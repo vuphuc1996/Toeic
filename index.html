@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Ứng dụng học từ vựng TOEIC cá nhân – kho từ A-Z, phân loại chủ đề và quản lý dữ liệu.">
-  <title>TOEIC Dictionary – Từ điển TOEIC A–Z</title>
+  <title>TOEIC Dictionary v2.1.0 – Từ điển TOEIC A–Z</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -53,7 +53,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 2 · v2.0.0</div>
+        <div class="sidebar-version">Phase 2 · v2.1.0</div>
       </div>
     </aside>
 
@@ -102,7 +102,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>Phase 2:</strong> hệ thống ôn tập ngẫu nhiên, chấm lỗi theo ký tự, lưu tiến độ ghi nhớ và nhắc học 60 phút. Ngữ pháp, đọc hiểu và Gemini sẽ được mở rộng ở giai đoạn tiếp theo.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>Phase 2:</strong> hệ thống ôn tập ngẫu nhiên, chấm lỗi theo ký tự, lưu tiến độ ghi nhớ và nhắc học theo chu kỳ 60/90/120/180 phút. Kho hiện tại có 98 từ mẫu để kiểm thử, chưa phải bộ từ vựng B2 hoàn chỉnh; dữ liệu sẽ được mở rộng và gắn nhãn CEFR ở đợt nội dung riêng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -157,12 +157,13 @@
           </section>
           <aside class="practice-side">
             <section class="panel reminder-panel">
-              <div class="panel-header"><div><h3><svg class="ui-icon"><use href="#icon-bell"></use></svg> Nhắc nhở học tập</h3><p class="muted">Chu kỳ mặc định 60 phút</p></div><span class="reminder-status-dot" id="reminderStatusDot"></span></div>
+              <div class="panel-header"><div><h3><svg class="ui-icon"><use href="#icon-bell"></use></svg> Nhắc nhở học tập</h3><p class="muted">Chọn chu kỳ nhắc phù hợp với lịch học</p></div><span class="reminder-status-dot" id="reminderStatusDot"></span></div>
               <label class="reminder-toggle"><span><strong>Bật nhắc nhở</strong><small>Nhắc câu hỏi mới hoặc động viên nếu chưa trả lời.</small></span><input type="checkbox" id="reminderEnabled"><i></i></label>
-              <label class="field"><span class="field-label">CHU KỲ NHẮC</span><select id="reminderInterval"><option value="60">60 phút (mặc định)</option><option value="1">1 phút (kiểm thử)</option></select></label>
-              <button class="secondary-button permission-button" id="notificationPermissionButton"><svg class="ui-icon button-icon"><use href="#icon-bell"></use></svg> Cho phép thông báo</button>
+              <label class="field"><span class="field-label">CHU KỲ NHẮC</span><select id="reminderInterval"><option value="60">60 phút (mặc định)</option><option value="90">90 phút</option><option value="120">120 phút</option><option value="180">180 phút</option><option value="1">1 phút (kiểm thử)</option></select></label>
+              <div class="notification-actions"><button class="secondary-button permission-button" id="notificationPermissionButton"><svg class="ui-icon button-icon"><use href="#icon-bell"></use></svg> Cho phép thông báo</button><button class="secondary-button permission-test-button" id="testNotificationButton" disabled><svg class="ui-icon button-icon"><use href="#icon-sparkles"></use></svg> Kiểm tra popup</button></div>
               <div class="reminder-info" id="reminderInfo">Nhắc nhở đang tắt. Bạn có thể bật khi sẵn sàng.</div>
-              <p class="reminder-limit">Bản GitHub-only chỉ kiểm tra nhắc nhở khi trang còn hoạt động hoặc khi bạn quay lại ứng dụng. Không bảo đảm thông báo khi đóng hoàn toàn trình duyệt.</p>
+              <div class="notification-platform-help" id="notificationPlatformHelp">PC/Android: cho phép Notifications trong trình duyệt. iPhone/iPad: cần thêm TOEIC Dictionary vào Màn hình chính và mở ứng dụng từ biểu tượng đã cài.</div>
+              <p class="reminder-limit">Khi ứng dụng đang mở, trang có thể hiện popup riêng; khi chạy nền, trình duyệt có thể hiện thông báo hệ thống. Muốn nhận Push đúng lịch sau khi đóng hoàn toàn ứng dụng cần máy chủ gửi Push.</p>
             </section>
             <section class="panel weak-panel">
               <div class="panel-header"><div><h3><svg class="ui-icon"><use href="#icon-trending"></use></svg> Từ cần củng cố</h3><p class="muted">Ưu tiên theo kết quả học</p></div></div>
@@ -193,7 +194,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Khôi phục dữ liệu gốc từ GitHub</button><span class="muted">Tổng dữ liệu: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>Phase 2 · GitHub Pages</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>Phase 2 · v2.1.0 · GitHub Pages</span></footer>
     </main>
   </div>
 

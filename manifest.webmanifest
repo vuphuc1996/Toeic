@@ -2,7 +2,7 @@
   "id": "./",
   "name": "TOEIC Dictionary – Từ điển TOEIC A–Z",
   "short_name": "TOEIC Dict",
-  "description": "Từ điển và ứng dụng ôn tập TOEIC A–Z, theo dõi tiến độ và nhắc học cá nhân.",
+  "description": "TOEIC Dictionary v2.1.0 – từ điển A–Z, luyện tập thông minh và nhắc học.",
   "lang": "vi",
   "start_url": "./",
   "scope": "./",

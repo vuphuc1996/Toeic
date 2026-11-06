@@ -132,3 +132,25 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .choice-option.correct-choice{border-color:#9ed8bc;background:#edfaf3;color:#176b4a}.choice-option.correct-choice>span{background:#d8f2e3;color:#16865c}.choice-option.wrong-choice{border-color:#e7a6a6;background:#fff0f0;color:#a33f3f}.choice-option.wrong-choice>span{background:#ffe0e0;color:#b84949}.choice-option:disabled{cursor:default;transform:none;box-shadow:none}
 
 .practice-home-panel{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(220px,1fr) auto;align-items:center;gap:22px;padding:18px 21px;margin-bottom:18px;background:linear-gradient(110deg,#fff 0%,#f8fbff 100%)}.practice-home-copy h3{margin:0;color:#183d6c;font-size:15px}.practice-home-copy .eyebrow{margin-bottom:5px}.practice-home-copy p:last-child{margin:6px 0 0;color:#7b8ba0;font-size:10px;line-height:1.55;max-width:540px}.practice-home-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.practice-home-metrics span{color:#8492a4;font-size:9px}.practice-home-metrics strong{display:block;color:#1e4779;font-size:18px;margin-top:3px}.practice-home-panel>.primary-button{font-size:10px}@media(max-width:1100px){.practice-home-panel{grid-template-columns:1fr auto}.practice-home-metrics{grid-column:1/-1;grid-row:2}.practice-home-panel>.primary-button{grid-column:2;grid-row:1}}@media(max-width:640px){.practice-home-panel{grid-template-columns:1fr;padding:15px;gap:12px}.practice-home-panel>.primary-button{grid-column:auto;grid-row:auto;width:100%}.practice-home-metrics{grid-column:auto;grid-row:auto;gap:6px}.practice-home-metrics strong{font-size:17px}}
+
+
+/* v2.1.0 – native notification diagnostics and social-style in-app reminder */
+.notification-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.notification-actions button{width:100%;min-width:0;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 8px;font-size:10px}
+.permission-test-button:disabled{opacity:.45;cursor:not-allowed}
+.notification-platform-help{margin-top:9px;padding:10px 11px;border:1px solid #e5edf7;border-radius:9px;background:#f8fbff;color:#60768f;font-size:10px;line-height:1.55}
+.reminder-popup{width:min(360px,calc(100vw - 28px));padding:13px 14px 12px;background:#fff;border:1px solid #dce7f3;border-left:4px solid #2f72b8;border-radius:13px;box-shadow:0 16px 42px rgba(18,44,75,.20);animation:reminder-pop-in .24s cubic-bezier(.2,.75,.25,1) both;text-align:left}
+.reminder-popup-head{display:flex;align-items:center;gap:8px;color:#193d68}
+.reminder-popup-icon{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:10px;background:#edf4fc;color:#2865a4}
+.reminder-popup-icon .ui-icon{width:19px;height:19px}
+.reminder-popup-head strong{font-size:11px;line-height:1.35;flex:1}
+.reminder-popup-head [data-reminder-close]{border:0;background:#f1f4f8;border-radius:7px;width:25px;height:25px;color:#6f8093;font-size:18px;line-height:1}
+.reminder-popup p{font-size:11px;line-height:1.55;color:#667a91;margin:9px 1px 11px}
+.reminder-popup-actions{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.reminder-popup-open{border:0;border-radius:8px;background:#1b4f86;color:#fff;padding:8px 12px;font-size:10px;font-weight:750}
+.reminder-popup-actions>span{font-size:8px;letter-spacing:.12em;color:#9ba8b8;font-weight:800}
+@keyframes reminder-pop-in{from{opacity:0;transform:translateY(-9px) scale(.985)}to{opacity:1;transform:none}}
+/* Vocabulary headwords use a capital initial for clearer I/l recognition. */
+.word-name,.detail-word,.weak-word-item strong{font-variant-ligatures:none;font-feature-settings:"ss01" 1;}
+@media(max-width:640px){.notification-actions{grid-template-columns:1fr}.reminder-popup{width:100%}.toast-region{left:12px;right:12px;bottom:78px}}
+@media(prefers-reduced-motion:reduce){.reminder-popup{animation:none}}
