@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "letter": "Q",
+  "words": [
+    {
+      "id": "quality-n",
+      "word": "quality",
+      "phonetic": {
+        "us": "/ˈkwɑː.lə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chất lượng; phẩm chất",
+          "definition_en": "how good or bad something is",
+          "synonyms": [
+            "standard",
+            "grade"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company is known for the quality of its products.",
+          "vi": "Công ty nổi tiếng về chất lượng sản phẩm."
+        }
+      ],
+      "collocations": [
+        "quality control",
+        "high quality"
+      ]
+    },
+    {
+      "id": "quarterly-adjadv",
+      "word": "quarterly",
+      "phonetic": {
+        "us": "/ˈkwɔːr.t̬ɚ.li/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "hằng quý",
+          "definition_en": "happening four times a year",
+          "synonyms": [
+            "every three months"
+          ],
+          "antonyms": [
+            "annual"
+          ]
+        },
+        {
+          "pos": "adv",
+          "meaning_vi": "mỗi quý",
+          "definition_en": "once every three months",
+          "synonyms": [
+            "four times a year"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The finance team prepares quarterly reports.",
+          "vi": "Nhóm tài chính chuẩn bị báo cáo hằng quý."
+        }
+      ],
+      "collocations": [
+        "quarterly report",
+        "quarterly meeting"
+      ]
+    },
+    {
+      "id": "query-n",
+      "word": "query",
+      "phonetic": {
+        "us": "/ˈkwɪr.i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "câu hỏi; yêu cầu tra cứu",
+          "definition_en": "a question, especially one asking for information",
+          "synonyms": [
+            "question",
+            "inquiry"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "OFFICE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please contact support if you have a billing query.",
+          "vi": "Vui lòng liên hệ bộ phận hỗ trợ nếu bạn có câu hỏi về thanh toán."
+        }
+      ],
+      "collocations": [
+        "customer query",
+        "respond to a query"
+      ]
+    }
+  ]
+}

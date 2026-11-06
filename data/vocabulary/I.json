@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "letter": "I",
+  "words": [
+    {
+      "id": "invoice-nv",
+      "word": "invoice",
+      "phonetic": {
+        "us": "/ˈɪn.vɔɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hóa đơn thanh toán",
+          "definition_en": "a document showing goods or services supplied and the amount due",
+          "synonyms": [
+            "bill",
+            "statement"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "xuất hóa đơn",
+          "definition_en": "to send an invoice for payment",
+          "synonyms": [
+            "bill",
+            "charge"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please pay the invoice within 30 days.",
+          "vi": "Vui lòng thanh toán hóa đơn trong vòng 30 ngày."
+        }
+      ],
+      "collocations": [
+        "issue an invoice",
+        "overdue invoice"
+      ]
+    },
+    {
+      "id": "inspect-v",
+      "word": "inspect",
+      "phonetic": {
+        "us": "/ɪnˈspekt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "kiểm tra; thanh tra",
+          "definition_en": "to examine something carefully",
+          "synonyms": [
+            "examine",
+            "check"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "inspection",
+          "pos": "n",
+          "meaning_vi": "sự kiểm tra"
+        },
+        {
+          "word": "inspector",
+          "pos": "n",
+          "meaning_vi": "thanh tra viên"
+        }
+      ],
+      "verb_forms": {
+        "v1": "inspect",
+        "vs_es": "inspects",
+        "v2": "inspected",
+        "v3": "inspected",
+        "ving": "inspecting"
+      },
+      "examples": [
+        {
+          "en": "A technician will inspect the equipment tomorrow.",
+          "vi": "Kỹ thuật viên sẽ kiểm tra thiết bị vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "inspect equipment",
+        "safety inspection"
+      ]
+    },
+    {
+      "id": "itinerary-n",
+      "word": "itinerary",
+      "phonetic": {
+        "us": "/aɪˈtɪn.ə.rer.i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lịch trình chuyến đi",
+          "definition_en": "a plan of a journey, including the route and places visited",
+          "synonyms": [
+            "schedule",
+            "travel plan"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The travel agent emailed the updated itinerary.",
+          "vi": "Đại lý du lịch đã gửi lịch trình cập nhật qua email."
+        }
+      ],
+      "collocations": [
+        "travel itinerary",
+        "detailed itinerary"
+      ]
+    }
+  ]
+}

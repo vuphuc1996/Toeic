@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "letter": "P",
+  "words": [
+    {
+      "id": "postpone-v",
+      "word": "postpone",
+      "phonetic": {
+        "us": "/poʊstˈpoʊn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hoãn; trì hoãn",
+          "definition_en": "to arrange for something to happen at a later time",
+          "synonyms": [
+            "delay",
+            "put off"
+          ],
+          "antonyms": [
+            "advance"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "MEETING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "postpone",
+        "vs_es": "postpones",
+        "v2": "postponed",
+        "v3": "postponed",
+        "ving": "postponing"
+      },
+      "examples": [
+        {
+          "en": "The meeting has been postponed until Thursday.",
+          "vi": "Cuộc họp đã được hoãn đến thứ Năm."
+        }
+      ],
+      "collocations": [
+        "postpone a meeting",
+        "postpone the launch"
+      ]
+    },
+    {
+      "id": "personnel-n",
+      "word": "personnel",
+      "phonetic": {
+        "us": "/ˌpɝː.səˈnel/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân sự; đội ngũ nhân viên",
+          "definition_en": "the people who work for an organization",
+          "synonyms": [
+            "staff",
+            "workforce"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All personnel must wear identification badges.",
+          "vi": "Toàn bộ nhân viên phải đeo thẻ nhận dạng."
+        }
+      ],
+      "collocations": [
+        "personnel department",
+        "personnel records"
+      ]
+    },
+    {
+      "id": "policy-n",
+      "word": "policy",
+      "phonetic": {
+        "us": "/ˈpɑː.lə.si/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chính sách; quy định",
+          "definition_en": "a set of ideas or plans used as a basis for decisions",
+          "synonyms": [
+            "guideline",
+            "rule"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please review the company travel policy.",
+          "vi": "Vui lòng xem lại chính sách công tác của công ty."
+        }
+      ],
+      "collocations": [
+        "company policy",
+        "privacy policy",
+        "insurance policy"
+      ]
+    },
+    {
+      "id": "purchase-nv",
+      "word": "purchase",
+      "phonetic": {
+        "us": "/ˈpɝː.tʃəs/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "mua; sắm",
+          "definition_en": "to buy something",
+          "synonyms": [
+            "buy",
+            "acquire"
+          ],
+          "antonyms": [
+            "sell"
+          ]
+        },
+        {
+          "pos": "n",
+          "meaning_vi": "việc mua hàng; món hàng đã mua",
+          "definition_en": "the act of buying something",
+          "synonyms": [
+            "acquisition"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "purchaser",
+          "pos": "n",
+          "meaning_vi": "người mua"
+        },
+        {
+          "word": "purchasing",
+          "pos": "n",
+          "meaning_vi": "việc mua hàng"
+        }
+      ],
+      "verb_forms": {
+        "v1": "purchase",
+        "vs_es": "purchases",
+        "v2": "purchased",
+        "v3": "purchased",
+        "ving": "purchasing"
+      },
+      "examples": [
+        {
+          "en": "The department plans to purchase new computers.",
+          "vi": "Phòng ban dự định mua máy tính mới."
+        }
+      ],
+      "collocations": [
+        "purchase order",
+        "purchase price"
+      ]
+    }
+  ]
+}

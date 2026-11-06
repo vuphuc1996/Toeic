@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "letter": "E",
+  "words": [
+    {
+      "id": "employee-n",
+      "word": "employee",
+      "phonetic": {
+        "us": "/ɪmˈplɔɪ.iː/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên; người lao động",
+          "definition_en": "a person who is paid to work for an organization",
+          "synonyms": [
+            "worker",
+            "staff member"
+          ],
+          "antonyms": [
+            "employer"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "employ",
+          "pos": "v",
+          "meaning_vi": "thuê; tuyển dụng"
+        },
+        {
+          "word": "employer",
+          "pos": "n",
+          "meaning_vi": "người sử dụng lao động"
+        },
+        {
+          "word": "employment",
+          "pos": "n",
+          "meaning_vi": "việc làm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Every employee must attend the safety training.",
+          "vi": "Mọi nhân viên phải tham gia khóa đào tạo an toàn."
+        }
+      ],
+      "collocations": [
+        "full-time employee",
+        "employee handbook"
+      ]
+    },
+    {
+      "id": "equipment-n",
+      "word": "equipment",
+      "phonetic": {
+        "us": "/ɪˈkwɪp.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thiết bị; dụng cụ",
+          "definition_en": "the tools or machines needed for a particular purpose",
+          "synonyms": [
+            "apparatus",
+            "gear"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All office equipment is inspected regularly.",
+          "vi": "Tất cả thiết bị văn phòng được kiểm tra định kỳ."
+        }
+      ],
+      "collocations": [
+        "office equipment",
+        "safety equipment"
+      ]
+    },
+    {
+      "id": "estimate-nv",
+      "word": "estimate",
+      "phonetic": {
+        "us": "/ˈes.tə.meɪt; ˈes.tə.mət/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bản ước tính; sự ước lượng",
+          "definition_en": "a judgment about the likely cost, size, or value of something",
+          "synonyms": [
+            "approximation",
+            "assessment"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "ước tính; dự toán",
+          "definition_en": "to calculate an approximate amount or value",
+          "synonyms": [
+            "assess",
+            "calculate"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor provided an estimate for the repairs.",
+          "vi": "Nhà thầu đã cung cấp dự toán chi phí sửa chữa."
+        }
+      ],
+      "collocations": [
+        "cost estimate",
+        "estimate the cost"
+      ]
+    },
+    {
+      "id": "expense-n",
+      "word": "expense",
+      "phonetic": {
+        "us": "/ɪkˈspens/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chi phí; khoản tiêu dùng",
+          "definition_en": "money spent to buy or do something",
+          "synonyms": [
+            "cost",
+            "expenditure"
+          ],
+          "antonyms": [
+            "income"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "expensive",
+          "pos": "adj",
+          "meaning_vi": "đắt đỏ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please submit your travel expenses by Monday.",
+          "vi": "Vui lòng nộp chi phí công tác trước thứ Hai."
+        }
+      ],
+      "collocations": [
+        "operating expenses",
+        "expense report"
+      ]
+    }
+  ]
+}

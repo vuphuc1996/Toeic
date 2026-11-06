@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "letter": "C",
+  "words": [
+    {
+      "id": "client-n",
+      "word": "client",
+      "phonetic": {
+        "us": "/ˈklaɪ.ənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khách hàng; thân chủ",
+          "definition_en": "a person or organization receiving professional services",
+          "synonyms": [
+            "customer",
+            "account"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consultant met with a new client.",
+          "vi": "Chuyên gia tư vấn đã gặp một khách hàng mới."
+        }
+      ],
+      "collocations": [
+        "potential client",
+        "client account"
+      ]
+    },
+    {
+      "id": "commute-vn",
+      "word": "commute",
+      "phonetic": {
+        "us": "/kəˈmjuːt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đi lại thường xuyên giữa nhà và nơi làm việc",
+          "definition_en": "to travel regularly between home and work",
+          "synonyms": [
+            "travel to work"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "TRANSPORT"
+      ],
+      "word_family": [
+        {
+          "word": "commuter",
+          "pos": "n",
+          "meaning_vi": "người đi làm hằng ngày"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "She commutes by train every morning.",
+          "vi": "Cô ấy đi làm bằng tàu mỗi sáng."
+        }
+      ],
+      "collocations": [
+        "daily commute",
+        "commute to work"
+      ]
+    },
+    {
+      "id": "conference-n",
+      "word": "conference",
+      "phonetic": {
+        "us": "/ˈkɑːn.fɚ.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hội nghị; hội thảo",
+          "definition_en": "a large formal meeting for discussion",
+          "synonyms": [
+            "convention",
+            "summit"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The annual sales conference begins on Monday.",
+          "vi": "Hội nghị bán hàng thường niên bắt đầu vào thứ Hai."
+        }
+      ],
+      "collocations": [
+        "attend a conference",
+        "conference room"
+      ]
+    },
+    {
+      "id": "confirm-v",
+      "word": "confirm",
+      "phonetic": {
+        "us": "/kənˈfɝːm/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "xác nhận; chứng thực",
+          "definition_en": "to state or show that something is definitely true",
+          "synonyms": [
+            "verify",
+            "validate"
+          ],
+          "antonyms": [
+            "deny",
+            "disprove"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "CUSTOMER",
+        "TIME"
+      ],
+      "word_family": [
+        {
+          "word": "confirmation",
+          "pos": "n",
+          "meaning_vi": "sự xác nhận"
+        },
+        {
+          "word": "confirmed",
+          "pos": "adj",
+          "meaning_vi": "đã xác nhận"
+        }
+      ],
+      "verb_forms": {
+        "v1": "confirm",
+        "vs_es": "confirms",
+        "v2": "confirmed",
+        "v3": "confirmed",
+        "ving": "confirming"
+      },
+      "examples": [
+        {
+          "en": "Please confirm your reservation by Friday.",
+          "vi": "Vui lòng xác nhận đặt chỗ trước thứ Sáu."
+        }
+      ],
+      "collocations": [
+        "confirm a booking",
+        "confirm receipt"
+      ]
+    }
+  ]
+}

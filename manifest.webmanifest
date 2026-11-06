@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "TOEIC Vocabulary",
+  "short_name": "TOEIC",
+  "description": "Kho từ vựng TOEIC A–Z và công cụ quản lý học tập cá nhân.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f7fb",
+  "theme_color": "#153c70",
+  "icons": [
+    {"src":"./assets/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./assets/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"./assets/icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "letter": "T",
+  "words": [
+    {
+      "id": "temporary-adj",
+      "word": "temporary",
+      "phonetic": {
+        "us": "/ˈtem.pə.rer.i/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "tạm thời; có thời hạn",
+          "definition_en": "lasting for only a limited period of time",
+          "synonyms": [
+            "short-term",
+            "provisional"
+          ],
+          "antonyms": [
+            "permanent"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "temporarily",
+          "pos": "adv",
+          "meaning_vi": "tạm thời"
+        },
+        {
+          "word": "temporary worker",
+          "pos": "n phrase",
+          "meaning_vi": "lao động thời vụ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A temporary assistant will cover the position this month.",
+          "vi": "Một trợ lý tạm thời sẽ đảm nhiệm vị trí này trong tháng."
+        }
+      ],
+      "collocations": [
+        "temporary position",
+        "temporary solution"
+      ]
+    },
+    {
+      "id": "transfer-nv",
+      "word": "transfer",
+      "phonetic": {
+        "us": "/trænsˈfɝː/ (v); /ˈtræns.fɝː/ (n)"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chuyển; điều chuyển; chuyển khoản",
+          "definition_en": "to move someone or something from one place or person to another",
+          "synonyms": [
+            "move",
+            "relocate"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "meaning_vi": "sự chuyển giao; lệnh chuyển",
+          "definition_en": "the act of moving someone or something",
+          "synonyms": [
+            "move",
+            "shift"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "FINANCE",
+        "TRANSPORT"
+      ],
+      "word_family": [
+        {
+          "word": "transferable",
+          "pos": "adj",
+          "meaning_vi": "có thể chuyển nhượng"
+        }
+      ],
+      "verb_forms": {
+        "v1": "transfer",
+        "vs_es": "transfers",
+        "v2": "transferred",
+        "v3": "transferred",
+        "ving": "transferring"
+      },
+      "examples": [
+        {
+          "en": "The employee requested a transfer to another branch.",
+          "vi": "Nhân viên đề nghị điều chuyển sang chi nhánh khác."
+        }
+      ],
+      "collocations": [
+        "bank transfer",
+        "transfer funds",
+        "transfer request"
+      ]
+    },
+    {
+      "id": "transaction-n",
+      "word": "transaction",
+      "phonetic": {
+        "us": "/trænˈzæk.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giao dịch",
+          "definition_en": "an instance of buying, selling, or exchanging something",
+          "synonyms": [
+            "deal",
+            "exchange"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "transact",
+          "pos": "v",
+          "meaning_vi": "giao dịch"
+        },
+        {
+          "word": "transactional",
+          "pos": "adj",
+          "meaning_vi": "thuộc giao dịch"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All transactions are recorded in the accounting system.",
+          "vi": "Tất cả giao dịch được ghi nhận trong hệ thống kế toán."
+        }
+      ],
+      "collocations": [
+        "business transaction",
+        "online transaction"
+      ]
+    },
+    {
+      "id": "tuesday-n",
+      "word": "Tuesday",
+      "phonetic": {
+        "us": "/ˈtuːz.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Thứ Ba",
+          "definition_en": "the day of the week after Monday and before Wednesday",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The interview has been scheduled for Tuesday.",
+          "vi": "Buổi phỏng vấn đã được lên lịch vào thứ Ba."
+        }
+      ],
+      "collocations": [
+        "Tuesday afternoon"
+      ]
+    },
+    {
+      "id": "thursday-n",
+      "word": "Thursday",
+      "phonetic": {
+        "us": "/ˈθɝːz.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Thứ Năm",
+          "definition_en": "the day of the week after Wednesday and before Friday",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please send the revised quotation by Thursday.",
+          "vi": "Vui lòng gửi báo giá đã chỉnh sửa trước thứ Năm."
+        }
+      ],
+      "collocations": [
+        "Thursday afternoon"
+      ]
+    },
+    {
+      "id": "time-n",
+      "word": "time",
+      "phonetic": {
+        "us": "/taɪm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian; thời điểm; lần",
+          "definition_en": "the measurable period during which events happen; a particular point or occasion",
+          "synonyms": [
+            "period",
+            "moment",
+            "occasion"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "What time does the next train leave?",
+          "vi": "Chuyến tàu tiếp theo khởi hành lúc mấy giờ?"
+        }
+      ],
+      "collocations": [
+        "on time",
+        "in time",
+        "at the same time"
+      ]
+    }
+  ]
+}

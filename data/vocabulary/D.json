@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "letter": "D",
+  "words": [
+    {
+      "id": "deadline-n",
+      "word": "deadline",
+      "phonetic": {
+        "us": "/ˈded.laɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hạn chót; thời hạn cuối",
+          "definition_en": "the latest time or date by which something must be completed",
+          "synonyms": [
+            "due date",
+            "time limit"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The application deadline is November 30.",
+          "vi": "Hạn nộp hồ sơ là ngày 30 tháng 11."
+        }
+      ],
+      "collocations": [
+        "meet a deadline",
+        "extend the deadline"
+      ]
+    },
+    {
+      "id": "delivery-n",
+      "word": "delivery",
+      "phonetic": {
+        "us": "/dɪˈlɪv.ɚ.i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự giao hàng; việc chuyển phát",
+          "definition_en": "the act of taking goods, letters, or people to a place",
+          "synonyms": [
+            "shipment",
+            "dispatch"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "CUSTOMER",
+        "TRANSPORT"
+      ],
+      "word_family": [
+        {
+          "word": "deliver",
+          "pos": "v",
+          "meaning_vi": "giao; chuyển"
+        },
+        {
+          "word": "deliverable",
+          "pos": "n",
+          "meaning_vi": "sản phẩm bàn giao"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Free delivery is available for orders over $50.",
+          "vi": "Miễn phí giao hàng cho đơn trên 50 đô la."
+        }
+      ],
+      "collocations": [
+        "delivery date",
+        "delivery service"
+      ]
+    },
+    {
+      "id": "depart-v",
+      "word": "depart",
+      "phonetic": {
+        "us": "/dɪˈpɑːrt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "khởi hành; rời đi",
+          "definition_en": "to leave a place, especially to start a journey",
+          "synonyms": [
+            "leave",
+            "set off"
+          ],
+          "antonyms": [
+            "arrive"
+          ]
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "TIME"
+      ],
+      "word_family": [
+        {
+          "word": "departure",
+          "pos": "n",
+          "meaning_vi": "sự khởi hành"
+        }
+      ],
+      "verb_forms": {
+        "v1": "depart",
+        "vs_es": "departs",
+        "v2": "departed",
+        "v3": "departed",
+        "ving": "departing"
+      },
+      "examples": [
+        {
+          "en": "The flight departs at 8:45 a.m.",
+          "vi": "Chuyến bay khởi hành lúc 8 giờ 45 sáng."
+        }
+      ],
+      "collocations": [
+        "depart from",
+        "departure time"
+      ]
+    },
+    {
+      "id": "discount-nv",
+      "word": "discount",
+      "phonetic": {
+        "us": "/ˈdɪs.kaʊnt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản giảm giá",
+          "definition_en": "a reduction in the usual price",
+          "synonyms": [
+            "reduction",
+            "markdown"
+          ],
+          "antonyms": [
+            "surcharge"
+          ]
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "giảm giá; chiết khấu",
+          "definition_en": "to reduce the price of something",
+          "synonyms": [
+            "reduce",
+            "mark down"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "MARKETING",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers receive a 10 percent discount.",
+          "vi": "Khách hàng được giảm giá 10 phần trăm."
+        }
+      ],
+      "collocations": [
+        "offer a discount",
+        "discount rate"
+      ]
+    },
+    {
+      "id": "date-nv",
+      "word": "date",
+      "phonetic": {
+        "us": "/deɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ngày; ngày tháng",
+          "definition_en": "a particular day of a month or year",
+          "synonyms": [
+            "calendar date"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "meaning_vi": "cuộc hẹn hò",
+          "definition_en": "a social meeting with someone you are romantically interested in",
+          "synonyms": [
+            "appointment"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "ghi ngày tháng",
+          "definition_en": "to write the day, month, and year on something",
+          "synonyms": [
+            "mark"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please write the date at the top of the form.",
+          "vi": "Vui lòng ghi ngày tháng ở đầu biểu mẫu."
+        }
+      ],
+      "collocations": [
+        "due date",
+        "date of birth",
+        "expiration date"
+      ]
+    },
+    {
+      "id": "day-n",
+      "word": "day",
+      "phonetic": {
+        "us": "/deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ngày; ban ngày",
+          "definition_en": "a period of 24 hours or the time when it is light",
+          "synonyms": [
+            "24-hour period"
+          ],
+          "antonyms": [
+            "night"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The office is closed on public holidays.",
+          "vi": "Văn phòng đóng cửa vào các ngày nghỉ lễ."
+        }
+      ],
+      "collocations": [
+        "business day",
+        "day off",
+        "every day"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "letter": "B",
+  "words": [
+    {
+      "id": "benefit-nv",
+      "word": "benefit",
+      "phonetic": {
+        "us": "/ˈben.ə.fɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lợi ích; phúc lợi",
+          "definition_en": "an advantage or a helpful effect",
+          "synonyms": [
+            "advantage",
+            "gain"
+          ],
+          "antonyms": [
+            "drawback",
+            "disadvantage"
+          ]
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "hưởng lợi; có lợi",
+          "definition_en": "to receive an advantage",
+          "synonyms": [
+            "gain",
+            "profit"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "beneficial",
+          "pos": "adj",
+          "meaning_vi": "có lợi"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new policy offers several benefits to employees.",
+          "vi": "Chính sách mới mang lại một số phúc lợi cho nhân viên."
+        }
+      ],
+      "collocations": [
+        "employee benefits",
+        "benefit from training"
+      ]
+    },
+    {
+      "id": "brochure-n",
+      "word": "brochure",
+      "phonetic": {
+        "us": "/broʊˈʃʊr/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tờ rơi; sách giới thiệu",
+          "definition_en": "a small magazine or booklet with information or pictures",
+          "synonyms": [
+            "leaflet",
+            "pamphlet"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please send me the product brochure.",
+          "vi": "Vui lòng gửi cho tôi tài liệu giới thiệu sản phẩm."
+        }
+      ],
+      "collocations": [
+        "product brochure",
+        "travel brochure"
+      ]
+    },
+    {
+      "id": "budget-nv",
+      "word": "budget",
+      "phonetic": {
+        "us": "/ˈbʌdʒ.ɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ngân sách",
+          "definition_en": "a plan for how money will be spent",
+          "synonyms": [
+            "funds",
+            "allowance"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "lập ngân sách",
+          "definition_en": "to plan how to spend money",
+          "synonyms": [
+            "allocate"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "budgetary",
+          "pos": "adj",
+          "meaning_vi": "thuộc ngân sách"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department must stay within its annual budget.",
+          "vi": "Phòng ban phải chi tiêu trong phạm vi ngân sách hằng năm."
+        }
+      ],
+      "collocations": [
+        "annual budget",
+        "budget proposal",
+        "within budget"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "letter": "H",
+  "words": [
+    {
+      "id": "headquarters-n",
+      "word": "headquarters",
+      "phonetic": {
+        "us": "/ˈhedˌkwɔːr.t̬ɚz/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "trụ sở chính",
+          "definition_en": "the main office or center of an organization",
+          "synonyms": [
+            "main office",
+            "central office"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company headquarters is located in Seoul.",
+          "vi": "Trụ sở chính của công ty đặt tại Seoul."
+        }
+      ],
+      "collocations": [
+        "company headquarters",
+        "headquarters building"
+      ]
+    },
+    {
+      "id": "hire-v",
+      "word": "hire",
+      "phonetic": {
+        "us": "/haɪr/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thuê; tuyển dụng",
+          "definition_en": "to employ someone or pay to use something",
+          "synonyms": [
+            "employ",
+            "recruit"
+          ],
+          "antonyms": [
+            "dismiss",
+            "fire"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "hire",
+          "pos": "n",
+          "meaning_vi": "sự thuê mướn (ít dùng)"
+        },
+        {
+          "word": "hiring",
+          "pos": "n",
+          "meaning_vi": "việc tuyển dụng"
+        }
+      ],
+      "verb_forms": {
+        "v1": "hire",
+        "vs_es": "hires",
+        "v2": "hired",
+        "v3": "hired",
+        "ving": "hiring"
+      },
+      "examples": [
+        {
+          "en": "The company plans to hire five engineers.",
+          "vi": "Công ty dự định tuyển năm kỹ sư."
+        }
+      ],
+      "collocations": [
+        "hire staff",
+        "hire a vehicle"
+      ]
+    },
+    {
+      "id": "hospitality-n",
+      "word": "hospitality",
+      "phonetic": {
+        "us": "/ˌhɑː.spɪˈtæl.ə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lòng hiếu khách; ngành dịch vụ lưu trú và ăn uống",
+          "definition_en": "friendly treatment of guests; the hotel and catering industry",
+          "synonyms": [
+            "welcome",
+            "guest service"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "She has ten years of experience in the hospitality industry.",
+          "vi": "Cô ấy có mười năm kinh nghiệm trong ngành dịch vụ khách sạn."
+        }
+      ],
+      "collocations": [
+        "hospitality industry",
+        "hospitality services"
+      ]
+    },
+    {
+      "id": "hour-n",
+      "word": "hour",
+      "phonetic": {
+        "us": "/aʊr/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giờ; khoảng thời gian 60 phút",
+          "definition_en": "a period of 60 minutes",
+          "synonyms": [
+            "sixty minutes"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training session lasts for two hours.",
+          "vi": "Buổi đào tạo kéo dài hai giờ."
+        }
+      ],
+      "collocations": [
+        "office hours",
+        "rush hour",
+        "per hour"
+      ]
+    }
+  ]
+}

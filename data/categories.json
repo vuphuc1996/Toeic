@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "TIME",
+      "label": "Thời gian & lịch trình",
+      "description": "Ngày, giờ, lịch hẹn, hạn chót và tần suất."
+    },
+    {
+      "id": "OFFICE",
+      "label": "Văn phòng",
+      "description": "Công việc, hồ sơ, nhân viên và thiết bị văn phòng."
+    },
+    {
+      "id": "BUSINESS",
+      "label": "Kinh doanh",
+      "description": "Hoạt động doanh nghiệp, quản lý và giao dịch."
+    },
+    {
+      "id": "MEETING",
+      "label": "Cuộc họp",
+      "description": "Hội nghị, lịch họp và thảo luận."
+    },
+    {
+      "id": "TRAVEL",
+      "label": "Du lịch",
+      "description": "Khách sạn, đặt chỗ, lịch trình và dịch vụ du lịch."
+    },
+    {
+      "id": "TRANSPORT",
+      "label": "Giao thông",
+      "description": "Phương tiện, di chuyển và vận tải."
+    },
+    {
+      "id": "HR",
+      "label": "Nhân sự",
+      "description": "Tuyển dụng, nhân viên, phúc lợi và đào tạo."
+    },
+    {
+      "id": "FINANCE",
+      "label": "Tài chính",
+      "description": "Ngân sách, chi phí, doanh thu và thanh toán."
+    },
+    {
+      "id": "PURCHASING",
+      "label": "Mua hàng",
+      "description": "Đặt hàng, mua sắm và nhà cung cấp."
+    },
+    {
+      "id": "CUSTOMER",
+      "label": "Khách hàng",
+      "description": "Dịch vụ, hỗ trợ và chăm sóc khách hàng."
+    },
+    {
+      "id": "SHIPPING",
+      "label": "Vận chuyển",
+      "description": "Giao hàng, kho vận và lô hàng."
+    },
+    {
+      "id": "TECHNOLOGY",
+      "label": "Công nghệ",
+      "description": "Hệ thống, thiết bị và phần mềm."
+    },
+    {
+      "id": "MARKETING",
+      "label": "Tiếp thị",
+      "description": "Quảng cáo, giới thiệu và ra mắt sản phẩm."
+    },
+    {
+      "id": "FACILITY",
+      "label": "Cơ sở vật chất",
+      "description": "Tòa nhà, thiết bị, tiện ích và bảo trì."
+    },
+    {
+      "id": "QUALITY",
+      "label": "Chất lượng",
+      "description": "Kiểm soát và tiêu chuẩn chất lượng."
+    },
+    {
+      "id": "DAILY",
+      "label": "Tiếng Anh thông dụng",
+      "description": "Từ vựng dùng thường xuyên trong đời sống."
+    }
+  ]
+}

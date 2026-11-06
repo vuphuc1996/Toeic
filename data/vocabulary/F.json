@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "letter": "F",
+  "words": [
+    {
+      "id": "facility-n",
+      "word": "facility",
+      "phonetic": {
+        "us": "/fəˈsɪl.ə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cơ sở; tiện nghi; công trình",
+          "definition_en": "a place, building, or equipment used for a particular purpose",
+          "synonyms": [
+            "amenity",
+            "installation"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company opened a new training facility.",
+          "vi": "Công ty đã mở một cơ sở đào tạo mới."
+        }
+      ],
+      "collocations": [
+        "office facility",
+        "production facility"
+      ]
+    },
+    {
+      "id": "flexible-adj",
+      "word": "flexible",
+      "phonetic": {
+        "us": "/ˈflek.sə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "linh hoạt; mềm dẻo",
+          "definition_en": "able to change or be changed easily",
+          "synonyms": [
+            "adaptable",
+            "versatile"
+          ],
+          "antonyms": [
+            "rigid",
+            "inflexible"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "flexibility",
+          "pos": "n",
+          "meaning_vi": "sự linh hoạt"
+        },
+        {
+          "word": "flexibly",
+          "pos": "adv",
+          "meaning_vi": "một cách linh hoạt"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company offers flexible working hours.",
+          "vi": "Công ty cung cấp giờ làm việc linh hoạt."
+        }
+      ],
+      "collocations": [
+        "flexible schedule",
+        "flexible hours"
+      ]
+    },
+    {
+      "id": "freight-n",
+      "word": "freight",
+      "phonetic": {
+        "us": "/freɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hàng hóa vận chuyển; cước vận tải",
+          "definition_en": "goods transported in bulk by truck, train, ship, or aircraft",
+          "synonyms": [
+            "cargo",
+            "shipment"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "TRANSPORT",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The freight will arrive at the warehouse tomorrow.",
+          "vi": "Lô hàng sẽ đến kho vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "freight costs",
+        "freight forwarder"
+      ]
+    },
+    {
+      "id": "friday-n",
+      "word": "Friday",
+      "phonetic": {
+        "us": "/ˈfraɪ.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Thứ Sáu",
+          "definition_en": "the day of the week after Thursday and before Saturday",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The office closes early on Friday.",
+          "vi": "Văn phòng đóng cửa sớm vào thứ Sáu."
+        }
+      ],
+      "collocations": [
+        "Friday evening",
+        "by Friday"
+      ]
+    }
+  ]
+}

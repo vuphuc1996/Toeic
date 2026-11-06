@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "letter": "G",
+  "words": [
+    {
+      "id": "guarantee-nv",
+      "word": "guarantee",
+      "phonetic": {
+        "us": "/ˌɡer.ənˈtiː/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự bảo đảm; giấy bảo hành",
+          "definition_en": "a promise that something will happen or work as stated",
+          "synonyms": [
+            "warranty",
+            "assurance"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "bảo đảm; cam kết",
+          "definition_en": "to promise that something will be done or will work",
+          "synonyms": [
+            "ensure",
+            "warrant"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The product comes with a two-year guarantee.",
+          "vi": "Sản phẩm đi kèm bảo hành hai năm."
+        }
+      ],
+      "collocations": [
+        "money-back guarantee",
+        "guarantee quality"
+      ]
+    },
+    {
+      "id": "guidance-n",
+      "word": "guidance",
+      "phonetic": {
+        "us": "/ˈɡaɪ.dəns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hướng dẫn; chỉ dẫn",
+          "definition_en": "help or advice about how to do something",
+          "synonyms": [
+            "direction",
+            "advice"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "guide",
+          "pos": "v/n",
+          "meaning_vi": "hướng dẫn; người hướng dẫn"
+        },
+        {
+          "word": "guideline",
+          "pos": "n",
+          "meaning_vi": "nguyên tắc hướng dẫn"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "New employees receive guidance from a supervisor.",
+          "vi": "Nhân viên mới nhận được hướng dẫn từ người giám sát."
+        }
+      ],
+      "collocations": [
+        "provide guidance",
+        "career guidance"
+      ]
+    },
+    {
+      "id": "gather-v",
+      "word": "gather",
+      "phonetic": {
+        "us": "/ˈɡæð.ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thu thập; tập hợp; tụ họp",
+          "definition_en": "to collect things or bring people together",
+          "synonyms": [
+            "collect",
+            "assemble"
+          ],
+          "antonyms": [
+            "scatter",
+            "disperse"
+          ]
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "gather",
+        "vs_es": "gathers",
+        "v2": "gathered",
+        "v3": "gathered",
+        "ving": "gathering"
+      },
+      "examples": [
+        {
+          "en": "Please gather the documents before the meeting.",
+          "vi": "Vui lòng tập hợp tài liệu trước cuộc họp."
+        }
+      ],
+      "collocations": [
+        "gather information",
+        "gather together"
+      ]
+    }
+  ]
+}

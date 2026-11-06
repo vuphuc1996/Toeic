@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "letter": "O",
+  "words": [
+    {
+      "id": "obtain-v",
+      "word": "obtain",
+      "phonetic": {
+        "us": "/əbˈteɪn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đạt được; có được; thu thập",
+          "definition_en": "to get something, especially by effort",
+          "synonyms": [
+            "acquire",
+            "get"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "OFFICE",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "obtain",
+        "vs_es": "obtains",
+        "v2": "obtained",
+        "v3": "obtained",
+        "ving": "obtaining"
+      },
+      "examples": [
+        {
+          "en": "Applicants must obtain approval before proceeding.",
+          "vi": "Ứng viên phải có được sự phê duyệt trước khi tiếp tục."
+        }
+      ],
+      "collocations": [
+        "obtain permission",
+        "obtain information"
+      ]
+    },
+    {
+      "id": "opportunity-n",
+      "word": "opportunity",
+      "phonetic": {
+        "us": "/ˌɑː.pɚˈtuː.nə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cơ hội",
+          "definition_en": "a situation in which it is possible to do something",
+          "synonyms": [
+            "chance",
+            "opening"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "opportune",
+          "pos": "adj",
+          "meaning_vi": "đúng thời điểm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "This training is a good opportunity to improve your skills.",
+          "vi": "Khóa đào tạo này là cơ hội tốt để cải thiện kỹ năng."
+        }
+      ],
+      "collocations": [
+        "career opportunity",
+        "take an opportunity"
+      ]
+    },
+    {
+      "id": "operate-v",
+      "word": "operate",
+      "phonetic": {
+        "us": "/ˈɑː.pə.reɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "vận hành; hoạt động; điều hành",
+          "definition_en": "to work or control a machine, system, or business",
+          "synonyms": [
+            "run",
+            "manage"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "BUSINESS",
+        "FACILITY"
+      ],
+      "word_family": [
+        {
+          "word": "operation",
+          "pos": "n",
+          "meaning_vi": "hoạt động; ca phẫu thuật"
+        },
+        {
+          "word": "operator",
+          "pos": "n",
+          "meaning_vi": "người vận hành"
+        },
+        {
+          "word": "operational",
+          "pos": "adj",
+          "meaning_vi": "thuộc vận hành"
+        }
+      ],
+      "verb_forms": {
+        "v1": "operate",
+        "vs_es": "operates",
+        "v2": "operated",
+        "v3": "operated",
+        "ving": "operating"
+      },
+      "examples": [
+        {
+          "en": "Only trained staff may operate this machine.",
+          "vi": "Chỉ nhân viên đã được đào tạo mới được vận hành máy này."
+        }
+      ],
+      "collocations": [
+        "operate machinery",
+        "operate a business"
+      ]
+    }
+  ]
+}

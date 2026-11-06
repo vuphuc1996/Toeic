@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "letter": "X",
+  "words": [
+    {
+      "id": "xray-n",
+      "word": "X-ray",
+      "phonetic": {
+        "us": "/ˈeks.reɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tia X; phim chụp X-quang",
+          "definition_en": "a type of radiation used to see inside objects or the body",
+          "synonyms": [
+            "radiograph"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The clinic sent the X-ray results to the doctor.",
+          "vi": "Phòng khám đã gửi kết quả chụp X-quang cho bác sĩ."
+        }
+      ],
+      "collocations": [
+        "X-ray image",
+        "X-ray examination"
+      ]
+    }
+  ]
+}

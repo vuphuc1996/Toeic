@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "letter": "Z",
+  "words": [
+    {
+      "id": "zero-nadj",
+      "word": "zero",
+      "phonetic": {
+        "us": "/ˈzɪr.oʊ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "số không",
+          "definition_en": "the number 0",
+          "synonyms": [
+            "nil",
+            "nought"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "adj",
+          "meaning_vi": "không; bằng không",
+          "definition_en": "no amount or quantity",
+          "synonyms": [
+            "none"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The revised plan has zero additional cost.",
+          "vi": "Kế hoạch sửa đổi không phát sinh thêm chi phí."
+        }
+      ],
+      "collocations": [
+        "zero balance",
+        "zero tolerance"
+      ]
+    },
+    {
+      "id": "zone-n",
+      "word": "zone",
+      "phonetic": {
+        "us": "/zoʊn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khu vực; vùng",
+          "definition_en": "an area with particular characteristics or rules",
+          "synonyms": [
+            "area",
+            "region"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRANSPORT",
+        "FACILITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Parking is prohibited in this zone.",
+          "vi": "Không được phép đỗ xe trong khu vực này."
+        }
+      ],
+      "collocations": [
+        "restricted zone",
+        "business zone"
+      ]
+    },
+    {
+      "id": "zipcode-n",
+      "word": "ZIP code",
+      "phonetic": {
+        "us": "/ˈzɪp koʊd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mã bưu chính (Hoa Kỳ)",
+          "definition_en": "a group of numbers used in a US postal address",
+          "synonyms": [
+            "postal code"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "CUSTOMER",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please include your ZIP code on the application form.",
+          "vi": "Vui lòng ghi mã bưu chính vào đơn đăng ký."
+        }
+      ],
+      "collocations": [
+        "enter a ZIP code",
+        "postal ZIP code"
+      ]
+    }
+  ]
+}

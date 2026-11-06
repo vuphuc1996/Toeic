@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "letter": "L",
+  "words": [
+    {
+      "id": "launch-nv",
+      "word": "launch",
+      "phonetic": {
+        "us": "/lɔːntʃ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "ra mắt; khởi động; phóng",
+          "definition_en": "to introduce a new product or start an activity",
+          "synonyms": [
+            "introduce",
+            "initiate"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "meaning_vi": "sự ra mắt; sự khởi động",
+          "definition_en": "the introduction of a product or the start of an activity",
+          "synonyms": [
+            "release",
+            "opening"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "launch",
+        "vs_es": "launches",
+        "v2": "launched",
+        "v3": "launched",
+        "ving": "launching"
+      },
+      "examples": [
+        {
+          "en": "The company will launch its new website next month.",
+          "vi": "Công ty sẽ ra mắt website mới vào tháng tới."
+        }
+      ],
+      "collocations": [
+        "product launch",
+        "launch a campaign"
+      ]
+    },
+    {
+      "id": "lease-nv",
+      "word": "lease",
+      "phonetic": {
+        "us": "/liːs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hợp đồng thuê; thời hạn thuê",
+          "definition_en": "a legal agreement to use property or equipment for a period",
+          "synonyms": [
+            "rental agreement"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "cho thuê; thuê theo hợp đồng",
+          "definition_en": "to use or let property under a lease",
+          "synonyms": [
+            "rent"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "FACILITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The office lease expires at the end of June.",
+          "vi": "Hợp đồng thuê văn phòng hết hạn vào cuối tháng Sáu."
+        }
+      ],
+      "collocations": [
+        "sign a lease",
+        "lease agreement"
+      ]
+    },
+    {
+      "id": "luggage-n",
+      "word": "luggage",
+      "phonetic": {
+        "us": "/ˈlʌɡ.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hành lý",
+          "definition_en": "bags and cases used when traveling",
+          "synonyms": [
+            "baggage"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Passengers should label all their luggage.",
+          "vi": "Hành khách nên ghi nhãn toàn bộ hành lý."
+        }
+      ],
+      "collocations": [
+        "carry-on luggage",
+        "luggage allowance"
+      ]
+    }
+  ]
+}

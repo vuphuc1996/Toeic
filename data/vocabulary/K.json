@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "letter": "K",
+  "words": [
+    {
+      "id": "keynote-n",
+      "word": "keynote",
+      "phonetic": {
+        "us": "/ˈkiː.noʊt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bài phát biểu chính; chủ đề trọng tâm",
+          "definition_en": "the main speech or central idea at an event",
+          "synonyms": [
+            "main address",
+            "central theme"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The keynote speaker will address the conference at 9 a.m.",
+          "vi": "Diễn giả chính sẽ phát biểu tại hội nghị lúc 9 giờ sáng."
+        }
+      ],
+      "collocations": [
+        "keynote speaker",
+        "keynote address"
+      ]
+    },
+    {
+      "id": "knowledge-n",
+      "word": "knowledge",
+      "phonetic": {
+        "us": "/ˈnɑː.lɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kiến thức; sự hiểu biết",
+          "definition_en": "information and skills gained through learning or experience",
+          "synonyms": [
+            "understanding",
+            "expertise"
+          ],
+          "antonyms": [
+            "ignorance"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "TECHNOLOGY",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "know",
+          "pos": "v",
+          "meaning_vi": "biết"
+        },
+        {
+          "word": "knowledgeable",
+          "pos": "adj",
+          "meaning_vi": "am hiểu"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The position requires knowledge of accounting software.",
+          "vi": "Vị trí này yêu cầu kiến thức về phần mềm kế toán."
+        }
+      ],
+      "collocations": [
+        "technical knowledge",
+        "knowledge of English"
+      ]
+    }
+  ]
+}

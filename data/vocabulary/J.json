@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "letter": "J",
+  "words": [
+    {
+      "id": "join-v",
+      "word": "join",
+      "phonetic": {
+        "us": "/dʒɔɪn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tham gia; gia nhập; nối",
+          "definition_en": "to become a member of a group or connect things",
+          "synonyms": [
+            "participate",
+            "connect"
+          ],
+          "antonyms": [
+            "leave",
+            "separate"
+          ]
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "HR",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "join",
+        "vs_es": "joins",
+        "v2": "joined",
+        "v3": "joined",
+        "ving": "joining"
+      },
+      "examples": [
+        {
+          "en": "Would you like to join the training session?",
+          "vi": "Bạn có muốn tham gia buổi đào tạo không?"
+        }
+      ],
+      "collocations": [
+        "join a meeting",
+        "join the company"
+      ]
+    },
+    {
+      "id": "journal-n",
+      "word": "journal",
+      "phonetic": {
+        "us": "/ˈdʒɝː.nəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tạp chí chuyên ngành; nhật ký",
+          "definition_en": "a publication or a written record of events",
+          "synonyms": [
+            "magazine",
+            "diary"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The research was published in a medical journal.",
+          "vi": "Nghiên cứu được đăng trên một tạp chí y khoa."
+        }
+      ],
+      "collocations": [
+        "academic journal",
+        "keep a journal"
+      ]
+    }
+  ]
+}

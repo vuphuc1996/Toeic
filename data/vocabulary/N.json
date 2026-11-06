@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "letter": "N",
+  "words": [
+    {
+      "id": "negotiate-v",
+      "word": "negotiate",
+      "phonetic": {
+        "us": "/nɪˈɡoʊ.ʃi.eɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đàm phán; thương lượng",
+          "definition_en": "to discuss something in order to reach an agreement",
+          "synonyms": [
+            "bargain",
+            "discuss"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "PURCHASING",
+        "HR"
+      ],
+      "word_family": [
+        {
+          "word": "negotiation",
+          "pos": "n",
+          "meaning_vi": "cuộc đàm phán"
+        },
+        {
+          "word": "negotiator",
+          "pos": "n",
+          "meaning_vi": "người đàm phán"
+        }
+      ],
+      "verb_forms": {
+        "v1": "negotiate",
+        "vs_es": "negotiates",
+        "v2": "negotiated",
+        "v3": "negotiated",
+        "ving": "negotiating"
+      },
+      "examples": [
+        {
+          "en": "They will negotiate a new contract next week.",
+          "vi": "Họ sẽ đàm phán hợp đồng mới vào tuần tới."
+        }
+      ],
+      "collocations": [
+        "negotiate a contract",
+        "negotiate terms"
+      ]
+    },
+    {
+      "id": "necessary-adj",
+      "word": "necessary",
+      "phonetic": {
+        "us": "/ˈnes.ə.ser.i/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "cần thiết; thiết yếu",
+          "definition_en": "needed for a particular purpose",
+          "synonyms": [
+            "essential",
+            "required"
+          ],
+          "antonyms": [
+            "unnecessary",
+            "optional"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "necessity",
+          "pos": "n",
+          "meaning_vi": "sự cần thiết"
+        },
+        {
+          "word": "necessarily",
+          "pos": "adv",
+          "meaning_vi": "tất yếu"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please bring all necessary documents to the interview.",
+          "vi": "Vui lòng mang theo tất cả giấy tờ cần thiết đến buổi phỏng vấn."
+        }
+      ],
+      "collocations": [
+        "necessary documents",
+        "when necessary"
+      ]
+    },
+    {
+      "id": "notice-nv",
+      "word": "notice",
+      "phonetic": {
+        "us": "/ˈnoʊ.t̬ɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thông báo; sự chú ý",
+          "definition_en": "information or a formal announcement; attention",
+          "synonyms": [
+            "announcement",
+            "notification"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "nhận thấy; chú ý",
+          "definition_en": "to see or become aware of something",
+          "synonyms": [
+            "observe",
+            "see"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TIME",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees received notice of the schedule change.",
+          "vi": "Nhân viên đã nhận được thông báo về việc thay đổi lịch."
+        }
+      ],
+      "collocations": [
+        "give notice",
+        "public notice",
+        "notice a change"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "letter": "U",
+  "words": [
+    {
+      "id": "update-nv",
+      "word": "update",
+      "phonetic": {
+        "us": "/ʌpˈdeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "cập nhật; làm mới",
+          "definition_en": "to make something more recent or current",
+          "synonyms": [
+            "revise",
+            "refresh"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "meaning_vi": "bản cập nhật; thông tin mới",
+          "definition_en": "the latest information about a situation",
+          "synonyms": [
+            "revision",
+            "progress report"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "updated",
+          "pos": "adj",
+          "meaning_vi": "đã cập nhật"
+        },
+        {
+          "word": "up-to-date",
+          "pos": "adj",
+          "meaning_vi": "cập nhật"
+        }
+      ],
+      "verb_forms": {
+        "v1": "update",
+        "vs_es": "updates",
+        "v2": "updated",
+        "v3": "updated",
+        "ving": "updating"
+      },
+      "examples": [
+        {
+          "en": "Please update your contact information.",
+          "vi": "Vui lòng cập nhật thông tin liên hệ."
+        }
+      ],
+      "collocations": [
+        "update a record",
+        "software update"
+      ]
+    },
+    {
+      "id": "urgent-adj",
+      "word": "urgent",
+      "phonetic": {
+        "us": "/ˈɝː.dʒənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "khẩn cấp; cấp bách",
+          "definition_en": "requiring immediate attention or action",
+          "synonyms": [
+            "pressing",
+            "critical"
+          ],
+          "antonyms": [
+            "nonurgent"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TIME",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "urgently",
+          "pos": "adv",
+          "meaning_vi": "một cách khẩn cấp"
+        },
+        {
+          "word": "urgency",
+          "pos": "n",
+          "meaning_vi": "tính cấp bách"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please respond to this urgent request immediately.",
+          "vi": "Vui lòng phản hồi yêu cầu khẩn cấp này ngay lập tức."
+        }
+      ],
+      "collocations": [
+        "urgent matter",
+        "urgent request"
+      ]
+    },
+    {
+      "id": "utility-n",
+      "word": "utility",
+      "phonetic": {
+        "us": "/juːˈtɪl.ə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dịch vụ tiện ích; tính hữu dụng",
+          "definition_en": "a service such as water or electricity; usefulness",
+          "synonyms": [
+            "service",
+            "usefulness"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "FINANCE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Utility bills are paid at the end of each month.",
+          "vi": "Hóa đơn dịch vụ tiện ích được thanh toán vào cuối mỗi tháng."
+        }
+      ],
+      "collocations": [
+        "utility bill",
+        "public utility"
+      ]
+    }
+  ]
+}

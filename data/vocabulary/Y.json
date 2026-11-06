@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "letter": "Y",
+  "words": [
+    {
+      "id": "yearly-adjadv",
+      "word": "yearly",
+      "phonetic": {
+        "us": "/ˈjɪr.li/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "hằng năm",
+          "definition_en": "happening once every year",
+          "synonyms": [
+            "annual"
+          ],
+          "antonyms": [
+            "monthly",
+            "weekly"
+          ]
+        },
+        {
+          "pos": "adv",
+          "meaning_vi": "mỗi năm",
+          "definition_en": "once a year",
+          "synonyms": [
+            "annually"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company publishes a yearly financial report.",
+          "vi": "Công ty công bố báo cáo tài chính hằng năm."
+        }
+      ],
+      "collocations": [
+        "yearly review",
+        "yearly salary"
+      ]
+    },
+    {
+      "id": "yield-nv",
+      "word": "yield",
+      "phonetic": {
+        "us": "/jiːld/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "mang lại; tạo ra; nhường",
+          "definition_en": "to produce a result or give way to someone",
+          "synonyms": [
+            "produce",
+            "generate"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "meaning_vi": "sản lượng; lợi suất",
+          "definition_en": "the amount produced or the return on an investment",
+          "synonyms": [
+            "output",
+            "return"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "yield",
+        "vs_es": "yields",
+        "v2": "yielded",
+        "v3": "yielded",
+        "ving": "yielding"
+      },
+      "examples": [
+        {
+          "en": "The investment is expected to yield a steady return.",
+          "vi": "Khoản đầu tư dự kiến mang lại lợi nhuận ổn định."
+        }
+      ],
+      "collocations": [
+        "yield a profit",
+        "annual yield"
+      ]
+    },
+    {
+      "id": "year-n",
+      "word": "year",
+      "phonetic": {
+        "us": "/jɪr/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "năm",
+          "definition_en": "a period of twelve months",
+          "synonyms": [
+            "twelve months"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company was founded ten years ago.",
+          "vi": "Công ty được thành lập cách đây mười năm."
+        }
+      ],
+      "collocations": [
+        "fiscal year",
+        "calendar year",
+        "year-end"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "letter": "M",
+  "words": [
+    {
+      "id": "maintain-v",
+      "word": "maintain",
+      "phonetic": {
+        "us": "/meɪnˈteɪn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "duy trì; bảo trì; giữ gìn",
+          "definition_en": "to keep something in good condition or at the same level",
+          "synonyms": [
+            "preserve",
+            "keep"
+          ],
+          "antonyms": [
+            "neglect"
+          ]
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "maintenance",
+          "pos": "n",
+          "meaning_vi": "sự bảo trì"
+        },
+        {
+          "word": "maintainable",
+          "pos": "adj",
+          "meaning_vi": "có thể bảo trì"
+        }
+      ],
+      "verb_forms": {
+        "v1": "maintain",
+        "vs_es": "maintains",
+        "v2": "maintained",
+        "v3": "maintained",
+        "ving": "maintaining"
+      },
+      "examples": [
+        {
+          "en": "The technician maintains the computer network.",
+          "vi": "Kỹ thuật viên bảo trì mạng máy tính."
+        }
+      ],
+      "collocations": [
+        "maintain equipment",
+        "maintain a relationship"
+      ]
+    },
+    {
+      "id": "merchandise-nv",
+      "word": "merchandise",
+      "phonetic": {
+        "us": "/ˈmɝː.tʃən.daɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hàng hóa; sản phẩm thương mại",
+          "definition_en": "goods that are bought and sold",
+          "synonyms": [
+            "goods",
+            "products"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "quảng bá hoặc kinh doanh hàng hóa",
+          "definition_en": "to promote or sell products",
+          "synonyms": [
+            "market",
+            "promote"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "MARKETING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The store received new merchandise this morning.",
+          "vi": "Cửa hàng đã nhận hàng hóa mới sáng nay."
+        }
+      ],
+      "collocations": [
+        "display merchandise",
+        "merchandise inventory"
+      ]
+    },
+    {
+      "id": "monthly-adjadv",
+      "word": "monthly",
+      "phonetic": {
+        "us": "/ˈmʌnθ.li/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "hằng tháng",
+          "definition_en": "happening or produced once a month",
+          "synonyms": [
+            "per-month"
+          ],
+          "antonyms": [
+            "daily",
+            "weekly"
+          ]
+        },
+        {
+          "pos": "adv",
+          "meaning_vi": "mỗi tháng",
+          "definition_en": "once every month",
+          "synonyms": [
+            "once a month"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "FINANCE",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "month",
+          "pos": "n",
+          "meaning_vi": "tháng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team holds a monthly review meeting.",
+          "vi": "Nhóm tổ chức cuộc họp đánh giá hằng tháng."
+        }
+      ],
+      "collocations": [
+        "monthly report",
+        "monthly payment"
+      ]
+    },
+    {
+      "id": "minute-n",
+      "word": "minute",
+      "phonetic": {
+        "us": "/ˈmɪn.ɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phút; biên bản cuộc họp (số nhiều: minutes)",
+          "definition_en": "a period of 60 seconds; an official written record of a meeting",
+          "synonyms": [
+            "moment",
+            "meeting record"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "MEETING",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The meeting will begin in five minutes.",
+          "vi": "Cuộc họp sẽ bắt đầu sau năm phút."
+        }
+      ],
+      "collocations": [
+        "meeting minutes",
+        "in a minute",
+        "minute hand"
+      ]
+    },
+    {
+      "id": "month-n",
+      "word": "month",
+      "phonetic": {
+        "us": "/mʌnθ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tháng",
+          "definition_en": "one of the twelve named periods into which a year is divided",
+          "synonyms": [
+            "calendar month"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The invoice must be paid within one month.",
+          "vi": "Hóa đơn phải được thanh toán trong vòng một tháng."
+        }
+      ],
+      "collocations": [
+        "next month",
+        "monthly report",
+        "per month"
+      ]
+    },
+    {
+      "id": "monday-n",
+      "word": "Monday",
+      "phonetic": {
+        "us": "/ˈmʌn.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Thứ Hai",
+          "definition_en": "the day of the week after Sunday and before Tuesday",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The report is due on Monday.",
+          "vi": "Báo cáo đến hạn vào thứ Hai."
+        }
+      ],
+      "collocations": [
+        "next Monday",
+        "Monday morning"
+      ]
+    }
+  ]
+}

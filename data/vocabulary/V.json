@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "letter": "V",
+  "words": [
+    {
+      "id": "vacancy-n",
+      "word": "vacancy",
+      "phonetic": {
+        "us": "/ˈveɪ.kən.si/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vị trí tuyển dụng; chỗ trống",
+          "definition_en": "a job that is available or an empty space",
+          "synonyms": [
+            "opening",
+            "job opening"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "vacant",
+          "pos": "adj",
+          "meaning_vi": "còn trống"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "There are currently two vacancies in the sales department.",
+          "vi": "Hiện có hai vị trí tuyển dụng trong phòng kinh doanh."
+        }
+      ],
+      "collocations": [
+        "job vacancy",
+        "fill a vacancy"
+      ]
+    },
+    {
+      "id": "vendor-n",
+      "word": "vendor",
+      "phonetic": {
+        "us": "/ˈven.dɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà cung cấp; người bán hàng",
+          "definition_en": "a person or company that sells goods or services",
+          "synonyms": [
+            "supplier",
+            "seller"
+          ],
+          "antonyms": [
+            "buyer"
+          ]
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The vendor will provide technical support.",
+          "vi": "Nhà cung cấp sẽ cung cấp hỗ trợ kỹ thuật."
+        }
+      ],
+      "collocations": [
+        "software vendor",
+        "approved vendor"
+      ]
+    },
+    {
+      "id": "verify-v",
+      "word": "verify",
+      "phonetic": {
+        "us": "/ˈver.ə.faɪ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "xác minh; kiểm chứng",
+          "definition_en": "to check that something is true or accurate",
+          "synonyms": [
+            "confirm",
+            "validate"
+          ],
+          "antonyms": [
+            "falsify"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TECHNOLOGY",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "verification",
+          "pos": "n",
+          "meaning_vi": "sự xác minh"
+        },
+        {
+          "word": "verifiable",
+          "pos": "adj",
+          "meaning_vi": "có thể xác minh"
+        }
+      ],
+      "verb_forms": {
+        "v1": "verify",
+        "vs_es": "verifies",
+        "v2": "verified",
+        "v3": "verified",
+        "ving": "verifying"
+      },
+      "examples": [
+        {
+          "en": "Please verify the information before submitting the form.",
+          "vi": "Vui lòng xác minh thông tin trước khi gửi biểu mẫu."
+        }
+      ],
+      "collocations": [
+        "verify information",
+        "verify an identity"
+      ]
+    }
+  ]
+}

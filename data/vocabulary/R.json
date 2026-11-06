@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "letter": "R",
+  "words": [
+    {
+      "id": "receipt-n",
+      "word": "receipt",
+      "phonetic": {
+        "us": "/rɪˈsiːt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "biên lai; giấy biên nhận",
+          "definition_en": "a document confirming that money or goods have been received",
+          "synonyms": [
+            "proof of payment",
+            "acknowledgment"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Keep your receipt in case you need a refund.",
+          "vi": "Hãy giữ biên lai phòng khi bạn cần hoàn tiền."
+        }
+      ],
+      "collocations": [
+        "issue a receipt",
+        "proof of receipt"
+      ]
+    },
+    {
+      "id": "recruit-v",
+      "word": "recruit",
+      "phonetic": {
+        "us": "/rɪˈkruːt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tuyển dụng; chiêu mộ",
+          "definition_en": "to find and employ new people",
+          "synonyms": [
+            "hire",
+            "enlist"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "recruitment",
+          "pos": "n",
+          "meaning_vi": "sự tuyển dụng"
+        },
+        {
+          "word": "recruiter",
+          "pos": "n",
+          "meaning_vi": "nhà tuyển dụng"
+        }
+      ],
+      "verb_forms": {
+        "v1": "recruit",
+        "vs_es": "recruits",
+        "v2": "recruited",
+        "v3": "recruited",
+        "ving": "recruiting"
+      },
+      "examples": [
+        {
+          "en": "The firm is recruiting experienced accountants.",
+          "vi": "Công ty đang tuyển kế toán viên có kinh nghiệm."
+        }
+      ],
+      "collocations": [
+        "recruit staff",
+        "recruitment process"
+      ]
+    },
+    {
+      "id": "reservation-n",
+      "word": "reservation",
+      "phonetic": {
+        "us": "/ˌrez.ɚˈveɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự đặt chỗ; đặt phòng",
+          "definition_en": "an arrangement to keep a seat, room, or place for someone",
+          "synonyms": [
+            "booking",
+            "appointment"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "CUSTOMER",
+        "TIME"
+      ],
+      "word_family": [
+        {
+          "word": "reserve",
+          "pos": "v",
+          "meaning_vi": "đặt trước; dành riêng"
+        },
+        {
+          "word": "reserved",
+          "pos": "adj",
+          "meaning_vi": "đã đặt trước"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "I would like to make a reservation for two people.",
+          "vi": "Tôi muốn đặt chỗ cho hai người."
+        }
+      ],
+      "collocations": [
+        "make a reservation",
+        "hotel reservation"
+      ]
+    },
+    {
+      "id": "revenue-n",
+      "word": "revenue",
+      "phonetic": {
+        "us": "/ˈrev.ə.nuː/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "doanh thu",
+          "definition_en": "income generated from normal business activities",
+          "synonyms": [
+            "income",
+            "proceeds"
+          ],
+          "antonyms": [
+            "expense",
+            "loss"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Online sales account for 30 percent of annual revenue.",
+          "vi": "Doanh số trực tuyến chiếm 30 phần trăm doanh thu hằng năm."
+        }
+      ],
+      "collocations": [
+        "annual revenue",
+        "revenue growth"
+      ]
+    }
+  ]
+}

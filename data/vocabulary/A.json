@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "letter": "A",
+  "words": [
+    {
+      "id": "accept-v",
+      "word": "accept",
+      "phonetic": {
+        "us": "/əkˈsept/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chấp nhận; đồng ý nhận",
+          "definition_en": "to agree to take or receive something",
+          "synonyms": [
+            "receive",
+            "approve"
+          ],
+          "antonyms": [
+            "reject",
+            "refuse"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "acceptable",
+          "pos": "adj",
+          "meaning_vi": "có thể chấp nhận"
+        },
+        {
+          "word": "acceptance",
+          "pos": "n",
+          "meaning_vi": "sự chấp nhận"
+        }
+      ],
+      "verb_forms": {
+        "v1": "accept",
+        "vs_es": "accepts",
+        "v2": "accepted",
+        "v3": "accepted",
+        "ving": "accepting"
+      },
+      "examples": [
+        {
+          "en": "We accept credit cards.",
+          "vi": "Chúng tôi chấp nhận thẻ tín dụng."
+        }
+      ],
+      "collocations": [
+        "accept an offer",
+        "accept payment"
+      ]
+    },
+    {
+      "id": "access-nv",
+      "word": "access",
+      "phonetic": {
+        "us": "/ˈæk.ses/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quyền truy cập; lối vào",
+          "definition_en": "the right or opportunity to use or enter something",
+          "synonyms": [
+            "entry",
+            "admission"
+          ],
+          "antonyms": [
+            "restriction"
+          ]
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "truy cập; tiếp cận",
+          "definition_en": "to reach or use information or a place",
+          "synonyms": [
+            "reach",
+            "enter"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "accessible",
+          "pos": "adj",
+          "meaning_vi": "có thể tiếp cận"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees can access the system remotely.",
+          "vi": "Nhân viên có thể truy cập hệ thống từ xa."
+        }
+      ],
+      "collocations": [
+        "access a file",
+        "Internet access"
+      ]
+    },
+    {
+      "id": "accommodation-n",
+      "word": "accommodation",
+      "phonetic": {
+        "us": "/əˌkɑː.məˈdeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chỗ ở; nơi lưu trú",
+          "definition_en": "a place where someone can stay or live",
+          "synonyms": [
+            "lodging",
+            "housing"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The hotel provides accommodation for conference guests.",
+          "vi": "Khách sạn cung cấp chỗ ở cho khách dự hội nghị."
+        }
+      ],
+      "collocations": [
+        "hotel accommodation",
+        "accommodation costs"
+      ]
+    },
+    {
+      "id": "appointment-n",
+      "word": "appointment",
+      "phonetic": {
+        "us": "/əˈpɔɪnt.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cuộc hẹn; lịch hẹn",
+          "definition_en": "an arrangement to meet someone at a particular time",
+          "synonyms": [
+            "meeting",
+            "engagement"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "OFFICE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "I have an appointment with the supplier at 10 a.m.",
+          "vi": "Tôi có cuộc hẹn với nhà cung cấp lúc 10 giờ sáng."
+        }
+      ],
+      "collocations": [
+        "make an appointment",
+        "cancel an appointment"
+      ]
+    },
+    {
+      "id": "always-adv",
+      "word": "always",
+      "phonetic": {
+        "us": "/ˈɔːl.weɪz/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "luôn luôn",
+          "definition_en": "at all times; on every occasion",
+          "synonyms": [
+            "constantly",
+            "continually"
+          ],
+          "antonyms": [
+            "never"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "She is always on time for meetings.",
+          "vi": "Cô ấy luôn đúng giờ trong các cuộc họp."
+        }
+      ],
+      "collocations": [
+        "almost always",
+        "as always"
+      ]
+    }
+  ]
+}

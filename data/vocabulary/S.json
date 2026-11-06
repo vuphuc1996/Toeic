@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "letter": "S",
+  "words": [
+    {
+      "id": "schedule-nv",
+      "word": "schedule",
+      "phonetic": {
+        "us": "/ˈskedʒ.uːl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lịch trình; thời gian biểu",
+          "definition_en": "a plan that lists the times when events or tasks will happen",
+          "synonyms": [
+            "timetable",
+            "agenda"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "lên lịch; sắp xếp thời gian",
+          "definition_en": "to plan for something to happen at a particular time",
+          "synonyms": [
+            "plan",
+            "arrange"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "OFFICE",
+        "MEETING"
+      ],
+      "word_family": [
+        {
+          "word": "scheduled",
+          "pos": "adj",
+          "meaning_vi": "được lên lịch"
+        },
+        {
+          "word": "scheduling",
+          "pos": "n",
+          "meaning_vi": "việc sắp lịch"
+        }
+      ],
+      "verb_forms": {
+        "v1": "schedule",
+        "vs_es": "schedules",
+        "v2": "scheduled",
+        "v3": "scheduled",
+        "ving": "scheduling"
+      },
+      "examples": [
+        {
+          "en": "The manager scheduled a meeting for Monday.",
+          "vi": "Quản lý đã lên lịch cuộc họp vào thứ Hai."
+        }
+      ],
+      "collocations": [
+        "work schedule",
+        "schedule a meeting",
+        "ahead of schedule"
+      ]
+    },
+    {
+      "id": "submit-v",
+      "word": "submit",
+      "phonetic": {
+        "us": "/səbˈmɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "nộp; trình; đệ trình",
+          "definition_en": "to give a document or proposal to someone for consideration",
+          "synonyms": [
+            "present",
+            "file"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "submission",
+          "pos": "n",
+          "meaning_vi": "sự đệ trình; bài nộp"
+        }
+      ],
+      "verb_forms": {
+        "v1": "submit",
+        "vs_es": "submits",
+        "v2": "submitted",
+        "v3": "submitted",
+        "ving": "submitting"
+      },
+      "examples": [
+        {
+          "en": "Please submit your application before the deadline.",
+          "vi": "Vui lòng nộp đơn trước hạn chót."
+        }
+      ],
+      "collocations": [
+        "submit a report",
+        "submit an application"
+      ]
+    },
+    {
+      "id": "supplier-n",
+      "word": "supplier",
+      "phonetic": {
+        "us": "/səˈplaɪ.ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà cung cấp",
+          "definition_en": "a person or company that provides goods or services",
+          "synonyms": [
+            "provider",
+            "vendor"
+          ],
+          "antonyms": [
+            "customer"
+          ]
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "BUSINESS",
+        "SHIPPING"
+      ],
+      "word_family": [
+        {
+          "word": "supply",
+          "pos": "n/v",
+          "meaning_vi": "nguồn cung; cung cấp"
+        },
+        {
+          "word": "supplies",
+          "pos": "n",
+          "meaning_vi": "vật tư"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We are looking for a reliable office supplies supplier.",
+          "vi": "Chúng tôi đang tìm nhà cung cấp vật tư văn phòng đáng tin cậy."
+        }
+      ],
+      "collocations": [
+        "major supplier",
+        "approved supplier"
+      ]
+    },
+    {
+      "id": "shipment-n",
+      "word": "shipment",
+      "phonetic": {
+        "us": "/ˈʃɪp.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lô hàng; việc vận chuyển hàng",
+          "definition_en": "a quantity of goods sent from one place to another",
+          "synonyms": [
+            "consignment",
+            "cargo"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "TRANSPORT",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "ship",
+          "pos": "v/n",
+          "meaning_vi": "vận chuyển bằng tàu; con tàu"
+        },
+        {
+          "word": "shipping",
+          "pos": "n",
+          "meaning_vi": "hoạt động vận chuyển"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The shipment is expected to arrive tomorrow.",
+          "vi": "Lô hàng dự kiến sẽ đến vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "track a shipment",
+        "shipment status"
+      ]
+    },
+    {
+      "id": "saturday-n",
+      "word": "Saturday",
+      "phonetic": {
+        "us": "/ˈsæt̬.ɚ.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Thứ Bảy",
+          "definition_en": "the day of the week after Friday and before Sunday",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The language course is held on Saturday mornings.",
+          "vi": "Khóa học ngôn ngữ được tổ chức vào sáng thứ Bảy."
+        }
+      ],
+      "collocations": [
+        "Saturday morning"
+      ]
+    },
+    {
+      "id": "sunday-n",
+      "word": "Sunday",
+      "phonetic": {
+        "us": "/ˈsʌn.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Chủ Nhật",
+          "definition_en": "the day of the week after Saturday and before Monday",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The hotel restaurant is open on Sunday.",
+          "vi": "Nhà hàng khách sạn mở cửa vào Chủ Nhật."
+        }
+      ],
+      "collocations": [
+        "Sunday afternoon"
+      ]
+    }
+  ]
+}
