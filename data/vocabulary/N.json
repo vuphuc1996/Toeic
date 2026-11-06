@@ -3,6 +3,59 @@
   "letter": "N",
   "words": [
     {
+      "id": "necessary-adj",
+      "word": "necessary",
+      "phonetic": {
+        "us": "/ˈnes.ə.ser.i/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "cần thiết; thiết yếu",
+          "definition_en": "needed for a particular purpose",
+          "synonyms": [
+            "essential",
+            "required"
+          ],
+          "antonyms": [
+            "unnecessary",
+            "optional"
+          ],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "necessity",
+          "pos": "n",
+          "meaning_vi": "sự cần thiết"
+        },
+        {
+          "word": "necessarily",
+          "pos": "adv",
+          "meaning_vi": "tất yếu"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please bring all necessary documents to the interview.",
+          "vi": "Vui lòng mang theo tất cả giấy tờ cần thiết đến buổi phỏng vấn."
+        }
+      ],
+      "collocations": [
+        "necessary documents",
+        "when necessary"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
       "id": "negotiate-v",
       "word": "negotiate",
       "phonetic": {
@@ -17,7 +70,8 @@
             "bargain",
             "discuss"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B2"
         }
       ],
       "topics": [
@@ -53,56 +107,90 @@
       "collocations": [
         "negotiate a contract",
         "negotiate terms"
-      ]
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "necessary-adj",
-      "word": "necessary",
+      "id": "negotiation-n",
+      "word": "negotiation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈnes.ə.ser.i/"
+        "us": "/nɪˌɡoʊ.ʃiˈeɪ.ʃən/"
       },
       "senses": [
         {
-          "pos": "adj",
-          "meaning_vi": "cần thiết; thiết yếu",
-          "definition_en": "needed for a particular purpose",
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "cuộc đàm phán; sự thương lượng",
+          "definition_en": "a discussion intended to reach an agreement",
           "synonyms": [
-            "essential",
-            "required"
+            "bargaining",
+            "discussion"
           ],
-          "antonyms": [
-            "unnecessary",
-            "optional"
-          ]
+          "antonyms": []
         }
       ],
       "topics": [
-        "DAILY",
-        "OFFICE",
-        "BUSINESS"
+        "BUSINESS",
+        "PURCHASING"
       ],
-      "word_family": [
-        {
-          "word": "necessity",
-          "pos": "n",
-          "meaning_vi": "sự cần thiết"
-        },
-        {
-          "word": "necessarily",
-          "pos": "adv",
-          "meaning_vi": "tất yếu"
-        }
-      ],
+      "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please bring all necessary documents to the interview.",
-          "vi": "Vui lòng mang theo tất cả giấy tờ cần thiết đến buổi phỏng vấn."
+          "en": "The negotiations continued for three days.",
+          "vi": "Cuộc đàm phán kéo dài ba ngày."
         }
       ],
       "collocations": [
-        "necessary documents",
-        "when necessary"
+        "contract negotiations",
+        "salary negotiation"
+      ]
+    },
+    {
+      "id": "network-v",
+      "word": "network",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈnet.wɝːk/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "mạng lưới; kết nối",
+          "definition_en": "a group of connected people or systems",
+          "synonyms": [
+            "system",
+            "connection"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "network",
+        "vs_es": "networks",
+        "v2": "networked",
+        "v3": "networked",
+        "ving": "networking"
+      },
+      "examples": [
+        {
+          "en": "The office network is temporarily unavailable.",
+          "vi": "Mạng văn phòng tạm thời không khả dụng."
+        }
+      ],
+      "collocations": [
+        "computer network",
+        "professional network"
       ]
     },
     {
@@ -120,7 +208,8 @@
             "announcement",
             "notification"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         },
         {
           "pos": "v",
@@ -130,7 +219,8 @@
             "observe",
             "see"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -150,6 +240,54 @@
         "give notice",
         "public notice",
         "notice a change"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "notify-v",
+      "word": "notify",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈnoʊ.t̬ə.faɪ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "thông báo; báo cho biết",
+          "definition_en": "to formally tell someone about something",
+          "synonyms": [
+            "inform",
+            "announce"
+          ],
+          "antonyms": [
+            "conceal"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "notify",
+        "vs_es": "notifies",
+        "v2": "notified",
+        "v3": "notified",
+        "ving": "notifying"
+      },
+      "examples": [
+        {
+          "en": "Please notify the supervisor of any changes.",
+          "vi": "Vui lòng thông báo cho giám sát viên về mọi thay đổi."
+        }
+      ],
+      "collocations": [
+        "notify customers",
+        "notify in advance"
       ]
     }
   ]

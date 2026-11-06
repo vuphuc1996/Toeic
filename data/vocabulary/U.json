@@ -3,6 +3,170 @@
   "letter": "U",
   "words": [
     {
+      "id": "unable-adj",
+      "word": "unable",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ʌnˈeɪ.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "không thể; không có khả năng",
+          "definition_en": "not having the ability or opportunity to do something",
+          "synonyms": [
+            "incapable",
+            "unable to"
+          ],
+          "antonyms": [
+            "able"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We are unable to process the request today.",
+          "vi": "Hôm nay chúng tôi không thể xử lý yêu cầu."
+        }
+      ],
+      "collocations": [
+        "unable to attend",
+        "unable to access"
+      ]
+    },
+    {
+      "id": "undertake-v",
+      "word": "undertake",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌʌn.dɚˈteɪk/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "đảm nhận; cam kết thực hiện",
+          "definition_en": "to accept responsibility for doing something",
+          "synonyms": [
+            "assume",
+            "carry out"
+          ],
+          "antonyms": [
+            "avoid"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "undertake",
+        "vs_es": "undertakes",
+        "v2": "undertook",
+        "v3": "undertaken",
+        "ving": "undertaking"
+      },
+      "examples": [
+        {
+          "en": "The contractor will undertake the renovation work.",
+          "vi": "Nhà thầu sẽ đảm nhận công việc cải tạo."
+        }
+      ],
+      "collocations": [
+        "undertake a project",
+        "undertake responsibility"
+      ]
+    },
+    {
+      "id": "uniform-n",
+      "word": "uniform",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈjuː.nə.fɔːrm/"
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "cefr_level": "A2",
+          "meaning_vi": "đồng phục; đồng nhất",
+          "definition_en": "special clothing worn by members of a group",
+          "synonyms": [
+            "work clothes",
+            "standardized"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees must wear a clean uniform.",
+          "vi": "Nhân viên phải mặc đồng phục sạch sẽ."
+        }
+      ],
+      "collocations": [
+        "staff uniform",
+        "uniform policy"
+      ]
+    },
+    {
+      "id": "unique-adj",
+      "word": "unique",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/juːˈniːk/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "độc đáo; duy nhất",
+          "definition_en": "being the only one of its kind",
+          "synonyms": [
+            "distinctive",
+            "one-of-a-kind"
+          ],
+          "antonyms": [
+            "common"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The product has a unique design.",
+          "vi": "Sản phẩm có thiết kế độc đáo."
+        }
+      ],
+      "collocations": [
+        "unique feature",
+        "unique opportunity"
+      ]
+    },
+    {
       "id": "update-nv",
       "word": "update",
       "phonetic": {
@@ -17,7 +181,8 @@
             "revise",
             "refresh"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         },
         {
           "pos": "n",
@@ -27,7 +192,8 @@
             "revision",
             "progress report"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -63,6 +229,54 @@
       "collocations": [
         "update a record",
         "software update"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "upgrade-v",
+      "word": "upgrade",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ʌpˈɡreɪd/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "nâng cấp",
+          "definition_en": "to improve equipment or a system",
+          "synonyms": [
+            "improve",
+            "enhance"
+          ],
+          "antonyms": [
+            "downgrade"
+          ]
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "upgrade",
+        "vs_es": "upgrades",
+        "v2": "upgraded",
+        "v3": "upgraded",
+        "ving": "upgrading"
+      },
+      "examples": [
+        {
+          "en": "The company plans to upgrade its network.",
+          "vi": "Công ty dự định nâng cấp mạng lưới."
+        }
+      ],
+      "collocations": [
+        "system upgrade",
+        "upgrade a service"
       ]
     },
     {
@@ -82,7 +296,8 @@
           ],
           "antonyms": [
             "nonurgent"
-          ]
+          ],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -112,7 +327,9 @@
       "collocations": [
         "urgent matter",
         "urgent request"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "utility-n",
@@ -129,7 +346,8 @@
             "service",
             "usefulness"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -148,7 +366,9 @@
       "collocations": [
         "utility bill",
         "public utility"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     }
   ]
 }

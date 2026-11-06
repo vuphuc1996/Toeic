@@ -3,6 +3,89 @@
   "letter": "B",
   "words": [
     {
+      "id": "balance-v",
+      "word": "balance",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈbæl.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "số dư; cân bằng",
+          "definition_en": "the amount of money in an account or a stable state",
+          "synonyms": [
+            "remainder",
+            "equilibrium"
+          ],
+          "antonyms": [
+            "imbalance"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "balance",
+        "vs_es": "balances",
+        "v2": "balanced",
+        "v3": "balanced",
+        "ving": "balancing"
+      },
+      "examples": [
+        {
+          "en": "Please check the balance before making a transfer.",
+          "vi": "Vui lòng kiểm tra số dư trước khi chuyển khoản."
+        }
+      ],
+      "collocations": [
+        "account balance",
+        "work-life balance"
+      ]
+    },
+    {
+      "id": "bank-n",
+      "word": "bank",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/bæŋk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "ngân hàng",
+          "definition_en": "an organization that keeps and lends money",
+          "synonyms": [
+            "financial institution"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The payment was sent to the bank yesterday.",
+          "vi": "Khoản thanh toán đã được gửi đến ngân hàng hôm qua."
+        }
+      ],
+      "collocations": [
+        "open a bank account",
+        "bank transfer"
+      ]
+    },
+    {
       "id": "benefit-nv",
       "word": "benefit",
       "phonetic": {
@@ -20,7 +103,8 @@
           "antonyms": [
             "drawback",
             "disadvantage"
-          ]
+          ],
+          "cefr_level": "B1"
         },
         {
           "pos": "v",
@@ -30,7 +114,8 @@
             "gain",
             "profit"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -54,6 +139,139 @@
       "collocations": [
         "employee benefits",
         "benefit from training"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "bill-v",
+      "word": "bill",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/bɪl/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A1",
+          "meaning_vi": "hóa đơn; tính tiền",
+          "definition_en": "a statement of money owed for goods or services",
+          "synonyms": [
+            "invoice",
+            "statement"
+          ],
+          "antonyms": [
+            "payment"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "bill",
+        "vs_es": "bills",
+        "v2": "billed",
+        "v3": "billed",
+        "ving": "billing"
+      },
+      "examples": [
+        {
+          "en": "The hotel bill includes breakfast.",
+          "vi": "Hóa đơn khách sạn bao gồm bữa sáng."
+        }
+      ],
+      "collocations": [
+        "pay a bill",
+        "electricity bill"
+      ]
+    },
+    {
+      "id": "borrow-v",
+      "word": "borrow",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈbɑːr.oʊ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "mượn",
+          "definition_en": "to take something temporarily and return it later",
+          "synonyms": [
+            "loan"
+          ],
+          "antonyms": [
+            "lend"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "borrow",
+        "vs_es": "borrows",
+        "v2": "borrowed",
+        "v3": "borrowed",
+        "ving": "borrowing"
+      },
+      "examples": [
+        {
+          "en": "May I borrow your calculator?",
+          "vi": "Tôi có thể mượn máy tính của bạn không?"
+        }
+      ],
+      "collocations": [
+        "borrow money",
+        "borrow equipment"
+      ]
+    },
+    {
+      "id": "branch-n",
+      "word": "branch",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/bræntʃ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "chi nhánh; nhánh",
+          "definition_en": "a local office of a large organization",
+          "synonyms": [
+            "office",
+            "division"
+          ],
+          "antonyms": [
+            "headquarters"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank opened a new branch downtown.",
+          "vi": "Ngân hàng mở một chi nhánh mới ở trung tâm."
+        }
+      ],
+      "collocations": [
+        "branch office",
+        "local branch"
       ]
     },
     {
@@ -71,7 +289,8 @@
             "leaflet",
             "pamphlet"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -89,7 +308,9 @@
       "collocations": [
         "product brochure",
         "travel brochure"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "budget-nv",
@@ -106,7 +327,8 @@
             "funds",
             "allowance"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         },
         {
           "pos": "v",
@@ -115,7 +337,8 @@
           "synonyms": [
             "allocate"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -140,6 +363,48 @@
         "annual budget",
         "budget proposal",
         "within budget"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "buyer-n",
+      "word": "buyer",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈbaɪ.ər/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "người mua; bên mua",
+          "definition_en": "a person or company that purchases something",
+          "synonyms": [
+            "purchaser",
+            "customer"
+          ],
+          "antonyms": [
+            "seller"
+          ]
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The buyer requested a delivery date.",
+          "vi": "Người mua yêu cầu ngày giao hàng."
+        }
+      ],
+      "collocations": [
+        "potential buyer",
+        "buyer information"
       ]
     }
   ]

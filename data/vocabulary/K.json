@@ -3,6 +3,46 @@
   "letter": "K",
   "words": [
     {
+      "id": "key-adj",
+      "word": "key",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kiː/"
+      },
+      "senses": [
+        {
+          "pos": "adj/n",
+          "cefr_level": "A1",
+          "meaning_vi": "chủ chốt; chìa khóa",
+          "definition_en": "very important or a tool for opening a lock",
+          "synonyms": [
+            "main",
+            "essential"
+          ],
+          "antonyms": [
+            "minor"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customer satisfaction is a key priority.",
+          "vi": "Sự hài lòng của khách hàng là ưu tiên chủ chốt."
+        }
+      ],
+      "collocations": [
+        "key factor",
+        "key information"
+      ]
+    },
+    {
       "id": "keynote-n",
       "word": "keynote",
       "phonetic": {
@@ -17,7 +57,8 @@
             "main address",
             "central theme"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B2"
         }
       ],
       "topics": [
@@ -35,7 +76,9 @@
       "collocations": [
         "keynote speaker",
         "keynote address"
-      ]
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "knowledge-n",
@@ -54,7 +97,8 @@
           ],
           "antonyms": [
             "ignorance"
-          ]
+          ],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -84,7 +128,9 @@
       "collocations": [
         "technical knowledge",
         "knowledge of English"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     }
   ]
 }

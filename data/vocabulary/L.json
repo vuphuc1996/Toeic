@@ -3,6 +3,88 @@
   "letter": "L",
   "words": [
     {
+      "id": "label-v",
+      "word": "label",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈleɪ.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "nhãn; dán nhãn",
+          "definition_en": "a piece of information attached to a product",
+          "synonyms": [
+            "tag",
+            "mark"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "label",
+        "vs_es": "labels",
+        "v2": "labeled",
+        "v3": "labeled",
+        "ving": "labeling"
+      },
+      "examples": [
+        {
+          "en": "Check the shipping label before dispatch.",
+          "vi": "Kiểm tra nhãn vận chuyển trước khi gửi."
+        }
+      ],
+      "collocations": [
+        "product label",
+        "label a package"
+      ]
+    },
+    {
+      "id": "labor-n",
+      "word": "labor",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈleɪ.bɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "lao động; nhân công",
+          "definition_en": "work, especially physical work, or workers as a group",
+          "synonyms": [
+            "workforce",
+            "work"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Labor costs increased this quarter.",
+          "vi": "Chi phí nhân công tăng trong quý này."
+        }
+      ],
+      "collocations": [
+        "labor costs",
+        "labor market"
+      ]
+    },
+    {
       "id": "launch-nv",
       "word": "launch",
       "phonetic": {
@@ -17,7 +99,8 @@
             "introduce",
             "initiate"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         },
         {
           "pos": "n",
@@ -27,7 +110,8 @@
             "release",
             "opening"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -52,6 +136,54 @@
       "collocations": [
         "product launch",
         "launch a campaign"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "lead-v",
+      "word": "lead",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/liːd/"
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "cefr_level": "B1",
+          "meaning_vi": "dẫn dắt; người dẫn đầu",
+          "definition_en": "to guide a group or be in the first position",
+          "synonyms": [
+            "guide",
+            "manage"
+          ],
+          "antonyms": [
+            "follow"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "lead",
+        "vs_es": "leads",
+        "v2": "led",
+        "v3": "led",
+        "ving": "leading"
+      },
+      "examples": [
+        {
+          "en": "She will lead the customer service team.",
+          "vi": "Cô ấy sẽ dẫn dắt đội chăm sóc khách hàng."
+        }
+      ],
+      "collocations": [
+        "lead a project",
+        "take the lead"
       ]
     },
     {
@@ -68,7 +200,8 @@
           "synonyms": [
             "rental agreement"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B2"
         },
         {
           "pos": "v",
@@ -77,7 +210,8 @@
           "synonyms": [
             "rent"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B2"
         }
       ],
       "topics": [
@@ -96,6 +230,270 @@
       "collocations": [
         "sign a lease",
         "lease agreement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "legal-adj",
+      "word": "legal",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈliː.ɡəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "hợp pháp; thuộc pháp lý",
+          "definition_en": "allowed by law or related to law",
+          "synonyms": [
+            "lawful",
+            "legitimate"
+          ],
+          "antonyms": [
+            "illegal"
+          ]
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The agreement requires legal review.",
+          "vi": "Thỏa thuận cần được bộ phận pháp lý xem xét."
+        }
+      ],
+      "collocations": [
+        "legal advice",
+        "legal requirement"
+      ]
+    },
+    {
+      "id": "lend-v",
+      "word": "lend",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/lend/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "cho mượn; cho vay",
+          "definition_en": "to give something temporarily expecting it back",
+          "synonyms": [
+            "loan",
+            "advance"
+          ],
+          "antonyms": [
+            "borrow"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "lend",
+        "vs_es": "lends",
+        "v2": "lent",
+        "v3": "lent",
+        "ving": "lending"
+      },
+      "examples": [
+        {
+          "en": "The bank agreed to lend the company money.",
+          "vi": "Ngân hàng đồng ý cho công ty vay tiền."
+        }
+      ],
+      "collocations": [
+        "lend money",
+        "lend a hand"
+      ]
+    },
+    {
+      "id": "license-v",
+      "word": "license",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈlaɪ.səns/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "giấy phép; cấp phép",
+          "definition_en": "official permission to do or use something",
+          "synonyms": [
+            "permit",
+            "authorization"
+          ],
+          "antonyms": [
+            "prohibition"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "license",
+        "vs_es": "licenses",
+        "v2": "licensed",
+        "v3": "licensed",
+        "ving": "licensing"
+      },
+      "examples": [
+        {
+          "en": "The software license expires in December.",
+          "vi": "Giấy phép phần mềm hết hạn vào tháng Mười Hai."
+        }
+      ],
+      "collocations": [
+        "business license",
+        "driver's license"
+      ]
+    },
+    {
+      "id": "limit-v",
+      "word": "limit",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈlɪm.ɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "giới hạn; hạn mức",
+          "definition_en": "the greatest amount or point allowed",
+          "synonyms": [
+            "maximum",
+            "restriction"
+          ],
+          "antonyms": [
+            "unlimited amount"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "limit",
+        "vs_es": "limits",
+        "v2": "limited",
+        "v3": "limited",
+        "ving": "limiting"
+      },
+      "examples": [
+        {
+          "en": "The company set a limit on travel expenses.",
+          "vi": "Công ty đặt giới hạn chi phí đi lại."
+        }
+      ],
+      "collocations": [
+        "spending limit",
+        "time limit"
+      ]
+    },
+    {
+      "id": "locate-v",
+      "word": "locate",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈloʊ.keɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "xác định vị trí; tìm thấy",
+          "definition_en": "to find the position of something",
+          "synonyms": [
+            "find",
+            "identify"
+          ],
+          "antonyms": [
+            "lose"
+          ]
+        }
+      ],
+      "topics": [
+        "TRANSPORT",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "locate",
+        "vs_es": "locates",
+        "v2": "located",
+        "v3": "located",
+        "ving": "locating"
+      },
+      "examples": [
+        {
+          "en": "The driver used GPS to locate the warehouse.",
+          "vi": "Tài xế dùng GPS để xác định vị trí nhà kho."
+        }
+      ],
+      "collocations": [
+        "locate a package",
+        "locate an office"
+      ]
+    },
+    {
+      "id": "logistics-n",
+      "word": "logistics",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ləˈdʒɪs.tɪks/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "hậu cần; quản lý luồng hàng",
+          "definition_en": "the planning and organization of moving goods and resources",
+          "synonyms": [
+            "distribution",
+            "supply management"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The logistics team tracks every shipment.",
+          "vi": "Đội hậu cần theo dõi từng lô hàng."
+        }
+      ],
+      "collocations": [
+        "logistics provider",
+        "logistics costs"
       ]
     },
     {
@@ -112,7 +510,8 @@
           "synonyms": [
             "baggage"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -130,7 +529,9 @@
       "collocations": [
         "carry-on luggage",
         "luggage allowance"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     }
   ]
 }

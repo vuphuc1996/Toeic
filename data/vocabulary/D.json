@@ -3,6 +3,143 @@
   "letter": "D",
   "words": [
     {
+      "id": "data-n",
+      "word": "data",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈdeɪ.t̬ə/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "dữ liệu",
+          "definition_en": "facts or information used for analysis",
+          "synonyms": [
+            "information",
+            "figures"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The survey data will be analyzed next week.",
+          "vi": "Dữ liệu khảo sát sẽ được phân tích vào tuần tới."
+        }
+      ],
+      "collocations": [
+        "data analysis",
+        "collect data"
+      ]
+    },
+    {
+      "id": "date-nv",
+      "word": "date",
+      "phonetic": {
+        "us": "/deɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ngày; ngày tháng",
+          "definition_en": "a particular day of a month or year",
+          "synonyms": [
+            "calendar date"
+          ],
+          "antonyms": [],
+          "cefr_level": "A1"
+        },
+        {
+          "pos": "n",
+          "meaning_vi": "cuộc hẹn hò",
+          "definition_en": "a social meeting with someone you are romantically interested in",
+          "synonyms": [
+            "appointment"
+          ],
+          "antonyms": [],
+          "cefr_level": "A1"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "ghi ngày tháng",
+          "definition_en": "to write the day, month, and year on something",
+          "synonyms": [
+            "mark"
+          ],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please write the date at the top of the form.",
+          "vi": "Vui lòng ghi ngày tháng ở đầu biểu mẫu."
+        }
+      ],
+      "collocations": [
+        "due date",
+        "date of birth",
+        "expiration date"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "day-n",
+      "word": "day",
+      "phonetic": {
+        "us": "/deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ngày; ban ngày",
+          "definition_en": "a period of 24 hours or the time when it is light",
+          "synonyms": [
+            "24-hour period"
+          ],
+          "antonyms": [
+            "night"
+          ],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The office is closed on public holidays.",
+          "vi": "Văn phòng đóng cửa vào các ngày nghỉ lễ."
+        }
+      ],
+      "collocations": [
+        "business day",
+        "day off",
+        "every day"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
       "id": "deadline-n",
       "word": "deadline",
       "phonetic": {
@@ -17,7 +154,8 @@
             "due date",
             "time limit"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -36,6 +174,146 @@
       "collocations": [
         "meet a deadline",
         "extend the deadline"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "decide-v",
+      "word": "decide",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/dɪˈsaɪd/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "quyết định",
+          "definition_en": "to choose after thinking about possibilities",
+          "synonyms": [
+            "choose",
+            "determine"
+          ],
+          "antonyms": [
+            "hesitate"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "decide",
+        "vs_es": "decides",
+        "v2": "decided",
+        "v3": "decided",
+        "ving": "deciding"
+      },
+      "examples": [
+        {
+          "en": "We need to decide which supplier to use.",
+          "vi": "Chúng ta cần quyết định sử dụng nhà cung cấp nào."
+        }
+      ],
+      "collocations": [
+        "decide on",
+        "decide to do something"
+      ]
+    },
+    {
+      "id": "delay-v",
+      "word": "delay",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/dɪˈleɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "sự chậm trễ; trì hoãn",
+          "definition_en": "a period of waiting or to make something late",
+          "synonyms": [
+            "postponement",
+            "hold-up"
+          ],
+          "antonyms": [
+            "advance"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "delay",
+        "vs_es": "delays",
+        "v2": "delayed",
+        "v3": "delayed",
+        "ving": "delaying"
+      },
+      "examples": [
+        {
+          "en": "Bad weather caused a delay in delivery.",
+          "vi": "Thời tiết xấu gây chậm trễ giao hàng."
+        }
+      ],
+      "collocations": [
+        "unexpected delay",
+        "delay a flight"
+      ]
+    },
+    {
+      "id": "deliver-v",
+      "word": "deliver",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/dɪˈlɪv.ər/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "giao; chuyển phát",
+          "definition_en": "to take goods or services to a person or place",
+          "synonyms": [
+            "bring",
+            "distribute"
+          ],
+          "antonyms": [
+            "collect"
+          ]
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "deliver",
+        "vs_es": "delivers",
+        "v2": "delivered",
+        "v3": "delivered",
+        "ving": "delivering"
+      },
+      "examples": [
+        {
+          "en": "The supplier will deliver the materials tomorrow.",
+          "vi": "Nhà cung cấp sẽ giao vật liệu vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "deliver a package",
+        "deliver on time"
       ]
     },
     {
@@ -53,7 +331,8 @@
             "shipment",
             "dispatch"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -83,7 +362,9 @@
       "collocations": [
         "delivery date",
         "delivery service"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "depart-v",
@@ -102,7 +383,8 @@
           ],
           "antonyms": [
             "arrive"
-          ]
+          ],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -133,6 +415,262 @@
       "collocations": [
         "depart from",
         "departure time"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "department-n",
+      "word": "department",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/dɪˈpɑːrt.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "phòng ban; bộ phận",
+          "definition_en": "a section of an organization",
+          "synonyms": [
+            "division",
+            "unit"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Contact the human resources department.",
+          "vi": "Hãy liên hệ phòng nhân sự."
+        }
+      ],
+      "collocations": [
+        "sales department",
+        "department manager"
+      ]
+    },
+    {
+      "id": "deposit-v",
+      "word": "deposit",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/dɪˈpɑː.zɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "tiền đặt cọc; gửi tiền",
+          "definition_en": "money paid in advance or put into a bank",
+          "synonyms": [
+            "down payment",
+            "installment"
+          ],
+          "antonyms": [
+            "withdrawal"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "deposit",
+        "vs_es": "deposits",
+        "v2": "deposited",
+        "v3": "deposited",
+        "ving": "depositing"
+      },
+      "examples": [
+        {
+          "en": "A deposit is required to reserve the room.",
+          "vi": "Cần đặt cọc để giữ phòng."
+        }
+      ],
+      "collocations": [
+        "security deposit",
+        "deposit money"
+      ]
+    },
+    {
+      "id": "design-v",
+      "word": "design",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/dɪˈzaɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "thiết kế; bản thiết kế",
+          "definition_en": "a plan or drawing showing how something will look",
+          "synonyms": [
+            "plan",
+            "layout"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "design",
+        "vs_es": "designs",
+        "v2": "designed",
+        "v3": "designed",
+        "ving": "designing"
+      },
+      "examples": [
+        {
+          "en": "The designer presented the new website design.",
+          "vi": "Nhà thiết kế đã trình bày thiết kế website mới."
+        }
+      ],
+      "collocations": [
+        "product design",
+        "design a brochure"
+      ]
+    },
+    {
+      "id": "destination-n",
+      "word": "destination",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌdes.təˈneɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "điểm đến",
+          "definition_en": "the place someone is going to",
+          "synonyms": [
+            "location",
+            "endpoint"
+          ],
+          "antonyms": [
+            "origin"
+          ]
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The final destination is listed on the ticket.",
+          "vi": "Điểm đến cuối cùng được ghi trên vé."
+        }
+      ],
+      "collocations": [
+        "tourist destination",
+        "final destination"
+      ]
+    },
+    {
+      "id": "develop-v",
+      "word": "develop",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/dɪˈvel.əp/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "phát triển; xây dựng",
+          "definition_en": "to grow or create something over time",
+          "synonyms": [
+            "grow",
+            "establish"
+          ],
+          "antonyms": [
+            "decline"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "develop",
+        "vs_es": "develops",
+        "v2": "developed",
+        "v3": "developed",
+        "ving": "developing"
+      },
+      "examples": [
+        {
+          "en": "The company plans to develop a new service.",
+          "vi": "Công ty dự định phát triển một dịch vụ mới."
+        }
+      ],
+      "collocations": [
+        "develop a strategy",
+        "develop software"
+      ]
+    },
+    {
+      "id": "difference-n",
+      "word": "difference",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈdɪf.ər.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "sự khác biệt",
+          "definition_en": "the way in which two or more things are not the same",
+          "synonyms": [
+            "distinction",
+            "variation"
+          ],
+          "antonyms": [
+            "similarity"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "There is a significant difference between the plans.",
+          "vi": "Có sự khác biệt đáng kể giữa hai kế hoạch."
+        }
+      ],
+      "collocations": [
+        "make a difference",
+        "key difference"
       ]
     },
     {
@@ -152,7 +690,8 @@
           ],
           "antonyms": [
             "surcharge"
-          ]
+          ],
+          "cefr_level": "A2"
         },
         {
           "pos": "v",
@@ -162,7 +701,8 @@
             "reduce",
             "mark down"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -181,97 +721,132 @@
       "collocations": [
         "offer a discount",
         "discount rate"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "date-nv",
-      "word": "date",
+      "id": "document-v",
+      "word": "document",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/deɪt/"
+        "us": "/ˈdɑː.kjə.mənt/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "ngày; ngày tháng",
-          "definition_en": "a particular day of a month or year",
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "tài liệu; lập hồ sơ",
+          "definition_en": "a written or digital record with information",
           "synonyms": [
-            "calendar date"
-          ],
-          "antonyms": []
-        },
-        {
-          "pos": "n",
-          "meaning_vi": "cuộc hẹn hò",
-          "definition_en": "a social meeting with someone you are romantically interested in",
-          "synonyms": [
-            "appointment"
-          ],
-          "antonyms": []
-        },
-        {
-          "pos": "v",
-          "meaning_vi": "ghi ngày tháng",
-          "definition_en": "to write the day, month, and year on something",
-          "synonyms": [
-            "mark"
+            "file",
+            "record"
           ],
           "antonyms": []
         }
       ],
       "topics": [
+        "OFFICE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "document",
+        "vs_es": "documents",
+        "v2": "documented",
+        "v3": "documented",
+        "ving": "documenting"
+      },
+      "examples": [
+        {
+          "en": "Please attach the required documents.",
+          "vi": "Vui lòng đính kèm các tài liệu được yêu cầu."
+        }
+      ],
+      "collocations": [
+        "supporting document",
+        "document a process"
+      ]
+    },
+    {
+      "id": "due-adj",
+      "word": "due",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/duː/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "đến hạn; phải nộp",
+          "definition_en": "expected or required at a particular time",
+          "synonyms": [
+            "payable",
+            "expected"
+          ],
+          "antonyms": [
+            "overdue"
+          ]
+        }
+      ],
+      "topics": [
         "TIME",
-        "DAILY",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The payment is due at the end of the month.",
+          "vi": "Khoản thanh toán đến hạn vào cuối tháng."
+        }
+      ],
+      "collocations": [
+        "due date",
+        "payment due"
+      ]
+    },
+    {
+      "id": "duty-n",
+      "word": "duty",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈduː.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "nhiệm vụ; nghĩa vụ",
+          "definition_en": "something someone is expected or required to do",
+          "synonyms": [
+            "responsibility",
+            "task"
+          ],
+          "antonyms": [
+            "privilege"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
         "OFFICE"
       ],
       "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please write the date at the top of the form.",
-          "vi": "Vui lòng ghi ngày tháng ở đầu biểu mẫu."
+          "en": "Customer service is part of her daily duties.",
+          "vi": "Chăm sóc khách hàng là một phần nhiệm vụ hằng ngày của cô ấy."
         }
       ],
       "collocations": [
-        "due date",
-        "date of birth",
-        "expiration date"
-      ]
-    },
-    {
-      "id": "day-n",
-      "word": "day",
-      "phonetic": {
-        "us": "/deɪ/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "ngày; ban ngày",
-          "definition_en": "a period of 24 hours or the time when it is light",
-          "synonyms": [
-            "24-hour period"
-          ],
-          "antonyms": [
-            "night"
-          ]
-        }
-      ],
-      "topics": [
-        "TIME",
-        "DAILY"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The office is closed on public holidays.",
-          "vi": "Văn phòng đóng cửa vào các ngày nghỉ lễ."
-        }
-      ],
-      "collocations": [
-        "business day",
-        "day off",
-        "every day"
+        "job duties",
+        "duty manager"
       ]
     }
   ]

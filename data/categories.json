@@ -80,6 +80,26 @@
       "id": "DAILY",
       "label": "Tiếng Anh thông dụng",
       "description": "Từ vựng dùng thường xuyên trong đời sống."
+    },
+    {
+      "id": "LEGAL",
+      "label": "Pháp lý & tuân thủ",
+      "description": "Hợp đồng, quy định, giấy phép và nghĩa vụ pháp lý."
+    },
+    {
+      "id": "HEALTH",
+      "label": "Sức khỏe & an toàn",
+      "description": "Sức khỏe nghề nghiệp, an toàn lao động và phòng ngừa rủi ro."
+    },
+    {
+      "id": "ENVIRONMENT",
+      "label": "Môi trường & bền vững",
+      "description": "Môi trường, phát triển bền vững và sử dụng tài nguyên."
+    },
+    {
+      "id": "EDUCATION",
+      "label": "Giáo dục & đào tạo",
+      "description": "Học tập, đào tạo, kỹ năng và hoạt động giáo dục."
     }
   ]
 }

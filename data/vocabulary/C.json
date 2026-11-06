@@ -3,6 +3,428 @@
   "letter": "C",
   "words": [
     {
+      "id": "calculate-v",
+      "word": "calculate",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkæl.kjə.leɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "tính toán",
+          "definition_en": "to find an amount or answer using mathematics",
+          "synonyms": [
+            "compute",
+            "figure out"
+          ],
+          "antonyms": [
+            "estimate"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "calculate",
+        "vs_es": "calculates",
+        "v2": "calculated",
+        "v3": "calculated",
+        "ving": "calculating"
+      },
+      "examples": [
+        {
+          "en": "Please calculate the total cost including tax.",
+          "vi": "Vui lòng tính tổng chi phí bao gồm thuế."
+        }
+      ],
+      "collocations": [
+        "calculate costs",
+        "calculate the total"
+      ]
+    },
+    {
+      "id": "cancel-v",
+      "word": "cancel",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkæn.səl/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "hủy",
+          "definition_en": "to decide that an event or arrangement will not happen",
+          "synonyms": [
+            "call off",
+            "withdraw"
+          ],
+          "antonyms": [
+            "confirm"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "cancel",
+        "vs_es": "cancels",
+        "v2": "canceled",
+        "v3": "canceled",
+        "ving": "canceling"
+      },
+      "examples": [
+        {
+          "en": "The airline canceled the afternoon flight.",
+          "vi": "Hãng hàng không đã hủy chuyến bay buổi chiều."
+        }
+      ],
+      "collocations": [
+        "cancel a booking",
+        "cancel a meeting"
+      ]
+    },
+    {
+      "id": "candidate-n",
+      "word": "candidate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkæn.dɪ.dət/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "ứng viên",
+          "definition_en": "a person applying for a job or considered for a role",
+          "synonyms": [
+            "applicant",
+            "contender"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each candidate will have a short interview.",
+          "vi": "Mỗi ứng viên sẽ có một buổi phỏng vấn ngắn."
+        }
+      ],
+      "collocations": [
+        "job candidate",
+        "qualified candidate"
+      ]
+    },
+    {
+      "id": "career-n",
+      "word": "career",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kəˈrɪr/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "sự nghiệp; nghề nghiệp",
+          "definition_en": "the jobs someone has during working life",
+          "synonyms": [
+            "profession",
+            "occupation"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "She wants to build a career in finance.",
+          "vi": "Cô ấy muốn phát triển sự nghiệp trong lĩnh vực tài chính."
+        }
+      ],
+      "collocations": [
+        "career development",
+        "career path"
+      ]
+    },
+    {
+      "id": "careful-adj",
+      "word": "careful",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈker.fəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "cẩn thận",
+          "definition_en": "giving attention to avoid mistakes or danger",
+          "synonyms": [
+            "cautious",
+            "attentive"
+          ],
+          "antonyms": [
+            "careless"
+          ]
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please be careful when handling fragile equipment.",
+          "vi": "Vui lòng cẩn thận khi xử lý thiết bị dễ vỡ."
+        }
+      ],
+      "collocations": [
+        "careful review",
+        "be careful with"
+      ]
+    },
+    {
+      "id": "cash-n",
+      "word": "cash",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kæʃ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "tiền mặt",
+          "definition_en": "money in the form of coins and notes",
+          "synonyms": [
+            "currency"
+          ],
+          "antonyms": [
+            "credit"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Some customers prefer to pay in cash.",
+          "vi": "Một số khách hàng thích thanh toán bằng tiền mặt."
+        }
+      ],
+      "collocations": [
+        "cash payment",
+        "pay in cash"
+      ]
+    },
+    {
+      "id": "cashier-n",
+      "word": "cashier",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kæˈʃɪr/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "thu ngân",
+          "definition_en": "a person who receives payments in a shop",
+          "synonyms": [
+            "teller"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The cashier gave me a receipt.",
+          "vi": "Thu ngân đã đưa tôi hóa đơn."
+        }
+      ],
+      "collocations": [
+        "store cashier",
+        "cashier desk"
+      ]
+    },
+    {
+      "id": "cause-v",
+      "word": "cause",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kɔːz/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "nguyên nhân; gây ra",
+          "definition_en": "the reason something happens or to make it happen",
+          "synonyms": [
+            "reason",
+            "trigger"
+          ],
+          "antonyms": [
+            "effect"
+          ]
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "cause",
+        "vs_es": "causes",
+        "v2": "caused",
+        "v3": "caused",
+        "ving": "causing"
+      },
+      "examples": [
+        {
+          "en": "A software error caused the delay.",
+          "vi": "Một lỗi phần mềm đã gây ra sự chậm trễ."
+        }
+      ],
+      "collocations": [
+        "cause a problem",
+        "root cause"
+      ]
+    },
+    {
+      "id": "charge-v",
+      "word": "charge",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/tʃɑːrdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "phí; tính phí; sạc",
+          "definition_en": "an amount asked for a service or to ask payment",
+          "synonyms": [
+            "fee",
+            "bill"
+          ],
+          "antonyms": [
+            "refund"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "charge",
+        "vs_es": "charges",
+        "v2": "charged",
+        "v3": "charged",
+        "ving": "charging"
+      },
+      "examples": [
+        {
+          "en": "The hotel does not charge for Wi-Fi.",
+          "vi": "Khách sạn không tính phí Wi-Fi."
+        }
+      ],
+      "collocations": [
+        "service charge",
+        "charge a fee"
+      ]
+    },
+    {
+      "id": "claim-v",
+      "word": "claim",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kleɪm/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "yêu cầu bồi thường; tuyên bố",
+          "definition_en": "a formal request for something or a statement",
+          "synonyms": [
+            "request",
+            "assertion"
+          ],
+          "antonyms": [
+            "deny"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "claim",
+        "vs_es": "claims",
+        "v2": "claimed",
+        "v3": "claimed",
+        "ving": "claiming"
+      },
+      "examples": [
+        {
+          "en": "Please submit a claim for the damaged package.",
+          "vi": "Vui lòng gửi yêu cầu bồi thường cho kiện hàng bị hỏng."
+        }
+      ],
+      "collocations": [
+        "insurance claim",
+        "claim compensation"
+      ]
+    },
+    {
       "id": "client-n",
       "word": "client",
       "phonetic": {
@@ -17,7 +439,8 @@
             "customer",
             "account"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -35,6 +458,178 @@
       "collocations": [
         "potential client",
         "client account"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "colleague-n",
+      "word": "colleague",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkɑː.liːɡ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "đồng nghiệp",
+          "definition_en": "a person you work with",
+          "synonyms": [
+            "coworker",
+            "associate"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "I will discuss the proposal with my colleagues.",
+          "vi": "Tôi sẽ thảo luận đề xuất với các đồng nghiệp."
+        }
+      ],
+      "collocations": [
+        "former colleague",
+        "close colleague"
+      ]
+    },
+    {
+      "id": "collect-v",
+      "word": "collect",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kəˈlekt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "thu thập; nhận; thu tiền",
+          "definition_en": "to bring things together or receive payment",
+          "synonyms": [
+            "gather",
+            "receive"
+          ],
+          "antonyms": [
+            "distribute"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "collect",
+        "vs_es": "collects",
+        "v2": "collected",
+        "v3": "collected",
+        "ving": "collecting"
+      },
+      "examples": [
+        {
+          "en": "The courier will collect the parcel this afternoon.",
+          "vi": "Nhân viên chuyển phát sẽ nhận bưu kiện chiều nay."
+        }
+      ],
+      "collocations": [
+        "collect data",
+        "collect payment"
+      ]
+    },
+    {
+      "id": "commercial-adj",
+      "word": "commercial",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kəˈmɝː.ʃəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj/n",
+          "cefr_level": "B1",
+          "meaning_vi": "thuộc thương mại; quảng cáo",
+          "definition_en": "related to business or intended to make a profit",
+          "synonyms": [
+            "business",
+            "trade"
+          ],
+          "antonyms": [
+            "noncommercial"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company signed a commercial agreement.",
+          "vi": "Công ty đã ký một thỏa thuận thương mại."
+        }
+      ],
+      "collocations": [
+        "commercial agreement",
+        "commercial property"
+      ]
+    },
+    {
+      "id": "communicate-v",
+      "word": "communicate",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kəˈmjuː.nə.keɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "giao tiếp; truyền đạt",
+          "definition_en": "to share information, ideas, or feelings",
+          "synonyms": [
+            "inform",
+            "convey"
+          ],
+          "antonyms": [
+            "conceal"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "communicate",
+        "vs_es": "communicates",
+        "v2": "communicated",
+        "v3": "communicated",
+        "ving": "communicating"
+      },
+      "examples": [
+        {
+          "en": "Managers should communicate changes clearly.",
+          "vi": "Quản lý nên truyền đạt thay đổi một cách rõ ràng."
+        }
+      ],
+      "collocations": [
+        "communicate effectively",
+        "communicate with clients"
       ]
     },
     {
@@ -51,7 +646,8 @@
           "synonyms": [
             "travel to work"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -76,6 +672,172 @@
       "collocations": [
         "daily commute",
         "commute to work"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "complaint-n",
+      "word": "complaint",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kəmˈpleɪnt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "lời phàn nàn; khiếu nại",
+          "definition_en": "a statement that something is wrong or unsatisfactory",
+          "synonyms": [
+            "grievance",
+            "objection"
+          ],
+          "antonyms": [
+            "compliment"
+          ]
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We received a complaint about the late delivery.",
+          "vi": "Chúng tôi nhận được khiếu nại về việc giao hàng trễ."
+        }
+      ],
+      "collocations": [
+        "file a complaint",
+        "customer complaint"
+      ]
+    },
+    {
+      "id": "complete-v",
+      "word": "complete",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kəmˈpliːt/"
+      },
+      "senses": [
+        {
+          "pos": "adj/v",
+          "cefr_level": "A2",
+          "meaning_vi": "hoàn thành; đầy đủ",
+          "definition_en": "having all parts or to finish something",
+          "synonyms": [
+            "finish",
+            "entire"
+          ],
+          "antonyms": [
+            "incomplete"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "complete",
+        "vs_es": "completes",
+        "v2": "completed",
+        "v3": "completed",
+        "ving": "completing"
+      },
+      "examples": [
+        {
+          "en": "Please complete the application form.",
+          "vi": "Vui lòng hoàn thành mẫu đơn đăng ký."
+        }
+      ],
+      "collocations": [
+        "complete a form",
+        "complete the project"
+      ]
+    },
+    {
+      "id": "compliance-n",
+      "word": "compliance",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kəmˈplaɪ.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự tuân thủ",
+          "definition_en": "the act of obeying a rule, law, or request",
+          "synonyms": [
+            "conformity",
+            "adherence"
+          ],
+          "antonyms": [
+            "violation"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The audit checks compliance with company policy.",
+          "vi": "Cuộc kiểm toán kiểm tra việc tuân thủ chính sách công ty."
+        }
+      ],
+      "collocations": [
+        "regulatory compliance",
+        "compliance requirements"
+      ]
+    },
+    {
+      "id": "condition-n",
+      "word": "condition",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kənˈdɪʃ.ən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "điều kiện; tình trạng",
+          "definition_en": "the state something is in or a requirement",
+          "synonyms": [
+            "state",
+            "requirement"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The machine is in good condition.",
+          "vi": "Máy móc đang trong tình trạng tốt."
+        }
+      ],
+      "collocations": [
+        "terms and conditions",
+        "working condition"
       ]
     },
     {
@@ -93,7 +855,8 @@
             "convention",
             "summit"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -111,7 +874,9 @@
       "collocations": [
         "attend a conference",
         "conference room"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "confirm-v",
@@ -131,7 +896,8 @@
           "antonyms": [
             "deny",
             "disprove"
-          ]
+          ],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -167,6 +933,440 @@
       "collocations": [
         "confirm a booking",
         "confirm receipt"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "consider-v",
+      "word": "consider",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kənˈsɪd.ər/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "cân nhắc; xem xét",
+          "definition_en": "to think carefully about something before deciding",
+          "synonyms": [
+            "review",
+            "consideration"
+          ],
+          "antonyms": [
+            "ignore"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "consider",
+        "vs_es": "considers",
+        "v2": "considered",
+        "v3": "considered",
+        "ving": "considering"
+      },
+      "examples": [
+        {
+          "en": "We will consider all applications carefully.",
+          "vi": "Chúng tôi sẽ xem xét kỹ tất cả hồ sơ."
+        }
+      ],
+      "collocations": [
+        "consider an offer",
+        "carefully consider"
+      ]
+    },
+    {
+      "id": "contact-v",
+      "word": "contact",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkɑːn.tækt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "liên hệ; người liên hệ",
+          "definition_en": "communication with someone or to communicate",
+          "synonyms": [
+            "reach",
+            "communicate with"
+          ],
+          "antonyms": [
+            "avoid"
+          ]
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "contact",
+        "vs_es": "contacts",
+        "v2": "contacted",
+        "v3": "contacted",
+        "ving": "contacting"
+      },
+      "examples": [
+        {
+          "en": "Please contact the support team if you need help.",
+          "vi": "Vui lòng liên hệ đội hỗ trợ nếu bạn cần giúp đỡ."
+        }
+      ],
+      "collocations": [
+        "contact details",
+        "contact a supplier"
+      ]
+    },
+    {
+      "id": "contingency-n",
+      "word": "contingency",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kənˈtɪn.dʒən.si/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "tình huống dự phòng",
+          "definition_en": "a possible future event that requires preparation",
+          "synonyms": [
+            "eventuality",
+            "possibility"
+          ],
+          "antonyms": [
+            "certainty"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project includes a contingency plan for delays.",
+          "vi": "Dự án có kế hoạch dự phòng cho các trường hợp chậm trễ."
+        }
+      ],
+      "collocations": [
+        "contingency plan",
+        "contingency fund"
+      ]
+    },
+    {
+      "id": "contract-v",
+      "word": "contract",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkɑːn.trækt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "hợp đồng; ký hợp đồng",
+          "definition_en": "a legal agreement between people or organizations",
+          "synonyms": [
+            "agreement",
+            "deal"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "contract",
+        "vs_es": "contracts",
+        "v2": "contracted",
+        "v3": "contracted",
+        "ving": "contracting"
+      },
+      "examples": [
+        {
+          "en": "Both parties signed the contract.",
+          "vi": "Hai bên đã ký hợp đồng."
+        }
+      ],
+      "collocations": [
+        "sign a contract",
+        "employment contract"
+      ]
+    },
+    {
+      "id": "convenient-adj",
+      "word": "convenient",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kənˈviː.ni.ənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "thuận tiện",
+          "definition_en": "easy to use or suitable for a particular purpose",
+          "synonyms": [
+            "handy",
+            "suitable"
+          ],
+          "antonyms": [
+            "inconvenient"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Online payment is convenient for many customers.",
+          "vi": "Thanh toán trực tuyến thuận tiện với nhiều khách hàng."
+        }
+      ],
+      "collocations": [
+        "convenient location",
+        "convenient time"
+      ]
+    },
+    {
+      "id": "cooperate-v",
+      "word": "cooperate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/koʊˈɑː.pə.reɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "hợp tác",
+          "definition_en": "to work together toward a shared goal",
+          "synonyms": [
+            "collaborate",
+            "work together"
+          ],
+          "antonyms": [
+            "compete"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "cooperate",
+        "vs_es": "cooperates",
+        "v2": "cooperated",
+        "v3": "cooperated",
+        "ving": "cooperating"
+      },
+      "examples": [
+        {
+          "en": "The departments must cooperate on the project.",
+          "vi": "Các phòng ban phải hợp tác trong dự án."
+        }
+      ],
+      "collocations": [
+        "cooperate closely",
+        "cooperate with"
+      ]
+    },
+    {
+      "id": "cost-v",
+      "word": "cost",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kɔːst/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A1",
+          "meaning_vi": "chi phí; có giá",
+          "definition_en": "the amount of money needed to buy or do something",
+          "synonyms": [
+            "price",
+            "expense"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "cost",
+        "vs_es": "costs",
+        "v2": "cost",
+        "v3": "cost",
+        "ving": "costing"
+      },
+      "examples": [
+        {
+          "en": "The repair will cost about fifty dollars.",
+          "vi": "Việc sửa chữa sẽ tốn khoảng 50 đô la."
+        }
+      ],
+      "collocations": [
+        "total cost",
+        "operating costs"
+      ]
+    },
+    {
+      "id": "create-v",
+      "word": "create",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kriˈeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "tạo ra; sáng tạo",
+          "definition_en": "to make something new",
+          "synonyms": [
+            "produce",
+            "generate"
+          ],
+          "antonyms": [
+            "destroy"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "create",
+        "vs_es": "creates",
+        "v2": "created",
+        "v3": "created",
+        "ving": "creating"
+      },
+      "examples": [
+        {
+          "en": "The team created a new marketing plan.",
+          "vi": "Đội ngũ đã tạo một kế hoạch tiếp thị mới."
+        }
+      ],
+      "collocations": [
+        "create a report",
+        "create an account"
+      ]
+    },
+    {
+      "id": "credit-n",
+      "word": "credit",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkred.ɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "tín dụng; khoản ghi có",
+          "definition_en": "an arrangement to pay later or money added to an account",
+          "synonyms": [
+            "loan",
+            "recognition"
+          ],
+          "antonyms": [
+            "debit"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The customer paid by credit card.",
+          "vi": "Khách hàng thanh toán bằng thẻ tín dụng."
+        }
+      ],
+      "collocations": [
+        "credit card",
+        "credit limit"
+      ]
+    },
+    {
+      "id": "current-adj",
+      "word": "current",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkɝː.ənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "hiện tại; hiện hành",
+          "definition_en": "happening or existing now",
+          "synonyms": [
+            "present",
+            "existing"
+          ],
+          "antonyms": [
+            "former"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please use the current version of the form.",
+          "vi": "Vui lòng sử dụng phiên bản biểu mẫu hiện hành."
+        }
+      ],
+      "collocations": [
+        "current address",
+        "current policy"
       ]
     }
   ]

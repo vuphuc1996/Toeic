@@ -3,6 +3,387 @@
   "letter": "P",
   "words": [
     {
+      "id": "participate-v",
+      "word": "participate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/pɑːrˈtɪs.ə.peɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "tham gia",
+          "definition_en": "to take part in an activity or event",
+          "synonyms": [
+            "take part",
+            "join"
+          ],
+          "antonyms": [
+            "withdraw"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "participate",
+        "vs_es": "participates",
+        "v2": "participated",
+        "v3": "participated",
+        "ving": "participating"
+      },
+      "examples": [
+        {
+          "en": "All employees are invited to participate in the survey.",
+          "vi": "Tất cả nhân viên được mời tham gia khảo sát."
+        }
+      ],
+      "collocations": [
+        "participate in a meeting",
+        "actively participate"
+      ]
+    },
+    {
+      "id": "partner-v",
+      "word": "partner",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈpɑːrt.nɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "đối tác; hợp tác",
+          "definition_en": "a person or organization that works with another",
+          "synonyms": [
+            "associate",
+            "collaborator"
+          ],
+          "antonyms": [
+            "competitor"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "partner",
+        "vs_es": "partners",
+        "v2": "partnered",
+        "v3": "partnered",
+        "ving": "partnering"
+      },
+      "examples": [
+        {
+          "en": "We are looking for a reliable business partner.",
+          "vi": "Chúng tôi đang tìm đối tác kinh doanh đáng tin cậy."
+        }
+      ],
+      "collocations": [
+        "business partner",
+        "strategic partner"
+      ]
+    },
+    {
+      "id": "passenger-n",
+      "word": "passenger",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈpæs.ən.dʒɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "hành khách",
+          "definition_en": "a person travelling in a vehicle but not driving it",
+          "synonyms": [
+            "traveler",
+            "traveller"
+          ],
+          "antonyms": [
+            "driver"
+          ]
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Passengers should arrive at the gate early.",
+          "vi": "Hành khách nên đến cổng sớm."
+        }
+      ],
+      "collocations": [
+        "passenger terminal",
+        "passenger information"
+      ]
+    },
+    {
+      "id": "payment-n",
+      "word": "payment",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈpeɪ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "khoản thanh toán; việc thanh toán",
+          "definition_en": "money paid for goods or services",
+          "synonyms": [
+            "fee",
+            "installment"
+          ],
+          "antonyms": [
+            "refund"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Payment is due within thirty days.",
+          "vi": "Thanh toán đến hạn trong vòng 30 ngày."
+        }
+      ],
+      "collocations": [
+        "make a payment",
+        "payment method"
+      ]
+    },
+    {
+      "id": "perform-v",
+      "word": "perform",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/pɚˈfɔːrm/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "thực hiện; biểu diễn",
+          "definition_en": "to do a task or activity",
+          "synonyms": [
+            "carry out",
+            "execute"
+          ],
+          "antonyms": [
+            "neglect"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "perform",
+        "vs_es": "performs",
+        "v2": "performed",
+        "v3": "performed",
+        "ving": "performing"
+      },
+      "examples": [
+        {
+          "en": "The technician will perform a safety check.",
+          "vi": "Kỹ thuật viên sẽ thực hiện kiểm tra an toàn."
+        }
+      ],
+      "collocations": [
+        "perform a task",
+        "perform an inspection"
+      ]
+    },
+    {
+      "id": "permit-v",
+      "word": "permit",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈpɝː.mɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "giấy phép; cho phép",
+          "definition_en": "an official document or to allow something",
+          "synonyms": [
+            "license",
+            "allow"
+          ],
+          "antonyms": [
+            "prohibit"
+          ]
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "permit",
+        "vs_es": "permits",
+        "v2": "permitted",
+        "v3": "permitted",
+        "ving": "permitting"
+      },
+      "examples": [
+        {
+          "en": "Visitors must obtain a parking permit.",
+          "vi": "Khách tham quan phải xin giấy phép đỗ xe."
+        }
+      ],
+      "collocations": [
+        "work permit",
+        "permit access"
+      ]
+    },
+    {
+      "id": "personnel-n",
+      "word": "personnel",
+      "phonetic": {
+        "us": "/ˌpɝː.səˈnel/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân sự; đội ngũ nhân viên",
+          "definition_en": "the people who work for an organization",
+          "synonyms": [
+            "staff",
+            "workforce"
+          ],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All personnel must wear identification badges.",
+          "vi": "Toàn bộ nhân viên phải đeo thẻ nhận dạng."
+        }
+      ],
+      "collocations": [
+        "personnel department",
+        "personnel records"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "policy-n",
+      "word": "policy",
+      "phonetic": {
+        "us": "/ˈpɑː.lə.si/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chính sách; quy định",
+          "definition_en": "a set of ideas or plans used as a basis for decisions",
+          "synonyms": [
+            "guideline",
+            "rule"
+          ],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please review the company travel policy.",
+          "vi": "Vui lòng xem lại chính sách công tác của công ty."
+        }
+      ],
+      "collocations": [
+        "company policy",
+        "privacy policy",
+        "insurance policy"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "position-n",
+      "word": "position",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/pəˈzɪʃ.ən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "vị trí; chức vụ",
+          "definition_en": "a job or the place where someone or something is",
+          "synonyms": [
+            "post",
+            "role"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The firm advertised a part-time position.",
+          "vi": "Công ty đăng tuyển một vị trí bán thời gian."
+        }
+      ],
+      "collocations": [
+        "senior position",
+        "job position"
+      ]
+    },
+    {
       "id": "postpone-v",
       "word": "postpone",
       "phonetic": {
@@ -19,7 +400,8 @@
           ],
           "antonyms": [
             "advance"
-          ]
+          ],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -44,79 +426,772 @@
       "collocations": [
         "postpone a meeting",
         "postpone the launch"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "personnel-n",
-      "word": "personnel",
+      "id": "potential-adj",
+      "word": "potential",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˌpɝː.səˈnel/"
+        "us": "/pəˈten.ʃəl/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "nhân sự; đội ngũ nhân viên",
-          "definition_en": "the people who work for an organization",
+          "pos": "adj/n",
+          "cefr_level": "B1",
+          "meaning_vi": "tiềm năng; khả năng",
+          "definition_en": "possible or capable of developing into something",
           "synonyms": [
-            "staff",
-            "workforce"
+            "possible",
+            "prospective"
           ],
-          "antonyms": []
+          "antonyms": [
+            "actual"
+          ]
         }
       ],
       "topics": [
-        "HR",
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The proposal has potential to reduce costs.",
+          "vi": "Đề xuất có tiềm năng giảm chi phí."
+        }
+      ],
+      "collocations": [
+        "potential customer",
+        "growth potential"
+      ]
+    },
+    {
+      "id": "preliminary-adj",
+      "word": "preliminary",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/prɪˈlɪm.ə.ner.i/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "sơ bộ; ban đầu",
+          "definition_en": "happening before a more complete or final stage",
+          "synonyms": [
+            "initial",
+            "preparatory"
+          ],
+          "antonyms": [
+            "final"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The preliminary results will be discussed tomorrow.",
+          "vi": "Kết quả sơ bộ sẽ được thảo luận vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "preliminary report",
+        "preliminary findings"
+      ]
+    },
+    {
+      "id": "prepare-v",
+      "word": "prepare",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/prɪˈper/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "chuẩn bị",
+          "definition_en": "to make something ready for use or an event",
+          "synonyms": [
+            "arrange",
+            "make ready"
+          ],
+          "antonyms": [
+            "neglect"
+          ]
+        }
+      ],
+      "topics": [
         "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "prepare",
+        "vs_es": "prepares",
+        "v2": "prepared",
+        "v3": "prepared",
+        "ving": "preparing"
+      },
+      "examples": [
+        {
+          "en": "Please prepare the documents before the meeting.",
+          "vi": "Vui lòng chuẩn bị tài liệu trước cuộc họp."
+        }
+      ],
+      "collocations": [
+        "prepare a report",
+        "prepare for an interview"
+      ]
+    },
+    {
+      "id": "prevent-v",
+      "word": "prevent",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/prɪˈvent/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "ngăn chặn; phòng ngừa",
+          "definition_en": "to stop something from happening",
+          "synonyms": [
+            "avoid",
+            "stop"
+          ],
+          "antonyms": [
+            "cause"
+          ]
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "prevent",
+        "vs_es": "prevents",
+        "v2": "prevented",
+        "v3": "prevented",
+        "ving": "preventing"
+      },
+      "examples": [
+        {
+          "en": "Regular maintenance can prevent equipment failure.",
+          "vi": "Bảo trì định kỳ có thể ngăn ngừa hỏng thiết bị."
+        }
+      ],
+      "collocations": [
+        "prevent accidents",
+        "prevent delays"
+      ]
+    },
+    {
+      "id": "previous-adj",
+      "word": "previous",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈpriː.vi.əs/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "trước đó; trước đây",
+          "definition_en": "happening or existing before the present time",
+          "synonyms": [
+            "prior",
+            "former"
+          ],
+          "antonyms": [
+            "subsequent"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
         "BUSINESS"
       ],
       "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "All personnel must wear identification badges.",
-          "vi": "Toàn bộ nhân viên phải đeo thẻ nhận dạng."
+          "en": "Please refer to the previous email.",
+          "vi": "Vui lòng tham khảo email trước đó."
         }
       ],
       "collocations": [
-        "personnel department",
-        "personnel records"
+        "previous experience",
+        "previous version"
       ]
     },
     {
-      "id": "policy-n",
-      "word": "policy",
+      "id": "procedure-n",
+      "word": "procedure",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈpɑː.lə.si/"
+        "us": "/prəˈsiː.dʒɚ/"
       },
       "senses": [
         {
           "pos": "n",
-          "meaning_vi": "chính sách; quy định",
-          "definition_en": "a set of ideas or plans used as a basis for decisions",
+          "cefr_level": "B1",
+          "meaning_vi": "quy trình; thủ tục",
+          "definition_en": "a series of actions used to do something",
           "synonyms": [
-            "guideline",
-            "rule"
+            "process",
+            "method"
           ],
           "antonyms": []
         }
       ],
       "topics": [
-        "HR",
         "BUSINESS",
-        "FINANCE"
+        "QUALITY"
       ],
       "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please review the company travel policy.",
-          "vi": "Vui lòng xem lại chính sách công tác của công ty."
+          "en": "Follow the standard procedure for refunds.",
+          "vi": "Hãy làm theo quy trình tiêu chuẩn khi hoàn tiền."
         }
       ],
       "collocations": [
-        "company policy",
-        "privacy policy",
-        "insurance policy"
+        "safety procedure",
+        "application procedure"
+      ]
+    },
+    {
+      "id": "process-v",
+      "word": "process",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈprɑː.ses/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "quy trình; xử lý",
+          "definition_en": "a series of steps or to deal with information",
+          "synonyms": [
+            "procedure",
+            "method"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "process",
+        "vs_es": "processes",
+        "v2": "processed",
+        "v3": "processed",
+        "ving": "processing"
+      },
+      "examples": [
+        {
+          "en": "The team processes orders within one day.",
+          "vi": "Đội ngũ xử lý đơn hàng trong vòng một ngày."
+        }
+      ],
+      "collocations": [
+        "application process",
+        "process a request"
+      ]
+    },
+    {
+      "id": "procurement-n",
+      "word": "procurement",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/prəˈkjʊr.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "hoạt động mua sắm; thu mua",
+          "definition_en": "the process of obtaining goods or services for an organization",
+          "synonyms": [
+            "purchasing",
+            "acquisition"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The procurement team invited three suppliers to bid.",
+          "vi": "Bộ phận thu mua mời ba nhà cung cấp tham gia đấu thầu."
+        }
+      ],
+      "collocations": [
+        "procurement process",
+        "procurement policy"
+      ]
+    },
+    {
+      "id": "produce-v",
+      "word": "produce",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/prəˈduːs/"
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "cefr_level": "A2",
+          "meaning_vi": "sản xuất; nông sản",
+          "definition_en": "to make or create something",
+          "synonyms": [
+            "manufacture",
+            "create"
+          ],
+          "antonyms": [
+            "consume"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "produce",
+        "vs_es": "produces",
+        "v2": "produced",
+        "v3": "produced",
+        "ving": "producing"
+      },
+      "examples": [
+        {
+          "en": "The factory produces about five thousand units a month.",
+          "vi": "Nhà máy sản xuất khoảng 5.000 đơn vị mỗi tháng."
+        }
+      ],
+      "collocations": [
+        "produce goods",
+        "agricultural produce"
+      ]
+    },
+    {
+      "id": "product-n",
+      "word": "product",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈprɑː.dʌkt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "sản phẩm",
+          "definition_en": "something made or grown to be sold",
+          "synonyms": [
+            "item",
+            "goods"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The product is available in three sizes.",
+          "vi": "Sản phẩm có sẵn với ba kích cỡ."
+        }
+      ],
+      "collocations": [
+        "new product",
+        "product launch"
+      ]
+    },
+    {
+      "id": "professional-adj",
+      "word": "professional",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/prəˈfeʃ.ən.əl/"
+      },
+      "senses": [
+        {
+          "pos": "adj/n",
+          "cefr_level": "B1",
+          "meaning_vi": "chuyên nghiệp; người làm nghề",
+          "definition_en": "relating to a job requiring special training",
+          "synonyms": [
+            "skilled",
+            "qualified"
+          ],
+          "antonyms": [
+            "unprofessional"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please maintain a professional attitude with clients.",
+          "vi": "Vui lòng giữ thái độ chuyên nghiệp với khách hàng."
+        }
+      ],
+      "collocations": [
+        "professional development",
+        "professional service"
+      ]
+    },
+    {
+      "id": "profit-v",
+      "word": "profit",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈprɑː.fɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "lợi nhuận; thu lợi",
+          "definition_en": "money gained after costs are paid",
+          "synonyms": [
+            "earnings",
+            "gain"
+          ],
+          "antonyms": [
+            "loss"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "profit",
+        "vs_es": "profits",
+        "v2": "profited",
+        "v3": "profited",
+        "ving": "profiting"
+      },
+      "examples": [
+        {
+          "en": "The company reported a higher profit this year.",
+          "vi": "Công ty báo cáo lợi nhuận cao hơn trong năm nay."
+        }
+      ],
+      "collocations": [
+        "net profit",
+        "profit margin"
+      ]
+    },
+    {
+      "id": "profitability-n",
+      "word": "profitability",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌprɑː.fɪ.t̬əˈbɪl.ə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "khả năng sinh lời",
+          "definition_en": "the degree to which a business or activity makes a profit",
+          "synonyms": [
+            "earning capacity",
+            "return"
+          ],
+          "antonyms": [
+            "unprofitability"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new strategy is expected to improve profitability.",
+          "vi": "Chiến lược mới được kỳ vọng cải thiện khả năng sinh lời."
+        }
+      ],
+      "collocations": [
+        "improve profitability",
+        "profitability analysis"
+      ]
+    },
+    {
+      "id": "progress-v",
+      "word": "progress",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈprɑː.ɡres/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "tiến bộ; tiến triển",
+          "definition_en": "movement toward a goal or to develop",
+          "synonyms": [
+            "development",
+            "improvement"
+          ],
+          "antonyms": [
+            "decline"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "progress",
+        "vs_es": "progresses",
+        "v2": "progressed",
+        "v3": "progressed",
+        "ving": "progressing"
+      },
+      "examples": [
+        {
+          "en": "The project is making good progress.",
+          "vi": "Dự án đang tiến triển tốt."
+        }
+      ],
+      "collocations": [
+        "make progress",
+        "progress report"
+      ]
+    },
+    {
+      "id": "project-v",
+      "word": "project",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈprɑː.dʒekt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "dự án; dự báo",
+          "definition_en": "a planned piece of work with a specific aim",
+          "synonyms": [
+            "plan",
+            "undertaking"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "project",
+        "vs_es": "projects",
+        "v2": "projected",
+        "v3": "projected",
+        "ving": "projecting"
+      },
+      "examples": [
+        {
+          "en": "The project will be completed in September.",
+          "vi": "Dự án sẽ hoàn thành vào tháng Chín."
+        }
+      ],
+      "collocations": [
+        "project manager",
+        "project budget"
+      ]
+    },
+    {
+      "id": "promote-v",
+      "word": "promote",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/prəˈmoʊt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "thăng chức; quảng bá",
+          "definition_en": "to encourage sales or give someone a higher position",
+          "synonyms": [
+            "advertise",
+            "advance"
+          ],
+          "antonyms": [
+            "demote"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "promote",
+        "vs_es": "promotes",
+        "v2": "promoted",
+        "v3": "promoted",
+        "ving": "promoting"
+      },
+      "examples": [
+        {
+          "en": "The company plans to promote its new service.",
+          "vi": "Công ty dự định quảng bá dịch vụ mới."
+        }
+      ],
+      "collocations": [
+        "promote a product",
+        "promote an employee"
+      ]
+    },
+    {
+      "id": "proposal-n",
+      "word": "proposal",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/prəˈpoʊ.zəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "đề xuất; bản kiến nghị",
+          "definition_en": "a plan or suggestion presented for consideration",
+          "synonyms": [
+            "suggestion",
+            "plan"
+          ],
+          "antonyms": [
+            "rejection"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The board reviewed the proposal.",
+          "vi": "Hội đồng đã xem xét đề xuất."
+        }
+      ],
+      "collocations": [
+        "business proposal",
+        "submit a proposal"
+      ]
+    },
+    {
+      "id": "provide-v",
+      "word": "provide",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/prəˈvaɪd/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "cung cấp",
+          "definition_en": "to give something that is needed or wanted",
+          "synonyms": [
+            "supply",
+            "offer"
+          ],
+          "antonyms": [
+            "withhold"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "provide",
+        "vs_es": "provides",
+        "v2": "provided",
+        "v3": "provided",
+        "ving": "providing"
+      },
+      "examples": [
+        {
+          "en": "The hotel provides free airport transportation.",
+          "vi": "Khách sạn cung cấp dịch vụ đưa đón sân bay miễn phí."
+        }
+      ],
+      "collocations": [
+        "provide information",
+        "provide support"
       ]
     },
     {
@@ -136,7 +1211,8 @@
           ],
           "antonyms": [
             "sell"
-          ]
+          ],
+          "cefr_level": "A2"
         },
         {
           "pos": "n",
@@ -145,7 +1221,8 @@
           "synonyms": [
             "acquisition"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -181,6 +1258,46 @@
       "collocations": [
         "purchase order",
         "purchase price"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "purpose-n",
+      "word": "purpose",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈpɝː.pəs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "mục đích",
+          "definition_en": "the reason for doing or making something",
+          "synonyms": [
+            "aim",
+            "objective"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The purpose of the meeting is to review sales.",
+          "vi": "Mục đích cuộc họp là xem xét doanh số."
+        }
+      ],
+      "collocations": [
+        "for this purpose",
+        "main purpose"
       ]
     }
   ]

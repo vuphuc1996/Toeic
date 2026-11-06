@@ -3,49 +3,467 @@
   "letter": "I",
   "words": [
     {
-      "id": "invoice-nv",
-      "word": "invoice",
+      "id": "identify-v",
+      "word": "identify",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈɪn.vɔɪs/"
+        "us": "/aɪˈden.t̬ə.faɪ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "nhận diện; xác định",
+          "definition_en": "to recognize or find out what something is",
+          "synonyms": [
+            "recognize",
+            "determine"
+          ],
+          "antonyms": [
+            "misidentify"
+          ]
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "identify",
+        "vs_es": "identifies",
+        "v2": "identified",
+        "v3": "identified",
+        "ving": "identifying"
+      },
+      "examples": [
+        {
+          "en": "The audit identified several problems.",
+          "vi": "Cuộc kiểm toán xác định một số vấn đề."
+        }
+      ],
+      "collocations": [
+        "identify a problem",
+        "identify a customer"
+      ]
+    },
+    {
+      "id": "implementation-n",
+      "word": "implementation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌɪm.plə.menˈteɪ.ʃən/"
       },
       "senses": [
         {
           "pos": "n",
-          "meaning_vi": "hóa đơn thanh toán",
-          "definition_en": "a document showing goods or services supplied and the amount due",
+          "cefr_level": "B2",
+          "meaning_vi": "việc triển khai; thực hiện",
+          "definition_en": "the process of putting a plan or system into operation",
           "synonyms": [
-            "bill",
-            "statement"
+            "execution",
+            "application"
           ],
-          "antonyms": []
-        },
-        {
-          "pos": "v",
-          "meaning_vi": "xuất hóa đơn",
-          "definition_en": "to send an invoice for payment",
-          "synonyms": [
-            "bill",
-            "charge"
-          ],
-          "antonyms": []
+          "antonyms": [
+            "abandonment"
+          ]
         }
       ],
       "topics": [
-        "FINANCE",
-        "PURCHASING",
-        "BUSINESS"
+        "BUSINESS",
+        "TECHNOLOGY"
       ],
       "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please pay the invoice within 30 days.",
-          "vi": "Vui lòng thanh toán hóa đơn trong vòng 30 ngày."
+          "en": "The implementation of the new system will take six months.",
+          "vi": "Việc triển khai hệ thống mới sẽ mất sáu tháng."
         }
       ],
       "collocations": [
-        "issue an invoice",
-        "overdue invoice"
+        "implementation plan",
+        "successful implementation"
+      ]
+    },
+    {
+      "id": "improve-v",
+      "word": "improve",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪmˈpruːv/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "cải thiện",
+          "definition_en": "to make or become better",
+          "synonyms": [
+            "enhance",
+            "upgrade"
+          ],
+          "antonyms": [
+            "worsen"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "improve",
+        "vs_es": "improves",
+        "v2": "improved",
+        "v3": "improved",
+        "ving": "improving"
+      },
+      "examples": [
+        {
+          "en": "We need to improve response times.",
+          "vi": "Chúng ta cần cải thiện thời gian phản hồi."
+        }
+      ],
+      "collocations": [
+        "improve performance",
+        "improve quality"
+      ]
+    },
+    {
+      "id": "include-v",
+      "word": "include",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈkluːd/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "bao gồm",
+          "definition_en": "to have something as part of a whole",
+          "synonyms": [
+            "contain",
+            "comprise"
+          ],
+          "antonyms": [
+            "exclude"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "include",
+        "vs_es": "includes",
+        "v2": "included",
+        "v3": "included",
+        "ving": "including"
+      },
+      "examples": [
+        {
+          "en": "The price includes breakfast and parking.",
+          "vi": "Giá bao gồm bữa sáng và chỗ đậu xe."
+        }
+      ],
+      "collocations": [
+        "include tax",
+        "include details"
+      ]
+    },
+    {
+      "id": "income-n",
+      "word": "income",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪn.kʌm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "thu nhập",
+          "definition_en": "money received from work or investments",
+          "synonyms": [
+            "earnings",
+            "revenue"
+          ],
+          "antonyms": [
+            "expense"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The form asks for your monthly income.",
+          "vi": "Biểu mẫu yêu cầu thu nhập hằng tháng của bạn."
+        }
+      ],
+      "collocations": [
+        "annual income",
+        "income tax"
+      ]
+    },
+    {
+      "id": "increase-v",
+      "word": "increase",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈkriːs/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "sự gia tăng; tăng lên",
+          "definition_en": "a rise in number, amount, or level",
+          "synonyms": [
+            "rise",
+            "growth"
+          ],
+          "antonyms": [
+            "decrease"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "increase",
+        "vs_es": "increases",
+        "v2": "increased",
+        "v3": "increased",
+        "ving": "increasing"
+      },
+      "examples": [
+        {
+          "en": "The company reported an increase in sales.",
+          "vi": "Công ty báo cáo doanh số tăng."
+        }
+      ],
+      "collocations": [
+        "increase revenue",
+        "price increase"
+      ]
+    },
+    {
+      "id": "indicate-v",
+      "word": "indicate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪn.də.keɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "cho biết; chỉ ra",
+          "definition_en": "to show or suggest that something is true",
+          "synonyms": [
+            "show",
+            "signal"
+          ],
+          "antonyms": [
+            "conceal"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "indicate",
+        "vs_es": "indicates",
+        "v2": "indicated",
+        "v3": "indicated",
+        "ving": "indicating"
+      },
+      "examples": [
+        {
+          "en": "The results indicate a need for further training.",
+          "vi": "Kết quả cho thấy cần đào tạo thêm."
+        }
+      ],
+      "collocations": [
+        "indicate a trend",
+        "indicate interest"
+      ]
+    },
+    {
+      "id": "industry-n",
+      "word": "industry",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪn.də.stri/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "ngành công nghiệp; lĩnh vực",
+          "definition_en": "a particular type of business or economic activity",
+          "synonyms": [
+            "sector",
+            "field"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company operates in the shipping industry.",
+          "vi": "Công ty hoạt động trong ngành vận chuyển."
+        }
+      ],
+      "collocations": [
+        "tourism industry",
+        "industry standard"
+      ]
+    },
+    {
+      "id": "information-n",
+      "word": "information",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌɪn.fɚˈmeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "thông tin",
+          "definition_en": "facts or details about something",
+          "synonyms": [
+            "details",
+            "data"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please provide accurate contact information.",
+          "vi": "Vui lòng cung cấp thông tin liên hệ chính xác."
+        }
+      ],
+      "collocations": [
+        "additional information",
+        "information desk"
+      ]
+    },
+    {
+      "id": "infrastructure-n",
+      "word": "infrastructure",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪn.frəˌstrʌk.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "cơ sở hạ tầng",
+          "definition_en": "the basic systems and services needed by a society or organization",
+          "synonyms": [
+            "framework",
+            "foundation"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project will upgrade the transportation infrastructure.",
+          "vi": "Dự án sẽ nâng cấp cơ sở hạ tầng giao thông."
+        }
+      ],
+      "collocations": [
+        "digital infrastructure",
+        "transport infrastructure"
+      ]
+    },
+    {
+      "id": "initiative-n",
+      "word": "initiative",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪˈnɪʃ.ə.t̬ɪv/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sáng kiến; chương trình chủ động",
+          "definition_en": "a new plan or action intended to solve a problem",
+          "synonyms": [
+            "undertaking",
+            "program"
+          ],
+          "antonyms": [
+            "inaction"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company launched an initiative to improve energy efficiency.",
+          "vi": "Công ty triển khai sáng kiến nâng cao hiệu quả năng lượng."
+        }
+      ],
+      "collocations": [
+        "take the initiative",
+        "corporate initiative"
       ]
     },
     {
@@ -63,7 +481,8 @@
             "examine",
             "check"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -99,6 +518,432 @@
       "collocations": [
         "inspect equipment",
         "safety inspection"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "install-v",
+      "word": "install",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈstɔːl/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "cài đặt; lắp đặt",
+          "definition_en": "to put equipment or software in place for use",
+          "synonyms": [
+            "set up",
+            "fit"
+          ],
+          "antonyms": [
+            "remove"
+          ]
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "install",
+        "vs_es": "installs",
+        "v2": "installed",
+        "v3": "installed",
+        "ving": "installing"
+      },
+      "examples": [
+        {
+          "en": "IT staff will install the new software.",
+          "vi": "Nhân viên IT sẽ cài đặt phần mềm mới."
+        }
+      ],
+      "collocations": [
+        "install software",
+        "install equipment"
+      ]
+    },
+    {
+      "id": "instruction-n",
+      "word": "instruction",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈstrʌk.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "hướng dẫn; chỉ dẫn",
+          "definition_en": "information about how to do something",
+          "synonyms": [
+            "direction",
+            "guideline"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Read the instructions before operating the machine.",
+          "vi": "Đọc hướng dẫn trước khi vận hành máy."
+        }
+      ],
+      "collocations": [
+        "follow instructions",
+        "instruction manual"
+      ]
+    },
+    {
+      "id": "insurance-n",
+      "word": "insurance",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈʃʊr.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "bảo hiểm",
+          "definition_en": "an arrangement that provides financial protection",
+          "synonyms": [
+            "coverage",
+            "protection"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company provides health insurance.",
+          "vi": "Công ty cung cấp bảo hiểm y tế."
+        }
+      ],
+      "collocations": [
+        "health insurance",
+        "insurance policy"
+      ]
+    },
+    {
+      "id": "interview-v",
+      "word": "interview",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪn.t̬ɚ.vjuː/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "phỏng vấn; cuộc phỏng vấn",
+          "definition_en": "a formal meeting in which questions are asked",
+          "synonyms": [
+            "meeting",
+            "questioning"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "interview",
+        "vs_es": "interviews",
+        "v2": "interviewed",
+        "v3": "interviewed",
+        "ving": "interviewing"
+      },
+      "examples": [
+        {
+          "en": "The candidate has an interview on Monday.",
+          "vi": "Ứng viên có buổi phỏng vấn vào thứ Hai."
+        }
+      ],
+      "collocations": [
+        "job interview",
+        "conduct an interview"
+      ]
+    },
+    {
+      "id": "introduce-v",
+      "word": "introduce",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌɪn.trəˈduːs/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "giới thiệu; đưa vào",
+          "definition_en": "to tell someone another person's name or bring something new",
+          "synonyms": [
+            "present",
+            "launch"
+          ],
+          "antonyms": [
+            "withdraw"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "introduce",
+        "vs_es": "introduces",
+        "v2": "introduced",
+        "v3": "introduced",
+        "ving": "introducing"
+      },
+      "examples": [
+        {
+          "en": "The company will introduce a new product.",
+          "vi": "Công ty sẽ giới thiệu một sản phẩm mới."
+        }
+      ],
+      "collocations": [
+        "introduce a policy",
+        "introduce yourself"
+      ]
+    },
+    {
+      "id": "inventory-n",
+      "word": "inventory",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪn.vənˌtɔːr.i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "hàng tồn kho; kiểm kê",
+          "definition_en": "a list of goods or the goods held by a business",
+          "synonyms": [
+            "stock",
+            "goods"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The warehouse updates its inventory daily.",
+          "vi": "Kho cập nhật hàng tồn kho hằng ngày."
+        }
+      ],
+      "collocations": [
+        "inventory control",
+        "take inventory"
+      ]
+    },
+    {
+      "id": "investment-n",
+      "word": "investment",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈvest.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "khoản đầu tư; sự đầu tư",
+          "definition_en": "money or effort put into something for future benefit",
+          "synonyms": [
+            "funding",
+            "capital"
+          ],
+          "antonyms": [
+            "withdrawal"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project requires a significant investment.",
+          "vi": "Dự án cần một khoản đầu tư đáng kể."
+        }
+      ],
+      "collocations": [
+        "capital investment",
+        "investment opportunity"
+      ]
+    },
+    {
+      "id": "invoice-nv",
+      "word": "invoice",
+      "phonetic": {
+        "us": "/ˈɪn.vɔɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hóa đơn thanh toán",
+          "definition_en": "a document showing goods or services supplied and the amount due",
+          "synonyms": [
+            "bill",
+            "statement"
+          ],
+          "antonyms": [],
+          "cefr_level": "B1"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "xuất hóa đơn",
+          "definition_en": "to send an invoice for payment",
+          "synonyms": [
+            "bill",
+            "charge"
+          ],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please pay the invoice within 30 days.",
+          "vi": "Vui lòng thanh toán hóa đơn trong vòng 30 ngày."
+        }
+      ],
+      "collocations": [
+        "issue an invoice",
+        "overdue invoice"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "issue-v",
+      "word": "issue",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪʃ.uː/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "vấn đề; phát hành",
+          "definition_en": "an important subject or a problem",
+          "synonyms": [
+            "problem",
+            "matter"
+          ],
+          "antonyms": [
+            "solution"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "issue",
+        "vs_es": "issues",
+        "v2": "issued",
+        "v3": "issued",
+        "ving": "issuing"
+      },
+      "examples": [
+        {
+          "en": "Please report any technical issue to support.",
+          "vi": "Vui lòng báo mọi vấn đề kỹ thuật cho bộ phận hỗ trợ."
+        }
+      ],
+      "collocations": [
+        "current issue",
+        "issue a statement"
+      ]
+    },
+    {
+      "id": "item-n",
+      "word": "item",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈaɪ.t̬əm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "mặt hàng; mục",
+          "definition_en": "a single thing in a list or group",
+          "synonyms": [
+            "article",
+            "product"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each item must have a price label.",
+          "vi": "Mỗi mặt hàng phải có nhãn giá."
+        }
+      ],
+      "collocations": [
+        "item number",
+        "list of items"
       ]
     },
     {
@@ -116,7 +961,8 @@
             "schedule",
             "travel plan"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -134,7 +980,9 @@
       "collocations": [
         "travel itinerary",
         "detailed itinerary"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     }
   ]
 }

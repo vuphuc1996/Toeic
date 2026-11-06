@@ -20,7 +20,8 @@
           "antonyms": [
             "reject",
             "refuse"
-          ]
+          ],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -55,7 +56,9 @@
       "collocations": [
         "accept an offer",
         "accept payment"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "access-nv",
@@ -74,7 +77,8 @@
           ],
           "antonyms": [
             "restriction"
-          ]
+          ],
+          "cefr_level": "B1"
         },
         {
           "pos": "v",
@@ -84,7 +88,8 @@
             "reach",
             "enter"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -98,7 +103,13 @@
           "meaning_vi": "có thể tiếp cận"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "access",
+        "vs_es": "accesses",
+        "v2": "accessed",
+        "v3": "accessed",
+        "ving": "accessing"
+      },
       "examples": [
         {
           "en": "Employees can access the system remotely.",
@@ -108,7 +119,9 @@
       "collocations": [
         "access a file",
         "Internet access"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "accommodation-n",
@@ -125,7 +138,8 @@
             "lodging",
             "housing"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -143,42 +157,214 @@
       "collocations": [
         "hotel accommodation",
         "accommodation costs"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "appointment-n",
-      "word": "appointment",
+      "id": "acquisition-n",
+      "word": "acquisition",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/əˈpɔɪnt.mənt/"
+        "us": "/ˌæk.wəˈzɪʃ.ən/"
       },
       "senses": [
         {
           "pos": "n",
-          "meaning_vi": "cuộc hẹn; lịch hẹn",
-          "definition_en": "an arrangement to meet someone at a particular time",
+          "cefr_level": "B2",
+          "meaning_vi": "sự mua lại; việc đạt được",
+          "definition_en": "the process of buying or obtaining a company or asset",
           "synonyms": [
-            "meeting",
-            "engagement"
+            "purchase",
+            "takeover"
           ],
-          "antonyms": []
+          "antonyms": [
+            "sale"
+          ]
         }
       ],
       "topics": [
-        "TIME",
-        "OFFICE",
-        "CUSTOMER"
+        "BUSINESS",
+        "FINANCE"
       ],
       "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "I have an appointment with the supplier at 10 a.m.",
-          "vi": "Tôi có cuộc hẹn với nhà cung cấp lúc 10 giờ sáng."
+          "en": "The acquisition was completed after regulatory approval.",
+          "vi": "Việc mua lại được hoàn tất sau khi có phê duyệt của cơ quan quản lý."
         }
       ],
       "collocations": [
-        "make an appointment",
-        "cancel an appointment"
+        "company acquisition",
+        "asset acquisition"
+      ]
+    },
+    {
+      "id": "address-v",
+      "word": "address",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈdres/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A1",
+          "meaning_vi": "địa chỉ; phát biểu với",
+          "definition_en": "details of where someone lives or speaks to someone",
+          "synonyms": [
+            "location",
+            "mention"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "address",
+        "vs_es": "addresses",
+        "v2": "addressed",
+        "v3": "addressed",
+        "ving": "addressing"
+      },
+      "examples": [
+        {
+          "en": "Please send the invoice to our new address.",
+          "vi": "Vui lòng gửi hóa đơn đến địa chỉ mới của chúng tôi."
+        }
+      ],
+      "collocations": [
+        "home address",
+        "address a concern"
+      ]
+    },
+    {
+      "id": "advice-n",
+      "word": "advice",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ədˈvaɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "lời khuyên",
+          "definition_en": "an opinion about what someone should do",
+          "synonyms": [
+            "guidance",
+            "suggestion"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consultant gave us useful advice.",
+          "vi": "Chuyên gia tư vấn đã cho chúng tôi lời khuyên hữu ích."
+        }
+      ],
+      "collocations": [
+        "give advice",
+        "financial advice"
+      ]
+    },
+    {
+      "id": "agenda-n",
+      "word": "agenda",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈdʒen.də/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "chương trình nghị sự; nội dung cuộc họp",
+          "definition_en": "a list of items to be discussed at a meeting",
+          "synonyms": [
+            "schedule",
+            "plan"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The agenda will be sent before the meeting.",
+          "vi": "Chương trình họp sẽ được gửi trước cuộc họp."
+        }
+      ],
+      "collocations": [
+        "meeting agenda",
+        "set the agenda"
+      ]
+    },
+    {
+      "id": "allocate-v",
+      "word": "allocate",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈæl.ə.keɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "phân bổ; cấp phát",
+          "definition_en": "to give a particular amount of time, money, or resources to someone or something",
+          "synonyms": [
+            "assign",
+            "distribute"
+          ],
+          "antonyms": [
+            "withhold"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "allocate",
+        "vs_es": "allocates",
+        "v2": "allocated",
+        "v3": "allocated",
+        "ving": "allocating"
+      },
+      "examples": [
+        {
+          "en": "The manager allocated additional funds to the project.",
+          "vi": "Quản lý phân bổ thêm ngân sách cho dự án."
+        }
+      ],
+      "collocations": [
+        "allocate resources",
+        "allocate a budget"
       ]
     },
     {
@@ -198,7 +384,8 @@
           ],
           "antonyms": [
             "never"
-          ]
+          ],
+          "cefr_level": "A1"
         }
       ],
       "topics": [
@@ -216,6 +403,395 @@
       "collocations": [
         "almost always",
         "as always"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "annual-adj",
+      "word": "annual",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈæn.ju.əl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "hằng năm; thường niên",
+          "definition_en": "happening once every year",
+          "synonyms": [
+            "yearly",
+            "once-a-year"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company publishes an annual report.",
+          "vi": "Công ty phát hành báo cáo thường niên."
+        }
+      ],
+      "collocations": [
+        "annual report",
+        "annual leave"
+      ]
+    },
+    {
+      "id": "apply-v",
+      "word": "apply",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈplaɪ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "nộp đơn; áp dụng",
+          "definition_en": "to make a formal request or use a method",
+          "synonyms": [
+            "request",
+            "submit"
+          ],
+          "antonyms": [
+            "withdraw"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "apply",
+        "vs_es": "applies",
+        "v2": "applied",
+        "v3": "applied",
+        "ving": "applying"
+      },
+      "examples": [
+        {
+          "en": "She plans to apply for the position.",
+          "vi": "Cô ấy dự định ứng tuyển vị trí này."
+        }
+      ],
+      "collocations": [
+        "apply for a job",
+        "apply a rule"
+      ]
+    },
+    {
+      "id": "appointment-n",
+      "word": "appointment",
+      "phonetic": {
+        "us": "/əˈpɔɪnt.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cuộc hẹn; lịch hẹn",
+          "definition_en": "an arrangement to meet someone at a particular time",
+          "synonyms": [
+            "meeting",
+            "engagement"
+          ],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "OFFICE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "I have an appointment with the supplier at 10 a.m.",
+          "vi": "Tôi có cuộc hẹn với nhà cung cấp lúc 10 giờ sáng."
+        }
+      ],
+      "collocations": [
+        "make an appointment",
+        "cancel an appointment"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "approve-v",
+      "word": "approve",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈpruːv/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "phê duyệt; chấp thuận",
+          "definition_en": "to officially accept or agree to something",
+          "synonyms": [
+            "authorize",
+            "accept"
+          ],
+          "antonyms": [
+            "reject"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "approve",
+        "vs_es": "approves",
+        "v2": "approved",
+        "v3": "approved",
+        "ving": "approving"
+      },
+      "examples": [
+        {
+          "en": "The director approved the revised budget.",
+          "vi": "Giám đốc đã phê duyệt ngân sách điều chỉnh."
+        }
+      ],
+      "collocations": [
+        "approve a request",
+        "approve a budget"
+      ]
+    },
+    {
+      "id": "arrange-v",
+      "word": "arrange",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈreɪndʒ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "sắp xếp; thu xếp",
+          "definition_en": "to organize something or make plans",
+          "synonyms": [
+            "organize",
+            "plan"
+          ],
+          "antonyms": [
+            "disorganize"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "arrange",
+        "vs_es": "arranges",
+        "v2": "arranged",
+        "v3": "arranged",
+        "ving": "arranging"
+      },
+      "examples": [
+        {
+          "en": "I will arrange a meeting with the supplier.",
+          "vi": "Tôi sẽ sắp xếp một cuộc họp với nhà cung cấp."
+        }
+      ],
+      "collocations": [
+        "arrange a meeting",
+        "arrange delivery"
+      ]
+    },
+    {
+      "id": "assistant-n",
+      "word": "assistant",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈsɪs.tənt/"
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "cefr_level": "A1",
+          "meaning_vi": "trợ lý; phụ tá",
+          "definition_en": "someone who helps another person with work",
+          "synonyms": [
+            "helper",
+            "aide"
+          ],
+          "antonyms": [
+            "manager"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The assistant prepared the documents.",
+          "vi": "Trợ lý đã chuẩn bị các tài liệu."
+        }
+      ],
+      "collocations": [
+        "administrative assistant",
+        "sales assistant"
+      ]
+    },
+    {
+      "id": "available-adj",
+      "word": "available",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈveɪ.lə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "có sẵn; rảnh",
+          "definition_en": "able to be used or obtained; free to do something",
+          "synonyms": [
+            "accessible",
+            "free"
+          ],
+          "antonyms": [
+            "unavailable"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The conference room is available after 2 p.m.",
+          "vi": "Phòng hội nghị còn trống sau 2 giờ chiều."
+        }
+      ],
+      "collocations": [
+        "available seats",
+        "available position"
+      ]
+    },
+    {
+      "id": "avoid-v",
+      "word": "avoid",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈvɔɪd/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "tránh; né",
+          "definition_en": "to stay away from something or prevent it",
+          "synonyms": [
+            "prevent",
+            "evade"
+          ],
+          "antonyms": [
+            "face"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "avoid",
+        "vs_es": "avoids",
+        "v2": "avoided",
+        "v3": "avoided",
+        "ving": "avoiding"
+      },
+      "examples": [
+        {
+          "en": "Please avoid making duplicate reservations.",
+          "vi": "Vui lòng tránh tạo đặt chỗ trùng lặp."
+        }
+      ],
+      "collocations": [
+        "avoid delays",
+        "avoid mistakes"
+      ]
+    },
+    {
+      "id": "award-v",
+      "word": "award",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈwɔːrd/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "giải thưởng; trao thưởng",
+          "definition_en": "a prize or to give a prize",
+          "synonyms": [
+            "prize",
+            "honor"
+          ],
+          "antonyms": [
+            "penalty"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "award",
+        "vs_es": "awards",
+        "v2": "awarded",
+        "v3": "awarded",
+        "ving": "awarding"
+      },
+      "examples": [
+        {
+          "en": "The team received an award for excellent service.",
+          "vi": "Đội ngũ nhận giải thưởng vì dịch vụ xuất sắc."
+        }
+      ],
+      "collocations": [
+        "win an award",
+        "award a contract"
       ]
     }
   ]

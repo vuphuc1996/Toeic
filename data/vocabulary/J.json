@@ -20,7 +20,8 @@
           "antonyms": [
             "leave",
             "separate"
-          ]
+          ],
+          "cefr_level": "A1"
         }
       ],
       "topics": [
@@ -45,7 +46,9 @@
       "collocations": [
         "join a meeting",
         "join the company"
-      ]
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "journal-n",
@@ -62,7 +65,8 @@
             "magazine",
             "diary"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -80,6 +84,86 @@
       "collocations": [
         "academic journal",
         "keep a journal"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "journey-n",
+      "word": "journey",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈdʒɝː.ni/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "chuyến đi; hành trình",
+          "definition_en": "the act of travelling from one place to another",
+          "synonyms": [
+            "trip",
+            "travel"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The journey takes approximately two hours.",
+          "vi": "Chuyến đi mất khoảng hai giờ."
+        }
+      ],
+      "collocations": [
+        "business journey",
+        "return journey"
+      ]
+    },
+    {
+      "id": "junior-adj",
+      "word": "junior",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈdʒuː.njɚ/"
+      },
+      "senses": [
+        {
+          "pos": "adj/n",
+          "cefr_level": "A2",
+          "meaning_vi": "cấp dưới; ít thâm niên",
+          "definition_en": "having a lower rank or less experience",
+          "synonyms": [
+            "entry-level",
+            "lower-ranking"
+          ],
+          "antonyms": [
+            "senior"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "She works as a junior analyst.",
+          "vi": "Cô ấy làm chuyên viên phân tích cấp dưới."
+        }
+      ],
+      "collocations": [
+        "junior staff",
+        "junior position"
       ]
     }
   ]

@@ -3,6 +3,44 @@
   "letter": "W",
   "words": [
     {
+      "id": "wage-n",
+      "word": "wage",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/weɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "tiền công; tiền lương theo giờ",
+          "definition_en": "money paid regularly for work, often by the hour",
+          "synonyms": [
+            "pay",
+            "earnings"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The minimum wage will increase next year.",
+          "vi": "Mức lương tối thiểu sẽ tăng vào năm tới."
+        }
+      ],
+      "collocations": [
+        "hourly wage",
+        "minimum wage"
+      ]
+    },
+    {
       "id": "warehouse-n",
       "word": "warehouse",
       "phonetic": {
@@ -17,7 +55,8 @@
             "storage facility",
             "depot"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -36,7 +75,9 @@
       "collocations": [
         "warehouse manager",
         "warehouse inventory"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "warranty-n",
@@ -52,7 +93,8 @@
           "synonyms": [
             "guarantee"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -71,6 +113,259 @@
       "collocations": [
         "warranty period",
         "under warranty"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "waste-v",
+      "word": "waste",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/weɪst/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "lãng phí; chất thải",
+          "definition_en": "unwanted material or to use more than necessary",
+          "synonyms": [
+            "garbage",
+            "misuse"
+          ],
+          "antonyms": [
+            "conserve"
+          ]
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "waste",
+        "vs_es": "wastes",
+        "v2": "wasted",
+        "v3": "wasted",
+        "ving": "wasting"
+      },
+      "examples": [
+        {
+          "en": "The new process reduces material waste.",
+          "vi": "Quy trình mới giảm lãng phí vật liệu."
+        }
+      ],
+      "collocations": [
+        "reduce waste",
+        "waste time"
+      ]
+    },
+    {
+      "id": "wednesday-n",
+      "word": "Wednesday",
+      "phonetic": {
+        "us": "/ˈwenz.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Thứ Tư",
+          "definition_en": "the day of the week after Tuesday and before Thursday",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Our weekly team meeting takes place every Wednesday.",
+          "vi": "Cuộc họp nhóm hằng tuần diễn ra vào mỗi thứ Tư."
+        }
+      ],
+      "collocations": [
+        "Wednesday morning"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "weekday-n",
+      "word": "weekday",
+      "phonetic": {
+        "us": "/ˈwiːk.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ngày trong tuần (thứ Hai đến thứ Sáu)",
+          "definition_en": "any day from Monday to Friday",
+          "synonyms": [
+            "business day"
+          ],
+          "antonyms": [
+            "weekend"
+          ],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customer service is available on weekdays.",
+          "vi": "Dịch vụ khách hàng hoạt động vào các ngày trong tuần."
+        }
+      ],
+      "collocations": [
+        "weekday schedule",
+        "during the weekdays"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "weekend-n",
+      "word": "weekend",
+      "phonetic": {
+        "us": "/ˌwiːkˈend/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cuối tuần",
+          "definition_en": "Saturday and Sunday, or the period around them",
+          "synonyms": [
+            "Saturday and Sunday"
+          ],
+          "antonyms": [
+            "weekday"
+          ],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The hotel is fully booked for the weekend.",
+          "vi": "Khách sạn đã kín phòng vào dịp cuối tuần."
+        }
+      ],
+      "collocations": [
+        "over the weekend",
+        "weekend trip"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "weekly-adjadv",
+      "word": "weekly",
+      "phonetic": {
+        "us": "/ˈwiːk.li/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "hằng tuần",
+          "definition_en": "happening or published once a week",
+          "synonyms": [
+            "every week"
+          ],
+          "antonyms": [
+            "daily",
+            "monthly"
+          ],
+          "cefr_level": "A1"
+        },
+        {
+          "pos": "adv",
+          "meaning_vi": "mỗi tuần",
+          "definition_en": "once every week",
+          "synonyms": [
+            "once a week"
+          ],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team holds a weekly progress meeting.",
+          "vi": "Nhóm tổ chức cuộc họp tiến độ hằng tuần."
+        }
+      ],
+      "collocations": [
+        "weekly report",
+        "weekly meeting"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "willing-adj",
+      "word": "willing",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈwɪl.ɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "sẵn lòng; sẵn sàng",
+          "definition_en": "ready or happy to do something",
+          "synonyms": [
+            "ready",
+            "eager"
+          ],
+          "antonyms": [
+            "unwilling"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier is willing to negotiate the price.",
+          "vi": "Nhà cung cấp sẵn lòng đàm phán giá."
+        }
+      ],
+      "collocations": [
+        "willing to help",
+        "willing participant"
       ]
     },
     {
@@ -91,7 +386,8 @@
           "antonyms": [
             "deposit",
             "submit"
-          ]
+          ],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -116,21 +412,31 @@
       "collocations": [
         "withdraw money",
         "withdraw an offer"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "wednesday-n",
-      "word": "Wednesday",
+      "id": "within-adv",
+      "word": "within",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈwenz.deɪ/"
+        "us": "/wɪˈðɪn/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "Thứ Tư",
-          "definition_en": "the day of the week after Tuesday and before Thursday",
-          "synonyms": [],
-          "antonyms": []
+          "pos": "prep/adv",
+          "cefr_level": "A2",
+          "meaning_vi": "trong vòng; bên trong",
+          "definition_en": "inside a particular area or before a period ends",
+          "synonyms": [
+            "inside",
+            "less than"
+          ],
+          "antonyms": [
+            "outside"
+          ]
         }
       ],
       "topics": [
@@ -141,133 +447,137 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Our weekly team meeting takes place every Wednesday.",
-          "vi": "Cuộc họp nhóm hằng tuần diễn ra vào mỗi thứ Tư."
+          "en": "Please respond within three business days.",
+          "vi": "Vui lòng phản hồi trong vòng ba ngày làm việc."
         }
       ],
       "collocations": [
-        "Wednesday morning"
+        "within a week",
+        "within budget"
       ]
     },
     {
-      "id": "weekday-n",
-      "word": "weekday",
+      "id": "withstand-v",
+      "word": "withstand",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈwiːk.deɪ/"
+        "us": "/wɪðˈstænd/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "ngày trong tuần (thứ Hai đến thứ Sáu)",
-          "definition_en": "any day from Monday to Friday",
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "chịu đựng; chống chịu",
+          "definition_en": "to remain undamaged by pressure or difficulty",
           "synonyms": [
-            "business day"
+            "resist",
+            "endure"
           ],
           "antonyms": [
-            "weekend"
+            "succumb"
           ]
         }
       ],
       "topics": [
-        "TIME",
-        "DAILY",
-        "OFFICE"
+        "QUALITY",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "withstand",
+        "vs_es": "withstands",
+        "v2": "withstood",
+        "v3": "withstood",
+        "ving": "withstanding"
+      },
+      "examples": [
+        {
+          "en": "The packaging must withstand long-distance transport.",
+          "vi": "Bao bì phải chịu được quá trình vận chuyển đường dài."
+        }
+      ],
+      "collocations": [
+        "withstand pressure",
+        "withstand impact"
+      ]
+    },
+    {
+      "id": "workshop-n",
+      "word": "workshop",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈwɝːk.ʃɑːp/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "hội thảo; xưởng",
+          "definition_en": "a meeting for discussion or a place where things are made",
+          "synonyms": [
+            "seminar",
+            "training session"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "MEETING"
       ],
       "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "Customer service is available on weekdays.",
-          "vi": "Dịch vụ khách hàng hoạt động vào các ngày trong tuần."
+          "en": "The workshop will focus on customer service.",
+          "vi": "Hội thảo sẽ tập trung vào dịch vụ khách hàng."
         }
       ],
       "collocations": [
-        "weekday schedule",
-        "during the weekdays"
+        "training workshop",
+        "workshop session"
       ]
     },
     {
-      "id": "weekend-n",
-      "word": "weekend",
+      "id": "worldwide-adj",
+      "word": "worldwide",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˌwiːkˈend/"
+        "us": "/ˌwɝːldˈwaɪd/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "cuối tuần",
-          "definition_en": "Saturday and Sunday, or the period around them",
+          "pos": "adj/adv",
+          "cefr_level": "B1",
+          "meaning_vi": "trên toàn thế giới",
+          "definition_en": "happening or existing throughout the world",
           "synonyms": [
-            "Saturday and Sunday"
+            "global",
+            "international"
           ],
           "antonyms": [
-            "weekday"
+            "local"
           ]
         }
       ],
       "topics": [
-        "TIME",
-        "DAILY",
+        "BUSINESS",
         "TRAVEL"
       ],
       "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "The hotel is fully booked for the weekend.",
-          "vi": "Khách sạn đã kín phòng vào dịp cuối tuần."
+          "en": "The brand has customers worldwide.",
+          "vi": "Thương hiệu có khách hàng trên toàn thế giới."
         }
       ],
       "collocations": [
-        "over the weekend",
-        "weekend trip"
-      ]
-    },
-    {
-      "id": "weekly-adjadv",
-      "word": "weekly",
-      "phonetic": {
-        "us": "/ˈwiːk.li/"
-      },
-      "senses": [
-        {
-          "pos": "adj",
-          "meaning_vi": "hằng tuần",
-          "definition_en": "happening or published once a week",
-          "synonyms": [
-            "every week"
-          ],
-          "antonyms": [
-            "daily",
-            "monthly"
-          ]
-        },
-        {
-          "pos": "adv",
-          "meaning_vi": "mỗi tuần",
-          "definition_en": "once every week",
-          "synonyms": [
-            "once a week"
-          ],
-          "antonyms": []
-        }
-      ],
-      "topics": [
-        "TIME",
-        "OFFICE",
-        "BUSINESS"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The team holds a weekly progress meeting.",
-          "vi": "Nhóm tổ chức cuộc họp tiến độ hằng tuần."
-        }
-      ],
-      "collocations": [
-        "weekly report",
-        "weekly meeting"
+        "worldwide sales",
+        "worldwide network"
       ]
     }
   ]

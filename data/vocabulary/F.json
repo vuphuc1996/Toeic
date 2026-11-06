@@ -17,7 +17,8 @@
             "amenity",
             "installation"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -36,6 +37,206 @@
       "collocations": [
         "office facility",
         "production facility"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "factory-n",
+      "word": "factory",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈfæk.tɚ.i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "nhà máy",
+          "definition_en": "a building where goods are made",
+          "synonyms": [
+            "plant",
+            "manufacturing site"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The factory produces electronic parts.",
+          "vi": "Nhà máy sản xuất linh kiện điện tử."
+        }
+      ],
+      "collocations": [
+        "factory worker",
+        "factory floor"
+      ]
+    },
+    {
+      "id": "failure-n",
+      "word": "failure",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈfeɪl.jɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "sự thất bại; sự hỏng hóc",
+          "definition_en": "a lack of success or the act of stopping working",
+          "synonyms": [
+            "breakdown",
+            "defeat"
+          ],
+          "antonyms": [
+            "success"
+          ]
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A power failure interrupted the meeting.",
+          "vi": "Sự cố mất điện đã làm gián đoạn cuộc họp."
+        }
+      ],
+      "collocations": [
+        "system failure",
+        "failure to deliver"
+      ]
+    },
+    {
+      "id": "feature-n",
+      "word": "feature",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈfiː.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "tính năng; đặc điểm",
+          "definition_en": "an important part or quality of something",
+          "synonyms": [
+            "function",
+            "characteristic"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The latest model includes a security feature.",
+          "vi": "Mẫu mới nhất có tính năng bảo mật."
+        }
+      ],
+      "collocations": [
+        "key feature",
+        "product feature"
+      ]
+    },
+    {
+      "id": "feedback-n",
+      "word": "feedback",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈfiːd.bæk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "phản hồi; nhận xét",
+          "definition_en": "information about how well something is done",
+          "synonyms": [
+            "response",
+            "comments"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The trainer requested feedback after the course.",
+          "vi": "Giảng viên yêu cầu phản hồi sau khóa học."
+        }
+      ],
+      "collocations": [
+        "customer feedback",
+        "provide feedback"
+      ]
+    },
+    {
+      "id": "finance-v",
+      "word": "finance",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈfaɪ.næns/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "tài chính; tài trợ",
+          "definition_en": "the management of money or to provide money",
+          "synonyms": [
+            "funding",
+            "money management"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "finance",
+        "vs_es": "finances",
+        "v2": "financed",
+        "v3": "financed",
+        "ving": "financing"
+      },
+      "examples": [
+        {
+          "en": "She works in the finance department.",
+          "vi": "Cô ấy làm việc tại phòng tài chính."
+        }
+      ],
+      "collocations": [
+        "corporate finance",
+        "finance a project"
       ]
     },
     {
@@ -56,7 +257,8 @@
           "antonyms": [
             "rigid",
             "inflexible"
-          ]
+          ],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -86,6 +288,98 @@
       "collocations": [
         "flexible schedule",
         "flexible hours"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "fluctuate-v",
+      "word": "fluctuate",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈflʌk.tʃu.eɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "dao động; biến động",
+          "definition_en": "to change frequently in amount or level",
+          "synonyms": [
+            "vary",
+            "shift"
+          ],
+          "antonyms": [
+            "stabilize"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "fluctuate",
+        "vs_es": "fluctuates",
+        "v2": "fluctuated",
+        "v3": "fluctuated",
+        "ving": "fluctuating"
+      },
+      "examples": [
+        {
+          "en": "Fuel prices fluctuate throughout the year.",
+          "vi": "Giá nhiên liệu biến động trong suốt năm."
+        }
+      ],
+      "collocations": [
+        "prices fluctuate",
+        "fluctuate significantly"
+      ]
+    },
+    {
+      "id": "forecast-v",
+      "word": "forecast",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈfɔːr.kæst/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "dự báo",
+          "definition_en": "a statement about what is likely to happen",
+          "synonyms": [
+            "projection",
+            "prediction"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "forecast",
+        "vs_es": "forecasts",
+        "v2": "forecasted",
+        "v3": "forecasted",
+        "ving": "forecasting"
+      },
+      "examples": [
+        {
+          "en": "The sales forecast has been revised.",
+          "vi": "Dự báo doanh số đã được điều chỉnh."
+        }
+      ],
+      "collocations": [
+        "sales forecast",
+        "forecast demand"
       ]
     },
     {
@@ -103,7 +397,8 @@
             "cargo",
             "shipment"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B2"
         }
       ],
       "topics": [
@@ -122,6 +417,48 @@
       "collocations": [
         "freight costs",
         "freight forwarder"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "frequent-adj",
+      "word": "frequent",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈfriː.kwənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "thường xuyên",
+          "definition_en": "happening often",
+          "synonyms": [
+            "regular",
+            "common"
+          ],
+          "antonyms": [
+            "rare"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Frequent updates keep the team informed.",
+          "vi": "Các cập nhật thường xuyên giúp nhóm nắm thông tin."
+        }
+      ],
+      "collocations": [
+        "frequent visits",
+        "frequent delays"
       ]
     },
     {
@@ -136,7 +473,8 @@
           "meaning_vi": "Thứ Sáu",
           "definition_en": "the day of the week after Thursday and before Saturday",
           "synonyms": [],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A1"
         }
       ],
       "topics": [
@@ -155,6 +493,54 @@
       "collocations": [
         "Friday evening",
         "by Friday"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "function-v",
+      "word": "function",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈfʌŋk.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "chức năng; hoạt động",
+          "definition_en": "the purpose of something or to work",
+          "synonyms": [
+            "purpose",
+            "operate"
+          ],
+          "antonyms": [
+            "malfunction"
+          ]
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "function",
+        "vs_es": "functions",
+        "v2": "functioned",
+        "v3": "functioned",
+        "ving": "functioning"
+      },
+      "examples": [
+        {
+          "en": "This button has a different function.",
+          "vi": "Nút này có chức năng khác."
+        }
+      ],
+      "collocations": [
+        "main function",
+        "function properly"
       ]
     }
   ]

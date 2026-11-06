@@ -16,7 +16,8 @@
           "synonyms": [
             "radiograph"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -34,7 +35,9 @@
       "collocations": [
         "X-ray image",
         "X-ray examination"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     }
   ]
 }

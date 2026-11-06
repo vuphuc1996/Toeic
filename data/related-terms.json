@@ -8,6 +8,18 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "accept",
+      "meaning_vi": "chấp nhận",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "accessible",
+      "meaning_vi": "có thể tiếp cận",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "account",
       "meaning_vi": "tài khoản; bản tường trình",
       "source": "curated-related-glossary"
@@ -58,6 +70,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "aide",
+      "meaning_vi": "trợ lý",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "allocate",
       "meaning_vi": "phân bổ",
       "source": "curated-related-glossary"
@@ -68,9 +86,27 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "alternative",
+      "meaning_vi": "phương án thay thế",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "amend",
+      "meaning_vi": "sửa đổi",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "amenity",
       "meaning_vi": "tiện nghi",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "amount",
+      "meaning_vi": "lượng; số tiền",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "announcement",
@@ -93,9 +129,27 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "applicant",
+      "meaning_vi": "người ứng tuyển",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "application",
+      "meaning_vi": "đơn đăng ký",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "appointment",
       "meaning_vi": "cuộc hẹn; lịch hẹn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "appraisal",
+      "meaning_vi": "sự thẩm định",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "approve",
@@ -128,6 +182,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "assertion",
+      "meaning_vi": "lời khẳng định",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "assess",
       "meaning_vi": "đánh giá",
       "source": "curated-related-glossary"
@@ -138,9 +198,39 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "asset",
+      "meaning_vi": "tài sản; nguồn lực",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "associate",
+      "meaning_vi": "cộng sự",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "assurance",
       "meaning_vi": "sự đảm bảo; sự cam đoan",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "attempt",
+      "meaning_vi": "sự cố gắng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "attentive",
+      "meaning_vi": "chú ý; cẩn thận",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "authorize",
+      "meaning_vi": "cấp quyền",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "baggage",
@@ -151,6 +241,12 @@
       "term": "bargain",
       "meaning_vi": "món hời; sự mặc cả",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "benchmark",
+      "meaning_vi": "mốc chuẩn",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "bill",
@@ -193,9 +289,21 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "call off",
+      "meaning_vi": "hủy bỏ",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "cargo",
       "meaning_vi": "hàng hóa vận chuyển",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "cautious",
+      "meaning_vi": "thận trọng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "central office",
@@ -223,9 +331,39 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "coaching",
+      "meaning_vi": "huấn luyện",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "collaborator",
+      "meaning_vi": "cộng tác viên",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "collect",
       "meaning_vi": "thu thập; thu tiền",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "commerce",
+      "meaning_vi": "thương mại",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "component",
+      "meaning_vi": "thành phần; linh kiện",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "condition",
+      "meaning_vi": "điều kiện; tình trạng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "confirm",
@@ -248,6 +386,18 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "consumer",
+      "meaning_vi": "người tiêu dùng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "contender",
+      "meaning_vi": "đối thủ; ứng viên cạnh tranh",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "continually",
       "meaning_vi": "liên tục; không ngừng",
       "source": "curated-related-glossary"
@@ -258,9 +408,51 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "convey",
+      "meaning_vi": "chuyển tải",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "conveyance",
+      "meaning_vi": "phương tiện vận chuyển",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "cost",
       "meaning_vi": "chi phí; trị giá",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "course",
+      "meaning_vi": "lộ trình",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "courtyard",
+      "meaning_vi": "sân trong",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "coverage",
+      "meaning_vi": "phạm vi bảo hiểm",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "coworker",
+      "meaning_vi": "đồng nghiệp",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "criterion",
+      "meaning_vi": "tiêu chí",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "critical",
@@ -276,6 +468,12 @@
       "term": "daily",
       "meaning_vi": "hằng ngày",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "danger",
+      "meaning_vi": "nguy hiểm",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "deal",
@@ -306,6 +504,12 @@
       "term": "diary",
       "meaning_vi": "nhật ký; sổ lịch",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "direct",
+      "meaning_vi": "hướng dẫn; trực tiếp",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "direction",
@@ -343,6 +547,30 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "distinction",
+      "meaning_vi": "sự phân biệt",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "distinctive",
+      "meaning_vi": "đặc trưng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "division",
+      "meaning_vi": "bộ phận; sự phân chia",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "document",
+      "meaning_vi": "tài liệu; ghi nhận",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "drawback",
       "meaning_vi": "nhược điểm; bất lợi",
       "source": "curated-related-glossary"
@@ -351,6 +579,12 @@
       "term": "due date",
       "meaning_vi": "ngày đến hạn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "edition",
+      "meaning_vi": "phiên bản; ấn bản",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "employ",
@@ -363,14 +597,38 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "endeavor",
+      "meaning_vi": "nỗ lực",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "endpoint",
+      "meaning_vi": "điểm cuối",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "engagement",
       "meaning_vi": "cam kết; cuộc hẹn; sự tham gia",
       "source": "curated-related-glossary"
     },
     {
+      "term": "enhance",
+      "meaning_vi": "nâng cao",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "enlist",
       "meaning_vi": "tuyển mộ; đăng ký tham gia",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "enroll",
+      "meaning_vi": "ghi danh",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "ensure",
@@ -388,9 +646,21 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "equilibrium",
+      "meaning_vi": "trạng thái cân bằng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "essential",
       "meaning_vi": "thiết yếu; cần thiết",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "evade",
+      "meaning_vi": "né tránh",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "every three months",
@@ -413,6 +683,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "execute",
+      "meaning_vi": "thực hiện",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "expenditure",
       "meaning_vi": "khoản chi; chi tiêu",
       "source": "curated-related-glossary"
@@ -433,9 +709,21 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "fee",
+      "meaning_vi": "khoản phí",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "file",
       "meaning_vi": "tệp; hồ sơ; nộp hồ sơ",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "financial institution",
+      "meaning_vi": "tổ chức tài chính",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "fire",
@@ -448,6 +736,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "functioning",
+      "meaning_vi": "sự hoạt động",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "funds",
       "meaning_vi": "nguồn vốn; quỹ tiền",
       "source": "curated-related-glossary"
@@ -456,6 +750,12 @@
       "term": "gain",
       "meaning_vi": "thu được; lợi ích; khoản tăng",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "gather",
+      "meaning_vi": "thu thập",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "gear",
@@ -473,6 +773,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "global",
+      "meaning_vi": "toàn cầu",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "goods",
       "meaning_vi": "hàng hóa",
       "source": "curated-related-glossary"
@@ -481,6 +787,12 @@
       "term": "grade",
       "meaning_vi": "cấp bậc; điểm số; xếp loại",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "grievance",
+      "meaning_vi": "khiếu nại; bất bình",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "guarantee",
@@ -493,14 +805,44 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "guidance",
+      "meaning_vi": "sự hướng dẫn",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "guideline",
       "meaning_vi": "hướng dẫn; nguyên tắc chỉ đạo",
       "source": "curated-related-glossary"
     },
     {
+      "term": "hazard",
+      "meaning_vi": "mối nguy",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "helper",
+      "meaning_vi": "người hỗ trợ",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "hire",
       "meaning_vi": "thuê; tuyển dụng",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "holder",
+      "meaning_vi": "người nắm giữ",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "honor",
+      "meaning_vi": "vinh danh",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "housing",
@@ -511,6 +853,18 @@
       "term": "ignorance",
       "meaning_vi": "sự thiếu hiểu biết",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "imbalance",
+      "meaning_vi": "sự mất cân bằng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "incapable",
+      "meaning_vi": "không có khả năng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "income",
@@ -538,9 +892,33 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "installment",
+      "meaning_vi": "kỳ trả góp",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "interim",
+      "meaning_vi": "tạm thời",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "international",
+      "meaning_vi": "quốc tế",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "introduce",
       "meaning_vi": "giới thiệu; đưa vào sử dụng",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "inventory",
+      "meaning_vi": "hàng tồn kho",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "job opening",
@@ -563,6 +941,24 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "legitimate",
+      "meaning_vi": "hợp pháp; chính đáng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "loan",
+      "meaning_vi": "khoản vay; cho vay",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "location",
+      "meaning_vi": "địa điểm; vị trí",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "lodging",
       "meaning_vi": "chỗ ở; nơi lưu trú",
       "source": "curated-related-glossary"
@@ -571,6 +967,18 @@
       "term": "loss",
       "meaning_vi": "sự mất mát; khoản lỗ",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "lot",
+      "meaning_vi": "khu đất; lô",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "machinery",
+      "meaning_vi": "máy móc",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "magazine",
@@ -591,6 +999,12 @@
       "term": "manage",
       "meaning_vi": "quản lý; xoay xở",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "manual",
+      "meaning_vi": "sổ tay; thủ công",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "mark",
@@ -621,6 +1035,18 @@
       "term": "meeting record",
       "meaning_vi": "biên bản cuộc họp",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "mention",
+      "meaning_vi": "đề cập",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "modify",
+      "meaning_vi": "điều chỉnh",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "moment",
@@ -678,6 +1104,18 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "objection",
+      "meaning_vi": "sự phản đối",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "observation",
+      "meaning_vi": "sự quan sát",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "observe",
       "meaning_vi": "quan sát; tuân thủ",
       "source": "curated-related-glossary"
@@ -686,6 +1124,12 @@
       "term": "occasion",
       "meaning_vi": "dịp; cơ hội",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "occupation",
+      "meaning_vi": "nghề nghiệp",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "once a month",
@@ -698,6 +1142,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "once-a-year",
+      "meaning_vi": "mỗi năm một lần",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "opening",
       "meaning_vi": "lễ khai trương; vị trí còn trống; phần mở đầu",
       "source": "curated-related-glossary"
@@ -706,6 +1156,12 @@
       "term": "optional",
       "meaning_vi": "không bắt buộc; tùy chọn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "outlay",
+      "meaning_vi": "khoản chi",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "output",
@@ -723,6 +1179,18 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "path",
+      "meaning_vi": "con đường",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "pattern",
+      "meaning_vi": "mô hình; quy luật",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "per-month",
       "meaning_vi": "mỗi tháng",
       "source": "curated-related-glossary"
@@ -738,14 +1206,38 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "permit",
+      "meaning_vi": "cho phép",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "plan",
       "meaning_vi": "kế hoạch; dự định",
       "source": "curated-related-glossary"
     },
     {
+      "term": "post",
+      "meaning_vi": "vị trí công việc",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "postal code",
       "meaning_vi": "mã bưu chính",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "precious",
+      "meaning_vi": "quý giá",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "prediction",
+      "meaning_vi": "sự dự đoán",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "present",
@@ -763,6 +1255,18 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "prevent",
+      "meaning_vi": "ngăn ngừa",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "prize",
+      "meaning_vi": "phần thưởng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "proceeds",
       "meaning_vi": "tiền thu được; doanh thu từ việc bán",
       "source": "curated-related-glossary"
@@ -778,6 +1282,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "profession",
+      "meaning_vi": "nghề nghiệp",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "profit",
       "meaning_vi": "lợi nhuận; thu lợi",
       "source": "curated-related-glossary"
@@ -786,6 +1296,12 @@
       "term": "progress report",
       "meaning_vi": "báo cáo tiến độ",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "projection",
+      "meaning_vi": "dự phóng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "promote",
@@ -798,6 +1314,30 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "proposal",
+      "meaning_vi": "đề xuất",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "proprietor",
+      "meaning_vi": "chủ sở hữu",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "prospect",
+      "meaning_vi": "triển vọng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "protection",
+      "meaning_vi": "sự bảo vệ",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "provider",
       "meaning_vi": "nhà cung cấp; đơn vị cung ứng",
       "source": "curated-related-glossary"
@@ -808,9 +1348,27 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "purchase",
+      "meaning_vi": "mua hàng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "purchaser",
+      "meaning_vi": "người mua",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "put off",
       "meaning_vi": "trì hoãn; hoãn lại",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "quantity",
+      "meaning_vi": "số lượng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "question",
@@ -818,9 +1376,21 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "questionnaire",
+      "meaning_vi": "bảng câu hỏi",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "radiograph",
       "meaning_vi": "ảnh X-quang",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "ratio",
+      "meaning_vi": "tỷ lệ",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "reach",
@@ -828,9 +1398,21 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "reason",
+      "meaning_vi": "lý do; nguyên nhân",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "receive",
       "meaning_vi": "nhận; tiếp nhận",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "record",
+      "meaning_vi": "hồ sơ; ghi lại",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "recruit",
@@ -863,6 +1445,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "reimbursement",
+      "meaning_vi": "khoản hoàn trả",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "reject",
       "meaning_vi": "từ chối; bác bỏ",
       "source": "curated-related-glossary"
@@ -893,6 +1481,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "repayment",
+      "meaning_vi": "sự hoàn trả",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "required",
       "meaning_vi": "được yêu cầu; bắt buộc",
       "source": "curated-related-glossary"
@@ -901,6 +1495,12 @@
       "term": "restriction",
       "meaning_vi": "sự hạn chế; quy định giới hạn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "retract",
+      "meaning_vi": "rút lại",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "retreat",
@@ -953,6 +1553,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "scope",
+      "meaning_vi": "phạm vi",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "see",
       "meaning_vi": "nhìn thấy; gặp; hiểu",
       "source": "curated-related-glossary"
@@ -1003,6 +1609,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "specialist",
+      "meaning_vi": "chuyên gia",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "staff",
       "meaning_vi": "nhân viên; đội ngũ nhân sự",
       "source": "curated-related-glossary"
@@ -1016,6 +1628,12 @@
       "term": "standard",
       "meaning_vi": "tiêu chuẩn; mức chuẩn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "standardized",
+      "meaning_vi": "được tiêu chuẩn hóa",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "statement",
@@ -1033,6 +1651,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "suggestion",
+      "meaning_vi": "gợi ý; đề xuất",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "summit",
       "meaning_vi": "hội nghị thượng đỉnh; đỉnh núi",
       "source": "curated-related-glossary"
@@ -1043,9 +1667,33 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "supply",
+      "meaning_vi": "nguồn cung; cung cấp",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "surcharge",
       "meaning_vi": "phụ phí",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "take part",
+      "meaning_vi": "tham gia",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "teller",
+      "meaning_vi": "giao dịch viên ngân hàng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "tendency",
+      "meaning_vi": "xu hướng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "time limit",
@@ -1058,6 +1706,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "trade",
+      "meaning_vi": "thương mại; trao đổi",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "travel plan",
       "meaning_vi": "kế hoạch chuyến đi",
       "source": "curated-related-glossary"
@@ -1068,6 +1722,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "trigger",
+      "meaning_vi": "kích hoạt; nguyên nhân khởi phát",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "twelve months",
       "meaning_vi": "mười hai tháng; một năm",
       "source": "curated-related-glossary"
@@ -1076,6 +1736,12 @@
       "term": "understanding",
       "meaning_vi": "sự hiểu biết; thỏa thuận",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "undertaking",
+      "meaning_vi": "công việc; cam kết",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "unnecessary",
@@ -1093,6 +1759,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "variation",
+      "meaning_vi": "sự biến đổi",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "vendor",
       "meaning_vi": "người bán; nhà cung cấp",
       "source": "curated-related-glossary"
@@ -1106,6 +1778,12 @@
       "term": "versatile",
       "meaning_vi": "đa năng; linh hoạt",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "volume",
+      "meaning_vi": "khối lượng",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     },
     {
       "term": "warrant",
@@ -1138,6 +1816,18 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "withdraw",
+      "meaning_vi": "rút lui",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "withdrawal",
+      "meaning_vi": "sự rút tiền; rút lui",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
+    },
+    {
       "term": "worker",
       "meaning_vi": "người lao động; công nhân",
       "source": "curated-related-glossary"
@@ -1146,6 +1836,12 @@
       "term": "workforce",
       "meaning_vi": "lực lượng lao động",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "yearly",
+      "meaning_vi": "hằng năm",
+      "pos": "",
+      "definition_en": "Reference gloss for practice distractors."
     }
   ]
 }

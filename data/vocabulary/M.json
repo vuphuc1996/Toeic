@@ -19,7 +19,8 @@
           ],
           "antonyms": [
             "neglect"
-          ]
+          ],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -55,6 +56,222 @@
       "collocations": [
         "maintain equipment",
         "maintain a relationship"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "manage-v",
+      "word": "manage",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmæn.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "quản lý; xoay xở",
+          "definition_en": "to control or organize people or activities",
+          "synonyms": [
+            "administer",
+            "oversee"
+          ],
+          "antonyms": [
+            "mismanage"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "manage",
+        "vs_es": "manages",
+        "v2": "managed",
+        "v3": "managed",
+        "ving": "managing"
+      },
+      "examples": [
+        {
+          "en": "She manages a team of twelve employees.",
+          "vi": "Cô ấy quản lý một nhóm gồm 12 nhân viên."
+        }
+      ],
+      "collocations": [
+        "manage a department",
+        "manage resources"
+      ]
+    },
+    {
+      "id": "manager-n",
+      "word": "manager",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmæn.ɪ.dʒɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "quản lý; người điều hành",
+          "definition_en": "a person responsible for controlling a team or activity",
+          "synonyms": [
+            "supervisor",
+            "leader"
+          ],
+          "antonyms": [
+            "employee"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manager approved the leave request.",
+          "vi": "Quản lý đã duyệt yêu cầu nghỉ phép."
+        }
+      ],
+      "collocations": [
+        "sales manager",
+        "project manager"
+      ]
+    },
+    {
+      "id": "manufacture-v",
+      "word": "manufacture",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌmæn.jəˈfæk.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "sản xuất",
+          "definition_en": "to make goods in large quantities using machinery",
+          "synonyms": [
+            "produce",
+            "make"
+          ],
+          "antonyms": [
+            "consume"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "manufacture",
+        "vs_es": "manufactures",
+        "v2": "manufactured",
+        "v3": "manufactured",
+        "ving": "manufacturing"
+      },
+      "examples": [
+        {
+          "en": "The plant manufactures electronic components.",
+          "vi": "Nhà máy sản xuất linh kiện điện tử."
+        }
+      ],
+      "collocations": [
+        "manufacture goods",
+        "manufactured product"
+      ]
+    },
+    {
+      "id": "material-n",
+      "word": "material",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/məˈtɪr.i.əl/"
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "cefr_level": "A2",
+          "meaning_vi": "vật liệu; tài liệu",
+          "definition_en": "a substance used to make things or information for study",
+          "synonyms": [
+            "substance",
+            "supply"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The materials will arrive tomorrow.",
+          "vi": "Vật liệu sẽ đến vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "raw material",
+        "training material"
+      ]
+    },
+    {
+      "id": "measure-v",
+      "word": "measure",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmeʒ.ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "biện pháp; đo lường",
+          "definition_en": "an action taken to achieve a result or to find size",
+          "synonyms": [
+            "action",
+            "assess"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "measure",
+        "vs_es": "measures",
+        "v2": "measured",
+        "v3": "measured",
+        "ving": "measuring"
+      },
+      "examples": [
+        {
+          "en": "The company introduced measures to reduce waste.",
+          "vi": "Công ty áp dụng các biện pháp giảm lãng phí."
+        }
+      ],
+      "collocations": [
+        "safety measure",
+        "measure performance"
       ]
     },
     {
@@ -72,7 +289,8 @@
             "goods",
             "products"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         },
         {
           "pos": "v",
@@ -82,7 +300,8 @@
             "market",
             "promote"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -101,7 +320,288 @@
       "collocations": [
         "display merchandise",
         "merchandise inventory"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "merger-n",
+      "word": "merger",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmɝː.dʒɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự sáp nhập",
+          "definition_en": "the joining of two companies or organizations",
+          "synonyms": [
+            "combination",
+            "consolidation"
+          ],
+          "antonyms": [
+            "separation"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The merger will create a larger regional company.",
+          "vi": "Việc sáp nhập sẽ tạo ra một công ty khu vực lớn hơn."
+        }
+      ],
+      "collocations": [
+        "company merger",
+        "merger agreement"
       ]
+    },
+    {
+      "id": "method-n",
+      "word": "method",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmeθ.əd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "phương pháp",
+          "definition_en": "a particular way of doing something",
+          "synonyms": [
+            "approach",
+            "technique"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "This method saves time.",
+          "vi": "Phương pháp này tiết kiệm thời gian."
+        }
+      ],
+      "collocations": [
+        "payment method",
+        "effective method"
+      ]
+    },
+    {
+      "id": "minimum-n",
+      "word": "minimum",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmɪn.ə.məm/"
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "cefr_level": "A2",
+          "meaning_vi": "mức tối thiểu; tối thiểu",
+          "definition_en": "the smallest amount or number allowed",
+          "synonyms": [
+            "least",
+            "lowest"
+          ],
+          "antonyms": [
+            "maximum"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The minimum order is fifty units.",
+          "vi": "Đơn hàng tối thiểu là 50 đơn vị."
+        }
+      ],
+      "collocations": [
+        "minimum wage",
+        "minimum requirement"
+      ]
+    },
+    {
+      "id": "minute-n",
+      "word": "minute",
+      "phonetic": {
+        "us": "/ˈmɪn.ɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phút; biên bản cuộc họp (số nhiều: minutes)",
+          "definition_en": "a period of 60 seconds; an official written record of a meeting",
+          "synonyms": [
+            "moment",
+            "meeting record"
+          ],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "MEETING",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The meeting will begin in five minutes.",
+          "vi": "Cuộc họp sẽ bắt đầu sau năm phút."
+        }
+      ],
+      "collocations": [
+        "meeting minutes",
+        "in a minute",
+        "minute hand"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "monday-n",
+      "word": "Monday",
+      "phonetic": {
+        "us": "/ˈmʌn.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Thứ Hai",
+          "definition_en": "the day of the week after Sunday and before Tuesday",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The report is due on Monday.",
+          "vi": "Báo cáo đến hạn vào thứ Hai."
+        }
+      ],
+      "collocations": [
+        "next Monday",
+        "Monday morning"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "monitor-v",
+      "word": "monitor",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmɑː.nə.t̬ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "cefr_level": "B1",
+          "meaning_vi": "theo dõi; màn hình",
+          "definition_en": "to watch and check a process over time",
+          "synonyms": [
+            "track",
+            "observe"
+          ],
+          "antonyms": [
+            "ignore"
+          ]
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "monitor",
+        "vs_es": "monitors",
+        "v2": "monitored",
+        "v3": "monitored",
+        "ving": "monitoring"
+      },
+      "examples": [
+        {
+          "en": "We monitor delivery progress online.",
+          "vi": "Chúng tôi theo dõi tiến độ giao hàng trực tuyến."
+        }
+      ],
+      "collocations": [
+        "monitor performance",
+        "computer monitor"
+      ]
+    },
+    {
+      "id": "month-n",
+      "word": "month",
+      "phonetic": {
+        "us": "/mʌnθ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tháng",
+          "definition_en": "one of the twelve named periods into which a year is divided",
+          "synonyms": [
+            "calendar month"
+          ],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The invoice must be paid within one month.",
+          "vi": "Hóa đơn phải được thanh toán trong vòng một tháng."
+        }
+      ],
+      "collocations": [
+        "next month",
+        "monthly report",
+        "per month"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "monthly-adjadv",
@@ -120,7 +620,8 @@
           "antonyms": [
             "daily",
             "weekly"
-          ]
+          ],
+          "cefr_level": "A2"
         },
         {
           "pos": "adv",
@@ -129,7 +630,8 @@
           "synonyms": [
             "once a month"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -154,112 +656,54 @@
       "collocations": [
         "monthly report",
         "monthly payment"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "minute-n",
-      "word": "minute",
+      "id": "motivate-v",
+      "word": "motivate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈmɪn.ɪt/"
+        "us": "/ˈmoʊ.t̬ə.veɪt/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "phút; biên bản cuộc họp (số nhiều: minutes)",
-          "definition_en": "a period of 60 seconds; an official written record of a meeting",
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "tạo động lực; thúc đẩy",
+          "definition_en": "to make someone want to do something",
           "synonyms": [
-            "moment",
-            "meeting record"
+            "inspire",
+            "encourage"
           ],
-          "antonyms": []
+          "antonyms": [
+            "discourage"
+          ]
         }
       ],
       "topics": [
-        "TIME",
-        "MEETING",
-        "OFFICE"
+        "HR",
+        "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The meeting will begin in five minutes.",
-          "vi": "Cuộc họp sẽ bắt đầu sau năm phút."
-        }
-      ],
-      "collocations": [
-        "meeting minutes",
-        "in a minute",
-        "minute hand"
-      ]
-    },
-    {
-      "id": "month-n",
-      "word": "month",
-      "phonetic": {
-        "us": "/mʌnθ/"
+      "verb_forms": {
+        "v1": "motivate",
+        "vs_es": "motivates",
+        "v2": "motivated",
+        "v3": "motivated",
+        "ving": "motivating"
       },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "tháng",
-          "definition_en": "one of the twelve named periods into which a year is divided",
-          "synonyms": [
-            "calendar month"
-          ],
-          "antonyms": []
-        }
-      ],
-      "topics": [
-        "TIME",
-        "DAILY",
-        "FINANCE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
       "examples": [
         {
-          "en": "The invoice must be paid within one month.",
-          "vi": "Hóa đơn phải được thanh toán trong vòng một tháng."
+          "en": "The bonus is intended to motivate employees.",
+          "vi": "Khoản thưởng nhằm tạo động lực cho nhân viên."
         }
       ],
       "collocations": [
-        "next month",
-        "monthly report",
-        "per month"
-      ]
-    },
-    {
-      "id": "monday-n",
-      "word": "Monday",
-      "phonetic": {
-        "us": "/ˈmʌn.deɪ/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "Thứ Hai",
-          "definition_en": "the day of the week after Sunday and before Tuesday",
-          "synonyms": [],
-          "antonyms": []
-        }
-      ],
-      "topics": [
-        "TIME",
-        "DAILY",
-        "OFFICE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The report is due on Monday.",
-          "vi": "Báo cáo đến hạn vào thứ Hai."
-        }
-      ],
-      "collocations": [
-        "next Monday",
-        "Monday morning"
+        "motivate a team",
+        "highly motivated"
       ]
     }
   ]

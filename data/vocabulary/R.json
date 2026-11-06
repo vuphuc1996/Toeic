@@ -3,6 +3,94 @@
   "letter": "R",
   "words": [
     {
+      "id": "range-v",
+      "word": "range",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/reɪndʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "phạm vi; dãy; dao động",
+          "definition_en": "a set of different things or the limits of something",
+          "synonyms": [
+            "variety",
+            "scope"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "range",
+        "vs_es": "ranges",
+        "v2": "ranged",
+        "v3": "ranged",
+        "ving": "ranging"
+      },
+      "examples": [
+        {
+          "en": "The store offers a wide range of products.",
+          "vi": "Cửa hàng cung cấp nhiều loại sản phẩm."
+        }
+      ],
+      "collocations": [
+        "price range",
+        "wide range"
+      ]
+    },
+    {
+      "id": "rate-v",
+      "word": "rate",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/reɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "tỷ lệ; mức giá; đánh giá",
+          "definition_en": "a measurement or price for a service",
+          "synonyms": [
+            "ratio",
+            "charge"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "rate",
+        "vs_es": "rates",
+        "v2": "rated",
+        "v3": "rated",
+        "ving": "rating"
+      },
+      "examples": [
+        {
+          "en": "The hotel offers a reduced rate for groups.",
+          "vi": "Khách sạn có mức giá giảm cho các đoàn."
+        }
+      ],
+      "collocations": [
+        "exchange rate",
+        "hourly rate"
+      ]
+    },
+    {
       "id": "receipt-n",
       "word": "receipt",
       "phonetic": {
@@ -17,7 +105,8 @@
             "proof of payment",
             "acknowledgment"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -35,6 +124,232 @@
       "collocations": [
         "issue a receipt",
         "proof of receipt"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "receive-v",
+      "word": "receive",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈsiːv/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "nhận",
+          "definition_en": "to get something that someone sends or gives",
+          "synonyms": [
+            "get",
+            "obtain"
+          ],
+          "antonyms": [
+            "send"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "receive",
+        "vs_es": "receives",
+        "v2": "received",
+        "v3": "received",
+        "ving": "receiving"
+      },
+      "examples": [
+        {
+          "en": "We received your application this morning.",
+          "vi": "Chúng tôi đã nhận được đơn đăng ký của bạn sáng nay."
+        }
+      ],
+      "collocations": [
+        "receive a package",
+        "receive payment"
+      ]
+    },
+    {
+      "id": "recent-adj",
+      "word": "recent",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈriː.sənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "gần đây",
+          "definition_en": "happening or starting not long ago",
+          "synonyms": [
+            "latest",
+            "new"
+          ],
+          "antonyms": [
+            "distant"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Recent changes will be explained at the meeting.",
+          "vi": "Những thay đổi gần đây sẽ được giải thích tại cuộc họp."
+        }
+      ],
+      "collocations": [
+        "recent update",
+        "recent experience"
+      ]
+    },
+    {
+      "id": "recommend-v",
+      "word": "recommend",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌrek.əˈmend/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "đề xuất; khuyến nghị",
+          "definition_en": "to suggest that someone or something is good",
+          "synonyms": [
+            "suggest",
+            "advise"
+          ],
+          "antonyms": [
+            "discourage"
+          ]
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "recommend",
+        "vs_es": "recommends",
+        "v2": "recommended",
+        "v3": "recommended",
+        "ving": "recommending"
+      },
+      "examples": [
+        {
+          "en": "The technician recommended replacing the battery.",
+          "vi": "Kỹ thuật viên đề nghị thay pin."
+        }
+      ],
+      "collocations": [
+        "highly recommend",
+        "recommend a solution"
+      ]
+    },
+    {
+      "id": "reconcile-v",
+      "word": "reconcile",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈrek.ən.saɪl/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "đối chiếu; làm cho khớp",
+          "definition_en": "to check that two sets of financial records agree",
+          "synonyms": [
+            "match",
+            "verify"
+          ],
+          "antonyms": [
+            "disagree"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "reconcile",
+        "vs_es": "reconciles",
+        "v2": "reconciled",
+        "v3": "reconciled",
+        "ving": "reconciling"
+      },
+      "examples": [
+        {
+          "en": "The accountant reconciled the bank statement with company records.",
+          "vi": "Kế toán đối chiếu sao kê ngân hàng với hồ sơ công ty."
+        }
+      ],
+      "collocations": [
+        "reconcile accounts",
+        "reconcile a statement"
+      ]
+    },
+    {
+      "id": "record-v",
+      "word": "record",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈrek.ɚd/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "hồ sơ; ghi lại",
+          "definition_en": "a written account or to store information",
+          "synonyms": [
+            "document",
+            "register"
+          ],
+          "antonyms": [
+            "erase"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "record",
+        "vs_es": "records",
+        "v2": "recorded",
+        "v3": "recorded",
+        "ving": "recording"
+      },
+      "examples": [
+        {
+          "en": "Please record the visitor's name.",
+          "vi": "Vui lòng ghi lại tên khách đến thăm."
+        }
+      ],
+      "collocations": [
+        "keep a record",
+        "record a transaction"
       ]
     },
     {
@@ -52,7 +367,8 @@
             "hire",
             "enlist"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -87,6 +403,588 @@
       "collocations": [
         "recruit staff",
         "recruitment process"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "reduce-v",
+      "word": "reduce",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈduːs/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "giảm",
+          "definition_en": "to make something smaller or less",
+          "synonyms": [
+            "decrease",
+            "lower"
+          ],
+          "antonyms": [
+            "increase"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "reduce",
+        "vs_es": "reduces",
+        "v2": "reduced",
+        "v3": "reduced",
+        "ving": "reducing"
+      },
+      "examples": [
+        {
+          "en": "The new process will reduce waiting time.",
+          "vi": "Quy trình mới sẽ giảm thời gian chờ."
+        }
+      ],
+      "collocations": [
+        "reduce costs",
+        "reduce waste"
+      ]
+    },
+    {
+      "id": "refund-v",
+      "word": "refund",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈriː.fʌnd/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "hoàn tiền; khoản hoàn tiền",
+          "definition_en": "money returned to a customer or to return it",
+          "synonyms": [
+            "reimbursement",
+            "repayment"
+          ],
+          "antonyms": [
+            "charge"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "refund",
+        "vs_es": "refunds",
+        "v2": "refunded",
+        "v3": "refunded",
+        "ving": "refunding"
+      },
+      "examples": [
+        {
+          "en": "Customers may request a refund within seven days.",
+          "vi": "Khách hàng có thể yêu cầu hoàn tiền trong vòng bảy ngày."
+        }
+      ],
+      "collocations": [
+        "full refund",
+        "issue a refund"
+      ]
+    },
+    {
+      "id": "register-v",
+      "word": "register",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈredʒ.ə.stɚ/"
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "cefr_level": "A2",
+          "meaning_vi": "đăng ký; sổ đăng ký",
+          "definition_en": "to officially record a name or details",
+          "synonyms": [
+            "enroll",
+            "record"
+          ],
+          "antonyms": [
+            "withdraw"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "register",
+        "vs_es": "registers",
+        "v2": "registered",
+        "v3": "registered",
+        "ving": "registering"
+      },
+      "examples": [
+        {
+          "en": "Please register for the workshop online.",
+          "vi": "Vui lòng đăng ký hội thảo trực tuyến."
+        }
+      ],
+      "collocations": [
+        "register online",
+        "register a complaint"
+      ]
+    },
+    {
+      "id": "regular-adj",
+      "word": "regular",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈreɡ.jə.lɚ/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "thường xuyên; đều đặn",
+          "definition_en": "happening often or at fixed times",
+          "synonyms": [
+            "usual",
+            "consistent"
+          ],
+          "antonyms": [
+            "irregular"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Regular maintenance prevents equipment problems.",
+          "vi": "Bảo trì thường xuyên ngăn ngừa vấn đề thiết bị."
+        }
+      ],
+      "collocations": [
+        "regular customer",
+        "regular inspection"
+      ]
+    },
+    {
+      "id": "regulation-n",
+      "word": "regulation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌreɡ.jəˈleɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "quy định; quy chế",
+          "definition_en": "an official rule made by an authority",
+          "synonyms": [
+            "rule",
+            "requirement"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company must comply with safety regulations.",
+          "vi": "Công ty phải tuân thủ các quy định an toàn."
+        }
+      ],
+      "collocations": [
+        "government regulation",
+        "safety regulation"
+      ]
+    },
+    {
+      "id": "reject-v",
+      "word": "reject",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈdʒekt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "từ chối; bác bỏ",
+          "definition_en": "to refuse to accept or consider something",
+          "synonyms": [
+            "refuse",
+            "decline"
+          ],
+          "antonyms": [
+            "accept"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "reject",
+        "vs_es": "rejects",
+        "v2": "rejected",
+        "v3": "rejected",
+        "ving": "rejecting"
+      },
+      "examples": [
+        {
+          "en": "The committee rejected the proposal.",
+          "vi": "Ủy ban đã bác bỏ đề xuất."
+        }
+      ],
+      "collocations": [
+        "reject an application",
+        "reject an offer"
+      ]
+    },
+    {
+      "id": "release-v",
+      "word": "release",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈliːs/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "phát hành; thả; công bố",
+          "definition_en": "to make something available to the public",
+          "synonyms": [
+            "launch",
+            "publish"
+          ],
+          "antonyms": [
+            "withhold"
+          ]
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "release",
+        "vs_es": "releases",
+        "v2": "released",
+        "v3": "released",
+        "ving": "releasing"
+      },
+      "examples": [
+        {
+          "en": "The software update will be released next week.",
+          "vi": "Bản cập nhật phần mềm sẽ được phát hành tuần tới."
+        }
+      ],
+      "collocations": [
+        "release a product",
+        "press release"
+      ]
+    },
+    {
+      "id": "remain-v",
+      "word": "remain",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈmeɪn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "vẫn còn; duy trì",
+          "definition_en": "to continue to exist or stay in a place",
+          "synonyms": [
+            "stay",
+            "continue"
+          ],
+          "antonyms": [
+            "leave"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "remain",
+        "vs_es": "remains",
+        "v2": "remained",
+        "v3": "remained",
+        "ving": "remaining"
+      },
+      "examples": [
+        {
+          "en": "Only two seats remain available.",
+          "vi": "Chỉ còn hai chỗ ngồi có sẵn."
+        }
+      ],
+      "collocations": [
+        "remain unchanged",
+        "remain available"
+      ]
+    },
+    {
+      "id": "remind-v",
+      "word": "remind",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈmaɪnd/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "nhắc nhở",
+          "definition_en": "to make someone remember something",
+          "synonyms": [
+            "prompt",
+            "alert"
+          ],
+          "antonyms": [
+            "forget"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "remind",
+        "vs_es": "reminds",
+        "v2": "reminded",
+        "v3": "reminded",
+        "ving": "reminding"
+      },
+      "examples": [
+        {
+          "en": "Please remind me to call the client.",
+          "vi": "Vui lòng nhắc tôi gọi cho khách hàng."
+        }
+      ],
+      "collocations": [
+        "remind someone of",
+        "remind staff"
+      ]
+    },
+    {
+      "id": "replace-v",
+      "word": "replace",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈpleɪs/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "thay thế",
+          "definition_en": "to take the place of something",
+          "synonyms": [
+            "substitute",
+            "exchange"
+          ],
+          "antonyms": [
+            "retain"
+          ]
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "replace",
+        "vs_es": "replaces",
+        "v2": "replaced",
+        "v3": "replaced",
+        "ving": "replacing"
+      },
+      "examples": [
+        {
+          "en": "The technician replaced the damaged part.",
+          "vi": "Kỹ thuật viên đã thay bộ phận bị hỏng."
+        }
+      ],
+      "collocations": [
+        "replace a device",
+        "replacement part"
+      ]
+    },
+    {
+      "id": "request-v",
+      "word": "request",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈkwest/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "yêu cầu; đề nghị",
+          "definition_en": "an act of asking for something",
+          "synonyms": [
+            "ask for",
+            "application"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "request",
+        "vs_es": "requests",
+        "v2": "requested",
+        "v3": "requested",
+        "ving": "requesting"
+      },
+      "examples": [
+        {
+          "en": "We received a request for additional information.",
+          "vi": "Chúng tôi nhận được yêu cầu cung cấp thêm thông tin."
+        }
+      ],
+      "collocations": [
+        "make a request",
+        "request assistance"
+      ]
+    },
+    {
+      "id": "require-v",
+      "word": "require",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈkwaɪr/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "yêu cầu; đòi hỏi",
+          "definition_en": "to need something or make it necessary",
+          "synonyms": [
+            "need",
+            "necessitate"
+          ],
+          "antonyms": [
+            "waive"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "require",
+        "vs_es": "requires",
+        "v2": "required",
+        "v3": "required",
+        "ving": "requiring"
+      },
+      "examples": [
+        {
+          "en": "The position requires two years of experience.",
+          "vi": "Vị trí yêu cầu hai năm kinh nghiệm."
+        }
+      ],
+      "collocations": [
+        "require approval",
+        "require training"
+      ]
+    },
+    {
+      "id": "research-v",
+      "word": "research",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈriː.sɝːtʃ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "nghiên cứu; khảo sát",
+          "definition_en": "the careful study of a subject to discover facts",
+          "synonyms": [
+            "study",
+            "investigation"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "research",
+        "vs_es": "researches",
+        "v2": "researched",
+        "v3": "researched",
+        "ving": "researching"
+      },
+      "examples": [
+        {
+          "en": "The team conducted market research.",
+          "vi": "Nhóm đã tiến hành nghiên cứu thị trường."
+        }
+      ],
+      "collocations": [
+        "market research",
+        "conduct research"
       ]
     },
     {
@@ -104,7 +1002,8 @@
             "booking",
             "appointment"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -134,6 +1033,303 @@
       "collocations": [
         "make a reservation",
         "hotel reservation"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "reserve-v",
+      "word": "reserve",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈzɝːv/"
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "cefr_level": "A2",
+          "meaning_vi": "đặt trước; dự trữ",
+          "definition_en": "to arrange to have something kept for future use",
+          "synonyms": [
+            "book",
+            "save"
+          ],
+          "antonyms": [
+            "cancel"
+          ]
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "reserve",
+        "vs_es": "reserves",
+        "v2": "reserved",
+        "v3": "reserved",
+        "ving": "reserving"
+      },
+      "examples": [
+        {
+          "en": "Please reserve a table for six people.",
+          "vi": "Vui lòng đặt bàn cho sáu người."
+        }
+      ],
+      "collocations": [
+        "reserve a room",
+        "make a reservation"
+      ]
+    },
+    {
+      "id": "resource-n",
+      "word": "resource",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈriː.sɔːrs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "nguồn lực; tài nguyên",
+          "definition_en": "a useful supply of something",
+          "synonyms": [
+            "asset",
+            "supply"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project needs additional resources.",
+          "vi": "Dự án cần thêm nguồn lực."
+        }
+      ],
+      "collocations": [
+        "human resources",
+        "natural resources"
+      ]
+    },
+    {
+      "id": "respond-v",
+      "word": "respond",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈspɑːnd/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "phản hồi; trả lời",
+          "definition_en": "to say or do something as an answer",
+          "synonyms": [
+            "reply",
+            "answer"
+          ],
+          "antonyms": [
+            "ignore"
+          ]
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "respond",
+        "vs_es": "responds",
+        "v2": "responded",
+        "v3": "responded",
+        "ving": "responding"
+      },
+      "examples": [
+        {
+          "en": "Please respond to the email by noon.",
+          "vi": "Vui lòng phản hồi email trước buổi trưa."
+        }
+      ],
+      "collocations": [
+        "respond quickly",
+        "respond to a request"
+      ]
+    },
+    {
+      "id": "responsibility-n",
+      "word": "responsibility",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˌspɑːn.səˈbɪl.ə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "trách nhiệm",
+          "definition_en": "a duty to deal with something",
+          "synonyms": [
+            "duty",
+            "obligation"
+          ],
+          "antonyms": [
+            "irresponsibility"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Managing the budget is her responsibility.",
+          "vi": "Quản lý ngân sách là trách nhiệm của cô ấy."
+        }
+      ],
+      "collocations": [
+        "take responsibility",
+        "job responsibility"
+      ]
+    },
+    {
+      "id": "result-v",
+      "word": "result",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈzʌlt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A1",
+          "meaning_vi": "kết quả; dẫn đến",
+          "definition_en": "something that happens because of an action",
+          "synonyms": [
+            "outcome",
+            "effect"
+          ],
+          "antonyms": [
+            "cause"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "result",
+        "vs_es": "results",
+        "v2": "resulted",
+        "v3": "resulted",
+        "ving": "resulting"
+      },
+      "examples": [
+        {
+          "en": "The survey results will be published tomorrow.",
+          "vi": "Kết quả khảo sát sẽ được công bố vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "final result",
+        "result in"
+      ]
+    },
+    {
+      "id": "retail-n",
+      "word": "retail",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈriː.teɪl/"
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "cefr_level": "B1",
+          "meaning_vi": "bán lẻ",
+          "definition_en": "the sale of goods directly to customers",
+          "synonyms": [
+            "shop trade"
+          ],
+          "antonyms": [
+            "wholesale"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company operates in the retail sector.",
+          "vi": "Công ty hoạt động trong lĩnh vực bán lẻ."
+        }
+      ],
+      "collocations": [
+        "retail price",
+        "retail store"
+      ]
+    },
+    {
+      "id": "retention-n",
+      "word": "retention",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈten.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự duy trì; giữ chân",
+          "definition_en": "the act of keeping employees or customers",
+          "synonyms": [
+            "preservation",
+            "continuity"
+          ],
+          "antonyms": [
+            "loss"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training program aims to improve employee retention.",
+          "vi": "Chương trình đào tạo nhằm cải thiện việc giữ chân nhân viên."
+        }
+      ],
+      "collocations": [
+        "staff retention",
+        "customer retention"
       ]
     },
     {
@@ -154,7 +1350,8 @@
           "antonyms": [
             "expense",
             "loss"
-          ]
+          ],
+          "cefr_level": "B2"
         }
       ],
       "topics": [
@@ -172,6 +1369,220 @@
       "collocations": [
         "annual revenue",
         "revenue growth"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "review-v",
+      "word": "review",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈvjuː/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "đánh giá; xem xét lại",
+          "definition_en": "a careful examination or to examine something again",
+          "synonyms": [
+            "assessment",
+            "examine"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "review",
+        "vs_es": "reviews",
+        "v2": "reviewed",
+        "v3": "reviewed",
+        "ving": "reviewing"
+      },
+      "examples": [
+        {
+          "en": "The manager will review the report.",
+          "vi": "Quản lý sẽ xem xét báo cáo."
+        }
+      ],
+      "collocations": [
+        "performance review",
+        "review a contract"
+      ]
+    },
+    {
+      "id": "revise-v",
+      "word": "revise",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈvaɪz/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "điều chỉnh; sửa đổi",
+          "definition_en": "to change something to improve or correct it",
+          "synonyms": [
+            "amend",
+            "modify"
+          ],
+          "antonyms": [
+            "retain"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "revise",
+        "vs_es": "revises",
+        "v2": "revised",
+        "v3": "revised",
+        "ving": "revising"
+      },
+      "examples": [
+        {
+          "en": "We need to revise the project schedule.",
+          "vi": "Chúng ta cần điều chỉnh lịch dự án."
+        }
+      ],
+      "collocations": [
+        "revise a plan",
+        "revise a document"
+      ]
+    },
+    {
+      "id": "risk-v",
+      "word": "risk",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪsk/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "rủi ro; mạo hiểm",
+          "definition_en": "the possibility of loss or danger",
+          "synonyms": [
+            "hazard",
+            "danger"
+          ],
+          "antonyms": [
+            "safety"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "risk",
+        "vs_es": "risks",
+        "v2": "risked",
+        "v3": "risked",
+        "ving": "risking"
+      },
+      "examples": [
+        {
+          "en": "The company must assess the financial risk.",
+          "vi": "Công ty phải đánh giá rủi ro tài chính."
+        }
+      ],
+      "collocations": [
+        "reduce risk",
+        "at risk"
+      ]
+    },
+    {
+      "id": "role-n",
+      "word": "role",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/roʊl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "vai trò; vị trí",
+          "definition_en": "the function or position someone has",
+          "synonyms": [
+            "function",
+            "position"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Communication is an important part of the role.",
+          "vi": "Giao tiếp là một phần quan trọng của vị trí này."
+        }
+      ],
+      "collocations": [
+        "key role",
+        "play a role"
+      ]
+    },
+    {
+      "id": "route-n",
+      "word": "route",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ruːt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "tuyến đường; lộ trình",
+          "definition_en": "a way from one place to another",
+          "synonyms": [
+            "path",
+            "course"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRANSPORT",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The driver chose a faster route.",
+          "vi": "Tài xế chọn tuyến đường nhanh hơn."
+        }
+      ],
+      "collocations": [
+        "delivery route",
+        "alternative route"
       ]
     }
   ]

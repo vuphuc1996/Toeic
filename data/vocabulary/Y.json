@@ -3,6 +3,83 @@
   "letter": "Y",
   "words": [
     {
+      "id": "yard-n",
+      "word": "yard",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/jɑːrd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "sân; bãi",
+          "definition_en": "an outdoor area next to a building or a unit of length",
+          "synonyms": [
+            "courtyard",
+            "lot"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The trucks are waiting in the loading yard.",
+          "vi": "Các xe tải đang chờ ở bãi bốc dỡ."
+        }
+      ],
+      "collocations": [
+        "storage yard",
+        "loading yard"
+      ]
+    },
+    {
+      "id": "year-n",
+      "word": "year",
+      "phonetic": {
+        "us": "/jɪr/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "năm",
+          "definition_en": "a period of twelve months",
+          "synonyms": [
+            "twelve months"
+          ],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company was founded ten years ago.",
+          "vi": "Công ty được thành lập cách đây mười năm."
+        }
+      ],
+      "collocations": [
+        "fiscal year",
+        "calendar year",
+        "year-end"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
       "id": "yearly-adjadv",
       "word": "yearly",
       "phonetic": {
@@ -19,7 +96,8 @@
           "antonyms": [
             "monthly",
             "weekly"
-          ]
+          ],
+          "cefr_level": "A2"
         },
         {
           "pos": "adv",
@@ -28,7 +106,8 @@
           "synonyms": [
             "annually"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -47,7 +126,9 @@
       "collocations": [
         "yearly review",
         "yearly salary"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "yield-nv",
@@ -64,7 +145,8 @@
             "produce",
             "generate"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B2"
         },
         {
           "pos": "n",
@@ -74,7 +156,8 @@
             "output",
             "return"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B2"
         }
       ],
       "topics": [
@@ -98,43 +181,9 @@
       "collocations": [
         "yield a profit",
         "annual yield"
-      ]
-    },
-    {
-      "id": "year-n",
-      "word": "year",
-      "phonetic": {
-        "us": "/jɪr/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "năm",
-          "definition_en": "a period of twelve months",
-          "synonyms": [
-            "twelve months"
-          ],
-          "antonyms": []
-        }
       ],
-      "topics": [
-        "TIME",
-        "DAILY",
-        "FINANCE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The company was founded ten years ago.",
-          "vi": "Công ty được thành lập cách đây mười năm."
-        }
-      ],
-      "collocations": [
-        "fiscal year",
-        "calendar year",
-        "year-end"
-      ]
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate"
     }
   ]
 }

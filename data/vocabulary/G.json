@@ -3,6 +3,132 @@
   "letter": "G",
   "words": [
     {
+      "id": "gather-v",
+      "word": "gather",
+      "phonetic": {
+        "us": "/ˈɡæð.ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thu thập; tập hợp; tụ họp",
+          "definition_en": "to collect things or bring people together",
+          "synonyms": [
+            "collect",
+            "assemble"
+          ],
+          "antonyms": [
+            "scatter",
+            "disperse"
+          ],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "gather",
+        "vs_es": "gathers",
+        "v2": "gathered",
+        "v3": "gathered",
+        "ving": "gathering"
+      },
+      "examples": [
+        {
+          "en": "Please gather the documents before the meeting.",
+          "vi": "Vui lòng tập hợp tài liệu trước cuộc họp."
+        }
+      ],
+      "collocations": [
+        "gather information",
+        "gather together"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "goal-n",
+      "word": "goal",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɡoʊl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "mục tiêu",
+          "definition_en": "something that a person or organization wants to achieve",
+          "synonyms": [
+            "aim",
+            "target"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Our main goal is to improve service quality.",
+          "vi": "Mục tiêu chính của chúng tôi là cải thiện chất lượng dịch vụ."
+        }
+      ],
+      "collocations": [
+        "achieve a goal",
+        "set a goal"
+      ]
+    },
+    {
+      "id": "goods-n",
+      "word": "goods",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɡʊdz/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "hàng hóa",
+          "definition_en": "things that are made or sold",
+          "synonyms": [
+            "products",
+            "merchandise"
+          ],
+          "antonyms": [
+            "services"
+          ]
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The goods will arrive at the warehouse tomorrow.",
+          "vi": "Hàng hóa sẽ đến kho vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "consumer goods",
+        "damaged goods"
+      ]
+    },
+    {
       "id": "guarantee-nv",
       "word": "guarantee",
       "phonetic": {
@@ -17,7 +143,8 @@
             "warranty",
             "assurance"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         },
         {
           "pos": "v",
@@ -27,7 +154,8 @@
             "ensure",
             "warrant"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -45,7 +173,9 @@
       "collocations": [
         "money-back guarantee",
         "guarantee quality"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "guidance-n",
@@ -62,7 +192,8 @@
             "direction",
             "advice"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -92,51 +223,54 @@
       "collocations": [
         "provide guidance",
         "career guidance"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "gather-v",
-      "word": "gather",
+      "id": "guide-v",
+      "word": "guide",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈɡæð.ɚ/"
+        "us": "/ɡaɪd/"
       },
       "senses": [
         {
-          "pos": "v",
-          "meaning_vi": "thu thập; tập hợp; tụ họp",
-          "definition_en": "to collect things or bring people together",
+          "pos": "n/v",
+          "cefr_level": "A1",
+          "meaning_vi": "hướng dẫn; hướng dẫn viên",
+          "definition_en": "information that helps someone or a person who leads",
           "synonyms": [
-            "collect",
-            "assemble"
+            "manual",
+            "direct"
           ],
           "antonyms": [
-            "scatter",
-            "disperse"
+            "mislead"
           ]
         }
       ],
       "topics": [
-        "MEETING",
-        "OFFICE",
-        "DAILY"
+        "TRAVEL",
+        "OFFICE"
       ],
       "word_family": [],
       "verb_forms": {
-        "v1": "gather",
-        "vs_es": "gathers",
-        "v2": "gathered",
-        "v3": "gathered",
-        "ving": "gathering"
+        "v1": "guide",
+        "vs_es": "guides",
+        "v2": "guided",
+        "v3": "guided",
+        "ving": "guiding"
       },
       "examples": [
         {
-          "en": "Please gather the documents before the meeting.",
-          "vi": "Vui lòng tập hợp tài liệu trước cuộc họp."
+          "en": "Please follow the installation guide.",
+          "vi": "Vui lòng làm theo hướng dẫn cài đặt."
         }
       ],
       "collocations": [
-        "gather information",
-        "gather together"
+        "user guide",
+        "tour guide"
       ]
     }
   ]

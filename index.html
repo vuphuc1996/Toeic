@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.6.0 – Từ điển TOEIC A–Z</title>
+  <title>TOEIC Dictionary v2.7.1 – Vocabulary Expansion</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -62,7 +62,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 4 · v2.6.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.7.1 · GitHub-only</div>
       </div>
     </aside>
 
@@ -116,7 +116,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.6.0:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.7.1:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -126,6 +126,7 @@
           <div class="filter-row">
             <label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="dictionarySearch" type="search" placeholder="Tìm từ, nghĩa tiếng Việt..." autocomplete="off"></label>
             <label class="field"><span class="field-label">CHỦ ĐỀ</span><select id="topicFilter"><option value="">Tất cả chủ đề</option></select></label>
+            <label class="field"><span class="field-label">CẤP ĐỘ CEFR</span><select id="cefrFilter"><option value="">Tất cả cấp độ</option><option value="A1">A1 · Cơ bản</option><option value="A2">A2 · Sơ cấp</option><option value="B1">B1 · Trung cấp</option><option value="B2">B2 · Trên trung cấp</option></select></label>
             <label class="field"><span class="field-label">LOẠI TỪ</span><select id="posFilter"><option value="">Tất cả loại từ</option><option value="n">Danh từ (n)</option><option value="v">Động từ (v)</option><option value="adj">Tính từ (adj)</option><option value="adv">Trạng từ (adv)</option><option value="prep">Giới từ (prep)</option><option value="conj">Liên từ (conj)</option><option value="pron">Đại từ (pron)</option></select></label>
             <label class="field"><span class="field-label">NGUỒN</span><select id="dictionarySourceFilter"><option value="all">Tất cả nguồn</option><option value="base">Từ điển gốc</option><option value="personal">Từ cá nhân</option></select></label>
             <button class="secondary-button reset-button" id="resetFilters">Đặt lại</button>
@@ -167,7 +168,11 @@
                 <div class="character-feedback" id="characterFeedback" hidden></div>
                 <div class="answer-reference" id="answerReference"></div>
                 <div class="choice-review" id="choiceReview" hidden></div>
-                <div class="auto-advance-row" id="autoAdvanceRow" hidden><div class="advance-indicator"><strong id="autoAdvanceCountdown">3</strong><span><b id="autoAdvanceStatus">Đang chuẩn bị câu tiếp theo</b><small>Chuyển câu tự động</small></span><i class="advance-spinner" aria-hidden="true"></i></div><button type="button" class="text-button" id="holdQuestionButton">Giữ câu này để xem kỹ</button></div>
+                <div class="auto-advance-row" id="autoAdvanceRow" hidden>
+                  <div class="advance-prep-copy"><span class="advance-prep-kicker">NEXT QUESTION · CHUẨN BỊ</span><strong id="autoAdvanceStatus">Bạn đã sẵn sàng cho câu tiếp theo?</strong><small id="autoAdvanceHint">Hãy ghi nhớ đáp án vừa học trước khi chuyển câu.</small></div>
+                  <div class="advance-count-wrap"><div class="advance-ring" id="autoAdvanceRing"><strong id="autoAdvanceCountdown">3</strong></div><span class="advance-count-label">GIÂY</span></div>
+                  <div class="advance-bottom"><div class="advance-progress-track"><span id="autoAdvanceProgress"></span></div><div class="advance-stage"><i class="is-active"></i><i></i><i></i><em id="autoAdvanceStageText">Chuẩn bị câu mới</em></div><button type="button" class="text-button" id="holdQuestionButton">Giữ câu này để xem kỹ</button></div>
+                </div>
                 <div class="feedback-ai-row"><button type="button" class="secondary-button" id="analyzeAnswerAIButton"><svg class="ui-icon button-icon"><use href="#icon-sparkles"></use></svg> Tra cứu Google AI</button></div>
               </div>
               <div class="quiz-actions"><button class="secondary-button" id="skipQuestionButton">Bỏ qua từ này</button><button class="primary-button" id="nextQuestionButton" disabled>Câu tiếp theo <svg class="ui-icon button-icon"><use href="#icon-arrow-right"></use></svg></button></div>
@@ -257,7 +262,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>GitHub-only · v2.6.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>GitHub-only · v2.7.1</span></footer>
     </main>
   </div>
 

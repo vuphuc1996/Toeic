@@ -3,6 +3,86 @@
   "letter": "O",
   "words": [
     {
+      "id": "objective-n",
+      "word": "objective",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əbˈdʒek.tɪv/"
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "cefr_level": "B1",
+          "meaning_vi": "mục tiêu; khách quan",
+          "definition_en": "a goal or based on facts rather than feelings",
+          "synonyms": [
+            "goal",
+            "aim"
+          ],
+          "antonyms": [
+            "subjective"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The objective is to reduce processing time.",
+          "vi": "Mục tiêu là giảm thời gian xử lý."
+        }
+      ],
+      "collocations": [
+        "business objective",
+        "objective assessment"
+      ]
+    },
+    {
+      "id": "obligation-n",
+      "word": "obligation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌɑː.bləˈɡeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "nghĩa vụ; trách nhiệm ràng buộc",
+          "definition_en": "something that a person or organization must do",
+          "synonyms": [
+            "duty",
+            "responsibility"
+          ],
+          "antonyms": [
+            "exemption"
+          ]
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier has an obligation to meet the delivery terms.",
+          "vi": "Nhà cung cấp có nghĩa vụ đáp ứng các điều khoản giao hàng."
+        }
+      ],
+      "collocations": [
+        "legal obligation",
+        "contractual obligation"
+      ]
+    },
+    {
       "id": "obtain-v",
       "word": "obtain",
       "phonetic": {
@@ -17,7 +97,8 @@
             "acquire",
             "get"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -42,48 +123,54 @@
       "collocations": [
         "obtain permission",
         "obtain information"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "opportunity-n",
-      "word": "opportunity",
+      "id": "offer-v",
+      "word": "offer",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˌɑː.pɚˈtuː.nə.t̬i/"
+        "us": "/ˈɔː.fɚ/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "cơ hội",
-          "definition_en": "a situation in which it is possible to do something",
+          "pos": "n/v",
+          "cefr_level": "A1",
+          "meaning_vi": "đề nghị; lời chào mời",
+          "definition_en": "to say that you are willing to give or do something",
           "synonyms": [
-            "chance",
-            "opening"
+            "proposal",
+            "provide"
           ],
-          "antonyms": []
+          "antonyms": [
+            "refuse"
+          ]
         }
       ],
       "topics": [
-        "HR",
         "BUSINESS",
-        "DAILY"
+        "CUSTOMER"
       ],
-      "word_family": [
-        {
-          "word": "opportune",
-          "pos": "adj",
-          "meaning_vi": "đúng thời điểm"
-        }
-      ],
-      "verb_forms": null,
+      "word_family": [],
+      "verb_forms": {
+        "v1": "offer",
+        "vs_es": "offers",
+        "v2": "offered",
+        "v3": "offered",
+        "ving": "offering"
+      },
       "examples": [
         {
-          "en": "This training is a good opportunity to improve your skills.",
-          "vi": "Khóa đào tạo này là cơ hội tốt để cải thiện kỹ năng."
+          "en": "The supplier offered a lower price.",
+          "vi": "Nhà cung cấp đề nghị mức giá thấp hơn."
         }
       ],
       "collocations": [
-        "career opportunity",
-        "take an opportunity"
+        "special offer",
+        "offer assistance"
       ]
     },
     {
@@ -101,7 +188,8 @@
             "run",
             "manage"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -142,6 +230,349 @@
       "collocations": [
         "operate machinery",
         "operate a business"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "operation-n",
+      "word": "operation",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌɑː.pəˈreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "hoạt động; vận hành",
+          "definition_en": "the process of working or being in action",
+          "synonyms": [
+            "functioning",
+            "activity"
+          ],
+          "antonyms": [
+            "shutdown"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The operation of the facility is fully automated.",
+          "vi": "Hoạt động của cơ sở được tự động hóa hoàn toàn."
+        }
+      ],
+      "collocations": [
+        "business operation",
+        "daily operations"
+      ]
+    },
+    {
+      "id": "opportunity-n",
+      "word": "opportunity",
+      "phonetic": {
+        "us": "/ˌɑː.pɚˈtuː.nə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cơ hội",
+          "definition_en": "a situation in which it is possible to do something",
+          "synonyms": [
+            "chance",
+            "opening"
+          ],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "opportune",
+          "pos": "adj",
+          "meaning_vi": "đúng thời điểm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "This training is a good opportunity to improve your skills.",
+          "vi": "Khóa đào tạo này là cơ hội tốt để cải thiện kỹ năng."
+        }
+      ],
+      "collocations": [
+        "career opportunity",
+        "take an opportunity"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "option-n",
+      "word": "option",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɑːp.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "lựa chọn",
+          "definition_en": "one of the possible choices",
+          "synonyms": [
+            "choice",
+            "alternative"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can choose the delivery option they prefer.",
+          "vi": "Khách hàng có thể chọn phương thức giao hàng họ thích."
+        }
+      ],
+      "collocations": [
+        "payment option",
+        "available option"
+      ]
+    },
+    {
+      "id": "order-v",
+      "word": "order",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɔːr.dɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A1",
+          "meaning_vi": "đơn hàng; đặt hàng",
+          "definition_en": "a request for goods or to request them",
+          "synonyms": [
+            "request",
+            "purchase"
+          ],
+          "antonyms": [
+            "cancel"
+          ]
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "order",
+        "vs_es": "orders",
+        "v2": "ordered",
+        "v3": "ordered",
+        "ving": "ordering"
+      },
+      "examples": [
+        {
+          "en": "Your order will be shipped tomorrow.",
+          "vi": "Đơn hàng của bạn sẽ được gửi vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "place an order",
+        "order confirmation"
+      ]
+    },
+    {
+      "id": "organize-v",
+      "word": "organize",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɔːr.ɡə.naɪz/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "tổ chức; sắp xếp",
+          "definition_en": "to arrange something in a structured way",
+          "synonyms": [
+            "arrange",
+            "coordinate"
+          ],
+          "antonyms": [
+            "disorganize"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "organize",
+        "vs_es": "organizes",
+        "v2": "organized",
+        "v3": "organized",
+        "ving": "organizing"
+      },
+      "examples": [
+        {
+          "en": "We need to organize the files by date.",
+          "vi": "Chúng ta cần sắp xếp hồ sơ theo ngày."
+        }
+      ],
+      "collocations": [
+        "organize a meeting",
+        "organize files"
+      ]
+    },
+    {
+      "id": "outcome-n",
+      "word": "outcome",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈaʊt.kʌm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "kết quả; hậu quả",
+          "definition_en": "the final result of an action or event",
+          "synonyms": [
+            "result",
+            "consequence"
+          ],
+          "antonyms": [
+            "cause"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The outcome of the audit was positive.",
+          "vi": "Kết quả cuộc kiểm toán rất tích cực."
+        }
+      ],
+      "collocations": [
+        "expected outcome",
+        "project outcome"
+      ]
+    },
+    {
+      "id": "oversee-v",
+      "word": "oversee",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌoʊ.vɚˈsiː/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "giám sát; trông coi",
+          "definition_en": "to be in charge of an activity and make sure it is done properly",
+          "synonyms": [
+            "supervise",
+            "manage"
+          ],
+          "antonyms": [
+            "neglect"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "oversee",
+        "vs_es": "oversees",
+        "v2": "oversaw",
+        "v3": "overseen",
+        "ving": "overseeing"
+      },
+      "examples": [
+        {
+          "en": "A senior engineer will oversee the installation.",
+          "vi": "Một kỹ sư cấp cao sẽ giám sát việc lắp đặt."
+        }
+      ],
+      "collocations": [
+        "oversee operations",
+        "oversee a project"
+      ]
+    },
+    {
+      "id": "owner-n",
+      "word": "owner",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈoʊ.nɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "chủ sở hữu",
+          "definition_en": "a person who owns something",
+          "synonyms": [
+            "proprietor",
+            "holder"
+          ],
+          "antonyms": [
+            "tenant"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The owner approved the renovation plan.",
+          "vi": "Chủ sở hữu đã phê duyệt kế hoạch cải tạo."
+        }
+      ],
+      "collocations": [
+        "business owner",
+        "property owner"
       ]
     }
   ]

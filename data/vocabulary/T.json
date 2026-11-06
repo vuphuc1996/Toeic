@@ -3,6 +3,204 @@
   "letter": "T",
   "words": [
     {
+      "id": "target-v",
+      "word": "target",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtɑːr.ɡɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "mục tiêu; nhắm tới",
+          "definition_en": "a result or level that someone aims to achieve",
+          "synonyms": [
+            "goal",
+            "objective"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "target",
+        "vs_es": "targets",
+        "v2": "targeted",
+        "v3": "targeted",
+        "ving": "targeting"
+      },
+      "examples": [
+        {
+          "en": "The sales team exceeded its monthly target.",
+          "vi": "Đội bán hàng vượt mục tiêu tháng."
+        }
+      ],
+      "collocations": [
+        "target market",
+        "meet a target"
+      ]
+    },
+    {
+      "id": "task-n",
+      "word": "task",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/tæsk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "nhiệm vụ; công việc",
+          "definition_en": "a piece of work that must be done",
+          "synonyms": [
+            "job",
+            "duty"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please finish this task before lunch.",
+          "vi": "Vui lòng hoàn thành nhiệm vụ này trước giờ ăn trưa."
+        }
+      ],
+      "collocations": [
+        "daily task",
+        "assign a task"
+      ]
+    },
+    {
+      "id": "team-n",
+      "word": "team",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/tiːm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "đội; nhóm",
+          "definition_en": "a group of people working together",
+          "synonyms": [
+            "group",
+            "staff"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team meets every Monday.",
+          "vi": "Nhóm họp vào thứ Hai hằng tuần."
+        }
+      ],
+      "collocations": [
+        "project team",
+        "team leader"
+      ]
+    },
+    {
+      "id": "technical-adj",
+      "word": "technical",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtek.nɪ.kəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "kỹ thuật; chuyên môn",
+          "definition_en": "relating to practical or scientific knowledge",
+          "synonyms": [
+            "specialized",
+            "mechanical"
+          ],
+          "antonyms": [
+            "nontechnical"
+          ]
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The report contains technical details.",
+          "vi": "Báo cáo chứa các chi tiết kỹ thuật."
+        }
+      ],
+      "collocations": [
+        "technical support",
+        "technical issue"
+      ]
+    },
+    {
+      "id": "technician-n",
+      "word": "technician",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/tekˈnɪʃ.ən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "kỹ thuật viên",
+          "definition_en": "a person skilled in using or repairing equipment",
+          "synonyms": [
+            "specialist",
+            "engineer"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A technician will inspect the printer.",
+          "vi": "Một kỹ thuật viên sẽ kiểm tra máy in."
+        }
+      ],
+      "collocations": [
+        "IT technician",
+        "maintenance technician"
+      ]
+    },
+    {
       "id": "temporary-adj",
       "word": "temporary",
       "phonetic": {
@@ -19,7 +217,8 @@
           ],
           "antonyms": [
             "permanent"
-          ]
+          ],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -49,7 +248,292 @@
       "collocations": [
         "temporary position",
         "temporary solution"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "term-n",
+      "word": "term",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/tɝːm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "điều khoản; học kỳ; thời hạn",
+          "definition_en": "a word or condition in an agreement",
+          "synonyms": [
+            "condition",
+            "period"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please read the terms of the agreement.",
+          "vi": "Vui lòng đọc các điều khoản của thỏa thuận."
+        }
+      ],
+      "collocations": [
+        "payment terms",
+        "contract term"
       ]
+    },
+    {
+      "id": "terminal-n",
+      "word": "terminal",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtɝː.mə.nəl/"
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "cefr_level": "B1",
+          "meaning_vi": "nhà ga; thiết bị đầu cuối",
+          "definition_en": "a building at an airport or a computer connection point",
+          "synonyms": [
+            "station",
+            "endpoint"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Passengers should proceed to Terminal 2.",
+          "vi": "Hành khách nên di chuyển đến Nhà ga số 2."
+        }
+      ],
+      "collocations": [
+        "airport terminal",
+        "payment terminal"
+      ]
+    },
+    {
+      "id": "thursday-n",
+      "word": "Thursday",
+      "phonetic": {
+        "us": "/ˈθɝːz.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Thứ Năm",
+          "definition_en": "the day of the week after Wednesday and before Friday",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please send the revised quotation by Thursday.",
+          "vi": "Vui lòng gửi báo giá đã chỉnh sửa trước thứ Năm."
+        }
+      ],
+      "collocations": [
+        "Thursday afternoon"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "time-n",
+      "word": "time",
+      "phonetic": {
+        "us": "/taɪm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian; thời điểm; lần",
+          "definition_en": "the measurable period during which events happen; a particular point or occasion",
+          "synonyms": [
+            "period",
+            "moment",
+            "occasion"
+          ],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "What time does the next train leave?",
+          "vi": "Chuyến tàu tiếp theo khởi hành lúc mấy giờ?"
+        }
+      ],
+      "collocations": [
+        "on time",
+        "in time",
+        "at the same time"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "trade-v",
+      "word": "trade",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/treɪd/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "thương mại; trao đổi",
+          "definition_en": "the activity of buying and selling goods",
+          "synonyms": [
+            "commerce",
+            "exchange"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "trade",
+        "vs_es": "trades",
+        "v2": "traded",
+        "v3": "traded",
+        "ving": "trading"
+      },
+      "examples": [
+        {
+          "en": "International trade increased last year.",
+          "vi": "Thương mại quốc tế tăng trong năm ngoái."
+        }
+      ],
+      "collocations": [
+        "trade agreement",
+        "foreign trade"
+      ]
+    },
+    {
+      "id": "training-n",
+      "word": "training",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtreɪ.nɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "đào tạo; huấn luyện",
+          "definition_en": "the process of learning skills for a job or activity",
+          "synonyms": [
+            "instruction",
+            "coaching"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All new employees receive safety training.",
+          "vi": "Tất cả nhân viên mới được đào tạo an toàn."
+        }
+      ],
+      "collocations": [
+        "staff training",
+        "training session"
+      ]
+    },
+    {
+      "id": "transaction-n",
+      "word": "transaction",
+      "phonetic": {
+        "us": "/trænˈzæk.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giao dịch",
+          "definition_en": "an instance of buying, selling, or exchanging something",
+          "synonyms": [
+            "deal",
+            "exchange"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "transact",
+          "pos": "v",
+          "meaning_vi": "giao dịch"
+        },
+        {
+          "word": "transactional",
+          "pos": "adj",
+          "meaning_vi": "thuộc giao dịch"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All transactions are recorded in the accounting system.",
+          "vi": "Tất cả giao dịch được ghi nhận trong hệ thống kế toán."
+        }
+      ],
+      "collocations": [
+        "business transaction",
+        "online transaction"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "transfer-nv",
@@ -66,7 +550,8 @@
             "move",
             "relocate"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         },
         {
           "pos": "n",
@@ -76,7 +561,8 @@
             "move",
             "shift"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -108,53 +594,90 @@
         "bank transfer",
         "transfer funds",
         "transfer request"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "transaction-n",
-      "word": "transaction",
+      "id": "transport-v",
+      "word": "transport",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/trænˈzæk.ʃən/"
+        "us": "/ˈtræn.spɔːrt/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "giao dịch",
-          "definition_en": "an instance of buying, selling, or exchanging something",
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "vận chuyển; phương tiện",
+          "definition_en": "to take people or goods from one place to another",
           "synonyms": [
-            "deal",
-            "exchange"
+            "carry",
+            "move"
           ],
           "antonyms": []
         }
       ],
       "topics": [
-        "FINANCE",
-        "BUSINESS",
-        "CUSTOMER"
+        "TRANSPORT",
+        "SHIPPING"
       ],
-      "word_family": [
-        {
-          "word": "transact",
-          "pos": "v",
-          "meaning_vi": "giao dịch"
-        },
-        {
-          "word": "transactional",
-          "pos": "adj",
-          "meaning_vi": "thuộc giao dịch"
-        }
-      ],
-      "verb_forms": null,
+      "word_family": [],
+      "verb_forms": {
+        "v1": "transport",
+        "vs_es": "transports",
+        "v2": "transported",
+        "v3": "transported",
+        "ving": "transporting"
+      },
       "examples": [
         {
-          "en": "All transactions are recorded in the accounting system.",
-          "vi": "Tất cả giao dịch được ghi nhận trong hệ thống kế toán."
+          "en": "The company transports goods across the country.",
+          "vi": "Công ty vận chuyển hàng hóa trên toàn quốc."
         }
       ],
       "collocations": [
-        "business transaction",
-        "online transaction"
+        "public transport",
+        "transport goods"
+      ]
+    },
+    {
+      "id": "trend-n",
+      "word": "trend",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/trend/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "xu hướng",
+          "definition_en": "a general direction in which something is developing",
+          "synonyms": [
+            "pattern",
+            "tendency"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The report identifies a growing trend in online sales.",
+          "vi": "Báo cáo xác định xu hướng tăng trong bán hàng trực tuyến."
+        }
+      ],
+      "collocations": [
+        "market trend",
+        "upward trend"
       ]
     },
     {
@@ -169,7 +692,8 @@
           "meaning_vi": "Thứ Ba",
           "definition_en": "the day of the week after Monday and before Wednesday",
           "synonyms": [],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A1"
         }
       ],
       "topics": [
@@ -186,76 +710,9 @@
       ],
       "collocations": [
         "Tuesday afternoon"
-      ]
-    },
-    {
-      "id": "thursday-n",
-      "word": "Thursday",
-      "phonetic": {
-        "us": "/ˈθɝːz.deɪ/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "Thứ Năm",
-          "definition_en": "the day of the week after Wednesday and before Friday",
-          "synonyms": [],
-          "antonyms": []
-        }
       ],
-      "topics": [
-        "TIME",
-        "DAILY"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "Please send the revised quotation by Thursday.",
-          "vi": "Vui lòng gửi báo giá đã chỉnh sửa trước thứ Năm."
-        }
-      ],
-      "collocations": [
-        "Thursday afternoon"
-      ]
-    },
-    {
-      "id": "time-n",
-      "word": "time",
-      "phonetic": {
-        "us": "/taɪm/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "thời gian; thời điểm; lần",
-          "definition_en": "the measurable period during which events happen; a particular point or occasion",
-          "synonyms": [
-            "period",
-            "moment",
-            "occasion"
-          ],
-          "antonyms": []
-        }
-      ],
-      "topics": [
-        "TIME",
-        "DAILY",
-        "OFFICE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "What time does the next train leave?",
-          "vi": "Chuyến tàu tiếp theo khởi hành lúc mấy giờ?"
-        }
-      ],
-      "collocations": [
-        "on time",
-        "in time",
-        "at the same time"
-      ]
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
     }
   ]
 }

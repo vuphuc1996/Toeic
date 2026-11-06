@@ -17,7 +17,8 @@
             "opening",
             "job opening"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -41,6 +42,210 @@
       "collocations": [
         "job vacancy",
         "fill a vacancy"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "valid-adj",
+      "word": "valid",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈvæl.ɪd/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "hợp lệ; còn hiệu lực",
+          "definition_en": "legally or officially acceptable",
+          "synonyms": [
+            "legitimate",
+            "acceptable"
+          ],
+          "antonyms": [
+            "invalid"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please provide a valid identification document.",
+          "vi": "Vui lòng cung cấp giấy tờ tùy thân hợp lệ."
+        }
+      ],
+      "collocations": [
+        "valid passport",
+        "valid contract"
+      ]
+    },
+    {
+      "id": "valuable-adj",
+      "word": "valuable",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈvæl.jə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "có giá trị; quý giá",
+          "definition_en": "worth a lot of money or useful",
+          "synonyms": [
+            "useful",
+            "precious"
+          ],
+          "antonyms": [
+            "worthless"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training provided valuable information.",
+          "vi": "Khóa đào tạo cung cấp thông tin có giá trị."
+        }
+      ],
+      "collocations": [
+        "valuable experience",
+        "valuable resource"
+      ]
+    },
+    {
+      "id": "value-v",
+      "word": "value",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈvæl.juː/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "giá trị; coi trọng",
+          "definition_en": "the worth of something or to consider important",
+          "synonyms": [
+            "worth",
+            "importance"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "value",
+        "vs_es": "values",
+        "v2": "valued",
+        "v3": "valued",
+        "ving": "valuing"
+      },
+      "examples": [
+        {
+          "en": "The company places great value on customer feedback.",
+          "vi": "Công ty rất coi trọng phản hồi của khách hàng."
+        }
+      ],
+      "collocations": [
+        "market value",
+        "add value"
+      ]
+    },
+    {
+      "id": "various-adj",
+      "word": "various",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈver.i.əs/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "nhiều loại; khác nhau",
+          "definition_en": "several different types or kinds",
+          "synonyms": [
+            "different",
+            "several"
+          ],
+          "antonyms": [
+            "same"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The store sells various office supplies.",
+          "vi": "Cửa hàng bán nhiều loại vật tư văn phòng."
+        }
+      ],
+      "collocations": [
+        "various reasons",
+        "various products"
+      ]
+    },
+    {
+      "id": "vehicle-n",
+      "word": "vehicle",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈviː.ə.kəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "phương tiện; xe cộ",
+          "definition_en": "a machine used for transporting people or goods",
+          "synonyms": [
+            "car",
+            "conveyance"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRANSPORT",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company operates a fleet of delivery vehicles.",
+          "vi": "Công ty vận hành một đội xe giao hàng."
+        }
+      ],
+      "collocations": [
+        "commercial vehicle",
+        "vehicle maintenance"
       ]
     },
     {
@@ -60,7 +265,8 @@
           ],
           "antonyms": [
             "buyer"
-          ]
+          ],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -79,7 +285,9 @@
       "collocations": [
         "software vendor",
         "approved vendor"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "verify-v",
@@ -98,7 +306,8 @@
           ],
           "antonyms": [
             "falsify"
-          ]
+          ],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -134,6 +343,162 @@
       "collocations": [
         "verify information",
         "verify an identity"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "version-n",
+      "word": "version",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈvɝː.ʒən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "phiên bản",
+          "definition_en": "a particular form of something that has changed",
+          "synonyms": [
+            "edition",
+            "release"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Make sure you are using the latest version.",
+          "vi": "Hãy chắc chắn bạn đang dùng phiên bản mới nhất."
+        }
+      ],
+      "collocations": [
+        "latest version",
+        "software version"
+      ]
+    },
+    {
+      "id": "viable-adj",
+      "word": "viable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈvaɪ.ə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "khả thi; có thể thực hiện",
+          "definition_en": "able to work successfully or be done",
+          "synonyms": [
+            "feasible",
+            "practical"
+          ],
+          "antonyms": [
+            "unworkable"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team is looking for a viable alternative.",
+          "vi": "Nhóm đang tìm một phương án thay thế khả thi."
+        }
+      ],
+      "collocations": [
+        "viable option",
+        "financially viable"
+      ]
+    },
+    {
+      "id": "visitor-n",
+      "word": "visitor",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈvɪz.ɪ.t̬ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "khách tham quan; khách đến thăm",
+          "definition_en": "a person who visits a place or organization",
+          "synonyms": [
+            "guest",
+            "caller"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All visitors must sign in at reception.",
+          "vi": "Tất cả khách phải đăng ký tại quầy lễ tân."
+        }
+      ],
+      "collocations": [
+        "office visitor",
+        "visitor badge"
+      ]
+    },
+    {
+      "id": "volume-n",
+      "word": "volume",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈvɑːl.juːm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "khối lượng; âm lượng; tập",
+          "definition_en": "the amount of space or sound, or a book in a series",
+          "synonyms": [
+            "amount",
+            "quantity"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The warehouse handles a high volume of orders.",
+          "vi": "Nhà kho xử lý khối lượng đơn hàng lớn."
+        }
+      ],
+      "collocations": [
+        "sales volume",
+        "order volume"
       ]
     }
   ]

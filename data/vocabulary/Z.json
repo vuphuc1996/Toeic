@@ -17,7 +17,8 @@
             "nil",
             "nought"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A1"
         },
         {
           "pos": "adj",
@@ -26,7 +27,8 @@
           "synonyms": [
             "none"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A1"
         }
       ],
       "topics": [
@@ -45,43 +47,9 @@
       "collocations": [
         "zero balance",
         "zero tolerance"
-      ]
-    },
-    {
-      "id": "zone-n",
-      "word": "zone",
-      "phonetic": {
-        "us": "/zoʊn/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "khu vực; vùng",
-          "definition_en": "an area with particular characteristics or rules",
-          "synonyms": [
-            "area",
-            "region"
-          ],
-          "antonyms": []
-        }
       ],
-      "topics": [
-        "TRANSPORT",
-        "FACILITY",
-        "BUSINESS"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "Parking is prohibited in this zone.",
-          "vi": "Không được phép đỗ xe trong khu vực này."
-        }
-      ],
-      "collocations": [
-        "restricted zone",
-        "business zone"
-      ]
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "zipcode-n",
@@ -97,7 +65,8 @@
           "synonyms": [
             "postal code"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -116,7 +85,48 @@
       "collocations": [
         "enter a ZIP code",
         "postal ZIP code"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "zone-n",
+      "word": "zone",
+      "phonetic": {
+        "us": "/zoʊn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khu vực; vùng",
+          "definition_en": "an area with particular characteristics or rules",
+          "synonyms": [
+            "area",
+            "region"
+          ],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRANSPORT",
+        "FACILITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Parking is prohibited in this zone.",
+          "vi": "Không được phép đỗ xe trong khu vực này."
+        }
+      ],
+      "collocations": [
+        "restricted zone",
+        "business zone"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     }
   ]
 }

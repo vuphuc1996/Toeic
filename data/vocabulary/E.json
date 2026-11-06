@@ -3,6 +3,209 @@
   "letter": "E",
   "words": [
     {
+      "id": "earn-v",
+      "word": "earn",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɝːn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "kiếm được; nhận lương",
+          "definition_en": "to receive money for work or an activity",
+          "synonyms": [
+            "make",
+            "receive"
+          ],
+          "antonyms": [
+            "spend"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "earn",
+        "vs_es": "earns",
+        "v2": "earned",
+        "v3": "earned",
+        "ving": "earning"
+      },
+      "examples": [
+        {
+          "en": "Employees earn paid leave each year.",
+          "vi": "Nhân viên được hưởng ngày nghỉ có lương mỗi năm."
+        }
+      ],
+      "collocations": [
+        "earn a salary",
+        "earn interest"
+      ]
+    },
+    {
+      "id": "economy-n",
+      "word": "economy",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪˈkɑː.nə.mi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "nền kinh tế; sự tiết kiệm",
+          "definition_en": "the system of money and trade in a country",
+          "synonyms": [
+            "financial system"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The local economy has grown steadily.",
+          "vi": "Nền kinh tế địa phương tăng trưởng ổn định."
+        }
+      ],
+      "collocations": [
+        "global economy",
+        "economy class"
+      ]
+    },
+    {
+      "id": "effective-adj",
+      "word": "effective",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪˈfek.tɪv/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "hiệu quả; có tác dụng",
+          "definition_en": "producing the result that is wanted",
+          "synonyms": [
+            "successful",
+            "efficient"
+          ],
+          "antonyms": [
+            "ineffective"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new policy is effective from June.",
+          "vi": "Chính sách mới có hiệu lực từ tháng Sáu."
+        }
+      ],
+      "collocations": [
+        "effective method",
+        "highly effective"
+      ]
+    },
+    {
+      "id": "efficient-adj",
+      "word": "efficient",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪˈfɪʃ.ənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "hiệu suất cao; tiết kiệm nguồn lực",
+          "definition_en": "working well without wasting time or resources",
+          "synonyms": [
+            "productive",
+            "capable"
+          ],
+          "antonyms": [
+            "inefficient"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new system makes order processing more efficient.",
+          "vi": "Hệ thống mới giúp xử lý đơn hàng hiệu quả hơn."
+        }
+      ],
+      "collocations": [
+        "energy efficient",
+        "efficient process"
+      ]
+    },
+    {
+      "id": "effort-n",
+      "word": "effort",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈef.ɚt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "nỗ lực",
+          "definition_en": "physical or mental energy used to do something",
+          "synonyms": [
+            "attempt",
+            "endeavor"
+          ],
+          "antonyms": [
+            "inaction"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Thank you for your effort on this project.",
+          "vi": "Cảm ơn nỗ lực của bạn trong dự án này."
+        }
+      ],
+      "collocations": [
+        "make an effort",
+        "put effort into"
+      ]
+    },
+    {
       "id": "employee-n",
       "word": "employee",
       "phonetic": {
@@ -19,7 +222,8 @@
           ],
           "antonyms": [
             "employer"
-          ]
+          ],
+          "cefr_level": "A1"
         }
       ],
       "topics": [
@@ -53,6 +257,180 @@
       "collocations": [
         "full-time employee",
         "employee handbook"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "employer-n",
+      "word": "employer",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪmˈplɔɪ.ər/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "người sử dụng lao động; nhà tuyển dụng",
+          "definition_en": "a person or organization that pays people to work",
+          "synonyms": [
+            "company",
+            "organization"
+          ],
+          "antonyms": [
+            "employee"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The employer provides health insurance.",
+          "vi": "Người sử dụng lao động cung cấp bảo hiểm y tế."
+        }
+      ],
+      "collocations": [
+        "potential employer",
+        "employer contribution"
+      ]
+    },
+    {
+      "id": "employment-n",
+      "word": "employment",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪmˈplɔɪ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "việc làm; sự tuyển dụng",
+          "definition_en": "the state of having paid work",
+          "synonyms": [
+            "work",
+            "occupation"
+          ],
+          "antonyms": [
+            "unemployment"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The region has seen an increase in employment.",
+          "vi": "Khu vực đã chứng kiến việc làm tăng lên."
+        }
+      ],
+      "collocations": [
+        "employment contract",
+        "employment opportunities"
+      ]
+    },
+    {
+      "id": "encourage-v",
+      "word": "encourage",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈkɝː.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "khuyến khích",
+          "definition_en": "to give someone support or confidence to do something",
+          "synonyms": [
+            "motivate",
+            "support"
+          ],
+          "antonyms": [
+            "discourage"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "encourage",
+        "vs_es": "encourages",
+        "v2": "encouraged",
+        "v3": "encouraged",
+        "ving": "encouraging"
+      },
+      "examples": [
+        {
+          "en": "Managers encourage staff to share ideas.",
+          "vi": "Quản lý khuyến khích nhân viên chia sẻ ý tưởng."
+        }
+      ],
+      "collocations": [
+        "encourage participation",
+        "encourage employees"
+      ]
+    },
+    {
+      "id": "ensure-v",
+      "word": "ensure",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈʃʊr/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "đảm bảo",
+          "definition_en": "to make certain that something happens",
+          "synonyms": [
+            "make sure",
+            "guarantee"
+          ],
+          "antonyms": [
+            "jeopardize"
+          ]
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "ensure",
+        "vs_es": "ensures",
+        "v2": "ensured",
+        "v3": "ensured",
+        "ving": "ensuring"
+      },
+      "examples": [
+        {
+          "en": "Please ensure that all fields are completed.",
+          "vi": "Vui lòng đảm bảo tất cả các trường đã được điền."
+        }
+      ],
+      "collocations": [
+        "ensure compliance",
+        "ensure quality"
       ]
     },
     {
@@ -70,7 +448,8 @@
             "apparatus",
             "gear"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -89,6 +468,48 @@
       "collocations": [
         "office equipment",
         "safety equipment"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "error-n",
+      "word": "error",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈer.ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "lỗi; sai sót",
+          "definition_en": "a mistake or something incorrect",
+          "synonyms": [
+            "mistake",
+            "fault"
+          ],
+          "antonyms": [
+            "accuracy"
+          ]
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The report contains an error in the total.",
+          "vi": "Báo cáo có lỗi ở phần tổng số."
+        }
+      ],
+      "collocations": [
+        "system error",
+        "human error"
       ]
     },
     {
@@ -106,7 +527,8 @@
             "approximation",
             "assessment"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         },
         {
           "pos": "v",
@@ -116,7 +538,8 @@
             "assess",
             "calculate"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -135,6 +558,178 @@
       "collocations": [
         "cost estimate",
         "estimate the cost"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "evaluate-v",
+      "word": "evaluate",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪˈvæl.ju.eɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "đánh giá; thẩm định",
+          "definition_en": "to judge the quality, importance, or value of something",
+          "synonyms": [
+            "assess",
+            "appraise"
+          ],
+          "antonyms": [
+            "ignore"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "evaluate",
+        "vs_es": "evaluates",
+        "v2": "evaluated",
+        "v3": "evaluated",
+        "ving": "evaluating"
+      },
+      "examples": [
+        {
+          "en": "We evaluate suppliers every six months.",
+          "vi": "Chúng tôi đánh giá nhà cung cấp mỗi sáu tháng."
+        }
+      ],
+      "collocations": [
+        "evaluate performance",
+        "evaluate a proposal"
+      ]
+    },
+    {
+      "id": "event-n",
+      "word": "event",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪˈvent/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "sự kiện",
+          "definition_en": "something that happens, especially a planned activity",
+          "synonyms": [
+            "occasion",
+            "activity"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will host a networking event.",
+          "vi": "Công ty sẽ tổ chức một sự kiện kết nối."
+        }
+      ],
+      "collocations": [
+        "annual event",
+        "corporate event"
+      ]
+    },
+    {
+      "id": "exchange-v",
+      "word": "exchange",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪksˈtʃeɪndʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "trao đổi; đổi hàng",
+          "definition_en": "the act of giving something and receiving something else",
+          "synonyms": [
+            "swap",
+            "trade"
+          ],
+          "antonyms": [
+            "retain"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "exchange",
+        "vs_es": "exchanges",
+        "v2": "exchanged",
+        "v3": "exchanged",
+        "ving": "exchanging"
+      },
+      "examples": [
+        {
+          "en": "Customers can exchange items within seven days.",
+          "vi": "Khách hàng có thể đổi hàng trong vòng bảy ngày."
+        }
+      ],
+      "collocations": [
+        "foreign exchange",
+        "exchange information"
+      ]
+    },
+    {
+      "id": "expenditure-n",
+      "word": "expenditure",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪkˈspen.dɪ.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "khoản chi; sự chi tiêu",
+          "definition_en": "the total amount of money spent",
+          "synonyms": [
+            "spending",
+            "outlay"
+          ],
+          "antonyms": [
+            "income"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department must reduce unnecessary expenditure.",
+          "vi": "Phòng ban phải giảm các khoản chi không cần thiết."
+        }
+      ],
+      "collocations": [
+        "capital expenditure",
+        "public expenditure"
       ]
     },
     {
@@ -154,7 +749,8 @@
           ],
           "antonyms": [
             "income"
-          ]
+          ],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -178,6 +774,100 @@
       "collocations": [
         "operating expenses",
         "expense report"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "experience-v",
+      "word": "experience",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪkˈspɪr.i.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "kinh nghiệm; trải nghiệm",
+          "definition_en": "knowledge gained by doing something",
+          "synonyms": [
+            "knowledge",
+            "practice"
+          ],
+          "antonyms": [
+            "inexperience"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "experience",
+        "vs_es": "experiences",
+        "v2": "experienced",
+        "v3": "experienced",
+        "ving": "experiencing"
+      },
+      "examples": [
+        {
+          "en": "She has five years of experience in sales.",
+          "vi": "Cô ấy có năm năm kinh nghiệm bán hàng."
+        }
+      ],
+      "collocations": [
+        "work experience",
+        "customer experience"
+      ]
+    },
+    {
+      "id": "extend-v",
+      "word": "extend",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪkˈstend/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "gia hạn; mở rộng",
+          "definition_en": "to make something longer or larger",
+          "synonyms": [
+            "lengthen",
+            "expand"
+          ],
+          "antonyms": [
+            "shorten"
+          ]
+        }
+      ],
+      "topics": [
+        "TIME",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "extend",
+        "vs_es": "extends",
+        "v2": "extended",
+        "v3": "extended",
+        "ving": "extending"
+      },
+      "examples": [
+        {
+          "en": "The manager agreed to extend the deadline.",
+          "vi": "Quản lý đồng ý gia hạn thời hạn."
+        }
+      ],
+      "collocations": [
+        "extend a contract",
+        "extend a deadline"
       ]
     }
   ]

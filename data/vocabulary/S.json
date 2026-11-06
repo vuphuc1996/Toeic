@@ -3,6 +3,168 @@
   "letter": "S",
   "words": [
     {
+      "id": "salary-n",
+      "word": "salary",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsæl.ɚ.i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "lương; tiền lương",
+          "definition_en": "fixed regular payment for work",
+          "synonyms": [
+            "pay",
+            "wages"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The position offers a competitive salary.",
+          "vi": "Vị trí có mức lương cạnh tranh."
+        }
+      ],
+      "collocations": [
+        "annual salary",
+        "salary increase"
+      ]
+    },
+    {
+      "id": "sample-v",
+      "word": "sample",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsæm.pəl/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "mẫu; lấy mẫu",
+          "definition_en": "a small part used to show or test the whole",
+          "synonyms": [
+            "specimen",
+            "example"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "sample",
+        "vs_es": "samples",
+        "v2": "sampled",
+        "v3": "sampled",
+        "ving": "sampling"
+      },
+      "examples": [
+        {
+          "en": "The supplier sent a sample for inspection.",
+          "vi": "Nhà cung cấp gửi mẫu để kiểm tra."
+        }
+      ],
+      "collocations": [
+        "product sample",
+        "free sample"
+      ]
+    },
+    {
+      "id": "satisfy-v",
+      "word": "satisfy",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsæt̬.ɪs.faɪ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "làm hài lòng; đáp ứng",
+          "definition_en": "to make someone pleased or meet a need",
+          "synonyms": [
+            "please",
+            "meet"
+          ],
+          "antonyms": [
+            "disappoint"
+          ]
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "satisfy",
+        "vs_es": "satisfies",
+        "v2": "satisfied",
+        "v3": "satisfied",
+        "ving": "satisfying"
+      },
+      "examples": [
+        {
+          "en": "The service must satisfy customer expectations.",
+          "vi": "Dịch vụ phải đáp ứng kỳ vọng khách hàng."
+        }
+      ],
+      "collocations": [
+        "satisfy a requirement",
+        "satisfy customers"
+      ]
+    },
+    {
+      "id": "saturday-n",
+      "word": "Saturday",
+      "phonetic": {
+        "us": "/ˈsæt̬.ɚ.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Thứ Bảy",
+          "definition_en": "the day of the week after Friday and before Sunday",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The language course is held on Saturday mornings.",
+          "vi": "Khóa học ngôn ngữ được tổ chức vào sáng thứ Bảy."
+        }
+      ],
+      "collocations": [
+        "Saturday morning"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
+    },
+    {
       "id": "schedule-nv",
       "word": "schedule",
       "phonetic": {
@@ -17,7 +179,8 @@
             "timetable",
             "agenda"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         },
         {
           "pos": "v",
@@ -27,7 +190,8 @@
             "plan",
             "arrange"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -64,6 +228,796 @@
         "work schedule",
         "schedule a meeting",
         "ahead of schedule"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "section-n",
+      "word": "section",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsek.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "phần; mục; bộ phận",
+          "definition_en": "one of the parts into which something is divided",
+          "synonyms": [
+            "part",
+            "division"
+          ],
+          "antonyms": [
+            "whole"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please complete section three of the form.",
+          "vi": "Vui lòng hoàn thành phần ba của biểu mẫu."
+        }
+      ],
+      "collocations": [
+        "sales section",
+        "section of a report"
+      ]
+    },
+    {
+      "id": "select-v",
+      "word": "select",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/səˈlekt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "lựa chọn; tuyển chọn",
+          "definition_en": "to choose something from a group",
+          "synonyms": [
+            "choose",
+            "pick"
+          ],
+          "antonyms": [
+            "reject"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "select",
+        "vs_es": "selects",
+        "v2": "selected",
+        "v3": "selected",
+        "ving": "selecting"
+      },
+      "examples": [
+        {
+          "en": "Select the appropriate payment method.",
+          "vi": "Chọn phương thức thanh toán phù hợp."
+        }
+      ],
+      "collocations": [
+        "select an option",
+        "carefully selected"
+      ]
+    },
+    {
+      "id": "senior-adj",
+      "word": "senior",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsiː.njɚ/"
+      },
+      "senses": [
+        {
+          "pos": "adj/n",
+          "cefr_level": "A2",
+          "meaning_vi": "cấp cao; thâm niên",
+          "definition_en": "having a higher position or more experience",
+          "synonyms": [
+            "experienced",
+            "high-ranking"
+          ],
+          "antonyms": [
+            "junior"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A senior engineer will lead the project.",
+          "vi": "Một kỹ sư cấp cao sẽ dẫn dắt dự án."
+        }
+      ],
+      "collocations": [
+        "senior manager",
+        "senior position"
+      ]
+    },
+    {
+      "id": "service-n",
+      "word": "service",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsɝː.vɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "dịch vụ; sự phục vụ",
+          "definition_en": "work done for customers rather than producing goods",
+          "synonyms": [
+            "assistance",
+            "support"
+          ],
+          "antonyms": [
+            "disservice"
+          ]
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The hotel provides excellent customer service.",
+          "vi": "Khách sạn cung cấp dịch vụ khách hàng xuất sắc."
+        }
+      ],
+      "collocations": [
+        "customer service",
+        "maintenance service"
+      ]
+    },
+    {
+      "id": "settle-v",
+      "word": "settle",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈset̬.əl/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "thanh toán; giải quyết; ổn định",
+          "definition_en": "to pay an amount or reach an agreement",
+          "synonyms": [
+            "resolve",
+            "pay"
+          ],
+          "antonyms": [
+            "dispute"
+          ]
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "settle",
+        "vs_es": "settles",
+        "v2": "settled",
+        "v3": "settled",
+        "ving": "settling"
+      },
+      "examples": [
+        {
+          "en": "The invoice must be settled within thirty days.",
+          "vi": "Hóa đơn phải được thanh toán trong vòng 30 ngày."
+        }
+      ],
+      "collocations": [
+        "settle a bill",
+        "settle a dispute"
+      ]
+    },
+    {
+      "id": "shipment-n",
+      "word": "shipment",
+      "phonetic": {
+        "us": "/ˈʃɪp.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lô hàng; việc vận chuyển hàng",
+          "definition_en": "a quantity of goods sent from one place to another",
+          "synonyms": [
+            "consignment",
+            "cargo"
+          ],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "TRANSPORT",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "ship",
+          "pos": "v/n",
+          "meaning_vi": "vận chuyển bằng tàu; con tàu"
+        },
+        {
+          "word": "shipping",
+          "pos": "n",
+          "meaning_vi": "hoạt động vận chuyển"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The shipment is expected to arrive tomorrow.",
+          "vi": "Lô hàng dự kiến sẽ đến vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "track a shipment",
+        "shipment status"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "significant-adj",
+      "word": "significant",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/sɪɡˈnɪf.ɪ.kənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "đáng kể; quan trọng",
+          "definition_en": "large or important enough to be noticed",
+          "synonyms": [
+            "substantial",
+            "important"
+          ],
+          "antonyms": [
+            "insignificant"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project achieved significant cost savings.",
+          "vi": "Dự án đạt mức tiết kiệm chi phí đáng kể."
+        }
+      ],
+      "collocations": [
+        "significant increase",
+        "significant impact"
+      ]
+    },
+    {
+      "id": "similar-adj",
+      "word": "similar",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsɪm.ə.lɚ/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "tương tự; giống nhau",
+          "definition_en": "almost the same as something else",
+          "synonyms": [
+            "alike",
+            "comparable"
+          ],
+          "antonyms": [
+            "different"
+          ]
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The two proposals are very similar.",
+          "vi": "Hai đề xuất rất giống nhau."
+        }
+      ],
+      "collocations": [
+        "similar products",
+        "similar experience"
+      ]
+    },
+    {
+      "id": "situation-n",
+      "word": "situation",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌsɪtʃ.uˈeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "tình huống; hoàn cảnh",
+          "definition_en": "the conditions at a particular time",
+          "synonyms": [
+            "circumstance",
+            "condition"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We will review the situation tomorrow.",
+          "vi": "Chúng tôi sẽ xem xét tình hình vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "current situation",
+        "difficult situation"
+      ]
+    },
+    {
+      "id": "skill-n",
+      "word": "skill",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/skɪl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "kỹ năng",
+          "definition_en": "the ability to do something well",
+          "synonyms": [
+            "ability",
+            "expertise"
+          ],
+          "antonyms": [
+            "inability"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Communication is an essential skill for this position.",
+          "vi": "Giao tiếp là kỹ năng thiết yếu cho vị trí này."
+        }
+      ],
+      "collocations": [
+        "technical skill",
+        "develop a skill"
+      ]
+    },
+    {
+      "id": "solution-n",
+      "word": "solution",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/səˈluː.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "giải pháp; lời giải",
+          "definition_en": "a way to solve a problem",
+          "synonyms": [
+            "answer",
+            "remedy"
+          ],
+          "antonyms": [
+            "problem"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The IT team found a solution to the issue.",
+          "vi": "Đội IT tìm được giải pháp cho vấn đề."
+        }
+      ],
+      "collocations": [
+        "effective solution",
+        "propose a solution"
+      ]
+    },
+    {
+      "id": "source-n",
+      "word": "source",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/sɔːrs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "nguồn; nguồn cung",
+          "definition_en": "the place or person something comes from",
+          "synonyms": [
+            "origin",
+            "supplier"
+          ],
+          "antonyms": [
+            "destination"
+          ]
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please identify the source of the information.",
+          "vi": "Vui lòng xác định nguồn của thông tin."
+        }
+      ],
+      "collocations": [
+        "reliable source",
+        "source materials"
+      ]
+    },
+    {
+      "id": "specific-adj",
+      "word": "specific",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/spəˈsɪf.ɪk/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "cụ thể; riêng biệt",
+          "definition_en": "clearly defined or relating to one particular thing",
+          "synonyms": [
+            "particular",
+            "precise"
+          ],
+          "antonyms": [
+            "general"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please provide a specific delivery date.",
+          "vi": "Vui lòng cung cấp ngày giao hàng cụ thể."
+        }
+      ],
+      "collocations": [
+        "specific requirement",
+        "specific details"
+      ]
+    },
+    {
+      "id": "specification-n",
+      "word": "specification",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌspes.ə.fəˈkeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "thông số kỹ thuật; bản mô tả yêu cầu",
+          "definition_en": "a detailed description of how something should be made or work",
+          "synonyms": [
+            "requirement",
+            "description"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The equipment must meet the technical specifications.",
+          "vi": "Thiết bị phải đáp ứng các thông số kỹ thuật."
+        }
+      ],
+      "collocations": [
+        "technical specification",
+        "product specifications"
+      ]
+    },
+    {
+      "id": "staff-v",
+      "word": "staff",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/stæf/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A1",
+          "meaning_vi": "nhân viên; bố trí nhân sự",
+          "definition_en": "the people who work for an organization",
+          "synonyms": [
+            "personnel",
+            "employees"
+          ],
+          "antonyms": [
+            "management"
+          ]
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "staff",
+        "vs_es": "staffs",
+        "v2": "staffed",
+        "v3": "staffed",
+        "ving": "staffing"
+      },
+      "examples": [
+        {
+          "en": "The staff will receive safety training.",
+          "vi": "Nhân viên sẽ được đào tạo an toàn."
+        }
+      ],
+      "collocations": [
+        "staff meeting",
+        "staff member"
+      ]
+    },
+    {
+      "id": "standard-n",
+      "word": "standard",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈstæn.dɚd/"
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "cefr_level": "A2",
+          "meaning_vi": "tiêu chuẩn; tiêu chuẩn hóa",
+          "definition_en": "a level of quality that is considered acceptable",
+          "synonyms": [
+            "criterion",
+            "benchmark"
+          ],
+          "antonyms": [
+            "substandard"
+          ]
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All products must meet safety standards.",
+          "vi": "Tất cả sản phẩm phải đáp ứng tiêu chuẩn an toàn."
+        }
+      ],
+      "collocations": [
+        "quality standard",
+        "standard procedure"
+      ]
+    },
+    {
+      "id": "statement-n",
+      "word": "statement",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsteɪt.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "bản sao kê; tuyên bố",
+          "definition_en": "a formal account or an expression of facts",
+          "synonyms": [
+            "report",
+            "declaration"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please review your bank statement.",
+          "vi": "Vui lòng xem lại sao kê ngân hàng."
+        }
+      ],
+      "collocations": [
+        "bank statement",
+        "official statement"
+      ]
+    },
+    {
+      "id": "stock-v",
+      "word": "stock",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/stɑːk/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "hàng tồn kho; cổ phiếu",
+          "definition_en": "goods kept for sale or shares in a company",
+          "synonyms": [
+            "inventory",
+            "supply"
+          ],
+          "antonyms": [
+            "shortage"
+          ]
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "stock",
+        "vs_es": "stocks",
+        "v2": "stocked",
+        "v3": "stocked",
+        "ving": "stocking"
+      },
+      "examples": [
+        {
+          "en": "The store has enough stock for the weekend.",
+          "vi": "Cửa hàng có đủ hàng tồn kho cho cuối tuần."
+        }
+      ],
+      "collocations": [
+        "in stock",
+        "stock level"
+      ]
+    },
+    {
+      "id": "strategy-n",
+      "word": "strategy",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈstræt̬.ə.dʒi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "chiến lược",
+          "definition_en": "a plan designed to achieve a long-term aim",
+          "synonyms": [
+            "plan",
+            "approach"
+          ],
+          "antonyms": [
+            "improvisation"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company is reviewing its growth strategy.",
+          "vi": "Công ty đang xem xét chiến lược tăng trưởng."
+        }
+      ],
+      "collocations": [
+        "marketing strategy",
+        "long-term strategy"
       ]
     },
     {
@@ -81,7 +1035,8 @@
             "present",
             "file"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -112,7 +1067,129 @@
       "collocations": [
         "submit a report",
         "submit an application"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "substantial-adj",
+      "word": "substantial",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/səbˈstæn.ʃəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "đáng kể; lớn về quy mô",
+          "definition_en": "large in amount, size, or importance",
+          "synonyms": [
+            "considerable",
+            "significant"
+          ],
+          "antonyms": [
+            "minor"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project requires a substantial investment.",
+          "vi": "Dự án yêu cầu khoản đầu tư đáng kể."
+        }
+      ],
+      "collocations": [
+        "substantial increase",
+        "substantial investment"
       ]
+    },
+    {
+      "id": "suggest-v",
+      "word": "suggest",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/səˈdʒest/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "đề xuất; gợi ý",
+          "definition_en": "to mention an idea for someone to consider",
+          "synonyms": [
+            "recommend",
+            "propose"
+          ],
+          "antonyms": [
+            "oppose"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "suggest",
+        "vs_es": "suggests",
+        "v2": "suggested",
+        "v3": "suggested",
+        "ving": "suggesting"
+      },
+      "examples": [
+        {
+          "en": "I suggest moving the meeting to Friday.",
+          "vi": "Tôi đề xuất chuyển cuộc họp sang thứ Sáu."
+        }
+      ],
+      "collocations": [
+        "suggest an improvement",
+        "suggest a date"
+      ]
+    },
+    {
+      "id": "sunday-n",
+      "word": "Sunday",
+      "phonetic": {
+        "us": "/ˈsʌn.deɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "Chủ Nhật",
+          "definition_en": "the day of the week after Saturday and before Monday",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The hotel restaurant is open on Sunday.",
+          "vi": "Nhà hàng khách sạn mở cửa vào Chủ Nhật."
+        }
+      ],
+      "collocations": [
+        "Sunday afternoon"
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "supplier-n",
@@ -131,7 +1208,8 @@
           ],
           "antonyms": [
             "customer"
-          ]
+          ],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -161,115 +1239,222 @@
       "collocations": [
         "major supplier",
         "approved supplier"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
-      "id": "shipment-n",
-      "word": "shipment",
+      "id": "supply-v",
+      "word": "supply",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈʃɪp.mənt/"
+        "us": "/səˈplaɪ/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "lô hàng; việc vận chuyển hàng",
-          "definition_en": "a quantity of goods sent from one place to another",
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "nguồn cung; cung cấp",
+          "definition_en": "an amount available or to provide what is needed",
           "synonyms": [
-            "consignment",
-            "cargo"
+            "provide",
+            "deliver"
+          ],
+          "antonyms": [
+            "demand"
+          ]
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "supply",
+        "vs_es": "supplies",
+        "v2": "supplied",
+        "v3": "supplied",
+        "ving": "supplying"
+      },
+      "examples": [
+        {
+          "en": "The supplier can supply the parts next week.",
+          "vi": "Nhà cung cấp có thể cung cấp linh kiện vào tuần tới."
+        }
+      ],
+      "collocations": [
+        "supply chain",
+        "supply materials"
+      ]
+    },
+    {
+      "id": "support-v",
+      "word": "support",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/səˈpɔːrt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A1",
+          "meaning_vi": "hỗ trợ; sự hỗ trợ",
+          "definition_en": "help or to give help",
+          "synonyms": [
+            "assist",
+            "help"
+          ],
+          "antonyms": [
+            "oppose"
+          ]
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "support",
+        "vs_es": "supports",
+        "v2": "supported",
+        "v3": "supported",
+        "ving": "supporting"
+      },
+      "examples": [
+        {
+          "en": "Our team supports customers by phone.",
+          "vi": "Đội ngũ hỗ trợ khách hàng qua điện thoại."
+        }
+      ],
+      "collocations": [
+        "technical support",
+        "customer support"
+      ]
+    },
+    {
+      "id": "survey-v",
+      "word": "survey",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsɝː.veɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "khảo sát; cuộc khảo sát",
+          "definition_en": "a set of questions used to collect information",
+          "synonyms": [
+            "questionnaire",
+            "study"
           ],
           "antonyms": []
         }
       ],
       "topics": [
-        "SHIPPING",
-        "TRANSPORT",
+        "BUSINESS",
         "CUSTOMER"
       ],
-      "word_family": [
-        {
-          "word": "ship",
-          "pos": "v/n",
-          "meaning_vi": "vận chuyển bằng tàu; con tàu"
-        },
-        {
-          "word": "shipping",
-          "pos": "n",
-          "meaning_vi": "hoạt động vận chuyển"
-        }
-      ],
-      "verb_forms": null,
+      "word_family": [],
+      "verb_forms": {
+        "v1": "survey",
+        "vs_es": "surveys",
+        "v2": "surveyed",
+        "v3": "surveyed",
+        "ving": "surveying"
+      },
       "examples": [
         {
-          "en": "The shipment is expected to arrive tomorrow.",
-          "vi": "Lô hàng dự kiến sẽ đến vào ngày mai."
+          "en": "Employees completed an online survey.",
+          "vi": "Nhân viên hoàn thành khảo sát trực tuyến."
         }
       ],
       "collocations": [
-        "track a shipment",
-        "shipment status"
+        "customer survey",
+        "conduct a survey"
       ]
     },
     {
-      "id": "saturday-n",
-      "word": "Saturday",
+      "id": "sustainable-adj",
+      "word": "sustainable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈsæt̬.ɚ.deɪ/"
+        "us": "/səˈsteɪ.nə.bəl/"
       },
       "senses": [
         {
-          "pos": "n",
-          "meaning_vi": "Thứ Bảy",
-          "definition_en": "the day of the week after Friday and before Sunday",
-          "synonyms": [],
-          "antonyms": []
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "bền vững; có thể duy trì lâu dài",
+          "definition_en": "able to continue over time without causing serious harm",
+          "synonyms": [
+            "viable",
+            "long-lasting"
+          ],
+          "antonyms": [
+            "unsustainable"
+          ]
         }
       ],
       "topics": [
-        "TIME",
-        "DAILY"
+        "BUSINESS",
+        "ENVIRONMENT"
       ],
       "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "The language course is held on Saturday mornings.",
-          "vi": "Khóa học ngôn ngữ được tổ chức vào sáng thứ Bảy."
+          "en": "The company is developing a sustainable supply chain.",
+          "vi": "Công ty đang phát triển chuỗi cung ứng bền vững."
         }
       ],
       "collocations": [
-        "Saturday morning"
+        "sustainable growth",
+        "sustainable development"
       ]
     },
     {
-      "id": "sunday-n",
-      "word": "Sunday",
+      "id": "system-n",
+      "word": "system",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈsʌn.deɪ/"
+        "us": "/ˈsɪs.təm/"
       },
       "senses": [
         {
           "pos": "n",
-          "meaning_vi": "Chủ Nhật",
-          "definition_en": "the day of the week after Saturday and before Monday",
-          "synonyms": [],
+          "cefr_level": "A1",
+          "meaning_vi": "hệ thống",
+          "definition_en": "a set of connected things working together",
+          "synonyms": [
+            "network",
+            "structure"
+          ],
           "antonyms": []
         }
       ],
       "topics": [
-        "TIME",
-        "DAILY"
+        "TECHNOLOGY",
+        "BUSINESS"
       ],
       "word_family": [],
       "verb_forms": null,
       "examples": [
         {
-          "en": "The hotel restaurant is open on Sunday.",
-          "vi": "Nhà hàng khách sạn mở cửa vào Chủ Nhật."
+          "en": "The system will be updated tonight.",
+          "vi": "Hệ thống sẽ được cập nhật tối nay."
         }
       ],
       "collocations": [
-        "Sunday afternoon"
+        "computer system",
+        "payment system"
       ]
     }
   ]

@@ -3,6 +3,52 @@
   "letter": "H",
   "words": [
     {
+      "id": "handle-v",
+      "word": "handle",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈhæn.dəl/"
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "cefr_level": "A2",
+          "meaning_vi": "xử lý; tay cầm",
+          "definition_en": "to deal with a situation or control something",
+          "synonyms": [
+            "manage",
+            "deal with"
+          ],
+          "antonyms": [
+            "neglect"
+          ]
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "handle",
+        "vs_es": "handles",
+        "v2": "handled",
+        "v3": "handled",
+        "ving": "handling"
+      },
+      "examples": [
+        {
+          "en": "The support team handles customer requests.",
+          "vi": "Đội hỗ trợ xử lý yêu cầu của khách hàng."
+        }
+      ],
+      "collocations": [
+        "handle a complaint",
+        "handle data"
+      ]
+    },
+    {
       "id": "headquarters-n",
       "word": "headquarters",
       "phonetic": {
@@ -17,7 +63,8 @@
             "main office",
             "central office"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -35,7 +82,9 @@
       "collocations": [
         "company headquarters",
         "headquarters building"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "hire-v",
@@ -55,7 +104,8 @@
           "antonyms": [
             "dismiss",
             "fire"
-          ]
+          ],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -90,7 +140,9 @@
       "collocations": [
         "hire staff",
         "hire a vehicle"
-      ]
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "hospitality-n",
@@ -107,7 +159,8 @@
             "welcome",
             "guest service"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -126,6 +179,54 @@
       "collocations": [
         "hospitality industry",
         "hospitality services"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "host-v",
+      "word": "host",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/hoʊst/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "A2",
+          "meaning_vi": "chủ nhà; tổ chức",
+          "definition_en": "a person who receives guests or to organize an event",
+          "synonyms": [
+            "organizer",
+            "presenter"
+          ],
+          "antonyms": [
+            "guest"
+          ]
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "host",
+        "vs_es": "hosts",
+        "v2": "hosted",
+        "v3": "hosted",
+        "ving": "hosting"
+      },
+      "examples": [
+        {
+          "en": "Our department will host the annual meeting.",
+          "vi": "Phòng ban chúng tôi sẽ tổ chức cuộc họp thường niên."
+        }
+      ],
+      "collocations": [
+        "host a conference",
+        "event host"
       ]
     },
     {
@@ -142,7 +243,8 @@
           "synonyms": [
             "sixty minutes"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A1"
         }
       ],
       "topics": [
@@ -162,7 +264,9 @@
         "office hours",
         "rush hour",
         "per hour"
-      ]
+      ],
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate"
     }
   ]
 }

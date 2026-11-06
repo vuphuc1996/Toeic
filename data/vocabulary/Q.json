@@ -17,7 +17,8 @@
             "standard",
             "grade"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "A2"
         }
       ],
       "topics": [
@@ -36,6 +37,85 @@
       "collocations": [
         "quality control",
         "high quality"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "quantity-n",
+      "word": "quantity",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkwɑːn.t̬ə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "số lượng",
+          "definition_en": "the amount or number of something",
+          "synonyms": [
+            "amount",
+            "volume"
+          ],
+          "antonyms": [
+            "quality"
+          ]
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please verify the quantity before signing.",
+          "vi": "Vui lòng xác minh số lượng trước khi ký."
+        }
+      ],
+      "collocations": [
+        "large quantity",
+        "minimum quantity"
+      ]
+    },
+    {
+      "id": "quarter-n",
+      "word": "quarter",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkwɔːr.t̬ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "quý; một phần tư",
+          "definition_en": "one of four equal parts or a three-month period",
+          "synonyms": [
+            "three-month period"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Sales increased during the second quarter.",
+          "vi": "Doanh số tăng trong quý hai."
+        }
+      ],
+      "collocations": [
+        "first quarter",
+        "quarterly report"
       ]
     },
     {
@@ -54,7 +134,8 @@
           ],
           "antonyms": [
             "annual"
-          ]
+          ],
+          "cefr_level": "B1"
         },
         {
           "pos": "adv",
@@ -63,7 +144,8 @@
           "synonyms": [
             "four times a year"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -82,7 +164,9 @@
       "collocations": [
         "quarterly report",
         "quarterly meeting"
-      ]
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate"
     },
     {
       "id": "query-n",
@@ -99,7 +183,8 @@
             "question",
             "inquiry"
           ],
-          "antonyms": []
+          "antonyms": [],
+          "cefr_level": "B2"
         }
       ],
       "topics": [
@@ -118,6 +203,90 @@
       "collocations": [
         "customer query",
         "respond to a query"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "quotation-n",
+      "word": "quotation",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kwoʊˈteɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "báo giá; câu trích dẫn",
+          "definition_en": "a formal statement of the price of goods or services",
+          "synonyms": [
+            "price estimate",
+            "quote"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier sent a quotation by email.",
+          "vi": "Nhà cung cấp gửi báo giá qua email."
+        }
+      ],
+      "collocations": [
+        "price quotation",
+        "written quotation"
+      ]
+    },
+    {
+      "id": "quote-v",
+      "word": "quote",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kwoʊt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "cefr_level": "B1",
+          "meaning_vi": "báo giá; trích dẫn",
+          "definition_en": "a statement of a price or to repeat exact words",
+          "synonyms": [
+            "quotation",
+            "estimate"
+          ],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "quote",
+        "vs_es": "quotes",
+        "v2": "quoted",
+        "v3": "quoted",
+        "ving": "quoting"
+      },
+      "examples": [
+        {
+          "en": "Please quote the price for one hundred units.",
+          "vi": "Vui lòng báo giá cho 100 đơn vị."
+        }
+      ],
+      "collocations": [
+        "request a quote",
+        "quote a price"
       ]
     }
   ]
