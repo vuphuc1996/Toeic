@@ -1,4 +1,4 @@
-const CACHE_NAME = 'toeic-vocab-phase1-v1.1.0';
+const CACHE_NAME = 'toeic-vocab-phase2-v2.0.0';
 const APP_SHELL = ["./", "./index.html", "./manifest.webmanifest", "./assets/css/app.css", "./assets/js/app.js", "./assets/icons/icon.svg", "./assets/icons/icon-192.png", "./assets/icons/icon-512.png", "./data/manifest.json", "./data/categories.json", "./data/vocabulary/A.json", "./data/vocabulary/B.json", "./data/vocabulary/C.json", "./data/vocabulary/D.json", "./data/vocabulary/E.json", "./data/vocabulary/F.json", "./data/vocabulary/G.json", "./data/vocabulary/H.json", "./data/vocabulary/I.json", "./data/vocabulary/J.json", "./data/vocabulary/K.json", "./data/vocabulary/L.json", "./data/vocabulary/M.json", "./data/vocabulary/N.json", "./data/vocabulary/O.json", "./data/vocabulary/P.json", "./data/vocabulary/Q.json", "./data/vocabulary/R.json", "./data/vocabulary/S.json", "./data/vocabulary/T.json", "./data/vocabulary/U.json", "./data/vocabulary/V.json", "./data/vocabulary/W.json", "./data/vocabulary/X.json", "./data/vocabulary/Y.json", "./data/vocabulary/Z.json", "./data/verbs/irregular-verbs.json", "./data/grammar/lessons.json", "./data/readings/reading-library.json"];
 
 self.addEventListener('install', event => {
@@ -37,4 +37,21 @@ self.addEventListener('fetch', event => {
     return;
   }
   event.respondWith((async () => { const cache = await caches.open(CACHE_NAME); const cached = await cache.match(request); if (cached) return cached; const fresh = await fetch(request); if (fresh.ok) cache.put(request,fresh.clone()); return fresh; })());
+});
+
+
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+  const targetUrl = event.notification.data?.url || new URL('./?open=practice', self.location.href).href;
+  event.waitUntil((async () => {
+    const windows = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    for (const client of windows) {
+      if ('focus' in client) {
+        await client.focus();
+        client.postMessage({ type: 'OPEN_PRACTICE' });
+        return;
+      }
+    }
+    if (self.clients.openWindow) await self.clients.openWindow(targetUrl);
+  })());
 });
