@@ -2,7 +2,7 @@
   "id": "./",
   "name": "TOEIC Dictionary – Từ điển TOEIC A–Z",
   "short_name": "TOEIC Dict",
-  "description": "Ứng dụng từ điển TOEIC A–Z, Smart Practice, phân tích đáp án bằng Google Gemini và nhắc học cục bộ trên GitHub Pages.",
+  "description": "Từ điển TOEIC A–Z, Smart Practice, thư viện ngữ pháp, Reading Mini và tra cứu Google AI Mode trên GitHub Pages.",
   "lang": "vi",
   "start_url": "./",
   "scope": "./",

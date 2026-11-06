@@ -1,4 +1,573 @@
 {
   "schemaVersion": 1,
-  "readings": []
+  "readings": [
+    {
+      "id": "office-schedule",
+      "title": "A revised office schedule",
+      "topic": "Office & Scheduling",
+      "level": "A2–B1",
+      "wordCount": 105,
+      "passage": "The administration team has announced a revised office schedule for next month. Employees who need to work remotely must submit a request to their supervisors by Friday. The office will remain open from 8:00 a.m. to 5:30 p.m., Monday through Friday. Staff members are also asked to update their calendar entries before the new schedule takes effect. Anyone who has questions about the change should contact the Human Resources department. A short briefing will be held in Meeting Room B on Wednesday at 10:00 a.m.",
+      "translation": "Bộ phận hành chính đã thông báo lịch làm việc văn phòng được điều chỉnh cho tháng tới. Nhân viên cần làm việc từ xa phải gửi yêu cầu cho quản lý trước thứ Sáu. Văn phòng sẽ mở cửa từ 8:00 đến 17:30, từ thứ Hai đến thứ Sáu. Nhân viên cũng được yêu cầu cập nhật lịch cá nhân trước khi lịch mới có hiệu lực. Ai có câu hỏi về thay đổi này nên liên hệ phòng Nhân sự. Một buổi phổ biến ngắn sẽ được tổ chức tại Phòng họp B vào thứ Tư lúc 10:00.",
+      "vocabulary": [
+        {
+          "word": "revised",
+          "pos": "adj",
+          "meaning": "đã được điều chỉnh"
+        },
+        {
+          "word": "remotely",
+          "pos": "adv",
+          "meaning": "từ xa"
+        },
+        {
+          "word": "submit",
+          "pos": "v",
+          "meaning": "nộp, gửi"
+        },
+        {
+          "word": "supervisor",
+          "pos": "n",
+          "meaning": "người giám sát/quản lý trực tiếp"
+        },
+        {
+          "word": "take effect",
+          "pos": "phrase",
+          "meaning": "có hiệu lực"
+        }
+      ],
+      "questions": [
+        {
+          "question": "When must employees submit remote-work requests?",
+          "choices": [
+            "By Friday",
+            "Next Wednesday",
+            "At 5:30 p.m.",
+            "At the end of next month"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bài đọc nêu rõ request phải được gửi by Friday."
+        },
+        {
+          "question": "Where will the briefing take place?",
+          "choices": [
+            "The HR office",
+            "Meeting Room B",
+            "The reception area",
+            "The supervisor's office"
+          ],
+          "answerIndex": 1,
+          "explanation": "Buổi phổ biến sẽ diễn ra tại Meeting Room B."
+        },
+        {
+          "question": "What should employees update?",
+          "choices": [
+            "Their job titles",
+            "Their salary records",
+            "Their calendar entries",
+            "Their travel documents"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên được yêu cầu cập nhật calendar entries."
+        }
+      ]
+    },
+    {
+      "id": "meeting-notice",
+      "title": "Notice of a quarterly meeting",
+      "topic": "Meetings & Communication",
+      "level": "A2–B1",
+      "wordCount": 108,
+      "passage": "All department heads are invited to attend the quarterly performance meeting on Thursday, April 18. The meeting will begin at 9:30 a.m. in Conference Hall 2. Each department should prepare a brief report covering its main achievements, current challenges, and plans for the next quarter. Presentation slides must be submitted to the planning office no later than Tuesday afternoon. Participants who cannot attend in person may join through the video-conferencing link provided in the calendar invitation. Please contact Ms. Tran if you require additional equipment.",
+      "translation": "Tất cả trưởng bộ phận được mời tham dự cuộc họp đánh giá hiệu suất quý vào thứ Năm, ngày 18 tháng 4. Cuộc họp bắt đầu lúc 9:30 tại Hội trường Hội nghị số 2. Mỗi bộ phận cần chuẩn bị báo cáo ngắn về thành tựu chính, thách thức hiện tại và kế hoạch cho quý tiếp theo. Slide trình bày phải được gửi đến văn phòng kế hoạch muộn nhất vào chiều thứ Ba. Người không thể tham dự trực tiếp có thể tham gia qua đường dẫn hội nghị trực tuyến trong thư mời lịch. Vui lòng liên hệ cô Trần nếu cần thêm thiết bị.",
+      "vocabulary": [
+        {
+          "word": "quarterly",
+          "pos": "adj/adv",
+          "meaning": "hàng quý"
+        },
+        {
+          "word": "achievement",
+          "pos": "n",
+          "meaning": "thành tựu"
+        },
+        {
+          "word": "challenge",
+          "pos": "n",
+          "meaning": "thách thức"
+        },
+        {
+          "word": "no later than",
+          "pos": "phrase",
+          "meaning": "không muộn hơn"
+        },
+        {
+          "word": "require",
+          "pos": "v",
+          "meaning": "cần, yêu cầu"
+        }
+      ],
+      "questions": [
+        {
+          "question": "When is the meeting scheduled?",
+          "choices": [
+            "Tuesday afternoon",
+            "Thursday, April 18",
+            "Friday morning",
+            "The following quarter"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông báo ghi Thursday, April 18."
+        },
+        {
+          "question": "What must be submitted by Tuesday afternoon?",
+          "choices": [
+            "Expense claims",
+            "Attendance sheets",
+            "Presentation slides",
+            "Equipment requests"
+          ],
+          "answerIndex": 2,
+          "explanation": "Slide trình bày phải gửi đến planning office trước hạn."
+        },
+        {
+          "question": "How can an absent participant join?",
+          "choices": [
+            "By telephone only",
+            "Through a video-conferencing link",
+            "By sending a written report",
+            "By visiting the planning office"
+          ],
+          "answerIndex": 1,
+          "explanation": "Người không đến trực tiếp có thể dùng video-conferencing link."
+        }
+      ]
+    },
+    {
+      "id": "business-travel",
+      "title": "Business travel arrangements",
+      "topic": "Travel & Transportation",
+      "level": "B1",
+      "wordCount": 112,
+      "passage": "Ms. Nguyen will visit the company's regional office in Singapore next week. The travel department has booked a morning flight and reserved a room at the Riverside Hotel for three nights. A shuttle bus will pick her up outside the arrival terminal at 9:15 a.m. She should keep all boarding passes and hotel receipts for reimbursement. The first client meeting is scheduled for Tuesday afternoon, so she will have Monday morning to review the presentation and meet the local sales team. Any changes to the itinerary will be sent by email.",
+      "translation": "Chị Nguyễn sẽ đến thăm văn phòng khu vực của công ty tại Singapore vào tuần tới. Phòng du lịch đã đặt chuyến bay buổi sáng và đặt phòng tại khách sạn Riverside trong ba đêm. Xe đưa đón sẽ đón chị bên ngoài nhà ga đến lúc 9:15 sáng. Chị nên giữ tất cả thẻ lên máy bay và hóa đơn khách sạn để hoàn tiền. Cuộc họp khách hàng đầu tiên được lên lịch vào chiều thứ Ba, vì vậy chị có sáng thứ Hai để xem lại bài trình bày và gặp nhóm bán hàng địa phương. Mọi thay đổi lịch trình sẽ được gửi qua email.",
+      "vocabulary": [
+        {
+          "word": "regional",
+          "pos": "adj",
+          "meaning": "thuộc khu vực"
+        },
+        {
+          "word": "reserve",
+          "pos": "v",
+          "meaning": "đặt trước"
+        },
+        {
+          "word": "terminal",
+          "pos": "n",
+          "meaning": "nhà ga"
+        },
+        {
+          "word": "reimbursement",
+          "pos": "n",
+          "meaning": "sự hoàn trả chi phí"
+        },
+        {
+          "word": "itinerary",
+          "pos": "n",
+          "meaning": "lịch trình chuyến đi"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How long will Ms. Nguyen stay at the hotel?",
+          "choices": [
+            "One night",
+            "Two nights",
+            "Three nights",
+            "One week"
+          ],
+          "answerIndex": 2,
+          "explanation": "Phòng được đặt trong three nights."
+        },
+        {
+          "question": "What should she keep for reimbursement?",
+          "choices": [
+            "Boarding passes and hotel receipts",
+            "Business cards only",
+            "The presentation slides",
+            "The shuttle timetable"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bài đọc yêu cầu giữ boarding passes và hotel receipts."
+        },
+        {
+          "question": "When is the first client meeting?",
+          "choices": [
+            "Monday morning",
+            "Monday afternoon",
+            "Tuesday afternoon",
+            "Wednesday morning"
+          ],
+          "answerIndex": 2,
+          "explanation": "Cuộc họp đầu tiên vào Tuesday afternoon."
+        }
+      ]
+    },
+    {
+      "id": "invoice-payment",
+      "title": "Invoice and payment reminder",
+      "topic": "Finance & Purchasing",
+      "level": "B1–B2",
+      "wordCount": 112,
+      "passage": "This is a friendly reminder that invoice INV-2048 is due for payment on May 30. According to our records, the invoice covers the maintenance services provided during April. Please review the attached statement and arrange the outstanding balance before the due date. If your accounting department has already transferred the funds, please disregard this notice and send us the transaction reference for confirmation. For questions about the invoice details, contact our billing team at the email address shown below. We appreciate your prompt attention to this matter.",
+      "translation": "Đây là lời nhắc thân thiện rằng hóa đơn INV-2048 đến hạn thanh toán vào ngày 30 tháng 5. Theo hồ sơ của chúng tôi, hóa đơn bao gồm dịch vụ bảo trì được cung cấp trong tháng Tư. Vui lòng xem bảng kê đính kèm và sắp xếp thanh toán khoản còn nợ trước ngày đến hạn. Nếu phòng kế toán của quý công ty đã chuyển tiền, vui lòng bỏ qua thông báo này và gửi mã tham chiếu giao dịch để xác nhận. Nếu có thắc mắc về chi tiết hóa đơn, hãy liên hệ nhóm thanh toán qua địa chỉ email bên dưới. Chúng tôi cảm ơn sự quan tâm kịp thời của quý công ty.",
+      "vocabulary": [
+        {
+          "word": "invoice",
+          "pos": "n",
+          "meaning": "hóa đơn"
+        },
+        {
+          "word": "outstanding balance",
+          "pos": "n phrase",
+          "meaning": "số dư/khoản còn phải thanh toán"
+        },
+        {
+          "word": "disregard",
+          "pos": "v",
+          "meaning": "bỏ qua"
+        },
+        {
+          "word": "transaction reference",
+          "pos": "n phrase",
+          "meaning": "mã tham chiếu giao dịch"
+        },
+        {
+          "word": "prompt",
+          "pos": "adj",
+          "meaning": "kịp thời, nhanh chóng"
+        }
+      ],
+      "questions": [
+        {
+          "question": "When is invoice INV-2048 due?",
+          "choices": [
+            "April 30",
+            "May 15",
+            "May 30",
+            "June 30"
+          ],
+          "answerIndex": 2,
+          "explanation": "Hóa đơn đến hạn vào May 30."
+        },
+        {
+          "question": "What should the customer send if payment has been made?",
+          "choices": [
+            "A new invoice",
+            "The transaction reference",
+            "A purchase order",
+            "A maintenance schedule"
+          ],
+          "answerIndex": 1,
+          "explanation": "Cần gửi transaction reference để xác nhận khoản tiền đã chuyển."
+        },
+        {
+          "question": "What does the invoice cover?",
+          "choices": [
+            "Office rent",
+            "Travel expenses",
+            "Maintenance services",
+            "New equipment"
+          ],
+          "answerIndex": 2,
+          "explanation": "Hóa đơn bao gồm dịch vụ bảo trì trong tháng Tư."
+        }
+      ]
+    },
+    {
+      "id": "shipping-update",
+      "title": "Shipment status update",
+      "topic": "Shipping & Logistics",
+      "level": "B1–B2",
+      "wordCount": 104,
+      "passage": "The logistics team has received an update from the carrier regarding shipment SO-7812. The goods departed the distribution center on Monday evening but were delayed at the regional checkpoint because of severe weather. The carrier now expects the shipment to arrive at the customer's warehouse by Thursday noon. The sales representative has informed the customer and offered to provide a revised delivery schedule if necessary. Warehouse staff are requested to reserve adequate storage space before the shipment arrives. Further updates will be shared as soon as they become available.",
+      "translation": "Nhóm logistics đã nhận được cập nhật từ đơn vị vận chuyển về lô hàng SO-7812. Hàng hóa rời trung tâm phân phối vào tối thứ Hai nhưng bị chậm tại trạm kiểm soát khu vực do thời tiết xấu. Đơn vị vận chuyển hiện dự kiến lô hàng sẽ đến kho của khách hàng trước trưa thứ Năm. Đại diện bán hàng đã thông báo cho khách và đề nghị cung cấp lịch giao hàng điều chỉnh nếu cần. Nhân viên kho được yêu cầu dành đủ không gian lưu trữ trước khi lô hàng đến. Các cập nhật tiếp theo sẽ được chia sẻ ngay khi có.",
+      "vocabulary": [
+        {
+          "word": "carrier",
+          "pos": "n",
+          "meaning": "đơn vị vận chuyển"
+        },
+        {
+          "word": "distribution center",
+          "pos": "n phrase",
+          "meaning": "trung tâm phân phối"
+        },
+        {
+          "word": "checkpoint",
+          "pos": "n",
+          "meaning": "trạm kiểm soát"
+        },
+        {
+          "word": "adequate",
+          "pos": "adj",
+          "meaning": "đầy đủ, phù hợp"
+        },
+        {
+          "word": "as soon as",
+          "pos": "conjunction",
+          "meaning": "ngay khi"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why was shipment SO-7812 delayed?",
+          "choices": [
+            "A customs document was missing",
+            "Severe weather",
+            "The warehouse was closed",
+            "The customer changed the order"
+          ],
+          "answerIndex": 1,
+          "explanation": "Lô hàng bị trễ do thời tiết xấu tại checkpoint."
+        },
+        {
+          "question": "When is the shipment expected to arrive?",
+          "choices": [
+            "Monday evening",
+            "Tuesday morning",
+            "Thursday noon",
+            "Friday afternoon"
+          ],
+          "answerIndex": 2,
+          "explanation": "Carrier dự kiến đến trước Thursday noon."
+        },
+        {
+          "question": "What are warehouse staff asked to do?",
+          "choices": [
+            "Cancel the order",
+            "Prepare storage space",
+            "Contact the carrier directly",
+            "Change the product price"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nhân viên kho cần dành đủ không gian lưu trữ."
+        }
+      ]
+    },
+    {
+      "id": "job-opening",
+      "title": "Internal job opening",
+      "topic": "Human Resources",
+      "level": "B1",
+      "wordCount": 108,
+      "passage": "The Human Resources department is accepting applications for the position of Operations Coordinator. Internal candidates must have at least two years of experience in office administration or logistics. The successful applicant will coordinate daily schedules, prepare monthly reports, and communicate with external suppliers. Interested employees should submit a résumé and a short statement of interest through the company portal by June 12. Shortlisted candidates will be invited to an interview during the following week. The position is expected to begin on July 1, subject to final approval from senior management.",
+      "translation": "Phòng Nhân sự đang nhận hồ sơ cho vị trí Điều phối viên Vận hành. Ứng viên nội bộ phải có ít nhất hai năm kinh nghiệm trong hành chính văn phòng hoặc logistics. Ứng viên được chọn sẽ điều phối lịch hằng ngày, chuẩn bị báo cáo tháng và trao đổi với nhà cung cấp bên ngoài. Nhân viên quan tâm cần nộp CV và một bản trình bày ngắn về nguyện vọng qua cổng thông tin công ty trước ngày 12 tháng 6. Ứng viên lọt danh sách ngắn sẽ được mời phỏng vấn trong tuần kế tiếp. Vị trí dự kiến bắt đầu từ ngày 1 tháng 7, tùy thuộc phê duyệt cuối cùng từ quản lý cấp cao.",
+      "vocabulary": [
+        {
+          "word": "application",
+          "pos": "n",
+          "meaning": "đơn ứng tuyển/hồ sơ"
+        },
+        {
+          "word": "coordinate",
+          "pos": "v",
+          "meaning": "điều phối"
+        },
+        {
+          "word": "supplier",
+          "pos": "n",
+          "meaning": "nhà cung cấp"
+        },
+        {
+          "word": "shortlisted",
+          "pos": "adj",
+          "meaning": "được chọn vào danh sách rút gọn"
+        },
+        {
+          "word": "subject to",
+          "pos": "phrase",
+          "meaning": "phụ thuộc vào"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What position is available?",
+          "choices": [
+            "Finance Manager",
+            "Operations Coordinator",
+            "Sales Representative",
+            "HR Assistant"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông báo tuyển vị trí Operations Coordinator."
+        },
+        {
+          "question": "How should interested employees apply?",
+          "choices": [
+            "By telephone",
+            "Through the company portal",
+            "By regular mail",
+            "At the interview"
+          ],
+          "answerIndex": 1,
+          "explanation": "Ứng viên nộp hồ sơ qua company portal."
+        },
+        {
+          "question": "When is the position expected to begin?",
+          "choices": [
+            "June 12",
+            "The following week",
+            "July 1",
+            "August 1"
+          ],
+          "answerIndex": 2,
+          "explanation": "Vị trí dự kiến bắt đầu July 1."
+        }
+      ]
+    },
+    {
+      "id": "customer-service",
+      "title": "Customer service response",
+      "topic": "Customer Service",
+      "level": "B1–B2",
+      "wordCount": 110,
+      "passage": "Thank you for contacting the customer support team about your recent order. We apologize that the replacement item has not arrived within the estimated delivery period. Our records show that the package was returned to the distribution facility because the delivery address was incomplete. To avoid further delays, please confirm your full address and a contact telephone number. Once we receive the updated information, we will arrange another shipment at no additional cost. You can track the replacement package using the reference number that will be sent to your email.",
+      "translation": "Cảm ơn quý khách đã liên hệ nhóm hỗ trợ khách hàng về đơn hàng gần đây. Chúng tôi xin lỗi vì sản phẩm thay thế chưa đến trong khoảng thời gian giao hàng dự kiến. Hồ sơ cho thấy kiện hàng đã được trả về cơ sở phân phối vì địa chỉ giao hàng chưa đầy đủ. Để tránh chậm trễ thêm, vui lòng xác nhận địa chỉ đầy đủ và số điện thoại liên hệ. Khi nhận được thông tin cập nhật, chúng tôi sẽ sắp xếp gửi lại mà không tính thêm phí. Quý khách có thể theo dõi kiện hàng thay thế bằng mã tham chiếu sẽ được gửi đến email.",
+      "vocabulary": [
+        {
+          "word": "replacement",
+          "pos": "n/adj",
+          "meaning": "sự thay thế; sản phẩm thay thế"
+        },
+        {
+          "word": "estimated",
+          "pos": "adj",
+          "meaning": "được ước tính/dự kiến"
+        },
+        {
+          "word": "incomplete",
+          "pos": "adj",
+          "meaning": "không đầy đủ"
+        },
+        {
+          "word": "arrange",
+          "pos": "v",
+          "meaning": "sắp xếp"
+        },
+        {
+          "word": "additional cost",
+          "pos": "n phrase",
+          "meaning": "chi phí phát sinh/thêm"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why was the package returned?",
+          "choices": [
+            "The item was damaged",
+            "The address was incomplete",
+            "The customer refused payment",
+            "The warehouse was closed"
+          ],
+          "answerIndex": 1,
+          "explanation": "Địa chỉ giao hàng chưa đầy đủ."
+        },
+        {
+          "question": "What information does the customer need to confirm?",
+          "choices": [
+            "A new order number",
+            "A full address and telephone number",
+            "A payment receipt",
+            "A product description"
+          ],
+          "answerIndex": 1,
+          "explanation": "Khách cần xác nhận địa chỉ đầy đủ và số điện thoại."
+        },
+        {
+          "question": "Will the replacement shipment cost extra?",
+          "choices": [
+            "Yes, a delivery fee applies",
+            "Only if it is urgent",
+            "No, there is no additional cost",
+            "The passage does not say"
+          ],
+          "answerIndex": 2,
+          "explanation": "Bài đọc ghi rõ at no additional cost."
+        }
+      ]
+    },
+    {
+      "id": "facility-maintenance",
+      "title": "Building maintenance announcement",
+      "topic": "Facilities & Office",
+      "level": "B1",
+      "wordCount": 104,
+      "passage": "The Facilities Department will carry out routine maintenance on the air-conditioning system this Saturday. Work is scheduled to begin at 7:00 a.m. and is expected to be completed by 1:00 p.m. During this period, employees may experience limited access to the east wing on the fourth floor. Staff members who plan to work over the weekend should use the temporary workstations on the third floor. The department apologizes for any inconvenience and asks employees to report urgent facility issues to the building reception desk.",
+      "translation": "Phòng Cơ sở vật chất sẽ tiến hành bảo trì định kỳ hệ thống điều hòa vào thứ Bảy này. Công việc dự kiến bắt đầu lúc 7:00 sáng và hoàn thành trước 1:00 chiều. Trong thời gian này, nhân viên có thể bị hạn chế tiếp cận khu phía Đông ở tầng bốn. Nhân viên dự định làm việc cuối tuần nên sử dụng các vị trí làm việc tạm thời ở tầng ba. Bộ phận xin lỗi vì sự bất tiện và đề nghị nhân viên báo cáo sự cố cơ sở vật chất khẩn cấp cho quầy lễ tân tòa nhà.",
+      "vocabulary": [
+        {
+          "word": "carry out",
+          "pos": "phrasal verb",
+          "meaning": "tiến hành, thực hiện"
+        },
+        {
+          "word": "routine",
+          "pos": "adj",
+          "meaning": "định kỳ, thường lệ"
+        },
+        {
+          "word": "limited access",
+          "pos": "n phrase",
+          "meaning": "quyền/khả năng tiếp cận bị hạn chế"
+        },
+        {
+          "word": "temporary",
+          "pos": "adj",
+          "meaning": "tạm thời"
+        },
+        {
+          "word": "inconvenience",
+          "pos": "n",
+          "meaning": "sự bất tiện"
+        }
+      ],
+      "questions": [
+        {
+          "question": "When will maintenance take place?",
+          "choices": [
+            "Friday evening",
+            "Saturday morning",
+            "Sunday afternoon",
+            "Monday morning"
+          ],
+          "answerIndex": 1,
+          "explanation": "Bảo trì diễn ra vào thứ Bảy, bắt đầu 7:00 a.m."
+        },
+        {
+          "question": "Which area may have limited access?",
+          "choices": [
+            "The third-floor lobby",
+            "The east wing on the fourth floor",
+            "The reception desk",
+            "The entire building"
+          ],
+          "answerIndex": 1,
+          "explanation": "Khu phía Đông ở tầng bốn bị hạn chế tiếp cận."
+        },
+        {
+          "question": "Where should weekend staff work?",
+          "choices": [
+            "On the fourth floor",
+            "At home",
+            "At temporary workstations on the third floor",
+            "In the reception area"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên nên dùng workstation tạm thời trên tầng ba."
+        }
+      ]
+    }
+  ]
 }

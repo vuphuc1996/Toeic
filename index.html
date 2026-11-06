@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, luyện tập thông minh, giải thích đáp án và cấu hình nhắc học – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.4.1 – Từ điển TOEIC A–Z</title>
+  <title>TOEIC Dictionary v2.5.0 – Từ điển TOEIC A–Z</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -50,12 +50,14 @@
         <button class="nav-item active" data-page="dashboard"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-home"></use></svg></span>Tổng quan</button>
         <button class="nav-item" data-page="dictionary"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span>Từ vựng</button>
         <button class="nav-item" data-page="practice"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-brain"></use></svg></span>Ôn tập</button>
+        <button class="nav-item" data-page="grammar"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Ngữ pháp</button>
+        <button class="nav-item" data-page="reading"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span>Đọc hiểu</button>
         <button class="nav-item" data-page="data"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-database"></use></svg></span>Quản lý dữ liệu</button>
         <button class="nav-item" data-page="settings"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-settings"></use></svg></span>Cấu hình</button>
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 2 · v2.4.1 · GitHub-only</div>
+        <div class="sidebar-version">Phase 3 · v2.5.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -97,14 +99,15 @@
             <div class="panel-header"><div><h3>Truy cập nhanh</h3><p class="muted">Các khu vực học tập và quản lý</p></div></div>
             <button class="quick-link" data-go="dictionary"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span><span><strong>Tra cứu từ vựng</strong><small>Alphabet, chủ đề và loại từ</small></span><b>→</b></button>
             <button class="quick-link" data-go="practice"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-brain"></use></svg></span><span><strong>Bắt đầu ôn tập</strong><small>Câu hỏi ngẫu nhiên, ưu tiên từ còn yếu</small></span><b>→</b></button>
-          <button class="quick-link" data-go="data"><span class="quick-symbol violet"><svg class="ui-icon"><use href="#icon-database"></use></svg></span><span><strong>Quản lý dữ liệu</strong><small>Thêm, sửa, nhập và xuất dữ liệu</small></span><b>→</b></button>
+          <button class="quick-link" data-go="grammar"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span><span><strong>Học ngữ pháp</strong><small>Cấu trúc câu, thì và loại từ</small></span><b>→</b></button>
+            <button class="quick-link" data-go="reading"><span class="quick-symbol violet"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span><span><strong>Đọc hiểu TOEIC</strong><small>Đoạn văn, từ vựng và câu hỏi</small></span><b>→</b></button>
           </section>
         </div>
         <section class="panel alphabet-panel">
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.4.1:</strong> từ điển và thuật toán học chạy trên trình duyệt, tiến độ lưu cục bộ. Thông báo được kiểm tra khi ứng dụng đang hoạt động hoặc khi người dùng quay lại; không cam kết Push nền sau khi đóng hoàn toàn app. Kho hiện tại vẫn là 98 từ mẫu, chưa phải bộ B2 hoàn chỉnh.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.5.0:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp và Reading Mini nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -115,6 +118,7 @@
             <label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="dictionarySearch" type="search" placeholder="Tìm từ, nghĩa tiếng Việt..." autocomplete="off"></label>
             <label class="field"><span class="field-label">CHỦ ĐỀ</span><select id="topicFilter"><option value="">Tất cả chủ đề</option></select></label>
             <label class="field"><span class="field-label">LOẠI TỪ</span><select id="posFilter"><option value="">Tất cả loại từ</option><option value="n">Danh từ (n)</option><option value="v">Động từ (v)</option><option value="adj">Tính từ (adj)</option><option value="adv">Trạng từ (adv)</option><option value="prep">Giới từ (prep)</option><option value="conj">Liên từ (conj)</option><option value="pron">Đại từ (pron)</option></select></label>
+            <label class="field"><span class="field-label">NGUỒN</span><select id="dictionarySourceFilter"><option value="all">Tất cả nguồn</option><option value="base">Từ điển gốc</option><option value="personal">Từ cá nhân</option></select></label>
             <button class="secondary-button reset-button" id="resetFilters">Đặt lại</button>
           </div>
           <div class="results-bar"><span id="resultCount">Đang tải dữ liệu...</span><span id="activeFilters"></span></div>
@@ -154,8 +158,8 @@
                 <div class="character-feedback" id="characterFeedback" hidden></div>
                 <div class="answer-reference" id="answerReference"></div>
                 <div class="choice-review" id="choiceReview" hidden></div>
-                <div class="auto-advance-row" id="autoAdvanceRow" hidden><span id="autoAdvanceStatus"></span><button type="button" class="text-button" id="holdQuestionButton">Giữ câu này để xem kỹ</button></div>
-                <div class="feedback-ai-row"><button type="button" class="secondary-button" id="analyzeAnswerAIButton"><svg class="ui-icon button-icon"><use href="#icon-sparkles"></use></svg> Phân tích bằng Google AI</button></div>
+                <div class="auto-advance-row" id="autoAdvanceRow" hidden><div class="advance-indicator"><strong id="autoAdvanceCountdown">3</strong><span><b id="autoAdvanceStatus">Đang chuẩn bị câu tiếp theo</b><small>Chuyển câu tự động</small></span><i class="advance-spinner" aria-hidden="true"></i></div><button type="button" class="text-button" id="holdQuestionButton">Giữ câu này để xem kỹ</button></div>
+                <div class="feedback-ai-row"><button type="button" class="secondary-button" id="analyzeAnswerAIButton"><svg class="ui-icon button-icon"><use href="#icon-sparkles"></use></svg> Tra cứu Google AI</button></div>
               </div>
               <div class="quiz-actions"><button class="secondary-button" id="skipQuestionButton">Bỏ qua từ này</button><button class="primary-button" id="nextQuestionButton" disabled>Câu tiếp theo <svg class="ui-icon button-icon"><use href="#icon-arrow-right"></use></svg></button></div>
             </div>
@@ -168,11 +172,25 @@
             <section class="panel settings-shortcut-panel">
               <div class="settings-shortcut-icon"><svg class="ui-icon"><use href="#icon-settings"></use></svg></div>
               <h3>Cấu hình cách học</h3>
-              <p>Thiết lập chu kỳ nhắc, thông báo hệ thống và thời gian tự động chuyển câu hỏi.</p>
+              <p>Thiết lập chu kỳ nhắc, thông báo hệ thống và thời gian đếm lùi chuyển câu.</p>
               <button class="secondary-button" data-go="settings">Mở cấu hình</button>
             </section>
           </aside>
         </div>
+      </section>
+
+      <section class="page" id="page-grammar">
+        <div class="page-heading compact-heading"><div><p class="eyebrow">GRAMMAR LEARNING</p><h1>Thư viện ngữ pháp</h1><p class="muted">Học cấu trúc câu, loại từ, trợ động từ, các thì và ngữ pháp thường gặp trong TOEIC.</p></div><span class="library-count" id="grammarCount">— bài học</span></div>
+        <section class="panel library-toolbar"><label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="grammarSearch" type="search" placeholder="Tìm cấu trúc, chủ điểm ngữ pháp..." autocomplete="off"></label><label class="field"><span class="field-label">NHÓM KIẾN THỨC</span><select id="grammarCategoryFilter"><option value="">Tất cả nhóm</option></select></label><label class="field"><span class="field-label">CẤP ĐỘ</span><select id="grammarLevelFilter"><option value="">Tất cả cấp độ</option><option>A1–A2</option><option>A2–B1</option><option>B1</option><option>B1–B2</option></select></label></section>
+        <div class="learning-card-grid" id="grammarCardList"></div>
+        <div class="empty-state" id="grammarEmpty" hidden><div>∑</div><strong>Không tìm thấy bài học</strong><p>Thử từ khóa hoặc bộ lọc khác.</p></div>
+      </section>
+
+      <section class="page" id="page-reading">
+        <div class="page-heading compact-heading"><div><p class="eyebrow">TOEIC READING MINI</p><h1>Đọc hiểu theo ngữ cảnh</h1><p class="muted">Luyện đọc thông báo, email, lịch họp, vận chuyển, nhân sự và kinh doanh.</p></div><span class="library-count" id="readingCount">— bài đọc</span></div>
+        <section class="panel library-toolbar"><label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="readingSearch" type="search" placeholder="Tìm chủ đề hoặc từ khóa..." autocomplete="off"></label><label class="field"><span class="field-label">CHỦ ĐỀ</span><select id="readingTopicFilter"><option value="">Tất cả chủ đề</option></select></label><label class="field"><span class="field-label">CẤP ĐỘ</span><select id="readingLevelFilter"><option value="">Tất cả cấp độ</option><option>A2–B1</option><option>B1</option><option>B1–B2</option></select></label></section>
+        <div class="learning-card-grid" id="readingCardList"></div>
+        <div class="empty-state" id="readingEmpty" hidden><div>▤</div><strong>Không tìm thấy đoạn đọc</strong><p>Thử từ khóa hoặc bộ lọc khác.</p></div>
       </section>
 
       <section class="page" id="page-settings">
@@ -181,8 +199,8 @@
           <section class="panel settings-panel">
             <div class="panel-header"><div><h3><svg class="ui-icon"><use href="#icon-bell"></use></svg> Thông báo và nhắc học</h3><p class="muted">Chạy cục bộ trên thiết bị, không cần dịch vụ bên ngoài.</p></div><span class="reminder-status-dot" id="reminderStatusDot"></span></div>
             <label class="reminder-toggle"><span><strong>Bật nhắc nhở học tập</strong><small>Nhắc câu hỏi mới hoặc lời động viên nếu câu trước chưa được trả lời.</small></span><input type="checkbox" id="reminderEnabled"><i></i></label>
-            <label class="field"><span class="field-label">CHU KỲ NHẮC</span><select id="reminderInterval"><option value="60">60 phút</option><option value="90">90 phút</option><option value="120">120 phút</option><option value="180">180 phút</option><option value="1">1 phút (kiểm thử)</option></select></label>
-            <div class="notification-actions"><button class="secondary-button permission-button" id="notificationPermissionButton"><svg class="ui-icon button-icon"><use href="#icon-bell"></use></svg> Cho phép thông báo</button><button class="secondary-button permission-test-button" id="testNotificationButton" disabled><svg class="ui-icon button-icon"><use href="#icon-sparkles"></use></svg> Kiểm tra popup</button></div>
+            <label class="field"><span class="field-label">CHU KỲ NHẮC</span><select id="reminderInterval"><option value="60">60 phút</option><option value="90">90 phút</option><option value="120">120 phút</option><option value="180">180 phút</option></select></label>
+            <div class="notification-actions"><button class="secondary-button permission-button" id="notificationPermissionButton"><svg class="ui-icon button-icon"><use href="#icon-bell"></use></svg> Cho phép thông báo</button></div>
             <div class="reminder-info" id="reminderInfo">Nhắc nhở đang tắt. Bạn có thể bật khi sẵn sàng.</div>
             <div class="notification-platform-help" id="notificationPlatformHelp">PC/Android: cấp quyền Notifications trong trình duyệt. iPhone/iPad: thêm website vào Màn hình chính trước khi cấp quyền.</div>
             <div class="github-local-note"><strong>Chế độ GitHub-only</strong><p>Thông báo hệ thống được tạo bởi Service Worker khi ứng dụng còn hoạt động. Nếu đóng hoàn toàn app/trình duyệt, GitHub Pages không có tiến trình chạy nền để tính giờ và gửi thông báo. Khi mở lại ứng dụng, hệ thống sẽ kiểm tra lịch đã đến hạn.</p></div>
@@ -195,48 +213,59 @@
           </section>
           <section class="panel settings-panel settings-data-panel">
             <div class="panel-header"><div><h3><svg class="ui-icon"><use href="#icon-database"></use></svg> Lưu trữ và quyền riêng tư</h3><p class="muted">Ứng dụng không cần backend cho chức năng học cá nhân.</p></div></div>
-            <ul class="settings-bullet-list"><li>Từ vựng và kiến thức đọc từ tệp JSON trên GitHub Pages.</li><li>Tiến độ, lịch sử và cấu hình lưu trong IndexedDB trên thiết bị.</li><li>Không gửi lịch sử học lên máy chủ.</li><li>Google Gemini chỉ nhận nội dung khi bạn chủ động mở và dán prompt.</li><li>Có thể Export JSON để sao lưu và chuyển thiết bị.</li></ul>
+            <ul class="settings-bullet-list"><li>Từ vựng và kiến thức đọc từ tệp JSON trên GitHub Pages.</li><li>Tiến độ, lịch sử và cấu hình lưu trong IndexedDB trên thiết bị.</li><li>Không gửi lịch sử học lên máy chủ.</li><li>Google AI Search chỉ mở khi bạn chủ động yêu cầu; không có API key hoặc gửi dữ liệu ngầm.</li><li>Có thể Export JSON để sao lưu và chuyển thiết bị.</li></ul>
           </section>
         </div>
       </section>
 
       <section class="page" id="page-data">
-        <div class="page-heading compact-heading"><div><p class="eyebrow">DATA WORKSPACE</p><h1>Quản lý dữ liệu</h1><p class="muted">Chỉnh sửa bản dữ liệu trên thiết bị và xuất tệp để cập nhật GitHub.</p></div><button class="primary-button" id="addWordButton"><svg class="ui-icon button-icon"><use href="#icon-plus"></use></svg> Thêm từ mới</button></div>
-        <div class="data-warning"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p>Thay đổi được lưu trong <strong>bộ nhớ dữ liệu riêng của trình duyệt (IndexedDB)</strong>, không phải cache tải trang. F5 không làm mất dữ liệu. Nếu xóa dữ liệu website/trình duyệt hoặc đặt lại thiết bị, dữ liệu cục bộ có thể mất. <strong>Chưa tự ghi lên GitHub</strong>; hãy Export JSON và cập nhật repository.</p></div>
+        <div class="page-heading compact-heading"><div><p class="eyebrow">DATA WORKSPACE</p><h1>Quản lý dữ liệu</h1><p class="muted">Quản lý từ vựng cá nhân trên thiết bị. Kho gốc trên GitHub luôn được bảo vệ, chỉ đọc.</p></div><button class="primary-button" id="addWordButton"><svg class="ui-icon button-icon"><use href="#icon-plus"></use></svg> Thêm từ mới</button></div>
+        <div class="data-warning"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>Kho từ vựng gốc</strong> được đọc từ GitHub và không thể sửa/xóa. Mọi từ bạn thêm, sửa hoặc ẩn chỉ tác động đến <strong>Từ vựng cá nhân</strong> trên thiết bị này. F5 không làm mất dữ liệu; hãy Export để sao lưu hoặc chuyển sang thiết bị khác.</p></div>
         <section class="panel data-panel">
           <div class="data-toolbar">
             <label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="dataSearch" type="search" placeholder="Tìm trong dữ liệu..." autocomplete="off"></label>
             <div class="toolbar-actions"><button class="secondary-button" id="importButton"><svg class="ui-icon button-icon"><use href="#icon-upload"></use></svg> Import JSON / CSV</button><button class="secondary-button" id="exportCsvButton"><svg class="ui-icon button-icon"><use href="#icon-download"></use></svg> CSV</button><button class="primary-button" id="exportJsonButton"><svg class="ui-icon button-icon"><use href="#icon-download"></use></svg> Export JSON</button><input type="file" id="importFile" accept=".json,.csv,application/json,text/csv" hidden></div>
           </div>
           <div class="data-filter-row">
+            <label class="field"><span class="field-label">NGUỒN DỮ LIỆU</span><select id="dataSourceFilter"><option value="all">Tất cả dữ liệu</option><option value="base">Từ vựng gốc (chỉ đọc)</option><option value="personal">Từ vựng cá nhân</option><option value="overrides">Bản cá nhân chỉnh từ gốc</option></select></label>
             <label class="field"><span class="field-label">LỌC CHỮ CÁI</span><select id="dataLetterFilter"><option value="">Tất cả A–Z</option></select></label>
             <label class="field"><span class="field-label">LỌC CHỦ ĐỀ</span><select id="dataTopicFilter"><option value="">Tất cả chủ đề</option></select></label>
             <label class="field"><span class="field-label">LỌC LOẠI TỪ</span><select id="dataPosFilter"><option value="">Tất cả loại từ</option><option value="n">Danh từ (n)</option><option value="v">Động từ (v)</option><option value="adj">Tính từ (adj)</option><option value="adv">Trạng từ (adv)</option><option value="prep">Giới từ (prep)</option><option value="conj">Liên từ (conj)</option><option value="pron">Đại từ (pron)</option></select></label>
             <button class="secondary-button data-reset-button" id="resetDataFilters">Đặt lại bộ lọc</button>
           </div>
-          <div class="results-bar"><span id="dataCount">—</span><span id="storageLabel">Chưa có thay đổi cục bộ</span></div>
+          <div class="results-bar"><span id="dataCount">—</span><span id="storageLabel">Từ vựng cá nhân được lưu riêng trên thiết bị</span></div>
           <div class="word-table-wrap"><table class="word-table data-table"><thead><tr><th>TỪ VỰNG</th><th>LOẠI TỪ</th><th>NGHĨA CHÍNH</th><th>CHỦ ĐỀ</th><th>THAO TÁC</th></tr></thead><tbody id="dataTableBody"></tbody></table></div>
           <div class="empty-state" id="dataEmpty" hidden><div>▤</div><strong>Chưa có dữ liệu phù hợp</strong><p>Thử từ khóa khác hoặc thêm từ mới.</p></div>
         </section>
-        <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Khôi phục dữ liệu gốc từ GitHub</button><span class="muted">Tổng dữ liệu: <strong id="totalDataFooter">—</strong></span></div>
+        <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>GitHub-only · v2.4.1</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>GitHub-only · v2.5.0</span></footer>
     </main>
   </div>
 
   <nav class="mobile-bottom-nav" aria-label="Điều hướng mobile">
-    <button class="active" data-page="dashboard"><span><svg class="ui-icon"><use href="#icon-home"></use></svg></span><small>Tổng quan</small></button>
+    <button class="active" data-page="dashboard"><span><svg class="ui-icon"><use href="#icon-home"></use></svg></span><small>Trang chủ</small></button>
     <button data-page="dictionary"><span><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span><small>Từ vựng</small></button>
     <button data-page="practice"><span><svg class="ui-icon"><use href="#icon-brain"></use></svg></span><small>Ôn tập</small></button>
-    <button data-page="data"><span><svg class="ui-icon"><use href="#icon-database"></use></svg></span><small>Dữ liệu</small></button>
-    <button data-page="settings"><span><svg class="ui-icon"><use href="#icon-settings"></use></svg></span><small>Cấu hình</small></button>
+    <button data-page="grammar"><span><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span><small>Ngữ pháp</small></button>
+    <button data-page="reading"><span><svg class="ui-icon"><use href="#icon-grid"></use></svg></span><small>Đọc hiểu</small></button>
   </nav>
 
   <div class="modal-backdrop" id="modalBackdrop" hidden>
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-header"><div><p class="eyebrow" id="modalEyebrow">VOCABULARY DETAIL</p><h2 id="modalTitle">Chi tiết từ vựng</h2></div><button class="close-button" id="closeModal" aria-label="Đóng cửa sổ"><svg class="ui-icon"><use href="#icon-close"></use></svg></button></div>
       <div class="modal-content" id="modalContent"></div>
+    </section>
+  </div>
+  <div class="google-search-backdrop" id="googleSearchBackdrop" hidden>
+    <section class="google-search-panel" role="dialog" aria-modal="true" aria-labelledby="googleSearchTitle">
+      <header class="google-search-header"><div><p class="eyebrow">GOOGLE SEARCH · AI MODE</p><h2 id="googleSearchTitle">Tra cứu và phân tích bằng Google</h2></div><button class="close-button" id="closeGoogleSearch" aria-label="Đóng tra cứu"><svg class="ui-icon"><use href="#icon-close"></use></svg></button></header>
+      <p class="google-search-description">Nội dung được chuẩn bị từ bài học hoặc từ vựng bạn đang xem. Chỉnh truy vấn, sao chép prompt đầy đủ rồi mở Google AI Mode. Khi xem xong, đóng tab Google để quay lại đúng vị trí đang học.</p>
+      <form id="googleSearchForm" class="google-search-form"><input id="googleSearchQuery" type="search" placeholder="Nhập nội dung cần tra cứu..." autocomplete="off"><button class="primary-button" type="submit">Google AI Mode</button></form>
+      <div class="google-search-actions"><button type="button" class="secondary-button" id="googleSearchStandard">Google Search</button><button type="button" class="secondary-button" id="copyGoogleContext">Sao chép toàn bộ nội dung phân tích</button></div>
+      <details class="google-context-details"><summary>Xem prompt và dữ liệu ngữ cảnh đã tạo</summary><textarea id="googleSearchContext" readonly rows="10"></textarea></details>
+      <p class="google-search-note"><strong>Cách sử dụng:</strong> Ứng dụng giữ một bảng tra cứu nhỏ và sao chép toàn bộ ngữ cảnh. Google AI Mode được mở ở tab riêng vì Google không cung cấp cam kết nhúng trang AI Mode vào website khác. Dán prompt vào ô Ask anything của Google để phân tích; đóng tab Google để quay lại bài đang học.</p>
     </section>
   </div>
   <div class="install-invite-backdrop" id="installInviteBackdrop" hidden>

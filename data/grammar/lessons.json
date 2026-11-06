@@ -1,4 +1,1214 @@
 {
   "schemaVersion": 1,
-  "lessons": []
+  "lessons": [
+    {
+      "id": "sentence-svo",
+      "title": "Cấu trúc câu cơ bản: S + V + O",
+      "category": "SENTENCE",
+      "level": "A1–A2",
+      "summary": "Nhận diện chủ ngữ, động từ và tân ngữ trong câu tiếng Anh.",
+      "formula": "Subject + Verb + Object",
+      "explanation": "Chủ ngữ (S) là người/vật thực hiện hoặc mang trạng thái. Động từ (V) diễn tả hành động/trạng thái. Tân ngữ (O) nhận tác động của hành động. Không phải câu nào cũng cần O; một số động từ đứng độc lập hoặc đi với bổ ngữ.",
+      "examples": [
+        {
+          "en": "The manager reviews the report.",
+          "vi": "Người quản lý xem xét báo cáo.",
+          "breakdown": [
+            {
+              "part": "S",
+              "text": "The manager",
+              "meaning": "Người quản lý"
+            },
+            {
+              "part": "V",
+              "text": "reviews",
+              "meaning": "xem xét"
+            },
+            {
+              "part": "O",
+              "text": "the report",
+              "meaning": "báo cáo"
+            }
+          ]
+        },
+        {
+          "en": "Employees attend the training session.",
+          "vi": "Nhân viên tham dự buổi đào tạo.",
+          "breakdown": [
+            {
+              "part": "S",
+              "text": "Employees",
+              "meaning": "Nhân viên"
+            },
+            {
+              "part": "V",
+              "text": "attend",
+              "meaning": "tham dự"
+            },
+            {
+              "part": "O",
+              "text": "the training session",
+              "meaning": "buổi đào tạo"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Tìm động từ chính trước, sau đó hỏi ai/cái gì thực hiện hành động để xác định S.",
+        "Sau động từ, hỏi ‘ai/cái gì?’ để tìm O nếu động từ cần tân ngữ."
+      ],
+      "exercises": [
+        {
+          "question": "Trong câu ‘The assistant prepared the documents.’, đâu là động từ?",
+          "choices": [
+            "The assistant",
+            "prepared",
+            "the documents",
+            "documents"
+          ],
+          "answerIndex": 1,
+          "explanation": "Prepared là động từ quá khứ của prepare, diễn tả hành động chuẩn bị."
+        },
+        {
+          "question": "Trong câu ‘Our team completed the project.’, cụm nào là tân ngữ?",
+          "choices": [
+            "Our team",
+            "completed",
+            "the project",
+            "team completed"
+          ],
+          "answerIndex": 2,
+          "explanation": "The project là đối tượng nhận hành động completed."
+        }
+      ]
+    },
+    {
+      "id": "parts-of-speech",
+      "title": "Các loại từ: Noun, Verb, Adjective, Adverb",
+      "category": "WORD FORM",
+      "level": "A1–B1",
+      "summary": "Nhận biết chức năng của từ để chọn đúng dạng từ trong TOEIC Part 5.",
+      "formula": "Noun · Verb · Adjective · Adverb",
+      "explanation": "Danh từ (n) thường làm chủ ngữ/tân ngữ. Động từ (v) diễn tả hành động hoặc trạng thái. Tính từ (adj) bổ nghĩa cho danh từ hoặc đứng sau linking verbs. Trạng từ (adv) bổ nghĩa cho động từ, tính từ, trạng từ hoặc cả câu. Vị trí trong câu là manh mối quan trọng nhưng cần xét ngữ cảnh.",
+      "examples": [
+        {
+          "en": "The successful candidate answered confidently.",
+          "vi": "Ứng viên thành công trả lời một cách tự tin.",
+          "breakdown": [
+            {
+              "part": "adj",
+              "text": "successful",
+              "meaning": "bổ nghĩa cho candidate"
+            },
+            {
+              "part": "n",
+              "text": "candidate",
+              "meaning": "danh từ"
+            },
+            {
+              "part": "v",
+              "text": "answered",
+              "meaning": "động từ"
+            },
+            {
+              "part": "adv",
+              "text": "confidently",
+              "meaning": "bổ nghĩa cho answered"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Sau mạo từ a/an/the thường là danh từ hoặc cụm danh từ.",
+        "Trạng từ thường có đuôi -ly nhưng không phải mọi từ -ly đều là trạng từ.",
+        "Sau linking verbs như be, seem, become thường dùng tính từ để mô tả chủ ngữ."
+      ],
+      "exercises": [
+        {
+          "question": "The report was completed _____. Chọn dạng đúng của ‘accurate’. ",
+          "choices": [
+            "accuracy",
+            "accurate",
+            "accurately",
+            "accurateness"
+          ],
+          "answerIndex": 2,
+          "explanation": "Accurately là trạng từ bổ nghĩa cho completed."
+        },
+        {
+          "question": "We need a _____ solution. Chọn dạng đúng của ‘rely’. ",
+          "choices": [
+            "rely",
+            "reliably",
+            "reliable",
+            "reliability"
+          ],
+          "answerIndex": 2,
+          "explanation": "Reliable là tính từ đứng trước danh từ solution."
+        }
+      ]
+    },
+    {
+      "id": "nouns-countability",
+      "title": "Danh từ đếm được và không đếm được",
+      "category": "NOUN",
+      "level": "A2–B1",
+      "summary": "Phân biệt countable và uncountable nouns, lượng từ và số nhiều.",
+      "formula": "a/an + singular countable noun · some/much + uncountable noun",
+      "explanation": "Danh từ đếm được có dạng số ít/số nhiều và có thể đi với a/an hoặc numbers. Danh từ không đếm được thường không có số nhiều và không dùng trực tiếp với a/an; dùng some, much, a little hoặc đơn vị đo như a piece of information.",
+      "examples": [
+        {
+          "en": "We received three applications and some information.",
+          "vi": "Chúng tôi nhận được ba hồ sơ ứng tuyển và một số thông tin.",
+          "breakdown": [
+            {
+              "part": "countable",
+              "text": "three applications",
+              "meaning": "ba hồ sơ, đếm được"
+            },
+            {
+              "part": "uncountable",
+              "text": "some information",
+              "meaning": "một số thông tin, không đếm trực tiếp"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Information, advice, equipment, furniture thường là danh từ không đếm được.",
+        "Dùng ‘a piece of information/advice’ khi muốn đếm từng đơn vị."
+      ],
+      "exercises": [
+        {
+          "question": "There is not much _____ left in the printer.",
+          "choices": [
+            "papers",
+            "paper",
+            "a paper",
+            "many paper"
+          ],
+          "answerIndex": 1,
+          "explanation": "Paper với nghĩa giấy là danh từ không đếm được; dùng much paper."
+        },
+        {
+          "question": "The company purchased two new _____.",
+          "choices": [
+            "equipment",
+            "equipments",
+            "pieces equipment",
+            "pieces of equipment"
+          ],
+          "answerIndex": 3,
+          "explanation": "Equipment không đếm được; dùng two pieces of equipment."
+        }
+      ]
+    },
+    {
+      "id": "subject-verb-agreement",
+      "title": "Sự hòa hợp chủ ngữ – động từ",
+      "category": "VERB",
+      "level": "A2–B1",
+      "summary": "Chọn động từ phù hợp với chủ ngữ số ít hoặc số nhiều.",
+      "formula": "Singular subject + singular verb · Plural subject + base verb",
+      "explanation": "Ở hiện tại đơn, chủ ngữ ngôi thứ ba số ít (he/she/it hoặc danh từ số ít) thường đi với động từ thêm -s/-es. Chủ ngữ số nhiều và I/you/we/they dùng dạng nguyên mẫu. Không để cụm danh từ chen giữa làm nhầm chủ ngữ chính.",
+      "examples": [
+        {
+          "en": "The list of attendees is on the desk.",
+          "vi": "Danh sách người tham dự ở trên bàn.",
+          "breakdown": [
+            {
+              "part": "S",
+              "text": "The list",
+              "meaning": "chủ ngữ số ít"
+            },
+            {
+              "part": "V",
+              "text": "is",
+              "meaning": "động từ số ít"
+            },
+            {
+              "part": "phrase",
+              "text": "of attendees",
+              "meaning": "cụm bổ nghĩa, không quyết định động từ"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Xác định danh từ trung tâm của chủ ngữ.",
+        "The number of + plural noun thường đi với động từ số ít; a number of + plural noun thường đi với động từ số nhiều."
+      ],
+      "exercises": [
+        {
+          "question": "The list of new employees _____ ready.",
+          "choices": [
+            "are",
+            "is",
+            "were",
+            "be"
+          ],
+          "answerIndex": 1,
+          "explanation": "Chủ ngữ chính là list (số ít), nên dùng is."
+        },
+        {
+          "question": "All department managers _____ the monthly meeting.",
+          "choices": [
+            "attends",
+            "attend",
+            "attending",
+            "has attend"
+          ],
+          "answerIndex": 1,
+          "explanation": "Managers là chủ ngữ số nhiều; hiện tại đơn dùng attend."
+        }
+      ]
+    },
+    {
+      "id": "present-simple",
+      "title": "Thì hiện tại đơn (Present Simple)",
+      "category": "TENSE",
+      "level": "A1–A2",
+      "summary": "Diễn tả thói quen, lịch trình và sự thật chung – rất thường gặp trong TOEIC.",
+      "formula": "S + V(s/es) · S + do/does not + V1 · Do/Does + S + V1?",
+      "explanation": "Hiện tại đơn dùng cho thói quen, sự thật và lịch trình cố định. Ngôi thứ ba số ít thêm -s/-es ở câu khẳng định. Khi dùng does/doesn't, động từ chính trở về V1.",
+      "examples": [
+        {
+          "en": "The train departs at 7:30 every morning.",
+          "vi": "Chuyến tàu khởi hành lúc 7:30 mỗi sáng.",
+          "breakdown": [
+            {
+              "part": "Subject",
+              "text": "The train",
+              "meaning": "chủ ngữ số ít"
+            },
+            {
+              "part": "Verb",
+              "text": "departs",
+              "meaning": "động từ thêm -s"
+            },
+            {
+              "part": "Time",
+              "text": "every morning",
+              "meaning": "dấu hiệu thói quen/lịch trình"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Dấu hiệu: always, usually, often, every day, once a week.",
+        "Does she work? không dùng Does she works?"
+      ],
+      "exercises": [
+        {
+          "question": "The office _____ at 8 a.m. on weekdays.",
+          "choices": [
+            "open",
+            "opens",
+            "opening",
+            "is open"
+          ],
+          "answerIndex": 1,
+          "explanation": "Chủ ngữ the office số ít; hiện tại đơn dùng opens."
+        },
+        {
+          "question": "_____ your supervisor approve these requests?",
+          "choices": [
+            "Do",
+            "Does",
+            "Is",
+            "Has"
+          ],
+          "answerIndex": 1,
+          "explanation": "Your supervisor là ngôi thứ ba số ít; dùng Does + V1."
+        }
+      ]
+    },
+    {
+      "id": "past-simple",
+      "title": "Thì quá khứ đơn (Past Simple)",
+      "category": "TENSE",
+      "level": "A2–B1",
+      "summary": "Diễn tả hành động đã xảy ra và kết thúc trong quá khứ.",
+      "formula": "S + V2/ed · S + did not + V1 · Did + S + V1?",
+      "explanation": "Dùng quá khứ đơn với thời điểm đã kết thúc như yesterday, last week, in 2024, two days ago. Động từ có quy tắc thêm -ed; động từ bất quy tắc dùng V2. Sau did/didn't luôn dùng V1.",
+      "examples": [
+        {
+          "en": "The supplier delivered the order yesterday.",
+          "vi": "Nhà cung cấp đã giao đơn hàng hôm qua.",
+          "breakdown": [
+            {
+              "part": "S",
+              "text": "The supplier",
+              "meaning": "nhà cung cấp"
+            },
+            {
+              "part": "V2",
+              "text": "delivered",
+              "meaning": "quá khứ của deliver"
+            },
+            {
+              "part": "Time",
+              "text": "yesterday",
+              "meaning": "hôm qua"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Dấu hiệu: yesterday, last month, ago, in + năm quá khứ.",
+        "Did you receive? không dùng Did you received?"
+      ],
+      "exercises": [
+        {
+          "question": "We _____ the invoice last Friday.",
+          "choices": [
+            "send",
+            "sent",
+            "sended",
+            "sending"
+          ],
+          "answerIndex": 1,
+          "explanation": "Send là động từ bất quy tắc; V2 là sent."
+        },
+        {
+          "question": "The manager did not _____ the proposal.",
+          "choices": [
+            "approved",
+            "approve",
+            "approves",
+            "approving"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sau did not dùng động từ nguyên mẫu V1."
+        }
+      ]
+    },
+    {
+      "id": "future-forms",
+      "title": "Diễn tả tương lai: will và be going to",
+      "category": "TENSE",
+      "level": "A2–B1",
+      "summary": "Phân biệt quyết định tức thời, dự đoán và kế hoạch đã có.",
+      "formula": "S + will + V1 · S + am/is/are going to + V1",
+      "explanation": "Will thường dùng cho quyết định ngay lúc nói, lời hứa hoặc dự đoán. Be going to thường diễn tả dự định đã có hoặc dự đoán dựa trên dấu hiệu hiện tại. Lịch trình đã sắp xếp còn có thể dùng hiện tại tiếp diễn.",
+      "examples": [
+        {
+          "en": "We are going to launch the new service next month.",
+          "vi": "Chúng tôi dự định ra mắt dịch vụ mới vào tháng tới.",
+          "breakdown": [
+            {
+              "part": "be going to",
+              "text": "are going to launch",
+              "meaning": "kế hoạch đã dự định"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Will + V1, không dùng will to V.",
+        "Be going to cần động từ be chia theo chủ ngữ."
+      ],
+      "exercises": [
+        {
+          "question": "The phone is ringing. I _____ answer it.",
+          "choices": [
+            "am going",
+            "will",
+            "am going to",
+            "would"
+          ],
+          "answerIndex": 1,
+          "explanation": "Quyết định tức thời: I will answer it."
+        },
+        {
+          "question": "They _____ open a new branch; the lease has already been signed.",
+          "choices": [
+            "are going to",
+            "will be",
+            "going to",
+            "is going to"
+          ],
+          "answerIndex": 0,
+          "explanation": "Kế hoạch đã được chuẩn bị; chủ ngữ they dùng are going to."
+        }
+      ]
+    },
+    {
+      "id": "present-perfect",
+      "title": "Thì hiện tại hoàn thành (Present Perfect)",
+      "category": "TENSE",
+      "level": "B1–B2",
+      "summary": "Nối một trải nghiệm/kết quả trong quá khứ với hiện tại.",
+      "formula": "S + have/has + V3",
+      "explanation": "Hiện tại hoàn thành diễn tả trải nghiệm không nêu thời điểm cụ thể, hành động bắt đầu trong quá khứ còn liên quan đến hiện tại hoặc kết quả hiện tại. Không dùng với thời điểm quá khứ đã kết thúc như yesterday hay last year.",
+      "examples": [
+        {
+          "en": "The company has expanded its operations into three countries.",
+          "vi": "Công ty đã mở rộng hoạt động sang ba quốc gia.",
+          "breakdown": [
+            {
+              "part": "have/has",
+              "text": "has",
+              "meaning": "trợ động từ cho chủ ngữ số ít"
+            },
+            {
+              "part": "V3",
+              "text": "expanded",
+              "meaning": "quá khứ phân từ"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Dấu hiệu thường gặp: already, yet, just, ever, never, since, for.",
+        "Since + mốc thời gian; for + khoảng thời gian."
+      ],
+      "exercises": [
+        {
+          "question": "She _____ worked here since 2021.",
+          "choices": [
+            "have",
+            "has",
+            "is",
+            "was"
+          ],
+          "answerIndex": 1,
+          "explanation": "She đi với has; cấu trúc has + V3."
+        },
+        {
+          "question": "We _____ the contract yesterday.",
+          "choices": [
+            "have signed",
+            "has signed",
+            "signed",
+            "sign"
+          ],
+          "answerIndex": 2,
+          "explanation": "Yesterday là mốc quá khứ đã kết thúc nên dùng quá khứ đơn signed."
+        }
+      ]
+    },
+    {
+      "id": "auxiliaries",
+      "title": "Trợ động từ be, do, have",
+      "category": "AUXILIARY",
+      "level": "A2–B1",
+      "summary": "Nhận biết vai trò của trợ động từ trong câu hỏi, phủ định và các thì.",
+      "formula": "Be + V-ing/V3 · Do/Does/Did + V1 · Have/Has/Had + V3",
+      "explanation": "Be dùng trong tiếp diễn, bị động và làm động từ nối. Do/does/did hỗ trợ câu hỏi và phủ định ở các thì đơn. Have/has/had kết hợp V3 trong các thì hoàn thành. Một số từ cũng có thể là động từ chính tùy cấu trúc.",
+      "examples": [
+        {
+          "en": "The documents have been sent to the client.",
+          "vi": "Các tài liệu đã được gửi cho khách hàng.",
+          "breakdown": [
+            {
+              "part": "have",
+              "text": "have",
+              "meaning": "trợ động từ hoàn thành"
+            },
+            {
+              "part": "been sent",
+              "text": "been sent",
+              "meaning": "cấu trúc bị động dạng hoàn thành"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Sau do/does/did trong câu hỏi dùng V1.",
+        "Have trong have lunch có thể là động từ chính, khác với have finished."
+      ],
+      "exercises": [
+        {
+          "question": "_____ the employees received their ID cards?",
+          "choices": [
+            "Do",
+            "Have",
+            "Are",
+            "Did been"
+          ],
+          "answerIndex": 1,
+          "explanation": "Received là V3 trong hiện tại hoàn thành: Have + subject + V3."
+        },
+        {
+          "question": "The new system _____ being tested now.",
+          "choices": [
+            "is",
+            "does",
+            "has",
+            "do"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bị động tiếp diễn dùng is being + V3."
+        }
+      ]
+    },
+    {
+      "id": "modal-verbs",
+      "title": "Động từ khuyết thiếu (Modal Verbs)",
+      "category": "MODAL",
+      "level": "B1–B2",
+      "summary": "Can, could, may, might, must, should, would và cách dùng trong công việc.",
+      "formula": "S + modal + V1 (không to)",
+      "explanation": "Modal verbs bổ nghĩa khả năng, sự cho phép, nghĩa vụ, lời khuyên hoặc mức độ chắc chắn. Sau modal dùng V1 không to; modal không thêm -s ở ngôi thứ ba.",
+      "examples": [
+        {
+          "en": "All visitors must wear identification badges.",
+          "vi": "Tất cả khách tham quan phải đeo thẻ nhận dạng.",
+          "breakdown": [
+            {
+              "part": "modal",
+              "text": "must",
+              "meaning": "nghĩa vụ/bắt buộc"
+            },
+            {
+              "part": "V1",
+              "text": "wear",
+              "meaning": "động từ nguyên mẫu"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Must thường diễn tả yêu cầu mạnh; should là lời khuyên.",
+        "Could/may thường làm lời yêu cầu lịch sự."
+      ],
+      "exercises": [
+        {
+          "question": "Applicants _____ submit the form before Friday. (bắt buộc)",
+          "choices": [
+            "must",
+            "might",
+            "would",
+            "could have"
+          ],
+          "answerIndex": 0,
+          "explanation": "Must thể hiện yêu cầu bắt buộc."
+        },
+        {
+          "question": "Could you _____ me the updated schedule?",
+          "choices": [
+            "sent",
+            "sending",
+            "send",
+            "to send"
+          ],
+          "answerIndex": 2,
+          "explanation": "Sau could dùng V1 send."
+        }
+      ]
+    },
+    {
+      "id": "articles",
+      "title": "Mạo từ a, an, the và không dùng mạo từ",
+      "category": "ARTICLE",
+      "level": "A2–B1",
+      "summary": "Chọn mạo từ dựa trên tính xác định và âm đầu của danh từ.",
+      "formula": "a + consonant sound · an + vowel sound · the + specific noun",
+      "explanation": "A/an dùng với danh từ đếm được số ít khi nhắc lần đầu hoặc không xác định. Chọn a/an theo âm đầu, không chỉ theo chữ cái. The dùng khi người nghe xác định được đối tượng hoặc nhắc lại. Danh từ số nhiều/không đếm được nói chung thường không cần mạo từ.",
+      "examples": [
+        {
+          "en": "Please send me an updated invoice and the original receipt.",
+          "vi": "Vui lòng gửi tôi một hóa đơn đã cập nhật và biên lai gốc.",
+          "breakdown": [
+            {
+              "part": "an",
+              "text": "an updated invoice",
+              "meaning": "một hóa đơn chưa xác định, updated bắt đầu bằng âm nguyên âm"
+            },
+            {
+              "part": "the",
+              "text": "the original receipt",
+              "meaning": "biên lai cụ thể đã xác định"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "An hour (h câm), nhưng a university (bắt đầu bằng âm /j/).",
+        "Nói chung: Information is important; không dùng an information."
+      ],
+      "exercises": [
+        {
+          "question": "We need _____ experienced accountant.",
+          "choices": [
+            "a",
+            "an",
+            "the a",
+            "no article"
+          ],
+          "answerIndex": 1,
+          "explanation": "Experienced bắt đầu bằng âm nguyên âm /ɪ/, dùng an."
+        },
+        {
+          "question": "_____ equipment in this room is new.",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "Many"
+          ],
+          "answerIndex": 2,
+          "explanation": "The equipment xác định là thiết bị trong căn phòng này."
+        }
+      ]
+    },
+    {
+      "id": "prepositions-time",
+      "title": "Giới từ thời gian: at, on, in",
+      "category": "PREPOSITION",
+      "level": "A2–B1",
+      "summary": "Dùng at cho thời điểm, on cho ngày và in cho khoảng thời gian dài.",
+      "formula": "at + clock time · on + day/date · in + month/year/period",
+      "explanation": "At thường đi với giờ và một số mốc cụ thể (at noon, at night). On đi với thứ/ngày (on Monday, on June 5). In đi với tháng, năm, mùa và buổi trong ngày (in July, in 2026, in the morning). Có ngoại lệ cố định như at the weekend trong Anh-Anh.",
+      "examples": [
+        {
+          "en": "The interview is at 9 a.m. on Monday, in June.",
+          "vi": "Buổi phỏng vấn diễn ra lúc 9 giờ sáng thứ Hai trong tháng Sáu.",
+          "breakdown": [
+            {
+              "part": "at",
+              "text": "at 9 a.m.",
+              "meaning": "giờ cụ thể"
+            },
+            {
+              "part": "on",
+              "text": "on Monday",
+              "meaning": "ngày trong tuần"
+            },
+            {
+              "part": "in",
+              "text": "in June",
+              "meaning": "tháng"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "At = điểm thời gian; on = ngày; in = khoảng thời gian rộng.",
+        "Không dùng giới từ trước today, tomorrow, yesterday, next Monday."
+      ],
+      "exercises": [
+        {
+          "question": "The conference begins _____ 8:30 a.m.",
+          "choices": [
+            "in",
+            "on",
+            "at",
+            "by"
+          ],
+          "answerIndex": 2,
+          "explanation": "Giờ cụ thể dùng at."
+        },
+        {
+          "question": "Our annual review takes place _____ September.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "answerIndex": 2,
+          "explanation": "Tháng dùng in."
+        }
+      ]
+    },
+    {
+      "id": "prepositions-place",
+      "title": "Giới từ địa điểm: at, on, in",
+      "category": "PREPOSITION",
+      "level": "A2–B1",
+      "summary": "Phân biệt địa điểm như điểm, bề mặt và không gian bao quanh.",
+      "formula": "at + point/location · on + surface/line · in + enclosed area",
+      "explanation": "At nhấn mạnh một điểm/địa điểm hoạt động (at the station, at work). On dùng cho bề mặt hoặc tuyến (on the table, on the wall). In dùng cho không gian có giới hạn, thành phố, quốc gia và phòng (in the office, in Hanoi). Ngữ cảnh quyết định cách dùng.",
+      "examples": [
+        {
+          "en": "The files are in the cabinet, and the notice is on the door.",
+          "vi": "Các tệp ở trong tủ và thông báo ở trên cửa.",
+          "breakdown": [
+            {
+              "part": "in",
+              "text": "in the cabinet",
+              "meaning": "bên trong không gian tủ"
+            },
+            {
+              "part": "on",
+              "text": "on the door",
+              "meaning": "trên bề mặt cửa"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "At the airport nhấn mạnh địa điểm; in the airport nhấn mạnh bên trong tòa nhà.",
+        "On a bus/train nhưng in a car thường là cách dùng phổ biến."
+      ],
+      "exercises": [
+        {
+          "question": "Ms. Lee is waiting _____ the reception desk.",
+          "choices": [
+            "at",
+            "in",
+            "on",
+            "into"
+          ],
+          "answerIndex": 0,
+          "explanation": "At the reception desk chỉ vị trí/điểm chờ."
+        },
+        {
+          "question": "The documents are _____ the top drawer.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "by"
+          ],
+          "answerIndex": 2,
+          "explanation": "In the drawer = bên trong ngăn kéo."
+        }
+      ]
+    },
+    {
+      "id": "passive-voice",
+      "title": "Câu bị động (Passive Voice)",
+      "category": "PASSIVE",
+      "level": "B1–B2",
+      "summary": "Nhấn mạnh hành động hoặc đối tượng chịu tác động thay vì người thực hiện.",
+      "formula": "S + be + V3 (+ by + agent)",
+      "explanation": "Câu bị động dùng khi người thực hiện không quan trọng, không rõ hoặc muốn nhấn mạnh đối tượng. Chia be theo thì và chủ ngữ; động từ chính luôn ở V3. Có thể thêm by + tác nhân khi cần nêu người thực hiện.",
+      "examples": [
+        {
+          "en": "The maintenance schedule was updated yesterday.",
+          "vi": "Lịch bảo trì đã được cập nhật hôm qua.",
+          "breakdown": [
+            {
+              "part": "be",
+              "text": "was",
+              "meaning": "quá khứ, chủ ngữ số ít"
+            },
+            {
+              "part": "V3",
+              "text": "updated",
+              "meaning": "quá khứ phân từ"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Hiện tại đơn bị động: am/is/are + V3.",
+        "Quá khứ đơn bị động: was/were + V3.",
+        "Không dùng be + V2."
+      ],
+      "exercises": [
+        {
+          "question": "All applications _____ by the HR team last week.",
+          "choices": [
+            "reviewed",
+            "were reviewed",
+            "are reviewing",
+            "have review"
+          ],
+          "answerIndex": 1,
+          "explanation": "Last week là quá khứ; applications số nhiều nên were reviewed."
+        },
+        {
+          "question": "The meeting room _____ every evening.",
+          "choices": [
+            "cleans",
+            "is cleaned",
+            "cleaned",
+            "is cleaning"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thói quen ở thể bị động: is cleaned."
+        }
+      ]
+    },
+    {
+      "id": "gerund-infinitive",
+      "title": "Gerund và Infinitive: V-ing / to V",
+      "category": "VERB PATTERN",
+      "level": "B1–B2",
+      "summary": "Nhận diện động từ theo sau bởi V-ing hoặc to-infinitive.",
+      "formula": "enjoy/avoid/finish + V-ing · plan/decide/hope + to V",
+      "explanation": "Một số động từ thường theo sau bởi V-ing (enjoy, avoid, suggest, finish); một số theo sau bởi to V (plan, decide, hope, agree). Một số động từ thay đổi nghĩa theo cấu trúc (remember doing/remember to do). Cần học theo cụm thay vì áp dụng một quy tắc cho mọi động từ.",
+      "examples": [
+        {
+          "en": "The team decided to postpone the product launch.",
+          "vi": "Nhóm quyết định hoãn buổi ra mắt sản phẩm.",
+          "breakdown": [
+            {
+              "part": "verb",
+              "text": "decided",
+              "meaning": "động từ quyết định"
+            },
+            {
+              "part": "infinitive",
+              "text": "to postpone",
+              "meaning": "decide + to V"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Enjoy doing, avoid doing, finish doing.",
+        "Decide to do, plan to do, hope to do.",
+        "Look forward to + V-ing vì to ở đây là giới từ."
+      ],
+      "exercises": [
+        {
+          "question": "We look forward to _____ from you.",
+          "choices": [
+            "hear",
+            "hearing",
+            "heard",
+            "to hear"
+          ],
+          "answerIndex": 1,
+          "explanation": "Look forward to + V-ing; to là giới từ."
+        },
+        {
+          "question": "The director agreed _____ the proposal.",
+          "choices": [
+            "considering",
+            "consider",
+            "to consider",
+            "considered"
+          ],
+          "answerIndex": 2,
+          "explanation": "Agree thường đi với to-infinitive."
+        }
+      ]
+    },
+    {
+      "id": "conditionals",
+      "title": "Câu điều kiện loại 0 và loại 1",
+      "category": "CONDITIONAL",
+      "level": "B1–B2",
+      "summary": "Diễn tả sự thật chung và khả năng có thể xảy ra trong tương lai.",
+      "formula": "Zero: If + present, present · First: If + present, will + V1",
+      "explanation": "Điều kiện loại 0 mô tả quy luật/sự thật chung. Loại 1 nói về điều kiện có khả năng xảy ra ở hiện tại/tương lai và kết quả tương lai. Trong mệnh đề if của loại 1 thường dùng hiện tại đơn, không dùng will.",
+      "examples": [
+        {
+          "en": "If the shipment arrives today, we will notify the client.",
+          "vi": "Nếu lô hàng đến hôm nay, chúng tôi sẽ thông báo cho khách hàng.",
+          "breakdown": [
+            {
+              "part": "condition",
+              "text": "If the shipment arrives today",
+              "meaning": "mệnh đề điều kiện hiện tại đơn"
+            },
+            {
+              "part": "result",
+              "text": "we will notify the client",
+              "meaning": "kết quả tương lai"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Không dùng will ngay sau if trong điều kiện loại 1 thông thường.",
+        "Có thể đảo vị trí hai mệnh đề; nếu If đứng đầu câu, thường dùng dấu phẩy."
+      ],
+      "exercises": [
+        {
+          "question": "If the client _____ the form today, we will process the request.",
+          "choices": [
+            "will submit",
+            "submits",
+            "submitted",
+            "submitting"
+          ],
+          "answerIndex": 1,
+          "explanation": "Mệnh đề if loại 1 dùng hiện tại đơn: submits."
+        },
+        {
+          "question": "If you heat water to 100°C, it _____.",
+          "choices": [
+            "boiled",
+            "boils",
+            "will boiling",
+            "boil"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sự thật khoa học dùng điều kiện loại 0; chủ ngữ it dùng boils."
+        }
+      ]
+    },
+    {
+      "id": "relative-clauses",
+      "title": "Mệnh đề quan hệ: who, which, that, whose",
+      "category": "RELATIVE",
+      "level": "B1–B2",
+      "summary": "Bổ sung thông tin về người, vật và quyền sở hữu.",
+      "formula": "who = people · which = things · whose = possession · that = people/things (defining)",
+      "explanation": "Mệnh đề quan hệ đứng sau danh từ để bổ sung thông tin. Who thường thay người, which thay vật/sự việc, whose chỉ sở hữu; that có thể thay người hoặc vật trong mệnh đề xác định. Không dùng that trong mệnh đề quan hệ không xác định có dấu phẩy.",
+      "examples": [
+        {
+          "en": "The employee who manages the account is on leave.",
+          "vi": "Nhân viên quản lý tài khoản đang nghỉ phép.",
+          "breakdown": [
+            {
+              "part": "antecedent",
+              "text": "The employee",
+              "meaning": "người được mô tả"
+            },
+            {
+              "part": "relative clause",
+              "text": "who manages the account",
+              "meaning": "mệnh đề quan hệ chỉ người"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Xác định danh từ đứng trước: người hay vật.",
+        "Có thể lược bỏ đại từ quan hệ khi nó làm tân ngữ trong mệnh đề xác định, không lược khi làm chủ ngữ."
+      ],
+      "exercises": [
+        {
+          "question": "The consultant _____ prepared the report will attend the meeting.",
+          "choices": [
+            "which",
+            "who",
+            "whose",
+            "where"
+          ],
+          "answerIndex": 1,
+          "explanation": "Consultant là người; đại từ quan hệ làm chủ ngữ nên dùng who."
+        },
+        {
+          "question": "Please review the document _____ was sent this morning.",
+          "choices": [
+            "who",
+            "whose",
+            "which",
+            "where"
+          ],
+          "answerIndex": 2,
+          "explanation": "Document là vật; dùng which hoặc that."
+        }
+      ]
+    },
+    {
+      "id": "adjective-adverb",
+      "title": "Phân biệt tính từ và trạng từ",
+      "category": "WORD FORM",
+      "level": "B1–B2",
+      "summary": "Chọn adj/adv đúng vị trí; phân biệt good/well, hard/hardly.",
+      "formula": "Adjective + noun · Linking verb + adjective · Verb + adverb",
+      "explanation": "Tính từ mô tả danh từ hoặc đứng sau linking verbs như be, seem, become. Trạng từ thường bổ nghĩa động từ, tính từ hoặc trạng từ khác. Một số cặp có nghĩa khác nhau: hard = chăm chỉ/nặng, hardly = hầu như không; late = muộn, lately = gần đây.",
+      "examples": [
+        {
+          "en": "The new software is highly reliable and operates efficiently.",
+          "vi": "Phần mềm mới rất đáng tin cậy và vận hành hiệu quả.",
+          "breakdown": [
+            {
+              "part": "adj",
+              "text": "reliable",
+              "meaning": "mô tả software"
+            },
+            {
+              "part": "adv",
+              "text": "efficiently",
+              "meaning": "bổ nghĩa cho operates"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Sau feel/look/sound/seem thường dùng tính từ khi mô tả chủ ngữ.",
+        "Không phải mọi trạng từ đều kết thúc bằng -ly: fast, hard, well."
+      ],
+      "exercises": [
+        {
+          "question": "The new receptionist speaks English _____.",
+          "choices": [
+            "fluent",
+            "fluently",
+            "fluency",
+            "more fluent"
+          ],
+          "answerIndex": 1,
+          "explanation": "Fluently là trạng từ bổ nghĩa cho speaks."
+        },
+        {
+          "question": "The instructions are very _____.",
+          "choices": [
+            "clearly",
+            "clear",
+            "clarity",
+            "clears"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sau be dùng tính từ clear để mô tả instructions."
+        }
+      ]
+    },
+    {
+      "id": "conjunctions",
+      "title": "Liên từ: because, although, while, therefore",
+      "category": "CONJUNCTION",
+      "level": "B1–B2",
+      "summary": "Nối ý chỉ nguyên nhân, tương phản, thời gian và kết quả.",
+      "formula": "because + clause · although + clause · therefore + independent clause",
+      "explanation": "Because giới thiệu nguyên nhân; although thể hiện tương phản; while có thể chỉ thời gian hoặc tương phản; therefore là trạng từ liên kết nêu kết quả và thường nối hai mệnh đề độc lập bằng dấu chấm phẩy/dấu chấm hoặc trạng từ liên kết theo cấu trúc phù hợp. Tránh dùng although và but cùng lúc trong cùng cấu trúc cơ bản.",
+      "examples": [
+        {
+          "en": "Although the shipment was delayed, the client accepted the revised schedule.",
+          "vi": "Mặc dù lô hàng bị trễ, khách hàng vẫn chấp nhận lịch trình đã điều chỉnh.",
+          "breakdown": [
+            {
+              "part": "conjunction",
+              "text": "Although",
+              "meaning": "mặc dù, báo hiệu tương phản"
+            },
+            {
+              "part": "main clause",
+              "text": "the client accepted the revised schedule",
+              "meaning": "mệnh đề chính"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Because of + noun phrase; because + subject + verb.",
+        "Despite/in spite of + noun phrase hoặc V-ing; although + clause."
+      ],
+      "exercises": [
+        {
+          "question": "The meeting was postponed _____ the director was ill.",
+          "choices": [
+            "because",
+            "although",
+            "therefore",
+            "despite"
+          ],
+          "answerIndex": 0,
+          "explanation": "Sau because là mệnh đề đầy đủ (the director was ill)."
+        },
+        {
+          "question": "_____ the high cost, the company approved the project.",
+          "choices": [
+            "Although",
+            "Because",
+            "Despite",
+            "Therefore"
+          ],
+          "answerIndex": 2,
+          "explanation": "Despite + cụm danh từ: the high cost."
+        }
+      ]
+    },
+    {
+      "id": "comparatives",
+      "title": "So sánh hơn và so sánh nhất",
+      "category": "COMPARISON",
+      "level": "A2–B1",
+      "summary": "So sánh giá, thời gian, chất lượng và hiệu suất trong ngữ cảnh công việc.",
+      "formula": "short adj + -er / the -est · more/most + long adj",
+      "explanation": "Tính từ ngắn thường thêm -er/-est; tính từ dài thường dùng more/most. Một số dạng bất quy tắc: good–better–best, bad–worse–worst. So sánh hơn thường đi với than; so sánh nhất thường có the.",
+      "examples": [
+        {
+          "en": "This delivery option is faster than the standard service.",
+          "vi": "Lựa chọn giao hàng này nhanh hơn dịch vụ tiêu chuẩn.",
+          "breakdown": [
+            {
+              "part": "comparative",
+              "text": "faster than",
+              "meaning": "nhanh hơn"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "More cheaper là sai; dùng cheaper.",
+        "The most efficient = hiệu quả nhất."
+      ],
+      "exercises": [
+        {
+          "question": "This route is _____ than the alternative route.",
+          "choices": [
+            "short",
+            "shorter",
+            "shortest",
+            "the short"
+          ],
+          "answerIndex": 1,
+          "explanation": "So sánh hơn của short là shorter."
+        },
+        {
+          "question": "It is the _____ solution available.",
+          "choices": [
+            "most practical",
+            "more practical",
+            "practicaler",
+            "much practical"
+          ],
+          "answerIndex": 0,
+          "explanation": "So sánh nhất của tính từ dài: the most practical."
+        }
+      ]
+    },
+    {
+      "id": "question-forms",
+      "title": "Câu hỏi Yes/No và Wh-questions",
+      "category": "SENTENCE",
+      "level": "A2–B1",
+      "summary": "Đảo trợ động từ và chọn từ hỏi chính xác.",
+      "formula": "Auxiliary + S + V1? · Wh-word + auxiliary + S + V1?",
+      "explanation": "Câu hỏi với động từ thường ở thì đơn dùng do/does/did. Với be, modal hoặc trợ động từ đã có, đảo trợ động từ lên trước chủ ngữ. Wh-words gồm what, when, where, why, who, which, how. Khi who/what là chủ ngữ, không dùng do/does/did theo cách thông thường.",
+      "examples": [
+        {
+          "en": "When does the next train leave?",
+          "vi": "Khi nào chuyến tàu tiếp theo khởi hành?",
+          "breakdown": [
+            {
+              "part": "Wh-word",
+              "text": "When",
+              "meaning": "hỏi thời gian"
+            },
+            {
+              "part": "auxiliary",
+              "text": "does",
+              "meaning": "trợ động từ ngôi thứ ba số ít"
+            },
+            {
+              "part": "subject + verb",
+              "text": "the next train leave",
+              "meaning": "chủ ngữ + V1"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Does the manager work here? dùng work, không phải works.",
+        "Where is the conference room? đảo be lên trước chủ ngữ."
+      ],
+      "exercises": [
+        {
+          "question": "Where _____ the accounting department located?",
+          "choices": [
+            "does",
+            "is",
+            "do",
+            "has"
+          ],
+          "answerIndex": 1,
+          "explanation": "Located diễn tả vị trí; dùng be: is the department located."
+        },
+        {
+          "question": "How often _____ the buses run?",
+          "choices": [
+            "does",
+            "is",
+            "do",
+            "has"
+          ],
+          "answerIndex": 2,
+          "explanation": "Buses số nhiều; hiện tại đơn dùng do + subject + V1."
+        }
+      ]
+    }
+  ]
 }
