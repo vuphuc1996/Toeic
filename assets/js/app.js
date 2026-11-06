@@ -433,6 +433,91 @@ function isStandaloneApp() {
 function isAppleMobile() {
   return /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 }
+const INSTALL_INVITE_KEY = 'toeic:pwa-install-invite:v1';
+function isAndroidDevice() { return /Android/i.test(navigator.userAgent || ''); }
+function isMobileOrTabletDevice() {
+  const ua = navigator.userAgent || '';
+  const appleTouch = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const mobileOrTabletUA = /Android|Mobile|Tablet|iPhone|iPad|iPod/i.test(ua) || navigator.userAgentData?.mobile === true;
+  const compactTouchDevice = !!(navigator.maxTouchPoints > 0 && window.matchMedia?.('(max-width: 1100px)').matches && window.matchMedia?.('(pointer: coarse)').matches);
+  return appleTouch || mobileOrTabletUA || compactTouchDevice;
+}
+function installInviteWasDismissed() {
+  try { return localStorage.getItem(INSTALL_INVITE_KEY) === 'dismissed'; } catch { return false; }
+}
+function markInstallInviteDismissed() {
+  try { localStorage.setItem(INSTALL_INVITE_KEY, 'dismissed'); } catch { /* Local storage may be disabled; the app remains usable. */ }
+}
+function syncInstallButton() {
+  const button = $('#installButton');
+  if (!button) return;
+  const show = !isStandaloneApp() && (isMobileOrTabletDevice() || !!state.deferredInstall);
+  button.hidden = !show;
+  button.title = isMobileOrTabletDevice() ? 'Hướng dẫn thêm vào màn hình chính' : 'Cài đặt TOEIC Dictionary';
+  button.setAttribute('aria-label', button.title);
+}
+function closeInstallInvite(remember = true) {
+  state.installGuideOpen = false;
+  $('#installInviteBackdrop').hidden = true;
+  document.body.classList.remove('install-invite-open');
+  if (remember) markInstallInviteDismissed();
+}
+function openInstallInvite(view = 'welcome') {
+  if (!isMobileOrTabletDevice() || isStandaloneApp()) return;
+  state.installGuideOpen = view === 'guide';
+  const content = $('#installInviteContent');
+  if (view === 'guide') {
+    const apple = isAppleMobile();
+    const android = isAndroidDevice();
+    let platformTitle = 'Thêm ứng dụng vào Màn hình chính';
+    let platformIntro = 'Tên mục có thể hơi khác nhau tùy trình duyệt và phiên bản hệ điều hành.';
+    let steps = '';
+    if (apple) {
+      platformTitle = 'Hướng dẫn cho iPhone / iPad';
+      platformIntro = 'Thao tác bằng Safari. Trình duyệt khác trên iPhone/iPad có thể không hiển thị đủ tùy chọn.';
+      steps = `<ol class="install-steps"><li>Mở địa chỉ TOEIC Dictionary bằng <strong>Safari</strong>.</li><li>Nhấn nút <strong>Chia sẻ</strong> (biểu tượng hình vuông có mũi tên hướng lên) ở thanh công cụ.</li><li>Kéo danh sách xuống và chọn <strong>Thêm vào Màn hình chính (Add to Home Screen)</strong>.</li><li>Nếu thấy tùy chọn <strong>Open as Web App</strong>, hãy bật để mở như ứng dụng; giữ tên <strong>TOEIC Dictionary</strong>, sau đó nhấn <strong>Thêm (Add)</strong>.</li><li>Thoát Safari và mở TOEIC Dictionary từ biểu tượng quyển sách trên Màn hình chính.</li></ol>`;
+    } else if (android) {
+      platformTitle = 'Hướng dẫn cho Android / máy tính bảng';
+      platformIntro = 'Khuyến nghị Chrome hoặc Edge. Nếu trình duyệt hiện hộp cài đặt, bạn có thể dùng nút cài ngay bên dưới.';
+      steps = `<ol class="install-steps"><li>Mở TOEIC Dictionary bằng <strong>Chrome</strong> hoặc <strong>Edge</strong>.</li><li>Nhấn menu <strong>⋮</strong> cạnh thanh địa chỉ.</li><li>Chọn <strong>Install and create shortcut</strong> hoặc mục tương đương như <strong>Install app / Add to Home screen</strong> tùy phiên bản Chrome/Edge.</li><li>Chọn <strong>Cài đặt (Install)</strong> hoặc <strong>Thêm (Add)</strong> để xác nhận.</li><li>Quay về Màn hình chính và mở biểu tượng <strong>TOEIC Dictionary</strong>.</li></ol>`;
+    } else {
+      platformTitle = 'Hướng dẫn cho máy tính bảng';
+      steps = `<ol class="install-steps"><li>Mở website bằng trình duyệt hiện đại.</li><li>Mở menu trình duyệt và tìm <strong>Install app</strong> hoặc <strong>Add to Home Screen</strong>.</li><li>Xác nhận thêm/cài đặt ứng dụng.</li><li>Mở TOEIC Dictionary từ biểu tượng vừa tạo.</li></ol>`;
+    }
+    const nativeButton = state.deferredInstall && !apple ? `<button type="button" class="primary-button" data-install-action="install">Cài đặt ngay <svg class="ui-icon button-icon"><use href="#icon-download"></use></svg></button>` : '';
+    content.innerHTML = `<p class="eyebrow">HƯỚNG DẪN THEO THIẾT BỊ</p><h2 id="installInviteTitle">${platformTitle}</h2><p id="installInviteDescription">${platformIntro}</p>${steps}<div class="install-invite-actions">${nativeButton}<button type="button" class="secondary-button" data-install-action="back">Quay lại</button><button type="button" class="text-button install-web-continue" data-install-action="dismiss">Đã hiểu, tiếp tục</button></div><p class="install-invite-footnote">Bạn phải tự xác nhận thao tác trong menu chia sẻ/cài đặt của thiết bị. Website không tự mở được menu Chia sẻ của iOS.</p>`;
+  } else {
+    content.innerHTML = `<p class="eyebrow">TOEIC DICTIONARY · MOBILE EXPERIENCE</p><h2 id="installInviteTitle">Thêm từ điển vào Màn hình chính?</h2><p id="installInviteDescription">Bạn có thể mở TOEIC Dictionary nhanh như một ứng dụng, học tập thuận tiện hơn và dễ quay lại mỗi ngày.</p><div class="install-benefits"><span>${icon('check-circle')} Mở nhanh từ biểu tượng ứng dụng</span><span>${icon('check-circle')} Giao diện gọn, gần giống ứng dụng riêng</span><span>${icon('check-circle')} Vẫn dùng được khi offline với dữ liệu đã cache</span></div><div class="install-invite-actions"><button type="button" class="primary-button" data-install-action="guide">Hướng dẫn thêm vào màn hình chính ${icon('arrow-right','ui-icon button-icon')}</button><button type="button" class="secondary-button" data-install-action="dismiss">Để sau, tiếp tục dùng trên web</button></div><p class="install-invite-footnote">Đây là lựa chọn tự nguyện. Đóng thông báo không ảnh hưởng đến việc sử dụng website.</p>`;
+  }
+  $('#installInviteBackdrop').hidden = false;
+  document.body.classList.add('install-invite-open');
+}
+async function runNativeInstall() {
+  if (!state.deferredInstall) return;
+  const promptEvent = state.deferredInstall;
+  state.deferredInstall = null;
+  try {
+    await promptEvent.prompt();
+    const choice = await promptEvent.userChoice;
+    if (choice?.outcome === 'accepted') {
+      markInstallInviteDismissed();
+      closeInstallInvite(false);
+      toast('Đã bắt đầu cài đặt TOEIC Dictionary.');
+    } else {
+      toast('Bạn có thể tiếp tục dùng website hoặc cài đặt sau.');
+    }
+  } catch (error) {
+    toast('Không mở được hộp cài đặt. Hãy dùng hướng dẫn thủ công bên dưới.', 'error');
+  }
+  syncInstallButton();
+}
+function initializeInstallInvite() {
+  syncInstallButton();
+  if (!isMobileOrTabletDevice() || isStandaloneApp() || installInviteWasDismissed()) return;
+  window.setTimeout(() => {
+    if (!isStandaloneApp() && !installInviteWasDismissed()) openInstallInvite('welcome');
+  }, 850);
+}
 function renderReminderStatus() {
   const enabled=!!state.reminder.enabled;
   $('#reminderEnabled').checked=enabled;
@@ -614,11 +699,21 @@ function bindEvents(){
   $('#modalContent').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]');if(edit)openEditor(edit.dataset.edit);});
   $('#globalSearch').addEventListener('keydown',e=>{if(e.key==='Enter'){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
   $('#globalSearch').addEventListener('input',e=>{if(e.target.value.length>=2){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
-  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#globalSearch').focus();}if(e.key==='Escape')closeModal();});
-  window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();state.deferredInstall=e;$('#installButton').hidden=false;});
-  $('#installButton').addEventListener('click',async()=>{if(!state.deferredInstall)return;state.deferredInstall.prompt();await state.deferredInstall.userChoice;state.deferredInstall=null;$('#installButton').hidden=true;});
+  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#globalSearch').focus();}if(e.key==='Escape'){if(!$('#installInviteBackdrop').hidden)closeInstallInvite(true);else closeModal();}});
+  window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();state.deferredInstall=e;syncInstallButton();if(state.installGuideOpen)openInstallInvite('guide');});
+  window.addEventListener('appinstalled',()=>{markInstallInviteDismissed();closeInstallInvite(false);syncInstallButton();toast('TOEIC Dictionary đã được thêm vào thiết bị.');});
+  $('#installButton').addEventListener('click',()=>{if(isMobileOrTabletDevice())openInstallInvite('guide');else if(state.deferredInstall)runNativeInstall();});
+  $('#installInviteBackdrop').addEventListener('click',e=>{
+    if(e.target.id==='installInviteBackdrop'){closeInstallInvite(true);return;}
+    const action=e.target.closest('[data-install-action]')?.dataset.installAction;
+    if(action==='dismiss')closeInstallInvite(true);
+    else if(action==='guide')openInstallInvite('guide');
+    else if(action==='back')openInstallInvite('welcome');
+    else if(action==='install')runNativeInstall();
+  });
+  window.addEventListener('pageshow',syncInstallButton);
 }
 function updateDate(){const now=new Date();$('#todayLabel').textContent=new Intl.DateTimeFormat('vi-VN',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(now);}
 async function registerSW(){if(!('serviceWorker'in navigator))return;try{await navigator.serviceWorker.register('./sw.js',{scope:'./'});}catch(err){console.warn('Service Worker chưa đăng ký được:',err);}}
-async function init(){bindEvents();updateDate();try{await loadData();await initializePractice();}catch(err){console.error(err);$('#metricWords').textContent='!';toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}registerSW();}
+async function init(){bindEvents();updateDate();try{await loadData();await initializePractice();}catch(err){console.error(err);$('#metricWords').textContent='!';toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}registerSW();initializeInstallInvite();}
 init();

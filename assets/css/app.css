@@ -154,3 +154,33 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .word-name,.detail-word,.weak-word-item strong{font-variant-ligatures:none;font-feature-settings:"ss01" 1;}
 @media(max-width:640px){.notification-actions{grid-template-columns:1fr}.reminder-popup{width:100%}.toast-region{left:12px;right:12px;bottom:78px}}
 @media(prefers-reduced-motion:reduce){.reminder-popup{animation:none}}
+
+/* Optional mobile/tablet Add to Home Screen invitation. Closing it never blocks web use. */
+.install-invite-backdrop{position:fixed;inset:0;z-index:110;display:grid;place-items:end center;padding:18px 14px calc(16px + env(safe-area-inset-bottom));background:rgba(12,29,50,.48);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);animation:install-backdrop-in .22s ease both}
+.install-invite-backdrop[hidden]{display:none!important}
+.install-invite-card{position:relative;width:min(100%,480px);max-height:min(88vh,760px);overflow:auto;padding:23px 22px 20px;border:1px solid rgba(255,255,255,.72);border-radius:24px;background:linear-gradient(155deg,#fff 0%,#f7faff 100%);box-shadow:0 24px 80px rgba(7,25,49,.24);animation:install-card-up .34s cubic-bezier(.2,.8,.2,1) both}
+.install-invite-topline{display:flex;align-items:center;justify-content:space-between;margin-bottom:17px}
+.install-invite-mark{width:52px;height:52px;display:grid;place-items:center;border-radius:17px;color:#fff;background:linear-gradient(145deg,#2b72b5,#153c70);box-shadow:0 9px 20px rgba(21,60,112,.2)}
+.install-book-icon{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.install-invite-close{width:35px;height:35px;border:1px solid #e7edf4;border-radius:11px;background:#fff;color:#718197;display:grid;place-items:center}
+.install-invite-close:hover{background:#f1f5fa;color:#183d6c}
+.install-invite-card .eyebrow{margin-bottom:7px}
+.install-invite-card h2{margin:0;color:#183b68;font-size:22px;line-height:1.25;letter-spacing:-.025em}
+.install-invite-card #installInviteDescription{margin:9px 0 17px;color:#687b91;font-size:13px;line-height:1.65}
+.install-benefits{display:grid;gap:10px;margin:17px 0 20px;padding:14px;border:1px solid #e8eef6;border-radius:14px;background:#fff}
+.install-benefits span{display:flex;align-items:center;gap:9px;color:#405772;font-size:12px;font-weight:600}
+.install-benefits .ui-icon{width:17px;height:17px;flex:0 0 17px;color:#1d9569}
+.install-invite-actions{display:grid;gap:9px}
+.install-invite-actions .primary-button,.install-invite-actions .secondary-button{width:100%;min-height:45px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;white-space:normal;text-align:center}
+.install-invite-actions .secondary-button{background:#f2f5f9}
+.install-invite-footnote{margin:13px 0 0;color:#98a4b2;font-size:10px;line-height:1.55;text-align:center}
+.install-steps{display:grid;gap:11px;margin:17px 0 20px;padding:0 0 0 22px;color:#53677f;font-size:12px;line-height:1.65}
+.install-steps li{padding-left:3px}
+.install-steps strong{color:#1b477d}
+.install-web-continue{justify-self:center;padding:8px}
+@keyframes install-backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes install-card-up{from{opacity:0;transform:translateY(22px) scale(.985)}to{opacity:1;transform:none}}
+@media(min-width:641px) and (max-width:1100px){.install-invite-backdrop{place-items:center;padding:24px}.install-invite-card{width:min(100%,520px);border-radius:22px}}
+@media(max-width:640px){.install-invite-backdrop{padding:10px 10px calc(10px + env(safe-area-inset-bottom));place-items:end center}.install-invite-card{padding:20px 17px 16px;border-radius:22px 22px 17px 17px;max-height:calc(90vh - env(safe-area-inset-top));}.install-invite-card h2{font-size:20px}.install-invite-card #installInviteDescription{font-size:12px}.install-benefits{padding:12px;gap:9px}.install-benefits span{font-size:11px}.topbar-actions{gap:6px}.install-guide-trigger{flex:0 0 34px;width:34px;height:34px}.global-search{width:min(43vw,190px)}}
+@media(prefers-reduced-motion:reduce){.install-invite-backdrop,.install-invite-card{animation:none!important}}
+body.install-invite-open{overflow:hidden}
