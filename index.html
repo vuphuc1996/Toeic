@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
-  <meta name="description" content="Từ điển TOEIC A–Z, luyện tập thông minh, giải thích đáp án và cấu hình nhắc học – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.5.1 – Từ điển TOEIC A–Z</title>
+  <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
+  <title>TOEIC Dictionary v2.6.0 – Từ điển TOEIC A–Z</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -38,6 +38,7 @@
     <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
     <symbol id="icon-brain" viewBox="0 0 24 24"><path d="M12 5.5a3.5 3.5 0 0 0-6.7-1.3A3.8 3.8 0 0 0 4 11a4 4 0 0 0 2.5 7.2A3.5 3.5 0 0 0 12 20zM12 5.5a3.5 3.5 0 0 1 6.7-1.3A3.8 3.8 0 0 1 20 11a4 4 0 0 1-2.5 7.2A3.5 3.5 0 0 1 12 20zM12 5v15M7.5 8.5h2M14.5 8.5h2M7.5 14.5h2M14.5 14.5h2"/></symbol>
     <symbol id="icon-trending" viewBox="0 0 24 24"><path d="M3 17 9 11l4 4 8-9"/><path d="M15 6h6v6"/></symbol>
+    <symbol id="icon-volume-2" viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 9a5 5 0 0 1 0 6M18.8 6.2a9 9 0 0 1 0 11.6"/></symbol>
     <symbol id="icon-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.7 2.9-.2-.1a1.7 1.7 0 0 0-1.8.1 1.7 1.7 0 0 0-.8 1.5v.2H8.7v-.2a1.7 1.7 0 0 0-.8-1.5 1.7 1.7 0 0 0-1.8-.1l-.2.1-1.7-2.9.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-.9h-.2v-3.4h.2a1.7 1.7 0 0 0 1.5-.9 1.7 1.7 0 0 0-.3-1.9l-.1-.1 1.7-2.9.2.1a1.7 1.7 0 0 0 1.8-.1 1.7 1.7 0 0 0 .8-1.5V2h6.6v.2a1.7 1.7 0 0 0 .8 1.5 1.7 1.7 0 0 0 1.8.1l.2-.1 1.7 2.9-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5.9h.2v3.4h-.2a1.7 1.7 0 0 0-1.5.9z"/></symbol>
     <symbol id="icon-device-laptop" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="1.8"/><path d="M2.5 19h19l-1.4-3H3.9zM9 19h6"/></symbol>
     <symbol id="icon-device-mobile" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M10.5 5h3M11 18.5h2"/></symbol>
@@ -55,12 +56,13 @@
         <button class="nav-item" data-page="practice"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-brain"></use></svg></span>Ôn tập</button>
         <button class="nav-item" data-page="grammar"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Ngữ pháp</button>
         <button class="nav-item" data-page="reading"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span>Đọc hiểu</button>
+        <button class="nav-item" data-page="listening"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bell"></use></svg></span>Nghe hiểu</button>
         <button class="nav-item" data-page="data"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-database"></use></svg></span>Quản lý dữ liệu</button>
         <button class="nav-item" data-page="settings"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-settings"></use></svg></span>Cấu hình</button>
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 3 · v2.5.1 · GitHub-only</div>
+        <div class="sidebar-version">Phase 4 · v2.6.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -107,13 +109,14 @@
             <button class="quick-link" data-go="practice"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-brain"></use></svg></span><span><strong>Bắt đầu ôn tập</strong><small>Câu hỏi ngẫu nhiên, ưu tiên từ còn yếu</small></span><b>→</b></button>
           <button class="quick-link" data-go="grammar"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span><span><strong>Học ngữ pháp</strong><small>Cấu trúc câu, thì và loại từ</small></span><b>→</b></button>
             <button class="quick-link" data-go="reading"><span class="quick-symbol violet"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span><span><strong>Đọc hiểu TOEIC</strong><small>Đoạn văn, từ vựng và câu hỏi</small></span><b>→</b></button>
+            <button class="quick-link" data-go="listening"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-bell"></use></svg></span><span><strong>Nghe hiểu TOEIC</strong><small>Hội thoại, thông báo và câu hỏi nghe</small></span><b>→</b></button>
           </section>
         </div>
         <section class="panel alphabet-panel">
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.5.1:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp và Reading Mini nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.6.0:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -199,6 +202,14 @@
         <div class="empty-state" id="readingEmpty" hidden><div>▤</div><strong>Không tìm thấy đoạn đọc</strong><p>Thử từ khóa hoặc bộ lọc khác.</p></div>
       </section>
 
+      <section class="page" id="page-listening">
+        <div class="page-heading compact-heading"><div><p class="eyebrow">TOEIC LISTENING PRACTICE</p><h1>Luyện nghe theo tình huống</h1><p class="muted">Nghe câu hỏi–đáp, hội thoại 2 người và thông báo ngắn. Transcript được ẩn để bạn luyện nghe trước.</p></div><span class="library-count" id="listeningCount">— bài nghe</span></div>
+        <section class="panel listening-intro"><div><strong>Audio được đọc bằng giọng tiếng Anh trên thiết bị</strong><p>Chọn giọng Mỹ hoặc Anh trong bộ điều khiển. Chất lượng và danh sách giọng phụ thuộc trình duyệt/hệ điều hành; đây là audio tổng hợp để luyện tập, không phải bản ghi âm đề thi chính thức.</p></div><span class="listening-intro-mark">♫</span></section>
+        <section class="panel library-toolbar"><label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="listeningSearch" type="search" placeholder="Tìm bài nghe, chủ đề hoặc từ khóa..." autocomplete="off"></label><label class="field"><span class="field-label">PHẦN THI</span><select id="listeningPartFilter"><option value="">Tất cả Part</option><option value="Part 2">Part 2 · Question–Response</option><option value="Part 3">Part 3 · Conversations</option><option value="Part 4">Part 4 · Talks</option></select></label><label class="field"><span class="field-label">CẤP ĐỘ</span><select id="listeningLevelFilter"><option value="">Tất cả cấp độ</option></select></label></section>
+        <div class="learning-card-grid" id="listeningCardList"></div>
+        <div class="empty-state" id="listeningEmpty" hidden><div>♫</div><strong>Không tìm thấy bài nghe</strong><p>Thử chủ đề hoặc cấp độ khác.</p></div>
+      </section>
+
       <section class="page" id="page-settings">
         <div class="page-heading compact-heading"><div><p class="eyebrow">PERSONAL PREFERENCES</p><h1>Cấu hình</h1><p class="muted">Thiết lập thông báo, nhịp ôn tập và hành vi sau khi trả lời.</p></div></div>
         <div class="settings-layout">
@@ -246,7 +257,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>GitHub-only · v2.5.1</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>GitHub-only · v2.6.0</span></footer>
     </main>
   </div>
 
@@ -256,6 +267,7 @@
     <button data-page="practice"><span><svg class="ui-icon"><use href="#icon-brain"></use></svg></span><small>Ôn tập</small></button>
     <button data-page="grammar"><span><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span><small>Ngữ pháp</small></button>
     <button data-page="reading"><span><svg class="ui-icon"><use href="#icon-grid"></use></svg></span><small>Đọc hiểu</small></button>
+    <button data-page="listening"><span><svg class="ui-icon"><use href="#icon-bell"></use></svg></span><small>Nghe</small></button>
   </nav>
 
   <div class="modal-backdrop" id="modalBackdrop" hidden>
@@ -265,13 +277,12 @@
     </section>
   </div>
   <div class="google-search-backdrop" id="googleSearchBackdrop" hidden>
-    <section class="google-search-panel" role="dialog" aria-modal="true" aria-labelledby="googleSearchTitle">
-      <header class="google-search-header"><div><p class="eyebrow">GOOGLE SEARCH · AI MODE</p><h2 id="googleSearchTitle">Tra cứu và phân tích bằng Google</h2></div><button class="close-button" id="closeGoogleSearch" aria-label="Đóng tra cứu"><svg class="ui-icon"><use href="#icon-close"></use></svg></button></header>
-      <p class="google-search-description">Nội dung được chuẩn bị từ bài học hoặc từ vựng bạn đang xem. Chỉnh truy vấn, sao chép prompt đầy đủ rồi mở Google AI Mode. Khi xem xong, đóng tab Google để quay lại đúng vị trí đang học.</p>
-      <form id="googleSearchForm" class="google-search-form"><input id="googleSearchQuery" type="search" placeholder="Nhập nội dung cần tra cứu..." autocomplete="off"><button class="primary-button" type="submit">Google AI Mode</button></form>
-      <div class="google-search-actions"><button type="button" class="secondary-button" id="googleSearchStandard">Google Search</button><button type="button" class="secondary-button" id="copyGoogleContext">Sao chép toàn bộ nội dung phân tích</button></div>
-      <details class="google-context-details"><summary>Xem prompt và dữ liệu ngữ cảnh đã tạo</summary><textarea id="googleSearchContext" readonly rows="10"></textarea></details>
-      <p class="google-search-note"><strong>Cách sử dụng:</strong> Ứng dụng giữ một bảng tra cứu nhỏ và sao chép toàn bộ ngữ cảnh. Google AI Mode được mở ở tab riêng vì Google không cung cấp cam kết nhúng trang AI Mode vào website khác. Dán prompt vào ô Ask anything của Google để phân tích; đóng tab Google để quay lại bài đang học.</p>
+    <section class="google-search-panel ai-oneway-panel" role="dialog" aria-modal="true" aria-labelledby="googleSearchTitle">
+      <header class="google-search-header"><div><p class="eyebrow">ONE-WAY GOOGLE AI ANALYSIS</p><h2 id="googleSearchTitle">Phân tích nội dung đang học</h2></div><button class="close-button" id="closeGoogleSearch" aria-label="Đóng tra cứu"><svg class="ui-icon"><use href="#icon-close"></use></svg></button></header>
+      <div class="ai-oneway-intro"><span class="ai-oneway-badge"><svg class="ui-icon"><use href="#icon-sparkles"></use></svg></span><div><strong>Một yêu cầu phân tích duy nhất</strong><p>TOEIC đã tự chuẩn bị toàn bộ ngữ cảnh. Nhấn nút bên dưới để gửi trực tiếp truy vấn sang Google AI Mode. Trong TOEIC, bạn chỉ có thể đóng bảng này; không có ô nhập câu hỏi tiếp theo.</p></div></div>
+      <div class="ai-oneway-context"><small>NỘI DUNG ĐANG PHÂN TÍCH</small><strong id="googleSearchSummary">Nội dung học tập hiện tại</strong><details><summary>Xem toàn bộ prompt sẽ gửi</summary><textarea id="googleSearchContext" readonly rows="12" aria-label="Prompt đã tạo tự động"></textarea></details></div>
+      <button type="button" class="primary-button ai-oneway-run" id="runGoogleAIButton"><svg class="ui-icon button-icon"><use href="#icon-sparkles"></use></svg> Tra cứu và chạy Google AI Mode một lần</button>
+      <p class="google-search-note"><strong>Lưu ý:</strong> Google AI Mode là dịch vụ bên ngoài. Ứng dụng gửi nội dung qua truy vấn Google Search AI Mode (udm=50) và mở kết quả ở tab riêng. Google có thể thay đổi tham số này; trang Google có thể vẫn cung cấp tính năng hỏi tiếp mà TOEIC không kiểm soát được. Không có iframe/API riêng được Google cam kết cho việc nhúng AI Mode.</p>
     </section>
   </div>
   <div class="install-invite-backdrop" id="installInviteBackdrop" hidden>

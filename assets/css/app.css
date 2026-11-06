@@ -355,3 +355,48 @@ body.google-search-open{overflow:hidden}
 @media(max-width:850px){.topbar{gap:10px}.topbar-actions{gap:9px}.global-search{width:clamp(165px,25vw,230px)}.device-greeting{padding:4px 7px;gap:7px}.device-greeting-icon{width:31px;height:31px;flex-basis:31px}}
 @media(max-width:640px){.topbar{gap:6px;padding:0 9px}.breadcrumb{gap:5px;min-width:0;flex:0 1 auto}.breadcrumb span,.breadcrumb i{display:none}.breadcrumb strong{display:block;max-width:66px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px}.breadcrumb-book{width:16px;height:16px;flex:0 0 16px}.topbar-actions{min-width:0;flex:1;gap:5px;justify-content:flex-end}.global-search{width:clamp(86px,29vw,126px);min-width:82px;flex:0 1 auto;height:33px;padding:0 7px;gap:5px}.global-search input{font-size:10px}.global-search kbd{display:none}.install-guide-trigger{width:30px;height:30px;flex:0 0 30px}.device-greeting{gap:4px;padding:3px 5px;border-radius:9px;flex:0 0 auto}.device-greeting-icon{width:26px;height:26px;flex:0 0 26px;border-radius:8px}.device-greeting-icon .ui-icon{width:16px;height:16px}.device-greeting-copy{gap:1px}.device-greeting-copy small{font-size:7px}.device-greeting-copy strong{font-size:8px;max-width:70px}.device-greeting-copy em{display:none}}
 @media(max-width:360px){.breadcrumb strong{max-width:48px}.global-search{width:84px;min-width:76px}.device-greeting{padding:3px 4px}.device-greeting-copy strong{max-width:62px;font-size:7.5px}}
+
+
+/* v2.6.0 – Listening, speech synthesis and one-way Google AI */
+.mobile-bottom-nav{grid-template-columns:repeat(6,minmax(0,1fr))}
+@media(max-width:640px){.mobile-bottom-nav{grid-template-columns:repeat(6,minmax(0,1fr))}.mobile-bottom-nav button small{font-size:8px}.mobile-bottom-nav button span{font-size:15px}}
+.pronunciation-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 4px}
+.pronunciation-toolbar .secondary-button{font-size:10px;min-height:36px}
+.pronunciation-note{margin:5px 0 14px;color:#8493a5;font-size:9px;line-height:1.55}
+.listening-intro{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:14px;padding:16px 18px;background:linear-gradient(110deg,#f5f9ff,#fbfcff)}
+.listening-intro strong{color:#294d73;font-size:12px}
+.listening-intro p{margin:5px 0 0;color:#71839a;font-size:10px;line-height:1.65;max-width:900px}
+.listening-intro-mark{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;border-radius:14px;background:#e4effc;color:#2e6eaa;font-size:28px}
+.listening-card{min-height:220px}
+.listening-card .learning-card-footer{margin-top:12px}
+.listening-player-card{padding:16px;border:1px solid #dfe9f4;border-radius:14px;background:linear-gradient(135deg,#f6faff,#fff)}
+.listening-player-head{display:flex;align-items:center;gap:12px}
+.listening-wave{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#e5effb;color:#2a69a5;font-size:25px}
+.listening-player-head>div{display:grid;gap:4px}.listening-player-head strong{font-size:12px;color:#294c72}.listening-player-head small{font-size:9px;color:#8493a7}
+.listening-player-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.listening-player-actions button{min-height:38px}
+.listening-player-status{margin-top:11px;padding:9px 11px;border-radius:8px;background:#edf4fc;color:#52718f;font-size:10px;line-height:1.5}
+.listening-speed-row{display:flex;align-items:center;justify-content:flex-end;gap:9px;margin-top:10px;color:#71839a;font-size:10px}
+.listening-speed-row select{padding:7px 9px;border:1px solid #dbe5ef;border-radius:8px;background:#fff;color:#42617e;font:inherit}
+.listening-hint{margin:-3px 0 10px;color:#8493a5;font-size:10px;line-height:1.6}
+.transcript-details{margin:14px 0;border:1px solid #e1e9f2;border-radius:12px;background:#fff;overflow:hidden}
+.transcript-details summary{padding:12px 14px;color:#37658e;font-size:11px;font-weight:800;cursor:pointer}
+.transcript-content{display:grid;gap:8px;padding:0 14px 12px}
+.transcript-line{padding:9px 10px;border-radius:8px;background:#f7f9fc}
+.transcript-line small{color:#2f679e;font-size:9px;font-weight:850;text-transform:uppercase;letter-spacing:.06em}
+.transcript-line p{margin:4px 0 0;color:#435d78;font-size:11px;line-height:1.7}
+.transcript-translation{margin:0;padding:12px 14px;border-top:1px solid #edf1f6;color:#71839a;font-size:10px;line-height:1.7}
+.ai-oneway-panel{width:min(100%,700px)}
+.ai-oneway-intro{display:flex;gap:12px;align-items:flex-start;margin:15px 0;padding:14px;border:1px solid #e1ebf6;border-radius:12px;background:#f4f8fd}
+.ai-oneway-badge{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;border-radius:11px;background:#e2edfb;color:#2c6da8}
+.ai-oneway-intro strong{color:#274c73;font-size:12px}
+.ai-oneway-intro p{margin:5px 0 0;color:#72849a;font-size:10px;line-height:1.65}
+.ai-oneway-context{padding:13px;border:1px solid #e3eaf2;border-radius:11px;background:#fff}
+.ai-oneway-context>small{display:block;color:#8a9aad;font-size:8px;font-weight:850;letter-spacing:.13em}
+.ai-oneway-context>strong{display:block;margin-top:5px;color:#345b82;font-size:12px}
+.ai-oneway-context details{margin-top:12px;padding-top:10px;border-top:1px solid #edf1f5}
+.ai-oneway-context summary{color:#68809a;font-size:10px;font-weight:750;cursor:pointer}
+.ai-oneway-context textarea{width:100%;min-height:180px;margin-top:9px;padding:10px;border:1px solid #dfe7f0;border-radius:8px;background:#f8fafc;color:#566f88;font:10px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;resize:vertical}
+.ai-oneway-run{width:100%;min-height:46px;justify-content:center;margin-top:14px}
+@media(max-width:760px){.listening-intro{padding:13px}.listening-intro-mark{width:38px;height:38px;flex-basis:38px}.listening-player-card{padding:13px}.pronunciation-toolbar{display:grid;grid-template-columns:1fr 1fr}.pronunciation-toolbar button:last-child{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){.listening-card,.ai-oneway-intro{animation:none!important;transition:none!important}}

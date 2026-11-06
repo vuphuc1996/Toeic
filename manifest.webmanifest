@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "TOEIC Dictionary – Từ điển TOEIC A–Z",
+  "name": "TOEIC Dictionary – Vocabulary, Listening & Reading",
   "short_name": "TOEIC Dict",
-  "description": "Từ điển TOEIC A–Z, Smart Practice, thư viện ngữ pháp, Reading Mini và tra cứu Google AI Mode trên GitHub Pages.",
+  "description": "Từ điển TOEIC A–Z, luyện tập, ngữ pháp, đọc hiểu, nghe hiểu và phát âm.",
   "lang": "vi",
   "start_url": "./",
   "scope": "./",
