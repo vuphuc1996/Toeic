@@ -64,10 +64,27 @@ for item in manifest.get("letters", []):
 if count != manifest.get("totalWords"):
     errors.append(f"manifest totalWords {manifest.get('totalWords')} != actual {count}")
 
+# Related-term glossaries support meanings for synonym/antonym answer choices.
+related_path = ROOT / "data" / "related-terms.json"
+try:
+    related_doc = json.loads(related_path.read_text(encoding="utf-8"))
+    related_terms = related_doc.get("terms", [])
+    seen_related: set[str] = set()
+    for entry in related_terms:
+        term = str(entry.get("term", "")).strip().casefold()
+        meaning = str(entry.get("meaning_vi", "")).strip()
+        if not term or not meaning:
+            errors.append("related-terms.json: each term requires term and meaning_vi")
+        if term in seen_related:
+            errors.append(f"related-terms.json: duplicate term {term}")
+        seen_related.add(term)
+except Exception as exc:
+    errors.append(f"related-terms.json: cannot read or validate: {exc}")
+
 if errors:
     print("DATA VALIDATION FAILED")
     for error in errors:
         print(f"- {error}")
     raise SystemExit(1)
 
-print(f"DATA VALIDATION OK: {count} words, {len(manifest.get('letters', []))} letter files, {len(category_ids)} topics.")
+print(f"DATA VALIDATION OK: {count} words, {len(manifest.get('letters', []))} letter files, {len(category_ids)} topics, {len(seen_related)} related-term glosses.")

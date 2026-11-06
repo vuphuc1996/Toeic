@@ -1,0 +1,1151 @@
+{
+  "schemaVersion": 1,
+  "description": "Bảng nghĩa tham chiếu cho synonym/antonym options. Không thay thế mục từ vựng đầy đủ.",
+  "terms": [
+    {
+      "term": "24-hour period",
+      "meaning_vi": "khoảng thời gian 24 giờ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "account",
+      "meaning_vi": "tài khoản; bản tường trình",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "acknowledgment",
+      "meaning_vi": "sự xác nhận; lời cảm ơn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "acquire",
+      "meaning_vi": "có được; thu nhận",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "acquisition",
+      "meaning_vi": "việc thu nhận; việc mua lại",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "adaptable",
+      "meaning_vi": "có khả năng thích nghi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "admission",
+      "meaning_vi": "sự cho phép vào; sự thừa nhận",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "advance",
+      "meaning_vi": "sự tiến bộ; khoản ứng trước; tiến lên",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "advantage",
+      "meaning_vi": "lợi thế; ưu điểm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "advice",
+      "meaning_vi": "lời khuyên",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "agenda",
+      "meaning_vi": "chương trình nghị sự",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "allocate",
+      "meaning_vi": "phân bổ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "allowance",
+      "meaning_vi": "phụ cấp; khoản trợ cấp",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "amenity",
+      "meaning_vi": "tiện nghi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "announcement",
+      "meaning_vi": "thông báo",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "annual",
+      "meaning_vi": "hằng năm; thường niên",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "annually",
+      "meaning_vi": "hằng năm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "apparatus",
+      "meaning_vi": "thiết bị; bộ máy",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "appointment",
+      "meaning_vi": "cuộc hẹn; lịch hẹn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "approve",
+      "meaning_vi": "phê duyệt; chấp thuận",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "approximation",
+      "meaning_vi": "sự ước lượng; giá trị xấp xỉ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "area",
+      "meaning_vi": "khu vực; lĩnh vực",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "arrange",
+      "meaning_vi": "sắp xếp; thu xếp",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "arrive",
+      "meaning_vi": "đến; tới nơi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "assemble",
+      "meaning_vi": "tập hợp; lắp ráp",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "assess",
+      "meaning_vi": "đánh giá",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "assessment",
+      "meaning_vi": "sự đánh giá; bài đánh giá",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "assurance",
+      "meaning_vi": "sự đảm bảo; sự cam đoan",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "baggage",
+      "meaning_vi": "hành lý",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "bargain",
+      "meaning_vi": "món hời; sự mặc cả",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "bill",
+      "meaning_vi": "hóa đơn; dự luật",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "booking",
+      "meaning_vi": "việc đặt chỗ; đặt phòng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "business day",
+      "meaning_vi": "ngày làm việc",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "buy",
+      "meaning_vi": "mua",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "buyer",
+      "meaning_vi": "người mua",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "calculate",
+      "meaning_vi": "tính toán",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "calendar date",
+      "meaning_vi": "ngày cụ thể trên lịch",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "calendar month",
+      "meaning_vi": "tháng dương lịch",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "cargo",
+      "meaning_vi": "hàng hóa vận chuyển",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "central office",
+      "meaning_vi": "văn phòng trung tâm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "central theme",
+      "meaning_vi": "chủ đề chính",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "chance",
+      "meaning_vi": "cơ hội; khả năng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "charge",
+      "meaning_vi": "tính phí; khoản phí; phụ trách",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "check",
+      "meaning_vi": "kiểm tra; tấm séc",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "collect",
+      "meaning_vi": "thu thập; thu tiền",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "confirm",
+      "meaning_vi": "xác nhận",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "connect",
+      "meaning_vi": "kết nối; liên kết",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "consignment",
+      "meaning_vi": "lô hàng ký gửi; lô hàng được giao",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "constantly",
+      "meaning_vi": "liên tục; thường xuyên",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "continually",
+      "meaning_vi": "liên tục; không ngừng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "convention",
+      "meaning_vi": "hội nghị; quy ước",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "cost",
+      "meaning_vi": "chi phí; trị giá",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "critical",
+      "meaning_vi": "quan trọng; mang tính quyết định; nghiêm trọng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "customer",
+      "meaning_vi": "khách hàng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "daily",
+      "meaning_vi": "hằng ngày",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "deal",
+      "meaning_vi": "thỏa thuận; giao dịch",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "delay",
+      "meaning_vi": "sự trì hoãn; làm chậm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "deny",
+      "meaning_vi": "phủ nhận; từ chối",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "deposit",
+      "meaning_vi": "tiền đặt cọc; khoản tiền gửi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "depot",
+      "meaning_vi": "kho; trạm trung chuyển",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "diary",
+      "meaning_vi": "nhật ký; sổ lịch",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "direction",
+      "meaning_vi": "hướng; chỉ dẫn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "disadvantage",
+      "meaning_vi": "bất lợi; nhược điểm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "discuss",
+      "meaning_vi": "thảo luận",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "dismiss",
+      "meaning_vi": "bác bỏ; cho thôi việc",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "dispatch",
+      "meaning_vi": "gửi đi; điều phối; chuyến hàng gửi đi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "disperse",
+      "meaning_vi": "phân tán; giải tán",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "disprove",
+      "meaning_vi": "chứng minh là sai; bác bỏ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "drawback",
+      "meaning_vi": "nhược điểm; bất lợi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "due date",
+      "meaning_vi": "ngày đến hạn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "employ",
+      "meaning_vi": "thuê; tuyển dụng; sử dụng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "employer",
+      "meaning_vi": "người sử dụng lao động",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "engagement",
+      "meaning_vi": "cam kết; cuộc hẹn; sự tham gia",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "enlist",
+      "meaning_vi": "tuyển mộ; đăng ký tham gia",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "ensure",
+      "meaning_vi": "đảm bảo",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "enter",
+      "meaning_vi": "đi vào; nhập dữ liệu",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "entry",
+      "meaning_vi": "mục nhập; lối vào; sự tham gia",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "essential",
+      "meaning_vi": "thiết yếu; cần thiết",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "every three months",
+      "meaning_vi": "ba tháng một lần",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "every week",
+      "meaning_vi": "mỗi tuần",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "examine",
+      "meaning_vi": "kiểm tra; xem xét",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "exchange",
+      "meaning_vi": "trao đổi; đổi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "expenditure",
+      "meaning_vi": "khoản chi; chi tiêu",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "expense",
+      "meaning_vi": "chi phí; khoản phí",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "expertise",
+      "meaning_vi": "chuyên môn; kiến thức chuyên sâu",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "falsify",
+      "meaning_vi": "làm giả; xuyên tạc",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "file",
+      "meaning_vi": "tệp; hồ sơ; nộp hồ sơ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "fire",
+      "meaning_vi": "sa thải; hỏa hoạn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "four times a year",
+      "meaning_vi": "bốn lần một năm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "funds",
+      "meaning_vi": "nguồn vốn; quỹ tiền",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "gain",
+      "meaning_vi": "thu được; lợi ích; khoản tăng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "gear",
+      "meaning_vi": "thiết bị; bánh răng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "generate",
+      "meaning_vi": "tạo ra; phát sinh",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "get",
+      "meaning_vi": "nhận; lấy; đạt được",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "goods",
+      "meaning_vi": "hàng hóa",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "grade",
+      "meaning_vi": "cấp bậc; điểm số; xếp loại",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "guarantee",
+      "meaning_vi": "đảm bảo; bảo hành",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "guest service",
+      "meaning_vi": "dịch vụ dành cho khách",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "guideline",
+      "meaning_vi": "hướng dẫn; nguyên tắc chỉ đạo",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "hire",
+      "meaning_vi": "thuê; tuyển dụng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "housing",
+      "meaning_vi": "nhà ở; chỗ ở",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "ignorance",
+      "meaning_vi": "sự thiếu hiểu biết",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "income",
+      "meaning_vi": "thu nhập",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "inflexible",
+      "meaning_vi": "không linh hoạt; cứng nhắc",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "initiate",
+      "meaning_vi": "khởi xướng; bắt đầu",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "inquiry",
+      "meaning_vi": "yêu cầu thông tin; câu hỏi; cuộc điều tra",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "installation",
+      "meaning_vi": "sự lắp đặt; thiết bị được lắp đặt",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "introduce",
+      "meaning_vi": "giới thiệu; đưa vào sử dụng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "job opening",
+      "meaning_vi": "vị trí tuyển dụng còn trống",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "keep",
+      "meaning_vi": "giữ; duy trì",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "leaflet",
+      "meaning_vi": "tờ rơi; tờ thông tin",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "leave",
+      "meaning_vi": "rời đi; nghỉ phép",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "lodging",
+      "meaning_vi": "chỗ ở; nơi lưu trú",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "loss",
+      "meaning_vi": "sự mất mát; khoản lỗ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "magazine",
+      "meaning_vi": "tạp chí",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "main address",
+      "meaning_vi": "địa chỉ chính",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "main office",
+      "meaning_vi": "trụ sở chính; văn phòng chính",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "manage",
+      "meaning_vi": "quản lý; xoay xở",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "mark",
+      "meaning_vi": "đánh dấu; điểm số",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "mark down",
+      "meaning_vi": "giảm giá; ghi chú",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "markdown",
+      "meaning_vi": "mức giảm giá; sự giảm giá",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "market",
+      "meaning_vi": "thị trường; tiếp thị",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "meeting",
+      "meaning_vi": "cuộc họp",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "meeting record",
+      "meaning_vi": "biên bản cuộc họp",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "moment",
+      "meaning_vi": "khoảnh khắc; thời điểm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "monthly",
+      "meaning_vi": "hằng tháng; hàng tháng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "move",
+      "meaning_vi": "di chuyển; chuyển động",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "neglect",
+      "meaning_vi": "bỏ bê; sao nhãng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "never",
+      "meaning_vi": "không bao giờ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "night",
+      "meaning_vi": "ban đêm; buổi tối",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "nil",
+      "meaning_vi": "số không; không có",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "none",
+      "meaning_vi": "không có gì; không ai",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "nonurgent",
+      "meaning_vi": "không khẩn cấp",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "notification",
+      "meaning_vi": "thông báo",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "nought",
+      "meaning_vi": "số không",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "observe",
+      "meaning_vi": "quan sát; tuân thủ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "occasion",
+      "meaning_vi": "dịp; cơ hội",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "once a month",
+      "meaning_vi": "mỗi tháng một lần",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "once a week",
+      "meaning_vi": "mỗi tuần một lần",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "opening",
+      "meaning_vi": "lễ khai trương; vị trí còn trống; phần mở đầu",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "optional",
+      "meaning_vi": "không bắt buộc; tùy chọn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "output",
+      "meaning_vi": "đầu ra; sản lượng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "pamphlet",
+      "meaning_vi": "sách mỏng; tập tài liệu giới thiệu",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "participate",
+      "meaning_vi": "tham gia",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "per-month",
+      "meaning_vi": "mỗi tháng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "period",
+      "meaning_vi": "khoảng thời gian; thời kỳ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "permanent",
+      "meaning_vi": "lâu dài; vĩnh viễn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "plan",
+      "meaning_vi": "kế hoạch; dự định",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "postal code",
+      "meaning_vi": "mã bưu chính",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "present",
+      "meaning_vi": "trình bày; hiện tại; có mặt",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "preserve",
+      "meaning_vi": "bảo quản; giữ gìn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "pressing",
+      "meaning_vi": "cấp bách; khẩn thiết",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "proceeds",
+      "meaning_vi": "tiền thu được; doanh thu từ việc bán",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "produce",
+      "meaning_vi": "sản xuất; nông sản",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "products",
+      "meaning_vi": "sản phẩm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "profit",
+      "meaning_vi": "lợi nhuận; thu lợi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "progress report",
+      "meaning_vi": "báo cáo tiến độ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "promote",
+      "meaning_vi": "thăng chức; quảng bá; xúc tiến",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "proof of payment",
+      "meaning_vi": "chứng từ thanh toán; bằng chứng đã trả tiền",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "provider",
+      "meaning_vi": "nhà cung cấp; đơn vị cung ứng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "provisional",
+      "meaning_vi": "tạm thời; dự kiến",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "put off",
+      "meaning_vi": "trì hoãn; hoãn lại",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "question",
+      "meaning_vi": "câu hỏi; vấn đề",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "radiograph",
+      "meaning_vi": "ảnh X-quang",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "reach",
+      "meaning_vi": "đạt tới; liên hệ; tầm với",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "receive",
+      "meaning_vi": "nhận; tiếp nhận",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "recruit",
+      "meaning_vi": "tuyển dụng; tuyển người",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "reduce",
+      "meaning_vi": "giảm; cắt giảm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "reduction",
+      "meaning_vi": "sự giảm; mức cắt giảm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "refresh",
+      "meaning_vi": "làm mới; cập nhật",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "refuse",
+      "meaning_vi": "từ chối",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "region",
+      "meaning_vi": "khu vực; vùng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "reject",
+      "meaning_vi": "từ chối; bác bỏ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "release",
+      "meaning_vi": "phát hành; công bố; giải phóng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "relocate",
+      "meaning_vi": "di dời; chuyển địa điểm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "remove",
+      "meaning_vi": "loại bỏ; di chuyển",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "rent",
+      "meaning_vi": "thuê; tiền thuê",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "rental agreement",
+      "meaning_vi": "hợp đồng thuê",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "required",
+      "meaning_vi": "được yêu cầu; bắt buộc",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "restriction",
+      "meaning_vi": "sự hạn chế; quy định giới hạn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "retreat",
+      "meaning_vi": "rút lui; nơi nghỉ dưỡng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "return",
+      "meaning_vi": "trả lại; quay về; lợi nhuận",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "revise",
+      "meaning_vi": "sửa đổi; ôn tập",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "revision",
+      "meaning_vi": "sự sửa đổi; bản chỉnh sửa",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "rigid",
+      "meaning_vi": "cứng nhắc; không linh hoạt",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "rule",
+      "meaning_vi": "quy tắc; quy định",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "run",
+      "meaning_vi": "chạy; vận hành; điều hành",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "saturday and sunday",
+      "meaning_vi": "thứ Bảy và Chủ nhật; cuối tuần",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "scatter",
+      "meaning_vi": "rải ra; phân tán",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "schedule",
+      "meaning_vi": "lịch trình; lên lịch",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "see",
+      "meaning_vi": "nhìn thấy; gặp; hiểu",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "sell",
+      "meaning_vi": "bán",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "seller",
+      "meaning_vi": "người bán",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "separate",
+      "meaning_vi": "riêng biệt; tách ra",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "service",
+      "meaning_vi": "dịch vụ; phục vụ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "set off",
+      "meaning_vi": "khởi hành; kích hoạt",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "shift",
+      "meaning_vi": "ca làm việc; sự thay đổi; chuyển dịch",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "shipment",
+      "meaning_vi": "lô hàng; việc vận chuyển hàng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "short-term",
+      "meaning_vi": "ngắn hạn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "sixty minutes",
+      "meaning_vi": "sáu mươi phút; một giờ",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "staff",
+      "meaning_vi": "nhân viên; đội ngũ nhân sự",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "staff member",
+      "meaning_vi": "thành viên nhân viên; nhân viên",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "standard",
+      "meaning_vi": "tiêu chuẩn; mức chuẩn",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "statement",
+      "meaning_vi": "bản tuyên bố; sao kê",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "storage facility",
+      "meaning_vi": "cơ sở lưu kho; kho chứa hàng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "submit",
+      "meaning_vi": "nộp; trình lên",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "summit",
+      "meaning_vi": "hội nghị thượng đỉnh; đỉnh núi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "supplier",
+      "meaning_vi": "nhà cung cấp",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "surcharge",
+      "meaning_vi": "phụ phí",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "time limit",
+      "meaning_vi": "giới hạn thời gian",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "timetable",
+      "meaning_vi": "thời khóa biểu; lịch trình",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "travel plan",
+      "meaning_vi": "kế hoạch chuyến đi",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "travel to work",
+      "meaning_vi": "đi lại đến nơi làm việc",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "twelve months",
+      "meaning_vi": "mười hai tháng; một năm",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "understanding",
+      "meaning_vi": "sự hiểu biết; thỏa thuận",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "unnecessary",
+      "meaning_vi": "không cần thiết",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "usefulness",
+      "meaning_vi": "tính hữu ích",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "validate",
+      "meaning_vi": "xác nhận tính hợp lệ; kiểm chứng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "vendor",
+      "meaning_vi": "người bán; nhà cung cấp",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "verify",
+      "meaning_vi": "xác minh; kiểm chứng",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "versatile",
+      "meaning_vi": "đa năng; linh hoạt",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "warrant",
+      "meaning_vi": "bảo đảm; chứng minh là cần thiết",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "warranty",
+      "meaning_vi": "bảo hành; giấy bảo hành",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "weekday",
+      "meaning_vi": "ngày trong tuần (thường từ thứ Hai đến thứ Sáu)",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "weekend",
+      "meaning_vi": "cuối tuần",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "weekly",
+      "meaning_vi": "hằng tuần",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "welcome",
+      "meaning_vi": "chào đón; sự hoan nghênh",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "worker",
+      "meaning_vi": "người lao động; công nhân",
+      "source": "curated-related-glossary"
+    },
+    {
+      "term": "workforce",
+      "meaning_vi": "lực lượng lao động",
+      "source": "curated-related-glossary"
+    }
+  ]
+}

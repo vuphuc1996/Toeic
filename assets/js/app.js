@@ -1,10 +1,11 @@
+import { LocalNotificationProvider } from './notification-provider.js';
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const icon = (name, cls='ui-icon') => `<svg class="${cls}" aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const DB_NAME = 'toeic-vocabulary-phase1';
 const DB_STORE = 'workspace';
-const state = { words: [], baseWords: [], categories: [], activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, currentQuestion: null, questionAnswered: false, sessionSeenIds: [], lastFeedback: null };
+const state = { words: [], baseWords: [], categories: [], relatedTerms: new Map(), activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3 }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionAnswered: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceCancelled: false };
 
 function openDB() {
   return new Promise((resolve, reject) => {
@@ -66,9 +67,10 @@ async function loadData() {
   const manifestResponse=await fetch('./data/manifest.json',{cache:'no-store'});
   if(!manifestResponse.ok) throw new Error(`Không đọc được manifest.json (${manifestResponse.status}).`);
   const manifest=await manifestResponse.json();
-  const [categoryResponse,...letterResponses]=await Promise.all([fetch(manifest.categories),...manifest.letters.map(x=>fetch(x.file))]);
+  const [categoryResponse,relatedResponse,...letterResponses]=await Promise.all([fetch(manifest.categories),fetch('./data/related-terms.json').catch(()=>null),...manifest.letters.map(x=>fetch(x.file))]);
   if(!categoryResponse.ok) throw new Error('Không đọc được categories.json.');
   const categoryData=await categoryResponse.json();
+  if(relatedResponse?.ok){const relatedData=await relatedResponse.json();state.relatedTerms=new Map((relatedData.terms||[]).map(item=>[normalizedAnswer(item.term),item]));}else{state.relatedTerms=new Map();}
   const loaded=[];
   for(let i=0;i<letterResponses.length;i++){
     const response=letterResponses[i];
@@ -100,12 +102,16 @@ function populateFilters(){
   $('#dataLetterFilter').innerHTML='<option value="">Tất cả A–Z</option>'+ALPHABET.map(l=>`<option value="${l}">${l}</option>`).join('');
 }
 function navigate(page){
+  if(state.activePage==='practice'&&page!=='practice') pauseAutoAdvance();
   state.activePage=page;
   $$('.page').forEach(p=>p.classList.toggle('active',p.id===`page-${page}`));
   $$('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
-  const titles={dashboard:'Tổng quan',dictionary:'Từ vựng',practice:'Ôn tập',data:'Quản lý dữ liệu'};
+  const titles={dashboard:'Tổng quan',dictionary:'Từ vựng',practice:'Ôn tập',data:'Quản lý dữ liệu',settings:'Cấu hình'};
   $('#pageTitle').textContent=titles[page]||'Tổng quan';
-  if(page==='dictionary') renderDictionary(); if(page==='data') renderDataTable(); if(page==='practice'){if(!state.currentQuestion)nextQuestion();renderQuestion();updatePracticeStats();renderReminderStatus();}
+  if(page==='dictionary') renderDictionary();
+  if(page==='data') renderDataTable();
+  if(page==='practice'){if(!state.currentQuestion)nextQuestion();renderQuestion();updatePracticeStats();resumeAutoAdvance();}
+  if(page==='settings') renderReminderStatus();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function filteredWords(){
@@ -146,7 +152,7 @@ function showDetail(id){
   const family=w.word_family?.length?`<div class="detail-section"><h4>WORD FAMILY</h4><div class="detail-pills">${w.word_family.map(x=>`<span class="detail-pill"><strong>${escapeHtml(displayWord(x.word))}</strong> · ${escapeHtml(x.pos||'')} — ${escapeHtml(x.meaning_vi||'')}</span>`).join('')}</div></div>`:'';
   const verbs=w.verb_forms?`<div class="detail-section"><h4>VERB FORMS</h4><div class="detail-pills">${Object.entries({V1:w.verb_forms.v1,'V-s/es':w.verb_forms.vs_es,V2:w.verb_forms.v2,V3:w.verb_forms.v3,'V-ing':w.verb_forms.ving}).filter(x=>x[1]).map(([k,v])=>`<span class="detail-pill"><strong>${k}:</strong> ${escapeHtml(v)}</span>`).join('')}</div></div>`:'';
   const examples=(w.examples||[]).map(e=>`<div class="example-card"><strong>${escapeHtml(e.en)}</strong><span>${escapeHtml(e.vi)}</span></div>`).join('');
-  $('#modalContent').innerHTML=`<h3 class="detail-word">${escapeHtml(displayWord(w.word))}</h3><div class="detail-ipa">${escapeHtml(w.phonetic?.us||'Chưa có phiên âm')}</div><div class="detail-pos">${posMarkup(w)}</div><div class="detail-section"><h4>MEANING & DEFINITIONS</h4>${senses||'<p>Chưa có nghĩa.</p>'}</div>${family}${verbs}<div class="detail-section"><h4>TOPICS</h4>${topicsMarkup(w.topics)}</div>${w.collocations?.length?`<div class="detail-section"><h4>COLLOCATIONS</h4><div class="detail-pills">${w.collocations.map(x=>`<span class="detail-pill">${escapeHtml(x)}</span>`).join('')}</div></div>`:''}<div class="detail-section"><h4>EXAMPLES</h4>${examples||'<p>Chưa có ví dụ.</p>'}</div><div class="modal-actions"><button class="secondary-button" data-edit="${escapeHtml(w.id)}">${icon('edit','ui-icon button-icon')} Sửa bản ghi</button></div>`;
+  $('#modalContent').innerHTML=`<h3 class="detail-word">${escapeHtml(displayWord(w.word))}</h3><div class="detail-ipa">${escapeHtml(w.phonetic?.us||'Chưa có phiên âm')}</div><div class="detail-pos">${posMarkup(w)}</div><div class="detail-section"><h4>MEANING & DEFINITIONS</h4>${senses||'<p>Chưa có nghĩa.</p>'}</div>${family}${verbs}<div class="detail-section"><h4>TOPICS</h4>${topicsMarkup(w.topics)}</div>${w.collocations?.length?`<div class="detail-section"><h4>COLLOCATIONS</h4><div class="detail-pills">${w.collocations.map(x=>`<span class="detail-pill">${escapeHtml(x)}</span>`).join('')}</div></div>`:''}<div class="detail-section"><h4>EXAMPLES</h4>${examples||'<p>Chưa có ví dụ.</p>'}</div><div class="modal-actions"><button class="secondary-button" data-ai-word="${escapeHtml(w.id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bằng Google AI</button><button class="secondary-button" data-edit="${escapeHtml(w.id)}">${icon('edit','ui-icon button-icon')} Sửa bản ghi</button></div>`;
   $('#modalBackdrop').hidden=false;
 }
 function openEditor(id=null){
@@ -252,8 +258,8 @@ function maskWord(word) {
   if (chars.length >= 6) reveal.add(Math.floor(chars.length/2));
   return chars.map((ch,i)=>reveal.has(i)?ch:'_').join(' ');
 }
-function makeQuestion(mode='random') {
-  const chosen = choosePracticeWord(mode);
+function makeQuestion(mode='random', forcedWordId=null) {
+  const chosen = forcedWordId ? state.words.find(w => w.id === forcedWordId) : choosePracticeWord(mode);
   if (!chosen) return null;
   const supported = eligibleModes(chosen);
   const actualMode = mode === 'random' ? supported[Math.floor(Math.random()*supported.length)] : mode;
@@ -298,7 +304,7 @@ function makeQuestion(mode='random') {
   return q;
 }
 async function savePracticeSession() {
-  await dbSet('practiceSession', { currentQuestion: state.currentQuestion, questionAnswered: state.questionAnswered, sessionSeenIds: state.sessionSeenIds, lastFeedback: state.lastFeedback });
+  await dbSet('practiceSession', { currentQuestion: state.currentQuestion, questionAnswered: state.questionAnswered, sessionSeenIds: state.sessionSeenIds, lastFeedback: state.lastFeedback, autoAdvanceCancelled: state.autoAdvanceCancelled });
 }
 function progressPriorityLabel(wordId) {
   const p = getWordProgress(wordId);
@@ -314,7 +320,7 @@ function renderQuestion() {
     $('#questionType').textContent='SẴN SÀNG'; $('#questionPrompt').textContent='Chọn “Câu hỏi mới” để bắt đầu.';
     $('#questionHint').textContent='Câu hỏi được chọn từ kho từ vựng và ưu tiên từ bạn chưa thuộc.';
     $('#choiceList').hidden=true; $('#answerForm').hidden=false; $('#answerInput').value='';
-    $('#nextQuestionButton').disabled=true; $('#answerFeedback').hidden=true; return;
+    $('#nextQuestionButton').disabled=true; $('#answerFeedback').hidden=true; $('#choiceReview').hidden=true; return;
   }
   const names = {missing:'MISSING LETTERS', 'meaning-to-word':'VIETNAMESE → ENGLISH', 'word-to-meaning':'ENGLISH → VIETNAMESE', pos:'PART OF SPEECH', synonym:'SYNONYM', antonym:'ANTONYM', verb:'VERB FORMS'};
   $('#questionType').textContent = names[q.mode] || 'PRACTICE';
@@ -323,7 +329,12 @@ function renderQuestion() {
   $('#questionPriority').textContent=progressPriorityLabel(q.wordId);
   const isChoice=q.choices?.length>0;
   $('#choiceList').hidden=!isChoice;
-  $('#choiceList').innerHTML=isChoice?q.choices.map((choice,i)=>{const picked=state.questionAnswered&&state.lastFeedback&&normalizedAnswer(state.lastFeedback.input)===normalizedAnswer(choice);const isRight=q.accepted.some(a=>normalizedAnswer(a)===normalizedAnswer(choice));const cls=state.questionAnswered&&isRight?' correct-choice':state.questionAnswered&&picked?' wrong-choice':'';return `<button type="button" class="choice-option${picked?' selected':''}${cls}" data-choice="${escapeHtml(choice)}" ${state.questionAnswered?'disabled':''}><span>${String.fromCharCode(65+i)}</span>${escapeHtml(choice)}</button>`;}).join(''):'';
+  $('#choiceList').innerHTML=isChoice?q.choices.map((choice,i)=>{
+    const picked=state.questionAnswered&&state.lastFeedback&&normalizedAnswer(state.lastFeedback.input)===normalizedAnswer(choice);
+    const isRight=q.accepted.some(a=>normalizedAnswer(a)===normalizedAnswer(choice));
+    const cls=state.questionAnswered&&isRight?' correct-choice':state.questionAnswered&&picked?' wrong-choice':'';
+    return `<button type="button" class="choice-option${picked?' selected':''}${cls}" data-choice="${escapeHtml(choice)}" ${state.questionAnswered?'disabled':''}><span>${String.fromCharCode(65+i)}</span>${escapeHtml(choice)}</button>`;
+  }).join(''):'';
   $('#answerForm').hidden=isChoice;
   $('#answerInput').value=''; $('#answerInput').disabled=state.questionAnswered;
   $('#answerLabel').textContent=q.expectedWord?'NHẬP TỪ TIẾNG ANH':'CÂU TRẢ LỜI';
@@ -333,6 +344,7 @@ function renderQuestion() {
   $('#nextQuestionButton').disabled=!state.questionAnswered;
   $('#skipQuestionButton').disabled=state.questionAnswered;
   if (state.questionAnswered && state.lastFeedback) renderFeedback(state.lastFeedback);
+  else { $('#choiceReview').hidden=true; $('#autoAdvanceRow').hidden=true; }
 }
 function alignCharacters(expected, actual) {
   const a=[...expected], b=[...actual]; const dp=Array.from({length:a.length+1},()=>Array(b.length+1).fill(0));
@@ -351,11 +363,87 @@ function alignCharacters(expected, actual) {
   }
   return cells.reverse();
 }
+const POS_EXPLANATIONS = {
+  n:'Danh từ – chỉ người, vật, sự việc, khái niệm hoặc địa điểm.',
+  v:'Động từ – diễn tả hành động, trạng thái hoặc quá trình.',
+  adj:'Tính từ – bổ nghĩa cho danh từ hoặc đứng sau một số động từ nối.',
+  adv:'Trạng từ – bổ nghĩa cho động từ, tính từ, trạng từ hoặc cả câu.',
+  prep:'Giới từ – thể hiện quan hệ về thời gian, địa điểm, phương thức...',
+  conj:'Liên từ – nối từ, cụm từ hoặc mệnh đề.',
+  pron:'Đại từ – thay thế cho danh từ hoặc cụm danh từ.',
+  'n/v':'Có thể dùng như danh từ hoặc động từ tùy ngữ cảnh.'
+};
+function lookupWord(term) {
+  const needle=normalizedAnswer(term);
+  return state.words.find(w=>normalizedAnswer(w.word)===needle)
+    || state.words.find(w=>(w.word_family||[]).some(f=>normalizedAnswer(f.word)===needle))
+    || null;
+}
+function findRelatedSources(term, relationKey=null) {
+  const needle=normalizedAnswer(term);
+  return state.words.filter(w=>(w.senses||[]).some(s=>{
+    const keys=relationKey?[relationKey]:['synonyms','antonyms'];
+    return keys.some(k=>(s[k]||[]).some(x=>normalizedAnswer(x)===needle));
+  })).slice(0,3);
+}
+function getChoiceExplanation(q, choice, isCorrect) {
+  if(q.mode==='pos') return POS_EXPLANATIONS[choice] || 'Ký hiệu loại từ trong tiếng Anh.';
+  if(q.mode==='word-to-meaning') {
+    const sources=state.words.filter(w=>(w.senses||[]).some(s=>normalizedAnswer(s.meaning_vi)===normalizedAnswer(choice)));
+    if(sources.length) return `Nghĩa này được dùng cho: ${sources.slice(0,3).map(w=>`${displayWord(w.word)} (${getAllPos(w).join('/')||'—'})`).join(', ')}.`;
+    return 'Đây là một phương án diễn đạt nghĩa tiếng Việt khác; hãy đối chiếu với nghĩa chính của từ trong câu hỏi.';
+  }
+  if(q.mode==='synonym'||q.mode==='antonym') {
+    const exact=lookupWord(choice);
+    if(exact) {
+      const senses=(exact.senses||[]).map(s=>`${s.pos||'—'}: ${s.meaning_vi||'chưa có nghĩa'}${s.definition_en?` (${s.definition_en})`:''}`).join('; ');
+      return `Nghĩa của ${displayWord(exact.word)}: ${senses||'Chưa có nghĩa tiếng Việt.'}`;
+    }
+    const alias=state.relatedTerms?.get(normalizedAnswer(choice));
+    const relation=q.mode==='synonym'?'đồng nghĩa với':'trái nghĩa với';
+    const source=state.words.find(w=>w.id===q.wordId);
+    const refs=findRelatedSources(choice);
+    if(alias) {
+      const context=refs.length?` Có liên hệ trong dữ liệu với: ${refs.map(w=>`${displayWord(w.word)} (${getPrimarySense(w).meaning_vi})`).join('; ')}.`:'';
+      return `Nghĩa tiếng Việt: ${alias.meaning_vi}. Đây là phương án ${relation} ${displayWord(q.word)} trong câu hỏi hiện tại.${context}`;
+    }
+    if(isCorrect) {
+      const meaning=source?getPrimarySense(source).meaning_vi:'';
+      return `Phương án này được lưu là ${relation} ${displayWord(q.word)}. Nghĩa riêng của lựa chọn chưa có trong bảng tham chiếu; nghĩa từ gốc: ${meaning||'xem từ điển gốc'}.`;
+    }
+    if(refs.length) return `Được dùng trong nhóm từ liên hệ của ${refs.map(w=>`${displayWord(w.word)} – ${getPrimarySense(w).meaning_vi}`).join('; ')}. Chưa có nghĩa độc lập đã kiểm chứng trong bảng tham chiếu.`;
+    return 'Chưa có nghĩa riêng trong bảng tham chiếu hiện tại. Có thể dùng nút Google AI để phân tích và kiểm chứng thêm.';
+  }
+  const exact=lookupWord(choice);
+  if(exact) return `${getAllPos(exact).join('/')} · ${(exact.senses||[]).map(s=>s.meaning_vi).filter(Boolean).join('; ')}`;
+  return isCorrect?'Đáp án khớp với dạng cần điền.':'So sánh với đáp án chuẩn và thông tin từ vựng bên dưới.';
+}
+function renderChoiceReview(q, feedback) {
+  const host=$('#choiceReview');
+  if(!q?.choices?.length){host.hidden=true;host.innerHTML='';return;}
+  host.hidden=false;
+  host.innerHTML=`<div class="choice-review-title"><strong>Giải nghĩa toàn bộ lựa chọn</strong><span>A–D</span></div><div class="choice-review-list">${q.choices.map((choice,i)=>{
+    const correct=q.accepted.some(x=>normalizedAnswer(x)===normalizedAnswer(choice));
+    const selected=normalizedAnswer(feedback.input)===normalizedAnswer(choice);
+    const badge=correct?(q.mode==='synonym'?'ĐÚNG · ĐỒNG NGHĨA':q.mode==='antonym'?'ĐÚNG · TRÁI NGHĨA':'ĐÁP ÁN ĐÚNG'):selected?'BẠN ĐÃ CHỌN · SAI':'PHƯƠNG ÁN KHÔNG ĐÚNG';
+    const cls=correct?'is-correct':selected?'is-selected-wrong':'is-neutral';
+    return `<article class="choice-review-item ${cls}"><div class="choice-review-head"><span class="choice-review-letter">${String.fromCharCode(65+i)}</span><strong>${escapeHtml(choice)}</strong><em>${badge}</em></div><p>${escapeHtml(getChoiceExplanation(q,choice,correct))}</p></article>`;
+  }).join('')}</div>`;
+}
+function renderWordReference(w,q,feedback) {
+  if(!w)return '';
+  const senses=(w.senses||[]).map(s=>`<div class="reference-sense"><span class="meaning-pos">${escapeHtml(s.pos||'')}</span><strong>${escapeHtml(s.meaning_vi||'')}</strong>${s.definition_en?`<small>${escapeHtml(s.definition_en)}</small>`:''}${s.synonyms?.length?`<p><b>Đồng nghĩa:</b> ${s.synonyms.map(escapeHtml).join(', ')}</p>`:''}${s.antonyms?.length?`<p><b>Trái nghĩa:</b> ${s.antonyms.map(escapeHtml).join(', ')}</p>`:''}</div>`).join('');
+  const examples=(w.examples||[]).map(e=>`<small class="reference-example">${escapeHtml(e.en)}${e.vi?` — ${escapeHtml(e.vi)}`:''}</small>`).join('');
+  const family=(w.word_family||[]).length?`<p><b>Word family:</b> ${w.word_family.map(f=>`${escapeHtml(displayWord(f.word))} (${escapeHtml(f.pos||'')}) – ${escapeHtml(f.meaning_vi||'')}`).join('; ')}</p>`:'';
+  const forms=w.verb_forms?`<p><b>Verb forms:</b> ${Object.entries({V1:w.verb_forms.v1,'V-s/es':w.verb_forms.vs_es,V2:w.verb_forms.v2,V3:w.verb_forms.v3,'V-ing':w.verb_forms.ving}).filter(([,v])=>v).map(([k,v])=>`${k}: ${escapeHtml(v)}`).join(' · ')}</p>`:'';
+  const selected=feedback.correct?'Bạn đã trả lời đúng.':`Bạn nhập/chọn: ${escapeHtml(feedback.input)} · Đáp án: ${escapeHtml(feedback.expected)}`;
+  return `<div class="reference-title-row"><strong>${escapeHtml(displayWord(w.word))}</strong><span>${escapeHtml(w.phonetic?.us||'')}</span></div><p class="reference-overview">${escapeHtml(selected)}</p>${senses}${family}${forms}${w.collocations?.length?`<p><b>Collocations:</b> ${w.collocations.map(escapeHtml).join(', ')}</p>`:''}${examples}${w.topics?.length?`<p><b>Chủ đề:</b> ${w.topics.map(escapeHtml).join(', ')}</p>`:''}`;
+}
 function renderFeedback(feedback) {
   $('#answerFeedback').hidden=false;
   $('#feedbackHeading').textContent=feedback.correct?'Chính xác! Bạn làm tốt lắm.':'Chưa chính xác – hãy ghi nhớ vị trí cần sửa.';
   $('#feedbackHeading').className=`feedback-heading ${feedback.correct?'is-correct':'is-wrong'}`;
-  $('#feedbackExplanation').textContent=feedback.correct?'Đáp án đã được ghi nhận vào lịch sử học tập.':`Đáp án đúng: ${feedback.expected}`;
+  $('#feedbackExplanation').textContent=feedback.correct?'Đáp án đã được ghi nhận. Hãy xem nghĩa của tất cả lựa chọn bên dưới.':`Đáp án đúng: ${feedback.expected}. Bạn có thể xem lại từng lựa chọn để ghi nhớ.`;
   const q=state.currentQuestion;
   if(q?.expectedWord){
     const cells=alignCharacters(q.expectedDisplay,feedback.input||'');
@@ -363,8 +451,9 @@ function renderFeedback(feedback) {
     $('#characterFeedback').innerHTML=cells.map(c=>`<span class="char-cell ${c.status}"><b>${escapeHtml(c.actual||'·')}</b><small>${escapeHtml(c.expected||'thừa')}</small></span>`).join('');
   } else { $('#characterFeedback').hidden=true; $('#characterFeedback').innerHTML=''; }
   const w=state.words.find(x=>x.id===q?.wordId);
-  const sense=w?getPrimarySense(w):{};
-  $('#answerReference').innerHTML=w?`<strong>${escapeHtml(displayWord(w.word))}</strong> <span>${escapeHtml(w.phonetic?.us||'')}</span><p>${escapeHtml(sense.meaning_vi||'')}</p>${w.examples?.[0]?`<small>${escapeHtml(w.examples[0].en)} — ${escapeHtml(w.examples[0].vi)}</small>`:''}`:'';
+  $('#answerReference').innerHTML=renderWordReference(w,q,feedback);
+  renderChoiceReview(q,feedback);
+  updateAutoAdvanceUI();
 }
 async function updatePracticeProgress(wordId, correct, input) {
   const now=Date.now(); const p=getWordProgress(wordId);
@@ -408,9 +497,12 @@ async function submitAnswer(value) {
   if(state.reminder.enabled){state.reminder.pendingAnswered=true;state.reminder.pendingWordId=null;state.reminder.nextAt=Date.now()+state.reminder.intervalMinutes*60000;await dbSet('reminderSettings',state.reminder);}
   await savePracticeSession(); renderQuestion(); renderReminderStatus();
   $('#nextQuestionButton').disabled=false; $('#skipQuestionButton').disabled=true;
+  scheduleAutoAdvance();
   toast(correct?'Đã ghi nhận câu trả lời đúng.':'Đã lưu kết quả. Từ này sẽ được ưu tiên ôn lại.');
 }
 async function nextQuestion(modeOverride=null) {
+  clearAutoAdvance();
+  state.autoAdvanceCancelled=false;
   const mode=modeOverride||$('#practiceMode').value||'random';
   const q=makeQuestion(mode);
   if(!q){toast('Chưa có từ phù hợp với dạng bài này. Hãy thêm dữ liệu hoặc chọn dạng khác.','error');return;}
@@ -421,6 +513,62 @@ async function skipQuestion() {
   if(!state.currentQuestion||state.questionAnswered)return;
   state.sessionSeenIds.push(state.currentQuestion.wordId);
   await nextQuestion($('#practiceMode').value);
+}
+function clearAutoAdvance() {
+  if(state.autoAdvanceTimer){clearInterval(state.autoAdvanceTimer);state.autoAdvanceTimer=null;}
+  state.autoAdvanceAt=null;
+  state.autoAdvanceRemaining=null;
+}
+function updateAutoAdvanceUI() {
+  const row=$('#autoAdvanceRow');
+  if(!row)return;
+  const active=!!state.questionAnswered && !!state.settings.autoNextEnabled && !state.autoAdvanceCancelled;
+  row.hidden=!active;
+  if(active&&state.autoAdvanceAt){const seconds=Math.max(0,Math.ceil((state.autoAdvanceAt-Date.now())/1000));$('#autoAdvanceStatus').textContent=`Tự động chuyển câu tiếp theo sau ${seconds} giây.`;}
+  else if(active){const seconds=Math.max(0,Math.ceil((state.autoAdvanceRemaining??((Number(state.settings.autoNextDelaySeconds)||3)*1000))/1000));$('#autoAdvanceStatus').textContent=`Tự động chuyển câu tiếp theo sau ${seconds} giây.`;}
+}
+function pauseAutoAdvance() {
+  if(state.autoAdvanceAt) state.autoAdvanceRemaining=Math.max(0,state.autoAdvanceAt-Date.now());
+  if(state.autoAdvanceTimer){clearInterval(state.autoAdvanceTimer);state.autoAdvanceTimer=null;}
+  state.autoAdvanceAt=null;
+  if(state.questionAnswered) updateAutoAdvanceUI();
+}
+function resumeAutoAdvance() {
+  if(!state.questionAnswered||!state.settings.autoNextEnabled||state.autoAdvanceCancelled||state.activePage!=='practice'||document.hidden)return;
+  if(state.autoAdvanceTimer)return;
+  const delay=state.autoAdvanceRemaining ?? ((Number(state.settings.autoNextDelaySeconds)||3)*1000);
+  state.autoAdvanceRemaining=null;
+  state.autoAdvanceAt=Date.now()+Math.max(0,delay);
+  state.autoAdvanceTimer=setInterval(async()=>{
+    if(state.activePage!=='practice'||document.hidden)return;
+    const remaining=state.autoAdvanceAt-Date.now();
+    updateAutoAdvanceUI();
+    if(remaining<=0){clearAutoAdvance();await nextQuestion();}
+  },200);
+  updateAutoAdvanceUI();
+}
+function scheduleAutoAdvance() {
+  clearAutoAdvance();
+  state.autoAdvanceCancelled=false;
+  if(!state.settings.autoNextEnabled||!state.questionAnswered){updateAutoAdvanceUI();return;}
+  state.autoAdvanceRemaining=(Number(state.settings.autoNextDelaySeconds)||3)*1000;
+  resumeAutoAdvance();
+  savePracticeSession();
+}
+async function holdCurrentQuestion() {
+  clearAutoAdvance();
+  state.autoAdvanceCancelled=true;
+  await savePracticeSession();
+  updateAutoAdvanceUI();
+  toast('Đã giữ câu hỏi. Bạn có thể xem kỹ đáp án và giải nghĩa.');
+}
+function setAutoNextSettings(enabled, seconds) {
+  state.settings.autoNextEnabled=!!enabled;
+  state.settings.autoNextDelaySeconds=[3,5,10].includes(Number(seconds))?Number(seconds):3;
+  dbSet('appSettings',state.settings).catch(err=>console.warn('Không lưu được cấu hình tự chuyển:',err));
+  if(!state.settings.autoNextEnabled) clearAutoAdvance();
+  else if(state.questionAnswered&&!state.autoAdvanceCancelled) scheduleAutoAdvance();
+  updateAutoAdvanceUI();
 }
 function formatRemaining(ms) {
   if(ms<=0)return 'đã đến giờ nhắc';
@@ -487,7 +635,7 @@ function openInstallInvite(view = 'welcome') {
     const nativeButton = state.deferredInstall && !apple ? `<button type="button" class="primary-button" data-install-action="install">Cài đặt ngay <svg class="ui-icon button-icon"><use href="#icon-download"></use></svg></button>` : '';
     content.innerHTML = `<p class="eyebrow">HƯỚNG DẪN THEO THIẾT BỊ</p><h2 id="installInviteTitle">${platformTitle}</h2><p id="installInviteDescription">${platformIntro}</p>${steps}<div class="install-invite-actions">${nativeButton}<button type="button" class="secondary-button" data-install-action="back">Quay lại</button><button type="button" class="text-button install-web-continue" data-install-action="dismiss">Đã hiểu, tiếp tục</button></div><p class="install-invite-footnote">Bạn phải tự xác nhận thao tác trong menu chia sẻ/cài đặt của thiết bị. Website không tự mở được menu Chia sẻ của iOS.</p>`;
   } else {
-    content.innerHTML = `<p class="eyebrow">TOEIC DICTIONARY · MOBILE EXPERIENCE</p><h2 id="installInviteTitle">Thêm từ điển vào Màn hình chính?</h2><p id="installInviteDescription">Bạn có thể mở TOEIC Dictionary nhanh như một ứng dụng, học tập thuận tiện hơn và dễ quay lại mỗi ngày.</p><div class="install-benefits"><span>${icon('check-circle')} Mở nhanh từ biểu tượng ứng dụng</span><span>${icon('check-circle')} Giao diện gọn, gần giống ứng dụng riêng</span><span>${icon('check-circle')} Vẫn dùng được khi offline với dữ liệu đã cache</span></div><div class="install-invite-actions"><button type="button" class="primary-button" data-install-action="guide">Hướng dẫn thêm vào màn hình chính ${icon('arrow-right','ui-icon button-icon')}</button><button type="button" class="secondary-button" data-install-action="dismiss">Để sau, tiếp tục dùng trên web</button></div><p class="install-invite-footnote">Đây là lựa chọn tự nguyện. Đóng thông báo không ảnh hưởng đến việc sử dụng website.</p>`;
+    content.innerHTML = `<p class="eyebrow">TOEIC DICTIONARY · MOBILE EXPERIENCE</p><h2 id="installInviteTitle">Thêm từ điển vào Màn hình chính?</h2><p id="installInviteDescription">Bạn có thể mở TOEIC Dictionary nhanh như một ứng dụng, học tập thuận tiện hơn và dễ quay lại mỗi ngày.</p><div class="install-benefits"><span>${icon('check-circle')} Mở nhanh từ biểu tượng ứng dụng</span><span>${icon('check-circle')} Giao diện gọn, gần giống ứng dụng riêng</span><span>${icon('check-circle')} Vẫn dùng được khi offline với dữ liệu đã cache</span></div><div class="install-invite-actions"><button type="button" class="primary-button" data-install-action="guide">Hướng dẫn thêm vào màn hình chính ${icon('arrow-right','ui-icon button-icon')}</button><button type="button" class="secondary-button" data-install-action="dismiss">Để sau, tiếp tục dùng trên web</button></div><p class="install-invite-footnote">Đây là lựa chọn tự nguyện. Chọn “Để sau, tiếp tục dùng trên web” để bỏ qua và sử dụng website bình thường.</p>`;
   }
   $('#installInviteBackdrop').hidden = false;
   document.body.classList.add('install-invite-open');
@@ -518,112 +666,87 @@ function initializeInstallInvite() {
     if (!isStandaloneApp() && !installInviteWasDismissed()) openInstallInvite('welcome');
   }, 850);
 }
+
+
 function renderReminderStatus() {
   const enabled=!!state.reminder.enabled;
-  $('#reminderEnabled').checked=enabled;
-  const allowedIntervals = REMINDER_INTERVAL_OPTIONS.map(String);
-  const selectedInterval = String(state.reminder.intervalMinutes || 60);
-  $('#reminderInterval').value=allowedIntervals.includes(selectedInterval)?selectedInterval:'60';
-  $('#reminderStatusDot').classList.toggle('enabled',enabled);
-  const supported=('Notification' in window) && ('serviceWorker' in navigator);
+  const toggle=$('#reminderEnabled'); if(toggle)toggle.checked=enabled;
+  const interval=$('#reminderInterval');
+  if(interval){const selected=String(state.reminder.intervalMinutes||60);interval.value=REMINDER_INTERVAL_OPTIONS.map(String).includes(selected)?selected:'60';}
+  const dot=$('#reminderStatusDot'); if(dot)dot.classList.toggle('enabled',enabled);
+  const supported=('Notification' in window)&&('serviceWorker' in navigator);
   const permission=supported?Notification.permission:'unsupported';
-  const permissionLabel=permission==='granted'?'Thông báo đã được cấp quyền':permission==='denied'?'Thông báo đang bị chặn':'Cho phép thông báo';
-  $('#notificationPermissionButton').innerHTML=`${icon('bell','ui-icon button-icon')}${permissionLabel}`;
-  $('#notificationPermissionButton').disabled=permission==='granted'||permission==='unsupported'||permission==='denied';
-  $('#testNotificationButton').disabled=permission!=='granted';
-  if(!enabled)$('#reminderInfo').textContent='Nhắc nhở đang tắt. Bật để bắt đầu chu kỳ nhắc học.';
-  else if(permission==='unsupported')$('#reminderInfo').textContent='Thiết bị/trình duyệt không hỗ trợ Web Notifications hoặc Service Worker. Popup trong trang vẫn có thể dùng khi ứng dụng đang mở.';
-  else if(permission==='denied')$('#reminderInfo').textContent='Bạn đã chặn thông báo hệ thống. Hãy vào cài đặt website của trình duyệt để cho phép lại; popup trong trang vẫn hoạt động.';
-  else if(permission!=='granted')$('#reminderInfo').textContent='Đang bật bộ đếm. Nhấn “Cho phép thông báo” để bật popup hệ thống; sau đó dùng “Kiểm tra popup”.';
-  else $('#reminderInfo').textContent='Đã cấp quyền thông báo hệ thống. '+(state.reminder.nextAt?`Nhắc tiếp theo sau ${formatRemaining(state.reminder.nextAt-Date.now())}.`:'Đang chuẩn bị chu kỳ nhắc.');
+  const permissionButton=$('#notificationPermissionButton');
+  if(permissionButton){
+    const label=permission==='granted'?'Thông báo đã được cấp quyền':permission==='denied'?'Thông báo đang bị chặn':permission==='unsupported'?'Không hỗ trợ thông báo':'Cho phép thông báo';
+    permissionButton.innerHTML=`${icon('bell','ui-icon button-icon')}${label}`;
+    permissionButton.disabled=permission==='granted'||permission==='unsupported'||permission==='denied';
+  }
+  const testButton=$('#testNotificationButton'); if(testButton)testButton.disabled=permission!=='granted';
+  const info=$('#reminderInfo');
+  if(info){
+    if(!enabled)info.textContent='Nhắc nhở đang tắt. Bật để bắt đầu chu kỳ.';
+    else if(permission==='unsupported')info.textContent='Thiết bị/trình duyệt không hỗ trợ thông báo hệ thống. Popup trong website vẫn hoạt động khi trang đang mở.';
+    else if(permission==='denied')info.textContent='Bạn đã chặn thông báo. Hãy cho phép Notifications trong cài đặt của trình duyệt hoặc thiết bị.';
+    else if(permission!=='granted')info.textContent='Bộ đếm cục bộ đã bật. Cấp quyền Notifications để hiển thị thông báo hệ thống khi ứng dụng còn hoạt động.';
+    else info.textContent=`Đã cấp quyền thông báo hệ thống. ${state.reminder.nextAt?`Lượt nhắc tiếp theo: ${formatRemaining(state.reminder.nextAt-Date.now())}.`:'Đang chuẩn bị chu kỳ nhắc.'}`;
+  }
   const help=$('#notificationPlatformHelp');
-  if(isAppleMobile()&&!isStandaloneApp()) help.textContent='iPhone/iPad: hãy mở trang bằng Safari → Chia sẻ → Thêm vào Màn hình chính. Sau đó mở TOEIC Dictionary từ biểu tượng ngoài màn hình chính, rồi mới cấp quyền thông báo. Web Push trên iPhone/iPad áp dụng cho web app đã thêm vào Home Screen từ iOS/iPadOS 16.4 trở lên.';
-  else if(isAppleMobile()) help.textContent='iPhone/iPad: bạn đang mở dạng ứng dụng màn hình chính. Hãy cho phép Notifications trong hộp thoại iOS và kiểm tra quyền tại Cài đặt → Thông báo → TOEIC Dictionary.';
-  else if(/Android/i.test(navigator.userAgent)) help.textContent='Android: dùng Chrome/Edge, cho phép Notifications cho website và kiểm tra Cài đặt Android → Ứng dụng → Chrome (hoặc TOEIC Dictionary) → Thông báo. Có thể cài PWA để mở như ứng dụng riêng.';
-  else help.textContent='PC/laptop: cho phép Notifications cho website trong trình duyệt và kiểm tra quyền thông báo của Windows/macOS. Nút “Kiểm tra popup” gửi một thông báo thử ngay.';
+  if(help){
+    if(isAppleMobile()&&!isStandaloneApp())help.textContent='iPhone/iPad: để hiện thông báo hệ thống, hãy thêm website vào Màn hình chính bằng Safari, mở từ biểu tượng TOEIC Dictionary rồi mới cấp quyền Notifications.';
+    else if(isAppleMobile())help.textContent='iPhone/iPad: bạn đang dùng PWA. Cho phép Notifications và kiểm tra Cài đặt iOS → Thông báo → TOEIC Dictionary.';
+    else if(/Android/i.test(navigator.userAgent))help.textContent='Android: dùng Chrome/Edge, cấp quyền Notifications cho website/PWA và kiểm tra cài đặt thông báo của hệ điều hành.';
+    else help.textContent='PC/laptop: cấp quyền Notifications cho website trong trình duyệt và cài đặt thông báo Windows/macOS.';
+  }
 }
-
 async function setReminderEnabled(enabled) {
-  state.reminder.enabled=enabled;
+  state.reminder.enabled=!!enabled;
   state.reminder.intervalMinutes=Number($('#reminderInterval').value)||60;
   state.reminder.nextAt=enabled?Date.now()+state.reminder.intervalMinutes*60000:null;
   state.reminder.pendingAnswered=true; state.reminder.pendingWordId=null;
-  await dbSet('reminderSettings',state.reminder); renderReminderStatus();
-  toast(enabled?'Đã bật nhắc nhở học tập.':'Đã tắt nhắc nhở học tập.');
+  await dbSet('reminderSettings',state.reminder);
+  renderReminderStatus();
+  toast(enabled?'Đã bật nhắc nhở cục bộ.':'Đã tắt nhắc nhở học tập.');
 }
 async function requestNotificationPermission() {
-  if(isAppleMobile()&&!isStandaloneApp()){toast('Trên iPhone/iPad, hãy thêm website vào Màn hình chính và mở từ biểu tượng ứng dụng trước khi xin quyền thông báo.','error');renderReminderStatus();return;}
+  if(isAppleMobile()&&!isStandaloneApp()){toast('Trên iPhone/iPad, hãy thêm website vào Màn hình chính và mở từ biểu tượng TOEIC Dictionary trước khi xin quyền thông báo.','error');renderReminderStatus();return;}
   if(!('Notification' in window)){toast('Trình duyệt này không hỗ trợ thông báo hệ thống.','error');return;}
   if(Notification.permission==='denied'){toast('Thông báo đang bị chặn. Hãy cho phép quyền Notifications trong cài đặt website của trình duyệt.','error');return;}
-  try { const permission=await Notification.requestPermission(); renderReminderStatus(); toast(permission==='granted'?'Đã cấp quyền thông báo.':permission==='denied'?'Bạn đã chặn thông báo.':'Chưa cấp quyền thông báo.',permission==='granted'?'success':'error'); }
-  catch(err){toast('Không thể yêu cầu quyền thông báo trên thiết bị này.','error');}
+  try {
+    const permission=await state.notificationProvider?.requestPermission?.() || await Notification.requestPermission();
+    renderReminderStatus();
+    toast(permission==='granted'?'Đã cấp quyền thông báo.':permission==='denied'?'Bạn đã chặn thông báo.':'Chưa cấp quyền thông báo.',permission==='granted'?'success':'error');
+  } catch(err){toast('Không thể yêu cầu quyền thông báo trên thiết bị này.','error');}
 }
 function showReminderPopup(title, body) {
   const host=$('#toastRegion');
   host.querySelectorAll('.reminder-popup').forEach(node=>node.remove());
   const popup=document.createElement('section');
-  popup.className='reminder-popup';
-  popup.setAttribute('role','status');
+  popup.className='reminder-popup'; popup.setAttribute('role','status');
   popup.innerHTML=`<div class="reminder-popup-head"><span class="reminder-popup-icon">${icon('book-open')}</span><strong>${escapeHtml(title)}</strong><button type="button" data-reminder-close aria-label="Đóng thông báo">×</button></div><p>${escapeHtml(body)}</p><div class="reminder-popup-actions"><button type="button" class="reminder-popup-open" data-reminder-open>Ôn tập ngay</button><span>TOEIC DICTIONARY</span></div>`;
-  popup.addEventListener('click',event=>{
-    if(event.target.closest('[data-reminder-close]')) popup.remove();
-    if(event.target.closest('[data-reminder-open]')) { popup.remove(); navigate('practice'); }
-  });
-  host.append(popup);
-  window.setTimeout(()=>{if(popup.isConnected)popup.remove();},18000);
+  popup.addEventListener('click',event=>{if(event.target.closest('[data-reminder-close]'))popup.remove();if(event.target.closest('[data-reminder-open]')){popup.remove();navigate('practice');}});
+  host.append(popup); window.setTimeout(()=>{if(popup.isConnected)popup.remove();},18000);
 }
 async function deliverReminder(title, body) {
   let delivered=false;
-  const hasPermission=('Notification' in window) && Notification.permission==='granted';
-  const pageVisible=document.visibilityState==='visible';
-  if(hasPermission && ('serviceWorker' in navigator)) {
-    try {
-      const reg=await navigator.serviceWorker.ready;
-      await reg.showNotification(title,{
-        body,
-        icon:new URL('./assets/icons/icon-192.png',location.href).href,
-        badge:new URL('./assets/icons/icon-192.png',location.href).href,
-        tag:'toeic-study-reminder',
-        renotify:true,
-        data:{url:new URL('./?open=practice',location.href).href}
-      });
-      delivered=true;
-    } catch(err) { console.warn('Không thể gửi thông báo hệ thống:',err); }
+  if(('Notification'in window)&&Notification.permission==='granted'&&state.notificationProvider){
+    try { const result=await state.notificationProvider.sendNotification({title,body,url:new URL('./?open=practice',location.href).href,tag:'toeic-study-reminder'}); delivered=!!result.delivered; }
+    catch(err){console.warn('Không thể gửi thông báo hệ thống:',err);}
   }
-  if(pageVisible && !delivered) showReminderPopup(title,body);
-  else if(!pageVisible && !delivered) console.info('Nhắc học đã đến hạn nhưng trình duyệt không chạy push nền. Nội dung sẽ được kiểm tra khi người dùng quay lại.');
-  if(!pageVisible && !delivered) return false;
-  return delivered || pageVisible;
+  if(document.visibilityState==='visible'&&!delivered)showReminderPopup(title,body);
+  return delivered || document.visibilityState==='visible';
 }
 async function testNativeNotification() {
-  if(!('Notification' in window) || !('serviceWorker' in navigator)) {
-    toast('Thiết bị này không hỗ trợ thông báo hệ thống qua Service Worker.','error');
-    showReminderPopup('TOEIC Dictionary – Kiểm tra nhắc nhở','Thông báo hệ thống không khả dụng. Popup trong trang vẫn có thể hiển thị khi ứng dụng đang mở.');
-    return;
-  }
-  if(Notification.permission!=='granted') {
-    await requestNotificationPermission();
-    if(Notification.permission!=='granted') return;
-  }
+  if(!('Notification'in window)||!('serviceWorker'in navigator)){toast('Thiết bị này không hỗ trợ thông báo qua Service Worker.','error');showReminderPopup('TOEIC Dictionary – Kiểm tra nhắc nhở','Popup trong website vẫn hoạt động khi trang đang mở.');return;}
+  if(Notification.permission!=='granted'){await requestNotificationPermission();if(Notification.permission!=='granted')return;}
   try {
-    const reg=await navigator.serviceWorker.ready;
-    await reg.showNotification('TOEIC Dictionary – Thông báo thử',{
-      body:'Nếu bạn nhìn thấy popup này ở khu vực thông báo của thiết bị, quyền thông báo hệ thống đã hoạt động.',
-      icon:new URL('./assets/icons/icon-192.png',location.href).href,
-      badge:new URL('./assets/icons/icon-192.png',location.href).href,
-      tag:'toeic-test-notification',
-      renotify:true,
-      data:{url:new URL('./?open=practice',location.href).href}
-    });
-    toast('Đã gửi thông báo thử cho hệ điều hành. Hãy kiểm tra banner/Trung tâm thông báo.');
-  } catch(err) {
-    console.error(err);
-    toast('Không gửi được thông báo thử. Kiểm tra HTTPS, quyền trình duyệt và Service Worker.','error');
-  }
+    const result=await state.notificationProvider.sendNotification({title:'TOEIC Dictionary – Thông báo thử',body:'Nếu bạn nhìn thấy thông báo này trong khu vực thông báo của thiết bị, quyền hệ thống đã hoạt động.',url:new URL('./?open=practice',location.href).href,tag:'toeic-test-notification'});
+    if(result.delivered)toast('Đã gửi thông báo thử cho hệ điều hành. Hãy kiểm tra banner/Trung tâm thông báo.');
+    else {showReminderPopup('TOEIC Dictionary – Kiểm tra nhắc nhở','Thông báo hệ thống chưa khả dụng. Popup trong website vẫn hoạt động khi trang mở.');toast('Không gửi được thông báo hệ thống.','error');}
+  } catch(err){console.error(err);toast('Không gửi được thông báo thử. Kiểm tra HTTPS, quyền trình duyệt và Service Worker.','error');}
 }
-
 async function checkReminder() {
-  if(state.reminderChecking||!state.reminder.enabled||!state.reminder.nextAt||Date.now()<state.reminder.nextAt)return;
+  if(state.reminderChecking || !state.reminder.enabled || !state.reminder.nextAt || Date.now()<state.reminder.nextAt)return;
   state.reminderChecking=true;
   try {
     let title,body;
@@ -652,16 +775,29 @@ async function initializePractice() {
   state.progress=await dbGet('studyProgress')||{};
   const reminder=await dbGet('reminderSettings');
   if(reminder&&typeof reminder==='object')state.reminder={...PRACTICE_DEFAULT_REMINDER,...reminder};
+  const settings=await dbGet('appSettings');
+  if(settings&&typeof settings==='object')state.settings={...state.settings,...settings};
   const session=await dbGet('practiceSession');
-  if(session){state.currentQuestion=session.currentQuestion||null;state.questionAnswered=!!session.questionAnswered;state.sessionSeenIds=Array.isArray(session.sessionSeenIds)?session.sessionSeenIds:[];if(state.currentQuestion?.word){const oldWord=String(state.currentQuestion.word);const newWord=displayWord(oldWord);state.currentQuestion.prompt=String(state.currentQuestion.prompt||'').split(oldWord).join(newWord);state.currentQuestion.word=newWord;if(state.currentQuestion.expectedWord&&state.currentQuestion.expectedDisplay)state.currentQuestion.expectedDisplay=displayWord(state.currentQuestion.expectedDisplay);}}
+  if(session){
+    state.currentQuestion=session.currentQuestion||null; state.questionAnswered=!!session.questionAnswered;
+    state.sessionSeenIds=Array.isArray(session.sessionSeenIds)?session.sessionSeenIds:[];
+    state.lastFeedback=session.lastFeedback||null;
+    state.autoAdvanceCancelled=!!session.autoAdvanceCancelled;
+    if(state.currentQuestion?.word){const oldWord=String(state.currentQuestion.word);const newWord=displayWord(oldWord);state.currentQuestion.prompt=String(state.currentQuestion.prompt||'').split(oldWord).join(newWord);state.currentQuestion.word=newWord;if(state.currentQuestion.expectedWord&&state.currentQuestion.expectedDisplay)state.currentQuestion.expectedDisplay=displayWord(state.currentQuestion.expectedDisplay);}
+  }
   if(state.currentQuestion&&!state.words.some(w=>w.id===state.currentQuestion.wordId)){state.currentQuestion=null;state.questionAnswered=false;}
-  updatePracticeStats(); renderQuestion(); renderReminderStatus();
+  updatePracticeStats(); renderQuestion(); renderReminderStatus(); syncSettingsUI();
   if(state.reminder.enabled&&!state.reminder.nextAt){state.reminder.nextAt=Date.now()+state.reminder.intervalMinutes*60000;await dbSet('reminderSettings',state.reminder);}
   setInterval(()=>{checkReminder();renderReminderStatus();},15000);
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkReminder();});
-  window.addEventListener('focus',checkReminder);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseAutoAdvance();else {checkReminder();resumeAutoAdvance();}});
+  window.addEventListener('focus',()=>{checkReminder();resumeAutoAdvance();});
   if(new URLSearchParams(location.search).get('open')==='practice')navigate('practice');
-  if('serviceWorker' in navigator)navigator.serviceWorker.addEventListener('message',e=>{if(e.data?.type==='OPEN_PRACTICE')navigate('practice');});
+  if(state.questionAnswered&&!state.autoAdvanceCancelled&&state.settings.autoNextEnabled){state.autoAdvanceRemaining=(Number(state.settings.autoNextDelaySeconds)||3)*1000;}
+}
+function syncSettingsUI(){
+  const enabled=$('#autoNextEnabled');if(enabled)enabled.checked=!!state.settings.autoNextEnabled;
+  const delay=$('#autoNextDelay');if(delay)delay.value=String([3,5,10].includes(Number(state.settings.autoNextDelaySeconds))?state.settings.autoNextDelaySeconds:3);
+  renderReminderStatus();
 }
 function bindPracticeEvents() {
   $('#newQuestionButton').addEventListener('click',()=>nextQuestion());
@@ -675,6 +811,10 @@ function bindPracticeEvents() {
   $('#reminderInterval').addEventListener('change',async()=>{const selected=Number($('#reminderInterval').value);state.reminder.intervalMinutes=REMINDER_INTERVAL_OPTIONS.includes(selected)?selected:60;if(state.reminder.enabled)state.reminder.nextAt=Date.now()+state.reminder.intervalMinutes*60000;await dbSet('reminderSettings',state.reminder);renderReminderStatus();toast(`Đã cập nhật chu kỳ ${state.reminder.intervalMinutes===1?'kiểm thử 1 phút':state.reminder.intervalMinutes+' phút'}.`);});
   $('#notificationPermissionButton').addEventListener('click',requestNotificationPermission);
   $('#testNotificationButton').addEventListener('click',testNativeNotification);
+  $('#autoNextEnabled').addEventListener('change',e=>setAutoNextSettings(e.target.checked,$('#autoNextDelay').value));
+  $('#autoNextDelay').addEventListener('change',()=>setAutoNextSettings($('#autoNextEnabled').checked,$('#autoNextDelay').value));
+  $('#holdQuestionButton').addEventListener('click',holdCurrentQuestion);
+  $('#analyzeAnswerAIButton').addEventListener('click',()=>showAIPromptModal(buildPracticeAIPrompt()));
 }
 
 function bindEvents(){
@@ -696,15 +836,14 @@ function bindEvents(){
   $('#importFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{await importFile(file);}catch(err){toast(`Import thất bại: ${err.message}`,'error');}finally{e.target.value='';}});
   $('#exportJsonButton').addEventListener('click',exportJSON);$('#exportCsvButton').addEventListener('click',exportCSV);$('#resetLocalButton').addEventListener('click',resetWorkspace);
   $('#closeModal').addEventListener('click',closeModal);$('#modalBackdrop').addEventListener('click',e=>{if(e.target.id==='modalBackdrop')closeModal();});
-  $('#modalContent').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]');if(edit)openEditor(edit.dataset.edit);});
+  $('#modalContent').addEventListener('click',async e=>{const edit=e.target.closest('[data-edit]');const ai=e.target.closest('[data-ai-word]');const copy=e.target.closest('[data-copy-ai-prompt]');const open=e.target.closest('[data-open-gemini]');if(edit)openEditor(edit.dataset.edit);if(ai){const w=state.words.find(x=>x.id===ai.dataset.aiWord);if(w)showAIPromptModal(buildWordAIPrompt(w));}if(copy)await copyAIPrompt();if(open)openGeminiWithPrompt();});
   $('#globalSearch').addEventListener('keydown',e=>{if(e.key==='Enter'){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
   $('#globalSearch').addEventListener('input',e=>{if(e.target.value.length>=2){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
-  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#globalSearch').focus();}if(e.key==='Escape'){if(!$('#installInviteBackdrop').hidden)closeInstallInvite(true);else closeModal();}});
+  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#globalSearch').focus();}if(e.key==='Escape'){if($('#installInviteBackdrop').hidden)closeModal();}});
   window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();state.deferredInstall=e;syncInstallButton();if(state.installGuideOpen)openInstallInvite('guide');});
   window.addEventListener('appinstalled',()=>{markInstallInviteDismissed();closeInstallInvite(false);syncInstallButton();toast('TOEIC Dictionary đã được thêm vào thiết bị.');});
   $('#installButton').addEventListener('click',()=>{if(isMobileOrTabletDevice())openInstallInvite('guide');else if(state.deferredInstall)runNativeInstall();});
   $('#installInviteBackdrop').addEventListener('click',e=>{
-    if(e.target.id==='installInviteBackdrop'){closeInstallInvite(true);return;}
     const action=e.target.closest('[data-install-action]')?.dataset.installAction;
     if(action==='dismiss')closeInstallInvite(true);
     else if(action==='guide')openInstallInvite('guide');
@@ -713,7 +852,36 @@ function bindEvents(){
   });
   window.addEventListener('pageshow',syncInstallButton);
 }
+function buildWordAIPrompt(word) {
+  const senses=(word.senses||[]).map((s,i)=>`${i+1}. Loại từ: ${s.pos}\n   Nghĩa tiếng Việt: ${s.meaning_vi}\n   Definition: ${s.definition_en||'Chưa có'}\n   Synonyms: ${(s.synonyms||[]).join(', ')||'Chưa có'}\n   Antonyms: ${(s.antonyms||[]).join(', ')||'Chưa có'}`).join('\n');
+  const forms=word.verb_forms?JSON.stringify(word.verb_forms,null,2):'Không áp dụng/chưa có';
+  return `Bạn là giáo viên tiếng Anh chuyên luyện TOEIC cho người học Việt Nam. Hãy phân tích đầy đủ mục từ sau, kiểm tra độ chính xác và không tự bịa dữ liệu.\n\nTỪ: ${displayWord(word.word)}\nIPA: ${word.phonetic?.us||'Chưa có'}\nCHỦ ĐỀ: ${(word.topics||[]).join(', ')}\nCÁC NGHĨA:\n${senses}\nWORD FAMILY: ${JSON.stringify(word.word_family||[],null,2)}\nVERB FORMS: ${forms}\nCOLLOCATIONS: ${(word.collocations||[]).join(', ')||'Chưa có'}\nVÍ DỤ: ${(word.examples||[]).map(e=>`${e.en} — ${e.vi}`).join('\n')||'Chưa có'}\n\nYÊU CẦU PHÂN TÍCH:\n1. Giải thích từng nghĩa và ngữ cảnh sử dụng; chỉ rõ loại từ n/v/adj/adv/prep...\n2. Phân biệt từ đồng nghĩa và trái nghĩa theo đúng ngữ cảnh, chỉ ra sắc thái khác nhau.\n3. Kiểm tra word family, V1/V-s/es/V2/V3/V-ing nếu là động từ.\n4. Nêu collocations và lỗi thường gặp của người Việt.\n5. Tạo tối thiểu 3 ví dụ theo bối cảnh TOEIC (văn phòng, cuộc họp, nhân sự, tài chính, vận chuyển...).\n6. Đề xuất mẹo ghi nhớ dễ hiểu.\n7. Tạo 5 câu hỏi ôn tập kèm đáp án và giải thích ở phần riêng cuối bài.\nNếu dữ liệu nguồn chưa đủ hoặc một quan hệ đồng/trái nghĩa không tự nhiên, hãy nói rõ thay vì suy đoán.`;
+}
+function buildPracticeAIPrompt() {
+  const q=state.currentQuestion; const f=state.lastFeedback; const w=state.words.find(x=>x.id===q?.wordId);
+  if(!q||!f||!w)return 'Hãy giải thích câu hỏi TOEIC hiện tại và cách tìm đáp án đúng.';
+  const options=(q.choices||[]).map((choice,i)=>{const correct=q.accepted.some(x=>normalizedAnswer(x)===normalizedAnswer(choice));return `${String.fromCharCode(65+i)}. ${choice}\n   Trạng thái: ${correct?'Đáp án đúng hợp lệ':'Phương án nhiễu'}\n   Giải nghĩa tham chiếu trong kho: ${getChoiceExplanation(q,choice,correct)}`;}).join('\n');
+  return `Bạn là giáo viên TOEIC và chuyên gia giải thích từ vựng/ngữ pháp cho người Việt. Hãy phân tích toàn bộ câu hỏi, đáp án và các phương án lựa chọn dưới đây.\n\nDẠNG BÀI: ${q.mode}\nCÂU HỎI: ${q.prompt}\nGỢI Ý: ${q.hint||'Không có'}\nTỪ MỤC TIÊU: ${displayWord(w.word)}\nIPA: ${w.phonetic?.us||'Chưa có'}\nCÁC NGHĨA: ${(w.senses||[]).map(s=>`${s.pos}: ${s.meaning_vi} (${s.definition_en||''})`).join('; ')}\nTỪ ĐỒNG NGHĨA: ${(w.senses||[]).flatMap(s=>s.synonyms||[]).join(', ')||'Không có'}\nTỪ TRÁI NGHĨA: ${(w.senses||[]).flatMap(s=>s.antonyms||[]).join(', ')||'Không có'}\nWORD FAMILY: ${JSON.stringify(w.word_family||[])}\nVERB FORMS: ${JSON.stringify(w.verb_forms||{})}\n\nCÁC LỰA CHỌN:\n${options||'Câu trả lời dạng nhập văn bản.'}\n\nCÂU TRẢ LỜI NGƯỜI HỌC: ${f.input}\nKẾT QUẢ: ${f.correct?'ĐÚNG':'SAI'}\nĐÁP ÁN ĐÚNG: ${f.expected}\nVÍ DỤ CỦA TỪ: ${(w.examples||[]).map(e=>`${e.en} — ${e.vi}`).join('; ')||'Chưa có'}\n\nHÃY TRẢ LỜI THEO CẤU TRÚC:\n1. Kết luận ngắn về câu trả lời của tôi.\n2. Giải thích vì sao đáp án đúng là đúng, theo ngữ cảnh của câu hỏi.\n3. Phân tích TỪNG lựa chọn A/B/C/D: nghĩa tiếng Việt, loại từ, sắc thái, vì sao đúng hoặc sai. Không bỏ qua lựa chọn sai.\n4. So sánh các từ gần nghĩa/dễ nhầm và chỉ ra bẫy TOEIC.\n5. Mở rộng word family, collocations và ví dụ thực tế nếu có.\n6. Mẹo ghi nhớ và cách phân biệt.\n7. Tạo thêm 3 câu hỏi tương tự, để đáp án ở cuối.\nKhông tự khẳng định nghĩa nếu dữ liệu chưa đủ; hãy ghi rõ phần nào cần tra từ điển.`;
+}
+function showAIPromptModal(prompt) {
+  state.lastAIPrompt=prompt;
+  clearAutoAdvance(); state.autoAdvanceCancelled=true; savePracticeSession(); updateAutoAdvanceUI();
+  $('#modalEyebrow').textContent='GOOGLE AI · LEARNING ASSISTANT';
+  $('#modalTitle').textContent='Phân tích nội dung bằng Google AI';
+  $('#modalContent').innerHTML=`<div class="ai-prompt-intro"><span class="ai-prompt-icon">${icon('sparkles')}</span><div><strong>Prompt đã được tạo từ dữ liệu hiện tại</strong><p>Gồm câu hỏi, câu trả lời, đáp án đúng/sai, toàn bộ lựa chọn và thông tin từ điển liên quan.</p></div></div><label class="field ai-prompt-field"><span class="field-label">NỘI DUNG GỬI GOOGLE GEMINI</span><textarea id="aiPromptTextarea" rows="17" readonly>${escapeHtml(prompt)}</textarea></label><div class="modal-actions ai-prompt-actions"><button type="button" class="secondary-button" data-copy-ai-prompt>${icon('copy','ui-icon button-icon')} Sao chép prompt</button><button type="button" class="primary-button" data-open-gemini>${icon('sparkles','ui-icon button-icon')} Mở Google Gemini</button></div><p class="ai-prompt-note">Website không gửi dữ liệu tự động. Bạn chủ động sao chép/dán prompt vào Gemini và có thể chỉnh sửa trước khi gửi.</p>`;
+  $('#modalBackdrop').hidden=false;
+}
+async function copyAIPrompt() {
+  const area=$('#aiPromptTextarea'); if(!area)return;
+  try { await navigator.clipboard.writeText(area.value); toast('Đã sao chép toàn bộ prompt AI.'); }
+  catch { area.focus();area.select();try{document.execCommand('copy');toast('Đã sao chép prompt.');}catch{toast('Hãy chọn và sao chép nội dung prompt thủ công.','error');} }
+}
+async function openGeminiWithPrompt() {
+  window.open('https://gemini.google.com/app','_blank','noopener,noreferrer');
+  await copyAIPrompt();
+  toast('Đã mở Google Gemini. Dán prompt vừa sao chép vào khung trò chuyện.');
+}
 function updateDate(){const now=new Date();$('#todayLabel').textContent=new Intl.DateTimeFormat('vi-VN',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(now);}
-async function registerSW(){if(!('serviceWorker'in navigator))return;try{await navigator.serviceWorker.register('./sw.js',{scope:'./'});}catch(err){console.warn('Service Worker chưa đăng ký được:',err);}}
-async function init(){bindEvents();updateDate();try{await loadData();await initializePractice();}catch(err){console.error(err);$('#metricWords').textContent='!';toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}registerSW();initializeInstallInvite();}
+async function registerSW(){if(!('serviceWorker'in navigator))return null;try{const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./'});await navigator.serviceWorker.ready;state.swRegistration=registration;state.notificationProvider=new LocalNotificationProvider(()=>state.swRegistration);return registration;}catch(err){console.warn('Service Worker chưa đăng ký được:',err);state.notificationProvider=new LocalNotificationProvider(()=>null);return null;}}
+async function init(){bindEvents();updateDate();try{await loadData();await initializePractice();}catch(err){console.error(err);$('#metricWords').textContent='!';toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}await registerSW();initializeInstallInvite();}
 init();

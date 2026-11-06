@@ -162,8 +162,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .install-invite-topline{display:flex;align-items:center;justify-content:space-between;margin-bottom:17px}
 .install-invite-mark{width:52px;height:52px;display:grid;place-items:center;border-radius:17px;color:#fff;background:linear-gradient(145deg,#2b72b5,#153c70);box-shadow:0 9px 20px rgba(21,60,112,.2)}
 .install-book-icon{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
-.install-invite-close{width:35px;height:35px;border:1px solid #e7edf4;border-radius:11px;background:#fff;color:#718197;display:grid;place-items:center}
-.install-invite-close:hover{background:#f1f5fa;color:#183d6c}
 .install-invite-card .eyebrow{margin-bottom:7px}
 .install-invite-card h2{margin:0;color:#183b68;font-size:22px;line-height:1.25;letter-spacing:-.025em}
 .install-invite-card #installInviteDescription{margin:9px 0 17px;color:#687b91;font-size:13px;line-height:1.65}
@@ -184,3 +182,64 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 @media(max-width:640px){.install-invite-backdrop{padding:10px 10px calc(10px + env(safe-area-inset-bottom));place-items:end center}.install-invite-card{padding:20px 17px 16px;border-radius:22px 22px 17px 17px;max-height:calc(90vh - env(safe-area-inset-top));}.install-invite-card h2{font-size:20px}.install-invite-card #installInviteDescription{font-size:12px}.install-benefits{padding:12px;gap:9px}.install-benefits span{font-size:11px}.topbar-actions{gap:6px}.install-guide-trigger{flex:0 0 34px;width:34px;height:34px}.global-search{width:min(43vw,190px)}}
 @media(prefers-reduced-motion:reduce){.install-invite-backdrop,.install-invite-card{animation:none!important}}
 body.install-invite-open{overflow:hidden}
+
+
+
+/* v2.4.0 – explanation for every multiple-choice option */
+.choice-review{margin-top:15px;padding:13px;border:1px solid #e3ebf5;border-radius:13px;background:#fff}
+.choice-review-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;color:#294563;font-size:12px}
+.choice-review-title span{font-size:9px;color:#8796a8;letter-spacing:.12em;font-weight:800}
+.choice-review-list{display:grid;gap:8px}
+.choice-review-item{padding:10px 11px;border:1px solid #e8edf3;border-radius:10px;background:#fbfcfe}
+.choice-review-item.is-correct{border-color:#a9ddc2;background:#f0faf4}
+.choice-review-item.is-selected-wrong{border-color:#e5b3b3;background:#fff5f5}
+.choice-review-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.choice-review-letter{display:grid;place-items:center;width:23px;height:23px;border-radius:7px;background:#eaf0f8;color:#305b8d;font-size:10px;font-weight:850}
+.choice-review-item.is-correct .choice-review-letter{background:#d9f2e4;color:#168457}
+.choice-review-item.is-selected-wrong .choice-review-letter{background:#ffe0e0;color:#b44b4b}
+.choice-review-head strong{font-size:12px;color:#263f5c;overflow-wrap:anywhere}
+.choice-review-head em{margin-left:auto;font-size:8px;font-style:normal;font-weight:800;letter-spacing:.06em;color:#8593a4}
+.choice-review-item.is-correct .choice-review-head em{color:#168457}
+.choice-review-item.is-selected-wrong .choice-review-head em{color:#b44b4b}
+.choice-review-item p{margin:7px 0 0 31px;color:#687c92;font-size:10px;line-height:1.6}
+.reference-title-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;color:#234a78}
+.reference-title-row strong{font-size:15px}.reference-title-row span{color:#8391a2;font-size:10px}
+.reference-overview{margin:6px 0 9px!important;color:#476889!important;font-weight:650}
+.reference-sense{margin:8px 0;padding:9px 10px;border-left:3px solid #d6e4f3;background:#f8fbff;border-radius:0 8px 8px 0}
+.reference-sense>strong{display:block;margin-top:3px;color:#294561;font-size:11px}
+.reference-sense small{display:block;margin-top:3px;color:#7c8ba0;font-size:9px}
+.reference-sense p,.answer-reference>p{margin:5px 0 0;color:#687e94;font-size:9px;line-height:1.5}
+.reference-example{display:block;margin-top:6px;color:#61768e;font-size:9px;line-height:1.5}
+.auto-advance-row{display:flex;align-items:center;justify-content:space-between;gap:9px;margin-top:12px;padding:9px 10px;border-radius:9px;background:#eff5fc;color:#476789;font-size:10px}
+.auto-advance-row[hidden]{display:none!important}
+.auto-advance-row .text-button{padding:6px 8px;font-size:9px;white-space:nowrap}
+.feedback-ai-row{display:flex;justify-content:flex-start;margin-top:11px}
+.feedback-ai-row .secondary-button{display:flex;align-items:center;gap:7px;font-size:10px}
+.ai-prompt-intro{display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;padding:12px;border-radius:12px;background:#f3f7fd;border:1px solid #e4edf7}
+.ai-prompt-icon{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:10px;background:#e1edfb;color:#2b68a5}
+.ai-prompt-intro strong{display:block;color:#24486f;font-size:12px}
+.ai-prompt-intro p{margin:4px 0 0;color:#73849a;font-size:10px;line-height:1.5}
+.ai-prompt-field textarea{width:100%;min-height:280px;padding:12px;border:1px solid #dce5f0;border-radius:10px;background:#fbfcfe;color:#354c66;font:12px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;resize:vertical;white-space:pre-wrap}
+.ai-prompt-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.ai-prompt-note{margin:10px 0 0;color:#8b98a8;font-size:10px;line-height:1.55}
+
+/* v2.4.0 – settings page, GitHub-only local reminder and auto advance */
+.settings-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;align-items:start}
+.settings-panel{padding:18px}
+.settings-panel .panel-header h3{display:flex;align-items:center;gap:8px;font-size:14px}
+.settings-panel .panel-header h3 .ui-icon{width:18px;height:18px;color:#3972a9}
+.settings-panel>.field{margin:12px 0}
+.settings-help{margin:10px 0 0;color:#7b8ba0;font-size:10px;line-height:1.65}
+.github-local-note{margin-top:13px;padding:11px 12px;border:1px solid #e6edf5;border-radius:10px;background:#f8fbff}
+.github-local-note strong{display:block;font-size:10px;color:#2e567f}
+.github-local-note p{margin:5px 0 0;color:#75869b;font-size:10px;line-height:1.6}
+.settings-data-panel{grid-column:1/-1}
+.settings-bullet-list{margin:4px 0 0;padding-left:19px;color:#687b91;font-size:11px;line-height:1.85}
+.settings-shortcut-panel{padding:17px;display:grid;justify-items:start;gap:8px}
+.settings-shortcut-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:#edf4fc;color:#316ba7}
+.settings-shortcut-panel h3{margin:0;color:#29496c;font-size:13px}
+.settings-shortcut-panel p{margin:0 0 3px;color:#7d8ca0;font-size:10px;line-height:1.6}
+.settings-shortcut-panel button{font-size:10px}
+@media(max-width:920px){.settings-layout{grid-template-columns:1fr}.settings-data-panel{grid-column:auto}}
+@media(max-width:760px){.mobile-bottom-nav{grid-template-columns:repeat(5,minmax(0,1fr))}.mobile-bottom-nav button small{font-size:7.5px}.settings-panel{padding:15px}.auto-advance-row{align-items:flex-start;flex-direction:column}.auto-advance-row .text-button{align-self:flex-start}.choice-review-item p{margin-left:0}.choice-review-head em{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.choice-review-item,.ai-prompt-intro{animation:none;transition:none}}
