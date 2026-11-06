@@ -1,5 +1,6 @@
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+const icon = (name, cls='ui-icon') => `<svg class="${cls}" aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const DB_NAME = 'toeic-vocabulary-phase1';
 const DB_STORE = 'workspace';
@@ -133,7 +134,7 @@ function renderDataTable(){
     return !q || normalizeText([w.word,...w.senses.flatMap(s=>[s.meaning_vi,s.definition_en,...s.synonyms,...s.antonyms]),...w.topics].join(' ')).includes(q);
   }));
   $('#dataCount').textContent=`${list.length} / ${state.words.length} bản ghi`;
-  $('#dataTableBody').innerHTML=list.map(w=>{const s=getPrimarySense(w);return `<tr><td><button class="word-name" data-edit="${escapeHtml(w.id)}">${escapeHtml(w.word)}</button><span class="word-ipa">${escapeHtml(w.phonetic?.us||'')}</span></td><td>${posMarkup(w)}</td><td>${escapeHtml(s.meaning_vi||'—')}</td><td>${topicsMarkup(w.topics)}</td><td><button class="row-action" data-edit="${escapeHtml(w.id)}">Sửa</button> <button class="row-action danger-text" data-delete="${escapeHtml(w.id)}">Xóa</button></td></tr>`}).join('');
+  $('#dataTableBody').innerHTML=list.map(w=>{const s=getPrimarySense(w);return `<tr><td><button class="word-name" data-edit="${escapeHtml(w.id)}">${escapeHtml(w.word)}</button><span class="word-ipa">${escapeHtml(w.phonetic?.us||'')}</span></td><td>${posMarkup(w)}</td><td>${escapeHtml(s.meaning_vi||'—')}</td><td>${topicsMarkup(w.topics)}</td><td><div class="row-actions"><button class="row-action icon-action" data-edit="${escapeHtml(w.id)}" title="Sửa từ vựng" aria-label="Sửa ${escapeHtml(w.word)}">${icon('edit')}</button><button class="row-action icon-action danger-text" data-delete="${escapeHtml(w.id)}" title="Xóa từ vựng" aria-label="Xóa ${escapeHtml(w.word)}">${icon('trash')}</button></div></td></tr>`}).join('');
   $('#dataEmpty').hidden=list.length>0;
 }
 function showDetail(id){
@@ -143,7 +144,7 @@ function showDetail(id){
   const family=w.word_family?.length?`<div class="detail-section"><h4>WORD FAMILY</h4><div class="detail-pills">${w.word_family.map(x=>`<span class="detail-pill"><strong>${escapeHtml(x.word)}</strong> · ${escapeHtml(x.pos||'')} — ${escapeHtml(x.meaning_vi||'')}</span>`).join('')}</div></div>`:'';
   const verbs=w.verb_forms?`<div class="detail-section"><h4>VERB FORMS</h4><div class="detail-pills">${Object.entries({V1:w.verb_forms.v1,'V-s/es':w.verb_forms.vs_es,V2:w.verb_forms.v2,V3:w.verb_forms.v3,'V-ing':w.verb_forms.ving}).filter(x=>x[1]).map(([k,v])=>`<span class="detail-pill"><strong>${k}:</strong> ${escapeHtml(v)}</span>`).join('')}</div></div>`:'';
   const examples=(w.examples||[]).map(e=>`<div class="example-card"><strong>${escapeHtml(e.en)}</strong><span>${escapeHtml(e.vi)}</span></div>`).join('');
-  $('#modalContent').innerHTML=`<h3 class="detail-word">${escapeHtml(w.word)}</h3><div class="detail-ipa">${escapeHtml(w.phonetic?.us||'Chưa có phiên âm')}</div><div class="detail-pos">${posMarkup(w)}</div><div class="detail-section"><h4>MEANING & DEFINITIONS</h4>${senses||'<p>Chưa có nghĩa.</p>'}</div>${family}${verbs}<div class="detail-section"><h4>TOPICS</h4>${topicsMarkup(w.topics)}</div>${w.collocations?.length?`<div class="detail-section"><h4>COLLOCATIONS</h4><div class="detail-pills">${w.collocations.map(x=>`<span class="detail-pill">${escapeHtml(x)}</span>`).join('')}</div></div>`:''}<div class="detail-section"><h4>EXAMPLES</h4>${examples||'<p>Chưa có ví dụ.</p>'}</div><div class="modal-actions"><button class="secondary-button" data-edit="${escapeHtml(w.id)}">Sửa bản ghi</button><button class="primary-button" id="detailCloseButton">Đóng</button></div>`;
+  $('#modalContent').innerHTML=`<h3 class="detail-word">${escapeHtml(w.word)}</h3><div class="detail-ipa">${escapeHtml(w.phonetic?.us||'Chưa có phiên âm')}</div><div class="detail-pos">${posMarkup(w)}</div><div class="detail-section"><h4>MEANING & DEFINITIONS</h4>${senses||'<p>Chưa có nghĩa.</p>'}</div>${family}${verbs}<div class="detail-section"><h4>TOPICS</h4>${topicsMarkup(w.topics)}</div>${w.collocations?.length?`<div class="detail-section"><h4>COLLOCATIONS</h4><div class="detail-pills">${w.collocations.map(x=>`<span class="detail-pill">${escapeHtml(x)}</span>`).join('')}</div></div>`:''}<div class="detail-section"><h4>EXAMPLES</h4>${examples||'<p>Chưa có ví dụ.</p>'}</div><div class="modal-actions"><button class="secondary-button" data-edit="${escapeHtml(w.id)}">${icon('edit','ui-icon button-icon')} Sửa bản ghi</button></div>`;
   $('#modalBackdrop').hidden=false;
 }
 function openEditor(id=null){
@@ -162,7 +163,7 @@ function openEditor(id=null){
   <label class="field full"><span class="field-label">VÍ DỤ TIẾNG ANH</span><input name="exampleEn" value="${escapeHtml(old?.examples?.[0]?.en||'')}" placeholder="The manager scheduled a meeting."></label>
   <label class="field full"><span class="field-label">DỊCH VÍ DỤ</span><input name="exampleVi" value="${escapeHtml(old?.examples?.[0]?.vi||'')}" placeholder="Quản lý đã lên lịch cuộc họp."></label>
   <label class="field full"><span class="field-label">COLLOCATIONS (PHÂN TÁCH BẰNG DẤU PHẨY)</span><input name="collocations" value="${escapeHtml((old?.collocations||[]).join(', '))}" placeholder="work schedule, daily schedule"></label>
-  </div><p class="editor-help">Các trường có dấu * là bắt buộc. Để thêm nhiều nghĩa hoặc đầy đủ word family/verb forms, có thể chỉnh sửa JSON sau khi export.</p><div class="modal-actions"><button type="button" class="secondary-button" id="cancelEditor">Hủy</button><button type="submit" class="primary-button">Lưu bản ghi</button></div></form>`;
+  </div><p class="editor-help">Các trường có dấu * là bắt buộc. Để thêm nhiều nghĩa hoặc đầy đủ word family/verb forms, có thể chỉnh sửa JSON sau khi export.</p><div class="modal-actions"><button type="submit" class="primary-button">Lưu bản ghi</button></div></form>`;
   const form=$('#wordEditorForm'); form.elements.pos.value=s.pos||'n';
   const topics=old?.topics||[]; [...form.elements.topics.options].forEach(o=>o.selected=topics.includes(o.value));
   $('#modalBackdrop').hidden=false;
@@ -174,7 +175,7 @@ function openEditor(id=null){
   });
 }
 async function persistWorkspace(){state.words=sortWords(state.words);await dbSet('workspace',state.words);state.localWorkspace=true;updateStorageLabel();}
-function updateStorageLabel(){ $('#storageLabel').textContent=state.localWorkspace?'Đang dùng bản dữ liệu đã chỉnh sửa trên thiết bị':'Đang dùng dữ liệu gốc từ GitHub'; }
+function updateStorageLabel(){ $('#storageLabel').textContent=state.localWorkspace?'Bản chỉnh sửa đang lưu trên thiết bị · IndexedDB':'Đang đọc bộ dữ liệu gốc từ GitHub'; }
 async function deleteWord(id){const item=state.words.find(w=>w.id===id);if(!item)return;if(!confirm(`Xóa từ "${item.word}" khỏi bản dữ liệu trên thiết bị?`))return;state.words=state.words.filter(w=>w.id!==id);await persistWorkspace();updateOverview();renderDictionary();renderDataTable();toast(`Đã xóa ${item.word} khỏi bản dữ liệu cục bộ.`);}
 function closeModal(){ $('#modalBackdrop').hidden=true; $('#modalContent').innerHTML=''; }
 function downloadFile(name,content,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
@@ -203,7 +204,7 @@ function bindEvents(){
   $('#importFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{await importFile(file);}catch(err){toast(`Import thất bại: ${err.message}`,'error');}finally{e.target.value='';}});
   $('#exportJsonButton').addEventListener('click',exportJSON);$('#exportCsvButton').addEventListener('click',exportCSV);$('#resetLocalButton').addEventListener('click',resetWorkspace);
   $('#closeModal').addEventListener('click',closeModal);$('#modalBackdrop').addEventListener('click',e=>{if(e.target.id==='modalBackdrop')closeModal();});
-  $('#modalContent').addEventListener('click',e=>{if(e.target.id==='detailCloseButton'||e.target.id==='cancelEditor')closeModal();const edit=e.target.closest('[data-edit]');if(edit)openEditor(edit.dataset.edit);});
+  $('#modalContent').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]');if(edit)openEditor(edit.dataset.edit);});
   $('#globalSearch').addEventListener('keydown',e=>{if(e.key==='Enter'){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
   $('#globalSearch').addEventListener('input',e=>{if(e.target.value.length>=2){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
   document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#globalSearch').focus();}if(e.key==='Escape')closeModal();});

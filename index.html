@@ -4,78 +4,101 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#153c70">
+  <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Ứng dụng học từ vựng TOEIC cá nhân – kho từ A-Z, phân loại chủ đề và quản lý dữ liệu.">
-  <title>TOEIC Vocabulary</title>
+  <title>TOEIC Dictionary – Từ điển TOEIC A–Z</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
 </head>
 <body>
+
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="icon-book-open" viewBox="0 0 24 24"><path d="M3.5 5.8c3.4-.9 6.2-.3 8.5 1.7v12c-2.3-2-5.1-2.6-8.5-1.7z"/><path d="M20.5 5.8c-3.4-.9-6.2-.3-8.5 1.7v12c2.3-2 5.1-2.6 8.5-1.7z"/><path d="M12 7.5v12"/><path d="M6.2 9.3c1.4-.2 2.5 0 3.5.6M6.2 12.2c1.4-.2 2.5 0 3.5.6M17.8 9.3c-1.4-.2-2.5 0-3.5.6M17.8 12.2c-1.4-.2-2.5 0-3.5.6"/></symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7"/><path d="M5.5 9v11h13V9M9.5 20v-6h5v6"/></symbol>
+    <symbol id="icon-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8.5" ry="3"/><path d="M3.5 5v7c0 1.7 3.8 3 8.5 3s8.5-1.3 8.5-3V5M3.5 12v7c0 1.7 3.8 3 8.5 3s8.5-1.3 8.5-3v-7"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-4.5-4.5L12 15l4.5-4.5M4 17v3h16v-3"/></symbol>
+    <symbol id="icon-upload" viewBox="0 0 24 24"><path d="M12 16V4m-4.5 4.5L12 4l4.5 4.5M4 17v3h16v-3"/></symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.4"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.4"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.4"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.4"/></symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.2 2.6 2.6 5.5-5.7"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10.5v5M12 7.5h.01"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="icon-edit" viewBox="0 0 24 24"><path d="m4 16.5-.8 4.3 4.3-.8L19 8.5a2.6 2.6 0 0 0-3.7-3.7z"/><path d="m13.8 6.3 3.7 3.7"/></symbol>
+    <symbol id="icon-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3m3 0-.8 13H6.8L6 7m3.5 3v6m5-6v6"/></symbol>
+    <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5zM19 16l.7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7z"/></symbol>
+    <symbol id="icon-bookmark" viewBox="0 0 24 24"><path d="M6 4.5A2.5 2.5 0 0 1 8.5 2h7A2.5 2.5 0 0 1 18 4.5V22l-6-4-6 4z"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  </svg>
   <div class="app-frame">
     <aside class="sidebar" aria-label="Điều hướng chính">
-      <a class="brand" href="./" aria-label="TOEIC Vocabulary trang chủ">
-        <span class="brand-mark">T</span><span><strong>TOEIC</strong><small>VOCABULARY</small></span>
+      <a class="brand" href="./" aria-label="TOEIC Dictionary – trang chủ">
+        <span class="brand-mark"><svg class="brand-book-icon"><use href="#icon-book-open"></use></svg></span><span class="brand-copy"><strong>TOEIC</strong><small>DICTIONARY</small></span>
       </a>
       <div class="sidebar-caption">KHÔNG GIAN HỌC TẬP</div>
       <nav class="side-nav">
-        <button class="nav-item active" data-page="dashboard"><span class="nav-icon">⌂</span>Tổng quan</button>
-        <button class="nav-item" data-page="dictionary"><span class="nav-icon">A–Z</span>Từ vựng</button>
-        <button class="nav-item" data-page="data"><span class="nav-icon">▤</span>Quản lý dữ liệu</button>
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-home"></use></svg></span>Tổng quan</button>
+        <button class="nav-item" data-page="dictionary"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span>Từ vựng</button>
+        <button class="nav-item" data-page="data"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-database"></use></svg></span>Quản lý dữ liệu</button>
       </nav>
       <div class="sidebar-bottom">
-        <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Không cần đăng nhập</small></span></div>
-        <div class="sidebar-version">Phase 1 · v1.0.0</div>
+        <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
+        <div class="sidebar-version">Phase 1 · v1.1.0</div>
       </div>
     </aside>
 
     <main class="main-area">
       <header class="topbar">
-        <button class="mobile-menu" id="mobileMenu" aria-label="Mở menu">☰</button>
-        <div class="breadcrumb"><span>TOEIC</span><i>/</i><strong id="pageTitle">Tổng quan</strong></div>
+        <button class="mobile-menu" id="mobileMenu" aria-label="Mở menu"><svg class="ui-icon"><use href="#icon-menu"></use></svg></button>
+        <div class="breadcrumb"><svg class="breadcrumb-book"><use href="#icon-book-open"></use></svg><span>TOEIC DICTIONARY</span><i>/</i><strong id="pageTitle">Tổng quan</strong></div>
         <div class="topbar-actions">
-          <label class="global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Tìm từ vựng..." autocomplete="off"><kbd>Ctrl K</kbd></label>
-          <button class="icon-button" id="installButton" hidden title="Cài đặt ứng dụng">⇩</button>
-          <button class="avatar" title="Ứng dụng cá nhân">T</button>
+          <label class="global-search"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="globalSearch" type="search" placeholder="Tìm từ vựng..." autocomplete="off"><kbd>Ctrl K</kbd></label>
+          <button class="icon-button" id="installButton" hidden title="Cài đặt ứng dụng"><svg class="ui-icon"><use href="#icon-download"></use></svg></button>
+          <button class="avatar" title="TOEIC Dictionary"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></button>
         </div>
       </header>
 
       <section class="page active" id="page-dashboard">
         <div class="page-heading">
-          <div><p class="eyebrow">LEARNING WORKSPACE</p><h1>Xin chào! Bắt đầu học TOEIC nhé.</h1><p class="muted">Không gian học tập của bạn, đơn giản và có thể mở rộng.</p></div>
+          <div><p class="eyebrow">LEARNING WORKSPACE</p><h1>Xin chào! Cùng mở từ điển TOEIC nhé.</h1><p class="muted">Không gian học tập của bạn, đơn giản và có thể mở rộng.</p></div>
           <div class="heading-date" id="todayLabel"></div>
         </div>
         <div class="metric-grid">
-          <article class="metric-card"><div class="metric-icon blue">A–Z</div><div><span>Từ vựng trong kho</span><strong id="metricWords">—</strong><small>Đọc từ bộ dữ liệu GitHub</small></div></article>
-          <article class="metric-card"><div class="metric-icon purple">▦</div><div><span>Chủ đề</span><strong id="metricTopics">—</strong><small>Có thể lọc nhiều chủ đề</small></div></article>
-          <article class="metric-card"><div class="metric-icon green">✓</div><div><span>Chữ cái đã có dữ liệu</span><strong id="metricLetters">—</strong><small>Trên tổng số 26 chữ cái</small></div></article>
+          <article class="metric-card"><div class="metric-icon blue"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></div><div><span>Từ vựng trong kho</span><strong id="metricWords">—</strong><small>Đọc từ bộ dữ liệu GitHub</small></div></article>
+          <article class="metric-card"><div class="metric-icon purple"><svg class="ui-icon"><use href="#icon-grid"></use></svg></div><div><span>Chủ đề</span><strong id="metricTopics">—</strong><small>Có thể lọc nhiều chủ đề</small></div></article>
+          <article class="metric-card"><div class="metric-icon green"><svg class="ui-icon"><use href="#icon-check-circle"></use></svg></div><div><span>Chữ cái đã có dữ liệu</span><strong id="metricLetters">—</strong><small>Trên tổng số 26 chữ cái</small></div></article>
         </div>
         <div class="dashboard-grid">
           <section class="panel welcome-panel">
-            <div class="panel-kicker">BẮT ĐẦU TỪ NHỮNG ĐIỀU CƠ BẢN</div>
-            <h2>Kho từ vựng TOEIC A–Z</h2>
+            <div class="panel-kicker">YOUR PERSONAL ENGLISH REFERENCE</div>
+            <h2>Từ điển TOEIC A–Z</h2>
             <p>Tra cứu theo chữ cái, lọc theo chủ đề hoặc loại từ. Mỗi từ có nghĩa, phiên âm, ví dụ và các mối liên hệ từ vựng khi có dữ liệu.</p>
-            <button class="primary-button" data-go="dictionary">Mở kho từ vựng <span>→</span></button>
-            <div class="welcome-decoration">Aa</div>
+            <button class="primary-button" data-go="dictionary">Mở từ điển <svg class="ui-icon button-icon"><use href="#icon-arrow-right"></use></svg></button>
+            <div class="welcome-book-art" aria-hidden="true"><svg><use href="#icon-book-open"></use></svg><span>TOEIC<br>DICTIONARY</span></div>
           </section>
           <section class="panel quick-panel">
             <div class="panel-header"><div><h3>Truy cập nhanh</h3><p class="muted">Các khu vực của giai đoạn 1</p></div></div>
-            <button class="quick-link" data-go="dictionary"><span class="quick-symbol">A–Z</span><span><strong>Tra cứu từ vựng</strong><small>Alphabet, chủ đề và loại từ</small></span><b>→</b></button>
-            <button class="quick-link" data-go="data"><span class="quick-symbol violet">＋</span><span><strong>Quản lý dữ liệu</strong><small>Thêm, sửa, nhập và xuất dữ liệu</small></span><b>→</b></button>
+            <button class="quick-link" data-go="dictionary"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span><span><strong>Tra cứu từ vựng</strong><small>Alphabet, chủ đề và loại từ</small></span><b>→</b></button>
+            <button class="quick-link" data-go="data"><span class="quick-symbol violet"><svg class="ui-icon"><use href="#icon-database"></use></svg></span><span><strong>Quản lý dữ liệu</strong><small>Thêm, sửa, nhập và xuất dữ liệu</small></span><b>→</b></button>
           </section>
         </div>
         <section class="panel alphabet-panel">
-          <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả →</button></div>
+          <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span>ⓘ</span><p><strong>Phạm vi Phase 1:</strong> nền tảng tra cứu và quản lý dữ liệu. Bộ ôn tập, chấm từng ký tự, lịch nhắc 60 phút, ngữ pháp và Gemini sẽ được phát triển ở các giai đoạn tiếp theo.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>Phạm vi Phase 1:</strong> nền tảng tra cứu và quản lý dữ liệu. Bộ ôn tập, chấm từng ký tự, lịch nhắc 60 phút, ngữ pháp và Gemini sẽ được phát triển ở các giai đoạn tiếp theo.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
-        <div class="page-heading compact-heading"><div><p class="eyebrow">VOCABULARY LIBRARY</p><h1>Kho từ vựng</h1><p class="muted">Tìm kiếm và phân loại từ vựng theo A–Z, chủ đề và loại từ.</p></div><button class="primary-button" data-go="data">＋ Quản lý dữ liệu</button></div>
+        <div class="page-heading compact-heading"><div><p class="eyebrow">VOCABULARY LIBRARY</p><h1>Kho từ vựng</h1><p class="muted">Tìm kiếm và phân loại từ vựng theo A–Z, chủ đề và loại từ.</p></div><button class="primary-button" data-go="data"><svg class="ui-icon button-icon"><use href="#icon-database"></use></svg> Quản lý dữ liệu</button></div>
         <section class="panel dictionary-panel">
           <div class="alphabet-row" id="alphabetFilter" aria-label="Lọc chữ cái"></div>
           <div class="filter-row">
-            <label class="field search-field"><span>⌕</span><input id="dictionarySearch" type="search" placeholder="Tìm từ, nghĩa tiếng Việt..." autocomplete="off"></label>
+            <label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="dictionarySearch" type="search" placeholder="Tìm từ, nghĩa tiếng Việt..." autocomplete="off"></label>
             <label class="field"><span class="field-label">CHỦ ĐỀ</span><select id="topicFilter"><option value="">Tất cả chủ đề</option></select></label>
             <label class="field"><span class="field-label">LOẠI TỪ</span><select id="posFilter"><option value="">Tất cả loại từ</option><option value="n">Danh từ (n)</option><option value="v">Động từ (v)</option><option value="adj">Tính từ (adj)</option><option value="adv">Trạng từ (adv)</option><option value="prep">Giới từ (prep)</option><option value="conj">Liên từ (conj)</option><option value="pron">Đại từ (pron)</option></select></label>
             <button class="secondary-button reset-button" id="resetFilters">Đặt lại</button>
@@ -88,12 +111,12 @@
       </section>
 
       <section class="page" id="page-data">
-        <div class="page-heading compact-heading"><div><p class="eyebrow">DATA WORKSPACE</p><h1>Quản lý dữ liệu</h1><p class="muted">Chỉnh sửa bản dữ liệu trên thiết bị và xuất tệp để cập nhật GitHub.</p></div><button class="primary-button" id="addWordButton">＋ Thêm từ mới</button></div>
-        <div class="data-warning"><span>ⓘ</span><p>Thay đổi tại đây được lưu trên trình duyệt hiện tại, <strong>chưa tự ghi lên GitHub</strong>. Hãy xuất JSON sau khi chỉnh sửa để cập nhật repository.</p></div>
+        <div class="page-heading compact-heading"><div><p class="eyebrow">DATA WORKSPACE</p><h1>Quản lý dữ liệu</h1><p class="muted">Chỉnh sửa bản dữ liệu trên thiết bị và xuất tệp để cập nhật GitHub.</p></div><button class="primary-button" id="addWordButton"><svg class="ui-icon button-icon"><use href="#icon-plus"></use></svg> Thêm từ mới</button></div>
+        <div class="data-warning"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p>Thay đổi được lưu trong <strong>bộ nhớ dữ liệu riêng của trình duyệt (IndexedDB)</strong>, không phải cache tải trang. F5 không làm mất dữ liệu. Nếu xóa dữ liệu website/trình duyệt hoặc đặt lại thiết bị, dữ liệu cục bộ có thể mất. <strong>Chưa tự ghi lên GitHub</strong>; hãy Export JSON và cập nhật repository.</p></div>
         <section class="panel data-panel">
           <div class="data-toolbar">
-            <label class="field search-field"><span>⌕</span><input id="dataSearch" type="search" placeholder="Tìm trong dữ liệu..." autocomplete="off"></label>
-            <div class="toolbar-actions"><button class="secondary-button" id="importButton">↑ Import JSON / CSV</button><button class="secondary-button" id="exportCsvButton">↓ CSV</button><button class="primary-button" id="exportJsonButton">↓ Export JSON</button><input type="file" id="importFile" accept=".json,.csv,application/json,text/csv" hidden></div>
+            <label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="dataSearch" type="search" placeholder="Tìm trong dữ liệu..." autocomplete="off"></label>
+            <div class="toolbar-actions"><button class="secondary-button" id="importButton"><svg class="ui-icon button-icon"><use href="#icon-upload"></use></svg> Import JSON / CSV</button><button class="secondary-button" id="exportCsvButton"><svg class="ui-icon button-icon"><use href="#icon-download"></use></svg> CSV</button><button class="primary-button" id="exportJsonButton"><svg class="ui-icon button-icon"><use href="#icon-download"></use></svg> Export JSON</button><input type="file" id="importFile" accept=".json,.csv,application/json,text/csv" hidden></div>
           </div>
           <div class="data-filter-row">
             <label class="field"><span class="field-label">LỌC CHỮ CÁI</span><select id="dataLetterFilter"><option value="">Tất cả A–Z</option></select></label>
@@ -108,19 +131,19 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Khôi phục dữ liệu gốc từ GitHub</button><span class="muted">Tổng dữ liệu: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Vocabulary · Personal Learning Workspace</span><span>Phase 1 · GitHub Pages</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>Phase 1 · GitHub Pages</span></footer>
     </main>
   </div>
 
   <nav class="mobile-bottom-nav" aria-label="Điều hướng mobile">
-    <button class="active" data-page="dashboard"><span>⌂</span><small>Tổng quan</small></button>
-    <button data-page="dictionary"><span>A–Z</span><small>Từ vựng</small></button>
-    <button data-page="data"><span>▤</span><small>Dữ liệu</small></button>
+    <button class="active" data-page="dashboard"><span><svg class="ui-icon"><use href="#icon-home"></use></svg></span><small>Tổng quan</small></button>
+    <button data-page="dictionary"><span><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span><small>Từ vựng</small></button>
+    <button data-page="data"><span><svg class="ui-icon"><use href="#icon-database"></use></svg></span><small>Dữ liệu</small></button>
   </nav>
 
   <div class="modal-backdrop" id="modalBackdrop" hidden>
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div class="modal-header"><div><p class="eyebrow" id="modalEyebrow">VOCABULARY DETAIL</p><h2 id="modalTitle">Chi tiết từ vựng</h2></div><button class="close-button" id="closeModal" aria-label="Đóng">×</button></div>
+      <div class="modal-header"><div><p class="eyebrow" id="modalEyebrow">VOCABULARY DETAIL</p><h2 id="modalTitle">Chi tiết từ vựng</h2></div><button class="close-button" id="closeModal" aria-label="Đóng cửa sổ"><svg class="ui-icon"><use href="#icon-close"></use></svg></button></div>
       <div class="modal-content" id="modalContent"></div>
     </section>
   </div>
