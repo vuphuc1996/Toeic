@@ -336,8 +336,6 @@ async function importFile(file){
 }
 async function resetWorkspace(){if(!confirm('Xóa toàn bộ từ vựng cá nhân trên thiết bị này và hiển thị lại kho gốc GitHub? Dữ liệu học tập không bị xóa.'))return;state.personalVocabulary=emptyPersonalVocabulary();await dbSet('personalVocabulary',state.personalVocabulary);await dbDelete('workspace');rebuildEffectiveWords();updateStorageLabel();updateOverview();renderDictionary();renderDataTable();toast('Đã xóa dữ liệu từ vựng cá nhân; kho gốc được khôi phục.');}
 function goToLetter(letter){state.activeLetter=letter||'';$('#dictionarySearch').value='';$('#topicFilter').value='';$('#posFilter').value='';navigate('dictionary');}
-
-function goToLetter(letter){state.activeLetter=letter||'';$('#dictionarySearch').value='';$('#topicFilter').value='';$('#posFilter').value='';navigate('dictionary');}
 // Phase 2 – adaptive practice, per-character feedback and study reminders.
 const REVIEW_INTERVALS = [10 * 60 * 1000, 1 * 86400000, 3 * 86400000, 7 * 86400000, 14 * 86400000, 30 * 86400000];
 const PRACTICE_DEFAULT_REMINDER = { enabled: false, intervalMinutes: 60, nextAt: null, pendingAnswered: true, lastTriggeredAt: null, pendingWordId: null };
@@ -1115,7 +1113,44 @@ function openGoogleSearch(mode='ai') {
   toast(opened===null?'Trình duyệt có thể đã chặn tab mới. Hãy cho phép mở trang Google.':'Đã mở Google AI Mode. Nội dung ngữ cảnh đầy đủ đã được sao chép; bạn có thể dán vào Google để phân tích.');
 }
 function openGoogleAIFromPanel(){openGoogleSearch('ai');}
+
+function detectDeviceProfile(){
+  const ua=String(navigator.userAgent||'');
+  const uaData=navigator.userAgentData||{};
+  const platform=String(uaData.platform||navigator.platform||'');
+  const touchPoints=Number(navigator.maxTouchPoints||0);
+  const isIPad=/iPad/i.test(ua)||(/MacIntel/i.test(platform)&&touchPoints>1);
+  const isAndroid=/Android/i.test(ua)||/Android/i.test(platform);
+  const isTablet=isIPad||/Tablet|PlayBook|Silk/i.test(ua)||(isAndroid&&!/Mobile/i.test(ua));
+  const isMobile=!isTablet&&(uaData.mobile===true||/iPhone|iPod|Windows Phone|Android.*Mobile|Mobile/i.test(ua));
+  let device='Laptop / PC',symbol='icon-device-laptop';
+  if(isTablet){device='Máy tính bảng';symbol='icon-device-tablet';}
+  else if(isMobile){device='Điện thoại';symbol='icon-device-mobile';}
+  let os='Thiết bị cá nhân';
+  if(isIPad)os='iPadOS';
+  else if(isAndroid)os='Android';
+  else if(/iPhone|iPod/i.test(ua))os='iOS';
+  else if(/Windows/i.test(platform)||/Windows NT/i.test(ua))os='Windows';
+  else if(/Mac/i.test(platform)||/Mac OS/i.test(ua))os='macOS';
+  else if(/CrOS|Chrome OS/i.test(ua+' '+platform))os='ChromeOS';
+  else if(/Linux/i.test(platform)||/Linux/i.test(ua))os='Linux';
+  return {device,os,symbol};
+}
+function renderDeviceGreeting(){
+  const greeting=$('#deviceGreeting');
+  if(!greeting)return;
+  const profile=detectDeviceProfile();
+  const name=$('#deviceGreetingName');
+  const platform=$('#deviceGreetingPlatform');
+  const use=$('#deviceGreetingIcon use');
+  if(name)name.textContent=profile.device;
+  if(platform)platform.textContent=profile.os;
+  if(use)use.setAttribute('href',`#${profile.symbol}`);
+  greeting.setAttribute('aria-label',`Xin chào! Bạn đang sử dụng ${profile.device}, hệ điều hành ${profile.os}.`);
+  greeting.title=`Xin chào! Thiết bị hiện tại: ${profile.device} · ${profile.os}`;
+}
+
 function updateDate(){const now=new Date();$('#todayLabel').textContent=new Intl.DateTimeFormat('vi-VN',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(now);}
 async function registerSW(){if(!('serviceWorker'in navigator))return null;try{const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./'});await navigator.serviceWorker.ready;state.swRegistration=registration;state.notificationProvider=new LocalNotificationProvider(()=>state.swRegistration);return registration;}catch(err){console.warn('Service Worker chưa đăng ký được:',err);state.notificationProvider=new LocalNotificationProvider(()=>null);return null;}}
-async function init(){bindEvents();updateDate();try{await loadData();await initializePractice();}catch(err){console.error(err);$('#metricWords').textContent='!';toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}await registerSW();initializeInstallInvite();}
+async function init(){bindEvents();updateDate();renderDeviceGreeting();try{await loadData();await initializePractice();}catch(err){console.error(err);$('#metricWords').textContent='!';toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}await registerSW();initializeInstallInvite();}
 init();

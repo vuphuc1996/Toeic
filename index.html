@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, luyện tập thông minh, giải thích đáp án và cấu hình nhắc học – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.5.0 – Từ điển TOEIC A–Z</title>
+  <title>TOEIC Dictionary v2.5.1 – Từ điển TOEIC A–Z</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -39,6 +39,9 @@
     <symbol id="icon-brain" viewBox="0 0 24 24"><path d="M12 5.5a3.5 3.5 0 0 0-6.7-1.3A3.8 3.8 0 0 0 4 11a4 4 0 0 0 2.5 7.2A3.5 3.5 0 0 0 12 20zM12 5.5a3.5 3.5 0 0 1 6.7-1.3A3.8 3.8 0 0 1 20 11a4 4 0 0 1-2.5 7.2A3.5 3.5 0 0 1 12 20zM12 5v15M7.5 8.5h2M14.5 8.5h2M7.5 14.5h2M14.5 14.5h2"/></symbol>
     <symbol id="icon-trending" viewBox="0 0 24 24"><path d="M3 17 9 11l4 4 8-9"/><path d="M15 6h6v6"/></symbol>
     <symbol id="icon-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.7 2.9-.2-.1a1.7 1.7 0 0 0-1.8.1 1.7 1.7 0 0 0-.8 1.5v.2H8.7v-.2a1.7 1.7 0 0 0-.8-1.5 1.7 1.7 0 0 0-1.8-.1l-.2.1-1.7-2.9.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-.9h-.2v-3.4h.2a1.7 1.7 0 0 0 1.5-.9 1.7 1.7 0 0 0-.3-1.9l-.1-.1 1.7-2.9.2.1a1.7 1.7 0 0 0 1.8-.1 1.7 1.7 0 0 0 .8-1.5V2h6.6v.2a1.7 1.7 0 0 0 .8 1.5 1.7 1.7 0 0 0 1.8.1l.2-.1 1.7 2.9-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5.9h.2v3.4h-.2a1.7 1.7 0 0 0-1.5.9z"/></symbol>
+    <symbol id="icon-device-laptop" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="1.8"/><path d="M2.5 19h19l-1.4-3H3.9zM9 19h6"/></symbol>
+    <symbol id="icon-device-mobile" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M10.5 5h3M11 18.5h2"/></symbol>
+    <symbol id="icon-device-tablet" viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="2"/><path d="M10.5 5h3M11 18.5h2"/></symbol>
   </svg>
   <div class="app-frame">
     <aside class="sidebar" aria-label="Điều hướng chính">
@@ -57,7 +60,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 3 · v2.5.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 3 · v2.5.1 · GitHub-only</div>
       </div>
     </aside>
 
@@ -68,7 +71,10 @@
         <div class="topbar-actions">
           <label class="global-search"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="globalSearch" type="search" placeholder="Tìm từ vựng..." autocomplete="off"><kbd>Ctrl K</kbd></label>
           <button class="icon-button install-guide-trigger" id="installButton" hidden title="Hướng dẫn thêm vào màn hình chính" aria-label="Hướng dẫn thêm vào màn hình chính"><svg class="ui-icon"><use href="#icon-download"></use></svg></button>
-          <button class="avatar" data-go="settings" title="Cấu hình ứng dụng" aria-label="Cấu hình ứng dụng"><svg class="ui-icon"><use href="#icon-settings"></use></svg></button>
+          <div class="device-greeting" id="deviceGreeting" role="status" aria-label="Xin chào! Thiết bị hiện tại">
+            <span class="device-greeting-icon"><svg class="ui-icon" id="deviceGreetingIcon"><use href="#icon-device-laptop"></use></svg></span>
+            <span class="device-greeting-copy"><small>Xin chào!</small><strong id="deviceGreetingName">Thiết bị của bạn</strong><em id="deviceGreetingPlatform">Đang nhận diện</em></span>
+          </div>
         </div>
       </header>
 
@@ -107,7 +113,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.5.0:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp và Reading Mini nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.5.1:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp và Reading Mini nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -240,7 +246,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>GitHub-only · v2.5.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>GitHub-only · v2.5.1</span></footer>
     </main>
   </div>
 
