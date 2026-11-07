@@ -10,21 +10,38 @@
       "topic": "Office & Scheduling",
       "level": "A2–B1",
       "segments": [
-        {"speaker": "Speaker", "text": "When do you expect to finish the sales report?", "voice": "female"}
+        {
+          "speaker": "Speaker",
+          "text": "When do you expect to finish the sales report?",
+          "voice": "female"
+        }
       ],
       "questions": [
         {
           "question": "Choose the most appropriate response.",
-          "choices": ["By the end of this afternoon.", "It was sold at a discount.", "The sales department is on the second floor."],
+          "choices": [
+            "By the end of this afternoon.",
+            "It was sold at a discount.",
+            "The sales department is on the second floor."
+          ],
           "answerIndex": 0,
           "explanation": "Câu hỏi When do you expect…? hỏi thời điểm. “By the end of this afternoon” trả lời đúng về thời hạn; hai lựa chọn còn lại không trả lời thời gian."
         }
       ],
       "transcriptTranslation": "Khi nào bạn dự kiến hoàn thành báo cáo bán hàng?",
       "vocabulary": [
-        {"word": "expect", "meaning": "dự kiến, mong đợi"},
-        {"word": "finish", "meaning": "hoàn thành"},
-        {"word": "deadline", "meaning": "hạn chót"}
+        {
+          "word": "expect",
+          "meaning": "dự kiến, mong đợi"
+        },
+        {
+          "word": "finish",
+          "meaning": "hoàn thành"
+        },
+        {
+          "word": "deadline",
+          "meaning": "hạn chót"
+        }
       ]
     },
     {
@@ -35,21 +52,38 @@
       "topic": "Meetings & Communication",
       "level": "A2–B1",
       "segments": [
-        {"speaker": "Speaker", "text": "Has the meeting been moved to Conference Room C?", "voice": "male"}
+        {
+          "speaker": "Speaker",
+          "text": "Has the meeting been moved to Conference Room C?",
+          "voice": "male"
+        }
       ],
       "questions": [
         {
           "question": "Choose the most appropriate response.",
-          "choices": ["No, it will remain in Room B.", "The meeting lasted about an hour.", "I invited three new clients."],
+          "choices": [
+            "No, it will remain in Room B.",
+            "The meeting lasted about an hour.",
+            "I invited three new clients."
+          ],
           "answerIndex": 0,
           "explanation": "Câu hỏi xác nhận địa điểm đã được chuyển chưa. “No, it will remain in Room B” trả lời trực tiếp về địa điểm."
         }
       ],
       "transcriptTranslation": "Cuộc họp đã được chuyển sang Phòng hội nghị C chưa?",
       "vocabulary": [
-        {"word": "move", "meaning": "di chuyển, chuyển địa điểm"},
-        {"word": "remain", "meaning": "vẫn ở, duy trì"},
-        {"word": "conference room", "meaning": "phòng hội nghị"}
+        {
+          "word": "move",
+          "meaning": "di chuyển, chuyển địa điểm"
+        },
+        {
+          "word": "remain",
+          "meaning": "vẫn ở, duy trì"
+        },
+        {
+          "word": "conference room",
+          "meaning": "phòng hội nghị"
+        }
       ]
     },
     {
@@ -60,23 +94,84 @@
       "topic": "Shipping & Logistics",
       "level": "B1",
       "segments": [
-        {"speaker": "Woman", "voice": "female", "text": "Good morning. I'm calling about order 5842. The tracking page says the shipment has been delayed."},
-        {"speaker": "Man", "voice": "male", "text": "I'm sorry about that. The truck was held up because of road construction near the distribution center."},
-        {"speaker": "Woman", "voice": "female", "text": "I see. Our store needs the replacement parts before Friday. Can you arrange an earlier delivery?"},
-        {"speaker": "Man", "voice": "male", "text": "I'll check with the local warehouse. We may be able to send the items on a smaller vehicle tomorrow morning."}
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Good morning. I'm calling about order 5842. The tracking page says the shipment has been delayed."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "I'm sorry about that. The truck was held up because of road construction near the distribution center."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "I see. Our store needs the replacement parts before Friday. Can you arrange an earlier delivery?"
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "I'll check with the local warehouse. We may be able to send the items on a smaller vehicle tomorrow morning."
+        }
       ],
       "questions": [
-        {"question": "What problem is the woman calling about?", "choices": ["A delayed shipment", "An incorrect invoice", "A damaged vehicle", "A canceled order"], "answerIndex": 0, "explanation": "Người phụ nữ gọi vì trang theo dõi cho biết lô hàng bị chậm (shipment has been delayed)."},
-        {"question": "Why was the truck delayed?", "choices": ["The driver was ill.", "There was road construction.", "The warehouse was closed.", "The order was incomplete."], "answerIndex": 1, "explanation": "Người đàn ông nói xe tải bị giữ lại do công trình đường bộ gần trung tâm phân phối."},
-        {"question": "What will the man probably do next?", "choices": ["Issue a refund", "Contact the local warehouse", "Cancel the replacement order", "Change the delivery address"], "answerIndex": 1, "explanation": "Anh ấy nói “I'll check with the local warehouse”, nên bước tiếp theo là liên hệ kho địa phương."}
+        {
+          "question": "What problem is the woman calling about?",
+          "choices": [
+            "A delayed shipment",
+            "An incorrect invoice",
+            "A damaged vehicle",
+            "A canceled order"
+          ],
+          "answerIndex": 0,
+          "explanation": "Người phụ nữ gọi vì trang theo dõi cho biết lô hàng bị chậm (shipment has been delayed)."
+        },
+        {
+          "question": "Why was the truck delayed?",
+          "choices": [
+            "The driver was ill.",
+            "There was road construction.",
+            "The warehouse was closed.",
+            "The order was incomplete."
+          ],
+          "answerIndex": 1,
+          "explanation": "Người đàn ông nói xe tải bị giữ lại do công trình đường bộ gần trung tâm phân phối."
+        },
+        {
+          "question": "What will the man probably do next?",
+          "choices": [
+            "Issue a refund",
+            "Contact the local warehouse",
+            "Cancel the replacement order",
+            "Change the delivery address"
+          ],
+          "answerIndex": 1,
+          "explanation": "Anh ấy nói “I'll check with the local warehouse”, nên bước tiếp theo là liên hệ kho địa phương."
+        }
       ],
       "transcriptTranslation": "Người phụ nữ gọi về đơn hàng 5842 vì lô hàng bị chậm. Người đàn ông giải thích xe tải bị chậm do công trình đường bộ. Cửa hàng cần linh kiện thay thế trước thứ Sáu, nên anh ấy sẽ kiểm tra với kho địa phương để có thể giao sớm hơn vào sáng hôm sau.",
       "vocabulary": [
-        {"word": "shipment", "meaning": "lô hàng, việc vận chuyển"},
-        {"word": "tracking", "meaning": "theo dõi hành trình"},
-        {"word": "distribution center", "meaning": "trung tâm phân phối"},
-        {"word": "replacement parts", "meaning": "linh kiện thay thế"},
-        {"word": "warehouse", "meaning": "nhà kho"}
+        {
+          "word": "shipment",
+          "meaning": "lô hàng, việc vận chuyển"
+        },
+        {
+          "word": "tracking",
+          "meaning": "theo dõi hành trình"
+        },
+        {
+          "word": "distribution center",
+          "meaning": "trung tâm phân phối"
+        },
+        {
+          "word": "replacement parts",
+          "meaning": "linh kiện thay thế"
+        },
+        {
+          "word": "warehouse",
+          "meaning": "nhà kho"
+        }
       ]
     },
     {
@@ -87,22 +182,80 @@
       "topic": "Travel & Transportation",
       "level": "B1–B2",
       "segments": [
-        {"speaker": "Man", "voice": "male", "text": "Have you booked the hotel for our visit to Singapore next week?"},
-        {"speaker": "Woman", "voice": "female", "text": "Not yet. The hotel near the exhibition center is fully booked, but I found another one two blocks away."},
-        {"speaker": "Man", "voice": "male", "text": "Does it provide transportation to the airport? Our flight arrives quite late."},
-        {"speaker": "Woman", "voice": "female", "text": "Yes. It offers a shuttle service every hour. I'll reserve two rooms this afternoon."}
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Have you booked the hotel for our visit to Singapore next week?"
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Not yet. The hotel near the exhibition center is fully booked, but I found another one two blocks away."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Does it provide transportation to the airport? Our flight arrives quite late."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Yes. It offers a shuttle service every hour. I'll reserve two rooms this afternoon."
+        }
       ],
       "questions": [
-        {"question": "Where are the speakers planning to travel?", "choices": ["Singapore", "Seoul", "Sydney", "San Francisco"], "answerIndex": 0, "explanation": "Người đàn ông nhắc trực tiếp đến chuyến thăm Singapore tuần tới."},
-        {"question": "Why did the woman choose another hotel?", "choices": ["It is less expensive.", "The first hotel is fully booked.", "It is closer to the airport.", "A colleague recommended it."], "answerIndex": 1, "explanation": "Khách sạn gần trung tâm triển lãm đã kín phòng (fully booked)."},
-        {"question": "What will the woman do this afternoon?", "choices": ["Change the flight", "Visit the exhibition center", "Reserve two rooms", "Arrange a rental car"], "answerIndex": 2, "explanation": "Cô ấy nói sẽ đặt hai phòng (reserve two rooms) vào chiều nay."}
+        {
+          "question": "Where are the speakers planning to travel?",
+          "choices": [
+            "Singapore",
+            "Seoul",
+            "Sydney",
+            "San Francisco"
+          ],
+          "answerIndex": 0,
+          "explanation": "Người đàn ông nhắc trực tiếp đến chuyến thăm Singapore tuần tới."
+        },
+        {
+          "question": "Why did the woman choose another hotel?",
+          "choices": [
+            "It is less expensive.",
+            "The first hotel is fully booked.",
+            "It is closer to the airport.",
+            "A colleague recommended it."
+          ],
+          "answerIndex": 1,
+          "explanation": "Khách sạn gần trung tâm triển lãm đã kín phòng (fully booked)."
+        },
+        {
+          "question": "What will the woman do this afternoon?",
+          "choices": [
+            "Change the flight",
+            "Visit the exhibition center",
+            "Reserve two rooms",
+            "Arrange a rental car"
+          ],
+          "answerIndex": 2,
+          "explanation": "Cô ấy nói sẽ đặt hai phòng (reserve two rooms) vào chiều nay."
+        }
       ],
       "transcriptTranslation": "Hai đồng nghiệp chuẩn bị chuyến công tác Singapore. Khách sạn gần trung tâm triển lãm đã kín phòng nên người phụ nữ chọn một khách sạn khác, có xe đưa đón sân bay mỗi giờ, và sẽ đặt hai phòng vào chiều nay.",
       "vocabulary": [
-        {"word": "exhibition center", "meaning": "trung tâm triển lãm"},
-        {"word": "fully booked", "meaning": "đã kín chỗ/phòng"},
-        {"word": "shuttle service", "meaning": "dịch vụ xe đưa đón"},
-        {"word": "reserve", "meaning": "đặt trước"}
+        {
+          "word": "exhibition center",
+          "meaning": "trung tâm triển lãm"
+        },
+        {
+          "word": "fully booked",
+          "meaning": "đã kín chỗ/phòng"
+        },
+        {
+          "word": "shuttle service",
+          "meaning": "dịch vụ xe đưa đón"
+        },
+        {
+          "word": "reserve",
+          "meaning": "đặt trước"
+        }
       ]
     },
     {
@@ -113,23 +266,85 @@
       "topic": "Human Resources",
       "level": "B1",
       "segments": [
-        {"speaker": "Woman", "voice": "female", "text": "Hello, this is Maya from Human Resources. I'm calling about your interview scheduled for Thursday morning."},
-        {"speaker": "Man", "voice": "male", "text": "Thank you for calling. Is there a problem with the schedule?"},
-        {"speaker": "Woman", "voice": "female", "text": "The hiring manager has to attend an urgent client meeting. Could you come in on Friday at ten instead?"},
-        {"speaker": "Man", "voice": "male", "text": "Friday at ten works for me. Should I bring another copy of my résumé?"},
-        {"speaker": "Woman", "voice": "female", "text": "That would be helpful. Please also bring your certificates."}
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Hello, this is Maya from Human Resources. I'm calling about your interview scheduled for Thursday morning."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Thank you for calling. Is there a problem with the schedule?"
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "The hiring manager has to attend an urgent client meeting. Could you come in on Friday at ten instead?"
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Friday at ten works for me. Should I bring another copy of my résumé?"
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "That would be helpful. Please also bring your certificates."
+        }
       ],
       "questions": [
-        {"question": "Who is the woman?", "choices": ["A job applicant", "An HR employee", "A hiring manager", "A customer"], "answerIndex": 1, "explanation": "Cô ấy tự giới thiệu là Maya từ Human Resources."},
-        {"question": "Why must the interview be rescheduled?", "choices": ["The applicant is traveling.", "The office is closed.", "The hiring manager has another meeting.", "The position has been filled."], "answerIndex": 2, "explanation": "Hiring manager phải tham dự cuộc họp khẩn với khách hàng."},
-        {"question": "What is the man asked to bring?", "choices": ["A passport and tickets", "A résumé and certificates", "A reference letter only", "A laptop and presentation"], "answerIndex": 1, "explanation": "Người phụ nữ đề nghị mang thêm một bản résumé và các chứng chỉ."}
+        {
+          "question": "Who is the woman?",
+          "choices": [
+            "A job applicant",
+            "An HR employee",
+            "A hiring manager",
+            "A customer"
+          ],
+          "answerIndex": 1,
+          "explanation": "Cô ấy tự giới thiệu là Maya từ Human Resources."
+        },
+        {
+          "question": "Why must the interview be rescheduled?",
+          "choices": [
+            "The applicant is traveling.",
+            "The office is closed.",
+            "The hiring manager has another meeting.",
+            "The position has been filled."
+          ],
+          "answerIndex": 2,
+          "explanation": "Hiring manager phải tham dự cuộc họp khẩn với khách hàng."
+        },
+        {
+          "question": "What is the man asked to bring?",
+          "choices": [
+            "A passport and tickets",
+            "A résumé and certificates",
+            "A reference letter only",
+            "A laptop and presentation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Người phụ nữ đề nghị mang thêm một bản résumé và các chứng chỉ."
+        }
       ],
       "transcriptTranslation": "Nhân viên nhân sự gọi để đổi lịch phỏng vấn từ sáng thứ Năm sang thứ Sáu lúc 10 giờ vì quản lý tuyển dụng có cuộc họp khẩn với khách hàng. Ứng viên đồng ý và được đề nghị mang CV cùng chứng chỉ.",
       "vocabulary": [
-        {"word": "reschedule", "meaning": "lên lịch lại"},
-        {"word": "hiring manager", "meaning": "quản lý tuyển dụng"},
-        {"word": "résumé", "meaning": "sơ yếu lý lịch/CV"},
-        {"word": "certificate", "meaning": "chứng chỉ"}
+        {
+          "word": "reschedule",
+          "meaning": "lên lịch lại"
+        },
+        {
+          "word": "hiring manager",
+          "meaning": "quản lý tuyển dụng"
+        },
+        {
+          "word": "résumé",
+          "meaning": "sơ yếu lý lịch/CV"
+        },
+        {
+          "word": "certificate",
+          "meaning": "chứng chỉ"
+        }
       ]
     },
     {
@@ -140,23 +355,84 @@
       "topic": "Finance & Purchasing",
       "level": "B1–B2",
       "segments": [
-        {"speaker": "Man", "voice": "male", "text": "I reviewed the invoice from Northstar Supplies, and the total seems higher than the quotation."},
-        {"speaker": "Woman", "voice": "female", "text": "Let me check. It looks like the delivery fee was added twice."},
-        {"speaker": "Man", "voice": "male", "text": "Could you contact the supplier and request a corrected invoice? We need to process payment by the end of the week."},
-        {"speaker": "Woman", "voice": "female", "text": "Certainly. I'll email their accounting department and ask them to send a revised copy today."}
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "I reviewed the invoice from Northstar Supplies, and the total seems higher than the quotation."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Let me check. It looks like the delivery fee was added twice."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Could you contact the supplier and request a corrected invoice? We need to process payment by the end of the week."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Certainly. I'll email their accounting department and ask them to send a revised copy today."
+        }
       ],
       "questions": [
-        {"question": "What is wrong with the invoice?", "choices": ["The product code is missing.", "The delivery fee was added twice.", "The payment date is incorrect.", "The supplier's address has changed."], "answerIndex": 1, "explanation": "Phí giao hàng đã bị cộng hai lần (added twice)."},
-        {"question": "What does the man ask the woman to do?", "choices": ["Contact the supplier", "Cancel the purchase", "Prepare a new quotation", "Arrange a delivery"], "answerIndex": 0, "explanation": "Anh ấy đề nghị liên hệ nhà cung cấp để yêu cầu hóa đơn đã chỉnh sửa."},
-        {"question": "When is payment due to be processed?", "choices": ["Today", "Tomorrow morning", "By the end of the week", "Next month"], "answerIndex": 2, "explanation": "Thanh toán cần được xử lý trước cuối tuần."}
+        {
+          "question": "What is wrong with the invoice?",
+          "choices": [
+            "The product code is missing.",
+            "The delivery fee was added twice.",
+            "The payment date is incorrect.",
+            "The supplier's address has changed."
+          ],
+          "answerIndex": 1,
+          "explanation": "Phí giao hàng đã bị cộng hai lần (added twice)."
+        },
+        {
+          "question": "What does the man ask the woman to do?",
+          "choices": [
+            "Contact the supplier",
+            "Cancel the purchase",
+            "Prepare a new quotation",
+            "Arrange a delivery"
+          ],
+          "answerIndex": 0,
+          "explanation": "Anh ấy đề nghị liên hệ nhà cung cấp để yêu cầu hóa đơn đã chỉnh sửa."
+        },
+        {
+          "question": "When is payment due to be processed?",
+          "choices": [
+            "Today",
+            "Tomorrow morning",
+            "By the end of the week",
+            "Next month"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thanh toán cần được xử lý trước cuối tuần."
+        }
       ],
       "transcriptTranslation": "Người đàn ông phát hiện tổng hóa đơn cao hơn báo giá. Người phụ nữ nhận ra phí giao hàng được cộng hai lần. Cô ấy sẽ liên hệ bộ phận kế toán của nhà cung cấp và yêu cầu gửi lại hóa đơn đã sửa trong ngày.",
       "vocabulary": [
-        {"word": "invoice", "meaning": "hóa đơn"},
-        {"word": "quotation", "meaning": "báo giá"},
-        {"word": "delivery fee", "meaning": "phí giao hàng"},
-        {"word": "supplier", "meaning": "nhà cung cấp"},
-        {"word": "process payment", "meaning": "xử lý thanh toán"}
+        {
+          "word": "invoice",
+          "meaning": "hóa đơn"
+        },
+        {
+          "word": "quotation",
+          "meaning": "báo giá"
+        },
+        {
+          "word": "delivery fee",
+          "meaning": "phí giao hàng"
+        },
+        {
+          "word": "supplier",
+          "meaning": "nhà cung cấp"
+        },
+        {
+          "word": "process payment",
+          "meaning": "xử lý thanh toán"
+        }
       ]
     },
     {
@@ -167,22 +443,80 @@
       "topic": "Facilities & Maintenance",
       "level": "B1",
       "segments": [
-        {"speaker": "Woman", "voice": "female", "text": "The air conditioner in Meeting Room A is making a loud noise again."},
-        {"speaker": "Man", "voice": "male", "text": "I'll inform the maintenance team. They replaced a filter there last month."},
-        {"speaker": "Woman", "voice": "female", "text": "We have an important presentation in that room tomorrow. Could they inspect it before then?"},
-        {"speaker": "Man", "voice": "male", "text": "I'll mark the request as urgent and ask them to visit this afternoon."}
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "The air conditioner in Meeting Room A is making a loud noise again."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "I'll inform the maintenance team. They replaced a filter there last month."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "We have an important presentation in that room tomorrow. Could they inspect it before then?"
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "I'll mark the request as urgent and ask them to visit this afternoon."
+        }
       ],
       "questions": [
-        {"question": "What problem does the woman report?", "choices": ["A broken projector", "A noisy air conditioner", "A leaking water pipe", "A missing meeting table"], "answerIndex": 1, "explanation": "Máy điều hòa trong Phòng họp A phát ra tiếng ồn lớn."},
-        {"question": "What happened last month?", "choices": ["A room was painted.", "A filter was replaced.", "New chairs were delivered.", "The room was closed."], "answerIndex": 1, "explanation": "Người đàn ông nói đội bảo trì đã thay bộ lọc vào tháng trước."},
-        {"question": "When does the woman need the problem fixed?", "choices": ["Before tomorrow's presentation", "By the end of the month", "After the next meeting", "Before lunch today"], "answerIndex": 0, "explanation": "Họ có buổi thuyết trình quan trọng vào ngày mai nên cần kiểm tra trước thời điểm đó."}
+        {
+          "question": "What problem does the woman report?",
+          "choices": [
+            "A broken projector",
+            "A noisy air conditioner",
+            "A leaking water pipe",
+            "A missing meeting table"
+          ],
+          "answerIndex": 1,
+          "explanation": "Máy điều hòa trong Phòng họp A phát ra tiếng ồn lớn."
+        },
+        {
+          "question": "What happened last month?",
+          "choices": [
+            "A room was painted.",
+            "A filter was replaced.",
+            "New chairs were delivered.",
+            "The room was closed."
+          ],
+          "answerIndex": 1,
+          "explanation": "Người đàn ông nói đội bảo trì đã thay bộ lọc vào tháng trước."
+        },
+        {
+          "question": "When does the woman need the problem fixed?",
+          "choices": [
+            "Before tomorrow's presentation",
+            "By the end of the month",
+            "After the next meeting",
+            "Before lunch today"
+          ],
+          "answerIndex": 0,
+          "explanation": "Họ có buổi thuyết trình quan trọng vào ngày mai nên cần kiểm tra trước thời điểm đó."
+        }
       ],
       "transcriptTranslation": "Người phụ nữ báo máy điều hòa ở Phòng họp A phát tiếng ồn. Người đàn ông sẽ báo đội bảo trì, yêu cầu kiểm tra khẩn trong chiều nay vì ngày mai có buổi thuyết trình.",
       "vocabulary": [
-        {"word": "air conditioner", "meaning": "máy điều hòa"},
-        {"word": "maintenance team", "meaning": "đội bảo trì"},
-        {"word": "inspect", "meaning": "kiểm tra"},
-        {"word": "urgent", "meaning": "khẩn cấp"}
+        {
+          "word": "air conditioner",
+          "meaning": "máy điều hòa"
+        },
+        {
+          "word": "maintenance team",
+          "meaning": "đội bảo trì"
+        },
+        {
+          "word": "inspect",
+          "meaning": "kiểm tra"
+        },
+        {
+          "word": "urgent",
+          "meaning": "khẩn cấp"
+        }
       ]
     },
     {
@@ -193,19 +527,65 @@
       "topic": "Office & Administration",
       "level": "B1",
       "segments": [
-        {"speaker": "Announcer", "voice": "female", "text": "Attention, employees. The customer service department will move to the fourth floor beginning next Monday. All staff members should pack their personal belongings by Friday afternoon. Computer equipment will be transferred by the technology team over the weekend. If you need assistance, please contact the facilities office. Thank you for your cooperation."}
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "Attention, employees. The customer service department will move to the fourth floor beginning next Monday. All staff members should pack their personal belongings by Friday afternoon. Computer equipment will be transferred by the technology team over the weekend. If you need assistance, please contact the facilities office. Thank you for your cooperation."
+        }
       ],
       "questions": [
-        {"question": "What department is moving?", "choices": ["Accounting", "Customer service", "Human resources", "Marketing"], "answerIndex": 1, "explanation": "Thông báo nêu rõ bộ phận customer service sẽ chuyển lên tầng bốn."},
-        {"question": "When should employees pack their belongings?", "choices": ["By Friday afternoon", "Next Monday morning", "Over the weekend", "By the end of next month"], "answerIndex": 0, "explanation": "Nhân viên phải đóng gói đồ cá nhân trước chiều thứ Sáu."},
-        {"question": "Who will transfer the computer equipment?", "choices": ["The facilities office", "The security team", "The technology team", "The department managers"], "answerIndex": 2, "explanation": "Đội công nghệ (technology team) sẽ chuyển thiết bị máy tính vào cuối tuần."}
+        {
+          "question": "What department is moving?",
+          "choices": [
+            "Accounting",
+            "Customer service",
+            "Human resources",
+            "Marketing"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông báo nêu rõ bộ phận customer service sẽ chuyển lên tầng bốn."
+        },
+        {
+          "question": "When should employees pack their belongings?",
+          "choices": [
+            "By Friday afternoon",
+            "Next Monday morning",
+            "Over the weekend",
+            "By the end of next month"
+          ],
+          "answerIndex": 0,
+          "explanation": "Nhân viên phải đóng gói đồ cá nhân trước chiều thứ Sáu."
+        },
+        {
+          "question": "Who will transfer the computer equipment?",
+          "choices": [
+            "The facilities office",
+            "The security team",
+            "The technology team",
+            "The department managers"
+          ],
+          "answerIndex": 2,
+          "explanation": "Đội công nghệ (technology team) sẽ chuyển thiết bị máy tính vào cuối tuần."
+        }
       ],
       "transcriptTranslation": "Thông báo cho biết bộ phận chăm sóc khách hàng sẽ chuyển lên tầng bốn từ thứ Hai tuần tới. Nhân viên đóng gói đồ cá nhân trước chiều thứ Sáu; đội công nghệ chuyển thiết bị vào cuối tuần.",
       "vocabulary": [
-        {"word": "relocation", "meaning": "việc chuyển địa điểm"},
-        {"word": "belongings", "meaning": "đồ đạc cá nhân"},
-        {"word": "transfer", "meaning": "chuyển giao, di chuyển"},
-        {"word": "cooperation", "meaning": "sự hợp tác"}
+        {
+          "word": "relocation",
+          "meaning": "việc chuyển địa điểm"
+        },
+        {
+          "word": "belongings",
+          "meaning": "đồ đạc cá nhân"
+        },
+        {
+          "word": "transfer",
+          "meaning": "chuyển giao, di chuyển"
+        },
+        {
+          "word": "cooperation",
+          "meaning": "sự hợp tác"
+        }
       ]
     },
     {
@@ -216,20 +596,271 @@
       "topic": "Meetings & Events",
       "level": "B1–B2",
       "segments": [
-        {"speaker": "Presenter", "voice": "male", "text": "Good afternoon, everyone. I have a brief update about tomorrow's business conference. Registration will open at eight thirty in the main lobby, and the opening presentation will begin at nine. Please note that the afternoon workshop has been moved from Room 204 to Room 310. Updated schedules are available at the information desk. Refreshments will be served during the fifteen minute break."}
+        {
+          "speaker": "Presenter",
+          "voice": "male",
+          "text": "Good afternoon, everyone. I have a brief update about tomorrow's business conference. Registration will open at eight thirty in the main lobby, and the opening presentation will begin at nine. Please note that the afternoon workshop has been moved from Room 204 to Room 310. Updated schedules are available at the information desk. Refreshments will be served during the fifteen minute break."
+        }
       ],
       "questions": [
-        {"question": "Where will registration take place?", "choices": ["In the main lobby", "In Room 310", "At the information desk", "Outside the conference center"], "answerIndex": 0, "explanation": "Đăng ký sẽ diễn ra ở sảnh chính (main lobby)."},
-        {"question": "What has changed?", "choices": ["The conference date", "The opening speaker", "The afternoon workshop room", "The registration fee"], "answerIndex": 2, "explanation": "Buổi workshop buổi chiều được chuyển từ phòng 204 sang phòng 310."},
-        {"question": "Where can participants get updated schedules?", "choices": ["At the hotel reception", "At the information desk", "In the main lobby café", "From the workshop presenter"], "answerIndex": 1, "explanation": "Lịch cập nhật có tại quầy thông tin (information desk)."}
+        {
+          "question": "Where will registration take place?",
+          "choices": [
+            "In the main lobby",
+            "In Room 310",
+            "At the information desk",
+            "Outside the conference center"
+          ],
+          "answerIndex": 0,
+          "explanation": "Đăng ký sẽ diễn ra ở sảnh chính (main lobby)."
+        },
+        {
+          "question": "What has changed?",
+          "choices": [
+            "The conference date",
+            "The opening speaker",
+            "The afternoon workshop room",
+            "The registration fee"
+          ],
+          "answerIndex": 2,
+          "explanation": "Buổi workshop buổi chiều được chuyển từ phòng 204 sang phòng 310."
+        },
+        {
+          "question": "Where can participants get updated schedules?",
+          "choices": [
+            "At the hotel reception",
+            "At the information desk",
+            "In the main lobby café",
+            "From the workshop presenter"
+          ],
+          "answerIndex": 1,
+          "explanation": "Lịch cập nhật có tại quầy thông tin (information desk)."
+        }
       ],
       "transcriptTranslation": "Người thuyết trình cập nhật lịch hội nghị kinh doanh ngày mai: đăng ký tại sảnh chính lúc 8:30, phần mở đầu lúc 9 giờ. Workshop buổi chiều chuyển sang phòng 310. Lịch mới được phát tại quầy thông tin.",
       "vocabulary": [
-        {"word": "registration", "meaning": "việc đăng ký"},
-        {"word": "opening presentation", "meaning": "phần thuyết trình khai mạc"},
-        {"word": "workshop", "meaning": "buổi hội thảo thực hành"},
-        {"word": "refreshments", "meaning": "đồ ăn nhẹ và thức uống"}
+        {
+          "word": "registration",
+          "meaning": "việc đăng ký"
+        },
+        {
+          "word": "opening presentation",
+          "meaning": "phần thuyết trình khai mạc"
+        },
+        {
+          "word": "workshop",
+          "meaning": "buổi hội thảo thực hành"
+        },
+        {
+          "word": "refreshments",
+          "meaning": "đồ ăn nhẹ và thức uống"
+        }
       ]
+    },
+    {
+      "id": "part3-budget-review",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Reviewing the quarterly budget",
+      "topic": "Business & Workplace",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "I have finished reviewing the department budget, but the travel expenses are about twelve percent higher than we forecast."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "That is mainly because two client visits were moved forward, and we had to book flights at short notice. The fares were considerably more expensive than usual."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Understood. Could you separate those additional costs from the regular travel expenses before the finance meeting on Thursday?"
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Certainly. I will update the spreadsheet this afternoon and send you a revised copy so that you can include it in the presentation."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why are travel expenses higher than expected?",
+          "choices": [
+            "Two employees were hired",
+            "Flights were booked at short notice",
+            "The hotel rates decreased",
+            "A client canceled a meeting"
+          ],
+          "answerIndex": 1,
+          "explanation": "The man explains that flights were booked at short notice."
+        }
+      ],
+      "transcriptTranslation": "Hội thoại/thông báo tiếng Anh trong bối cảnh công việc.",
+      "vocabulary": []
+    },
+    {
+      "id": "part3-interview-arrangement",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Arranging a job interview",
+      "topic": "Business & Workplace",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Good afternoon. I am calling from the recruitment team about your application for the operations coordinator position. The hiring manager would like to invite you for an interview."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Thank you for letting me know. I am available on Wednesday, although I would prefer an afternoon appointment because I have a training session in the morning."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "That should be possible. We can schedule the interview for 2:30 p.m. at our head office. Please bring a copy of your professional certificate and a photo identification document."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "That works well. Could you send me the building address and visitor registration instructions by email?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "When is the interview scheduled?",
+          "choices": [
+            "Wednesday at 9:00 a.m.",
+            "Wednesday at 2:30 p.m.",
+            "Thursday at noon",
+            "Friday afternoon"
+          ],
+          "answerIndex": 1,
+          "explanation": "The recruiter offers Wednesday at 2:30 p.m."
+        }
+      ],
+      "transcriptTranslation": "Hội thoại/thông báo tiếng Anh trong bối cảnh công việc.",
+      "vocabulary": []
+    },
+    {
+      "id": "part3-software-upgrade",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Preparing for a software upgrade",
+      "topic": "Business & Workplace",
+      "level": "B2",
+      "segments": [
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "The information systems team plans to upgrade the inventory platform this weekend. During the upgrade, employees will not be able to submit stock requests through the usual portal."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Will the warehouse scanners be affected as well? We have several large deliveries scheduled for Saturday, and the receiving team needs to record every item as it arrives."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "The scanners will continue to work offline. However, the records will not synchronize until the new platform is available on Monday morning."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "In that case, I will inform the warehouse supervisors and ask them to keep the paper delivery logs as a backup."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What will employees be unable to do during the upgrade?",
+          "choices": [
+            "Use warehouse scanners",
+            "Submit stock requests through the portal",
+            "Receive deliveries",
+            "Access the building"
+          ],
+          "answerIndex": 1,
+          "explanation": "The portal will not accept stock requests during the upgrade."
+        }
+      ],
+      "transcriptTranslation": "Hội thoại/thông báo tiếng Anh trong bối cảnh công việc.",
+      "vocabulary": []
+    },
+    {
+      "id": "part4-safety-announcement",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Safety announcement at a facility",
+      "topic": "Business & Workplace",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "Attention, all visitors and contractors. A routine safety inspection is currently taking place in the eastern storage area. For your safety, please use the marked pedestrian walkway and do not enter the inspection zone unless accompanied by a facility supervisor."
+        },
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "The inspection is expected to finish by 11:30 a.m. Anyone who needs to collect equipment from that area should contact the reception desk, where temporary access arrangements can be made."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What should visitors do?",
+          "choices": [
+            "Enter the inspection area alone",
+            "Use the marked pedestrian walkway",
+            "Move equipment without approval",
+            "Wait outside the building"
+          ],
+          "answerIndex": 1,
+          "explanation": "Visitors are instructed to use the marked pedestrian walkway."
+        }
+      ],
+      "transcriptTranslation": "Hội thoại/thông báo tiếng Anh trong bối cảnh công việc.",
+      "vocabulary": []
+    },
+    {
+      "id": "part4-product-launch",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Product launch presentation",
+      "topic": "Business & Workplace",
+      "level": "B2",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "male",
+          "text": "Thank you for joining today’s product briefing. Our new customer service platform is scheduled for release on the first Monday of next month. The system combines email, telephone, and online inquiries in a single workspace, allowing service agents to track each request from the initial contact to its resolution."
+        },
+        {
+          "speaker": "Speaker",
+          "voice": "male",
+          "text": "Before the launch, all team leaders must complete the online training module and submit their department readiness checklist. The training portal will remain open until the twenty-sixth. If you encounter technical problems, please contact the implementation team rather than the general help desk."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What must team leaders submit before the launch?",
+          "choices": [
+            "A customer survey",
+            "A department readiness checklist",
+            "A revised product price",
+            "A monthly sales report"
+          ],
+          "answerIndex": 1,
+          "explanation": "The speaker asks team leaders to submit their department readiness checklist."
+        }
+      ],
+      "transcriptTranslation": "Hội thoại/thông báo tiếng Anh trong bối cảnh công việc.",
+      "vocabulary": []
     }
   ]
 }

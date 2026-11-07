@@ -3,6 +3,145 @@
   "letter": "A",
   "words": [
     {
+      "id": "absence-n",
+      "word": "absence",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự vắng mặt",
+          "definition_en": "Absence — sự vắng mặt.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed absence during the meeting.",
+          "vi": "Nhóm đã thảo luận về “absence” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "absenteeism-n",
+      "word": "absenteeism",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng vắng mặt thường xuyên",
+          "definition_en": "the practice of regularly being absent from work or school",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new attendance policy aims to reduce absenteeism.",
+          "vi": "Chính sách chấm công mới nhằm giảm tình trạng vắng mặt."
+        }
+      ],
+      "collocations": [
+        "employee absenteeism",
+        "absenteeism rate"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "absorb-v",
+      "word": "absorb",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tiếp nhận; hấp thụ",
+          "definition_en": "to take in or incorporate something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company plans to absorb the temporary staff into its permanent workforce.",
+          "vi": "Công ty dự định tiếp nhận nhân viên thời vụ vào lực lượng lao động chính thức."
+        }
+      ],
+      "collocations": [
+        "absorb costs",
+        "absorb new employees"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "abstract-adj",
+      "word": "abstract",
+      "phonetic": {
+        "us": "/ˈæb.strækt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "trừu tượng; mang tính khái quát",
+          "definition_en": "existing in thought or as an idea rather than having a physical form",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "abstractly",
+          "pos": "adv",
+          "meaning_vi": "một cách trừu tượng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The report begins with an abstract discussion of economic theory.",
+          "vi": "Cuộc báo cáo bắt đầu bằng phần thảo luận trừu tượng về lý thuyết kinh tế."
+        }
+      ],
+      "collocations": [
+        "abstract concept",
+        "abstract reasoning"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "accept-v",
       "word": "accept",
       "phonetic": {
@@ -124,6 +263,71 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "accident-n",
+      "word": "accident",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈæk.sə.dənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tai nạn",
+          "definition_en": "an unexpected event that causes damage or injury",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company recorded fewer workplace accidents.",
+          "vi": "Công ty ghi nhận ít tai nạn lao động hơn."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "accommodate-v",
+      "word": "accommodate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đáp ứng; cung cấp chỗ ở",
+          "definition_en": "accommodate: đáp ứng; cung cấp chỗ ở.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The hotel can accommodate up to 250 conference guests.",
+          "vi": "Khách sạn có thể phục vụ tối đa 250 khách dự hội nghị."
+        }
+      ],
+      "collocations": [
+        "accommodate a request",
+        "accommodate guests"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "accommodation-n",
       "word": "accommodation",
       "phonetic": {
@@ -160,6 +364,353 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "accomplish-v",
+      "word": "accomplish",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hoàn thành; đạt được",
+          "definition_en": "Accomplish — hoàn thành; đạt được.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed accomplish during the meeting.",
+          "vi": "Nhóm đã thảo luận về “accomplish” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accordance-n",
+      "word": "accordance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phù hợp; sự tuân theo",
+          "definition_en": "accordance: sự phù hợp; sự tuân theo.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All payments must be made in accordance with the contract.",
+          "vi": "Mọi khoản thanh toán phải được thực hiện theo hợp đồng."
+        }
+      ],
+      "collocations": [
+        "in accordance with",
+        "accordance with regulations"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "account-holder-n",
+      "word": "account holder",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈkaʊnt ˌhoʊl.dɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chủ tài khoản",
+          "definition_en": "a person who owns a bank account",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The account holder must verify their identity.",
+          "vi": "Chủ tài khoản phải xác minh danh tính."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "accountable-adj",
+      "word": "accountable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "chịu trách nhiệm; có nghĩa vụ giải trình",
+          "definition_en": "accountable: chịu trách nhiệm; có nghĩa vụ giải trình.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Department heads are accountable for their budgets.",
+          "vi": "Trưởng bộ phận chịu trách nhiệm về ngân sách của mình."
+        }
+      ],
+      "collocations": [
+        "be accountable for",
+        "hold someone accountable"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accountant-n",
+      "word": "accountant",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kế toán viên",
+          "definition_en": "a person whose job is to keep or examine financial accounts",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The accountant will review the quarterly figures.",
+          "vi": "Kế toán viên sẽ rà soát các số liệu quý."
+        }
+      ],
+      "collocations": [
+        "certified accountant",
+        "staff accountant"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accounting-n",
+      "word": "accounting",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kế toán",
+          "definition_en": "the work of recording and reporting an organization’s financial activities",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "She works in the accounting department.",
+          "vi": "Cô ấy làm việc tại phòng kế toán."
+        }
+      ],
+      "collocations": [
+        "accounting department",
+        "accounting software"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accrue-v",
+      "word": "accrue",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tích lũy; phát sinh dần",
+          "definition_en": "Accrue: tích lũy; phát sinh dần.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the accrue issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “accrue” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accumulate-v",
+      "word": "accumulate",
+      "phonetic": {
+        "us": "/əˈkjuː.mjə.leɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tích lũy; tích tụ",
+          "definition_en": "to collect or increase gradually over time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "accumulation",
+          "pos": "n",
+          "meaning_vi": "sự tích lũy"
+        },
+        {
+          "word": "cumulative",
+          "pos": "adj",
+          "meaning_vi": "tích lũy dần"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Small expenses can accumulate into a substantial amount.",
+          "vi": "Những khoản chi nhỏ có thể tích lũy thành một số tiền đáng kể."
+        }
+      ],
+      "collocations": [
+        "accumulate wealth",
+        "accumulate experience"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accurate-adj",
+      "word": "accurate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "chính xác",
+          "definition_en": "Accurate — chính xác.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed accurate during the meeting.",
+          "vi": "Nhóm đã thảo luận về “accurate” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "acknowledge-v",
+      "word": "acknowledge",
+      "phonetic": {
+        "us": "/əkˈnɑː.lɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thừa nhận; công nhận; xác nhận đã nhận",
+          "definition_en": "to accept or admit that something is true or that something has been received",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "acknowledgment",
+          "pos": "n",
+          "meaning_vi": "sự công nhận; xác nhận"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please acknowledge receipt of the revised contract.",
+          "vi": "Vui lòng xác nhận đã nhận hợp đồng sửa đổi."
+        }
+      ],
+      "collocations": [
+        "acknowledge receipt",
+        "acknowledge a contribution"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "acquisition-n",
@@ -200,6 +751,120 @@
         "company acquisition",
         "asset acquisition"
       ]
+    },
+    {
+      "id": "activate-v",
+      "word": "activate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "kích hoạt",
+          "definition_en": "activate: kích hoạt.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please activate your account before placing an order.",
+          "vi": "Vui lòng kích hoạt tài khoản trước khi đặt hàng."
+        }
+      ],
+      "collocations": [
+        "activate an account",
+        "activate a service"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "adapt-v",
+      "word": "adapt",
+      "phonetic": {
+        "us": "/əˈdæpt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thích nghi; điều chỉnh cho phù hợp",
+          "definition_en": "to change something or yourself to suit a new situation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CAREER",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "adaptation",
+          "pos": "n",
+          "meaning_vi": "sự thích nghi; sự điều chỉnh"
+        },
+        {
+          "word": "adaptable",
+          "pos": "adj",
+          "meaning_vi": "có khả năng thích nghi"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "New employees must adapt quickly to the company's procedures.",
+          "vi": "Nhân viên mới phải nhanh chóng thích nghi với quy trình của công ty."
+        }
+      ],
+      "collocations": [
+        "adapt to change",
+        "adapt a strategy"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "additional-adj",
+      "word": "additional",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "bổ sung; thêm",
+          "definition_en": "additional: bổ sung; thêm.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Additional documents are required for the application.",
+          "vi": "Cần bổ sung giấy tờ cho hồ sơ đăng ký."
+        }
+      ],
+      "collocations": [
+        "additional information",
+        "additional charge"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "address-v",
@@ -246,6 +911,339 @@
       ]
     },
     {
+      "id": "adequate-adj",
+      "word": "adequate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "đầy đủ; thích đáng",
+          "definition_en": "enough or satisfactory for a particular purpose",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The current staffing level is adequate for the project.",
+          "vi": "Nhân sự hiện tại đủ đáp ứng dự án."
+        }
+      ],
+      "collocations": [
+        "adequate resources",
+        "adequate time",
+        "adequate training"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "adherence-n",
+      "word": "adherence",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tuân thủ",
+          "definition_en": "the act of following a rule, agreement, or standard",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Strict adherence to safety procedures is required.",
+          "vi": "Việc tuân thủ nghiêm ngặt quy trình an toàn là bắt buộc."
+        }
+      ],
+      "collocations": [
+        "adherence to policy",
+        "strict adherence"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "adjacent-adj",
+      "word": "adjacent",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "liền kề; kế bên",
+          "definition_en": "Adjacent: liền kề; kế bên.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the adjacent issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “adjacent” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "adjourn-v",
+      "word": "adjourn",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hoãn; tạm ngừng cuộc họp",
+          "definition_en": "to stop a meeting or legal process temporarily",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The chairperson adjourned the meeting until Friday.",
+          "vi": "Chủ tọa hoãn cuộc họp đến thứ Sáu."
+        }
+      ],
+      "collocations": [
+        "adjourn a meeting",
+        "adjourn until"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "adjustment-n",
+      "word": "adjustment",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự điều chỉnh",
+          "definition_en": "adjustment: sự điều chỉnh.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The invoice includes an adjustment for shipping costs.",
+          "vi": "Hóa đơn bao gồm khoản điều chỉnh chi phí vận chuyển."
+        }
+      ],
+      "collocations": [
+        "price adjustment",
+        "make an adjustment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "administration-n",
+      "word": "administration",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự quản lý; ban điều hành",
+          "definition_en": "the process of managing an organization or its activities",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The administration announced a new travel policy.",
+          "vi": "Ban điều hành công bố chính sách công tác mới."
+        }
+      ],
+      "collocations": [
+        "office administration",
+        "central administration"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "administrative-adj",
+      "word": "administrative",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc hành chính; quản trị",
+          "definition_en": "administrative: thuộc hành chính; quản trị.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Administrative staff will distribute the revised schedule.",
+          "vi": "Nhân viên hành chính sẽ phát lịch trình đã sửa đổi."
+        }
+      ],
+      "collocations": [
+        "administrative duties",
+        "administrative assistant"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "administrator-n",
+      "word": "administrator",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quản trị viên; người quản lý",
+          "definition_en": "administrator: quản trị viên; người quản lý.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Contact the system administrator if you cannot log in.",
+          "vi": "Liên hệ quản trị viên hệ thống nếu bạn không thể đăng nhập."
+        }
+      ],
+      "collocations": [
+        "system administrator",
+        "office administrator"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "admission-n",
+      "word": "admission",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự cho phép vào; vé vào cửa",
+          "definition_en": "Admission — sự cho phép vào; vé vào cửa.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed admission during the meeting.",
+          "vi": "Nhóm đã thảo luận về “admission” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "adopt-v",
+      "word": "adopt",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "áp dụng; thông qua",
+          "definition_en": "Adopt — áp dụng; thông qua.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed adopt during the meeting.",
+          "vi": "Nhóm đã thảo luận về “adopt” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "advice-n",
       "word": "advice",
       "cefr_level": "A2",
@@ -284,6 +1282,124 @@
       ]
     },
     {
+      "id": "advisory-adj",
+      "word": "advisory",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj/n",
+          "meaning_vi": "mang tính tư vấn; thông báo khuyến nghị",
+          "definition_en": "providing advice or information rather than direct instructions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank issued an advisory notice about the change in fees.",
+          "vi": "Ngân hàng phát hành thông báo tư vấn về thay đổi phí."
+        }
+      ],
+      "collocations": [
+        "advisory board",
+        "travel advisory"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "advocate-vn",
+      "word": "advocate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "ủng hộ; người ủng hộ",
+          "definition_en": "to publicly support an idea or policy; a person who does so",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        },
+        {
+          "pos": "n",
+          "meaning_vi": "ủng hộ; người ủng hộ",
+          "definition_en": "to publicly support an idea or policy; a person who does so",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "advocate",
+        "vs_es": "advocates",
+        "v2": "advocated",
+        "v3": "advocated",
+        "ving": "advocating"
+      },
+      "examples": [
+        {
+          "en": "Several managers advocate a more flexible work policy.",
+          "vi": "Một số quản lý ủng hộ chính sách làm việc linh hoạt hơn."
+        }
+      ],
+      "collocations": [
+        "advocate change",
+        "strongly advocate",
+        "an advocate for"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "affiliate-n",
+      "word": "affiliate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "đơn vị liên kết; liên kết",
+          "definition_en": "an organization connected to a larger one; to connect formally",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The regional affiliate will handle customer inquiries.",
+          "vi": "Đơn vị liên kết khu vực sẽ xử lý các yêu cầu của khách hàng."
+        }
+      ],
+      "collocations": [
+        "affiliate company",
+        "affiliated office"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "agenda-n",
       "word": "agenda",
       "cefr_level": "B1",
@@ -320,6 +1436,139 @@
         "meeting agenda",
         "set the agenda"
       ]
+    },
+    {
+      "id": "aggregate-nv",
+      "word": "aggregate",
+      "phonetic": {
+        "us": "/ˈæɡ.rə.ɡət/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "tổng hợp; tổng số; gộp lại",
+          "definition_en": "a total formed by combining several amounts; to combine amounts",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The aggregate cost of the project exceeded the initial estimate.",
+          "vi": "Tổng chi phí của dự án vượt quá ước tính ban đầu."
+        }
+      ],
+      "collocations": [
+        "aggregate demand",
+        "in the aggregate"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "aisle-n",
+      "word": "aisle",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/aɪl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lối đi giữa các kệ hàng",
+          "definition_en": "a passage between rows of shelves",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The cleaning products are in aisle six.",
+          "vi": "Các sản phẩm vệ sinh nằm ở lối đi số sáu."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "aisle-seat-n",
+      "word": "aisle seat",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈaɪl siːt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ghế cạnh lối đi",
+          "definition_en": "a seat next to the passage between rows",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "I would prefer an aisle seat near the front.",
+          "vi": "Tôi muốn ghế cạnh lối đi gần phía trước."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "albeit-conj",
+      "word": "albeit",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "conj",
+          "meaning_vi": "mặc dù; dù rằng",
+          "definition_en": "although; even though",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The launch was successful, albeit slightly delayed.",
+          "vi": "Buổi ra mắt đã thành công, mặc dù hơi chậm trễ."
+        }
+      ],
+      "collocations": [
+        "albeit limited",
+        "albeit difficult",
+        "albeit slowly"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
     },
     {
       "id": "allocate-v",
@@ -368,6 +1617,115 @@
       ]
     },
     {
+      "id": "allocation-n",
+      "word": "allocation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phân bổ; khoản được phân bổ",
+          "definition_en": "allocation: sự phân bổ; khoản được phân bổ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The budget allocation was approved by the director.",
+          "vi": "Việc phân bổ ngân sách đã được giám đốc phê duyệt."
+        }
+      ],
+      "collocations": [
+        "budget allocation",
+        "resource allocation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "allowance-n",
+      "word": "allowance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phụ cấp; khoản trợ cấp",
+          "definition_en": "an amount of money given regularly for a particular purpose",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees receive a monthly transportation allowance.",
+          "vi": "Nhân viên nhận phụ cấp đi lại hằng tháng."
+        }
+      ],
+      "collocations": [
+        "travel allowance",
+        "meal allowance"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "alter-v",
+      "word": "alter",
+      "phonetic": {
+        "us": "/ˈɑːl.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thay đổi; sửa đổi",
+          "definition_en": "to change something, usually slightly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "alteration",
+          "pos": "n",
+          "meaning_vi": "sự thay đổi; chỉnh sửa"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier agreed to alter the delivery schedule.",
+          "vi": "Nhà cung cấp đồng ý điều chỉnh lịch giao hàng."
+        }
+      ],
+      "collocations": [
+        "alter a document",
+        "alter the schedule"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "always-adv",
       "word": "always",
       "phonetic": {
@@ -408,6 +1766,255 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "ambiguous-adj",
+      "word": "ambiguous",
+      "phonetic": {
+        "us": "/æmˈbɪɡ.ju.əs/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "mơ hồ; có thể hiểu theo nhiều cách",
+          "definition_en": "having more than one possible meaning and therefore not clear",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "ambiguity",
+          "pos": "n",
+          "meaning_vi": "sự mơ hồ"
+        },
+        {
+          "word": "unambiguous",
+          "pos": "adj",
+          "meaning_vi": "rõ ràng; không mơ hồ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract contains an ambiguous clause that requires clarification.",
+          "vi": "Hợp đồng có một điều khoản mơ hồ cần được làm rõ."
+        }
+      ],
+      "collocations": [
+        "ambiguous wording",
+        "remain ambiguous"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "amend-v",
+      "word": "amend",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "sửa đổi; bổ sung (văn bản)",
+          "definition_en": "Amend — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will amend the relevant process.",
+          "vi": "Nội dung liên quan đến “amend” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "amendment-n",
+      "word": "amendment",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự sửa đổi; bản sửa đổi",
+          "definition_en": "a change made to a document, law, or agreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Both parties must sign the contract amendment.",
+          "vi": "Cả hai bên phải ký bản sửa đổi hợp đồng."
+        }
+      ],
+      "collocations": [
+        "contract amendment",
+        "proposed amendment"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "amenity-n",
+      "word": "amenity",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈmen.ə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tiện nghi; tiện ích",
+          "definition_en": "a feature or service that makes a place comfortable",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The fitness center is a popular hotel amenity.",
+          "vi": "Phòng tập thể hình là tiện nghi được yêu thích của khách sạn."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "analogy-n",
+      "word": "analogy",
+      "phonetic": {
+        "us": "/əˈnæl.ə.dʒi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phép loại suy; sự tương đồng để giải thích",
+          "definition_en": "a comparison between things that have similar features",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lecturer used an analogy to explain the complex process.",
+          "vi": "Giảng viên dùng phép loại suy để giải thích quy trình phức tạp."
+        }
+      ],
+      "collocations": [
+        "draw an analogy",
+        "by analogy with"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "analyze-v",
+      "word": "analyze",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "phân tích",
+          "definition_en": "to examine something carefully in order to understand it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "analyze",
+        "vs_es": "analyzes",
+        "v2": "analyzed",
+        "v3": "analyzed",
+        "ving": "analyzing"
+      },
+      "examples": [
+        {
+          "en": "The team analyzed customer feedback before changing the service.",
+          "vi": "Nhóm đã phân tích phản hồi của khách hàng trước khi thay đổi dịch vụ."
+        }
+      ],
+      "collocations": [
+        "analyze data",
+        "analyze results",
+        "analyze feedback"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "announcement-n",
+      "word": "announcement",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈnaʊns.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thông báo",
+          "definition_en": "a public or official statement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The announcement will be sent to all staff.",
+          "vi": "Thông báo sẽ được gửi đến toàn thể nhân viên."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "annual-adj",
       "word": "annual",
       "cefr_level": "A2",
@@ -444,6 +2051,247 @@
         "annual report",
         "annual leave"
       ]
+    },
+    {
+      "id": "annually-adv",
+      "word": "annually",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "hằng năm",
+          "definition_en": "annually: hằng năm.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Safety procedures are reviewed annually.",
+          "vi": "Các quy trình an toàn được rà soát hằng năm."
+        }
+      ],
+      "collocations": [
+        "review annually",
+        "paid annually"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "anticipate-v",
+      "word": "anticipate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "dự đoán; lường trước; mong đợi",
+          "definition_en": "to expect something and prepare for it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "anticipate",
+        "vs_es": "anticipates",
+        "v2": "anticipated",
+        "v3": "anticipated",
+        "ving": "anticipating"
+      },
+      "examples": [
+        {
+          "en": "We anticipate higher demand during the holiday season.",
+          "vi": "Chúng tôi dự đoán nhu cầu sẽ cao hơn trong mùa lễ."
+        }
+      ],
+      "collocations": [
+        "anticipate demand",
+        "anticipate problems",
+        "highly anticipated"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "apologize-v",
+      "word": "apologize",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "xin lỗi",
+          "definition_en": "Apologize — xin lỗi.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed apologize during the meeting.",
+          "vi": "Nhóm đã thảo luận về “apologize” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "apparent-adj",
+      "word": "apparent",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "rõ ràng; có vẻ như",
+          "definition_en": "easy to see or understand; seeming to be true",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "It became apparent that additional training was needed.",
+          "vi": "Dần trở nên rõ ràng rằng cần có thêm đào tạo."
+        }
+      ],
+      "collocations": [
+        "apparent reason",
+        "become apparent",
+        "apparently obvious"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "applicable-adj",
+      "word": "applicable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể áp dụng; thích hợp",
+          "definition_en": "applicable: có thể áp dụng; thích hợp.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The discount is applicable to orders over $500.",
+          "vi": "Mức giảm giá áp dụng cho đơn hàng trên 500 đô la."
+        }
+      ],
+      "collocations": [
+        "where applicable",
+        "applicable regulations"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "applicant-n",
+      "word": "applicant",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈæp.lə.kənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người ứng tuyển",
+          "definition_en": "a person who formally asks for a job",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each applicant must submit a current résumé.",
+          "vi": "Mỗi ứng viên phải nộp sơ yếu lý lịch cập nhật."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "application-n",
+      "word": "application",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đơn; hồ sơ; ứng dụng",
+          "definition_en": "a formal request for something, especially a job or permission",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Your application has been received.",
+          "vi": "Chúng tôi đã nhận được hồ sơ của bạn."
+        }
+      ],
+      "collocations": [
+        "job application",
+        "application form"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "apply-v",
@@ -492,6 +2340,40 @@
       ]
     },
     {
+      "id": "appoint-v",
+      "word": "appoint",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "bổ nhiệm; chỉ định",
+          "definition_en": "to choose someone for a job or position",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The director appointed Ms. Chen as regional manager.",
+          "vi": "Giám đốc bổ nhiệm bà Chen làm quản lý khu vực."
+        }
+      ],
+      "collocations": [
+        "appoint a director",
+        "appoint someone to a post"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "appointment-n",
       "word": "appointment",
       "phonetic": {
@@ -529,6 +2411,170 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "appraisal-n",
+      "word": "appraisal",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈpreɪ.zəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đánh giá hiệu suất",
+          "definition_en": "a formal assessment of an employee’s work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Staff appraisals take place twice a year.",
+          "vi": "Đánh giá nhân viên diễn ra hai lần mỗi năm."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "appraise-v",
+      "word": "appraise",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đánh giá; định giá",
+          "definition_en": "to examine and judge the value or quality of something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Supervisors appraise staff performance twice a year.",
+          "vi": "Các giám sát viên đánh giá hiệu suất nhân viên hai lần mỗi năm."
+        }
+      ],
+      "collocations": [
+        "appraise performance",
+        "appraise property"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "apprentice-n",
+      "word": "apprentice",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người học nghề",
+          "definition_en": "a person who learns a skilled job by working with an experienced person",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The apprentice is training in the maintenance workshop.",
+          "vi": "Người học nghề đang được đào tạo tại xưởng bảo trì."
+        }
+      ],
+      "collocations": [
+        "apprentice electrician",
+        "apprenticeship program"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "apprenticeship-n",
+      "word": "apprenticeship",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chương trình học nghề",
+          "definition_en": "a period of training while working for a skilled employer",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company offers a two-year apprenticeship in engineering.",
+          "vi": "Công ty cung cấp chương trình học nghề kỹ thuật kéo dài hai năm."
+        }
+      ],
+      "collocations": [
+        "complete an apprenticeship",
+        "apprenticeship program"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "approval-n",
+      "word": "approval",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự chấp thuận",
+          "definition_en": "Approval — sự chấp thuận.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed approval during the meeting.",
+          "vi": "Nhóm đã thảo luận về “approval” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "approve-v",
@@ -577,6 +2623,162 @@
       ]
     },
     {
+      "id": "approximate-adjv",
+      "word": "approximate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "xấp xỉ; ước tính",
+          "definition_en": "close to an exact amount but not completely accurate; to estimate",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "xấp xỉ; ước tính",
+          "definition_en": "close to an exact amount but not completely accurate; to estimate",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "approximate",
+        "vs_es": "approximates",
+        "v2": "approximated",
+        "v3": "approximated",
+        "ving": "approximating"
+      },
+      "examples": [
+        {
+          "en": "The approximate cost of the renovation is $20,000.",
+          "vi": "Chi phí cải tạo ước tính là 20.000 đô la."
+        }
+      ],
+      "collocations": [
+        "approximate cost",
+        "approximate number",
+        "approximately equal"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "approximately-adv",
+      "word": "approximately",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "xấp xỉ; khoảng",
+          "definition_en": "approximately: xấp xỉ; khoảng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The delivery will take approximately three business days.",
+          "vi": "Việc giao hàng sẽ mất khoảng ba ngày làm việc."
+        }
+      ],
+      "collocations": [
+        "approximately 20 percent",
+        "approximately two weeks"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "arbitrary-adj",
+      "word": "arbitrary",
+      "phonetic": {
+        "us": "/ˈɑːr.bə.trer.i/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "tùy tiện; không dựa trên nguyên tắc rõ ràng",
+          "definition_en": "decided without a clear reason or system",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "arbitrarily",
+          "pos": "adv",
+          "meaning_vi": "một cách tùy tiện"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The selection process should follow clear rules rather than arbitrary decisions.",
+          "vi": "Quy trình tuyển chọn nên tuân theo quy tắc rõ ràng thay vì quyết định tùy tiện."
+        }
+      ],
+      "collocations": [
+        "arbitrary decision",
+        "arbitrary limit"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "architect-n",
+      "word": "architect",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɑːr.kə.tekt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kiến trúc sư",
+          "definition_en": "a person who designs buildings",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The architect presented the revised office design.",
+          "vi": "Kiến trúc sư trình bày thiết kế văn phòng đã sửa đổi."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "arrange-v",
       "word": "arrange",
       "cefr_level": "A2",
@@ -623,6 +2825,287 @@
       ]
     },
     {
+      "id": "arrangement-n",
+      "word": "arrangement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự sắp xếp; thỏa thuận",
+          "definition_en": "arrangement: sự sắp xếp; thỏa thuận.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Travel arrangements have been confirmed.",
+          "vi": "Các sắp xếp cho chuyến công tác đã được xác nhận."
+        }
+      ],
+      "collocations": [
+        "make arrangements",
+        "travel arrangements"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "arrears-n",
+      "word": "arrears",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản nợ quá hạn; tiền còn thiếu",
+          "definition_en": "money that is owed and should have been paid earlier",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The tenant has fallen two months into rent arrears.",
+          "vi": "Người thuê đang nợ tiền thuê nhà hai tháng."
+        }
+      ],
+      "collocations": [
+        "rent arrears",
+        "payment in arrears"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "assembly-n",
+      "word": "assembly",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự lắp ráp; dây chuyền lắp ráp",
+          "definition_en": "the process of putting parts together to make a product",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The assembly line will operate on Saturday.",
+          "vi": "Dây chuyền lắp ráp sẽ hoạt động vào thứ Bảy."
+        }
+      ],
+      "collocations": [
+        "assembly line",
+        "assembly plant"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "assess-v",
+      "word": "assess",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đánh giá; thẩm định",
+          "definition_en": "Assess: đánh giá; thẩm định.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the assess issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “assess” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "assessment-n",
+      "word": "assessment",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự đánh giá; bài đánh giá",
+          "definition_en": "a judgment about the quality, importance, or ability of someone or something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The assessment will measure each candidate’s technical skills.",
+          "vi": "Bài đánh giá sẽ đo lường kỹ năng chuyên môn của từng ứng viên."
+        }
+      ],
+      "collocations": [
+        "risk assessment",
+        "skills assessment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "asset-n",
+      "word": "asset",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tài sản; nguồn lực có giá trị",
+          "definition_en": "something valuable that an organization owns or controls",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new equipment is recorded as a company asset.",
+          "vi": "Thiết bị mới được ghi nhận là tài sản công ty."
+        }
+      ],
+      "collocations": [
+        "fixed asset",
+        "company assets"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "assign-v",
+      "word": "assign",
+      "phonetic": {
+        "us": "/əˈsaɪn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giao; phân công; chỉ định",
+          "definition_en": "to give someone a particular task or responsibility",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "assignment",
+          "pos": "n",
+          "meaning_vi": "nhiệm vụ; bài tập"
+        },
+        {
+          "word": "assignee",
+          "pos": "n",
+          "meaning_vi": "người được giao"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manager assigned each analyst a section of the report.",
+          "vi": "Người quản lý phân công cho mỗi chuyên viên một phần của báo cáo."
+        }
+      ],
+      "collocations": [
+        "assign a task",
+        "assign responsibility"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "assistance-n",
+      "word": "assistance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hỗ trợ; trợ giúp",
+          "definition_en": "assistance: sự hỗ trợ; trợ giúp.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Technical assistance is available around the clock.",
+          "vi": "Hỗ trợ kỹ thuật luôn sẵn sàng suốt ngày đêm."
+        }
+      ],
+      "collocations": [
+        "technical assistance",
+        "require assistance"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "assistant-n",
       "word": "assistant",
       "cefr_level": "A1",
@@ -661,6 +3144,470 @@
         "administrative assistant",
         "sales assistant"
       ]
+    },
+    {
+      "id": "assumption-n",
+      "word": "assumption",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giả định; điều giả sử",
+          "definition_en": "something that is accepted as true without proof",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The forecast was based on the assumption that demand would rise.",
+          "vi": "Dự báo dựa trên giả định rằng nhu cầu sẽ tăng."
+        }
+      ],
+      "collocations": [
+        "make an assumption",
+        "underlying assumption",
+        "reasonable assumption"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "attachment-n",
+      "word": "attachment",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/əˈtætʃ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tệp đính kèm",
+          "definition_en": "a file sent with an email",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please review the attachment before the meeting.",
+          "vi": "Vui lòng xem tệp đính kèm trước cuộc họp."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "attain-v",
+      "word": "attain",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đạt được; giành được",
+          "definition_en": "to succeed in achieving something after effort",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "attain",
+        "vs_es": "attains",
+        "v2": "attained",
+        "v3": "attained",
+        "ving": "attaining"
+      },
+      "examples": [
+        {
+          "en": "She attained her target ahead of schedule.",
+          "vi": "Cô ấy đã đạt mục tiêu trước thời hạn."
+        }
+      ],
+      "collocations": [
+        "attain a goal",
+        "attain a standard",
+        "attain proficiency"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "attendance-n",
+      "word": "attendance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tham dự; chuyên cần",
+          "definition_en": "attendance: sự tham dự; chuyên cần.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Attendance at the safety briefing is mandatory.",
+          "vi": "Việc tham dự buổi hướng dẫn an toàn là bắt buộc."
+        }
+      ],
+      "collocations": [
+        "attendance record",
+        "take attendance"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "attendee-n",
+      "word": "attendee",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người tham dự",
+          "definition_en": "Attendee — người tham dự.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed attendee during the meeting.",
+          "vi": "Nhóm đã thảo luận về “attendee” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "attribute-nv",
+      "word": "attribute",
+      "phonetic": {
+        "us": "/əˈtrɪb.juːt/"
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "meaning_vi": "quy cho; cho là do; đặc tính",
+          "definition_en": "to regard something as being caused by a particular person or thing",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "attribution",
+          "pos": "n",
+          "meaning_vi": "sự quy kết; sự ghi công"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Researchers attribute the improvement to better staff training.",
+          "vi": "Các nhà nghiên cứu cho rằng sự cải thiện là nhờ đào tạo nhân viên tốt hơn."
+        }
+      ],
+      "collocations": [
+        "attribute something to",
+        "key attribute"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "audit-n",
+      "word": "audit",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cuộc kiểm toán; sự kiểm tra",
+          "definition_en": "an official examination of financial records or business procedures",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "An external firm will conduct the annual audit.",
+          "vi": "Một công ty bên ngoài sẽ thực hiện kiểm toán hằng năm."
+        }
+      ],
+      "collocations": [
+        "external audit",
+        "audit report"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "auditor-n",
+      "word": "auditor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kiểm toán viên",
+          "definition_en": "a person who officially examines financial records",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The auditor requested copies of the invoices.",
+          "vi": "Kiểm toán viên yêu cầu bản sao các hóa đơn."
+        }
+      ],
+      "collocations": [
+        "internal auditor",
+        "external auditor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "authentic-adj",
+      "word": "authentic",
+      "phonetic": {
+        "us": "/ɔːˈθen.tɪk/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "xác thực; chân thực; đáng tin là thật",
+          "definition_en": "genuine or real, not copied or false",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "authenticate",
+          "pos": "v",
+          "meaning_vi": "xác thực"
+        },
+        {
+          "word": "authentication",
+          "pos": "n",
+          "meaning_vi": "sự xác thực"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The museum confirmed that the document is authentic.",
+          "vi": "Bảo tàng xác nhận tài liệu là xác thực."
+        }
+      ],
+      "collocations": [
+        "authentic document",
+        "authentic experience"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "authorization-n",
+      "word": "authorization",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự ủy quyền; giấy phép",
+          "definition_en": "authorization: sự ủy quyền; giấy phép.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Written authorization is needed to access the records.",
+          "vi": "Cần có văn bản ủy quyền để truy cập hồ sơ."
+        }
+      ],
+      "collocations": [
+        "written authorization",
+        "payment authorization"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "authorize-v",
+      "word": "authorize",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "ủy quyền; cho phép chính thức",
+          "definition_en": "Authorize — ủy quyền; cho phép chính thức.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed authorize during the meeting.",
+          "vi": "Nhóm đã thảo luận về “authorize” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "automated-adj",
+      "word": "automated",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "được tự động hóa",
+          "definition_en": "operated by machines or computers with little human control",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The warehouse uses an automated inventory system.",
+          "vi": "Kho hàng sử dụng hệ thống kiểm kê tự động."
+        }
+      ],
+      "collocations": [
+        "automated system",
+        "automated process"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "availability-n",
+      "word": "availability",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng sẵn có; khả năng có mặt",
+          "definition_en": "the state of being able to be used, obtained, or present",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please check room availability before confirming the booking.",
+          "vi": "Vui lòng kiểm tra tình trạng phòng trống trước khi xác nhận đặt chỗ."
+        }
+      ],
+      "collocations": [
+        "product availability",
+        "room availability",
+        "subject to availability"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
     },
     {
       "id": "available-adj",

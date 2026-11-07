@@ -100,6 +100,66 @@
       "id": "EDUCATION",
       "label": "Giáo dục & đào tạo",
       "description": "Học tập, đào tạo, kỹ năng và hoạt động giáo dục."
+    },
+    {
+      "id": "FOOD",
+      "label": "Ẩm thực & nhà hàng",
+      "description": "Nhà hàng, thực đơn, đặt bàn và dịch vụ ăn uống."
+    },
+    {
+      "id": "HOTEL",
+      "label": "Khách sạn & lưu trú",
+      "description": "Đặt phòng, tiện nghi, nhận và trả phòng."
+    },
+    {
+      "id": "EVENT",
+      "label": "Sự kiện & hội nghị",
+      "description": "Sự kiện, triển lãm, hội thảo và đăng ký."
+    },
+    {
+      "id": "COMMUNICATION",
+      "label": "Giao tiếp & thư từ",
+      "description": "Điện thoại, email, trao đổi và phản hồi."
+    },
+    {
+      "id": "CONSTRUCTION",
+      "label": "Xây dựng & bảo trì",
+      "description": "Công trình, sửa chữa, vật liệu và bảo dưỡng."
+    },
+    {
+      "id": "SHOPPING",
+      "label": "Mua sắm & bán lẻ",
+      "description": "Cửa hàng, đơn hàng, thanh toán và đổi trả."
+    },
+    {
+      "id": "BANKING",
+      "label": "Ngân hàng & thanh toán",
+      "description": "Tài khoản, chuyển khoản, thẻ và giao dịch."
+    },
+    {
+      "id": "CAREER",
+      "label": "Nghề nghiệp & kỹ năng",
+      "description": "Nghề nghiệp, năng lực, thăng tiến và đào tạo."
+    },
+    {
+      "id": "WEATHER",
+      "label": "Thời tiết & môi trường sống",
+      "description": "Dự báo, khí hậu, điều kiện và cảnh báo."
+    },
+    {
+      "id": "HEALTHCARE",
+      "label": "Y tế & chăm sóc",
+      "description": "Phòng khám, lịch hẹn, điều trị và bảo hiểm."
+    },
+    {
+      "id": "AIRPORT",
+      "label": "Sân bay & hàng không",
+      "description": "Check-in, hành lý, chuyến bay và an ninh."
+    },
+    {
+      "id": "REAL_ESTATE",
+      "label": "Bất động sản & văn phòng",
+      "description": "Thuê/mua mặt bằng, hợp đồng và tiện ích."
     }
   ]
 }

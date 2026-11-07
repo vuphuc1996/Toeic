@@ -43,6 +43,71 @@
       ]
     },
     {
+      "id": "undergo-v",
+      "word": "undergo",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "trải qua; chịu (quá trình)",
+          "definition_en": "Undergo — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will undergo the relevant process.",
+          "vi": "Nội dung liên quan đến “undergo” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "understaffed-adj",
+      "word": "understaffed",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thiếu nhân sự",
+          "definition_en": "not having enough employees to do the required work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The customer service desk is understaffed during peak hours.",
+          "vi": "Quầy dịch vụ khách hàng thiếu nhân viên trong giờ cao điểm."
+        }
+      ],
+      "collocations": [
+        "understaffed department",
+        "severely understaffed"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "undertake-v",
       "word": "undertake",
       "cefr_level": "B2",
@@ -87,6 +152,108 @@
         "undertake a project",
         "undertake responsibility"
       ]
+    },
+    {
+      "id": "undertaking-n",
+      "word": "undertaking",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cam kết; nhiệm vụ được đảm nhận",
+          "definition_en": "a formal promise or a task that is being undertaken",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier gave a written undertaking to meet the deadline.",
+          "vi": "Nhà cung cấp đưa ra cam kết bằng văn bản sẽ đáp ứng thời hạn."
+        }
+      ],
+      "collocations": [
+        "written undertaking",
+        "business undertaking"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "underwrite-v",
+      "word": "underwrite",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "bảo lãnh; thẩm định rủi ro",
+          "definition_en": "to accept financial responsibility for a risk or investment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The insurer agreed to underwrite the new policy.",
+          "vi": "Công ty bảo hiểm đồng ý bảo lãnh hợp đồng mới."
+        }
+      ],
+      "collocations": [
+        "underwrite a policy",
+        "underwrite an issue"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "underwriting-n",
+      "word": "underwriting",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nghiệp vụ thẩm định/bảo lãnh tài chính",
+          "definition_en": "the process of assessing and accepting financial risk",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank’s underwriting team reviewed the loan application.",
+          "vi": "Đội thẩm định của ngân hàng đã xem xét hồ sơ vay."
+        }
+      ],
+      "collocations": [
+        "insurance underwriting",
+        "underwriting process"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "uniform-n",
@@ -369,6 +536,88 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "utilization-n",
+      "word": "utilization",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc sử dụng; mức độ tận dụng",
+          "definition_en": "the act of using something effectively",
+          "synonyms": [
+            "use"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY"
+      ],
+      "word_family": [
+        {
+          "word": "utilize",
+          "pos": "v",
+          "meaning_vi": "sử dụng; tận dụng"
+        },
+        {
+          "word": "utilization",
+          "pos": "n",
+          "meaning_vi": "việc sử dụng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new system improves the utilization of available resources.",
+          "vi": "Hệ thống mới cải thiện việc sử dụng các nguồn lực sẵn có."
+        }
+      ],
+      "collocations": [
+        "resource utilization",
+        "capacity utilization"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "utilize-v",
+      "word": "utilize",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "sử dụng; tận dụng",
+          "definition_en": "to use something effectively",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will utilize the vacant floor for training.",
+          "vi": "Công ty sẽ tận dụng tầng còn trống làm nơi đào tạo."
+        }
+      ],
+      "collocations": [
+        "utilize resources",
+        "utilize space"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

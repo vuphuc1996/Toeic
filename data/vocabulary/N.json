@@ -150,6 +150,40 @@
       ]
     },
     {
+      "id": "negotiator-n",
+      "word": "negotiator",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà đàm phán",
+          "definition_en": "a person who takes part in formal discussions to reach an agreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "An experienced negotiator will represent the company.",
+          "vi": "Một nhà đàm phán giàu kinh nghiệm sẽ đại diện công ty."
+        }
+      ],
+      "collocations": [
+        "chief negotiator",
+        "skilled negotiator"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "network-v",
       "word": "network",
       "cefr_level": "A2",
@@ -192,6 +226,173 @@
         "computer network",
         "professional network"
       ]
+    },
+    {
+      "id": "nevertheless-adj",
+      "word": "nevertheless",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "tuy nhiên; dù vậy",
+          "definition_en": "Nevertheless — tuy nhiên; dù vậy.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed nevertheless during the meeting.",
+          "vi": "Nhóm đã thảo luận về “nevertheless” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "noncompliance-n",
+      "word": "noncompliance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự không tuân thủ",
+          "definition_en": "failure to follow a rule, standard, or requirement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Repeated noncompliance may result in a financial penalty.",
+          "vi": "Việc liên tục không tuân thủ có thể dẫn đến phạt tài chính."
+        }
+      ],
+      "collocations": [
+        "regulatory noncompliance",
+        "report noncompliance"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "noncompliant-adj",
+      "word": "noncompliant",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "không tuân thủ",
+          "definition_en": "not following a rule, standard, or requirement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Noncompliant products will be removed from the production line.",
+          "vi": "Sản phẩm không đạt yêu cầu sẽ bị loại khỏi dây chuyền sản xuất."
+        }
+      ],
+      "collocations": [
+        "noncompliant equipment",
+        "noncompliant supplier"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "notarize-v",
+      "word": "notarize",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "công chứng",
+          "definition_en": "to make a document official by having it certified by a notary",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The authorization letter must be notarized before submission.",
+          "vi": "Thư ủy quyền phải được công chứng trước khi nộp."
+        }
+      ],
+      "collocations": [
+        "notarize a document",
+        "notarized copy"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "notarized-adj",
+      "word": "notarized",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "đã được công chứng",
+          "definition_en": "officially certified by a notary",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please provide a notarized copy of the agreement.",
+          "vi": "Vui lòng cung cấp bản sao hợp đồng đã được công chứng."
+        }
+      ],
+      "collocations": [
+        "notarized document",
+        "notarized translation"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "notice-nv",

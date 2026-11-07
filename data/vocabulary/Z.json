@@ -52,6 +52,40 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "zero-based-budgeting-n",
+      "word": "zero-based budgeting",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lập ngân sách từ con số không",
+          "definition_en": "a budgeting method that requires every expense to be justified each period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department adopted zero-based budgeting to control costs.",
+          "vi": "Bộ phận áp dụng phương pháp lập ngân sách từ con số không để kiểm soát chi phí."
+        }
+      ],
+      "collocations": [
+        "zero-based budgeting process",
+        "zero-based budget"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "zipcode-n",
       "word": "ZIP code",
       "phonetic": {

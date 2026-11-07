@@ -3,6 +3,71 @@
   "letter": "F",
   "words": [
     {
+      "id": "facilitate-v",
+      "word": "facilitate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tạo điều kiện; hỗ trợ tiến trình",
+          "definition_en": "Facilitate — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will facilitate the relevant process.",
+          "vi": "Nội dung liên quan đến “facilitate” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "facilitator-n",
+      "word": "facilitator",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người điều phối; người hướng dẫn",
+          "definition_en": "a person who helps a group work effectively",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A trained facilitator will lead the workshop.",
+          "vi": "Một người điều phối được đào tạo sẽ dẫn dắt hội thảo."
+        }
+      ],
+      "collocations": [
+        "workshop facilitator",
+        "meeting facilitator"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "facility-n",
       "word": "facility",
       "phonetic": {
@@ -118,6 +183,136 @@
         "system failure",
         "failure to deliver"
       ]
+    },
+    {
+      "id": "fare-n",
+      "word": "fare",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giá vé; cước vận chuyển hành khách",
+          "definition_en": "the money paid for a journey on public transportation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The airline has reduced its domestic fares.",
+          "vi": "Hãng hàng không đã giảm giá vé nội địa."
+        }
+      ],
+      "collocations": [
+        "airfare",
+        "bus fare"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "fatigue-n",
+      "word": "fatigue",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/fəˈtiːɡ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự mệt mỏi",
+          "definition_en": "extreme tiredness",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees should report persistent fatigue.",
+          "vi": "Nhân viên nên báo cáo tình trạng mệt mỏi kéo dài."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "feasibility-n",
+      "word": "feasibility",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính khả thi",
+          "definition_en": "feasibility: tính khả thi.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A feasibility study will be completed before construction.",
+          "vi": "Một nghiên cứu khả thi sẽ được hoàn tất trước khi xây dựng."
+        }
+      ],
+      "collocations": [
+        "feasibility study",
+        "technical feasibility"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "feasible-adj",
+      "word": "feasible",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "khả thi",
+          "definition_en": "Feasible: khả thi.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the feasible issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “feasible” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "feature-n",
@@ -240,6 +435,204 @@
       ]
     },
     {
+      "id": "first-aid-n",
+      "word": "first aid",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌfɝːst ˈeɪd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sơ cứu",
+          "definition_en": "basic medical help given before full treatment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HEALTHCARE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All supervisors must complete first aid training.",
+          "vi": "Tất cả giám sát viên phải hoàn thành khóa sơ cứu."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "first-aid-kit-n",
+      "word": "first aid kit",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌfɝːst ˈeɪd kɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bộ sơ cứu",
+          "definition_en": "a box containing basic medical supplies",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A first aid kit is kept near the reception desk.",
+          "vi": "Một bộ sơ cứu được đặt gần quầy lễ tân."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "fiscal-adj",
+      "word": "fiscal",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc tài chính/ngân sách",
+          "definition_en": "relating to government or company finances",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The fiscal year ends on March 31.",
+          "vi": "Năm tài chính kết thúc vào ngày 31 tháng Ba."
+        }
+      ],
+      "collocations": [
+        "fiscal year",
+        "fiscal policy"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "fiscal-year-n",
+      "word": "fiscal year",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "năm tài chính",
+          "definition_en": "a twelve-month period used for accounting purposes",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will publish its results after the fiscal year.",
+          "vi": "Công ty sẽ công bố kết quả sau khi kết thúc năm tài chính."
+        }
+      ],
+      "collocations": [
+        "current fiscal year",
+        "end of fiscal year"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "fleet-n",
+      "word": "fleet",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đội xe; đội tàu",
+          "definition_en": "a group of vehicles or ships owned or operated by one organization",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company is replacing its delivery fleet.",
+          "vi": "Công ty đang thay thế đội xe giao hàng."
+        }
+      ],
+      "collocations": [
+        "vehicle fleet",
+        "fleet management"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "flexibility-n",
+      "word": "flexibility",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính linh hoạt",
+          "definition_en": "flexibility: tính linh hoạt.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company offers flexibility in working hours.",
+          "vi": "Công ty cho phép linh hoạt về giờ làm việc."
+        }
+      ],
+      "collocations": [
+        "work flexibility",
+        "scheduling flexibility"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "flexible-adj",
       "word": "flexible",
       "phonetic": {
@@ -291,6 +684,68 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "flight-attendant-n",
+      "word": "flight attendant",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈflaɪt əˌten.dənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tiếp viên hàng không",
+          "definition_en": "a person who serves and assists passengers on an aircraft",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A flight attendant helped the passenger find a seat.",
+          "vi": "Tiếp viên giúp hành khách tìm chỗ ngồi."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "floor-plan-n",
+      "word": "floor plan",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈflɔːr plæn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sơ đồ mặt bằng",
+          "definition_en": "a drawing showing the layout of a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The agent sent us the office floor plan.",
+          "vi": "Môi giới gửi cho chúng tôi sơ đồ mặt bằng văn phòng."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "fluctuate-v",
@@ -381,6 +836,207 @@
         "sales forecast",
         "forecast demand"
       ]
+    },
+    {
+      "id": "foresee-v",
+      "word": "foresee",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "dự đoán trước",
+          "definition_en": "to think or know that something will happen in the future",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We do not foresee any delays in the delivery schedule.",
+          "vi": "Chúng tôi không dự đoán sẽ có sự chậm trễ trong lịch giao hàng."
+        }
+      ],
+      "collocations": [
+        "foresee a problem",
+        "foresee demand"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "foreseeable-adj",
+      "word": "foreseeable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể dự đoán trước",
+          "definition_en": "able to be anticipated",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "No foreseeable changes will affect the current timetable.",
+          "vi": "Không có thay đổi nào có thể dự đoán sẽ ảnh hưởng lịch trình hiện tại."
+        }
+      ],
+      "collocations": [
+        "foreseeable future",
+        "foreseeable risk"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "forward-v",
+      "word": "forward",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈfɔːr.wɚd/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chuyển tiếp",
+          "definition_en": "to send a message or document to another person",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Could you forward the updated schedule to the team?",
+          "vi": "Bạn có thể chuyển tiếp lịch trình cập nhật cho nhóm không?"
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "franchise-n",
+      "word": "franchise",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "quyền kinh doanh nhượng quyền; nhượng quyền",
+          "definition_en": "a right to operate using a company’s brand; to grant that right",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The restaurant plans to open three franchise locations.",
+          "vi": "Nhà hàng dự định mở ba địa điểm nhượng quyền."
+        }
+      ],
+      "collocations": [
+        "franchise agreement",
+        "franchise operation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "franchisee-n",
+      "word": "franchisee",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bên nhận quyền nhượng quyền",
+          "definition_en": "a person or company licensed to operate a franchise",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each franchisee must follow the brand standards.",
+          "vi": "Mỗi bên nhận quyền phải tuân thủ tiêu chuẩn thương hiệu."
+        }
+      ],
+      "collocations": [
+        "franchisee agreement",
+        "local franchisee"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "franchisor-n",
+      "word": "franchisor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bên nhượng quyền",
+          "definition_en": "a company that grants the right to operate a franchise",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The franchisor provides marketing materials and staff training.",
+          "vi": "Bên nhượng quyền cung cấp tài liệu tiếp thị và đào tạo nhân viên."
+        }
+      ],
+      "collocations": [
+        "franchisor support",
+        "franchisor network"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "freight-n",
@@ -496,6 +1152,71 @@
       ],
       "cefr_level": "A1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "fulfill-v",
+      "word": "fulfill",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hoàn thành; đáp ứng",
+          "definition_en": "Fulfill — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will fulfill the relevant process.",
+          "vi": "Nội dung liên quan đến “fulfill” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "fulfillment-n",
+      "word": "fulfillment",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc hoàn tất đơn hàng; sự đáp ứng",
+          "definition_en": "the process of completing an order by receiving, packing, and delivering goods",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The retailer outsourced order fulfillment to a logistics provider.",
+          "vi": "Nhà bán lẻ thuê ngoài việc hoàn tất đơn hàng cho đơn vị logistics."
+        }
+      ],
+      "collocations": [
+        "order fulfillment",
+        "fulfillment center"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "function-v",

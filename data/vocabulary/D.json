@@ -179,6 +179,83 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "debate-nv",
+      "word": "debate",
+      "phonetic": {
+        "us": "/dɪˈbeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "cuộc tranh luận; tranh luận",
+          "definition_en": "a formal discussion of different opinions; to discuss opposing views",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "debatable",
+          "pos": "adj",
+          "meaning_vi": "có thể tranh luận"
+        },
+        {
+          "word": "debater",
+          "pos": "n",
+          "meaning_vi": "người tranh luận"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The proposal sparked a debate about public spending.",
+          "vi": "Đề xuất đã làm dấy lên cuộc tranh luận về chi tiêu công."
+        }
+      ],
+      "collocations": [
+        "hold a debate",
+        "heated debate"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "debit-card-n",
+      "word": "debit card",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈdeb.ɪt kɑːrd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thẻ ghi nợ",
+          "definition_en": "a bank card that takes money directly from an account",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "You can pay with a debit card.",
+          "vi": "Bạn có thể thanh toán bằng thẻ ghi nợ."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "decide-v",
       "word": "decide",
       "cefr_level": "A1",
@@ -223,6 +300,186 @@
         "decide on",
         "decide to do something"
       ]
+    },
+    {
+      "id": "decline-vn",
+      "word": "decline",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giảm; suy giảm; từ chối",
+          "definition_en": "to become smaller or weaker; to politely refuse",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        },
+        {
+          "pos": "n",
+          "meaning_vi": "giảm; suy giảm; từ chối",
+          "definition_en": "to become smaller or weaker; to politely refuse",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "decline",
+        "vs_es": "declines",
+        "v2": "declined",
+        "v3": "declined",
+        "ving": "declining"
+      },
+      "examples": [
+        {
+          "en": "Online orders declined slightly in the final quarter.",
+          "vi": "Đơn hàng trực tuyến giảm nhẹ trong quý cuối."
+        }
+      ],
+      "collocations": [
+        "decline in sales",
+        "decline an offer",
+        "sharply decline"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "deduct-v",
+      "word": "deduct",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "khấu trừ; trừ đi",
+          "definition_en": "Deduct — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will deduct the relevant process.",
+          "vi": "Nội dung liên quan đến “deduct” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deduction-n",
+      "word": "deduction",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản khấu trừ",
+          "definition_en": "deduction: khoản khấu trừ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The payslip lists each tax deduction.",
+          "vi": "Phiếu lương liệt kê từng khoản khấu trừ thuế."
+        }
+      ],
+      "collocations": [
+        "tax deduction",
+        "salary deduction"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "defective-adj",
+      "word": "defective",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "bị lỗi; có khuyết tật",
+          "definition_en": "Defective — bị lỗi; có khuyết tật.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed defective during the meeting.",
+          "vi": "Nhóm đã thảo luận về “defective” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deficit-n",
+      "word": "deficit",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thâm hụt; khoản thiếu hụt",
+          "definition_en": "deficit: thâm hụt; khoản thiếu hụt.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department is working to reduce its budget deficit.",
+          "vi": "Bộ phận đang tìm cách giảm thâm hụt ngân sách."
+        }
+      ],
+      "collocations": [
+        "budget deficit",
+        "trade deficit"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "delay-v",
@@ -271,6 +528,105 @@
       ]
     },
     {
+      "id": "delegate-v",
+      "word": "delegate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "meaning_vi": "ủy quyền; người được ủy quyền",
+          "definition_en": "Delegate — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will delegate the relevant process.",
+          "vi": "Nội dung liên quan đến “delegate” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "delegation-n",
+      "word": "delegation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự ủy quyền; đoàn đại biểu",
+          "definition_en": "the act of assigning responsibility; a group of representatives",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The delegation will visit the manufacturing facility tomorrow.",
+          "vi": "Đoàn đại biểu sẽ thăm cơ sở sản xuất vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "delegation of authority",
+        "trade delegation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deliberately-adv",
+      "word": "deliberately",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "cố ý; có chủ đích",
+          "definition_en": "intentionally and not by accident",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The figures were deliberately excluded from the draft.",
+          "vi": "Các số liệu đã được cố ý loại khỏi bản dự thảo."
+        }
+      ],
+      "collocations": [
+        "deliberately omit",
+        "deliberately delay"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "deliver-v",
       "word": "deliver",
       "cefr_level": "A2",
@@ -315,6 +671,40 @@
         "deliver a package",
         "deliver on time"
       ]
+    },
+    {
+      "id": "deliverable-n",
+      "word": "deliverable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sản phẩm/kết quả cần bàn giao",
+          "definition_en": "deliverable: sản phẩm/kết quả cần bàn giao.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract specifies each project deliverable.",
+          "vi": "Hợp đồng quy định từng kết quả cần bàn giao của dự án."
+        }
+      ],
+      "collocations": [
+        "project deliverable",
+        "key deliverables"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "delivery-n",
@@ -365,6 +755,97 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "demonstrate-v",
+      "word": "demonstrate",
+      "phonetic": {
+        "us": "/ˈdem.ən.streɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chứng minh; trình bày; thể hiện",
+          "definition_en": "to show clearly that something is true or how something works",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "demonstration",
+          "pos": "n",
+          "meaning_vi": "sự trình diễn; minh chứng"
+        },
+        {
+          "word": "demonstrative",
+          "pos": "adj",
+          "meaning_vi": "có tính minh họa"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The results demonstrate the value of regular training.",
+          "vi": "Kết quả chứng minh giá trị của việc đào tạo thường xuyên."
+        }
+      ],
+      "collocations": [
+        "demonstrate a capability",
+        "demonstrate how to use"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "denote-v",
+      "word": "denote",
+      "phonetic": {
+        "us": "/dɪˈnoʊt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "biểu thị; biểu đạt; chỉ ra",
+          "definition_en": "to represent or mean something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "denotation",
+          "pos": "n",
+          "meaning_vi": "nghĩa biểu thị"
+        },
+        {
+          "word": "denotative",
+          "pos": "adj",
+          "meaning_vi": "mang nghĩa biểu thị"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "In the chart, a dashed line denotes projected sales.",
+          "vi": "Trong biểu đồ, đường nét đứt biểu thị doanh số dự kiến."
+        }
+      ],
+      "collocations": [
+        "denote a category",
+        "symbol denotes"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "depart-v",
@@ -458,6 +939,37 @@
       ]
     },
     {
+      "id": "departure-n",
+      "word": "departure",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự khởi hành",
+          "definition_en": "Departure — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The departure was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “departure” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "deposit-v",
       "word": "deposit",
       "cefr_level": "B1",
@@ -504,6 +1016,82 @@
       ]
     },
     {
+      "id": "depreciation-n",
+      "word": "depreciation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khấu hao; sự mất giá",
+          "definition_en": "the reduction in an asset’s value over time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The accountant calculated depreciation on the new vehicles.",
+          "vi": "Kế toán viên tính khấu hao cho các xe mới."
+        }
+      ],
+      "collocations": [
+        "asset depreciation",
+        "depreciation expense"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "derive-v",
+      "word": "derive",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "bắt nguồn; thu được",
+          "definition_en": "to obtain something from a source or develop from something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "derive",
+        "vs_es": "derives",
+        "v2": "derived",
+        "v3": "derived",
+        "ving": "deriving"
+      },
+      "examples": [
+        {
+          "en": "The figures are derived from the latest customer survey.",
+          "vi": "Các số liệu được lấy từ khảo sát khách hàng mới nhất."
+        }
+      ],
+      "collocations": [
+        "derive from",
+        "derive information",
+        "derive benefit"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
       "id": "design-v",
       "word": "design",
       "cefr_level": "A2",
@@ -548,6 +1136,74 @@
       ]
     },
     {
+      "id": "designate-v",
+      "word": "designate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chỉ định; định danh",
+          "definition_en": "to officially choose someone or something for a purpose",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company designated a separate room for client meetings.",
+          "vi": "Công ty chỉ định một phòng riêng cho các cuộc họp khách hàng."
+        }
+      ],
+      "collocations": [
+        "designate an area",
+        "designated representative"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "designation-n",
+      "word": "designation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chức danh; sự chỉ định",
+          "definition_en": "an official title or the act of assigning a role",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Her new designation is senior account manager.",
+          "vi": "Chức danh mới của cô ấy là quản lý khách hàng cấp cao."
+        }
+      ],
+      "collocations": [
+        "job designation",
+        "official designation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "destination-n",
       "word": "destination",
       "cefr_level": "A2",
@@ -586,6 +1242,47 @@
         "tourist destination",
         "final destination"
       ]
+    },
+    {
+      "id": "detect-v",
+      "word": "detect",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "phát hiện; nhận biết",
+          "definition_en": "to notice or discover something that is difficult to see",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "detect",
+        "vs_es": "detects",
+        "v2": "detected",
+        "v3": "detected",
+        "ving": "detecting"
+      },
+      "examples": [
+        {
+          "en": "The system can detect unusual login activity.",
+          "vi": "Hệ thống có thể phát hiện hoạt động đăng nhập bất thường."
+        }
+      ],
+      "collocations": [
+        "detect a problem",
+        "detect changes",
+        "early detection"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
     },
     {
       "id": "develop-v",
@@ -674,6 +1371,182 @@
       ]
     },
     {
+      "id": "diminish-v",
+      "word": "diminish",
+      "phonetic": {
+        "us": "/dɪˈmɪn.ɪʃ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giảm bớt; suy giảm; làm giảm",
+          "definition_en": "to become or make something smaller or less important",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "ENVIRONMENT"
+      ],
+      "word_family": [
+        {
+          "word": "diminution",
+          "pos": "n",
+          "meaning_vi": "sự suy giảm"
+        },
+        {
+          "word": "diminished",
+          "pos": "adj",
+          "meaning_vi": "bị suy giảm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new process should diminish the risk of data entry errors.",
+          "vi": "Quy trình mới sẽ làm giảm nguy cơ lỗi nhập dữ liệu."
+        }
+      ],
+      "collocations": [
+        "diminish the impact",
+        "diminish in importance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "dining-n",
+      "word": "dining",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈdaɪ.nɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc ăn uống; khu vực ăn uống",
+          "definition_en": "the activity or service of eating a meal",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The hotel offers outdoor dining in summer.",
+          "vi": "Khách sạn phục vụ ăn uống ngoài trời vào mùa hè."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "disburse-v",
+      "word": "disburse",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giải ngân; chi trả",
+          "definition_en": "to pay out money from a fund",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department will disburse travel expenses next week.",
+          "vi": "Bộ phận sẽ chi trả chi phí công tác vào tuần tới."
+        }
+      ],
+      "collocations": [
+        "disburse funds",
+        "disburse payments"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "disbursement-n",
+      "word": "disbursement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản chi; sự giải ngân",
+          "definition_en": "a payment made from a fund",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All disbursements must be supported by receipts.",
+          "vi": "Tất cả khoản chi phải có hóa đơn chứng từ."
+        }
+      ],
+      "collocations": [
+        "cash disbursement",
+        "disbursement record"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "disclose-v",
+      "word": "disclose",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tiết lộ; công bố",
+          "definition_en": "Disclose — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will disclose the relevant process.",
+          "vi": "Nội dung liên quan đến “disclose” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "discount-nv",
       "word": "discount",
       "phonetic": {
@@ -726,6 +1599,432 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "discrepancy-n",
+      "word": "discrepancy",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự sai lệch; điểm không khớp",
+          "definition_en": "Discrepancy: sự sai lệch; điểm không khớp.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the discrepancy issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “discrepancy” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "discrete-adj",
+      "word": "discrete",
+      "phonetic": {
+        "us": "/dɪˈskriːt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "riêng biệt; tách rời; không liên tục",
+          "definition_en": "separate and distinct, rather than continuous or connected",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The database stores the information in discrete categories.",
+          "vi": "Cơ sở dữ liệu lưu trữ thông tin trong các danh mục riêng biệt."
+        }
+      ],
+      "collocations": [
+        "discrete units",
+        "discrete variables"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "discretion-n",
+      "word": "discretion",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quyền tùy nghi; sự thận trọng",
+          "definition_en": "the freedom to decide something; careful judgment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Discounts may be offered at the manager’s discretion.",
+          "vi": "Giảm giá có thể được áp dụng theo quyết định của quản lý."
+        }
+      ],
+      "collocations": [
+        "at one’s discretion",
+        "use discretion"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "discretionary-adj",
+      "word": "discretionary",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "tùy nghi; không bắt buộc",
+          "definition_en": "available to be used at someone’s choice",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The budget includes a small amount for discretionary spending.",
+          "vi": "Ngân sách bao gồm một khoản nhỏ cho chi tiêu tùy nghi."
+        }
+      ],
+      "collocations": [
+        "discretionary spending",
+        "discretionary bonus"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "discriminate-v",
+      "word": "discriminate",
+      "phonetic": {
+        "us": "/dɪˈskrɪm.ə.neɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "phân biệt; đối xử phân biệt",
+          "definition_en": "to recognize a difference, or to treat a person unfairly because of a characteristic",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "discrimination",
+          "pos": "n",
+          "meaning_vi": "sự phân biệt đối xử"
+        },
+        {
+          "word": "discriminatory",
+          "pos": "adj",
+          "meaning_vi": "mang tính phân biệt đối xử"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The policy prohibits employers from discriminating against applicants.",
+          "vi": "Chính sách nghiêm cấm nhà tuyển dụng phân biệt đối xử với ứng viên."
+        }
+      ],
+      "collocations": [
+        "discriminate between",
+        "discriminate against"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "dish-n",
+      "word": "dish",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/dɪʃ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "món ăn",
+          "definition_en": "food prepared in a particular way",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "This dish is one of the chef’s specialties.",
+          "vi": "Món ăn này là một trong những món đặc biệt của đầu bếp."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "dispatch-n",
+      "word": "dispatch",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc gửi đi; điều phối giao hàng",
+          "definition_en": "the act of sending goods or people to a destination",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Orders are ready for dispatch before noon.",
+          "vi": "Các đơn hàng sẵn sàng được gửi đi trước buổi trưa."
+        }
+      ],
+      "collocations": [
+        "dispatch center",
+        "dispatch date"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "dispatching-n",
+      "word": "dispatching",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc điều phối gửi hàng",
+          "definition_en": "the process of sending people or goods to their destination",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Dispatching staff coordinate daily delivery routes.",
+          "vi": "Nhân viên điều phối sắp xếp các tuyến giao hàng hằng ngày."
+        }
+      ],
+      "collocations": [
+        "dispatching system",
+        "dispatching department"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "distort-v",
+      "word": "distort",
+      "phonetic": {
+        "us": "/dɪˈstɔːrt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "làm méo mó; bóp méo; xuyên tạc",
+          "definition_en": "to change the shape, appearance, or meaning of something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "QUALITY"
+      ],
+      "word_family": [
+        {
+          "word": "distortion",
+          "pos": "n",
+          "meaning_vi": "sự bóp méo"
+        },
+        {
+          "word": "distorted",
+          "pos": "adj",
+          "meaning_vi": "bị bóp méo"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A small sample may distort the survey results.",
+          "vi": "Một mẫu khảo sát nhỏ có thể làm sai lệch kết quả."
+        }
+      ],
+      "collocations": [
+        "distort the facts",
+        "distorted image"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "distribute-v",
+      "word": "distribute",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "phân phối",
+          "definition_en": "Distribute — phân phối.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed distribute during the meeting.",
+          "vi": "Nhóm đã thảo luận về “distribute” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "distributor-n",
+      "word": "distributor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà phân phối",
+          "definition_en": "a company that supplies products to retailers or customers",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The distributor covers five provinces.",
+          "vi": "Nhà phân phối phụ trách năm tỉnh."
+        }
+      ],
+      "collocations": [
+        "authorized distributor",
+        "local distributor"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "diverse-adj",
+      "word": "diverse",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "đa dạng; gồm nhiều loại khác nhau",
+          "definition_en": "including many different types, people, or ideas",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company serves a diverse range of clients.",
+          "vi": "Công ty phục vụ nhiều nhóm khách hàng đa dạng."
+        }
+      ],
+      "collocations": [
+        "diverse range",
+        "culturally diverse",
+        "diverse background"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
       "id": "document-v",
       "word": "document",
       "cefr_level": "A2",
@@ -770,6 +2069,171 @@
       ]
     },
     {
+      "id": "documentation-n",
+      "word": "documentation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tài liệu; hồ sơ chứng từ",
+          "definition_en": "documentation: tài liệu; hồ sơ chứng từ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please retain all documentation for the audit.",
+          "vi": "Vui lòng lưu giữ toàn bộ chứng từ phục vụ kiểm toán."
+        }
+      ],
+      "collocations": [
+        "supporting documentation",
+        "technical documentation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "domain-n",
+      "word": "domain",
+      "phonetic": {
+        "us": "/doʊˈmeɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lĩnh vực; phạm vi; miền",
+          "definition_en": "an area of knowledge, activity, or control",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project requires expertise in the domain of data security.",
+          "vi": "Dự án đòi hỏi chuyên môn trong lĩnh vực bảo mật dữ liệu."
+        }
+      ],
+      "collocations": [
+        "domain knowledge",
+        "research domain"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "downtime-n",
+      "word": "downtime",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian ngừng hoạt động",
+          "definition_en": "a period when a machine or system is unavailable or not operating",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Regular maintenance helps reduce equipment downtime.",
+          "vi": "Bảo trì định kỳ giúp giảm thời gian thiết bị ngừng hoạt động."
+        }
+      ],
+      "collocations": [
+        "system downtime",
+        " minimize downtime"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "draft-nv",
+      "word": "draft",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/dræft/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "bản nháp; soạn thảo",
+          "definition_en": "an early version of a document or message",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please review the draft before it is sent.",
+          "vi": "Vui lòng xem bản nháp trước khi gửi."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "drought-n",
+      "word": "drought",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/draʊt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hạn hán",
+          "definition_en": "a long period with very little rain",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The drought affected local agricultural businesses.",
+          "vi": "Hạn hán ảnh hưởng đến các doanh nghiệp nông nghiệp địa phương."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "due-adj",
       "word": "due",
       "cefr_level": "A2",
@@ -808,6 +2272,105 @@
         "due date",
         "payment due"
       ]
+    },
+    {
+      "id": "duplicate-adj",
+      "word": "duplicate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "trùng lặp; bản sao",
+          "definition_en": "duplicate: trùng lặp; bản sao.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please remove duplicate entries from the customer list.",
+          "vi": "Vui lòng xóa các mục trùng lặp khỏi danh sách khách hàng."
+        }
+      ],
+      "collocations": [
+        "duplicate record",
+        "duplicate invoice"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "durable-adj",
+      "word": "durable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "bền; lâu hỏng",
+          "definition_en": "Durable — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The durable was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “durable” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "duration-n",
+      "word": "duration",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời lượng; khoảng thời gian",
+          "definition_en": "duration: thời lượng; khoảng thời gian.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training course has a duration of two weeks.",
+          "vi": "Khóa đào tạo kéo dài hai tuần."
+        }
+      ],
+      "collocations": [
+        "course duration",
+        "contract duration"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "duty-n",

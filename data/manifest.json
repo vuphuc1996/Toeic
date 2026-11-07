@@ -1,121 +1,121 @@
 {
   "schemaVersion": 1,
-  "version": "2.7.1",
+  "version": "2.9.7",
   "letters": [
     {
       "letter": "A",
       "file": "./data/vocabulary/A.json",
-      "count": 18
+      "count": 102
     },
     {
       "letter": "B",
       "file": "./data/vocabulary/B.json",
-      "count": 9
+      "count": 33
     },
     {
       "letter": "C",
       "file": "./data/vocabulary/C.json",
-      "count": 32
+      "count": 124
     },
     {
       "letter": "D",
       "file": "./data/vocabulary/D.json",
-      "count": 19
+      "count": 63
     },
     {
       "letter": "E",
       "file": "./data/vocabulary/E.json",
-      "count": 20
+      "count": 52
     },
     {
       "letter": "F",
       "file": "./data/vocabulary/F.json",
-      "count": 13
+      "count": 35
     },
     {
       "letter": "G",
       "file": "./data/vocabulary/G.json",
-      "count": 6
+      "count": 11
     },
     {
       "letter": "H",
       "file": "./data/vocabulary/H.json",
-      "count": 6
+      "count": 11
     },
     {
       "letter": "I",
       "file": "./data/vocabulary/I.json",
-      "count": 23
+      "count": 53
     },
     {
       "letter": "J",
       "file": "./data/vocabulary/J.json",
-      "count": 4
+      "count": 6
     },
     {
       "letter": "K",
       "file": "./data/vocabulary/K.json",
-      "count": 3
+      "count": 4
     },
     {
       "letter": "L",
       "file": "./data/vocabulary/L.json",
-      "count": 12
+      "count": 28
     },
     {
       "letter": "M",
       "file": "./data/vocabulary/M.json",
-      "count": 16
+      "count": 31
     },
     {
       "letter": "N",
       "file": "./data/vocabulary/N.json",
-      "count": 6
+      "count": 12
     },
     {
       "letter": "O",
       "file": "./data/vocabulary/O.json",
-      "count": 13
+      "count": 31
     },
     {
       "letter": "P",
       "file": "./data/vocabulary/P.json",
-      "count": 30
+      "count": 75
     },
     {
       "letter": "Q",
       "file": "./data/vocabulary/Q.json",
-      "count": 7
+      "count": 9
     },
     {
       "letter": "R",
       "file": "./data/vocabulary/R.json",
-      "count": 36
+      "count": 77
     },
     {
       "letter": "S",
       "file": "./data/vocabulary/S.json",
-      "count": 34
+      "count": 68
     },
     {
       "letter": "T",
       "file": "./data/vocabulary/T.json",
-      "count": 17
+      "count": 30
     },
     {
       "letter": "U",
       "file": "./data/vocabulary/U.json",
-      "count": 8
+      "count": 15
     },
     {
       "letter": "V",
       "file": "./data/vocabulary/V.json",
-      "count": 12
+      "count": 19
     },
     {
       "letter": "W",
       "file": "./data/vocabulary/W.json",
-      "count": 14
+      "count": 28
     },
     {
       "letter": "X",
@@ -125,22 +125,24 @@
     {
       "letter": "Y",
       "file": "./data/vocabulary/Y.json",
-      "count": 4
+      "count": 6
     },
     {
       "letter": "Z",
       "file": "./data/vocabulary/Z.json",
-      "count": 3
+      "count": 4
     }
   ],
   "categories": "./data/categories.json",
-  "totalWords": 366,
+  "totalWords": 928,
   "cefrLevels": {
-    "A1": 58,
-    "A2": 163,
-    "B1": 108,
-    "B2": 37
+    "B2": 294,
+    "B1": 275,
+    "A2": 228,
+    "A1": 64,
+    "C1": 67
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
-  "totalTopics": 20
+  "totalTopics": 32,
+  "wordCount": 928
 }

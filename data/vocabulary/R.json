@@ -3,6 +3,37 @@
   "letter": "R",
   "words": [
     {
+      "id": "rainfall-n",
+      "word": "rainfall",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈreɪn.fɔːl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lượng mưa",
+          "definition_en": "the amount of rain that falls",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Heavy rainfall may delay the construction work.",
+          "vi": "Mưa lớn có thể làm chậm công trình xây dựng."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "range-v",
       "word": "range",
       "cefr_level": "B1",
@@ -89,6 +120,37 @@
         "exchange rate",
         "hourly rate"
       ]
+    },
+    {
+      "id": "real-estate-agent-n",
+      "word": "real estate agent",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈriːl ɪˌsteɪt ˌeɪ.dʒənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "môi giới bất động sản",
+          "definition_en": "a person who helps people buy, sell, or rent property",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The real estate agent arranged a property viewing.",
+          "vi": "Môi giới bất động sản đã sắp xếp buổi xem nhà."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "receipt-n",
@@ -215,6 +277,37 @@
       ]
     },
     {
+      "id": "recipient-n",
+      "word": "recipient",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈsɪp.i.ənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người nhận",
+          "definition_en": "the person who receives something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Check the recipient list before sending the email.",
+          "vi": "Kiểm tra danh sách người nhận trước khi gửi email."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "recommend-v",
       "word": "recommend",
       "cefr_level": "B1",
@@ -307,6 +400,40 @@
       ]
     },
     {
+      "id": "reconciliation-n",
+      "word": "reconciliation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự đối chiếu; việc hòa giải",
+          "definition_en": "reconciliation: sự đối chiếu; việc hòa giải.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank reconciliation revealed two errors.",
+          "vi": "Việc đối chiếu ngân hàng phát hiện hai lỗi."
+        }
+      ],
+      "collocations": [
+        "bank reconciliation",
+        "account reconciliation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "record-v",
       "word": "record",
       "cefr_level": "A2",
@@ -351,6 +478,37 @@
         "keep a record",
         "record a transaction"
       ]
+    },
+    {
+      "id": "recovery-n",
+      "word": "recovery",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈkʌv.ɚ.i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hồi phục",
+          "definition_en": "the process of becoming healthy again",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HEALTHCARE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The employee is expected to make a full recovery.",
+          "vi": "Nhân viên được kỳ vọng sẽ hồi phục hoàn toàn."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "recruit-v",
@@ -408,6 +566,105 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "recruitment-n",
+      "word": "recruitment",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc tuyển dụng",
+          "definition_en": "the process of finding and hiring new employees",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The recruitment campaign attracted many applicants.",
+          "vi": "Chiến dịch tuyển dụng thu hút nhiều ứng viên."
+        }
+      ],
+      "collocations": [
+        "recruitment process",
+        "recruitment agency"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "recurring-adj",
+      "word": "recurring",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "định kỳ; lặp lại",
+          "definition_en": "recurring: định kỳ; lặp lại.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The software identifies recurring monthly expenses.",
+          "vi": "Phần mềm nhận diện các khoản chi định kỳ hằng tháng."
+        }
+      ],
+      "collocations": [
+        "recurring payment",
+        "recurring meeting"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "recycle-n",
+      "word": "recycle",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌriːˈsaɪ.kəl/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tái chế",
+          "definition_en": "to process used materials so they can be used again",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The office encourages staff to recycle paper.",
+          "vi": "Văn phòng khuyến khích nhân viên tái chế giấy."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "reduce-v",
       "word": "reduce",
       "cefr_level": "A2",
@@ -452,6 +709,74 @@
         "reduce costs",
         "reduce waste"
       ]
+    },
+    {
+      "id": "redundancy-n",
+      "word": "redundancy",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng dôi dư nhân sự; sự dư thừa",
+          "definition_en": "a situation in which a job is no longer needed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The restructuring may result in several redundancies.",
+          "vi": "Việc tái cơ cấu có thể dẫn đến một số vị trí dôi dư."
+        }
+      ],
+      "collocations": [
+        "make redundancies",
+        "redundancy payment"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "redundant-adj",
+      "word": "redundant",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "dôi dư; không còn cần thiết",
+          "definition_en": "no longer needed or useful",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Several redundant positions will be eliminated.",
+          "vi": "Một số vị trí không còn cần thiết sẽ bị loại bỏ."
+        }
+      ],
+      "collocations": [
+        "redundant staff",
+        "become redundant"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "refund-v",
@@ -546,6 +871,37 @@
       ]
     },
     {
+      "id": "registration-n",
+      "word": "registration",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌredʒ.əˈstreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc đăng ký",
+          "definition_en": "the process of entering a name on a list",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Registration closes two days before the event.",
+          "vi": "Đăng ký kết thúc hai ngày trước sự kiện."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "regular-adj",
       "word": "regular",
       "cefr_level": "A2",
@@ -622,6 +978,71 @@
         "government regulation",
         "safety regulation"
       ]
+    },
+    {
+      "id": "reimburse-v",
+      "word": "reimburse",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hoàn tiền; bồi hoàn chi phí",
+          "definition_en": "Reimburse — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will reimburse the relevant process.",
+          "vi": "Nội dung liên quan đến “reimburse” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "reimbursement-n",
+      "word": "reimbursement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hoàn trả chi phí",
+          "definition_en": "money paid back to someone for expenses they have incurred",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Submit the form to request reimbursement for travel expenses.",
+          "vi": "Nộp biểu mẫu để yêu cầu hoàn trả chi phí đi lại."
+        }
+      ],
+      "collocations": [
+        "expense reimbursement",
+        "reimbursement request"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "reject-v",
@@ -716,6 +1137,37 @@
       ]
     },
     {
+      "id": "reliable-adj",
+      "word": "reliable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "đáng tin cậy",
+          "definition_en": "Reliable — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The reliable was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “reliable” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "remain-v",
       "word": "remain",
       "cefr_level": "B1",
@@ -808,6 +1260,297 @@
       ]
     },
     {
+      "id": "remittance-n",
+      "word": "remittance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản tiền chuyển đi; việc chuyển tiền",
+          "definition_en": "a payment sent to someone, especially to settle an invoice",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please include the invoice number with your remittance.",
+          "vi": "Vui lòng ghi số hóa đơn khi chuyển tiền."
+        }
+      ],
+      "collocations": [
+        "remittance advice",
+        "send a remittance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "remunerate-v",
+      "word": "remunerate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "trả công; thù lao",
+          "definition_en": "to pay someone for work or services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Consultants are remunerated according to the hours worked.",
+          "vi": "Chuyên gia tư vấn được trả công theo số giờ làm việc."
+        }
+      ],
+      "collocations": [
+        "remunerate employees",
+        "fairly remunerated"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "remuneration-n",
+      "word": "remuneration",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thù lao; tiền công",
+          "definition_en": "payment for work or services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The remuneration package includes health insurance.",
+          "vi": "Gói thù lao bao gồm bảo hiểm y tế."
+        }
+      ],
+      "collocations": [
+        "annual remuneration",
+        "remuneration package"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "renew-v",
+      "word": "renew",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "gia hạn; làm mới",
+          "definition_en": "renew: gia hạn; làm mới.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company plans to renew the office lease.",
+          "vi": "Công ty dự định gia hạn hợp đồng thuê văn phòng."
+        }
+      ],
+      "collocations": [
+        "renew a contract",
+        "renew a license"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "renewable-n",
+      "word": "renewable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈnuː.ə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể tái tạo",
+          "definition_en": "able to be replaced naturally",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The building uses renewable energy.",
+          "vi": "Tòa nhà sử dụng năng lượng tái tạo."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "renewal-n",
+      "word": "renewal",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự gia hạn; đổi mới",
+          "definition_en": "Renewal — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The renewal was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “renewal” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "renovate-v",
+      "word": "renovate",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈren.ə.veɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "cải tạo; tân trang",
+          "definition_en": "to repair and improve an old building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company plans to renovate the main lobby.",
+          "vi": "Công ty dự định cải tạo sảnh chính."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "renovation-n",
+      "word": "renovation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌren.əˈveɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc cải tạo",
+          "definition_en": "the process of repairing and improving a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Office renovation will begin next Monday.",
+          "vi": "Việc cải tạo văn phòng sẽ bắt đầu vào thứ Hai tới."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "rent-nv",
+      "word": "rent",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rent/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "tiền thuê; thuê",
+          "definition_en": "money paid regularly to use a property",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The monthly rent includes building maintenance.",
+          "vi": "Tiền thuê hàng tháng bao gồm bảo trì tòa nhà."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "replace-v",
       "word": "replace",
       "cefr_level": "A2",
@@ -852,6 +1595,40 @@
         "replace a device",
         "replacement part"
       ]
+    },
+    {
+      "id": "replacement-n",
+      "word": "replacement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thay thế; vật thay thế",
+          "definition_en": "replacement: sự thay thế; vật thay thế.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A replacement will be shipped at no extra cost.",
+          "vi": "Sản phẩm thay thế sẽ được gửi mà không tính thêm phí."
+        }
+      ],
+      "collocations": [
+        "replacement part",
+        "replacement employee"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "request-v",
@@ -942,6 +1719,136 @@
         "require approval",
         "require training"
       ]
+    },
+    {
+      "id": "requirement-n",
+      "word": "requirement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "yêu cầu; điều kiện cần",
+          "definition_en": "Requirement — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The requirement was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “requirement” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "requisition-n",
+      "word": "requisition",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiếu yêu cầu; yêu cầu cấp phát",
+          "definition_en": "an official request for equipment, supplies, or services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A purchase requisition must be approved before ordering.",
+          "vi": "Phiếu yêu cầu mua hàng phải được duyệt trước khi đặt hàng."
+        }
+      ],
+      "collocations": [
+        "purchase requisition",
+        "requisition form"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "reschedule-v",
+      "word": "reschedule",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "lên lịch lại",
+          "definition_en": "Reschedule — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will reschedule the relevant process.",
+          "vi": "Nội dung liên quan đến “reschedule” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "rescind-v",
+      "word": "rescind",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hủy bỏ; thu hồi (quyết định/hợp đồng)",
+          "definition_en": "to officially cancel a law, agreement, or decision",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company may rescind the offer if the deadline is missed.",
+          "vi": "Công ty có thể hủy đề nghị nếu bỏ lỡ thời hạn."
+        }
+      ],
+      "collocations": [
+        "rescind an offer",
+        "rescind a contract"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "research-v",
@@ -1084,6 +1991,74 @@
       ]
     },
     {
+      "id": "resign-v",
+      "word": "resign",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "từ chức; nghỉ việc",
+          "definition_en": "to formally leave a job or position",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The branch manager will resign at the end of the month.",
+          "vi": "Quản lý chi nhánh sẽ nghỉ việc vào cuối tháng."
+        }
+      ],
+      "collocations": [
+        "resign from a position",
+        "resign as director"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "resignation-n",
+      "word": "resignation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự từ chức; đơn xin nghỉ việc",
+          "definition_en": "the act of leaving a job voluntarily",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The director submitted her resignation yesterday.",
+          "vi": "Giám đốc đã nộp đơn từ chức hôm qua."
+        }
+      ],
+      "collocations": [
+        "letter of resignation",
+        "accept a resignation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "resource-n",
       "word": "resource",
       "cefr_level": "B1",
@@ -1168,6 +2143,37 @@
       ]
     },
     {
+      "id": "response-n",
+      "word": "response",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/rɪˈspɑːns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phản hồi; câu trả lời",
+          "definition_en": "an answer or reaction",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We expect a response within two business days.",
+          "vi": "Chúng tôi mong nhận phản hồi trong hai ngày làm việc."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "responsibility-n",
       "word": "responsibility",
       "cefr_level": "B1",
@@ -1206,6 +2212,37 @@
         "take responsibility",
         "job responsibility"
       ]
+    },
+    {
+      "id": "restaurant-n",
+      "word": "restaurant",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈres.tə.rɑːnt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà hàng",
+          "definition_en": "a place where people pay to eat meals",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The restaurant is fully booked for Friday evening.",
+          "vi": "Nhà hàng đã kín chỗ vào tối thứ Sáu."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "result-v",
@@ -1293,6 +2330,113 @@
       ]
     },
     {
+      "id": "retailer-n",
+      "word": "retailer",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈriː.teɪ.lɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà bán lẻ",
+          "definition_en": "a business that sells goods to the public",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The retailer offers free delivery on large orders.",
+          "vi": "Nhà bán lẻ miễn phí giao hàng cho đơn lớn."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "retain-v",
+      "word": "retain",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giữ lại; duy trì",
+          "definition_en": "to keep something or continue to have it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "retain",
+        "vs_es": "retains",
+        "v2": "retained",
+        "v3": "retained",
+        "ving": "retaining"
+      },
+      "examples": [
+        {
+          "en": "The company introduced a program to retain experienced staff.",
+          "vi": "Công ty triển khai chương trình để giữ chân nhân viên giàu kinh nghiệm."
+        }
+      ],
+      "collocations": [
+        "retain employees",
+        "retain information",
+        "retain control"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "retainer-n",
+      "word": "retainer",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phí giữ chân; khoản phí trả trước",
+          "definition_en": "a fee paid in advance to secure professional services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The law firm requires a monthly retainer.",
+          "vi": "Công ty luật yêu cầu khoản phí giữ dịch vụ hằng tháng."
+        }
+      ],
+      "collocations": [
+        "monthly retainer",
+        "retainer fee"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "retention-n",
       "word": "retention",
       "cefr_level": "B2",
@@ -1331,6 +2475,74 @@
         "staff retention",
         "customer retention"
       ]
+    },
+    {
+      "id": "retiree-n",
+      "word": "retiree",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người đã nghỉ hưu",
+          "definition_en": "a person who has retired from work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Retirees may continue using the company health plan.",
+          "vi": "Người đã nghỉ hưu có thể tiếp tục sử dụng chương trình y tế của công ty."
+        }
+      ],
+      "collocations": [
+        "company retiree",
+        "retired employee"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "retirement-n",
+      "word": "retirement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự nghỉ hưu",
+          "definition_en": "the act of leaving employment after a working life",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company contributes to employees’ retirement plans.",
+          "vi": "Công ty đóng góp vào các chương trình hưu trí của nhân viên."
+        }
+      ],
+      "collocations": [
+        "retirement plan",
+        "retirement age"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "revenue-n",
@@ -1372,6 +2584,40 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "revenue-stream-n",
+      "word": "revenue stream",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nguồn doanh thu",
+          "definition_en": "a source from which a business earns income",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Online subscriptions have become a major revenue stream.",
+          "vi": "Thuê bao trực tuyến đã trở thành nguồn doanh thu chính."
+        }
+      ],
+      "collocations": [
+        "new revenue stream",
+        "diversify revenue streams"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "review-v",
@@ -1464,6 +2710,40 @@
       ]
     },
     {
+      "id": "revision-n",
+      "word": "revision",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự sửa đổi; bản chỉnh sửa",
+          "definition_en": "revision: sự sửa đổi; bản chỉnh sửa.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The latest revision includes updated prices.",
+          "vi": "Bản sửa đổi mới nhất bao gồm giá đã cập nhật."
+        }
+      ],
+      "collocations": [
+        "final revision",
+        "schedule revision"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "risk-v",
       "word": "risk",
       "cefr_level": "B1",
@@ -1548,6 +2828,37 @@
       ]
     },
     {
+      "id": "room-service-n",
+      "word": "room service",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈruːm ˌsɝː.vɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dịch vụ phục vụ tại phòng",
+          "definition_en": "a hotel service that brings food to guest rooms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Room service is available until midnight.",
+          "vi": "Dịch vụ tại phòng hoạt động đến nửa đêm."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "route-n",
       "word": "route",
       "cefr_level": "A2",
@@ -1584,6 +2895,37 @@
         "delivery route",
         "alternative route"
       ]
+    },
+    {
+      "id": "r-sum-n",
+      "word": "résumé",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈrez.ə.meɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sơ yếu lý lịch; CV",
+          "definition_en": "a document describing education and work experience",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please attach your résumé to the application.",
+          "vi": "Vui lòng đính kèm CV vào đơn ứng tuyển."
+        }
+      ],
+      "collocations": []
     }
   ]
 }

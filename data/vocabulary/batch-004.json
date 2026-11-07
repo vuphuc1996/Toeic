@@ -1,0 +1,2695 @@
+{
+  "schemaVersion": 1,
+  "batch": "004",
+  "version": "2.9.6",
+  "focus": "TOEIC comprehensive expansion",
+  "count": 79,
+  "words": [
+    {
+      "id": "accommodate-v",
+      "word": "accommodate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đáp ứng; cung cấp chỗ ở",
+          "definition_en": "accommodate: đáp ứng; cung cấp chỗ ở.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The hotel can accommodate up to 250 conference guests.",
+          "vi": "Khách sạn có thể phục vụ tối đa 250 khách dự hội nghị."
+        }
+      ],
+      "collocations": [
+        "accommodate a request",
+        "accommodate guests"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accordance-n",
+      "word": "accordance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phù hợp; sự tuân theo",
+          "definition_en": "accordance: sự phù hợp; sự tuân theo.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All payments must be made in accordance with the contract.",
+          "vi": "Mọi khoản thanh toán phải được thực hiện theo hợp đồng."
+        }
+      ],
+      "collocations": [
+        "in accordance with",
+        "accordance with regulations"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accountable-adj",
+      "word": "accountable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "chịu trách nhiệm; có nghĩa vụ giải trình",
+          "definition_en": "accountable: chịu trách nhiệm; có nghĩa vụ giải trình.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Department heads are accountable for their budgets.",
+          "vi": "Trưởng bộ phận chịu trách nhiệm về ngân sách của mình."
+        }
+      ],
+      "collocations": [
+        "be accountable for",
+        "hold someone accountable"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "activate-v",
+      "word": "activate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "kích hoạt",
+          "definition_en": "activate: kích hoạt.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please activate your account before placing an order.",
+          "vi": "Vui lòng kích hoạt tài khoản trước khi đặt hàng."
+        }
+      ],
+      "collocations": [
+        "activate an account",
+        "activate a service"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "additional-adj",
+      "word": "additional",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "bổ sung; thêm",
+          "definition_en": "additional: bổ sung; thêm.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Additional documents are required for the application.",
+          "vi": "Cần bổ sung giấy tờ cho hồ sơ đăng ký."
+        }
+      ],
+      "collocations": [
+        "additional information",
+        "additional charge"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "adjustment-n",
+      "word": "adjustment",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự điều chỉnh",
+          "definition_en": "adjustment: sự điều chỉnh.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The invoice includes an adjustment for shipping costs.",
+          "vi": "Hóa đơn bao gồm khoản điều chỉnh chi phí vận chuyển."
+        }
+      ],
+      "collocations": [
+        "price adjustment",
+        "make an adjustment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "administrative-adj",
+      "word": "administrative",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc hành chính; quản trị",
+          "definition_en": "administrative: thuộc hành chính; quản trị.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Administrative staff will distribute the revised schedule.",
+          "vi": "Nhân viên hành chính sẽ phát lịch trình đã sửa đổi."
+        }
+      ],
+      "collocations": [
+        "administrative duties",
+        "administrative assistant"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "administrator-n",
+      "word": "administrator",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quản trị viên; người quản lý",
+          "definition_en": "administrator: quản trị viên; người quản lý.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Contact the system administrator if you cannot log in.",
+          "vi": "Liên hệ quản trị viên hệ thống nếu bạn không thể đăng nhập."
+        }
+      ],
+      "collocations": [
+        "system administrator",
+        "office administrator"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "allocation-n",
+      "word": "allocation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phân bổ; khoản được phân bổ",
+          "definition_en": "allocation: sự phân bổ; khoản được phân bổ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The budget allocation was approved by the director.",
+          "vi": "Việc phân bổ ngân sách đã được giám đốc phê duyệt."
+        }
+      ],
+      "collocations": [
+        "budget allocation",
+        "resource allocation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "annually-adv",
+      "word": "annually",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "hằng năm",
+          "definition_en": "annually: hằng năm.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Safety procedures are reviewed annually.",
+          "vi": "Các quy trình an toàn được rà soát hằng năm."
+        }
+      ],
+      "collocations": [
+        "review annually",
+        "paid annually"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "applicable-adj",
+      "word": "applicable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể áp dụng; thích hợp",
+          "definition_en": "applicable: có thể áp dụng; thích hợp.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The discount is applicable to orders over $500.",
+          "vi": "Mức giảm giá áp dụng cho đơn hàng trên 500 đô la."
+        }
+      ],
+      "collocations": [
+        "where applicable",
+        "applicable regulations"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "approximately-adv",
+      "word": "approximately",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "xấp xỉ; khoảng",
+          "definition_en": "approximately: xấp xỉ; khoảng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The delivery will take approximately three business days.",
+          "vi": "Việc giao hàng sẽ mất khoảng ba ngày làm việc."
+        }
+      ],
+      "collocations": [
+        "approximately 20 percent",
+        "approximately two weeks"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "arrangement-n",
+      "word": "arrangement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự sắp xếp; thỏa thuận",
+          "definition_en": "arrangement: sự sắp xếp; thỏa thuận.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Travel arrangements have been confirmed.",
+          "vi": "Các sắp xếp cho chuyến công tác đã được xác nhận."
+        }
+      ],
+      "collocations": [
+        "make arrangements",
+        "travel arrangements"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "assistance-n",
+      "word": "assistance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hỗ trợ; trợ giúp",
+          "definition_en": "assistance: sự hỗ trợ; trợ giúp.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Technical assistance is available around the clock.",
+          "vi": "Hỗ trợ kỹ thuật luôn sẵn sàng suốt ngày đêm."
+        }
+      ],
+      "collocations": [
+        "technical assistance",
+        "require assistance"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "attendance-n",
+      "word": "attendance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tham dự; chuyên cần",
+          "definition_en": "attendance: sự tham dự; chuyên cần.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Attendance at the safety briefing is mandatory.",
+          "vi": "Việc tham dự buổi hướng dẫn an toàn là bắt buộc."
+        }
+      ],
+      "collocations": [
+        "attendance record",
+        "take attendance"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "authorization-n",
+      "word": "authorization",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự ủy quyền; giấy phép",
+          "definition_en": "authorization: sự ủy quyền; giấy phép.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Written authorization is needed to access the records.",
+          "vi": "Cần có văn bản ủy quyền để truy cập hồ sơ."
+        }
+      ],
+      "collocations": [
+        "written authorization",
+        "payment authorization"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "backlog-n",
+      "word": "backlog",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lượng công việc tồn đọng",
+          "definition_en": "backlog: lượng công việc tồn đọng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The support team is working to clear its backlog.",
+          "vi": "Nhóm hỗ trợ đang xử lý lượng công việc tồn đọng."
+        }
+      ],
+      "collocations": [
+        "order backlog",
+        "work backlog"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "billable-adj",
+      "word": "billable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể tính phí",
+          "definition_en": "billable: có thể tính phí.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Travel time may be billable under the service agreement.",
+          "vi": "Thời gian di chuyển có thể được tính phí theo thỏa thuận dịch vụ."
+        }
+      ],
+      "collocations": [
+        "billable hours",
+        "billable expenses"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "compensation-n",
+      "word": "compensation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tiền bồi thường; chế độ đãi ngộ",
+          "definition_en": "compensation: tiền bồi thường; chế độ đãi ngộ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The compensation package includes health coverage.",
+          "vi": "Gói đãi ngộ bao gồm bảo hiểm sức khỏe."
+        }
+      ],
+      "collocations": [
+        "compensation package",
+        "workers' compensation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "competitive-adj",
+      "word": "competitive",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có tính cạnh tranh; cạnh tranh",
+          "definition_en": "competitive: có tính cạnh tranh; cạnh tranh.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company offers competitive salaries.",
+          "vi": "Công ty đưa ra mức lương cạnh tranh."
+        }
+      ],
+      "collocations": [
+        "competitive price",
+        "competitive salary"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "competitor-n",
+      "word": "competitor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đối thủ cạnh tranh",
+          "definition_en": "competitor: đối thủ cạnh tranh.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A major competitor has launched a similar product.",
+          "vi": "Một đối thủ lớn vừa ra mắt sản phẩm tương tự."
+        }
+      ],
+      "collocations": [
+        "major competitor",
+        "market competitor"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "completion-n",
+      "word": "completion",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hoàn thành",
+          "definition_en": "completion: sự hoàn thành.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Payment is due upon completion of the project.",
+          "vi": "Thanh toán đến hạn khi dự án hoàn thành."
+        }
+      ],
+      "collocations": [
+        "project completion",
+        "completion date"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consumable-n",
+      "word": "consumable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vật tư tiêu hao",
+          "definition_en": "consumable: vật tư tiêu hao.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Office consumables are ordered at the start of each month.",
+          "vi": "Vật tư tiêu hao văn phòng được đặt vào đầu mỗi tháng."
+        }
+      ],
+      "collocations": [
+        "office consumables",
+        "medical consumables"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "contractual-adj",
+      "word": "contractual",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc hợp đồng; theo hợp đồng",
+          "definition_en": "contractual: thuộc hợp đồng; theo hợp đồng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier must meet all contractual obligations.",
+          "vi": "Nhà cung cấp phải đáp ứng mọi nghĩa vụ theo hợp đồng."
+        }
+      ],
+      "collocations": [
+        "contractual obligation",
+        "contractual agreement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "coverage-n",
+      "word": "coverage",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phạm vi bảo hiểm; phạm vi bao phủ",
+          "definition_en": "coverage: phạm vi bảo hiểm; phạm vi bao phủ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The warranty provides coverage for manufacturing defects.",
+          "vi": "Bảo hành bao gồm các lỗi do sản xuất."
+        }
+      ],
+      "collocations": [
+        "insurance coverage",
+        "service coverage"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "creditor-n",
+      "word": "creditor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chủ nợ; bên cho vay",
+          "definition_en": "creditor: chủ nợ; bên cho vay.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company reached an agreement with its creditors.",
+          "vi": "Công ty đạt được thỏa thuận với các chủ nợ."
+        }
+      ],
+      "collocations": [
+        "secured creditor",
+        "major creditor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deduction-n",
+      "word": "deduction",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản khấu trừ",
+          "definition_en": "deduction: khoản khấu trừ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The payslip lists each tax deduction.",
+          "vi": "Phiếu lương liệt kê từng khoản khấu trừ thuế."
+        }
+      ],
+      "collocations": [
+        "tax deduction",
+        "salary deduction"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deficit-n",
+      "word": "deficit",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thâm hụt; khoản thiếu hụt",
+          "definition_en": "deficit: thâm hụt; khoản thiếu hụt.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department is working to reduce its budget deficit.",
+          "vi": "Bộ phận đang tìm cách giảm thâm hụt ngân sách."
+        }
+      ],
+      "collocations": [
+        "budget deficit",
+        "trade deficit"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deliverable-n",
+      "word": "deliverable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sản phẩm/kết quả cần bàn giao",
+          "definition_en": "deliverable: sản phẩm/kết quả cần bàn giao.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract specifies each project deliverable.",
+          "vi": "Hợp đồng quy định từng kết quả cần bàn giao của dự án."
+        }
+      ],
+      "collocations": [
+        "project deliverable",
+        "key deliverables"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "documentation-n",
+      "word": "documentation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tài liệu; hồ sơ chứng từ",
+          "definition_en": "documentation: tài liệu; hồ sơ chứng từ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please retain all documentation for the audit.",
+          "vi": "Vui lòng lưu giữ toàn bộ chứng từ phục vụ kiểm toán."
+        }
+      ],
+      "collocations": [
+        "supporting documentation",
+        "technical documentation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "duplicate-adj",
+      "word": "duplicate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "trùng lặp; bản sao",
+          "definition_en": "duplicate: trùng lặp; bản sao.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please remove duplicate entries from the customer list.",
+          "vi": "Vui lòng xóa các mục trùng lặp khỏi danh sách khách hàng."
+        }
+      ],
+      "collocations": [
+        "duplicate record",
+        "duplicate invoice"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "duration-n",
+      "word": "duration",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời lượng; khoảng thời gian",
+          "definition_en": "duration: thời lượng; khoảng thời gian.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training course has a duration of two weeks.",
+          "vi": "Khóa đào tạo kéo dài hai tuần."
+        }
+      ],
+      "collocations": [
+        "course duration",
+        "contract duration"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "efficiently-adv",
+      "word": "efficiently",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "một cách hiệu quả",
+          "definition_en": "efficiently: một cách hiệu quả.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new software processes invoices more efficiently.",
+          "vi": "Phần mềm mới xử lý hóa đơn hiệu quả hơn."
+        }
+      ],
+      "collocations": [
+        "work efficiently",
+        "operate efficiently"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "electronic-adj",
+      "word": "electronic",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "điện tử",
+          "definition_en": "electronic: điện tử.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Electronic receipts are sent automatically.",
+          "vi": "Biên lai điện tử được gửi tự động."
+        }
+      ],
+      "collocations": [
+        "electronic payment",
+        "electronic signature"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "eligibility-n",
+      "word": "eligibility",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điều kiện đủ; tư cách hợp lệ",
+          "definition_en": "eligibility: điều kiện đủ; tư cách hợp lệ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Eligibility for the allowance depends on job grade.",
+          "vi": "Điều kiện hưởng phụ cấp phụ thuộc vào cấp bậc công việc."
+        }
+      ],
+      "collocations": [
+        "eligibility criteria",
+        "check eligibility"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "enquiry-n",
+      "word": "enquiry",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "yêu cầu thông tin; câu hỏi",
+          "definition_en": "enquiry: yêu cầu thông tin; câu hỏi.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We received an enquiry about international shipping rates.",
+          "vi": "Chúng tôi nhận được yêu cầu thông tin về cước vận chuyển quốc tế."
+        }
+      ],
+      "collocations": [
+        "customer enquiry",
+        "make an enquiry"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "equivalent-adj",
+      "word": "equivalent",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "tương đương",
+          "definition_en": "equivalent: tương đương.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The replacement part is equivalent to the original model.",
+          "vi": "Linh kiện thay thế tương đương với mẫu ban đầu."
+        }
+      ],
+      "collocations": [
+        "equivalent value",
+        "equivalent qualification"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "expiration-n",
+      "word": "expiration",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hết hạn",
+          "definition_en": "expiration: sự hết hạn.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Check the expiration date on your access card.",
+          "vi": "Kiểm tra ngày hết hạn trên thẻ ra vào của bạn."
+        }
+      ],
+      "collocations": [
+        "expiration date",
+        "date of expiration"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "feasibility-n",
+      "word": "feasibility",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính khả thi",
+          "definition_en": "feasibility: tính khả thi.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A feasibility study will be completed before construction.",
+          "vi": "Một nghiên cứu khả thi sẽ được hoàn tất trước khi xây dựng."
+        }
+      ],
+      "collocations": [
+        "feasibility study",
+        "technical feasibility"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "flexibility-n",
+      "word": "flexibility",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính linh hoạt",
+          "definition_en": "flexibility: tính linh hoạt.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company offers flexibility in working hours.",
+          "vi": "Công ty cho phép linh hoạt về giờ làm việc."
+        }
+      ],
+      "collocations": [
+        "work flexibility",
+        "scheduling flexibility"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "handling-n",
+      "word": "handling",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc xử lý; thao tác",
+          "definition_en": "handling: việc xử lý; thao tác.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Special handling is required for fragile items.",
+          "vi": "Hàng dễ vỡ cần được xử lý đặc biệt."
+        }
+      ],
+      "collocations": [
+        "special handling",
+        "baggage handling"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "incentivize-v",
+      "word": "incentivize",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tạo động lực; khuyến khích bằng lợi ích",
+          "definition_en": "incentivize: tạo động lực; khuyến khích bằng lợi ích.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bonus is designed to incentivize higher productivity.",
+          "vi": "Khoản thưởng được thiết kế để khuyến khích năng suất cao hơn."
+        }
+      ],
+      "collocations": [
+        "incentivize employees",
+        "incentivize performance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "inspector-n",
+      "word": "inspector",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thanh tra viên; người kiểm định",
+          "definition_en": "inspector: thanh tra viên; người kiểm định.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A building inspector visited the site yesterday.",
+          "vi": "Một thanh tra xây dựng đã đến công trường hôm qua."
+        }
+      ],
+      "collocations": [
+        "safety inspector",
+        "quality inspector"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "invoicing-n",
+      "word": "invoicing",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc lập và phát hành hóa đơn",
+          "definition_en": "invoicing: việc lập và phát hành hóa đơn.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The accounting team automated its invoicing process.",
+          "vi": "Nhóm kế toán đã tự động hóa quy trình lập hóa đơn."
+        }
+      ],
+      "collocations": [
+        "automated invoicing",
+        "invoicing system"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "lessee-n",
+      "word": "lessee",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bên thuê tài sản",
+          "definition_en": "lessee: bên thuê tài sản.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lessee is responsible for routine maintenance.",
+          "vi": "Bên thuê chịu trách nhiệm bảo trì định kỳ."
+        }
+      ],
+      "collocations": [
+        "commercial lessee",
+        "rights of the lessee"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "lessor-n",
+      "word": "lessor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bên cho thuê tài sản",
+          "definition_en": "lessor: bên cho thuê tài sản.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lessor must provide written notice before entry.",
+          "vi": "Bên cho thuê phải thông báo bằng văn bản trước khi vào."
+        }
+      ],
+      "collocations": [
+        "property lessor",
+        "rights of the lessor"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "manufacturer-n",
+      "word": "manufacturer",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà sản xuất",
+          "definition_en": "manufacturer: nhà sản xuất.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manufacturer offers a two-year warranty.",
+          "vi": "Nhà sản xuất cung cấp bảo hành hai năm."
+        }
+      ],
+      "collocations": [
+        "original manufacturer",
+        "equipment manufacturer"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "officeholder-n",
+      "word": "officeholder",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người giữ chức vụ",
+          "definition_en": "officeholder: người giữ chức vụ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The officeholder will serve a three-year term.",
+          "vi": "Người giữ chức vụ sẽ đảm nhiệm nhiệm kỳ ba năm."
+        }
+      ],
+      "collocations": [
+        "elected officeholder",
+        "public officeholder"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "outsource-v",
+      "word": "outsource",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thuê ngoài; giao cho bên ngoài thực hiện",
+          "definition_en": "outsource: thuê ngoài; giao cho bên ngoài thực hiện.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company decided to outsource its payroll services.",
+          "vi": "Công ty quyết định thuê ngoài dịch vụ tính lương."
+        }
+      ],
+      "collocations": [
+        "outsource production",
+        "outsource a service"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "outsourcing-n",
+      "word": "outsourcing",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc thuê ngoài",
+          "definition_en": "outsourcing: việc thuê ngoài.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Outsourcing reduced the department's operating costs.",
+          "vi": "Thuê ngoài đã giảm chi phí hoạt động của bộ phận."
+        }
+      ],
+      "collocations": [
+        "IT outsourcing",
+        "business process outsourcing"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "parcel-n",
+      "word": "parcel",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bưu kiện; gói hàng",
+          "definition_en": "parcel: bưu kiện; gói hàng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The parcel can be collected at the service counter.",
+          "vi": "Bưu kiện có thể được nhận tại quầy dịch vụ."
+        }
+      ],
+      "collocations": [
+        "track a parcel",
+        "parcel delivery"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "payable-adj",
+      "word": "payable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "phải trả; đến hạn thanh toán",
+          "definition_en": "payable: phải trả; đến hạn thanh toán.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The balance is payable within thirty days.",
+          "vi": "Số dư phải được thanh toán trong vòng 30 ngày."
+        }
+      ],
+      "collocations": [
+        "accounts payable",
+        "payable on receipt"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "penalty-n",
+      "word": "penalty",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tiền phạt; hình phạt",
+          "definition_en": "penalty: tiền phạt; hình phạt.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A late payment penalty may apply.",
+          "vi": "Có thể áp dụng tiền phạt thanh toán trễ."
+        }
+      ],
+      "collocations": [
+        "late penalty",
+        "cancellation penalty"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "perishable-adj",
+      "word": "perishable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "dễ hư hỏng; mau hỏng",
+          "definition_en": "perishable: dễ hư hỏng; mau hỏng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Perishable goods must be stored at a low temperature.",
+          "vi": "Hàng dễ hư hỏng phải được bảo quản ở nhiệt độ thấp."
+        }
+      ],
+      "collocations": [
+        "perishable goods",
+        "perishable food"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "portfolio-n",
+      "word": "portfolio",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "danh mục đầu tư; hồ sơ năng lực",
+          "definition_en": "portfolio: danh mục đầu tư; hồ sơ năng lực.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The firm manages a diverse investment portfolio.",
+          "vi": "Công ty quản lý danh mục đầu tư đa dạng."
+        }
+      ],
+      "collocations": [
+        "investment portfolio",
+        "product portfolio"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "postage-n",
+      "word": "postage",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cước bưu chính; phí gửi thư",
+          "definition_en": "postage: cước bưu chính; phí gửi thư.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Postage is included in the quoted price.",
+          "vi": "Phí gửi bưu chính đã được tính trong giá báo."
+        }
+      ],
+      "collocations": [
+        "postage fee",
+        "prepaid postage"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "postponement-n",
+      "word": "postponement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự trì hoãn; việc hoãn lại",
+          "definition_en": "postponement: sự trì hoãn; việc hoãn lại.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The postponement was announced by email.",
+          "vi": "Việc hoãn lịch được thông báo qua email."
+        }
+      ],
+      "collocations": [
+        "announcement of postponement",
+        "indefinite postponement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "premium-n",
+      "word": "premium",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phí bảo hiểm; khoản phụ trội",
+          "definition_en": "premium: phí bảo hiểm; khoản phụ trội.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The annual insurance premium is due in March.",
+          "vi": "Phí bảo hiểm hằng năm đến hạn vào tháng Ba."
+        }
+      ],
+      "collocations": [
+        "insurance premium",
+        "pay a premium"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "prescribe-v",
+      "word": "prescribe",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "quy định; chỉ định",
+          "definition_en": "prescribe: quy định; chỉ định.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The policy prescribes a standard review procedure.",
+          "vi": "Chính sách quy định quy trình rà soát tiêu chuẩn."
+        }
+      ],
+      "collocations": [
+        "prescribe a procedure",
+        "prescribe standards"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "productivity-n",
+      "word": "productivity",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "năng suất",
+          "definition_en": "productivity: năng suất.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Flexible schedules have improved staff productivity.",
+          "vi": "Lịch làm việc linh hoạt đã cải thiện năng suất nhân viên."
+        }
+      ],
+      "collocations": [
+        "increase productivity",
+        "labor productivity"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "proficiency-n",
+      "word": "proficiency",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thành thạo; trình độ",
+          "definition_en": "proficiency: sự thành thạo; trình độ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The position requires proficiency in spreadsheet software.",
+          "vi": "Vị trí này yêu cầu thành thạo phần mềm bảng tính."
+        }
+      ],
+      "collocations": [
+        "language proficiency",
+        "technical proficiency"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "proficient-adj",
+      "word": "proficient",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thành thạo",
+          "definition_en": "proficient: thành thạo.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Applicants should be proficient in written English.",
+          "vi": "Ứng viên nên thành thạo tiếng Anh viết."
+        }
+      ],
+      "collocations": [
+        "proficient in",
+        "highly proficient"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "prolong-v",
+      "word": "prolong",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "kéo dài; làm lâu hơn",
+          "definition_en": "prolong: kéo dài; làm lâu hơn.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The repair work may prolong the building closure.",
+          "vi": "Công việc sửa chữa có thể kéo dài thời gian đóng cửa tòa nhà."
+        }
+      ],
+      "collocations": [
+        "prolong a process",
+        "prolong the stay"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "prolonged-adj",
+      "word": "prolonged",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "kéo dài; lâu hơn bình thường",
+          "definition_en": "prolonged: kéo dài; lâu hơn bình thường.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Prolonged delays have affected several deliveries.",
+          "vi": "Sự chậm trễ kéo dài đã ảnh hưởng đến một số chuyến giao hàng."
+        }
+      ],
+      "collocations": [
+        "prolonged absence",
+        "prolonged delay"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "promptly-adv",
+      "word": "promptly",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "ngay lập tức; đúng giờ",
+          "definition_en": "promptly: ngay lập tức; đúng giờ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please respond promptly to the customer's inquiry.",
+          "vi": "Vui lòng phản hồi nhanh chóng yêu cầu của khách hàng."
+        }
+      ],
+      "collocations": [
+        "respond promptly",
+        "pay promptly"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "reconciliation-n",
+      "word": "reconciliation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự đối chiếu; việc hòa giải",
+          "definition_en": "reconciliation: sự đối chiếu; việc hòa giải.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank reconciliation revealed two errors.",
+          "vi": "Việc đối chiếu ngân hàng phát hiện hai lỗi."
+        }
+      ],
+      "collocations": [
+        "bank reconciliation",
+        "account reconciliation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "recurring-adj",
+      "word": "recurring",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "định kỳ; lặp lại",
+          "definition_en": "recurring: định kỳ; lặp lại.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The software identifies recurring monthly expenses.",
+          "vi": "Phần mềm nhận diện các khoản chi định kỳ hằng tháng."
+        }
+      ],
+      "collocations": [
+        "recurring payment",
+        "recurring meeting"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "renew-v",
+      "word": "renew",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "gia hạn; làm mới",
+          "definition_en": "renew: gia hạn; làm mới.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company plans to renew the office lease.",
+          "vi": "Công ty dự định gia hạn hợp đồng thuê văn phòng."
+        }
+      ],
+      "collocations": [
+        "renew a contract",
+        "renew a license"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "replacement-n",
+      "word": "replacement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thay thế; vật thay thế",
+          "definition_en": "replacement: sự thay thế; vật thay thế.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A replacement will be shipped at no extra cost.",
+          "vi": "Sản phẩm thay thế sẽ được gửi mà không tính thêm phí."
+        }
+      ],
+      "collocations": [
+        "replacement part",
+        "replacement employee"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "revision-n",
+      "word": "revision",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự sửa đổi; bản chỉnh sửa",
+          "definition_en": "revision: sự sửa đổi; bản chỉnh sửa.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The latest revision includes updated prices.",
+          "vi": "Bản sửa đổi mới nhất bao gồm giá đã cập nhật."
+        }
+      ],
+      "collocations": [
+        "final revision",
+        "schedule revision"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "specify-v",
+      "word": "specify",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "quy định rõ; nêu cụ thể",
+          "definition_en": "specify: quy định rõ; nêu cụ thể.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract specifies the delivery deadline.",
+          "vi": "Hợp đồng quy định rõ thời hạn giao hàng."
+        }
+      ],
+      "collocations": [
+        "specify a date",
+        "specify requirements"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "subscription-n",
+      "word": "subscription",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thuê bao; gói đăng ký định kỳ",
+          "definition_en": "subscription: thuê bao; gói đăng ký định kỳ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The annual subscription includes technical support.",
+          "vi": "Gói đăng ký hằng năm bao gồm hỗ trợ kỹ thuật."
+        }
+      ],
+      "collocations": [
+        "annual subscription",
+        "subscription fee"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "subscribe-v",
+      "word": "subscribe",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đăng ký thuê bao; đặt mua định kỳ",
+          "definition_en": "subscribe: đăng ký thuê bao; đặt mua định kỳ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can subscribe to the monthly newsletter.",
+          "vi": "Khách hàng có thể đăng ký nhận bản tin hằng tháng."
+        }
+      ],
+      "collocations": [
+        "subscribe to a service",
+        "subscribe online"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "sufficient-adj",
+      "word": "sufficient",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "đủ; đầy đủ",
+          "definition_en": "sufficient: đủ; đầy đủ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please allow sufficient time for customs clearance.",
+          "vi": "Vui lòng dành đủ thời gian để thông quan."
+        }
+      ],
+      "collocations": [
+        "sufficient funds",
+        "sufficient evidence"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "sufficiently-adv",
+      "word": "sufficiently",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "đủ mức; một cách đầy đủ",
+          "definition_en": "sufficiently: đủ mức; một cách đầy đủ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The room is sufficiently large for the workshop.",
+          "vi": "Căn phòng đủ rộng cho buổi hội thảo."
+        }
+      ],
+      "collocations": [
+        "sufficiently detailed",
+        "sufficiently prepared"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "suspend-v",
+      "word": "suspend",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tạm ngừng; đình chỉ",
+          "definition_en": "suspend: tạm ngừng; đình chỉ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The airline suspended flights because of the storm.",
+          "vi": "Hãng hàng không tạm ngừng các chuyến bay vì bão."
+        }
+      ],
+      "collocations": [
+        "suspend service",
+        "suspend operations"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "suspension-n",
+      "word": "suspension",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tạm ngừng; đình chỉ",
+          "definition_en": "suspension: sự tạm ngừng; đình chỉ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The temporary suspension will last until repairs are complete.",
+          "vi": "Việc tạm ngừng sẽ kéo dài đến khi sửa chữa hoàn tất."
+        }
+      ],
+      "collocations": [
+        "temporary suspension",
+        "suspension of service"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "transact-v",
+      "word": "transact",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thực hiện giao dịch",
+          "definition_en": "transact: thực hiện giao dịch.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can transact securely through the mobile app.",
+          "vi": "Khách hàng có thể giao dịch an toàn qua ứng dụng di động."
+        }
+      ],
+      "collocations": [
+        "transact business",
+        "transact online"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "transit-n",
+      "word": "transit",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự quá cảnh; vận chuyển trung chuyển",
+          "definition_en": "transit: sự quá cảnh; vận chuyển trung chuyển.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The goods are currently in transit to the regional warehouse.",
+          "vi": "Hàng hóa hiện đang trên đường đến kho khu vực."
+        }
+      ],
+      "collocations": [
+        "in transit",
+        "public transit"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    }
+  ]
+}

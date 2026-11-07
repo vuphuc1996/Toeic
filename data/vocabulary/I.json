@@ -49,6 +49,37 @@
       ]
     },
     {
+      "id": "implement-v",
+      "word": "implement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "triển khai; thực hiện",
+          "definition_en": "Implement — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will implement the relevant process.",
+          "vi": "Nội dung liên quan đến “implement” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "implementation-n",
       "word": "implementation",
       "cefr_level": "B2",
@@ -133,6 +164,105 @@
         "improve performance",
         "improve quality"
       ]
+    },
+    {
+      "id": "in-house-adj",
+      "word": "in-house",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj/adv",
+          "meaning_vi": "nội bộ; tại công ty",
+          "definition_en": "done within an organization rather than by an outside provider",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company provides in-house training for new supervisors.",
+          "vi": "Công ty tổ chức đào tạo nội bộ cho các giám sát viên mới."
+        }
+      ],
+      "collocations": [
+        "in-house training",
+        "in-house counsel"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "incentive-n",
+      "word": "incentive",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "động lực; khoản khuyến khích",
+          "definition_en": "Incentive — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The incentive was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “incentive” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "incentivize-v",
+      "word": "incentivize",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tạo động lực; khuyến khích bằng lợi ích",
+          "definition_en": "incentivize: tạo động lực; khuyến khích bằng lợi ích.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bonus is designed to incentivize higher productivity.",
+          "vi": "Khoản thưởng được thiết kế để khuyến khích năng suất cao hơn."
+        }
+      ],
+      "collocations": [
+        "incentivize employees",
+        "incentivize performance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "include-v",
@@ -221,6 +351,74 @@
       ]
     },
     {
+      "id": "incorporate-v",
+      "word": "incorporate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "kết hợp; sáp nhập; thành lập pháp nhân",
+          "definition_en": "to include something as part of a whole or form a company",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please incorporate the latest figures into the report.",
+          "vi": "Vui lòng đưa số liệu mới nhất vào báo cáo."
+        }
+      ],
+      "collocations": [
+        "incorporate feedback",
+        "incorporate a company"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "incorporation-n",
+      "word": "incorporation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc thành lập công ty; sự hợp nhất",
+          "definition_en": "the process of forming a legal company or combining elements",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The incorporation documents were filed yesterday.",
+          "vi": "Hồ sơ thành lập công ty đã được nộp hôm qua."
+        }
+      ],
+      "collocations": [
+        "certificate of incorporation",
+        "date of incorporation"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "increase-v",
       "word": "increase",
       "cefr_level": "A2",
@@ -265,6 +463,142 @@
         "increase revenue",
         "price increase"
       ]
+    },
+    {
+      "id": "incur-v",
+      "word": "incur",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "gánh chịu; phát sinh (chi phí/nợ)",
+          "definition_en": "to become responsible for a cost, debt, or penalty",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company may incur additional costs if delivery is delayed.",
+          "vi": "Công ty có thể phát sinh thêm chi phí nếu giao hàng chậm."
+        }
+      ],
+      "collocations": [
+        "incur expenses",
+        "incur a penalty"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "incurrence-n",
+      "word": "incurrence",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phát sinh (chi phí/nghĩa vụ)",
+          "definition_en": "the act of becoming subject to a cost or liability",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The incurrence of travel costs must be approved in advance.",
+          "vi": "Việc phát sinh chi phí công tác phải được phê duyệt trước."
+        }
+      ],
+      "collocations": [
+        "incurrence of costs",
+        "date of incurrence"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "indemnify-v",
+      "word": "indemnify",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "bồi thường; bảo đảm không bị tổn thất",
+          "definition_en": "to compensate someone for loss or damage",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier agreed to indemnify the buyer against certain losses.",
+          "vi": "Nhà cung cấp đồng ý bồi thường cho bên mua đối với một số tổn thất nhất định."
+        }
+      ],
+      "collocations": [
+        "indemnify against loss",
+        "indemnify a client"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "indemnity-n",
+      "word": "indemnity",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự bồi thường; khoản bồi thường",
+          "definition_en": "protection against financial loss or a promise to compensate for damage",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract includes an indemnity clause.",
+          "vi": "Hợp đồng bao gồm điều khoản bồi thường."
+        }
+      ],
+      "collocations": [
+        "indemnity clause",
+        "professional indemnity"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "indicate-v",
@@ -313,6 +647,74 @@
       ]
     },
     {
+      "id": "induct-v",
+      "word": "induct",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giới thiệu; kết nạp; hướng dẫn ban đầu",
+          "definition_en": "to formally introduce someone to a role or organization",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "New hires will be inducted by their department supervisors.",
+          "vi": "Nhân viên mới sẽ được giám sát bộ phận hướng dẫn."
+        }
+      ],
+      "collocations": [
+        "induct new employees",
+        "induct into office"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "induction-n",
+      "word": "induction",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chương trình định hướng nhân viên mới",
+          "definition_en": "the process of introducing someone to a job or organization",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The induction session begins at 9 a.m. on Monday.",
+          "vi": "Buổi định hướng bắt đầu lúc 9 giờ sáng thứ Hai."
+        }
+      ],
+      "collocations": [
+        "staff induction",
+        "induction program"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "industry-n",
       "word": "industry",
       "cefr_level": "B1",
@@ -349,6 +751,42 @@
         "tourism industry",
         "industry standard"
       ]
+    },
+    {
+      "id": "inevitable-adj",
+      "word": "inevitable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "không thể tránh khỏi; tất yếu",
+          "definition_en": "certain to happen and impossible to avoid",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Some delays are inevitable during the transition.",
+          "vi": "Một số sự chậm trễ là điều không thể tránh khỏi trong giai đoạn chuyển đổi."
+        }
+      ],
+      "collocations": [
+        "inevitable change",
+        "almost inevitable",
+        "inevitable consequence"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
     },
     {
       "id": "information-n",
@@ -427,6 +865,37 @@
       ]
     },
     {
+      "id": "ingredient-n",
+      "word": "ingredient",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈɡriː.di.ənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thành phần; nguyên liệu",
+          "definition_en": "one of the foods used to make a dish",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please list every ingredient on the package.",
+          "vi": "Vui lòng liệt kê mọi thành phần trên bao bì."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "initiative-n",
       "word": "initiative",
       "cefr_level": "B2",
@@ -465,6 +934,167 @@
         "take the initiative",
         "corporate initiative"
       ]
+    },
+    {
+      "id": "injury-n",
+      "word": "injury",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪn.dʒɚ.i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chấn thương",
+          "definition_en": "physical harm to a person",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HEALTHCARE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Report any workplace injury immediately.",
+          "vi": "Báo cáo ngay mọi chấn thương tại nơi làm việc."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "inquire-v",
+      "word": "inquire",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hỏi; yêu cầu thông tin",
+          "definition_en": "Inquire — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will inquire the relevant process.",
+          "vi": "Nội dung liên quan đến “inquire” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "inquiry-n",
+      "word": "inquiry",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "câu hỏi; yêu cầu thông tin",
+          "definition_en": "Inquiry — câu hỏi; yêu cầu thông tin.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed inquiry during the meeting.",
+          "vi": "Nhóm đã thảo luận về “inquiry” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "insolvency-n",
+      "word": "insolvency",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng mất khả năng thanh toán",
+          "definition_en": "the state of being unable to pay debts",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The court appointed an administrator after the company entered insolvency.",
+          "vi": "Tòa án chỉ định quản tài viên sau khi công ty mất khả năng thanh toán."
+        }
+      ],
+      "collocations": [
+        "declare insolvency",
+        "insolvency proceedings"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "insolvent-adj",
+      "word": "insolvent",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "mất khả năng thanh toán",
+          "definition_en": "unable to pay debts when they are due",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The firm became insolvent after several major clients withdrew.",
+          "vi": "Công ty mất khả năng thanh toán sau khi một số khách hàng lớn rút lui."
+        }
+      ],
+      "collocations": [
+        "become insolvent",
+        "insolvent company"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "inspect-v",
@@ -523,6 +1153,71 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "inspection-n",
+      "word": "inspection",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự kiểm tra; đợt thanh tra",
+          "definition_en": "Inspection — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspection was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “inspection” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "inspector-n",
+      "word": "inspector",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thanh tra viên; người kiểm định",
+          "definition_en": "inspector: thanh tra viên; người kiểm định.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A building inspector visited the site yesterday.",
+          "vi": "Một thanh tra xây dựng đã đến công trường hôm qua."
+        }
+      ],
+      "collocations": [
+        "safety inspector",
+        "quality inspector"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "install-v",
       "word": "install",
       "cefr_level": "A2",
@@ -569,6 +1264,40 @@
       ]
     },
     {
+      "id": "installment-n",
+      "word": "installment",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản trả góp; kỳ thanh toán",
+          "definition_en": "one of a series of regular payments for something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The equipment can be paid for in monthly installments.",
+          "vi": "Thiết bị có thể được thanh toán theo từng tháng."
+        }
+      ],
+      "collocations": [
+        "monthly installment",
+        "installment plan"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "instruction-n",
       "word": "instruction",
       "cefr_level": "A2",
@@ -607,6 +1336,37 @@
       ]
     },
     {
+      "id": "instructor-n",
+      "word": "instructor",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈstrʌk.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giảng viên; người hướng dẫn",
+          "definition_en": "a person who teaches a skill or subject",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The instructor explained the new software.",
+          "vi": "Giảng viên giải thích phần mềm mới."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "insurance-n",
       "word": "insurance",
       "cefr_level": "B1",
@@ -643,6 +1403,144 @@
         "health insurance",
         "insurance policy"
       ]
+    },
+    {
+      "id": "interest-rate-n",
+      "word": "interest rate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪn.trəst ˌreɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lãi suất",
+          "definition_en": "the percentage charged or paid on money",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank announced a lower interest rate.",
+          "vi": "Ngân hàng công bố mức lãi suất thấp hơn."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "interim-adj",
+      "word": "interim",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj/n",
+          "meaning_vi": "tạm thời; trong thời gian chuyển tiếp",
+          "definition_en": "temporary and intended to last until something permanent is arranged",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "An interim manager will oversee the department during the search.",
+          "vi": "Một quản lý tạm quyền sẽ giám sát bộ phận trong thời gian tìm người."
+        }
+      ],
+      "collocations": [
+        "interim report",
+        "interim manager"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "internship-n",
+      "word": "internship",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɪn.tɝːn.ʃɪp/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kỳ thực tập",
+          "definition_en": "a period of work experience for a student",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company offers a summer internship program.",
+          "vi": "Công ty cung cấp chương trình thực tập mùa hè."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "interpret-v",
+      "word": "interpret",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "diễn giải; giải thích; phiên dịch",
+          "definition_en": "to explain the meaning of information or understand it in a particular way",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "interpret",
+        "vs_es": "interprets",
+        "v2": "interpreted",
+        "v3": "interpreted",
+        "ving": "interpreting"
+      },
+      "examples": [
+        {
+          "en": "The analyst interpreted the data differently.",
+          "vi": "Nhà phân tích diễn giải dữ liệu theo cách khác."
+        }
+      ],
+      "collocations": [
+        "interpret data",
+        "interpret results",
+        "interpret a statement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
     },
     {
       "id": "interview-v",
@@ -773,6 +1671,40 @@
       ]
     },
     {
+      "id": "inventory-control-n",
+      "word": "inventory control",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kiểm soát hàng tồn kho",
+          "definition_en": "the process of monitoring and managing stock",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Inventory control software helps prevent shortages.",
+          "vi": "Phần mềm kiểm soát tồn kho giúp ngăn ngừa tình trạng thiếu hàng."
+        }
+      ],
+      "collocations": [
+        "inventory control system",
+        "inventory control procedure"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "investment-n",
       "word": "investment",
       "cefr_level": "B1",
@@ -861,6 +1793,74 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "invoiceable-adj",
+      "word": "invoiceable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể xuất hóa đơn",
+          "definition_en": "able to be charged and included on an invoice",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Only approved project hours are invoiceable to the client.",
+          "vi": "Chỉ những giờ dự án được phê duyệt mới có thể tính vào hóa đơn khách hàng."
+        }
+      ],
+      "collocations": [
+        "invoiceable hours",
+        "invoiceable expense"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "invoicing-n",
+      "word": "invoicing",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc lập và phát hành hóa đơn",
+          "definition_en": "invoicing: việc lập và phát hành hóa đơn.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The accounting team automated its invoicing process.",
+          "vi": "Nhóm kế toán đã tự động hóa quy trình lập hóa đơn."
+        }
+      ],
+      "collocations": [
+        "automated invoicing",
+        "invoicing system"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "issue-v",

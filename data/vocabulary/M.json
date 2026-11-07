@@ -61,6 +61,37 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "maintenance-n",
+      "word": "maintenance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảo trì; sự duy tu",
+          "definition_en": "Maintenance — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The maintenance was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “maintenance” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "manage-v",
       "word": "manage",
       "cefr_level": "A2",
@@ -147,6 +178,105 @@
       ]
     },
     {
+      "id": "mandate-n",
+      "word": "mandate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "ủy quyền; chỉ thị; nhiệm vụ được giao",
+          "definition_en": "an official order or authority; to officially require",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The committee has a mandate to review company policy.",
+          "vi": "Ủy ban được giao nhiệm vụ rà soát chính sách công ty."
+        }
+      ],
+      "collocations": [
+        "legal mandate",
+        "mandate a review"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "mandatory-adj",
+      "word": "mandatory",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "bắt buộc",
+          "definition_en": "Mandatory — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The mandatory was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “mandatory” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "manpower-n",
+      "word": "manpower",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân lực",
+          "definition_en": "the number of people available to do work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Additional manpower will be needed during the peak season.",
+          "vi": "Cần thêm nhân lực trong mùa cao điểm."
+        }
+      ],
+      "collocations": [
+        "manpower shortage",
+        "manpower requirements"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "manufacture-v",
       "word": "manufacture",
       "cefr_level": "B1",
@@ -191,6 +321,40 @@
         "manufacture goods",
         "manufactured product"
       ]
+    },
+    {
+      "id": "manufacturer-n",
+      "word": "manufacturer",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà sản xuất",
+          "definition_en": "manufacturer: nhà sản xuất.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manufacturer offers a two-year warranty.",
+          "vi": "Nhà sản xuất cung cấp bảo hành hai năm."
+        }
+      ],
+      "collocations": [
+        "original manufacturer",
+        "equipment manufacturer"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "material-n",
@@ -275,6 +439,68 @@
       ]
     },
     {
+      "id": "mentor-n",
+      "word": "mentor",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmen.tɔːr/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người cố vấn",
+          "definition_en": "an experienced person who advises someone",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each new employee is assigned a mentor.",
+          "vi": "Mỗi nhân viên mới được chỉ định một người cố vấn."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "menu-n",
+      "word": "menu",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmen.juː/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thực đơn",
+          "definition_en": "a list of food and drinks available in a restaurant",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The updated menu includes several vegetarian options.",
+          "vi": "Thực đơn mới có một số lựa chọn món chay."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "merchandise-nv",
       "word": "merchandise",
       "phonetic": {
@@ -325,6 +551,40 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "merge-v",
+      "word": "merge",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "sáp nhập; hợp nhất",
+          "definition_en": "to combine two or more organizations or things",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The two departments will merge next month.",
+          "vi": "Hai bộ phận sẽ sáp nhập vào tháng tới."
+        }
+      ],
+      "collocations": [
+        "merge departments",
+        "merge with a competitor"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "merger-n",
       "word": "merger",
       "cefr_level": "B2",
@@ -365,6 +625,37 @@
       ]
     },
     {
+      "id": "message-n",
+      "word": "message",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmes.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tin nhắn; thông điệp",
+          "definition_en": "a piece of information sent to someone",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "I left a message with the reception desk.",
+          "vi": "Tôi đã để lại tin nhắn tại quầy lễ tân."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "method-n",
       "word": "method",
       "cefr_level": "A2",
@@ -401,6 +692,40 @@
         "payment method",
         "effective method"
       ]
+    },
+    {
+      "id": "milestone-n",
+      "word": "milestone",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mốc quan trọng; cột mốc tiến độ",
+          "definition_en": "an important stage or event in a project",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Completing the prototype is the next project milestone.",
+          "vi": "Hoàn thành mẫu thử là cột mốc tiếp theo của dự án."
+        }
+      ],
+      "collocations": [
+        "reach a milestone",
+        "project milestone"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "minimum-n",
@@ -481,6 +806,116 @@
       ],
       "cefr_level": "A1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "mitigate-v",
+      "word": "mitigate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giảm nhẹ; hạn chế tác động tiêu cực",
+          "definition_en": "to make something harmful or serious less severe",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "mitigate",
+        "vs_es": "mitigates",
+        "v2": "mitigated",
+        "v3": "mitigated",
+        "ving": "mitigating"
+      },
+      "examples": [
+        {
+          "en": "The new controls are designed to mitigate security risks.",
+          "vi": "Các biện pháp kiểm soát mới được thiết kế để giảm thiểu rủi ro bảo mật."
+        }
+      ],
+      "collocations": [
+        "mitigate risk",
+        "mitigate the impact",
+        "mitigate damage"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "mobilization-n",
+      "word": "mobilization",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự huy động",
+          "definition_en": "the act of organizing resources or people for use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The rapid mobilization of technicians reduced the downtime.",
+          "vi": "Việc huy động kỹ thuật viên nhanh chóng đã giảm thời gian ngừng máy."
+        }
+      ],
+      "collocations": [
+        "resource mobilization",
+        "staff mobilization"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "mobilize-v",
+      "word": "mobilize",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "huy động; triển khai",
+          "definition_en": "to organize people or resources for a purpose",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company mobilized additional staff to handle the orders.",
+          "vi": "Công ty huy động thêm nhân viên để xử lý đơn hàng."
+        }
+      ],
+      "collocations": [
+        "mobilize resources",
+        "mobilize a team"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "monday-n",
@@ -659,6 +1094,71 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "moratorium-n",
+      "word": "moratorium",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lệnh tạm hoãn; thời hạn đình chỉ",
+          "definition_en": "an official temporary stop to an activity or payment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lender granted a three-month moratorium on repayments.",
+          "vi": "Bên cho vay chấp thuận tạm hoãn trả nợ trong ba tháng."
+        }
+      ],
+      "collocations": [
+        "payment moratorium",
+        "impose a moratorium"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "mortgage-n",
+      "word": "mortgage",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈmɔːr.ɡɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản vay thế chấp",
+          "definition_en": "a loan used to buy property",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank offers mortgages to qualified buyers.",
+          "vi": "Ngân hàng cung cấp khoản vay thế chấp cho người mua đủ điều kiện."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "motivate-v",

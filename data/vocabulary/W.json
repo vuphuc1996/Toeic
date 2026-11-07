@@ -41,6 +41,71 @@
       ]
     },
     {
+      "id": "waiter-n",
+      "word": "waiter",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈweɪ.t̬ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên phục vụ bàn",
+          "definition_en": "a person who serves food in a restaurant",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The waiter brought the requested menu.",
+          "vi": "Nhân viên phục vụ mang thực đơn được yêu cầu."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "waiver-n",
+      "word": "waiver",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự từ bỏ quyền; giấy miễn trừ",
+          "definition_en": "an official statement giving up a right or allowing a rule not to apply",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A signed waiver is required before participation.",
+          "vi": "Cần có giấy miễn trừ đã ký trước khi tham gia."
+        }
+      ],
+      "collocations": [
+        "liability waiver",
+        "waiver form"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "warehouse-n",
       "word": "warehouse",
       "phonetic": {
@@ -78,6 +143,40 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "warehouseman-n",
+      "word": "warehouseman",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên kho",
+          "definition_en": "a person who works in a warehouse",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The warehouseman checked the incoming pallets.",
+          "vi": "Nhân viên kho kiểm tra các pallet hàng nhập."
+        }
+      ],
+      "collocations": [
+        "warehouse staff",
+        "warehouse supervisor"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "warranty-n",
@@ -329,6 +428,71 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "wellness-n",
+      "word": "wellness",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈwel.nəs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sức khỏe toàn diện",
+          "definition_en": "the state of being healthy in body and mind",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HEALTHCARE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company introduced a workplace wellness program.",
+          "vi": "Công ty triển khai chương trình chăm sóc sức khỏe tại nơi làm việc."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "wholesale-n",
+      "word": "wholesale",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "meaning_vi": "bán buôn; sỉ",
+          "definition_en": "the activity of selling goods in large quantities to businesses",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company sells office supplies at wholesale prices.",
+          "vi": "Công ty bán vật tư văn phòng với giá bán buôn."
+        }
+      ],
+      "collocations": [
+        "wholesale price",
+        "wholesale market"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "willing-adj",
       "word": "willing",
       "cefr_level": "A2",
@@ -367,6 +531,68 @@
         "willing to help",
         "willing participant"
       ]
+    },
+    {
+      "id": "windy-adj",
+      "word": "windy",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈwɪn.di/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có gió; nhiều gió",
+          "definition_en": "with a lot of wind",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "It will be windy near the coast tomorrow.",
+          "vi": "Ngày mai khu vực gần bờ biển sẽ nhiều gió."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "wire-transfer-n",
+      "word": "wire transfer",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈwaɪr ˌtræns.fɝː/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyển khoản ngân hàng",
+          "definition_en": "an electronic transfer of money between banks",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The wire transfer may take one business day.",
+          "vi": "Giao dịch chuyển khoản có thể mất một ngày làm việc."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "withdraw-v",
@@ -415,6 +641,108 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "withdrawal-n",
+      "word": "withdrawal",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc rút tiền; sự rút lui",
+          "definition_en": "the act of taking money out of an account or removing something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Cash withdrawals are limited to a daily maximum.",
+          "vi": "Việc rút tiền mặt bị giới hạn ở mức tối đa mỗi ngày."
+        }
+      ],
+      "collocations": [
+        "cash withdrawal",
+        "withdrawal limit"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "withhold-v",
+      "word": "withhold",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giữ lại; khấu lưu",
+          "definition_en": "to refuse to give or to keep back part of something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The employer must withhold the required tax from wages.",
+          "vi": "Người sử dụng lao động phải khấu trừ khoản thuế bắt buộc từ tiền lương."
+        }
+      ],
+      "collocations": [
+        "withhold payment",
+        "withhold information"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "withholding-n",
+      "word": "withholding",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự khấu lưu; khoản giữ lại",
+          "definition_en": "the act of keeping back money or information",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Tax withholding is shown on the employee’s payslip.",
+          "vi": "Khoản khấu lưu thuế được thể hiện trên phiếu lương nhân viên."
+        }
+      ],
+      "collocations": [
+        "tax withholding",
+        "withholding tax"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "within-adv",
@@ -501,6 +829,139 @@
         "withstand pressure",
         "withstand impact"
       ]
+    },
+    {
+      "id": "workforce-n",
+      "word": "workforce",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lực lượng lao động",
+          "definition_en": "the total number of people employed by an organization or country",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company plans to expand its workforce next year.",
+          "vi": "Công ty dự định mở rộng lực lượng lao động vào năm tới."
+        }
+      ],
+      "collocations": [
+        "skilled workforce",
+        "workforce planning"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "workload-n",
+      "word": "workload",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈwɝːk.loʊd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khối lượng công việc",
+          "definition_en": "the amount of work a person has to do",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manager redistributed the team’s workload.",
+          "vi": "Quản lý phân bổ lại khối lượng công việc của nhóm."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "workplace-n",
+      "word": "workplace",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nơi làm việc",
+          "definition_en": "a place where people work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The policy applies to all workplace facilities.",
+          "vi": "Chính sách áp dụng cho tất cả cơ sở tại nơi làm việc."
+        }
+      ],
+      "collocations": [
+        "workplace safety",
+        "workplace policy"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "workplace-safety-n",
+      "word": "workplace safety",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "an toàn tại nơi làm việc",
+          "definition_en": "the condition of a work environment being free from hazards",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Workplace safety inspections are conducted monthly.",
+          "vi": "Việc kiểm tra an toàn nơi làm việc được tiến hành hằng tháng."
+        }
+      ],
+      "collocations": [
+        "workplace safety rules",
+        "workplace safety inspection"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "workshop-n",

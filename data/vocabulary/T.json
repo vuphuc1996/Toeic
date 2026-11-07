@@ -201,6 +201,37 @@
       ]
     },
     {
+      "id": "temperature-n",
+      "word": "temperature",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtem.pɚ.ə.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhiệt độ",
+          "definition_en": "how hot or cold something is",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The temperature is expected to drop overnight.",
+          "vi": "Nhiệt độ dự kiến giảm trong đêm."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "temporary-adj",
       "word": "temporary",
       "phonetic": {
@@ -251,6 +282,71 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "tenant-n",
+      "word": "tenant",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈten.ənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người thuê",
+          "definition_en": "a person who rents a property",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Tenants must report repairs to the building manager.",
+          "vi": "Người thuê phải báo việc sửa chữa cho quản lý tòa nhà."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "tender-n",
+      "word": "tender",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "hồ sơ dự thầu; đấu thầu",
+          "definition_en": "a formal offer to supply goods or complete work at a stated price",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The firm submitted a tender for the construction project.",
+          "vi": "Công ty đã nộp hồ sơ dự thầu cho dự án xây dựng."
+        }
+      ],
+      "collocations": [
+        "submit a tender",
+        "tender process"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "term-n",
@@ -327,6 +423,173 @@
         "airport terminal",
         "payment terminal"
       ]
+    },
+    {
+      "id": "terminate-v",
+      "word": "terminate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chấm dứt; kết thúc",
+          "definition_en": "to bring something to an end",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Either party may terminate the agreement with written notice.",
+          "vi": "Mỗi bên có thể chấm dứt thỏa thuận bằng thông báo bằng văn bản."
+        }
+      ],
+      "collocations": [
+        "terminate a contract",
+        "terminate employment"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "termination-n",
+      "word": "termination",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự chấm dứt",
+          "definition_en": "the act of ending an agreement, job, or process",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract outlines the conditions for termination.",
+          "vi": "Hợp đồng nêu rõ các điều kiện chấm dứt."
+        }
+      ],
+      "collocations": [
+        "contract termination",
+        "termination date"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "thereafter-adv",
+      "word": "thereafter",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "sau đó; kể từ thời điểm đó",
+          "definition_en": "after that time or event",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The fee is payable monthly thereafter.",
+          "vi": "Sau đó, khoản phí được thanh toán hằng tháng."
+        }
+      ],
+      "collocations": [
+        "immediately thereafter",
+        "thereafter payable"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "threshold-n",
+      "word": "threshold",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ngưỡng; mức giới hạn",
+          "definition_en": "a level or point at which something changes or begins",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Orders above the threshold qualify for free delivery.",
+          "vi": "Đơn hàng vượt ngưỡng sẽ đủ điều kiện giao hàng miễn phí."
+        }
+      ],
+      "collocations": [
+        "minimum threshold",
+        "income threshold"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "thunderstorm-n",
+      "word": "thunderstorm",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈθʌn.dɚ.stɔːrm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giông bão",
+          "definition_en": "a storm with thunder and lightning",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The outdoor event was canceled due to a thunderstorm.",
+          "vi": "Sự kiện ngoài trời bị hủy do giông bão."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "thursday-n",
@@ -486,6 +749,40 @@
       ]
     },
     {
+      "id": "transact-v",
+      "word": "transact",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thực hiện giao dịch",
+          "definition_en": "transact: thực hiện giao dịch.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can transact securely through the mobile app.",
+          "vi": "Khách hàng có thể giao dịch an toàn qua ứng dụng di động."
+        }
+      ],
+      "collocations": [
+        "transact business",
+        "transact online"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "transaction-n",
       "word": "transaction",
       "phonetic": {
@@ -599,6 +896,40 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "transit-n",
+      "word": "transit",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự quá cảnh; vận chuyển trung chuyển",
+          "definition_en": "transit: sự quá cảnh; vận chuyển trung chuyển.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The goods are currently in transit to the regional warehouse.",
+          "vi": "Hàng hóa hiện đang trên đường đến kho khu vực."
+        }
+      ],
+      "collocations": [
+        "in transit",
+        "public transit"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "transport-v",
       "word": "transport",
       "cefr_level": "A2",
@@ -641,6 +972,37 @@
         "public transport",
         "transport goods"
       ]
+    },
+    {
+      "id": "treatment-n",
+      "word": "treatment",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtriːt.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự điều trị",
+          "definition_en": "medical care given to a patient",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HEALTHCARE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The clinic provides treatment for minor injuries.",
+          "vi": "Phòng khám điều trị các chấn thương nhẹ."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "trend-n",
@@ -713,6 +1075,68 @@
       ],
       "cefr_level": "A1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "turnover-n",
+      "word": "turnover",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "doanh thu; tỷ lệ luân chuyển",
+          "definition_en": "Turnover — doanh thu; tỷ lệ luân chuyển.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed turnover during the meeting.",
+          "vi": "Nhóm đã thảo luận về “turnover” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "tutorial-n",
+      "word": "tutorial",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/tuːˈtɔːr.i.əl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "buổi hướng dẫn; bài hướng dẫn",
+          "definition_en": "a lesson explaining how to do something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A video tutorial is available on the training portal.",
+          "vi": "Video hướng dẫn có trên cổng đào tạo."
+        }
+      ],
+      "collocations": []
     }
   ]
 }

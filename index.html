@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.7.1 – Vocabulary Expansion</title>
+  <title>TOEIC Dictionary v2.9.7 – Flashcard Learning</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -51,18 +51,21 @@
       </a>
       <div class="sidebar-caption">KHÔNG GIAN HỌC TẬP</div>
       <nav class="side-nav">
-        <button class="nav-item active" data-page="dashboard"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-home"></use></svg></span>Tổng quan</button>
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-home"></use></svg></span>Trang chủ</button>
         <button class="nav-item" data-page="dictionary"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span>Từ vựng</button>
         <button class="nav-item" data-page="practice"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-brain"></use></svg></span>Ôn tập</button>
-        <button class="nav-item" data-page="grammar"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Ngữ pháp</button>
-        <button class="nav-item" data-page="reading"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span>Đọc hiểu</button>
-        <button class="nav-item" data-page="listening"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bell"></use></svg></span>Nghe hiểu</button>
-        <button class="nav-item" data-page="data"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-database"></use></svg></span>Quản lý dữ liệu</button>
-        <button class="nav-item" data-page="settings"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-settings"></use></svg></span>Cấu hình</button>
+        <div class="nav-group-label">HỌC TẬP</div>
+        <button class="nav-item nav-subitem" data-page="flashcards"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Flashcard từ vựng</button>
+        <button class="nav-item nav-subitem" data-page="grammar"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Ngữ pháp</button>
+        <button class="nav-item nav-subitem" data-page="reading"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span>Đọc hiểu</button>
+        <button class="nav-item nav-subitem" data-page="listening"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bell"></use></svg></span>Nghe</button>
+        <div class="nav-group-label">CẤU HÌNH</div>
+        <button class="nav-item nav-subitem" data-page="settings"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-settings"></use></svg></span>Cấu hình</button>
+        <button class="nav-item nav-subitem" data-page="data"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-database"></use></svg></span>Quản lý dữ liệu</button>
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.7.1 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.9.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -95,6 +98,12 @@
           <div class="practice-home-metrics"><span>Đã luyện tập<strong id="homeReviewed">0</strong></span><span>Độ chính xác<strong id="homeAccuracy">0%</strong></span><span>Cần học/ôn<strong id="homeDue">0</strong></span></div>
           <button class="primary-button" data-go="practice">Bắt đầu ôn tập <svg class="ui-icon button-icon"><use href="#icon-arrow-right"></use></svg></button>
         </section>
+        <section class="panel level-meter-panel" aria-label="Chỉ số năng lực học tập">
+          <div class="level-meter-copy"><p class="eyebrow">PERSONAL LEARNING INDEX</p><h3>Thước đo tiến độ từ vựng</h3><p class="muted">Chỉ số nội bộ dựa trên số từ đã ghi nhớ và độ chính xác khi ôn tập; chưa phải chứng chỉ CEFR hoặc điểm TOEIC.</p></div>
+          <div class="level-meter-value"><strong id="learningLevelLabel">Chưa đủ dữ liệu</strong><span id="learningLevelDetail">Hãy bắt đầu ôn tập để hệ thống đánh giá.</span></div>
+          <div class="level-meter-track"><span id="learningLevelProgress"></span></div>
+          <div class="level-meter-scale"><span>A1</span><span>A2</span><span>B1</span><span>B2</span></div>
+        </section>
         <div class="dashboard-grid">
           <section class="panel welcome-panel">
             <div class="panel-kicker">YOUR PERSONAL ENGLISH REFERENCE</div>
@@ -116,12 +125,13 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.7.1:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.9.0:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
         <div class="page-heading compact-heading"><div><p class="eyebrow">VOCABULARY LIBRARY</p><h1>Kho từ vựng</h1><p class="muted">Tìm kiếm và phân loại từ vựng theo A–Z, chủ đề và loại từ.</p></div><button class="primary-button" data-go="data"><svg class="ui-icon button-icon"><use href="#icon-database"></use></svg> Quản lý dữ liệu</button></div>
         <section class="panel dictionary-panel">
+          <div class="topic-showcase" id="topicShowcase" aria-label="Chọn chủ đề từ vựng"></div>
           <div class="alphabet-row" id="alphabetFilter" aria-label="Lọc chữ cái"></div>
           <div class="filter-row">
             <label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="dictionarySearch" type="search" placeholder="Tìm từ, nghĩa tiếng Việt..." autocomplete="off"></label>
@@ -136,6 +146,15 @@
           <div class="word-card-list" id="wordCardList"></div>
           <div class="empty-state" id="dictionaryEmpty" hidden><div>⌕</div><strong>Không tìm thấy từ phù hợp</strong><p>Thử thay đổi từ khóa hoặc bộ lọc.</p></div>
         </section>
+      </section>
+
+      <section class="page" id="page-flashcards">
+        <div class="page-heading compact-heading"><div><p class="eyebrow">SMART FLASHCARD STUDIO</p><h1>Học từ vựng bằng Flashcard</h1><p class="muted">Học theo lượt 10 từ, có hình minh họa, phát âm, ví dụ và kiểm tra nhanh.</p></div><span class="library-count" id="flashcardMasteryLabel">Bắt đầu hành trình</span></div>
+        <section class="flash-welcome panel"><div><span class="flash-kicker">YOUR DAILY WORD QUEST</span><h2>Mỗi ngày tốt hơn 10 từ ✨</h2><p>Hệ thống ưu tiên từ mới, từ bạn hay quên và từ đã đến lịch ôn. Tiến độ chỉ lưu trên thiết bị này.</p><div class="flash-welcome-stats"><span><strong id="flashKnownCount">0</strong><small>Đã ghi nhớ</small></span><span><strong id="flashDueCount">0</strong><small>Cần ôn lại</small></span><span><strong id="flashStreakCount">0</strong><small>Đã học hôm nay</small></span></div></div><div class="flash-welcome-art" aria-hidden="true">🧠<span>✦</span><b>📚</b></div></section>
+        <section class="flash-topic-section"><div class="section-heading"><div><h2>Chọn hành trình</h2><p>44 hành trình chủ đề · Chọn một chủ đề hoặc học tổng hợp tất cả.</p></div><label class="flash-batch-select">Số từ tiếp theo<select id="flashNextBatch"><option value="5">5 từ</option><option value="10" selected>10 từ</option></select></label></div><label class="flash-topic-search"><span>⌕</span><input id="flashTopicSearch" type="search" placeholder="Tìm chủ đề: Office, Banking, Travel..."></label><div class="flash-topic-grid" id="flashTopicGrid"></div></section>
+        <section class="flash-session panel" id="flashSession" hidden><div class="flash-session-head"><div><span class="flash-kicker" id="flashSessionEyebrow">VOCABULARY QUEST</span><h2 id="flashSessionTitle">Lượt học của bạn</h2></div><div class="flash-progress-wrap"><strong id="flashProgressText">0 / 10</strong><div class="flash-progress"><span id="flashProgressBar"></span></div></div></div><div id="flashcardStage"></div><div class="flash-session-actions" id="flashSessionActions"></div></section>
+        <section class="flash-session panel" id="flashQuiz" hidden><div class="flash-session-head"><div><span class="flash-kicker">QUICK CHECK</span><h2>Kiểm tra nhanh</h2><p class="muted">Chọn nghĩa đúng nhất cho từng từ vừa học.</p></div><strong id="flashQuizProgress">1 / 10</strong></div><div id="flashQuizStage"></div><div class="flash-session-actions" id="flashQuizActions"></div></section>
+        <section class="flash-result panel" id="flashResult" hidden></section>
       </section>
 
       <section class="page" id="page-practice">
@@ -262,7 +281,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace</span><span>GitHub-only · v2.7.1</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.9.7</span></footer>
     </main>
   </div>
 
@@ -270,11 +289,17 @@
     <button class="active" data-page="dashboard"><span><svg class="ui-icon"><use href="#icon-home"></use></svg></span><small>Trang chủ</small></button>
     <button data-page="dictionary"><span><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span><small>Từ vựng</small></button>
     <button data-page="practice"><span><svg class="ui-icon"><use href="#icon-brain"></use></svg></span><small>Ôn tập</small></button>
-    <button data-page="grammar"><span><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span><small>Ngữ pháp</small></button>
-    <button data-page="reading"><span><svg class="ui-icon"><use href="#icon-grid"></use></svg></span><small>Đọc hiểu</small></button>
-    <button data-page="listening"><span><svg class="ui-icon"><use href="#icon-bell"></use></svg></span><small>Nghe</small></button>
+    <button data-menu-toggle="learning"><span><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span><small>Học tập</small></button>
+    <button data-menu-toggle="config"><span><svg class="ui-icon"><use href="#icon-settings"></use></svg></span><small>Cấu hình</small></button>
   </nav>
 
+  <div class="mobile-group-menu" id="mobileGroupMenu" hidden>
+    <button class="mobile-group-scrim" data-group-close aria-label="Đóng menu"></button>
+    <section class="mobile-group-sheet" role="dialog" aria-modal="true" aria-label="Menu phụ">
+      <div class="mobile-group-sheet-head"><strong id="mobileGroupTitle">Học tập</strong><button type="button" data-group-close aria-label="Đóng">×</button></div>
+      <div class="mobile-group-options" id="mobileGroupOptions"></div>
+    </section>
+  </div>
   <div class="modal-backdrop" id="modalBackdrop" hidden>
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-header"><div><p class="eyebrow" id="modalEyebrow">VOCABULARY DETAIL</p><h2 id="modalTitle">Chi tiết từ vựng</h2></div><button class="close-button" id="closeModal" aria-label="Đóng cửa sổ"><svg class="ui-icon"><use href="#icon-close"></use></svg></button></div>

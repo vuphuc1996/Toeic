@@ -3,6 +3,37 @@
   "letter": "Q",
   "words": [
     {
+      "id": "qualification-n",
+      "word": "qualification",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "trình độ; điều kiện chuyên môn",
+          "definition_en": "Qualification — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The qualification was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “qualification” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "quality-n",
       "word": "quality",
       "phonetic": {
@@ -206,6 +237,40 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "quota-n",
+      "word": "quota",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hạn ngạch; chỉ tiêu",
+          "definition_en": "a fixed amount or number that must be reached",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each representative has a monthly sales quota.",
+          "vi": "Mỗi nhân viên kinh doanh có chỉ tiêu bán hàng hằng tháng."
+        }
+      ],
+      "collocations": [
+        "sales quota",
+        "meet a quota"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "quotation-n",

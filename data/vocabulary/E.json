@@ -166,6 +166,40 @@
       ]
     },
     {
+      "id": "efficiently-adv",
+      "word": "efficiently",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "một cách hiệu quả",
+          "definition_en": "efficiently: một cách hiệu quả.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new software processes invoices more efficiently.",
+          "vi": "Phần mềm mới xử lý hóa đơn hiệu quả hơn."
+        }
+      ],
+      "collocations": [
+        "work efficiently",
+        "operate efficiently"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "effort-n",
       "word": "effort",
       "cefr_level": "A2",
@@ -204,6 +238,295 @@
         "make an effort",
         "put effort into"
       ]
+    },
+    {
+      "id": "electronic-adj",
+      "word": "electronic",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "điện tử",
+          "definition_en": "electronic: điện tử.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Electronic receipts are sent automatically.",
+          "vi": "Biên lai điện tử được gửi tự động."
+        }
+      ],
+      "collocations": [
+        "electronic payment",
+        "electronic signature"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "eligibility-n",
+      "word": "eligibility",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điều kiện đủ; tư cách hợp lệ",
+          "definition_en": "eligibility: điều kiện đủ; tư cách hợp lệ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Eligibility for the allowance depends on job grade.",
+          "vi": "Điều kiện hưởng phụ cấp phụ thuộc vào cấp bậc công việc."
+        }
+      ],
+      "collocations": [
+        "eligibility criteria",
+        "check eligibility"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "eligible-adj",
+      "word": "eligible",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "đủ điều kiện",
+          "definition_en": "Eligible — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The eligible was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “eligible” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "eliminate-v",
+      "word": "eliminate",
+      "phonetic": {
+        "us": "/ɪˈlɪm.ə.neɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "loại bỏ; loại trừ; khử",
+          "definition_en": "to remove or get rid of something completely",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "elimination",
+          "pos": "n",
+          "meaning_vi": "sự loại bỏ"
+        },
+        {
+          "word": "eliminator",
+          "pos": "n",
+          "meaning_vi": "thiết bị/người loại bỏ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The revised procedure will eliminate unnecessary steps.",
+          "vi": "Quy trình sửa đổi sẽ loại bỏ các bước không cần thiết."
+        }
+      ],
+      "collocations": [
+        "eliminate errors",
+        "eliminate a possibility"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "emerge-v",
+      "word": "emerge",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "xuất hiện; nổi lên; dần được biết đến",
+          "definition_en": "to appear or become known",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "emerge",
+        "vs_es": "emerges",
+        "v2": "emerged",
+        "v3": "emerged",
+        "ving": "emerging"
+      },
+      "examples": [
+        {
+          "en": "Several issues emerged during the review process.",
+          "vi": "Một số vấn đề đã xuất hiện trong quá trình rà soát."
+        }
+      ],
+      "collocations": [
+        "emerge as",
+        "newly emerged",
+        "emerge from"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "emergency-nadj",
+      "word": "emergency",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪˈmɝː.dʒən.si/"
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "meaning_vi": "trường hợp khẩn cấp; khẩn cấp",
+          "definition_en": "an unexpected serious situation needing immediate action",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HEALTHCARE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Call the emergency number if assistance is required.",
+          "vi": "Gọi số khẩn cấp nếu cần hỗ trợ."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "emission-n",
+      "word": "emission",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khí thải; sự phát thải",
+          "definition_en": "Emission — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The emission was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “emission” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "empirical-adj",
+      "word": "empirical",
+      "phonetic": {
+        "us": "/ɪmˈpɪr.ɪ.kəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "dựa trên quan sát hoặc thực nghiệm",
+          "definition_en": "based on what is experienced or seen rather than on theory",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "empirically",
+          "pos": "adv",
+          "meaning_vi": "dựa trên thực nghiệm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The conclusion is supported by empirical evidence.",
+          "vi": "Kết luận được hỗ trợ bởi bằng chứng thực nghiệm."
+        }
+      ],
+      "collocations": [
+        "empirical research",
+        "empirical data"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "employee-n",
@@ -342,6 +665,78 @@
       ]
     },
     {
+      "id": "enclose-v",
+      "word": "enclose",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đính kèm; gửi kèm",
+          "definition_en": "Enclose — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will enclose the relevant process.",
+          "vi": "Nội dung liên quan đến “enclose” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "encounter-nv",
+      "word": "encounter",
+      "phonetic": {
+        "us": "/ɪnˈkaʊn.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "meaning_vi": "gặp phải; trải qua; cuộc chạm trán",
+          "definition_en": "to experience something, especially something unexpected",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "DAILY",
+        "CAREER"
+      ],
+      "word_family": [
+        {
+          "word": "encountered",
+          "pos": "adj",
+          "meaning_vi": "đã gặp phải"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Applicants may encounter technical problems during registration.",
+          "vi": "Ứng viên có thể gặp sự cố kỹ thuật trong quá trình đăng ký."
+        }
+      ],
+      "collocations": [
+        "encounter a problem",
+        "unexpected encounter"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "encourage-v",
       "word": "encourage",
       "cefr_level": "A2",
@@ -386,6 +781,212 @@
         "encourage participation",
         "encourage employees"
       ]
+    },
+    {
+      "id": "endorse-v",
+      "word": "endorse",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tán thành; chứng thực",
+          "definition_en": "Endorse: tán thành; chứng thực.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the endorse issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “endorse” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "endorsement-n",
+      "word": "endorsement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự chứng thực; sự ủng hộ",
+          "definition_en": "a public statement of support or an official signature approving a document",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The proposal received the director’s endorsement.",
+          "vi": "Đề xuất nhận được sự chấp thuận của giám đốc."
+        }
+      ],
+      "collocations": [
+        "official endorsement",
+        "written endorsement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "enhance-v",
+      "word": "enhance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "nâng cao; tăng cường; cải thiện",
+          "definition_en": "to improve the quality, value, or strength of something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "enhance",
+        "vs_es": "enhances",
+        "v2": "enhanced",
+        "v3": "enhanced",
+        "ving": "enhancing"
+      },
+      "examples": [
+        {
+          "en": "The new software will enhance data security.",
+          "vi": "Phần mềm mới sẽ tăng cường bảo mật dữ liệu."
+        }
+      ],
+      "collocations": [
+        "enhance performance",
+        "enhance security",
+        "enhance skills"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "enquiry-n",
+      "word": "enquiry",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "yêu cầu thông tin; câu hỏi",
+          "definition_en": "enquiry: yêu cầu thông tin; câu hỏi.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We received an enquiry about international shipping rates.",
+          "vi": "Chúng tôi nhận được yêu cầu thông tin về cước vận chuyển quốc tế."
+        }
+      ],
+      "collocations": [
+        "customer enquiry",
+        "make an enquiry"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "enroll-n",
+      "word": "enroll",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪnˈroʊl/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đăng ký học",
+          "definition_en": "to officially join a course or school",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees can enroll in the language program online.",
+          "vi": "Nhân viên có thể đăng ký chương trình ngôn ngữ trực tuyến."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "enrollment-n",
+      "word": "enrollment",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc đăng ký; ghi danh",
+          "definition_en": "the process of officially joining a course, plan, or program",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Open enrollment for the insurance plan begins next week.",
+          "vi": "Đợt đăng ký bảo hiểm mở sẽ bắt đầu vào tuần tới."
+        }
+      ],
+      "collocations": [
+        "course enrollment",
+        "open enrollment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "ensure-v",
@@ -434,6 +1035,75 @@
       ]
     },
     {
+      "id": "entitlement-n",
+      "word": "entitlement",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quyền được hưởng",
+          "definition_en": "the right to receive something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The handbook lists each employee’s leave entitlement.",
+          "vi": "Sổ tay liệt kê quyền nghỉ phép của từng nhân viên."
+        }
+      ],
+      "collocations": [
+        "annual leave entitlement",
+        "benefit entitlement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "entity-n",
+      "word": "entity",
+      "phonetic": {
+        "us": "/ˈen.t̬ə.t̬i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thực thể; tổ chức; đơn vị độc lập",
+          "definition_en": "something that exists as a separate and independent unit",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each subsidiary operates as a separate legal entity.",
+          "vi": "Mỗi công ty con hoạt động như một pháp nhân độc lập."
+        }
+      ],
+      "collocations": [
+        "legal entity",
+        "business entity"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "equipment-n",
       "word": "equipment",
       "phonetic": {
@@ -471,6 +1141,40 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "equivalent-adj",
+      "word": "equivalent",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "tương đương",
+          "definition_en": "equivalent: tương đương.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The replacement part is equivalent to the original model.",
+          "vi": "Linh kiện thay thế tương đương với mẫu ban đầu."
+        }
+      ],
+      "collocations": [
+        "equivalent value",
+        "equivalent qualification"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "error-n",
@@ -511,6 +1215,48 @@
         "system error",
         "human error"
       ]
+    },
+    {
+      "id": "establish-v",
+      "word": "establish",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thành lập; thiết lập; xác lập",
+          "definition_en": "to start an organization or create a system, relationship, or fact",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "establish",
+        "vs_es": "establishs",
+        "v2": "established",
+        "v3": "established",
+        "ving": "establishing"
+      },
+      "examples": [
+        {
+          "en": "The two companies established a long-term partnership.",
+          "vi": "Hai công ty đã thiết lập quan hệ đối tác dài hạn."
+        }
+      ],
+      "collocations": [
+        "establish a company",
+        "establish contact",
+        "establish a policy"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
     },
     {
       "id": "estimate-nv",
@@ -647,6 +1393,118 @@
       ]
     },
     {
+      "id": "event-coordinator-n",
+      "word": "event coordinator",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪˈvent koʊˈɔːr.dən.eɪ.t̬ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điều phối viên sự kiện",
+          "definition_en": "a person who organizes the practical details of an event",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The event coordinator sent the final schedule to all speakers.",
+          "vi": "Điều phối viên sự kiện đã gửi lịch trình cuối cùng cho tất cả diễn giả."
+        }
+      ],
+      "collocations": [
+        "event coordinator",
+        "coordinate an event"
+      ]
+    },
+    {
+      "id": "evidence-n",
+      "word": "evidence",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bằng chứng; chứng cứ",
+          "definition_en": "facts or information that show whether something is true",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "There is little evidence that the policy has reduced costs.",
+          "vi": "Có rất ít bằng chứng cho thấy chính sách đã giảm chi phí."
+        }
+      ],
+      "collocations": [
+        "provide evidence",
+        "strong evidence",
+        "evidence of"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "exceed-v",
+      "word": "exceed",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "vượt quá; vượt mức",
+          "definition_en": "to be greater than a number, amount, or limit",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "exceed",
+        "vs_es": "exceeds",
+        "v2": "exceeded",
+        "v3": "exceeded",
+        "ving": "exceeding"
+      },
+      "examples": [
+        {
+          "en": "Travel expenses must not exceed the approved budget.",
+          "vi": "Chi phí đi lại không được vượt quá ngân sách đã duyệt."
+        }
+      ],
+      "collocations": [
+        "exceed expectations",
+        "exceed the limit",
+        "exceed the budget"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
       "id": "exchange-v",
       "word": "exchange",
       "cefr_level": "A2",
@@ -691,6 +1549,167 @@
         "foreign exchange",
         "exchange information"
       ]
+    },
+    {
+      "id": "executive-n",
+      "word": "executive",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "meaning_vi": "lãnh đạo; thuộc ban điều hành",
+          "definition_en": "a senior manager; relating to management",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The executive team approved the expansion plan.",
+          "vi": "Ban điều hành đã phê duyệt kế hoạch mở rộng."
+        }
+      ],
+      "collocations": [
+        "chief executive",
+        "executive decision"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "exempt-adj",
+      "word": "exempt",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj/v",
+          "meaning_vi": "được miễn; miễn trừ",
+          "definition_en": "Exempt: được miễn; miễn trừ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the exempt issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “exempt” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "exemption-n",
+      "word": "exemption",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự miễn trừ",
+          "definition_en": "special permission not to follow a rule or pay a charge",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new regulation provides an exemption for small businesses.",
+          "vi": "Quy định mới có điều khoản miễn trừ cho doanh nghiệp nhỏ."
+        }
+      ],
+      "collocations": [
+        "tax exemption",
+        "exemption from fees"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "exhibition-n",
+      "word": "exhibition",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌek.səˈbɪʃ.ən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "triển lãm",
+          "definition_en": "a public display of products or works",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The annual exhibition attracts international visitors.",
+          "vi": "Triển lãm thường niên thu hút khách quốc tế."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "exhibitor-n",
+      "word": "exhibitor",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɪɡˈzɪb.ɪ.t̬ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đơn vị trưng bày",
+          "definition_en": "a person or company showing products at an exhibition",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each exhibitor will receive a display booth.",
+          "vi": "Mỗi đơn vị trưng bày sẽ nhận một gian hàng."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "expenditure-n",
@@ -825,6 +1844,71 @@
       ]
     },
     {
+      "id": "expertise-n",
+      "word": "expertise",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌek.spɚˈtiːz/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyên môn; kiến thức chuyên sâu",
+          "definition_en": "special skill or knowledge in a subject",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The role requires expertise in data analysis.",
+          "vi": "Vị trí này yêu cầu chuyên môn về phân tích dữ liệu."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "expiration-n",
+      "word": "expiration",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hết hạn",
+          "definition_en": "expiration: sự hết hạn.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Check the expiration date on your access card.",
+          "vi": "Kiểm tra ngày hết hạn trên thẻ ra vào của bạn."
+        }
+      ],
+      "collocations": [
+        "expiration date",
+        "date of expiration"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "extend-v",
       "word": "extend",
       "cefr_level": "B1",
@@ -869,6 +1953,37 @@
         "extend a contract",
         "extend a deadline"
       ]
+    },
+    {
+      "id": "extension-n",
+      "word": "extension",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự gia hạn; số máy lẻ",
+          "definition_en": "Extension — sự gia hạn; số máy lẻ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed extension during the meeting.",
+          "vi": "Nhóm đã thảo luận về “extension” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

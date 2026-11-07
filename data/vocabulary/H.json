@@ -49,6 +49,105 @@
       ]
     },
     {
+      "id": "handling-n",
+      "word": "handling",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc xử lý; thao tác",
+          "definition_en": "handling: việc xử lý; thao tác.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Special handling is required for fragile items.",
+          "vi": "Hàng dễ vỡ cần được xử lý đặc biệt."
+        }
+      ],
+      "collocations": [
+        "special handling",
+        "baggage handling"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "hazard-n",
+      "word": "hazard",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈhæz.ɚd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mối nguy hiểm",
+          "definition_en": "something that may cause harm",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees must report any safety hazard.",
+          "vi": "Nhân viên phải báo cáo mọi mối nguy an toàn."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "headcount-n",
+      "word": "headcount",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tổng số nhân sự",
+          "definition_en": "the number of people employed or present",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department headcount will remain unchanged this quarter.",
+          "vi": "Tổng nhân sự của bộ phận sẽ không thay đổi trong quý này."
+        }
+      ],
+      "collocations": [
+        "employee headcount",
+        "reduce headcount"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "headquarters-n",
       "word": "headquarters",
       "phonetic": {
@@ -267,6 +366,68 @@
       ],
       "cefr_level": "A1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "housekeeping-n",
+      "word": "housekeeping",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈhaʊsˌkiː.pɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bộ phận buồng phòng; công việc dọn phòng",
+          "definition_en": "the department responsible for cleaning guest rooms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Housekeeping will deliver extra towels shortly.",
+          "vi": "Bộ phận buồng phòng sẽ giao thêm khăn ngay."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "humid-adj",
+      "word": "humid",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈhjuː.mɪd/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "ẩm; ẩm ướt",
+          "definition_en": "containing a high amount of water in the air",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The warehouse becomes humid during the rainy season.",
+          "vi": "Nhà kho trở nên ẩm vào mùa mưa."
+        }
+      ],
+      "collocations": []
     }
   ]
 }

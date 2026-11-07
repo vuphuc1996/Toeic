@@ -87,6 +87,37 @@
       ]
     },
     {
+      "id": "validity-n",
+      "word": "validity",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hiệu lực; tính hợp lệ",
+          "definition_en": "Validity — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The validity was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “validity” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "valuable-adj",
       "word": "valuable",
       "cefr_level": "A2",
@@ -290,6 +321,71 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "venue-n",
+      "word": "venue",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈven.juː/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "địa điểm tổ chức",
+          "definition_en": "the place where an event happens",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The event venue is close to the central station.",
+          "vi": "Địa điểm tổ chức sự kiện gần ga trung tâm."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "verification-n",
+      "word": "verification",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự xác minh; kiểm chứng",
+          "definition_en": "the process of checking that information is true or accurate",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Identity verification is required before account activation.",
+          "vi": "Cần xác minh danh tính trước khi kích hoạt tài khoản."
+        }
+      ],
+      "collocations": [
+        "identity verification",
+        "verification process"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "verify-v",
       "word": "verify",
       "phonetic": {
@@ -386,6 +482,108 @@
       ]
     },
     {
+      "id": "vest-v",
+      "word": "vest",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "trao quyền/lợi ích chính thức",
+          "definition_en": "to give someone a legal right or authority",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The shares will vest after the employee completes four years of service.",
+          "vi": "Cổ phiếu sẽ được trao quyền sở hữu sau khi nhân viên hoàn thành bốn năm làm việc."
+        }
+      ],
+      "collocations": [
+        "vest in an employee",
+        "vested rights"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "vested-adj",
+      "word": "vested",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "đã được trao quyền; có quyền lợi chính thức",
+          "definition_en": "legally secured or established",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees receive vested benefits under the retirement plan.",
+          "vi": "Nhân viên nhận được các quyền lợi đã xác lập theo chương trình hưu trí."
+        }
+      ],
+      "collocations": [
+        "vested interest",
+        "vested benefit"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "viability-n",
+      "word": "viability",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính khả thi; khả năng tồn tại",
+          "definition_en": "the ability to work successfully or continue",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The study evaluates the financial viability of the expansion.",
+          "vi": "Nghiên cứu đánh giá tính khả thi tài chính của việc mở rộng."
+        }
+      ],
+      "collocations": [
+        "financial viability",
+        "assess viability"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "viable-adj",
       "word": "viable",
       "cefr_level": "B2",
@@ -462,6 +660,37 @@
         "office visitor",
         "visitor badge"
       ]
+    },
+    {
+      "id": "voicemail-n",
+      "word": "voicemail",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈvɔɪs.meɪl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thư thoại",
+          "definition_en": "a recorded telephone message",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please leave a voicemail after the tone.",
+          "vi": "Vui lòng để lại lời nhắn thoại sau tiếng bíp."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "volume-n",

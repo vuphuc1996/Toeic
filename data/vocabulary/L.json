@@ -85,6 +85,133 @@
       ]
     },
     {
+      "id": "labor-intensive-adj",
+      "word": "labor-intensive",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thâm dụng lao động",
+          "definition_en": "requiring a large amount of human work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The process is labor-intensive and requires careful supervision.",
+          "vi": "Quy trình này thâm dụng lao động và cần được giám sát cẩn thận."
+        }
+      ],
+      "collocations": [
+        "labor-intensive process",
+        "labor-intensive industry"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "laboratory-n",
+      "word": "laboratory",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phòng thí nghiệm",
+          "definition_en": "Laboratory — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The laboratory was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “laboratory” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "landfill-n",
+      "word": "landfill",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈlænd.fɪl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bãi chôn lấp rác",
+          "definition_en": "a place where waste is buried",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The city plans to reduce waste sent to landfill.",
+          "vi": "Thành phố dự định giảm lượng rác đưa đến bãi chôn lấp."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "landlord-n",
+      "word": "landlord",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈlænd.lɔːrd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chủ nhà; bên cho thuê",
+          "definition_en": "a person who rents property to others",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The landlord agreed to repair the air conditioner.",
+          "vi": "Chủ nhà đồng ý sửa máy điều hòa."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "launch-nv",
       "word": "launch",
       "phonetic": {
@@ -139,6 +266,37 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "layover-n",
+      "word": "layover",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈleɪˌoʊ.vɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian quá cảnh",
+          "definition_en": "a short stay between parts of a journey",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The flight includes a two-hour layover in Seoul.",
+          "vi": "Chuyến bay có hai giờ quá cảnh tại Seoul."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "lead-v",
@@ -235,6 +393,71 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "lease-agreement-n",
+      "word": "lease agreement",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈliːs əˌɡriː.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hợp đồng thuê",
+          "definition_en": "a legal contract for renting property",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Both parties signed the lease agreement.",
+          "vi": "Hai bên đã ký hợp đồng thuê."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "ledger-n",
+      "word": "ledger",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sổ cái kế toán",
+          "definition_en": "a book or digital record containing financial accounts",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All transactions must be entered in the general ledger.",
+          "vi": "Tất cả giao dịch phải được ghi vào sổ cái tổng hợp."
+        }
+      ],
+      "collocations": [
+        "general ledger",
+        "ledger account"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "legal-adj",
       "word": "legal",
       "cefr_level": "B1",
@@ -319,6 +542,105 @@
         "lend money",
         "lend a hand"
       ]
+    },
+    {
+      "id": "lessee-n",
+      "word": "lessee",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bên thuê tài sản",
+          "definition_en": "lessee: bên thuê tài sản.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lessee is responsible for routine maintenance.",
+          "vi": "Bên thuê chịu trách nhiệm bảo trì định kỳ."
+        }
+      ],
+      "collocations": [
+        "commercial lessee",
+        "rights of the lessee"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "lessor-n",
+      "word": "lessor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bên cho thuê tài sản",
+          "definition_en": "lessor: bên cho thuê tài sản.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lessor must provide written notice before entry.",
+          "vi": "Bên cho thuê phải thông báo bằng văn bản trước khi vào."
+        }
+      ],
+      "collocations": [
+        "property lessor",
+        "rights of the lessor"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "liability-n",
+      "word": "liability",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "trách nhiệm pháp lý; khoản nợ",
+          "definition_en": "Liability: trách nhiệm pháp lý; khoản nợ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the liability issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “liability” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "license-v",
@@ -413,6 +735,167 @@
       ]
     },
     {
+      "id": "liquidate-v",
+      "word": "liquidate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thanh lý; chuyển thành tiền mặt",
+          "definition_en": "to close a business by selling its assets, or convert assets into cash",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company decided to liquidate its unused equipment.",
+          "vi": "Công ty quyết định thanh lý thiết bị không còn sử dụng."
+        }
+      ],
+      "collocations": [
+        "liquidate assets",
+        "liquidate a company"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "liquidation-n",
+      "word": "liquidation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thanh lý",
+          "definition_en": "the process of closing a business and selling its assets",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The liquidation process may take several months.",
+          "vi": "Quá trình thanh lý có thể mất vài tháng."
+        }
+      ],
+      "collocations": [
+        "voluntary liquidation",
+        "liquidation sale"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "literacy-n",
+      "word": "literacy",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈlɪt̬.ɚ.ə.si/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khả năng đọc viết; hiểu biết",
+          "definition_en": "the ability to read and write or understand a subject",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The program improves digital literacy among staff.",
+          "vi": "Chương trình cải thiện hiểu biết số của nhân viên."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "loan-n",
+      "word": "loan",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/loʊn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản vay",
+          "definition_en": "money borrowed from a bank or another person",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank approved the business loan.",
+          "vi": "Ngân hàng đã duyệt khoản vay kinh doanh."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "lobby-n",
+      "word": "lobby",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈlɑː.bi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sảnh khách sạn",
+          "definition_en": "the entrance area of a hotel",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Guests can wait in the lobby before check-in.",
+          "vi": "Khách có thể chờ ở sảnh trước khi nhận phòng."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "locate-v",
       "word": "locate",
       "cefr_level": "A2",
@@ -457,6 +940,40 @@
         "locate a package",
         "locate an office"
       ]
+    },
+    {
+      "id": "logistical-adj",
+      "word": "logistical",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc hậu cần",
+          "definition_en": "relating to the organization of transport and supplies",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We need to resolve several logistical issues before the exhibition.",
+          "vi": "Chúng ta cần giải quyết một số vấn đề hậu cần trước triển lãm."
+        }
+      ],
+      "collocations": [
+        "logistical arrangements",
+        "logistical support"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "logistics-n",

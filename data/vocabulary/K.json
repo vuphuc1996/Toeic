@@ -81,6 +81,37 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "kitchen-n",
+      "word": "kitchen",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkɪtʃ.ən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà bếp",
+          "definition_en": "a room where food is prepared",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The kitchen closes thirty minutes before the restaurant.",
+          "vi": "Nhà bếp đóng cửa 30 phút trước nhà hàng."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "knowledge-n",
       "word": "knowledge",
       "phonetic": {

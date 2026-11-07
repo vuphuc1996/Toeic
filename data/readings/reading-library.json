@@ -568,6 +568,198 @@
           "explanation": "Nhân viên nên dùng workstation tạm thời trên tầng ba."
         }
       ]
+    },
+    {
+      "id": "customer-refund-email",
+      "title": "Customer refund request",
+      "topic": "Customer Service",
+      "level": "B1",
+      "documentType": "EMAIL",
+      "passage": "Dear Customer Support Team, I am writing regarding order VP-2841, which was delivered on October 28. Although the outer package was intact, the wireless keyboard inside was damaged and could not be used. I have attached photographs of the item and the original receipt. Could you please advise whether a replacement can be dispatched this week or whether I should return the product first? I would appreciate confirmation of the next steps by Friday. Thank you for your assistance.",
+      "translation": "A customer reports a damaged keyboard and requests a replacement or return instructions.",
+      "wordCount": 79,
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "What does the customer request?",
+          "choices": [
+            "A refund for a hotel",
+            "A replacement or return instructions",
+            "A new delivery address",
+            "A discount on shipping"
+          ],
+          "answerIndex": 1,
+          "explanation": "The customer asks whether a replacement can be sent or the product should be returned."
+        }
+      ]
+    },
+    {
+      "id": "facility-maintenance-notice",
+      "title": "Building maintenance notice",
+      "topic": "Facilities",
+      "level": "B1",
+      "documentType": "NOTICE",
+      "passage": "Please be advised that the east-wing elevators will be unavailable from 7:00 a.m. to noon on Saturday while technicians replace the control panels. Employees who need to access floors above the fifth level should use the west-wing elevators. The maintenance team expects normal service to resume by 12:30 p.m. Contractors must check in at the security desk before entering restricted areas. We apologize for any inconvenience and appreciate your cooperation.",
+      "translation": "Thông báo bảo trì thang máy cánh đông vào sáng thứ Bảy.",
+      "wordCount": 70,
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "When will the elevators be unavailable?",
+          "choices": [
+            "Friday afternoon",
+            "Saturday morning",
+            "All day Sunday",
+            "Monday morning"
+          ],
+          "answerIndex": 1,
+          "explanation": "The notice says 7:00 a.m. to noon on Saturday."
+        }
+      ]
+    },
+    {
+      "id": "job-posting-analyst",
+      "title": "Business analyst position",
+      "topic": "Recruitment",
+      "level": "B1–B2",
+      "documentType": "JOB POSTING",
+      "passage": "Northstar Logistics is seeking a business analyst to support its regional operations team. Applicants should have at least three years of experience working with operational data and be comfortable preparing reports for senior managers. Familiarity with spreadsheet software and dashboard tools is required. The successful candidate will coordinate with warehouse supervisors, identify process delays, and recommend improvements. Applications, including a résumé and a brief cover letter, must be submitted through the careers portal by November 20.",
+      "translation": "Tin tuyển dụng chuyên viên phân tích kinh doanh tại công ty logistics.",
+      "wordCount": 76,
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "What is required from applicants?",
+          "choices": [
+            "A driving license",
+            "A résumé and cover letter",
+            "A technical certificate only",
+            "A reference from a customer"
+          ],
+          "answerIndex": 1,
+          "explanation": "Applicants must submit a résumé and a brief cover letter."
+        }
+      ]
+    },
+    {
+      "id": "supplier-invoice-followup",
+      "title": "Supplier invoice follow-up",
+      "topic": "Finance",
+      "level": "B1–B2",
+      "documentType": "EMAIL",
+      "passage": "Hello Ms. Nguyen, Our accounting department has reviewed invoice INV-9037 for the office furniture delivered last month. The purchase order lists 24 desks, whereas the invoice indicates 26. Before we schedule payment, please confirm whether the additional two units were approved by the purchasing manager. If the invoice was issued in error, send us a corrected copy by Wednesday. Payment will be processed within five business days after the documents have been verified.",
+      "translation": "Email yêu cầu nhà cung cấp xác nhận chênh lệch số lượng trên hóa đơn.",
+      "wordCount": 73,
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "Why has payment not been scheduled?",
+          "choices": [
+            "The goods have not arrived",
+            "The invoice quantity needs verification",
+            "The bank account is closed",
+            "The purchasing manager is absent"
+          ],
+          "answerIndex": 1,
+          "explanation": "The invoice lists 26 desks while the purchase order lists 24."
+        }
+      ]
+    },
+    {
+      "id": "travel-itinerary",
+      "title": "Updated travel itinerary",
+      "topic": "Business Travel",
+      "level": "B1",
+      "documentType": "ITINERARY",
+      "passage": "The sales team will depart for Singapore on Flight VN651 at 9:15 a.m. on Tuesday. All participants should arrive at the international terminal at least two hours before departure. The hotel shuttle will meet the group outside Gate 4 and take them to the Marina Business Hotel. Wednesday morning is reserved for client visits, while the regional sales conference begins at 1:30 p.m. on Thursday. Any changes to dietary requirements should be sent to the travel coordinator no later than Monday.",
+      "translation": "Lịch trình chuyến công tác Singapore của nhóm kinh doanh.",
+      "wordCount": 81,
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "Where will the hotel shuttle meet the group?",
+          "choices": [
+            "At Gate 4",
+            "At the hotel lobby",
+            "At the conference hall",
+            "At the domestic terminal"
+          ],
+          "answerIndex": 0,
+          "explanation": "The itinerary says the shuttle will meet the group outside Gate 4."
+        }
+      ]
+    },
+    {
+      "id": "double-passage-order",
+      "title": "Order status and warehouse update",
+      "topic": "Shipping & Logistics",
+      "level": "B2",
+      "documentType": "DOUBLE PASSAGE",
+      "passage": "Passage 1 – Customer email: Our branch has not received shipment 77102, although the tracking portal showed an expected delivery date of November 3. The items are required for a product launch next week. Please confirm the revised arrival date and whether partial delivery is possible.\n\nPassage 2 – Warehouse response: Shipment 77102 was held at the regional sorting center because one carton was incorrectly labeled. The carton has now been relabeled, and the remaining packages are scheduled to leave tonight. We can arrange a partial delivery of the available items tomorrow morning.",
+      "translation": "Hai văn bản liên quan: email khách hàng hỏi đơn hàng và phản hồi từ kho.",
+      "wordCount": 93,
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "What caused the delay?",
+          "choices": [
+            "A missing payment",
+            "An incorrectly labeled carton",
+            "A vehicle breakdown",
+            "A customs inspection"
+          ],
+          "answerIndex": 1,
+          "explanation": "The warehouse response identifies an incorrectly labeled carton."
+        }
+      ]
+    },
+    {
+      "id": "training-announcement",
+      "title": "Staff training announcement",
+      "topic": "Human Resources",
+      "level": "A2–B1",
+      "documentType": "ANNOUNCEMENT",
+      "passage": "The Human Resources Department will conduct a customer communication workshop on December 4 and 5 in Training Room 3. The workshop is open to employees who regularly communicate with customers by phone or email. Participants should bring a laptop and review the short preparation guide attached to the invitation. Attendance is limited to 20 people, so employees are encouraged to register before November 25. A confirmation email will be sent to everyone who secures a place.",
+      "translation": "Thông báo khóa đào tạo kỹ năng giao tiếp khách hàng.",
+      "wordCount": 76,
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "Who is the workshop intended for?",
+          "choices": [
+            "New suppliers",
+            "Employees who communicate with customers",
+            "External auditors",
+            "Job applicants"
+          ],
+          "answerIndex": 1,
+          "explanation": "The workshop is intended for staff who communicate with customers by phone or email."
+        }
+      ]
+    },
+    {
+      "id": "triple-passage-meeting",
+      "title": "Conference arrangements",
+      "topic": "Meetings",
+      "level": "B2",
+      "documentType": "TRIPLE PASSAGE",
+      "passage": "Passage 1 – Invitation: The annual partners conference will take place on March 12 at the Riverside Convention Center. Registration opens at 8:00 a.m.\n\nPassage 2 – Venue notice: The main hall is available from 7:00 a.m. Exhibitors may deliver display materials through the loading entrance on the north side.\n\nPassage 3 – Organizer email: Due to a scheduling conflict, the opening presentation has been moved from 9:00 to 9:30 a.m. The registration desk will remain open until 10:00 a.m.",
+      "translation": "Ba văn bản: thư mời, thông báo địa điểm và email cập nhật lịch.",
+      "wordCount": 80,
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "What time does the opening presentation begin now?",
+          "choices": [
+            "8:00 a.m.",
+            "9:00 a.m.",
+            "9:30 a.m.",
+            "10:00 a.m."
+          ],
+          "answerIndex": 2,
+          "explanation": "The organizer email changes the presentation time to 9:30 a.m."
+        }
+      ]
     }
   ]
 }

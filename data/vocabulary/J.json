@@ -165,6 +165,71 @@
         "junior staff",
         "junior position"
       ]
+    },
+    {
+      "id": "jurisdiction-n",
+      "word": "jurisdiction",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thẩm quyền; phạm vi quyền hạn",
+          "definition_en": "the official power to make legal decisions in an area",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract specifies which court has jurisdiction.",
+          "vi": "Hợp đồng quy định tòa án nào có thẩm quyền."
+        }
+      ],
+      "collocations": [
+        "legal jurisdiction",
+        "within the jurisdiction"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "justify-v",
+      "word": "justify",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "biện minh; chứng minh là hợp lý",
+          "definition_en": "Justify — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will justify the relevant process.",
+          "vi": "Nội dung liên quan đến “justify” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

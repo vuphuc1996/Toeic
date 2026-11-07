@@ -83,6 +83,40 @@
       ]
     },
     {
+      "id": "obligatory-adj",
+      "word": "obligatory",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "bắt buộc",
+          "definition_en": "required by a rule, law, or agreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A security briefing is obligatory for all visitors.",
+          "vi": "Buổi hướng dẫn an ninh là bắt buộc đối với mọi khách tham quan."
+        }
+      ],
+      "collocations": [
+        "obligatory course",
+        "obligatory requirement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "obtain-v",
       "word": "obtain",
       "phonetic": {
@@ -126,6 +160,105 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "occupancy-n",
+      "word": "occupancy",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng/số lượng người sử dụng",
+          "definition_en": "Occupancy — tình trạng/số lượng người sử dụng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed occupancy during the meeting.",
+          "vi": "Nhóm đã thảo luận về “occupancy” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "occupational-adj",
+      "word": "occupational",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc nghề nghiệp; tại nơi làm việc",
+          "definition_en": "relating to a job or work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company provides occupational health services.",
+          "vi": "Công ty cung cấp dịch vụ sức khỏe nghề nghiệp."
+        }
+      ],
+      "collocations": [
+        "occupational health",
+        "occupational safety"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "occupational-safety-n",
+      "word": "occupational safety",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "an toàn lao động",
+          "definition_en": "the prevention of accidents and injuries at work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Occupational safety training is held every quarter.",
+          "vi": "Đào tạo an toàn lao động được tổ chức mỗi quý."
+        }
+      ],
+      "collocations": [
+        "occupational safety standards",
+        "occupational safety training"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "offer-v",
@@ -172,6 +305,40 @@
         "special offer",
         "offer assistance"
       ]
+    },
+    {
+      "id": "officeholder-n",
+      "word": "officeholder",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người giữ chức vụ",
+          "definition_en": "officeholder: người giữ chức vụ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The officeholder will serve a three-year term.",
+          "vi": "Người giữ chức vụ sẽ đảm nhiệm nhiệm kỳ ba năm."
+        }
+      ],
+      "collocations": [
+        "elected officeholder",
+        "public officeholder"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "operate-v",
@@ -450,6 +617,71 @@
       ]
     },
     {
+      "id": "organizer-n",
+      "word": "organizer",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈɔːr.ɡə.naɪ.zɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người tổ chức",
+          "definition_en": "a person who plans an event",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The organizer confirmed the speaker list.",
+          "vi": "Người tổ chức đã xác nhận danh sách diễn giả."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "outage-n",
+      "word": "outage",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự cố mất điện/dịch vụ",
+          "definition_en": "a period when a service or system is not available",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The scheduled outage will begin after midnight.",
+          "vi": "Sự cố ngừng dịch vụ theo lịch sẽ bắt đầu sau nửa đêm."
+        }
+      ],
+      "collocations": [
+        "power outage",
+        "service outage"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "outcome-n",
       "word": "outcome",
       "cefr_level": "B1",
@@ -488,6 +720,328 @@
         "expected outcome",
         "project outcome"
       ]
+    },
+    {
+      "id": "outlook-n",
+      "word": "outlook",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈaʊt.lʊk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "triển vọng; dự báo",
+          "definition_en": "a view of what is likely to happen",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The five-day outlook shows cooler temperatures.",
+          "vi": "Dự báo năm ngày cho thấy nhiệt độ mát hơn."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "outsource-v",
+      "word": "outsource",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thuê ngoài; giao cho bên ngoài thực hiện",
+          "definition_en": "outsource: thuê ngoài; giao cho bên ngoài thực hiện.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company decided to outsource its payroll services.",
+          "vi": "Công ty quyết định thuê ngoài dịch vụ tính lương."
+        }
+      ],
+      "collocations": [
+        "outsource production",
+        "outsource a service"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "outsourcing-n",
+      "word": "outsourcing",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc thuê ngoài",
+          "definition_en": "outsourcing: việc thuê ngoài.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Outsourcing reduced the department's operating costs.",
+          "vi": "Thuê ngoài đã giảm chi phí hoạt động của bộ phận."
+        }
+      ],
+      "collocations": [
+        "IT outsourcing",
+        "business process outsourcing"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "outstanding-adj",
+      "word": "outstanding",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "nổi bật; chưa thanh toán",
+          "definition_en": "Outstanding — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The outstanding was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “outstanding” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "overcast-adj",
+      "word": "overcast",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌoʊ.vɚˈkæst/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "âm u; nhiều mây",
+          "definition_en": "covered with clouds",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The sky will remain overcast this afternoon.",
+          "vi": "Bầu trời sẽ tiếp tục âm u vào chiều nay."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "overdraft-n",
+      "word": "overdraft",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈoʊ.vɚ.dræft/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thấu chi",
+          "definition_en": "the amount by which money taken out exceeds the balance",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The account has an agreed overdraft limit.",
+          "vi": "Tài khoản có hạn mức thấu chi đã thỏa thuận."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "overdue-adj",
+      "word": "overdue",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "quá hạn",
+          "definition_en": "Overdue — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The overdue was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “overdue” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "overhaul-n",
+      "word": "overhaul",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "đại tu; cải tổ toàn diện",
+          "definition_en": "Overhaul: đại tu; cải tổ toàn diện.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manager explained the overhaul policy to the team.",
+          "vi": "Quản lý đã giải thích chính sách “overhaul” cho nhóm."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "overhead-n",
+      "word": "overhead",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "meaning_vi": "chi phí chung; chi phí vận hành",
+          "definition_en": "regular business costs not directly linked to a product",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new system is expected to lower administrative overhead.",
+          "vi": "Hệ thống mới dự kiến giảm chi phí quản lý chung."
+        }
+      ],
+      "collocations": [
+        "overhead costs",
+        "reduce overhead"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "overhead-cost-n",
+      "word": "overhead cost",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chi phí quản lý chung",
+          "definition_en": "a regular operating expense not directly tied to production",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Rent and utilities are included in overhead costs.",
+          "vi": "Tiền thuê và tiện ích được tính vào chi phí chung."
+        }
+      ],
+      "collocations": [
+        "fixed overhead costs",
+        "allocate overhead costs"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "oversee-v",
@@ -534,6 +1088,40 @@
         "oversee operations",
         "oversee a project"
       ]
+    },
+    {
+      "id": "overtime-n",
+      "word": "overtime",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giờ làm thêm; tiền làm thêm giờ",
+          "definition_en": "time worked beyond normal working hours",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Overtime must be approved by a supervisor.",
+          "vi": "Giờ làm thêm phải được người giám sát phê duyệt."
+        }
+      ],
+      "collocations": [
+        "work overtime",
+        "overtime pay"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "owner-n",

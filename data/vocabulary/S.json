@@ -3,6 +3,37 @@
   "letter": "S",
   "words": [
     {
+      "id": "safety-n",
+      "word": "safety",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈseɪf.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự an toàn",
+          "definition_en": "the condition of being protected from danger",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Workplace safety is reviewed every quarter.",
+          "vi": "An toàn nơi làm việc được rà soát mỗi quý."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "salary-n",
       "word": "salary",
       "cefr_level": "A2",
@@ -85,6 +116,68 @@
       ]
     },
     {
+      "id": "sanitation-n",
+      "word": "sanitation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌsæn.əˈteɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vệ sinh",
+          "definition_en": "conditions relating to public health and cleanliness",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The facility improved sanitation in shared areas.",
+          "vi": "Cơ sở cải thiện vệ sinh tại các khu vực chung."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "sanitize-n",
+      "word": "sanitize",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsæn.ə.taɪz/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "khử khuẩn",
+          "definition_en": "to clean something to remove harmful germs",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Staff must sanitize shared equipment after use.",
+          "vi": "Nhân viên phải khử khuẩn thiết bị dùng chung sau khi sử dụng."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "satisfy-v",
       "word": "satisfy",
       "cefr_level": "B1",
@@ -165,6 +258,68 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "savings-account-n",
+      "word": "savings account",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈseɪ.vɪŋz əˌkaʊnt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tài khoản tiết kiệm",
+          "definition_en": "a bank account used to save money and earn interest",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A savings account usually pays interest.",
+          "vi": "Tài khoản tiết kiệm thường có trả lãi."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "scaffold-n",
+      "word": "scaffold",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈskæf.oʊld/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giàn giáo",
+          "definition_en": "a temporary structure used by workers",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The scaffold must be inspected every morning.",
+          "vi": "Giàn giáo phải được kiểm tra mỗi sáng."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "schedule-nv",
       "word": "schedule",
       "phonetic": {
@@ -231,6 +386,37 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "scholarship-n",
+      "word": "scholarship",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈskɑː.lɚ.ʃɪp/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "học bổng",
+          "definition_en": "money given to support a student’s education",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The foundation offers scholarships to local students.",
+          "vi": "Quỹ cung cấp học bổng cho sinh viên địa phương."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "section-n",
@@ -317,6 +503,37 @@
         "select an option",
         "carefully selected"
       ]
+    },
+    {
+      "id": "seminar-n",
+      "word": "seminar",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsem.ə.nɑːr/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hội thảo chuyên đề",
+          "definition_en": "a meeting for discussion or training",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The seminar covers new workplace safety standards.",
+          "vi": "Hội thảo đề cập các tiêu chuẩn an toàn lao động mới."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "senior-adj",
@@ -445,6 +662,105 @@
       ]
     },
     {
+      "id": "severance-n",
+      "word": "severance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "trợ cấp thôi việc; sự chấm dứt quan hệ lao động",
+          "definition_en": "payment or conditions given when employment ends",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The agreement specifies the severance package.",
+          "vi": "Thỏa thuận quy định gói trợ cấp thôi việc."
+        }
+      ],
+      "collocations": [
+        "severance pay",
+        "severance package"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "severance-pay-n",
+      "word": "severance pay",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tiền trợ cấp thôi việc",
+          "definition_en": "money paid to an employee when employment is terminated",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Eligible staff will receive severance pay under the policy.",
+          "vi": "Nhân viên đủ điều kiện sẽ nhận trợ cấp thôi việc theo chính sách."
+        }
+      ],
+      "collocations": [
+        "receive severance pay",
+        "severance pay package"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "shelter-nv",
+      "word": "shelter",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈʃel.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "nơi trú ẩn; che chở",
+          "definition_en": "a place that protects people from bad weather",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees should move to the nearest shelter.",
+          "vi": "Nhân viên nên di chuyển đến nơi trú ẩn gần nhất."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "shipment-n",
       "word": "shipment",
       "phonetic": {
@@ -493,6 +809,40 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "shortage-n",
+      "word": "shortage",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng thiếu hụt",
+          "definition_en": "a situation in which there is not enough of something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A shortage of components has slowed production.",
+          "vi": "Tình trạng thiếu linh kiện đã làm chậm sản xuất."
+        }
+      ],
+      "collocations": [
+        "labor shortage",
+        "supply shortage"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "significant-adj",
@@ -693,6 +1043,40 @@
       ]
     },
     {
+      "id": "solvent-adj",
+      "word": "solvent",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có khả năng thanh toán; đủ khả năng trả nợ",
+          "definition_en": "having enough money or assets to pay debts when they are due",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company remains solvent despite lower sales.",
+          "vi": "Công ty vẫn có khả năng thanh toán dù doanh số giảm."
+        }
+      ],
+      "collocations": [
+        "remain solvent",
+        "solvent business"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "source-n",
       "word": "source",
       "cefr_level": "A2",
@@ -811,6 +1195,71 @@
       ]
     },
     {
+      "id": "specify-v",
+      "word": "specify",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "quy định rõ; nêu cụ thể",
+          "definition_en": "specify: quy định rõ; nêu cụ thể.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract specifies the delivery deadline.",
+          "vi": "Hợp đồng quy định rõ thời hạn giao hàng."
+        }
+      ],
+      "collocations": [
+        "specify a date",
+        "specify requirements"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "square-footage-n",
+      "word": "square footage",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈskwer ˌfʊt̬.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "diện tích tính bằng foot vuông",
+          "definition_en": "the area of a floor or building measured in square feet",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The listing provides the office square footage.",
+          "vi": "Tin đăng cung cấp diện tích văn phòng tính bằng foot vuông."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "staff-v",
       "word": "staff",
       "cefr_level": "A1",
@@ -855,6 +1304,40 @@
         "staff meeting",
         "staff member"
       ]
+    },
+    {
+      "id": "stakeholder-n",
+      "word": "stakeholder",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bên liên quan",
+          "definition_en": "a person or group affected by an organization’s decisions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project manager will update all stakeholders on Friday.",
+          "vi": "Quản lý dự án sẽ cập nhật thông tin cho tất cả bên liên quan vào thứ Sáu."
+        }
+      ],
+      "collocations": [
+        "key stakeholder",
+        "stakeholder meeting"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "standard-n",
@@ -981,6 +1464,37 @@
       ]
     },
     {
+      "id": "stockroom-n",
+      "word": "stockroom",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈstɑːk.ruːm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kho chứa hàng",
+          "definition_en": "a room where a store keeps goods",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manager checked the stockroom for more supplies.",
+          "vi": "Quản lý kiểm tra kho để tìm thêm hàng."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "strategy-n",
       "word": "strategy",
       "cefr_level": "B2",
@@ -1019,6 +1533,74 @@
         "marketing strategy",
         "long-term strategy"
       ]
+    },
+    {
+      "id": "subcontract-v",
+      "word": "subcontract",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v/n",
+          "meaning_vi": "giao thầu phụ; hợp đồng thầu phụ",
+          "definition_en": "to pay another company to do part of a contract",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The builder may subcontract the electrical work.",
+          "vi": "Nhà thầu có thể giao thầu phụ phần công việc điện."
+        }
+      ],
+      "collocations": [
+        "subcontract work",
+        "subcontract agreement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "subcontractor-n",
+      "word": "subcontractor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà thầu phụ",
+          "definition_en": "a person or company hired to do part of a larger contract",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All subcontractors must complete the safety orientation.",
+          "vi": "Tất cả nhà thầu phụ phải hoàn thành buổi định hướng an toàn."
+        }
+      ],
+      "collocations": [
+        "approved subcontractor",
+        "subcontractor agreement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "submit-v",
@@ -1072,6 +1654,108 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "subscribe-v",
+      "word": "subscribe",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đăng ký thuê bao; đặt mua định kỳ",
+          "definition_en": "subscribe: đăng ký thuê bao; đặt mua định kỳ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can subscribe to the monthly newsletter.",
+          "vi": "Khách hàng có thể đăng ký nhận bản tin hằng tháng."
+        }
+      ],
+      "collocations": [
+        "subscribe to a service",
+        "subscribe online"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "subscription-n",
+      "word": "subscription",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thuê bao; gói đăng ký định kỳ",
+          "definition_en": "subscription: thuê bao; gói đăng ký định kỳ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The annual subscription includes technical support.",
+          "vi": "Gói đăng ký hằng năm bao gồm hỗ trợ kỹ thuật."
+        }
+      ],
+      "collocations": [
+        "annual subscription",
+        "subscription fee"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "subsidiary-n",
+      "word": "subsidiary",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "công ty con",
+          "definition_en": "a company controlled by another, larger company",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The subsidiary operates independently in three countries.",
+          "vi": "Công ty con hoạt động độc lập tại ba quốc gia."
+        }
+      ],
+      "collocations": [
+        "wholly owned subsidiary",
+        "foreign subsidiary"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "substantial-adj",
       "word": "substantial",
       "cefr_level": "B2",
@@ -1110,6 +1794,74 @@
         "substantial increase",
         "substantial investment"
       ]
+    },
+    {
+      "id": "sufficient-adj",
+      "word": "sufficient",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "đủ; đầy đủ",
+          "definition_en": "sufficient: đủ; đầy đủ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please allow sufficient time for customs clearance.",
+          "vi": "Vui lòng dành đủ thời gian để thông quan."
+        }
+      ],
+      "collocations": [
+        "sufficient funds",
+        "sufficient evidence"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "sufficiently-adv",
+      "word": "sufficiently",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "đủ mức; một cách đầy đủ",
+          "definition_en": "sufficiently: đủ mức; một cách đầy đủ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The room is sufficiently large for the workshop.",
+          "vi": "Căn phòng đủ rộng cho buổi hội thảo."
+        }
+      ],
+      "collocations": [
+        "sufficiently detailed",
+        "sufficiently prepared"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "suggest-v",
@@ -1158,6 +1910,37 @@
       ]
     },
     {
+      "id": "suite-n",
+      "word": "suite",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/swiːt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phòng hạng sang; căn hộ",
+          "definition_en": "a set of connected rooms in a hotel",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The executive suite overlooks the city.",
+          "vi": "Phòng suite dành cho khách điều hành nhìn ra thành phố."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "sunday-n",
       "word": "Sunday",
       "phonetic": {
@@ -1190,6 +1973,108 @@
       ],
       "cefr_level": "A1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "supervise-v",
+      "word": "supervise",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giám sát",
+          "definition_en": "to manage and watch over work or people",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A senior technician will supervise the installation.",
+          "vi": "Một kỹ thuật viên cấp cao sẽ giám sát việc lắp đặt."
+        }
+      ],
+      "collocations": [
+        "supervise a team",
+        "supervise operations"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "supervision-n",
+      "word": "supervision",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự giám sát",
+          "definition_en": "the act of managing and watching over work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new employees work under close supervision.",
+          "vi": "Nhân viên mới làm việc dưới sự giám sát chặt chẽ."
+        }
+      ],
+      "collocations": [
+        "under supervision",
+        "direct supervision"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "supervisor-n",
+      "word": "supervisor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người giám sát; quản lý trực tiếp",
+          "definition_en": "a person who oversees employees or an activity",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Ask your supervisor to approve the leave request.",
+          "vi": "Hãy yêu cầu người giám sát phê duyệt đơn nghỉ phép."
+        }
+      ],
+      "collocations": [
+        "direct supervisor",
+        "shift supervisor"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "supplier-n",
@@ -1336,6 +2221,71 @@
       ]
     },
     {
+      "id": "surcharge-n",
+      "word": "surcharge",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phụ phí",
+          "definition_en": "Surcharge: phụ phí.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manager explained the surcharge policy to the team.",
+          "vi": "Quản lý đã giải thích chính sách “surcharge” cho nhóm."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "surplus-n",
+      "word": "surplus",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phần dư; lượng thặng dư",
+          "definition_en": "an amount that is more than what is needed or used",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The warehouse has a surplus of seasonal products.",
+          "vi": "Kho hàng có lượng hàng theo mùa dư thừa."
+        }
+      ],
+      "collocations": [
+        "budget surplus",
+        "surplus stock"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "survey-v",
       "word": "survey",
       "cefr_level": "A2",
@@ -1380,6 +2330,150 @@
       ]
     },
     {
+      "id": "suspend-v",
+      "word": "suspend",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tạm ngừng; đình chỉ",
+          "definition_en": "suspend: tạm ngừng; đình chỉ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The airline suspended flights because of the storm.",
+          "vi": "Hãng hàng không tạm ngừng các chuyến bay vì bão."
+        }
+      ],
+      "collocations": [
+        "suspend service",
+        "suspend operations"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "suspension-n",
+      "word": "suspension",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tạm ngừng; đình chỉ",
+          "definition_en": "suspension: sự tạm ngừng; đình chỉ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The temporary suspension will last until repairs are complete.",
+          "vi": "Việc tạm ngừng sẽ kéo dài đến khi sửa chữa hoàn tất."
+        }
+      ],
+      "collocations": [
+        "temporary suspension",
+        "suspension of service"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "sustain-v",
+      "word": "sustain",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "duy trì; chống đỡ; chịu đựng",
+          "definition_en": "to keep something going over time or support it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "sustain",
+        "vs_es": "sustains",
+        "v2": "sustained",
+        "v3": "sustained",
+        "ving": "sustaining"
+      },
+      "examples": [
+        {
+          "en": "The business needs new customers to sustain growth.",
+          "vi": "Doanh nghiệp cần khách hàng mới để duy trì tăng trưởng."
+        }
+      ],
+      "collocations": [
+        "sustain growth",
+        "sustain an effort",
+        "sustainable development"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "sustainability-n",
+      "word": "sustainability",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính bền vững",
+          "definition_en": "the ability to continue without causing long-term damage",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The annual report includes a section on environmental sustainability.",
+          "vi": "Báo cáo thường niên có phần về tính bền vững môi trường."
+        }
+      ],
+      "collocations": [
+        "environmental sustainability",
+        "business sustainability"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "sustainable-adj",
       "word": "sustainable",
       "cefr_level": "B2",
@@ -1418,6 +2512,37 @@
         "sustainable growth",
         "sustainable development"
       ]
+    },
+    {
+      "id": "symptom-n",
+      "word": "symptom",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈsɪmp.təm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "triệu chứng",
+          "definition_en": "a physical sign of an illness",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HEALTHCARE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Report any unusual symptoms to the medical team.",
+          "vi": "Báo cáo mọi triệu chứng bất thường cho đội ngũ y tế."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "system-n",

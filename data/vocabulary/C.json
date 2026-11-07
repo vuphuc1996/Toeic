@@ -133,6 +133,37 @@
       ]
     },
     {
+      "id": "capacity-n",
+      "word": "capacity",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sức chứa; năng lực",
+          "definition_en": "Capacity — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The capacity was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “capacity” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "career-n",
       "word": "career",
       "cefr_level": "A2",
@@ -211,6 +242,102 @@
       ]
     },
     {
+      "id": "cargo-n",
+      "word": "cargo",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hàng hóa vận chuyển",
+          "definition_en": "Cargo — hàng hóa vận chuyển.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed cargo during the meeting.",
+          "vi": "Nhóm đã thảo luận về “cargo” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "carrier-n",
+      "word": "carrier",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đơn vị vận chuyển; hãng vận tải",
+          "definition_en": "a company that transports people or goods",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The carrier will collect the packages this afternoon.",
+          "vi": "Đơn vị vận chuyển sẽ đến lấy các kiện hàng chiều nay."
+        }
+      ],
+      "collocations": [
+        "shipping carrier",
+        "national carrier"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "carry-on-n",
+      "word": "carry-on",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈker.i.ɑːn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hành lý xách tay",
+          "definition_en": "a small bag taken onto an aircraft",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each passenger may bring one carry-on bag.",
+          "vi": "Mỗi hành khách có thể mang một túi xách tay."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "cash-n",
       "word": "cash",
       "cefr_level": "A1",
@@ -287,6 +414,71 @@
       ]
     },
     {
+      "id": "catalogue-n",
+      "word": "catalogue",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "danh mục hàng hóa; catalogue",
+          "definition_en": "a list or publication showing products or services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The latest catalogue includes several new models.",
+          "vi": "Danh mục mới nhất bao gồm một số mẫu mới."
+        }
+      ],
+      "collocations": [
+        "product catalogue",
+        "online catalogue"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "catering-n",
+      "word": "catering",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkeɪ.t̬ɚ.ɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dịch vụ cung cấp đồ ăn",
+          "definition_en": "the business of providing food for events",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Catering is included in the conference package.",
+          "vi": "Dịch vụ ăn uống được bao gồm trong gói hội nghị."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "cause-v",
       "word": "cause",
       "cefr_level": "B1",
@@ -331,6 +523,229 @@
         "cause a problem",
         "root cause"
       ]
+    },
+    {
+      "id": "cease-v",
+      "word": "cease",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chấm dứt; ngừng",
+          "definition_en": "to stop happening or operating",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "cease",
+        "vs_es": "ceases",
+        "v2": "ceased",
+        "v3": "ceased",
+        "ving": "ceasing"
+      },
+      "examples": [
+        {
+          "en": "The service will cease operations at the end of June.",
+          "vi": "Dịch vụ sẽ ngừng hoạt động vào cuối tháng Sáu."
+        }
+      ],
+      "collocations": [
+        "cease operations",
+        "cease production",
+        "cease to exist"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "certificate-n",
+      "word": "certificate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chứng chỉ; giấy chứng nhận",
+          "definition_en": "Certificate — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The certificate was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “certificate” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "certification-n",
+      "word": "certification",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chứng nhận; giấy chứng nhận",
+          "definition_en": "official proof that someone has met a required standard",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The position requires professional certification.",
+          "vi": "Vị trí này yêu cầu chứng chỉ chuyên môn."
+        }
+      ],
+      "collocations": [
+        "professional certification",
+        "safety certification"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "certify-v",
+      "word": "certify",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chứng nhận; xác nhận",
+          "definition_en": "to officially state that something meets a standard",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier must certify that the materials meet safety standards.",
+          "vi": "Nhà cung cấp phải chứng nhận vật liệu đáp ứng tiêu chuẩn an toàn."
+        }
+      ],
+      "collocations": [
+        "certify compliance",
+        "certify a document"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "challenge-nv",
+      "word": "challenge",
+      "phonetic": {
+        "us": "/ˈtʃæl.ɪndʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "thách thức; đặt nghi vấn; thách thức ai",
+          "definition_en": "something difficult that tests ability; to question or test something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CAREER",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "challenging",
+          "pos": "adj",
+          "meaning_vi": "đầy thử thách"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Meeting the new deadline will be a significant challenge.",
+          "vi": "Việc đáp ứng thời hạn mới sẽ là một thách thức đáng kể."
+        }
+      ],
+      "collocations": [
+        "face a challenge",
+        "challenge an assumption"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "channel-nv",
+      "word": "channel",
+      "phonetic": {
+        "us": "/ˈtʃæn.əl/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "kênh; phương tiện; chuyển hướng",
+          "definition_en": "a method or system for communicating or distributing something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "MARKETING"
+      ],
+      "word_family": [
+        {
+          "word": "channeling",
+          "pos": "n",
+          "meaning_vi": "sự định hướng; chuyển hướng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can contact support through several channels.",
+          "vi": "Khách hàng có thể liên hệ bộ phận hỗ trợ qua nhiều kênh."
+        }
+      ],
+      "collocations": [
+        "communication channel",
+        "sales channel"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "charge-v",
@@ -379,6 +794,262 @@
       ]
     },
     {
+      "id": "check-in-n",
+      "word": "check-in",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtʃek.ɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thủ tục nhận phòng; làm thủ tục",
+          "definition_en": "the process of registering arrival",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Online check-in opens twenty-four hours before arrival.",
+          "vi": "Làm thủ tục trực tuyến mở trước giờ đến 24 giờ."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "checkout-n",
+      "word": "checkout",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtʃek.aʊt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thủ tục trả phòng",
+          "definition_en": "the process of leaving a hotel",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Checkout time is eleven o’clock.",
+          "vi": "Giờ trả phòng là 11 giờ."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "checkout-clerk-n",
+      "word": "checkout clerk",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtʃek.aʊt klɝːk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên thu ngân",
+          "definition_en": "a person who receives payment in a store",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The checkout clerk offered a printed receipt.",
+          "vi": "Nhân viên thu ngân đề nghị in biên lai."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "checkout-counter-n",
+      "word": "checkout counter",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtʃek.aʊt ˌkaʊn.t̬ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quầy thanh toán",
+          "definition_en": "the place in a store where customers pay",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please bring the items to the checkout counter.",
+          "vi": "Vui lòng mang các mặt hàng đến quầy thanh toán."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "checkup-n",
+      "word": "checkup",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈtʃek.ʌp/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khám sức khỏe định kỳ",
+          "definition_en": "a medical examination to check health",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HEALTHCARE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Annual checkups are available to all employees.",
+          "vi": "Khám sức khỏe định kỳ hằng năm dành cho mọi nhân viên."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "circulate-v",
+      "word": "circulate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "lưu hành; phân phát",
+          "definition_en": "Circulate: lưu hành; phân phát.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the circulate issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “circulate” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "circulation-n",
+      "word": "circulation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự lưu hành; số lượng phát hành",
+          "definition_en": "the distribution or movement of something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The magazine increased its circulation last year.",
+          "vi": "Tạp chí đã tăng số lượng phát hành vào năm ngoái."
+        }
+      ],
+      "collocations": [
+        "wide circulation",
+        "circulation figures"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "circumstance-n",
+      "word": "circumstance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hoàn cảnh; tình huống",
+          "definition_en": "a fact or condition that affects a situation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees may work remotely under certain circumstances.",
+          "vi": "Nhân viên có thể làm việc từ xa trong một số hoàn cảnh nhất định."
+        }
+      ],
+      "collocations": [
+        "under the circumstances",
+        "due to circumstances",
+        "personal circumstances"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
       "id": "claim-v",
       "word": "claim",
       "cefr_level": "B1",
@@ -425,6 +1096,139 @@
       ]
     },
     {
+      "id": "clarify-v",
+      "word": "clarify",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "làm rõ; giải thích",
+          "definition_en": "Clarify — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will clarify the relevant process.",
+          "vi": "Nội dung liên quan đến “clarify” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "clearance-n",
+      "word": "clearance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thông quan; giải phóng hàng; thanh lý",
+          "definition_en": "official permission for goods or people to pass through a control point",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The shipment is waiting for customs clearance.",
+          "vi": "Lô hàng đang chờ thông quan."
+        }
+      ],
+      "collocations": [
+        "customs clearance",
+        "security clearance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "clerical-adj",
+      "word": "clerical",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc công việc văn thư",
+          "definition_en": "relating to routine office or record-keeping work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The position requires strong clerical and computer skills.",
+          "vi": "Vị trí này yêu cầu kỹ năng văn thư và máy tính tốt."
+        }
+      ],
+      "collocations": [
+        "clerical duties",
+        "clerical staff"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "clerk-n",
+      "word": "clerk",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên văn phòng; nhân viên quầy",
+          "definition_en": "an office worker who keeps records or handles routine transactions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Ask the front-desk clerk for a visitor badge.",
+          "vi": "Hãy hỏi nhân viên quầy lễ tân để nhận thẻ khách."
+        }
+      ],
+      "collocations": [
+        "office clerk",
+        "sales clerk"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "client-n",
       "word": "client",
       "phonetic": {
@@ -461,6 +1265,150 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "clientele-n",
+      "word": "clientele",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tệp khách hàng",
+          "definition_en": "Clientele — tệp khách hàng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed clientele during the meeting.",
+          "vi": "Nhóm đã thảo luận về “clientele” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "climate-n",
+      "word": "climate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈklaɪ.mət/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khí hậu",
+          "definition_en": "the usual weather conditions of a region",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "WEATHER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The region has a warm and humid climate.",
+          "vi": "Khu vực có khí hậu ấm và ẩm."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "coherent-adj",
+      "word": "coherent",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "mạch lạc; logic; nhất quán",
+          "definition_en": "logical and well organized, so that the parts fit together",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The applicant gave a coherent explanation of the proposal.",
+          "vi": "Ứng viên đã đưa ra lời giải thích mạch lạc về đề xuất."
+        }
+      ],
+      "collocations": [
+        "coherent argument",
+        "coherent explanation",
+        "coherent structure"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "coincide-v",
+      "word": "coincide",
+      "phonetic": {
+        "us": "/ˌkoʊ.ɪnˈsaɪd/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "trùng hợp; xảy ra đồng thời",
+          "definition_en": "to happen at or near the same time, or to be the same",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "coincidence",
+          "pos": "n",
+          "meaning_vi": "sự trùng hợp"
+        },
+        {
+          "word": "coincidental",
+          "pos": "adj",
+          "meaning_vi": "tình cờ; trùng hợp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The product launch will coincide with the annual conference.",
+          "vi": "Việc ra mắt sản phẩm sẽ diễn ra cùng thời điểm với hội nghị thường niên."
+        }
+      ],
+      "collocations": [
+        "coincide with an event",
+        "dates coincide"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "colleague-n",
@@ -547,6 +1495,47 @@
       ]
     },
     {
+      "id": "commence-v",
+      "word": "commence",
+      "phonetic": {
+        "us": "/kəˈmens/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "bắt đầu; khởi công",
+          "definition_en": "to begin or start",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "CONSTRUCTION"
+      ],
+      "word_family": [
+        {
+          "word": "commencement",
+          "pos": "n",
+          "meaning_vi": "sự bắt đầu; lễ tốt nghiệp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Construction is scheduled to commence in early March.",
+          "vi": "Hạng mục xây dựng dự kiến bắt đầu vào đầu tháng Ba."
+        }
+      ],
+      "collocations": [
+        "commence work",
+        "commence proceedings"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "commercial-adj",
       "word": "commercial",
       "cefr_level": "B1",
@@ -585,6 +1574,74 @@
         "commercial agreement",
         "commercial property"
       ]
+    },
+    {
+      "id": "commission-n",
+      "word": "commission",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hoa hồng; phí môi giới",
+          "definition_en": "money paid to someone based on the value of sales they make",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Sales representatives earn a commission on each contract.",
+          "vi": "Nhân viên kinh doanh nhận hoa hồng trên mỗi hợp đồng."
+        }
+      ],
+      "collocations": [
+        "sales commission",
+        "commission rate"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "commodity-n",
+      "word": "commodity",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hàng hóa; nguyên liệu giao dịch",
+          "definition_en": "a raw material or basic product that can be bought and sold",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company imports several agricultural commodities.",
+          "vi": "Công ty nhập khẩu một số mặt hàng nông sản."
+        }
+      ],
+      "collocations": [
+        "commodity prices",
+        "commodity market"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "communicate-v",
@@ -677,6 +1734,230 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "compensate-v",
+      "word": "compensate",
+      "phonetic": {
+        "us": "/ˈkɑːm.pen.seɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "bồi thường; đền bù; bù đắp",
+          "definition_en": "to pay someone for loss or work, or to make up for something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "HR"
+      ],
+      "word_family": [
+        {
+          "word": "compensation",
+          "pos": "n",
+          "meaning_vi": "sự bồi thường; tiền thù lao"
+        },
+        {
+          "word": "compensatory",
+          "pos": "adj",
+          "meaning_vi": "mang tính bù đắp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The airline will compensate passengers for the cancelled flight.",
+          "vi": "Hãng hàng không sẽ bồi thường cho hành khách vì chuyến bay bị hủy."
+        }
+      ],
+      "collocations": [
+        "compensate for a loss",
+        "compensate employees"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "compensation-n",
+      "word": "compensation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tiền bồi thường; chế độ đãi ngộ",
+          "definition_en": "compensation: tiền bồi thường; chế độ đãi ngộ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The compensation package includes health coverage.",
+          "vi": "Gói đãi ngộ bao gồm bảo hiểm sức khỏe."
+        }
+      ],
+      "collocations": [
+        "compensation package",
+        "workers' compensation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "competency-n",
+      "word": "competency",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "năng lực; khả năng chuyên môn",
+          "definition_en": "the ability to do a task successfully",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Communication is a key competency for this role.",
+          "vi": "Giao tiếp là năng lực then chốt của vị trí này."
+        }
+      ],
+      "collocations": [
+        "core competency",
+        "technical competency"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "competitive-adj",
+      "word": "competitive",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có tính cạnh tranh; cạnh tranh",
+          "definition_en": "competitive: có tính cạnh tranh; cạnh tranh.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company offers competitive salaries.",
+          "vi": "Công ty đưa ra mức lương cạnh tranh."
+        }
+      ],
+      "collocations": [
+        "competitive price",
+        "competitive salary"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "competitor-n",
+      "word": "competitor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đối thủ cạnh tranh",
+          "definition_en": "competitor: đối thủ cạnh tranh.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A major competitor has launched a similar product.",
+          "vi": "Một đối thủ lớn vừa ra mắt sản phẩm tương tự."
+        }
+      ],
+      "collocations": [
+        "major competitor",
+        "market competitor"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "compile-v",
+      "word": "compile",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "biên soạn; tổng hợp",
+          "definition_en": "to collect information from different sources and arrange it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "compile",
+        "vs_es": "compiles",
+        "v2": "compiled",
+        "v3": "compiled",
+        "ving": "compiling"
+      },
+      "examples": [
+        {
+          "en": "Please compile the sales figures into one spreadsheet.",
+          "vi": "Vui lòng tổng hợp số liệu bán hàng vào một bảng tính."
+        }
+      ],
+      "collocations": [
+        "compile a report",
+        "compile data",
+        "compile a list"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
       "id": "complaint-n",
       "word": "complaint",
       "cefr_level": "A2",
@@ -715,6 +1996,47 @@
         "file a complaint",
         "customer complaint"
       ]
+    },
+    {
+      "id": "complement-nv",
+      "word": "complement",
+      "phonetic": {
+        "us": "/ˈkɑːm.plə.ment/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "bổ sung; phần bổ trợ; làm hoàn thiện",
+          "definition_en": "something that completes or improves another thing",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "complementary",
+          "pos": "adj",
+          "meaning_vi": "bổ trợ; bổ sung cho nhau"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The two services complement each other.",
+          "vi": "Hai dịch vụ bổ trợ cho nhau."
+        }
+      ],
+      "collocations": [
+        "complement each other",
+        "a perfect complement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "complete-v",
@@ -763,6 +2085,40 @@
       ]
     },
     {
+      "id": "completion-n",
+      "word": "completion",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hoàn thành",
+          "definition_en": "completion: sự hoàn thành.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Payment is due upon completion of the project.",
+          "vi": "Thanh toán đến hạn khi dự án hoàn thành."
+        }
+      ],
+      "collocations": [
+        "project completion",
+        "completion date"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "compliance-n",
       "word": "compliance",
       "cefr_level": "B2",
@@ -803,6 +2159,256 @@
       ]
     },
     {
+      "id": "complimentary-adj",
+      "word": "complimentary",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "miễn phí; được tặng kèm",
+          "definition_en": "provided free of charge as a courtesy",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Guests receive complimentary breakfast during their stay.",
+          "vi": "Khách được phục vụ bữa sáng miễn phí trong thời gian lưu trú."
+        }
+      ],
+      "collocations": [
+        "complimentary breakfast",
+        "complimentary ticket"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "comply-v",
+      "word": "comply",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tuân thủ",
+          "definition_en": "Comply — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will comply the relevant process.",
+          "vi": "Nội dung liên quan đến “comply” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "compost-n",
+      "word": "compost",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkɑːm.poʊst/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "phân hữu cơ; ủ phân",
+          "definition_en": "decayed organic material used to improve soil",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The cafeteria collects food scraps for compost.",
+          "vi": "Căng tin thu gom thức ăn thừa để ủ phân."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "comprehensive-adj",
+      "word": "comprehensive",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "toàn diện; bao quát",
+          "definition_en": "including all or nearly all relevant details",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The course provides a comprehensive overview of business writing.",
+          "vi": "Khóa học cung cấp cái nhìn tổng quan toàn diện về văn phong kinh doanh."
+        }
+      ],
+      "collocations": [
+        "comprehensive review",
+        "comprehensive guide",
+        "comprehensive coverage"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "comprise-v",
+      "word": "comprise",
+      "phonetic": {
+        "us": "/kəmˈpraɪz/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "bao gồm; gồm có; cấu thành",
+          "definition_en": "to consist of particular parts or members",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "comprising",
+          "pos": "prep",
+          "meaning_vi": "bao gồm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training program comprises six practical modules.",
+          "vi": "Chương trình đào tạo bao gồm sáu mô-đun thực hành."
+        }
+      ],
+      "collocations": [
+        "comprise several parts",
+        "be comprised of"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "conceive-v",
+      "word": "conceive",
+      "phonetic": {
+        "us": "/kənˈsiːv/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hình thành ý tưởng; tưởng tượng; thụ thai",
+          "definition_en": "to form an idea or plan in your mind",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "concept",
+          "pos": "n",
+          "meaning_vi": "khái niệm"
+        },
+        {
+          "word": "conception",
+          "pos": "n",
+          "meaning_vi": "sự hình thành ý tưởng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team conceived a new approach to customer support.",
+          "vi": "Nhóm đã hình thành một cách tiếp cận mới đối với hỗ trợ khách hàng."
+        }
+      ],
+      "collocations": [
+        "conceive an idea",
+        "conceive a plan"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "concierge-n",
+      "word": "concierge",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌkɑːn.siˈerʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên hỗ trợ khách tại khách sạn",
+          "definition_en": "a hotel employee who assists guests",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Ask the concierge to arrange a taxi.",
+          "vi": "Hãy nhờ nhân viên hỗ trợ khách đặt taxi."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "condition-n",
       "word": "condition",
       "cefr_level": "A2",
@@ -841,6 +2447,52 @@
       ]
     },
     {
+      "id": "confer-v",
+      "word": "confer",
+      "phonetic": {
+        "us": "/kənˈfɝː/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "trao; cấp; hội ý; bàn bạc",
+          "definition_en": "to give an official title, honor, or benefit, or to discuss something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "HR",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "conference",
+          "pos": "n",
+          "meaning_vi": "hội nghị"
+        },
+        {
+          "word": "conferral",
+          "pos": "n",
+          "meaning_vi": "sự trao/cấp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The university will confer an award on the research team.",
+          "vi": "Trường đại học sẽ trao giải thưởng cho nhóm nghiên cứu."
+        }
+      ],
+      "collocations": [
+        "confer a degree",
+        "confer with colleagues"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "conference-n",
       "word": "conference",
       "phonetic": {
@@ -877,6 +2529,71 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "confidential-adj",
+      "word": "confidential",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "bảo mật; bí mật",
+          "definition_en": "Confidential — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The confidential was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “confidential” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "confidentiality-n",
+      "word": "confidentiality",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính bảo mật",
+          "definition_en": "the state of keeping information private",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees must maintain the confidentiality of client records.",
+          "vi": "Nhân viên phải duy trì tính bảo mật của hồ sơ khách hàng."
+        }
+      ],
+      "collocations": [
+        "maintain confidentiality",
+        "confidentiality agreement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "confirm-v",
@@ -938,6 +2655,165 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "confirmation-n",
+      "word": "confirmation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự xác nhận",
+          "definition_en": "Confirmation — sự xác nhận.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed confirmation during the meeting.",
+          "vi": "Nhóm đã thảo luận về “confirmation” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consecutive-adj",
+      "word": "consecutive",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "liên tiếp",
+          "definition_en": "Consecutive — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consecutive was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “consecutive” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consensus-n",
+      "word": "consensus",
+      "phonetic": {
+        "us": "/kənˈsen.səs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự đồng thuận; ý kiến thống nhất",
+          "definition_en": "a general agreement among a group of people",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The committee reached a consensus after a lengthy discussion.",
+          "vi": "Ủy ban đạt được sự đồng thuận sau cuộc thảo luận kéo dài."
+        }
+      ],
+      "collocations": [
+        "reach a consensus",
+        "broad consensus"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consent-n",
+      "word": "consent",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "sự đồng ý; đồng ý",
+          "definition_en": "Consent: sự đồng ý; đồng ý.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department reviewed the consent issue at the meeting.",
+          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “consent” tại cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "conservation-n",
+      "word": "conservation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌkɑːn.sɚˈveɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự bảo tồn; tiết kiệm tài nguyên",
+          "definition_en": "the protection of natural resources",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Water conservation is part of the company policy.",
+          "vi": "Tiết kiệm nước là một phần trong chính sách công ty."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "consider-v",
       "word": "consider",
       "cefr_level": "B1",
@@ -984,6 +2860,412 @@
       ]
     },
     {
+      "id": "considerable-adj",
+      "word": "considerable",
+      "phonetic": {
+        "us": "/kənˈsɪd.ɚ.ə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "đáng kể; khá lớn",
+          "definition_en": "large in amount, size, or importance",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "considerably",
+          "pos": "adv",
+          "meaning_vi": "đáng kể"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The upgrade requires a considerable investment.",
+          "vi": "Bản nâng cấp đòi hỏi một khoản đầu tư đáng kể."
+        }
+      ],
+      "collocations": [
+        "considerable amount",
+        "considerable effort"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consignment-n",
+      "word": "consignment",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lô hàng gửi; hàng ký gửi",
+          "definition_en": "a quantity of goods sent to someone, usually for sale or delivery",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consignment was delayed at the distribution center.",
+          "vi": "Lô hàng bị chậm tại trung tâm phân phối."
+        }
+      ],
+      "collocations": [
+        "consignment note",
+        "consignment of goods"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consistently-adv",
+      "word": "consistently",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "meaning_vi": "một cách nhất quán; đều đặn",
+          "definition_en": "in the same way over time; regularly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The branch has consistently exceeded its sales targets.",
+          "vi": "Chi nhánh liên tục vượt chỉ tiêu bán hàng."
+        }
+      ],
+      "collocations": [
+        "consistently high",
+        "perform consistently",
+        "consistently achieve"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "consolidate-v",
+      "word": "consolidate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hợp nhất; củng cố; gom lại",
+          "definition_en": "to combine separate things into a single stronger or more effective whole",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company plans to consolidate its regional offices.",
+          "vi": "Công ty dự định hợp nhất các văn phòng khu vực."
+        }
+      ],
+      "collocations": [
+        "consolidate accounts",
+        "consolidate operations"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "constrain-v",
+      "word": "constrain",
+      "phonetic": {
+        "us": "/kənˈstreɪn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hạn chế; ràng buộc; kìm hãm",
+          "definition_en": "to limit or restrict what someone can do",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "constraint",
+          "pos": "n",
+          "meaning_vi": "sự hạn chế; ràng buộc"
+        },
+        {
+          "word": "constrained",
+          "pos": "adj",
+          "meaning_vi": "bị hạn chế"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Limited funding may constrain the scope of the project.",
+          "vi": "Nguồn vốn hạn chế có thể giới hạn phạm vi dự án."
+        }
+      ],
+      "collocations": [
+        "constrain growth",
+        "budget constraints"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consultancy-n",
+      "word": "consultancy",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dịch vụ tư vấn; công ty tư vấn",
+          "definition_en": "professional advice or a business providing it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The firm hired a consultancy to improve its logistics network.",
+          "vi": "Công ty thuê đơn vị tư vấn để cải thiện mạng lưới logistics."
+        }
+      ],
+      "collocations": [
+        "consultancy firm",
+        "management consultancy"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consultant-n",
+      "word": "consultant",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyên gia tư vấn",
+          "definition_en": "a person who provides professional advice to an organization",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consultant recommended changes to the workflow.",
+          "vi": "Chuyên gia tư vấn đề xuất thay đổi quy trình làm việc."
+        }
+      ],
+      "collocations": [
+        "management consultant",
+        "IT consultant"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consultation-n",
+      "word": "consultation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tham vấn; buổi tư vấn",
+          "definition_en": "a discussion in which advice or opinions are exchanged",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The policy was revised after consultation with employees.",
+          "vi": "Chính sách đã được sửa đổi sau khi tham vấn nhân viên."
+        }
+      ],
+      "collocations": [
+        "consultation process",
+        "in consultation with",
+        "public consultation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "consumable-n",
+      "word": "consumable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vật tư tiêu hao",
+          "definition_en": "consumable: vật tư tiêu hao.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Office consumables are ordered at the start of each month.",
+          "vi": "Vật tư tiêu hao văn phòng được đặt vào đầu mỗi tháng."
+        }
+      ],
+      "collocations": [
+        "office consumables",
+        "medical consumables"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consume-v",
+      "word": "consume",
+      "phonetic": {
+        "us": "/kənˈsuːm/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tiêu thụ; sử dụng hết; tiêu hao",
+          "definition_en": "to use fuel, energy, time, or resources",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "consumer",
+          "pos": "n",
+          "meaning_vi": "người tiêu dùng"
+        },
+        {
+          "word": "consumption",
+          "pos": "n",
+          "meaning_vi": "sự tiêu thụ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Older equipment consumes more electricity.",
+          "vi": "Thiết bị cũ tiêu thụ nhiều điện hơn."
+        }
+      ],
+      "collocations": [
+        "consume energy",
+        "consume resources"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consumption-n",
+      "word": "consumption",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tiêu thụ; mức tiêu thụ",
+          "definition_en": "Consumption — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consumption was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “consumption” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "contact-v",
       "word": "contact",
       "cefr_level": "A2",
@@ -1028,6 +3310,47 @@
         "contact details",
         "contact a supplier"
       ]
+    },
+    {
+      "id": "contemporary-nv",
+      "word": "contemporary",
+      "phonetic": {
+        "us": "/kənˈtem.pə.rer.i/"
+      },
+      "senses": [
+        {
+          "pos": "adj/n",
+          "meaning_vi": "đương đại; hiện đại; người cùng thời",
+          "definition_en": "belonging to the present time or the same period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "contemporarily",
+          "pos": "adv",
+          "meaning_vi": "trong thời hiện đại"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The course examines contemporary approaches to management.",
+          "vi": "Khóa học xem xét các phương pháp quản lý đương đại."
+        }
+      ],
+      "collocations": [
+        "contemporary art",
+        "contemporary society"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "contingency-n",
@@ -1114,6 +3437,193 @@
       ]
     },
     {
+      "id": "contractor-n",
+      "word": "contractor",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkɑːn.træk.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà thầu",
+          "definition_en": "a person or company hired to do a job",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor submitted a revised project estimate.",
+          "vi": "Nhà thầu đã nộp dự toán dự án đã điều chỉnh."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "contractual-adj",
+      "word": "contractual",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc hợp đồng; theo hợp đồng",
+          "definition_en": "contractual: thuộc hợp đồng; theo hợp đồng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier must meet all contractual obligations.",
+          "vi": "Nhà cung cấp phải đáp ứng mọi nghĩa vụ theo hợp đồng."
+        }
+      ],
+      "collocations": [
+        "contractual obligation",
+        "contractual agreement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "contradict-v",
+      "word": "contradict",
+      "phonetic": {
+        "us": "/ˌkɑːn.trəˈdɪkt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "mâu thuẫn; phủ nhận; nói trái lại",
+          "definition_en": "to state the opposite of what someone else has said, or to be inconsistent",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "contradiction",
+          "pos": "n",
+          "meaning_vi": "sự mâu thuẫn"
+        },
+        {
+          "word": "contradictory",
+          "pos": "adj",
+          "meaning_vi": "mâu thuẫn"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The figures in the appendix contradict the summary.",
+          "vi": "Các số liệu trong phụ lục mâu thuẫn với phần tóm tắt."
+        }
+      ],
+      "collocations": [
+        "directly contradict",
+        "contradict a statement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "contribute-v",
+      "word": "contribute",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đóng góp; góp phần",
+          "definition_en": "to give something, such as time, money, or ideas, to help achieve a result",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "contribute",
+        "vs_es": "contributes",
+        "v2": "contributed",
+        "v3": "contributed",
+        "ving": "contributing"
+      },
+      "examples": [
+        {
+          "en": "Each department contributed ideas to the improvement project.",
+          "vi": "Mỗi phòng ban đã đóng góp ý tưởng cho dự án cải tiến."
+        }
+      ],
+      "collocations": [
+        "contribute to",
+        "make a contribution",
+        "contribute funds"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "convenience-n",
+      "word": "convenience",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thuận tiện",
+          "definition_en": "the quality of being easy or suitable for a particular purpose",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Online payment is offered for the convenience of customers.",
+          "vi": "Thanh toán trực tuyến được cung cấp để tạo thuận tiện cho khách hàng."
+        }
+      ],
+      "collocations": [
+        "for your convenience",
+        "convenience store"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "convenient-adj",
       "word": "convenient",
       "cefr_level": "A2",
@@ -1152,6 +3662,140 @@
         "convenient location",
         "convenient time"
       ]
+    },
+    {
+      "id": "conventional-adj",
+      "word": "conventional",
+      "phonetic": {
+        "us": "/kənˈven.ʃən.əl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "theo quy ước; thông thường; truyền thống",
+          "definition_en": "based on what is generally done or believed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "convention",
+          "pos": "n",
+          "meaning_vi": "quy ước; hội nghị"
+        },
+        {
+          "word": "conventionally",
+          "pos": "adv",
+          "meaning_vi": "theo cách thông thường"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company replaced conventional forms with an online system.",
+          "vi": "Công ty thay các biểu mẫu thông thường bằng hệ thống trực tuyến."
+        }
+      ],
+      "collocations": [
+        "conventional method",
+        "conventional wisdom"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "convert-v",
+      "word": "convert",
+      "phonetic": {
+        "us": "/kənˈvɝːt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chuyển đổi; cải tạo; đổi sang",
+          "definition_en": "to change something into a different form or use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "conversion",
+          "pos": "n",
+          "meaning_vi": "sự chuyển đổi"
+        },
+        {
+          "word": "convertible",
+          "pos": "adj",
+          "meaning_vi": "có thể chuyển đổi"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The software can convert files into several formats.",
+          "vi": "Phần mềm có thể chuyển đổi tệp sang nhiều định dạng."
+        }
+      ],
+      "collocations": [
+        "convert currency",
+        "convert a file"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "convey-v",
+      "word": "convey",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "truyền đạt; chuyển tải",
+          "definition_en": "to communicate or express an idea, feeling, or information",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "convey",
+        "vs_es": "conveys",
+        "v2": "conveyed",
+        "v3": "conveyed",
+        "ving": "conveying"
+      },
+      "examples": [
+        {
+          "en": "The chart conveys the main findings clearly.",
+          "vi": "Biểu đồ truyền tải rõ ràng những phát hiện chính."
+        }
+      ],
+      "collocations": [
+        "convey a message",
+        "convey information",
+        "convey meaning"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
     },
     {
       "id": "cooperate-v",
@@ -1200,6 +3844,102 @@
       ]
     },
     {
+      "id": "coordinate-v",
+      "word": "coordinate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "điều phối; phối hợp",
+          "definition_en": "Coordinate — điều phối; phối hợp.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed coordinate during the meeting.",
+          "vi": "Nhóm đã thảo luận về “coordinate” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "coordinator-n",
+      "word": "coordinator",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điều phối viên",
+          "definition_en": "a person who organizes people or activities",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The event coordinator will contact all registered participants.",
+          "vi": "Điều phối viên sự kiện sẽ liên hệ tất cả người tham dự đã đăng ký."
+        }
+      ],
+      "collocations": [
+        "project coordinator",
+        "event coordinator"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "correspondence-n",
+      "word": "correspondence",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌkɔːr.əˈspɑːn.dəns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thư từ; trao đổi thư tín",
+          "definition_en": "letters and messages exchanged between people",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Keep all correspondence related to the contract.",
+          "vi": "Lưu giữ mọi thư từ liên quan đến hợp đồng."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "cost-v",
       "word": "cost",
       "cefr_level": "A1",
@@ -1242,6 +3982,167 @@
         "total cost",
         "operating costs"
       ]
+    },
+    {
+      "id": "coupon-n",
+      "word": "coupon",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkuː.pɑːn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiếu giảm giá",
+          "definition_en": "a document that gives a price reduction",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can use the coupon at checkout.",
+          "vi": "Khách hàng có thể dùng phiếu giảm giá khi thanh toán."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "courier-n",
+      "word": "courier",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người/đơn vị chuyển phát nhanh",
+          "definition_en": "a person or company that delivers packages and documents",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A courier will deliver the signed documents tomorrow.",
+          "vi": "Đơn vị chuyển phát sẽ giao tài liệu đã ký vào ngày mai."
+        }
+      ],
+      "collocations": [
+        "courier service",
+        "courier delivery"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "coursework-n",
+      "word": "coursework",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkɔːrs.wɝːk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bài tập trong khóa học",
+          "definition_en": "work completed as part of a course",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Coursework must be submitted by Friday.",
+          "vi": "Bài tập khóa học phải được nộp trước thứ Sáu."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "courtesy-n",
+      "word": "courtesy",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự lịch thiệp; phép lịch sự",
+          "definition_en": "Courtesy — sự lịch thiệp; phép lịch sự.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed courtesy during the meeting.",
+          "vi": "Nhóm đã thảo luận về “courtesy” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "coverage-n",
+      "word": "coverage",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phạm vi bảo hiểm; phạm vi bao phủ",
+          "definition_en": "coverage: phạm vi bảo hiểm; phạm vi bao phủ.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The warranty provides coverage for manufacturing defects.",
+          "vi": "Bảo hành bao gồm các lỗi do sản xuất."
+        }
+      ],
+      "collocations": [
+        "insurance coverage",
+        "service coverage"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "create-v",
@@ -1290,6 +4191,40 @@
       ]
     },
     {
+      "id": "credential-n",
+      "word": "credential",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bằng cấp; giấy chứng nhận; thông tin xác thực",
+          "definition_en": "a qualification or proof of identity or authority",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please bring your professional credentials to the interview.",
+          "vi": "Vui lòng mang theo bằng cấp chuyên môn khi phỏng vấn."
+        }
+      ],
+      "collocations": [
+        "academic credentials",
+        "login credentials"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "credit-n",
       "word": "credit",
       "cefr_level": "A2",
@@ -1330,6 +4265,225 @@
       ]
     },
     {
+      "id": "credit-limit-n",
+      "word": "credit limit",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkred.ɪt ˌlɪm.ɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hạn mức tín dụng",
+          "definition_en": "the maximum amount that can be borrowed on a credit account",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank increased the company’s credit limit.",
+          "vi": "Ngân hàng tăng hạn mức tín dụng của công ty."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "creditor-n",
+      "word": "creditor",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chủ nợ; bên cho vay",
+          "definition_en": "creditor: chủ nợ; bên cho vay.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company reached an agreement with its creditors.",
+          "vi": "Công ty đạt được thỏa thuận với các chủ nợ."
+        }
+      ],
+      "collocations": [
+        "secured creditor",
+        "major creditor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "criteria-n",
+      "word": "criteria",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "các tiêu chí; tiêu chuẩn đánh giá",
+          "definition_en": "standards used to judge or decide something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Applicants must meet all the selection criteria.",
+          "vi": "Ứng viên phải đáp ứng tất cả tiêu chí tuyển chọn."
+        }
+      ],
+      "collocations": [
+        "selection criteria",
+        "meet the criteria",
+        "evaluation criteria"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "crucial-adj",
+      "word": "crucial",
+      "phonetic": {
+        "us": "/ˈkruː.ʃəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "then chốt; cực kỳ quan trọng",
+          "definition_en": "extremely important because it affects the result",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "crucially",
+          "pos": "adv",
+          "meaning_vi": "một cách then chốt"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Accurate data is crucial to the final decision.",
+          "vi": "Dữ liệu chính xác đóng vai trò then chốt đối với quyết định cuối cùng."
+        }
+      ],
+      "collocations": [
+        "crucial role",
+        "crucial factor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cuisine-n",
+      "word": "cuisine",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kwɪˈziːn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phong cách ẩm thực",
+          "definition_en": "a style of cooking",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The hotel restaurant serves regional cuisine.",
+          "vi": "Nhà hàng khách sạn phục vụ ẩm thực vùng miền."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "cumulative-adj",
+      "word": "cumulative",
+      "phonetic": {
+        "us": "/ˈkjuː.mjə.lə.tɪv/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "tích lũy; tăng dần qua các giai đoạn",
+          "definition_en": "increasing by adding more each time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "accumulate",
+          "pos": "v",
+          "meaning_vi": "tích lũy"
+        },
+        {
+          "word": "cumulatively",
+          "pos": "adv",
+          "meaning_vi": "theo cách tích lũy"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The report shows the cumulative effect of the monthly increases.",
+          "vi": "Báo cáo cho thấy tác động tích lũy của các đợt tăng hằng tháng."
+        }
+      ],
+      "collocations": [
+        "cumulative effect",
+        "cumulative total"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "current-adj",
       "word": "current",
       "cefr_level": "A2",
@@ -1368,6 +4522,99 @@
         "current address",
         "current policy"
       ]
+    },
+    {
+      "id": "curriculum-n",
+      "word": "curriculum",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/kəˈrɪk.jə.ləm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chương trình học",
+          "definition_en": "the subjects included in a course of study",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training center updated its business English curriculum.",
+          "vi": "Trung tâm đào tạo cập nhật chương trình tiếng Anh thương mại."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "customs-n",
+      "word": "customs",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkʌs.təmz/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hải quan",
+          "definition_en": "the official service checking goods entering a country",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Passengers must declare restricted items at customs.",
+          "vi": "Hành khách phải khai báo hàng hóa hạn chế tại hải quan."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "customs-declaration-n",
+      "word": "customs declaration",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈkʌs.təmz ˌdek.ləˈreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tờ khai hải quan",
+          "definition_en": "a form listing goods brought into a country",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Complete the customs declaration before landing.",
+          "vi": "Hoàn thành tờ khai hải quan trước khi hạ cánh."
+        }
+      ],
+      "collocations": []
     }
   ]
 }

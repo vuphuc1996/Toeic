@@ -80,6 +80,40 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "year-end-n",
+      "word": "year-end",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "meaning_vi": "cuối năm; thời điểm kết thúc năm tài chính",
+          "definition_en": "the end of a calendar or financial year",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All outstanding invoices must be settled before the year-end.",
+          "vi": "Tất cả hóa đơn còn tồn phải được thanh toán trước cuối năm."
+        }
+      ],
+      "collocations": [
+        "year-end report",
+        "year-end closing"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "yearly-adjadv",
       "word": "yearly",
       "phonetic": {
@@ -184,6 +218,40 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "yielding-adj",
+      "word": "yielding",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "nhường; dễ uốn",
+          "definition_en": "allowing pressure or influence to change one’s position or shape",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A yielding approach helped the two sides reach an agreement.",
+          "vi": "Cách tiếp cận nhượng bộ giúp hai bên đạt được thỏa thuận."
+        }
+      ],
+      "collocations": [
+        "yielding attitude",
+        "yielding material"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

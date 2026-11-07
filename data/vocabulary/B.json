@@ -3,6 +3,136 @@
   "letter": "B",
   "words": [
     {
+      "id": "backlog-n",
+      "word": "backlog",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lượng công việc tồn đọng",
+          "definition_en": "backlog: lượng công việc tồn đọng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The support team is working to clear its backlog.",
+          "vi": "Nhóm hỗ trợ đang xử lý lượng công việc tồn đọng."
+        }
+      ],
+      "collocations": [
+        "order backlog",
+        "work backlog"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "backorder-n",
+      "word": "backorder",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đơn hàng chưa thể giao do thiếu hàng",
+          "definition_en": "an order for goods that are temporarily unavailable",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The unavailable items were placed on backorder.",
+          "vi": "Các mặt hàng chưa có sẵn được chuyển sang trạng thái chờ hàng."
+        }
+      ],
+      "collocations": [
+        "place on backorder",
+        "backorder status"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "backup-n",
+      "word": "backup",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/adj",
+          "meaning_vi": "bản sao lưu; dự phòng",
+          "definition_en": "Backup — bản sao lưu; dự phòng.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed backup during the meeting.",
+          "vi": "Nhóm đã thảo luận về “backup” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "baggage-n",
+      "word": "baggage",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈbæɡ.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hành lý",
+          "definition_en": "the bags and cases a traveler carries",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Passengers should label all checked baggage.",
+          "vi": "Hành khách nên dán nhãn cho toàn bộ hành lý ký gửi."
+        }
+      ],
+      "collocations": []
+    },
+    {
       "id": "balance-v",
       "word": "balance",
       "cefr_level": "A2",
@@ -86,6 +216,198 @@
       ]
     },
     {
+      "id": "bank-account-n",
+      "word": "bank account",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈbæŋk əˌkaʊnt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tài khoản ngân hàng",
+          "definition_en": "an arrangement that allows a person to keep money in a bank",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "You can open a bank account online.",
+          "vi": "Bạn có thể mở tài khoản ngân hàng trực tuyến."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "barcode-n",
+      "word": "barcode",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈbɑːr.koʊd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mã vạch",
+          "definition_en": "a pattern of lines that identifies a product",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The cashier scanned the barcode on each item.",
+          "vi": "Thu ngân quét mã vạch trên từng mặt hàng."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "bargain-n",
+      "word": "bargain",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "món hời; mặc cả",
+          "definition_en": "Bargain — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bargain was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “bargain” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "benchmark-n",
+      "word": "benchmark",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "mốc chuẩn; đối chuẩn",
+          "definition_en": "a standard used to compare performance; to compare against a standard",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team uses industry benchmarks to evaluate service quality.",
+          "vi": "Nhóm sử dụng chuẩn ngành để đánh giá chất lượng dịch vụ."
+        }
+      ],
+      "collocations": [
+        "industry benchmark",
+        "benchmark performance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "beneficial-adj",
+      "word": "beneficial",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có lợi; hữu ích",
+          "definition_en": "Beneficial — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The beneficial was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “beneficial” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "beneficiary-n",
+      "word": "beneficiary",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người thụ hưởng",
+          "definition_en": "a person who receives money or another benefit",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The employee named her spouse as the insurance beneficiary.",
+          "vi": "Nhân viên chỉ định vợ/chồng là người thụ hưởng bảo hiểm."
+        }
+      ],
+      "collocations": [
+        "insurance beneficiary",
+        "named beneficiary"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "benefit-nv",
       "word": "benefit",
       "phonetic": {
@@ -144,6 +466,151 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "beverage-n",
+      "word": "beverage",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈbev.ɚ.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đồ uống",
+          "definition_en": "a drink, especially one other than water",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FOOD"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Complimentary beverages are available in the lobby.",
+          "vi": "Đồ uống miễn phí có tại sảnh."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "bias-nv",
+      "word": "bias",
+      "phonetic": {
+        "us": "/ˈbaɪ.əs/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "thiên kiến; sự thiên vị; làm thiên lệch",
+          "definition_en": "an unfair preference for or against someone or something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "HR"
+      ],
+      "word_family": [
+        {
+          "word": "biased",
+          "pos": "adj",
+          "meaning_vi": "thiên vị; thiên lệch"
+        },
+        {
+          "word": "unbiased",
+          "pos": "adj",
+          "meaning_vi": "khách quan; không thiên lệch"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The survey was redesigned to reduce selection bias.",
+          "vi": "Cuộc khảo sát được thiết kế lại để giảm thiên kiến lựa chọn."
+        }
+      ],
+      "collocations": [
+        "reduce bias",
+        "confirmation bias"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "bid-n",
+      "word": "bid",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giá dự thầu; lời chào giá",
+          "definition_en": "an offer to pay a particular amount or to do a job for a stated price",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Three contractors submitted bids for the project.",
+          "vi": "Ba nhà thầu đã nộp hồ sơ dự thầu cho dự án."
+        }
+      ],
+      "collocations": [
+        "submit a bid",
+        "winning bid"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "biennial-adj",
+      "word": "biennial",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "hai năm một lần",
+          "definition_en": "happening once every two years",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The biennial conference will take place in Seoul.",
+          "vi": "Hội nghị hai năm một lần sẽ diễn ra tại Seoul."
+        }
+      ],
+      "collocations": [
+        "biennial report",
+        "biennial conference"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "bill-v",
       "word": "bill",
       "cefr_level": "A1",
@@ -188,6 +655,229 @@
         "pay a bill",
         "electricity bill"
       ]
+    },
+    {
+      "id": "billable-adj",
+      "word": "billable",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể tính phí",
+          "definition_en": "billable: có thể tính phí.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Travel time may be billable under the service agreement.",
+          "vi": "Thời gian di chuyển có thể được tính phí theo thỏa thuận dịch vụ."
+        }
+      ],
+      "collocations": [
+        "billable hours",
+        "billable expenses"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "billing-n",
+      "word": "billing",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc lập hóa đơn",
+          "definition_en": "Billing — việc lập hóa đơn.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The team discussed billing during the meeting.",
+          "vi": "Nhóm đã thảo luận về “billing” trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "biodegradable-n",
+      "word": "biodegradable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌbaɪ.oʊ.dɪˈɡreɪ.də.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể phân hủy sinh học",
+          "definition_en": "able to decay naturally without harming the environment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier switched to biodegradable packaging.",
+          "vi": "Nhà cung cấp chuyển sang bao bì có thể phân hủy sinh học."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "blue-collar-adj",
+      "word": "blue-collar",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˌbluːˈkɑː.lɚ/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc lao động chân tay",
+          "definition_en": "relating to manual or industrial work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project requires experienced blue-collar workers.",
+          "vi": "Dự án cần công nhân có kinh nghiệm."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "blueprint-n",
+      "word": "blueprint",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈbluː.prɪnt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bản thiết kế; bản vẽ",
+          "definition_en": "a detailed plan for a building or project",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The architect shared the latest building blueprint.",
+          "vi": "Kiến trúc sư đã chia sẻ bản vẽ công trình mới nhất."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "boarding-n",
+      "word": "boarding",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈbɔːr.dɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc lên máy bay",
+          "definition_en": "the process of getting onto an aircraft",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Boarding begins thirty minutes before departure.",
+          "vi": "Việc lên máy bay bắt đầu 30 phút trước giờ khởi hành."
+        }
+      ],
+      "collocations": []
+    },
+    {
+      "id": "booking-n",
+      "word": "booking",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc đặt chỗ; đặt dịch vụ",
+          "definition_en": "an arrangement to reserve a room, seat, or service",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please confirm your hotel booking by email.",
+          "vi": "Vui lòng xác nhận đặt phòng khách sạn qua email."
+        }
+      ],
+      "collocations": [
+        "hotel booking",
+        "booking confirmation"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "borrow-v",
@@ -273,6 +963,71 @@
         "branch office",
         "local branch"
       ]
+    },
+    {
+      "id": "breakdown-n",
+      "word": "breakdown",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hỏng hóc; bảng phân tích chi tiết",
+          "definition_en": "a failure of a machine, or a division of information into parts",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A detailed cost breakdown is attached to the proposal.",
+          "vi": "Bảng phân tích chi phí chi tiết được đính kèm đề xuất."
+        }
+      ],
+      "collocations": [
+        "cost breakdown",
+        "equipment breakdown"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "briefing-n",
+      "word": "briefing",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "buổi phổ biến thông tin",
+          "definition_en": "Briefing — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The briefing was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “briefing” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "brochure-n",
@@ -366,6 +1121,40 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "bulk-n",
+      "word": "bulk",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "số lượng lớn; khối lượng lớn",
+          "definition_en": "a large quantity of something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier offers a discount on bulk orders.",
+          "vi": "Nhà cung cấp giảm giá cho đơn hàng số lượng lớn."
+        }
+      ],
+      "collocations": [
+        "bulk order",
+        "buy in bulk"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "buyer-n",

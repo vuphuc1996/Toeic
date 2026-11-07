@@ -51,6 +51,37 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "generate-v",
+      "word": "generate",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tạo ra; phát sinh",
+          "definition_en": "Generate — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will generate the relevant process.",
+          "vi": "Nội dung liên quan đến “generate” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "goal-n",
       "word": "goal",
       "cefr_level": "A1",
@@ -129,6 +160,74 @@
       ]
     },
     {
+      "id": "grievance-n",
+      "word": "grievance",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khiếu nại; bất bình",
+          "definition_en": "a formal complaint about something considered unfair",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees may submit a grievance to human resources.",
+          "vi": "Nhân viên có thể gửi khiếu nại đến phòng nhân sự."
+        }
+      ],
+      "collocations": [
+        "file a grievance",
+        "grievance procedure"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "grievance-procedure-n",
+      "word": "grievance procedure",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy trình giải quyết khiếu nại",
+          "definition_en": "the formal process for handling employee complaints",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The grievance procedure is explained in the staff handbook.",
+          "vi": "Quy trình giải quyết khiếu nại được giải thích trong sổ tay nhân viên."
+        }
+      ],
+      "collocations": [
+        "follow the grievance procedure",
+        "formal grievance procedure"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "guarantee-nv",
       "word": "guarantee",
       "phonetic": {
@@ -176,6 +275,37 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "guest-n",
+      "word": "guest",
+      "cefr_level": "A1",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ɡest/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khách lưu trú; khách mời",
+          "definition_en": "a person staying at or visiting a place",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A1"
+        }
+      ],
+      "topics": [
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Every guest receives a breakfast voucher.",
+          "vi": "Mỗi khách nhận một phiếu ăn sáng."
+        }
+      ],
+      "collocations": []
     },
     {
       "id": "guidance-n",
@@ -272,6 +402,37 @@
         "user guide",
         "tour guide"
       ]
+    },
+    {
+      "id": "guideline-n",
+      "word": "guideline",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hướng dẫn; nguyên tắc chỉ đạo",
+          "definition_en": "Guideline — see Vietnamese meaning and examples.",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The guideline was discussed during the meeting.",
+          "vi": "Nội dung liên quan đến “guideline” được đề cập trong cuộc họp."
+        }
+      ],
+      "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }
