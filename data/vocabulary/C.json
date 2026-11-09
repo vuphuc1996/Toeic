@@ -136,7 +136,7 @@
       "id": "capacity-n",
       "word": "capacity",
       "phonetic": {
-        "us": ""
+        "us": "/kəˈpæs.ə.t̬i/"
       },
       "senses": [
         {
@@ -417,7 +417,7 @@
       "id": "catalogue-n",
       "word": "catalogue",
       "phonetic": {
-        "us": ""
+        "us": "/ˈkæt̬.ə.lɑːɡ/"
       },
       "senses": [
         {
@@ -570,7 +570,7 @@
       "id": "certificate-n",
       "word": "certificate",
       "phonetic": {
-        "us": ""
+        "us": "/sɚˈtɪf.ə.kət/"
       },
       "senses": [
         {
@@ -585,7 +585,18 @@
       "topics": [
         "EDUCATION"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "certify",
+          "pos": "v",
+          "meaning_vi": "chứng nhận; xác nhận"
+        },
+        {
+          "word": "certification",
+          "pos": "n",
+          "meaning_vi": "sự chứng nhận"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -601,7 +612,7 @@
       "id": "certification-n",
       "word": "certification",
       "phonetic": {
-        "us": ""
+        "us": "/ˌsɝː.t̬ə.fɪˈkeɪ.ʃən/"
       },
       "senses": [
         {
@@ -616,7 +627,18 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "certify",
+          "pos": "v",
+          "meaning_vi": "chứng nhận; xác nhận"
+        },
+        {
+          "word": "certificate",
+          "pos": "n",
+          "meaning_vi": "giấy chứng nhận"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -635,7 +657,7 @@
       "id": "certify-v",
       "word": "certify",
       "phonetic": {
-        "us": ""
+        "us": "/ˈsɝː.t̬ə.faɪ/"
       },
       "senses": [
         {
@@ -650,8 +672,25 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
-      "verb_forms": null,
+      "word_family": [
+        {
+          "word": "certification",
+          "pos": "n",
+          "meaning_vi": "sự chứng nhận"
+        },
+        {
+          "word": "certificate",
+          "pos": "n",
+          "meaning_vi": "giấy chứng nhận"
+        }
+      ],
+      "verb_forms": {
+        "v1": "certify",
+        "vs_es": "certifies",
+        "v2": "certified",
+        "v3": "certified",
+        "ving": "certifying"
+      },
       "examples": [
         {
           "en": "The supplier must certify that the materials meet safety standards.",
@@ -692,7 +731,13 @@
           "meaning_vi": "đầy thử thách"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "challenge",
+        "vs_es": "challenges",
+        "v2": "challenged",
+        "v3": "challenged",
+        "ving": "challenging"
+      },
       "examples": [
         {
           "en": "Meeting the new deadline will be a significant challenge.",
@@ -733,7 +778,13 @@
           "meaning_vi": "sự định hướng; chuyển hướng"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "channel",
+        "vs_es": "channels",
+        "v2": "channeled",
+        "v3": "channeled",
+        "ving": "channeling"
+      },
       "examples": [
         {
           "en": "Customers can contact support through several channels.",
@@ -952,7 +1003,7 @@
       "id": "circulate-v",
       "word": "circulate",
       "phonetic": {
-        "us": ""
+        "us": "/ˈsɝː.kjə.leɪt/"
       },
       "senses": [
         {
@@ -968,14 +1019,23 @@
         "OFFICE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "circulate",
+        "vs_es": "circulates",
+        "v2": "circulated",
+        "v3": "circulated",
+        "ving": "circulating"
+      },
       "examples": [
         {
           "en": "Please circulate the updated meeting agenda to all department heads.",
           "vi": "Vui lòng gửi chương trình họp đã cập nhật đến tất cả trưởng bộ phận."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "circulate the meeting agenda",
+        "circulate a memo"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -1099,7 +1159,7 @@
       "id": "clarify-v",
       "word": "clarify",
       "phonetic": {
-        "us": ""
+        "us": "/ˈkler.ə.faɪ/"
       },
       "senses": [
         {
@@ -1115,14 +1175,23 @@
         "OFFICE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "clarify",
+        "vs_es": "clarifies",
+        "v2": "clarified",
+        "v3": "clarified",
+        "ving": "clarifying"
+      },
       "examples": [
         {
           "en": "The purchasing manager asked the supplier to clarify the delivery terms.",
           "vi": "Trưởng bộ phận mua hàng yêu cầu nhà cung cấp làm rõ các điều khoản giao hàng."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "clarify the requirements",
+        "clarify the deadline"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -1198,7 +1267,7 @@
       "id": "clerk-n",
       "word": "clerk",
       "phonetic": {
-        "us": ""
+        "us": "/klɝːk/"
       },
       "senses": [
         {
@@ -1396,7 +1465,13 @@
           "meaning_vi": "tình cờ; trùng hợp"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "coincide",
+        "vs_es": "coincides",
+        "v2": "coincided",
+        "v3": "coincided",
+        "ving": "coinciding"
+      },
       "examples": [
         {
           "en": "The product launch will coincide with the annual conference.",
@@ -1521,7 +1596,13 @@
           "meaning_vi": "sự bắt đầu; lễ tốt nghiệp"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "commence",
+        "vs_es": "commences",
+        "v2": "commenced",
+        "v3": "commenced",
+        "ving": "commencing"
+      },
       "examples": [
         {
           "en": "Construction is scheduled to commence in early March.",
@@ -1579,7 +1660,7 @@
       "id": "commission-n",
       "word": "commission",
       "phonetic": {
-        "us": ""
+        "us": "/kəˈmɪʃ.ən/"
       },
       "senses": [
         {
@@ -1613,7 +1694,7 @@
       "id": "commodity-n",
       "word": "commodity",
       "phonetic": {
-        "us": ""
+        "us": "/kəˈmɑː.də.t̬i/"
       },
       "senses": [
         {
@@ -1719,7 +1800,13 @@
           "meaning_vi": "người đi làm hằng ngày"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "commute",
+        "vs_es": "commutes",
+        "v2": "commuted",
+        "v3": "commuted",
+        "ving": "commuting"
+      },
       "examples": [
         {
           "en": "She commutes by train every morning.",
@@ -1765,7 +1852,13 @@
           "meaning_vi": "mang tính bù đắp"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "compensate",
+        "vs_es": "compensates",
+        "v2": "compensated",
+        "v3": "compensated",
+        "ving": "compensating"
+      },
       "examples": [
         {
           "en": "The airline will compensate passengers for the cancelled flight.",
@@ -1783,7 +1876,7 @@
       "id": "compensation-n",
       "word": "compensation",
       "phonetic": {
-        "us": ""
+        "us": "/ˌkɑːm.penˈseɪ.ʃən/"
       },
       "senses": [
         {
@@ -1798,7 +1891,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "compensate",
+          "pos": "v",
+          "meaning_vi": "bồi thường; đền bù"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1851,7 +1950,7 @@
       "id": "competitive-adj",
       "word": "competitive",
       "phonetic": {
-        "us": ""
+        "us": "/kəmˈpet̬.ə.t̬ɪv/"
       },
       "senses": [
         {
@@ -1885,16 +1984,20 @@
       "id": "competitor-n",
       "word": "competitor",
       "phonetic": {
-        "us": ""
+        "us": "/kəmˈpet̬.ə.t̬ɚ/"
       },
       "senses": [
         {
           "pos": "n",
           "meaning_vi": "đối thủ cạnh tranh",
           "definition_en": "a person or organization that offers similar products or services and competes for the same customers",
-          "synonyms": [],
+          "synonyms": [
+            "challenger",
+            "contender",
+            "rival"
+          ],
           "antonyms": [],
-          "cefr_level": "A2"
+          "cefr_level": "B1"
         }
       ],
       "topics": [
@@ -1912,8 +2015,8 @@
         "major competitor",
         "market competitor"
       ],
-      "cefr_level": "A2",
-      "level_basis": "editorial-estimate; verify by sense"
+      "cefr_level": "B1",
+      "level_basis": "Cambridge Dictionary CEFR B1; verified 2026-11-09"
     },
     {
       "id": "compile-v",
@@ -2024,7 +2127,13 @@
           "meaning_vi": "bổ trợ; bổ sung cho nhau"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "complement",
+        "vs_es": "complements",
+        "v2": "complemented",
+        "v3": "complemented",
+        "ving": "complementing"
+      },
       "examples": [
         {
           "en": "The two services complement each other.",
@@ -2145,7 +2254,13 @@
         "BUSINESS",
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "comply",
+          "pos": "v",
+          "meaning_vi": "tuân thủ"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2196,7 +2311,7 @@
       "id": "comply-v",
       "word": "comply",
       "phonetic": {
-        "us": ""
+        "us": "/kəmˈplaɪ/"
       },
       "senses": [
         {
@@ -2211,15 +2326,30 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
-      "verb_forms": null,
+      "word_family": [
+        {
+          "word": "compliance",
+          "pos": "n",
+          "meaning_vi": "sự tuân thủ"
+        }
+      ],
+      "verb_forms": {
+        "v1": "comply",
+        "vs_es": "complies",
+        "v2": "complied",
+        "v3": "complied",
+        "ving": "complying"
+      },
       "examples": [
         {
           "en": "All contractors must comply with the company’s safety regulations.",
           "vi": "Tất cả nhà thầu phải tuân thủ các quy định an toàn của công ty."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "comply with regulations",
+        "comply with company policy"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -2245,14 +2375,23 @@
         "ENVIRONMENT"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "compost",
+        "vs_es": "composts",
+        "v2": "composted",
+        "v3": "composted",
+        "ving": "composting"
+      },
       "examples": [
         {
           "en": "The cafeteria collects food scraps for compost.",
           "vi": "Căng tin thu gom thức ăn thừa để ủ phân."
         }
       ],
-      "collocations": []
+      "collocations": [
+        "make compost",
+        "compost food scraps"
+      ]
     },
     {
       "id": "comprehensive-adj",
@@ -2317,7 +2456,13 @@
           "meaning_vi": "bao gồm"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "comprise",
+        "vs_es": "comprises",
+        "v2": "comprised",
+        "v3": "comprised",
+        "ving": "comprising"
+      },
       "examples": [
         {
           "en": "The training program comprises six practical modules.",
@@ -2363,7 +2508,13 @@
           "meaning_vi": "sự hình thành ý tưởng"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "conceive",
+        "vs_es": "conceives",
+        "v2": "conceived",
+        "v3": "conceived",
+        "ving": "conceiving"
+      },
       "examples": [
         {
           "en": "The team conceived a new approach to customer support.",
@@ -2478,7 +2629,13 @@
           "meaning_vi": "sự trao/cấp"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "confer",
+        "vs_es": "confers",
+        "v2": "conferred",
+        "v3": "conferred",
+        "ving": "conferring"
+      },
       "examples": [
         {
           "en": "The university will confer an award on the research team.",
@@ -2673,7 +2830,13 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "confirm",
+          "pos": "v",
+          "meaning_vi": "xác nhận"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2771,14 +2934,23 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "consent",
+        "vs_es": "consents",
+        "v2": "consented",
+        "v3": "consented",
+        "ving": "consenting"
+      },
       "examples": [
         {
           "en": "The survey will be conducted only after participants give their consent.",
           "vi": "Khảo sát chỉ được tiến hành sau khi người tham gia đưa ra sự đồng ý."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "give written consent",
+        "obtain consent from a client"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -2819,7 +2991,7 @@
       "cefr_level": "B1",
       "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/kənˈsɪd.ər/"
+        "us": "/kənˈsɪd.ɚ/"
       },
       "senses": [
         {
@@ -2990,7 +3162,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "consolidate",
+        "vs_es": "consolidates",
+        "v2": "consolidated",
+        "v3": "consolidated",
+        "ving": "consolidating"
+      },
       "examples": [
         {
           "en": "The company plans to consolidate its regional offices.",
@@ -3036,7 +3214,13 @@
           "meaning_vi": "bị hạn chế"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "constrain",
+        "vs_es": "constrains",
+        "v2": "constrained",
+        "v3": "constrained",
+        "ving": "constraining"
+      },
       "examples": [
         {
           "en": "Limited funding may constrain the scope of the project.",
@@ -3069,7 +3253,18 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "consultant",
+          "pos": "n",
+          "meaning_vi": "chuyên gia tư vấn"
+        },
+        {
+          "word": "consultation",
+          "pos": "n",
+          "meaning_vi": "sự tư vấn; buổi tham vấn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -3088,7 +3283,7 @@
       "id": "consultant-n",
       "word": "consultant",
       "phonetic": {
-        "us": ""
+        "us": "/kənˈsʌl.tənt/"
       },
       "senses": [
         {
@@ -3103,7 +3298,18 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "consultancy",
+          "pos": "n",
+          "meaning_vi": "dịch vụ tư vấn; công ty tư vấn"
+        },
+        {
+          "word": "consultation",
+          "pos": "n",
+          "meaning_vi": "sự tư vấn; buổi tham vấn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -3122,7 +3328,7 @@
       "id": "consultation-n",
       "word": "consultation",
       "phonetic": {
-        "us": ""
+        "us": "/ˌkɑːn.səlˈteɪ.ʃən/"
       },
       "senses": [
         {
@@ -3138,7 +3344,18 @@
         "HR",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "consultancy",
+          "pos": "n",
+          "meaning_vi": "dịch vụ tư vấn; công ty tư vấn"
+        },
+        {
+          "word": "consultant",
+          "pos": "n",
+          "meaning_vi": "chuyên gia tư vấn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -3220,7 +3437,13 @@
           "meaning_vi": "sự tiêu thụ"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "consume",
+        "vs_es": "consumes",
+        "v2": "consumed",
+        "v3": "consumed",
+        "ving": "consuming"
+      },
       "examples": [
         {
           "en": "Older equipment consumes more electricity.",
@@ -3533,7 +3756,13 @@
           "meaning_vi": "mâu thuẫn"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "contradict",
+        "vs_es": "contradicts",
+        "v2": "contradicted",
+        "v3": "contradicted",
+        "ving": "contradicting"
+      },
       "examples": [
         {
           "en": "The figures in the appendix contradict the summary.",
@@ -3741,7 +3970,13 @@
           "meaning_vi": "có thể chuyển đổi"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "convert",
+        "vs_es": "converts",
+        "v2": "converted",
+        "v3": "converted",
+        "ving": "converting"
+      },
       "examples": [
         {
           "en": "The software can convert files into several formats.",
@@ -3862,15 +4097,30 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
-      "verb_forms": null,
+      "word_family": [
+        {
+          "word": "coordinator",
+          "pos": "n",
+          "meaning_vi": "điều phối viên"
+        }
+      ],
+      "verb_forms": {
+        "v1": "coordinate",
+        "vs_es": "coordinates",
+        "v2": "coordinated",
+        "v3": "coordinated",
+        "ving": "coordinating"
+      },
       "examples": [
         {
           "en": "The event coordinator will coordinate transportation for all speakers.",
           "vi": "Điều phối viên sự kiện sẽ phối hợp việc đưa đón tất cả diễn giả."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "coordinate a meeting",
+        "coordinate logistics"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -3893,7 +4143,13 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "coordinate",
+          "pos": "v",
+          "meaning_vi": "phối hợp; điều phối"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

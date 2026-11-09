@@ -772,7 +772,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "outsource",
+        "vs_es": "outsources",
+        "v2": "outsourced",
+        "v3": "outsourced",
+        "ving": "outsourcing"
+      },
       "examples": [
         {
           "en": "The retailer decided to outsource its delivery operations to a logistics provider.",
@@ -964,14 +970,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "overhaul",
+        "vs_es": "overhauls",
+        "v2": "overhauled",
+        "v3": "overhauled",
+        "ving": "overhauling"
+      },
       "examples": [
         {
           "en": "The airline scheduled a complete overhaul of its booking platform.",
           "vi": "Hãng hàng không lên lịch đại tu toàn bộ nền tảng đặt chỗ."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "a major overhaul",
+        "overhaul the production equipment"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },

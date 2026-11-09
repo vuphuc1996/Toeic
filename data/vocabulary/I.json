@@ -68,14 +68,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "implement",
+        "vs_es": "implements",
+        "v2": "implemented",
+        "v3": "implemented",
+        "ving": "implementing"
+      },
       "examples": [
         {
           "en": "The company will implement the revised attendance policy next month.",
           "vi": "Công ty sẽ triển khai chính sách chấm công đã sửa đổi vào tháng tới."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "implement a policy",
+        "implement a new system"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -250,7 +259,13 @@
         "HR"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "incentivize",
+        "vs_es": "incentivizes",
+        "v2": "incentivized",
+        "v3": "incentivized",
+        "ving": "incentivizing"
+      },
       "examples": [
         {
           "en": "The new commission plan is intended to incentivize higher sales.",
@@ -370,7 +385,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "incorporate",
+        "vs_es": "incorporates",
+        "v2": "incorporated",
+        "v3": "incorporated",
+        "ving": "incorporating"
+      },
       "examples": [
         {
           "en": "Please incorporate the latest figures into the report.",
@@ -484,7 +505,13 @@
         "FINANCE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "incur",
+        "vs_es": "incurs",
+        "v2": "incurred",
+        "v3": "incurred",
+        "ving": "incurring"
+      },
       "examples": [
         {
           "en": "The company may incur additional costs if delivery is delayed.",
@@ -552,7 +579,13 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "indemnify",
+        "vs_es": "indemnifies",
+        "v2": "indemnified",
+        "v3": "indemnified",
+        "ving": "indemnifying"
+      },
       "examples": [
         {
           "en": "The supplier agreed to indemnify the buyer against certain losses.",
@@ -666,7 +699,13 @@
         "HR"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "induct",
+        "vs_es": "inducts",
+        "v2": "inducted",
+        "v3": "inducted",
+        "ving": "inducting"
+      },
       "examples": [
         {
           "en": "New hires will be inducted by their department supervisors.",
@@ -986,14 +1025,23 @@
         "CUSTOMER"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "inquire",
+        "vs_es": "inquires",
+        "v2": "inquired",
+        "v3": "inquired",
+        "ving": "inquiring"
+      },
       "examples": [
         {
           "en": "Please inquire at the reception desk if you need a visitor pass.",
           "vi": "Vui lòng hỏi tại quầy lễ tân nếu bạn cần thẻ khách."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "inquire about availability",
+        "inquire into a matter"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -1171,7 +1219,18 @@
       "topics": [
         "QUALITY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "inspect",
+          "pos": "v",
+          "meaning_vi": "kiểm tra; thanh tra"
+        },
+        {
+          "word": "inspector",
+          "pos": "n",
+          "meaning_vi": "thanh tra viên; nhân viên kiểm định"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1202,7 +1261,18 @@
       "topics": [
         "QUALITY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "inspect",
+          "pos": "v",
+          "meaning_vi": "kiểm tra; thanh tra"
+        },
+        {
+          "word": "inspection",
+          "pos": "n",
+          "meaning_vi": "sự kiểm tra; cuộc thanh tra"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1780,7 +1850,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "invoice",
+        "vs_es": "invoices",
+        "v2": "invoiced",
+        "v3": "invoiced",
+        "ving": "invoicing"
+      },
       "examples": [
         {
           "en": "Please pay the invoice within 30 days.",

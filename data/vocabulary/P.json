@@ -1368,7 +1368,13 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "prescribe",
+        "vs_es": "prescribes",
+        "v2": "prescribed",
+        "v3": "prescribed",
+        "ving": "prescribing"
+      },
       "examples": [
         {
           "en": "The safety regulations prescribe a monthly inspection of all lifting equipment.",
@@ -1810,7 +1816,18 @@
         "BUSINESS",
         "SHIPPING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "product",
+          "pos": "n",
+          "meaning_vi": "sản phẩm"
+        },
+        {
+          "word": "productivity",
+          "pos": "n",
+          "meaning_vi": "năng suất"
+        }
+      ],
       "verb_forms": {
         "v1": "produce",
         "vs_es": "produces",
@@ -1854,7 +1871,18 @@
         "BUSINESS",
         "MARKETING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "produce",
+          "pos": "v/n",
+          "meaning_vi": "sản xuất; nông sản"
+        },
+        {
+          "word": "productivity",
+          "pos": "n",
+          "meaning_vi": "năng suất"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1886,7 +1914,18 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "produce",
+          "pos": "v/n",
+          "meaning_vi": "sản xuất; nông sản"
+        },
+        {
+          "word": "product",
+          "pos": "n",
+          "meaning_vi": "sản phẩm"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2205,7 +2244,13 @@
         "TIME"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "prolong",
+        "vs_es": "prolongs",
+        "v2": "prolonged",
+        "v3": "prolonged",
+        "ving": "prolonging"
+      },
       "examples": [
         {
           "en": "A shortage of replacement parts could prolong the equipment repair.",

@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.11-batch-001-ipa",
+  "baseDataVersion": "2.9.10",
+  "targetDataVersion": "2.9.11",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "operations": [
+    {
+      "id": "buyer-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": "/ˈbaɪ.ər/"
+      },
+      "new": "/ˈbaɪ.ɚ/"
+    },
+    {
+      "id": "consider-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": "/kənˈsɪd.ər/"
+      },
+      "new": "/kənˈsɪd.ɚ/"
+    },
+    {
+      "id": "deliver-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": "/dɪˈlɪv.ər/"
+      },
+      "new": "/dɪˈlɪv.ɚ/"
+    },
+    {
+      "id": "difference-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": "/ˈdɪf.ər.əns/"
+      },
+      "new": "/ˈdɪf.ɚ.əns/"
+    },
+    {
+      "id": "employer-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": "/ɪmˈplɔɪ.ər/"
+      },
+      "new": "/ɪmˈplɔɪ.ɚ/"
+    },
+    {
+      "id": "estimate-nv",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": "/ˈes.tə.meɪt; ˈes.tə.mət/"
+      },
+      "new": "/ˈes.tə.mət/"
+    },
+    {
+      "id": "transfer-nv",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": "/trænsˈfɝː/ (v); /ˈtræns.fɝː/ (n)"
+      },
+      "new": "/ˈtræns.fɝː/"
+    },
+    {
+      "id": "capacity-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/kəˈpæs.ə.t̬i/"
+    },
+    {
+      "id": "catalogue-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈkæt̬.ə.lɑːɡ/"
+    },
+    {
+      "id": "certificate-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/sɚˈtɪf.ə.kət/"
+    },
+    {
+      "id": "certification-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˌsɝː.t̬ə.fɪˈkeɪ.ʃən/"
+    },
+    {
+      "id": "certify-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈsɝː.t̬ə.faɪ/"
+    },
+    {
+      "id": "circulate-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈsɝː.kjə.leɪt/"
+    },
+    {
+      "id": "clarify-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈkler.ə.faɪ/"
+    },
+    {
+      "id": "clerk-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/klɝːk/"
+    },
+    {
+      "id": "commission-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/kəˈmɪʃ.ən/"
+    },
+    {
+      "id": "commodity-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/kəˈmɑː.də.t̬i/"
+    },
+    {
+      "id": "compensation-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˌkɑːm.penˈseɪ.ʃən/"
+    },
+    {
+      "id": "competitive-adj",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/kəmˈpet̬.ə.t̬ɪv/"
+    },
+    {
+      "id": "competitor-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/kəmˈpet̬.ə.t̬ɚ/"
+    },
+    {
+      "id": "comply-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/kəmˈplaɪ/"
+    },
+    {
+      "id": "authorization-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˌɑː.θɚ.əˈzeɪ.ʃən/"
+    },
+    {
+      "id": "arrangement-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈreɪndʒ.mənt/"
+    },
+    {
+      "id": "consultant-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/kənˈsʌl.tənt/"
+    },
+    {
+      "id": "consultation-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˌkɑːn.səlˈteɪ.ʃən/"
+    },
+    {
+      "id": "application-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˌæp.ləˈkeɪ.ʃən/"
+    },
+    {
+      "id": "applicable-adj",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈplɪk.ə.bəl/"
+    },
+    {
+      "id": "attendance-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈten.dəns/"
+    },
+    {
+      "id": "attendee-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ə.tenˈdiː/"
+    },
+    {
+      "id": "recruitment-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/rɪˈkruːt.mənt/"
+    },
+    {
+      "id": "manufacturer-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˌmæn.jəˈfæk.tʃɚ.ɚ/"
+    }
+  ]
+}

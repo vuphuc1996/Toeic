@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.10-batch-004",
+  "baseDataVersion": "2.9.9",
+  "targetDataVersion": "2.9.10",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "description": "Verb forms and curated TOEIC collocations; 29 verb-form records.",
+  "operations": [
+    {
+      "id": "notice-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "notice",
+        "vs_es": "notices",
+        "v2": "noticed",
+        "v3": "noticed",
+        "ving": "noticing"
+      }
+    },
+    {
+      "id": "outsource-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "outsource",
+        "vs_es": "outsources",
+        "v2": "outsourced",
+        "v3": "outsourced",
+        "ving": "outsourcing"
+      }
+    },
+    {
+      "id": "overhaul-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "overhaul",
+        "vs_es": "overhauls",
+        "v2": "overhauled",
+        "v3": "overhauled",
+        "ving": "overhauling"
+      }
+    },
+    {
+      "id": "prescribe-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "prescribe",
+        "vs_es": "prescribes",
+        "v2": "prescribed",
+        "v3": "prescribed",
+        "ving": "prescribing"
+      }
+    },
+    {
+      "id": "prolong-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "prolong",
+        "vs_es": "prolongs",
+        "v2": "prolonged",
+        "v3": "prolonged",
+        "ving": "prolonging"
+      }
+    },
+    {
+      "id": "recycle-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "recycle",
+        "vs_es": "recycles",
+        "v2": "recycled",
+        "v3": "recycled",
+        "ving": "recycling"
+      }
+    },
+    {
+      "id": "reimburse-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "reimburse",
+        "vs_es": "reimburses",
+        "v2": "reimbursed",
+        "v3": "reimbursed",
+        "ving": "reimbursing"
+      }
+    },
+    {
+      "id": "remunerate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "remunerate",
+        "vs_es": "remunerates",
+        "v2": "remunerated",
+        "v3": "remunerated",
+        "ving": "remunerating"
+      }
+    },
+    {
+      "id": "renew-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "renew",
+        "vs_es": "renews",
+        "v2": "renewed",
+        "v3": "renewed",
+        "ving": "renewing"
+      }
+    },
+    {
+      "id": "renovate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "renovate",
+        "vs_es": "renovates",
+        "v2": "renovated",
+        "v3": "renovated",
+        "ving": "renovating"
+      }
+    },
+    {
+      "id": "rent-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "rent",
+        "vs_es": "rents",
+        "v2": "rented",
+        "v3": "rented",
+        "ving": "renting"
+      }
+    },
+    {
+      "id": "reschedule-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "reschedule",
+        "vs_es": "reschedules",
+        "v2": "rescheduled",
+        "v3": "rescheduled",
+        "ving": "rescheduling"
+      }
+    },
+    {
+      "id": "rescind-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "rescind",
+        "vs_es": "rescinds",
+        "v2": "rescinded",
+        "v3": "rescinded",
+        "ving": "rescinding"
+      }
+    },
+    {
+      "id": "resign-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "resign",
+        "vs_es": "resigns",
+        "v2": "resigned",
+        "v3": "resigned",
+        "ving": "resigning"
+      }
+    },
+    {
+      "id": "sanitize-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "sanitize",
+        "vs_es": "sanitizes",
+        "v2": "sanitized",
+        "v3": "sanitized",
+        "ving": "sanitizing"
+      }
+    },
+    {
+      "id": "shelter-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "shelter",
+        "vs_es": "shelters",
+        "v2": "sheltered",
+        "v3": "sheltered",
+        "ving": "sheltering"
+      }
+    },
+    {
+      "id": "specify-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "specify",
+        "vs_es": "specifies",
+        "v2": "specified",
+        "v3": "specified",
+        "ving": "specifying"
+      }
+    },
+    {
+      "id": "subcontract-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "subcontract",
+        "vs_es": "subcontracts",
+        "v2": "subcontracted",
+        "v3": "subcontracted",
+        "ving": "subcontracting"
+      }
+    },
+    {
+      "id": "subscribe-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "subscribe",
+        "vs_es": "subscribes",
+        "v2": "subscribed",
+        "v3": "subscribed",
+        "ving": "subscribing"
+      }
+    },
+    {
+      "id": "supervise-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "supervise",
+        "vs_es": "supervises",
+        "v2": "supervised",
+        "v3": "supervised",
+        "ving": "supervising"
+      }
+    },
+    {
+      "id": "suspend-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "suspend",
+        "vs_es": "suspends",
+        "v2": "suspended",
+        "v3": "suspended",
+        "ving": "suspending"
+      }
+    },
+    {
+      "id": "tender-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "tender",
+        "vs_es": "tenders",
+        "v2": "tendered",
+        "v3": "tendered",
+        "ving": "tendering"
+      }
+    },
+    {
+      "id": "terminate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "terminate",
+        "vs_es": "terminates",
+        "v2": "terminated",
+        "v3": "terminated",
+        "ving": "terminating"
+      }
+    },
+    {
+      "id": "transact-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "transact",
+        "vs_es": "transacts",
+        "v2": "transacted",
+        "v3": "transacted",
+        "ving": "transacting"
+      }
+    },
+    {
+      "id": "undergo-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "undergo",
+        "vs_es": "undergoes",
+        "v2": "underwent",
+        "v3": "undergone",
+        "ving": "undergoing"
+      }
+    },
+    {
+      "id": "underwrite-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "underwrite",
+        "vs_es": "underwrites",
+        "v2": "underwrote",
+        "v3": "underwritten",
+        "ving": "underwriting"
+      }
+    },
+    {
+      "id": "utilize-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "utilize",
+        "vs_es": "utilizes",
+        "v2": "utilized",
+        "v3": "utilized",
+        "ving": "utilizing"
+      }
+    },
+    {
+      "id": "vest-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "vest",
+        "vs_es": "vests",
+        "v2": "vested",
+        "v3": "vested",
+        "ving": "vesting"
+      }
+    },
+    {
+      "id": "withhold-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "withhold",
+        "vs_es": "withholds",
+        "v2": "withheld",
+        "v3": "withheld",
+        "ving": "withholding"
+      }
+    },
+    {
+      "id": "overhaul-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "a major overhaul",
+        "overhaul the production equipment"
+      ]
+    },
+    {
+      "id": "recycle-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "recycle paper",
+        "recycle used materials"
+      ]
+    },
+    {
+      "id": "reimburse-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "reimburse travel expenses",
+        "reimburse an employee"
+      ]
+    },
+    {
+      "id": "renovate-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "renovate an office",
+        "renovate the company building"
+      ]
+    },
+    {
+      "id": "rent-nv",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "pay monthly rent",
+        "rent office space"
+      ]
+    },
+    {
+      "id": "reschedule-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "reschedule a meeting",
+        "reschedule an appointment"
+      ]
+    },
+    {
+      "id": "sanitize-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "sanitize equipment",
+        "sanitize a work surface"
+      ]
+    },
+    {
+      "id": "shelter-nv",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "seek shelter from bad weather",
+        "provide shelter for evacuees"
+      ]
+    },
+    {
+      "id": "undergo-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "undergo training",
+        "undergo a safety inspection"
+      ]
+    }
+  ]
+}

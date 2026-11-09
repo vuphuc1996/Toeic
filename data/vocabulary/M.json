@@ -118,7 +118,13 @@
         "BUSINESS",
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "manager",
+          "pos": "n",
+          "meaning_vi": "người quản lý"
+        }
+      ],
       "verb_forms": {
         "v1": "manage",
         "vs_es": "manages",
@@ -164,7 +170,13 @@
         "HR",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "manage",
+          "pos": "v",
+          "meaning_vi": "quản lý; điều hành"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -197,7 +209,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "mandate",
+        "vs_es": "mandates",
+        "v2": "mandated",
+        "v3": "mandated",
+        "ving": "mandating"
+      },
       "examples": [
         {
           "en": "The committee has a mandate to review company policy.",
@@ -303,7 +321,13 @@
         "BUSINESS",
         "SHIPPING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "manufacturer",
+          "pos": "n",
+          "meaning_vi": "nhà sản xuất"
+        }
+      ],
       "verb_forms": {
         "v1": "manufacture",
         "vs_es": "manufactures",
@@ -326,7 +350,7 @@
       "id": "manufacturer-n",
       "word": "manufacturer",
       "phonetic": {
-        "us": ""
+        "us": "/ˌmæn.jəˈfæk.tʃɚ.ɚ/"
       },
       "senses": [
         {
@@ -341,7 +365,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "manufacture",
+          "pos": "v",
+          "meaning_vi": "sản xuất"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -536,7 +566,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "merchandise",
+        "vs_es": "merchandises",
+        "v2": "merchandised",
+        "v3": "merchandised",
+        "ving": "merchandising"
+      },
       "examples": [
         {
           "en": "The store received new merchandise this morning.",
@@ -570,7 +606,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "merge",
+        "vs_es": "merges",
+        "v2": "merged",
+        "v3": "merged",
+        "ving": "merging"
+      },
       "examples": [
         {
           "en": "The two departments will merge next month.",
@@ -903,7 +945,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "mobilize",
+        "vs_es": "mobilizes",
+        "v2": "mobilized",
+        "v3": "mobilized",
+        "ving": "mobilizing"
+      },
       "examples": [
         {
           "en": "The company mobilized additional staff to handle the orders.",

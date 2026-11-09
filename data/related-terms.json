@@ -316,6 +316,12 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "challenger",
+      "meaning_vi": "người thách thức; đối thủ cạnh tranh",
+      "pos": "n",
+      "definition_en": "a person or organization that competes against another"
+    },
+    {
       "term": "chance",
       "meaning_vi": "cơ hội; khả năng",
       "source": "curated-related-glossary"
@@ -1526,6 +1532,12 @@
       "term": "rigid",
       "meaning_vi": "cứng nhắc; không linh hoạt",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "rival",
+      "meaning_vi": "đối thủ; đối thủ cạnh tranh",
+      "pos": "n",
+      "definition_en": "a person or organization competing with another"
     },
     {
       "term": "rule",

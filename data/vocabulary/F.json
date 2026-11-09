@@ -22,14 +22,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "facilitate",
+        "vs_es": "facilitates",
+        "v2": "facilitated",
+        "v3": "facilitated",
+        "ving": "facilitating"
+      },
       "examples": [
         {
           "en": "The online form is designed to facilitate the registration process.",
           "vi": "Biểu mẫu trực tuyến được thiết kế để tạo thuận lợi cho quy trình đăng ký."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "facilitate communication",
+        "facilitate the approval process"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -857,7 +866,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "foresee",
+        "vs_es": "foresees",
+        "v2": "foresaw",
+        "v3": "foreseen",
+        "ving": "foreseeing"
+      },
       "examples": [
         {
           "en": "We do not foresee any delays in the delivery schedule.",
@@ -927,14 +942,23 @@
         "COMMUNICATION"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "forward",
+        "vs_es": "forwards",
+        "v2": "forwarded",
+        "v3": "forwarded",
+        "ving": "forwarding"
+      },
       "examples": [
         {
           "en": "Could you forward the updated schedule to the team?",
           "vi": "Bạn có thể chuyển tiếp lịch trình cập nhật cho nhóm không?"
         }
       ],
-      "collocations": []
+      "collocations": [
+        "forward an email",
+        "forward a customer request"
+      ]
     },
     {
       "id": "franchise-n",
@@ -956,7 +980,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "franchise",
+        "vs_es": "franchises",
+        "v2": "franchised",
+        "v3": "franchised",
+        "ving": "franchising"
+      },
       "examples": [
         {
           "en": "The restaurant plans to open three franchise locations.",
@@ -1173,14 +1203,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "fulfill",
+        "vs_es": "fulfills",
+        "v2": "fulfilled",
+        "v3": "fulfilled",
+        "ving": "fulfilling"
+      },
       "examples": [
         {
           "en": "The supplier must fulfill every requirement listed in the purchase agreement.",
           "vi": "Nhà cung cấp phải đáp ứng mọi yêu cầu được nêu trong thỏa thuận mua hàng."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "fulfill an obligation",
+        "fulfill a requirement"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },

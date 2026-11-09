@@ -220,14 +220,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "justify",
+        "vs_es": "justifies",
+        "v2": "justified",
+        "v3": "justified",
+        "ving": "justifying"
+      },
       "examples": [
         {
           "en": "The project manager must justify the additional expense in the budget report.",
           "vi": "Quản lý dự án phải giải trình khoản chi phí bổ sung trong báo cáo ngân sách."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "justify the expense",
+        "justify a business decision"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     }

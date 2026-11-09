@@ -168,14 +168,23 @@
         "HEALTH"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "sanitize",
+        "vs_es": "sanitizes",
+        "v2": "sanitized",
+        "v3": "sanitized",
+        "ving": "sanitizing"
+      },
       "examples": [
         {
           "en": "Staff must sanitize shared equipment after use.",
           "vi": "Nhân viên phải khử khuẩn thiết bị dùng chung sau khi sử dụng."
         }
       ],
-      "collocations": []
+      "collocations": [
+        "sanitize equipment",
+        "sanitize a work surface"
+      ]
     },
     {
       "id": "satisfy-v",
@@ -751,14 +760,23 @@
         "WEATHER"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "shelter",
+        "vs_es": "shelters",
+        "v2": "sheltered",
+        "v3": "sheltered",
+        "ving": "sheltering"
+      },
       "examples": [
         {
           "en": "Employees should move to the nearest shelter.",
           "vi": "Nhân viên nên di chuyển đến nơi trú ẩn gần nhất."
         }
       ],
-      "collocations": []
+      "collocations": [
+        "seek shelter from bad weather",
+        "provide shelter for evacuees"
+      ]
     },
     {
       "id": "shipment-n",
@@ -1214,7 +1232,13 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "specify",
+        "vs_es": "specifies",
+        "v2": "specified",
+        "v3": "specified",
+        "ving": "specifying"
+      },
       "examples": [
         {
           "en": "Please specify the quantity and delivery address when placing your order.",
@@ -1554,7 +1578,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "subcontract",
+        "vs_es": "subcontracts",
+        "v2": "subcontracted",
+        "v3": "subcontracted",
+        "ving": "subcontracting"
+      },
       "examples": [
         {
           "en": "The builder may subcontract the electrical work.",
@@ -1673,7 +1703,13 @@
         "TECHNOLOGY"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "subscribe",
+        "vs_es": "subscribes",
+        "v2": "subscribed",
+        "v3": "subscribed",
+        "ving": "subscribing"
+      },
       "examples": [
         {
           "en": "Customers can subscribe to the monthly industry newsletter on our website.",
@@ -1993,8 +2029,25 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
-      "verb_forms": null,
+      "word_family": [
+        {
+          "word": "supervision",
+          "pos": "n",
+          "meaning_vi": "sự giám sát"
+        },
+        {
+          "word": "supervisor",
+          "pos": "n",
+          "meaning_vi": "người giám sát"
+        }
+      ],
+      "verb_forms": {
+        "v1": "supervise",
+        "vs_es": "supervises",
+        "v2": "supervised",
+        "v3": "supervised",
+        "ving": "supervising"
+      },
       "examples": [
         {
           "en": "A senior technician will supervise the installation.",
@@ -2027,7 +2080,18 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "supervise",
+          "pos": "v",
+          "meaning_vi": "giám sát"
+        },
+        {
+          "word": "supervisor",
+          "pos": "n",
+          "meaning_vi": "người giám sát"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2061,7 +2125,18 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "supervise",
+          "pos": "v",
+          "meaning_vi": "giám sát"
+        },
+        {
+          "word": "supervision",
+          "pos": "n",
+          "meaning_vi": "sự giám sát"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2155,7 +2230,13 @@
         "PURCHASING",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "supplier",
+          "pos": "n",
+          "meaning_vi": "nhà cung cấp"
+        }
+      ],
       "verb_forms": {
         "v1": "supply",
         "vs_es": "supplies",
@@ -2349,7 +2430,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "suspend",
+        "vs_es": "suspends",
+        "v2": "suspended",
+        "v3": "suspended",
+        "ving": "suspending"
+      },
       "examples": [
         {
           "en": "The airline will suspend the route while runway repairs are underway.",

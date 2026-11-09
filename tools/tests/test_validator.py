@@ -88,6 +88,33 @@ class ValidatorTests(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn("DQ004", out)
 
+    def test_verb_sense_requires_verb_forms(self):
+        self.clean_with_baseline()
+        self.repo.words["A"][0]["senses"][0]["pos"] = "v"
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1, out)
+        self.assertIn("VF001", out)
+
+    def test_verb_forms_v1_must_match_headword(self):
+        self.clean_with_baseline()
+        self.repo.words["A"][0]["senses"][0]["pos"] = "n/v"
+        self.repo.words["A"][0]["verb_forms"] = {"v1":"other", "vs_es":"others", "v2":"othered", "v3":"othered", "ving":"othering"}
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1, out)
+        self.assertIn("VF002", out)
+
+    def test_verb_sense_requires_collocations(self):
+        self.clean_with_baseline()
+        self.repo.words["A"][0]["senses"][0]["pos"] = "v"
+        self.repo.words["A"][0]["verb_forms"] = {"v1":"alpha", "vs_es":"alphas", "v2":"alphaed", "v3":"alphaed", "ving":"alphaing"}
+        self.repo.words["A"][0]["collocations"] = []
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1, out)
+        self.assertIn("FD003", out)
+
     def test_manifest_total_words_wrong(self):
         self.clean_with_baseline()
         self.repo.manifest_over["totalWords"] = 3

@@ -569,7 +569,7 @@
       "id": "recruitment-n",
       "word": "recruitment",
       "phonetic": {
-        "us": ""
+        "us": "/rɪˈkruːt.mənt/"
       },
       "senses": [
         {
@@ -584,7 +584,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "recruit",
+          "pos": "v",
+          "meaning_vi": "tuyển dụng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -655,14 +661,23 @@
         "ENVIRONMENT"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "recycle",
+        "vs_es": "recycles",
+        "v2": "recycled",
+        "v3": "recycled",
+        "ving": "recycling"
+      },
       "examples": [
         {
           "en": "The office encourages staff to recycle paper.",
           "vi": "Văn phòng khuyến khích nhân viên tái chế giấy."
         }
       ],
-      "collocations": []
+      "collocations": [
+        "recycle paper",
+        "recycle used materials"
+      ]
     },
     {
       "id": "reduce-v",
@@ -999,14 +1014,23 @@
         "FINANCE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "reimburse",
+        "vs_es": "reimburses",
+        "v2": "reimbursed",
+        "v3": "reimbursed",
+        "ving": "reimbursing"
+      },
       "examples": [
         {
           "en": "Employees can submit receipts to be reimbursed for business travel costs.",
           "vi": "Nhân viên có thể nộp hóa đơn để được hoàn trả chi phí đi công tác."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "reimburse travel expenses",
+        "reimburse an employee"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -1313,7 +1337,13 @@
         "HR"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "remunerate",
+        "vs_es": "remunerates",
+        "v2": "remunerated",
+        "v3": "remunerated",
+        "ving": "remunerating"
+      },
       "examples": [
         {
           "en": "Consultants are remunerated according to the hours worked.",
@@ -1381,7 +1411,13 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "renew",
+        "vs_es": "renews",
+        "v2": "renewed",
+        "v3": "renewed",
+        "ving": "renewing"
+      },
       "examples": [
         {
           "en": "The tenant must renew the office lease before the end of December.",
@@ -1479,14 +1515,23 @@
         "CONSTRUCTION"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "renovate",
+        "vs_es": "renovates",
+        "v2": "renovated",
+        "v3": "renovated",
+        "ving": "renovating"
+      },
       "examples": [
         {
           "en": "The company plans to renovate the main lobby.",
           "vi": "Công ty dự định cải tạo sảnh chính."
         }
       ],
-      "collocations": []
+      "collocations": [
+        "renovate an office",
+        "renovate the company building"
+      ]
     },
     {
       "id": "renovation-n",
@@ -1541,14 +1586,23 @@
         "REAL_ESTATE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "rent",
+        "vs_es": "rents",
+        "v2": "rented",
+        "v3": "rented",
+        "ving": "renting"
+      },
       "examples": [
         {
           "en": "The monthly rent includes building maintenance.",
           "vi": "Tiền thuê hàng tháng bao gồm bảo trì tòa nhà."
         }
       ],
-      "collocations": []
+      "collocations": [
+        "pay monthly rent",
+        "rent office space"
+      ]
     },
     {
       "id": "replace-v",
@@ -1805,14 +1859,23 @@
         "TIME"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "reschedule",
+        "vs_es": "reschedules",
+        "v2": "rescheduled",
+        "v3": "rescheduled",
+        "ving": "rescheduling"
+      },
       "examples": [
         {
           "en": "The coordinator had to reschedule the interview because the manager was unavailable.",
           "vi": "Điều phối viên phải sắp xếp lại lịch phỏng vấn vì quản lý không thể tham dự."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "reschedule a meeting",
+        "reschedule an appointment"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -1836,7 +1899,13 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "rescind",
+        "vs_es": "rescinds",
+        "v2": "rescinded",
+        "v3": "rescinded",
+        "ving": "rescinding"
+      },
       "examples": [
         {
           "en": "The company may rescind the offer if the deadline is missed.",
@@ -2010,7 +2079,13 @@
         "HR"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "resign",
+        "vs_es": "resigns",
+        "v2": "resigned",
+        "v3": "resigned",
+        "ving": "resigning"
+      },
       "examples": [
         {
           "en": "The branch manager will resign at the end of the month.",
@@ -2123,7 +2198,13 @@
         "CUSTOMER",
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "response",
+          "pos": "n",
+          "meaning_vi": "phản hồi; sự đáp ứng"
+        }
+      ],
       "verb_forms": {
         "v1": "respond",
         "vs_es": "responds",
@@ -2163,7 +2244,13 @@
       "topics": [
         "COMMUNICATION"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "respond",
+          "pos": "v",
+          "meaning_vi": "phản hồi; đáp lại"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

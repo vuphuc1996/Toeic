@@ -79,16 +79,7 @@
       "params": {
         "regex": "^/[^/;()\\[\\]]+/$"
       },
-      "violations": [
-        {
-          "id": "estimate-nv",
-          "at": "/phonetic/us"
-        },
-        {
-          "id": "transfer-nv",
-          "at": "/phonetic/us"
-        }
-      ]
+      "violations": []
     },
     "IP003": {
       "params": {
@@ -100,28 +91,7 @@
       "params": {
         "substring": "ər"
       },
-      "violations": [
-        {
-          "id": "buyer-n",
-          "at": "/phonetic/us"
-        },
-        {
-          "id": "consider-v",
-          "at": "/phonetic/us"
-        },
-        {
-          "id": "deliver-v",
-          "at": "/phonetic/us"
-        },
-        {
-          "id": "difference-n",
-          "at": "/phonetic/us"
-        },
-        {
-          "id": "employer-n",
-          "at": "/phonetic/us"
-        }
-      ]
+      "violations": []
     },
     "FD001": {
       "params": {

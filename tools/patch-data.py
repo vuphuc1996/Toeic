@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import tempfile
 from pathlib import Path
 from typing import Any
@@ -77,6 +78,13 @@ def validate_patch_context(root: Path, patch: dict, mode: str) -> tuple[dict[str
     return found, ids
 
 
+def has_verb_sense(record: dict) -> bool:
+    for sense in record.get("senses", []) if isinstance(record.get("senses"), list) else []:
+        if isinstance(sense, dict) and "v" in re.split(r"[/,\\s]+", str(sense.get("pos", "")).lower()):
+            return True
+    return False
+
+
 def verify_operations(patch: dict, found: dict[str, tuple[Path, dict]], mode: str) -> dict[Path, dict]:
     staged: dict[Path, dict] = {}
     seen: set[tuple[str, str]] = set()
@@ -98,6 +106,13 @@ def verify_operations(patch: dict, found: dict[str, tuple[Path, dict]], mode: st
         expected_pos = op.get("expect", {}).get("pos")
         if expected_pos is not None and actual_pos != expected_pos:
             raise ValueError(f"{rid} {pointer}: POS mismatch ({actual_pos!r} != {expected_pos!r})")
+        expected_verb_sense = op.get("expect", {}).get("verbSense")
+        if expected_verb_sense is not None:
+            if not isinstance(expected_verb_sense, bool):
+                raise ValueError(f"{rid} {pointer}: expect.verbSense phải là boolean")
+            actual_verb_sense = has_verb_sense(rec)
+            if actual_verb_sense is not expected_verb_sense:
+                raise ValueError(f"{rid} {pointer}: verb-sense mismatch ({actual_verb_sense!r} != {expected_verb_sense!r})")
         actual = get_pointer(rec, pointer)
         expected = op.get("new") if mode == "rollback" else op.get("expect", {}).get("old")
         if actual != expected:

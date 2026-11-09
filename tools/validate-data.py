@@ -51,6 +51,9 @@ RULES = {
     "DQ004": ("STRUCT", "Đúng kiểu dữ liệu và đủ field bắt buộc"),
     "DQ005": ("STRUCT", "Manifest khớp dữ liệu thực tế"),
     "DQ006": ("STRUCT", "related-terms.json hợp lệ"),
+    "VF001": ("STRUCT", "Mọi bản ghi có sense động từ phải có verb_forms"),
+    "VF002": ("STRUCT", "verb_forms.v1 phải khớp headword"),
+    "FD003": ("STRUCT", "Mọi bản ghi có sense động từ phải có ít nhất một collocation"),
     "EX001": ("STRUCT", "Mỗi từ có ít nhất một ví dụ"),
     "EX002": ("STRUCT", "Ví dụ có en và vi không rỗng"),
     "EX003": ("STRUCT", "Không trùng nguyên văn câu ví dụ tiếng Anh"),
@@ -189,6 +192,16 @@ def is_str_list(value: object) -> bool:
     return isinstance(value, list) and all(isinstance(x, str) for x in value)
 
 
+def has_verb_sense(record: dict) -> bool:
+    senses = record.get("senses", [])
+    if not isinstance(senses, list):
+        return False
+    return any(
+        isinstance(sense, dict) and "v" in re.split(r"[/,\\s]+", str(sense.get("pos", "")).lower())
+        for sense in senses
+    )
+
+
 # ---------------------------------------------------------------- data loading
 def load_manifest_and_records(ctx: Context) -> None:
     mpath = ctx.root / "data" / "manifest.json"
@@ -301,6 +314,14 @@ def check_schema(ctx: Context) -> None:
                 isinstance(e, dict) and isinstance(e.get("en"), str) and isinstance(e.get("vi"), str) for e in ex
             ):
                 ctx.add("DQ004", rid, "/examples", "examples phải là mảng {en, vi} kiểu chuỗi")
+        if has_verb_sense(r):
+            if vf is None:
+                ctx.add("VF001", rid, "/verb_forms", "có sense POS động từ nhưng chưa có verb_forms")
+            elif isinstance(vf, dict) and vf.get("v1") != r.get("word"):
+                ctx.add("VF002", rid, "/verb_forms/v1", "v1 không khớp headword")
+            collocations = r.get("collocations")
+            if not isinstance(collocations, list) or not collocations:
+                ctx.add("FD003", rid, "/collocations", "có sense POS động từ nhưng chưa có collocation")
 
 
 def check_struct_content(ctx: Context) -> None:

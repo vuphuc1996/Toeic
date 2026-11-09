@@ -136,7 +136,18 @@
         "BUSINESS",
         "PURCHASING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "negotiate",
+          "pos": "v",
+          "meaning_vi": "đàm phán"
+        },
+        {
+          "word": "negotiator",
+          "pos": "n",
+          "meaning_vi": "người đàm phán"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -168,7 +179,18 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "negotiate",
+          "pos": "v",
+          "meaning_vi": "đàm phán"
+        },
+        {
+          "word": "negotiation",
+          "pos": "n",
+          "meaning_vi": "cuộc đàm phán"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -346,7 +368,13 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "notarize",
+        "vs_es": "notarizes",
+        "v2": "notarized",
+        "v3": "notarized",
+        "ving": "notarizing"
+      },
       "examples": [
         {
           "en": "The authorization letter must be notarized before submission.",
@@ -430,7 +458,13 @@
         "HR"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "notice",
+        "vs_es": "notices",
+        "v2": "noticed",
+        "v3": "noticed",
+        "ving": "noticing"
+      },
       "examples": [
         {
           "en": "Employees received notice of the schedule change.",

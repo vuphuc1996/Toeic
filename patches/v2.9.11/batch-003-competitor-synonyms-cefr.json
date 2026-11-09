@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.11-batch-003-competitor-synonyms-cefr",
+  "baseDataVersion": "2.9.10",
+  "targetDataVersion": "2.9.11",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "operations": [
+    {
+      "id": "competitor-n",
+      "path": "/senses/0/synonyms",
+      "expect": {
+        "old": [],
+        "pos": "n"
+      },
+      "new": [
+        "challenger",
+        "contender",
+        "rival"
+      ]
+    },
+    {
+      "id": "competitor-n",
+      "path": "/senses/0/cefr_level",
+      "expect": {
+        "old": "A2",
+        "pos": "n"
+      },
+      "new": "B1"
+    },
+    {
+      "id": "competitor-n",
+      "path": "/cefr_level",
+      "expect": {
+        "old": "A2"
+      },
+      "new": "B1"
+    },
+    {
+      "id": "competitor-n",
+      "path": "/level_basis",
+      "expect": {
+        "old": "editorial-estimate; verify by sense"
+      },
+      "new": "Cambridge Dictionary CEFR B1; verified 2026-11-09"
+    }
+  ]
+}

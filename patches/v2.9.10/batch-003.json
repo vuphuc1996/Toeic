@@ -1,0 +1,619 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.10-batch-003",
+  "baseDataVersion": "2.9.9",
+  "targetDataVersion": "2.9.10",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "description": "Verb forms and curated TOEIC collocations; 31 verb-form records.",
+  "operations": [
+    {
+      "id": "draft-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "draft",
+        "vs_es": "drafts",
+        "v2": "drafted",
+        "v3": "drafted",
+        "ving": "drafting"
+      }
+    },
+    {
+      "id": "eliminate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "eliminate",
+        "vs_es": "eliminates",
+        "v2": "eliminated",
+        "v3": "eliminated",
+        "ving": "eliminating"
+      }
+    },
+    {
+      "id": "enclose-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "enclose",
+        "vs_es": "encloses",
+        "v2": "enclosed",
+        "v3": "enclosed",
+        "ving": "enclosing"
+      }
+    },
+    {
+      "id": "encounter-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "encounter",
+        "vs_es": "encounters",
+        "v2": "encountered",
+        "v3": "encountered",
+        "ving": "encountering"
+      }
+    },
+    {
+      "id": "endorse-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "endorse",
+        "vs_es": "endorses",
+        "v2": "endorsed",
+        "v3": "endorsed",
+        "ving": "endorsing"
+      }
+    },
+    {
+      "id": "enroll-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "enroll",
+        "vs_es": "enrolls",
+        "v2": "enrolled",
+        "v3": "enrolled",
+        "ving": "enrolling"
+      }
+    },
+    {
+      "id": "estimate-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "estimate",
+        "vs_es": "estimates",
+        "v2": "estimated",
+        "v3": "estimated",
+        "ving": "estimating"
+      }
+    },
+    {
+      "id": "exempt-adj",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "exempt",
+        "vs_es": "exempts",
+        "v2": "exempted",
+        "v3": "exempted",
+        "ving": "exempting"
+      }
+    },
+    {
+      "id": "facilitate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "facilitate",
+        "vs_es": "facilitates",
+        "v2": "facilitated",
+        "v3": "facilitated",
+        "ving": "facilitating"
+      }
+    },
+    {
+      "id": "foresee-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "foresee",
+        "vs_es": "foresees",
+        "v2": "foresaw",
+        "v3": "foreseen",
+        "ving": "foreseeing"
+      }
+    },
+    {
+      "id": "forward-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "forward",
+        "vs_es": "forwards",
+        "v2": "forwarded",
+        "v3": "forwarded",
+        "ving": "forwarding"
+      }
+    },
+    {
+      "id": "franchise-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "franchise",
+        "vs_es": "franchises",
+        "v2": "franchised",
+        "v3": "franchised",
+        "ving": "franchising"
+      }
+    },
+    {
+      "id": "fulfill-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "fulfill",
+        "vs_es": "fulfills",
+        "v2": "fulfilled",
+        "v3": "fulfilled",
+        "ving": "fulfilling"
+      }
+    },
+    {
+      "id": "generate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "generate",
+        "vs_es": "generates",
+        "v2": "generated",
+        "v3": "generated",
+        "ving": "generating"
+      }
+    },
+    {
+      "id": "guarantee-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "guarantee",
+        "vs_es": "guarantees",
+        "v2": "guaranteed",
+        "v3": "guaranteed",
+        "ving": "guaranteeing"
+      }
+    },
+    {
+      "id": "implement-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "implement",
+        "vs_es": "implements",
+        "v2": "implemented",
+        "v3": "implemented",
+        "ving": "implementing"
+      }
+    },
+    {
+      "id": "incentivize-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "incentivize",
+        "vs_es": "incentivizes",
+        "v2": "incentivized",
+        "v3": "incentivized",
+        "ving": "incentivizing"
+      }
+    },
+    {
+      "id": "incorporate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "incorporate",
+        "vs_es": "incorporates",
+        "v2": "incorporated",
+        "v3": "incorporated",
+        "ving": "incorporating"
+      }
+    },
+    {
+      "id": "incur-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "incur",
+        "vs_es": "incurs",
+        "v2": "incurred",
+        "v3": "incurred",
+        "ving": "incurring"
+      }
+    },
+    {
+      "id": "indemnify-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "indemnify",
+        "vs_es": "indemnifies",
+        "v2": "indemnified",
+        "v3": "indemnified",
+        "ving": "indemnifying"
+      }
+    },
+    {
+      "id": "induct-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "induct",
+        "vs_es": "inducts",
+        "v2": "inducted",
+        "v3": "inducted",
+        "ving": "inducting"
+      }
+    },
+    {
+      "id": "inquire-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "inquire",
+        "vs_es": "inquires",
+        "v2": "inquired",
+        "v3": "inquired",
+        "ving": "inquiring"
+      }
+    },
+    {
+      "id": "invoice-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "invoice",
+        "vs_es": "invoices",
+        "v2": "invoiced",
+        "v3": "invoiced",
+        "ving": "invoicing"
+      }
+    },
+    {
+      "id": "justify-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "justify",
+        "vs_es": "justifies",
+        "v2": "justified",
+        "v3": "justified",
+        "ving": "justifying"
+      }
+    },
+    {
+      "id": "lease-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "lease",
+        "vs_es": "leases",
+        "v2": "leased",
+        "v3": "leased",
+        "ving": "leasing"
+      }
+    },
+    {
+      "id": "liquidate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "liquidate",
+        "vs_es": "liquidates",
+        "v2": "liquidated",
+        "v3": "liquidated",
+        "ving": "liquidating"
+      }
+    },
+    {
+      "id": "mandate-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "mandate",
+        "vs_es": "mandates",
+        "v2": "mandated",
+        "v3": "mandated",
+        "ving": "mandating"
+      }
+    },
+    {
+      "id": "merchandise-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "merchandise",
+        "vs_es": "merchandises",
+        "v2": "merchandised",
+        "v3": "merchandised",
+        "ving": "merchandising"
+      }
+    },
+    {
+      "id": "merge-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "merge",
+        "vs_es": "merges",
+        "v2": "merged",
+        "v3": "merged",
+        "ving": "merging"
+      }
+    },
+    {
+      "id": "mobilize-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "mobilize",
+        "vs_es": "mobilizes",
+        "v2": "mobilized",
+        "v3": "mobilized",
+        "ving": "mobilizing"
+      }
+    },
+    {
+      "id": "notarize-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "notarize",
+        "vs_es": "notarizes",
+        "v2": "notarized",
+        "v3": "notarized",
+        "ving": "notarizing"
+      }
+    },
+    {
+      "id": "draft-nv",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "draft a proposal",
+        "prepare a first draft"
+      ]
+    },
+    {
+      "id": "enclose-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "enclose a copy of the receipt",
+        "enclose the invoice"
+      ]
+    },
+    {
+      "id": "endorse-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "endorse a proposal",
+        "endorse a check"
+      ]
+    },
+    {
+      "id": "enroll-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "enroll in a training program",
+        "enroll new employees"
+      ]
+    },
+    {
+      "id": "exempt-adj",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "be exempt from tax",
+        "exempt an employee from a fee"
+      ]
+    },
+    {
+      "id": "facilitate-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "facilitate communication",
+        "facilitate the approval process"
+      ]
+    },
+    {
+      "id": "forward-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "forward an email",
+        "forward a customer request"
+      ]
+    },
+    {
+      "id": "fulfill-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "fulfill an obligation",
+        "fulfill a requirement"
+      ]
+    },
+    {
+      "id": "generate-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "generate revenue",
+        "generate qualified leads"
+      ]
+    },
+    {
+      "id": "implement-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "implement a policy",
+        "implement a new system"
+      ]
+    },
+    {
+      "id": "inquire-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "inquire about availability",
+        "inquire into a matter"
+      ]
+    },
+    {
+      "id": "justify-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "justify the expense",
+        "justify a business decision"
+      ]
+    }
+  ]
+}

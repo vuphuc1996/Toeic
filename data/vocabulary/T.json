@@ -334,7 +334,13 @@
         "PURCHASING"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "tender",
+        "vs_es": "tenders",
+        "v2": "tendered",
+        "v3": "tendered",
+        "ving": "tendering"
+      },
       "examples": [
         {
           "en": "The firm submitted a tender for the construction project.",
@@ -444,7 +450,13 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "terminate",
+        "vs_es": "terminates",
+        "v2": "terminated",
+        "v3": "terminated",
+        "ving": "terminating"
+      },
       "examples": [
         {
           "en": "Either party may terminate the agreement with written notice.",
@@ -768,7 +780,13 @@
         "BANKING"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "transact",
+        "vs_es": "transacts",
+        "v2": "transacted",
+        "v3": "transacted",
+        "ving": "transacting"
+      },
       "examples": [
         {
           "en": "Customers can transact securely through the bank’s mobile application.",
@@ -836,7 +854,7 @@
       "id": "transfer-nv",
       "word": "transfer",
       "phonetic": {
-        "us": "/trænsˈfɝː/ (v); /ˈtræns.fɝː/ (n)"
+        "us": "/ˈtræns.fɝː/"
       },
       "senses": [
         {

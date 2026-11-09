@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.10-batch-002",
+  "baseDataVersion": "2.9.9",
+  "targetDataVersion": "2.9.10",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "description": "Verb forms and curated TOEIC collocations; 31 verb-form records.",
+  "operations": [
+    {
+      "id": "coincide-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "coincide",
+        "vs_es": "coincides",
+        "v2": "coincided",
+        "v3": "coincided",
+        "ving": "coinciding"
+      }
+    },
+    {
+      "id": "commence-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "commence",
+        "vs_es": "commences",
+        "v2": "commenced",
+        "v3": "commenced",
+        "ving": "commencing"
+      }
+    },
+    {
+      "id": "commute-vn",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "commute",
+        "vs_es": "commutes",
+        "v2": "commuted",
+        "v3": "commuted",
+        "ving": "commuting"
+      }
+    },
+    {
+      "id": "compensate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "compensate",
+        "vs_es": "compensates",
+        "v2": "compensated",
+        "v3": "compensated",
+        "ving": "compensating"
+      }
+    },
+    {
+      "id": "complement-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "complement",
+        "vs_es": "complements",
+        "v2": "complemented",
+        "v3": "complemented",
+        "ving": "complementing"
+      }
+    },
+    {
+      "id": "comply-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "comply",
+        "vs_es": "complies",
+        "v2": "complied",
+        "v3": "complied",
+        "ving": "complying"
+      }
+    },
+    {
+      "id": "compost-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "compost",
+        "vs_es": "composts",
+        "v2": "composted",
+        "v3": "composted",
+        "ving": "composting"
+      }
+    },
+    {
+      "id": "comprise-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "comprise",
+        "vs_es": "comprises",
+        "v2": "comprised",
+        "v3": "comprised",
+        "ving": "comprising"
+      }
+    },
+    {
+      "id": "conceive-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "conceive",
+        "vs_es": "conceives",
+        "v2": "conceived",
+        "v3": "conceived",
+        "ving": "conceiving"
+      }
+    },
+    {
+      "id": "confer-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "confer",
+        "vs_es": "confers",
+        "v2": "conferred",
+        "v3": "conferred",
+        "ving": "conferring"
+      }
+    },
+    {
+      "id": "consent-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "consent",
+        "vs_es": "consents",
+        "v2": "consented",
+        "v3": "consented",
+        "ving": "consenting"
+      }
+    },
+    {
+      "id": "consolidate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "consolidate",
+        "vs_es": "consolidates",
+        "v2": "consolidated",
+        "v3": "consolidated",
+        "ving": "consolidating"
+      }
+    },
+    {
+      "id": "constrain-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "constrain",
+        "vs_es": "constrains",
+        "v2": "constrained",
+        "v3": "constrained",
+        "ving": "constraining"
+      }
+    },
+    {
+      "id": "consume-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "consume",
+        "vs_es": "consumes",
+        "v2": "consumed",
+        "v3": "consumed",
+        "ving": "consuming"
+      }
+    },
+    {
+      "id": "contradict-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "contradict",
+        "vs_es": "contradicts",
+        "v2": "contradicted",
+        "v3": "contradicted",
+        "ving": "contradicting"
+      }
+    },
+    {
+      "id": "convert-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "convert",
+        "vs_es": "converts",
+        "v2": "converted",
+        "v3": "converted",
+        "ving": "converting"
+      }
+    },
+    {
+      "id": "coordinate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "coordinate",
+        "vs_es": "coordinates",
+        "v2": "coordinated",
+        "v3": "coordinated",
+        "ving": "coordinating"
+      }
+    },
+    {
+      "id": "date-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "date",
+        "vs_es": "dates",
+        "v2": "dated",
+        "v3": "dated",
+        "ving": "dating"
+      }
+    },
+    {
+      "id": "debate-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "debate",
+        "vs_es": "debates",
+        "v2": "debated",
+        "v3": "debated",
+        "ving": "debating"
+      }
+    },
+    {
+      "id": "deduct-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "deduct",
+        "vs_es": "deducts",
+        "v2": "deducted",
+        "v3": "deducted",
+        "ving": "deducting"
+      }
+    },
+    {
+      "id": "delegate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "delegate",
+        "vs_es": "delegates",
+        "v2": "delegated",
+        "v3": "delegated",
+        "ving": "delegating"
+      }
+    },
+    {
+      "id": "demonstrate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "demonstrate",
+        "vs_es": "demonstrates",
+        "v2": "demonstrated",
+        "v3": "demonstrated",
+        "ving": "demonstrating"
+      }
+    },
+    {
+      "id": "denote-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "denote",
+        "vs_es": "denotes",
+        "v2": "denoted",
+        "v3": "denoted",
+        "ving": "denoting"
+      }
+    },
+    {
+      "id": "designate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "designate",
+        "vs_es": "designates",
+        "v2": "designated",
+        "v3": "designated",
+        "ving": "designating"
+      }
+    },
+    {
+      "id": "diminish-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "diminish",
+        "vs_es": "diminishes",
+        "v2": "diminished",
+        "v3": "diminished",
+        "ving": "diminishing"
+      }
+    },
+    {
+      "id": "disburse-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "disburse",
+        "vs_es": "disburses",
+        "v2": "disbursed",
+        "v3": "disbursed",
+        "ving": "disbursing"
+      }
+    },
+    {
+      "id": "disclose-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "disclose",
+        "vs_es": "discloses",
+        "v2": "disclosed",
+        "v3": "disclosed",
+        "ving": "disclosing"
+      }
+    },
+    {
+      "id": "discount-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "discount",
+        "vs_es": "discounts",
+        "v2": "discounted",
+        "v3": "discounted",
+        "ving": "discounting"
+      }
+    },
+    {
+      "id": "discriminate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "discriminate",
+        "vs_es": "discriminates",
+        "v2": "discriminated",
+        "v3": "discriminated",
+        "ving": "discriminating"
+      }
+    },
+    {
+      "id": "distort-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "distort",
+        "vs_es": "distorts",
+        "v2": "distorted",
+        "v3": "distorted",
+        "ving": "distorting"
+      }
+    },
+    {
+      "id": "distribute-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "distribute",
+        "vs_es": "distributes",
+        "v2": "distributed",
+        "v3": "distributed",
+        "ving": "distributing"
+      }
+    },
+    {
+      "id": "comply-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "comply with regulations",
+        "comply with company policy"
+      ]
+    },
+    {
+      "id": "compost-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "make compost",
+        "compost food scraps"
+      ]
+    },
+    {
+      "id": "consent-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "give written consent",
+        "obtain consent from a client"
+      ]
+    },
+    {
+      "id": "coordinate-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "coordinate a meeting",
+        "coordinate logistics"
+      ]
+    },
+    {
+      "id": "deduct-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "deduct taxes from salary",
+        "deduct expenses from the total"
+      ]
+    },
+    {
+      "id": "delegate-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "delegate a task to a colleague",
+        "delegate responsibility to a manager"
+      ]
+    },
+    {
+      "id": "disclose-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "disclose financial information",
+        "disclose a conflict of interest"
+      ]
+    },
+    {
+      "id": "distribute-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "distribute the documents",
+        "distribute promotional materials"
+      ]
+    }
+  ]
+}

@@ -84,7 +84,13 @@
         "OFFICE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "date",
+        "vs_es": "dates",
+        "v2": "dated",
+        "v3": "dated",
+        "ving": "dating"
+      },
       "examples": [
         {
           "en": "Please write the date at the top of the form.",
@@ -210,7 +216,13 @@
           "meaning_vi": "người tranh luận"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "debate",
+        "vs_es": "debates",
+        "v2": "debated",
+        "v3": "debated",
+        "ving": "debating"
+      },
       "examples": [
         {
           "en": "The proposal sparked a debate about public spending.",
@@ -371,14 +383,23 @@
         "FINANCE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "deduct",
+        "vs_es": "deducts",
+        "v2": "deducted",
+        "v3": "deducted",
+        "ving": "deducting"
+      },
       "examples": [
         {
           "en": "The employer will deduct income tax from each monthly salary.",
           "vi": "Người sử dụng lao động sẽ khấu trừ thuế thu nhập từ mỗi tháng lương."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "deduct taxes from salary",
+        "deduct expenses from the total"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -547,14 +568,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "delegate",
+        "vs_es": "delegates",
+        "v2": "delegated",
+        "v3": "delegated",
+        "ving": "delegating"
+      },
       "examples": [
         {
           "en": "The director decided to delegate routine approvals to the regional managers.",
           "vi": "Giám đốc quyết định ủy quyền phê duyệt công việc thường lệ cho các quản lý khu vực."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "delegate a task to a colleague",
+        "delegate responsibility to a manager"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -632,7 +662,7 @@
       "cefr_level": "A2",
       "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/dɪˈlɪv.ər/"
+        "us": "/dɪˈlɪv.ɚ/"
       },
       "senses": [
         {
@@ -653,7 +683,18 @@
         "SHIPPING",
         "CUSTOMER"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "deliverable",
+          "pos": "n",
+          "meaning_vi": "sản phẩm bàn giao"
+        },
+        {
+          "word": "delivery",
+          "pos": "n",
+          "meaning_vi": "sự giao hàng; việc giao"
+        }
+      ],
       "verb_forms": {
         "v1": "deliver",
         "vs_es": "delivers",
@@ -691,7 +732,18 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "deliver",
+          "pos": "v",
+          "meaning_vi": "giao; chuyển; trình bày"
+        },
+        {
+          "word": "delivery",
+          "pos": "n",
+          "meaning_vi": "sự giao hàng; việc giao"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -788,7 +840,13 @@
           "meaning_vi": "có tính minh họa"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "demonstrate",
+        "vs_es": "demonstrates",
+        "v2": "demonstrated",
+        "v3": "demonstrated",
+        "ving": "demonstrating"
+      },
       "examples": [
         {
           "en": "The results demonstrate the value of regular training.",
@@ -833,7 +891,13 @@
           "meaning_vi": "mang nghĩa biểu thị"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "denote",
+        "vs_es": "denotes",
+        "v2": "denoted",
+        "v3": "denoted",
+        "ving": "denoting"
+      },
       "examples": [
         {
           "en": "In the chart, a dashed line denotes projected sales.",
@@ -1155,7 +1219,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "designate",
+        "vs_es": "designates",
+        "v2": "designated",
+        "v3": "designated",
+        "ving": "designating"
+      },
       "examples": [
         {
           "en": "The company designated a separate room for client meetings.",
@@ -1336,7 +1406,7 @@
       "cefr_level": "A1",
       "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈdɪf.ər.əns/"
+        "us": "/ˈdɪf.ɚ.əns/"
       },
       "senses": [
         {
@@ -1402,7 +1472,13 @@
           "meaning_vi": "bị suy giảm"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "diminish",
+        "vs_es": "diminishes",
+        "v2": "diminished",
+        "v3": "diminished",
+        "ving": "diminishing"
+      },
       "examples": [
         {
           "en": "The new process should diminish the risk of data entry errors.",
@@ -1467,7 +1543,13 @@
         "FINANCE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "disburse",
+        "vs_es": "disburses",
+        "v2": "disbursed",
+        "v3": "disbursed",
+        "ving": "disbursing"
+      },
       "examples": [
         {
           "en": "The department will disburse travel expenses next week.",
@@ -1535,14 +1617,23 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "disclose",
+        "vs_es": "discloses",
+        "v2": "disclosed",
+        "v3": "disclosed",
+        "ving": "disclosing"
+      },
       "examples": [
         {
           "en": "The applicant must disclose any conflicts of interest on the form.",
           "vi": "Ứng viên phải công khai mọi xung đột lợi ích trên biểu mẫu."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "disclose financial information",
+        "disclose a conflict of interest"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -1584,7 +1675,13 @@
         "FINANCE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "discount",
+        "vs_es": "discounts",
+        "v2": "discounted",
+        "v3": "discounted",
+        "ving": "discounting"
+      },
       "examples": [
         {
           "en": "Customers receive a 10 percent discount.",
@@ -1764,7 +1861,13 @@
           "meaning_vi": "mang tính phân biệt đối xử"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "discriminate",
+        "vs_es": "discriminates",
+        "v2": "discriminated",
+        "v3": "discriminated",
+        "ving": "discriminating"
+      },
       "examples": [
         {
           "en": "The policy prohibits employers from discriminating against applicants.",
@@ -1909,7 +2012,13 @@
           "meaning_vi": "bị bóp méo"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "distort",
+        "vs_es": "distorts",
+        "v2": "distorted",
+        "v3": "distorted",
+        "ving": "distorting"
+      },
       "examples": [
         {
           "en": "A small sample may distort the survey results.",
@@ -1943,14 +2052,23 @@
         "SHIPPING"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "distribute",
+        "vs_es": "distributes",
+        "v2": "distributed",
+        "v3": "distributed",
+        "ving": "distributing"
+      },
       "examples": [
         {
           "en": "Reception will distribute the updated visitor badges this afternoon.",
           "vi": "Bộ phận lễ tân sẽ phát thẻ khách đã cập nhật vào chiều nay."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "distribute the documents",
+        "distribute promotional materials"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -2193,14 +2311,23 @@
         "COMMUNICATION"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "draft",
+        "vs_es": "drafts",
+        "v2": "drafted",
+        "v3": "drafted",
+        "ving": "drafting"
+      },
       "examples": [
         {
           "en": "Please review the draft before it is sent.",
           "vi": "Vui lòng xem bản nháp trước khi gửi."
         }
       ],
-      "collocations": []
+      "collocations": [
+        "draft a proposal",
+        "prepare a first draft"
+      ]
     },
     {
       "id": "drought-n",

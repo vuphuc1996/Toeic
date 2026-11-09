@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2.9.9",
+  "version": "2.9.11",
   "letters": [
     {
       "letter": "A",
@@ -137,8 +137,8 @@
   "totalWords": 928,
   "cefrLevels": {
     "B2": 294,
-    "B1": 275,
-    "A2": 228,
+    "B1": 276,
+    "A2": 227,
     "A1": 64,
     "C1": 67
   },

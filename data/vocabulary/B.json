@@ -297,14 +297,23 @@
         "PURCHASING"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "bargain",
+        "vs_es": "bargains",
+        "v2": "bargained",
+        "v3": "bargained",
+        "ving": "bargaining"
+      },
       "examples": [
         {
           "en": "The purchasing manager negotiated a bargain with the equipment supplier.",
           "vi": "Trưởng bộ phận mua hàng đã thương lượng được một thỏa thuận có lợi với nhà cung cấp thiết bị."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "strike a bargain",
+        "bargain for a lower price"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -328,7 +337,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "benchmark",
+        "vs_es": "benchmarks",
+        "v2": "benchmarked",
+        "v3": "benchmarked",
+        "ving": "benchmarking"
+      },
       "examples": [
         {
           "en": "The team uses industry benchmarks to evaluate service quality.",
@@ -361,7 +376,18 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "benefit",
+          "pos": "n/v",
+          "meaning_vi": "lợi ích; có lợi"
+        },
+        {
+          "word": "beneficiary",
+          "pos": "n",
+          "meaning_vi": "người thụ hưởng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -392,7 +418,18 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "benefit",
+          "pos": "n/v",
+          "meaning_vi": "lợi ích; có lợi"
+        },
+        {
+          "word": "beneficial",
+          "pos": "adj",
+          "meaning_vi": "có lợi"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -449,9 +486,20 @@
           "word": "beneficial",
           "pos": "adj",
           "meaning_vi": "có lợi"
+        },
+        {
+          "word": "beneficiary",
+          "pos": "n",
+          "meaning_vi": "người thụ hưởng"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "benefit",
+        "vs_es": "benefits",
+        "v2": "benefited",
+        "v3": "benefited",
+        "ving": "benefiting"
+      },
       "examples": [
         {
           "en": "The new policy offers several benefits to employees.",
@@ -528,7 +576,13 @@
           "meaning_vi": "khách quan; không thiên lệch"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "bias",
+        "vs_es": "biases",
+        "v2": "biased",
+        "v3": "biased",
+        "ving": "biasing"
+      },
       "examples": [
         {
           "en": "The survey was redesigned to reduce selection bias.",
@@ -1107,7 +1161,13 @@
           "meaning_vi": "thuộc ngân sách"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "budget",
+        "vs_es": "budgets",
+        "v2": "budgeted",
+        "v3": "budgeted",
+        "ving": "budgeting"
+      },
       "examples": [
         {
           "en": "The department must stay within its annual budget.",
@@ -1162,7 +1222,7 @@
       "cefr_level": "A2",
       "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ˈbaɪ.ər/"
+        "us": "/ˈbaɪ.ɚ/"
       },
       "senses": [
         {

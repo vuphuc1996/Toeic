@@ -696,7 +696,13 @@
         "FINANCE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "withhold",
+        "vs_es": "withholds",
+        "v2": "withheld",
+        "v3": "withheld",
+        "ving": "withholding"
+      },
       "examples": [
         {
           "en": "The employer must withhold the required tax from wages.",

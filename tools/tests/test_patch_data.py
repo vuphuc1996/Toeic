@@ -26,7 +26,7 @@ class PatchDataTests(unittest.TestCase):
         self.patch_path = self.root / "patch.json"
         self.patch = {"schemaVersion": 1, "batchId": "test", "baseDataVersion": "2.9.8", "targetDataVersion": "2.9.9", "idSetSha256": sha(["alpha-n", "beta-v"]), "operations": [
             {"id": "alpha-n", "path": "/senses/0/definition_en", "expect": {"old": "old alpha", "pos": "n"}, "new": "new alpha"},
-            {"id": "beta-v", "path": "/examples/0/en", "expect": {"old": "old beta sentence"}, "new": "new beta sentence"}
+            {"id": "beta-v", "path": "/examples/0/en", "expect": {"old": "old beta sentence", "verbSense": True}, "new": "new beta sentence"}
         ]}
         self.save_patch()
 
@@ -90,6 +90,20 @@ class PatchDataTests(unittest.TestCase):
     def test_pos_mismatch_aborts(self):
         self.patch["operations"][0]["expect"]["pos"]="v";self.save_patch()
         self.assertNotEqual(self.run_tool("--apply").returncode,0)
+
+    def test_verb_sense_precondition_accepts_verb_record(self):
+        result=self.run_tool("--dry-run")
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+
+    def test_verb_sense_precondition_rejects_changed_pos(self):
+        doc=json.loads((self.root/"data/vocabulary/B.json").read_text(encoding="utf-8"))
+        doc["words"][0]["senses"][0]["pos"]="n"
+        (self.root/"data/vocabulary/B.json").write_text(json.dumps(doc),encoding="utf-8")
+        before=(self.root/"data/vocabulary/A.json").read_bytes()
+        result=self.run_tool("--apply")
+        self.assertNotEqual(result.returncode,0,result.stdout+result.stderr)
+        self.assertIn("verb-sense mismatch",result.stdout+result.stderr)
+        self.assertEqual(before,(self.root/"data/vocabulary/A.json").read_bytes())
 
     def test_rollback_refuses_to_overwrite_intervening_edit(self):
         self.assertEqual(self.run_tool("--apply").returncode,0)

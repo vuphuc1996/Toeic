@@ -1,0 +1,856 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.11-batch-002-word-family",
+  "baseDataVersion": "2.9.10",
+  "targetDataVersion": "2.9.11",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "operations": [
+    {
+      "id": "apply-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "applicant",
+          "pos": "n",
+          "meaning_vi": "người nộp đơn; ứng viên"
+        },
+        {
+          "word": "application",
+          "pos": "n",
+          "meaning_vi": "đơn ứng tuyển; ứng dụng; việc áp dụng"
+        },
+        {
+          "word": "applicable",
+          "pos": "adj",
+          "meaning_vi": "có thể áp dụng; thích hợp"
+        }
+      ]
+    },
+    {
+      "id": "applicant-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "apply",
+          "pos": "v",
+          "meaning_vi": "áp dụng; nộp đơn"
+        },
+        {
+          "word": "application",
+          "pos": "n",
+          "meaning_vi": "đơn ứng tuyển; ứng dụng; việc áp dụng"
+        },
+        {
+          "word": "applicable",
+          "pos": "adj",
+          "meaning_vi": "có thể áp dụng; thích hợp"
+        }
+      ]
+    },
+    {
+      "id": "application-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "apply",
+          "pos": "v",
+          "meaning_vi": "áp dụng; nộp đơn"
+        },
+        {
+          "word": "applicant",
+          "pos": "n",
+          "meaning_vi": "người nộp đơn; ứng viên"
+        },
+        {
+          "word": "applicable",
+          "pos": "adj",
+          "meaning_vi": "có thể áp dụng; thích hợp"
+        }
+      ]
+    },
+    {
+      "id": "applicable-adj",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "apply",
+          "pos": "v",
+          "meaning_vi": "áp dụng; nộp đơn"
+        },
+        {
+          "word": "applicant",
+          "pos": "n",
+          "meaning_vi": "người nộp đơn; ứng viên"
+        },
+        {
+          "word": "application",
+          "pos": "n",
+          "meaning_vi": "đơn ứng tuyển; ứng dụng; việc áp dụng"
+        }
+      ]
+    },
+    {
+      "id": "arrange-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "arrangement",
+          "pos": "n",
+          "meaning_vi": "sự sắp xếp; thỏa thuận"
+        }
+      ]
+    },
+    {
+      "id": "arrangement-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "arrange",
+          "pos": "v",
+          "meaning_vi": "sắp xếp; thu xếp"
+        }
+      ]
+    },
+    {
+      "id": "attendance-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "attendee",
+          "pos": "n",
+          "meaning_vi": "người tham dự"
+        }
+      ]
+    },
+    {
+      "id": "attendee-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "attendance",
+          "pos": "n",
+          "meaning_vi": "sự tham dự; chuyên cần"
+        }
+      ]
+    },
+    {
+      "id": "benefit-nv",
+      "path": "/word_family",
+      "expect": {
+        "old": [
+          {
+            "word": "beneficial",
+            "pos": "adj",
+            "meaning_vi": "có lợi"
+          }
+        ]
+      },
+      "new": [
+        {
+          "word": "beneficial",
+          "pos": "adj",
+          "meaning_vi": "có lợi"
+        },
+        {
+          "word": "beneficiary",
+          "pos": "n",
+          "meaning_vi": "người thụ hưởng"
+        }
+      ]
+    },
+    {
+      "id": "beneficial-adj",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "benefit",
+          "pos": "n/v",
+          "meaning_vi": "lợi ích; có lợi"
+        },
+        {
+          "word": "beneficiary",
+          "pos": "n",
+          "meaning_vi": "người thụ hưởng"
+        }
+      ]
+    },
+    {
+      "id": "beneficiary-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "benefit",
+          "pos": "n/v",
+          "meaning_vi": "lợi ích; có lợi"
+        },
+        {
+          "word": "beneficial",
+          "pos": "adj",
+          "meaning_vi": "có lợi"
+        }
+      ]
+    },
+    {
+      "id": "comply-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "compliance",
+          "pos": "n",
+          "meaning_vi": "sự tuân thủ"
+        }
+      ]
+    },
+    {
+      "id": "compliance-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "comply",
+          "pos": "v",
+          "meaning_vi": "tuân thủ"
+        }
+      ]
+    },
+    {
+      "id": "consultancy-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "consultant",
+          "pos": "n",
+          "meaning_vi": "chuyên gia tư vấn"
+        },
+        {
+          "word": "consultation",
+          "pos": "n",
+          "meaning_vi": "sự tư vấn; buổi tham vấn"
+        }
+      ]
+    },
+    {
+      "id": "consultant-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "consultancy",
+          "pos": "n",
+          "meaning_vi": "dịch vụ tư vấn; công ty tư vấn"
+        },
+        {
+          "word": "consultation",
+          "pos": "n",
+          "meaning_vi": "sự tư vấn; buổi tham vấn"
+        }
+      ]
+    },
+    {
+      "id": "consultation-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "consultancy",
+          "pos": "n",
+          "meaning_vi": "dịch vụ tư vấn; công ty tư vấn"
+        },
+        {
+          "word": "consultant",
+          "pos": "n",
+          "meaning_vi": "chuyên gia tư vấn"
+        }
+      ]
+    },
+    {
+      "id": "deliver-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "deliverable",
+          "pos": "n",
+          "meaning_vi": "sản phẩm bàn giao"
+        },
+        {
+          "word": "delivery",
+          "pos": "n",
+          "meaning_vi": "sự giao hàng; việc giao"
+        }
+      ]
+    },
+    {
+      "id": "deliverable-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "deliver",
+          "pos": "v",
+          "meaning_vi": "giao; chuyển; trình bày"
+        },
+        {
+          "word": "delivery",
+          "pos": "n",
+          "meaning_vi": "sự giao hàng; việc giao"
+        }
+      ]
+    },
+    {
+      "id": "employer-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "employee",
+          "pos": "n",
+          "meaning_vi": "người lao động; nhân viên"
+        },
+        {
+          "word": "employment",
+          "pos": "n",
+          "meaning_vi": "việc làm; sự tuyển dụng"
+        }
+      ]
+    },
+    {
+      "id": "employment-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "employee",
+          "pos": "n",
+          "meaning_vi": "người lao động; nhân viên"
+        },
+        {
+          "word": "employer",
+          "pos": "n",
+          "meaning_vi": "người sử dụng lao động"
+        }
+      ]
+    },
+    {
+      "id": "manage-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "manager",
+          "pos": "n",
+          "meaning_vi": "người quản lý"
+        }
+      ]
+    },
+    {
+      "id": "manager-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "manage",
+          "pos": "v",
+          "meaning_vi": "quản lý; điều hành"
+        }
+      ]
+    },
+    {
+      "id": "manufacture-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "manufacturer",
+          "pos": "n",
+          "meaning_vi": "nhà sản xuất"
+        }
+      ]
+    },
+    {
+      "id": "manufacturer-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "manufacture",
+          "pos": "v",
+          "meaning_vi": "sản xuất"
+        }
+      ]
+    },
+    {
+      "id": "produce-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "product",
+          "pos": "n",
+          "meaning_vi": "sản phẩm"
+        },
+        {
+          "word": "productivity",
+          "pos": "n",
+          "meaning_vi": "năng suất"
+        }
+      ]
+    },
+    {
+      "id": "product-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "produce",
+          "pos": "v/n",
+          "meaning_vi": "sản xuất; nông sản"
+        },
+        {
+          "word": "productivity",
+          "pos": "n",
+          "meaning_vi": "năng suất"
+        }
+      ]
+    },
+    {
+      "id": "productivity-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "produce",
+          "pos": "v/n",
+          "meaning_vi": "sản xuất; nông sản"
+        },
+        {
+          "word": "product",
+          "pos": "n",
+          "meaning_vi": "sản phẩm"
+        }
+      ]
+    },
+    {
+      "id": "recruitment-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "recruit",
+          "pos": "v",
+          "meaning_vi": "tuyển dụng"
+        }
+      ]
+    },
+    {
+      "id": "respond-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "response",
+          "pos": "n",
+          "meaning_vi": "phản hồi; sự đáp ứng"
+        }
+      ]
+    },
+    {
+      "id": "response-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "respond",
+          "pos": "v",
+          "meaning_vi": "phản hồi; đáp lại"
+        }
+      ]
+    },
+    {
+      "id": "supply-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "supplier",
+          "pos": "n",
+          "meaning_vi": "nhà cung cấp"
+        }
+      ]
+    },
+    {
+      "id": "authorize-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "authorization",
+          "pos": "n",
+          "meaning_vi": "sự ủy quyền; sự cho phép"
+        }
+      ]
+    },
+    {
+      "id": "authorization-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "authorize",
+          "pos": "v",
+          "meaning_vi": "ủy quyền; cho phép"
+        }
+      ]
+    },
+    {
+      "id": "confirmation-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "confirm",
+          "pos": "v",
+          "meaning_vi": "xác nhận"
+        }
+      ]
+    },
+    {
+      "id": "coordinate-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "coordinator",
+          "pos": "n",
+          "meaning_vi": "điều phối viên"
+        }
+      ]
+    },
+    {
+      "id": "coordinator-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "coordinate",
+          "pos": "v",
+          "meaning_vi": "phối hợp; điều phối"
+        }
+      ]
+    },
+    {
+      "id": "negotiation-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "negotiate",
+          "pos": "v",
+          "meaning_vi": "đàm phán"
+        },
+        {
+          "word": "negotiator",
+          "pos": "n",
+          "meaning_vi": "người đàm phán"
+        }
+      ]
+    },
+    {
+      "id": "negotiator-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "negotiate",
+          "pos": "v",
+          "meaning_vi": "đàm phán"
+        },
+        {
+          "word": "negotiation",
+          "pos": "n",
+          "meaning_vi": "cuộc đàm phán"
+        }
+      ]
+    },
+    {
+      "id": "approve-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "approval",
+          "pos": "n",
+          "meaning_vi": "sự phê duyệt"
+        }
+      ]
+    },
+    {
+      "id": "approval-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "approve",
+          "pos": "v",
+          "meaning_vi": "phê duyệt"
+        }
+      ]
+    },
+    {
+      "id": "inspection-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "inspect",
+          "pos": "v",
+          "meaning_vi": "kiểm tra; thanh tra"
+        },
+        {
+          "word": "inspector",
+          "pos": "n",
+          "meaning_vi": "thanh tra viên; nhân viên kiểm định"
+        }
+      ]
+    },
+    {
+      "id": "inspector-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "inspect",
+          "pos": "v",
+          "meaning_vi": "kiểm tra; thanh tra"
+        },
+        {
+          "word": "inspection",
+          "pos": "n",
+          "meaning_vi": "sự kiểm tra; cuộc thanh tra"
+        }
+      ]
+    },
+    {
+      "id": "supervise-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "supervision",
+          "pos": "n",
+          "meaning_vi": "sự giám sát"
+        },
+        {
+          "word": "supervisor",
+          "pos": "n",
+          "meaning_vi": "người giám sát"
+        }
+      ]
+    },
+    {
+      "id": "supervision-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "supervise",
+          "pos": "v",
+          "meaning_vi": "giám sát"
+        },
+        {
+          "word": "supervisor",
+          "pos": "n",
+          "meaning_vi": "người giám sát"
+        }
+      ]
+    },
+    {
+      "id": "supervisor-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "supervise",
+          "pos": "v",
+          "meaning_vi": "giám sát"
+        },
+        {
+          "word": "supervision",
+          "pos": "n",
+          "meaning_vi": "sự giám sát"
+        }
+      ]
+    },
+    {
+      "id": "compensation-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "compensate",
+          "pos": "v",
+          "meaning_vi": "bồi thường; đền bù"
+        }
+      ]
+    },
+    {
+      "id": "certify-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "certification",
+          "pos": "n",
+          "meaning_vi": "sự chứng nhận"
+        },
+        {
+          "word": "certificate",
+          "pos": "n",
+          "meaning_vi": "giấy chứng nhận"
+        }
+      ]
+    },
+    {
+      "id": "certification-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "certify",
+          "pos": "v",
+          "meaning_vi": "chứng nhận; xác nhận"
+        },
+        {
+          "word": "certificate",
+          "pos": "n",
+          "meaning_vi": "giấy chứng nhận"
+        }
+      ]
+    },
+    {
+      "id": "certificate-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "certify",
+          "pos": "v",
+          "meaning_vi": "chứng nhận; xác nhận"
+        },
+        {
+          "word": "certification",
+          "pos": "n",
+          "meaning_vi": "sự chứng nhận"
+        }
+      ]
+    }
+  ]
+}

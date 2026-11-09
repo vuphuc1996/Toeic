@@ -378,7 +378,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "lease",
+        "vs_es": "leases",
+        "v2": "leased",
+        "v3": "leased",
+        "ving": "leasing"
+      },
       "examples": [
         {
           "en": "The office lease expires at the end of June.",
@@ -754,7 +760,13 @@
         "FINANCE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "liquidate",
+        "vs_es": "liquidates",
+        "v2": "liquidated",
+        "v3": "liquidated",
+        "ving": "liquidating"
+      },
       "examples": [
         {
           "en": "The company decided to liquidate its unused equipment.",

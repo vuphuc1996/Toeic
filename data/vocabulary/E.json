@@ -370,7 +370,13 @@
           "meaning_vi": "thiết bị/người loại bỏ"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "eliminate",
+        "vs_es": "eliminates",
+        "v2": "eliminated",
+        "v3": "eliminated",
+        "ving": "eliminating"
+      },
       "examples": [
         {
           "en": "The revised procedure will eliminate unnecessary steps.",
@@ -590,7 +596,7 @@
       "cefr_level": "A2",
       "level_basis": "editorial-estimate",
       "phonetic": {
-        "us": "/ɪmˈplɔɪ.ər/"
+        "us": "/ɪmˈplɔɪ.ɚ/"
       },
       "senses": [
         {
@@ -611,7 +617,18 @@
         "HR",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "employee",
+          "pos": "n",
+          "meaning_vi": "người lao động; nhân viên"
+        },
+        {
+          "word": "employment",
+          "pos": "n",
+          "meaning_vi": "việc làm; sự tuyển dụng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -651,7 +668,18 @@
         "HR",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "employee",
+          "pos": "n",
+          "meaning_vi": "người lao động; nhân viên"
+        },
+        {
+          "word": "employer",
+          "pos": "n",
+          "meaning_vi": "người sử dụng lao động"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -684,14 +712,23 @@
         "OFFICE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "enclose",
+        "vs_es": "encloses",
+        "v2": "enclosed",
+        "v3": "enclosed",
+        "ving": "enclosing"
+      },
       "examples": [
         {
           "en": "Please enclose a copy of your receipt with the warranty claim.",
           "vi": "Vui lòng gửi kèm một bản sao biên lai cùng yêu cầu bảo hành."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "enclose a copy of the receipt",
+        "enclose the invoice"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -722,7 +759,13 @@
           "meaning_vi": "đã gặp phải"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "encounter",
+        "vs_es": "encounters",
+        "v2": "encountered",
+        "v3": "encountered",
+        "ving": "encountering"
+      },
       "examples": [
         {
           "en": "Applicants may encounter technical problems during registration.",
@@ -802,14 +845,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "endorse",
+        "vs_es": "endorses",
+        "v2": "endorsed",
+        "v3": "endorsed",
+        "ving": "endorsing"
+      },
       "examples": [
         {
           "en": "The board voted to endorse the revised investment proposal.",
           "vi": "Hội đồng đã bỏ phiếu tán thành đề xuất đầu tư đã sửa đổi."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "endorse a proposal",
+        "endorse a check"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -945,14 +997,23 @@
         "EDUCATION"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "enroll",
+        "vs_es": "enrolls",
+        "v2": "enrolled",
+        "v3": "enrolled",
+        "ving": "enrolling"
+      },
       "examples": [
         {
           "en": "Employees can enroll in the language program online.",
           "vi": "Nhân viên có thể đăng ký chương trình ngôn ngữ trực tuyến."
         }
       ],
-      "collocations": []
+      "collocations": [
+        "enroll in a training program",
+        "enroll new employees"
+      ]
     },
     {
       "id": "enrollment-n",
@@ -1262,7 +1323,7 @@
       "id": "estimate-nv",
       "word": "estimate",
       "phonetic": {
-        "us": "/ˈes.tə.meɪt; ˈes.tə.mət/"
+        "us": "/ˈes.tə.mət/"
       },
       "senses": [
         {
@@ -1294,7 +1355,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "estimate",
+        "vs_es": "estimates",
+        "v2": "estimated",
+        "v3": "estimated",
+        "ving": "estimating"
+      },
       "examples": [
         {
           "en": "The contractor provided an estimate for the repairs.",
@@ -1604,14 +1671,23 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "exempt",
+        "vs_es": "exempts",
+        "v2": "exempted",
+        "v3": "exempted",
+        "ving": "exempting"
+      },
       "examples": [
         {
           "en": "Small businesses may be exempt from the annual registration fee.",
           "vi": "Các doanh nghiệp nhỏ có thể được miễn lệ phí đăng ký hằng năm."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "be exempt from tax",
+        "exempt an employee from a fee"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },

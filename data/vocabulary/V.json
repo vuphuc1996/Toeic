@@ -501,7 +501,13 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "vest",
+        "vs_es": "vests",
+        "v2": "vested",
+        "v3": "vested",
+        "ving": "vesting"
+      },
       "examples": [
         {
           "en": "The shares will vest after the employee completes four years of service.",

@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.10-batch-001",
+  "baseDataVersion": "2.9.9",
+  "targetDataVersion": "2.9.10",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "description": "Verb forms and curated TOEIC collocations; 31 verb-form records.",
+  "operations": [
+    {
+      "id": "absorb-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "absorb",
+        "vs_es": "absorbs",
+        "v2": "absorbed",
+        "v3": "absorbed",
+        "ving": "absorbing"
+      }
+    },
+    {
+      "id": "accommodate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "accommodate",
+        "vs_es": "accommodates",
+        "v2": "accommodated",
+        "v3": "accommodated",
+        "ving": "accommodating"
+      }
+    },
+    {
+      "id": "accomplish-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "accomplish",
+        "vs_es": "accomplishes",
+        "v2": "accomplished",
+        "v3": "accomplished",
+        "ving": "accomplishing"
+      }
+    },
+    {
+      "id": "accrue-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "accrue",
+        "vs_es": "accrues",
+        "v2": "accrued",
+        "v3": "accrued",
+        "ving": "accruing"
+      }
+    },
+    {
+      "id": "accumulate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "accumulate",
+        "vs_es": "accumulates",
+        "v2": "accumulated",
+        "v3": "accumulated",
+        "ving": "accumulating"
+      }
+    },
+    {
+      "id": "acknowledge-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "acknowledge",
+        "vs_es": "acknowledges",
+        "v2": "acknowledged",
+        "v3": "acknowledged",
+        "ving": "acknowledging"
+      }
+    },
+    {
+      "id": "activate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "activate",
+        "vs_es": "activates",
+        "v2": "activated",
+        "v3": "activated",
+        "ving": "activating"
+      }
+    },
+    {
+      "id": "adapt-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "adapt",
+        "vs_es": "adapts",
+        "v2": "adapted",
+        "v3": "adapted",
+        "ving": "adapting"
+      }
+    },
+    {
+      "id": "adjourn-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "adjourn",
+        "vs_es": "adjourns",
+        "v2": "adjourned",
+        "v3": "adjourned",
+        "ving": "adjourning"
+      }
+    },
+    {
+      "id": "adopt-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "adopt",
+        "vs_es": "adopts",
+        "v2": "adopted",
+        "v3": "adopted",
+        "ving": "adopting"
+      }
+    },
+    {
+      "id": "affiliate-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "affiliate",
+        "vs_es": "affiliates",
+        "v2": "affiliated",
+        "v3": "affiliated",
+        "ving": "affiliating"
+      }
+    },
+    {
+      "id": "aggregate-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "aggregate",
+        "vs_es": "aggregates",
+        "v2": "aggregated",
+        "v3": "aggregated",
+        "ving": "aggregating"
+      }
+    },
+    {
+      "id": "alter-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "alter",
+        "vs_es": "alters",
+        "v2": "altered",
+        "v3": "altered",
+        "ving": "altering"
+      }
+    },
+    {
+      "id": "amend-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "amend",
+        "vs_es": "amends",
+        "v2": "amended",
+        "v3": "amended",
+        "ving": "amending"
+      }
+    },
+    {
+      "id": "apologize-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "apologize",
+        "vs_es": "apologizes",
+        "v2": "apologized",
+        "v3": "apologized",
+        "ving": "apologizing"
+      }
+    },
+    {
+      "id": "appoint-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "appoint",
+        "vs_es": "appoints",
+        "v2": "appointed",
+        "v3": "appointed",
+        "ving": "appointing"
+      }
+    },
+    {
+      "id": "appraise-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "appraise",
+        "vs_es": "appraises",
+        "v2": "appraised",
+        "v3": "appraised",
+        "ving": "appraising"
+      }
+    },
+    {
+      "id": "assess-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "assess",
+        "vs_es": "assesses",
+        "v2": "assessed",
+        "v3": "assessed",
+        "ving": "assessing"
+      }
+    },
+    {
+      "id": "assign-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "assign",
+        "vs_es": "assigns",
+        "v2": "assigned",
+        "v3": "assigned",
+        "ving": "assigning"
+      }
+    },
+    {
+      "id": "attribute-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "attribute",
+        "vs_es": "attributes",
+        "v2": "attributed",
+        "v3": "attributed",
+        "ving": "attributing"
+      }
+    },
+    {
+      "id": "authorize-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "authorize",
+        "vs_es": "authorizes",
+        "v2": "authorized",
+        "v3": "authorized",
+        "ving": "authorizing"
+      }
+    },
+    {
+      "id": "bargain-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "bargain",
+        "vs_es": "bargains",
+        "v2": "bargained",
+        "v3": "bargained",
+        "ving": "bargaining"
+      }
+    },
+    {
+      "id": "benchmark-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "benchmark",
+        "vs_es": "benchmarks",
+        "v2": "benchmarked",
+        "v3": "benchmarked",
+        "ving": "benchmarking"
+      }
+    },
+    {
+      "id": "benefit-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "benefit",
+        "vs_es": "benefits",
+        "v2": "benefited",
+        "v3": "benefited",
+        "ving": "benefiting"
+      }
+    },
+    {
+      "id": "bias-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "bias",
+        "vs_es": "biases",
+        "v2": "biased",
+        "v3": "biased",
+        "ving": "biasing"
+      }
+    },
+    {
+      "id": "budget-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "budget",
+        "vs_es": "budgets",
+        "v2": "budgeted",
+        "v3": "budgeted",
+        "ving": "budgeting"
+      }
+    },
+    {
+      "id": "certify-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "certify",
+        "vs_es": "certifies",
+        "v2": "certified",
+        "v3": "certified",
+        "ving": "certifying"
+      }
+    },
+    {
+      "id": "challenge-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "challenge",
+        "vs_es": "challenges",
+        "v2": "challenged",
+        "v3": "challenged",
+        "ving": "challenging"
+      }
+    },
+    {
+      "id": "channel-nv",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "channel",
+        "vs_es": "channels",
+        "v2": "channeled",
+        "v3": "channeled",
+        "ving": "channeling"
+      }
+    },
+    {
+      "id": "circulate-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "circulate",
+        "vs_es": "circulates",
+        "v2": "circulated",
+        "v3": "circulated",
+        "ving": "circulating"
+      }
+    },
+    {
+      "id": "clarify-v",
+      "path": "/verb_forms",
+      "expect": {
+        "old": null,
+        "verbSense": true
+      },
+      "new": {
+        "v1": "clarify",
+        "vs_es": "clarifies",
+        "v2": "clarified",
+        "v3": "clarified",
+        "ving": "clarifying"
+      }
+    },
+    {
+      "id": "accomplish-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "accomplish a goal",
+        "accomplish a task"
+      ]
+    },
+    {
+      "id": "accrue-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "accrue interest",
+        "accrue employee benefits"
+      ]
+    },
+    {
+      "id": "adopt-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "adopt a policy",
+        "adopt a new strategy"
+      ]
+    },
+    {
+      "id": "amend-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "amend a contract",
+        "amend the agreement"
+      ]
+    },
+    {
+      "id": "apologize-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "apologize for the delay",
+        "apologize for the inconvenience"
+      ]
+    },
+    {
+      "id": "assess-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "assess employee performance",
+        "assess the financial risk"
+      ]
+    },
+    {
+      "id": "authorize-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "authorize payment",
+        "authorize access to the system"
+      ]
+    },
+    {
+      "id": "bargain-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "strike a bargain",
+        "bargain for a lower price"
+      ]
+    },
+    {
+      "id": "circulate-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "circulate the meeting agenda",
+        "circulate a memo"
+      ]
+    },
+    {
+      "id": "clarify-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [],
+        "verbSense": true
+      },
+      "new": [
+        "clarify the requirements",
+        "clarify the deadline"
+      ]
+    }
+  ]
+}

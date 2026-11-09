@@ -87,7 +87,13 @@
         "HR"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "absorb",
+        "vs_es": "absorbs",
+        "v2": "absorbed",
+        "v3": "absorbed",
+        "ving": "absorbing"
+      },
       "examples": [
         {
           "en": "The company plans to absorb the temporary staff into its permanent workforce.",
@@ -313,7 +319,13 @@
         "HOTEL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "accommodate",
+        "vs_es": "accommodates",
+        "v2": "accommodated",
+        "v3": "accommodated",
+        "ving": "accommodating"
+      },
       "examples": [
         {
           "en": "The conference room can accommodate up to forty participants.",
@@ -385,14 +397,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "accomplish",
+        "vs_es": "accomplishes",
+        "v2": "accomplished",
+        "v3": "accomplished",
+        "ving": "accomplishing"
+      },
       "examples": [
         {
           "en": "The project team accomplished all of its targets ahead of schedule.",
           "vi": "Nhóm dự án đã hoàn thành tất cả mục tiêu trước thời hạn."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "accomplish a goal",
+        "accomplish a task"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -583,14 +604,23 @@
         "FINANCE"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "accrue",
+        "vs_es": "accrues",
+        "v2": "accrued",
+        "v3": "accrued",
+        "ving": "accruing"
+      },
       "examples": [
         {
           "en": "Interest will accrue on the outstanding balance until it is paid in full.",
           "vi": "Tiền lãi sẽ tích lũy trên số dư còn nợ cho đến khi được thanh toán đầy đủ."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "accrue interest",
+        "accrue employee benefits"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -626,7 +656,13 @@
           "meaning_vi": "tích lũy dần"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "accumulate",
+        "vs_es": "accumulates",
+        "v2": "accumulated",
+        "v3": "accumulated",
+        "ving": "accumulating"
+      },
       "examples": [
         {
           "en": "Small expenses can accumulate into a substantial amount.",
@@ -698,7 +734,13 @@
           "meaning_vi": "sự công nhận; xác nhận"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "acknowledge",
+        "vs_es": "acknowledges",
+        "v2": "acknowledged",
+        "v3": "acknowledged",
+        "ving": "acknowledging"
+      },
       "examples": [
         {
           "en": "Please acknowledge receipt of the revised contract.",
@@ -772,7 +814,13 @@
         "TECHNOLOGY"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "activate",
+        "vs_es": "activates",
+        "v2": "activated",
+        "v3": "activated",
+        "ving": "activating"
+      },
       "examples": [
         {
           "en": "New employees must activate their accounts before accessing the portal.",
@@ -818,7 +866,13 @@
           "meaning_vi": "có khả năng thích nghi"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "adapt",
+        "vs_es": "adapts",
+        "v2": "adapted",
+        "v3": "adapted",
+        "ving": "adapting"
+      },
       "examples": [
         {
           "en": "New employees must adapt quickly to the company's procedures.",
@@ -1031,7 +1085,13 @@
         "MEETING"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "adjourn",
+        "vs_es": "adjourns",
+        "v2": "adjourned",
+        "v3": "adjourned",
+        "ving": "adjourning"
+      },
       "examples": [
         {
           "en": "The chairperson adjourned the meeting until Friday.",
@@ -1232,14 +1292,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "adopt",
+        "vs_es": "adopts",
+        "v2": "adopted",
+        "v3": "adopted",
+        "ving": "adopting"
+      },
       "examples": [
         {
           "en": "The board voted to adopt the new customer service guidelines.",
           "vi": "Hội đồng đã bỏ phiếu thông qua bộ hướng dẫn dịch vụ khách hàng mới."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "adopt a policy",
+        "adopt a new strategy"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -1385,7 +1454,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "affiliate",
+        "vs_es": "affiliates",
+        "v2": "affiliated",
+        "v3": "affiliated",
+        "ving": "affiliating"
+      },
       "examples": [
         {
           "en": "The regional affiliate will handle customer inquiries.",
@@ -1458,7 +1533,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "aggregate",
+        "vs_es": "aggregates",
+        "v2": "aggregated",
+        "v3": "aggregated",
+        "ving": "aggregating"
+      },
       "examples": [
         {
           "en": "The aggregate cost of the project exceeded the initial estimate.",
@@ -1711,7 +1792,13 @@
           "meaning_vi": "sự thay đổi; chỉnh sửa"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "alter",
+        "vs_es": "alters",
+        "v2": "altered",
+        "v3": "altered",
+        "ving": "altering"
+      },
       "examples": [
         {
           "en": "The supplier agreed to alter the delivery schedule.",
@@ -1831,14 +1918,23 @@
         "LEGAL"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "amend",
+        "vs_es": "amends",
+        "v2": "amended",
+        "v3": "amended",
+        "ving": "amending"
+      },
       "examples": [
         {
           "en": "Both parties agreed to amend the contract before signing it.",
           "vi": "Hai bên đồng ý sửa đổi hợp đồng trước khi ký."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "amend a contract",
+        "amend the agreement"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -2147,14 +2243,23 @@
         "CUSTOMER"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "apologize",
+        "vs_es": "apologizes",
+        "v2": "apologized",
+        "v3": "apologized",
+        "ving": "apologizing"
+      },
       "examples": [
         {
           "en": "The airline apologized to passengers for the unexpected delay.",
           "vi": "Hãng hàng không đã xin lỗi hành khách vì sự chậm trễ ngoài dự kiến."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "apologize for the delay",
+        "apologize for the inconvenience"
+      ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -2198,7 +2303,7 @@
       "id": "applicable-adj",
       "word": "applicable",
       "phonetic": {
-        "us": ""
+        "us": "/əˈplɪk.ə.bəl/"
       },
       "senses": [
         {
@@ -2213,7 +2318,23 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "apply",
+          "pos": "v",
+          "meaning_vi": "áp dụng; nộp đơn"
+        },
+        {
+          "word": "applicant",
+          "pos": "n",
+          "meaning_vi": "người nộp đơn; ứng viên"
+        },
+        {
+          "word": "application",
+          "pos": "n",
+          "meaning_vi": "đơn ứng tuyển; ứng dụng; việc áp dụng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2249,7 +2370,23 @@
       "topics": [
         "CAREER"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "apply",
+          "pos": "v",
+          "meaning_vi": "áp dụng; nộp đơn"
+        },
+        {
+          "word": "application",
+          "pos": "n",
+          "meaning_vi": "đơn ứng tuyển; ứng dụng; việc áp dụng"
+        },
+        {
+          "word": "applicable",
+          "pos": "adj",
+          "meaning_vi": "có thể áp dụng; thích hợp"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2263,7 +2400,7 @@
       "id": "application-n",
       "word": "application",
       "phonetic": {
-        "us": ""
+        "us": "/ˌæp.ləˈkeɪ.ʃən/"
       },
       "senses": [
         {
@@ -2278,7 +2415,23 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "apply",
+          "pos": "v",
+          "meaning_vi": "áp dụng; nộp đơn"
+        },
+        {
+          "word": "applicant",
+          "pos": "n",
+          "meaning_vi": "người nộp đơn; ứng viên"
+        },
+        {
+          "word": "applicable",
+          "pos": "adj",
+          "meaning_vi": "có thể áp dụng; thích hợp"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2320,7 +2473,23 @@
         "HR",
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "applicant",
+          "pos": "n",
+          "meaning_vi": "người nộp đơn; ứng viên"
+        },
+        {
+          "word": "application",
+          "pos": "n",
+          "meaning_vi": "đơn ứng tuyển; ứng dụng; việc áp dụng"
+        },
+        {
+          "word": "applicable",
+          "pos": "adj",
+          "meaning_vi": "có thể áp dụng; thích hợp"
+        }
+      ],
       "verb_forms": {
         "v1": "apply",
         "vs_es": "applies",
@@ -2359,7 +2528,13 @@
         "HR"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "appoint",
+        "vs_es": "appoints",
+        "v2": "appointed",
+        "v3": "appointed",
+        "ving": "appointing"
+      },
       "examples": [
         {
           "en": "The director appointed Ms. Chen as regional manager.",
@@ -2463,7 +2638,13 @@
         "HR"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "appraise",
+        "vs_es": "appraises",
+        "v2": "appraised",
+        "v3": "appraised",
+        "ving": "appraising"
+      },
       "examples": [
         {
           "en": "Supervisors appraise staff performance twice a year.",
@@ -2564,7 +2745,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "approve",
+          "pos": "v",
+          "meaning_vi": "phê duyệt"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2603,7 +2790,13 @@
         "BUSINESS",
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "approval",
+          "pos": "n",
+          "meaning_vi": "sự phê duyệt"
+        }
+      ],
       "verb_forms": {
         "v1": "approve",
         "vs_es": "approves",
@@ -2805,7 +2998,13 @@
         "TIME",
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "arrangement",
+          "pos": "n",
+          "meaning_vi": "sự sắp xếp; thỏa thuận"
+        }
+      ],
       "verb_forms": {
         "v1": "arrange",
         "vs_es": "arranges",
@@ -2828,7 +3027,7 @@
       "id": "arrangement-n",
       "word": "arrangement",
       "phonetic": {
-        "us": ""
+        "us": "/əˈreɪndʒ.mənt/"
       },
       "senses": [
         {
@@ -2843,7 +3042,13 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "arrange",
+          "pos": "v",
+          "meaning_vi": "sắp xếp; thu xếp"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2946,14 +3151,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "assess",
+        "vs_es": "assesses",
+        "v2": "assessed",
+        "v3": "assessed",
+        "ving": "assessing"
+      },
       "examples": [
         {
           "en": "The consultant will assess the building before preparing a renovation estimate.",
           "vi": "Chuyên gia tư vấn sẽ đánh giá tòa nhà trước khi lập dự toán cải tạo."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "assess employee performance",
+        "assess the financial risk"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -3057,7 +3271,13 @@
           "meaning_vi": "người được giao"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "assign",
+        "vs_es": "assigns",
+        "v2": "assigned",
+        "v3": "assigned",
+        "ving": "assigning"
+      },
       "examples": [
         {
           "en": "The manager assigned each analyst a section of the report.",
@@ -3258,7 +3478,7 @@
       "id": "attendance-n",
       "word": "attendance",
       "phonetic": {
-        "us": ""
+        "us": "/əˈten.dəns/"
       },
       "senses": [
         {
@@ -3273,7 +3493,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "attendee",
+          "pos": "n",
+          "meaning_vi": "người tham dự"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -3292,7 +3518,7 @@
       "id": "attendee-n",
       "word": "attendee",
       "phonetic": {
-        "us": ""
+        "us": "/ə.tenˈdiː/"
       },
       "senses": [
         {
@@ -3307,7 +3533,13 @@
       "topics": [
         "MEETING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "attendance",
+          "pos": "n",
+          "meaning_vi": "sự tham dự; chuyên cần"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -3346,7 +3578,13 @@
           "meaning_vi": "sự quy kết; sự ghi công"
         }
       ],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "attribute",
+        "vs_es": "attributes",
+        "v2": "attributed",
+        "v3": "attributed",
+        "ving": "attributing"
+      },
       "examples": [
         {
           "en": "Researchers attribute the improvement to better staff training.",
@@ -3478,7 +3716,7 @@
       "id": "authorization-n",
       "word": "authorization",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɑː.θɚ.əˈzeɪ.ʃən/"
       },
       "senses": [
         {
@@ -3493,7 +3731,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "authorize",
+          "pos": "v",
+          "meaning_vi": "ủy quyền; cho phép"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -3527,15 +3771,30 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
-      "verb_forms": null,
+      "word_family": [
+        {
+          "word": "authorization",
+          "pos": "n",
+          "meaning_vi": "sự ủy quyền; sự cho phép"
+        }
+      ],
+      "verb_forms": {
+        "v1": "authorize",
+        "vs_es": "authorizes",
+        "v2": "authorized",
+        "v3": "authorized",
+        "ving": "authorizing"
+      },
       "examples": [
         {
           "en": "Only the finance director can authorize payments above the stated limit.",
           "vi": "Chỉ giám đốc tài chính mới có quyền phê duyệt các khoản thanh toán vượt hạn mức đã quy định."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "authorize payment",
+        "authorize access to the system"
+      ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },

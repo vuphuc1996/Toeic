@@ -70,14 +70,23 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "generate",
+        "vs_es": "generates",
+        "v2": "generated",
+        "v3": "generated",
+        "ving": "generating"
+      },
       "examples": [
         {
           "en": "The new advertising campaign is expected to generate more online sales.",
           "vi": "Chiến dịch quảng cáo mới được kỳ vọng tạo ra thêm doanh thu trực tuyến."
         }
       ],
-      "collocations": [],
+      "collocations": [
+        "generate revenue",
+        "generate qualified leads"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -262,7 +271,13 @@
         "BUSINESS"
       ],
       "word_family": [],
-      "verb_forms": null,
+      "verb_forms": {
+        "v1": "guarantee",
+        "vs_es": "guarantees",
+        "v2": "guaranteed",
+        "v3": "guaranteed",
+        "ving": "guaranteeing"
+      },
       "examples": [
         {
           "en": "The product comes with a two-year guarantee.",
