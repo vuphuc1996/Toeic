@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2.9.7",
+  "version": "2.9.8",
   "letters": [
     {
       "letter": "A",
@@ -143,6 +143,5 @@
     "C1": 67
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
-  "totalTopics": 32,
-  "wordCount": 928
+  "totalTopics": 32
 }

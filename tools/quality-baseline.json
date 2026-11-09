@@ -1,0 +1,2587 @@
+{
+  "schemaVersion": 1,
+  "createdFrom": {
+    "version": "2.9.7",
+    "totalWords": 928,
+    "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656"
+  },
+  "note": "Nợ chất lượng đã biết. Không sửa tay; chỉ siết lại bằng --tighten-baseline trong commit được duyệt.",
+  "rules": {
+    "DF002": {
+      "params": {
+        "pattern": "headword + [—–:-]"
+      },
+      "violations": [
+        {
+          "id": "absence-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accommodate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accomplish-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accordance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accountable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accrue-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accurate-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "activate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "additional-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "adjacent-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "adjustment-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "administrative-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "administrator-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "admission-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "adopt-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "allocation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "amend-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "annually-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "apologize-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "applicable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "approval-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "approximately-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "arrangement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "assess-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "assistance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "attendance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "attendee-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "authorization-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "authorize-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "backlog-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "backup-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "bargain-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "beneficial-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "billable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "billing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "briefing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "capacity-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "cargo-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "certificate-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "circulate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "clarify-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "clientele-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "compensation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "competitive-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "competitor-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "completion-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "comply-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "confidential-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "confirmation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consecutive-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consent-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consumable-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consumption-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "contractual-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "coordinate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "courtesy-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "coverage-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "creditor-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deduct-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deduction-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "defective-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deficit-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "delegate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deliverable-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "departure-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "disclose-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "discrepancy-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "distribute-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "documentation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "duplicate-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "durable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "duration-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "efficiently-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "electronic-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "eligibility-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "eligible-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "emission-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "enclose-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "endorse-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "enquiry-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "equivalent-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "exempt-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "expiration-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "extension-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "facilitate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "feasibility-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "feasible-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "flexibility-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "fulfill-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "generate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "guideline-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "handling-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "implement-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "incentive-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "incentivize-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inquire-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inquiry-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inspection-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inspector-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "invoicing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "justify-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "laboratory-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "lessee-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "lessor-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "liability-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "maintenance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "mandatory-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "manufacturer-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "nevertheless-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "occupancy-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "officeholder-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "outsource-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "outsourcing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "outstanding-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "overdue-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "overhaul-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "parcel-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "participant-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "payable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "penalty-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "performance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "perishable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "portfolio-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "postage-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "postponement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "precaution-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "premium-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "prescribe-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "priority-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "productivity-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "proficiency-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "proficient-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "prolong-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "prolonged-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "promptly-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "provisional-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "qualification-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "reconciliation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "recurring-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "reimburse-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "reliable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "renew-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "renewal-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "replacement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "requirement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "reschedule-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "revision-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "specify-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "subscribe-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "subscription-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "sufficient-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "sufficiently-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "surcharge-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "suspend-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "suspension-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "transact-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "transit-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "turnover-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "undergo-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "validity-n",
+          "at": "/senses/0/definition_en"
+        }
+      ]
+    },
+    "DF003": {
+      "params": {
+        "markers": "đ ơ ư ă, dot-below, hook-above, tilde, circumflex+tone"
+      },
+      "violations": [
+        {
+          "id": "absence-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accommodate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accomplish-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accordance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accountable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accrue-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "activate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "additional-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "adjacent-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "adjustment-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "administrative-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "administrator-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "admission-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "adopt-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "allocation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "annually-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "apologize-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "applicable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "approval-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "approximately-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "arrangement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "assess-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "assistance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "attendance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "attendee-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "authorization-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "authorize-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "backlog-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "backup-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "billable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "billing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "cargo-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "circulate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "clientele-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "compensation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "competitive-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "competitor-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "completion-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "confirmation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consent-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consumable-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "contractual-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "coordinate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "courtesy-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "coverage-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "creditor-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deduction-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "defective-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deficit-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deliverable-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "discrepancy-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "distribute-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "documentation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "duplicate-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "duration-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "efficiently-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "electronic-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "eligibility-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "endorse-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "enquiry-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "equivalent-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "exempt-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "expiration-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "extension-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "feasibility-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "feasible-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "flexibility-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "handling-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "incentivize-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inquiry-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inspector-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "invoicing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "lessee-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "lessor-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "liability-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "manufacturer-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "nevertheless-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "occupancy-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "officeholder-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "outsource-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "outsourcing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "overhaul-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "parcel-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "payable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "penalty-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "perishable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "portfolio-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "postage-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "postponement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "premium-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "prescribe-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "productivity-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "proficiency-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "proficient-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "prolong-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "prolonged-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "promptly-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "provisional-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "reconciliation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "recurring-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "renew-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "replacement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "revision-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "specify-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "subscribe-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "subscription-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "sufficient-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "sufficiently-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "surcharge-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "suspend-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "suspension-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "transact-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "transit-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "turnover-n",
+          "at": "/senses/0/definition_en"
+        }
+      ]
+    },
+    "DF004": {
+      "params": {
+        "match": "case-insensitive prefix at word boundary"
+      },
+      "violations": [
+        {
+          "id": "absence-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accommodate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accomplish-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accordance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accountable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accrue-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "accurate-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "activate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "additional-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "adjacent-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "adjustment-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "administrative-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "administrator-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "admission-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "adopt-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "allocation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "amend-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "annually-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "apologize-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "applicable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "approval-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "approximately-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "arrangement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "assess-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "assistance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "attendance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "attendee-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "authorization-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "authorize-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "backlog-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "backup-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "bargain-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "beneficial-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "billable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "billing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "briefing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "capacity-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "cargo-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "certificate-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "circulate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "clarify-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "clientele-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "compensation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "competitive-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "competitor-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "completion-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "comply-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "confidential-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "confirmation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consecutive-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consent-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consumable-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "consumption-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "contractual-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "coordinate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "courtesy-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "coverage-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "creditor-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deduct-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deduction-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "defective-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deficit-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "delegate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "deliverable-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "departure-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "disclose-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "discrepancy-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "distribute-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "documentation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "duplicate-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "durable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "duration-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "efficiently-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "electronic-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "eligibility-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "eligible-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "emission-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "enclose-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "endorse-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "enquiry-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "equivalent-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "exempt-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "expiration-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "extension-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "facilitate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "feasibility-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "feasible-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "flexibility-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "fulfill-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "generate-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "guideline-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "handling-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "implement-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "incentive-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "incentivize-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inquire-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inquiry-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inspection-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "inspector-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "invoicing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "justify-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "laboratory-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "lessee-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "lessor-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "liability-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "maintenance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "mandatory-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "manufacturer-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "nevertheless-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "occupancy-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "officeholder-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "outsource-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "outsourcing-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "outstanding-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "overdue-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "overhaul-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "parcel-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "participant-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "payable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "penalty-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "performance-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "perishable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "portfolio-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "postage-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "postponement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "precaution-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "premium-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "prescribe-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "priority-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "productivity-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "proficiency-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "proficient-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "prolong-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "prolonged-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "promptly-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "provisional-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "qualification-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "reconciliation-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "recurring-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "reimburse-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "reliable-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "renew-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "renewal-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "replacement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "requirement-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "reschedule-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "revision-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "specify-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "subscribe-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "subscription-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "sufficient-adj",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "sufficiently-adv",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "surcharge-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "suspend-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "suspension-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "transact-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "transit-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "turnover-n",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "undergo-v",
+          "at": "/senses/0/definition_en"
+        },
+        {
+          "id": "validity-n",
+          "at": "/senses/0/definition_en"
+        }
+      ]
+    },
+    "DF005": {
+      "params": {
+        "scope": "same record, casefold"
+      },
+      "violations": [
+        {
+          "id": "advocate-vn",
+          "at": "/senses/1/definition_en"
+        },
+        {
+          "id": "approximate-adjv",
+          "at": "/senses/1/definition_en"
+        },
+        {
+          "id": "decline-vn",
+          "at": "/senses/1/definition_en"
+        }
+      ]
+    },
+    "EX004": {
+      "params": {
+        "minRepeat": 3,
+        "mask": "headword + suffix up to word end"
+      },
+      "violations": [
+        {
+          "id": "absence-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "accomplish-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "accrue-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "accurate-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "adjacent-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "admission-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "adopt-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "amend-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "apologize-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "approval-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "assess-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "attendee-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "authorize-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "backup-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "bargain-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "beneficial-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "billing-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "briefing-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "capacity-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "cargo-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "certificate-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "circulate-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "clarify-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "clientele-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "comply-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "confidential-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "confirmation-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "consecutive-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "consent-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "consumption-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "coordinate-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "courtesy-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "deduct-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "defective-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "delegate-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "departure-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "disclose-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "discrepancy-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "distribute-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "durable-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "eligible-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "emission-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "enclose-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "endorse-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "exempt-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "extension-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "facilitate-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "feasible-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "fulfill-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "generate-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "guideline-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "implement-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "incentive-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "inquire-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "inquiry-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "inspection-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "justify-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "laboratory-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "liability-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "maintenance-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "mandatory-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "nevertheless-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "occupancy-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "outstanding-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "overdue-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "participant-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "performance-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "precaution-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "priority-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "provisional-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "qualification-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "reimburse-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "reliable-adj",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "renewal-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "requirement-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "reschedule-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "turnover-n",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "undergo-v",
+          "at": "/examples/0/en"
+        },
+        {
+          "id": "validity-n",
+          "at": "/examples/0/en"
+        }
+      ]
+    },
+    "EX005": {
+      "params": {
+        "minRepeat": 3,
+        "mask": "headword + meaning_vi parts"
+      },
+      "violations": [
+        {
+          "id": "absence-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "accomplish-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "accrue-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "accurate-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "adjacent-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "admission-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "adopt-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "amend-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "apologize-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "approval-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "assess-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "attendee-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "authorize-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "backup-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "bargain-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "beneficial-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "billing-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "briefing-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "capacity-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "cargo-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "certificate-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "circulate-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "clarify-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "clientele-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "comply-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "confidential-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "confirmation-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "consecutive-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "consent-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "consumption-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "coordinate-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "courtesy-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "deduct-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "defective-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "delegate-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "departure-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "disclose-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "discrepancy-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "distribute-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "durable-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "eligible-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "emission-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "enclose-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "endorse-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "exempt-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "extension-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "facilitate-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "feasible-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "fulfill-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "generate-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "guideline-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "implement-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "incentive-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "inquire-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "inquiry-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "inspection-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "justify-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "laboratory-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "liability-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "maintenance-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "mandatory-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "nevertheless-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "occupancy-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "outstanding-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "overdue-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "participant-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "performance-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "precaution-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "priority-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "provisional-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "qualification-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "reimburse-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "reliable-adj",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "renewal-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "requirement-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "reschedule-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "turnover-n",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "undergo-v",
+          "at": "/examples/0/vi"
+        },
+        {
+          "id": "validity-n",
+          "at": "/examples/0/vi"
+        }
+      ]
+    },
+    "EX006": {
+      "params": {
+        "match": "token stem + up to 4 letters"
+      },
+      "violations": [
+        {
+          "id": "day-n",
+          "at": "/examples/0/en"
+        }
+      ]
+    },
+    "EX009": {
+      "params": {
+        "rule": "no Vietnamese letters or equal to en"
+      },
+      "violations": []
+    },
+    "IP001": {
+      "params": {
+        "regex": "^/[^/;()\\[\\]]+/$"
+      },
+      "violations": [
+        {
+          "id": "estimate-nv",
+          "at": "/phonetic/us"
+        },
+        {
+          "id": "transfer-nv",
+          "at": "/phonetic/us"
+        }
+      ]
+    },
+    "IP003": {
+      "params": {
+        "minVowelGroups": 2
+      },
+      "violations": []
+    },
+    "IP004": {
+      "params": {
+        "substring": "ər"
+      },
+      "violations": [
+        {
+          "id": "buyer-n",
+          "at": "/phonetic/us"
+        },
+        {
+          "id": "consider-v",
+          "at": "/phonetic/us"
+        },
+        {
+          "id": "deliver-v",
+          "at": "/phonetic/us"
+        },
+        {
+          "id": "difference-n",
+          "at": "/phonetic/us"
+        },
+        {
+          "id": "employer-n",
+          "at": "/phonetic/us"
+        }
+      ]
+    },
+    "FD001": {
+      "params": {
+        "match": "token stem + up to 4 letters"
+      },
+      "violations": [
+        {
+          "id": "apprentice-n",
+          "at": "/collocations/1"
+        },
+        {
+          "id": "event-coordinator-n",
+          "at": "/collocations/1"
+        },
+        {
+          "id": "fare-n",
+          "at": "/collocations/0"
+        },
+        {
+          "id": "replace-v",
+          "at": "/collocations/1"
+        },
+        {
+          "id": "reserve-v",
+          "at": "/collocations/1"
+        },
+        {
+          "id": "warehouseman-n",
+          "at": "/collocations/0"
+        },
+        {
+          "id": "warehouseman-n",
+          "at": "/collocations/1"
+        },
+        {
+          "id": "zero-based-budgeting-n",
+          "at": "/collocations/1"
+        }
+      ]
+    },
+    "TP002": {
+      "params": {
+        "scan": "assets/js/*.js, index.html, assets/css/*.css; literal assets/ paths and topic file: names"
+      },
+      "violations": []
+    },
+    "SW002": {
+      "params": {
+        "exclude": [
+          "^data/vocabulary/batch-\\d+\\.json$",
+          "^data/verbs/irregular-verbs\\.json$"
+        ]
+      },
+      "violations": [
+        {
+          "id": "assets/topics/customer.webp",
+          "at": ""
+        },
+        {
+          "id": "assets/topics/finance.webp",
+          "at": ""
+        },
+        {
+          "id": "assets/topics/meeting.webp",
+          "at": ""
+        },
+        {
+          "id": "assets/topics/office.webp",
+          "at": ""
+        },
+        {
+          "id": "assets/topics/shipping.webp",
+          "at": ""
+        },
+        {
+          "id": "assets/topics/technology.webp",
+          "at": ""
+        },
+        {
+          "id": "assets/topics/time.webp",
+          "at": ""
+        },
+        {
+          "id": "assets/topics/travel.webp",
+          "at": ""
+        }
+      ]
+    }
+  }
+}
