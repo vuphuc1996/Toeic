@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.10.0 – Flashcard Learning</title>
+  <title>TOEIC Dictionary v2.10.1 – Flashcard Learning</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -65,7 +65,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.10.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.10.1 · GitHub-only</div>
       </div>
     </aside>
 
@@ -125,7 +125,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.10.0:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.10.1:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -274,7 +274,7 @@
               <label class="field"><span class="field-label">NGHỈ GIỮA CÁC TỪ VỰNG</span><select id="ttsWordPause"><option value="600">0.6 giây</option><option value="800">0.8 giây</option><option value="900">0.9 giây · Mặc định</option><option value="1100">1.1 giây</option><option value="1300">1.3 giây</option></select></label>
               <label class="field"><span class="field-label">NGHỈ GIỮA LƯỢT LỜI</span><select id="ttsSentencePause"><option value="600">0.6 giây</option><option value="750">0.75 giây</option><option value="850">0.85 giây · Mặc định</option><option value="1000">1 giây</option><option value="1200">1.2 giây</option></select></label>
             </div>
-            <div class="tts-settings-note"><strong>Cách hoạt động:</strong> Giọng nam và nữ được lưu riêng trên thiết bị. Bạn có thể chọn thủ công cùng một voice cho cả hai nhóm khi hệ điều hành không gắn nhãn giới tính chính xác. Mục “Đọc từ vựng chậm” sẽ phát từng từ riêng, nghỉ theo thời gian đã chọn; hội thoại vẫn giữ câu nói liền mạch và chỉ nghỉ giữa các lượt lời. Voice phụ thuộc trình duyệt/hệ điều hành, nên tên và chất lượng có thể khác nhau giữa Windows, Android và iOS. Pitch chỉ điều chỉnh độ cao âm, không thể khử tiếng ồm hoặc biến voice gốc thành voice khác.</div>
+            <div class="tts-settings-note"><strong>Cách hoạt động:</strong> Giọng nam và nữ được lưu riêng trên thiết bị. Bạn có thể chọn thủ công cùng một voice cho cả hai nhóm khi hệ điều hành không gắn nhãn giới tính chính xác. Mục “Đọc từ vựng chậm” sẽ phát từng từ riêng, nghỉ theo thời gian đã chọn; hội thoại vẫn giữ câu nói liền mạch và chỉ nghỉ giữa các lượt lời. Voice phụ thuộc trình duyệt/hệ điều hành, nên tên và chất lượng có thể khác nhau giữa Windows, Android và iOS. Trên iPhone, nếu thiết bị có voice Daniel — en-GB, ứng dụng sẽ gợi ý voice này cho nhóm nam vì bạn đã xác nhận nghe rõ hơn giọng nam mặc định. Bạn vẫn có thể chọn voice khác. Pitch chỉ điều chỉnh độ cao âm, không thể khử tiếng ồm hoặc biến voice gốc thành voice khác.</div>
             <button type="button" class="secondary-button" id="previewDefaultVoice">▶ Nghe thử giọng mặc định</button>
           </section>
           <section class="panel settings-panel settings-data-panel">
@@ -307,7 +307,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.10.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.10.1</span></footer>
     </main>
   </div>
 

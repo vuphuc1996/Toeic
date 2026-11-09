@@ -6,7 +6,7 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const DB_NAME = 'toeic-vocabulary-phase1';
 const DB_STORE = 'workspace';
 const DEFAULT_TTS_SETTINGS = { accent: 'en-US', defaultGender: 'female', maleVoiceURI: '', femaleVoiceURI: '', rate: 0.92, pitch: 1, volume: 1, wordPauseMs: 900, sentencePauseMs: 850 };
-const state = { words: [], baseWords: [], categories: [], relatedTerms: new Map(), personalVocabulary: { schemaVersion: 3, additions: [], overrides: {}, overrideBaseSigs: {}, deletedBaseIds: [] }, staleOverrideIds: [], wordSources: new Map(), grammarLessons: [], readings: [], listening: [], grammarProgress: {}, readingProgress: {}, listeningProgress: {}, activeListening: null, speechRate: 1, activeGrammarLesson: null, activeReading: null, activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3, tts: { ...DEFAULT_TTS_SETTINGS } }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionAnswered: false, practiceReviewPending: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceTransitionTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceDuration: 3000, autoAdvanceCancelled: false, lastGoogleContext: '', lastGoogleQuery: '', flashProgress: {}, flashSession: null, flashQuizIndex: 0, flashQuizAnswers: [] };
+const state = { words: [], baseWords: [], categories: [], relatedTerms: new Map(), personalVocabulary: { schemaVersion: 3, additions: [], overrides: {}, overrideBaseSigs: {}, deletedBaseIds: [] }, staleOverrideIds: [], wordSources: new Map(), grammarLessons: [], readings: [], listening: [], grammarProgress: {}, readingProgress: {}, listeningProgress: {}, activeListening: null, speechRate: 1, activeGrammarLesson: null, activeReading: null, activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3, tts: { ...DEFAULT_TTS_SETTINGS } }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionAnswered: false, practiceReviewPending: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceTransitionTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceDuration: 3000, autoAdvanceCancelled: false, autoAdvanceWaiting: false, lastGoogleContext: '', lastGoogleQuery: '', flashProgress: {}, flashSession: null, flashQuizIndex: 0, flashQuizAnswers: [] };
 
 function openDB() {
   return new Promise((resolve, reject) => {
@@ -349,7 +349,7 @@ async function deleteWord(id){
   else state.personalVocabulary.additions=state.personalVocabulary.additions.filter(w=>w.id!==id);
   await persistPersonalVocabulary(); updateOverview(); renderDictionary(); renderDataTable(); renderQuestion(); toast('Đã cập nhật danh sách từ vựng cá nhân.');
 }
-function closeModal(){ if(state.practiceReviewPending)return;stopSpeech();$('#modalBackdrop').classList.remove('is-practice-review');delete $('#modalBackdrop').dataset.modalType;$('#closeModal').hidden=false;$('#modalBackdrop').hidden=true;$('#modalContent').innerHTML=''; }
+function closeModal(){ if(state.practiceReviewPending||state.autoAdvanceWaiting)return;stopSpeech();$('#modalBackdrop').classList.remove('is-practice-review');delete $('#modalBackdrop').dataset.modalType;$('#closeModal').hidden=false;$('#modalBackdrop').hidden=true;$('#modalContent').innerHTML=''; }
 function downloadFile(name,content,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function personalExportRecords(){return sortWords([...state.personalVocabulary.additions,...Object.values(state.personalVocabulary.overrides)]);}
 function exportJSON(){const payload={schemaVersion:3,exportedAt:new Date().toISOString(),type:'TOEIC_PERSONAL_VOCABULARY',note:'Chỉ chứa thay đổi cá nhân; không bao gồm dữ liệu từ điển gốc của GitHub.',personalVocabulary:state.personalVocabulary,words:personalExportRecords()};downloadFile('toeic-personal-vocabulary.json',JSON.stringify(payload,null,2),'application/json;charset=utf-8');toast('Đã xuất dữ liệu từ vựng cá nhân.');}
@@ -485,7 +485,7 @@ function makeQuestion(mode='random', forcedWordId=null) {
   return q;
 }
 async function savePracticeSession() {
-  await dbSet('practiceSession', { currentQuestion: state.currentQuestion, questionAnswered: state.questionAnswered, practiceReviewPending: state.practiceReviewPending, sessionSeenIds: state.sessionSeenIds, lastFeedback: state.lastFeedback, autoAdvanceCancelled: state.autoAdvanceCancelled });
+  await dbSet('practiceSession', { currentQuestion: state.currentQuestion, questionAnswered: state.questionAnswered, practiceReviewPending: state.practiceReviewPending, sessionSeenIds: state.sessionSeenIds, lastFeedback: state.lastFeedback, autoAdvanceCancelled: state.autoAdvanceCancelled, autoAdvanceWaiting: state.autoAdvanceWaiting });
 }
 function progressPriorityLabel(wordId) {
   const p = getWordProgress(wordId);
@@ -663,15 +663,56 @@ function openPracticeReviewModal(feedback){
   $('#modalBackdrop').hidden=false;
   $('#modalContent [data-practice-review-ok]')?.focus();
 }
+function closeAutoAdvanceWaitModal(){
+  const backdrop=$('#modalBackdrop');
+  if(backdrop?.dataset.modalType!=='practice-wait')return;
+  backdrop.classList.remove('is-auto-advance-wait');
+  delete backdrop.dataset.modalType;
+  $('#closeModal').hidden=false;
+  backdrop.hidden=true;
+  $('#modalContent').innerHTML='';
+}
+function showAutoAdvanceWaitModal(){
+  const backdrop=$('#modalBackdrop');
+  backdrop.classList.remove('is-practice-review');
+  backdrop.classList.add('is-auto-advance-wait');
+  backdrop.dataset.modalType='practice-wait';
+  $('#closeModal').hidden=true;
+  $('#modalEyebrow').textContent='SMART REVIEW · CHUẨN BỊ CÂU TIẾP THEO';
+  $('#modalTitle').textContent='Đang chuẩn bị câu hỏi mới';
+  $('#modalContent').innerHTML=`<div class="auto-next-wait-card" role="status" aria-live="polite"><div class="auto-next-wait-loader" aria-hidden="true"><span></span></div><p class="auto-next-wait-kicker">BẠN ĐÃ HOÀN THÀNH CÂU HỎI</p><h3 id="autoAdvanceWaitStatus">Đang chuẩn bị câu tiếp theo</h3><p id="autoAdvanceWaitHint">Bạn có thể xem thời gian chờ hoặc giữ câu hiện tại để chuyển thủ công.</p><div class="auto-next-wait-meter"><div class="auto-next-wait-ring" id="autoAdvanceWaitRing"><strong id="autoAdvanceWaitCountdown">${Number(state.settings.autoNextDelaySeconds)||3}</strong><small>GIÂY</small></div><div class="auto-next-wait-progress"><span id="autoAdvanceWaitProgress"></span></div><div class="auto-next-wait-stage" id="autoAdvanceWaitStage">Đang chọn nội dung phù hợp với tiến độ học.</div></div><button type="button" class="secondary-button" data-auto-advance-cancel>Giữ câu này · Chuyển thủ công</button></div>`;
+  backdrop.hidden=false;
+  updateAutoAdvanceUI();
+}
+async function cancelAutoAdvanceWait(){
+  if(!state.autoAdvanceWaiting)return;
+  clearAutoAdvance();
+  state.autoAdvanceWaiting=false;
+  state.autoAdvanceCancelled=true;
+  closeAutoAdvanceWaitModal();
+  $('#nextQuestionButton').disabled=false;
+  await savePracticeSession();
+  updateAutoAdvanceUI();
+  toast('Đã giữ câu hiện tại. Bạn có thể tự chuyển sang câu tiếp theo.');
+}
 async function acknowledgePracticeReview(){
   if(!state.practiceReviewPending)return;
   state.practiceReviewPending=false;
+  if(state.settings.autoNextEnabled&&!state.autoAdvanceCancelled){
+    state.autoAdvanceWaiting=true;
+    await savePracticeSession();
+    $('#nextQuestionButton').disabled=true;
+    showAutoAdvanceWaitModal();
+    scheduleAutoAdvance();
+    return;
+  }
+  state.autoAdvanceWaiting=false;
   $('#modalBackdrop').classList.remove('is-practice-review');delete $('#modalBackdrop').dataset.modalType;
   $('#closeModal').hidden=false;$('#modalBackdrop').hidden=true;$('#modalContent').innerHTML='';
   await savePracticeSession();
   $('#nextQuestionButton').disabled=false;
-  if(state.settings.autoNextEnabled&&!state.autoAdvanceCancelled)scheduleAutoAdvance();
-  else{clearAutoAdvance();updateAutoAdvanceUI();}
+  clearAutoAdvance();
+  updateAutoAdvanceUI();
 }
 
 async function updatePracticeProgress(wordId, correct, input) {
@@ -723,6 +764,8 @@ async function submitAnswer(value) {
 }
 async function nextQuestion(modeOverride=null) {
   clearAutoAdvance();
+  state.autoAdvanceWaiting=false;
+  closeAutoAdvanceWaitModal();
   state.autoAdvanceCancelled=false;
   const mode=modeOverride||$('#practiceMode').value||'random';
   const q=makeQuestion(mode);
@@ -744,27 +787,27 @@ function clearAutoAdvance() {
 }
 function updateAutoAdvanceUI() {
   const row=$('#autoAdvanceRow');
-  if(!row)return;
-  const active=!!state.questionAnswered && !state.practiceReviewPending && !!state.settings.autoNextEnabled && !state.autoAdvanceCancelled;
-  row.hidden=!active;
-  if(!active){row.classList.remove('is-loading','is-final-count');const countdown=$('#autoAdvanceCountdown');if(countdown)countdown.textContent=String(Number(state.settings.autoNextDelaySeconds)||3);const progress=$('#autoAdvanceProgress');if(progress)progress.style.width='0%';return;}
+  if(row)row.hidden=true; // Countdown is presented in a focused waiting modal, not below the answer content.
+  const active=!!state.autoAdvanceWaiting && !!state.questionAnswered && !state.practiceReviewPending && !!state.settings.autoNextEnabled && !state.autoAdvanceCancelled;
+  const backdrop=$('#modalBackdrop');
+  if(!active){
+    if(backdrop?.dataset.modalType==='practice-wait')closeAutoAdvanceWaitModal();
+    return;
+  }
   const remaining=state.autoAdvanceAt ? state.autoAdvanceAt-Date.now() : (state.autoAdvanceRemaining??((Number(state.settings.autoNextDelaySeconds)||3)*1000));
   const seconds=Math.max(0,Math.ceil(remaining/1000));
   const duration=Math.max(1000,state.autoAdvanceDuration||((Number(state.settings.autoNextDelaySeconds)||3)*1000));
   const elapsed=Math.min(1,Math.max(0,1-Math.max(0,remaining)/duration));
-  const countdown=$('#autoAdvanceCountdown'), status=$('#autoAdvanceStatus'), hint=$('#autoAdvanceHint');
-  const progress=$('#autoAdvanceProgress'), stageText=$('#autoAdvanceStageText'), ring=$('#autoAdvanceRing');
-  if(countdown){const next=String(seconds||'✓');if(countdown.textContent!==next){countdown.textContent=next;countdown.classList.remove('count-tick');void countdown.offsetWidth;countdown.classList.add('count-tick');}}
+  const count=$('#autoAdvanceWaitCountdown'),status=$('#autoAdvanceWaitStatus'),hint=$('#autoAdvanceWaitHint');
+  const progress=$('#autoAdvanceWaitProgress'),ring=$('#autoAdvanceWaitRing'),stage=$('#autoAdvanceWaitStage');
+  if(count){const next=String(seconds||'✓');if(count.textContent!==next){count.textContent=next;count.classList.remove('count-tick');void count.offsetWidth;count.classList.add('count-tick');}}
   if(progress)progress.style.width=`${Math.round(elapsed*100)}%`;
-  const stage=seconds>=3?'Chuẩn bị câu mới':seconds===2?'Sắp chuyển câu':seconds===1?'Sẵn sàng chưa?':'Đang tải câu hỏi mới…';
-  if(status)status.textContent=stage;
-  if(hint)hint.textContent=seconds>0?'Hãy ghi nhớ đáp án vừa học trước khi chuyển câu.':'Đang chọn từ tiếp theo phù hợp với tiến độ của bạn.';
-  if(stageText)stageText.textContent=seconds>0?'Chuẩn bị câu mới':'Đang chuyển câu';
   if(ring){ring.style.setProperty('--ring-progress',`${Math.round(elapsed*100)}%`);ring.classList.toggle('is-final',seconds<=1);}
-  row.classList.toggle('is-loading',seconds===0);
-  row.classList.toggle('is-final-count',seconds===1);
-  $$('.advance-stage i',row).forEach((dot,index)=>dot.classList.toggle('is-active',index<Math.max(0,Math.min(3,Math.ceil(elapsed*3)))));
+  if(status)status.textContent=seconds>0?'Đang chuẩn bị câu tiếp theo':'Đang tải câu hỏi mới…';
+  if(hint)hint.textContent=seconds>0?'Hệ thống đang chọn từ phù hợp với lịch sử ôn tập của bạn.':'Một chút nữa thôi, câu hỏi tiếp theo đang được mở.';
+  if(stage)stage.textContent=seconds>0?`Còn ${seconds} giây · Bạn có thể giữ câu để chuyển thủ công.`:'Đang hoàn tất chuyển câu…';
 }
+
 function pauseAutoAdvance() {
   if(state.autoAdvanceAt) state.autoAdvanceRemaining=Math.max(0,state.autoAdvanceAt-Date.now());
   if(state.autoAdvanceTimer){clearInterval(state.autoAdvanceTimer);state.autoAdvanceTimer=null;}
@@ -772,7 +815,7 @@ function pauseAutoAdvance() {
   if(state.questionAnswered) updateAutoAdvanceUI();
 }
 function resumeAutoAdvance() {
-  if(!state.questionAnswered||state.practiceReviewPending||!state.settings.autoNextEnabled||state.autoAdvanceCancelled||state.activePage!=='practice'||document.hidden)return;
+  if(!state.questionAnswered||state.practiceReviewPending||!state.autoAdvanceWaiting||!state.settings.autoNextEnabled||state.autoAdvanceCancelled||state.activePage!=='practice'||document.hidden)return;
   if(state.autoAdvanceTimer||state.autoAdvanceTransitionTimer)return;
   const delay=state.autoAdvanceRemaining ?? ((Number(state.settings.autoNextDelaySeconds)||3)*1000);
   state.autoAdvanceRemaining=null;
@@ -787,7 +830,7 @@ function resumeAutoAdvance() {
       const countdown=$('#autoAdvanceCountdown');const status=$('#autoAdvanceStatus');
       if(countdown)countdown.textContent='…';
       if(status)status.textContent='Đang tải câu hỏi tiếp theo…';
-      state.autoAdvanceTransitionTimer=setTimeout(async()=>{state.autoAdvanceTransitionTimer=null;if(state.activePage==='practice'&&!document.hidden)await nextQuestion();},420);
+      state.autoAdvanceTransitionTimer=setTimeout(async()=>{state.autoAdvanceTransitionTimer=null;if(state.activePage==='practice'&&!document.hidden){state.autoAdvanceWaiting=false;closeAutoAdvanceWaitModal();await nextQuestion();}},520);
     }
   },100);
   updateAutoAdvanceUI();
@@ -795,7 +838,7 @@ function resumeAutoAdvance() {
 function scheduleAutoAdvance() {
   clearAutoAdvance();
   state.autoAdvanceCancelled=false;
-  if(!state.settings.autoNextEnabled||!state.questionAnswered||state.practiceReviewPending){updateAutoAdvanceUI();return;}
+  if(!state.settings.autoNextEnabled||!state.questionAnswered||state.practiceReviewPending||!state.autoAdvanceWaiting){updateAutoAdvanceUI();return;}
   state.autoAdvanceRemaining=(Number(state.settings.autoNextDelaySeconds)||3)*1000;
   state.autoAdvanceDuration=state.autoAdvanceRemaining;
   resumeAutoAdvance();
@@ -803,7 +846,9 @@ function scheduleAutoAdvance() {
 }
 async function holdCurrentQuestion() {
   clearAutoAdvance();
+  state.autoAdvanceWaiting=false;
   state.autoAdvanceCancelled=true;
+  closeAutoAdvanceWaitModal();
   await savePracticeSession();
   updateAutoAdvanceUI();
   toast('Đã giữ câu hỏi. Bạn có thể xem kỹ đáp án và giải nghĩa.');
@@ -812,8 +857,8 @@ function setAutoNextSettings(enabled, seconds) {
   state.settings.autoNextEnabled=!!enabled;
   state.settings.autoNextDelaySeconds=[3,5,10].includes(Number(seconds))?Number(seconds):3;
   dbSet('appSettings',state.settings).catch(err=>console.warn('Không lưu được cấu hình tự chuyển:',err));
-  if(!state.settings.autoNextEnabled) clearAutoAdvance();
-  else if(state.questionAnswered&&!state.practiceReviewPending&&!state.autoAdvanceCancelled) scheduleAutoAdvance();
+  if(!state.settings.autoNextEnabled){clearAutoAdvance();state.autoAdvanceWaiting=false;closeAutoAdvanceWaitModal();$('#nextQuestionButton').disabled=!state.questionAnswered||state.practiceReviewPending;}
+  else if(state.questionAnswered&&!state.practiceReviewPending&&!state.autoAdvanceCancelled){state.autoAdvanceWaiting=true;showAutoAdvanceWaitModal();scheduleAutoAdvance();}
   updateAutoAdvanceUI();
 }
 function formatRemaining(ms) {
@@ -1022,6 +1067,7 @@ async function initializePractice() {
     state.sessionSeenIds=Array.isArray(session.sessionSeenIds)?session.sessionSeenIds:[];
     state.lastFeedback=session.lastFeedback||null;
     state.autoAdvanceCancelled=!!session.autoAdvanceCancelled;
+    state.autoAdvanceWaiting=!!session.autoAdvanceWaiting;
     if(state.currentQuestion?.word){const oldWord=String(state.currentQuestion.word);const newWord=displayWord(oldWord);state.currentQuestion.prompt=String(state.currentQuestion.prompt||'').split(oldWord).join(newWord);state.currentQuestion.word=newWord;if(state.currentQuestion.expectedWord&&state.currentQuestion.expectedDisplay)state.currentQuestion.expectedDisplay=displayWord(state.currentQuestion.expectedDisplay);}
   }
   if(state.currentQuestion&&!state.words.some(w=>w.id===state.currentQuestion.wordId)){state.currentQuestion=null;state.questionAnswered=false;}
@@ -1032,7 +1078,7 @@ async function initializePractice() {
   window.addEventListener('focus',()=>{checkReminder();resumeAutoAdvance();});
   if(new URLSearchParams(location.search).get('open')==='practice')navigate('practice');
   if(state.questionAnswered&&state.practiceReviewPending&&state.lastFeedback){openPracticeReviewModal(state.lastFeedback);}
-  else if(state.questionAnswered&&!state.autoAdvanceCancelled&&state.settings.autoNextEnabled){state.autoAdvanceRemaining=(Number(state.settings.autoNextDelaySeconds)||3)*1000;resumeAutoAdvance();}
+  else if(state.questionAnswered&&!state.autoAdvanceCancelled&&state.settings.autoNextEnabled){state.autoAdvanceWaiting=true;state.autoAdvanceRemaining=(Number(state.settings.autoNextDelaySeconds)||3)*1000;state.autoAdvanceDuration=state.autoAdvanceRemaining;showAutoAdvanceWaitModal();resumeAutoAdvance();}
 }
 function syncSettingsUI(){
   const enabled=$('#autoNextEnabled');if(enabled)enabled.checked=!!state.settings.autoNextEnabled;
@@ -1156,14 +1202,14 @@ function bindEvents(){
   $('#importButton').addEventListener('click',()=>$('#importFile').click());
   $('#importFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{await importFile(file);}catch(err){toast(`Import thất bại: ${err.message}`,'error');}finally{e.target.value='';}});
   $('#exportJsonButton').addEventListener('click',exportJSON);$('#exportCsvButton').addEventListener('click',exportCSV);$('#resetLocalButton').addEventListener('click',resetWorkspace);
-  $('#closeModal').addEventListener('click',()=>{if(state.practiceReviewPending)return;closeModal();});$('#modalBackdrop').addEventListener('click',e=>{if(e.target.id==='modalBackdrop'&&state.practiceReviewPending&&$('#modalBackdrop').dataset.modalType==='practice-review')return;if(e.target.id==='modalBackdrop')closeModal();});
-  $('#modalContent').addEventListener('click',async e=>{const edit=e.target.closest('[data-edit]');const ai=e.target.closest('[data-ai-word]');const copy=e.target.closest('[data-copy-ai-prompt]');const open=e.target.closest('[data-open-google-ai]');const grammarChoice=e.target.closest('[data-grammar-choice]');const readingChoice=e.target.closest('[data-reading-choice]');const lookup=e.target.closest('[data-lookup-term]');const grammarAI=e.target.closest('[data-ai-lesson]');const readingAI=e.target.closest('[data-ai-reading]');const listeningChoice=e.target.closest('[data-listening-choice]');const listeningAI=e.target.closest('[data-ai-listening]');const speak=e.target.closest('[data-speak-word]');const stop=e.target.closest('[data-stop-speech]');const play=e.target.closest('[data-listening-play]');const stopListening=e.target.closest('[data-listening-stop]');const vocabPlay=e.target.closest('[data-listening-vocab-play]');const reviewOk=e.target.closest('[data-practice-review-ok]');const reviewAI=e.target.closest('[data-practice-review-ai]');if(reviewOk){acknowledgePracticeReview();return;}if(reviewAI){showAIPromptModal(buildPracticeAIPrompt(),'Phân tích câu trả lời ôn tập hiện tại');return;}if(edit)openEditor(edit.dataset.edit);if(ai){const w=state.words.find(x=>x.id===ai.dataset.aiWord);if(w)showAIPromptModal(buildWordAIPrompt(w),`Giải thích từ ${displayWord(w.word)} theo ngữ cảnh TOEIC`);}if(copy)await copyAIPrompt();if(open)openGoogleAIFromPanel();if(grammarChoice)answerGrammarExercise(grammarChoice);if(readingChoice)answerReadingQuestion(readingChoice);if(lookup)openLookupTerm(lookup.dataset.lookupTerm);if(grammarAI){const lesson=state.grammarLessons.find(x=>x.id===grammarAI.dataset.aiLesson);if(lesson)showAIPromptModal(buildGrammarAIPrompt(lesson),`Phân tích ngữ pháp ${lesson.title}`);}if(readingAI){const reading=state.readings.find(x=>x.id===readingAI.dataset.aiReading);if(reading)showAIPromptModal(buildReadingAIPrompt(reading),`Phân tích bài đọc TOEIC ${reading.title}`);}if(listeningChoice)answerListeningQuestion(listeningChoice);if(listeningAI){const item=state.listening.find(x=>x.id===listeningAI.dataset.aiListening);if(item)showAIPromptModal(buildListeningAIPrompt(item),`Phân tích bài nghe TOEIC ${item.title}`);}if(speak)speakText(speak.dataset.speakWord,speak.dataset.accent||null,'',state.settings.tts?.defaultGender||'female');if(stop)stopSpeech();if(play)playListeningAudio(play.dataset.listeningPlay);if(vocabPlay)playListeningVocabulary(vocabPlay.dataset.listeningVocabPlay);if(stopListening)stopSpeech();});
+  $('#closeModal').addEventListener('click',()=>{if(state.practiceReviewPending)return;closeModal();});$('#modalBackdrop').addEventListener('click',e=>{if(e.target.id==='modalBackdrop'&&(state.practiceReviewPending||state.autoAdvanceWaiting))return;if(e.target.id==='modalBackdrop')closeModal();});
+  $('#modalContent').addEventListener('click',async e=>{const edit=e.target.closest('[data-edit]');const ai=e.target.closest('[data-ai-word]');const copy=e.target.closest('[data-copy-ai-prompt]');const open=e.target.closest('[data-open-google-ai]');const grammarChoice=e.target.closest('[data-grammar-choice]');const readingChoice=e.target.closest('[data-reading-choice]');const lookup=e.target.closest('[data-lookup-term]');const grammarAI=e.target.closest('[data-ai-lesson]');const readingAI=e.target.closest('[data-ai-reading]');const listeningChoice=e.target.closest('[data-listening-choice]');const listeningAI=e.target.closest('[data-ai-listening]');const speak=e.target.closest('[data-speak-word]');const stop=e.target.closest('[data-stop-speech]');const play=e.target.closest('[data-listening-play]');const stopListening=e.target.closest('[data-listening-stop]');const vocabPlay=e.target.closest('[data-listening-vocab-play]');const reviewOk=e.target.closest('[data-practice-review-ok]');const reviewAI=e.target.closest('[data-practice-review-ai]');const waitCancel=e.target.closest('[data-auto-advance-cancel]');if(waitCancel){cancelAutoAdvanceWait();return;}if(reviewOk){acknowledgePracticeReview();return;}if(reviewAI){showAIPromptModal(buildPracticeAIPrompt(),'Phân tích câu trả lời ôn tập hiện tại');return;}if(edit)openEditor(edit.dataset.edit);if(ai){const w=state.words.find(x=>x.id===ai.dataset.aiWord);if(w)showAIPromptModal(buildWordAIPrompt(w),`Giải thích từ ${displayWord(w.word)} theo ngữ cảnh TOEIC`);}if(copy)await copyAIPrompt();if(open)openGoogleAIFromPanel();if(grammarChoice)answerGrammarExercise(grammarChoice);if(readingChoice)answerReadingQuestion(readingChoice);if(lookup)openLookupTerm(lookup.dataset.lookupTerm);if(grammarAI){const lesson=state.grammarLessons.find(x=>x.id===grammarAI.dataset.aiLesson);if(lesson)showAIPromptModal(buildGrammarAIPrompt(lesson),`Phân tích ngữ pháp ${lesson.title}`);}if(readingAI){const reading=state.readings.find(x=>x.id===readingAI.dataset.aiReading);if(reading)showAIPromptModal(buildReadingAIPrompt(reading),`Phân tích bài đọc TOEIC ${reading.title}`);}if(listeningChoice)answerListeningQuestion(listeningChoice);if(listeningAI){const item=state.listening.find(x=>x.id===listeningAI.dataset.aiListening);if(item)showAIPromptModal(buildListeningAIPrompt(item),`Phân tích bài nghe TOEIC ${item.title}`);}if(speak)speakText(speak.dataset.speakWord,speak.dataset.accent||null,'',state.settings.tts?.defaultGender||'female');if(stop)stopSpeech();if(play)playListeningAudio(play.dataset.listeningPlay);if(vocabPlay)playListeningVocabulary(vocabPlay.dataset.listeningVocabPlay);if(stopListening)stopSpeech();});
   $('#closeGoogleSearch').addEventListener('click',closeGoogleSearchPanel);
   $('#googleSearchBackdrop').addEventListener('click',e=>{if(e.target.id==='googleSearchBackdrop')closeGoogleSearchPanel();});
   $('#runGoogleAIButton').addEventListener('click',openGoogleSearch);
   $('#globalSearch').addEventListener('keydown',e=>{if(e.key==='Enter'){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
   $('#globalSearch').addEventListener('input',e=>{if(e.target.value.length>=2){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
-  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#globalSearch').focus();}if(e.key==='Escape'){if(!$('#googleSearchBackdrop').hidden)closeGoogleSearchPanel();else if($('#installInviteBackdrop').hidden&&!state.practiceReviewPending)closeModal();}});
+  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#globalSearch').focus();}if(e.key==='Escape'){if(!$('#googleSearchBackdrop').hidden)closeGoogleSearchPanel();else if($('#installInviteBackdrop').hidden&&!state.practiceReviewPending&&!state.autoAdvanceWaiting)closeModal();}});
   window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();state.deferredInstall=e;syncInstallButton();if(state.installGuideOpen)openInstallInvite('guide');});
   window.addEventListener('appinstalled',()=>{markInstallInviteDismissed();closeInstallInvite(false);syncInstallButton();toast('TOEIC Dictionary đã được thêm vào thiết bị.');});
   $('#installButton').addEventListener('click',()=>{if(isMobileOrTabletDevice())openInstallInvite('guide');else if(state.deferredInstall)runNativeInstall();});
@@ -1273,17 +1319,28 @@ function classifyVoiceHint(value=''){
   if(/male|man|daniel|alex|fred|tom|arthur|oliver|guy|david|mark|george|ryan|james/.test(hint))return 'male';
   return '';
 }
+function recommendedMaleVoice(voices=getSpeechVoices()){
+  // The user confirmed that iOS Daniel (English UK) sounds clearer than the default male voice.
+  return voices.find(v=>/\bdaniel\b/i.test(v.name||'')&&String(v.lang||'').toLowerCase()==='en-gb')
+    || voices.find(v=>/\bdaniel\b/i.test(v.name||'')) || null;
+}
 function refreshSpeechVoiceSelectors(){
   const voices=getSpeechVoices();
-  const options=voices.map(v=>{const gender=classifyVoiceGender(v);const label=gender==='male'?' · nhận diện nam':gender==='female'?' · nhận diện nữ':' · chưa xác định giới tính';return `<option value="${escapeHtml(v.voiceURI||v.name)}">${escapeHtml(v.name)} — ${escapeHtml(v.lang||'en')} ${label}</option>`;}).join('');
+  const suggestedMale=recommendedMaleVoice(voices);
+  const options=voices.map(v=>{const gender=classifyVoiceGender(v);const label=(v===suggestedMale?' · gợi ý rõ ràng trên iPhone':gender==='male'?' · nhận diện nam':gender==='female'?' · nhận diện nữ':' · chưa xác định giới tính');return `<option value="${escapeHtml(v.voiceURI||v.name)}">${escapeHtml(v.name)} — ${escapeHtml(v.lang||'en')}${label}</option>`;}).join('');
   for(const gender of ['male','female']){
     const select=$(`#tts${gender==='male'?'Male':'Female'}Voice`);if(!select)continue;
     const saved=state.settings.tts?.[`${gender}VoiceURI`]||'';
     select.innerHTML=`<option value="">Tự chọn voice phù hợp</option>${options}`;
-    if(saved){if([...select.options].some(o=>o.value===saved))select.value=saved;else{const missing=document.createElement('option');missing.value=saved;missing.textContent='Voice đã lưu nhưng thiết bị hiện tại không cung cấp';select.append(missing);select.value=saved;}}
+    const recommended=gender==='male'?suggestedMale:null;
+    const selected=saved||(recommended?(recommended.voiceURI||recommended.name):'');
+    if(selected){if([...select.options].some(o=>o.value===selected))select.value=selected;else{const missing=document.createElement('option');missing.value=selected;missing.textContent='Voice đã lưu nhưng thiết bị hiện tại không cung cấp';select.append(missing);select.value=selected;}}
     select.disabled=!voices.length;
   }
-  const status=$('#ttsVoiceStatus');if(status)status.textContent=voices.length?`Đã tìm thấy ${voices.length} voice tiếng Anh trên thiết bị này.`:'Trình duyệt chưa cung cấp voice tiếng Anh. Thử tải lại danh sách hoặc kiểm tra cài đặt giọng nói của hệ điều hành.';
+  const status=$('#ttsVoiceStatus');
+  if(status){
+    status.textContent=voices.length?`Đã tìm thấy ${voices.length} voice tiếng Anh trên thiết bị này.${suggestedMale?' Giọng nam gợi ý: '+suggestedMale.name+' — '+suggestedMale.lang+'.':''}`:'Trình duyệt chưa cung cấp voice tiếng Anh. Thử tải lại danh sách hoặc kiểm tra cài đặt giọng nói của hệ điều hành.';
+  }
 }
 function chooseEnglishVoice(accent='en-US',speaker='',voiceHint='',excludeNames=[]){
   const voices=getSpeechVoices();if(!voices.length)return null;
@@ -1293,7 +1350,8 @@ function chooseEnglishVoice(accent='en-US',speaker='',voiceHint='',excludeNames=
   const pool=exact.length?exact:voices;
   const wanted=classifyVoiceHint(voiceHint||speaker)||cfg.defaultGender;
   const preferredURI=wanted==='male'?cfg.maleVoiceURI:wanted==='female'?cfg.femaleVoiceURI:'';
-  if(preferredURI){const chosen=pool.find(v=>(v.voiceURI||v.name)===preferredURI)||voices.find(v=>(v.voiceURI||v.name)===preferredURI);if(chosen)return chosen;}
+  if(preferredURI){const chosen=voices.find(v=>(v.voiceURI||v.name)===preferredURI);if(chosen)return chosen;}
+  if(wanted==='male'){const daniel=recommendedMaleVoice(voices);if(daniel)return daniel;}
   const gendered=pool.filter(v=>classifyVoiceGender(v)===wanted);
   const preferred=gendered.length?gendered:pool;
   const available=preferred.filter(v=>!excludeNames.includes(v.name));
@@ -1302,11 +1360,11 @@ function chooseEnglishVoice(accent='en-US',speaker='',voiceHint='',excludeNames=
 }
 function configureUtterance(utterance,{accent,gender,voice,rate}={}){
   const cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})};
-  utterance.lang=accent||cfg.accent||'en-US';
+  const chosen=voice||chooseEnglishVoice(accent||cfg.accent,'',gender||cfg.defaultGender);
+  utterance.lang=chosen?.lang||accent||cfg.accent||'en-US';
   utterance.rate=Math.min(1.15,Math.max(.75,Number(rate??cfg.rate)||.92));
   utterance.pitch=Math.min(1.2,Math.max(.8,Number(cfg.pitch)||1));
   utterance.volume=Math.min(1,Math.max(.1,Number(cfg.volume)||1));
-  const chosen=voice||chooseEnglishVoice(utterance.lang,'',gender||cfg.defaultGender);
   if(chosen)utterance.voice=chosen;
   return utterance;
 }
