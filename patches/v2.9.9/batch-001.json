@@ -1,0 +1,1010 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.9-batch-001",
+  "baseDataVersion": "2.9.8",
+  "targetDataVersion": "2.9.9",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "description": "Manual editorial correction: 40 headwords, English definitions and TOEIC-context examples with Vietnamese translations.",
+  "operations": [
+    {
+      "id": "absence-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Absence — sự vắng mặt.",
+        "pos": "n"
+      },
+      "new": "the fact of not being present in a place or at an event"
+    },
+    {
+      "id": "absence-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed absence during the meeting."
+      },
+      "new": "The employee's absence was recorded in the attendance system."
+    },
+    {
+      "id": "absence-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “absence” trong cuộc họp."
+      },
+      "new": "Sự vắng mặt của nhân viên đã được ghi nhận trong hệ thống chấm công."
+    },
+    {
+      "id": "accommodate-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "accommodate: đáp ứng; cung cấp chỗ ở.",
+        "pos": "v"
+      },
+      "new": "to provide enough space for someone or something, or to adjust to someone's needs"
+    },
+    {
+      "id": "accommodate-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The hotel can accommodate up to 250 conference guests."
+      },
+      "new": "The conference room can accommodate up to forty participants."
+    },
+    {
+      "id": "accommodate-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Khách sạn có thể phục vụ tối đa 250 khách dự hội nghị."
+      },
+      "new": "Phòng hội nghị có thể đáp ứng chỗ ngồi cho tối đa bốn mươi người tham dự."
+    },
+    {
+      "id": "accomplish-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Accomplish — hoàn thành; đạt được.",
+        "pos": "v"
+      },
+      "new": "to succeed in doing or completing something, especially a task or goal"
+    },
+    {
+      "id": "accomplish-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed accomplish during the meeting."
+      },
+      "new": "The project team accomplished all of its targets ahead of schedule."
+    },
+    {
+      "id": "accomplish-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “accomplish” trong cuộc họp."
+      },
+      "new": "Nhóm dự án đã hoàn thành tất cả mục tiêu trước thời hạn."
+    },
+    {
+      "id": "accordance-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "accordance: sự phù hợp; sự tuân theo.",
+        "pos": "n"
+      },
+      "new": "the condition of following a rule, instruction, or standard; commonly used in “in accordance with”"
+    },
+    {
+      "id": "accordance-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "All payments must be made in accordance with the contract."
+      },
+      "new": "All expense claims must be submitted in accordance with company policy."
+    },
+    {
+      "id": "accordance-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Mọi khoản thanh toán phải được thực hiện theo hợp đồng."
+      },
+      "new": "Mọi đề nghị thanh toán chi phí phải được gửi theo đúng chính sách công ty."
+    },
+    {
+      "id": "accountable-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "accountable: chịu trách nhiệm; có nghĩa vụ giải trình.",
+        "pos": "adj"
+      },
+      "new": "responsible for actions or decisions and required to explain them"
+    },
+    {
+      "id": "accountable-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Department heads are accountable for their budgets."
+      },
+      "new": "Each department manager is accountable for the accuracy of the monthly report."
+    },
+    {
+      "id": "accountable-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Trưởng bộ phận chịu trách nhiệm về ngân sách của mình."
+      },
+      "new": "Mỗi trưởng phòng chịu trách nhiệm về độ chính xác của báo cáo hằng tháng."
+    },
+    {
+      "id": "accrue-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Accrue: tích lũy; phát sinh dần.",
+        "pos": "v"
+      },
+      "new": "to increase or accumulate gradually over time, especially money, interest, or benefits"
+    },
+    {
+      "id": "accrue-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the accrue issue at the meeting."
+      },
+      "new": "Interest will accrue on the outstanding balance until it is paid in full."
+    },
+    {
+      "id": "accrue-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “accrue” tại cuộc họp."
+      },
+      "new": "Tiền lãi sẽ tích lũy trên số dư còn nợ cho đến khi được thanh toán đầy đủ."
+    },
+    {
+      "id": "accurate-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Accurate — chính xác.",
+        "pos": "adj"
+      },
+      "new": "correct and exact, with no significant mistakes"
+    },
+    {
+      "id": "accurate-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed accurate during the meeting."
+      },
+      "new": "Please make sure that the figures in the sales report are accurate."
+    },
+    {
+      "id": "accurate-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “accurate” trong cuộc họp."
+      },
+      "new": "Vui lòng đảm bảo các số liệu trong báo cáo bán hàng là chính xác."
+    },
+    {
+      "id": "activate-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "activate: kích hoạt.",
+        "pos": "v"
+      },
+      "new": "to make a system, device, account, or process start working"
+    },
+    {
+      "id": "activate-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Please activate your account before placing an order."
+      },
+      "new": "New employees must activate their accounts before accessing the portal."
+    },
+    {
+      "id": "activate-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Vui lòng kích hoạt tài khoản trước khi đặt hàng."
+      },
+      "new": "Nhân viên mới phải kích hoạt tài khoản trước khi truy cập cổng thông tin."
+    },
+    {
+      "id": "additional-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "additional: bổ sung; thêm.",
+        "pos": "adj"
+      },
+      "new": "extra; added to what is already available or required"
+    },
+    {
+      "id": "additional-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Additional documents are required for the application."
+      },
+      "new": "The supplier agreed to deliver the additional office chairs by Friday."
+    },
+    {
+      "id": "additional-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Cần bổ sung giấy tờ cho hồ sơ đăng ký."
+      },
+      "new": "Nhà cung cấp đồng ý giao thêm số ghế văn phòng trước thứ Sáu."
+    },
+    {
+      "id": "adjacent-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Adjacent: liền kề; kế bên.",
+        "pos": "adj"
+      },
+      "new": "next to or sharing a boundary with something"
+    },
+    {
+      "id": "adjacent-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the adjacent issue at the meeting."
+      },
+      "new": "The training room is adjacent to the main conference hall."
+    },
+    {
+      "id": "adjacent-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “adjacent” tại cuộc họp."
+      },
+      "new": "Phòng đào tạo nằm liền kề hội trường chính."
+    },
+    {
+      "id": "adjustment-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "adjustment: sự điều chỉnh.",
+        "pos": "n"
+      },
+      "new": "a small change made to improve something or make it suitable"
+    },
+    {
+      "id": "adjustment-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The invoice includes an adjustment for shipping costs."
+      },
+      "new": "The finance department made an adjustment to the travel budget."
+    },
+    {
+      "id": "adjustment-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Hóa đơn bao gồm khoản điều chỉnh chi phí vận chuyển."
+      },
+      "new": "Phòng tài chính đã điều chỉnh ngân sách công tác."
+    },
+    {
+      "id": "administrative-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "administrative: thuộc hành chính; quản trị.",
+        "pos": "adj"
+      },
+      "new": "related to organizing, managing, or running the work of an organization"
+    },
+    {
+      "id": "administrative-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Administrative staff will distribute the revised schedule."
+      },
+      "new": "Administrative staff will send the revised schedule to all employees."
+    },
+    {
+      "id": "administrative-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhân viên hành chính sẽ phát lịch trình đã sửa đổi."
+      },
+      "new": "Nhân viên hành chính sẽ gửi lịch trình đã sửa đổi cho toàn thể nhân viên."
+    },
+    {
+      "id": "administrator-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "administrator: quản trị viên; người quản lý.",
+        "pos": "n"
+      },
+      "new": "a person responsible for managing an organization, system, or process"
+    },
+    {
+      "id": "administrator-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Contact the system administrator if you cannot log in."
+      },
+      "new": "Contact the system administrator if your account is locked."
+    },
+    {
+      "id": "administrator-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Liên hệ quản trị viên hệ thống nếu bạn không thể đăng nhập."
+      },
+      "new": "Hãy liên hệ quản trị viên hệ thống nếu tài khoản của bạn bị khóa."
+    },
+    {
+      "id": "admission-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Admission — sự cho phép vào; vé vào cửa.",
+        "pos": "n"
+      },
+      "new": "permission to enter a place or event; the fee charged for entry"
+    },
+    {
+      "id": "admission-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed admission during the meeting."
+      },
+      "new": "Admission to the annual trade exhibition is free for registered customers."
+    },
+    {
+      "id": "admission-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “admission” trong cuộc họp."
+      },
+      "new": "Khách hàng đã đăng ký được vào triển lãm thương mại thường niên miễn phí."
+    },
+    {
+      "id": "adopt-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Adopt — áp dụng; thông qua.",
+        "pos": "v"
+      },
+      "new": "to formally accept or begin using a plan, policy, or method"
+    },
+    {
+      "id": "adopt-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed adopt during the meeting."
+      },
+      "new": "The board voted to adopt the new customer service guidelines."
+    },
+    {
+      "id": "adopt-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “adopt” trong cuộc họp."
+      },
+      "new": "Hội đồng đã bỏ phiếu thông qua bộ hướng dẫn dịch vụ khách hàng mới."
+    },
+    {
+      "id": "allocation-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "allocation: sự phân bổ; khoản được phân bổ.",
+        "pos": "n"
+      },
+      "new": "the process of assigning money, time, or resources for a particular purpose"
+    },
+    {
+      "id": "allocation-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The budget allocation was approved by the director."
+      },
+      "new": "The allocation of funds for staff training was approved last week."
+    },
+    {
+      "id": "allocation-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Việc phân bổ ngân sách đã được giám đốc phê duyệt."
+      },
+      "new": "Việc phân bổ kinh phí đào tạo nhân viên đã được phê duyệt tuần trước."
+    },
+    {
+      "id": "amend-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Amend — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to make a formal change to a document, contract, or law"
+    },
+    {
+      "id": "amend-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will amend the relevant process."
+      },
+      "new": "Both parties agreed to amend the contract before signing it."
+    },
+    {
+      "id": "amend-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “amend” được đề cập trong cuộc họp."
+      },
+      "new": "Hai bên đồng ý sửa đổi hợp đồng trước khi ký."
+    },
+    {
+      "id": "annually-adv",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "annually: hằng năm.",
+        "pos": "adv"
+      },
+      "new": "once every year"
+    },
+    {
+      "id": "annually-adv",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Safety procedures are reviewed annually."
+      },
+      "new": "The company reviews employee performance annually."
+    },
+    {
+      "id": "annually-adv",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Các quy trình an toàn được rà soát hằng năm."
+      },
+      "new": "Công ty đánh giá hiệu quả làm việc của nhân viên hằng năm."
+    },
+    {
+      "id": "apologize-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Apologize — xin lỗi.",
+        "pos": "v"
+      },
+      "new": "to tell someone that you are sorry for a mistake or for causing trouble"
+    },
+    {
+      "id": "apologize-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed apologize during the meeting."
+      },
+      "new": "The airline apologized to passengers for the unexpected delay."
+    },
+    {
+      "id": "apologize-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “apologize” trong cuộc họp."
+      },
+      "new": "Hãng hàng không đã xin lỗi hành khách vì sự chậm trễ ngoài dự kiến."
+    },
+    {
+      "id": "applicable-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "applicable: có thể áp dụng; thích hợp.",
+        "pos": "adj"
+      },
+      "new": "relevant to a particular person, situation, or set of conditions"
+    },
+    {
+      "id": "applicable-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The discount is applicable to orders over $500."
+      },
+      "new": "The discount is applicable to orders placed before the end of the month."
+    },
+    {
+      "id": "applicable-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Mức giảm giá áp dụng cho đơn hàng trên 500 đô la."
+      },
+      "new": "Mức giảm giá được áp dụng cho các đơn hàng đặt trước cuối tháng."
+    },
+    {
+      "id": "approval-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Approval — sự chấp thuận.",
+        "pos": "n"
+      },
+      "new": "official agreement or permission for a plan, request, or action"
+    },
+    {
+      "id": "approval-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed approval during the meeting."
+      },
+      "new": "The marketing proposal is awaiting approval from the regional director."
+    },
+    {
+      "id": "approval-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “approval” trong cuộc họp."
+      },
+      "new": "Đề xuất tiếp thị đang chờ giám đốc khu vực phê duyệt."
+    },
+    {
+      "id": "approximately-adv",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "approximately: xấp xỉ; khoảng.",
+        "pos": "adv"
+      },
+      "new": "used to indicate an amount, time, or number that is close to but not exactly correct"
+    },
+    {
+      "id": "approximately-adv",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The delivery will take approximately three business days."
+      },
+      "new": "The replacement parts are expected to arrive in approximately five days."
+    },
+    {
+      "id": "approximately-adv",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Việc giao hàng sẽ mất khoảng ba ngày làm việc."
+      },
+      "new": "Các linh kiện thay thế dự kiến sẽ đến trong khoảng năm ngày."
+    },
+    {
+      "id": "arrangement-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "arrangement: sự sắp xếp; thỏa thuận.",
+        "pos": "n"
+      },
+      "new": "a plan or agreement made in advance about how something will happen"
+    },
+    {
+      "id": "arrangement-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Travel arrangements have been confirmed."
+      },
+      "new": "The travel arrangements for the visiting delegates have been finalized."
+    },
+    {
+      "id": "arrangement-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Các sắp xếp cho chuyến công tác đã được xác nhận."
+      },
+      "new": "Các sắp xếp đi lại cho đoàn đại biểu đến thăm đã được hoàn tất."
+    },
+    {
+      "id": "assess-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Assess: đánh giá; thẩm định.",
+        "pos": "v"
+      },
+      "new": "to examine something and judge its quality, value, importance, or condition"
+    },
+    {
+      "id": "assess-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the assess issue at the meeting."
+      },
+      "new": "The consultant will assess the building before preparing a renovation estimate."
+    },
+    {
+      "id": "assess-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “assess” tại cuộc họp."
+      },
+      "new": "Chuyên gia tư vấn sẽ đánh giá tòa nhà trước khi lập dự toán cải tạo."
+    },
+    {
+      "id": "assistance-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "assistance: sự hỗ trợ; trợ giúp.",
+        "pos": "n"
+      },
+      "new": "help or support given to someone who needs it"
+    },
+    {
+      "id": "assistance-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Technical assistance is available around the clock."
+      },
+      "new": "Customers can request technical assistance through the support center."
+    },
+    {
+      "id": "assistance-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Hỗ trợ kỹ thuật luôn sẵn sàng suốt ngày đêm."
+      },
+      "new": "Khách hàng có thể yêu cầu hỗ trợ kỹ thuật thông qua trung tâm hỗ trợ."
+    },
+    {
+      "id": "attendance-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "attendance: sự tham dự; chuyên cần.",
+        "pos": "n"
+      },
+      "new": "the act of being present at a meeting, event, or place"
+    },
+    {
+      "id": "attendance-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Attendance at the safety briefing is mandatory."
+      },
+      "new": "Attendance at the safety training session is required for all warehouse staff."
+    },
+    {
+      "id": "attendance-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Việc tham dự buổi hướng dẫn an toàn là bắt buộc."
+      },
+      "new": "Toàn bộ nhân viên kho bắt buộc tham dự buổi đào tạo an toàn."
+    },
+    {
+      "id": "attendee-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Attendee — người tham dự.",
+        "pos": "n"
+      },
+      "new": "a person who is present at a meeting, conference, or other event"
+    },
+    {
+      "id": "attendee-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed attendee during the meeting."
+      },
+      "new": "Each attendee will receive a copy of the conference program at registration."
+    },
+    {
+      "id": "attendee-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “attendee” trong cuộc họp."
+      },
+      "new": "Mỗi người tham dự sẽ nhận một bản chương trình hội nghị khi đăng ký."
+    },
+    {
+      "id": "authorization-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "authorization: sự ủy quyền; giấy phép.",
+        "pos": "n"
+      },
+      "new": "official permission to do something or to access something"
+    },
+    {
+      "id": "authorization-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Written authorization is needed to access the records."
+      },
+      "new": "Written authorization is required before confidential files can be released."
+    },
+    {
+      "id": "authorization-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Cần có văn bản ủy quyền để truy cập hồ sơ."
+      },
+      "new": "Cần có văn bản ủy quyền trước khi hồ sơ mật được cung cấp."
+    },
+    {
+      "id": "authorize-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Authorize — ủy quyền; cho phép chính thức.",
+        "pos": "v"
+      },
+      "new": "to give someone official permission to do something"
+    },
+    {
+      "id": "authorize-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed authorize during the meeting."
+      },
+      "new": "Only the finance director can authorize payments above the stated limit."
+    },
+    {
+      "id": "authorize-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “authorize” trong cuộc họp."
+      },
+      "new": "Chỉ giám đốc tài chính mới có quyền phê duyệt các khoản thanh toán vượt hạn mức đã quy định."
+    },
+    {
+      "id": "backlog-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "backlog: lượng công việc tồn đọng.",
+        "pos": "n"
+      },
+      "new": "a quantity of work, orders, or requests that have not yet been completed"
+    },
+    {
+      "id": "backlog-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The support team is working to clear its backlog."
+      },
+      "new": "The support team is hiring temporary staff to reduce its backlog of requests."
+    },
+    {
+      "id": "backlog-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm hỗ trợ đang xử lý lượng công việc tồn đọng."
+      },
+      "new": "Nhóm hỗ trợ đang tuyển nhân viên thời vụ để giảm lượng yêu cầu tồn đọng."
+    },
+    {
+      "id": "backup-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Backup — bản sao lưu; dự phòng.",
+        "pos": "n/adj"
+      },
+      "new": "a copy of data kept in case the original is lost, or a person or resource ready to provide support"
+    },
+    {
+      "id": "backup-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed backup during the meeting."
+      },
+      "new": "The IT team creates a backup of the customer database every night."
+    },
+    {
+      "id": "backup-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “backup” trong cuộc họp."
+      },
+      "new": "Đội CNTT tạo bản sao lưu cơ sở dữ liệu khách hàng mỗi đêm."
+    },
+    {
+      "id": "bargain-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Bargain — see Vietnamese meaning and examples.",
+        "pos": "n/v"
+      },
+      "new": "an agreement reached after discussion, or something bought at a price lower than usual"
+    },
+    {
+      "id": "bargain-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The bargain was discussed during the meeting."
+      },
+      "new": "The purchasing manager negotiated a bargain with the equipment supplier."
+    },
+    {
+      "id": "bargain-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “bargain” được đề cập trong cuộc họp."
+      },
+      "new": "Trưởng bộ phận mua hàng đã thương lượng được một thỏa thuận có lợi với nhà cung cấp thiết bị."
+    },
+    {
+      "id": "beneficial-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Beneficial — see Vietnamese meaning and examples.",
+        "pos": "adj"
+      },
+      "new": "helpful or producing a positive effect"
+    },
+    {
+      "id": "beneficial-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The beneficial was discussed during the meeting."
+      },
+      "new": "Flexible working hours can be beneficial to employees with long commutes."
+    },
+    {
+      "id": "beneficial-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “beneficial” được đề cập trong cuộc họp."
+      },
+      "new": "Giờ làm việc linh hoạt có thể mang lại lợi ích cho nhân viên phải đi làm xa."
+    },
+    {
+      "id": "billable-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "billable: có thể tính phí.",
+        "pos": "adj"
+      },
+      "new": "able to be charged to a customer or included on an invoice"
+    },
+    {
+      "id": "billable-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Travel time may be billable under the service agreement."
+      },
+      "new": "The consultant records all billable hours in the project management system."
+    },
+    {
+      "id": "billable-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Thời gian di chuyển có thể được tính phí theo thỏa thuận dịch vụ."
+      },
+      "new": "Chuyên gia tư vấn ghi lại toàn bộ số giờ có thể tính phí trong hệ thống quản lý dự án."
+    },
+    {
+      "id": "billing-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Billing — việc lập hóa đơn.",
+        "pos": "n"
+      },
+      "new": "the process of preparing invoices and collecting payment for goods or services"
+    },
+    {
+      "id": "billing-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed billing during the meeting."
+      },
+      "new": "The billing department will issue the revised invoice tomorrow."
+    },
+    {
+      "id": "billing-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “billing” trong cuộc họp."
+      },
+      "new": "Bộ phận lập hóa đơn sẽ phát hành hóa đơn đã điều chỉnh vào ngày mai."
+    },
+    {
+      "id": "briefing-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Briefing — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "a short meeting or summary that provides essential information or instructions"
+    },
+    {
+      "id": "briefing-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The briefing was discussed during the meeting."
+      },
+      "new": "All drivers must attend a safety briefing before starting their shifts."
+    },
+    {
+      "id": "briefing-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “briefing” được đề cập trong cuộc họp."
+      },
+      "new": "Tất cả tài xế phải tham dự buổi phổ biến an toàn trước khi bắt đầu ca làm."
+    },
+    {
+      "id": "capacity-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Capacity — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "the maximum amount something can hold or the ability to perform a task"
+    },
+    {
+      "id": "capacity-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The capacity was discussed during the meeting."
+      },
+      "new": "The new warehouse has the capacity to store 8,000 packages."
+    },
+    {
+      "id": "capacity-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “capacity” được đề cập trong cuộc họp."
+      },
+      "new": "Nhà kho mới có sức chứa 8.000 kiện hàng."
+    },
+    {
+      "id": "cargo-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Cargo — hàng hóa vận chuyển.",
+        "pos": "n"
+      },
+      "new": "goods carried by a ship, aircraft, train, or truck"
+    },
+    {
+      "id": "cargo-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed cargo during the meeting."
+      },
+      "new": "The cargo was inspected before it was loaded onto the aircraft."
+    },
+    {
+      "id": "cargo-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “cargo” trong cuộc họp."
+      },
+      "new": "Hàng hóa đã được kiểm tra trước khi được xếp lên máy bay."
+    },
+    {
+      "id": "certificate-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Certificate — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "an official document that confirms a fact, qualification, or completed course"
+    },
+    {
+      "id": "certificate-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The certificate was discussed during the meeting."
+      },
+      "new": "Applicants must submit a safety training certificate with their forms."
+    },
+    {
+      "id": "certificate-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “certificate” được đề cập trong cuộc họp."
+      },
+      "new": "Ứng viên phải nộp chứng chỉ đào tạo an toàn kèm theo hồ sơ."
+    },
+    {
+      "id": "circulate-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Circulate: lưu hành; phân phát.",
+        "pos": "v"
+      },
+      "new": "to distribute a document or information to a group, or to move continuously through a system"
+    },
+    {
+      "id": "circulate-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the circulate issue at the meeting."
+      },
+      "new": "Please circulate the updated meeting agenda to all department heads."
+    },
+    {
+      "id": "circulate-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “circulate” tại cuộc họp."
+      },
+      "new": "Vui lòng gửi chương trình họp đã cập nhật đến tất cả trưởng bộ phận."
+    }
+  ]
+}

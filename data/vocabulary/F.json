@@ -12,7 +12,7 @@
         {
           "pos": "v",
           "meaning_vi": "tạo điều kiện; hỗ trợ tiến trình",
-          "definition_en": "Facilitate — see Vietnamese meaning and examples.",
+          "definition_en": "to make an action or process easier to do",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -25,8 +25,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will facilitate the relevant process.",
-          "vi": "Nội dung liên quan đến “facilitate” được đề cập trong cuộc họp."
+          "en": "The online form is designed to facilitate the registration process.",
+          "vi": "Biểu mẫu trực tuyến được thiết kế để tạo thuận lợi cho quy trình đăng ký."
         }
       ],
       "collocations": [],
@@ -259,7 +259,7 @@
         {
           "pos": "n",
           "meaning_vi": "tính khả thi",
-          "definition_en": "feasibility: tính khả thi.",
+          "definition_en": "the possibility that a plan or project can be carried out successfully",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -272,8 +272,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "A feasibility study will be completed before construction.",
-          "vi": "Một nghiên cứu khả thi sẽ được hoàn tất trước khi xây dựng."
+          "en": "The engineering team will study the feasibility of building a second warehouse.",
+          "vi": "Đội ngũ kỹ thuật sẽ nghiên cứu tính khả thi của việc xây dựng nhà kho thứ hai."
         }
       ],
       "collocations": [
@@ -293,7 +293,7 @@
         {
           "pos": "adj",
           "meaning_vi": "khả thi",
-          "definition_en": "Feasible: khả thi.",
+          "definition_en": "possible and practical to do under the available conditions",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -306,8 +306,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the feasible issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “feasible” tại cuộc họp."
+          "en": "The manager believes that the proposed delivery schedule is feasible.",
+          "vi": "Quản lý tin rằng lịch giao hàng được đề xuất là khả thi."
         }
       ],
       "collocations": [],
@@ -608,7 +608,7 @@
         {
           "pos": "n",
           "meaning_vi": "tính linh hoạt",
-          "definition_en": "flexibility: tính linh hoạt.",
+          "definition_en": "the ability to change or adapt to different needs, conditions, or arrangements",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -621,8 +621,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company offers flexibility in working hours.",
-          "vi": "Công ty cho phép linh hoạt về giờ làm việc."
+          "en": "The company introduced flexible shifts to give employees more flexibility.",
+          "vi": "Công ty áp dụng ca làm linh hoạt để nhân viên có thêm sự linh hoạt."
         }
       ],
       "collocations": [
@@ -1163,7 +1163,7 @@
         {
           "pos": "v",
           "meaning_vi": "hoàn thành; đáp ứng",
-          "definition_en": "Fulfill — see Vietnamese meaning and examples.",
+          "definition_en": "to do what is required, promised, or expected; to satisfy a need or condition",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1176,8 +1176,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will fulfill the relevant process.",
-          "vi": "Nội dung liên quan đến “fulfill” được đề cập trong cuộc họp."
+          "en": "The supplier must fulfill every requirement listed in the purchase agreement.",
+          "vi": "Nhà cung cấp phải đáp ứng mọi yêu cầu được nêu trong thỏa thuận mua hàng."
         }
       ],
       "collocations": [],

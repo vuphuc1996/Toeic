@@ -237,7 +237,7 @@
         {
           "pos": "adv",
           "meaning_vi": "tuy nhiên; dù vậy",
-          "definition_en": "Nevertheless — tuy nhiên; dù vậy.",
+          "definition_en": "despite what has just been said or the situation described; however",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -250,8 +250,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed nevertheless during the meeting.",
-          "vi": "Nhóm đã thảo luận về “nevertheless” trong cuộc họp."
+          "en": "The shipment was delayed; nevertheless, the customer agreed to keep the order.",
+          "vi": "Lô hàng bị chậm trễ; tuy nhiên, khách hàng vẫn đồng ý giữ đơn hàng."
         }
       ],
       "collocations": [],

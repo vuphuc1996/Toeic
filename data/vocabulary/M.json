@@ -70,7 +70,7 @@
         {
           "pos": "n",
           "meaning_vi": "bảo trì; sự duy tu",
-          "definition_en": "Maintenance — see Vietnamese meaning and examples.",
+          "definition_en": "work done regularly to keep a building, machine, or system in good condition",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -83,8 +83,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The maintenance was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “maintenance” được đề cập trong cuộc họp."
+          "en": "Routine maintenance will be carried out after business hours.",
+          "vi": "Công tác bảo trì định kỳ sẽ được thực hiện sau giờ làm việc."
         }
       ],
       "collocations": [],
@@ -221,7 +221,7 @@
         {
           "pos": "adj",
           "meaning_vi": "bắt buộc",
-          "definition_en": "Mandatory — see Vietnamese meaning and examples.",
+          "definition_en": "required by a law, rule, or official instruction; not optional",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -234,8 +234,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The mandatory was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “mandatory” được đề cập trong cuộc họp."
+          "en": "Wearing a safety helmet is mandatory inside the construction area.",
+          "vi": "Việc đội mũ bảo hộ là bắt buộc trong khu vực xây dựng."
         }
       ],
       "collocations": [],
@@ -332,7 +332,7 @@
         {
           "pos": "n",
           "meaning_vi": "nhà sản xuất",
-          "definition_en": "manufacturer: nhà sản xuất.",
+          "definition_en": "a company or person that makes goods in large quantities for sale",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -345,8 +345,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The manufacturer offers a two-year warranty.",
-          "vi": "Nhà sản xuất cung cấp bảo hành hai năm."
+          "en": "The manufacturer will replace any unit that fails during the warranty period.",
+          "vi": "Nhà sản xuất sẽ thay thế mọi thiết bị bị hỏng trong thời hạn bảo hành."
         }
       ],
       "collocations": [

@@ -409,7 +409,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự đối chiếu; việc hòa giải",
-          "definition_en": "reconciliation: sự đối chiếu; việc hòa giải.",
+          "definition_en": "the process of comparing two sets of financial records to make sure that they agree",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -422,8 +422,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The bank reconciliation revealed two errors.",
-          "vi": "Việc đối chiếu ngân hàng phát hiện hai lỗi."
+          "en": "The accounting team performs a bank reconciliation at the end of every month.",
+          "vi": "Nhóm kế toán thực hiện đối chiếu ngân hàng vào cuối mỗi tháng."
         }
       ],
       "collocations": [
@@ -609,7 +609,7 @@
         {
           "pos": "adj",
           "meaning_vi": "định kỳ; lặp lại",
-          "definition_en": "recurring: định kỳ; lặp lại.",
+          "definition_en": "happening repeatedly, often at regular intervals",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -622,8 +622,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The software identifies recurring monthly expenses.",
-          "vi": "Phần mềm nhận diện các khoản chi định kỳ hằng tháng."
+          "en": "The finance department monitors recurring payments for all company subscriptions.",
+          "vi": "Bộ phận tài chính theo dõi các khoản thanh toán định kỳ cho tất cả thuê bao của công ty."
         }
       ],
       "collocations": [
@@ -989,7 +989,7 @@
         {
           "pos": "v",
           "meaning_vi": "hoàn tiền; bồi hoàn chi phí",
-          "definition_en": "Reimburse — see Vietnamese meaning and examples.",
+          "definition_en": "to repay someone for money they have spent on an approved expense",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1002,8 +1002,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will reimburse the relevant process.",
-          "vi": "Nội dung liên quan đến “reimburse” được đề cập trong cuộc họp."
+          "en": "Employees can submit receipts to be reimbursed for business travel costs.",
+          "vi": "Nhân viên có thể nộp hóa đơn để được hoàn trả chi phí đi công tác."
         }
       ],
       "collocations": [],
@@ -1146,7 +1146,7 @@
         {
           "pos": "adj",
           "meaning_vi": "đáng tin cậy",
-          "definition_en": "Reliable — see Vietnamese meaning and examples.",
+          "definition_en": "able to be trusted to work correctly or to provide consistent and accurate results",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1159,8 +1159,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The reliable was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “reliable” được đề cập trong cuộc họp."
+          "en": "We need a reliable supplier that can deliver office materials on schedule.",
+          "vi": "Chúng tôi cần một nhà cung cấp đáng tin cậy có thể giao vật tư văn phòng đúng lịch."
         }
       ],
       "collocations": [],
@@ -1371,7 +1371,7 @@
         {
           "pos": "v",
           "meaning_vi": "gia hạn; làm mới",
-          "definition_en": "renew: gia hạn; làm mới.",
+          "definition_en": "to extend the period for which an agreement, license, or document remains valid",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -1384,8 +1384,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company plans to renew the office lease.",
-          "vi": "Công ty dự định gia hạn hợp đồng thuê văn phòng."
+          "en": "The tenant must renew the office lease before the end of December.",
+          "vi": "Người thuê phải gia hạn hợp đồng thuê văn phòng trước cuối tháng Mười Hai."
         }
       ],
       "collocations": [
@@ -1436,7 +1436,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự gia hạn; đổi mới",
-          "definition_en": "Renewal — see Vietnamese meaning and examples.",
+          "definition_en": "the process of extending the period for which an agreement, license, or document remains valid",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1449,8 +1449,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The renewal was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “renewal” được đề cập trong cuộc họp."
+          "en": "The renewal of the maintenance contract was approved by the director.",
+          "vi": "Việc gia hạn hợp đồng bảo trì đã được giám đốc phê duyệt."
         }
       ],
       "collocations": [],
@@ -1606,7 +1606,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự thay thế; vật thay thế",
-          "definition_en": "replacement: sự thay thế; vật thay thế.",
+          "definition_en": "a person or thing that takes the place of another that is missing, damaged, or no longer suitable",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -1619,8 +1619,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "A replacement will be shipped at no extra cost.",
-          "vi": "Sản phẩm thay thế sẽ được gửi mà không tính thêm phí."
+          "en": "A replacement printer will be delivered to the branch by Friday.",
+          "vi": "Một máy in thay thế sẽ được giao đến chi nhánh trước thứ Sáu."
         }
       ],
       "collocations": [
@@ -1730,7 +1730,7 @@
         {
           "pos": "n",
           "meaning_vi": "yêu cầu; điều kiện cần",
-          "definition_en": "Requirement — see Vietnamese meaning and examples.",
+          "definition_en": "something that is necessary or must be done to meet a rule, standard, or need",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1743,8 +1743,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The requirement was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “requirement” được đề cập trong cuộc họp."
+          "en": "A valid identification card is a requirement for entering the secure area.",
+          "vi": "Thẻ căn cước hợp lệ là yêu cầu bắt buộc để vào khu vực an ninh."
         }
       ],
       "collocations": [],
@@ -1795,7 +1795,7 @@
         {
           "pos": "v",
           "meaning_vi": "lên lịch lại",
-          "definition_en": "Reschedule — see Vietnamese meaning and examples.",
+          "definition_en": "to arrange for an event or appointment to take place at a different time or date",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1808,8 +1808,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will reschedule the relevant process.",
-          "vi": "Nội dung liên quan đến “reschedule” được đề cập trong cuộc họp."
+          "en": "The coordinator had to reschedule the interview because the manager was unavailable.",
+          "vi": "Điều phối viên phải sắp xếp lại lịch phỏng vấn vì quản lý không thể tham dự."
         }
       ],
       "collocations": [],
@@ -2719,7 +2719,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự sửa đổi; bản chỉnh sửa",
-          "definition_en": "revision: sự sửa đổi; bản chỉnh sửa.",
+          "definition_en": "a change made to something after it has been reviewed, or a version containing such changes",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2732,8 +2732,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The latest revision includes updated prices.",
-          "vi": "Bản sửa đổi mới nhất bao gồm giá đã cập nhật."
+          "en": "The latest revision of the employee handbook includes the updated leave policy.",
+          "vi": "Bản chỉnh sửa mới nhất của sổ tay nhân viên bao gồm chính sách nghỉ phép đã cập nhật."
         }
       ],
       "collocations": [

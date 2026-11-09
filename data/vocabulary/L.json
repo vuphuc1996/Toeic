@@ -128,7 +128,7 @@
         {
           "pos": "n",
           "meaning_vi": "phòng thí nghiệm",
-          "definition_en": "Laboratory — see Vietnamese meaning and examples.",
+          "definition_en": "a place equipped for scientific tests, research, or technical examination",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -141,8 +141,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The laboratory was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “laboratory” được đề cập trong cuộc họp."
+          "en": "The product samples were sent to an independent laboratory for testing.",
+          "vi": "Các mẫu sản phẩm đã được gửi đến phòng thí nghiệm độc lập để kiểm tra."
         }
       ],
       "collocations": [],
@@ -553,7 +553,7 @@
         {
           "pos": "n",
           "meaning_vi": "bên thuê tài sản",
-          "definition_en": "lessee: bên thuê tài sản.",
+          "definition_en": "a person or organization that rents property or equipment under a lease",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "C1"
@@ -566,8 +566,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The lessee is responsible for routine maintenance.",
-          "vi": "Bên thuê chịu trách nhiệm bảo trì định kỳ."
+          "en": "The lessee must maintain the office space throughout the rental period.",
+          "vi": "Bên thuê phải bảo trì mặt bằng văn phòng trong suốt thời hạn thuê."
         }
       ],
       "collocations": [
@@ -587,7 +587,7 @@
         {
           "pos": "n",
           "meaning_vi": "bên cho thuê tài sản",
-          "definition_en": "lessor: bên cho thuê tài sản.",
+          "definition_en": "a person or organization that allows another party to use property or equipment in return for rent",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "C1"
@@ -600,8 +600,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The lessor must provide written notice before entry.",
-          "vi": "Bên cho thuê phải thông báo bằng văn bản trước khi vào."
+          "en": "The lessor agreed to repair the air-conditioning system before the office opens.",
+          "vi": "Bên cho thuê đồng ý sửa hệ thống điều hòa trước khi văn phòng khai trương."
         }
       ],
       "collocations": [
@@ -621,7 +621,7 @@
         {
           "pos": "n",
           "meaning_vi": "trách nhiệm pháp lý; khoản nợ",
-          "definition_en": "Liability: trách nhiệm pháp lý; khoản nợ.",
+          "definition_en": "a legal responsibility or a debt that an individual or organization must pay",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -634,8 +634,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the liability issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “liability” tại cuộc họp."
+          "en": "The company recorded the unpaid tax as a current liability.",
+          "vi": "Công ty ghi nhận khoản thuế chưa nộp là một khoản nợ ngắn hạn."
         }
       ],
       "collocations": [],

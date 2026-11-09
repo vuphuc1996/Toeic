@@ -175,7 +175,7 @@
         {
           "pos": "adv",
           "meaning_vi": "một cách hiệu quả",
-          "definition_en": "efficiently: một cách hiệu quả.",
+          "definition_en": "in a way that uses time, energy, or resources without unnecessary waste",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -188,8 +188,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The new software processes invoices more efficiently.",
-          "vi": "Phần mềm mới xử lý hóa đơn hiệu quả hơn."
+          "en": "The new software allows staff to process invoices more efficiently.",
+          "vi": "Phần mềm mới giúp nhân viên xử lý hóa đơn hiệu quả hơn."
         }
       ],
       "collocations": [
@@ -249,7 +249,7 @@
         {
           "pos": "adj",
           "meaning_vi": "điện tử",
-          "definition_en": "electronic: điện tử.",
+          "definition_en": "using a computer, digital system, or electronic equipment rather than paper or mechanical methods",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -262,8 +262,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Electronic receipts are sent automatically.",
-          "vi": "Biên lai điện tử được gửi tự động."
+          "en": "Electronic receipts are sent automatically after each online purchase.",
+          "vi": "Biên lai điện tử được gửi tự động sau mỗi lần mua hàng trực tuyến."
         }
       ],
       "collocations": [
@@ -283,7 +283,7 @@
         {
           "pos": "n",
           "meaning_vi": "điều kiện đủ; tư cách hợp lệ",
-          "definition_en": "eligibility: điều kiện đủ; tư cách hợp lệ.",
+          "definition_en": "the state of meeting the conditions required to receive or do something",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -296,8 +296,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Eligibility for the allowance depends on job grade.",
-          "vi": "Điều kiện hưởng phụ cấp phụ thuộc vào cấp bậc công việc."
+          "en": "Eligibility for the housing allowance depends on length of service.",
+          "vi": "Điều kiện được hưởng trợ cấp nhà ở phụ thuộc vào thâm niên công tác."
         }
       ],
       "collocations": [
@@ -317,7 +317,7 @@
         {
           "pos": "adj",
           "meaning_vi": "đủ điều kiện",
-          "definition_en": "Eligible — see Vietnamese meaning and examples.",
+          "definition_en": "meeting the conditions required to receive or do something",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -330,8 +330,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The eligible was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “eligible” được đề cập trong cuộc họp."
+          "en": "Employees who have completed six months of service are eligible for the benefit.",
+          "vi": "Nhân viên đã làm việc đủ sáu tháng sẽ đủ điều kiện nhận phúc lợi."
         }
       ],
       "collocations": [],
@@ -467,7 +467,7 @@
         {
           "pos": "n",
           "meaning_vi": "khí thải; sự phát thải",
-          "definition_en": "Emission — see Vietnamese meaning and examples.",
+          "definition_en": "the release of gas, heat, light, or another substance into the environment",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -480,8 +480,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The emission was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “emission” được đề cập trong cuộc họp."
+          "en": "The factory must report its annual carbon emissions to the authorities.",
+          "vi": "Nhà máy phải báo cáo lượng khí thải carbon hằng năm cho cơ quan chức năng."
         }
       ],
       "collocations": [],
@@ -674,7 +674,7 @@
         {
           "pos": "v",
           "meaning_vi": "đính kèm; gửi kèm",
-          "definition_en": "Enclose — see Vietnamese meaning and examples.",
+          "definition_en": "to put something inside an envelope or package with another item, or to surround something",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -687,8 +687,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will enclose the relevant process.",
-          "vi": "Nội dung liên quan đến “enclose” được đề cập trong cuộc họp."
+          "en": "Please enclose a copy of your receipt with the warranty claim.",
+          "vi": "Vui lòng gửi kèm một bản sao biên lai cùng yêu cầu bảo hành."
         }
       ],
       "collocations": [],
@@ -792,7 +792,7 @@
         {
           "pos": "v",
           "meaning_vi": "tán thành; chứng thực",
-          "definition_en": "Endorse: tán thành; chứng thực.",
+          "definition_en": "to publicly express support for something, or to sign a document to make it valid",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -805,8 +805,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the endorse issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “endorse” tại cuộc họp."
+          "en": "The board voted to endorse the revised investment proposal.",
+          "vi": "Hội đồng đã bỏ phiếu tán thành đề xuất đầu tư đã sửa đổi."
         }
       ],
       "collocations": [],
@@ -899,7 +899,7 @@
         {
           "pos": "n",
           "meaning_vi": "yêu cầu thông tin; câu hỏi",
-          "definition_en": "enquiry: yêu cầu thông tin; câu hỏi.",
+          "definition_en": "a question or request for information about a product, service, or situation",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -912,8 +912,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "We received an enquiry about international shipping rates.",
-          "vi": "Chúng tôi nhận được yêu cầu thông tin về cước vận chuyển quốc tế."
+          "en": "Our sales team received an enquiry about bulk delivery rates.",
+          "vi": "Đội ngũ bán hàng nhận được yêu cầu thông tin về mức phí giao hàng số lượng lớn."
         }
       ],
       "collocations": [
@@ -1152,7 +1152,7 @@
         {
           "pos": "adj",
           "meaning_vi": "tương đương",
-          "definition_en": "equivalent: tương đương.",
+          "definition_en": "equal in value, function, meaning, or importance to something else",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1165,8 +1165,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The replacement part is equivalent to the original model.",
-          "vi": "Linh kiện thay thế tương đương với mẫu ban đầu."
+          "en": "The replacement battery is equivalent to the original model.",
+          "vi": "Pin thay thế có thông số tương đương với mẫu ban đầu."
         }
       ],
       "collocations": [
@@ -1594,7 +1594,7 @@
         {
           "pos": "adj/v",
           "meaning_vi": "được miễn; miễn trừ",
-          "definition_en": "Exempt: được miễn; miễn trừ.",
+          "definition_en": "not required to do something or pay a particular charge because of a rule or special condition",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1607,8 +1607,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the exempt issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “exempt” tại cuộc họp."
+          "en": "Small businesses may be exempt from the annual registration fee.",
+          "vi": "Các doanh nghiệp nhỏ có thể được miễn lệ phí đăng ký hằng năm."
         }
       ],
       "collocations": [],
@@ -1884,7 +1884,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự hết hạn",
-          "definition_en": "expiration: sự hết hạn.",
+          "definition_en": "the end of the period during which a document, agreement, or product remains valid or usable",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1897,8 +1897,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Check the expiration date on your access card.",
-          "vi": "Kiểm tra ngày hết hạn trên thẻ ra vào của bạn."
+          "en": "Please check the expiration date before renewing your access card.",
+          "vi": "Vui lòng kiểm tra ngày hết hạn trước khi gia hạn thẻ truy cập."
         }
       ],
       "collocations": [
@@ -1964,7 +1964,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự gia hạn; số máy lẻ",
-          "definition_en": "Extension — sự gia hạn; số máy lẻ.",
+          "definition_en": "an arrangement that gives extra time, or an additional part connected to something; also a telephone line number",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1977,8 +1977,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed extension during the meeting.",
-          "vi": "Nhóm đã thảo luận về “extension” trong cuộc họp."
+          "en": "The client requested an extension of the payment deadline.",
+          "vi": "Khách hàng đề nghị gia hạn thời hạn thanh toán."
         }
       ],
       "collocations": [],

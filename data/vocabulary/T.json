@@ -758,7 +758,7 @@
         {
           "pos": "v",
           "meaning_vi": "thực hiện giao dịch",
-          "definition_en": "transact: thực hiện giao dịch.",
+          "definition_en": "to carry out business or financial activities, especially by exchanging money or information",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -771,8 +771,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Customers can transact securely through the mobile app.",
-          "vi": "Khách hàng có thể giao dịch an toàn qua ứng dụng di động."
+          "en": "Customers can transact securely through the bank’s mobile application.",
+          "vi": "Khách hàng có thể thực hiện giao dịch an toàn thông qua ứng dụng di động của ngân hàng."
         }
       ],
       "collocations": [
@@ -905,7 +905,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự quá cảnh; vận chuyển trung chuyển",
-          "definition_en": "transit: sự quá cảnh; vận chuyển trung chuyển.",
+          "definition_en": "the process of being moved from one place to another, especially during transportation",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -918,8 +918,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The goods are currently in transit to the regional warehouse.",
-          "vi": "Hàng hóa hiện đang trên đường đến kho khu vực."
+          "en": "The shipment is currently in transit and is expected to reach the regional depot tomorrow.",
+          "vi": "Lô hàng hiện đang trong quá trình vận chuyển và dự kiến đến kho khu vực vào ngày mai."
         }
       ],
       "collocations": [
@@ -1086,7 +1086,7 @@
         {
           "pos": "n",
           "meaning_vi": "doanh thu; tỷ lệ luân chuyển",
-          "definition_en": "Turnover — doanh thu; tỷ lệ luân chuyển.",
+          "definition_en": "the total value of sales made by a business during a period, or the rate at which employees leave and are replaced",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1099,8 +1099,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed turnover during the meeting.",
-          "vi": "Nhóm đã thảo luận về “turnover” trong cuộc họp."
+          "en": "The retailer reported a 12 percent increase in annual turnover.",
+          "vi": "Nhà bán lẻ báo cáo doanh thu hằng năm tăng 12 phần trăm."
         }
       ],
       "collocations": [],

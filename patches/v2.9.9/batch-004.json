@@ -1,0 +1,1010 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.9-batch-004",
+  "baseDataVersion": "2.9.8",
+  "targetDataVersion": "2.9.9",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "description": "Manual editorial correction for the final 40 headwords in the placeholder-definition debt list. All first-sense English definitions and TOEIC-context examples/translations are rewritten with POS-checked patches.",
+  "operations": [
+    {
+      "id": "performance-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Performance — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "how well a person, team, or organization carries out a task or achieves its goals"
+    },
+    {
+      "id": "performance-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The performance was discussed during the meeting."
+      },
+      "new": "The quarterly report shows a significant improvement in employee performance."
+    },
+    {
+      "id": "performance-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “performance” được đề cập trong cuộc họp."
+      },
+      "new": "Báo cáo quý cho thấy hiệu suất làm việc của nhân viên được cải thiện đáng kể."
+    },
+    {
+      "id": "perishable-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "perishable: dễ hư hỏng; mau hỏng.",
+        "pos": "adj"
+      },
+      "new": "likely to decay or become unsafe to eat after a relatively short time"
+    },
+    {
+      "id": "perishable-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Perishable goods must be stored at a low temperature."
+      },
+      "new": "The warehouse stores perishable products in temperature-controlled rooms."
+    },
+    {
+      "id": "perishable-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Hàng dễ hư hỏng phải được bảo quản ở nhiệt độ thấp."
+      },
+      "new": "Kho hàng bảo quản các sản phẩm dễ hư hỏng trong những phòng có kiểm soát nhiệt độ."
+    },
+    {
+      "id": "portfolio-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "portfolio: danh mục đầu tư; hồ sơ năng lực.",
+        "pos": "n"
+      },
+      "new": "a collection of investments, projects, or examples of work held or presented by a person or organization"
+    },
+    {
+      "id": "portfolio-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The firm manages a diverse investment portfolio."
+      },
+      "new": "The investment firm reviewed each client’s portfolio before recommending changes."
+    },
+    {
+      "id": "portfolio-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Công ty quản lý danh mục đầu tư đa dạng."
+      },
+      "new": "Công ty đầu tư đã xem xét danh mục đầu tư của từng khách hàng trước khi đề xuất điều chỉnh."
+    },
+    {
+      "id": "postage-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "postage: cước bưu chính; phí gửi thư.",
+        "pos": "n"
+      },
+      "new": "the fee charged for sending a letter or package through the postal service"
+    },
+    {
+      "id": "postage-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Postage is included in the quoted price."
+      },
+      "new": "The online order confirmation states that postage will be added to the final cost."
+    },
+    {
+      "id": "postage-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Phí gửi bưu chính đã được tính trong giá báo."
+      },
+      "new": "Xác nhận đơn hàng trực tuyến cho biết phí gửi bưu chính sẽ được cộng vào tổng chi phí."
+    },
+    {
+      "id": "postponement-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "postponement: sự trì hoãn; việc hoãn lại.",
+        "pos": "n"
+      },
+      "new": "the act of arranging for an event or activity to take place at a later time"
+    },
+    {
+      "id": "postponement-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The postponement was announced by email."
+      },
+      "new": "Due to severe weather, the postponement of the outdoor event was announced this morning."
+    },
+    {
+      "id": "postponement-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Việc hoãn lịch được thông báo qua email."
+      },
+      "new": "Do thời tiết khắc nghiệt, việc hoãn sự kiện ngoài trời đã được thông báo sáng nay."
+    },
+    {
+      "id": "precaution-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Precaution — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "an action taken in advance to reduce the risk of harm, damage, or an unwanted problem"
+    },
+    {
+      "id": "precaution-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The precaution was discussed during the meeting."
+      },
+      "new": "As a precaution, all visitors must sign in at the reception desk."
+    },
+    {
+      "id": "precaution-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “precaution” được đề cập trong cuộc họp."
+      },
+      "new": "Để phòng ngừa rủi ro, tất cả khách đến thăm phải đăng ký tại quầy lễ tân."
+    },
+    {
+      "id": "premium-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "premium: phí bảo hiểm; khoản phụ trội.",
+        "pos": "n"
+      },
+      "new": "an amount paid regularly for an insurance policy, or an additional charge for a higher level of service"
+    },
+    {
+      "id": "premium-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The annual insurance premium is due in March."
+      },
+      "new": "The company will pay the annual insurance premium for all full-time employees."
+    },
+    {
+      "id": "premium-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Phí bảo hiểm hằng năm đến hạn vào tháng Ba."
+      },
+      "new": "Công ty sẽ thanh toán phí bảo hiểm hằng năm cho tất cả nhân viên toàn thời gian."
+    },
+    {
+      "id": "prescribe-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "prescribe: quy định; chỉ định.",
+        "pos": "v"
+      },
+      "new": "to state officially what must be done or what treatment or procedure should be followed"
+    },
+    {
+      "id": "prescribe-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The policy prescribes a standard review procedure."
+      },
+      "new": "The safety regulations prescribe a monthly inspection of all lifting equipment."
+    },
+    {
+      "id": "prescribe-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Chính sách quy định quy trình rà soát tiêu chuẩn."
+      },
+      "new": "Quy định an toàn yêu cầu kiểm tra hằng tháng toàn bộ thiết bị nâng."
+    },
+    {
+      "id": "priority-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Priority — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "something that is considered more important than other matters and should be dealt with first"
+    },
+    {
+      "id": "priority-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The priority was discussed during the meeting."
+      },
+      "new": "Resolving the customer’s billing issue is our top priority today."
+    },
+    {
+      "id": "priority-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “priority” được đề cập trong cuộc họp."
+      },
+      "new": "Giải quyết vấn đề thanh toán của khách hàng là ưu tiên hàng đầu của chúng ta hôm nay."
+    },
+    {
+      "id": "productivity-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "productivity: năng suất.",
+        "pos": "n"
+      },
+      "new": "the rate at which work is completed or goods and services are produced"
+    },
+    {
+      "id": "productivity-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Flexible schedules have improved staff productivity."
+      },
+      "new": "The new scheduling system has increased productivity across the service department."
+    },
+    {
+      "id": "productivity-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Lịch làm việc linh hoạt đã cải thiện năng suất nhân viên."
+      },
+      "new": "Hệ thống lập lịch mới đã nâng cao năng suất trên toàn bộ bộ phận dịch vụ."
+    },
+    {
+      "id": "proficiency-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "proficiency: sự thành thạo; trình độ.",
+        "pos": "n"
+      },
+      "new": "a high level of skill or ability in a particular subject or activity"
+    },
+    {
+      "id": "proficiency-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The position requires proficiency in spreadsheet software."
+      },
+      "new": "The position requires proficiency in business English and spreadsheet software."
+    },
+    {
+      "id": "proficiency-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Vị trí này yêu cầu thành thạo phần mềm bảng tính."
+      },
+      "new": "Vị trí này yêu cầu trình độ thành thạo tiếng Anh thương mại và phần mềm bảng tính."
+    },
+    {
+      "id": "proficient-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "proficient: thành thạo.",
+        "pos": "adj"
+      },
+      "new": "having the skill and ability needed to do something well"
+    },
+    {
+      "id": "proficient-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Applicants should be proficient in written English."
+      },
+      "new": "Applicants must be proficient in using common office applications."
+    },
+    {
+      "id": "proficient-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Ứng viên nên thành thạo tiếng Anh viết."
+      },
+      "new": "Ứng viên phải thành thạo việc sử dụng các ứng dụng văn phòng phổ biến."
+    },
+    {
+      "id": "prolong-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "prolong: kéo dài; làm lâu hơn.",
+        "pos": "v"
+      },
+      "new": "to make an activity, situation, or period of time continue for longer than expected"
+    },
+    {
+      "id": "prolong-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The repair work may prolong the building closure."
+      },
+      "new": "A shortage of replacement parts could prolong the equipment repair."
+    },
+    {
+      "id": "prolong-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Công việc sửa chữa có thể kéo dài thời gian đóng cửa tòa nhà."
+      },
+      "new": "Tình trạng thiếu linh kiện thay thế có thể kéo dài việc sửa chữa thiết bị."
+    },
+    {
+      "id": "prolonged-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "prolonged: kéo dài; lâu hơn bình thường.",
+        "pos": "adj"
+      },
+      "new": "continuing for a longer period than is usual or expected"
+    },
+    {
+      "id": "prolonged-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Prolonged delays have affected several deliveries."
+      },
+      "new": "The airport issued an apology after prolonged delays disrupted several flights."
+    },
+    {
+      "id": "prolonged-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Sự chậm trễ kéo dài đã ảnh hưởng đến một số chuyến giao hàng."
+      },
+      "new": "Sân bay đã đưa ra lời xin lỗi sau khi tình trạng chậm trễ kéo dài làm gián đoạn một số chuyến bay."
+    },
+    {
+      "id": "promptly-adv",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "promptly: ngay lập tức; đúng giờ.",
+        "pos": "adv"
+      },
+      "new": "quickly and without unnecessary delay"
+    },
+    {
+      "id": "promptly-adv",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Please respond promptly to the customer's inquiry."
+      },
+      "new": "Please forward the signed contract to our legal department promptly."
+    },
+    {
+      "id": "promptly-adv",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Vui lòng phản hồi nhanh chóng yêu cầu của khách hàng."
+      },
+      "new": "Vui lòng nhanh chóng chuyển hợp đồng đã ký đến bộ phận pháp lý của chúng tôi."
+    },
+    {
+      "id": "provisional-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Provisional: tạm thời; có điều kiện.",
+        "pos": "adj"
+      },
+      "new": "temporary and intended to be confirmed, changed, or replaced later"
+    },
+    {
+      "id": "provisional-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the provisional issue at the meeting."
+      },
+      "new": "The provisional schedule will be finalized after all department managers respond."
+    },
+    {
+      "id": "provisional-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “provisional” tại cuộc họp."
+      },
+      "new": "Lịch trình tạm thời sẽ được chốt sau khi tất cả trưởng bộ phận phản hồi."
+    },
+    {
+      "id": "qualification-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Qualification — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "a skill, experience, or certificate that makes someone suitable for a particular job or activity"
+    },
+    {
+      "id": "qualification-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The qualification was discussed during the meeting."
+      },
+      "new": "Applicants should list each relevant qualification on the application form."
+    },
+    {
+      "id": "qualification-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “qualification” được đề cập trong cuộc họp."
+      },
+      "new": "Ứng viên nên liệt kê từng bằng cấp và năng lực phù hợp trong mẫu đơn ứng tuyển."
+    },
+    {
+      "id": "reconciliation-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "reconciliation: sự đối chiếu; việc hòa giải.",
+        "pos": "n"
+      },
+      "new": "the process of comparing two sets of financial records to make sure that they agree"
+    },
+    {
+      "id": "reconciliation-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The bank reconciliation revealed two errors."
+      },
+      "new": "The accounting team performs a bank reconciliation at the end of every month."
+    },
+    {
+      "id": "reconciliation-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Việc đối chiếu ngân hàng phát hiện hai lỗi."
+      },
+      "new": "Nhóm kế toán thực hiện đối chiếu ngân hàng vào cuối mỗi tháng."
+    },
+    {
+      "id": "recurring-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "recurring: định kỳ; lặp lại.",
+        "pos": "adj"
+      },
+      "new": "happening repeatedly, often at regular intervals"
+    },
+    {
+      "id": "recurring-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The software identifies recurring monthly expenses."
+      },
+      "new": "The finance department monitors recurring payments for all company subscriptions."
+    },
+    {
+      "id": "recurring-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Phần mềm nhận diện các khoản chi định kỳ hằng tháng."
+      },
+      "new": "Bộ phận tài chính theo dõi các khoản thanh toán định kỳ cho tất cả thuê bao của công ty."
+    },
+    {
+      "id": "reimburse-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Reimburse — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to repay someone for money they have spent on an approved expense"
+    },
+    {
+      "id": "reimburse-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will reimburse the relevant process."
+      },
+      "new": "Employees can submit receipts to be reimbursed for business travel costs."
+    },
+    {
+      "id": "reimburse-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “reimburse” được đề cập trong cuộc họp."
+      },
+      "new": "Nhân viên có thể nộp hóa đơn để được hoàn trả chi phí đi công tác."
+    },
+    {
+      "id": "reliable-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Reliable — see Vietnamese meaning and examples.",
+        "pos": "adj"
+      },
+      "new": "able to be trusted to work correctly or to provide consistent and accurate results"
+    },
+    {
+      "id": "reliable-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The reliable was discussed during the meeting."
+      },
+      "new": "We need a reliable supplier that can deliver office materials on schedule."
+    },
+    {
+      "id": "reliable-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “reliable” được đề cập trong cuộc họp."
+      },
+      "new": "Chúng tôi cần một nhà cung cấp đáng tin cậy có thể giao vật tư văn phòng đúng lịch."
+    },
+    {
+      "id": "renew-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "renew: gia hạn; làm mới.",
+        "pos": "v"
+      },
+      "new": "to extend the period for which an agreement, license, or document remains valid"
+    },
+    {
+      "id": "renew-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company plans to renew the office lease."
+      },
+      "new": "The tenant must renew the office lease before the end of December."
+    },
+    {
+      "id": "renew-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Công ty dự định gia hạn hợp đồng thuê văn phòng."
+      },
+      "new": "Người thuê phải gia hạn hợp đồng thuê văn phòng trước cuối tháng Mười Hai."
+    },
+    {
+      "id": "renewal-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Renewal — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "the process of extending the period for which an agreement, license, or document remains valid"
+    },
+    {
+      "id": "renewal-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The renewal was discussed during the meeting."
+      },
+      "new": "The renewal of the maintenance contract was approved by the director."
+    },
+    {
+      "id": "renewal-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “renewal” được đề cập trong cuộc họp."
+      },
+      "new": "Việc gia hạn hợp đồng bảo trì đã được giám đốc phê duyệt."
+    },
+    {
+      "id": "replacement-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "replacement: sự thay thế; vật thay thế.",
+        "pos": "n"
+      },
+      "new": "a person or thing that takes the place of another that is missing, damaged, or no longer suitable"
+    },
+    {
+      "id": "replacement-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "A replacement will be shipped at no extra cost."
+      },
+      "new": "A replacement printer will be delivered to the branch by Friday."
+    },
+    {
+      "id": "replacement-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Sản phẩm thay thế sẽ được gửi mà không tính thêm phí."
+      },
+      "new": "Một máy in thay thế sẽ được giao đến chi nhánh trước thứ Sáu."
+    },
+    {
+      "id": "requirement-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Requirement — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "something that is necessary or must be done to meet a rule, standard, or need"
+    },
+    {
+      "id": "requirement-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The requirement was discussed during the meeting."
+      },
+      "new": "A valid identification card is a requirement for entering the secure area."
+    },
+    {
+      "id": "requirement-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “requirement” được đề cập trong cuộc họp."
+      },
+      "new": "Thẻ căn cước hợp lệ là yêu cầu bắt buộc để vào khu vực an ninh."
+    },
+    {
+      "id": "reschedule-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Reschedule — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to arrange for an event or appointment to take place at a different time or date"
+    },
+    {
+      "id": "reschedule-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will reschedule the relevant process."
+      },
+      "new": "The coordinator had to reschedule the interview because the manager was unavailable."
+    },
+    {
+      "id": "reschedule-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “reschedule” được đề cập trong cuộc họp."
+      },
+      "new": "Điều phối viên phải sắp xếp lại lịch phỏng vấn vì quản lý không thể tham dự."
+    },
+    {
+      "id": "revision-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "revision: sự sửa đổi; bản chỉnh sửa.",
+        "pos": "n"
+      },
+      "new": "a change made to something after it has been reviewed, or a version containing such changes"
+    },
+    {
+      "id": "revision-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The latest revision includes updated prices."
+      },
+      "new": "The latest revision of the employee handbook includes the updated leave policy."
+    },
+    {
+      "id": "revision-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bản sửa đổi mới nhất bao gồm giá đã cập nhật."
+      },
+      "new": "Bản chỉnh sửa mới nhất của sổ tay nhân viên bao gồm chính sách nghỉ phép đã cập nhật."
+    },
+    {
+      "id": "specify-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "specify: quy định rõ; nêu cụ thể.",
+        "pos": "v"
+      },
+      "new": "to state or describe something clearly and exactly"
+    },
+    {
+      "id": "specify-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The contract specifies the delivery deadline."
+      },
+      "new": "Please specify the quantity and delivery address when placing your order."
+    },
+    {
+      "id": "specify-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Hợp đồng quy định rõ thời hạn giao hàng."
+      },
+      "new": "Vui lòng ghi rõ số lượng và địa chỉ giao hàng khi đặt đơn."
+    },
+    {
+      "id": "subscribe-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "subscribe: đăng ký thuê bao; đặt mua định kỳ.",
+        "pos": "v"
+      },
+      "new": "to arrange to receive a publication or service, usually by paying regularly"
+    },
+    {
+      "id": "subscribe-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Customers can subscribe to the monthly newsletter."
+      },
+      "new": "Customers can subscribe to the monthly industry newsletter on our website."
+    },
+    {
+      "id": "subscribe-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Khách hàng có thể đăng ký nhận bản tin hằng tháng."
+      },
+      "new": "Khách hàng có thể đăng ký nhận bản tin ngành hằng tháng trên trang web của chúng tôi."
+    },
+    {
+      "id": "subscription-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "subscription: thuê bao; gói đăng ký định kỳ.",
+        "pos": "n"
+      },
+      "new": "an arrangement in which someone pays regularly to receive a service or publication"
+    },
+    {
+      "id": "subscription-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The annual subscription includes technical support."
+      },
+      "new": "The annual software subscription includes technical support and security updates."
+    },
+    {
+      "id": "subscription-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Gói đăng ký hằng năm bao gồm hỗ trợ kỹ thuật."
+      },
+      "new": "Gói thuê bao phần mềm hằng năm bao gồm hỗ trợ kỹ thuật và các bản cập nhật bảo mật."
+    },
+    {
+      "id": "sufficient-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "sufficient: đủ; đầy đủ.",
+        "pos": "adj"
+      },
+      "new": "as much as is needed for a particular purpose; enough"
+    },
+    {
+      "id": "sufficient-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Please allow sufficient time for customs clearance."
+      },
+      "new": "Please allow sufficient time for the shipment to clear customs."
+    },
+    {
+      "id": "sufficient-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Vui lòng dành đủ thời gian để thông quan."
+      },
+      "new": "Vui lòng dành đủ thời gian để lô hàng hoàn tất thủ tục thông quan."
+    },
+    {
+      "id": "sufficiently-adv",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "sufficiently: đủ mức; một cách đầy đủ.",
+        "pos": "adv"
+      },
+      "new": "to the degree that is needed or adequate for a particular purpose"
+    },
+    {
+      "id": "sufficiently-adv",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The room is sufficiently large for the workshop."
+      },
+      "new": "The conference room is sufficiently large to accommodate all registered guests."
+    },
+    {
+      "id": "sufficiently-adv",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Căn phòng đủ rộng cho buổi hội thảo."
+      },
+      "new": "Phòng hội nghị đủ rộng để bố trí chỗ cho tất cả khách đã đăng ký."
+    },
+    {
+      "id": "surcharge-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Surcharge: phụ phí.",
+        "pos": "n"
+      },
+      "new": "an extra amount of money added to the usual price or basic charge"
+    },
+    {
+      "id": "surcharge-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The manager explained the surcharge policy to the team."
+      },
+      "new": "A fuel surcharge may apply to deliveries outside the metropolitan area."
+    },
+    {
+      "id": "surcharge-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Quản lý đã giải thích chính sách “surcharge” cho nhóm."
+      },
+      "new": "Phụ phí nhiên liệu có thể được áp dụng cho các chuyến giao hàng ngoài khu vực đô thị."
+    },
+    {
+      "id": "suspend-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "suspend: tạm ngừng; đình chỉ.",
+        "pos": "v"
+      },
+      "new": "to stop an activity, service, or privilege temporarily, often until a problem is resolved"
+    },
+    {
+      "id": "suspend-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The airline suspended flights because of the storm."
+      },
+      "new": "The airline will suspend the route while runway repairs are underway."
+    },
+    {
+      "id": "suspend-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Hãng hàng không tạm ngừng các chuyến bay vì bão."
+      },
+      "new": "Hãng hàng không sẽ tạm ngừng tuyến bay trong thời gian sửa chữa đường băng."
+    },
+    {
+      "id": "suspension-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "suspension: sự tạm ngừng; đình chỉ.",
+        "pos": "n"
+      },
+      "new": "the temporary stopping of an activity, service, or privilege"
+    },
+    {
+      "id": "suspension-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The temporary suspension will last until repairs are complete."
+      },
+      "new": "The temporary suspension of deliveries was announced after the warehouse fire."
+    },
+    {
+      "id": "suspension-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Việc tạm ngừng sẽ kéo dài đến khi sửa chữa hoàn tất."
+      },
+      "new": "Việc tạm ngừng giao hàng đã được thông báo sau vụ cháy nhà kho."
+    },
+    {
+      "id": "transact-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "transact: thực hiện giao dịch.",
+        "pos": "v"
+      },
+      "new": "to carry out business or financial activities, especially by exchanging money or information"
+    },
+    {
+      "id": "transact-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Customers can transact securely through the mobile app."
+      },
+      "new": "Customers can transact securely through the bank’s mobile application."
+    },
+    {
+      "id": "transact-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Khách hàng có thể giao dịch an toàn qua ứng dụng di động."
+      },
+      "new": "Khách hàng có thể thực hiện giao dịch an toàn thông qua ứng dụng di động của ngân hàng."
+    },
+    {
+      "id": "transit-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "transit: sự quá cảnh; vận chuyển trung chuyển.",
+        "pos": "n"
+      },
+      "new": "the process of being moved from one place to another, especially during transportation"
+    },
+    {
+      "id": "transit-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The goods are currently in transit to the regional warehouse."
+      },
+      "new": "The shipment is currently in transit and is expected to reach the regional depot tomorrow."
+    },
+    {
+      "id": "transit-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Hàng hóa hiện đang trên đường đến kho khu vực."
+      },
+      "new": "Lô hàng hiện đang trong quá trình vận chuyển và dự kiến đến kho khu vực vào ngày mai."
+    },
+    {
+      "id": "turnover-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Turnover — doanh thu; tỷ lệ luân chuyển.",
+        "pos": "n"
+      },
+      "new": "the total value of sales made by a business during a period, or the rate at which employees leave and are replaced"
+    },
+    {
+      "id": "turnover-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed turnover during the meeting."
+      },
+      "new": "The retailer reported a 12 percent increase in annual turnover."
+    },
+    {
+      "id": "turnover-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “turnover” trong cuộc họp."
+      },
+      "new": "Nhà bán lẻ báo cáo doanh thu hằng năm tăng 12 phần trăm."
+    },
+    {
+      "id": "undergo-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Undergo — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to experience or be subjected to a process, examination, or change"
+    },
+    {
+      "id": "undergo-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will undergo the relevant process."
+      },
+      "new": "All new employees must undergo safety training before starting work."
+    },
+    {
+      "id": "undergo-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “undergo” được đề cập trong cuộc họp."
+      },
+      "new": "Tất cả nhân viên mới phải trải qua khóa đào tạo an toàn trước khi bắt đầu công việc."
+    },
+    {
+      "id": "validity-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Validity — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "the state of being legally or officially acceptable, or the period during which something remains valid"
+    },
+    {
+      "id": "validity-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The validity was discussed during the meeting."
+      },
+      "new": "Please check the validity of your access permit before entering the facility."
+    },
+    {
+      "id": "validity-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “validity” được đề cập trong cuộc họp."
+      },
+      "new": "Vui lòng kiểm tra hiệu lực của giấy phép ra vào trước khi vào cơ sở."
+    }
+  ]
+}

@@ -12,7 +12,7 @@
         {
           "pos": "n",
           "meaning_vi": "lượng công việc tồn đọng",
-          "definition_en": "backlog: lượng công việc tồn đọng.",
+          "definition_en": "a quantity of work, orders, or requests that have not yet been completed",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -25,8 +25,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The support team is working to clear its backlog.",
-          "vi": "Nhóm hỗ trợ đang xử lý lượng công việc tồn đọng."
+          "en": "The support team is hiring temporary staff to reduce its backlog of requests.",
+          "vi": "Nhóm hỗ trợ đang tuyển nhân viên thời vụ để giảm lượng yêu cầu tồn đọng."
         }
       ],
       "collocations": [
@@ -80,7 +80,7 @@
         {
           "pos": "n/adj",
           "meaning_vi": "bản sao lưu; dự phòng",
-          "definition_en": "Backup — bản sao lưu; dự phòng.",
+          "definition_en": "a copy of data kept in case the original is lost, or a person or resource ready to provide support",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -93,8 +93,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed backup during the meeting.",
-          "vi": "Nhóm đã thảo luận về “backup” trong cuộc họp."
+          "en": "The IT team creates a backup of the customer database every night.",
+          "vi": "Đội CNTT tạo bản sao lưu cơ sở dữ liệu khách hàng mỗi đêm."
         }
       ],
       "collocations": [],
@@ -287,7 +287,7 @@
         {
           "pos": "n/v",
           "meaning_vi": "món hời; mặc cả",
-          "definition_en": "Bargain — see Vietnamese meaning and examples.",
+          "definition_en": "an agreement reached after discussion, or something bought at a price lower than usual",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -300,8 +300,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The bargain was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “bargain” được đề cập trong cuộc họp."
+          "en": "The purchasing manager negotiated a bargain with the equipment supplier.",
+          "vi": "Trưởng bộ phận mua hàng đã thương lượng được một thỏa thuận có lợi với nhà cung cấp thiết bị."
         }
       ],
       "collocations": [],
@@ -352,7 +352,7 @@
         {
           "pos": "adj",
           "meaning_vi": "có lợi; hữu ích",
-          "definition_en": "Beneficial — see Vietnamese meaning and examples.",
+          "definition_en": "helpful or producing a positive effect",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -365,8 +365,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The beneficial was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “beneficial” được đề cập trong cuộc họp."
+          "en": "Flexible working hours can be beneficial to employees with long commutes.",
+          "vi": "Giờ làm việc linh hoạt có thể mang lại lợi ích cho nhân viên phải đi làm xa."
         }
       ],
       "collocations": [],
@@ -666,7 +666,7 @@
         {
           "pos": "adj",
           "meaning_vi": "có thể tính phí",
-          "definition_en": "billable: có thể tính phí.",
+          "definition_en": "able to be charged to a customer or included on an invoice",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -679,8 +679,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Travel time may be billable under the service agreement.",
-          "vi": "Thời gian di chuyển có thể được tính phí theo thỏa thuận dịch vụ."
+          "en": "The consultant records all billable hours in the project management system.",
+          "vi": "Chuyên gia tư vấn ghi lại toàn bộ số giờ có thể tính phí trong hệ thống quản lý dự án."
         }
       ],
       "collocations": [
@@ -700,7 +700,7 @@
         {
           "pos": "n",
           "meaning_vi": "việc lập hóa đơn",
-          "definition_en": "Billing — việc lập hóa đơn.",
+          "definition_en": "the process of preparing invoices and collecting payment for goods or services",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -713,8 +713,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed billing during the meeting.",
-          "vi": "Nhóm đã thảo luận về “billing” trong cuộc họp."
+          "en": "The billing department will issue the revised invoice tomorrow.",
+          "vi": "Bộ phận lập hóa đơn sẽ phát hành hóa đơn đã điều chỉnh vào ngày mai."
         }
       ],
       "collocations": [],
@@ -1008,7 +1008,7 @@
         {
           "pos": "n",
           "meaning_vi": "buổi phổ biến thông tin",
-          "definition_en": "Briefing — see Vietnamese meaning and examples.",
+          "definition_en": "a short meeting or summary that provides essential information or instructions",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1021,8 +1021,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The briefing was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “briefing” được đề cập trong cuộc họp."
+          "en": "All drivers must attend a safety briefing before starting their shifts.",
+          "vi": "Tất cả tài xế phải tham dự buổi phổ biến an toàn trước khi bắt đầu ca làm."
         }
       ],
       "collocations": [],

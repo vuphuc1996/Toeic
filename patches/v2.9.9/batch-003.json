@@ -1,0 +1,1010 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.9-batch-003",
+  "baseDataVersion": "2.9.8",
+  "targetDataVersion": "2.9.9",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "description": "Editorial correction for 40 headwords E–P (part 1).",
+  "operations": [
+    {
+      "id": "equivalent-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "equivalent: tương đương.",
+        "pos": "adj"
+      },
+      "new": "equal in value, function, meaning, or importance to something else"
+    },
+    {
+      "id": "equivalent-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The replacement part is equivalent to the original model."
+      },
+      "new": "The replacement battery is equivalent to the original model."
+    },
+    {
+      "id": "equivalent-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Linh kiện thay thế tương đương với mẫu ban đầu."
+      },
+      "new": "Pin thay thế có thông số tương đương với mẫu ban đầu."
+    },
+    {
+      "id": "exempt-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Exempt: được miễn; miễn trừ.",
+        "pos": "adj/v"
+      },
+      "new": "not required to do something or pay a particular charge because of a rule or special condition"
+    },
+    {
+      "id": "exempt-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the exempt issue at the meeting."
+      },
+      "new": "Small businesses may be exempt from the annual registration fee."
+    },
+    {
+      "id": "exempt-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “exempt” tại cuộc họp."
+      },
+      "new": "Các doanh nghiệp nhỏ có thể được miễn lệ phí đăng ký hằng năm."
+    },
+    {
+      "id": "expiration-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "expiration: sự hết hạn.",
+        "pos": "n"
+      },
+      "new": "the end of the period during which a document, agreement, or product remains valid or usable"
+    },
+    {
+      "id": "expiration-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Check the expiration date on your access card."
+      },
+      "new": "Please check the expiration date before renewing your access card."
+    },
+    {
+      "id": "expiration-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Kiểm tra ngày hết hạn trên thẻ ra vào của bạn."
+      },
+      "new": "Vui lòng kiểm tra ngày hết hạn trước khi gia hạn thẻ truy cập."
+    },
+    {
+      "id": "extension-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Extension — sự gia hạn; số máy lẻ.",
+        "pos": "n"
+      },
+      "new": "an arrangement that gives extra time, or an additional part connected to something; also a telephone line number"
+    },
+    {
+      "id": "extension-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed extension during the meeting."
+      },
+      "new": "The client requested an extension of the payment deadline."
+    },
+    {
+      "id": "extension-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “extension” trong cuộc họp."
+      },
+      "new": "Khách hàng đề nghị gia hạn thời hạn thanh toán."
+    },
+    {
+      "id": "facilitate-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Facilitate — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to make an action or process easier to do"
+    },
+    {
+      "id": "facilitate-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will facilitate the relevant process."
+      },
+      "new": "The online form is designed to facilitate the registration process."
+    },
+    {
+      "id": "facilitate-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “facilitate” được đề cập trong cuộc họp."
+      },
+      "new": "Biểu mẫu trực tuyến được thiết kế để tạo thuận lợi cho quy trình đăng ký."
+    },
+    {
+      "id": "feasibility-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "feasibility: tính khả thi.",
+        "pos": "n"
+      },
+      "new": "the possibility that a plan or project can be carried out successfully"
+    },
+    {
+      "id": "feasibility-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "A feasibility study will be completed before construction."
+      },
+      "new": "The engineering team will study the feasibility of building a second warehouse."
+    },
+    {
+      "id": "feasibility-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Một nghiên cứu khả thi sẽ được hoàn tất trước khi xây dựng."
+      },
+      "new": "Đội ngũ kỹ thuật sẽ nghiên cứu tính khả thi của việc xây dựng nhà kho thứ hai."
+    },
+    {
+      "id": "feasible-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Feasible: khả thi.",
+        "pos": "adj"
+      },
+      "new": "possible and practical to do under the available conditions"
+    },
+    {
+      "id": "feasible-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the feasible issue at the meeting."
+      },
+      "new": "The manager believes that the proposed delivery schedule is feasible."
+    },
+    {
+      "id": "feasible-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “feasible” tại cuộc họp."
+      },
+      "new": "Quản lý tin rằng lịch giao hàng được đề xuất là khả thi."
+    },
+    {
+      "id": "flexibility-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "flexibility: tính linh hoạt.",
+        "pos": "n"
+      },
+      "new": "the ability to change or adapt to different needs, conditions, or arrangements"
+    },
+    {
+      "id": "flexibility-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company offers flexibility in working hours."
+      },
+      "new": "The company introduced flexible shifts to give employees more flexibility."
+    },
+    {
+      "id": "flexibility-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Công ty cho phép linh hoạt về giờ làm việc."
+      },
+      "new": "Công ty áp dụng ca làm linh hoạt để nhân viên có thêm sự linh hoạt."
+    },
+    {
+      "id": "fulfill-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Fulfill — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to do what is required, promised, or expected; to satisfy a need or condition"
+    },
+    {
+      "id": "fulfill-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will fulfill the relevant process."
+      },
+      "new": "The supplier must fulfill every requirement listed in the purchase agreement."
+    },
+    {
+      "id": "fulfill-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “fulfill” được đề cập trong cuộc họp."
+      },
+      "new": "Nhà cung cấp phải đáp ứng mọi yêu cầu được nêu trong thỏa thuận mua hàng."
+    },
+    {
+      "id": "generate-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Generate — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to produce or create something, such as income, information, or electricity"
+    },
+    {
+      "id": "generate-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will generate the relevant process."
+      },
+      "new": "The new advertising campaign is expected to generate more online sales."
+    },
+    {
+      "id": "generate-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “generate” được đề cập trong cuộc họp."
+      },
+      "new": "Chiến dịch quảng cáo mới được kỳ vọng tạo ra thêm doanh thu trực tuyến."
+    },
+    {
+      "id": "guideline-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Guideline — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "a general rule or piece of advice that helps people make decisions or perform a task"
+    },
+    {
+      "id": "guideline-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The guideline was discussed during the meeting."
+      },
+      "new": "The handbook provides guidelines for handling customer complaints."
+    },
+    {
+      "id": "guideline-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “guideline” được đề cập trong cuộc họp."
+      },
+      "new": "Sổ tay cung cấp hướng dẫn về cách xử lý khiếu nại của khách hàng."
+    },
+    {
+      "id": "handling-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "handling: việc xử lý; thao tác.",
+        "pos": "n"
+      },
+      "new": "the way something is dealt with, managed, or physically treated"
+    },
+    {
+      "id": "handling-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Special handling is required for fragile items."
+      },
+      "new": "Careful handling is required when loading fragile equipment."
+    },
+    {
+      "id": "handling-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Hàng dễ vỡ cần được xử lý đặc biệt."
+      },
+      "new": "Cần thao tác cẩn thận khi xếp dỡ thiết bị dễ vỡ."
+    },
+    {
+      "id": "implement-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Implement — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to put a plan, decision, or system into practical use"
+    },
+    {
+      "id": "implement-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will implement the relevant process."
+      },
+      "new": "The company will implement the revised attendance policy next month."
+    },
+    {
+      "id": "implement-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “implement” được đề cập trong cuộc họp."
+      },
+      "new": "Công ty sẽ triển khai chính sách chấm công đã sửa đổi vào tháng tới."
+    },
+    {
+      "id": "incentive-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Incentive — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "something offered to encourage a person to take an action or achieve a goal"
+    },
+    {
+      "id": "incentive-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The incentive was discussed during the meeting."
+      },
+      "new": "Employees who exceed their sales targets may receive a financial incentive."
+    },
+    {
+      "id": "incentive-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “incentive” được đề cập trong cuộc họp."
+      },
+      "new": "Nhân viên vượt chỉ tiêu bán hàng có thể nhận được khoản khuyến khích tài chính."
+    },
+    {
+      "id": "incentivize-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "incentivize: tạo động lực; khuyến khích bằng lợi ích.",
+        "pos": "v"
+      },
+      "new": "to encourage a particular action by offering a reward or benefit"
+    },
+    {
+      "id": "incentivize-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The bonus is designed to incentivize higher productivity."
+      },
+      "new": "The new commission plan is intended to incentivize higher sales."
+    },
+    {
+      "id": "incentivize-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Khoản thưởng được thiết kế để khuyến khích năng suất cao hơn."
+      },
+      "new": "Chính sách hoa hồng mới nhằm khuyến khích tăng doanh số."
+    },
+    {
+      "id": "inquire-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Inquire — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to ask for information about something"
+    },
+    {
+      "id": "inquire-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will inquire the relevant process."
+      },
+      "new": "Please inquire at the reception desk if you need a visitor pass."
+    },
+    {
+      "id": "inquire-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “inquire” được đề cập trong cuộc họp."
+      },
+      "new": "Vui lòng hỏi tại quầy lễ tân nếu bạn cần thẻ khách."
+    },
+    {
+      "id": "inquiry-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Inquiry — câu hỏi; yêu cầu thông tin.",
+        "pos": "n"
+      },
+      "new": "a request for information, or an official examination of a matter"
+    },
+    {
+      "id": "inquiry-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed inquiry during the meeting."
+      },
+      "new": "The customer submitted an inquiry about the status of the refund."
+    },
+    {
+      "id": "inquiry-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “inquiry” trong cuộc họp."
+      },
+      "new": "Khách hàng đã gửi yêu cầu thông tin về tình trạng hoàn tiền."
+    },
+    {
+      "id": "inspection-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Inspection — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "an official or careful examination to check quality, safety, or condition"
+    },
+    {
+      "id": "inspection-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The inspection was discussed during the meeting."
+      },
+      "new": "The building passed its annual fire safety inspection."
+    },
+    {
+      "id": "inspection-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “inspection” được đề cập trong cuộc họp."
+      },
+      "new": "Tòa nhà đã vượt qua đợt kiểm tra an toàn phòng cháy hằng năm."
+    },
+    {
+      "id": "inspector-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "inspector: thanh tra viên; người kiểm định.",
+        "pos": "n"
+      },
+      "new": "a person whose job is to examine something to make sure that it meets required standards"
+    },
+    {
+      "id": "inspector-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "A building inspector visited the site yesterday."
+      },
+      "new": "A safety inspector will visit the factory on Thursday."
+    },
+    {
+      "id": "inspector-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Một thanh tra xây dựng đã đến công trường hôm qua."
+      },
+      "new": "Một thanh tra an toàn sẽ đến nhà máy vào thứ Năm."
+    },
+    {
+      "id": "invoicing-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "invoicing: việc lập và phát hành hóa đơn.",
+        "pos": "n"
+      },
+      "new": "the process of preparing and sending invoices for goods or services"
+    },
+    {
+      "id": "invoicing-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The accounting team automated its invoicing process."
+      },
+      "new": "Automated invoicing has reduced paperwork in the accounting department."
+    },
+    {
+      "id": "invoicing-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm kế toán đã tự động hóa quy trình lập hóa đơn."
+      },
+      "new": "Việc lập hóa đơn tự động đã giảm giấy tờ trong phòng kế toán."
+    },
+    {
+      "id": "justify-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Justify — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to provide a good reason or evidence to show that an action or decision is reasonable"
+    },
+    {
+      "id": "justify-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will justify the relevant process."
+      },
+      "new": "The project manager must justify the additional expense in the budget report."
+    },
+    {
+      "id": "justify-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “justify” được đề cập trong cuộc họp."
+      },
+      "new": "Quản lý dự án phải giải trình khoản chi phí bổ sung trong báo cáo ngân sách."
+    },
+    {
+      "id": "laboratory-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Laboratory — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "a place equipped for scientific tests, research, or technical examination"
+    },
+    {
+      "id": "laboratory-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The laboratory was discussed during the meeting."
+      },
+      "new": "The product samples were sent to an independent laboratory for testing."
+    },
+    {
+      "id": "laboratory-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “laboratory” được đề cập trong cuộc họp."
+      },
+      "new": "Các mẫu sản phẩm đã được gửi đến phòng thí nghiệm độc lập để kiểm tra."
+    },
+    {
+      "id": "lessee-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "lessee: bên thuê tài sản.",
+        "pos": "n"
+      },
+      "new": "a person or organization that rents property or equipment under a lease"
+    },
+    {
+      "id": "lessee-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The lessee is responsible for routine maintenance."
+      },
+      "new": "The lessee must maintain the office space throughout the rental period."
+    },
+    {
+      "id": "lessee-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bên thuê chịu trách nhiệm bảo trì định kỳ."
+      },
+      "new": "Bên thuê phải bảo trì mặt bằng văn phòng trong suốt thời hạn thuê."
+    },
+    {
+      "id": "lessor-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "lessor: bên cho thuê tài sản.",
+        "pos": "n"
+      },
+      "new": "a person or organization that allows another party to use property or equipment in return for rent"
+    },
+    {
+      "id": "lessor-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The lessor must provide written notice before entry."
+      },
+      "new": "The lessor agreed to repair the air-conditioning system before the office opens."
+    },
+    {
+      "id": "lessor-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bên cho thuê phải thông báo bằng văn bản trước khi vào."
+      },
+      "new": "Bên cho thuê đồng ý sửa hệ thống điều hòa trước khi văn phòng khai trương."
+    },
+    {
+      "id": "liability-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Liability: trách nhiệm pháp lý; khoản nợ.",
+        "pos": "n"
+      },
+      "new": "a legal responsibility or a debt that an individual or organization must pay"
+    },
+    {
+      "id": "liability-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the liability issue at the meeting."
+      },
+      "new": "The company recorded the unpaid tax as a current liability."
+    },
+    {
+      "id": "liability-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “liability” tại cuộc họp."
+      },
+      "new": "Công ty ghi nhận khoản thuế chưa nộp là một khoản nợ ngắn hạn."
+    },
+    {
+      "id": "maintenance-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Maintenance — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "work done regularly to keep a building, machine, or system in good condition"
+    },
+    {
+      "id": "maintenance-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The maintenance was discussed during the meeting."
+      },
+      "new": "Routine maintenance will be carried out after business hours."
+    },
+    {
+      "id": "maintenance-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “maintenance” được đề cập trong cuộc họp."
+      },
+      "new": "Công tác bảo trì định kỳ sẽ được thực hiện sau giờ làm việc."
+    },
+    {
+      "id": "mandatory-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Mandatory — see Vietnamese meaning and examples.",
+        "pos": "adj"
+      },
+      "new": "required by a law, rule, or official instruction; not optional"
+    },
+    {
+      "id": "mandatory-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The mandatory was discussed during the meeting."
+      },
+      "new": "Wearing a safety helmet is mandatory inside the construction area."
+    },
+    {
+      "id": "mandatory-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “mandatory” được đề cập trong cuộc họp."
+      },
+      "new": "Việc đội mũ bảo hộ là bắt buộc trong khu vực xây dựng."
+    },
+    {
+      "id": "manufacturer-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "manufacturer: nhà sản xuất.",
+        "pos": "n"
+      },
+      "new": "a company or person that makes goods in large quantities for sale"
+    },
+    {
+      "id": "manufacturer-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The manufacturer offers a two-year warranty."
+      },
+      "new": "The manufacturer will replace any unit that fails during the warranty period."
+    },
+    {
+      "id": "manufacturer-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhà sản xuất cung cấp bảo hành hai năm."
+      },
+      "new": "Nhà sản xuất sẽ thay thế mọi thiết bị bị hỏng trong thời hạn bảo hành."
+    },
+    {
+      "id": "nevertheless-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Nevertheless — tuy nhiên; dù vậy.",
+        "pos": "adv"
+      },
+      "new": "despite what has just been said or the situation described; however"
+    },
+    {
+      "id": "nevertheless-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed nevertheless during the meeting."
+      },
+      "new": "The shipment was delayed; nevertheless, the customer agreed to keep the order."
+    },
+    {
+      "id": "nevertheless-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “nevertheless” trong cuộc họp."
+      },
+      "new": "Lô hàng bị chậm trễ; tuy nhiên, khách hàng vẫn đồng ý giữ đơn hàng."
+    },
+    {
+      "id": "occupancy-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Occupancy — tình trạng/số lượng người sử dụng.",
+        "pos": "n"
+      },
+      "new": "the state or number of people using or living in a building, room, or other space"
+    },
+    {
+      "id": "occupancy-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed occupancy during the meeting."
+      },
+      "new": "The hotel expects an occupancy rate of more than eighty percent this weekend."
+    },
+    {
+      "id": "occupancy-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “occupancy” trong cuộc họp."
+      },
+      "new": "Khách sạn dự kiến tỷ lệ lấp đầy phòng sẽ vượt tám mươi phần trăm vào cuối tuần này."
+    },
+    {
+      "id": "officeholder-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "officeholder: người giữ chức vụ.",
+        "pos": "n"
+      },
+      "new": "a person who currently holds an official position or public office"
+    },
+    {
+      "id": "officeholder-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The officeholder will serve a three-year term."
+      },
+      "new": "The officeholder must submit an annual statement of interests."
+    },
+    {
+      "id": "officeholder-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Người giữ chức vụ sẽ đảm nhiệm nhiệm kỳ ba năm."
+      },
+      "new": "Người giữ chức vụ phải nộp bản kê khai lợi ích hằng năm."
+    },
+    {
+      "id": "outsource-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "outsource: thuê ngoài; giao cho bên ngoài thực hiện.",
+        "pos": "v"
+      },
+      "new": "to arrange for an outside company or person to perform work instead of doing it internally"
+    },
+    {
+      "id": "outsource-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company decided to outsource its payroll services."
+      },
+      "new": "The retailer decided to outsource its delivery operations to a logistics provider."
+    },
+    {
+      "id": "outsource-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Công ty quyết định thuê ngoài dịch vụ tính lương."
+      },
+      "new": "Nhà bán lẻ quyết định thuê một đơn vị logistics bên ngoài thực hiện hoạt động giao hàng."
+    },
+    {
+      "id": "outsourcing-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "outsourcing: việc thuê ngoài.",
+        "pos": "n"
+      },
+      "new": "the practice of paying an outside organization to perform work or provide services"
+    },
+    {
+      "id": "outsourcing-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Outsourcing reduced the department's operating costs."
+      },
+      "new": "Outsourcing customer support helped the company reduce operating costs."
+    },
+    {
+      "id": "outsourcing-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Thuê ngoài đã giảm chi phí hoạt động của bộ phận."
+      },
+      "new": "Việc thuê ngoài dịch vụ chăm sóc khách hàng đã giúp công ty giảm chi phí vận hành."
+    },
+    {
+      "id": "outstanding-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Outstanding — see Vietnamese meaning and examples.",
+        "pos": "adj"
+      },
+      "new": "not yet paid, completed, or resolved; also exceptionally good"
+    },
+    {
+      "id": "outstanding-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The outstanding was discussed during the meeting."
+      },
+      "new": "Please settle all outstanding invoices before the end of the quarter."
+    },
+    {
+      "id": "outstanding-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “outstanding” được đề cập trong cuộc họp."
+      },
+      "new": "Vui lòng thanh toán tất cả hóa đơn còn tồn đọng trước khi kết thúc quý."
+    },
+    {
+      "id": "overdue-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Overdue — see Vietnamese meaning and examples.",
+        "pos": "adj"
+      },
+      "new": "not paid, returned, or completed by the expected or required date"
+    },
+    {
+      "id": "overdue-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The overdue was discussed during the meeting."
+      },
+      "new": "The library sent reminders to members with overdue books."
+    },
+    {
+      "id": "overdue-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “overdue” được đề cập trong cuộc họp."
+      },
+      "new": "Thư viện gửi thông báo nhắc nhở các thành viên chưa trả sách đúng hạn."
+    },
+    {
+      "id": "overhaul-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Overhaul: đại tu; cải tổ toàn diện.",
+        "pos": "n/v"
+      },
+      "new": "a thorough examination and repair or major improvement of a system or organization"
+    },
+    {
+      "id": "overhaul-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The manager explained the overhaul policy to the team."
+      },
+      "new": "The airline scheduled a complete overhaul of its booking platform."
+    },
+    {
+      "id": "overhaul-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Quản lý đã giải thích chính sách “overhaul” cho nhóm."
+      },
+      "new": "Hãng hàng không lên lịch đại tu toàn bộ nền tảng đặt chỗ."
+    },
+    {
+      "id": "parcel-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "parcel: bưu kiện; gói hàng.",
+        "pos": "n"
+      },
+      "new": "a package or wrapped item sent or delivered to someone"
+    },
+    {
+      "id": "parcel-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The parcel can be collected at the service counter."
+      },
+      "new": "The courier left the parcel at the reception desk."
+    },
+    {
+      "id": "parcel-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bưu kiện có thể được nhận tại quầy dịch vụ."
+      },
+      "new": "Nhân viên chuyển phát đã để bưu kiện tại quầy lễ tân."
+    },
+    {
+      "id": "participant-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Participant — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "a person who takes part in an activity, event, or program"
+    },
+    {
+      "id": "participant-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The participant was discussed during the meeting."
+      },
+      "new": "Each participant must complete the online safety course before the workshop."
+    },
+    {
+      "id": "participant-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “participant” được đề cập trong cuộc họp."
+      },
+      "new": "Mỗi người tham gia phải hoàn thành khóa an toàn trực tuyến trước buổi hội thảo."
+    },
+    {
+      "id": "payable-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "payable: phải trả; đến hạn thanh toán.",
+        "pos": "adj"
+      },
+      "new": "required to be paid, especially by a stated date"
+    },
+    {
+      "id": "payable-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The balance is payable within thirty days."
+      },
+      "new": "The remaining balance is payable within thirty days of the invoice date."
+    },
+    {
+      "id": "payable-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Số dư phải được thanh toán trong vòng 30 ngày."
+      },
+      "new": "Số dư còn lại phải được thanh toán trong vòng ba mươi ngày kể từ ngày xuất hóa đơn."
+    },
+    {
+      "id": "penalty-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "penalty: tiền phạt; hình phạt.",
+        "pos": "n"
+      },
+      "new": "a punishment or additional amount of money imposed for breaking a rule or failing to meet an obligation"
+    },
+    {
+      "id": "penalty-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "A late payment penalty may apply."
+      },
+      "new": "A penalty will be charged if the equipment is returned after the due date."
+    },
+    {
+      "id": "penalty-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Có thể áp dụng tiền phạt thanh toán trễ."
+      },
+      "new": "Một khoản phạt sẽ được áp dụng nếu thiết bị được trả sau ngày đến hạn."
+    }
+  ]
+}

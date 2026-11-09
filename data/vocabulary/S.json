@@ -1204,7 +1204,7 @@
         {
           "pos": "v",
           "meaning_vi": "quy định rõ; nêu cụ thể",
-          "definition_en": "specify: quy định rõ; nêu cụ thể.",
+          "definition_en": "to state or describe something clearly and exactly",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1217,8 +1217,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The contract specifies the delivery deadline.",
-          "vi": "Hợp đồng quy định rõ thời hạn giao hàng."
+          "en": "Please specify the quantity and delivery address when placing your order.",
+          "vi": "Vui lòng ghi rõ số lượng và địa chỉ giao hàng khi đặt đơn."
         }
       ],
       "collocations": [
@@ -1663,7 +1663,7 @@
         {
           "pos": "v",
           "meaning_vi": "đăng ký thuê bao; đặt mua định kỳ",
-          "definition_en": "subscribe: đăng ký thuê bao; đặt mua định kỳ.",
+          "definition_en": "to arrange to receive a publication or service, usually by paying regularly",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -1676,8 +1676,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Customers can subscribe to the monthly newsletter.",
-          "vi": "Khách hàng có thể đăng ký nhận bản tin hằng tháng."
+          "en": "Customers can subscribe to the monthly industry newsletter on our website.",
+          "vi": "Khách hàng có thể đăng ký nhận bản tin ngành hằng tháng trên trang web của chúng tôi."
         }
       ],
       "collocations": [
@@ -1697,7 +1697,7 @@
         {
           "pos": "n",
           "meaning_vi": "thuê bao; gói đăng ký định kỳ",
-          "definition_en": "subscription: thuê bao; gói đăng ký định kỳ.",
+          "definition_en": "an arrangement in which someone pays regularly to receive a service or publication",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -1710,8 +1710,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The annual subscription includes technical support.",
-          "vi": "Gói đăng ký hằng năm bao gồm hỗ trợ kỹ thuật."
+          "en": "The annual software subscription includes technical support and security updates.",
+          "vi": "Gói thuê bao phần mềm hằng năm bao gồm hỗ trợ kỹ thuật và các bản cập nhật bảo mật."
         }
       ],
       "collocations": [
@@ -1805,7 +1805,7 @@
         {
           "pos": "adj",
           "meaning_vi": "đủ; đầy đủ",
-          "definition_en": "sufficient: đủ; đầy đủ.",
+          "definition_en": "as much as is needed for a particular purpose; enough",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1818,8 +1818,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please allow sufficient time for customs clearance.",
-          "vi": "Vui lòng dành đủ thời gian để thông quan."
+          "en": "Please allow sufficient time for the shipment to clear customs.",
+          "vi": "Vui lòng dành đủ thời gian để lô hàng hoàn tất thủ tục thông quan."
         }
       ],
       "collocations": [
@@ -1839,7 +1839,7 @@
         {
           "pos": "adv",
           "meaning_vi": "đủ mức; một cách đầy đủ",
-          "definition_en": "sufficiently: đủ mức; một cách đầy đủ.",
+          "definition_en": "to the degree that is needed or adequate for a particular purpose",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1852,8 +1852,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The room is sufficiently large for the workshop.",
-          "vi": "Căn phòng đủ rộng cho buổi hội thảo."
+          "en": "The conference room is sufficiently large to accommodate all registered guests.",
+          "vi": "Phòng hội nghị đủ rộng để bố trí chỗ cho tất cả khách đã đăng ký."
         }
       ],
       "collocations": [
@@ -2230,7 +2230,7 @@
         {
           "pos": "n",
           "meaning_vi": "phụ phí",
-          "definition_en": "Surcharge: phụ phí.",
+          "definition_en": "an extra amount of money added to the usual price or basic charge",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2243,8 +2243,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The manager explained the surcharge policy to the team.",
-          "vi": "Quản lý đã giải thích chính sách “surcharge” cho nhóm."
+          "en": "A fuel surcharge may apply to deliveries outside the metropolitan area.",
+          "vi": "Phụ phí nhiên liệu có thể được áp dụng cho các chuyến giao hàng ngoài khu vực đô thị."
         }
       ],
       "collocations": [],
@@ -2339,7 +2339,7 @@
         {
           "pos": "v",
           "meaning_vi": "tạm ngừng; đình chỉ",
-          "definition_en": "suspend: tạm ngừng; đình chỉ.",
+          "definition_en": "to stop an activity, service, or privilege temporarily, often until a problem is resolved",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2352,8 +2352,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The airline suspended flights because of the storm.",
-          "vi": "Hãng hàng không tạm ngừng các chuyến bay vì bão."
+          "en": "The airline will suspend the route while runway repairs are underway.",
+          "vi": "Hãng hàng không sẽ tạm ngừng tuyến bay trong thời gian sửa chữa đường băng."
         }
       ],
       "collocations": [
@@ -2373,7 +2373,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự tạm ngừng; đình chỉ",
-          "definition_en": "suspension: sự tạm ngừng; đình chỉ.",
+          "definition_en": "the temporary stopping of an activity, service, or privilege",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2386,8 +2386,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The temporary suspension will last until repairs are complete.",
-          "vi": "Việc tạm ngừng sẽ kéo dài đến khi sửa chữa hoàn tất."
+          "en": "The temporary suspension of deliveries was announced after the warehouse fire.",
+          "vi": "Việc tạm ngừng giao hàng đã được thông báo sau vụ cháy nhà kho."
         }
       ],
       "collocations": [

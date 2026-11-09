@@ -12,7 +12,7 @@
         {
           "pos": "n",
           "meaning_vi": "bưu kiện; gói hàng",
-          "definition_en": "parcel: bưu kiện; gói hàng.",
+          "definition_en": "a package or wrapped item sent or delivered to someone",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -25,8 +25,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The parcel can be collected at the service counter.",
-          "vi": "Bưu kiện có thể được nhận tại quầy dịch vụ."
+          "en": "The courier left the parcel at the reception desk.",
+          "vi": "Nhân viên chuyển phát đã để bưu kiện tại quầy lễ tân."
         }
       ],
       "collocations": [
@@ -46,7 +46,7 @@
         {
           "pos": "n",
           "meaning_vi": "người tham gia",
-          "definition_en": "Participant — see Vietnamese meaning and examples.",
+          "definition_en": "a person who takes part in an activity, event, or program",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -59,8 +59,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The participant was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “participant” được đề cập trong cuộc họp."
+          "en": "Each participant must complete the online safety course before the workshop.",
+          "vi": "Mỗi người tham gia phải hoàn thành khóa an toàn trực tuyến trước buổi hội thảo."
         }
       ],
       "collocations": [],
@@ -209,7 +209,7 @@
         {
           "pos": "adj",
           "meaning_vi": "phải trả; đến hạn thanh toán",
-          "definition_en": "payable: phải trả; đến hạn thanh toán.",
+          "definition_en": "required to be paid, especially by a stated date",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -222,8 +222,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The balance is payable within thirty days.",
-          "vi": "Số dư phải được thanh toán trong vòng 30 ngày."
+          "en": "The remaining balance is payable within thirty days of the invoice date.",
+          "vi": "Số dư còn lại phải được thanh toán trong vòng ba mươi ngày kể từ ngày xuất hóa đơn."
         }
       ],
       "collocations": [
@@ -419,7 +419,7 @@
         {
           "pos": "n",
           "meaning_vi": "tiền phạt; hình phạt",
-          "definition_en": "penalty: tiền phạt; hình phạt.",
+          "definition_en": "a punishment or additional amount of money imposed for breaking a rule or failing to meet an obligation",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -432,8 +432,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "A late payment penalty may apply.",
-          "vi": "Có thể áp dụng tiền phạt thanh toán trễ."
+          "en": "A penalty will be charged if the equipment is returned after the due date.",
+          "vi": "Một khoản phạt sẽ được áp dụng nếu thiết bị được trả sau ngày đến hạn."
         }
       ],
       "collocations": [
@@ -533,7 +533,7 @@
         {
           "pos": "n",
           "meaning_vi": "hiệu suất; kết quả thực hiện",
-          "definition_en": "Performance — see Vietnamese meaning and examples.",
+          "definition_en": "how well a person, team, or organization carries out a task or achieves its goals",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -546,8 +546,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The performance was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “performance” được đề cập trong cuộc họp."
+          "en": "The quarterly report shows a significant improvement in employee performance.",
+          "vi": "Báo cáo quý cho thấy hiệu suất làm việc của nhân viên được cải thiện đáng kể."
         }
       ],
       "collocations": [],
@@ -564,7 +564,7 @@
         {
           "pos": "adj",
           "meaning_vi": "dễ hư hỏng; mau hỏng",
-          "definition_en": "perishable: dễ hư hỏng; mau hỏng.",
+          "definition_en": "likely to decay or become unsafe to eat after a relatively short time",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -577,8 +577,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Perishable goods must be stored at a low temperature.",
-          "vi": "Hàng dễ hư hỏng phải được bảo quản ở nhiệt độ thấp."
+          "en": "The warehouse stores perishable products in temperature-controlled rooms.",
+          "vi": "Kho hàng bảo quản các sản phẩm dễ hư hỏng trong những phòng có kiểm soát nhiệt độ."
         }
       ],
       "collocations": [
@@ -949,7 +949,7 @@
         {
           "pos": "n",
           "meaning_vi": "danh mục đầu tư; hồ sơ năng lực",
-          "definition_en": "portfolio: danh mục đầu tư; hồ sơ năng lực.",
+          "definition_en": "a collection of investments, projects, or examples of work held or presented by a person or organization",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -962,8 +962,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The firm manages a diverse investment portfolio.",
-          "vi": "Công ty quản lý danh mục đầu tư đa dạng."
+          "en": "The investment firm reviewed each client’s portfolio before recommending changes.",
+          "vi": "Công ty đầu tư đã xem xét danh mục đầu tư của từng khách hàng trước khi đề xuất điều chỉnh."
         }
       ],
       "collocations": [
@@ -1021,7 +1021,7 @@
         {
           "pos": "n",
           "meaning_vi": "cước bưu chính; phí gửi thư",
-          "definition_en": "postage: cước bưu chính; phí gửi thư.",
+          "definition_en": "the fee charged for sending a letter or package through the postal service",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1034,8 +1034,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Postage is included in the quoted price.",
-          "vi": "Phí gửi bưu chính đã được tính trong giá báo."
+          "en": "The online order confirmation states that postage will be added to the final cost.",
+          "vi": "Xác nhận đơn hàng trực tuyến cho biết phí gửi bưu chính sẽ được cộng vào tổng chi phí."
         }
       ],
       "collocations": [
@@ -1102,7 +1102,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự trì hoãn; việc hoãn lại",
-          "definition_en": "postponement: sự trì hoãn; việc hoãn lại.",
+          "definition_en": "the act of arranging for an event or activity to take place at a later time",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1115,8 +1115,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The postponement was announced by email.",
-          "vi": "Việc hoãn lịch được thông báo qua email."
+          "en": "Due to severe weather, the postponement of the outdoor event was announced this morning.",
+          "vi": "Do thời tiết khắc nghiệt, việc hoãn sự kiện ngoài trời đã được thông báo sáng nay."
         }
       ],
       "collocations": [
@@ -1176,7 +1176,7 @@
         {
           "pos": "n",
           "meaning_vi": "biện pháp phòng ngừa",
-          "definition_en": "Precaution — see Vietnamese meaning and examples.",
+          "definition_en": "an action taken in advance to reduce the risk of harm, damage, or an unwanted problem",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1189,8 +1189,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The precaution was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “precaution” được đề cập trong cuộc họp."
+          "en": "As a precaution, all visitors must sign in at the reception desk.",
+          "vi": "Để phòng ngừa rủi ro, tất cả khách đến thăm phải đăng ký tại quầy lễ tân."
         }
       ],
       "collocations": [],
@@ -1278,7 +1278,7 @@
         {
           "pos": "n",
           "meaning_vi": "phí bảo hiểm; khoản phụ trội",
-          "definition_en": "premium: phí bảo hiểm; khoản phụ trội.",
+          "definition_en": "an amount paid regularly for an insurance policy, or an additional charge for a higher level of service",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1291,8 +1291,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The annual insurance premium is due in March.",
-          "vi": "Phí bảo hiểm hằng năm đến hạn vào tháng Ba."
+          "en": "The company will pay the annual insurance premium for all full-time employees.",
+          "vi": "Công ty sẽ thanh toán phí bảo hiểm hằng năm cho tất cả nhân viên toàn thời gian."
         }
       ],
       "collocations": [
@@ -1358,7 +1358,7 @@
         {
           "pos": "v",
           "meaning_vi": "quy định; chỉ định",
-          "definition_en": "prescribe: quy định; chỉ định.",
+          "definition_en": "to state officially what must be done or what treatment or procedure should be followed",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1371,8 +1371,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The policy prescribes a standard review procedure.",
-          "vi": "Chính sách quy định quy trình rà soát tiêu chuẩn."
+          "en": "The safety regulations prescribe a monthly inspection of all lifting equipment.",
+          "vi": "Quy định an toàn yêu cầu kiểm tra hằng tháng toàn bộ thiết bị nâng."
         }
       ],
       "collocations": [
@@ -1540,7 +1540,7 @@
         {
           "pos": "n",
           "meaning_vi": "ưu tiên; điều được ưu tiên",
-          "definition_en": "Priority — see Vietnamese meaning and examples.",
+          "definition_en": "something that is considered more important than other matters and should be dealt with first",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1553,8 +1553,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The priority was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “priority” được đề cập trong cuộc họp."
+          "en": "Resolving the customer’s billing issue is our top priority today.",
+          "vi": "Giải quyết vấn đề thanh toán của khách hàng là ưu tiên hàng đầu của chúng ta hôm nay."
         }
       ],
       "collocations": [],
@@ -1877,7 +1877,7 @@
         {
           "pos": "n",
           "meaning_vi": "năng suất",
-          "definition_en": "productivity: năng suất.",
+          "definition_en": "the rate at which work is completed or goods and services are produced",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1890,8 +1890,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Flexible schedules have improved staff productivity.",
-          "vi": "Lịch làm việc linh hoạt đã cải thiện năng suất nhân viên."
+          "en": "The new scheduling system has increased productivity across the service department.",
+          "vi": "Hệ thống lập lịch mới đã nâng cao năng suất trên toàn bộ bộ phận dịch vụ."
         }
       ],
       "collocations": [
@@ -1951,7 +1951,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự thành thạo; trình độ",
-          "definition_en": "proficiency: sự thành thạo; trình độ.",
+          "definition_en": "a high level of skill or ability in a particular subject or activity",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1964,8 +1964,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The position requires proficiency in spreadsheet software.",
-          "vi": "Vị trí này yêu cầu thành thạo phần mềm bảng tính."
+          "en": "The position requires proficiency in business English and spreadsheet software.",
+          "vi": "Vị trí này yêu cầu trình độ thành thạo tiếng Anh thương mại và phần mềm bảng tính."
         }
       ],
       "collocations": [
@@ -1985,7 +1985,7 @@
         {
           "pos": "adj",
           "meaning_vi": "thành thạo",
-          "definition_en": "proficient: thành thạo.",
+          "definition_en": "having the skill and ability needed to do something well",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1998,8 +1998,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Applicants should be proficient in written English.",
-          "vi": "Ứng viên nên thành thạo tiếng Anh viết."
+          "en": "Applicants must be proficient in using common office applications.",
+          "vi": "Ứng viên phải thành thạo việc sử dụng các ứng dụng văn phòng phổ biến."
         }
       ],
       "collocations": [
@@ -2195,7 +2195,7 @@
         {
           "pos": "v",
           "meaning_vi": "kéo dài; làm lâu hơn",
-          "definition_en": "prolong: kéo dài; làm lâu hơn.",
+          "definition_en": "to make an activity, situation, or period of time continue for longer than expected",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2208,8 +2208,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The repair work may prolong the building closure.",
-          "vi": "Công việc sửa chữa có thể kéo dài thời gian đóng cửa tòa nhà."
+          "en": "A shortage of replacement parts could prolong the equipment repair.",
+          "vi": "Tình trạng thiếu linh kiện thay thế có thể kéo dài việc sửa chữa thiết bị."
         }
       ],
       "collocations": [
@@ -2229,7 +2229,7 @@
         {
           "pos": "adj",
           "meaning_vi": "kéo dài; lâu hơn bình thường",
-          "definition_en": "prolonged: kéo dài; lâu hơn bình thường.",
+          "definition_en": "continuing for a longer period than is usual or expected",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2242,8 +2242,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Prolonged delays have affected several deliveries.",
-          "vi": "Sự chậm trễ kéo dài đã ảnh hưởng đến một số chuyến giao hàng."
+          "en": "The airport issued an apology after prolonged delays disrupted several flights.",
+          "vi": "Sân bay đã đưa ra lời xin lỗi sau khi tình trạng chậm trễ kéo dài làm gián đoạn một số chuyến bay."
         }
       ],
       "collocations": [
@@ -2340,7 +2340,7 @@
         {
           "pos": "adv",
           "meaning_vi": "ngay lập tức; đúng giờ",
-          "definition_en": "promptly: ngay lập tức; đúng giờ.",
+          "definition_en": "quickly and without unnecessary delay",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2353,8 +2353,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please respond promptly to the customer's inquiry.",
-          "vi": "Vui lòng phản hồi nhanh chóng yêu cầu của khách hàng."
+          "en": "Please forward the signed contract to our legal department promptly.",
+          "vi": "Vui lòng nhanh chóng chuyển hợp đồng đã ký đến bộ phận pháp lý của chúng tôi."
         }
       ],
       "collocations": [
@@ -2626,7 +2626,7 @@
         {
           "pos": "adj",
           "meaning_vi": "tạm thời; có điều kiện",
-          "definition_en": "Provisional: tạm thời; có điều kiện.",
+          "definition_en": "temporary and intended to be confirmed, changed, or replaced later",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2639,8 +2639,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the provisional issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “provisional” tại cuộc họp."
+          "en": "The provisional schedule will be finalized after all department managers respond.",
+          "vi": "Lịch trình tạm thời sẽ được chốt sau khi tất cả trưởng bộ phận phản hồi."
         }
       ],
       "collocations": [],

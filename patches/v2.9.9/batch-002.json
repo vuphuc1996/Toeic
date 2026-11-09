@@ -1,0 +1,1002 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.9.9-batch-002",
+  "baseDataVersion": "2.9.8",
+  "targetDataVersion": "2.9.9",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "description": "Editorial correction for 40 headwords C–E.",
+  "operations": [
+    {
+      "id": "clarify-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Clarify — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to make information, instructions, or a situation easier to understand"
+    },
+    {
+      "id": "clarify-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will clarify the relevant process."
+      },
+      "new": "The purchasing manager asked the supplier to clarify the delivery terms."
+    },
+    {
+      "id": "clarify-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “clarify” được đề cập trong cuộc họp."
+      },
+      "new": "Trưởng bộ phận mua hàng yêu cầu nhà cung cấp làm rõ các điều khoản giao hàng."
+    },
+    {
+      "id": "clientele-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Clientele — tệp khách hàng.",
+        "pos": "n"
+      },
+      "new": "the people who regularly buy goods or use services from a business"
+    },
+    {
+      "id": "clientele-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed clientele during the meeting."
+      },
+      "new": "The new branch is designed to serve a younger clientele."
+    },
+    {
+      "id": "clientele-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “clientele” trong cuộc họp."
+      },
+      "new": "Chi nhánh mới được thiết kế để phục vụ nhóm khách hàng trẻ hơn."
+    },
+    {
+      "id": "compensation-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "compensation: tiền bồi thường; chế độ đãi ngộ.",
+        "pos": "n"
+      },
+      "new": "money or benefits given in return for work, or to make up for loss or injury"
+    },
+    {
+      "id": "compensation-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The compensation package includes health coverage."
+      },
+      "new": "The compensation package includes a transport allowance and health insurance."
+    },
+    {
+      "id": "compensation-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Gói đãi ngộ bao gồm bảo hiểm sức khỏe."
+      },
+      "new": "Gói đãi ngộ bao gồm phụ cấp đi lại và bảo hiểm y tế."
+    },
+    {
+      "id": "competitive-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "competitive: có tính cạnh tranh; cạnh tranh.",
+        "pos": "adj"
+      },
+      "new": "able to compete successfully, especially because of price, quality, or performance"
+    },
+    {
+      "id": "competitive-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company offers competitive salaries."
+      },
+      "new": "The company offers competitive salaries to attract experienced engineers."
+    },
+    {
+      "id": "competitive-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Công ty đưa ra mức lương cạnh tranh."
+      },
+      "new": "Công ty đưa ra mức lương cạnh tranh để thu hút các kỹ sư giàu kinh nghiệm."
+    },
+    {
+      "id": "competitor-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "competitor: đối thủ cạnh tranh.",
+        "pos": "n"
+      },
+      "new": "a person or organization that offers similar products or services and competes for the same customers"
+    },
+    {
+      "id": "competitor-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "A major competitor has launched a similar product."
+      },
+      "new": "A major competitor has opened a new store across the street."
+    },
+    {
+      "id": "competitor-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Một đối thủ lớn vừa ra mắt sản phẩm tương tự."
+      },
+      "new": "Một đối thủ cạnh tranh lớn đã mở cửa hàng mới bên kia đường."
+    },
+    {
+      "id": "completion-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "completion: sự hoàn thành.",
+        "pos": "n"
+      },
+      "new": "the act or result of finishing a task, project, or process"
+    },
+    {
+      "id": "completion-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Payment is due upon completion of the project."
+      },
+      "new": "Final payment will be made upon completion of the installation."
+    },
+    {
+      "id": "completion-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Thanh toán đến hạn khi dự án hoàn thành."
+      },
+      "new": "Khoản thanh toán cuối cùng sẽ được thực hiện sau khi hoàn tất việc lắp đặt."
+    },
+    {
+      "id": "comply-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Comply — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to act according to a rule, law, request, or official requirement"
+    },
+    {
+      "id": "comply-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will comply the relevant process."
+      },
+      "new": "All contractors must comply with the company’s safety regulations."
+    },
+    {
+      "id": "comply-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “comply” được đề cập trong cuộc họp."
+      },
+      "new": "Tất cả nhà thầu phải tuân thủ các quy định an toàn của công ty."
+    },
+    {
+      "id": "confidential-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Confidential — see Vietnamese meaning and examples.",
+        "pos": "adj"
+      },
+      "new": "intended to be kept private and not shared with people who are not authorized"
+    },
+    {
+      "id": "confidential-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The confidential was discussed during the meeting."
+      },
+      "new": "Employees must not disclose confidential customer information."
+    },
+    {
+      "id": "confidential-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “confidential” được đề cập trong cuộc họp."
+      },
+      "new": "Nhân viên không được tiết lộ thông tin khách hàng bảo mật."
+    },
+    {
+      "id": "confirmation-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Confirmation — sự xác nhận.",
+        "pos": "n"
+      },
+      "new": "a statement or message showing that an arrangement, booking, or fact is definite"
+    },
+    {
+      "id": "confirmation-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed confirmation during the meeting."
+      },
+      "new": "You will receive an email confirmation after your reservation is processed."
+    },
+    {
+      "id": "confirmation-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “confirmation” trong cuộc họp."
+      },
+      "new": "Bạn sẽ nhận được email xác nhận sau khi đặt chỗ được xử lý."
+    },
+    {
+      "id": "consecutive-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Consecutive — see Vietnamese meaning and examples.",
+        "pos": "adj"
+      },
+      "new": "following one after another without a break or interruption"
+    },
+    {
+      "id": "consecutive-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The consecutive was discussed during the meeting."
+      },
+      "new": "The warehouse recorded three consecutive days without a shipping delay."
+    },
+    {
+      "id": "consecutive-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “consecutive” được đề cập trong cuộc họp."
+      },
+      "new": "Nhà kho ghi nhận ba ngày liên tiếp không xảy ra chậm trễ giao hàng."
+    },
+    {
+      "id": "consent-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Consent: sự đồng ý; đồng ý.",
+        "pos": "n/v"
+      },
+      "new": "permission or agreement given for something to happen"
+    },
+    {
+      "id": "consent-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the consent issue at the meeting."
+      },
+      "new": "The survey will be conducted only after participants give their consent."
+    },
+    {
+      "id": "consent-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “consent” tại cuộc họp."
+      },
+      "new": "Khảo sát chỉ được tiến hành sau khi người tham gia đưa ra sự đồng ý."
+    },
+    {
+      "id": "consumable-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "consumable: vật tư tiêu hao.",
+        "pos": "n"
+      },
+      "new": "a product or material that is used up during normal operations and must be replaced"
+    },
+    {
+      "id": "consumable-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Office consumables are ordered at the start of each month."
+      },
+      "new": "The office orders printer ink and other consumables every month."
+    },
+    {
+      "id": "consumable-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Vật tư tiêu hao văn phòng được đặt vào đầu mỗi tháng."
+      },
+      "new": "Văn phòng đặt mực in và các vật tư tiêu hao khác mỗi tháng."
+    },
+    {
+      "id": "consumption-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Consumption — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "the amount of a resource, product, or service that is used"
+    },
+    {
+      "id": "consumption-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The consumption was discussed during the meeting."
+      },
+      "new": "The new lighting system has reduced electricity consumption."
+    },
+    {
+      "id": "consumption-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “consumption” được đề cập trong cuộc họp."
+      },
+      "new": "Hệ thống chiếu sáng mới đã giảm mức tiêu thụ điện."
+    },
+    {
+      "id": "contractual-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "contractual: thuộc hợp đồng; theo hợp đồng.",
+        "pos": "adj"
+      },
+      "new": "relating to a contract or to duties and rights established by a contract"
+    },
+    {
+      "id": "contractual-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The supplier must meet all contractual obligations."
+      },
+      "new": "The supplier failed to meet its contractual obligations."
+    },
+    {
+      "id": "contractual-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhà cung cấp phải đáp ứng mọi nghĩa vụ theo hợp đồng."
+      },
+      "new": "Nhà cung cấp đã không thực hiện đúng các nghĩa vụ theo hợp đồng."
+    },
+    {
+      "id": "coordinate-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Coordinate — điều phối; phối hợp.",
+        "pos": "v"
+      },
+      "new": "to organize people, activities, or resources so that they work together effectively"
+    },
+    {
+      "id": "coordinate-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed coordinate during the meeting."
+      },
+      "new": "The event coordinator will coordinate transportation for all speakers."
+    },
+    {
+      "id": "coordinate-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “coordinate” trong cuộc họp."
+      },
+      "new": "Điều phối viên sự kiện sẽ phối hợp việc đưa đón tất cả diễn giả."
+    },
+    {
+      "id": "courtesy-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Courtesy — sự lịch thiệp; phép lịch sự.",
+        "pos": "n"
+      },
+      "new": "polite behavior or a considerate action intended to show respect"
+    },
+    {
+      "id": "courtesy-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed courtesy during the meeting."
+      },
+      "new": "As a courtesy, the hotel will provide a shuttle to the airport."
+    },
+    {
+      "id": "courtesy-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “courtesy” trong cuộc họp."
+      },
+      "new": "Để thể hiện sự chu đáo, khách sạn sẽ cung cấp xe đưa đón đến sân bay."
+    },
+    {
+      "id": "coverage-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "coverage: phạm vi bảo hiểm; phạm vi bao phủ.",
+        "pos": "n"
+      },
+      "new": "the protection or services included in an insurance or warranty plan; the area or amount included"
+    },
+    {
+      "id": "coverage-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The warranty provides coverage for manufacturing defects."
+      },
+      "new": "The extended warranty provides coverage for parts and labor."
+    },
+    {
+      "id": "coverage-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bảo hành bao gồm các lỗi do sản xuất."
+      },
+      "new": "Gói bảo hành mở rộng bao gồm chi phí linh kiện và nhân công."
+    },
+    {
+      "id": "creditor-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "creditor: chủ nợ; bên cho vay.",
+        "pos": "n"
+      },
+      "new": "a person or organization to whom money is owed"
+    },
+    {
+      "id": "creditor-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company reached an agreement with its creditors."
+      },
+      "new": "The company negotiated a longer repayment period with its creditors."
+    },
+    {
+      "id": "creditor-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Công ty đạt được thỏa thuận với các chủ nợ."
+      },
+      "new": "Công ty đã đàm phán thời hạn trả nợ dài hơn với các chủ nợ."
+    },
+    {
+      "id": "deduct-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Deduct — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to take an amount away from a total, salary, or payment"
+    },
+    {
+      "id": "deduct-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will deduct the relevant process."
+      },
+      "new": "The employer will deduct income tax from each monthly salary."
+    },
+    {
+      "id": "deduct-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “deduct” được đề cập trong cuộc họp."
+      },
+      "new": "Người sử dụng lao động sẽ khấu trừ thuế thu nhập từ mỗi tháng lương."
+    },
+    {
+      "id": "deduction-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "deduction: khoản khấu trừ.",
+        "pos": "n"
+      },
+      "new": "an amount that is subtracted from a total, especially for tax or another payment"
+    },
+    {
+      "id": "deduction-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The payslip lists each tax deduction."
+      },
+      "new": "The payslip shows a deduction for the employee’s health insurance."
+    },
+    {
+      "id": "deduction-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Phiếu lương liệt kê từng khoản khấu trừ thuế."
+      },
+      "new": "Phiếu lương thể hiện khoản khấu trừ cho bảo hiểm y tế của nhân viên."
+    },
+    {
+      "id": "defective-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Defective — bị lỗi; có khuyết tật.",
+        "pos": "adj"
+      },
+      "new": "not working correctly or not made properly because of a fault"
+    },
+    {
+      "id": "defective-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed defective during the meeting."
+      },
+      "new": "Customers may return defective products within thirty days."
+    },
+    {
+      "id": "defective-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “defective” trong cuộc họp."
+      },
+      "new": "Khách hàng có thể trả lại sản phẩm bị lỗi trong vòng ba mươi ngày."
+    },
+    {
+      "id": "deficit-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "deficit: thâm hụt; khoản thiếu hụt.",
+        "pos": "n"
+      },
+      "new": "an amount by which expenses or demand are greater than income, supply, or available resources"
+    },
+    {
+      "id": "deficit-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department is working to reduce its budget deficit."
+      },
+      "new": "The department must reduce its budget deficit before the next quarter."
+    },
+    {
+      "id": "deficit-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đang tìm cách giảm thâm hụt ngân sách."
+      },
+      "new": "Bộ phận phải giảm mức thâm hụt ngân sách trước quý tới."
+    },
+    {
+      "id": "delegate-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Delegate — see Vietnamese meaning and examples.",
+        "pos": "v/n"
+      },
+      "new": "to give a task or responsibility to another person, usually with the authority to complete it"
+    },
+    {
+      "id": "delegate-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will delegate the relevant process."
+      },
+      "new": "The director decided to delegate routine approvals to the regional managers."
+    },
+    {
+      "id": "delegate-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “delegate” được đề cập trong cuộc họp."
+      },
+      "new": "Giám đốc quyết định ủy quyền phê duyệt công việc thường lệ cho các quản lý khu vực."
+    },
+    {
+      "id": "deliverable-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "deliverable: sản phẩm/kết quả cần bàn giao.",
+        "pos": "n"
+      },
+      "new": "a product, document, or result that must be provided as part of a project or agreement"
+    },
+    {
+      "id": "deliverable-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The contract specifies each project deliverable."
+      },
+      "new": "The final report is the last deliverable under the consulting contract."
+    },
+    {
+      "id": "deliverable-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Hợp đồng quy định từng kết quả cần bàn giao của dự án."
+      },
+      "new": "Báo cáo cuối cùng là sản phẩm bàn giao cuối cùng theo hợp đồng tư vấn."
+    },
+    {
+      "id": "departure-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Departure — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "the act or scheduled time of leaving a place"
+    },
+    {
+      "id": "departure-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The departure was discussed during the meeting."
+      },
+      "new": "Passengers should arrive at the gate thirty minutes before departure."
+    },
+    {
+      "id": "departure-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “departure” được đề cập trong cuộc họp."
+      },
+      "new": "Hành khách nên có mặt tại cửa khởi hành trước ba mươi phút."
+    },
+    {
+      "id": "disclose-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Disclose — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to make information known, especially information that was previously private or secret"
+    },
+    {
+      "id": "disclose-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will disclose the relevant process."
+      },
+      "new": "The applicant must disclose any conflicts of interest on the form."
+    },
+    {
+      "id": "disclose-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “disclose” được đề cập trong cuộc họp."
+      },
+      "new": "Ứng viên phải công khai mọi xung đột lợi ích trên biểu mẫu."
+    },
+    {
+      "id": "discrepancy-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Discrepancy: sự sai lệch; điểm không khớp.",
+        "pos": "n"
+      },
+      "new": "a difference between two pieces of information or amounts that should match"
+    },
+    {
+      "id": "discrepancy-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the discrepancy issue at the meeting."
+      },
+      "new": "The accountant found a discrepancy between the invoice and the purchase order."
+    },
+    {
+      "id": "discrepancy-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “discrepancy” tại cuộc họp."
+      },
+      "new": "Kế toán phát hiện sự sai lệch giữa hóa đơn và đơn đặt hàng."
+    },
+    {
+      "id": "distribute-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Distribute — phân phối.",
+        "pos": "v"
+      },
+      "new": "to deliver or share goods, documents, or information among several people or places"
+    },
+    {
+      "id": "distribute-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The team discussed distribute during the meeting."
+      },
+      "new": "Reception will distribute the updated visitor badges this afternoon."
+    },
+    {
+      "id": "distribute-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nhóm đã thảo luận về “distribute” trong cuộc họp."
+      },
+      "new": "Bộ phận lễ tân sẽ phát thẻ khách đã cập nhật vào chiều nay."
+    },
+    {
+      "id": "documentation-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "documentation: tài liệu; hồ sơ chứng từ.",
+        "pos": "n"
+      },
+      "new": "documents that provide information, evidence, or instructions about something"
+    },
+    {
+      "id": "documentation-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Please retain all documentation for the audit."
+      },
+      "new": "Please keep the shipping documentation for customs inspection."
+    },
+    {
+      "id": "documentation-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Vui lòng lưu giữ toàn bộ chứng từ phục vụ kiểm toán."
+      },
+      "new": "Vui lòng lưu giữ hồ sơ chứng từ vận chuyển để phục vụ kiểm tra hải quan."
+    },
+    {
+      "id": "duplicate-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "duplicate: trùng lặp; bản sao.",
+        "pos": "adj"
+      },
+      "new": "exactly the same as another item, or repeated when only one copy is needed"
+    },
+    {
+      "id": "duplicate-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Please remove duplicate entries from the customer list."
+      },
+      "new": "The database detected duplicate customer records and flagged them for review."
+    },
+    {
+      "id": "duplicate-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Vui lòng xóa các mục trùng lặp khỏi danh sách khách hàng."
+      },
+      "new": "Cơ sở dữ liệu phát hiện các hồ sơ khách hàng trùng lặp và đánh dấu để rà soát."
+    },
+    {
+      "id": "durable-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Durable — see Vietnamese meaning and examples.",
+        "pos": "adj"
+      },
+      "new": "able to last a long time without becoming damaged or worn out"
+    },
+    {
+      "id": "durable-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The durable was discussed during the meeting."
+      },
+      "new": "The manufacturer uses durable materials for its outdoor equipment."
+    },
+    {
+      "id": "durable-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “durable” được đề cập trong cuộc họp."
+      },
+      "new": "Nhà sản xuất sử dụng vật liệu bền cho thiết bị ngoài trời."
+    },
+    {
+      "id": "duration-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "duration: thời lượng; khoảng thời gian.",
+        "pos": "n"
+      },
+      "new": "the length of time that an event, activity, or condition continues"
+    },
+    {
+      "id": "duration-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Khóa đào tạo kéo dài hai tuần."
+      },
+      "new": "Khóa đào tạo có thời lượng hai tuần."
+    },
+    {
+      "id": "efficiently-adv",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "efficiently: một cách hiệu quả.",
+        "pos": "adv"
+      },
+      "new": "in a way that uses time, energy, or resources without unnecessary waste"
+    },
+    {
+      "id": "efficiently-adv",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The new software processes invoices more efficiently."
+      },
+      "new": "The new software allows staff to process invoices more efficiently."
+    },
+    {
+      "id": "efficiently-adv",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Phần mềm mới xử lý hóa đơn hiệu quả hơn."
+      },
+      "new": "Phần mềm mới giúp nhân viên xử lý hóa đơn hiệu quả hơn."
+    },
+    {
+      "id": "electronic-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "electronic: điện tử.",
+        "pos": "adj"
+      },
+      "new": "using a computer, digital system, or electronic equipment rather than paper or mechanical methods"
+    },
+    {
+      "id": "electronic-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Electronic receipts are sent automatically."
+      },
+      "new": "Electronic receipts are sent automatically after each online purchase."
+    },
+    {
+      "id": "electronic-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Biên lai điện tử được gửi tự động."
+      },
+      "new": "Biên lai điện tử được gửi tự động sau mỗi lần mua hàng trực tuyến."
+    },
+    {
+      "id": "eligibility-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "eligibility: điều kiện đủ; tư cách hợp lệ.",
+        "pos": "n"
+      },
+      "new": "the state of meeting the conditions required to receive or do something"
+    },
+    {
+      "id": "eligibility-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "Eligibility for the allowance depends on job grade."
+      },
+      "new": "Eligibility for the housing allowance depends on length of service."
+    },
+    {
+      "id": "eligibility-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Điều kiện hưởng phụ cấp phụ thuộc vào cấp bậc công việc."
+      },
+      "new": "Điều kiện được hưởng trợ cấp nhà ở phụ thuộc vào thâm niên công tác."
+    },
+    {
+      "id": "eligible-adj",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Eligible — see Vietnamese meaning and examples.",
+        "pos": "adj"
+      },
+      "new": "meeting the conditions required to receive or do something"
+    },
+    {
+      "id": "eligible-adj",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The eligible was discussed during the meeting."
+      },
+      "new": "Employees who have completed six months of service are eligible for the benefit."
+    },
+    {
+      "id": "eligible-adj",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “eligible” được đề cập trong cuộc họp."
+      },
+      "new": "Nhân viên đã làm việc đủ sáu tháng sẽ đủ điều kiện nhận phúc lợi."
+    },
+    {
+      "id": "emission-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Emission — see Vietnamese meaning and examples.",
+        "pos": "n"
+      },
+      "new": "the release of gas, heat, light, or another substance into the environment"
+    },
+    {
+      "id": "emission-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The emission was discussed during the meeting."
+      },
+      "new": "The factory must report its annual carbon emissions to the authorities."
+    },
+    {
+      "id": "emission-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “emission” được đề cập trong cuộc họp."
+      },
+      "new": "Nhà máy phải báo cáo lượng khí thải carbon hằng năm cho cơ quan chức năng."
+    },
+    {
+      "id": "enclose-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Enclose — see Vietnamese meaning and examples.",
+        "pos": "v"
+      },
+      "new": "to put something inside an envelope or package with another item, or to surround something"
+    },
+    {
+      "id": "enclose-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The company will enclose the relevant process."
+      },
+      "new": "Please enclose a copy of your receipt with the warranty claim."
+    },
+    {
+      "id": "enclose-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Nội dung liên quan đến “enclose” được đề cập trong cuộc họp."
+      },
+      "new": "Vui lòng gửi kèm một bản sao biên lai cùng yêu cầu bảo hành."
+    },
+    {
+      "id": "endorse-v",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "Endorse: tán thành; chứng thực.",
+        "pos": "v"
+      },
+      "new": "to publicly express support for something, or to sign a document to make it valid"
+    },
+    {
+      "id": "endorse-v",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "The department reviewed the endorse issue at the meeting."
+      },
+      "new": "The board voted to endorse the revised investment proposal."
+    },
+    {
+      "id": "endorse-v",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Bộ phận đã xem xét vấn đề liên quan đến “endorse” tại cuộc họp."
+      },
+      "new": "Hội đồng đã bỏ phiếu tán thành đề xuất đầu tư đã sửa đổi."
+    },
+    {
+      "id": "enquiry-n",
+      "path": "/senses/0/definition_en",
+      "expect": {
+        "old": "enquiry: yêu cầu thông tin; câu hỏi.",
+        "pos": "n"
+      },
+      "new": "a question or request for information about a product, service, or situation"
+    },
+    {
+      "id": "enquiry-n",
+      "path": "/examples/0/en",
+      "expect": {
+        "old": "We received an enquiry about international shipping rates."
+      },
+      "new": "Our sales team received an enquiry about bulk delivery rates."
+    },
+    {
+      "id": "enquiry-n",
+      "path": "/examples/0/vi",
+      "expect": {
+        "old": "Chúng tôi nhận được yêu cầu thông tin về cước vận chuyển quốc tế."
+      },
+      "new": "Đội ngũ bán hàng nhận được yêu cầu thông tin về mức phí giao hàng số lượng lớn."
+    }
+  ]
+}

@@ -361,7 +361,7 @@
         {
           "pos": "v",
           "meaning_vi": "khấu trừ; trừ đi",
-          "definition_en": "Deduct — see Vietnamese meaning and examples.",
+          "definition_en": "to take an amount away from a total, salary, or payment",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -374,8 +374,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will deduct the relevant process.",
-          "vi": "Nội dung liên quan đến “deduct” được đề cập trong cuộc họp."
+          "en": "The employer will deduct income tax from each monthly salary.",
+          "vi": "Người sử dụng lao động sẽ khấu trừ thuế thu nhập từ mỗi tháng lương."
         }
       ],
       "collocations": [],
@@ -392,7 +392,7 @@
         {
           "pos": "n",
           "meaning_vi": "khoản khấu trừ",
-          "definition_en": "deduction: khoản khấu trừ.",
+          "definition_en": "an amount that is subtracted from a total, especially for tax or another payment",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -405,8 +405,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The payslip lists each tax deduction.",
-          "vi": "Phiếu lương liệt kê từng khoản khấu trừ thuế."
+          "en": "The payslip shows a deduction for the employee’s health insurance.",
+          "vi": "Phiếu lương thể hiện khoản khấu trừ cho bảo hiểm y tế của nhân viên."
         }
       ],
       "collocations": [
@@ -426,7 +426,7 @@
         {
           "pos": "adj",
           "meaning_vi": "bị lỗi; có khuyết tật",
-          "definition_en": "Defective — bị lỗi; có khuyết tật.",
+          "definition_en": "not working correctly or not made properly because of a fault",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -439,8 +439,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed defective during the meeting.",
-          "vi": "Nhóm đã thảo luận về “defective” trong cuộc họp."
+          "en": "Customers may return defective products within thirty days.",
+          "vi": "Khách hàng có thể trả lại sản phẩm bị lỗi trong vòng ba mươi ngày."
         }
       ],
       "collocations": [],
@@ -457,7 +457,7 @@
         {
           "pos": "n",
           "meaning_vi": "thâm hụt; khoản thiếu hụt",
-          "definition_en": "deficit: thâm hụt; khoản thiếu hụt.",
+          "definition_en": "an amount by which expenses or demand are greater than income, supply, or available resources",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -470,8 +470,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department is working to reduce its budget deficit.",
-          "vi": "Bộ phận đang tìm cách giảm thâm hụt ngân sách."
+          "en": "The department must reduce its budget deficit before the next quarter.",
+          "vi": "Bộ phận phải giảm mức thâm hụt ngân sách trước quý tới."
         }
       ],
       "collocations": [
@@ -537,7 +537,7 @@
         {
           "pos": "v/n",
           "meaning_vi": "ủy quyền; người được ủy quyền",
-          "definition_en": "Delegate — see Vietnamese meaning and examples.",
+          "definition_en": "to give a task or responsibility to another person, usually with the authority to complete it",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -550,8 +550,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will delegate the relevant process.",
-          "vi": "Nội dung liên quan đến “delegate” được đề cập trong cuộc họp."
+          "en": "The director decided to delegate routine approvals to the regional managers.",
+          "vi": "Giám đốc quyết định ủy quyền phê duyệt công việc thường lệ cho các quản lý khu vực."
         }
       ],
       "collocations": [],
@@ -682,7 +682,7 @@
         {
           "pos": "n",
           "meaning_vi": "sản phẩm/kết quả cần bàn giao",
-          "definition_en": "deliverable: sản phẩm/kết quả cần bàn giao.",
+          "definition_en": "a product, document, or result that must be provided as part of a project or agreement",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -695,8 +695,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The contract specifies each project deliverable.",
-          "vi": "Hợp đồng quy định từng kết quả cần bàn giao của dự án."
+          "en": "The final report is the last deliverable under the consulting contract.",
+          "vi": "Báo cáo cuối cùng là sản phẩm bàn giao cuối cùng theo hợp đồng tư vấn."
         }
       ],
       "collocations": [
@@ -948,7 +948,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự khởi hành",
-          "definition_en": "Departure — see Vietnamese meaning and examples.",
+          "definition_en": "the act or scheduled time of leaving a place",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -961,8 +961,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The departure was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “departure” được đề cập trong cuộc họp."
+          "en": "Passengers should arrive at the gate thirty minutes before departure.",
+          "vi": "Hành khách nên có mặt tại cửa khởi hành trước ba mươi phút."
         }
       ],
       "collocations": [],
@@ -1525,7 +1525,7 @@
         {
           "pos": "v",
           "meaning_vi": "tiết lộ; công bố",
-          "definition_en": "Disclose — see Vietnamese meaning and examples.",
+          "definition_en": "to make information known, especially information that was previously private or secret",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1538,8 +1538,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will disclose the relevant process.",
-          "vi": "Nội dung liên quan đến “disclose” được đề cập trong cuộc họp."
+          "en": "The applicant must disclose any conflicts of interest on the form.",
+          "vi": "Ứng viên phải công khai mọi xung đột lợi ích trên biểu mẫu."
         }
       ],
       "collocations": [],
@@ -1608,7 +1608,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự sai lệch; điểm không khớp",
-          "definition_en": "Discrepancy: sự sai lệch; điểm không khớp.",
+          "definition_en": "a difference between two pieces of information or amounts that should match",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1621,8 +1621,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the discrepancy issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “discrepancy” tại cuộc họp."
+          "en": "The accountant found a discrepancy between the invoice and the purchase order.",
+          "vi": "Kế toán phát hiện sự sai lệch giữa hóa đơn và đơn đặt hàng."
         }
       ],
       "collocations": [],
@@ -1933,7 +1933,7 @@
         {
           "pos": "v",
           "meaning_vi": "phân phối",
-          "definition_en": "Distribute — phân phối.",
+          "definition_en": "to deliver or share goods, documents, or information among several people or places",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1946,8 +1946,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed distribute during the meeting.",
-          "vi": "Nhóm đã thảo luận về “distribute” trong cuộc họp."
+          "en": "Reception will distribute the updated visitor badges this afternoon.",
+          "vi": "Bộ phận lễ tân sẽ phát thẻ khách đã cập nhật vào chiều nay."
         }
       ],
       "collocations": [],
@@ -2078,7 +2078,7 @@
         {
           "pos": "n",
           "meaning_vi": "tài liệu; hồ sơ chứng từ",
-          "definition_en": "documentation: tài liệu; hồ sơ chứng từ.",
+          "definition_en": "documents that provide information, evidence, or instructions about something",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2091,8 +2091,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please retain all documentation for the audit.",
-          "vi": "Vui lòng lưu giữ toàn bộ chứng từ phục vụ kiểm toán."
+          "en": "Please keep the shipping documentation for customs inspection.",
+          "vi": "Vui lòng lưu giữ hồ sơ chứng từ vận chuyển để phục vụ kiểm tra hải quan."
         }
       ],
       "collocations": [
@@ -2283,7 +2283,7 @@
         {
           "pos": "adj",
           "meaning_vi": "trùng lặp; bản sao",
-          "definition_en": "duplicate: trùng lặp; bản sao.",
+          "definition_en": "exactly the same as another item, or repeated when only one copy is needed",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2296,8 +2296,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please remove duplicate entries from the customer list.",
-          "vi": "Vui lòng xóa các mục trùng lặp khỏi danh sách khách hàng."
+          "en": "The database detected duplicate customer records and flagged them for review.",
+          "vi": "Cơ sở dữ liệu phát hiện các hồ sơ khách hàng trùng lặp và đánh dấu để rà soát."
         }
       ],
       "collocations": [
@@ -2317,7 +2317,7 @@
         {
           "pos": "adj",
           "meaning_vi": "bền; lâu hỏng",
-          "definition_en": "Durable — see Vietnamese meaning and examples.",
+          "definition_en": "able to last a long time without becoming damaged or worn out",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2330,8 +2330,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The durable was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “durable” được đề cập trong cuộc họp."
+          "en": "The manufacturer uses durable materials for its outdoor equipment.",
+          "vi": "Nhà sản xuất sử dụng vật liệu bền cho thiết bị ngoài trời."
         }
       ],
       "collocations": [],
@@ -2348,7 +2348,7 @@
         {
           "pos": "n",
           "meaning_vi": "thời lượng; khoảng thời gian",
-          "definition_en": "duration: thời lượng; khoảng thời gian.",
+          "definition_en": "the length of time that an event, activity, or condition continues",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2362,7 +2362,7 @@
       "examples": [
         {
           "en": "The training course has a duration of two weeks.",
-          "vi": "Khóa đào tạo kéo dài hai tuần."
+          "vi": "Khóa đào tạo có thời lượng hai tuần."
         }
       ],
       "collocations": [

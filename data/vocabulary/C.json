@@ -142,7 +142,7 @@
         {
           "pos": "n",
           "meaning_vi": "sức chứa; năng lực",
-          "definition_en": "Capacity — see Vietnamese meaning and examples.",
+          "definition_en": "the maximum amount something can hold or the ability to perform a task",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -155,8 +155,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The capacity was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “capacity” được đề cập trong cuộc họp."
+          "en": "The new warehouse has the capacity to store 8,000 packages.",
+          "vi": "Nhà kho mới có sức chứa 8.000 kiện hàng."
         }
       ],
       "collocations": [],
@@ -251,7 +251,7 @@
         {
           "pos": "n",
           "meaning_vi": "hàng hóa vận chuyển",
-          "definition_en": "Cargo — hàng hóa vận chuyển.",
+          "definition_en": "goods carried by a ship, aircraft, train, or truck",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -264,8 +264,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed cargo during the meeting.",
-          "vi": "Nhóm đã thảo luận về “cargo” trong cuộc họp."
+          "en": "The cargo was inspected before it was loaded onto the aircraft.",
+          "vi": "Hàng hóa đã được kiểm tra trước khi được xếp lên máy bay."
         }
       ],
       "collocations": [],
@@ -576,7 +576,7 @@
         {
           "pos": "n",
           "meaning_vi": "chứng chỉ; giấy chứng nhận",
-          "definition_en": "Certificate — see Vietnamese meaning and examples.",
+          "definition_en": "an official document that confirms a fact, qualification, or completed course",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -589,8 +589,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The certificate was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “certificate” được đề cập trong cuộc họp."
+          "en": "Applicants must submit a safety training certificate with their forms.",
+          "vi": "Ứng viên phải nộp chứng chỉ đào tạo an toàn kèm theo hồ sơ."
         }
       ],
       "collocations": [],
@@ -958,7 +958,7 @@
         {
           "pos": "v",
           "meaning_vi": "lưu hành; phân phát",
-          "definition_en": "Circulate: lưu hành; phân phát.",
+          "definition_en": "to distribute a document or information to a group, or to move continuously through a system",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -971,8 +971,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the circulate issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “circulate” tại cuộc họp."
+          "en": "Please circulate the updated meeting agenda to all department heads.",
+          "vi": "Vui lòng gửi chương trình họp đã cập nhật đến tất cả trưởng bộ phận."
         }
       ],
       "collocations": [],
@@ -1105,7 +1105,7 @@
         {
           "pos": "v",
           "meaning_vi": "làm rõ; giải thích",
-          "definition_en": "Clarify — see Vietnamese meaning and examples.",
+          "definition_en": "to make information, instructions, or a situation easier to understand",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1118,8 +1118,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will clarify the relevant process.",
-          "vi": "Nội dung liên quan đến “clarify” được đề cập trong cuộc họp."
+          "en": "The purchasing manager asked the supplier to clarify the delivery terms.",
+          "vi": "Trưởng bộ phận mua hàng yêu cầu nhà cung cấp làm rõ các điều khoản giao hàng."
         }
       ],
       "collocations": [],
@@ -1276,7 +1276,7 @@
         {
           "pos": "n",
           "meaning_vi": "tệp khách hàng",
-          "definition_en": "Clientele — tệp khách hàng.",
+          "definition_en": "the people who regularly buy goods or use services from a business",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1289,8 +1289,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed clientele during the meeting.",
-          "vi": "Nhóm đã thảo luận về “clientele” trong cuộc họp."
+          "en": "The new branch is designed to serve a younger clientele.",
+          "vi": "Chi nhánh mới được thiết kế để phục vụ nhóm khách hàng trẻ hơn."
         }
       ],
       "collocations": [],
@@ -1789,7 +1789,7 @@
         {
           "pos": "n",
           "meaning_vi": "tiền bồi thường; chế độ đãi ngộ",
-          "definition_en": "compensation: tiền bồi thường; chế độ đãi ngộ.",
+          "definition_en": "money or benefits given in return for work, or to make up for loss or injury",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1802,8 +1802,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The compensation package includes health coverage.",
-          "vi": "Gói đãi ngộ bao gồm bảo hiểm sức khỏe."
+          "en": "The compensation package includes a transport allowance and health insurance.",
+          "vi": "Gói đãi ngộ bao gồm phụ cấp đi lại và bảo hiểm y tế."
         }
       ],
       "collocations": [
@@ -1857,7 +1857,7 @@
         {
           "pos": "adj",
           "meaning_vi": "có tính cạnh tranh; cạnh tranh",
-          "definition_en": "competitive: có tính cạnh tranh; cạnh tranh.",
+          "definition_en": "able to compete successfully, especially because of price, quality, or performance",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1870,8 +1870,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company offers competitive salaries.",
-          "vi": "Công ty đưa ra mức lương cạnh tranh."
+          "en": "The company offers competitive salaries to attract experienced engineers.",
+          "vi": "Công ty đưa ra mức lương cạnh tranh để thu hút các kỹ sư giàu kinh nghiệm."
         }
       ],
       "collocations": [
@@ -1891,7 +1891,7 @@
         {
           "pos": "n",
           "meaning_vi": "đối thủ cạnh tranh",
-          "definition_en": "competitor: đối thủ cạnh tranh.",
+          "definition_en": "a person or organization that offers similar products or services and competes for the same customers",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -1904,8 +1904,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "A major competitor has launched a similar product.",
-          "vi": "Một đối thủ lớn vừa ra mắt sản phẩm tương tự."
+          "en": "A major competitor has opened a new store across the street.",
+          "vi": "Một đối thủ cạnh tranh lớn đã mở cửa hàng mới bên kia đường."
         }
       ],
       "collocations": [
@@ -2094,7 +2094,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự hoàn thành",
-          "definition_en": "completion: sự hoàn thành.",
+          "definition_en": "the act or result of finishing a task, project, or process",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2107,8 +2107,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Payment is due upon completion of the project.",
-          "vi": "Thanh toán đến hạn khi dự án hoàn thành."
+          "en": "Final payment will be made upon completion of the installation.",
+          "vi": "Khoản thanh toán cuối cùng sẽ được thực hiện sau khi hoàn tất việc lắp đặt."
         }
       ],
       "collocations": [
@@ -2202,7 +2202,7 @@
         {
           "pos": "v",
           "meaning_vi": "tuân thủ",
-          "definition_en": "Comply — see Vietnamese meaning and examples.",
+          "definition_en": "to act according to a rule, law, request, or official requirement",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2215,8 +2215,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will comply the relevant process.",
-          "vi": "Nội dung liên quan đến “comply” được đề cập trong cuộc họp."
+          "en": "All contractors must comply with the company’s safety regulations.",
+          "vi": "Tất cả nhà thầu phải tuân thủ các quy định an toàn của công ty."
         }
       ],
       "collocations": [],
@@ -2540,7 +2540,7 @@
         {
           "pos": "adj",
           "meaning_vi": "bảo mật; bí mật",
-          "definition_en": "Confidential — see Vietnamese meaning and examples.",
+          "definition_en": "intended to be kept private and not shared with people who are not authorized",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2553,8 +2553,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The confidential was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “confidential” được đề cập trong cuộc họp."
+          "en": "Employees must not disclose confidential customer information.",
+          "vi": "Nhân viên không được tiết lộ thông tin khách hàng bảo mật."
         }
       ],
       "collocations": [],
@@ -2664,7 +2664,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự xác nhận",
-          "definition_en": "Confirmation — sự xác nhận.",
+          "definition_en": "a statement or message showing that an arrangement, booking, or fact is definite",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -2677,8 +2677,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed confirmation during the meeting.",
-          "vi": "Nhóm đã thảo luận về “confirmation” trong cuộc họp."
+          "en": "You will receive an email confirmation after your reservation is processed.",
+          "vi": "Bạn sẽ nhận được email xác nhận sau khi đặt chỗ được xử lý."
         }
       ],
       "collocations": [],
@@ -2695,7 +2695,7 @@
         {
           "pos": "adj",
           "meaning_vi": "liên tiếp",
-          "definition_en": "Consecutive — see Vietnamese meaning and examples.",
+          "definition_en": "following one after another without a break or interruption",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2708,8 +2708,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The consecutive was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “consecutive” được đề cập trong cuộc họp."
+          "en": "The warehouse recorded three consecutive days without a shipping delay.",
+          "vi": "Nhà kho ghi nhận ba ngày liên tiếp không xảy ra chậm trễ giao hàng."
         }
       ],
       "collocations": [],
@@ -2761,7 +2761,7 @@
         {
           "pos": "n/v",
           "meaning_vi": "sự đồng ý; đồng ý",
-          "definition_en": "Consent: sự đồng ý; đồng ý.",
+          "definition_en": "permission or agreement given for something to happen",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2774,8 +2774,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the consent issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “consent” tại cuộc họp."
+          "en": "The survey will be conducted only after participants give their consent.",
+          "vi": "Khảo sát chỉ được tiến hành sau khi người tham gia đưa ra sự đồng ý."
         }
       ],
       "collocations": [],
@@ -3164,7 +3164,7 @@
         {
           "pos": "n",
           "meaning_vi": "vật tư tiêu hao",
-          "definition_en": "consumable: vật tư tiêu hao.",
+          "definition_en": "a product or material that is used up during normal operations and must be replaced",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -3177,8 +3177,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Office consumables are ordered at the start of each month.",
-          "vi": "Vật tư tiêu hao văn phòng được đặt vào đầu mỗi tháng."
+          "en": "The office orders printer ink and other consumables every month.",
+          "vi": "Văn phòng đặt mực in và các vật tư tiêu hao khác mỗi tháng."
         }
       ],
       "collocations": [
@@ -3244,7 +3244,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự tiêu thụ; mức tiêu thụ",
-          "definition_en": "Consumption — see Vietnamese meaning and examples.",
+          "definition_en": "the amount of a resource, product, or service that is used",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -3257,8 +3257,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The consumption was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “consumption” được đề cập trong cuộc họp."
+          "en": "The new lighting system has reduced electricity consumption.",
+          "vi": "Hệ thống chiếu sáng mới đã giảm mức tiêu thụ điện."
         }
       ],
       "collocations": [],
@@ -3477,7 +3477,7 @@
         {
           "pos": "adj",
           "meaning_vi": "thuộc hợp đồng; theo hợp đồng",
-          "definition_en": "contractual: thuộc hợp đồng; theo hợp đồng.",
+          "definition_en": "relating to a contract or to duties and rights established by a contract",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -3490,8 +3490,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The supplier must meet all contractual obligations.",
-          "vi": "Nhà cung cấp phải đáp ứng mọi nghĩa vụ theo hợp đồng."
+          "en": "The supplier failed to meet its contractual obligations.",
+          "vi": "Nhà cung cấp đã không thực hiện đúng các nghĩa vụ theo hợp đồng."
         }
       ],
       "collocations": [
@@ -3853,7 +3853,7 @@
         {
           "pos": "v",
           "meaning_vi": "điều phối; phối hợp",
-          "definition_en": "Coordinate — điều phối; phối hợp.",
+          "definition_en": "to organize people, activities, or resources so that they work together effectively",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -3866,8 +3866,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed coordinate during the meeting.",
-          "vi": "Nhóm đã thảo luận về “coordinate” trong cuộc họp."
+          "en": "The event coordinator will coordinate transportation for all speakers.",
+          "vi": "Điều phối viên sự kiện sẽ phối hợp việc đưa đón tất cả diễn giả."
         }
       ],
       "collocations": [],
@@ -4089,7 +4089,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự lịch thiệp; phép lịch sự",
-          "definition_en": "Courtesy — sự lịch thiệp; phép lịch sự.",
+          "definition_en": "polite behavior or a considerate action intended to show respect",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -4102,8 +4102,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed courtesy during the meeting.",
-          "vi": "Nhóm đã thảo luận về “courtesy” trong cuộc họp."
+          "en": "As a courtesy, the hotel will provide a shuttle to the airport.",
+          "vi": "Để thể hiện sự chu đáo, khách sạn sẽ cung cấp xe đưa đón đến sân bay."
         }
       ],
       "collocations": [],
@@ -4120,7 +4120,7 @@
         {
           "pos": "n",
           "meaning_vi": "phạm vi bảo hiểm; phạm vi bao phủ",
-          "definition_en": "coverage: phạm vi bảo hiểm; phạm vi bao phủ.",
+          "definition_en": "the protection or services included in an insurance or warranty plan; the area or amount included",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -4133,8 +4133,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The warranty provides coverage for manufacturing defects.",
-          "vi": "Bảo hành bao gồm các lỗi do sản xuất."
+          "en": "The extended warranty provides coverage for parts and labor.",
+          "vi": "Gói bảo hành mở rộng bao gồm chi phí linh kiện và nhân công."
         }
       ],
       "collocations": [
@@ -4305,7 +4305,7 @@
         {
           "pos": "n",
           "meaning_vi": "chủ nợ; bên cho vay",
-          "definition_en": "creditor: chủ nợ; bên cho vay.",
+          "definition_en": "a person or organization to whom money is owed",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -4318,8 +4318,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company reached an agreement with its creditors.",
-          "vi": "Công ty đạt được thỏa thuận với các chủ nợ."
+          "en": "The company negotiated a longer repayment period with its creditors.",
+          "vi": "Công ty đã đàm phán thời hạn trả nợ dài hơn với các chủ nợ."
         }
       ],
       "collocations": [

@@ -210,7 +210,7 @@
         {
           "pos": "v",
           "meaning_vi": "biện minh; chứng minh là hợp lý",
-          "definition_en": "Justify — see Vietnamese meaning and examples.",
+          "definition_en": "to provide a good reason or evidence to show that an action or decision is reasonable",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -223,8 +223,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will justify the relevant process.",
-          "vi": "Nội dung liên quan đến “justify” được đề cập trong cuộc họp."
+          "en": "The project manager must justify the additional expense in the budget report.",
+          "vi": "Quản lý dự án phải giải trình khoản chi phí bổ sung trong báo cáo ngân sách."
         }
       ],
       "collocations": [],

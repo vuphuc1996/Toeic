@@ -12,7 +12,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự vắng mặt",
-          "definition_en": "Absence — sự vắng mặt.",
+          "definition_en": "the fact of not being present in a place or at an event",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -25,8 +25,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed absence during the meeting.",
-          "vi": "Nhóm đã thảo luận về “absence” trong cuộc họp."
+          "en": "The employee's absence was recorded in the attendance system.",
+          "vi": "Sự vắng mặt của nhân viên đã được ghi nhận trong hệ thống chấm công."
         }
       ],
       "collocations": [],
@@ -303,7 +303,7 @@
         {
           "pos": "v",
           "meaning_vi": "đáp ứng; cung cấp chỗ ở",
-          "definition_en": "accommodate: đáp ứng; cung cấp chỗ ở.",
+          "definition_en": "to provide enough space for someone or something, or to adjust to someone's needs",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -316,8 +316,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The hotel can accommodate up to 250 conference guests.",
-          "vi": "Khách sạn có thể phục vụ tối đa 250 khách dự hội nghị."
+          "en": "The conference room can accommodate up to forty participants.",
+          "vi": "Phòng hội nghị có thể đáp ứng chỗ ngồi cho tối đa bốn mươi người tham dự."
         }
       ],
       "collocations": [
@@ -375,7 +375,7 @@
         {
           "pos": "v",
           "meaning_vi": "hoàn thành; đạt được",
-          "definition_en": "Accomplish — hoàn thành; đạt được.",
+          "definition_en": "to succeed in doing or completing something, especially a task or goal",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -388,8 +388,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed accomplish during the meeting.",
-          "vi": "Nhóm đã thảo luận về “accomplish” trong cuộc họp."
+          "en": "The project team accomplished all of its targets ahead of schedule.",
+          "vi": "Nhóm dự án đã hoàn thành tất cả mục tiêu trước thời hạn."
         }
       ],
       "collocations": [],
@@ -406,7 +406,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự phù hợp; sự tuân theo",
-          "definition_en": "accordance: sự phù hợp; sự tuân theo.",
+          "definition_en": "the condition of following a rule, instruction, or standard; commonly used in “in accordance with”",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -419,8 +419,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "All payments must be made in accordance with the contract.",
-          "vi": "Mọi khoản thanh toán phải được thực hiện theo hợp đồng."
+          "en": "All expense claims must be submitted in accordance with company policy.",
+          "vi": "Mọi đề nghị thanh toán chi phí phải được gửi theo đúng chính sách công ty."
         }
       ],
       "collocations": [
@@ -471,7 +471,7 @@
         {
           "pos": "adj",
           "meaning_vi": "chịu trách nhiệm; có nghĩa vụ giải trình",
-          "definition_en": "accountable: chịu trách nhiệm; có nghĩa vụ giải trình.",
+          "definition_en": "responsible for actions or decisions and required to explain them",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -484,8 +484,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Department heads are accountable for their budgets.",
-          "vi": "Trưởng bộ phận chịu trách nhiệm về ngân sách của mình."
+          "en": "Each department manager is accountable for the accuracy of the monthly report.",
+          "vi": "Mỗi trưởng phòng chịu trách nhiệm về độ chính xác của báo cáo hằng tháng."
         }
       ],
       "collocations": [
@@ -573,7 +573,7 @@
         {
           "pos": "v",
           "meaning_vi": "tích lũy; phát sinh dần",
-          "definition_en": "Accrue: tích lũy; phát sinh dần.",
+          "definition_en": "to increase or accumulate gradually over time, especially money, interest, or benefits",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -586,8 +586,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the accrue issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “accrue” tại cuộc họp."
+          "en": "Interest will accrue on the outstanding balance until it is paid in full.",
+          "vi": "Tiền lãi sẽ tích lũy trên số dư còn nợ cho đến khi được thanh toán đầy đủ."
         }
       ],
       "collocations": [],
@@ -650,7 +650,7 @@
         {
           "pos": "adj",
           "meaning_vi": "chính xác",
-          "definition_en": "Accurate — chính xác.",
+          "definition_en": "correct and exact, with no significant mistakes",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -663,8 +663,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed accurate during the meeting.",
-          "vi": "Nhóm đã thảo luận về “accurate” trong cuộc họp."
+          "en": "Please make sure that the figures in the sales report are accurate.",
+          "vi": "Vui lòng đảm bảo các số liệu trong báo cáo bán hàng là chính xác."
         }
       ],
       "collocations": [],
@@ -762,7 +762,7 @@
         {
           "pos": "v",
           "meaning_vi": "kích hoạt",
-          "definition_en": "activate: kích hoạt.",
+          "definition_en": "to make a system, device, account, or process start working",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -775,8 +775,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please activate your account before placing an order.",
-          "vi": "Vui lòng kích hoạt tài khoản trước khi đặt hàng."
+          "en": "New employees must activate their accounts before accessing the portal.",
+          "vi": "Nhân viên mới phải kích hoạt tài khoản trước khi truy cập cổng thông tin."
         }
       ],
       "collocations": [
@@ -842,7 +842,7 @@
         {
           "pos": "adj",
           "meaning_vi": "bổ sung; thêm",
-          "definition_en": "additional: bổ sung; thêm.",
+          "definition_en": "extra; added to what is already available or required",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -855,8 +855,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Additional documents are required for the application.",
-          "vi": "Cần bổ sung giấy tờ cho hồ sơ đăng ký."
+          "en": "The supplier agreed to deliver the additional office chairs by Friday.",
+          "vi": "Nhà cung cấp đồng ý giao thêm số ghế văn phòng trước thứ Sáu."
         }
       ],
       "collocations": [
@@ -990,7 +990,7 @@
         {
           "pos": "adj",
           "meaning_vi": "liền kề; kế bên",
-          "definition_en": "Adjacent: liền kề; kế bên.",
+          "definition_en": "next to or sharing a boundary with something",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1003,8 +1003,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the adjacent issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “adjacent” tại cuộc họp."
+          "en": "The training room is adjacent to the main conference hall.",
+          "vi": "Phòng đào tạo nằm liền kề hội trường chính."
         }
       ],
       "collocations": [],
@@ -1055,7 +1055,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự điều chỉnh",
-          "definition_en": "adjustment: sự điều chỉnh.",
+          "definition_en": "a small change made to improve something or make it suitable",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1068,8 +1068,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The invoice includes an adjustment for shipping costs.",
-          "vi": "Hóa đơn bao gồm khoản điều chỉnh chi phí vận chuyển."
+          "en": "The finance department made an adjustment to the travel budget.",
+          "vi": "Phòng tài chính đã điều chỉnh ngân sách công tác."
         }
       ],
       "collocations": [
@@ -1123,7 +1123,7 @@
         {
           "pos": "adj",
           "meaning_vi": "thuộc hành chính; quản trị",
-          "definition_en": "administrative: thuộc hành chính; quản trị.",
+          "definition_en": "related to organizing, managing, or running the work of an organization",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1136,8 +1136,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Administrative staff will distribute the revised schedule.",
-          "vi": "Nhân viên hành chính sẽ phát lịch trình đã sửa đổi."
+          "en": "Administrative staff will send the revised schedule to all employees.",
+          "vi": "Nhân viên hành chính sẽ gửi lịch trình đã sửa đổi cho toàn thể nhân viên."
         }
       ],
       "collocations": [
@@ -1157,7 +1157,7 @@
         {
           "pos": "n",
           "meaning_vi": "quản trị viên; người quản lý",
-          "definition_en": "administrator: quản trị viên; người quản lý.",
+          "definition_en": "a person responsible for managing an organization, system, or process",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1170,8 +1170,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Contact the system administrator if you cannot log in.",
-          "vi": "Liên hệ quản trị viên hệ thống nếu bạn không thể đăng nhập."
+          "en": "Contact the system administrator if your account is locked.",
+          "vi": "Hãy liên hệ quản trị viên hệ thống nếu tài khoản của bạn bị khóa."
         }
       ],
       "collocations": [
@@ -1191,7 +1191,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự cho phép vào; vé vào cửa",
-          "definition_en": "Admission — sự cho phép vào; vé vào cửa.",
+          "definition_en": "permission to enter a place or event; the fee charged for entry",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1204,8 +1204,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed admission during the meeting.",
-          "vi": "Nhóm đã thảo luận về “admission” trong cuộc họp."
+          "en": "Admission to the annual trade exhibition is free for registered customers.",
+          "vi": "Khách hàng đã đăng ký được vào triển lãm thương mại thường niên miễn phí."
         }
       ],
       "collocations": [],
@@ -1222,7 +1222,7 @@
         {
           "pos": "v",
           "meaning_vi": "áp dụng; thông qua",
-          "definition_en": "Adopt — áp dụng; thông qua.",
+          "definition_en": "to formally accept or begin using a plan, policy, or method",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1235,8 +1235,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed adopt during the meeting.",
-          "vi": "Nhóm đã thảo luận về “adopt” trong cuộc họp."
+          "en": "The board voted to adopt the new customer service guidelines.",
+          "vi": "Hội đồng đã bỏ phiếu thông qua bộ hướng dẫn dịch vụ khách hàng mới."
         }
       ],
       "collocations": [],
@@ -1626,7 +1626,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự phân bổ; khoản được phân bổ",
-          "definition_en": "allocation: sự phân bổ; khoản được phân bổ.",
+          "definition_en": "the process of assigning money, time, or resources for a particular purpose",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1639,8 +1639,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The budget allocation was approved by the director.",
-          "vi": "Việc phân bổ ngân sách đã được giám đốc phê duyệt."
+          "en": "The allocation of funds for staff training was approved last week.",
+          "vi": "Việc phân bổ kinh phí đào tạo nhân viên đã được phê duyệt tuần trước."
         }
       ],
       "collocations": [
@@ -1821,7 +1821,7 @@
         {
           "pos": "v",
           "meaning_vi": "sửa đổi; bổ sung (văn bản)",
-          "definition_en": "Amend — see Vietnamese meaning and examples.",
+          "definition_en": "to make a formal change to a document, contract, or law",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1834,8 +1834,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will amend the relevant process.",
-          "vi": "Nội dung liên quan đến “amend” được đề cập trong cuộc họp."
+          "en": "Both parties agreed to amend the contract before signing it.",
+          "vi": "Hai bên đồng ý sửa đổi hợp đồng trước khi ký."
         }
       ],
       "collocations": [],
@@ -2062,7 +2062,7 @@
         {
           "pos": "adv",
           "meaning_vi": "hằng năm",
-          "definition_en": "annually: hằng năm.",
+          "definition_en": "once every year",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -2075,8 +2075,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Safety procedures are reviewed annually.",
-          "vi": "Các quy trình an toàn được rà soát hằng năm."
+          "en": "The company reviews employee performance annually.",
+          "vi": "Công ty đánh giá hiệu quả làm việc của nhân viên hằng năm."
         }
       ],
       "collocations": [
@@ -2137,7 +2137,7 @@
         {
           "pos": "v",
           "meaning_vi": "xin lỗi",
-          "definition_en": "Apologize — xin lỗi.",
+          "definition_en": "to tell someone that you are sorry for a mistake or for causing trouble",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -2150,8 +2150,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed apologize during the meeting.",
-          "vi": "Nhóm đã thảo luận về “apologize” trong cuộc họp."
+          "en": "The airline apologized to passengers for the unexpected delay.",
+          "vi": "Hãng hàng không đã xin lỗi hành khách vì sự chậm trễ ngoài dự kiến."
         }
       ],
       "collocations": [],
@@ -2204,7 +2204,7 @@
         {
           "pos": "adj",
           "meaning_vi": "có thể áp dụng; thích hợp",
-          "definition_en": "applicable: có thể áp dụng; thích hợp.",
+          "definition_en": "relevant to a particular person, situation, or set of conditions",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -2217,8 +2217,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The discount is applicable to orders over $500.",
-          "vi": "Mức giảm giá áp dụng cho đơn hàng trên 500 đô la."
+          "en": "The discount is applicable to orders placed before the end of the month.",
+          "vi": "Mức giảm giá được áp dụng cho các đơn hàng đặt trước cuối tháng."
         }
       ],
       "collocations": [
@@ -2555,7 +2555,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự chấp thuận",
-          "definition_en": "Approval — sự chấp thuận.",
+          "definition_en": "official agreement or permission for a plan, request, or action",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2568,8 +2568,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed approval during the meeting.",
-          "vi": "Nhóm đã thảo luận về “approval” trong cuộc họp."
+          "en": "The marketing proposal is awaiting approval from the regional director.",
+          "vi": "Đề xuất tiếp thị đang chờ giám đốc khu vực phê duyệt."
         }
       ],
       "collocations": [],
@@ -2682,7 +2682,7 @@
         {
           "pos": "adv",
           "meaning_vi": "xấp xỉ; khoảng",
-          "definition_en": "approximately: xấp xỉ; khoảng.",
+          "definition_en": "used to indicate an amount, time, or number that is close to but not exactly correct",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -2695,8 +2695,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The delivery will take approximately three business days.",
-          "vi": "Việc giao hàng sẽ mất khoảng ba ngày làm việc."
+          "en": "The replacement parts are expected to arrive in approximately five days.",
+          "vi": "Các linh kiện thay thế dự kiến sẽ đến trong khoảng năm ngày."
         }
       ],
       "collocations": [
@@ -2834,7 +2834,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự sắp xếp; thỏa thuận",
-          "definition_en": "arrangement: sự sắp xếp; thỏa thuận.",
+          "definition_en": "a plan or agreement made in advance about how something will happen",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2847,8 +2847,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Travel arrangements have been confirmed.",
-          "vi": "Các sắp xếp cho chuyến công tác đã được xác nhận."
+          "en": "The travel arrangements for the visiting delegates have been finalized.",
+          "vi": "Các sắp xếp đi lại cho đoàn đại biểu đến thăm đã được hoàn tất."
         }
       ],
       "collocations": [
@@ -2936,7 +2936,7 @@
         {
           "pos": "v",
           "meaning_vi": "đánh giá; thẩm định",
-          "definition_en": "Assess: đánh giá; thẩm định.",
+          "definition_en": "to examine something and judge its quality, value, importance, or condition",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -2949,8 +2949,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The department reviewed the assess issue at the meeting.",
-          "vi": "Bộ phận đã xem xét vấn đề liên quan đến “assess” tại cuộc họp."
+          "en": "The consultant will assess the building before preparing a renovation estimate.",
+          "vi": "Chuyên gia tư vấn sẽ đánh giá tòa nhà trước khi lập dự toán cải tạo."
         }
       ],
       "collocations": [],
@@ -3081,7 +3081,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự hỗ trợ; trợ giúp",
-          "definition_en": "assistance: sự hỗ trợ; trợ giúp.",
+          "definition_en": "help or support given to someone who needs it",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -3094,8 +3094,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Technical assistance is available around the clock.",
-          "vi": "Hỗ trợ kỹ thuật luôn sẵn sàng suốt ngày đêm."
+          "en": "Customers can request technical assistance through the support center.",
+          "vi": "Khách hàng có thể yêu cầu hỗ trợ kỹ thuật thông qua trung tâm hỗ trợ."
         }
       ],
       "collocations": [
@@ -3264,7 +3264,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự tham dự; chuyên cần",
-          "definition_en": "attendance: sự tham dự; chuyên cần.",
+          "definition_en": "the act of being present at a meeting, event, or place",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "A2"
@@ -3277,8 +3277,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Attendance at the safety briefing is mandatory.",
-          "vi": "Việc tham dự buổi hướng dẫn an toàn là bắt buộc."
+          "en": "Attendance at the safety training session is required for all warehouse staff.",
+          "vi": "Toàn bộ nhân viên kho bắt buộc tham dự buổi đào tạo an toàn."
         }
       ],
       "collocations": [
@@ -3298,7 +3298,7 @@
         {
           "pos": "n",
           "meaning_vi": "người tham dự",
-          "definition_en": "Attendee — người tham dự.",
+          "definition_en": "a person who is present at a meeting, conference, or other event",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -3311,8 +3311,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed attendee during the meeting.",
-          "vi": "Nhóm đã thảo luận về “attendee” trong cuộc họp."
+          "en": "Each attendee will receive a copy of the conference program at registration.",
+          "vi": "Mỗi người tham dự sẽ nhận một bản chương trình hội nghị khi đăng ký."
         }
       ],
       "collocations": [],
@@ -3484,7 +3484,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự ủy quyền; giấy phép",
-          "definition_en": "authorization: sự ủy quyền; giấy phép.",
+          "definition_en": "official permission to do something or to access something",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -3497,8 +3497,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Written authorization is needed to access the records.",
-          "vi": "Cần có văn bản ủy quyền để truy cập hồ sơ."
+          "en": "Written authorization is required before confidential files can be released.",
+          "vi": "Cần có văn bản ủy quyền trước khi hồ sơ mật được cung cấp."
         }
       ],
       "collocations": [
@@ -3518,7 +3518,7 @@
         {
           "pos": "v",
           "meaning_vi": "ủy quyền; cho phép chính thức",
-          "definition_en": "Authorize — ủy quyền; cho phép chính thức.",
+          "definition_en": "to give someone official permission to do something",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -3531,8 +3531,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed authorize during the meeting.",
-          "vi": "Nhóm đã thảo luận về “authorize” trong cuộc họp."
+          "en": "Only the finance director can authorize payments above the stated limit.",
+          "vi": "Chỉ giám đốc tài chính mới có quyền phê duyệt các khoản thanh toán vượt hạn mức đã quy định."
         }
       ],
       "collocations": [],

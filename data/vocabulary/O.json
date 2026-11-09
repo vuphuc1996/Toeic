@@ -171,7 +171,7 @@
         {
           "pos": "n",
           "meaning_vi": "tình trạng/số lượng người sử dụng",
-          "definition_en": "Occupancy — tình trạng/số lượng người sử dụng.",
+          "definition_en": "the state or number of people using or living in a building, room, or other space",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -184,8 +184,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed occupancy during the meeting.",
-          "vi": "Nhóm đã thảo luận về “occupancy” trong cuộc họp."
+          "en": "The hotel expects an occupancy rate of more than eighty percent this weekend.",
+          "vi": "Khách sạn dự kiến tỷ lệ lấp đầy phòng sẽ vượt tám mươi phần trăm vào cuối tuần này."
         }
       ],
       "collocations": [],
@@ -316,7 +316,7 @@
         {
           "pos": "n",
           "meaning_vi": "người giữ chức vụ",
-          "definition_en": "officeholder: người giữ chức vụ.",
+          "definition_en": "a person who currently holds an official position or public office",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "C1"
@@ -329,8 +329,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The officeholder will serve a three-year term.",
-          "vi": "Người giữ chức vụ sẽ đảm nhiệm nhiệm kỳ ba năm."
+          "en": "The officeholder must submit an annual statement of interests.",
+          "vi": "Người giữ chức vụ phải nộp bản kê khai lợi ích hằng năm."
         }
       ],
       "collocations": [
@@ -762,7 +762,7 @@
         {
           "pos": "v",
           "meaning_vi": "thuê ngoài; giao cho bên ngoài thực hiện",
-          "definition_en": "outsource: thuê ngoài; giao cho bên ngoài thực hiện.",
+          "definition_en": "to arrange for an outside company or person to perform work instead of doing it internally",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -775,8 +775,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company decided to outsource its payroll services.",
-          "vi": "Công ty quyết định thuê ngoài dịch vụ tính lương."
+          "en": "The retailer decided to outsource its delivery operations to a logistics provider.",
+          "vi": "Nhà bán lẻ quyết định thuê một đơn vị logistics bên ngoài thực hiện hoạt động giao hàng."
         }
       ],
       "collocations": [
@@ -796,7 +796,7 @@
         {
           "pos": "n",
           "meaning_vi": "việc thuê ngoài",
-          "definition_en": "outsourcing: việc thuê ngoài.",
+          "definition_en": "the practice of paying an outside organization to perform work or provide services",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -809,8 +809,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Outsourcing reduced the department's operating costs.",
-          "vi": "Thuê ngoài đã giảm chi phí hoạt động của bộ phận."
+          "en": "Outsourcing customer support helped the company reduce operating costs.",
+          "vi": "Việc thuê ngoài dịch vụ chăm sóc khách hàng đã giúp công ty giảm chi phí vận hành."
         }
       ],
       "collocations": [
@@ -830,7 +830,7 @@
         {
           "pos": "adj",
           "meaning_vi": "nổi bật; chưa thanh toán",
-          "definition_en": "Outstanding — see Vietnamese meaning and examples.",
+          "definition_en": "not yet paid, completed, or resolved; also exceptionally good",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -843,8 +843,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The outstanding was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “outstanding” được đề cập trong cuộc họp."
+          "en": "Please settle all outstanding invoices before the end of the quarter.",
+          "vi": "Vui lòng thanh toán tất cả hóa đơn còn tồn đọng trước khi kết thúc quý."
         }
       ],
       "collocations": [],
@@ -923,7 +923,7 @@
         {
           "pos": "adj",
           "meaning_vi": "quá hạn",
-          "definition_en": "Overdue — see Vietnamese meaning and examples.",
+          "definition_en": "not paid, returned, or completed by the expected or required date",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -936,8 +936,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The overdue was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “overdue” được đề cập trong cuộc họp."
+          "en": "The library sent reminders to members with overdue books.",
+          "vi": "Thư viện gửi thông báo nhắc nhở các thành viên chưa trả sách đúng hạn."
         }
       ],
       "collocations": [],
@@ -954,7 +954,7 @@
         {
           "pos": "n/v",
           "meaning_vi": "đại tu; cải tổ toàn diện",
-          "definition_en": "Overhaul: đại tu; cải tổ toàn diện.",
+          "definition_en": "a thorough examination and repair or major improvement of a system or organization",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -967,8 +967,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The manager explained the overhaul policy to the team.",
-          "vi": "Quản lý đã giải thích chính sách “overhaul” cho nhóm."
+          "en": "The airline scheduled a complete overhaul of its booking platform.",
+          "vi": "Hãng hàng không lên lịch đại tu toàn bộ nền tảng đặt chỗ."
         }
       ],
       "collocations": [],

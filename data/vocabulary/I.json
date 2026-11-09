@@ -58,7 +58,7 @@
         {
           "pos": "v",
           "meaning_vi": "triển khai; thực hiện",
-          "definition_en": "Implement — see Vietnamese meaning and examples.",
+          "definition_en": "to put a plan, decision, or system into practical use",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -71,8 +71,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will implement the relevant process.",
-          "vi": "Nội dung liên quan đến “implement” được đề cập trong cuộc họp."
+          "en": "The company will implement the revised attendance policy next month.",
+          "vi": "Công ty sẽ triển khai chính sách chấm công đã sửa đổi vào tháng tới."
         }
       ],
       "collocations": [],
@@ -209,7 +209,7 @@
         {
           "pos": "n",
           "meaning_vi": "động lực; khoản khuyến khích",
-          "definition_en": "Incentive — see Vietnamese meaning and examples.",
+          "definition_en": "something offered to encourage a person to take an action or achieve a goal",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -222,8 +222,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The incentive was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “incentive” được đề cập trong cuộc họp."
+          "en": "Employees who exceed their sales targets may receive a financial incentive.",
+          "vi": "Nhân viên vượt chỉ tiêu bán hàng có thể nhận được khoản khuyến khích tài chính."
         }
       ],
       "collocations": [],
@@ -240,7 +240,7 @@
         {
           "pos": "v",
           "meaning_vi": "tạo động lực; khuyến khích bằng lợi ích",
-          "definition_en": "incentivize: tạo động lực; khuyến khích bằng lợi ích.",
+          "definition_en": "to encourage a particular action by offering a reward or benefit",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -253,8 +253,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The bonus is designed to incentivize higher productivity.",
-          "vi": "Khoản thưởng được thiết kế để khuyến khích năng suất cao hơn."
+          "en": "The new commission plan is intended to incentivize higher sales.",
+          "vi": "Chính sách hoa hồng mới nhằm khuyến khích tăng doanh số."
         }
       ],
       "collocations": [
@@ -976,7 +976,7 @@
         {
           "pos": "v",
           "meaning_vi": "hỏi; yêu cầu thông tin",
-          "definition_en": "Inquire — see Vietnamese meaning and examples.",
+          "definition_en": "to ask for information about something",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -989,8 +989,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The company will inquire the relevant process.",
-          "vi": "Nội dung liên quan đến “inquire” được đề cập trong cuộc họp."
+          "en": "Please inquire at the reception desk if you need a visitor pass.",
+          "vi": "Vui lòng hỏi tại quầy lễ tân nếu bạn cần thẻ khách."
         }
       ],
       "collocations": [],
@@ -1007,7 +1007,7 @@
         {
           "pos": "n",
           "meaning_vi": "câu hỏi; yêu cầu thông tin",
-          "definition_en": "Inquiry — câu hỏi; yêu cầu thông tin.",
+          "definition_en": "a request for information, or an official examination of a matter",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1020,8 +1020,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The team discussed inquiry during the meeting.",
-          "vi": "Nhóm đã thảo luận về “inquiry” trong cuộc họp."
+          "en": "The customer submitted an inquiry about the status of the refund.",
+          "vi": "Khách hàng đã gửi yêu cầu thông tin về tình trạng hoàn tiền."
         }
       ],
       "collocations": [],
@@ -1162,7 +1162,7 @@
         {
           "pos": "n",
           "meaning_vi": "sự kiểm tra; đợt thanh tra",
-          "definition_en": "Inspection — see Vietnamese meaning and examples.",
+          "definition_en": "an official or careful examination to check quality, safety, or condition",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1175,8 +1175,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The inspection was discussed during the meeting.",
-          "vi": "Nội dung liên quan đến “inspection” được đề cập trong cuộc họp."
+          "en": "The building passed its annual fire safety inspection.",
+          "vi": "Tòa nhà đã vượt qua đợt kiểm tra an toàn phòng cháy hằng năm."
         }
       ],
       "collocations": [],
@@ -1193,7 +1193,7 @@
         {
           "pos": "n",
           "meaning_vi": "thanh tra viên; người kiểm định",
-          "definition_en": "inspector: thanh tra viên; người kiểm định.",
+          "definition_en": "a person whose job is to examine something to make sure that it meets required standards",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -1206,8 +1206,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "A building inspector visited the site yesterday.",
-          "vi": "Một thanh tra xây dựng đã đến công trường hôm qua."
+          "en": "A safety inspector will visit the factory on Thursday.",
+          "vi": "Một thanh tra an toàn sẽ đến nhà máy vào thứ Năm."
         }
       ],
       "collocations": [
@@ -1838,7 +1838,7 @@
         {
           "pos": "n",
           "meaning_vi": "việc lập và phát hành hóa đơn",
-          "definition_en": "invoicing: việc lập và phát hành hóa đơn.",
+          "definition_en": "the process of preparing and sending invoices for goods or services",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B2"
@@ -1851,8 +1851,8 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The accounting team automated its invoicing process.",
-          "vi": "Nhóm kế toán đã tự động hóa quy trình lập hóa đơn."
+          "en": "Automated invoicing has reduced paperwork in the accounting department.",
+          "vi": "Việc lập hóa đơn tự động đã giảm giấy tờ trong phòng kế toán."
         }
       ],
       "collocations": [
