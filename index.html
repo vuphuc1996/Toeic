@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.9.11 – Flashcard Learning</title>
+  <title>TOEIC Dictionary v2.10.0 – Flashcard Learning</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -65,7 +65,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.9.11 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.10.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -125,7 +125,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.9.11:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.10.0:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -252,6 +252,31 @@
             <label class="field"><span class="field-label">THỜI GIAN CHỜ</span><select id="autoNextDelay"><option value="3">3 giây (mặc định)</option><option value="5">5 giây</option><option value="10">10 giây</option></select></label>
             <p class="settings-help">Bạn có thể nhấn “Giữ câu này để xem kỹ” sau khi trả lời. Mở phân tích AI cũng tự dừng bộ đếm để bạn đọc đầy đủ các lựa chọn.</p>
           </section>
+          <section class="panel settings-panel tts-settings-panel">
+            <div class="panel-header"><div><h3><svg class="ui-icon"><use href="#icon-volume-2"></use></svg> Giọng đọc & nhịp nghe</h3><p class="muted">Chọn voice thực sự có trên thiết bị, nghe thử từng giọng và điều chỉnh nhịp đọc.</p></div><button type="button" class="secondary-button" id="refreshSpeechVoices">Làm mới voice</button></div>
+            <div class="tts-voice-status" id="ttsVoiceStatus" aria-live="polite">Đang tải danh sách voice từ thiết bị…</div>
+            <div class="tts-voice-grid">
+              <div class="tts-voice-card">
+                <label class="field"><span class="field-label">VOICE NAM</span><select id="ttsMaleVoice"><option value="">Tự chọn voice phù hợp</option></select></label>
+                <button type="button" class="secondary-button" id="previewMaleVoice">▶ Nghe thử giọng nam</button>
+              </div>
+              <div class="tts-voice-card">
+                <label class="field"><span class="field-label">VOICE NỮ</span><select id="ttsFemaleVoice"><option value="">Tự chọn voice phù hợp</option></select></label>
+                <button type="button" class="secondary-button" id="previewFemaleVoice">▶ Nghe thử giọng nữ</button>
+              </div>
+            </div>
+            <div class="tts-settings-grid">
+              <label class="field"><span class="field-label">GIỌNG MẶC ĐỊNH CHO TỪ VỰNG</span><select id="ttsDefaultGender"><option value="female">Giọng nữ</option><option value="male">Giọng nam</option></select></label>
+              <label class="field"><span class="field-label">BIẾN THỂ TIẾNG ANH</span><select id="ttsAccent"><option value="en-US">English (United States)</option><option value="en-GB">English (United Kingdom)</option></select></label>
+              <label class="field"><span class="field-label">TỐC ĐỘ MẶC ĐỊNH</span><select id="ttsRate"><option value="0.78">0.78 · Chậm</option><option value="0.85">0.85 · Rõ ràng</option><option value="0.92">0.92 · Tự nhiên (mặc định)</option><option value="1">1.00 · Bình thường</option><option value="1.08">1.08 · Nhanh</option></select></label>
+              <label class="field"><span class="field-label">ĐỘ CAO GIỌNG (PITCH)</span><select id="ttsPitch"><option value="0.85">Thấp hơn · 0.85</option><option value="0.95">Hơi thấp · 0.95</option><option value="1">Chuẩn · 1.00</option><option value="1.05">Hơi cao · 1.05</option><option value="1.1">Cao hơn · 1.10</option><option value="1.15">Cao · 1.15</option></select></label>
+              <label class="field"><span class="field-label">ÂM LƯỢNG</span><select id="ttsVolume"><option value="0.7">70%</option><option value="0.8">80%</option><option value="0.9">90%</option><option value="1">100% · Mặc định</option></select></label>
+              <label class="field"><span class="field-label">NGHỈ GIỮA CÁC TỪ VỰNG</span><select id="ttsWordPause"><option value="600">0.6 giây</option><option value="800">0.8 giây</option><option value="900">0.9 giây · Mặc định</option><option value="1100">1.1 giây</option><option value="1300">1.3 giây</option></select></label>
+              <label class="field"><span class="field-label">NGHỈ GIỮA LƯỢT LỜI</span><select id="ttsSentencePause"><option value="600">0.6 giây</option><option value="750">0.75 giây</option><option value="850">0.85 giây · Mặc định</option><option value="1000">1 giây</option><option value="1200">1.2 giây</option></select></label>
+            </div>
+            <div class="tts-settings-note"><strong>Cách hoạt động:</strong> Giọng nam và nữ được lưu riêng trên thiết bị. Bạn có thể chọn thủ công cùng một voice cho cả hai nhóm khi hệ điều hành không gắn nhãn giới tính chính xác. Mục “Đọc từ vựng chậm” sẽ phát từng từ riêng, nghỉ theo thời gian đã chọn; hội thoại vẫn giữ câu nói liền mạch và chỉ nghỉ giữa các lượt lời. Voice phụ thuộc trình duyệt/hệ điều hành, nên tên và chất lượng có thể khác nhau giữa Windows, Android và iOS. Pitch chỉ điều chỉnh độ cao âm, không thể khử tiếng ồm hoặc biến voice gốc thành voice khác.</div>
+            <button type="button" class="secondary-button" id="previewDefaultVoice">▶ Nghe thử giọng mặc định</button>
+          </section>
           <section class="panel settings-panel settings-data-panel">
             <div class="panel-header"><div><h3><svg class="ui-icon"><use href="#icon-database"></use></svg> Lưu trữ và quyền riêng tư</h3><p class="muted">Ứng dụng không cần backend cho chức năng học cá nhân.</p></div></div>
             <ul class="settings-bullet-list"><li>Từ vựng và kiến thức đọc từ tệp JSON trên GitHub Pages.</li><li>Tiến độ, lịch sử và cấu hình lưu trong IndexedDB trên thiết bị.</li><li>Không gửi lịch sử học lên máy chủ.</li><li>Google AI Search chỉ mở khi bạn chủ động yêu cầu; không có API key hoặc gửi dữ liệu ngầm.</li><li>Có thể Export JSON để sao lưu và chuyển thiết bị.</li></ul>
@@ -262,6 +287,7 @@
       <section class="page" id="page-data">
         <div class="page-heading compact-heading"><div><p class="eyebrow">DATA WORKSPACE</p><h1>Quản lý dữ liệu</h1><p class="muted">Quản lý từ vựng cá nhân trên thiết bị. Kho gốc trên GitHub luôn được bảo vệ, chỉ đọc.</p></div><button class="primary-button" id="addWordButton"><svg class="ui-icon button-icon"><use href="#icon-plus"></use></svg> Thêm từ mới</button></div>
         <div class="data-warning"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>Kho từ vựng gốc</strong> được đọc từ GitHub và không thể sửa/xóa. Mọi từ bạn thêm, sửa hoặc ẩn chỉ tác động đến <strong>Từ vựng cá nhân</strong> trên thiết bị này. F5 không làm mất dữ liệu; hãy Export để sao lưu hoặc chuyển sang thiết bị khác.</p></div>
+        <div class="stale-override-note" id="staleOverrideNote" hidden></div>
         <section class="panel data-panel">
           <div class="data-toolbar">
             <label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="dataSearch" type="search" placeholder="Tìm trong dữ liệu..." autocomplete="off"></label>
@@ -281,7 +307,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.9.11</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.10.0</span></footer>
     </main>
   </div>
 
