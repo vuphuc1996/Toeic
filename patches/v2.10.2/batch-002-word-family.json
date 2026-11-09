@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.10.2-batch-002-word-family",
+  "baseDataVersion": "2.10.1",
+  "targetDataVersion": "2.10.2",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "operations": [
+    {
+      "id": "accommodate-v",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "accommodation",
+          "pos": "n",
+          "meaning_vi": "chỗ ở; nơi lưu trú; sự điều chỉnh hoặc thu xếp"
+        }
+      ]
+    },
+    {
+      "id": "accommodation-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "accommodate",
+          "pos": "v",
+          "meaning_vi": "cung cấp chỗ ở; đáp ứng hoặc điều chỉnh để phù hợp"
+        }
+      ]
+    },
+    {
+      "id": "accountant-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "accounting",
+          "pos": "n",
+          "meaning_vi": "kế toán; công việc ghi chép và xử lý tài chính"
+        }
+      ]
+    },
+    {
+      "id": "accounting-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "accountant",
+          "pos": "n",
+          "meaning_vi": "kế toán viên"
+        }
+      ]
+    },
+    {
+      "id": "administration-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "administrative",
+          "pos": "adj",
+          "meaning_vi": "thuộc hành chính; quản trị"
+        },
+        {
+          "word": "administrator",
+          "pos": "n",
+          "meaning_vi": "quản trị viên; người quản lý"
+        }
+      ]
+    },
+    {
+      "id": "administrative-adj",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "administration",
+          "pos": "n",
+          "meaning_vi": "sự quản lý; ban điều hành"
+        },
+        {
+          "word": "administrator",
+          "pos": "n",
+          "meaning_vi": "quản trị viên; người quản lý"
+        }
+      ]
+    },
+    {
+      "id": "administrator-n",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "administration",
+          "pos": "n",
+          "meaning_vi": "sự quản lý; ban điều hành"
+        },
+        {
+          "word": "administrative",
+          "pos": "adj",
+          "meaning_vi": "thuộc hành chính; quản trị"
+        }
+      ]
+    },
+    {
+      "id": "annual-adj",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "annually",
+          "pos": "adv",
+          "meaning_vi": "hằng năm; mỗi năm"
+        }
+      ]
+    },
+    {
+      "id": "annually-adv",
+      "path": "/word_family",
+      "expect": {
+        "old": []
+      },
+      "new": [
+        {
+          "word": "annual",
+          "pos": "adj",
+          "meaning_vi": "hằng năm; thường niên"
+        }
+      ]
+    }
+  ]
+}

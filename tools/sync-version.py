@@ -10,7 +10,7 @@ Safety rules
   * Only the registered markers below are touched; no blind search/replace of version-like text.
   * Every marker must match EXACTLY once. A missing or duplicated marker stops the run (exit 2)
     before any file is written.
-  * CHANGELOG.md is check-only: the changelog must contain a heading for the current version, but
+  * docs/CHANGELOG.md is check-only: the changelog must contain a heading for the current version, but
     its history is never rewritten.
 Exit codes: 0 ok, 1 versions disagree (check) or post-apply check failed, 2 marker/structure problem.
 """
@@ -45,11 +45,11 @@ MARKERS: tuple[Marker, ...] = (
     Marker("index.html sidebar", "index.html", (rf'<div class="sidebar-version">Phase 5 · v({SEMVER}) · GitHub-only</div>',)),
     Marker("index.html phase-note", "index.html", (rf"<strong>GitHub-only v({SEMVER}):</strong>",)),
     Marker("index.html footer", "index.html", (rf"<span>GitHub-only · v({SEMVER})</span>",)),
-    Marker("README.md title", "README.md", (rf"\A# TOEIC Dictionary v({SEMVER})",)),
-    Marker("MASTER_STATUS.md version line", "MASTER_STATUS.md",
+    Marker("docs/README.md title", "docs/README.md", (rf"\A# TOEIC Dictionary v({SEMVER})",)),
+    Marker("docs/MASTER_STATUS.md version line", "docs/MASTER_STATUS.md",
            (rf"\*\*Phiên bản mã nguồn đang kiểm kê:\*\* v({SEMVER})",)),
 )
-CHANGELOG = "CHANGELOG.md"
+CHANGELOG = "docs/CHANGELOG.md"
 
 
 class StructureError(Exception):

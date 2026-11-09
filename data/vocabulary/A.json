@@ -6,7 +6,7 @@
       "id": "absence-n",
       "word": "absence",
       "phonetic": {
-        "us": ""
+        "us": "/ˈæb.səns/"
       },
       "senses": [
         {
@@ -71,7 +71,7 @@
       "id": "absorb-v",
       "word": "absorb",
       "phonetic": {
-        "us": ""
+        "us": "/əbˈsɔːrb/"
       },
       "senses": [
         {
@@ -303,7 +303,7 @@
       "id": "accommodate-v",
       "word": "accommodate",
       "phonetic": {
-        "us": ""
+        "us": "/əˈkɑː.mə.deɪt/"
       },
       "senses": [
         {
@@ -318,7 +318,13 @@
       "topics": [
         "HOTEL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "accommodation",
+          "pos": "n",
+          "meaning_vi": "chỗ ở; nơi lưu trú; sự điều chỉnh hoặc thu xếp"
+        }
+      ],
       "verb_forms": {
         "v1": "accommodate",
         "vs_es": "accommodates",
@@ -362,7 +368,13 @@
         "TRAVEL",
         "FACILITY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "accommodate",
+          "pos": "v",
+          "meaning_vi": "cung cấp chỗ ở; đáp ứng hoặc điều chỉnh để phù hợp"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -520,7 +532,7 @@
       "id": "accountant-n",
       "word": "accountant",
       "phonetic": {
-        "us": ""
+        "us": "/əˈkaʊn.t̬ənt/"
       },
       "senses": [
         {
@@ -535,7 +547,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "accounting",
+          "pos": "n",
+          "meaning_vi": "kế toán; công việc ghi chép và xử lý tài chính"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -554,7 +572,7 @@
       "id": "accounting-n",
       "word": "accounting",
       "phonetic": {
-        "us": ""
+        "us": "/əˈkaʊn.t̬ɪŋ/"
       },
       "senses": [
         {
@@ -569,7 +587,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "accountant",
+          "pos": "n",
+          "meaning_vi": "kế toán viên"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -680,7 +704,7 @@
       "id": "accurate-adj",
       "word": "accurate",
       "phonetic": {
-        "us": ""
+        "us": "/ˈæk.jɚ.ət/"
       },
       "senses": [
         {
@@ -798,7 +822,7 @@
       "id": "activate-v",
       "word": "activate",
       "phonetic": {
-        "us": ""
+        "us": "/ˈæk.tə.veɪt/"
       },
       "senses": [
         {
@@ -890,7 +914,7 @@
       "id": "additional-adj",
       "word": "additional",
       "phonetic": {
-        "us": ""
+        "us": "/əˈdɪʃ.ə.nəl/"
       },
       "senses": [
         {
@@ -968,7 +992,7 @@
       "id": "adequate-adj",
       "word": "adequate",
       "phonetic": {
-        "us": ""
+        "us": "/ˈæd.ə.kwət/"
       },
       "senses": [
         {
@@ -1038,7 +1062,7 @@
       "id": "adjacent-adj",
       "word": "adjacent",
       "phonetic": {
-        "us": ""
+        "us": "/əˈdʒeɪ.sənt/"
       },
       "senses": [
         {
@@ -1143,7 +1167,7 @@
       "id": "administration-n",
       "word": "administration",
       "phonetic": {
-        "us": ""
+        "us": "/ədˌmɪn.əˈstreɪ.ʃən/"
       },
       "senses": [
         {
@@ -1158,7 +1182,18 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "administrative",
+          "pos": "adj",
+          "meaning_vi": "thuộc hành chính; quản trị"
+        },
+        {
+          "word": "administrator",
+          "pos": "n",
+          "meaning_vi": "quản trị viên; người quản lý"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1192,7 +1227,18 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "administration",
+          "pos": "n",
+          "meaning_vi": "sự quản lý; ban điều hành"
+        },
+        {
+          "word": "administrator",
+          "pos": "n",
+          "meaning_vi": "quản trị viên; người quản lý"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1226,7 +1272,18 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "administration",
+          "pos": "n",
+          "meaning_vi": "sự quản lý; ban điều hành"
+        },
+        {
+          "word": "administrative",
+          "pos": "adj",
+          "meaning_vi": "thuộc hành chính; quản trị"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2135,7 +2192,13 @@
         "TIME",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "annually",
+          "pos": "adv",
+          "meaning_vi": "hằng năm; mỗi năm"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2167,7 +2230,13 @@
       "topics": [
         "TIME"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "annual",
+          "pos": "adj",
+          "meaning_vi": "hằng năm; thường niên"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

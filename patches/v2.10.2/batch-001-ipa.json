@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.10.2-batch-001-ipa",
+  "baseDataVersion": "2.10.1",
+  "targetDataVersion": "2.10.2",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "operations": [
+    {
+      "id": "absence-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈæb.səns/"
+    },
+    {
+      "id": "absorb-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əbˈsɔːrb/"
+    },
+    {
+      "id": "accommodate-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈkɑː.mə.deɪt/"
+    },
+    {
+      "id": "accountant-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈkaʊn.t̬ənt/"
+    },
+    {
+      "id": "accounting-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈkaʊn.t̬ɪŋ/"
+    },
+    {
+      "id": "accurate-adj",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈæk.jɚ.ət/"
+    },
+    {
+      "id": "activate-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈæk.tə.veɪt/"
+    },
+    {
+      "id": "additional-adj",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈdɪʃ.ə.nəl/"
+    },
+    {
+      "id": "adequate-adj",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈæd.ə.kwət/"
+    },
+    {
+      "id": "adjacent-adj",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈdʒeɪ.sənt/"
+    },
+    {
+      "id": "administration-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ədˌmɪn.əˈstreɪ.ʃən/"
+    }
+  ]
+}
