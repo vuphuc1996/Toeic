@@ -133,6 +133,49 @@ class LearningContentTests(unittest.TestCase):
         self.assertTrue(all(len(x.get('documents', [])) == (2 if x.get('documentType') == 'DOUBLE PASSAGE' else 3) for x in multi))
         self.assertTrue(all(all(d.get('label', '').strip() and d.get('content', '').strip() for d in x['documents']) for x in multi))
 
+    def test_listening_and_reading_rationales_are_written_in_vietnamese(self):
+        import re
+        vietnamese = re.compile(r"[ăâđêôơưàáảãạằắẳẵặầấẩẫậèéẻẽẹềếểễệìíịòóỏõọồốổỗộờớởợùúủũụừứửữựỳýỷỹỵ]", re.I)
+        vietnamese_words = re.compile(r"\b(là|vì|do|nên|được|cần|khi|trong|tại|theo|sau|trước|để|cũng|phải|chỉ|có|không|nêu|cho|người|một|của|với|bằng|từ|nhờ|đây|bài|câu|chủ|động|danh|tính|trạng)\b", re.I)
+        for library_name, items in (("Listening", self.listening), ("Reading", self.reading)):
+            for item in items:
+                for index, question in enumerate(item.get("questions", []), 1):
+                    rationale = question.get("explanation", "")
+                    self.assertRegex(rationale, vietnamese,
+                                     f"{library_name} {item.get('id')} Q{index} needs Vietnamese characters")
+                    self.assertRegex(rationale, vietnamese_words,
+                                     f"{library_name} {item.get('id')} Q{index} must be explained in Vietnamese, not merely contain an accented English word")
+
+    def test_part1_prompt_does_not_call_svg_illustrations_photographs(self):
+        for item in self.listening:
+            if item.get("part") == "Part 1" and item.get("visualType") == "illustration":
+                for question in item.get("questions", []):
+                    self.assertIn("illustration", question.get("question", "").lower())
+                    self.assertNotIn("photograph", question.get("question", "").lower())
+
+    def test_part1_rendering_uses_illustration_semantics(self):
+        app_js = (ROOT / "assets/js/app.js").read_text(encoding="utf-8")
+        css = (ROOT / "assets/css/app.css").read_text(encoding="utf-8")
+        self.assertIn("illustrationMarkup", app_js)
+        self.assertIn("part1-illustration-frame", app_js)
+        self.assertIn(".part1-illustration-frame", css)
+        self.assertNotIn("photoMarkup", app_js)
+
+    def test_part2_invoice_distractors_are_distinct_from_the_answer(self):
+        item = next(x for x in self.listening if x.get("id") == "part2-invoice-approval")
+        question = item["questions"][0]
+        self.assertEqual(question["choices"][question["answerIndex"]], "Not yet; Finance is still reviewing it.")
+        self.assertNotEqual(question["choices"][0], question["choices"][2])
+        self.assertNotIn("page two", question["choices"][0].lower())
+        self.assertNotIn("second page", question["choices"][2].lower())
+
+    def test_part1_rationales_are_specific_to_the_illustration(self):
+        for item in self.listening:
+            if item.get("part") == "Part 1":
+                rationale = item["questions"][0].get("explanation", "")
+                self.assertNotIn("mô tả đúng hành động hoặc vật thể nổi bật", rationale)
+                self.assertGreaterEqual(len(rationale), 100)
+
     def test_grammar_exercises_have_unique_lesson_ids_and_valid_answers(self):
         ids = [x.get('id') for x in self.grammar]
         self.assertTrue(all(ids))

@@ -227,7 +227,7 @@
             "A colleague recommended it."
           ],
           "answerIndex": 1,
-          "explanation": "Khách sạn gần trung tâm triển lãm đã kín phòng (fully booked)."
+          "explanation": "Khách sạn gần trung tâm triển lãm đã kín phòng nên người phụ nữ chọn một khách sạn khác."
         },
         {
           "question": "What will the woman do this afternoon?",
@@ -238,7 +238,7 @@
             "Arrange a rental car"
           ],
           "answerIndex": 2,
-          "explanation": "Cô ấy nói sẽ đặt hai phòng (reserve two rooms) vào chiều nay."
+          "explanation": "Cô ấy nói sẽ đặt hai phòng vào chiều nay, nên đáp án đúng là hành động đặt phòng."
         }
       ],
       "transcriptTranslation": "Hai đồng nghiệp chuẩn bị chuyến công tác Singapore. Khách sạn gần trung tâm triển lãm đã kín phòng nên người phụ nữ chọn một khách sạn khác, có xe đưa đón sân bay mỗi giờ, và sẽ đặt hai phòng vào chiều nay.",
@@ -391,7 +391,7 @@
             "The supplier's address has changed."
           ],
           "answerIndex": 1,
-          "explanation": "Phí giao hàng đã bị cộng hai lần (added twice)."
+          "explanation": "Trong hội thoại, họ phát hiện phí giao hàng bị cộng hai lần, khiến tổng hóa đơn cao hơn."
         },
         {
           "question": "What does the man ask the woman to do?",
@@ -620,7 +620,7 @@
             "Outside the conference center"
           ],
           "answerIndex": 0,
-          "explanation": "Đăng ký sẽ diễn ra ở sảnh chính (main lobby)."
+          "explanation": "Thông báo nêu rõ người tham dự phải làm thủ tục đăng ký tại sảnh chính."
         },
         {
           "question": "What has changed?",
@@ -705,7 +705,7 @@
             "A client canceled a meeting"
           ],
           "answerIndex": 1,
-          "explanation": "The man explains that flights were booked at short notice."
+          "explanation": "Người đàn ông giải thích rằng các chuyến bay phải được đặt trong thời gian gấp nên giá vé cao hơn dự kiến."
         },
         {
           "question": "What will the man do this afternoon?",
@@ -773,7 +773,7 @@
             "Friday afternoon"
           ],
           "answerIndex": 1,
-          "explanation": "The recruiter offers Wednesday at 2:30 p.m."
+          "explanation": "Nhà tuyển dụng xác nhận lịch phỏng vấn vào thứ Tư lúc 14:30, nên phương án này đúng."
         },
         {
           "question": "What position has the applicant applied for?",
@@ -841,7 +841,7 @@
             "Access the building"
           ],
           "answerIndex": 1,
-          "explanation": "The portal will not accept stock requests during the upgrade."
+          "explanation": "Người phụ nữ cho biết cổng thông tin sẽ tạm ngừng nhận yêu cầu xuất kho trong thời gian nâng cấp."
         },
         {
           "question": "When will the inventory platform become available again?",
@@ -899,7 +899,7 @@
             "Wait outside the building"
           ],
           "answerIndex": 1,
-          "explanation": "Visitors are instructed to use the marked pedestrian walkway."
+          "explanation": "Thông báo yêu cầu khách và nhà thầu đi theo lối dành cho người đi bộ đã được đánh dấu."
         },
         {
           "question": "When is the inspection expected to finish?",
@@ -957,7 +957,7 @@
             "A monthly sales report"
           ],
           "answerIndex": 1,
-          "explanation": "The speaker asks team leaders to submit their department readiness checklist."
+          "explanation": "Diễn giả yêu cầu các trưởng nhóm nộp danh sách kiểm tra mức độ sẵn sàng của bộ phận trước khi ra mắt."
         },
         {
           "question": "Which services are combined in the new platform?",
@@ -1023,7 +1023,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "question": "Listen to the four statements and select the one that best describes the illustration.",
           "choices": [
             "Option A",
             "Option B",
@@ -1031,7 +1031,7 @@
             "Option D"
           ],
           "answerIndex": 0,
-          "explanation": "Đáp án A mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+          "explanation": "Đáp án A: Hình minh họa cho thấy hai nhân viên ngồi đối diện tại bàn và đang cùng xem tài liệu; lựa chọn A khớp với người và hoạt động nổi bật. Các lựa chọn B–D lần lượt mô tả phục vụ bữa ăn, xếp hàng hoặc xếp ghế — những chi tiết không xuất hiện trong hình."
         }
       ],
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
@@ -1077,7 +1077,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "question": "Listen to the four statements and select the one that best describes the illustration.",
           "choices": [
             "Option A",
             "Option B",
@@ -1085,7 +1085,7 @@
             "Option D"
           ],
           "answerIndex": 1,
-          "explanation": "Đáp án B mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+          "explanation": "Đáp án B: Người công nhân đang đặt một thùng carton lên kệ lưu trữ; lựa chọn B mô tả đúng hành động và vị trí trong hình. Các lựa chọn còn lại nói về quét sàn, chất hàng lên xe hoặc tháo kệ."
         }
       ],
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
@@ -1131,7 +1131,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "question": "Listen to the four statements and select the one that best describes the illustration.",
           "choices": [
             "Option A",
             "Option B",
@@ -1139,7 +1139,7 @@
             "Option D"
           ],
           "answerIndex": 2,
-          "explanation": "Đáp án C mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+          "explanation": "Đáp án C: Hình cho thấy một kỹ thuật viên đang kiểm tra thiết bị điều hòa; lựa chọn C khớp với người thực hiện và thiết bị được nhấn mạnh. Các lựa chọn A, B và D mô tả những hành động khác không có trong hình."
         }
       ],
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
@@ -1185,7 +1185,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "question": "Listen to the four statements and select the one that best describes the illustration.",
           "choices": [
             "Option A",
             "Option B",
@@ -1193,7 +1193,7 @@
             "Option D"
           ],
           "answerIndex": 3,
-          "explanation": "Đáp án D mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+          "explanation": "Đáp án D: Hành khách đang kéo một chiếc vali qua nhà ga; lựa chọn D mô tả đúng hành động chính. Hình không cho thấy hành khách lên máy bay bằng cầu thang, cân vali tại quầy hay xách nhiều túi mua sắm."
         }
       ],
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
@@ -1239,7 +1239,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "question": "Listen to the four statements and select the one that best describes the illustration.",
           "choices": [
             "Option A",
             "Option B",
@@ -1247,7 +1247,7 @@
             "Option D"
           ],
           "answerIndex": 0,
-          "explanation": "Đáp án A mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+          "explanation": "Đáp án A: Màn hình trình chiếu đã được lắp ở phía trước phòng họp; lựa chọn A mô tả đúng chi tiết nổi bật. Các lựa chọn còn lại nói về khán giả rời phòng, viết lên cửa kính hoặc sắp xếp ghế quanh bàn ăn."
         }
       ],
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
@@ -1293,7 +1293,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "question": "Listen to the four statements and select the one that best describes the illustration.",
           "choices": [
             "Option A",
             "Option B",
@@ -1301,7 +1301,7 @@
             "Option D"
           ],
           "answerIndex": 1,
-          "explanation": "Đáp án B mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+          "explanation": "Đáp án B: Nhân viên lễ tân đang tưới chậu cây đặt cạnh quầy; lựa chọn B khớp với người và hành động trong hình. Các lựa chọn còn lại mô tả ký nhận hàng, chuyển cây ra ngoài hoặc đóng rèm cửa."
         }
       ],
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
@@ -1347,7 +1347,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "question": "Listen to the four statements and select the one that best describes the illustration.",
           "choices": [
             "Option A",
             "Option B",
@@ -1355,7 +1355,7 @@
             "Option D"
           ],
           "answerIndex": 2,
-          "explanation": "Đáp án C mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+          "explanation": "Đáp án C: Một nhân viên nhà hàng đang sắp xếp đĩa trên bàn; lựa chọn C mô tả đúng hoạt động chính. Hình không thể hiện việc thanh toán, mang bàn ra ngoài hay rửa bát trong bồn."
         }
       ],
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
@@ -1401,7 +1401,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "question": "Listen to the four statements and select the one that best describes the illustration.",
           "choices": [
             "Option A",
             "Option B",
@@ -1409,7 +1409,7 @@
             "Option D"
           ],
           "answerIndex": 3,
-          "explanation": "Đáp án D mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+          "explanation": "Đáp án D: Nhân viên đang lấy các trang giấy từ máy photocopy; lựa chọn D khớp với hành động và thiết bị trong hình. Các lựa chọn còn lại mô tả sửa màn hình máy tính, cất giấy vào tủ hoặc vận hành máy hủy tài liệu."
         }
       ],
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
@@ -1466,9 +1466,9 @@
         {
           "question": "Choose the most appropriate response.",
           "choices": [
-            "The revised total is on page two.",
+            "The supplier corrected the shipping charge.",
             "Not yet; Finance is still reviewing it.",
-            "It was sent to the supplier by train."
+            "Please forward the purchase order to Finance."
           ],
           "answerIndex": 1,
           "explanation": "Câu hỏi Yes/No hỏi hóa đơn đã được duyệt chưa; 'Not yet' trả lời trực tiếp và cung cấp trạng thái đang được Finance xem xét."
@@ -1891,7 +1891,7 @@
             "About forty minutes."
           ],
           "answerIndex": 2,
-          "explanation": "How long hỏi khoảng thời gian; 'About forty minutes' trả lời đúng độ dài cuộc kiểm tra."
+          "explanation": "How long hỏi thời lượng cần thiết; khoảng 40 phút là độ dài của một lần kiểm tra, không phải lịch kiểm tra hàng tháng."
         }
       ],
       "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
@@ -1978,10 +1978,10 @@
           "choices": [
             "The contract covers three years.",
             "The legal team is on vacation.",
-            "I just sent my comments to the legal team."
+            "Yes. I sent my final comments to the legal team this morning."
           ],
           "answerIndex": 2,
-          "explanation": "Câu hỏi Have you finished…? hỏi tiến độ; phương án C cho biết người nói vừa gửi nhận xét, hàm ý đã hoàn tất phần rà soát."
+          "explanation": "Câu hỏi Have you finished…? hỏi việc rà soát đã hoàn tất chưa. Câu trả lời xác nhận rõ bằng “Yes” và cho biết các nhận xét cuối cùng đã được gửi cho bộ phận pháp chế."
         }
       ],
       "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
@@ -2094,14 +2094,14 @@
       ],
       "questions": [
         {
-          "question": "Choose the most appropriate response.",
+          "question": "The supplier promised to deliver the samples today, didn't they?",
           "choices": [
-            "Yes, but the courier has requested another day.",
+            "They did, but the courier has requested another day.",
             "The samples are stored in the laboratory.",
             "The supplier sells office furniture."
           ],
           "answerIndex": 0,
-          "explanation": "Câu hỏi phủ định xác nhận lời hứa giao hàng hôm nay; A xác nhận nhưng giải thích hãng vận chuyển xin lùi một ngày."
+          "explanation": "Đây là câu hỏi đuôi xác nhận lời hứa giao hàng. “They did” xác nhận nhà cung cấp đã hứa, còn mệnh đề sau giải thích hãng vận chuyển xin lùi thời gian."
         }
       ],
       "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
@@ -2147,7 +2147,7 @@
             "A recruitment interview"
           ],
           "answerIndex": 0,
-          "explanation": "The woman says the client meeting is scheduled for Friday morning."
+          "explanation": "Người phụ nữ cho biết cuộc họp với khách hàng được lên lịch vào sáng thứ Sáu."
         },
         {
           "question": "What information is the man waiting for?",
@@ -2158,7 +2158,7 @@
             "The client's travel schedule"
           ],
           "answerIndex": 1,
-          "explanation": "The man is waiting for current delivery figures from Logistics."
+          "explanation": "Người đàn ông đang chờ số liệu giao hàng cập nhật từ bộ phận Logistics."
         },
         {
           "question": "What does the man plan to add to the slides?",
@@ -2169,7 +2169,7 @@
             "Print the delivery labels"
           ],
           "answerIndex": 2,
-          "explanation": "He agrees to add a chart comparing this quarter with the previous one."
+          "explanation": "Anh ấy đồng ý bổ sung biểu đồ so sánh kết quả quý này với quý trước vào bản trình chiếu."
         }
       ],
       "transcriptTranslation": "Hai đồng nghiệp chuẩn bị bài thuyết trình cho cuộc họp khách hàng vào sáng thứ Sáu. Người đàn ông đang chờ số liệu giao hàng mới nhất từ bộ phận Logistics; anh sẽ thêm biểu đồ so sánh hai quý và gửi bản để xem xét vào cuối ngày.",
@@ -2228,7 +2228,7 @@
             "Printer cartridges"
           ],
           "answerIndex": 1,
-          "explanation": "The first speaker identifies the quotation as being for replacement monitors."
+          "explanation": "Người nói đầu tiên xác định báo giá này dành cho các màn hình thay thế."
         },
         {
           "question": "What is included in the quoted price?",
@@ -2239,7 +2239,7 @@
             "Staff training"
           ],
           "answerIndex": 0,
-          "explanation": "The man says delivery is included, while installation is charged separately."
+          "explanation": "Người đàn ông nói phí giao hàng đã bao gồm, còn phí lắp đặt được tính riêng."
         },
         {
           "question": "What will the woman do next?",
@@ -2250,7 +2250,7 @@
             "Arrange a staff meeting"
           ],
           "answerIndex": 2,
-          "explanation": "She says she will check the installation budget and respond that afternoon."
+          "explanation": "Người phụ nữ sẽ kiểm tra ngân sách lắp đặt và phản hồi vào chiều hôm đó."
         }
       ],
       "transcriptTranslation": "Nhân viên mua sắm trao đổi về báo giá màn hình thay thế. Giá đã gồm giao hàng nhưng chưa gồm lắp đặt; nhà cung cấp có thể lắp mười hai màn hình vào thứ Ba nếu được xác nhận trước ngày mai. Người phụ nữ sẽ kiểm tra ngân sách lắp đặt.",
@@ -2309,7 +2309,7 @@
             "To cancel an airport transfer"
           ],
           "answerIndex": 1,
-          "explanation": "The return flight has changed, so the guest needs the room for one more night."
+          "explanation": "Chuyến bay về đã được đổi lịch nên vị khách cần kéo dài thời gian lưu trú thêm một đêm."
         },
         {
           "question": "What will remain unchanged?",
@@ -2320,7 +2320,7 @@
             "The airport transfer"
           ],
           "answerIndex": 2,
-          "explanation": "The man confirms that the corporate rate will remain unchanged."
+          "explanation": "Người đàn ông xác nhận mức giá dành cho khách hàng doanh nghiệp sẽ không thay đổi."
         },
         {
           "question": "What does the woman request in addition?",
@@ -2331,7 +2331,7 @@
             "A printed invoice"
           ],
           "answerIndex": 0,
-          "explanation": "She asks for a late checkout because the airport transfer is at 2 p.m."
+          "explanation": "Người phụ nữ đề nghị trả phòng muộn vì xe đưa khách ra sân bay chỉ đến lúc 14 giờ."
         }
       ],
       "transcriptTranslation": "Người phụ nữ gọi để gia hạn phòng cho ông Alvarez vì chuyến bay về bị chuyển sang tối thứ Năm. Khách sạn có thể giữ nguyên phòng và giá doanh nghiệp. Cô cũng yêu cầu trả phòng muộn vào thứ Sáu; yêu cầu còn tùy tình trạng phòng.",
@@ -2390,7 +2390,7 @@
             "At the end of this quarter"
           ],
           "answerIndex": 1,
-          "explanation": "The man states that the campaign begins on the first of next month."
+          "explanation": "Người đàn ông cho biết chiến dịch sẽ bắt đầu vào ngày đầu tiên của tháng tới."
         },
         {
           "question": "Why does the northern office need more posters?",
@@ -2401,7 +2401,7 @@
             "It is moving to another city"
           ],
           "answerIndex": 0,
-          "explanation": "The woman explains that the northern office is opening a new showroom."
+          "explanation": "Người phụ nữ giải thích văn phòng miền Bắc đang khai trương một phòng trưng bày mới."
         },
         {
           "question": "What does the woman agree to do?",
@@ -2412,7 +2412,7 @@
             "Postpone the campaign"
           ],
           "answerIndex": 2,
-          "explanation": "She will contact the northern office and confirm the quantity to Design before lunch."
+          "explanation": "Cô ấy sẽ liên hệ văn phòng miền Bắc và xác nhận số lượng bổ sung với bộ phận Thiết kế trước giờ ăn trưa."
         }
       ],
       "transcriptTranslation": "Hai nhân viên điều phối chiến dịch tiếp thị dự kiến bắt đầu vào đầu tháng sau. Văn phòng miền Bắc cần thêm áp phích do sắp khai trương phòng trưng bày mới. Người phụ nữ sẽ xác nhận số lượng với văn phòng này và gửi cho nhóm thiết kế trước bữa trưa.",
@@ -2471,7 +2471,7 @@
             "A new security system"
           ],
           "answerIndex": 1,
-          "explanation": "The woman says the building manager approved an elevator inspection."
+          "explanation": "Người phụ nữ cho biết quản lý tòa nhà đã phê duyệt việc kiểm tra thang máy."
         },
         {
           "question": "Why does the man prefer Thursday morning?",
@@ -2482,7 +2482,7 @@
             "The elevators are used less at night"
           ],
           "answerIndex": 2,
-          "explanation": "He says the reception area is usually quiet early on Thursday, while Wednesday is busy with visitors."
+          "explanation": "Người đàn ông muốn chọn sáng thứ Năm vì khu vực lễ tân thường ít khách hơn, trong khi thứ Tư là ngày đông khách."
         },
         {
           "question": "What will the man prepare?",
@@ -2493,7 +2493,7 @@
             "A new maintenance schedule for next year"
           ],
           "answerIndex": 0,
-          "explanation": "He agrees to prepare notices near both elevator entrances after the time is confirmed."
+          "explanation": "Anh ấy đồng ý chuẩn bị thông báo đặt cạnh cả hai lối vào thang máy sau khi thời gian được xác nhận."
         }
       ],
       "transcriptTranslation": "Ban quản lý tòa nhà đã duyệt việc kiểm tra thang máy. Nhà thầu có thể đến vào thứ Tư, nhưng người đàn ông đề nghị sáng sớm thứ Năm vì lượng khách ít hơn. Người phụ nữ sẽ hỏi lại nhà thầu; người đàn ông sẽ chuẩn bị thông báo sau khi chốt giờ.",
@@ -2537,7 +2537,7 @@
             "Next Monday morning"
           ],
           "answerIndex": 1,
-          "explanation": "The announcement states that the meeting will take place this Friday at 10 a.m."
+          "explanation": "Thông báo nêu cuộc họp toàn thể sẽ diễn ra lúc 10 giờ sáng thứ Sáu tuần này."
         },
         {
           "question": "What will the chief operating officer discuss?",
@@ -2548,7 +2548,7 @@
             "Changes to the cafeteria menu"
           ],
           "answerIndex": 2,
-          "explanation": "The speaker says the COO will review performance and introduce priorities for the next quarter."
+          "explanation": "Diễn giả cho biết giám đốc vận hành sẽ điểm lại kết quả hoạt động và giới thiệu các ưu tiên cho quý tiếp theo."
         },
         {
           "question": "How can employees submit questions?",
@@ -2559,7 +2559,7 @@
             "By speaking to the security team"
           ],
           "answerIndex": 0,
-          "explanation": "Questions must be submitted through the online form by Thursday afternoon."
+          "explanation": "Câu hỏi phải được gửi qua biểu mẫu trực tuyến trước chiều thứ Năm."
         }
       ],
       "transcriptTranslation": "Cuộc họp toàn thể hằng quý diễn ra lúc 10 giờ sáng thứ Sáu tại hội trường chính. Giám đốc vận hành sẽ điểm lại kết quả kinh doanh và ưu tiên quý tới. Nhân viên làm từ xa có thể tham gia qua liên kết trong lịch; câu hỏi gửi bằng biểu mẫu trực tuyến trước chiều thứ Năm.",
@@ -2603,7 +2603,7 @@
             "To ask about a product warranty"
           ],
           "answerIndex": 1,
-          "explanation": "Natalie says two desk lamps were missing from the delivered order."
+          "explanation": "Natalie cho biết đơn hàng đã giao nhưng bị thiếu hai chiếc đèn bàn."
         },
         {
           "question": "When are the new employees scheduled to start?",
@@ -2614,7 +2614,7 @@
             "Thursday"
           ],
           "answerIndex": 3,
-          "explanation": "The voicemail states that the new employees start work on Thursday."
+          "explanation": "Tin nhắn thoại nêu rõ nhân viên mới sẽ bắt đầu làm việc vào thứ Năm."
         },
         {
           "question": "What does Natalie ask the company to do before 4 p.m.?",
@@ -2625,7 +2625,7 @@
             "Update the purchase order price"
           ],
           "answerIndex": 0,
-          "explanation": "She asks for a call before 4 p.m. to confirm the delivery address."
+          "explanation": "Cô ấy đề nghị công ty gọi lại trước 16 giờ để xác nhận địa chỉ giao hàng."
         }
       ],
       "transcriptTranslation": "Natalie Brooks gọi về đơn hàng G-2084. Bàn làm việc đã được giao nhưng thiếu hai đèn bàn. Cô đề nghị giao bổ sung trước thứ Tư vì nhân viên mới bắt đầu làm vào thứ Năm, đồng thời yêu cầu gọi lại trước 16 giờ để xác nhận địa chỉ.",
@@ -2669,7 +2669,7 @@
             "The warehouse will begin a night shift"
           ],
           "answerIndex": 1,
-          "explanation": "The supervisor announces that forklifts will use marked lanes along the west wall starting Monday."
+          "explanation": "Người giám sát thông báo xe nâng sẽ di chuyển theo các làn đã đánh dấu dọc bức tường phía Tây từ thứ Hai."
         },
         {
           "question": "Where should pedestrians walk?",
@@ -2680,7 +2680,7 @@
             "Near the emergency exits"
           ],
           "answerIndex": 2,
-          "explanation": "Pedestrians are instructed to remain in the yellow walkway."
+          "explanation": "Người đi bộ được yêu cầu đi trong lối màu vàng."
         },
         {
           "question": "What should employees report immediately?",
@@ -2691,7 +2691,7 @@
             "Missing time sheets"
           ],
           "answerIndex": 0,
-          "explanation": "The supervisor asks staff to report damaged barriers and blocked walkways to their shift supervisors."
+          "explanation": "Nhân viên phải báo ngay cho quản lý ca nếu phát hiện rào chắn hư hỏng hoặc lối đi bị chặn."
         }
       ],
       "transcriptTranslation": "Quản lý nhắc nhân viên về quy định giao thông mới trong kho. Từ thứ Hai, xe nâng đi theo làn đánh dấu dọc tường phía Tây, người đi bộ sử dụng lối màu vàng. Không để pallet gần cửa thoát hiểm; mọi vật cản hoặc rào chắn hư hỏng phải được báo ngay.",
@@ -2735,7 +2735,7 @@
             "Managers attending a budget meeting"
           ],
           "answerIndex": 0,
-          "explanation": "The workshop is for staff who regularly respond to customer inquiries by phone or email."
+          "explanation": "Hội thảo dành cho nhân viên thường xuyên tiếp nhận yêu cầu của khách hàng qua điện thoại hoặc email."
         },
         {
           "question": "How many employees may each department nominate?",
@@ -2746,7 +2746,7 @@
             "Exactly ten"
           ],
           "answerIndex": 1,
-          "explanation": "The announcement limits each department to four nominees."
+          "explanation": "Thông báo giới hạn mỗi phòng ban ở mức tối đa bốn người được đề cử."
         },
         {
           "question": "When will confirmation emails be sent?",
@@ -2757,7 +2757,7 @@
             "On the day of the workshop"
           ],
           "answerIndex": 2,
-          "explanation": "The speaker says confirmation emails will be sent within two business days after the deadline."
+          "explanation": "Diễn giả cho biết email xác nhận sẽ được gửi trong vòng hai ngày làm việc sau hạn đăng ký."
         }
       ],
       "transcriptTranslation": "Đăng ký mở cho hội thảo giao tiếp khách hàng ngày 8 tháng 10. Hội thảo nửa ngày dành cho nhân viên thường xử lý yêu cầu qua điện thoại hoặc email. Mỗi phòng ban được đề cử tối đa bốn người; biểu mẫu cần hoàn thành trước ngày 25 tháng 9.",
@@ -2801,7 +2801,7 @@
             "The airport has changed its opening hours"
           ],
           "answerIndex": 1,
-          "explanation": "The speaker attributes the change to road construction near the terminal."
+          "explanation": "Diễn giả cho biết điểm đón xe được thay đổi do có công trình đường bộ gần nhà ga."
         },
         {
           "question": "Where should passengers meet the shuttle?",
@@ -2812,7 +2812,7 @@
             "Next to the train station"
           ],
           "answerIndex": 0,
-          "explanation": "The shuttle will now depart from the north entrance."
+          "explanation": "Xe đưa đón hiện sẽ khởi hành từ cổng phía Bắc."
         },
         {
           "question": "What should passengers show the driver?",
@@ -2823,7 +2823,7 @@
             "A payment receipt"
           ],
           "answerIndex": 2,
-          "explanation": "Passengers are instructed to show employee identification to the driver."
+          "explanation": "Hành khách được yêu cầu xuất trình thẻ nhân viên cho tài xế."
         }
       ],
       "transcriptTranslation": "Dịch vụ xe đưa đón sân bay ngày mai đổi điểm khởi hành sang cổng phía Bắc do thi công đường gần nhà ga. Chuyến đầu vẫn chạy lúc 5:45; các chuyến sau theo lịch mỗi giờ. Hành khách cần đến sớm mười phút và xuất trình thẻ nhân viên.",
@@ -2867,7 +2867,7 @@
             "After the management meeting"
           ],
           "answerIndex": 1,
-          "explanation": "The manager gives November 6 as the submission deadline."
+          "explanation": "Người quản lý nêu ngày 6 tháng 11 là hạn cuối nộp phiếu kiểm kê."
         },
         {
           "question": "How should damaged goods be recorded?",
@@ -2878,7 +2878,7 @@
             "Only after contacting Finance"
           ],
           "answerIndex": 2,
-          "explanation": "The manager explicitly asks staff to record damaged goods separately."
+          "explanation": "Người quản lý yêu cầu ghi nhận hàng hóa hư hỏng tách biệt với hàng hết tồn kho."
         },
         {
           "question": "What should employees do if a product code is missing?",
@@ -2889,7 +2889,7 @@
             "Add a note in the comments column"
           ],
           "answerIndex": 3,
-          "explanation": "They should not create a new code; they should add a note in the comments column."
+          "explanation": "Khi thiếu mã sản phẩm, nhân viên không được tự tạo mã mới mà phải ghi chú vào cột nhận xét."
         }
       ],
       "transcriptTranslation": "Đợt kiểm kê quý bắt đầu ngày 3 tháng 11; các chi nhánh gửi phiếu đã hoàn tất cho bộ phận vận hành trung tâm trước ngày 6 tháng 11. Hàng hư hỏng phải ghi riêng với hàng hết kho. Nếu thiếu mã sản phẩm, không tự tạo mã mới mà ghi chú ở cột nhận xét.",

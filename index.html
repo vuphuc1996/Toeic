@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.12.0 – Flashcard Learning</title>
+  <title>TOEIC Dictionary v2.13.0 – Flashcard Learning</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -65,7 +65,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.12.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.13.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -98,13 +98,25 @@
           <div class="practice-home-metrics"><span>Đã luyện tập<strong id="homeReviewed">0</strong></span><span>Độ chính xác<strong id="homeAccuracy">0%</strong></span><span>Cần học/ôn<strong id="homeDue">0</strong></span></div>
           <button class="primary-button" data-go="practice">Bắt đầu ôn tập <svg class="ui-icon button-icon"><use href="#icon-arrow-right"></use></svg></button>
         </section>
-        <section class="panel toeic-progress-panel" id="toeicProgressPanel" aria-label="Tiến độ TOEIC theo từng Part">
-          <div class="panel-header"><div><p class="eyebrow">TOEIC LEARNING DIAGNOSTICS</p><h3>Tiến độ theo 7 Parts</h3><p class="muted">Theo dõi câu đã làm, tỷ lệ đúng và phần cần ưu tiên. Đây là chỉ số học tập nội bộ, không phải điểm quy đổi ETS.</p></div><span class="learning-category">TOEIC L&amp;R</span></div>
+        <section class="toeic-progress-panel" id="toeicProgressPanel" aria-label="Tiến độ TOEIC theo từng Part">
+          <header class="toeic-progress-header">
+            <div class="toeic-progress-intro">
+              <p class="eyebrow">TOEIC LEARNING DIAGNOSTICS</p>
+              <div class="toeic-progress-title-line"><h2>Tiến độ theo 7 Parts</h2><span class="learning-category">TOEIC L&amp;R</span></div>
+              <p class="toeic-progress-description">Theo dõi số câu đã làm, tỷ lệ đúng và phần cần ưu tiên. Đây là chỉ số học tập nội bộ, không phải điểm quy đổi ETS.</p>
+            </div>
+          </header>
           <div class="toeic-progress-columns">
-            <section><div class="toeic-progress-heading"><strong>LISTENING · PART 1–4</strong><small>100 câu trong đề chuẩn</small></div><div class="toeic-part-grid" id="toeicListeningParts"></div></section>
-            <section><div class="toeic-progress-heading"><strong>READING · PART 5–7</strong><small>100 câu trong đề chuẩn</small></div><div class="toeic-part-grid" id="toeicReadingParts"></div></section>
+            <section class="toeic-progress-group" aria-label="Listening Part 1 đến 4">
+              <div class="toeic-progress-heading"><strong>LISTENING · PART 1–4</strong><small>100 câu trong đề chuẩn</small></div>
+              <div class="toeic-part-grid" id="toeicListeningParts"></div>
+            </section>
+            <section class="toeic-progress-group" aria-label="Reading Part 5 đến 7">
+              <div class="toeic-progress-heading"><strong>READING · PART 5–7</strong><small>100 câu trong đề chuẩn</small></div>
+              <div class="toeic-part-grid" id="toeicReadingParts"></div>
+            </section>
           </div>
-          <div class="toeic-priority-row" id="toeicPriorityText">Hoàn thành một số câu luyện tập để hệ thống xác định Part cần ưu tiên.</div>
+          <div class="toeic-priority-row"><svg class="ui-icon" aria-hidden="true"><use href="#icon-target"></use></svg><p id="toeicPriorityText" role="status" aria-live="polite">Hoàn thành một số câu luyện tập để hệ thống xác định Part cần ưu tiên.</p></div>
         </section>
         <section class="panel level-meter-panel" aria-label="Chỉ số năng lực học tập">
           <div class="level-meter-copy"><p class="eyebrow">PERSONAL LEARNING INDEX</p><h3>Thước đo tiến độ từ vựng</h3><p class="muted">Chỉ số nội bộ dựa trên số từ đã ghi nhớ và độ chính xác khi ôn tập; chưa phải chứng chỉ CEFR hoặc điểm TOEIC.</p></div>
@@ -133,7 +145,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.12.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.13.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -315,7 +327,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.12.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.13.0</span></footer>
     </main>
   </div>
 

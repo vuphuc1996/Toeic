@@ -120,7 +120,7 @@
             "The following quarter"
           ],
           "answerIndex": 1,
-          "explanation": "Thông báo ghi Thursday, April 18."
+          "explanation": "Thông báo ghi cuộc họp diễn ra vào thứ Năm, ngày 18 tháng 4; đây là thời điểm được hỏi."
         },
         {
           "question": "What must be submitted by Tuesday afternoon?",
@@ -216,7 +216,7 @@
             "Wednesday morning"
           ],
           "answerIndex": 2,
-          "explanation": "Cuộc họp đầu tiên vào Tuesday afternoon."
+          "explanation": "Lịch trình nêu cuộc họp đầu tiên diễn ra vào chiều thứ Ba, trước các hoạt động còn lại."
         }
       ],
       "part": "Part 7",
@@ -268,7 +268,7 @@
             "June 30"
           ],
           "answerIndex": 2,
-          "explanation": "Hóa đơn đến hạn vào May 30."
+          "explanation": "Điều khoản thanh toán nêu hạn cuối của hóa đơn INV-2048 là ngày 30 tháng 5."
         },
         {
           "question": "What should the customer send if payment has been made?",
@@ -416,7 +416,7 @@
             "HR Assistant"
           ],
           "answerIndex": 1,
-          "explanation": "Thông báo tuyển vị trí Operations Coordinator."
+          "explanation": "Thông báo tuyển dụng nêu vị trí đang cần tuyển là Operations Coordinator."
         },
         {
           "question": "How should interested employees apply?",
@@ -427,7 +427,7 @@
             "At the interview"
           ],
           "answerIndex": 1,
-          "explanation": "Ứng viên nộp hồ sơ qua company portal."
+          "explanation": "Hướng dẫn ứng tuyển yêu cầu ứng viên gửi hồ sơ qua cổng thông tin nội bộ của công ty."
         },
         {
           "question": "When is the position expected to begin?",
@@ -438,7 +438,7 @@
             "August 1"
           ],
           "answerIndex": 2,
-          "explanation": "Vị trí dự kiến bắt đầu July 1."
+          "explanation": "Thông báo ghi ngày dự kiến bắt đầu công việc là ngày 1 tháng 7."
         }
       ],
       "part": "Part 7",
@@ -564,7 +564,7 @@
             "Monday morning"
           ],
           "answerIndex": 1,
-          "explanation": "Bảo trì diễn ra vào thứ Bảy, bắt đầu 7:00 a.m."
+          "explanation": "Lịch bảo trì được ấn định vào sáng thứ Bảy, bắt đầu lúc 7:00."
         },
         {
           "question": "Which area may have limited access?",
@@ -575,7 +575,7 @@
             "The entire building"
           ],
           "answerIndex": 1,
-          "explanation": "Khu phía Đông ở tầng bốn bị hạn chế tiếp cận."
+          "explanation": "Thông báo giới hạn quyền tiếp cận khu phía Đông ở tầng bốn trong thời gian bảo trì."
         },
         {
           "question": "Where should weekend staff work?",
@@ -613,7 +613,7 @@
             "A discount on shipping"
           ],
           "answerIndex": 1,
-          "explanation": "The customer asks whether a replacement can be sent or the product should be returned."
+          "explanation": "Khách hàng hỏi liệu sản phẩm thay thế có thể được gửi trong tuần này hay họ cần hoàn trả sản phẩm trước."
         }
       ],
       "part": "Part 7",
@@ -639,7 +639,7 @@
             "Monday morning"
           ],
           "answerIndex": 1,
-          "explanation": "The notice says 7:00 a.m. to noon on Saturday."
+          "explanation": "Thông báo nêu thang máy ở cánh Đông sẽ ngừng hoạt động từ 7 giờ sáng đến trưa thứ Bảy."
         }
       ],
       "part": "Part 7",
@@ -665,7 +665,7 @@
             "A reference from a customer"
           ],
           "answerIndex": 1,
-          "explanation": "Applicants must submit a résumé and a brief cover letter."
+          "explanation": "Thông báo tuyển dụng yêu cầu ứng viên gửi một bản résumé và thư xin việc ngắn; đây là hai tài liệu được liệt kê trong mục hồ sơ cần nộp."
         }
       ],
       "part": "Part 7",
@@ -691,7 +691,7 @@
             "The purchasing manager is absent"
           ],
           "answerIndex": 1,
-          "explanation": "The invoice lists 26 desks while the purchase order lists 24."
+          "explanation": "Hóa đơn ghi 26 chiếc bàn trong khi đơn đặt hàng ghi 24 chiếc, vì vậy số lượng cần được xác minh trước khi thanh toán."
         }
       ],
       "part": "Part 7",
@@ -717,7 +717,7 @@
             "At the domestic terminal"
           ],
           "answerIndex": 0,
-          "explanation": "The itinerary says the shuttle will meet the group outside Gate 4."
+          "explanation": "Lịch trình cho biết xe đưa đón của khách sạn sẽ đón đoàn bên ngoài Cổng số 4."
         }
       ],
       "part": "Part 7",
@@ -743,7 +743,7 @@
             "A customs inspection"
           ],
           "answerIndex": 1,
-          "explanation": "The warehouse response identifies an incorrectly labeled carton."
+          "explanation": "Phản hồi của kho xác định một thùng hàng bị dán nhãn sai là nguyên nhân gây chậm trễ."
         }
       ],
       "part": "Part 7",
@@ -779,7 +779,7 @@
             "Job applicants"
           ],
           "answerIndex": 1,
-          "explanation": "The workshop is intended for staff who communicate with customers by phone or email."
+          "explanation": "Thông báo cho biết hội thảo dành cho nhân viên thường xuyên liên hệ với khách hàng qua điện thoại hoặc email."
         }
       ],
       "part": "Part 7",
@@ -805,7 +805,7 @@
             "10:00 a.m."
           ],
           "answerIndex": 2,
-          "explanation": "The organizer email changes the presentation time to 9:30 a.m."
+          "explanation": "Email từ ban tổ chức cập nhật giờ thuyết trình khai mạc từ 9:00 sang 9:30 sáng."
         }
       ],
       "part": "Part 7",
@@ -1333,7 +1333,7 @@
             "during August 20"
           ],
           "answerIndex": 2,
-          "explanation": "By August 20 thể hiện hạn cuối nộp hồ sơ."
+          "explanation": "Cụm by August 20 đặt ra hạn cuối là ngày 20 tháng 8; hồ sơ phải được gửi trước hoặc trong ngày này."
         },
         {
           "question": "Choose the best sentence for blank (4).",
@@ -1670,7 +1670,7 @@
             "An evening meal"
           ],
           "answerIndex": 2,
-          "explanation": "Khách sạn xác nhận bữa sáng đã bao gồm."
+          "explanation": "Email xác nhận đặt phòng cho biết bữa sáng đã nằm trong gói lưu trú."
         },
         {
           "question": "What is scheduled for 2:00 p.m. on April 18?",
