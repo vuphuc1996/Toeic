@@ -1444,7 +1444,7 @@
           "explanation": "Người hỏi hỏi địa điểm (Where); quầy lễ tân là nơi nhận thẻ khách. Hai lựa chọn còn lại nói về thời điểm và tình trạng thẻ, không trả lời địa điểm."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Tôi có thể nhận thẻ khách ở đâu?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1474,7 +1474,7 @@
           "explanation": "Câu hỏi Yes/No hỏi hóa đơn đã được duyệt chưa; 'Not yet' trả lời trực tiếp và cung cấp trạng thái đang được Finance xem xét."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Hóa đơn đã chỉnh sửa đã được phê duyệt chưa?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1504,7 +1504,7 @@
           "explanation": "Đây là lời đề xuất bắt đầu bằng Why don't we; phương án C thể hiện sự đồng ý và nêu lợi ích của việc đổi lịch."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Sao chúng ta không chuyển buổi đào tạo sang thứ Năm?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1534,7 +1534,7 @@
           "explanation": "Who hỏi người phụ trách; Ms. Patel là tên người và bộ phận chịu trách nhiệm. Các phương án khác trả lời thời điểm và địa điểm."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Ai chịu trách nhiệm cập nhật cơ sở dữ liệu khách hàng?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1564,7 +1564,7 @@
           "explanation": "When yêu cầu thời điểm; 'By noon tomorrow' là mốc thời gian giao hàng phù hợp."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Khi nào máy in thay thế sẽ đến?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1594,7 +1594,7 @@
           "explanation": "Câu hỏi đưa ra hai lựa chọn về chỗ ngồi; người trả lời chọn aisle seat."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Bạn muốn ghế cạnh cửa sổ hay ghế ở lối đi?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1616,15 +1616,15 @@
         {
           "question": "Choose the most appropriate response.",
           "choices": [
-            "Yes, the maintenance team is using it.",
+            "That’s right; the maintenance team is using it.",
             "The conference begins at nine.",
             "I sent the room number yesterday."
           ],
           "answerIndex": 0,
-          "explanation": "Câu hỏi đuôi xác nhận phòng không sử dụng được; 'Yes' xác nhận thông tin và giải thích phòng đang được bảo trì."
+          "explanation": "Đây là câu trần thuật kèm đuôi xác nhận “isn’t it?”. “That’s right” xác nhận phòng hội nghị không thể sử dụng chiều nay; mệnh đề sau giải thích đội bảo trì đang dùng phòng."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Phòng hội nghị không thể sử dụng vào chiều nay, phải không?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1654,7 +1654,7 @@
           "explanation": "How many hỏi số lượng; 'Twenty' là câu trả lời trực tiếp về số bản cần chuẩn bị."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Tôi nên chuẩn bị bao nhiêu bản sao cho buổi hội thảo?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1684,7 +1684,7 @@
           "explanation": "Đây là lời nhờ vả lịch sự; phương án A chấp nhận yêu cầu và nêu cách gửi báo cáo."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Bạn có thể gửi cho tôi số liệu doanh số mới nhất không?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1714,7 +1714,7 @@
           "explanation": "Why hỏi nguyên nhân; địa chỉ cũ trên đơn hàng giải thích vì sao kiện hàng được chuyển nhầm."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Tại sao lô hàng lại được gửi nhầm đến chi nhánh?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1744,7 +1744,7 @@
           "explanation": "Người nói hỏi ông Chen đã trở về hay chưa; phương án A cung cấp trạng thái dự kiến trở về tối nay."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Bạn có biết ông Chen đã trở về sau chuyến công tác chưa?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1774,7 +1774,7 @@
           "explanation": "Which hỏi chọn đề xuất nào; phương án B xác định đề xuất của nhóm thiết kế."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Ủy ban đã chọn đề xuất nào?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1804,7 +1804,7 @@
           "explanation": "Should I…? hỏi có nên làm việc đó không; câu trả lời từ chối đề xuất và đưa ra phương tiện thay thế."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Tôi có nên đặt taxi ra sân bay không?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1834,7 +1834,7 @@
           "explanation": "Where hỏi địa điểm; showroom trên King Street là địa điểm diễn ra buổi giới thiệu."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Buổi giới thiệu sản phẩm được tổ chức ở đâu?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1864,7 +1864,7 @@
           "explanation": "Đây là lời thông báo về vấn đề chưa nhận được mã; phương án B phản hồi bằng hành động xử lý phù hợp."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Tôi vẫn chưa nhận được mã truy cập.",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1894,7 +1894,7 @@
           "explanation": "How long hỏi thời lượng cần thiết; khoảng 40 phút là độ dài của một lần kiểm tra, không phải lịch kiểm tra hàng tháng."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Việc kiểm tra thiết bị thường mất bao lâu?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1924,7 +1924,7 @@
           "explanation": "Who hỏi cần liên hệ ai; Accounts Department là bộ phận phụ trách vấn đề thanh toán."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Tôi nên liên hệ ai về khoản thanh toán còn thiếu?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1954,7 +1954,7 @@
           "explanation": "Đây là một thông báo, không phải câu hỏi; lời đáp tự nhiên là cảm ơn vì đã thông báo."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Nhà ăn sẽ đóng cửa sớm hôm nay.",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -1984,7 +1984,7 @@
           "explanation": "Câu hỏi Have you finished…? hỏi việc rà soát đã hoàn tất chưa. Câu trả lời xác nhận rõ bằng “Yes” và cho biết các nhận xét cuối cùng đã được gửi cho bộ phận pháp chế."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Bạn đã xem xét hợp đồng xong chưa?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -2014,7 +2014,7 @@
           "explanation": "Lời hỏi xin gia hạn cần phản hồi về khả năng xem xét; người nói sẽ hỏi điều phối viên chương trình."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Có thể gia hạn thời hạn đăng ký được không?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -2044,7 +2044,7 @@
           "explanation": "What time hỏi giờ khởi hành; 5:45 a.m. là đáp án thời gian."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Chuyến xe đưa đón đầu tiên ra sân bay khởi hành lúc mấy giờ?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -2074,7 +2074,7 @@
           "explanation": "Why hỏi lý do; việc bổ sung chức năng đặt chỗ mới là mục đích của đợt cập nhật."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Tại sao trang web lại được cập nhật vào tối nay?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },
@@ -2094,7 +2094,7 @@
       ],
       "questions": [
         {
-          "question": "The supplier promised to deliver the samples today, didn't they?",
+          "question": "Choose the most appropriate response.",
           "choices": [
             "They did, but the courier has requested another day.",
             "The samples are stored in the laboratory.",
@@ -2104,7 +2104,7 @@
           "explanation": "Đây là câu hỏi đuôi xác nhận lời hứa giao hàng. “They did” xác nhận nhà cung cấp đã hứa, còn mệnh đề sau giải thích hãng vận chuyển xin lùi thời gian."
         }
       ],
-      "transcriptTranslation": "Nghe câu hỏi/lời nói tiếng Anh và chọn phản hồi phù hợp nhất.",
+      "transcriptTranslation": "Nhà cung cấp đã hứa giao mẫu hàng hôm nay, phải không?",
       "vocabulary": [],
       "contentSource": "original-editorial"
     },

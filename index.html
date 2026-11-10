@@ -6,10 +6,11 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.13.0 – Flashcard Learning</title>
+  <title>TOEIC Dictionary v2.14.0 – Flashcard Learning</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
+  <link rel="stylesheet" href="./assets/css/design-system.css">
 </head>
 <body>
 
@@ -51,21 +52,21 @@
       </a>
       <div class="sidebar-caption">KHÔNG GIAN HỌC TẬP</div>
       <nav class="side-nav">
-        <button class="nav-item active" data-page="dashboard"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-home"></use></svg></span>Trang chủ</button>
-        <button class="nav-item" data-page="dictionary"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span>Từ vựng</button>
-        <button class="nav-item" data-page="practice"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-brain"></use></svg></span>Ôn tập</button>
+        <button class="nav-item active" data-page="dashboard" title="Trang chủ" aria-label="Trang chủ"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-home"></use></svg></span>Trang chủ</button>
+        <button class="nav-item" data-page="dictionary" title="Từ vựng" aria-label="Từ vựng"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span>Từ vựng</button>
+        <button class="nav-item" data-page="practice" title="Ôn tập" aria-label="Ôn tập"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-brain"></use></svg></span>Ôn tập</button>
         <div class="nav-group-label">HỌC TẬP</div>
-        <button class="nav-item nav-subitem" data-page="flashcards"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Flashcard từ vựng</button>
-        <button class="nav-item nav-subitem" data-page="grammar"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Ngữ pháp</button>
-        <button class="nav-item nav-subitem" data-page="reading"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span>Đọc hiểu</button>
-        <button class="nav-item nav-subitem" data-page="listening"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bell"></use></svg></span>Nghe</button>
+        <button class="nav-item nav-subitem" data-page="flashcards" title="Flashcard từ vựng" aria-label="Flashcard từ vựng"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Flashcard từ vựng</button>
+        <button class="nav-item nav-subitem" data-page="grammar" title="Ngữ pháp" aria-label="Ngữ pháp"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Ngữ pháp</button>
+        <button class="nav-item nav-subitem" data-page="reading" title="Đọc hiểu" aria-label="Đọc hiểu"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span>Đọc hiểu</button>
+        <button class="nav-item nav-subitem" data-page="listening" title="Nghe" aria-label="Nghe"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bell"></use></svg></span>Nghe</button>
         <div class="nav-group-label">CẤU HÌNH</div>
-        <button class="nav-item nav-subitem" data-page="settings"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-settings"></use></svg></span>Cấu hình</button>
-        <button class="nav-item nav-subitem" data-page="data"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-database"></use></svg></span>Quản lý dữ liệu</button>
+        <button class="nav-item nav-subitem" data-page="settings" title="Cấu hình" aria-label="Cấu hình"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-settings"></use></svg></span>Cấu hình</button>
+        <button class="nav-item nav-subitem" data-page="data" title="Quản lý dữ liệu" aria-label="Quản lý dữ liệu"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-database"></use></svg></span>Quản lý dữ liệu</button>
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.13.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.14.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -145,7 +146,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.13.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.14.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -327,14 +328,14 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.13.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.14.0</span></footer>
     </main>
   </div>
 
-  <nav class="mobile-bottom-nav" aria-label="Điều hướng mobile">
-    <button class="active" data-page="dashboard"><span><svg class="ui-icon"><use href="#icon-home"></use></svg></span><small>Trang chủ</small></button>
-    <button data-page="dictionary"><span><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span><small>Từ vựng</small></button>
-    <button data-page="practice"><span><svg class="ui-icon"><use href="#icon-brain"></use></svg></span><small>Ôn tập</small></button>
+  <nav class="mobile-bottom-nav" aria-label="Điều hướng nhanh">
+    <button class="active" data-page="dashboard" title="Trang chủ" aria-label="Trang chủ"><span><svg class="ui-icon"><use href="#icon-home"></use></svg></span><small>Trang chủ</small></button>
+    <button data-page="dictionary" title="Từ vựng" aria-label="Từ vựng"><span><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span><small>Từ vựng</small></button>
+    <button data-page="practice" title="Ôn tập" aria-label="Ôn tập"><span><svg class="ui-icon"><use href="#icon-brain"></use></svg></span><small>Ôn tập</small></button>
     <button data-menu-toggle="learning"><span><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span><small>Học tập</small></button>
     <button data-menu-toggle="config"><span><svg class="ui-icon"><use href="#icon-settings"></use></svg></span><small>Cấu hình</small></button>
   </nav>

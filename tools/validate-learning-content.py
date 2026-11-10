@@ -78,6 +78,11 @@ def main():
         for j,q in enumerate(questions):
             expected=3 if part=='Part 2' else 4
             validate_question(q,f"Listening {ident} Q{j+1}",expected)
+            if part == 'Part 2' and str(q.get('question','')).strip() != 'Choose the most appropriate response.':
+                ERRORS.append(f"Listening {ident}: Part 2 display prompt must use the standard response-selection instruction")
+        translation = str(item.get('transcriptTranslation','')).strip()
+        if part == 'Part 2' and re.search(r'nghe câu hỏi|lời nói tiếng anh|chọn phản hồi phù hợp nhất', translation, re.I):
+            ERRORS.append(f"Listening {ident}: Part 2 transcriptTranslation is a generic instruction, not a Vietnamese translation")
         if part=='Part 1':
             if len(segments)!=4: ERRORS.append(f"Listening {ident}: Part 1 needs exactly four spoken statements")
             image=item.get('image','')

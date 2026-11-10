@@ -1,0 +1,563 @@
+/*
+ * TOEIC Dictionary Design System — v2.14.0
+ * Shared visual rules for phone, tablet, laptop and desktop.
+ * Keep feature-specific behavior in app.css; this file owns common scale and responsive guardrails.
+ */
+:root {
+  color-scheme: light;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+  --ds-text: clamp(15px, calc(14.5px + .12vw), 16px);
+  --ds-text-sm: 14px;
+  --ds-text-xs: 12px;
+  --ds-line: 1.58;
+  --ds-content-max: 1600px;
+  --ds-touch: 44px;
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 20px;
+  --ds-space-6: 24px;
+  --ds-space-8: 32px;
+  --ds-radius-sm: 10px;
+  --ds-radius-md: 14px;
+  --ds-radius-lg: 18px;
+  --ds-border: #e3eaf2;
+  --ds-focus: 0 0 0 3px rgba(59, 125, 190, .24);
+  --ds-shadow-card: 0 6px 22px rgba(24, 47, 79, .055);
+  --ds-motion-fast: 140ms;
+  --ds-motion-base: 200ms;
+  --ds-motion-slow: 280ms;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--canvas, #f5f7fb);
+}
+
+body {
+  min-width: 320px;
+  font-family: var(--font);
+  font-size: var(--ds-text);
+  line-height: var(--ds-line);
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+}
+
+.app-frame,
+.main-area,
+.page,
+.panel,
+.practice-layout,
+.dashboard-grid,
+.metric-grid,
+.toeic-progress-panel,
+.toeic-progress-columns,
+.toeic-progress-group,
+.learning-card,
+.flash-session,
+.reading-document-card,
+.listening-card {
+  min-width: 0;
+}
+
+.app-frame { min-height: 100vh; min-height: 100svh; min-height: 100dvh; }
+.main-area { min-height: 100vh; min-height: 100svh; min-height: 100dvh; }
+.page {
+  width: 100%;
+  max-width: var(--ds-content-max);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 2.6vw, 44px);
+}
+
+/* Hierarchy: keep labels descriptive, but do not let them become microtext. */
+h1, h2, h3, h4 { text-wrap: balance; }
+h2 { font-size: clamp(19px, 1.5vw, 24px); line-height: 1.3; }
+h3 { font-size: clamp(17px, 1.25vw, 21px); line-height: 1.35; }
+p, li { text-wrap: pretty; }
+.page-heading h1 { font-size: clamp(25px, 2vw, 34px); line-height: 1.22; }
+.page-heading .muted,
+.page-heading > div > .muted,
+.toeic-progress-description,
+.section-heading p { font-size: 14px; line-height: 1.62; }
+.eyebrow,
+.panel-kicker,
+.flash-kicker,
+.sidebar-caption,
+.nav-group-label,
+.field-label,
+.reading-passage-label,
+.source-badge,
+.cefr-badge {
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: .09em;
+}
+.muted,
+.metric-card span,
+.quick-link small,
+.metric-card small,
+.phase-note p,
+.data-warning p,
+.results-bar,
+.word-table th,
+.word-table td,
+.toeic-part-meta,
+.reading-part-intro p,
+.app-footer {
+  font-size: max(12px, 1em);
+  line-height: 1.55;
+}
+.metric-card small,
+.quick-link small,
+.phase-note p,
+.data-warning p,
+.toeic-part-meta,
+.reading-part-intro p { font-size: 12px; }
+
+/* Shared controls and icon metrics. */
+button, input, select, textarea { font-family: inherit; }
+button, a, input, select, textarea, summary { -webkit-tap-highlight-color: transparent; }
+button:not(.letter-tile):not(.alphabet-chip) { line-height: 1.25; }
+.primary-button,
+.secondary-button,
+.text-button,
+.icon-button,
+.close-button,
+.row-action,
+.quick-link,
+.nav-item,
+.nav-subitem,
+.alphabet-chip,
+.letter-tile,
+.choice-option,
+.quiz-actions button,
+.flash-topic-card,
+.mobile-bottom-nav button {
+  touch-action: manipulation;
+}
+.primary-button,
+.secondary-button {
+  min-height: var(--ds-touch);
+  padding: 10px 16px;
+  border-radius: 11px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.text-button { min-height: 44px; padding: 9px 12px; font-size: 14px; }
+.icon-button,
+.close-button { min-width: 44px; min-height: 44px; }
+.icon-action { min-width: 36px; min-height: 36px; }
+.field input,
+.field select,
+.field textarea,
+.global-search,
+.search-field,
+.flash-topic-search,
+.listening-speed-control select {
+  min-height: 44px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.ui-icon {
+  width: 1.25em;
+  height: 1.25em;
+  flex: 0 0 auto;
+  vertical-align: -.18em;
+}
+button:disabled,
+.primary-button:disabled,
+.secondary-button:disabled {
+  cursor: not-allowed;
+  opacity: .58;
+  transform: none;
+  box-shadow: none;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid rgba(59, 125, 190, .42);
+  outline-offset: 2px;
+  box-shadow: var(--ds-focus);
+}
+input, select, textarea { max-width: 100%; }
+img, svg, video, canvas { max-width: 100%; }
+
+/* Component surfaces share one border/radius/shadow rhythm. */
+.panel,
+.metric-card,
+.learning-card,
+.flash-topic-card,
+.reading-document-card,
+.listening-card,
+.toeic-part-card {
+  border-color: var(--ds-border);
+  border-radius: var(--ds-radius-md);
+}
+.panel { box-shadow: 0 2px 10px rgba(24, 47, 79, .025); }
+.metric-card { padding: clamp(14px, 1.4vw, 20px); }
+.toeic-part-card { min-height: 112px; padding: 14px; }
+.toeic-part-name { font-size: 12px; }
+.toeic-part-card > strong { font-size: 20px; }
+.toeic-part-meta { font-size: 12px; }
+.toeic-progress-heading { font-size: 13px; }
+.toeic-progress-heading small { font-size: 12px; }
+.toeic-priority-row { font-size: 13px; }
+
+/* Tables remain usable on narrow screens; the component may switch to cards. */
+.word-table th { font-size: 12px; }
+.word-table td { font-size: 13px; }
+.word-name { font-size: 15px; }
+.word-ipa { font-size: 12px; }
+.field-label { letter-spacing: .07em; }
+
+/* Subtle interaction: feedback, not decoration that competes with study content. */
+@media (hover: hover) and (pointer: fine) {
+  .panel:hover { border-color: #dce6f0; }
+  .metric-card:hover,
+  .learning-card:hover,
+  .flash-topic-card:hover,
+  .reading-document-card:hover,
+  .listening-card:hover {
+    box-shadow: var(--ds-shadow-card);
+  }
+  .primary-button:hover,
+  .secondary-button:hover { transform: translateY(-1px); }
+}
+.primary-button:active,
+.secondary-button:active,
+.icon-button:active,
+.quick-link:active,
+.choice-option:active { transform: scale(.985); }
+.page.active { animation: ds-page-in var(--ds-motion-slow) ease both; }
+.modal-backdrop:not([hidden]) .modal { animation: ds-modal-in 220ms cubic-bezier(.2,.75,.25,1) both; }
+@keyframes ds-page-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ds-modal-in {
+  from { opacity: 0; transform: translateY(10px) scale(.992); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+
+/* Tablet portrait/compact laptop: keep the vertical icon rail; no phone-style bottom bar. */
+@media (min-width: 641px) and (max-width: 850px) {
+  .sidebar { width: 76px; padding: 20px 9px 16px; }
+  .brand { justify-content: center; padding: 0 0 24px; }
+  .brand-copy,
+  .sidebar-caption,
+  .local-state > span:not(.status-dot),
+  .sidebar-version { display: none !important; }
+  .local-state { justify-content: center; padding: 10px 0; border: 0; }
+  .nav-item { width: 100%; min-height: 48px; justify-content: center; padding: 10px 0; }
+  .nav-icon { width: 24px; margin: 0; }
+  .main-area { margin-left: 76px; }
+  .mobile-bottom-nav { display: none !important; }
+  .topbar { min-height: 64px; height: 64px; padding-inline: clamp(14px, 2.4vw, 22px); }
+  .page { padding: 22px clamp(18px, 2.5vw, 26px); }
+  .page-heading { gap: 14px; }
+  .page-heading h1 { font-size: clamp(25px, 3vw, 29px); }
+  .metric-grid { gap: 10px; }
+  .metric-card { gap: 10px; }
+  .dashboard-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .filter-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Large tablets and small laptops. */
+@media (min-width: 851px) and (max-width: 1199px) {
+  .sidebar { width: 216px; }
+  .main-area { margin-left: 216px; }
+  .mobile-bottom-nav { display: none !important; }
+  .topbar { gap: 10px; padding-inline: clamp(18px, 2.2vw, 28px); }
+  .breadcrumb { min-width: 0; flex: 1 1 auto; }
+  .topbar-actions { min-width: 0; flex: 0 1 auto; gap: 8px; }
+  .global-search { width: clamp(140px, 18vw, 210px); min-width: 130px; }
+  .device-greeting { gap: 6px; padding: 4px 6px; }
+  .device-greeting-icon { width: 30px; height: 30px; flex-basis: 30px; }
+  .device-greeting-copy em { display: none; }
+  .page { padding-inline: clamp(20px, 2.4vw, 30px); }
+  .dashboard-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Phone: safe-area-aware fixed navigation and larger reading/tap scale. */
+@media (max-width: 640px) {
+  html { scroll-padding-top: 70px; }
+  body { font-size: 15px; line-height: 1.58; }
+  .sidebar { display: none !important; }
+  .main-area { margin-left: 0 !important; padding-bottom: calc(78px + env(safe-area-inset-bottom)); }
+  .topbar { position: sticky; top: 0; min-height: 58px; height: 58px; padding-inline: 10px; }
+  .page { padding: 20px clamp(14px, 4vw, 20px) 22px; }
+  .page-heading { align-items: flex-start; gap: 10px; margin-bottom: 18px; }
+  .page-heading h1 { font-size: clamp(23px, 6vw, 27px); line-height: 1.24; }
+  .page-heading .muted,
+  .page-heading > div > .muted,
+  .muted { font-size: 13px; line-height: 1.58; }
+  .eyebrow, .panel-kicker, .flash-kicker { font-size: 11px; }
+  .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .metric-card { min-height: 92px; padding: 12px; gap: 9px; }
+  .metric-card span { font-size: 12px; }
+  .metric-card small { font-size: 11px; }
+  .dashboard-grid { grid-template-columns: 1fr; gap: 12px; }
+  .practice-home-panel { gap: 14px; }
+  .level-meter-panel { gap: 10px; }
+  .toeic-progress-columns { grid-template-columns: 1fr; gap: 18px; }
+  .toeic-part-grid,
+  .toeic-progress-group:last-child .toeic-part-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .toeic-part-card { min-height: 108px; padding: 12px; }
+  .toeic-part-name { font-size: 12px; }
+  .toeic-part-meta { font-size: 12px; }
+  .toeic-progress-description { font-size: 13px; }
+  .primary-button, .secondary-button { width: auto; min-height: 44px; font-size: 14px; }
+  .field input, .field select, .field textarea,
+  .global-search, .search-field, .flash-topic-search { min-height: 46px; font-size: 16px; }
+  .choice-option { min-height: 54px; font-size: 15px; }
+  .reading-passage { font-size: 14px; line-height: 1.75; }
+  .transcript-line p { font-size: 13px; }
+  .app-footer { position: static; gap: 8px; padding: 12px 14px calc(14px + env(safe-area-inset-bottom)); font-size: 11px; }
+  .mobile-bottom-nav {
+    position: fixed;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    inset: auto 0 0;
+    height: calc(66px + env(safe-area-inset-bottom));
+    padding: 5px 4px calc(5px + env(safe-area-inset-bottom));
+    background: rgba(255,255,255,.97);
+    border-top: 1px solid var(--ds-border);
+    box-shadow: 0 -5px 20px rgba(24,47,79,.055);
+    backdrop-filter: blur(14px) saturate(1.2);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    z-index: 40;
+  }
+  .mobile-bottom-nav button { min-width: 0; min-height: 48px; gap: 3px; padding: 3px 1px; }
+  .mobile-bottom-nav button span { display: grid; place-items: center; height: 22px; font-size: 17px; }
+  .mobile-bottom-nav .ui-icon { width: 20px; height: 20px; }
+  .mobile-bottom-nav button small { font-size: 11px; line-height: 1.2; white-space: nowrap; }
+  .mobile-bottom-nav button.active { color: var(--navy); font-weight: 750; }
+  .mobile-bottom-nav button.active span { transform: translateY(-1px); }
+  .modal-backdrop { padding: 8px 8px calc(8px + env(safe-area-inset-bottom)); }
+  .modal { max-height: calc(92dvh - env(safe-area-inset-top)); overflow: auto; }
+}
+
+@media (max-width: 380px) {
+  .topbar { padding-inline: 8px; }
+  .page { padding-inline: 13px; }
+  .mobile-bottom-nav button small { font-size: 10px; }
+  .metric-card { padding: 10px; }
+  .toeic-part-card { padding: 10px; }
+  .filter-row { gap: 8px; }
+}
+
+/* Progress feedback: movement follows a real value change, not an endless decorative loop. */
+.toeic-part-track i,
+.level-meter-track span,
+.flash-progress span,
+.advance-progress-track span {
+  transition: width 360ms cubic-bezier(.2,.75,.25,1), background-color var(--ds-motion-base) ease;
+}
+
+/* Touch-first controls: keep the app comfortable on iPhone/iPad and Android. */
+@media (pointer: coarse) {
+  .nav-item,
+  .nav-subitem,
+  .quick-link,
+  .alphabet-chip,
+  .letter-tile,
+  .icon-action,
+  .row-action,
+  .text-button { min-width: 44px; min-height: 44px; }
+  .alphabet-chip { min-width: 44px; min-height: 44px; }
+  button:focus-visible, a:focus-visible { outline-offset: 3px; }
+}
+
+@media (hover: none) {
+  .topic-disc:hover,
+  .topic-disc.active,
+  .letter-tile:hover,
+  .word-card:hover,
+  .metric-card:hover,
+  .toeic-part-card:hover { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .page.active { animation: none !important; }
+}
+
+@media (prefers-contrast: more) {
+  :root { --line: #bcc9d8; --ds-border: #bcc9d8; --muted: #53657b; }
+  .muted, .field-label, .toeic-part-meta { color: #53657b; }
+  button:focus-visible, a:focus-visible { outline-color: currentColor; }
+}
+
+
+/* Readability floor: replace legacy micro-labels with a consistent, legible minimum. */
+.advance-count-label,
+.advance-indicator>span b,
+.advance-indicator>span small,
+.advance-prep-copy>small,
+.advance-prep-kicker,
+.advance-stage em,
+.ai-oneway-context summary,
+.ai-oneway-context>small,
+.ai-oneway-intro p,
+.ai-prompt-intro p,
+.ai-prompt-note,
+.alphabet-chip,
+.answer-reference small,
+.answer-reference>p,
+.answer-reference>span,
+.app-footer,
+.auto-next-wait-kicker,
+.auto-next-wait-ring small,
+.brand small,
+.brand-copy small,
+.breadcrumb strong,
+.cefr-badge,
+.char-cell small,
+.choice-option>span,
+.choice-review-head em,
+.choice-review-item p,
+.choice-review-letter,
+.choice-review-title span,
+.data-footer-actions .muted,
+.data-warning p,
+.detail-cefr,
+.detail-pill,
+.detail-section h4,
+.device-greeting-copy em,
+.device-greeting-copy small,
+.device-greeting-copy strong,
+.editor-help,
+.empty-state p,
+.example-card span,
+.exercise-choice,
+.exercise-choice>span,
+.exercise-feedback,
+.exercise-kicker,
+.eyebrow,
+.field-label,
+.flash-collocations span,
+.flash-example small,
+.flash-kicker,
+.flash-related-grid small,
+.flash-topic-copy small,
+.flash-verb-forms span,
+.github-local-note p,
+.github-local-note strong,
+.global-search input,
+.global-search kbd,
+.google-context-details summary,
+.google-search-note,
+.install-invite-footnote,
+.learning-card-footer small,
+.learning-category,
+.learning-formula,
+.learning-level,
+.lesson-example>span,
+.letter-tile small,
+.listening-hint,
+.listening-intro p,
+.listening-player-head small,
+.listening-player-status,
+.listening-speed-control label,
+.listening-speed-row,
+.local-state small,
+.meaning-line .meaning-pos,
+.meaning-line small,
+.metric-card small,
+.metric-card span,
+.mobile-bottom-nav button small,
+.nav-group-label,
+.notification-platform-help,
+.panel-header .muted,
+.panel-kicker,
+.part1-illustration-frame figcaption,
+.personal-editor-note,
+.phase-note p,
+.pos-tag,
+.practice-home-copy p:last-child,
+.practice-home-metrics span,
+.practice-review-answer-grid small,
+.practice-stat small,
+.practice-stat span,
+.priority-pill,
+.pronunciation-note,
+.question-type,
+.quick-link small,
+.quick-symbol,
+.quiz-controls .field-label,
+.quiz-counter,
+.quiz-kicker,
+.read-only-label,
+.reading-card-meta,
+.reading-passage-label,
+.reading-vocab-chip small,
+.reading-vocab-chip span,
+.reference-example,
+.reference-sense p,
+.reference-sense small,
+.reference-title-row span,
+.reminder-info,
+.reminder-limit,
+.reminder-popup-actions>span,
+.reminder-popup-open,
+.reminder-toggle small,
+.results-bar,
+.row-action,
+.sentence-breakdown b,
+.sentence-breakdown small,
+.sentence-breakdown span,
+.settings-help,
+.settings-shortcut-panel p,
+.sidebar-caption,
+.sidebar-version,
+.source-badge,
+.toeic-part-card>strong small,
+.toeic-part-meta,
+.toeic-part-name,
+.toeic-progress-heading small,
+.topic-disc small,
+.topic-tag,
+.transcript-line small,
+.transcript-translation,
+.weak-word-item em,
+.weak-word-item small,
+.welcome-book-art span,
+.word-ipa,
+.word-origin-note,
+.word-table td,
+.word-table th {
+  font-size: max(11px, .86em) !important;
+}
+
+/* Button copy remains comfortably readable even in compact feature rows. */
+.page-heading > .primary-button,
+.toolbar-actions button,
+.quiz-actions button,
+.learning-card-footer .secondary-button,
+.auto-advance-row .text-button,
+.feedback-ai-row .secondary-button,
+.google-search-actions .secondary-button,
+.notification-actions button,
+.practice-home-panel > .primary-button,
+.settings-shortcut-panel button,
+.pronunciation-toolbar .secondary-button {
+  font-size: 14px !important;
+}

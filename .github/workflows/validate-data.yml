@@ -1,0 +1,73 @@
+name: Validate TOEIC dictionary
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "data/**"
+      - "patches/**"
+      - "assets/**"
+      - "tools/**"
+      - "sw.js"
+      - "index.html"
+      - "manifest.webmanifest"
+      - "docs/**"
+      - ".github/workflows/validate-data.yml"
+  pull_request:
+    paths:
+      - "data/**"
+      - "patches/**"
+      - "assets/**"
+      - "tools/**"
+      - "sw.js"
+      - "index.html"
+      - "manifest.webmanifest"
+      - "docs/**"
+      - ".github/workflows/validate-data.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Python syntax check
+        run: python -m py_compile tools/validate-data.py tools/validate-learning-content.py tools/audit-toeic-coverage.py tools/audit-question-evidence.py tools/sync-version.py tools/patch-data.py
+      - name: Unit tests (isolated modules)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tools/tests -p 'test_baseline_ids.py' -v
+          python -m unittest discover -s tools/tests -p 'test_patch_data.py' -v
+          python -m unittest discover -s tools/tests -p 'test_sync_version.py' -v
+          python -m unittest discover -s tools/tests -p 'test_validator.py' -v
+          python -m unittest discover -s tools/tests -p 'test_learning_content.py' -v
+          python -m unittest discover -s tools/tests -p 'test_dashboard_layout.py' -v
+          python -m unittest discover -s tools/tests -p 'test_design_system.py' -v
+          python -m unittest discover -s tools/tests -p 'test_question_evidence.py' -v
+      - name: Validate vocabulary data (structure, ID integrity, APP_SHELL, ratchet baseline)
+        run: python tools/validate-data.py
+      - name: Validate TOEIC learning content (Listening/Reading/Grammar)
+        run: python tools/validate-learning-content.py
+      - name: Generate TOEIC coverage report
+        run: python tools/audit-toeic-coverage.py
+      - name: Generate answer-to-source evidence audit
+        run: python tools/audit-question-evidence.py
+      - name: Version sync check
+        run: python tools/sync-version.py --check
+      - name: JavaScript syntax check
+        run: |
+          node --check sw.js
+          for f in assets/js/*.js; do cp "$f" "/tmp/$(basename "$f" .js).mjs"; node --check "/tmp/$(basename "$f" .js).mjs"; done

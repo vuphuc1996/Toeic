@@ -169,6 +169,23 @@ class LearningContentTests(unittest.TestCase):
         self.assertNotIn("page two", question["choices"][0].lower())
         self.assertNotIn("second page", question["choices"][2].lower())
 
+
+    def test_part2_display_prompt_is_consistent_and_translations_are_not_placeholders(self):
+        import re
+        part2 = [x for x in self.listening if x.get('part') == 'Part 2']
+        self.assertGreaterEqual(len(part2), 25)
+        for item in part2:
+            self.assertEqual(item['questions'][0].get('question'), 'Choose the most appropriate response.', item.get('id'))
+            translation = item.get('transcriptTranslation', '')
+            self.assertTrue(translation.strip(), item.get('id'))
+            self.assertNotRegex(translation, re.compile(r'nghe câu hỏi|lời nói tiếng anh|chọn phản hồi phù hợp nhất', re.I), item.get('id'))
+
+    def test_part2_negative_tag_response_is_unambiguous(self):
+        item = next(x for x in self.listening if x.get('id') == 'part2-room-unavailable')
+        q = item['questions'][0]
+        self.assertIn('That’s right', q['choices'][q['answerIndex']])
+        self.assertIn('xác nhận', q['explanation'].lower())
+
     def test_part1_rationales_are_specific_to_the_illustration(self):
         for item in self.listening:
             if item.get("part") == "Part 1":
