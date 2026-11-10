@@ -27,6 +27,7 @@ class LearningContentTests(unittest.TestCase):
         p1 = [x for x in self.listening if x.get('part') == 'Part 1']
         self.assertGreaterEqual(len(p1), 8)
         self.assertTrue(all(x.get('contentSource') == 'original-editorial' for x in p1))
+        self.assertTrue(all(x.get('visualType') == 'illustration' for x in p1 if x.get('image', '').lower().endswith('.svg')))
 
     def test_part1_images_exist_and_have_one_question(self):
         p1 = [x for x in self.listening if x.get('part') == 'Part 1']
@@ -88,6 +89,49 @@ class LearningContentTests(unittest.TestCase):
                 self.assertIn(q.get('answerIndex'), range(4))
                 self.assertTrue(q.get('question', '').strip())
                 self.assertTrue(q.get('explanation', '').strip())
+
+    def test_question_pool_meets_one_form_blueprint(self):
+        listen = {f'Part {i}': 0 for i in range(1, 5)}
+        for item in self.listening:
+            listen[item['part']] += len(item.get('questions', []))
+        self.assertGreaterEqual(listen['Part 1'], 6)
+        self.assertGreaterEqual(listen['Part 2'], 25)
+        self.assertGreaterEqual(listen['Part 3'], 39)
+        self.assertGreaterEqual(listen['Part 4'], 30)
+        self.assertGreaterEqual(sum(listen.values()), 100)
+
+        read = {f'Part {i}': 0 for i in range(5, 8)}
+        p7_single = p7_multiple = 0
+        for item in self.reading:
+            count = len(item.get('questions', []))
+            read[item['part']] += count
+            if item['part'] == 'Part 7':
+                if item.get('documentType') in ('DOUBLE PASSAGE', 'TRIPLE PASSAGE'):
+                    p7_multiple += count
+                else:
+                    p7_single += count
+        self.assertGreaterEqual(read['Part 5'], 30)
+        self.assertGreaterEqual(read['Part 6'], 16)
+        self.assertGreaterEqual(p7_single, 29)
+        self.assertGreaterEqual(p7_multiple, 25)
+        self.assertGreaterEqual(sum(read.values()), 100)
+
+    def test_part3_and_part4_sets_have_three_questions(self):
+        for item in self.listening:
+            if item.get('part') in ('Part 3', 'Part 4'):
+                self.assertEqual(len(item.get('questions', [])), 3, item.get('id'))
+
+    def test_part3_conversations_have_multiple_speakers(self):
+        for item in self.listening:
+            if item.get('part') == 'Part 3':
+                speakers = {s.get('speaker') for s in item.get('segments', []) if s.get('speaker')}
+                self.assertGreaterEqual(len(speakers), 2, item.get('id'))
+
+    def test_all_part7_multi_document_questions_are_tagged(self):
+        multi = [x for x in self.reading if x.get('part') == 'Part 7' and x.get('documentType') in ('DOUBLE PASSAGE', 'TRIPLE PASSAGE')]
+        self.assertGreaterEqual(sum(len(x.get('questions', [])) for x in multi), 25)
+        self.assertTrue(all(len(x.get('documents', [])) == (2 if x.get('documentType') == 'DOUBLE PASSAGE' else 3) for x in multi))
+        self.assertTrue(all(all(d.get('label', '').strip() and d.get('content', '').strip() for d in x['documents']) for x in multi))
 
     def test_grammar_exercises_have_unique_lesson_ids_and_valid_answers(self):
         ids = [x.get('id') for x in self.grammar]

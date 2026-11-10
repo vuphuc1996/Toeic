@@ -29,6 +29,7 @@ def answer_distribution(items, part):
     )
     return [result.get(i, 0) for i in range(4)]
 
+version = load("data/manifest.json").get("version", "unknown")
 vocab = []
 for file in sorted((ROOT / "data/vocabulary").glob("[A-Z].json")):
     vocab.extend(load(str(file.relative_to(ROOT))).get("words", []))
@@ -55,8 +56,17 @@ listening_segments = sum(len(item.get("segments", [])) for item in listening)
 LISTEN_TARGET = {"Part 1": 6, "Part 2": 25, "Part 3": 39, "Part 4": 30}
 READ_TARGET = {"Part 5": 30, "Part 6": 16, "Part 7": 54}
 
+p7_single_questions = sum(len(item.get("questions", [])) for item in readings if item.get("part") == "Part 7" and item.get("documentType") not in ("DOUBLE PASSAGE", "TRIPLE PASSAGE"))
+p7_multiple_items = [item for item in readings if item.get("part") == "Part 7" and item.get("documentType") in ("DOUBLE PASSAGE", "TRIPLE PASSAGE")]
+p7_multiple_questions = sum(len(item.get("questions", [])) for item in p7_multiple_items)
+p7_structured_multi_items = sum(
+    1 for item in p7_multiple_items
+    if len(item.get("documents", [])) == (2 if item.get("documentType") == "DOUBLE PASSAGE" else 3)
+    and all(doc.get("label") and doc.get("content") for doc in item.get("documents", []))
+)
+
 lines = [
-    "# TOEIC Content Coverage — v2.11.0", "",
+    f"# TOEIC Content Coverage — v{version}", "",
     f"Generated: {datetime.date.today().isoformat()}", "",
     "> TOEIC Listening & Reading only. IELTS and other exam-specific content are intentionally excluded until TOEIC acceptance gates are met.", "",
     "## Vocabulary coverage", "",
@@ -86,7 +96,9 @@ for part in READ_TARGET:
     lines.append(f"| {part} | {R.get(part, 0)} | {RQ.get(part, 0)} |")
 lines += [
     f"| **Total** | **{len(readings)}** | **{sum(RQ.values())}** |", "",
-    f"- Reading text word count (current passages/documents): {reading_words}.", "",
+    f"- Reading text word count (current passages/documents): {reading_words}.",
+    f"- Part 7 question mix: {p7_single_questions} single-passage questions / {p7_multiple_questions} multiple-passage questions.",
+    f"- Structured Part 7 multi-document resources: {p7_structured_multi_items}/{len(p7_multiple_items)} double/triple passages.", "",
     "## Grammar", "",
     f"- Lessons: {len(grammar)}.",
     f"- Exercises: {sum(len(item.get('exercises', [])) for item in grammar)}.", "",
@@ -111,15 +123,16 @@ for part in list(LISTEN_TARGET) + list(READ_TARGET):
 
 lines += [
     "", "## Interpretation and gaps", "",
-    "- Current volume is 36 Listening questions / 100 reference questions and 77 Reading questions / 100 reference questions; it is not enough for a full test form.",
-    "- Listening P2–P4 remain the largest immediate volume gaps. P1 contains 8 SVG illustration sets, not photographic source material.",
-    "- Reading Part 7 has the closest question-count coverage, but needs continued passage diversity, cross-document reasoning and editorial answer review.",
+    f"- Listening pool has {sum(LQ.values())} questions; blueprint minima are met for one form (P1 includes 8 practice illustrations versus 6 questions in a form).",
+    f"- Reading pool has {sum(RQ.values())} questions; Part 7 includes {p7_single_questions} single-passage and {p7_multiple_questions} multiple-passage questions, enough to select 29 + 25 for one form.",
+    f"- Structured Part 7 double/triple passage resources: {p7_structured_multi_items}/{len(p7_multiple_items)}.",
+    "- The bank is content-pool ready for one blueprint selection; a timed mock engine, review workflow and editorial semantic audit are still not implemented.",
     "- Vocabulary is 928 headwords, below the 3,000–5,000 internal TOEIC planning target. That target is not an official ETS list.",
     "- No score conversion should be described as an ETS score until a validated scoring/equating model exists; current per-Part analytics are local-practice indicators.",
     "- `tools/validate-learning-content.py` checks IDs, choices, answers, explanation presence, Part coverage, passages and image assets. It does not prove semantic correctness; editorial review remains required.", ""
 ]
-report = ROOT / "docs/reports/TOEIC_CONTENT_COVERAGE_v2.11.0.md"
+report = ROOT / f"docs/reports/TOEIC_CONTENT_COVERAGE_v{version}.md"
 report.parent.mkdir(parents=True, exist_ok=True)
 report.write_text("\n".join(lines), encoding="utf-8")
 print(report.relative_to(ROOT))
-print(f"Vocabulary {len(vocab)} | IPA {ipa} | Word family {family} | Listening {len(listening)}/{sum(LQ.values())} | Reading {len(readings)}/{sum(RQ.values())} | Grammar {len(grammar)}")
+print(f"Vocabulary {len(vocab)} | IPA {ipa} | Word family {family} | Listening {len(listening)}/{sum(LQ.values())} | Reading {len(readings)}/{sum(RQ.values())} | P7 single/multi {p7_single_questions}/{p7_multiple_questions} | Grammar {len(grammar)}")

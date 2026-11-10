@@ -747,7 +747,17 @@
         }
       ],
       "part": "Part 7",
-      "contentSource": "original-editorial"
+      "contentSource": "original-editorial",
+      "documents": [
+        {
+          "label": "CUSTOMER EMAIL",
+          "content": "Our branch has not received shipment 77102, although the tracking portal showed an expected delivery date of November 3. The items are required for a product launch next week. Please confirm the revised arrival date and whether partial delivery is possible."
+        },
+        {
+          "label": "WAREHOUSE RESPONSE",
+          "content": "Shipment 77102 was held at the regional sorting center because one carton was incorrectly labeled. The carton has now been relabeled, and the remaining packages are scheduled to leave tonight. We can arrange a partial delivery of the available items tomorrow morning."
+        }
+      ]
     },
     {
       "id": "training-announcement",
@@ -799,7 +809,21 @@
         }
       ],
       "part": "Part 7",
-      "contentSource": "original-editorial"
+      "contentSource": "original-editorial",
+      "documents": [
+        {
+          "label": "INVITATION",
+          "content": "The annual partners conference will take place on March 12 at the Riverside Convention Center. Registration opens at 8:00 a.m."
+        },
+        {
+          "label": "VENUE NOTICE",
+          "content": "The main hall is available from 7:00 a.m. Exhibitors may deliver display materials through the loading entrance on the north side."
+        },
+        {
+          "label": "ORGANIZER EMAIL",
+          "content": "Due to a scheduling conflict, the opening presentation has been moved from 9:00 to 9:30 a.m. The registration desk will remain open until 10:00 a.m."
+        }
+      ]
     },
     {
       "id": "part5-workplace-grammar-01",
@@ -1538,7 +1562,7 @@
           "explanation": "Khách hàng muốn xác nhận tình trạng đơn NL-4817 vì trạng thái vận chuyển chưa cập nhật."
         },
         {
-          "question": "What caused the delay?",
+          "question": "What is the reason the shipment was held?",
           "choices": [
             "A shortage of drivers",
             "An additional inspection",
@@ -1669,6 +1693,639 @@
           ],
           "answerIndex": 0,
           "explanation": "Khách sạn cho biết xe shuttle khởi hành mỗi 30 phút."
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "part5-tense-voice-set-05",
+      "title": "Part 5 · Tenses & Passive Voice Set 5",
+      "topic": "Office & Administration",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES",
+      "level": "B1–B2",
+      "wordCount": 0,
+      "passage": "",
+      "translation": "Bộ câu hỏi về thì, câu bị động và cách dùng động từ trong tình huống công sở.",
+      "vocabulary": [
+        {
+          "word": "distribute",
+          "pos": "v",
+          "meaning": "phân phát"
+        },
+        {
+          "word": "renewal",
+          "pos": "n",
+          "meaning": "việc gia hạn"
+        }
+      ],
+      "questions": [
+        {
+          "question": "The updated safety guidelines _____ to all branch managers yesterday.",
+          "choices": [
+            "send",
+            "were sent",
+            "have sending",
+            "are send"
+          ],
+          "answerIndex": 1,
+          "explanation": "Cụm yesterday chỉ thời điểm quá khứ; chủ ngữ guidelines nhận hành động nên dùng bị động quá khứ đơn were sent."
+        },
+        {
+          "question": "Ms. Rivera _____ the monthly report before the department meeting begins.",
+          "choices": [
+            "will have completed",
+            "completing",
+            "complete",
+            "has completing"
+          ],
+          "answerIndex": 0,
+          "explanation": "Hành động hoàn tất trước một mốc tương lai dùng tương lai hoàn thành: will have completed."
+        },
+        {
+          "question": "The maintenance contract _____ automatically unless either party gives written notice.",
+          "choices": [
+            "renew",
+            "renewing",
+            "is renewed",
+            "have renew"
+          ],
+          "answerIndex": 2,
+          "explanation": "Chủ ngữ contract nhận hành động gia hạn; cấu trúc bị động hiện tại đơn là is renewed."
+        },
+        {
+          "question": "Employees _____ their access cards at the security desk when they leave the company.",
+          "choices": [
+            "returning",
+            "returns",
+            "to return",
+            "must return"
+          ],
+          "answerIndex": 3,
+          "explanation": "Sau chủ ngữ Employees cần động từ chính; must return diễn tả nghĩa vụ."
+        },
+        {
+          "question": "By the time the visitors arrived, the conference room _____.",
+          "choices": [
+            "had been prepared",
+            "has prepare",
+            "was preparing",
+            "will prepare"
+          ],
+          "answerIndex": 0,
+          "explanation": "Hành động chuẩn bị hoàn tất trước một mốc quá khứ khác; dùng quá khứ hoàn thành bị động had been prepared."
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "part5-adjectives-adverbs-set-06",
+      "title": "Part 5 · Adjectives, Adverbs & Comparisons Set 6",
+      "topic": "Business & Management",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES",
+      "level": "A2–B2",
+      "wordCount": 0,
+      "passage": "",
+      "translation": "Bộ câu hỏi phân biệt tính từ, trạng từ, so sánh và cấu trúc bổ nghĩa.",
+      "vocabulary": [
+        {
+          "word": "efficient",
+          "pos": "adj",
+          "meaning": "hiệu quả"
+        },
+        {
+          "word": "accurate",
+          "pos": "adj",
+          "meaning": "chính xác"
+        }
+      ],
+      "questions": [
+        {
+          "question": "The new scheduling system is considerably _____ than the previous one.",
+          "choices": [
+            "efficient",
+            "more efficient",
+            "most efficiently",
+            "efficiency"
+          ],
+          "answerIndex": 1,
+          "explanation": "Có than nên cần cấu trúc so sánh hơn; more efficient là dạng tính từ phù hợp."
+        },
+        {
+          "question": "Please review the figures _____ before submitting the expense claim.",
+          "choices": [
+            "careful",
+            "carefully",
+            "carefulness",
+            "care"
+          ],
+          "answerIndex": 1,
+          "explanation": "Trạng từ carefully bổ nghĩa cho động từ review."
+        },
+        {
+          "question": "The director was _____ satisfied with the revised proposal.",
+          "choices": [
+            "high",
+            "height",
+            "highly",
+            "higher"
+          ],
+          "answerIndex": 2,
+          "explanation": "Highly là trạng từ bổ nghĩa cho tính từ satisfied."
+        },
+        {
+          "question": "All visitors must wear _____ identification badges inside the facility.",
+          "choices": [
+            "visible",
+            "visibly",
+            "visibility",
+            "vision"
+          ],
+          "answerIndex": 0,
+          "explanation": "Danh từ identification badges cần tính từ visible đứng trước để mô tả thẻ phải dễ nhìn thấy."
+        },
+        {
+          "question": "The finance team completed the audit more _____ than expected.",
+          "choices": [
+            "quick",
+            "quickly",
+            "quickness",
+            "quicker"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sau more cần trạng từ quickly để bổ nghĩa cho completed trong phép so sánh cách thức."
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "part5-connectors-prepositions-set-07",
+      "title": "Part 5 · Connectors & Prepositions Set 7",
+      "topic": "Business & Management",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES",
+      "level": "B1–B2",
+      "wordCount": 0,
+      "passage": "",
+      "translation": "Bộ câu hỏi về liên từ, giới từ và quan hệ logic giữa các mệnh đề.",
+      "vocabulary": [
+        {
+          "word": "despite",
+          "pos": "prep",
+          "meaning": "mặc dù"
+        },
+        {
+          "word": "therefore",
+          "pos": "adv",
+          "meaning": "vì vậy"
+        }
+      ],
+      "questions": [
+        {
+          "question": "_____ the heavy rain, the outdoor inspection was completed as scheduled.",
+          "choices": [
+            "Because",
+            "Despite",
+            "Although",
+            "Unless"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sau chỗ trống là cụm danh từ the heavy rain; despite là giới từ phù hợp. Although cần một mệnh đề."
+        },
+        {
+          "question": "The shipment was delayed; _____, the customer was notified immediately.",
+          "choices": [
+            "however",
+            "therefore",
+            "otherwise",
+            "instead of"
+          ],
+          "answerIndex": 1,
+          "explanation": "Việc thông báo ngay là hệ quả của sự chậm trễ; therefore diễn tả kết quả."
+        },
+        {
+          "question": "Please submit the signed agreement _____ 5 p.m. on Friday.",
+          "choices": [
+            "by",
+            "among",
+            "during",
+            "since"
+          ],
+          "answerIndex": 0,
+          "explanation": "By + thời điểm hạn cuối diễn tả phải hoàn thành không muộn hơn 5 giờ chiều thứ Sáu."
+        },
+        {
+          "question": "The proposal was rejected _____ it did not include a cost estimate.",
+          "choices": [
+            "unless",
+            "while",
+            "because",
+            "despite"
+          ],
+          "answerIndex": 2,
+          "explanation": "Because nối mệnh đề nêu nguyên nhân proposal bị từ chối."
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "part6-product-workshop-registration",
+      "title": "Part 6 · Product Workshop Registration",
+      "topic": "Training & Development",
+      "part": "Part 6",
+      "documentType": "EMAIL",
+      "level": "B1–B2",
+      "passage": "To: Regional Sales Teams\nFrom: Product Training Office\nSubject: October product workshops\n\nThe Riverside Conference Center will host a series of product workshops from October 14 to 16. The registration period [1] and will remain open until October 5. Each workshop includes a short presentation, a product demonstration, and a question-and-answer session. Participants may borrow a tablet [2] by the event organizers. [3], attendees should review the updated product guide on the company portal. Each session is expected to last approximately 90 minutes. [4].",
+      "translation": "Trung tâm hội nghị Riverside sẽ tổ chức chuỗi hội thảo sản phẩm từ ngày 14 đến 16 tháng 10. Thời gian đăng ký bắt đầu ngày 18 tháng 9 và mở đến ngày 5 tháng 10. Người tham dự có thể mượn máy tính bảng do ban tổ chức cung cấp. Trước khi tham dự, mọi người nên xem hướng dẫn sản phẩm mới trên cổng thông tin công ty. Mỗi buổi dự kiến kéo dài khoảng 90 phút. Sơ đồ phòng họp và lịch chi tiết sẽ được gửi cho người đã đăng ký trước sự kiện hai ngày.",
+      "wordCount": 84,
+      "vocabulary": [
+        {
+          "word": "registration period",
+          "pos": "phrase",
+          "meaning": "thời gian đăng ký"
+        },
+        {
+          "word": "demonstration",
+          "pos": "n",
+          "meaning": "buổi trình diễn/minh họa"
+        },
+        {
+          "word": "attendee",
+          "pos": "n",
+          "meaning": "người tham dự"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the best phrase for blank (1).",
+          "choices": [
+            "begins on September 18",
+            "beginning on September 18",
+            "has begin September 18",
+            "to begin on September 18"
+          ],
+          "answerIndex": 0,
+          "explanation": "Câu có hai vị ngữ song song '... and will remain open'; chủ ngữ The registration period cần động từ chia hiện tại đơn begins."
+        },
+        {
+          "question": "Choose the best phrase for blank (2).",
+          "choices": [
+            "which will be provided",
+            "who provide",
+            "providing them",
+            "has provided"
+          ],
+          "answerIndex": 0,
+          "explanation": "Mệnh đề quan hệ bị động which will be provided bổ nghĩa cho tablet và xác định thiết bị sẽ do ban tổ chức cung cấp."
+        },
+        {
+          "question": "Choose the best phrase for blank (3).",
+          "choices": [
+            "After the workshop has ended",
+            "Before attending the first workshop",
+            "Unless the guide is available",
+            "Despite the registration deadline"
+          ],
+          "answerIndex": 1,
+          "explanation": "Người tham dự nên xem hướng dẫn trước khi dự buổi đầu tiên; Before attending tạo quan hệ thời gian hợp lý."
+        },
+        {
+          "question": "Choose the best sentence for blank (4).",
+          "choices": [
+            "The cafeteria will introduce a new lunch menu next week.",
+            "A floor plan and detailed schedule will be emailed to registered participants two days before the event.",
+            "The company was founded more than twenty years ago.",
+            "All product returns must be handled by the accounting department."
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu B tiếp nối trực tiếp thông tin về buổi workshop và cung cấp thông tin hậu cần trước ngày diễn ra; các câu còn lại lạc chủ đề."
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "part7-double-equipment-order",
+      "title": "Part 7 · Double Passage: Equipment Order Confirmation",
+      "topic": "Procurement & Supply",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B1–B2",
+      "documents": [
+        {
+          "label": "EMAIL FROM OFFICE ADMINISTRATION",
+          "content": "To: orders@brightoffice.example\nFrom: lena.park@northstar.example\nSubject: Order BO-7316\n\nHello,\n\nWe placed an order for eight adjustable desks and eight monitor arms last week. The order confirmation lists delivery for April 22. Our new office area will be ready on April 24, so please let me know whether the shipment is still scheduled to arrive on time. If the monitor arms are delayed, we can accept the desks first.\n\nThank you,\nLena Park\nOffice Administration"
+        },
+        {
+          "label": "REPLY FROM SUPPLIER",
+          "content": "To: Lena Park\nFrom: Bright Office Orders\nSubject: Re: Order BO-7316\n\nThank you for your message. The eight desks have passed inspection and will leave our warehouse on April 20. The monitor arms are awaiting a replacement component and are now expected to ship on April 23. We can deliver the desks separately on April 22 at no additional charge. Please reply by 2 p.m. tomorrow if you would like us to split the delivery. The monitor arms will follow as soon as they are ready."
+        }
+      ],
+      "passage": "EMAIL FROM OFFICE ADMINISTRATION\nTo: orders@brightoffice.example\nFrom: lena.park@northstar.example\nSubject: Order BO-7316\n\nWe placed an order for eight adjustable desks and eight monitor arms last week. The order confirmation lists delivery for April 22. Our new office area will be ready on April 24, so please let me know whether the shipment is still scheduled to arrive on time. If the monitor arms are delayed, we can accept the desks first.\n\nREPLY FROM SUPPLIER\nThe eight desks have passed inspection and will leave our warehouse on April 20. The monitor arms are awaiting a replacement component and are now expected to ship on April 23. We can deliver the desks separately on April 22 at no additional charge. Please reply by 2 p.m. tomorrow if you would like us to split the delivery.",
+      "wordCount": 165,
+      "translation": "Bộ phận hành chính hỏi nhà cung cấp về đơn hàng gồm tám bàn điều chỉnh và tám giá đỡ màn hình. Nhà cung cấp cho biết bàn đã qua kiểm tra và có thể giao ngày 22 tháng 4, còn giá đỡ màn hình bị chậm do chờ linh kiện thay thế. Nhà cung cấp đề nghị giao bàn trước miễn phí nếu khách xác nhận trước 14 giờ ngày mai.",
+      "vocabulary": [
+        {
+          "word": "adjustable",
+          "pos": "adj",
+          "meaning": "có thể điều chỉnh"
+        },
+        {
+          "word": "await",
+          "pos": "v",
+          "meaning": "chờ đợi"
+        },
+        {
+          "word": "split delivery",
+          "pos": "phrase",
+          "meaning": "chia thành nhiều đợt giao"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why did Lena Park contact the supplier?",
+          "choices": [
+            "To ask whether an order will arrive on schedule",
+            "To request a discount on office rent",
+            "To cancel a damaged desk",
+            "To change the billing contact"
+          ],
+          "answerIndex": 0,
+          "explanation": "Email đầu tiên hỏi đơn BO-7316 có còn được giao đúng lịch ngày 22 tháng 4 hay không."
+        },
+        {
+          "question": "Why are the monitor arms not ready to ship?",
+          "choices": [
+            "A shortage of delivery vehicles",
+            "A replacement component is not yet available",
+            "The desks have failed inspection",
+            "The office area is not ready"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nhà cung cấp cho biết monitor arms đang chờ linh kiện thay thế."
+        },
+        {
+          "question": "What can Bright Office deliver on April 22?",
+          "choices": [
+            "All sixteen items",
+            "Only the monitor arms",
+            "The eight desks",
+            "A replacement component"
+          ],
+          "answerIndex": 2,
+          "explanation": "Tám chiếc bàn đã qua kiểm tra và có thể giao riêng vào ngày 22 tháng 4."
+        },
+        {
+          "question": "What must Lena do by 2 p.m. tomorrow?",
+          "choices": [
+            "Send the payment receipt",
+            "Confirm whether she wants separate deliveries",
+            "Provide a new office floor plan",
+            "Return the order confirmation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nhà cung cấp yêu cầu cô xác nhận trước 14 giờ nếu muốn tách đơn giao bàn trước."
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "part7-double-training-reimbursement",
+      "title": "Part 7 · Double Passage: Training Reimbursement",
+      "topic": "Human Resources",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B2",
+      "documents": [
+        {
+          "label": "INTERNAL MEMO",
+          "content": "To: Department Managers\nFrom: Human Resources\nSubject: Professional development reimbursement\n\nBeginning July 1, employees may request reimbursement for approved external courses related to their current roles. The annual limit is $600 per employee. Requests must include proof of payment and a course-completion certificate. Applications should be submitted within 30 days of the course end date. Courses that have not received manager approval before registration are not eligible."
+        },
+        {
+          "label": "EMAIL FROM EMPLOYEE",
+          "content": "To: hr@harborline.example\nFrom: daniel.cho@harborline.example\nSubject: Reimbursement question\n\nHello HR Team,\n\nI completed a project-management course on June 18. My manager approved the course in May, and I have both the payment receipt and completion certificate. Since the reimbursement program begins on July 1, may I submit my application in July?\n\nRegards,\nDaniel Cho"
+        }
+      ],
+      "passage": "INTERNAL MEMO\nTo: Department Managers\nFrom: Human Resources\nSubject: Professional development reimbursement\n\nBeginning July 1, employees may request reimbursement for approved external courses related to their current roles. The annual limit is $600 per employee. Requests must include proof of payment and a course-completion certificate. Applications should be submitted within 30 days of the course end date. Courses that have not received manager approval before registration are not eligible.\n\nEMAIL FROM EMPLOYEE\nDaniel Cho completed a project-management course on June 18. His manager approved it in May, and he has the payment receipt and completion certificate. He asks whether he may apply in July.",
+      "wordCount": 125,
+      "translation": "Bản ghi nhớ của Nhân sự thông báo chương trình hoàn trả chi phí khóa học bên ngoài bắt đầu từ ngày 1 tháng 7, tối đa 600 đô la mỗi nhân viên mỗi năm. Hồ sơ cần biên lai thanh toán, chứng nhận hoàn thành và phải nộp trong vòng 30 ngày sau khi khóa học kết thúc. Daniel Cho hoàn tất khóa học ngày 18 tháng 6, đã được quản lý duyệt từ tháng 5 và hỏi liệu có thể nộp đơn trong tháng 7 không.",
+      "vocabulary": [
+        {
+          "word": "reimbursement",
+          "pos": "n",
+          "meaning": "hoàn trả chi phí"
+        },
+        {
+          "word": "eligible",
+          "pos": "adj",
+          "meaning": "đủ điều kiện"
+        },
+        {
+          "word": "proof of payment",
+          "pos": "phrase",
+          "meaning": "bằng chứng thanh toán"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the annual reimbursement limit?",
+          "choices": [
+            "$300",
+            "$450",
+            "$600",
+            "$1,000"
+          ],
+          "answerIndex": 2,
+          "explanation": "Bản ghi nhớ quy định mức tối đa 600 đô la cho mỗi nhân viên mỗi năm."
+        },
+        {
+          "question": "Which document does Daniel already have?",
+          "choices": [
+            "A manager's job description",
+            "A course-completion certificate",
+            "A new employment contract",
+            "A travel itinerary"
+          ],
+          "answerIndex": 1,
+          "explanation": "Email của Daniel xác nhận anh có biên lai thanh toán và chứng nhận hoàn thành khóa học."
+        },
+        {
+          "question": "Why does Daniel believe he may qualify for reimbursement?",
+          "choices": [
+            "His course was approved before he registered",
+            "He works in the Human Resources department",
+            "The course was held inside the company",
+            "He has not yet paid the course fee"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bản ghi nhớ loại trừ khóa học chưa được quản lý phê duyệt trước khi đăng ký; Daniel được duyệt từ tháng 5."
+        },
+        {
+          "question": "When should Daniel submit his application according to the memo?",
+          "choices": [
+            "Within 30 days of the course end date",
+            "Before July 1 in all cases",
+            "Within 60 days of registration",
+            "Only at the end of the calendar year"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bản ghi nhớ yêu cầu nộp đơn trong vòng 30 ngày kể từ ngày kết thúc khóa học."
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "part7-triple-regional-sales-meeting",
+      "title": "Part 7 · Triple Passage: Regional Sales Meeting",
+      "topic": "Sales & Marketing",
+      "part": "Part 7",
+      "documentType": "TRIPLE PASSAGE",
+      "level": "B2",
+      "documents": [
+        {
+          "label": "EMAIL INVITATION",
+          "content": "To: Regional Sales Managers\nFrom: Sales Operations\nSubject: Regional review meeting — August 12\n\nThe regional sales review will be held at the Lakeside Business Center on August 12. Please arrive by 9:15 a.m. so that registration can be completed before the opening session at 9:30. Each region should bring its latest customer-retention report."
+        },
+        {
+          "label": "MEETING AGENDA",
+          "content": "9:30–10:15  Quarterly performance review\n10:15–10:30  Break\n10:30–11:15  Customer retention workshop\n11:15–12:00  Regional action plans\n12:00–1:00   Lunch\nThe afternoon session will be reserved for one-to-one discussions with the sales director."
+        },
+        {
+          "label": "TRAVEL NOTE",
+          "content": "The Lakeside Business Center is a five-minute walk from Central Station. Visitors arriving by car may use the underground garage; parking tickets should be validated at the reception desk. Lunch will be provided in the conference dining area."
+        }
+      ],
+      "passage": "EMAIL INVITATION\nThe regional sales review will be held at the Lakeside Business Center on August 12. Participants should arrive by 9:15 a.m. and bring the latest customer-retention report.\n\nMEETING AGENDA\n9:30–10:15 Quarterly performance review; 10:30–11:15 customer retention workshop; 11:15–12:00 regional action plans; lunch at noon; afternoon one-to-one discussions with the sales director.\n\nTRAVEL NOTE\nThe venue is a five-minute walk from Central Station. Visitors driving may use the underground garage and validate their parking tickets at reception.",
+      "wordCount": 138,
+      "translation": "Cuộc họp đánh giá doanh số khu vực diễn ra tại Lakeside Business Center ngày 12 tháng 8. Người tham dự đến trước 9:15 và mang theo báo cáo giữ chân khách hàng. Chương trình gồm đánh giá kết quả quý, hội thảo giữ chân khách hàng, kế hoạch hành động và buổi trao đổi riêng buổi chiều. Địa điểm cách ga Central năm phút đi bộ; người đi ô tô có thể dùng hầm gửi xe và xác nhận vé tại lễ tân.",
+      "vocabulary": [
+        {
+          "word": "retention",
+          "pos": "n",
+          "meaning": "việc duy trì/giữ chân"
+        },
+        {
+          "word": "agenda",
+          "pos": "n",
+          "meaning": "chương trình cuộc họp"
+        },
+        {
+          "word": "validate",
+          "pos": "v",
+          "meaning": "xác nhận hiệu lực"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are participants asked to bring?",
+          "choices": [
+            "A customer-retention report",
+            "A parking receipt",
+            "A printed hotel reservation",
+            "A product sample"
+          ],
+          "answerIndex": 0,
+          "explanation": "Email mời yêu cầu mỗi khu vực mang theo báo cáo giữ chân khách hàng mới nhất."
+        },
+        {
+          "question": "When is the customer retention workshop scheduled?",
+          "choices": [
+            "9:30 a.m.",
+            "10:30 a.m.",
+            "11:15 a.m.",
+            "1:00 p.m."
+          ],
+          "answerIndex": 1,
+          "explanation": "Theo agenda, workshop diễn ra từ 10:30 đến 11:15."
+        },
+        {
+          "question": "What should participants who drive do to receive parking validation?",
+          "choices": [
+            "Pay at the train station",
+            "Leave the ticket in their car",
+            "Validate the parking ticket at reception",
+            "Send the ticket to Sales Operations"
+          ],
+          "answerIndex": 2,
+          "explanation": "Travel note hướng dẫn xác nhận vé đỗ xe tại quầy lễ tân."
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "part7-triple-facility-renovation",
+      "title": "Part 7 · Triple Passage: Facility Renovation Schedule",
+      "topic": "Facilities & Maintenance",
+      "part": "Part 7",
+      "documentType": "TRIPLE PASSAGE",
+      "level": "B2",
+      "documents": [
+        {
+          "label": "BUILDING ANNOUNCEMENT",
+          "content": "The second-floor reception and waiting area will be renovated from March 4 through March 15. During this period, visitors should check in at the temporary desk beside the north entrance. Meeting rooms on the second floor will remain accessible by the east stairwell."
+        },
+        {
+          "label": "EMAIL FROM IT",
+          "content": "To: All Employees\nFrom: IT Support\nSubject: Network maintenance during renovation\n\nNetwork equipment near the reception area will be relocated on March 7 after 6 p.m. The employee Wi-Fi service may be unavailable for up to one hour. Wired connections in the meeting rooms will not be affected."
+        },
+        {
+          "label": "REPLY FROM FACILITIES",
+          "content": "The temporary reception desk will be staffed from 8 a.m. to 5 p.m. Employees expecting visitors after 5 p.m. should notify Security in advance. Delivery drivers should continue using the loading entrance on the south side of the building."
+        }
+      ],
+      "passage": "BUILDING ANNOUNCEMENT\nThe second-floor reception and waiting area will be renovated from March 4 through March 15. Visitors should check in at a temporary desk beside the north entrance. Meeting rooms remain accessible via the east stairwell.\n\nEMAIL FROM IT\nNetwork equipment near reception will be relocated on March 7 after 6 p.m. Employee Wi-Fi may be unavailable for up to one hour; wired meeting-room connections will not be affected.\n\nREPLY FROM FACILITIES\nThe temporary desk is staffed from 8 a.m. to 5 p.m. Employees expecting visitors later should notify Security in advance. Delivery drivers should use the south loading entrance.",
+      "wordCount": 134,
+      "translation": "Khu lễ tân và phòng chờ tầng hai được cải tạo từ ngày 4 đến 15 tháng 3. Khách đến làm việc đăng ký tại quầy tạm gần cổng phía Bắc; phòng họp vẫn đi được bằng cầu thang phía Đông. Thiết bị mạng được di chuyển sau 18 giờ ngày 7 tháng 3, có thể khiến Wi-Fi nhân viên gián đoạn tối đa một giờ. Quầy tạm hoạt động từ 8 đến 17 giờ; khách đến muộn cần được báo trước cho bộ phận An ninh.",
+      "vocabulary": [
+        {
+          "word": "renovate",
+          "pos": "v",
+          "meaning": "cải tạo"
+        },
+        {
+          "word": "relocate",
+          "pos": "v",
+          "meaning": "di dời"
+        },
+        {
+          "word": "in advance",
+          "pos": "phrase",
+          "meaning": "trước"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Where should visitors check in during the renovation?",
+          "choices": [
+            "At the loading entrance",
+            "At a temporary desk near the north entrance",
+            "In the second-floor waiting area",
+            "At the IT support office"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông báo tòa nhà chỉ rõ quầy tạm nằm bên cạnh cổng phía Bắc."
+        },
+        {
+          "question": "When may employee Wi-Fi be unavailable?",
+          "choices": [
+            "On March 4 all day",
+            "Before 8 a.m. every morning",
+            "After network equipment is moved on March 7",
+            "Throughout the entire renovation"
+          ],
+          "answerIndex": 2,
+          "explanation": "Email IT cho biết thiết bị được di dời sau 18 giờ ngày 7 tháng 3 và Wi-Fi có thể ngắt tối đa một giờ."
+        },
+        {
+          "question": "What should employees do if they expect visitors after 5 p.m.?",
+          "choices": [
+            "Notify Security in advance",
+            "Ask IT to keep Wi-Fi on",
+            "Use the south loading entrance",
+            "Reschedule all meetings"
+          ],
+          "answerIndex": 0,
+          "explanation": "Facilities yêu cầu báo trước cho Security khi có khách đến sau 17 giờ."
         }
       ],
       "contentSource": "original-editorial"
