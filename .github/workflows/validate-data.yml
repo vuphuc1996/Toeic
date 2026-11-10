@@ -31,18 +31,18 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "22"
+          node-version: "24"
       - name: Python syntax check
         run: python -m py_compile tools/validate-data.py tools/validate-learning-content.py tools/audit-toeic-coverage.py tools/audit-question-evidence.py tools/audit-distractors.py tools/sync-version.py tools/patch-data.py
       - name: Unit tests (isolated modules)
@@ -59,6 +59,7 @@ jobs:
           python -m unittest discover -s tools/tests -p 'test_question_evidence.py' -v
           python -m unittest discover -s tools/tests -p 'test_distractor_quality.py' -v
           python -m unittest discover -s tools/tests -p 'test_choice_history.py' -v
+          python -m unittest discover -s tools/tests -p 'test_learning_detail_scope.py' -v
       - name: Validate vocabulary data (structure, ID integrity, APP_SHELL, ratchet baseline)
         run: python tools/validate-data.py
       - name: Validate TOEIC learning content (Listening/Reading/Grammar)
@@ -75,3 +76,4 @@ jobs:
         run: |
           node --check sw.js
           for f in assets/js/*.js; do cp "$f" "/tmp/$(basename "$f" .js).mjs"; node --check "/tmp/$(basename "$f" .js).mjs"; done
+          node tools/tests/runtime-render-smoke.mjs
