@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.11.0-batch-001-ipa",
+  "baseDataVersion": "2.10.2",
+  "targetDataVersion": "2.11.0",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "description": "Cambridge-checked US IPA for six TOEIC-priority headwords; annual already had a verified value and was retained.",
+  "operations": [
+    {
+      "id": "allowance-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈlaʊ.əns/"
+    },
+    {
+      "id": "annually-adv",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈæn.ju.ə.li/"
+    },
+    {
+      "id": "appoint-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈpɔɪnt/"
+    },
+    {
+      "id": "approval-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈpruː.vəl/"
+    },
+    {
+      "id": "asset-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈæs.et/"
+    },
+    {
+      "id": "availability-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˌveɪ.ləˈbɪl.ə.t̬i/"
+    }
+  ]
+}

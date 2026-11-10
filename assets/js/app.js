@@ -101,7 +101,7 @@ async function loadData() {
   state.readingProgress=await dbGet('readingProgress')||{};
   state.listeningProgress=await dbGet('listeningProgress')||{};
   state.flashProgress=await dbGet('flashProgress')||{};
-  updateOverview(); populateFilters(); renderDictionary(); renderDataTable(); renderGrammarLibrary(); renderReadingLibrary(); renderListeningLibrary(); updateStorageLabel();
+  updateOverview(); renderToeicPartInsights(); populateFilters(); renderDictionary(); renderDataTable(); renderGrammarLibrary(); renderReadingLibrary(); renderListeningLibrary(); updateStorageLabel();
 }
 function emptyPersonalVocabulary(){return {schemaVersion:3,additions:[],overrides:{},overrideBaseSigs:{},deletedBaseIds:[]};}
 function recordSignature(record){return JSON.stringify(normalizeRecord(record));}
@@ -182,6 +182,34 @@ function sourceBadgeMarkup(id){
 }
 function personalRecordCount(){return (state.personalVocabulary.additions||[]).length+Object.keys(state.personalVocabulary.overrides||{}).length+(state.personalVocabulary.deletedBaseIds||[]).length;}
 
+function collectToeicPartStats(items,progressMap,parts){
+  return parts.map(part=>{
+    const subset=items.filter(item=>item.part===part);
+    const total=subset.reduce((sum,item)=>sum+(item.questions||[]).length,0);
+    let answered=0,correct=0;
+    subset.forEach(item=>{
+      const answers=progressMap[item.id]?.answers||{};
+      Object.values(answers).forEach(a=>{if(a?.answered){answered++;if(a.correct)correct++;}});
+    });
+    return {part,total,answered,correct,accuracy:answered?Math.round(correct/answered*100):null,coverage:total?Math.round(answered/total*100):0};
+  });
+}
+function renderPartStatCards(hostId,stats,area){
+  const host=$(`#${hostId}`);if(!host)return;
+  host.innerHTML=stats.map(stat=>`<button type="button" class="toeic-part-card" data-toeic-area="${area}" data-toeic-part="${stat.part}"><span class="toeic-part-name">${stat.part}</span><strong>${stat.answered}<small> / ${stat.total} câu</small></strong><span class="toeic-part-track"><i style="width:${stat.coverage}%"></i></span><span class="toeic-part-meta">${stat.accuracy===null?'Chưa có lượt làm':`${stat.accuracy}% đúng`} · ${stat.coverage}% hoàn thành</span></button>`).join('');
+}
+function renderToeicPartInsights(){
+  if(!$('#toeicProgressPanel'))return;
+  const listen=collectToeicPartStats(state.listening,state.listeningProgress,['Part 1','Part 2','Part 3','Part 4']);
+  const read=collectToeicPartStats(state.readings,state.readingProgress,['Part 5','Part 6','Part 7']);
+  renderPartStatCards('toeicListeningParts',listen,'listening');renderPartStatCards('toeicReadingParts',read,'reading');
+  const attempted=[...listen,...read].filter(x=>x.answered>0).sort((a,b)=>(a.accuracy??100)-(b.accuracy??100));
+  const priority=$('#toeicPriorityText');
+  if(priority){
+    if(!attempted.length)priority.textContent='Hoàn thành một số câu luyện tập để hệ thống xác định Part cần ưu tiên.';
+    else {const weakest=attempted[0];priority.innerHTML=`<strong>Part nên ưu tiên:</strong> ${weakest.part} · ${weakest.accuracy}% đúng sau ${weakest.answered} câu đã làm. Nhấn vào thẻ Part để luyện tập tiếp.`;}
+  }
+}
 function updateOverview(){
   $('#metricWords').textContent=state.words.length.toLocaleString('vi-VN');
   $('#metricTopics').textContent=state.categories.length.toLocaleString('vi-VN');
@@ -191,6 +219,7 @@ function updateOverview(){
   const dash=$('#dashboardAlphabet');
   dash.innerHTML=ALPHABET.map(l=>{const n=state.words.filter(w=>w.word[0].toUpperCase()===l).length;return `<button class="letter-tile ${n?'has-words':''}" data-letter="${l}"><strong>${l}</strong><small>${n}</small></button>`}).join('');
   if(state.progress) updatePracticeStats();
+  renderToeicPartInsights();
 }
 function renderTopicShowcase(){
  const host=$('#topicShowcase');if(!host)return;
@@ -206,6 +235,8 @@ function populateFilters(){
   $('#grammarCategoryFilter').innerHTML='<option value="">Tất cả nhóm</option>'+grammarCategories.map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('');
   const grammarLevels=[...new Set(state.grammarLessons.map(x=>x.level).filter(Boolean))].sort();
   $('#grammarLevelFilter').innerHTML='<option value="">Tất cả cấp độ</option>'+grammarLevels.map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('');
+  const readingParts=[...new Set(state.readings.map(x=>x.part).filter(Boolean))].sort();
+  const readingPartFilter=$('#readingPartFilter');if(readingPartFilter)readingPartFilter.innerHTML='<option value="">Tất cả Part</option>'+readingParts.map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('');
   const readingTopics=[...new Set(state.readings.map(x=>x.topic).filter(Boolean))].sort();
   $('#readingTopicFilter').innerHTML='<option value="">Tất cả chủ đề</option>'+readingTopics.map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('');
   const readingLevels=[...new Set(state.readings.map(x=>x.level).filter(Boolean))].sort();
@@ -1172,6 +1203,7 @@ function bindEvents(){
   $$('[data-menu-toggle]').forEach(b=>b.addEventListener('click',()=>openMobileGroupMenu(b.dataset.menuToggle)));
   $('#mobileGroupMenu')?.addEventListener('click',e=>{if(e.target.closest('[data-group-close]'))$('#mobileGroupMenu').hidden=true;const item=e.target.closest('[data-group-page]');if(item){$('#mobileGroupMenu').hidden=true;navigate(item.dataset.groupPage);}});
   $$('[data-go]').forEach(b=>b.addEventListener('click',()=>navigate(b.dataset.go)));
+  $('#toeicProgressPanel')?.addEventListener('click',e=>{const btn=e.target.closest('[data-toeic-part]');if(!btn)return;const area=btn.dataset.toeicArea,part=btn.dataset.toeicPart;navigate(area);const filter=area==='listening'?$('#listeningPartFilter'):$('#readingPartFilter');if(filter){filter.value=part;if(area==='listening')renderListeningLibrary();else renderReadingLibrary();}});
   $('#dashboardAlphabet').addEventListener('click',e=>{const b=e.target.closest('[data-letter]');if(b)goToLetter(b.dataset.letter);});
   $('#alphabetFilter').addEventListener('click',e=>{const b=e.target.closest('[data-letter]');if(b){state.activeLetter=b.dataset.letter;renderDictionary();}});
   $('#topicShowcase')?.addEventListener('click',e=>{const b=e.target.closest('[data-topic]');if(!b)return;$('#topicFilter').value=b.dataset.topic;$$('[data-topic]', $('#topicShowcase')).forEach(x=>x.classList.toggle('active',x===b));state.activeLetter='';renderDictionary();});
@@ -1183,7 +1215,7 @@ function bindEvents(){
   $('#dataTableBody').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(edit)openEditor(edit.dataset.edit);if(del)deleteWord(del.dataset.delete);});
   $('#dataSearch').addEventListener('input',renderDataTable);
   $('#grammarSearch').addEventListener('input',renderGrammarLibrary); $('#grammarCategoryFilter').addEventListener('change',renderGrammarLibrary); $('#grammarLevelFilter').addEventListener('change',renderGrammarLibrary);
-  $('#readingSearch').addEventListener('input',renderReadingLibrary); $('#readingTopicFilter').addEventListener('change',renderReadingLibrary); $('#readingLevelFilter').addEventListener('change',renderReadingLibrary);
+  $('#readingSearch').addEventListener('input',renderReadingLibrary); $('#readingPartFilter')?.addEventListener('change',renderReadingLibrary); $('#readingTopicFilter').addEventListener('change',renderReadingLibrary); $('#readingLevelFilter').addEventListener('change',renderReadingLibrary);
   $('#listeningSearch').addEventListener('input',renderListeningLibrary); $('#listeningPartFilter').addEventListener('change',renderListeningLibrary); $('#listeningLevelFilter').addEventListener('change',renderListeningLibrary);
   $('#flashTopicGrid')?.addEventListener('click',e=>{const b=e.target.closest('[data-flash-topic]');if(b)startFlashSession(b.dataset.flashTopic,10);});
   $('#flashTopicSearch')?.addEventListener('input',renderFlashHome);
@@ -1245,7 +1277,7 @@ function openGrammarLesson(id){
   const prog=state.grammarProgress[id]||{answers:{}};
   const exercises=(lesson.exercises||[]).map((ex,i)=>{
     const saved=prog.answers?.[i];
-    return `<article class="lesson-exercise" data-grammar-exercise="${i}"><div class="exercise-kicker">BÀI TẬP ${i+1}</div><h4>${escapeHtml(ex.question)}</h4><div class="exercise-choice-grid">${ex.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===ex.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==ex.answerIndex?'is-wrong':''}" data-grammar-choice data-lesson-id="${escapeHtml(id)}" data-exercise-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(ex.explanation):''}</p></article>`;
+    return `<article class="lesson-exercise" data-grammar-exercise="${i}"><div class="exercise-kicker">BÀI TẬP ${i+1}</div><h4>${escapeHtml(ex.question)}</h4><div class="exercise-choice-grid">${ex.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===ex.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==ex.answerIndex?'is-wrong':''}" data-grammar-choice data-lesson-id="${escapeHtml(id)}" data-exercise-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(ex.explanation):''}</p></article>`;
   }).join('');
   $('#modalEyebrow').textContent=`GRAMMAR · ${lesson.category} · ${lesson.level}`;$('#modalTitle').textContent=lesson.title;
   $('#modalContent').innerHTML=`<div class="lesson-intro"><p>${escapeHtml(lesson.summary)}</p><div class="lesson-formula">${escapeHtml(lesson.formula)}</div></div><section class="detail-section"><h4>GIẢI THÍCH</h4><p class="lesson-explanation">${escapeHtml(lesson.explanation)}</p></section><section class="detail-section"><h4>VÍ DỤ VÀ PHÂN TÍCH</h4>${examples}</section><section class="detail-section"><h4>MẸO GHI NHỚ</h4><ul class="lesson-tips">${tips}</ul></section><section class="detail-section"><h4>LUYỆN TẬP</h4><div class="lesson-exercises">${exercises}</div></section><div class="modal-actions"><button class="primary-button" data-ai-lesson="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Tra cứu Google AI</button></div>`;
@@ -1259,19 +1291,22 @@ async function answerGrammarExercise(button){
   const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${exercise.explanation}`;renderGrammarLibrary();
 }
 function renderReadingLibrary(){
-  const q=normalizeText($('#readingSearch').value),topic=$('#readingTopicFilter').value,level=$('#readingLevelFilter').value;
-  const list=state.readings.filter(item=>{if(topic&&item.topic!==topic)return false;if(level&&item.level!==level)return false;return !q||normalizeText([item.title,item.topic,item.level,item.passage,...(item.vocabulary||[]).map(x=>x.word)].join(' ')).includes(q);});
+  const q=normalizeText($('#readingSearch').value),topic=$('#readingTopicFilter').value,level=$('#readingLevelFilter').value,part=$('#readingPartFilter')?.value||'';
+  const list=state.readings.filter(item=>{if(part&&item.part!==part)return false;if(topic&&item.topic!==topic)return false;if(level&&item.level!==level)return false;return !q||normalizeText([item.title,item.topic,item.level,item.passage,...(item.vocabulary||[]).map(x=>x.word)].join(' ')).includes(q);});
   $('#readingCount').textContent=`${list.length} / ${state.readings.length} bài đọc`;
-  $('#readingCardList').innerHTML=list.map(item=>{const progress=state.readingProgress[item.id]||{};const done=Object.values(progress.answers||{}).filter(x=>x?.answered).length;return `<article class="learning-card reading-card"><div class="learning-card-top"><span class="learning-category">${escapeHtml(item.documentType||item.topic)}</span><span class="learning-level">${escapeHtml(item.level)}</span></div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.passage.slice(0,190))}…</p><div class="reading-card-meta"><span>${item.wordCount||item.passage.split(/\s+/).length} từ</span><span>${done}/${(item.questions||[]).length} câu đã làm</span></div><div class="learning-card-footer"><small>Reading Mini · TOEIC Context</small><button class="secondary-button" data-reading-open="${escapeHtml(item.id)}">Đọc bài <span>→</span></button></div></article>`;}).join('');
+  $('#readingCardList').innerHTML=list.map(item=>{const progress=state.readingProgress[item.id]||{};const done=Object.values(progress.answers||{}).filter(x=>x?.answered).length;const preview=(item.passage||item.documents?.[0]?.content||item.questions?.[0]?.question||'Bộ câu hỏi luyện TOEIC theo Part.').replace(/\s+/g,' ').slice(0,190);return `<article class="learning-card reading-card"><div class="learning-card-top"><span class="learning-category">${escapeHtml(item.part||'Reading')} · ${escapeHtml(item.documentType||item.topic)}</span><span class="learning-level">${escapeHtml(item.level)}</span></div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(preview)}${preview.length>=190?'…':''}</p><div class="reading-card-meta"><span>${item.wordCount||item.passage.split(/\s+/).length} từ</span><span>${done}/${(item.questions||[]).length} câu đã làm</span></div><div class="learning-card-footer"><small>${escapeHtml(item.part||'Reading')} · TOEIC Practice</small><button class="secondary-button" data-reading-open="${escapeHtml(item.id)}">Đọc bài <span>→</span></button></div></article>`;}).join('');
   $('#readingEmpty').hidden=list.length>0;
 }
 function openReadingDetail(id){
   const reading=state.readings.find(x=>x.id===id);if(!reading)return;state.activeReading=id;
   const vocab=(reading.vocabulary||[]).map(v=>`<button type="button" class="reading-vocab-chip" data-lookup-term="${escapeHtml(v.word)}"><strong>${escapeHtml(displayWord(v.word))}</strong><small>${escapeHtml(v.pos)}</small><span>${escapeHtml(v.meaning)}</span></button>`).join('');
   const prog=state.readingProgress[id]||{answers:{}};
-  const questions=(reading.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise reading-question" data-reading-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==q.answerIndex?'is-wrong':''}" data-reading-choice data-reading-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(q.explanation):''}</p></article>`;}).join('');
-  $('#modalEyebrow').textContent=`READING MINI · ${reading.topic} · ${reading.level}`;$('#modalTitle').textContent=reading.title;
-  $('#modalContent').innerHTML=`<div class="reading-passage-card"><div class="reading-passage-label">PASSAGE · ${reading.wordCount||reading.passage.split(/\s+/).length} WORDS</div><p class="reading-passage">${escapeHtml(reading.passage)}</p></div><details class="translation-details"><summary>Xem bản dịch tiếng Việt</summary><p>${escapeHtml(reading.translation||'Chưa có bản dịch.')}</p></details><section class="detail-section"><h4>TỪ VỰNG TRONG BÀI · NHẤN ĐỂ TRA CỨU</h4><div class="reading-vocab-grid">${vocab}</div></section><section class="detail-section"><h4>CÂU HỎI ĐỌC HIỂU</h4><div class="lesson-exercises">${questions}</div></section><div class="modal-actions"><button class="primary-button" data-ai-reading="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bài đọc bằng Google AI</button></div>`;
+  const documents=(reading.documents||[]).map((doc,i)=>`<section class="reading-document-card"><div class="reading-passage-label">${escapeHtml(doc.label||`DOCUMENT ${i+1}`)}</div><pre class="reading-passage">${escapeHtml(doc.content||'')}</pre></section>`).join('');
+  const passageMarkup=reading.part==='Part 5'?`<div class="reading-part-intro"><span class="learning-category">PART 5 · INCOMPLETE SENTENCES</span><p>Chọn từ hoặc cụm từ phù hợp nhất để hoàn thành từng câu.</p></div>`:(documents||reading.passage)?`<div class="reading-passage-card"><div class="reading-passage-label">${escapeHtml(reading.part||'PASSAGE')} · ${reading.wordCount||String(reading.passage||'').split(/\s+/).filter(Boolean).length} WORDS</div>${documents?documents:`<pre class="reading-passage">${escapeHtml(reading.passage||'')}</pre>`}</div>`:'';
+  const questions=(reading.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise reading-question" data-reading-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==q.answerIndex?'is-wrong':''}" data-reading-choice data-reading-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(q.explanation):''}</p></article>`;}).join('');
+  $('#modalEyebrow').textContent=`${reading.part||'READING'} · ${reading.documentType||reading.topic} · ${reading.level}`;$('#modalTitle').textContent=reading.title;
+  const vocabMarkup=vocab?`<section class="detail-section"><h4>TỪ VỰNG TRONG BÀI · NHẤN ĐỂ TRA CỨU</h4><div class="reading-vocab-grid">${vocab}</div></section>`:'';
+  $('#modalContent').innerHTML=`${passageMarkup}<details class="translation-details"><summary>Xem bản dịch tiếng Việt</summary><p>${escapeHtml(reading.translation||'Chưa có bản dịch.')}</p></details>${vocabMarkup}<section class="detail-section"><h4>${escapeHtml(reading.part||'READING')} · CÂU HỎI</h4><div class="lesson-exercises">${questions}</div></section><div class="modal-actions"><button class="primary-button" data-ai-reading="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bài đọc bằng Google AI</button></div>`;
   $('#modalBackdrop').hidden=false;
 }
 async function answerReadingQuestion(button){
@@ -1279,23 +1314,27 @@ async function answerReadingQuestion(button){
   if(!question)return;const prog=state.readingProgress[id]||{answers:{}};prog.answers=prog.answers||{};if(prog.answers[index]?.answered)return;
   const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,correct,answeredAt:Date.now()};state.readingProgress[id]=prog;await dbSet('readingProgress',state.readingProgress);
   const card=button.closest('.reading-question');$$('[data-reading-choice]',card).forEach(b=>{b.disabled=true;const selected=Number(b.dataset.choiceIndex);if(selected===question.answerIndex)b.classList.add('is-correct');if(selected===choiceIndex&&!correct)b.classList.add('is-wrong');});
-  const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${question.explanation}`;renderReadingLibrary();
+  const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${question.explanation}`;renderReadingLibrary();renderToeicPartInsights();
 }
 function renderListeningLibrary(){
   const q=normalizeText($('#listeningSearch')?.value||''),part=$('#listeningPartFilter')?.value||'',level=$('#listeningLevelFilter')?.value||'';
   const list=state.listening.filter(item=>{if(part&&item.part!==part)return false;if(level&&item.level!==level)return false;return !q||normalizeText([item.title,item.topic,item.part,item.level,(item.segments||[]).map(x=>x.text).join(' '),(item.vocabulary||[]).map(x=>x.word).join(' ')].join(' ')).includes(q);});
   $('#listeningCount').textContent=`${list.length} / ${state.listening.length} bài nghe`;
-  $('#listeningCardList').innerHTML=list.map(item=>{const prog=state.listeningProgress[item.id]||{};const done=Object.values(prog.answers||{}).filter(x=>x?.answered).length;const count=(item.questions||[]).length;const kind=item.part==='Part 2'?'Question–Response':item.part==='Part 3'?'Conversation':'Short Talk';return `<article class="learning-card listening-card"><div class="learning-card-top"><span class="learning-category">${escapeHtml(item.part)} · ${escapeHtml(kind)}</span><span class="learning-level">${escapeHtml(item.level)}</span></div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.topic)} · ${(item.segments||[]).length} lượt lời · ${count} câu hỏi</p><div class="reading-card-meta"><span>${done}/${count} câu đã làm</span><span>Audio tổng hợp</span></div><div class="learning-card-footer"><small>Listening Practice · ${escapeHtml(item.topic)}</small><button class="secondary-button" data-listening-open="${escapeHtml(item.id)}">Bắt đầu nghe <span>→</span></button></div></article>`;}).join('');
+  $('#listeningCardList').innerHTML=list.map(item=>{const prog=state.listeningProgress[item.id]||{};const done=Object.values(prog.answers||{}).filter(x=>x?.answered).length;const count=(item.questions||[]).length;const kind=item.part==='Part 1'?'Image Description':item.part==='Part 2'?'Question–Response':item.part==='Part 3'?'Conversation':'Short Talk';return `<article class="learning-card listening-card"><div class="learning-card-top"><span class="learning-category">${escapeHtml(item.part)} · ${escapeHtml(kind)}</span><span class="learning-level">${escapeHtml(item.level)}</span></div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.topic)} · ${(item.segments||[]).length} lượt lời · ${count} câu hỏi</p><div class="reading-card-meta"><span>${done}/${count} câu đã làm</span><span>Audio tổng hợp</span></div><div class="learning-card-footer"><small>Listening Practice · ${escapeHtml(item.topic)}</small><button class="secondary-button" data-listening-open="${escapeHtml(item.id)}">Bắt đầu nghe <span>→</span></button></div></article>`;}).join('');
   $('#listeningEmpty').hidden=list.length>0;
 }
 function openListeningDetail(id){
   stopSpeech();const item=state.listening.find(x=>x.id===id);if(!item)return;state.activeListening=id;
   const prog=state.listeningProgress[id]||{answers:{}};
-  const questions=(item.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise listening-question" data-listening-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==q.answerIndex?'is-wrong':''}" data-listening-choice data-listening-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(q.explanation):''}</p></article>`;}).join('');
+  const questions=(item.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise listening-question" data-listening-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==q.answerIndex?'is-wrong':''}" data-listening-choice data-listening-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(q.explanation):''}</p></article>`;}).join('');
   const transcript=(item.segments||[]).map((seg,i)=>`<div class="transcript-line"><small>${escapeHtml(seg.speaker||`Speaker ${i+1}`)}</small><p>${escapeHtml(seg.text)}</p></div>`).join('');
+  const photoMarkup=item.part==='Part 1'&&item.image?`<figure class="part1-photo-frame"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt||item.title)}" loading="eager"><figcaption>HÌNH MINH HỌA · Quan sát hình trước khi nghe</figcaption></figure>`:'';
   const vocab=(item.vocabulary||[]).map(v=>`<button type="button" class="reading-vocab-chip" data-lookup-term="${escapeHtml(v.word)}"><strong>${escapeHtml(displayWord(v.word))}</strong><span>${escapeHtml(v.meaning)}</span></button>`).join('');
   $('#modalEyebrow').textContent=`LISTENING · ${item.part} · ${item.level}`;$('#modalTitle').textContent=item.title;
-  $('#modalContent').innerHTML=`<div class="listening-player-card"><div class="listening-player-head"><span class="listening-wave">♫</span><div><strong>${escapeHtml(item.part)} · ${escapeHtml(item.type==='conversation'?'Hội thoại':item.type==='talk'?'Bài nói ngắn':'Câu hỏi – đáp')}</strong><small>${escapeHtml(item.topic)} · ${item.segments.length} lượt lời</small></div></div><div class="listening-player-actions"><button type="button" class="primary-button" data-listening-play="${escapeHtml(id)}">${icon('volume-2','ui-icon button-icon')} Nghe toàn bộ</button><button type="button" class="secondary-button" data-listening-vocab-play="${escapeHtml(id)}">Đọc từ vựng chậm</button><button type="button" class="secondary-button" data-listening-stop>⏹ Dừng</button></div><div class="listening-player-status" id="listeningPlayerStatus" aria-live="polite">Sẵn sàng phát audio. Bạn nên nghe trước khi mở transcript.</div><div class="listening-speed-row"><label for="listeningSpeed">Tốc độ đọc trong bài này</label><select id="listeningSpeed"><option value="0.75">x0.75 · Chậm</option><option value="0.85">x0.85 · Rõ ràng</option><option value="0.92" selected>x0.92 · Tự nhiên</option><option value="1">x1.0 · Bình thường</option><option value="1.1">x1.1 · Nhanh</option></select></div><p class="tts-inline-note">Giọng nam/nữ, cao độ giọng và khoảng nghỉ được điều chỉnh trong mục Cấu hình → Giọng đọc.</p></div><section class="detail-section"><h4>QUESTIONS · CÂU HỎI NGHE HIỂU</h4><p class="listening-hint">Nghe nội dung, sau đó chọn đáp án. Transcript và bản dịch được để bên dưới để bạn tự kiểm tra sau.</p><div class="lesson-exercises">${questions}</div></section><details class="transcript-details"><summary>Hiện transcript tiếng Anh</summary><div class="transcript-content">${transcript}</div><p class="transcript-translation"><strong>Dịch nghĩa:</strong> ${escapeHtml(item.transcriptTranslation||'Chưa có bản dịch.')}</p></details><section class="detail-section"><h4>TỪ VỰNG TRỌNG TÂM</h4><div class="reading-vocab-grid">${vocab}</div></section><div class="modal-actions"><button class="secondary-button" data-ai-listening="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bài nghe một chiều bằng Google AI</button></div>`;
+  const vocabMarkup=vocab?`<section class="detail-section"><h4>TỪ VỰNG TRỌNG TÂM</h4><div class="reading-vocab-grid">${vocab}</div></section>`:'';
+  const vocabPlayButton=vocab?`<button type="button" class="secondary-button" data-listening-vocab-play="${escapeHtml(id)}">Đọc từ vựng chậm</button>`:'';
+  const playLabel=item.part==='Part 1'?'Nghe bốn mô tả A–D':'Nghe toàn bộ';
+  $('#modalContent').innerHTML=`${photoMarkup}<div class="listening-player-card"><div class="listening-player-head"><span class="listening-wave">♫</span><div><strong>${escapeHtml(item.part)} · ${escapeHtml(item.type==='photograph'?'Mô tả ảnh':item.type==='conversation'?'Hội thoại':item.type==='talk'?'Bài nói ngắn':'Câu hỏi – đáp')}</strong><small>${escapeHtml(item.topic)} · ${item.segments.length} lượt lời</small></div></div><div class="listening-player-actions"><button type="button" class="primary-button" data-listening-play="${escapeHtml(id)}">${icon('volume-2','ui-icon button-icon')} ${playLabel}</button>${vocabPlayButton}<button type="button" class="secondary-button" data-listening-stop>⏹ Dừng</button></div><div class="listening-player-status" id="listeningPlayerStatus" aria-live="polite">Sẵn sàng phát audio. Bạn nên nghe trước khi mở transcript.</div><div class="listening-speed-row"><label for="listeningSpeed">Tốc độ đọc trong bài này</label><select id="listeningSpeed"><option value="0.75">x0.75 · Chậm</option><option value="0.85">x0.85 · Rõ ràng</option><option value="0.92" selected>x0.92 · Tự nhiên</option><option value="1">x1.0 · Bình thường</option><option value="1.1">x1.1 · Nhanh</option></select></div><p class="tts-inline-note">Giọng nam/nữ, cao độ giọng và khoảng nghỉ được điều chỉnh trong mục Cấu hình → Giọng đọc.</p></div><section class="detail-section"><h4>QUESTIONS · CÂU HỎI NGHE HIỂU</h4><p class="listening-hint">${item.part==='Part 1'?'Nghe lần lượt bốn mô tả A–D, quan sát ảnh và chọn mô tả khớp nhất. Transcript chỉ mở sau khi bạn đã làm.':'Nghe nội dung, sau đó chọn đáp án. Transcript và bản dịch được để bên dưới để bạn tự kiểm tra sau.'}</p><div class="lesson-exercises">${questions}</div></section><details class="transcript-details"><summary>Hiện transcript tiếng Anh</summary><div class="transcript-content">${transcript}</div><p class="transcript-translation"><strong>Dịch nghĩa:</strong> ${escapeHtml(item.transcriptTranslation||'Chưa có bản dịch.')}</p></details>${vocabMarkup}<div class="modal-actions"><button class="secondary-button" data-ai-listening="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bài nghe một chiều bằng Google AI</button></div>`;
   $('#modalBackdrop').hidden=false;
 }
 let listeningPlaybackToken=0;
@@ -1414,7 +1453,8 @@ async function playListeningAudio(id){
     const speaker=String(segment.speaker||'Speaker').trim(),key=speaker.toLowerCase();
     if(speakerVoices.has(key))return speakerVoices.get(key);
     const gender=classifyVoiceHint(segment.voice||speaker)||cfg.defaultGender;
-    const voice=chooseEnglishVoice(cfg.accent,speaker,gender,usedVoiceNames[gender]||[]);
+    const segmentAccent=segment.accent||cfg.accent;
+    const voice=chooseEnglishVoice(segmentAccent,speaker,gender,usedVoiceNames[gender]||[]);
     if(voice){speakerVoices.set(key,voice);(usedVoiceNames[gender]||[]).push(voice.name);}return voice;
   };
   if(status)status.textContent=`Đang chuẩn bị ${segments.length} lượt lời…`;
@@ -1424,7 +1464,7 @@ async function playListeningAudio(id){
     const gender=classifyVoiceHint(segment.voice||speaker)||cfg.defaultGender;
     const voice=resolveSpeakerVoice(segment);
     if(status)status.textContent=`Đang nghe: ${speaker} (${index+1}/${segments.length})`;
-    const ok=await speakUtterance(segment.text,{accent:cfg.accent,gender,voice,rate:speed},playbackToken);
+    const ok=await speakUtterance(segment.text,{accent:segment.accent||cfg.accent,gender,voice,rate:speed},playbackToken);
     if(playbackToken!==listeningPlaybackToken)return;
     if(!ok){if(status)status.textContent='Voice gặp lỗi khi phát. Bạn có thể chọn voice khác trong Cấu hình.';return;}
     if(index<segments.length-1){
@@ -1475,7 +1515,7 @@ async function answerListeningQuestion(button){
   if(!question)return;const prog=state.listeningProgress[id]||{answers:{}};prog.answers=prog.answers||{};if(prog.answers[index]?.answered)return;
   const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,correct,answeredAt:Date.now()};state.listeningProgress[id]=prog;await dbSet('listeningProgress',state.listeningProgress);
   const card=button.closest('.listening-question');$$('[data-listening-choice]',card).forEach(b=>{b.disabled=true;const selected=Number(b.dataset.choiceIndex);if(selected===question.answerIndex)b.classList.add('is-correct');if(selected===choiceIndex&&!correct)b.classList.add('is-wrong');});
-  const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${question.explanation}`;renderListeningLibrary();
+  const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${question.explanation}`;renderListeningLibrary();renderToeicPartInsights();
 }
 function buildListeningAIPrompt(item){
   return `Bạn là giáo viên luyện TOEIC Listening cho người học Việt Nam. Hãy phân tích bài nghe theo đúng thông tin dưới đây. Đây là nội dung luyện tập do ứng dụng tạo, không phải đề thi chính thức.\n\nPHẦN: ${item.part}\nTIÊU ĐỀ: ${item.title}\nCHỦ ĐỀ: ${item.topic}\nCẤP ĐỘ: ${item.level}\n\nTRANSCRIPT:\n${(item.segments||[]).map(s=>`${s.speaker}: ${s.text}`).join('\n')}\n\nCÂU HỎI VÀ ĐÁP ÁN:\n${(item.questions||[]).map((q,i)=>`${i+1}. ${q.question}\n${q.choices.map((c,j)=>`${String.fromCharCode(65+j)}. ${c}`).join('\n')}\nĐáp án: ${q.choices[q.answerIndex]}\nGiải thích hiện có: ${q.explanation}`).join('\n\n')}\n\nTỪ VỰNG:\n${(item.vocabulary||[]).map(v=>`${v.word}: ${v.meaning}`).join('\n')}\n\nYÊU CẦU: Dịch từng lượt lời; giải thích nối âm, trọng âm và cụm từ quan trọng; chỉ ra từ khóa để bắt thông tin; phân tích lý do từng lựa chọn đúng/sai; hướng dẫn nghe bắt ý chính, thời gian, địa điểm, mục đích và suy luận; đề xuất một lần luyện nghe lại có mục tiêu. Hãy trả lời đầy đủ trong một phản hồi, không đặt câu hỏi ngược lại.`;
