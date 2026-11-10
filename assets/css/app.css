@@ -318,7 +318,8 @@ body.install-invite-open{overflow:hidden}
 .exercise-choice.is-correct>span{background:#d9f2e2;color:#147a4b}
 .exercise-choice.is-wrong{border-color:#e6b6b6;background:#fff3f3;color:#a54848}
 .exercise-choice.is-wrong>span{background:#ffe0e0;color:#b14444}
-.exercise-feedback{margin:10px 0 0;padding:10px;border-radius:8px;background:#f2f7fc;color:#58718b;font-size:10px;line-height:1.65}
+.exercise-feedback{margin:10px 0 0;padding:10px;border-radius:8px;background:#f2f7fc;color:#58718b;font-size:12px;line-height:1.65}
+.historical-choice-note{display:block;margin:0 0 7px;padding:7px 9px;border-left:3px solid #8a9bad;border-radius:4px;background:rgba(115,135,156,.09);color:#40566d;font-size:12px;font-weight:600;line-height:1.5}
 .exercise-feedback.visible{display:block}
 .lesson-exercise .exercise-feedback[hidden]{display:none}
 .reading-passage-card{padding:15px;border:1px solid #e0e9f3;border-radius:13px;background:#f9fbfe}

@@ -2163,13 +2163,19 @@
         {
           "question": "What does the man plan to add to the slides?",
           "choices": [
+            "Ask Logistics to send the updated figures",
+            "Reserve a larger conference room",
+            "Add a chart comparing the two quarters",
+            "Print copies of the current presentation"
+          ],
+          "answerIndex": 2,
+          "explanation": "Anh ấy đồng ý bổ sung biểu đồ so sánh kết quả quý này với quý trước vào bản trình chiếu.",
+          "legacyChoices": [
             "Call the client",
             "Book a conference room",
             "Add a comparison chart to the slides",
             "Print the delivery labels"
-          ],
-          "answerIndex": 2,
-          "explanation": "Anh ấy đồng ý bổ sung biểu đồ so sánh kết quả quý này với quý trước vào bản trình chiếu."
+          ]
         }
       ],
       "transcriptTranslation": "Hai đồng nghiệp chuẩn bị bài thuyết trình cho cuộc họp khách hàng vào sáng thứ Sáu. Người đàn ông đang chờ số liệu giao hàng mới nhất từ bộ phận Logistics; anh sẽ thêm biểu đồ so sánh hai quý và gửi bản để xem xét vào cuối ngày.",
@@ -2303,13 +2309,19 @@
         {
           "question": "Why does the woman call the hotel?",
           "choices": [
+            "To change the guest’s room type",
+            "To extend the guest’s stay",
+            "To request an earlier check-in",
+            "To cancel the reservation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Chuyến bay về đã được đổi lịch nên vị khách cần kéo dài thời gian lưu trú thêm một đêm.",
+          "legacyChoices": [
             "To reserve a meeting room",
             "To extend a guest's stay",
             "To report a lost suitcase",
             "To cancel an airport transfer"
-          ],
-          "answerIndex": 1,
-          "explanation": "Chuyến bay về đã được đổi lịch nên vị khách cần kéo dài thời gian lưu trú thêm một đêm."
+          ]
         },
         {
           "question": "What will remain unchanged?",
@@ -2730,12 +2742,18 @@
           "question": "Who is the workshop intended for?",
           "choices": [
             "Employees who respond to customer inquiries",
+            "Accountants who prepare quarterly reports",
+            "Warehouse staff who arrange deliveries",
+            "Managers who approve travel requests"
+          ],
+          "answerIndex": 0,
+          "explanation": "Hội thảo dành cho nhân viên thường xuyên tiếp nhận yêu cầu của khách hàng qua điện thoại hoặc email.",
+          "legacyChoices": [
+            "Employees who respond to customer inquiries",
             "Newly hired accountants",
             "Warehouse delivery drivers",
             "Managers attending a budget meeting"
-          ],
-          "answerIndex": 0,
-          "explanation": "Hội thảo dành cho nhân viên thường xuyên tiếp nhận yêu cầu của khách hàng qua điện thoại hoặc email."
+          ]
         },
         {
           "question": "How many employees may each department nominate?",

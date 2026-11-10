@@ -44,7 +44,28 @@ function toast(message, type='success') {
   const el=document.createElement('div'); el.className=`toast ${type==='error'?'error':''}`; el.textContent=message; $('#toastRegion').append(el); setTimeout(()=>el.remove(),3400);
 }
 function normalizeText(value='') { return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/đ/g,'d').trim(); }
-function escapeHtml(value='') { return String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch])); }
+function escapeHtml(value='') { return String(value).replace(/[&<>\"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[ch])); }
+function savedChoiceText(question,saved){
+  if(!saved?.answered)return '';
+  if(typeof saved.choiceText==='string'&&saved.choiceText.trim())return saved.choiceText;
+  const index=Number(saved.choiceIndex);
+  if(!Number.isInteger(index)||index<0)return '';
+  const legacy=question?.legacyChoices?.[index];
+  if(typeof legacy==='string')return legacy;
+  return question?.choices?.[index]??'';
+}
+function savedChoiceIsArchived(question,saved){
+  if(!saved?.answered)return false;
+  const index=Number(saved.choiceIndex),text=savedChoiceText(question,saved);
+  return Number.isInteger(index)&&index>=0&&text!==String(question?.choices?.[index]??'');
+}
+function savedChoiceWrongClass(question,saved,index){
+  return Boolean(saved?.answered&&!savedChoiceIsArchived(question,saved)&&Number(saved.choiceIndex)===index&&index!==question.answerIndex);
+}
+function savedChoiceHistoryMarkup(question,saved){
+  if(!savedChoiceIsArchived(question,saved))return '';
+  return `<span class="historical-choice-note">Lựa chọn đã lưu trước lần cập nhật: ${escapeHtml(savedChoiceText(question,saved))}</span>`;
+}
 function displayWord(value='') { const text=String(value); return text ? text.charAt(0).toLocaleUpperCase('en-US') + text.slice(1) : text; }
 function getPrimarySense(item) { return item.senses?.[0] || {pos:'',meaning_vi:'',definition_en:'',synonyms:[],antonyms:[]}; }
 function getAllPos(item) { return [...new Set((item.senses||[]).map(s=>s.pos).filter(Boolean))]; }
@@ -1303,7 +1324,7 @@ function openReadingDetail(id){
   const prog=state.readingProgress[id]||{answers:{}};
   const documents=(reading.documents||[]).map((doc,i)=>`<section class="reading-document-card"><div class="reading-passage-label">${escapeHtml(doc.label||`DOCUMENT ${i+1}`)}</div><pre class="reading-passage">${escapeHtml(doc.content||'')}</pre></section>`).join('');
   const passageMarkup=reading.part==='Part 5'?`<div class="reading-part-intro"><span class="learning-category">PART 5 · INCOMPLETE SENTENCES</span><p>Chọn từ hoặc cụm từ phù hợp nhất để hoàn thành từng câu.</p></div>`:(documents||reading.passage)?`<div class="reading-passage-card"><div class="reading-passage-label">${escapeHtml(reading.part||'PASSAGE')} · ${reading.wordCount||String(reading.passage||'').split(/\s+/).filter(Boolean).length} WORDS</div>${documents?documents:`<pre class="reading-passage">${escapeHtml(reading.passage||'')}</pre>`}</div>`:'';
-  const questions=(reading.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise reading-question" data-reading-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==q.answerIndex?'is-wrong':''}" data-reading-choice data-reading-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(q.explanation):''}</p></article>`;}).join('');
+  const questions=(reading.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise reading-question" data-reading-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${savedChoiceWrongClass(q,saved,j)?'is-wrong':''}" data-reading-choice data-reading-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?`${savedChoiceHistoryMarkup(q,saved)}${escapeHtml(q.explanation)}`:''}</p></article>`;}).join('');
   $('#modalEyebrow').textContent=`${reading.part||'READING'} · ${reading.documentType||reading.topic} · ${reading.level}`;$('#modalTitle').textContent=reading.title;
   const vocabMarkup=vocab?`<section class="detail-section"><h4>TỪ VỰNG TRONG BÀI · NHẤN ĐỂ TRA CỨU</h4><div class="reading-vocab-grid">${vocab}</div></section>`:'';
   $('#modalContent').innerHTML=`${passageMarkup}<details class="translation-details"><summary>Xem bản dịch tiếng Việt</summary><p>${escapeHtml(reading.translation||'Chưa có bản dịch.')}</p></details>${vocabMarkup}<section class="detail-section"><h4>${escapeHtml(reading.part||'READING')} · CÂU HỎI</h4><div class="lesson-exercises">${questions}</div></section><div class="modal-actions"><button class="primary-button" data-ai-reading="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bài đọc bằng Google AI</button></div>`;
@@ -1312,7 +1333,7 @@ function openReadingDetail(id){
 async function answerReadingQuestion(button){
   const id=button.dataset.readingId,index=Number(button.dataset.questionIndex),choiceIndex=Number(button.dataset.choiceIndex),reading=state.readings.find(x=>x.id===id),question=reading?.questions?.[index];
   if(!question)return;const prog=state.readingProgress[id]||{answers:{}};prog.answers=prog.answers||{};if(prog.answers[index]?.answered)return;
-  const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,correct,answeredAt:Date.now()};state.readingProgress[id]=prog;await dbSet('readingProgress',state.readingProgress);
+  const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()};state.readingProgress[id]=prog;await dbSet('readingProgress',state.readingProgress);
   const card=button.closest('.reading-question');$$('[data-reading-choice]',card).forEach(b=>{b.disabled=true;const selected=Number(b.dataset.choiceIndex);if(selected===question.answerIndex)b.classList.add('is-correct');if(selected===choiceIndex&&!correct)b.classList.add('is-wrong');});
   const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${question.explanation}`;renderReadingLibrary();renderToeicPartInsights();
 }
@@ -1326,7 +1347,7 @@ function renderListeningLibrary(){
 function openListeningDetail(id){
   stopSpeech();const item=state.listening.find(x=>x.id===id);if(!item)return;state.activeListening=id;
   const prog=state.listeningProgress[id]||{answers:{}};
-  const questions=(item.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise listening-question" data-listening-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==q.answerIndex?'is-wrong':''}" data-listening-choice data-listening-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(q.explanation):''}</p></article>`;}).join('');
+  const questions=(item.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise listening-question" data-listening-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${savedChoiceWrongClass(q,saved,j)?'is-wrong':''}" data-listening-choice data-listening-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?`${savedChoiceHistoryMarkup(q,saved)}${escapeHtml(q.explanation)}`:''}</p></article>`;}).join('');
   const transcript=(item.segments||[]).map((seg,i)=>`<div class="transcript-line"><small>${escapeHtml(seg.speaker||`Speaker ${i+1}`)}</small><p>${escapeHtml(seg.text)}</p></div>`).join('');
   const illustrationMarkup=item.part==='Part 1'&&item.image?`<figure class="part1-illustration-frame"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt||item.title)}" loading="eager"><figcaption>HÌNH MINH HỌA · Quan sát hình trước khi nghe</figcaption></figure>`:'';
   const vocab=(item.vocabulary||[]).map(v=>`<button type="button" class="reading-vocab-chip" data-lookup-term="${escapeHtml(v.word)}"><strong>${escapeHtml(displayWord(v.word))}</strong><span>${escapeHtml(v.meaning)}</span></button>`).join('');
@@ -1513,7 +1534,7 @@ function bindTtsSettings(){
 async function answerListeningQuestion(button){
   const id=button.dataset.listeningId,index=Number(button.dataset.questionIndex),choiceIndex=Number(button.dataset.choiceIndex),item=state.listening.find(x=>x.id===id),question=item?.questions?.[index];
   if(!question)return;const prog=state.listeningProgress[id]||{answers:{}};prog.answers=prog.answers||{};if(prog.answers[index]?.answered)return;
-  const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,correct,answeredAt:Date.now()};state.listeningProgress[id]=prog;await dbSet('listeningProgress',state.listeningProgress);
+  const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()};state.listeningProgress[id]=prog;await dbSet('listeningProgress',state.listeningProgress);
   const card=button.closest('.listening-question');$$('[data-listening-choice]',card).forEach(b=>{b.disabled=true;const selected=Number(b.dataset.choiceIndex);if(selected===question.answerIndex)b.classList.add('is-correct');if(selected===choiceIndex&&!correct)b.classList.add('is-wrong');});
   const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${question.explanation}`;renderListeningLibrary();renderToeicPartInsights();
 }

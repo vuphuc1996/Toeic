@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SCRIPT = ROOT / "tools" / "audit-question-evidence.py"
-REPORT = ROOT / "docs" / "reports" / "TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.14.0.md"
+REPORT = ROOT / "docs" / "reports" / "TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.15.0.md"
 
 
 class QuestionEvidenceAuditTests(unittest.TestCase):
@@ -37,7 +37,7 @@ class QuestionEvidenceAuditTests(unittest.TestCase):
             self.assertIn(expected, self.report)
 
     def test_remaining_distractor_audit_scope_is_explicit(self):
-        self.assertIn("distractor plausibility and uniqueness across the 126 direct/lexical-evidence items", self.report)
+        self.assertIn("distractor plausibility and uniqueness for the 126 direct/lexical items plus six inference/paraphrase items were reviewed in v2.15.0", self.report.lower())
 
     def test_no_unresolved_low_overlap_inference_label_remains(self):
         self.assertNotIn("Manual paraphrase/inference review |", self.report)

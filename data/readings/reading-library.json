@@ -200,12 +200,18 @@
           "question": "What should she keep for reimbursement?",
           "choices": [
             "Boarding passes and hotel receipts",
+            "The client meeting agenda",
+            "A copy of the presentation slides",
+            "The airport shuttle timetable"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bài đọc yêu cầu giữ boarding passes và hotel receipts.",
+          "legacyChoices": [
+            "Boarding passes and hotel receipts",
             "Business cards only",
             "The presentation slides",
             "The shuttle timetable"
-          ],
-          "answerIndex": 0,
-          "explanation": "Bài đọc yêu cầu giữ boarding passes và hotel receipts."
+          ]
         },
         {
           "question": "When is the first client meeting?",
@@ -607,13 +613,19 @@
         {
           "question": "What does the customer request?",
           "choices": [
+            "A full refund for the damaged keyboard",
+            "A replacement or instructions for returning the product",
+            "An exchange for a different keyboard model",
+            "A refund of the original shipping charge"
+          ],
+          "answerIndex": 1,
+          "explanation": "Khách hàng hỏi liệu sản phẩm thay thế có thể được gửi trong tuần này hay họ cần hoàn trả sản phẩm trước.",
+          "legacyChoices": [
             "A refund for a hotel",
             "A replacement or return instructions",
             "A new delivery address",
             "A discount on shipping"
-          ],
-          "answerIndex": 1,
-          "explanation": "Khách hàng hỏi liệu sản phẩm thay thế có thể được gửi trong tuần này hay họ cần hoàn trả sản phẩm trước."
+          ]
         }
       ],
       "part": "Part 7",
@@ -685,13 +697,19 @@
         {
           "question": "Why has payment not been scheduled?",
           "choices": [
+            "The delivery confirmation is missing",
+            "The invoice quantity needs verification",
+            "The payment terms are unclear",
+            "The supplier’s bank details have changed"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hóa đơn ghi 26 chiếc bàn trong khi đơn đặt hàng ghi 24 chiếc, vì vậy số lượng cần được xác minh trước khi thanh toán.",
+          "legacyChoices": [
             "The goods have not arrived",
             "The invoice quantity needs verification",
             "The bank account is closed",
             "The purchasing manager is absent"
-          ],
-          "answerIndex": 1,
-          "explanation": "Hóa đơn ghi 26 chiếc bàn trong khi đơn đặt hàng ghi 24 chiếc, vì vậy số lượng cần được xác minh trước khi thanh toán."
+          ]
         }
       ],
       "part": "Part 7",
@@ -737,13 +755,19 @@
         {
           "question": "What caused the delay?",
           "choices": [
-            "A missing payment",
+            "A payment hold at the sorting center",
             "An incorrectly labeled carton",
             "A vehicle breakdown",
             "A customs inspection"
           ],
           "answerIndex": 1,
-          "explanation": "Phản hồi của kho xác định một thùng hàng bị dán nhãn sai là nguyên nhân gây chậm trễ."
+          "explanation": "Phản hồi của kho xác định một thùng hàng bị dán nhãn sai là nguyên nhân gây chậm trễ.",
+          "legacyChoices": [
+            "A missing payment",
+            "An incorrectly labeled carton",
+            "A vehicle breakdown",
+            "A customs inspection"
+          ]
         }
       ],
       "part": "Part 7",
@@ -773,13 +797,19 @@
         {
           "question": "Who is the workshop intended for?",
           "choices": [
+            "Employees who manage internal purchasing",
+            "Employees who regularly communicate with customers",
+            "Warehouse employees who inspect deliveries",
+            "Managers who approve departmental budgets"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông báo cho biết hội thảo dành cho nhân viên thường xuyên liên hệ với khách hàng qua điện thoại hoặc email.",
+          "legacyChoices": [
             "New suppliers",
             "Employees who communicate with customers",
             "External auditors",
             "Job applicants"
-          ],
-          "answerIndex": 1,
-          "explanation": "Thông báo cho biết hội thảo dành cho nhân viên thường xuyên liên hệ với khách hàng qua điện thoại hoặc email."
+          ]
         }
       ],
       "part": "Part 7",
@@ -1469,12 +1499,18 @@
           "question": "Who is the workshop mainly intended for?",
           "choices": [
             "Employees who handle customer accounts and inquiries",
+            "Employees responsible for processing payroll",
+            "Employees who coordinate supplier contracts",
+            "Employees who provide technical support"
+          ],
+          "answerIndex": 0,
+          "explanation": "Email nói workshop dành cho nhân viên xử lý gia hạn tài khoản và yêu cầu dịch vụ.",
+          "legacyChoices": [
+            "Employees who handle customer accounts and inquiries",
             "Newly hired accounting staff",
             "External suppliers of office equipment",
             "Employees who manage building security"
-          ],
-          "answerIndex": 0,
-          "explanation": "Email nói workshop dành cho nhân viên xử lý gia hạn tài khoản và yêu cầu dịch vụ."
+          ]
         },
         {
           "question": "Where will the workshop be held?",
@@ -2045,13 +2081,19 @@
         {
           "question": "Why did Lena Park contact the supplier?",
           "choices": [
+            "To ask whether the order will arrive on schedule",
+            "To report damage to the monitor arms",
+            "To change the delivery address",
+            "To request a different payment arrangement"
+          ],
+          "answerIndex": 0,
+          "explanation": "Email đầu tiên hỏi đơn BO-7316 có còn được giao đúng lịch ngày 22 tháng 4 hay không.",
+          "legacyChoices": [
             "To ask whether an order will arrive on schedule",
             "To request a discount on office rent",
             "To cancel a damaged desk",
             "To change the billing contact"
-          ],
-          "answerIndex": 0,
-          "explanation": "Email đầu tiên hỏi đơn BO-7316 có còn được giao đúng lịch ngày 22 tháng 4 hay không."
+          ]
         },
         {
           "question": "Why are the monitor arms not ready to ship?",
@@ -2219,13 +2261,19 @@
         {
           "question": "What are participants asked to bring?",
           "choices": [
+            "The latest customer-retention report",
+            "A summary of the quarterly performance figures",
+            "A copy of the meeting agenda",
+            "A parking validation ticket"
+          ],
+          "answerIndex": 0,
+          "explanation": "Email mời yêu cầu mỗi khu vực mang theo báo cáo giữ chân khách hàng mới nhất.",
+          "legacyChoices": [
             "A customer-retention report",
             "A parking receipt",
             "A printed hotel reservation",
             "A product sample"
-          ],
-          "answerIndex": 0,
-          "explanation": "Email mời yêu cầu mỗi khu vực mang theo báo cáo giữ chân khách hàng mới nhất."
+          ]
         },
         {
           "question": "When is the customer retention workshop scheduled?",
@@ -2320,12 +2368,18 @@
           "question": "What should employees do if they expect visitors after 5 p.m.?",
           "choices": [
             "Notify Security in advance",
+            "Ask Reception to remain open later",
+            "Use the south loading entrance",
+            "Arrange visitor access through the IT department"
+          ],
+          "answerIndex": 0,
+          "explanation": "Facilities yêu cầu báo trước cho Security khi có khách đến sau 17 giờ.",
+          "legacyChoices": [
+            "Notify Security in advance",
             "Ask IT to keep Wi-Fi on",
             "Use the south loading entrance",
             "Reschedule all meetings"
-          ],
-          "answerIndex": 0,
-          "explanation": "Facilities yêu cầu báo trước cho Security khi có khách đến sau 17 giờ."
+          ]
         }
       ],
       "contentSource": "original-editorial"
