@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.10.2 – Flashcard Learning</title>
+  <title>TOEIC Dictionary v2.11.0 – Flashcard Learning</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -65,7 +65,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.10.2 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.11.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -85,7 +85,7 @@
 
       <section class="page active" id="page-dashboard">
         <div class="page-heading">
-          <div><p class="eyebrow">LEARNING WORKSPACE</p><h1>Xin chào! Cùng mở từ điển TOEIC nhé.</h1><p class="muted">Không gian học tập của bạn, đơn giản và có thể mở rộng.</p></div>
+          <div><p class="eyebrow">LEARNING WORKSPACE</p><h1>Xin chào! Cùng mở từ điển TOEIC nhé.</h1><p class="muted">Không gian luyện TOEIC chuyên sâu · phát triển theo đủ 7 Parts.</p></div>
           <div class="heading-date" id="todayLabel"></div>
         </div>
         <div class="metric-grid">
@@ -97,6 +97,14 @@
           <div class="practice-home-copy"><p class="eyebrow">SMART REVIEW</p><h3>Học một chút mỗi ngày, ghi nhớ lâu hơn.</h3><p>Theo dõi số lượt ôn, độ chính xác và những từ cần củng cố. Hệ thống tự ưu tiên nội dung phù hợp với kết quả của bạn.</p></div>
           <div class="practice-home-metrics"><span>Đã luyện tập<strong id="homeReviewed">0</strong></span><span>Độ chính xác<strong id="homeAccuracy">0%</strong></span><span>Cần học/ôn<strong id="homeDue">0</strong></span></div>
           <button class="primary-button" data-go="practice">Bắt đầu ôn tập <svg class="ui-icon button-icon"><use href="#icon-arrow-right"></use></svg></button>
+        </section>
+        <section class="panel toeic-progress-panel" id="toeicProgressPanel" aria-label="Tiến độ TOEIC theo từng Part">
+          <div class="panel-header"><div><p class="eyebrow">TOEIC LEARNING DIAGNOSTICS</p><h3>Tiến độ theo 7 Parts</h3><p class="muted">Theo dõi câu đã làm, tỷ lệ đúng và phần cần ưu tiên. Đây là chỉ số học tập nội bộ, không phải điểm quy đổi ETS.</p></div><span class="learning-category">TOEIC L&amp;R</span></div>
+          <div class="toeic-progress-columns">
+            <section><div class="toeic-progress-heading"><strong>LISTENING · PART 1–4</strong><small>100 câu trong đề chuẩn</small></div><div class="toeic-part-grid" id="toeicListeningParts"></div></section>
+            <section><div class="toeic-progress-heading"><strong>READING · PART 5–7</strong><small>100 câu trong đề chuẩn</small></div><div class="toeic-part-grid" id="toeicReadingParts"></div></section>
+          </div>
+          <div class="toeic-priority-row" id="toeicPriorityText">Hoàn thành một số câu luyện tập để hệ thống xác định Part cần ưu tiên.</div>
         </section>
         <section class="panel level-meter-panel" aria-label="Chỉ số năng lực học tập">
           <div class="level-meter-copy"><p class="eyebrow">PERSONAL LEARNING INDEX</p><h3>Thước đo tiến độ từ vựng</h3><p class="muted">Chỉ số nội bộ dựa trên số từ đã ghi nhớ và độ chính xác khi ôn tập; chưa phải chứng chỉ CEFR hoặc điểm TOEIC.</p></div>
@@ -125,7 +133,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.10.2:</strong> từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; ngữ pháp, Reading Mini, Listening và phát âm nằm trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.11.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -220,8 +228,8 @@
       </section>
 
       <section class="page" id="page-reading">
-        <div class="page-heading compact-heading"><div><p class="eyebrow">TOEIC READING MINI</p><h1>Đọc hiểu theo ngữ cảnh</h1><p class="muted">Luyện đọc thông báo, email, lịch họp, vận chuyển, nhân sự và kinh doanh.</p></div><span class="library-count" id="readingCount">— bài đọc</span></div>
-        <section class="panel library-toolbar"><label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="readingSearch" type="search" placeholder="Tìm chủ đề hoặc từ khóa..." autocomplete="off"></label><label class="field"><span class="field-label">CHỦ ĐỀ</span><select id="readingTopicFilter"><option value="">Tất cả chủ đề</option></select></label><label class="field"><span class="field-label">CẤP ĐỘ</span><select id="readingLevelFilter"><option value="">Tất cả cấp độ</option><option>A2–B1</option><option>B1</option><option>B1–B2</option></select></label></section>
+        <div class="page-heading compact-heading"><div><p class="eyebrow">TOEIC READING MINI</p><h1>Đọc hiểu theo Part 5–7</h1><p class="muted">Luyện Part 5 hoàn thành câu, Part 6 hoàn thành văn bản và Part 7 đọc hiểu đơn/đôi/ba.</p></div><span class="library-count" id="readingCount">— bài đọc</span></div>
+        <section class="panel library-toolbar"><label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="readingSearch" type="search" placeholder="Tìm chủ đề hoặc từ khóa..." autocomplete="off"></label><label class="field"><span class="field-label">PHẦN THI</span><select id="readingPartFilter"><option value="">Tất cả Part</option><option value="Part 5">Part 5 · Incomplete Sentences</option><option value="Part 6">Part 6 · Text Completion</option><option value="Part 7">Part 7 · Reading Comprehension</option></select></label><label class="field"><span class="field-label">CHỦ ĐỀ</span><select id="readingTopicFilter"><option value="">Tất cả chủ đề</option></select></label><label class="field"><span class="field-label">CẤP ĐỘ</span><select id="readingLevelFilter"><option value="">Tất cả cấp độ</option><option>A2–B1</option><option>B1</option><option>B1–B2</option></select></label></section>
         <div class="learning-card-grid" id="readingCardList"></div>
         <div class="empty-state" id="readingEmpty" hidden><div>▤</div><strong>Không tìm thấy đoạn đọc</strong><p>Thử từ khóa hoặc bộ lọc khác.</p></div>
       </section>
@@ -229,7 +237,7 @@
       <section class="page" id="page-listening">
         <div class="page-heading compact-heading"><div><p class="eyebrow">TOEIC LISTENING PRACTICE</p><h1>Luyện nghe theo tình huống</h1><p class="muted">Nghe câu hỏi–đáp, hội thoại 2 người và thông báo ngắn. Transcript được ẩn để bạn luyện nghe trước.</p></div><span class="library-count" id="listeningCount">— bài nghe</span></div>
         <section class="panel listening-intro"><div><strong>Audio được đọc bằng giọng tiếng Anh trên thiết bị</strong><p>Chọn giọng Mỹ hoặc Anh trong bộ điều khiển. Chất lượng và danh sách giọng phụ thuộc trình duyệt/hệ điều hành; đây là audio tổng hợp để luyện tập, không phải bản ghi âm đề thi chính thức.</p></div><span class="listening-intro-mark">♫</span></section>
-        <section class="panel library-toolbar"><label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="listeningSearch" type="search" placeholder="Tìm bài nghe, chủ đề hoặc từ khóa..." autocomplete="off"></label><label class="field"><span class="field-label">PHẦN THI</span><select id="listeningPartFilter"><option value="">Tất cả Part</option><option value="Part 2">Part 2 · Question–Response</option><option value="Part 3">Part 3 · Conversations</option><option value="Part 4">Part 4 · Talks</option></select></label><label class="field"><span class="field-label">CẤP ĐỘ</span><select id="listeningLevelFilter"><option value="">Tất cả cấp độ</option></select></label></section>
+        <section class="panel library-toolbar"><label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="listeningSearch" type="search" placeholder="Tìm bài nghe, chủ đề hoặc từ khóa..." autocomplete="off"></label><label class="field"><span class="field-label">PHẦN THI</span><select id="listeningPartFilter"><option value="">Tất cả Part</option><option value="Part 1">Part 1 · Photographs</option><option value="Part 2">Part 2 · Question–Response</option><option value="Part 3">Part 3 · Conversations</option><option value="Part 4">Part 4 · Talks</option></select></label><label class="field"><span class="field-label">CẤP ĐỘ</span><select id="listeningLevelFilter"><option value="">Tất cả cấp độ</option></select></label></section>
         <div class="learning-card-grid" id="listeningCardList"></div>
         <div class="empty-state" id="listeningEmpty" hidden><div>♫</div><strong>Không tìm thấy bài nghe</strong><p>Thử chủ đề hoặc cấp độ khác.</p></div>
       </section>
@@ -307,7 +315,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.10.2</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.11.0</span></footer>
     </main>
   </div>
 

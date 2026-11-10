@@ -861,6 +861,430 @@
       ],
       "transcriptTranslation": "Hội thoại/thông báo tiếng Anh trong bối cảnh công việc.",
       "vocabulary": []
+    },
+    {
+      "id": "part1-meeting-documents",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Reviewing documents at a meeting",
+      "topic": "Office & Administration",
+      "level": "A2–B1",
+      "image": "./assets/listening/part1-meeting-documents.svg",
+      "imageAlt": "Reviewing documents at a meeting",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "Two employees are reviewing documents at a table.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A waiter is bringing a meal to the employees.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "The people are waiting in line beside the door.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Several chairs have been stacked on the table.",
+          "voice": "female",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 0,
+          "explanation": "Đáp án A mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+        }
+      ],
+      "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording."
+    },
+    {
+      "id": "part1-warehouse-box",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Stocking a warehouse shelf",
+      "topic": "Warehouse & Shipping",
+      "level": "A2–B1",
+      "image": "./assets/listening/part1-warehouse-box.svg",
+      "imageAlt": "Stocking a warehouse shelf",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "The worker is sweeping the warehouse floor.",
+          "voice": "female",
+          "accent": "en-GB"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A worker is placing a carton on a storage shelf.",
+          "voice": "female",
+          "accent": "en-GB"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Some boxes are being loaded into a delivery van.",
+          "voice": "female",
+          "accent": "en-GB"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "The shelves are being taken apart.",
+          "voice": "female",
+          "accent": "en-GB"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 1,
+          "explanation": "Đáp án B mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+        }
+      ],
+      "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording."
+    },
+    {
+      "id": "part1-technician-inspection",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Inspecting an air-conditioning unit",
+      "topic": "Facilities Maintenance",
+      "level": "A2–B1",
+      "image": "./assets/listening/part1-technician-inspection.svg",
+      "imageAlt": "Inspecting an air-conditioning unit",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "A customer is opening a window.",
+          "voice": "female",
+          "accent": "en-CA"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "The equipment is being moved out of the room.",
+          "voice": "female",
+          "accent": "en-CA"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A technician is inspecting an air-conditioning unit.",
+          "voice": "female",
+          "accent": "en-CA"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A worker is painting the wall behind the unit.",
+          "voice": "female",
+          "accent": "en-CA"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 2,
+          "explanation": "Đáp án C mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+        }
+      ],
+      "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording."
+    },
+    {
+      "id": "part1-airport-suitcase",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Traveling through an airport",
+      "topic": "Travel & Airport",
+      "level": "A2–B1",
+      "image": "./assets/listening/part1-airport-suitcase.svg",
+      "imageAlt": "Traveling through an airport",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "Passengers are boarding an aircraft by stairs.",
+          "voice": "female",
+          "accent": "en-AU"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A suitcase is being weighed at a counter.",
+          "voice": "female",
+          "accent": "en-AU"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "The traveler is carrying several shopping bags.",
+          "voice": "female",
+          "accent": "en-AU"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A traveler is pulling a suitcase through the terminal.",
+          "voice": "female",
+          "accent": "en-AU"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 3,
+          "explanation": "Đáp án D mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+        }
+      ],
+      "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording."
+    },
+    {
+      "id": "part1-presentation-room",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Preparing a conference room",
+      "topic": "Meetings & Presentations",
+      "level": "A2–B1",
+      "image": "./assets/listening/part1-presentation-room.svg",
+      "imageAlt": "Preparing a conference room",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "A presentation screen has been set up at the front of the room.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "The audience is leaving the conference room.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A speaker is writing on a glass window.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "The chairs are arranged around a dining table.",
+          "voice": "female",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 0,
+          "explanation": "Đáp án A mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+        }
+      ],
+      "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording."
+    },
+    {
+      "id": "part1-reception-plant",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Watering a plant at reception",
+      "topic": "Office & Administration",
+      "level": "A2–B1",
+      "image": "./assets/listening/part1-reception-plant.svg",
+      "imageAlt": "Watering a plant at reception",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "A customer is signing a delivery form.",
+          "voice": "female",
+          "accent": "en-GB"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A receptionist is watering a plant beside the counter.",
+          "voice": "female",
+          "accent": "en-GB"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "The plant is being moved outside the building.",
+          "voice": "female",
+          "accent": "en-GB"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A receptionist is closing the window blinds.",
+          "voice": "female",
+          "accent": "en-GB"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 1,
+          "explanation": "Đáp án B mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+        }
+      ],
+      "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording."
+    },
+    {
+      "id": "part1-restaurant-setting",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Setting a restaurant table",
+      "topic": "Restaurant & Hospitality",
+      "level": "A2–B1",
+      "image": "./assets/listening/part1-restaurant-setting.svg",
+      "imageAlt": "Setting a restaurant table",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "A customer is paying the bill at the counter.",
+          "voice": "female",
+          "accent": "en-CA"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "The tables are being carried out of the restaurant.",
+          "voice": "female",
+          "accent": "en-CA"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A restaurant employee is arranging plates on a table.",
+          "voice": "female",
+          "accent": "en-CA"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A chef is washing dishes in a sink.",
+          "voice": "female",
+          "accent": "en-CA"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 2,
+          "explanation": "Đáp án C mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+        }
+      ],
+      "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording."
+    },
+    {
+      "id": "part1-photocopier",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Collecting printed documents",
+      "topic": "Office & Administration",
+      "level": "A2–B1",
+      "image": "./assets/listening/part1-photocopier.svg",
+      "imageAlt": "Collecting printed documents",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "A man is repairing a computer monitor.",
+          "voice": "female",
+          "accent": "en-AU"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "The documents are being placed in a filing cabinet.",
+          "voice": "female",
+          "accent": "en-AU"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A woman is operating a paper shredder.",
+          "voice": "female",
+          "accent": "en-AU"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "An employee is collecting pages from a photocopier.",
+          "voice": "female",
+          "accent": "en-AU"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 3,
+          "explanation": "Đáp án D mô tả đúng hành động hoặc vật thể nổi bật trong hình. Các lựa chọn còn lại thay đổi người thực hiện, hành động hoặc bối cảnh nên không khớp với hình minh họa."
+        }
+      ],
+      "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording."
     }
   ]
 }

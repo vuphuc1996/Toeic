@@ -1209,6 +1209,262 @@
           "explanation": "Buses số nhiều; hiện tại đơn dùng do + subject + V1."
         }
       ]
+    },
+    {
+      "id": "parallel-structure-toeic",
+      "title": "Cấu trúc song song trong danh sách và liên từ",
+      "category": "SENTENCE STRUCTURE",
+      "level": "B1–B2",
+      "summary": "Nhận diện các thành phần cùng chức năng sau and, or, either…or và not only…but also.",
+      "formula": "A + and/or + A · either A or B · not only A but also B",
+      "explanation": "Các thành phần được nối bởi liên từ song song cần cùng dạng ngữ pháp: danh từ với danh từ, V-ing với V-ing, động từ nguyên mẫu với động từ nguyên mẫu, hoặc mệnh đề với mệnh đề. TOEIC thường kiểm tra lỗi trộn loại từ trong email, thông báo và mô tả nhiệm vụ.",
+      "examples": [
+        {
+          "en": "The position requires organizing schedules and preparing reports.",
+          "vi": "Vị trí này yêu cầu sắp xếp lịch và chuẩn bị báo cáo.",
+          "breakdown": [
+            {
+              "part": "V-ing",
+              "text": "organizing schedules",
+              "meaning": "sắp xếp lịch"
+            },
+            {
+              "part": "and",
+              "text": "and",
+              "meaning": "nối hai thành phần song song"
+            },
+            {
+              "part": "V-ing",
+              "text": "preparing reports",
+              "meaning": "chuẩn bị báo cáo"
+            }
+          ]
+        },
+        {
+          "en": "The policy applies to both full-time and part-time employees.",
+          "vi": "Chính sách áp dụng cho cả nhân viên toàn thời gian và bán thời gian.",
+          "breakdown": []
+        }
+      ],
+      "tips": [
+        "Sau and/or, xác định loại từ hoặc cấu trúc của thành phần đứng trước.",
+        "Not only…but also cần song song về ngữ pháp và chú ý đảo trợ động từ nếu not only đứng đầu câu."
+      ],
+      "exercises": [
+        {
+          "question": "The assistant is responsible for scheduling interviews and _____ travel arrangements.",
+          "choices": [
+            "coordinating",
+            "coordinate",
+            "coordination",
+            "coordinated"
+          ],
+          "answerIndex": 0,
+          "explanation": "Scheduling là V-ing; coordinating tạo cấu trúc song song."
+        },
+        {
+          "question": "The report is intended to inform managers and _____ recommendations.",
+          "choices": [
+            "providing",
+            "provide",
+            "provider",
+            "provided"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sau to inform dùng động từ nguyên mẫu; and nối với provide."
+        },
+        {
+          "question": "The new system is both reliable and _____.",
+          "choices": [
+            "efficiency",
+            "efficiently",
+            "efficient",
+            "to be efficient"
+          ],
+          "answerIndex": 2,
+          "explanation": "Reliable là tính từ; vị trí sau and cần tính từ efficient."
+        }
+      ]
+    },
+    {
+      "id": "participial-adjectives-toeic",
+      "title": "Phân từ làm tính từ: -ed và -ing",
+      "category": "WORD FORMS",
+      "level": "B1",
+      "summary": "Phân biệt tính từ chỉ cảm xúc/trạng thái và tính từ mô tả đặc điểm gây ra tác động.",
+      "formula": "-ed: cảm nhận/trạng thái · -ing: tính chất gây ra cảm nhận",
+      "explanation": "Tính từ kết thúc bằng -ed thường diễn tả cảm nhận hoặc trạng thái của người/vật chịu tác động. Tính từ -ing mô tả điều gì tạo ra cảm nhận đó. Trong TOEIC, cặp như interested/interesting, satisfied/satisfying và confused/confusing hay xuất hiện trong câu mô tả dịch vụ, đào tạo và sản phẩm.",
+      "examples": [
+        {
+          "en": "Customers were satisfied with the revised service.",
+          "vi": "Khách hàng hài lòng với dịch vụ đã điều chỉnh.",
+          "breakdown": []
+        },
+        {
+          "en": "The training session was informative and engaging.",
+          "vi": "Buổi đào tạo cung cấp nhiều thông tin và hấp dẫn.",
+          "breakdown": []
+        }
+      ],
+      "tips": [
+        "Hỏi chủ ngữ đang cảm thấy thế nào hay đang gây ra cảm giác gì.",
+        "Không chọn chỉ dựa vào đuôi từ; phải kiểm tra chủ ngữ và ngữ cảnh."
+      ],
+      "exercises": [
+        {
+          "question": "The presentation was so _____ that several employees requested a copy.",
+          "choices": [
+            "interested",
+            "interest",
+            "interestingly",
+            "interesting"
+          ],
+          "answerIndex": 3,
+          "explanation": "Presentation gây sự quan tâm nên dùng interesting."
+        },
+        {
+          "question": "The participants were _____ in the new safety procedure.",
+          "choices": [
+            "interested",
+            "interesting",
+            "interest",
+            "interests"
+          ],
+          "answerIndex": 0,
+          "explanation": "Participants là người có cảm nhận, dùng interested."
+        },
+        {
+          "question": "The instructions were confusing, so some users felt _____.",
+          "choices": [
+            "confusing",
+            "confused",
+            "confuse",
+            "confusion"
+          ],
+          "answerIndex": 1,
+          "explanation": "Users là người cảm thấy bối rối, dùng confused."
+        }
+      ]
+    },
+    {
+      "id": "verb-patterns-toeic",
+      "title": "Mẫu động từ thường gặp trong TOEIC",
+      "category": "VERB PATTERNS",
+      "level": "B1–B2",
+      "summary": "Ghi nhớ các động từ đi với to-infinitive, V-ing hoặc tân ngữ + to-infinitive.",
+      "formula": "plan/agree/decide + to V · avoid/consider/finish + V-ing · ask/allow/require + O + to V",
+      "explanation": "Một số động từ trong thông báo, hướng dẫn và email yêu cầu dạng động từ theo sau cố định. Ví dụ: decide to postpone, avoid making, require employees to attend. Học theo cụm giúp hạn chế chọn sai dạng từ ở Part 5 và Part 6.",
+      "examples": [
+        {
+          "en": "Employees are required to attend the safety briefing.",
+          "vi": "Nhân viên được yêu cầu tham dự buổi hướng dẫn an toàn.",
+          "breakdown": []
+        },
+        {
+          "en": "The committee decided to postpone the vote.",
+          "vi": "Ủy ban quyết định hoãn việc bỏ phiếu.",
+          "breakdown": []
+        }
+      ],
+      "tips": [
+        "Học động từ cùng mẫu theo sau thay vì học riêng nghĩa của động từ.",
+        "Sau giới từ dùng danh từ hoặc V-ing; sau modal dùng động từ nguyên mẫu."
+      ],
+      "exercises": [
+        {
+          "question": "The committee agreed _____ the proposal at its next meeting.",
+          "choices": [
+            "consider",
+            "considering",
+            "to consider",
+            "considered"
+          ],
+          "answerIndex": 2,
+          "explanation": "Agree đi với to-infinitive: agree to consider."
+        },
+        {
+          "question": "Please avoid _____ confidential information by email.",
+          "choices": [
+            "send",
+            "to send",
+            "sent",
+            "sending"
+          ],
+          "answerIndex": 3,
+          "explanation": "Avoid đi với V-ing."
+        },
+        {
+          "question": "The supervisor asked all staff _____ the updated form.",
+          "choices": [
+            "to complete",
+            "complete",
+            "completing",
+            "completed"
+          ],
+          "answerIndex": 0,
+          "explanation": "Ask + object + to-infinitive: asked all staff to complete."
+        }
+      ]
+    },
+    {
+      "id": "relative-clause-reference-toeic",
+      "title": "Mệnh đề quan hệ và đại từ tham chiếu",
+      "category": "CLAUSES",
+      "level": "B1–B2",
+      "summary": "Dùng who, which, that, whose và where để nối thông tin trong câu.",
+      "formula": "person: who/that · thing: which/that · possession: whose · place: where",
+      "explanation": "Mệnh đề quan hệ bổ sung thông tin về người, vật hoặc địa điểm. Trong văn bản TOEIC, mệnh đề này thường mô tả ứng viên, thiết bị, hợp đồng, phòng ban và địa điểm. Không dùng đại từ quan hệ làm chủ ngữ/tân ngữ sai chức năng; không lặp đại từ nếu đã có chủ ngữ.",
+      "examples": [
+        {
+          "en": "The employee who submitted the form will receive a confirmation email.",
+          "vi": "Nhân viên đã nộp biểu mẫu sẽ nhận email xác nhận.",
+          "breakdown": []
+        },
+        {
+          "en": "The building where the seminar will take place has a parking garage.",
+          "vi": "Tòa nhà nơi hội thảo diễn ra có bãi đỗ xe.",
+          "breakdown": []
+        }
+      ],
+      "tips": [
+        "Who dùng cho người; which dùng cho vật; whose diễn tả sở hữu.",
+        "Where thay cho in/at which khi nói về địa điểm; kiểm tra xem câu cần chủ ngữ hay trạng ngữ."
+      ],
+      "exercises": [
+        {
+          "question": "The consultant _____ prepared the market report will present it tomorrow.",
+          "choices": [
+            "which",
+            "who",
+            "where",
+            "whose"
+          ],
+          "answerIndex": 1,
+          "explanation": "Consultant là người và cần đại từ làm chủ ngữ, nên dùng who."
+        },
+        {
+          "question": "The software _____ we installed last month is now fully operational.",
+          "choices": [
+            "who",
+            "where",
+            "which",
+            "whose"
+          ],
+          "answerIndex": 2,
+          "explanation": "Software là vật; which làm tân ngữ của installed."
+        },
+        {
+          "question": "The branch _____ Ms. Lee works is located downtown.",
+          "choices": [
+            "who",
+            "which",
+            "whose",
+            "where"
+          ],
+          "answerIndex": 3,
+          "explanation": "Nói về địa điểm nơi làm việc, dùng where."
+        }
+      ]
     }
   ]
 }
