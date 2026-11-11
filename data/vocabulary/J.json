@@ -40,7 +40,8 @@
       "examples": [
         {
           "en": "Would you like to join the training session?",
-          "vi": "Bạn có muốn tham gia buổi đào tạo không?"
+          "vi": "Bạn có muốn tham gia buổi đào tạo không?",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -78,7 +79,8 @@
       "examples": [
         {
           "en": "The research was published in a medical journal.",
-          "vi": "Nghiên cứu được đăng trên một tạp chí y khoa."
+          "vi": "Nghiên cứu được đăng trên một tạp chí y khoa.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -118,7 +120,8 @@
       "examples": [
         {
           "en": "The journey takes approximately two hours.",
-          "vi": "Chuyến đi mất khoảng hai giờ."
+          "vi": "Chuyến đi mất khoảng hai giờ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -157,8 +160,9 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "She works as a junior analyst.",
-          "vi": "Cô ấy làm chuyên viên phân tích cấp dưới."
+          "en": "The company is recruiting a junior analyst to support its regional finance team.",
+          "vi": "Công ty đang tuyển một chuyên viên phân tích cấp dưới để hỗ trợ nhóm tài chính khu vực.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -190,7 +194,8 @@
       "examples": [
         {
           "en": "The contract specifies which court has jurisdiction.",
-          "vi": "Hợp đồng quy định tòa án nào có thẩm quyền."
+          "vi": "Hợp đồng quy định tòa án nào có thẩm quyền.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -230,7 +235,8 @@
       "examples": [
         {
           "en": "The project manager must justify the additional expense in the budget report.",
-          "vi": "Quản lý dự án phải giải trình khoản chi phí bổ sung trong báo cáo ngân sách."
+          "vi": "Quản lý dự án phải giải trình khoản chi phí bổ sung trong báo cáo ngân sách.",
+          "sense_index": 0
         }
       ],
       "collocations": [

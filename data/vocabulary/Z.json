@@ -40,8 +40,14 @@
       "verb_forms": null,
       "examples": [
         {
+          "en": "The account balance fell to zero after the final payment was processed.",
+          "vi": "Số dư tài khoản giảm về 0 sau khi khoản thanh toán cuối cùng được xử lý.",
+          "sense_index": 0
+        },
+        {
           "en": "The revised plan has zero additional cost.",
-          "vi": "Kế hoạch sửa đổi không phát sinh thêm chi phí."
+          "vi": "Kế hoạch sửa đổi không phát sinh thêm chi phí.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -75,7 +81,8 @@
       "examples": [
         {
           "en": "The department adopted zero-based budgeting to control costs.",
-          "vi": "Bộ phận áp dụng phương pháp lập ngân sách từ con số không để kiểm soát chi phí."
+          "vi": "Bộ phận áp dụng phương pháp lập ngân sách từ con số không để kiểm soát chi phí.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -113,7 +120,8 @@
       "examples": [
         {
           "en": "Please include your ZIP code on the application form.",
-          "vi": "Vui lòng ghi mã bưu chính vào đơn đăng ký."
+          "vi": "Vui lòng ghi mã bưu chính vào đơn đăng ký.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -152,7 +160,8 @@
       "examples": [
         {
           "en": "Parking is prohibited in this zone.",
-          "vi": "Không được phép đỗ xe trong khu vực này."
+          "vi": "Không được phép đỗ xe trong khu vực này.",
+          "sense_index": 0
         }
       ],
       "collocations": [

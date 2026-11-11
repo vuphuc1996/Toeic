@@ -32,7 +32,8 @@
       "examples": [
         {
           "en": "The minimum wage will increase next year.",
-          "vi": "Mức lương tối thiểu sẽ tăng vào năm tới."
+          "vi": "Mức lương tối thiểu sẽ tăng vào năm tới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -66,7 +67,8 @@
       "examples": [
         {
           "en": "The waiter brought the requested menu.",
-          "vi": "Nhân viên phục vụ mang thực đơn được yêu cầu."
+          "vi": "Nhân viên phục vụ mang thực đơn được yêu cầu.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -95,7 +97,8 @@
       "examples": [
         {
           "en": "A signed waiver is required before participation.",
-          "vi": "Cần có giấy miễn trừ đã ký trước khi tham gia."
+          "vi": "Cần có giấy miễn trừ đã ký trước khi tham gia.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -134,7 +137,8 @@
       "examples": [
         {
           "en": "The products are stored in a central warehouse.",
-          "vi": "Sản phẩm được lưu trữ tại kho trung tâm."
+          "vi": "Sản phẩm được lưu trữ tại kho trung tâm.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -168,7 +172,8 @@
       "examples": [
         {
           "en": "The warehouseman checked the incoming pallets.",
-          "vi": "Nhân viên kho kiểm tra các pallet hàng nhập."
+          "vi": "Nhân viên kho kiểm tra các pallet hàng nhập.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -206,7 +211,8 @@
       "examples": [
         {
           "en": "The laptop is covered by a one-year warranty.",
-          "vi": "Máy tính xách tay được bảo hành một năm."
+          "vi": "Máy tính xách tay được bảo hành một năm.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -254,7 +260,8 @@
       "examples": [
         {
           "en": "The new process reduces material waste.",
-          "vi": "Quy trình mới giảm lãng phí vật liệu."
+          "vi": "Quy trình mới giảm lãng phí vật liệu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -287,7 +294,8 @@
       "examples": [
         {
           "en": "Our weekly team meeting takes place every Wednesday.",
-          "vi": "Cuộc họp nhóm hằng tuần diễn ra vào mỗi thứ Tư."
+          "vi": "Cuộc họp nhóm hằng tuần diễn ra vào mỗi thứ Tư.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -326,7 +334,8 @@
       "examples": [
         {
           "en": "Customer service is available on weekdays.",
-          "vi": "Dịch vụ khách hàng hoạt động vào các ngày trong tuần."
+          "vi": "Dịch vụ khách hàng hoạt động vào các ngày trong tuần.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -366,7 +375,8 @@
       "examples": [
         {
           "en": "The hotel is fully booked for the weekend.",
-          "vi": "Khách sạn đã kín phòng vào dịp cuối tuần."
+          "vi": "Khách sạn đã kín phòng vào dịp cuối tuần.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -417,7 +427,13 @@
       "examples": [
         {
           "en": "The team holds a weekly progress meeting.",
-          "vi": "Nhóm tổ chức cuộc họp tiến độ hằng tuần."
+          "vi": "Nhóm tổ chức cuộc họp tiến độ hằng tuần.",
+          "sense_index": 0
+        },
+        {
+          "en": "The department meets weekly to review unresolved service requests.",
+          "vi": "Bộ phận họp mỗi tuần để xem xét các yêu cầu dịch vụ chưa được giải quyết.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -453,7 +469,8 @@
       "examples": [
         {
           "en": "The company introduced a workplace wellness program.",
-          "vi": "Công ty triển khai chương trình chăm sóc sức khỏe tại nơi làm việc."
+          "vi": "Công ty triển khai chương trình chăm sóc sức khỏe tại nơi làm việc.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -482,7 +499,8 @@
       "examples": [
         {
           "en": "The company sells office supplies at wholesale prices.",
-          "vi": "Công ty bán vật tư văn phòng với giá bán buôn."
+          "vi": "Công ty bán vật tư văn phòng với giá bán buôn.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -524,7 +542,8 @@
       "examples": [
         {
           "en": "The supplier is willing to negotiate the price.",
-          "vi": "Nhà cung cấp sẵn lòng đàm phán giá."
+          "vi": "Nhà cung cấp sẵn lòng đàm phán giá.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -558,7 +577,8 @@
       "examples": [
         {
           "en": "It will be windy near the coast tomorrow.",
-          "vi": "Ngày mai khu vực gần bờ biển sẽ nhiều gió."
+          "vi": "Ngày mai khu vực gần bờ biển sẽ nhiều gió.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -589,7 +609,8 @@
       "examples": [
         {
           "en": "The wire transfer may take one business day.",
-          "vi": "Giao dịch chuyển khoản có thể mất một ngày làm việc."
+          "vi": "Giao dịch chuyển khoản có thể mất một ngày làm việc.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -632,7 +653,8 @@
       "examples": [
         {
           "en": "You may withdraw your application at any time.",
-          "vi": "Bạn có thể rút đơn ứng tuyển bất cứ lúc nào."
+          "vi": "Bạn có thể rút đơn ứng tuyển bất cứ lúc nào.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -666,7 +688,8 @@
       "examples": [
         {
           "en": "Cash withdrawals are limited to a daily maximum.",
-          "vi": "Việc rút tiền mặt bị giới hạn ở mức tối đa mỗi ngày."
+          "vi": "Việc rút tiền mặt bị giới hạn ở mức tối đa mỗi ngày.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -706,7 +729,8 @@
       "examples": [
         {
           "en": "The employer must withhold the required tax from wages.",
-          "vi": "Người sử dụng lao động phải khấu trừ khoản thuế bắt buộc từ tiền lương."
+          "vi": "Người sử dụng lao động phải khấu trừ khoản thuế bắt buộc từ tiền lương.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -740,7 +764,8 @@
       "examples": [
         {
           "en": "Tax withholding is shown on the employee’s payslip.",
-          "vi": "Khoản khấu lưu thuế được thể hiện trên phiếu lương nhân viên."
+          "vi": "Khoản khấu lưu thuế được thể hiện trên phiếu lương nhân viên.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -782,7 +807,8 @@
       "examples": [
         {
           "en": "Please respond within three business days.",
-          "vi": "Vui lòng phản hồi trong vòng ba ngày làm việc."
+          "vi": "Vui lòng phản hồi trong vòng ba ngày làm việc.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -828,7 +854,8 @@
       "examples": [
         {
           "en": "The packaging must withstand long-distance transport.",
-          "vi": "Bao bì phải chịu được quá trình vận chuyển đường dài."
+          "vi": "Bao bì phải chịu được quá trình vận chuyển đường dài.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -860,7 +887,8 @@
       "examples": [
         {
           "en": "The company plans to expand its workforce next year.",
-          "vi": "Công ty dự định mở rộng lực lượng lao động vào năm tới."
+          "vi": "Công ty dự định mở rộng lực lượng lao động vào năm tới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -896,7 +924,8 @@
       "examples": [
         {
           "en": "The manager redistributed the team’s workload.",
-          "vi": "Quản lý phân bổ lại khối lượng công việc của nhóm."
+          "vi": "Quản lý phân bổ lại khối lượng công việc của nhóm.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -925,7 +954,8 @@
       "examples": [
         {
           "en": "The policy applies to all workplace facilities.",
-          "vi": "Chính sách áp dụng cho tất cả cơ sở tại nơi làm việc."
+          "vi": "Chính sách áp dụng cho tất cả cơ sở tại nơi làm việc.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -959,7 +989,8 @@
       "examples": [
         {
           "en": "Workplace safety inspections are conducted monthly.",
-          "vi": "Việc kiểm tra an toàn nơi làm việc được tiến hành hằng tháng."
+          "vi": "Việc kiểm tra an toàn nơi làm việc được tiến hành hằng tháng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -999,7 +1030,8 @@
       "examples": [
         {
           "en": "The workshop will focus on customer service.",
-          "vi": "Hội thảo sẽ tập trung vào dịch vụ khách hàng."
+          "vi": "Hội thảo sẽ tập trung vào dịch vụ khách hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1038,8 +1070,9 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The brand has customers worldwide.",
-          "vi": "Thương hiệu có khách hàng trên toàn thế giới."
+          "en": "The company has a worldwide distribution network supported by regional partners.",
+          "vi": "Công ty có mạng lưới phân phối trên toàn thế giới với sự hỗ trợ của các đối tác khu vực.",
+          "sense_index": 0
         }
       ],
       "collocations": [

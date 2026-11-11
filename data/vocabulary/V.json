@@ -36,7 +36,8 @@
       "examples": [
         {
           "en": "There are currently two vacancies in the sales department.",
-          "vi": "Hiện có hai vị trí tuyển dụng trong phòng kinh doanh."
+          "vi": "Hiện có hai vị trí tuyển dụng trong phòng kinh doanh.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -78,7 +79,8 @@
       "examples": [
         {
           "en": "Please provide a valid identification document.",
-          "vi": "Vui lòng cung cấp giấy tờ tùy thân hợp lệ."
+          "vi": "Vui lòng cung cấp giấy tờ tùy thân hợp lệ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -110,7 +112,8 @@
       "examples": [
         {
           "en": "Please check the validity of your access permit before entering the facility.",
-          "vi": "Vui lòng kiểm tra hiệu lực của giấy phép ra vào trước khi vào cơ sở."
+          "vi": "Vui lòng kiểm tra hiệu lực của giấy phép ra vào trước khi vào cơ sở.",
+          "sense_index": 0
         }
       ],
       "collocations": [],
@@ -149,7 +152,8 @@
       "examples": [
         {
           "en": "The training provided valuable information.",
-          "vi": "Khóa đào tạo cung cấp thông tin có giá trị."
+          "vi": "Khóa đào tạo cung cấp thông tin có giá trị.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -193,7 +197,8 @@
       "examples": [
         {
           "en": "The company places great value on customer feedback.",
-          "vi": "Công ty rất coi trọng phản hồi của khách hàng."
+          "vi": "Công ty rất coi trọng phản hồi của khách hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -233,7 +238,8 @@
       "examples": [
         {
           "en": "The store sells various office supplies.",
-          "vi": "Cửa hàng bán nhiều loại vật tư văn phòng."
+          "vi": "Cửa hàng bán nhiều loại vật tư văn phòng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -271,7 +277,8 @@
       "examples": [
         {
           "en": "The company operates a fleet of delivery vehicles.",
-          "vi": "Công ty vận hành một đội xe giao hàng."
+          "vi": "Công ty vận hành một đội xe giao hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -310,7 +317,8 @@
       "examples": [
         {
           "en": "The vendor will provide technical support.",
-          "vi": "Nhà cung cấp sẽ cung cấp hỗ trợ kỹ thuật."
+          "vi": "Nhà cung cấp sẽ cung cấp hỗ trợ kỹ thuật.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -346,7 +354,8 @@
       "examples": [
         {
           "en": "The event venue is close to the central station.",
-          "vi": "Địa điểm tổ chức sự kiện gần ga trung tâm."
+          "vi": "Địa điểm tổ chức sự kiện gần ga trung tâm.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -375,7 +384,8 @@
       "examples": [
         {
           "en": "Identity verification is required before account activation.",
-          "vi": "Cần xác minh danh tính trước khi kích hoạt tài khoản."
+          "vi": "Cần xác minh danh tính trước khi kích hoạt tài khoản.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -433,7 +443,8 @@
       "examples": [
         {
           "en": "Please verify the information before submitting the form.",
-          "vi": "Vui lòng xác minh thông tin trước khi gửi biểu mẫu."
+          "vi": "Vui lòng xác minh thông tin trước khi gửi biểu mẫu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -473,7 +484,8 @@
       "examples": [
         {
           "en": "Make sure you are using the latest version.",
-          "vi": "Hãy chắc chắn bạn đang dùng phiên bản mới nhất."
+          "vi": "Hãy chắc chắn bạn đang dùng phiên bản mới nhất.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -511,7 +523,8 @@
       "examples": [
         {
           "en": "The shares will vest after the employee completes four years of service.",
-          "vi": "Cổ phiếu sẽ được trao quyền sở hữu sau khi nhân viên hoàn thành bốn năm làm việc."
+          "vi": "Cổ phiếu sẽ được trao quyền sở hữu sau khi nhân viên hoàn thành bốn năm làm việc.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -545,7 +558,8 @@
       "examples": [
         {
           "en": "Employees receive vested benefits under the retirement plan.",
-          "vi": "Nhân viên nhận được các quyền lợi đã xác lập theo chương trình hưu trí."
+          "vi": "Nhân viên nhận được các quyền lợi đã xác lập theo chương trình hưu trí.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -579,7 +593,8 @@
       "examples": [
         {
           "en": "The study evaluates the financial viability of the expansion.",
-          "vi": "Nghiên cứu đánh giá tính khả thi tài chính của việc mở rộng."
+          "vi": "Nghiên cứu đánh giá tính khả thi tài chính của việc mở rộng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -621,7 +636,8 @@
       "examples": [
         {
           "en": "The team is looking for a viable alternative.",
-          "vi": "Nhóm đang tìm một phương án thay thế khả thi."
+          "vi": "Nhóm đang tìm một phương án thay thế khả thi.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -659,7 +675,8 @@
       "examples": [
         {
           "en": "All visitors must sign in at reception.",
-          "vi": "Tất cả khách phải đăng ký tại quầy lễ tân."
+          "vi": "Tất cả khách phải đăng ký tại quầy lễ tân.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -693,7 +710,8 @@
       "examples": [
         {
           "en": "Please leave a voicemail after the tone.",
-          "vi": "Vui lòng để lại lời nhắn thoại sau tiếng bíp."
+          "vi": "Vui lòng để lại lời nhắn thoại sau tiếng bíp.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -728,7 +746,8 @@
       "examples": [
         {
           "en": "The warehouse handles a high volume of orders.",
-          "vi": "Nhà kho xử lý khối lượng đơn hàng lớn."
+          "vi": "Nhà kho xử lý khối lượng đơn hàng lớn.",
+          "sense_index": 0
         }
       ],
       "collocations": [

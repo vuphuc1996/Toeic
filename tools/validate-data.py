@@ -57,6 +57,8 @@ RULES = {
     "EX001": ("STRUCT", "Mỗi từ có ít nhất một ví dụ"),
     "EX002": ("STRUCT", "Ví dụ có en và vi không rỗng"),
     "EX003": ("STRUCT", "Không trùng nguyên văn câu ví dụ tiếng Anh"),
+    "EX010": ("STRUCT", "sense_index của ví dụ phải trỏ tới một sense hợp lệ"),
+    "EX011": ("STRUCT", "Mỗi sense phải có ít nhất một ví dụ được gắn đúng nghĩa"),
     "DF001": ("STRUCT", "definition_en và meaning_vi không rỗng"),
     "IP002": ("STRUCT", "IPA chỉ chứa ký tự trong bảng cho phép"),
     "CE001": ("STRUCT", "CEFR thuộc A1–C1"),
@@ -350,17 +352,26 @@ def check_struct_content(ctx: Context) -> None:
         if isinstance(ex, list):
             if not ex:
                 ctx.add("EX001", rid, "/examples", "không có ví dụ")
+            covered_senses: set[int] = set()
             for i, e in enumerate(ex):
                 if not isinstance(e, dict):
                     continue
                 for key in ("en", "vi"):
                     if isinstance(e.get(key), str) and not e[key].strip():
                         ctx.add("EX002", rid, f"/examples/{i}/{key}", f"ví dụ {key} rỗng")
+                sense_index = e.get("sense_index", 0)
+                if type(sense_index) is not int or sense_index < 0 or sense_index >= len(senses):
+                    ctx.add("EX010", rid, f"/examples/{i}/sense_index", "sense_index không trỏ tới sense hợp lệ")
+                else:
+                    covered_senses.add(sense_index)
                 en = e.get("en")
                 if isinstance(en, str) and en.strip():
                     if en in en_seen and en_seen[en] != rid:
                         ctx.add("EX003", rid, f"/examples/{i}/en", f"câu trùng với {en_seen[en]}")
                     en_seen.setdefault(en, rid)
+            for sense_index in range(len(senses)):
+                if sense_index not in covered_senses:
+                    ctx.add("EX011", rid, f"/senses/{sense_index}", "sense chưa có ví dụ minh họa riêng")
         ph = r.get("phonetic")
         if isinstance(ph, dict):
             for key, val in ph.items():

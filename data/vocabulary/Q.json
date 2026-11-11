@@ -26,7 +26,8 @@
       "examples": [
         {
           "en": "Applicants should list each relevant qualification on the application form.",
-          "vi": "Ứng viên nên liệt kê từng bằng cấp và năng lực phù hợp trong mẫu đơn ứng tuyển."
+          "vi": "Ứng viên nên liệt kê từng bằng cấp và năng lực phù hợp trong mẫu đơn ứng tuyển.",
+          "sense_index": 0
         }
       ],
       "collocations": [],
@@ -62,7 +63,8 @@
       "examples": [
         {
           "en": "The company is known for the quality of its products.",
-          "vi": "Công ty nổi tiếng về chất lượng sản phẩm."
+          "vi": "Công ty nổi tiếng về chất lượng sản phẩm.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -104,7 +106,8 @@
       "examples": [
         {
           "en": "Please verify the quantity before signing.",
-          "vi": "Vui lòng xác minh số lượng trước khi ký."
+          "vi": "Vui lòng xác minh số lượng trước khi ký.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -141,7 +144,8 @@
       "examples": [
         {
           "en": "Sales increased during the second quarter.",
-          "vi": "Doanh số tăng trong quý hai."
+          "vi": "Doanh số tăng trong quý hai.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -189,7 +193,13 @@
       "examples": [
         {
           "en": "The finance team prepares quarterly reports.",
-          "vi": "Nhóm tài chính chuẩn bị báo cáo hằng quý."
+          "vi": "Nhóm tài chính chuẩn bị báo cáo hằng quý.",
+          "sense_index": 0
+        },
+        {
+          "en": "The board meets quarterly to review financial performance and major risks.",
+          "vi": "Hội đồng họp mỗi quý để xem xét kết quả tài chính và các rủi ro lớn.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -228,7 +238,8 @@
       "examples": [
         {
           "en": "Please contact support if you have a billing query.",
-          "vi": "Vui lòng liên hệ bộ phận hỗ trợ nếu bạn có câu hỏi về thanh toán."
+          "vi": "Vui lòng liên hệ bộ phận hỗ trợ nếu bạn có câu hỏi về thanh toán.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -262,7 +273,8 @@
       "examples": [
         {
           "en": "Each representative has a monthly sales quota.",
-          "vi": "Mỗi nhân viên kinh doanh có chỉ tiêu bán hàng hằng tháng."
+          "vi": "Mỗi nhân viên kinh doanh có chỉ tiêu bán hàng hằng tháng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -302,7 +314,8 @@
       "examples": [
         {
           "en": "The supplier sent a quotation by email.",
-          "vi": "Nhà cung cấp gửi báo giá qua email."
+          "vi": "Nhà cung cấp gửi báo giá qua email.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -346,7 +359,8 @@
       "examples": [
         {
           "en": "Please quote the price for one hundred units.",
-          "vi": "Vui lòng báo giá cho 100 đơn vị."
+          "vi": "Vui lòng báo giá cho 100 đơn vị.",
+          "sense_index": 0
         }
       ],
       "collocations": [

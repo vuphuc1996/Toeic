@@ -40,7 +40,8 @@
       "examples": [
         {
           "en": "The support team handles customer requests.",
-          "vi": "Đội hỗ trợ xử lý yêu cầu của khách hàng."
+          "vi": "Đội hỗ trợ xử lý yêu cầu của khách hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -72,7 +73,8 @@
       "examples": [
         {
           "en": "Careful handling is required when loading fragile equipment.",
-          "vi": "Cần thao tác cẩn thận khi xếp dỡ thiết bị dễ vỡ."
+          "vi": "Cần thao tác cẩn thận khi xếp dỡ thiết bị dễ vỡ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -108,7 +110,8 @@
       "examples": [
         {
           "en": "Employees must report any safety hazard.",
-          "vi": "Nhân viên phải báo cáo mọi mối nguy an toàn."
+          "vi": "Nhân viên phải báo cáo mọi mối nguy an toàn.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -137,7 +140,8 @@
       "examples": [
         {
           "en": "The department headcount will remain unchanged this quarter.",
-          "vi": "Tổng nhân sự của bộ phận sẽ không thay đổi trong quý này."
+          "vi": "Tổng nhân sự của bộ phận sẽ không thay đổi trong quý này.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -175,7 +179,8 @@
       "examples": [
         {
           "en": "The company headquarters is located in Seoul.",
-          "vi": "Trụ sở chính của công ty đặt tại Seoul."
+          "vi": "Trụ sở chính của công ty đặt tại Seoul.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -233,7 +238,8 @@
       "examples": [
         {
           "en": "The company plans to hire five engineers.",
-          "vi": "Công ty dự định tuyển năm kỹ sư."
+          "vi": "Công ty dự định tuyển năm kỹ sư.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -272,7 +278,8 @@
       "examples": [
         {
           "en": "She has ten years of experience in the hospitality industry.",
-          "vi": "Cô ấy có mười năm kinh nghiệm trong ngành dịch vụ khách sạn."
+          "vi": "Cô ấy có mười năm kinh nghiệm trong ngành dịch vụ khách sạn.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -320,7 +327,8 @@
       "examples": [
         {
           "en": "Our department will host the annual meeting.",
-          "vi": "Phòng ban chúng tôi sẽ tổ chức cuộc họp thường niên."
+          "vi": "Phòng ban chúng tôi sẽ tổ chức cuộc họp thường niên.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -356,7 +364,8 @@
       "examples": [
         {
           "en": "The training session lasts for two hours.",
-          "vi": "Buổi đào tạo kéo dài hai giờ."
+          "vi": "Buổi đào tạo kéo dài hai giờ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -393,7 +402,8 @@
       "examples": [
         {
           "en": "Housekeeping will deliver extra towels shortly.",
-          "vi": "Bộ phận buồng phòng sẽ giao thêm khăn ngay."
+          "vi": "Bộ phận buồng phòng sẽ giao thêm khăn ngay.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -424,7 +434,8 @@
       "examples": [
         {
           "en": "The warehouse becomes humid during the rainy season.",
-          "vi": "Nhà kho trở nên ẩm vào mùa mưa."
+          "vi": "Nhà kho trở nên ẩm vào mùa mưa.",
+          "sense_index": 0
         }
       ],
       "collocations": []

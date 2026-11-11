@@ -89,7 +89,7 @@ function normalizeRecord(raw) {
   if (!senses.length) throw new Error(`Từ "${word}" cần có ít nhất một nghĩa hoặc loại từ.`);
   const topics=Array.isArray(raw.topics)?raw.topics:String(raw.topics||'').split(',').map(x=>x.trim().toUpperCase()).filter(Boolean);
   const examples=Array.isArray(raw.examples)?raw.examples:[];
-  return {id,word,cefr_level:String(raw.cefr_level||raw.level||''),level_basis:String(raw.level_basis||'editorial-estimate'),phonetic:raw.phonetic&&typeof raw.phonetic==='object'?raw.phonetic:{us:String(raw.ipa||'')},senses,topics:[...new Set(topics)],word_family:Array.isArray(raw.word_family)?raw.word_family:[],verb_forms:raw.verb_forms&&typeof raw.verb_forms==='object'?raw.verb_forms:null,examples:examples.map(e=>({en:String(e.en||''),vi:String(e.vi||'')})),collocations:Array.isArray(raw.collocations)?raw.collocations:String(raw.collocations||'').split(',').map(x=>x.trim()).filter(Boolean)};
+  return {id,word,cefr_level:String(raw.cefr_level||raw.level||''),level_basis:String(raw.level_basis||'editorial-estimate'),phonetic:raw.phonetic&&typeof raw.phonetic==='object'?raw.phonetic:{us:String(raw.ipa||'')},senses,topics:[...new Set(topics)],word_family:Array.isArray(raw.word_family)?raw.word_family:[],verb_forms:raw.verb_forms&&typeof raw.verb_forms==='object'?raw.verb_forms:null,examples:examples.map(e=>({en:String(e.en||''),vi:String(e.vi||''),sense_index:Number.isInteger(e.sense_index)&&e.sense_index>=0&&e.sense_index<senses.length?e.sense_index:0})).sort((a,b)=>a.sense_index-b.sense_index),collocations:Array.isArray(raw.collocations)?raw.collocations:String(raw.collocations||'').split(',').map(x=>x.trim()).filter(Boolean)};
 }
 async function loadData() {
   const manifestResponse=await fetch('./data/manifest.json',{cache:'no-store'});
@@ -412,20 +412,40 @@ function renderDataTable(){
   updateStorageLabel();
 }
 
+function posDisplayLabel(pos=''){
+  const labels={n:'Danh từ',v:'Động từ',adj:'Tính từ',adv:'Trạng từ',prep:'Giới từ',pron:'Đại từ',conj:'Liên từ',det:'Từ hạn định',aux:'Trợ động từ',interj:'Thán từ',num:'Số từ'};
+  return String(pos||'—').split(/[\/,\s]+/).filter(Boolean).map(code=>labels[code.toLowerCase()]||code.toUpperCase()).join(' / ')||'Chưa phân loại';
+}
+function posCodes(pos=''){
+  return String(pos||'').toLowerCase().split(/[\/,\s]+/).filter(Boolean);
+}
 function showDetail(id){
   const w=state.words.find(x=>x.id===id); if(!w)return;
   const origin=getWordSource(id);
   const originLabel=origin==='base'?'Từ vựng gốc · chỉ đọc':origin==='personal-edit'?'Bản cá nhân ghi đè từ gốc':'Từ vựng cá nhân';
   $('#modalEyebrow').textContent='VOCABULARY DETAIL'; $('#modalTitle').textContent='Chi tiết từ vựng';
-  const senses=w.senses.map(s=>`<div class="meaning-line"><span class="meaning-pos">${escapeHtml(s.pos||'')}</span><strong>${escapeHtml(s.meaning_vi||'')}</strong><small>${escapeHtml(s.definition_en||'')}</small>${s.synonyms?.length?`<div class="detail-pills" style="margin-top:7px">${s.synonyms.map(x=>`<span class="detail-pill">≈ ${escapeHtml(x)}</span>`).join('')}</div>`:''}${s.antonyms?.length?`<div class="detail-pills" style="margin-top:5px">${s.antonyms.map(x=>`<span class="detail-pill">≠ ${escapeHtml(x)}</span>`).join('')}</div>`:''}</div>`).join('');
+  const groups=[];
+  (w.senses||[]).forEach((sense,index)=>{
+    const key=String(sense.pos||'—').trim().toLowerCase();
+    let group=groups.find(item=>item.key===key);
+    if(!group){group={key,pos:sense.pos||'—',senses:[]};groups.push(group);}
+    group.senses.push({sense,index});
+  });
+  const senseCards=groups.map(group=>{
+    const meanings=group.senses.map(({sense,index})=>{
+      const related=`${sense.synonyms?.length?`<div class="sense-relations"><span class="sense-relation-label">Gần nghĩa</span><div class="detail-pills">${sense.synonyms.map(x=>`<span class="detail-pill">≈ ${escapeHtml(x)}</span>`).join('')}</div></div>`:''}${sense.antonyms?.length?`<div class="sense-relations"><span class="sense-relation-label">Trái nghĩa</span><div class="detail-pills">${sense.antonyms.map(x=>`<span class="detail-pill">≠ ${escapeHtml(x)}</span>`).join('')}</div></div>`:''}`;
+      const examples=(w.examples||[]).filter(example=>Number.isInteger(example.sense_index)?example.sense_index===index:index===0).map(example=>`<div class="example-card"><strong>${escapeHtml(example.en)}</strong><span>${escapeHtml(example.vi)}</span></div>`).join('');
+      return `<article class="meaning-entry"><div class="meaning-entry-title">${escapeHtml(sense.meaning_vi||'Chưa có nghĩa')}</div>${sense.definition_en?`<p class="meaning-definition">${escapeHtml(sense.definition_en)}</p>`:''}${related}${examples?`<div class="sense-examples"><span class="sense-example-label">VÍ DỤ NGỮ CẢNH</span>${examples}</div>`:''}</article>`;
+    }).join('');
+    const includesVerb=group.senses.some(({sense})=>posCodes(sense.pos).includes('v'));
+    const verbForms=includesVerb&&w.verb_forms?`<div class="verb-form-block"><span class="sense-example-label">CÁC DẠNG ĐỘNG TỪ</span><div class="detail-pills">${Object.entries({V1:w.verb_forms.v1,'V-s/es':w.verb_forms.vs_es,V2:w.verb_forms.v2,V3:w.verb_forms.v3,'V-ing':w.verb_forms.ving}).filter(x=>x[1]).map(([k,v])=>`<span class="detail-pill"><strong>${k}:</strong> ${escapeHtml(v)}</span>`).join('')}</div></div>`:'';
+    return `<section class="pos-detail-card"><header class="pos-detail-header"><strong>${escapeHtml(posDisplayLabel(group.pos))}</strong><span>${escapeHtml(group.pos)}</span></header><div class="pos-detail-body">${meanings}${verbForms}</div></section>`;
+  }).join('');
   const family=w.word_family?.length?`<div class="detail-section"><h4>WORD FAMILY</h4><div class="detail-pills">${w.word_family.map(x=>`<span class="detail-pill"><strong>${escapeHtml(displayWord(x.word))}</strong> · ${escapeHtml(x.pos||'')} — ${escapeHtml(x.meaning_vi||'')}</span>`).join('')}</div></div>`:'';
-  const verbs=w.verb_forms?`<div class="detail-section"><h4>VERB FORMS</h4><div class="detail-pills">${Object.entries({V1:w.verb_forms.v1,'V-s/es':w.verb_forms.vs_es,V2:w.verb_forms.v2,V3:w.verb_forms.v3,'V-ing':w.verb_forms.ving}).filter(x=>x[1]).map(([k,v])=>`<span class="detail-pill"><strong>${k}:</strong> ${escapeHtml(v)}</span>`).join('')}</div></div>`:'';
-  const examples=(w.examples||[]).map(e=>`<div class="example-card"><strong>${escapeHtml(e.en)}</strong><span>${escapeHtml(e.vi)}</span></div>`).join('');
   const editButton=origin==='base'?`<button class="secondary-button" data-edit="${escapeHtml(w.id)}">${icon('edit','ui-icon button-icon')} Tạo bản cá nhân</button>`:`<button class="secondary-button" data-edit="${escapeHtml(w.id)}">${icon('edit','ui-icon button-icon')} Sửa từ cá nhân</button>`;
-  $('#modalContent').innerHTML=`<div class="word-origin-note">${escapeHtml(originLabel)} · Không thay đổi dữ liệu gốc trên GitHub.</div><h3 class="detail-word">${escapeHtml(displayWord(w.word))}</h3><div class="detail-ipa">${escapeHtml(w.phonetic?.us||'Chưa có phiên âm')}</div><div class="detail-cefr">${w.cefr_level?`CEFR ${escapeHtml(w.cefr_level)} · mức gợi ý học tập`:'Chưa gắn cấp độ CEFR'}</div><div class="pronunciation-toolbar"><button type="button" class="secondary-button" data-speak-word="${escapeHtml(w.word)}" data-accent="en-US">${icon('volume-2','ui-icon button-icon')} Nghe giọng Mỹ</button><button type="button" class="secondary-button" data-speak-word="${escapeHtml(w.word)}" data-accent="en-GB">${icon('volume-2','ui-icon button-icon')} Nghe giọng Anh</button><button type="button" class="text-button" data-stop-speech>⏹ Dừng</button></div><p class="pronunciation-note">Âm thanh do giọng đọc tiếng Anh có sẵn trên trình duyệt/thiết bị tổng hợp.</p><div class="detail-pos">${posMarkup(w)}</div><div class="detail-section"><h4>MEANING & DEFINITIONS</h4>${senses||'<p>Chưa có nghĩa.</p>'}</div>${family}${verbs}<div class="detail-section"><h4>TOPICS</h4>${topicsMarkup(w.topics)}</div>${w.collocations?.length?`<div class="detail-section"><h4>COLLOCATIONS</h4><div class="detail-pills">${w.collocations.map(x=>`<span class="detail-pill">${escapeHtml(x)}</span>`).join('')}</div></div>`:''}<div class="detail-section"><h4>EXAMPLES</h4>${examples||'<p>Chưa có ví dụ.</p>'}</div><div class="modal-actions"><button class="secondary-button" data-ai-word="${escapeHtml(w.id)}">${icon('sparkles','ui-icon button-icon')} Tra cứu Google AI</button>${editButton}</div>`;
+  $('#modalContent').innerHTML=`<div class="word-origin-note">${escapeHtml(originLabel)} · Không thay đổi dữ liệu gốc trên GitHub.</div><h3 class="detail-word">${escapeHtml(displayWord(w.word))}</h3><div class="detail-ipa">${escapeHtml(w.phonetic?.us||'Chưa có phiên âm')}</div><div class="detail-cefr">${w.cefr_level?`CEFR ${escapeHtml(w.cefr_level)} · mức gợi ý học tập`:'Chưa gắn cấp độ CEFR'}</div><div class="pronunciation-toolbar"><button type="button" class="secondary-button" data-speak-word="${escapeHtml(w.word)}" data-accent="en-US">${icon('volume-2','ui-icon button-icon')} Nghe giọng Mỹ</button><button type="button" class="secondary-button" data-speak-word="${escapeHtml(w.word)}" data-accent="en-GB">${icon('volume-2','ui-icon button-icon')} Nghe giọng Anh</button><button type="button" class="text-button" data-stop-speech>⏹ Dừng</button></div><p class="pronunciation-note">Âm thanh do giọng đọc tiếng Anh có sẵn trên trình duyệt/thiết bị tổng hợp.</p><div class="detail-section pos-groups-section"><h4>NGHĨA THEO TỪ LOẠI</h4><div class="pos-detail-grid">${senseCards||'<p>Chưa có nghĩa.</p>'}</div></div>${family}<div class="detail-section"><h4>TOPICS</h4>${topicsMarkup(w.topics)}</div>${w.collocations?.length?`<div class="detail-section"><h4>COLLOCATIONS</h4><div class="detail-pills">${w.collocations.map(x=>`<span class="detail-pill">${escapeHtml(x)}</span>`).join('')}</div></div>`:''}<div class="modal-actions"><button class="secondary-button" data-ai-word="${escapeHtml(w.id)}">${icon('sparkles','ui-icon button-icon')} Tra cứu Google AI</button>${editButton}</div>`;
   $('#modalBackdrop').hidden=false;
 }
-
 function openEditor(id=null){
   const old=state.words.find(w=>w.id===id); const s=old?.senses?.[0]||{}; const origin=old?getWordSource(id):'new';
   $('#modalEyebrow').textContent=old?'PERSONAL VOCABULARY · EDIT':'PERSONAL VOCABULARY · NEW';
@@ -450,7 +470,7 @@ function openEditor(id=null){
   $('#modalBackdrop').hidden=false;
   form.addEventListener('submit',async e=>{
     e.preventDefault(); const fd=new FormData(form); const w=String(fd.get('word')).trim(); const pos=String(fd.get('pos'));
-    const record=normalizeRecord({id:old?.id||undefined,word:w,phonetic:{us:String(fd.get('ipa')||'')},senses:[{pos,meaning_vi:String(fd.get('meaning')||''),definition_en:String(fd.get('definition')||''),synonyms:String(fd.get('synonyms')||'').split(',').map(x=>x.trim()).filter(Boolean),antonyms:String(fd.get('antonyms')||'').split(',').map(x=>x.trim()).filter(Boolean)},...(old?.senses?.slice(1)||[])],topics:[...form.elements.topics.selectedOptions].map(o=>o.value),examples:[{en:String(fd.get('exampleEn')||''),vi:String(fd.get('exampleVi')||'')}].filter(x=>x.en||x.vi),collocations:String(fd.get('collocations')||'').split(',').map(x=>x.trim()).filter(Boolean),word_family:old?.word_family||[],verb_forms:old?.verb_forms||null});
+    const record=normalizeRecord({id:old?.id||undefined,word:w,phonetic:{us:String(fd.get('ipa')||'')},senses:[{pos,meaning_vi:String(fd.get('meaning')||''),definition_en:String(fd.get('definition')||''),synonyms:String(fd.get('synonyms')||'').split(',').map(x=>x.trim()).filter(Boolean),antonyms:String(fd.get('antonyms')||'').split(',').map(x=>x.trim()).filter(Boolean)},...(old?.senses?.slice(1)||[])],topics:[...form.elements.topics.selectedOptions].map(o=>o.value),examples:[{en:String(fd.get('exampleEn')||''),vi:String(fd.get('exampleVi')||''),sense_index:0},...(old?.examples?.slice(1)||[])].filter(x=>x.en||x.vi),collocations:String(fd.get('collocations')||'').split(',').map(x=>x.trim()).filter(Boolean),word_family:old?.word_family||[],verb_forms:old?.verb_forms||null});
     const duplicate=state.words.find(x=>x.id!==old?.id&&normalizeText(x.word)===normalizeText(record.word));
     if(duplicate){toast(`Từ này đã tồn tại: ${displayWord(duplicate.word)}. Hãy mở bản ghi đó để tạo bản cá nhân.`, 'error');return;}
     if(old&&state.baseWords.some(x=>x.id===old.id)){state.personalVocabulary.overrides[old.id]=record;const base=state.baseWords.find(x=>x.id===old.id);if(base)state.personalVocabulary.overrideBaseSigs[old.id]=recordSignature(base);}
@@ -1309,7 +1329,7 @@ function bindEvents(){
   $('#resetFilters').addEventListener('click',()=>{state.activeLetter='';$('#dictionarySearch').value='';$('#topicFilter').value='';$('#posFilter').value='';$('#cefrFilter').value='';$('#dictionarySourceFilter').value='all';$$('[data-topic]', $('#topicShowcase')).forEach(x=>x.classList.toggle('active',x.dataset.topic===''));renderDictionary();});
   $('#wordTableBody').addEventListener('click',e=>{const b=e.target.closest('[data-detail]');if(b)showDetail(b.dataset.detail);});
   $('#wordCardList').addEventListener('click',e=>{const b=e.target.closest('[data-detail]');if(b)showDetail(b.dataset.detail);});
-  $('#dataTableBody').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(edit)openEditor(edit.dataset.edit);if(del)deleteWord(del.dataset.delete);});
+  $('#dataTableBody').addEventListener('click',e=>{const detail=e.target.closest('[data-detail]');if(detail){showDetail(detail.dataset.detail);return;}const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(edit){openEditor(edit.dataset.edit);return;}if(del)deleteWord(del.dataset.delete);});
   $('#dataSearch').addEventListener('input',renderDataTable);
   $('#grammarSearch').addEventListener('input',renderGrammarLibrary); $('#grammarCategoryFilter').addEventListener('change',renderGrammarLibrary); $('#grammarLevelFilter').addEventListener('change',renderGrammarLibrary);
   $('#readingSearch').addEventListener('input',renderReadingLibrary); $('#readingPartFilter')?.addEventListener('change',renderReadingLibrary); $('#readingTopicFilter').addEventListener('change',renderReadingLibrary); $('#readingLevelFilter').addEventListener('change',renderReadingLibrary);

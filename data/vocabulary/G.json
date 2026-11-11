@@ -40,7 +40,8 @@
       "examples": [
         {
           "en": "Please gather the documents before the meeting.",
-          "vi": "Vui lòng tập hợp tài liệu trước cuộc họp."
+          "vi": "Vui lòng tập hợp tài liệu trước cuộc họp.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -80,7 +81,8 @@
       "examples": [
         {
           "en": "The new advertising campaign is expected to generate more online sales.",
-          "vi": "Chiến dịch quảng cáo mới được kỳ vọng tạo ra thêm doanh thu trực tuyến."
+          "vi": "Chiến dịch quảng cáo mới được kỳ vọng tạo ra thêm doanh thu trực tuyến.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -120,7 +122,8 @@
       "examples": [
         {
           "en": "Our main goal is to improve service quality.",
-          "vi": "Mục tiêu chính của chúng tôi là cải thiện chất lượng dịch vụ."
+          "vi": "Mục tiêu chính của chúng tôi là cải thiện chất lượng dịch vụ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -160,7 +163,8 @@
       "examples": [
         {
           "en": "The goods will arrive at the warehouse tomorrow.",
-          "vi": "Hàng hóa sẽ đến kho vào ngày mai."
+          "vi": "Hàng hóa sẽ đến kho vào ngày mai.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -192,7 +196,8 @@
       "examples": [
         {
           "en": "Employees may submit a grievance to human resources.",
-          "vi": "Nhân viên có thể gửi khiếu nại đến phòng nhân sự."
+          "vi": "Nhân viên có thể gửi khiếu nại đến phòng nhân sự.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -226,7 +231,8 @@
       "examples": [
         {
           "en": "The grievance procedure is explained in the staff handbook.",
-          "vi": "Quy trình giải quyết khiếu nại được giải thích trong sổ tay nhân viên."
+          "vi": "Quy trình giải quyết khiếu nại được giải thích trong sổ tay nhân viên.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -281,7 +287,13 @@
       "examples": [
         {
           "en": "The product comes with a two-year guarantee.",
-          "vi": "Sản phẩm đi kèm bảo hành hai năm."
+          "vi": "Sản phẩm đi kèm bảo hành hai năm.",
+          "sense_index": 0
+        },
+        {
+          "en": "The manufacturer guarantees all replacement parts for one year.",
+          "vi": "Nhà sản xuất bảo đảm tất cả linh kiện thay thế trong một năm.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -317,7 +329,8 @@
       "examples": [
         {
           "en": "Every guest receives a breakfast voucher.",
-          "vi": "Mỗi khách nhận một phiếu ăn sáng."
+          "vi": "Mỗi khách nhận một phiếu ăn sáng.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -362,7 +375,8 @@
       "examples": [
         {
           "en": "New employees receive guidance from a supervisor.",
-          "vi": "Nhân viên mới nhận được hướng dẫn từ người giám sát."
+          "vi": "Nhân viên mới nhận được hướng dẫn từ người giám sát.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -410,7 +424,8 @@
       "examples": [
         {
           "en": "Please follow the installation guide.",
-          "vi": "Vui lòng làm theo hướng dẫn cài đặt."
+          "vi": "Vui lòng làm theo hướng dẫn cài đặt.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -442,7 +457,8 @@
       "examples": [
         {
           "en": "The handbook provides guidelines for handling customer complaints.",
-          "vi": "Sổ tay cung cấp hướng dẫn về cách xử lý khiếu nại của khách hàng."
+          "vi": "Sổ tay cung cấp hướng dẫn về cách xử lý khiếu nại của khách hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [],

@@ -34,7 +34,8 @@
       "examples": [
         {
           "en": "We are unable to process the request today.",
-          "vi": "Hôm nay chúng tôi không thể xử lý yêu cầu."
+          "vi": "Hôm nay chúng tôi không thể xử lý yêu cầu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -72,7 +73,8 @@
       "examples": [
         {
           "en": "All new employees must undergo safety training before starting work.",
-          "vi": "Tất cả nhân viên mới phải trải qua khóa đào tạo an toàn trước khi bắt đầu công việc."
+          "vi": "Tất cả nhân viên mới phải trải qua khóa đào tạo an toàn trước khi bắt đầu công việc.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -106,7 +108,8 @@
       "examples": [
         {
           "en": "The customer service desk is understaffed during peak hours.",
-          "vi": "Quầy dịch vụ khách hàng thiếu nhân viên trong giờ cao điểm."
+          "vi": "Quầy dịch vụ khách hàng thiếu nhân viên trong giờ cao điểm.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -154,7 +157,8 @@
       "examples": [
         {
           "en": "The contractor will undertake the renovation work.",
-          "vi": "Nhà thầu sẽ đảm nhận công việc cải tạo."
+          "vi": "Nhà thầu sẽ đảm nhận công việc cải tạo.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -186,7 +190,8 @@
       "examples": [
         {
           "en": "The supplier gave a written undertaking to meet the deadline.",
-          "vi": "Nhà cung cấp đưa ra cam kết bằng văn bản sẽ đáp ứng thời hạn."
+          "vi": "Nhà cung cấp đưa ra cam kết bằng văn bản sẽ đáp ứng thời hạn.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -226,7 +231,8 @@
       "examples": [
         {
           "en": "The insurer agreed to underwrite the new policy.",
-          "vi": "Công ty bảo hiểm đồng ý bảo lãnh hợp đồng mới."
+          "vi": "Công ty bảo hiểm đồng ý bảo lãnh hợp đồng mới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -260,7 +266,8 @@
       "examples": [
         {
           "en": "The bank’s underwriting team reviewed the loan application.",
-          "vi": "Đội thẩm định của ngân hàng đã xem xét hồ sơ vay."
+          "vi": "Đội thẩm định của ngân hàng đã xem xét hồ sơ vay.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -300,7 +307,8 @@
       "examples": [
         {
           "en": "Employees must wear a clean uniform.",
-          "vi": "Nhân viên phải mặc đồng phục sạch sẽ."
+          "vi": "Nhân viên phải mặc đồng phục sạch sẽ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -339,8 +347,9 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The product has a unique design.",
-          "vi": "Sản phẩm có thiết kế độc đáo."
+          "en": "Each branch has a unique identification code for processing internal transactions.",
+          "vi": "Mỗi chi nhánh có một mã nhận dạng riêng để xử lý các giao dịch nội bộ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -405,7 +414,13 @@
       "examples": [
         {
           "en": "Please update your contact information.",
-          "vi": "Vui lòng cập nhật thông tin liên hệ."
+          "vi": "Vui lòng cập nhật thông tin liên hệ.",
+          "sense_index": 0
+        },
+        {
+          "en": "The latest software update fixed an issue with employee account access.",
+          "vi": "Bản cập nhật phần mềm mới nhất đã khắc phục sự cố truy cập tài khoản nhân viên.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -453,7 +468,8 @@
       "examples": [
         {
           "en": "The company plans to upgrade its network.",
-          "vi": "Công ty dự định nâng cấp mạng lưới."
+          "vi": "Công ty dự định nâng cấp mạng lưới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -503,7 +519,8 @@
       "examples": [
         {
           "en": "Please respond to this urgent request immediately.",
-          "vi": "Vui lòng phản hồi yêu cầu khẩn cấp này ngay lập tức."
+          "vi": "Vui lòng phản hồi yêu cầu khẩn cấp này ngay lập tức.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -542,7 +559,8 @@
       "examples": [
         {
           "en": "Utility bills are paid at the end of each month.",
-          "vi": "Hóa đơn dịch vụ tiện ích được thanh toán vào cuối mỗi tháng."
+          "vi": "Hóa đơn dịch vụ tiện ích được thanh toán vào cuối mỗi tháng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -590,7 +608,8 @@
       "examples": [
         {
           "en": "The new system improves the utilization of available resources.",
-          "vi": "Hệ thống mới cải thiện việc sử dụng các nguồn lực sẵn có."
+          "vi": "Hệ thống mới cải thiện việc sử dụng các nguồn lực sẵn có.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -630,7 +649,8 @@
       "examples": [
         {
           "en": "The company will utilize the vacant floor for training.",
-          "vi": "Công ty sẽ tận dụng tầng còn trống làm nơi đào tạo."
+          "vi": "Công ty sẽ tận dụng tầng còn trống làm nơi đào tạo.",
+          "sense_index": 0
         }
       ],
       "collocations": [

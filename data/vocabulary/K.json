@@ -34,7 +34,8 @@
       "examples": [
         {
           "en": "Customer satisfaction is a key priority.",
-          "vi": "Sự hài lòng của khách hàng là ưu tiên chủ chốt."
+          "vi": "Sự hài lòng của khách hàng là ưu tiên chủ chốt.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -70,7 +71,8 @@
       "examples": [
         {
           "en": "The keynote speaker will address the conference at 9 a.m.",
-          "vi": "Diễn giả chính sẽ phát biểu tại hội nghị lúc 9 giờ sáng."
+          "vi": "Diễn giả chính sẽ phát biểu tại hội nghị lúc 9 giờ sáng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -106,7 +108,8 @@
       "examples": [
         {
           "en": "The kitchen closes thirty minutes before the restaurant.",
-          "vi": "Nhà bếp đóng cửa 30 phút trước nhà hàng."
+          "vi": "Nhà bếp đóng cửa 30 phút trước nhà hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -153,7 +156,8 @@
       "examples": [
         {
           "en": "The position requires knowledge of accounting software.",
-          "vi": "Vị trí này yêu cầu kiến thức về phần mềm kế toán."
+          "vi": "Vị trí này yêu cầu kiến thức về phần mềm kế toán.",
+          "sense_index": 0
         }
       ],
       "collocations": [

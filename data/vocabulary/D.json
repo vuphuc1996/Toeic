@@ -32,7 +32,8 @@
       "examples": [
         {
           "en": "The survey data will be analyzed next week.",
-          "vi": "Dữ liệu khảo sát sẽ được phân tích vào tuần tới."
+          "vi": "Dữ liệu khảo sát sẽ được phân tích vào tuần tới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -94,7 +95,18 @@
       "examples": [
         {
           "en": "Please write the date at the top of the form.",
-          "vi": "Vui lòng ghi ngày tháng ở đầu biểu mẫu."
+          "vi": "Vui lòng ghi ngày tháng ở đầu biểu mẫu.",
+          "sense_index": 0
+        },
+        {
+          "en": "The conference room is reserved for their lunch date on Thursday.",
+          "vi": "Phòng hội nghị đã được đặt cho buổi hẹn ăn trưa của họ vào thứ Năm.",
+          "sense_index": 1
+        },
+        {
+          "en": "Please date and initial every page before returning the signed agreement.",
+          "vi": "Vui lòng ghi ngày và ký nháy vào từng trang trước khi gửi lại thỏa thuận đã ký.",
+          "sense_index": 2
         }
       ],
       "collocations": [
@@ -133,8 +145,9 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "The office is closed on public holidays.",
-          "vi": "Văn phòng đóng cửa vào các ngày nghỉ lễ."
+          "en": "The training center will remain open throughout the day.",
+          "vi": "Trung tâm đào tạo sẽ mở cửa suốt cả ngày.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -174,7 +187,8 @@
       "examples": [
         {
           "en": "The application deadline is November 30.",
-          "vi": "Hạn nộp hồ sơ là ngày 30 tháng 11."
+          "vi": "Hạn nộp hồ sơ là ngày 30 tháng 11.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -226,7 +240,8 @@
       "examples": [
         {
           "en": "The proposal sparked a debate about public spending.",
-          "vi": "Đề xuất đã làm dấy lên cuộc tranh luận về chi tiêu công."
+          "vi": "Đề xuất đã làm dấy lên cuộc tranh luận về chi tiêu công.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -261,8 +276,9 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "You can pay with a debit card.",
-          "vi": "Bạn có thể thanh toán bằng thẻ ghi nợ."
+          "en": "The payment terminal accepts debit cards issued by major domestic banks.",
+          "vi": "Thiết bị thanh toán chấp nhận thẻ ghi nợ do các ngân hàng lớn trong nước phát hành.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -305,7 +321,8 @@
       "examples": [
         {
           "en": "We need to decide which supplier to use.",
-          "vi": "Chúng ta cần quyết định sử dụng nhà cung cấp nào."
+          "vi": "Chúng ta cần quyết định sử dụng nhà cung cấp nào.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -323,15 +340,15 @@
         {
           "pos": "v",
           "meaning_vi": "giảm; suy giảm; từ chối",
-          "definition_en": "to become smaller or weaker; to politely refuse",
+          "definition_en": "to become smaller, weaker, or less successful; to politely refuse something",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
         },
         {
           "pos": "n",
-          "meaning_vi": "giảm; suy giảm; từ chối",
-          "definition_en": "to become smaller or weaker; to politely refuse",
+          "meaning_vi": "sự suy giảm; sự từ chối",
+          "definition_en": "a reduction in amount, quality, or importance; a polite refusal",
           "synonyms": [],
           "antonyms": [],
           "cefr_level": "B1"
@@ -352,7 +369,13 @@
       "examples": [
         {
           "en": "Online orders declined slightly in the final quarter.",
-          "vi": "Đơn hàng trực tuyến giảm nhẹ trong quý cuối."
+          "vi": "Đơn hàng trực tuyến giảm nhẹ trong quý cuối.",
+          "sense_index": 0
+        },
+        {
+          "en": "There was a noticeable decline in customer complaints after the policy change.",
+          "vi": "Số lượng khiếu nại của khách hàng đã giảm đáng kể sau khi chính sách thay đổi.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -393,7 +416,8 @@
       "examples": [
         {
           "en": "The employer will deduct income tax from each monthly salary.",
-          "vi": "Người sử dụng lao động sẽ khấu trừ thuế thu nhập từ mỗi tháng lương."
+          "vi": "Người sử dụng lao động sẽ khấu trừ thuế thu nhập từ mỗi tháng lương.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -427,7 +451,8 @@
       "examples": [
         {
           "en": "The payslip shows a deduction for the employee’s health insurance.",
-          "vi": "Phiếu lương thể hiện khoản khấu trừ cho bảo hiểm y tế của nhân viên."
+          "vi": "Phiếu lương thể hiện khoản khấu trừ cho bảo hiểm y tế của nhân viên.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -461,7 +486,8 @@
       "examples": [
         {
           "en": "Customers may return defective products within thirty days.",
-          "vi": "Khách hàng có thể trả lại sản phẩm bị lỗi trong vòng ba mươi ngày."
+          "vi": "Khách hàng có thể trả lại sản phẩm bị lỗi trong vòng ba mươi ngày.",
+          "sense_index": 0
         }
       ],
       "collocations": [],
@@ -492,7 +518,8 @@
       "examples": [
         {
           "en": "The department must reduce its budget deficit before the next quarter.",
-          "vi": "Bộ phận phải giảm mức thâm hụt ngân sách trước quý tới."
+          "vi": "Bộ phận phải giảm mức thâm hụt ngân sách trước quý tới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -540,7 +567,8 @@
       "examples": [
         {
           "en": "Bad weather caused a delay in delivery.",
-          "vi": "Thời tiết xấu gây chậm trễ giao hàng."
+          "vi": "Thời tiết xấu gây chậm trễ giao hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -578,7 +606,8 @@
       "examples": [
         {
           "en": "The director decided to delegate routine approvals to the regional managers.",
-          "vi": "Giám đốc quyết định ủy quyền phê duyệt công việc thường lệ cho các quản lý khu vực."
+          "vi": "Giám đốc quyết định ủy quyền phê duyệt công việc thường lệ cho các quản lý khu vực.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -612,7 +641,8 @@
       "examples": [
         {
           "en": "The delegation will visit the manufacturing facility tomorrow.",
-          "vi": "Đoàn đại biểu sẽ thăm cơ sở sản xuất vào ngày mai."
+          "vi": "Đoàn đại biểu sẽ thăm cơ sở sản xuất vào ngày mai.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -646,7 +676,8 @@
       "examples": [
         {
           "en": "The figures were deliberately excluded from the draft.",
-          "vi": "Các số liệu đã được cố ý loại khỏi bản dự thảo."
+          "vi": "Các số liệu đã được cố ý loại khỏi bản dự thảo.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -705,7 +736,8 @@
       "examples": [
         {
           "en": "The supplier will deliver the materials tomorrow.",
-          "vi": "Nhà cung cấp sẽ giao vật liệu vào ngày mai."
+          "vi": "Nhà cung cấp sẽ giao vật liệu vào ngày mai.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -748,7 +780,8 @@
       "examples": [
         {
           "en": "The final report is the last deliverable under the consulting contract.",
-          "vi": "Báo cáo cuối cùng là sản phẩm bàn giao cuối cùng theo hợp đồng tư vấn."
+          "vi": "Báo cáo cuối cùng là sản phẩm bàn giao cuối cùng theo hợp đồng tư vấn.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -798,7 +831,8 @@
       "examples": [
         {
           "en": "Free delivery is available for orders over $50.",
-          "vi": "Miễn phí giao hàng cho đơn trên 50 đô la."
+          "vi": "Miễn phí giao hàng cho đơn trên 50 đô la.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -850,7 +884,8 @@
       "examples": [
         {
           "en": "The results demonstrate the value of regular training.",
-          "vi": "Kết quả chứng minh giá trị của việc đào tạo thường xuyên."
+          "vi": "Kết quả chứng minh giá trị của việc đào tạo thường xuyên.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -901,7 +936,8 @@
       "examples": [
         {
           "en": "In the chart, a dashed line denotes projected sales.",
-          "vi": "Trong biểu đồ, đường nét đứt biểu thị doanh số dự kiến."
+          "vi": "Trong biểu đồ, đường nét đứt biểu thị doanh số dự kiến.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -953,8 +989,9 @@
       },
       "examples": [
         {
-          "en": "The flight departs at 8:45 a.m.",
-          "vi": "Chuyến bay khởi hành lúc 8 giờ 45 sáng."
+          "en": "The express train will depart from platform four at eight forty-five tomorrow morning.",
+          "vi": "Tàu tốc hành sẽ khởi hành từ sân ga số bốn lúc 8 giờ 45 sáng mai.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -994,7 +1031,8 @@
       "examples": [
         {
           "en": "Contact the human resources department.",
-          "vi": "Hãy liên hệ phòng nhân sự."
+          "vi": "Hãy liên hệ phòng nhân sự.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1026,7 +1064,8 @@
       "examples": [
         {
           "en": "Passengers should arrive at the gate thirty minutes before departure.",
-          "vi": "Hành khách nên có mặt tại cửa khởi hành trước ba mươi phút."
+          "vi": "Hành khách nên có mặt tại cửa khởi hành trước ba mươi phút.",
+          "sense_index": 0
         }
       ],
       "collocations": [],
@@ -1071,7 +1110,8 @@
       "examples": [
         {
           "en": "A deposit is required to reserve the room.",
-          "vi": "Cần đặt cọc để giữ phòng."
+          "vi": "Cần đặt cọc để giữ phòng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1103,7 +1143,8 @@
       "examples": [
         {
           "en": "The accountant calculated depreciation on the new vehicles.",
-          "vi": "Kế toán viên tính khấu hao cho các xe mới."
+          "vi": "Kế toán viên tính khấu hao cho các xe mới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1144,7 +1185,8 @@
       "examples": [
         {
           "en": "The figures are derived from the latest customer survey.",
-          "vi": "Các số liệu được lấy từ khảo sát khách hàng mới nhất."
+          "vi": "Các số liệu được lấy từ khảo sát khách hàng mới nhất.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1191,7 +1233,8 @@
       "examples": [
         {
           "en": "The designer presented the new website design.",
-          "vi": "Nhà thiết kế đã trình bày thiết kế website mới."
+          "vi": "Nhà thiết kế đã trình bày thiết kế website mới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1229,7 +1272,8 @@
       "examples": [
         {
           "en": "The company designated a separate room for client meetings.",
-          "vi": "Công ty chỉ định một phòng riêng cho các cuộc họp khách hàng."
+          "vi": "Công ty chỉ định một phòng riêng cho các cuộc họp khách hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1263,7 +1307,8 @@
       "examples": [
         {
           "en": "Her new designation is senior account manager.",
-          "vi": "Chức danh mới của cô ấy là quản lý khách hàng cấp cao."
+          "vi": "Chức danh mới của cô ấy là quản lý khách hàng cấp cao.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1305,7 +1350,8 @@
       "examples": [
         {
           "en": "The final destination is listed on the ticket.",
-          "vi": "Điểm đến cuối cùng được ghi trên vé."
+          "vi": "Điểm đến cuối cùng được ghi trên vé.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1343,7 +1389,8 @@
       "examples": [
         {
           "en": "The system can detect unusual login activity.",
-          "vi": "Hệ thống có thể phát hiện hoạt động đăng nhập bất thường."
+          "vi": "Hệ thống có thể phát hiện hoạt động đăng nhập bất thường.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1392,7 +1439,8 @@
       "examples": [
         {
           "en": "The company plans to develop a new service.",
-          "vi": "Công ty dự định phát triển một dịch vụ mới."
+          "vi": "Công ty dự định phát triển một dịch vụ mới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1432,7 +1480,8 @@
       "examples": [
         {
           "en": "There is a significant difference between the plans.",
-          "vi": "Có sự khác biệt đáng kể giữa hai kế hoạch."
+          "vi": "Có sự khác biệt đáng kể giữa hai kế hoạch.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1482,7 +1531,8 @@
       "examples": [
         {
           "en": "The new process should diminish the risk of data entry errors.",
-          "vi": "Quy trình mới sẽ làm giảm nguy cơ lỗi nhập dữ liệu."
+          "vi": "Quy trình mới sẽ làm giảm nguy cơ lỗi nhập dữ liệu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1518,7 +1568,8 @@
       "examples": [
         {
           "en": "The hotel offers outdoor dining in summer.",
-          "vi": "Khách sạn phục vụ ăn uống ngoài trời vào mùa hè."
+          "vi": "Khách sạn phục vụ ăn uống ngoài trời vào mùa hè.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -1553,7 +1604,8 @@
       "examples": [
         {
           "en": "The department will disburse travel expenses next week.",
-          "vi": "Bộ phận sẽ chi trả chi phí công tác vào tuần tới."
+          "vi": "Bộ phận sẽ chi trả chi phí công tác vào tuần tới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1587,7 +1639,8 @@
       "examples": [
         {
           "en": "All disbursements must be supported by receipts.",
-          "vi": "Tất cả khoản chi phải có hóa đơn chứng từ."
+          "vi": "Tất cả khoản chi phải có hóa đơn chứng từ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1627,7 +1680,8 @@
       "examples": [
         {
           "en": "The applicant must disclose any conflicts of interest on the form.",
-          "vi": "Ứng viên phải công khai mọi xung đột lợi ích trên biểu mẫu."
+          "vi": "Ứng viên phải công khai mọi xung đột lợi ích trên biểu mẫu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1685,7 +1739,13 @@
       "examples": [
         {
           "en": "Customers receive a 10 percent discount.",
-          "vi": "Khách hàng được giảm giá 10 phần trăm."
+          "vi": "Khách hàng được giảm giá 10 phần trăm.",
+          "sense_index": 0
+        },
+        {
+          "en": "The supplier agreed to discount the bulk order by five percent.",
+          "vi": "Nhà cung cấp đồng ý giảm giá đơn hàng số lượng lớn xuống năm phần trăm.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -1719,7 +1779,8 @@
       "examples": [
         {
           "en": "The accountant found a discrepancy between the invoice and the purchase order.",
-          "vi": "Kế toán phát hiện sự sai lệch giữa hóa đơn và đơn đặt hàng."
+          "vi": "Kế toán phát hiện sự sai lệch giữa hóa đơn và đơn đặt hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [],
@@ -1751,7 +1812,8 @@
       "examples": [
         {
           "en": "The database stores the information in discrete categories.",
-          "vi": "Cơ sở dữ liệu lưu trữ thông tin trong các danh mục riêng biệt."
+          "vi": "Cơ sở dữ liệu lưu trữ thông tin trong các danh mục riêng biệt.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1785,7 +1847,8 @@
       "examples": [
         {
           "en": "Discounts may be offered at the manager’s discretion.",
-          "vi": "Giảm giá có thể được áp dụng theo quyết định của quản lý."
+          "vi": "Giảm giá có thể được áp dụng theo quyết định của quản lý.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1819,7 +1882,8 @@
       "examples": [
         {
           "en": "The budget includes a small amount for discretionary spending.",
-          "vi": "Ngân sách bao gồm một khoản nhỏ cho chi tiêu tùy nghi."
+          "vi": "Ngân sách bao gồm một khoản nhỏ cho chi tiêu tùy nghi.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1871,7 +1935,8 @@
       "examples": [
         {
           "en": "The policy prohibits employers from discriminating against applicants.",
-          "vi": "Chính sách nghiêm cấm nhà tuyển dụng phân biệt đối xử với ứng viên."
+          "vi": "Chính sách nghiêm cấm nhà tuyển dụng phân biệt đối xử với ứng viên.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1907,7 +1972,8 @@
       "examples": [
         {
           "en": "This dish is one of the chef’s specialties.",
-          "vi": "Món ăn này là một trong những món đặc biệt của đầu bếp."
+          "vi": "Món ăn này là một trong những món đặc biệt của đầu bếp.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -1936,7 +2002,8 @@
       "examples": [
         {
           "en": "Orders are ready for dispatch before noon.",
-          "vi": "Các đơn hàng sẵn sàng được gửi đi trước buổi trưa."
+          "vi": "Các đơn hàng sẵn sàng được gửi đi trước buổi trưa.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1970,7 +2037,8 @@
       "examples": [
         {
           "en": "Dispatching staff coordinate daily delivery routes.",
-          "vi": "Nhân viên điều phối sắp xếp các tuyến giao hàng hằng ngày."
+          "vi": "Nhân viên điều phối sắp xếp các tuyến giao hàng hằng ngày.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2022,7 +2090,8 @@
       "examples": [
         {
           "en": "A small sample may distort the survey results.",
-          "vi": "Một mẫu khảo sát nhỏ có thể làm sai lệch kết quả."
+          "vi": "Một mẫu khảo sát nhỏ có thể làm sai lệch kết quả.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2062,7 +2131,8 @@
       "examples": [
         {
           "en": "Reception will distribute the updated visitor badges this afternoon.",
-          "vi": "Bộ phận lễ tân sẽ phát thẻ khách đã cập nhật vào chiều nay."
+          "vi": "Bộ phận lễ tân sẽ phát thẻ khách đã cập nhật vào chiều nay.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2096,7 +2166,8 @@
       "examples": [
         {
           "en": "The distributor covers five provinces.",
-          "vi": "Nhà phân phối phụ trách năm tỉnh."
+          "vi": "Nhà phân phối phụ trách năm tỉnh.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2131,7 +2202,8 @@
       "examples": [
         {
           "en": "The company serves a diverse range of clients.",
-          "vi": "Công ty phục vụ nhiều nhóm khách hàng đa dạng."
+          "vi": "Công ty phục vụ nhiều nhóm khách hàng đa dạng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2178,7 +2250,8 @@
       "examples": [
         {
           "en": "Please attach the required documents.",
-          "vi": "Vui lòng đính kèm các tài liệu được yêu cầu."
+          "vi": "Vui lòng đính kèm các tài liệu được yêu cầu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2210,7 +2283,8 @@
       "examples": [
         {
           "en": "Please keep the shipping documentation for customs inspection.",
-          "vi": "Vui lòng lưu giữ hồ sơ chứng từ vận chuyển để phục vụ kiểm tra hải quan."
+          "vi": "Vui lòng lưu giữ hồ sơ chứng từ vận chuyển để phục vụ kiểm tra hải quan.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2245,7 +2319,8 @@
       "examples": [
         {
           "en": "The project requires expertise in the domain of data security.",
-          "vi": "Dự án đòi hỏi chuyên môn trong lĩnh vực bảo mật dữ liệu."
+          "vi": "Dự án đòi hỏi chuyên môn trong lĩnh vực bảo mật dữ liệu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2279,7 +2354,8 @@
       "examples": [
         {
           "en": "Regular maintenance helps reduce equipment downtime.",
-          "vi": "Bảo trì định kỳ giúp giảm thời gian thiết bị ngừng hoạt động."
+          "vi": "Bảo trì định kỳ giúp giảm thời gian thiết bị ngừng hoạt động.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2321,7 +2397,8 @@
       "examples": [
         {
           "en": "Please review the draft before it is sent.",
-          "vi": "Vui lòng xem bản nháp trước khi gửi."
+          "vi": "Vui lòng xem bản nháp trước khi gửi.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2355,7 +2432,8 @@
       "examples": [
         {
           "en": "The drought affected local agricultural businesses.",
-          "vi": "Hạn hán ảnh hưởng đến các doanh nghiệp nông nghiệp địa phương."
+          "vi": "Hạn hán ảnh hưởng đến các doanh nghiệp nông nghiệp địa phương.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -2392,7 +2470,8 @@
       "examples": [
         {
           "en": "The payment is due at the end of the month.",
-          "vi": "Khoản thanh toán đến hạn vào cuối tháng."
+          "vi": "Khoản thanh toán đến hạn vào cuối tháng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2424,7 +2503,8 @@
       "examples": [
         {
           "en": "The database detected duplicate customer records and flagged them for review.",
-          "vi": "Cơ sở dữ liệu phát hiện các hồ sơ khách hàng trùng lặp và đánh dấu để rà soát."
+          "vi": "Cơ sở dữ liệu phát hiện các hồ sơ khách hàng trùng lặp và đánh dấu để rà soát.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2458,7 +2538,8 @@
       "examples": [
         {
           "en": "The manufacturer uses durable materials for its outdoor equipment.",
-          "vi": "Nhà sản xuất sử dụng vật liệu bền cho thiết bị ngoài trời."
+          "vi": "Nhà sản xuất sử dụng vật liệu bền cho thiết bị ngoài trời.",
+          "sense_index": 0
         }
       ],
       "collocations": [],
@@ -2489,7 +2570,8 @@
       "examples": [
         {
           "en": "The training course has a duration of two weeks.",
-          "vi": "Khóa đào tạo có thời lượng hai tuần."
+          "vi": "Khóa đào tạo có thời lượng hai tuần.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2531,7 +2613,8 @@
       "examples": [
         {
           "en": "Customer service is part of her daily duties.",
-          "vi": "Chăm sóc khách hàng là một phần nhiệm vụ hằng ngày của cô ấy."
+          "vi": "Chăm sóc khách hàng là một phần nhiệm vụ hằng ngày của cô ấy.",
+          "sense_index": 0
         }
       ],
       "collocations": [

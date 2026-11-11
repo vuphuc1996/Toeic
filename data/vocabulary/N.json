@@ -45,7 +45,8 @@
       "examples": [
         {
           "en": "Please bring all necessary documents to the interview.",
-          "vi": "Vui lòng mang theo tất cả giấy tờ cần thiết đến buổi phỏng vấn."
+          "vi": "Vui lòng mang theo tất cả giấy tờ cần thiết đến buổi phỏng vấn.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -101,7 +102,8 @@
       "examples": [
         {
           "en": "They will negotiate a new contract next week.",
-          "vi": "Họ sẽ đàm phán hợp đồng mới vào tuần tới."
+          "vi": "Họ sẽ đàm phán hợp đồng mới vào tuần tới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -152,7 +154,8 @@
       "examples": [
         {
           "en": "The negotiations continued for three days.",
-          "vi": "Cuộc đàm phán kéo dài ba ngày."
+          "vi": "Cuộc đàm phán kéo dài ba ngày.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -195,7 +198,8 @@
       "examples": [
         {
           "en": "An experienced negotiator will represent the company.",
-          "vi": "Một nhà đàm phán giàu kinh nghiệm sẽ đại diện công ty."
+          "vi": "Một nhà đàm phán giàu kinh nghiệm sẽ đại diện công ty.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -241,7 +245,8 @@
       "examples": [
         {
           "en": "The office network is temporarily unavailable.",
-          "vi": "Mạng văn phòng tạm thời không khả dụng."
+          "vi": "Mạng văn phòng tạm thời không khả dụng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -273,7 +278,8 @@
       "examples": [
         {
           "en": "The shipment was delayed; nevertheless, the customer agreed to keep the order.",
-          "vi": "Lô hàng bị chậm trễ; tuy nhiên, khách hàng vẫn đồng ý giữ đơn hàng."
+          "vi": "Lô hàng bị chậm trễ; tuy nhiên, khách hàng vẫn đồng ý giữ đơn hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [],
@@ -304,7 +310,8 @@
       "examples": [
         {
           "en": "Repeated noncompliance may result in a financial penalty.",
-          "vi": "Việc liên tục không tuân thủ có thể dẫn đến phạt tài chính."
+          "vi": "Việc liên tục không tuân thủ có thể dẫn đến phạt tài chính.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -338,7 +345,8 @@
       "examples": [
         {
           "en": "Noncompliant products will be removed from the production line.",
-          "vi": "Sản phẩm không đạt yêu cầu sẽ bị loại khỏi dây chuyền sản xuất."
+          "vi": "Sản phẩm không đạt yêu cầu sẽ bị loại khỏi dây chuyền sản xuất.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -378,7 +386,8 @@
       "examples": [
         {
           "en": "The authorization letter must be notarized before submission.",
-          "vi": "Thư ủy quyền phải được công chứng trước khi nộp."
+          "vi": "Thư ủy quyền phải được công chứng trước khi nộp.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -412,7 +421,8 @@
       "examples": [
         {
           "en": "Please provide a notarized copy of the agreement.",
-          "vi": "Vui lòng cung cấp bản sao hợp đồng đã được công chứng."
+          "vi": "Vui lòng cung cấp bản sao hợp đồng đã được công chứng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -468,7 +478,13 @@
       "examples": [
         {
           "en": "Employees received notice of the schedule change.",
-          "vi": "Nhân viên đã nhận được thông báo về việc thay đổi lịch."
+          "vi": "Nhân viên đã nhận được thông báo về việc thay đổi lịch.",
+          "sense_index": 0
+        },
+        {
+          "en": "The supervisor noticed a discrepancy in the monthly expense report.",
+          "vi": "Người giám sát nhận thấy một điểm sai lệch trong báo cáo chi phí hằng tháng.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -517,7 +533,8 @@
       "examples": [
         {
           "en": "Please notify the supervisor of any changes.",
-          "vi": "Vui lòng thông báo cho giám sát viên về mọi thay đổi."
+          "vi": "Vui lòng thông báo cho giám sát viên về mọi thay đổi.",
+          "sense_index": 0
         }
       ],
       "collocations": [

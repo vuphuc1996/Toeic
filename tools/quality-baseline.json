@@ -29,20 +29,7 @@
       "params": {
         "scope": "same record, casefold"
       },
-      "violations": [
-        {
-          "id": "advocate-vn",
-          "at": "/senses/1/definition_en"
-        },
-        {
-          "id": "approximate-adjv",
-          "at": "/senses/1/definition_en"
-        },
-        {
-          "id": "decline-vn",
-          "at": "/senses/1/definition_en"
-        }
-      ]
+      "violations": []
     },
     "EX004": {
       "params": {
@@ -62,12 +49,7 @@
       "params": {
         "match": "token stem + up to 4 letters"
       },
-      "violations": [
-        {
-          "id": "day-n",
-          "at": "/examples/0/en"
-        }
-      ]
+      "violations": []
     },
     "EX009": {
       "params": {

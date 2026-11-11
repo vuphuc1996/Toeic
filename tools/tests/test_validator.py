@@ -80,6 +80,27 @@ class ValidatorTests(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn("DQ004", out)
 
+    def test_example_sense_index_must_be_in_range(self):
+        self.clean_with_baseline()
+        self.repo.words["A"][0]["examples"][0]["sense_index"] = 3
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1)
+        self.assertIn("EX010", out)
+
+    def test_every_sense_requires_its_own_example(self):
+        self.clean_with_baseline()
+        word = self.repo.words["A"][0]
+        word["senses"].append({
+            "pos": "v", "meaning_vi": "thực hiện một hành động",
+            "definition_en": "to perform an action in a particular situation",
+            "synonyms": [], "antonyms": [], "cefr_level": "A1",
+        })
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1)
+        self.assertIn("EX011", out)
+
     def test_missing_required_field(self):
         self.clean_with_baseline()
         del self.repo.words["A"][0]["collocations"]

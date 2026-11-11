@@ -32,7 +32,8 @@
       "examples": [
         {
           "en": "The trucks are waiting in the loading yard.",
-          "vi": "Các xe tải đang chờ ở bãi bốc dỡ."
+          "vi": "Các xe tải đang chờ ở bãi bốc dỡ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -68,7 +69,8 @@
       "examples": [
         {
           "en": "The company was founded ten years ago.",
-          "vi": "Công ty được thành lập cách đây mười năm."
+          "vi": "Công ty được thành lập cách đây mười năm.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -103,7 +105,8 @@
       "examples": [
         {
           "en": "All outstanding invoices must be settled before the year-end.",
-          "vi": "Tất cả hóa đơn còn tồn phải được thanh toán trước cuối năm."
+          "vi": "Tất cả hóa đơn còn tồn phải được thanh toán trước cuối năm.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -154,7 +157,13 @@
       "examples": [
         {
           "en": "The company publishes a yearly financial report.",
-          "vi": "Công ty công bố báo cáo tài chính hằng năm."
+          "vi": "Công ty công bố báo cáo tài chính hằng năm.",
+          "sense_index": 0
+        },
+        {
+          "en": "The company reviews its insurance coverage yearly before renewing the policy.",
+          "vi": "Công ty xem xét phạm vi bảo hiểm hằng năm trước khi gia hạn hợp đồng.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -209,7 +218,13 @@
       "examples": [
         {
           "en": "The investment is expected to yield a steady return.",
-          "vi": "Khoản đầu tư dự kiến mang lại lợi nhuận ổn định."
+          "vi": "Khoản đầu tư dự kiến mang lại lợi nhuận ổn định.",
+          "sense_index": 0
+        },
+        {
+          "en": "The bond offers a higher yield than the previous investment.",
+          "vi": "Trái phiếu này mang lại lợi suất cao hơn khoản đầu tư trước đó.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -243,7 +258,8 @@
       "examples": [
         {
           "en": "A yielding approach helped the two sides reach an agreement.",
-          "vi": "Cách tiếp cận nhượng bộ giúp hai bên đạt được thỏa thuận."
+          "vi": "Cách tiếp cận nhượng bộ giúp hai bên đạt được thỏa thuận.",
+          "sense_index": 0
         }
       ],
       "collocations": [

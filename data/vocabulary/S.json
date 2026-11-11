@@ -28,7 +28,8 @@
       "examples": [
         {
           "en": "Workplace safety is reviewed every quarter.",
-          "vi": "An toàn nơi làm việc được rà soát mỗi quý."
+          "vi": "An toàn nơi làm việc được rà soát mỗi quý.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -63,7 +64,8 @@
       "examples": [
         {
           "en": "The position offers a competitive salary.",
-          "vi": "Vị trí có mức lương cạnh tranh."
+          "vi": "Vị trí có mức lương cạnh tranh.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -107,7 +109,8 @@
       "examples": [
         {
           "en": "The supplier sent a sample for inspection.",
-          "vi": "Nhà cung cấp gửi mẫu để kiểm tra."
+          "vi": "Nhà cung cấp gửi mẫu để kiểm tra.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -141,7 +144,8 @@
       "examples": [
         {
           "en": "The facility improved sanitation in shared areas.",
-          "vi": "Cơ sở cải thiện vệ sinh tại các khu vực chung."
+          "vi": "Cơ sở cải thiện vệ sinh tại các khu vực chung.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -178,7 +182,8 @@
       "examples": [
         {
           "en": "Staff must sanitize shared equipment after use.",
-          "vi": "Nhân viên phải khử khuẩn thiết bị dùng chung sau khi sử dụng."
+          "vi": "Nhân viên phải khử khuẩn thiết bị dùng chung sau khi sử dụng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -224,7 +229,8 @@
       "examples": [
         {
           "en": "The service must satisfy customer expectations.",
-          "vi": "Dịch vụ phải đáp ứng kỳ vọng khách hàng."
+          "vi": "Dịch vụ phải đáp ứng kỳ vọng khách hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -257,7 +263,8 @@
       "examples": [
         {
           "en": "The language course is held on Saturday mornings.",
-          "vi": "Khóa học ngôn ngữ được tổ chức vào sáng thứ Bảy."
+          "vi": "Khóa học ngôn ngữ được tổ chức vào sáng thứ Bảy.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -292,7 +299,8 @@
       "examples": [
         {
           "en": "A savings account usually pays interest.",
-          "vi": "Tài khoản tiết kiệm thường có trả lãi."
+          "vi": "Tài khoản tiết kiệm thường có trả lãi.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -323,7 +331,8 @@
       "examples": [
         {
           "en": "The scaffold must be inspected every morning.",
-          "vi": "Giàn giáo phải được kiểm tra mỗi sáng."
+          "vi": "Giàn giáo phải được kiểm tra mỗi sáng.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -384,8 +393,14 @@
       },
       "examples": [
         {
+          "en": "The revised schedule is available on the company intranet.",
+          "vi": "Lịch trình đã điều chỉnh hiện có trên mạng nội bộ của công ty.",
+          "sense_index": 0
+        },
+        {
           "en": "The manager scheduled a meeting for Monday.",
-          "vi": "Quản lý đã lên lịch cuộc họp vào thứ Hai."
+          "vi": "Quản lý đã lên lịch cuộc họp vào thứ Hai.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -422,7 +437,8 @@
       "examples": [
         {
           "en": "The foundation offers scholarships to local students.",
-          "vi": "Quỹ cung cấp học bổng cho sinh viên địa phương."
+          "vi": "Quỹ cung cấp học bổng cho sinh viên địa phương.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -459,7 +475,8 @@
       "examples": [
         {
           "en": "Please complete section three of the form.",
-          "vi": "Vui lòng hoàn thành phần ba của biểu mẫu."
+          "vi": "Vui lòng hoàn thành phần ba của biểu mẫu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -505,7 +522,8 @@
       "examples": [
         {
           "en": "Select the appropriate payment method.",
-          "vi": "Chọn phương thức thanh toán phù hợp."
+          "vi": "Chọn phương thức thanh toán phù hợp.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -539,7 +557,8 @@
       "examples": [
         {
           "en": "The seminar covers new workplace safety standards.",
-          "vi": "Hội thảo đề cập các tiêu chuẩn an toàn lao động mới."
+          "vi": "Hội thảo đề cập các tiêu chuẩn an toàn lao động mới.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -576,7 +595,8 @@
       "examples": [
         {
           "en": "A senior engineer will lead the project.",
-          "vi": "Một kỹ sư cấp cao sẽ dẫn dắt dự án."
+          "vi": "Một kỹ sư cấp cao sẽ dẫn dắt dự án.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -616,7 +636,8 @@
       "examples": [
         {
           "en": "The hotel provides excellent customer service.",
-          "vi": "Khách sạn cung cấp dịch vụ khách hàng xuất sắc."
+          "vi": "Khách sạn cung cấp dịch vụ khách hàng xuất sắc.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -662,7 +683,8 @@
       "examples": [
         {
           "en": "The invoice must be settled within thirty days.",
-          "vi": "Hóa đơn phải được thanh toán trong vòng 30 ngày."
+          "vi": "Hóa đơn phải được thanh toán trong vòng 30 ngày.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -694,7 +716,8 @@
       "examples": [
         {
           "en": "The agreement specifies the severance package.",
-          "vi": "Thỏa thuận quy định gói trợ cấp thôi việc."
+          "vi": "Thỏa thuận quy định gói trợ cấp thôi việc.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -728,7 +751,8 @@
       "examples": [
         {
           "en": "Eligible staff will receive severance pay under the policy.",
-          "vi": "Nhân viên đủ điều kiện sẽ nhận trợ cấp thôi việc theo chính sách."
+          "vi": "Nhân viên đủ điều kiện sẽ nhận trợ cấp thôi việc theo chính sách.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -770,7 +794,8 @@
       "examples": [
         {
           "en": "Employees should move to the nearest shelter.",
-          "vi": "Nhân viên nên di chuyển đến nơi trú ẩn gần nhất."
+          "vi": "Nhân viên nên di chuyển đến nơi trú ẩn gần nhất.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -818,7 +843,8 @@
       "examples": [
         {
           "en": "The shipment is expected to arrive tomorrow.",
-          "vi": "Lô hàng dự kiến sẽ đến vào ngày mai."
+          "vi": "Lô hàng dự kiến sẽ đến vào ngày mai.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -852,7 +878,8 @@
       "examples": [
         {
           "en": "A shortage of components has slowed production.",
-          "vi": "Tình trạng thiếu linh kiện đã làm chậm sản xuất."
+          "vi": "Tình trạng thiếu linh kiện đã làm chậm sản xuất.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -894,7 +921,8 @@
       "examples": [
         {
           "en": "The project achieved significant cost savings.",
-          "vi": "Dự án đạt mức tiết kiệm chi phí đáng kể."
+          "vi": "Dự án đạt mức tiết kiệm chi phí đáng kể.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -934,7 +962,8 @@
       "examples": [
         {
           "en": "The two proposals are very similar.",
-          "vi": "Hai đề xuất rất giống nhau."
+          "vi": "Hai đề xuất rất giống nhau.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -972,7 +1001,8 @@
       "examples": [
         {
           "en": "We will review the situation tomorrow.",
-          "vi": "Chúng tôi sẽ xem xét tình hình vào ngày mai."
+          "vi": "Chúng tôi sẽ xem xét tình hình vào ngày mai.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1012,7 +1042,8 @@
       "examples": [
         {
           "en": "Communication is an essential skill for this position.",
-          "vi": "Giao tiếp là kỹ năng thiết yếu cho vị trí này."
+          "vi": "Giao tiếp là kỹ năng thiết yếu cho vị trí này.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1052,7 +1083,8 @@
       "examples": [
         {
           "en": "The IT team found a solution to the issue.",
-          "vi": "Đội IT tìm được giải pháp cho vấn đề."
+          "vi": "Đội IT tìm được giải pháp cho vấn đề.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1084,7 +1116,8 @@
       "examples": [
         {
           "en": "The company remains solvent despite lower sales.",
-          "vi": "Công ty vẫn có khả năng thanh toán dù doanh số giảm."
+          "vi": "Công ty vẫn có khả năng thanh toán dù doanh số giảm.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1126,7 +1159,8 @@
       "examples": [
         {
           "en": "Please identify the source of the information.",
-          "vi": "Vui lòng xác định nguồn của thông tin."
+          "vi": "Vui lòng xác định nguồn của thông tin.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1166,7 +1200,8 @@
       "examples": [
         {
           "en": "Please provide a specific delivery date.",
-          "vi": "Vui lòng cung cấp ngày giao hàng cụ thể."
+          "vi": "Vui lòng cung cấp ngày giao hàng cụ thể.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1204,7 +1239,8 @@
       "examples": [
         {
           "en": "The equipment must meet the technical specifications.",
-          "vi": "Thiết bị phải đáp ứng các thông số kỹ thuật."
+          "vi": "Thiết bị phải đáp ứng các thông số kỹ thuật.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1242,7 +1278,8 @@
       "examples": [
         {
           "en": "Please specify the quantity and delivery address when placing your order.",
-          "vi": "Vui lòng ghi rõ số lượng và địa chỉ giao hàng khi đặt đơn."
+          "vi": "Vui lòng ghi rõ số lượng và địa chỉ giao hàng khi đặt đơn.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1278,7 +1315,8 @@
       "examples": [
         {
           "en": "The listing provides the office square footage.",
-          "vi": "Tin đăng cung cấp diện tích văn phòng tính bằng foot vuông."
+          "vi": "Tin đăng cung cấp diện tích văn phòng tính bằng foot vuông.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -1321,7 +1359,8 @@
       "examples": [
         {
           "en": "The staff will receive safety training.",
-          "vi": "Nhân viên sẽ được đào tạo an toàn."
+          "vi": "Nhân viên sẽ được đào tạo an toàn.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1353,7 +1392,8 @@
       "examples": [
         {
           "en": "The project manager will update all stakeholders on Friday.",
-          "vi": "Quản lý dự án sẽ cập nhật thông tin cho tất cả bên liên quan vào thứ Sáu."
+          "vi": "Quản lý dự án sẽ cập nhật thông tin cho tất cả bên liên quan vào thứ Sáu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1395,7 +1435,8 @@
       "examples": [
         {
           "en": "All products must meet safety standards.",
-          "vi": "Tất cả sản phẩm phải đáp ứng tiêu chuẩn an toàn."
+          "vi": "Tất cả sản phẩm phải đáp ứng tiêu chuẩn an toàn.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1432,8 +1473,9 @@
       "verb_forms": null,
       "examples": [
         {
-          "en": "Please review your bank statement.",
-          "vi": "Vui lòng xem lại sao kê ngân hàng."
+          "en": "Customers can download their monthly bank statement through the mobile banking application.",
+          "vi": "Khách hàng có thể tải sao kê ngân hàng hằng tháng thông qua ứng dụng ngân hàng di động.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1479,7 +1521,8 @@
       "examples": [
         {
           "en": "The store has enough stock for the weekend.",
-          "vi": "Cửa hàng có đủ hàng tồn kho cho cuối tuần."
+          "vi": "Cửa hàng có đủ hàng tồn kho cho cuối tuần.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1513,7 +1556,8 @@
       "examples": [
         {
           "en": "The manager checked the stockroom for more supplies.",
-          "vi": "Quản lý kiểm tra kho để tìm thêm hàng."
+          "vi": "Quản lý kiểm tra kho để tìm thêm hàng.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -1550,7 +1594,8 @@
       "examples": [
         {
           "en": "The company is reviewing its growth strategy.",
-          "vi": "Công ty đang xem xét chiến lược tăng trưởng."
+          "vi": "Công ty đang xem xét chiến lược tăng trưởng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1588,7 +1633,8 @@
       "examples": [
         {
           "en": "The builder may subcontract the electrical work.",
-          "vi": "Nhà thầu có thể giao thầu phụ phần công việc điện."
+          "vi": "Nhà thầu có thể giao thầu phụ phần công việc điện.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1622,7 +1668,8 @@
       "examples": [
         {
           "en": "All subcontractors must complete the safety orientation.",
-          "vi": "Tất cả nhà thầu phụ phải hoàn thành buổi định hướng an toàn."
+          "vi": "Tất cả nhà thầu phụ phải hoàn thành buổi định hướng an toàn.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1673,7 +1720,8 @@
       "examples": [
         {
           "en": "Please submit your application before the deadline.",
-          "vi": "Vui lòng nộp đơn trước hạn chót."
+          "vi": "Vui lòng nộp đơn trước hạn chót.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1713,7 +1761,8 @@
       "examples": [
         {
           "en": "Customers can subscribe to the monthly industry newsletter on our website.",
-          "vi": "Khách hàng có thể đăng ký nhận bản tin ngành hằng tháng trên trang web của chúng tôi."
+          "vi": "Khách hàng có thể đăng ký nhận bản tin ngành hằng tháng trên trang web của chúng tôi.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1747,7 +1796,8 @@
       "examples": [
         {
           "en": "The annual software subscription includes technical support and security updates.",
-          "vi": "Gói thuê bao phần mềm hằng năm bao gồm hỗ trợ kỹ thuật và các bản cập nhật bảo mật."
+          "vi": "Gói thuê bao phần mềm hằng năm bao gồm hỗ trợ kỹ thuật và các bản cập nhật bảo mật.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1781,7 +1831,8 @@
       "examples": [
         {
           "en": "The subsidiary operates independently in three countries.",
-          "vi": "Công ty con hoạt động độc lập tại ba quốc gia."
+          "vi": "Công ty con hoạt động độc lập tại ba quốc gia.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1823,7 +1874,8 @@
       "examples": [
         {
           "en": "The project requires a substantial investment.",
-          "vi": "Dự án yêu cầu khoản đầu tư đáng kể."
+          "vi": "Dự án yêu cầu khoản đầu tư đáng kể.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1855,7 +1907,8 @@
       "examples": [
         {
           "en": "Please allow sufficient time for the shipment to clear customs.",
-          "vi": "Vui lòng dành đủ thời gian để lô hàng hoàn tất thủ tục thông quan."
+          "vi": "Vui lòng dành đủ thời gian để lô hàng hoàn tất thủ tục thông quan.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1889,7 +1942,8 @@
       "examples": [
         {
           "en": "The conference room is sufficiently large to accommodate all registered guests.",
-          "vi": "Phòng hội nghị đủ rộng để bố trí chỗ cho tất cả khách đã đăng ký."
+          "vi": "Phòng hội nghị đủ rộng để bố trí chỗ cho tất cả khách đã đăng ký.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1937,7 +1991,8 @@
       "examples": [
         {
           "en": "I suggest moving the meeting to Friday.",
-          "vi": "Tôi đề xuất chuyển cuộc họp sang thứ Sáu."
+          "vi": "Tôi đề xuất chuyển cuộc họp sang thứ Sáu.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -1971,7 +2026,8 @@
       "examples": [
         {
           "en": "The executive suite overlooks the city.",
-          "vi": "Phòng suite dành cho khách điều hành nhìn ra thành phố."
+          "vi": "Phòng suite dành cho khách điều hành nhìn ra thành phố.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -2001,7 +2057,8 @@
       "examples": [
         {
           "en": "The hotel restaurant is open on Sunday.",
-          "vi": "Nhà hàng khách sạn mở cửa vào Chủ Nhật."
+          "vi": "Nhà hàng khách sạn mở cửa vào Chủ Nhật.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2051,7 +2108,8 @@
       "examples": [
         {
           "en": "A senior technician will supervise the installation.",
-          "vi": "Một kỹ thuật viên cấp cao sẽ giám sát việc lắp đặt."
+          "vi": "Một kỹ thuật viên cấp cao sẽ giám sát việc lắp đặt.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2096,7 +2154,8 @@
       "examples": [
         {
           "en": "The new employees work under close supervision.",
-          "vi": "Nhân viên mới làm việc dưới sự giám sát chặt chẽ."
+          "vi": "Nhân viên mới làm việc dưới sự giám sát chặt chẽ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2141,7 +2200,8 @@
       "examples": [
         {
           "en": "Ask your supervisor to approve the leave request.",
-          "vi": "Hãy yêu cầu người giám sát phê duyệt đơn nghỉ phép."
+          "vi": "Hãy yêu cầu người giám sát phê duyệt đơn nghỉ phép.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2193,7 +2253,8 @@
       "examples": [
         {
           "en": "We are looking for a reliable office supplies supplier.",
-          "vi": "Chúng tôi đang tìm nhà cung cấp vật tư văn phòng đáng tin cậy."
+          "vi": "Chúng tôi đang tìm nhà cung cấp vật tư văn phòng đáng tin cậy.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2247,7 +2308,8 @@
       "examples": [
         {
           "en": "The supplier can supply the parts next week.",
-          "vi": "Nhà cung cấp có thể cung cấp linh kiện vào tuần tới."
+          "vi": "Nhà cung cấp có thể cung cấp linh kiện vào tuần tới.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2293,7 +2355,8 @@
       "examples": [
         {
           "en": "Our team supports customers by phone.",
-          "vi": "Đội ngũ hỗ trợ khách hàng qua điện thoại."
+          "vi": "Đội ngũ hỗ trợ khách hàng qua điện thoại.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2325,7 +2388,8 @@
       "examples": [
         {
           "en": "A fuel surcharge may apply to deliveries outside the metropolitan area.",
-          "vi": "Phụ phí nhiên liệu có thể được áp dụng cho các chuyến giao hàng ngoài khu vực đô thị."
+          "vi": "Phụ phí nhiên liệu có thể được áp dụng cho các chuyến giao hàng ngoài khu vực đô thị.",
+          "sense_index": 0
         }
       ],
       "collocations": [],
@@ -2356,7 +2420,8 @@
       "examples": [
         {
           "en": "The warehouse has a surplus of seasonal products.",
-          "vi": "Kho hàng có lượng hàng theo mùa dư thừa."
+          "vi": "Kho hàng có lượng hàng theo mùa dư thừa.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2402,7 +2467,8 @@
       "examples": [
         {
           "en": "Employees completed an online survey.",
-          "vi": "Nhân viên hoàn thành khảo sát trực tuyến."
+          "vi": "Nhân viên hoàn thành khảo sát trực tuyến.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2440,7 +2506,8 @@
       "examples": [
         {
           "en": "The airline will suspend the route while runway repairs are underway.",
-          "vi": "Hãng hàng không sẽ tạm ngừng tuyến bay trong thời gian sửa chữa đường băng."
+          "vi": "Hãng hàng không sẽ tạm ngừng tuyến bay trong thời gian sửa chữa đường băng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2474,7 +2541,8 @@
       "examples": [
         {
           "en": "The temporary suspension of deliveries was announced after the warehouse fire.",
-          "vi": "Việc tạm ngừng giao hàng đã được thông báo sau vụ cháy nhà kho."
+          "vi": "Việc tạm ngừng giao hàng đã được thông báo sau vụ cháy nhà kho.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2515,7 +2583,8 @@
       "examples": [
         {
           "en": "The business needs new customers to sustain growth.",
-          "vi": "Doanh nghiệp cần khách hàng mới để duy trì tăng trưởng."
+          "vi": "Doanh nghiệp cần khách hàng mới để duy trì tăng trưởng.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2550,7 +2619,8 @@
       "examples": [
         {
           "en": "The annual report includes a section on environmental sustainability.",
-          "vi": "Báo cáo thường niên có phần về tính bền vững môi trường."
+          "vi": "Báo cáo thường niên có phần về tính bền vững môi trường.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2592,7 +2662,8 @@
       "examples": [
         {
           "en": "The company is developing a sustainable supply chain.",
-          "vi": "Công ty đang phát triển chuỗi cung ứng bền vững."
+          "vi": "Công ty đang phát triển chuỗi cung ứng bền vững.",
+          "sense_index": 0
         }
       ],
       "collocations": [
@@ -2626,7 +2697,8 @@
       "examples": [
         {
           "en": "Report any unusual symptoms to the medical team.",
-          "vi": "Báo cáo mọi triệu chứng bất thường cho đội ngũ y tế."
+          "vi": "Báo cáo mọi triệu chứng bất thường cho đội ngũ y tế.",
+          "sense_index": 0
         }
       ],
       "collocations": []
@@ -2661,7 +2733,8 @@
       "examples": [
         {
           "en": "The system will be updated tonight.",
-          "vi": "Hệ thống sẽ được cập nhật tối nay."
+          "vi": "Hệ thống sẽ được cập nhật tối nay.",
+          "sense_index": 0
         }
       ],
       "collocations": [

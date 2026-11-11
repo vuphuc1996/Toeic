@@ -29,7 +29,8 @@
       "examples": [
         {
           "en": "The clinic sent the X-ray results to the doctor.",
-          "vi": "Phòng khám đã gửi kết quả chụp X-quang cho bác sĩ."
+          "vi": "Phòng khám đã gửi kết quả chụp X-quang cho bác sĩ.",
+          "sense_index": 0
         }
       ],
       "collocations": [
