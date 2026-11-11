@@ -46,7 +46,13 @@
             "At the end of next month"
           ],
           "answerIndex": 0,
-          "explanation": "Bài đọc nêu rõ request phải được gửi by Friday."
+          "explanation": "Bài đọc nêu rõ request phải được gửi by Friday.",
+          "choiceIds": [
+            "reading:office-schedule:1:choice:1",
+            "reading:office-schedule:1:choice:2",
+            "reading:office-schedule:1:choice:3",
+            "reading:office-schedule:1:choice:4"
+          ]
         },
         {
           "question": "Where will the briefing take place?",
@@ -57,7 +63,13 @@
             "The supervisor's office"
           ],
           "answerIndex": 1,
-          "explanation": "Buổi phổ biến sẽ diễn ra tại Meeting Room B."
+          "explanation": "Buổi phổ biến sẽ diễn ra tại Meeting Room B.",
+          "choiceIds": [
+            "reading:office-schedule:2:choice:1",
+            "reading:office-schedule:2:choice:2",
+            "reading:office-schedule:2:choice:3",
+            "reading:office-schedule:2:choice:4"
+          ]
         },
         {
           "question": "What should employees update?",
@@ -68,7 +80,13 @@
             "Their travel documents"
           ],
           "answerIndex": 2,
-          "explanation": "Nhân viên được yêu cầu cập nhật calendar entries."
+          "explanation": "Nhân viên được yêu cầu cập nhật calendar entries.",
+          "choiceIds": [
+            "reading:office-schedule:3:choice:1",
+            "reading:office-schedule:3:choice:2",
+            "reading:office-schedule:3:choice:3",
+            "reading:office-schedule:3:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -120,7 +138,13 @@
             "The following quarter"
           ],
           "answerIndex": 1,
-          "explanation": "Thông báo ghi cuộc họp diễn ra vào thứ Năm, ngày 18 tháng 4; đây là thời điểm được hỏi."
+          "explanation": "Thông báo ghi cuộc họp diễn ra vào thứ Năm, ngày 18 tháng 4; đây là thời điểm được hỏi.",
+          "choiceIds": [
+            "reading:meeting-notice:1:choice:1",
+            "reading:meeting-notice:1:choice:2",
+            "reading:meeting-notice:1:choice:3",
+            "reading:meeting-notice:1:choice:4"
+          ]
         },
         {
           "question": "What must be submitted by Tuesday afternoon?",
@@ -131,7 +155,13 @@
             "Equipment requests"
           ],
           "answerIndex": 2,
-          "explanation": "Slide trình bày phải gửi đến planning office trước hạn."
+          "explanation": "Slide trình bày phải gửi đến planning office trước hạn.",
+          "choiceIds": [
+            "reading:meeting-notice:2:choice:1",
+            "reading:meeting-notice:2:choice:2",
+            "reading:meeting-notice:2:choice:3",
+            "reading:meeting-notice:2:choice:4"
+          ]
         },
         {
           "question": "How can an absent participant join?",
@@ -142,7 +172,13 @@
             "By visiting the planning office"
           ],
           "answerIndex": 1,
-          "explanation": "Người không đến trực tiếp có thể dùng video-conferencing link."
+          "explanation": "Người không đến trực tiếp có thể dùng video-conferencing link.",
+          "choiceIds": [
+            "reading:meeting-notice:3:choice:1",
+            "reading:meeting-notice:3:choice:2",
+            "reading:meeting-notice:3:choice:3",
+            "reading:meeting-notice:3:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -194,7 +230,13 @@
             "One week"
           ],
           "answerIndex": 2,
-          "explanation": "Phòng được đặt trong three nights."
+          "explanation": "Phòng được đặt trong three nights.",
+          "choiceIds": [
+            "reading:business-travel:1:choice:1",
+            "reading:business-travel:1:choice:2",
+            "reading:business-travel:1:choice:3",
+            "reading:business-travel:1:choice:4"
+          ]
         },
         {
           "question": "What should she keep for reimbursement?",
@@ -211,6 +253,18 @@
             "Business cards only",
             "The presentation slides",
             "The shuttle timetable"
+          ],
+          "choiceIds": [
+            "reading:business-travel:2:choice:1",
+            "reading:business-travel:2:choice:2",
+            "reading:business-travel:2:choice:3",
+            "reading:business-travel:2:choice:4"
+          ],
+          "legacyChoiceIds": [
+            "legacy:reading:business-travel:2:choice:1",
+            "legacy:reading:business-travel:2:choice:2",
+            "legacy:reading:business-travel:2:choice:3",
+            "legacy:reading:business-travel:2:choice:4"
           ]
         },
         {
@@ -222,7 +276,13 @@
             "Wednesday morning"
           ],
           "answerIndex": 2,
-          "explanation": "Lịch trình nêu cuộc họp đầu tiên diễn ra vào chiều thứ Ba, trước các hoạt động còn lại."
+          "explanation": "Lịch trình nêu cuộc họp đầu tiên diễn ra vào chiều thứ Ba, trước các hoạt động còn lại.",
+          "choiceIds": [
+            "reading:business-travel:3:choice:1",
+            "reading:business-travel:3:choice:2",
+            "reading:business-travel:3:choice:3",
+            "reading:business-travel:3:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -274,7 +334,13 @@
             "June 30"
           ],
           "answerIndex": 2,
-          "explanation": "Điều khoản thanh toán nêu hạn cuối của hóa đơn INV-2048 là ngày 30 tháng 5."
+          "explanation": "Điều khoản thanh toán nêu hạn cuối của hóa đơn INV-2048 là ngày 30 tháng 5.",
+          "choiceIds": [
+            "reading:invoice-payment:1:choice:1",
+            "reading:invoice-payment:1:choice:2",
+            "reading:invoice-payment:1:choice:3",
+            "reading:invoice-payment:1:choice:4"
+          ]
         },
         {
           "question": "What should the customer send if payment has been made?",
@@ -285,7 +351,13 @@
             "A maintenance schedule"
           ],
           "answerIndex": 1,
-          "explanation": "Cần gửi transaction reference để xác nhận khoản tiền đã chuyển."
+          "explanation": "Cần gửi transaction reference để xác nhận khoản tiền đã chuyển.",
+          "choiceIds": [
+            "reading:invoice-payment:2:choice:1",
+            "reading:invoice-payment:2:choice:2",
+            "reading:invoice-payment:2:choice:3",
+            "reading:invoice-payment:2:choice:4"
+          ]
         },
         {
           "question": "What does the invoice cover?",
@@ -296,7 +368,13 @@
             "New equipment"
           ],
           "answerIndex": 2,
-          "explanation": "Hóa đơn bao gồm dịch vụ bảo trì trong tháng Tư."
+          "explanation": "Hóa đơn bao gồm dịch vụ bảo trì trong tháng Tư.",
+          "choiceIds": [
+            "reading:invoice-payment:3:choice:1",
+            "reading:invoice-payment:3:choice:2",
+            "reading:invoice-payment:3:choice:3",
+            "reading:invoice-payment:3:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -348,7 +426,13 @@
             "The customer changed the order"
           ],
           "answerIndex": 1,
-          "explanation": "Lô hàng bị trễ do thời tiết xấu tại checkpoint."
+          "explanation": "Lô hàng bị trễ do thời tiết xấu tại checkpoint.",
+          "choiceIds": [
+            "reading:shipping-update:1:choice:1",
+            "reading:shipping-update:1:choice:2",
+            "reading:shipping-update:1:choice:3",
+            "reading:shipping-update:1:choice:4"
+          ]
         },
         {
           "question": "When is the shipment expected to arrive?",
@@ -359,7 +443,13 @@
             "Friday afternoon"
           ],
           "answerIndex": 2,
-          "explanation": "Carrier dự kiến đến trước Thursday noon."
+          "explanation": "Carrier dự kiến đến trước Thursday noon.",
+          "choiceIds": [
+            "reading:shipping-update:2:choice:1",
+            "reading:shipping-update:2:choice:2",
+            "reading:shipping-update:2:choice:3",
+            "reading:shipping-update:2:choice:4"
+          ]
         },
         {
           "question": "What are warehouse staff asked to do?",
@@ -370,7 +460,13 @@
             "Change the product price"
           ],
           "answerIndex": 1,
-          "explanation": "Nhân viên kho cần dành đủ không gian lưu trữ."
+          "explanation": "Nhân viên kho cần dành đủ không gian lưu trữ.",
+          "choiceIds": [
+            "reading:shipping-update:3:choice:1",
+            "reading:shipping-update:3:choice:2",
+            "reading:shipping-update:3:choice:3",
+            "reading:shipping-update:3:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -422,7 +518,13 @@
             "HR Assistant"
           ],
           "answerIndex": 1,
-          "explanation": "Thông báo tuyển dụng nêu vị trí đang cần tuyển là Operations Coordinator."
+          "explanation": "Thông báo tuyển dụng nêu vị trí đang cần tuyển là Operations Coordinator.",
+          "choiceIds": [
+            "reading:job-opening:1:choice:1",
+            "reading:job-opening:1:choice:2",
+            "reading:job-opening:1:choice:3",
+            "reading:job-opening:1:choice:4"
+          ]
         },
         {
           "question": "How should interested employees apply?",
@@ -433,7 +535,13 @@
             "At the interview"
           ],
           "answerIndex": 1,
-          "explanation": "Hướng dẫn ứng tuyển yêu cầu ứng viên gửi hồ sơ qua cổng thông tin nội bộ của công ty."
+          "explanation": "Hướng dẫn ứng tuyển yêu cầu ứng viên gửi hồ sơ qua cổng thông tin nội bộ của công ty.",
+          "choiceIds": [
+            "reading:job-opening:2:choice:1",
+            "reading:job-opening:2:choice:2",
+            "reading:job-opening:2:choice:3",
+            "reading:job-opening:2:choice:4"
+          ]
         },
         {
           "question": "When is the position expected to begin?",
@@ -444,7 +552,13 @@
             "August 1"
           ],
           "answerIndex": 2,
-          "explanation": "Thông báo ghi ngày dự kiến bắt đầu công việc là ngày 1 tháng 7."
+          "explanation": "Thông báo ghi ngày dự kiến bắt đầu công việc là ngày 1 tháng 7.",
+          "choiceIds": [
+            "reading:job-opening:3:choice:1",
+            "reading:job-opening:3:choice:2",
+            "reading:job-opening:3:choice:3",
+            "reading:job-opening:3:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -496,7 +610,13 @@
             "The warehouse was closed"
           ],
           "answerIndex": 1,
-          "explanation": "Địa chỉ giao hàng chưa đầy đủ."
+          "explanation": "Địa chỉ giao hàng chưa đầy đủ.",
+          "choiceIds": [
+            "reading:customer-service:1:choice:1",
+            "reading:customer-service:1:choice:2",
+            "reading:customer-service:1:choice:3",
+            "reading:customer-service:1:choice:4"
+          ]
         },
         {
           "question": "What information does the customer need to confirm?",
@@ -507,7 +627,13 @@
             "A product description"
           ],
           "answerIndex": 1,
-          "explanation": "Khách cần xác nhận địa chỉ đầy đủ và số điện thoại."
+          "explanation": "Khách cần xác nhận địa chỉ đầy đủ và số điện thoại.",
+          "choiceIds": [
+            "reading:customer-service:2:choice:1",
+            "reading:customer-service:2:choice:2",
+            "reading:customer-service:2:choice:3",
+            "reading:customer-service:2:choice:4"
+          ]
         },
         {
           "question": "Will the replacement shipment cost extra?",
@@ -518,7 +644,13 @@
             "The passage does not say"
           ],
           "answerIndex": 2,
-          "explanation": "Bài đọc ghi rõ at no additional cost."
+          "explanation": "Bài đọc ghi rõ at no additional cost.",
+          "choiceIds": [
+            "reading:customer-service:3:choice:1",
+            "reading:customer-service:3:choice:2",
+            "reading:customer-service:3:choice:3",
+            "reading:customer-service:3:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -570,7 +702,13 @@
             "Monday morning"
           ],
           "answerIndex": 1,
-          "explanation": "Lịch bảo trì được ấn định vào sáng thứ Bảy, bắt đầu lúc 7:00."
+          "explanation": "Lịch bảo trì được ấn định vào sáng thứ Bảy, bắt đầu lúc 7:00.",
+          "choiceIds": [
+            "reading:facility-maintenance:1:choice:1",
+            "reading:facility-maintenance:1:choice:2",
+            "reading:facility-maintenance:1:choice:3",
+            "reading:facility-maintenance:1:choice:4"
+          ]
         },
         {
           "question": "Which area may have limited access?",
@@ -581,7 +719,13 @@
             "The entire building"
           ],
           "answerIndex": 1,
-          "explanation": "Thông báo giới hạn quyền tiếp cận khu phía Đông ở tầng bốn trong thời gian bảo trì."
+          "explanation": "Thông báo giới hạn quyền tiếp cận khu phía Đông ở tầng bốn trong thời gian bảo trì.",
+          "choiceIds": [
+            "reading:facility-maintenance:2:choice:1",
+            "reading:facility-maintenance:2:choice:2",
+            "reading:facility-maintenance:2:choice:3",
+            "reading:facility-maintenance:2:choice:4"
+          ]
         },
         {
           "question": "Where should weekend staff work?",
@@ -592,7 +736,13 @@
             "In the reception area"
           ],
           "answerIndex": 2,
-          "explanation": "Nhân viên nên dùng workstation tạm thời trên tầng ba."
+          "explanation": "Nhân viên nên dùng workstation tạm thời trên tầng ba.",
+          "choiceIds": [
+            "reading:facility-maintenance:3:choice:1",
+            "reading:facility-maintenance:3:choice:2",
+            "reading:facility-maintenance:3:choice:3",
+            "reading:facility-maintenance:3:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -625,6 +775,18 @@
             "A replacement or return instructions",
             "A new delivery address",
             "A discount on shipping"
+          ],
+          "choiceIds": [
+            "reading:customer-refund-email:1:choice:1",
+            "reading:customer-refund-email:1:choice:2",
+            "reading:customer-refund-email:1:choice:3",
+            "reading:customer-refund-email:1:choice:4"
+          ],
+          "legacyChoiceIds": [
+            "legacy:reading:customer-refund-email:1:choice:1",
+            "legacy:reading:customer-refund-email:1:choice:2",
+            "legacy:reading:customer-refund-email:1:choice:3",
+            "legacy:reading:customer-refund-email:1:choice:4"
           ]
         }
       ],
@@ -651,7 +813,13 @@
             "Monday morning"
           ],
           "answerIndex": 1,
-          "explanation": "Thông báo nêu thang máy ở cánh Đông sẽ ngừng hoạt động từ 7 giờ sáng đến trưa thứ Bảy."
+          "explanation": "Thông báo nêu thang máy ở cánh Đông sẽ ngừng hoạt động từ 7 giờ sáng đến trưa thứ Bảy.",
+          "choiceIds": [
+            "reading:facility-maintenance-notice:1:choice:1",
+            "reading:facility-maintenance-notice:1:choice:2",
+            "reading:facility-maintenance-notice:1:choice:3",
+            "reading:facility-maintenance-notice:1:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -677,7 +845,13 @@
             "A reference from a customer"
           ],
           "answerIndex": 1,
-          "explanation": "Thông báo tuyển dụng yêu cầu ứng viên gửi một bản résumé và thư xin việc ngắn; đây là hai tài liệu được liệt kê trong mục hồ sơ cần nộp."
+          "explanation": "Thông báo tuyển dụng yêu cầu ứng viên gửi một bản résumé và thư xin việc ngắn; đây là hai tài liệu được liệt kê trong mục hồ sơ cần nộp.",
+          "choiceIds": [
+            "reading:job-posting-analyst:1:choice:1",
+            "reading:job-posting-analyst:1:choice:2",
+            "reading:job-posting-analyst:1:choice:3",
+            "reading:job-posting-analyst:1:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -709,6 +883,18 @@
             "The invoice quantity needs verification",
             "The bank account is closed",
             "The purchasing manager is absent"
+          ],
+          "choiceIds": [
+            "reading:supplier-invoice-followup:1:choice:1",
+            "reading:supplier-invoice-followup:1:choice:2",
+            "reading:supplier-invoice-followup:1:choice:3",
+            "reading:supplier-invoice-followup:1:choice:4"
+          ],
+          "legacyChoiceIds": [
+            "legacy:reading:supplier-invoice-followup:1:choice:1",
+            "legacy:reading:supplier-invoice-followup:1:choice:2",
+            "legacy:reading:supplier-invoice-followup:1:choice:3",
+            "legacy:reading:supplier-invoice-followup:1:choice:4"
           ]
         }
       ],
@@ -735,7 +921,13 @@
             "At the domestic terminal"
           ],
           "answerIndex": 0,
-          "explanation": "Lịch trình cho biết xe đưa đón của khách sạn sẽ đón đoàn bên ngoài Cổng số 4."
+          "explanation": "Lịch trình cho biết xe đưa đón của khách sạn sẽ đón đoàn bên ngoài Cổng số 4.",
+          "choiceIds": [
+            "reading:travel-itinerary:1:choice:1",
+            "reading:travel-itinerary:1:choice:2",
+            "reading:travel-itinerary:1:choice:3",
+            "reading:travel-itinerary:1:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -767,6 +959,18 @@
             "An incorrectly labeled carton",
             "A vehicle breakdown",
             "A customs inspection"
+          ],
+          "choiceIds": [
+            "reading:double-passage-order:1:choice:1",
+            "reading:double-passage-order:1:choice:2",
+            "reading:double-passage-order:1:choice:3",
+            "reading:double-passage-order:1:choice:4"
+          ],
+          "legacyChoiceIds": [
+            "legacy:reading:double-passage-order:1:choice:1",
+            "legacy:reading:double-passage-order:1:choice:2",
+            "legacy:reading:double-passage-order:1:choice:3",
+            "legacy:reading:double-passage-order:1:choice:4"
           ]
         }
       ],
@@ -809,6 +1013,18 @@
             "Employees who communicate with customers",
             "External auditors",
             "Job applicants"
+          ],
+          "choiceIds": [
+            "reading:training-announcement:1:choice:1",
+            "reading:training-announcement:1:choice:2",
+            "reading:training-announcement:1:choice:3",
+            "reading:training-announcement:1:choice:4"
+          ],
+          "legacyChoiceIds": [
+            "legacy:reading:training-announcement:1:choice:1",
+            "legacy:reading:training-announcement:1:choice:2",
+            "legacy:reading:training-announcement:1:choice:3",
+            "legacy:reading:training-announcement:1:choice:4"
           ]
         }
       ],
@@ -835,7 +1051,13 @@
             "10:00 a.m."
           ],
           "answerIndex": 2,
-          "explanation": "Email từ ban tổ chức cập nhật giờ thuyết trình khai mạc từ 9:00 sang 9:30 sáng."
+          "explanation": "Email từ ban tổ chức cập nhật giờ thuyết trình khai mạc từ 9:00 sang 9:30 sáng.",
+          "choiceIds": [
+            "reading:triple-passage-meeting:1:choice:1",
+            "reading:triple-passage-meeting:1:choice:2",
+            "reading:triple-passage-meeting:1:choice:3",
+            "reading:triple-passage-meeting:1:choice:4"
+          ]
         }
       ],
       "part": "Part 7",
@@ -892,7 +1114,13 @@
             "theirs"
           ],
           "answerIndex": 0,
-          "explanation": "Tính từ sở hữu their đứng trước danh từ expense reports. They là đại từ chủ ngữ, them là tân ngữ và theirs không đứng trước danh từ."
+          "explanation": "Tính từ sở hữu their đứng trước danh từ expense reports. They là đại từ chủ ngữ, them là tân ngữ và theirs không đứng trước danh từ.",
+          "choiceIds": [
+            "reading:part5-workplace-grammar-01:1:choice:1",
+            "reading:part5-workplace-grammar-01:1:choice:2",
+            "reading:part5-workplace-grammar-01:1:choice:3",
+            "reading:part5-workplace-grammar-01:1:choice:4"
+          ]
         },
         {
           "question": "The regional manager will _____ the revised proposal this afternoon.",
@@ -903,7 +1131,13 @@
             "reviewed"
           ],
           "answerIndex": 1,
-          "explanation": "Sau will dùng động từ nguyên mẫu review."
+          "explanation": "Sau will dùng động từ nguyên mẫu review.",
+          "choiceIds": [
+            "reading:part5-workplace-grammar-01:2:choice:1",
+            "reading:part5-workplace-grammar-01:2:choice:2",
+            "reading:part5-workplace-grammar-01:2:choice:3",
+            "reading:part5-workplace-grammar-01:2:choice:4"
+          ]
         },
         {
           "question": "Online orders increased _____ after the company launched its new service.",
@@ -914,7 +1148,13 @@
             "more significant"
           ],
           "answerIndex": 2,
-          "explanation": "Động từ increased cần trạng từ significantly để bổ nghĩa."
+          "explanation": "Động từ increased cần trạng từ significantly để bổ nghĩa.",
+          "choiceIds": [
+            "reading:part5-workplace-grammar-01:3:choice:1",
+            "reading:part5-workplace-grammar-01:3:choice:2",
+            "reading:part5-workplace-grammar-01:3:choice:3",
+            "reading:part5-workplace-grammar-01:3:choice:4"
+          ]
         },
         {
           "question": "Please contact the reception desk _____ you need a visitor badge.",
@@ -925,7 +1165,13 @@
             "if"
           ],
           "answerIndex": 3,
-          "explanation": "If tạo mệnh đề điều kiện: liên hệ lễ tân nếu bạn cần thẻ khách."
+          "explanation": "If tạo mệnh đề điều kiện: liên hệ lễ tân nếu bạn cần thẻ khách.",
+          "choiceIds": [
+            "reading:part5-workplace-grammar-01:4:choice:1",
+            "reading:part5-workplace-grammar-01:4:choice:2",
+            "reading:part5-workplace-grammar-01:4:choice:3",
+            "reading:part5-workplace-grammar-01:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -967,7 +1213,13 @@
             "unless"
           ],
           "answerIndex": 0,
-          "explanation": "Because of đứng trước cụm danh từ routine maintenance; because phải đi với mệnh đề."
+          "explanation": "Because of đứng trước cụm danh từ routine maintenance; because phải đi với mệnh đề.",
+          "choiceIds": [
+            "reading:part5-business-vocabulary-02:1:choice:1",
+            "reading:part5-business-vocabulary-02:1:choice:2",
+            "reading:part5-business-vocabulary-02:1:choice:3",
+            "reading:part5-business-vocabulary-02:1:choice:4"
+          ]
         },
         {
           "question": "Applicants should have at least three years of relevant _____.",
@@ -978,7 +1230,13 @@
             "experiential"
           ],
           "answerIndex": 1,
-          "explanation": "Sau relevant cần danh từ experience."
+          "explanation": "Sau relevant cần danh từ experience.",
+          "choiceIds": [
+            "reading:part5-business-vocabulary-02:2:choice:1",
+            "reading:part5-business-vocabulary-02:2:choice:2",
+            "reading:part5-business-vocabulary-02:2:choice:3",
+            "reading:part5-business-vocabulary-02:2:choice:4"
+          ]
         },
         {
           "question": "The supplier offers a _____ discount for orders of more than 500 units.",
@@ -989,7 +1247,13 @@
             "consideration"
           ],
           "answerIndex": 2,
-          "explanation": "Considerable là tính từ bổ nghĩa cho danh từ discount."
+          "explanation": "Considerable là tính từ bổ nghĩa cho danh từ discount.",
+          "choiceIds": [
+            "reading:part5-business-vocabulary-02:3:choice:1",
+            "reading:part5-business-vocabulary-02:3:choice:2",
+            "reading:part5-business-vocabulary-02:3:choice:3",
+            "reading:part5-business-vocabulary-02:3:choice:4"
+          ]
         },
         {
           "question": "The purchasing team has _____ the order with the supplier.",
@@ -1000,7 +1264,13 @@
             "confirmed"
           ],
           "answerIndex": 3,
-          "explanation": "Hiện tại hoàn thành dùng has + past participle confirmed."
+          "explanation": "Hiện tại hoàn thành dùng has + past participle confirmed.",
+          "choiceIds": [
+            "reading:part5-business-vocabulary-02:4:choice:1",
+            "reading:part5-business-vocabulary-02:4:choice:2",
+            "reading:part5-business-vocabulary-02:4:choice:3",
+            "reading:part5-business-vocabulary-02:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -1042,7 +1312,13 @@
             "be"
           ],
           "answerIndex": 0,
-          "explanation": "Với neither…nor, động từ hòa hợp với chủ ngữ gần nhất: the receipt (số ít), nên dùng is."
+          "explanation": "Với neither…nor, động từ hòa hợp với chủ ngữ gần nhất: the receipt (số ít), nên dùng is.",
+          "choiceIds": [
+            "reading:part5-forms-and-agreement-03:1:choice:1",
+            "reading:part5-forms-and-agreement-03:1:choice:2",
+            "reading:part5-forms-and-agreement-03:1:choice:3",
+            "reading:part5-forms-and-agreement-03:1:choice:4"
+          ]
         },
         {
           "question": "The company decided to postpone _____ the new accounting system.",
@@ -1053,7 +1329,13 @@
             "implementation"
           ],
           "answerIndex": 1,
-          "explanation": "Postpone đi với V-ing: postpone implementing."
+          "explanation": "Postpone đi với V-ing: postpone implementing.",
+          "choiceIds": [
+            "reading:part5-forms-and-agreement-03:2:choice:1",
+            "reading:part5-forms-and-agreement-03:2:choice:2",
+            "reading:part5-forms-and-agreement-03:2:choice:3",
+            "reading:part5-forms-and-agreement-03:2:choice:4"
+          ]
         },
         {
           "question": "Employees who _____ the safety workshop will receive a certificate.",
@@ -1064,7 +1346,13 @@
             "attendance"
           ],
           "answerIndex": 2,
-          "explanation": "Employees là chủ ngữ số nhiều; mệnh đề quan hệ dùng attend."
+          "explanation": "Employees là chủ ngữ số nhiều; mệnh đề quan hệ dùng attend.",
+          "choiceIds": [
+            "reading:part5-forms-and-agreement-03:3:choice:1",
+            "reading:part5-forms-and-agreement-03:3:choice:2",
+            "reading:part5-forms-and-agreement-03:3:choice:3",
+            "reading:part5-forms-and-agreement-03:3:choice:4"
+          ]
         },
         {
           "question": "The director requested a _____ report on quarterly sales.",
@@ -1075,7 +1363,13 @@
             "detailed"
           ],
           "answerIndex": 3,
-          "explanation": "Detailed là tính từ mô tả report."
+          "explanation": "Detailed là tính từ mô tả report.",
+          "choiceIds": [
+            "reading:part5-forms-and-agreement-03:4:choice:1",
+            "reading:part5-forms-and-agreement-03:4:choice:2",
+            "reading:part5-forms-and-agreement-03:4:choice:3",
+            "reading:part5-forms-and-agreement-03:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -1117,7 +1411,13 @@
             "for"
           ],
           "answerIndex": 0,
-          "explanation": "Cụm cố định là in advance."
+          "explanation": "Cụm cố định là in advance.",
+          "choiceIds": [
+            "reading:part5-prepositions-and-connectors-04:1:choice:1",
+            "reading:part5-prepositions-and-connectors-04:1:choice:2",
+            "reading:part5-prepositions-and-connectors-04:1:choice:3",
+            "reading:part5-prepositions-and-connectors-04:1:choice:4"
+          ]
         },
         {
           "question": "_____ the short notice, most employees attended the briefing.",
@@ -1128,7 +1428,13 @@
             "Unless"
           ],
           "answerIndex": 1,
-          "explanation": "Despite là giới từ theo sau bởi danh từ/cụm danh từ the short notice."
+          "explanation": "Despite là giới từ theo sau bởi danh từ/cụm danh từ the short notice.",
+          "choiceIds": [
+            "reading:part5-prepositions-and-connectors-04:2:choice:1",
+            "reading:part5-prepositions-and-connectors-04:2:choice:2",
+            "reading:part5-prepositions-and-connectors-04:2:choice:3",
+            "reading:part5-prepositions-and-connectors-04:2:choice:4"
+          ]
         },
         {
           "question": "The email contains updated information _____ the delivery schedule.",
@@ -1139,7 +1445,13 @@
             "regardless"
           ],
           "answerIndex": 2,
-          "explanation": "Regarding là giới từ mang nghĩa liên quan đến."
+          "explanation": "Regarding là giới từ mang nghĩa liên quan đến.",
+          "choiceIds": [
+            "reading:part5-prepositions-and-connectors-04:3:choice:1",
+            "reading:part5-prepositions-and-connectors-04:3:choice:2",
+            "reading:part5-prepositions-and-connectors-04:3:choice:3",
+            "reading:part5-prepositions-and-connectors-04:3:choice:4"
+          ]
         },
         {
           "question": "The new policy will take effect _____ July 1.",
@@ -1150,7 +1462,13 @@
             "on"
           ],
           "answerIndex": 3,
-          "explanation": "Dùng on trước ngày cụ thể."
+          "explanation": "Dùng on trước ngày cụ thể.",
+          "choiceIds": [
+            "reading:part5-prepositions-and-connectors-04:4:choice:1",
+            "reading:part5-prepositions-and-connectors-04:4:choice:2",
+            "reading:part5-prepositions-and-connectors-04:4:choice:3",
+            "reading:part5-prepositions-and-connectors-04:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -1191,7 +1509,13 @@
             "are available next week"
           ],
           "answerIndex": 0,
-          "explanation": "Sau sessions cần cụm tính từ bổ nghĩa: available next week."
+          "explanation": "Sau sessions cần cụm tính từ bổ nghĩa: available next week.",
+          "choiceIds": [
+            "reading:part6-training-center-newsletter:1:choice:1",
+            "reading:part6-training-center-newsletter:1:choice:2",
+            "reading:part6-training-center-newsletter:1:choice:3",
+            "reading:part6-training-center-newsletter:1:choice:4"
+          ]
         },
         {
           "question": "Choose the best sentence for blank (2).",
@@ -1202,7 +1526,13 @@
             "The facilities team is located in another city."
           ],
           "answerIndex": 1,
-          "explanation": "Câu bổ sung nội dung có liên quan trực tiếp đến buổi giới thiệu trung tâm đào tạo."
+          "explanation": "Câu bổ sung nội dung có liên quan trực tiếp đến buổi giới thiệu trung tâm đào tạo.",
+          "choiceIds": [
+            "reading:part6-training-center-newsletter:2:choice:1",
+            "reading:part6-training-center-newsletter:2:choice:2",
+            "reading:part6-training-center-newsletter:2:choice:3",
+            "reading:part6-training-center-newsletter:2:choice:4"
+          ]
         },
         {
           "question": "Choose the best phrase for blank (3).",
@@ -1213,7 +1543,13 @@
             "during the next financial year"
           ],
           "answerIndex": 0,
-          "explanation": "As early as possible bổ nghĩa cho hành động hoàn tất đăng ký; ngữ cảnh nhấn mạnh số chỗ ngồi có hạn nên cần hoàn tất sớm."
+          "explanation": "As early as possible bổ nghĩa cho hành động hoàn tất đăng ký; ngữ cảnh nhấn mạnh số chỗ ngồi có hạn nên cần hoàn tất sớm.",
+          "choiceIds": [
+            "reading:part6-training-center-newsletter:3:choice:1",
+            "reading:part6-training-center-newsletter:3:choice:2",
+            "reading:part6-training-center-newsletter:3:choice:3",
+            "reading:part6-training-center-newsletter:3:choice:4"
+          ]
         },
         {
           "question": "Choose the best sentence for blank (4).",
@@ -1224,7 +1560,13 @@
             "The office can also arrange an individual orientation upon request."
           ],
           "answerIndex": 3,
-          "explanation": "Câu bổ sung thông tin hỗ trợ liên quan trực tiếp đến đăng ký và orientation."
+          "explanation": "Câu bổ sung thông tin hỗ trợ liên quan trực tiếp đến đăng ký và orientation.",
+          "choiceIds": [
+            "reading:part6-training-center-newsletter:4:choice:1",
+            "reading:part6-training-center-newsletter:4:choice:2",
+            "reading:part6-training-center-newsletter:4:choice:3",
+            "reading:part6-training-center-newsletter:4:choice:4"
+          ]
         }
       ],
       "wordCount": 78,
@@ -1266,7 +1608,13 @@
             "to ship"
           ],
           "answerIndex": 0,
-          "explanation": "Bị động tiếp diễn was being + past participle: was being shipped."
+          "explanation": "Bị động tiếp diễn was being + past participle: was being shipped.",
+          "choiceIds": [
+            "reading:part6-customer-service-email:1:choice:1",
+            "reading:part6-customer-service-email:1:choice:2",
+            "reading:part6-customer-service-email:1:choice:3",
+            "reading:part6-customer-service-email:1:choice:4"
+          ]
         },
         {
           "question": "Choose the best phrase for blank (2).",
@@ -1277,7 +1625,13 @@
             "as possible soon"
           ],
           "answerIndex": 1,
-          "explanation": "Cụm tự nhiên và đúng cấu trúc là as soon as possible."
+          "explanation": "Cụm tự nhiên và đúng cấu trúc là as soon as possible.",
+          "choiceIds": [
+            "reading:part6-customer-service-email:2:choice:1",
+            "reading:part6-customer-service-email:2:choice:2",
+            "reading:part6-customer-service-email:2:choice:3",
+            "reading:part6-customer-service-email:2:choice:4"
+          ]
         },
         {
           "question": "Choose the best sentence for blank (3).",
@@ -1288,7 +1642,13 @@
             "The invoice was issued last month."
           ],
           "answerIndex": 2,
-          "explanation": "Câu hướng dẫn xử lý sản phẩm hỏng nối trực tiếp với câu không cần trả lại."
+          "explanation": "Câu hướng dẫn xử lý sản phẩm hỏng nối trực tiếp với câu không cần trả lại.",
+          "choiceIds": [
+            "reading:part6-customer-service-email:3:choice:1",
+            "reading:part6-customer-service-email:3:choice:2",
+            "reading:part6-customer-service-email:3:choice:3",
+            "reading:part6-customer-service-email:3:choice:4"
+          ]
         },
         {
           "question": "Choose the best phrase for blank (4).",
@@ -1299,7 +1659,13 @@
             "at your convenience"
           ],
           "answerIndex": 3,
-          "explanation": "At your convenience là cụm cố định, nghĩa là khi thuận tiện cho bạn."
+          "explanation": "At your convenience là cụm cố định, nghĩa là khi thuận tiện cho bạn.",
+          "choiceIds": [
+            "reading:part6-customer-service-email:4:choice:1",
+            "reading:part6-customer-service-email:4:choice:2",
+            "reading:part6-customer-service-email:4:choice:3",
+            "reading:part6-customer-service-email:4:choice:4"
+          ]
         }
       ],
       "wordCount": 80,
@@ -1341,7 +1707,13 @@
             "coordinated"
           ],
           "answerIndex": 0,
-          "explanation": "Sau for dùng V-ing; coordinating song song với preparing trong cấu trúc responsible for."
+          "explanation": "Sau for dùng V-ing; coordinating song song với preparing trong cấu trúc responsible for.",
+          "choiceIds": [
+            "reading:part6-job-posting:1:choice:1",
+            "reading:part6-job-posting:1:choice:2",
+            "reading:part6-job-posting:1:choice:3",
+            "reading:part6-job-posting:1:choice:4"
+          ]
         },
         {
           "question": "Choose the best sentence for blank (2).",
@@ -1352,7 +1724,13 @@
             "No deliveries will be accepted after 5 p.m."
           ],
           "answerIndex": 1,
-          "explanation": "Thông tin về kinh nghiệm phù hợp với yêu cầu tuyển dụng."
+          "explanation": "Thông tin về kinh nghiệm phù hợp với yêu cầu tuyển dụng.",
+          "choiceIds": [
+            "reading:part6-job-posting:2:choice:1",
+            "reading:part6-job-posting:2:choice:2",
+            "reading:part6-job-posting:2:choice:3",
+            "reading:part6-job-posting:2:choice:4"
+          ]
         },
         {
           "question": "Choose the best phrase for blank (3).",
@@ -1363,7 +1741,13 @@
             "during August 20"
           ],
           "answerIndex": 2,
-          "explanation": "Cụm by August 20 đặt ra hạn cuối là ngày 20 tháng 8; hồ sơ phải được gửi trước hoặc trong ngày này."
+          "explanation": "Cụm by August 20 đặt ra hạn cuối là ngày 20 tháng 8; hồ sơ phải được gửi trước hoặc trong ngày này.",
+          "choiceIds": [
+            "reading:part6-job-posting:3:choice:1",
+            "reading:part6-job-posting:3:choice:2",
+            "reading:part6-job-posting:3:choice:3",
+            "reading:part6-job-posting:3:choice:4"
+          ]
         },
         {
           "question": "Choose the best sentence for blank (4).",
@@ -1374,7 +1758,13 @@
             "Candidates selected for an interview will receive an email invitation."
           ],
           "answerIndex": 3,
-          "explanation": "Câu thông báo bước tiếp theo sau khi phỏng vấn được lên lịch."
+          "explanation": "Câu thông báo bước tiếp theo sau khi phỏng vấn được lên lịch.",
+          "choiceIds": [
+            "reading:part6-job-posting:4:choice:1",
+            "reading:part6-job-posting:4:choice:2",
+            "reading:part6-job-posting:4:choice:3",
+            "reading:part6-job-posting:4:choice:4"
+          ]
         }
       ],
       "wordCount": 71,
@@ -1423,7 +1813,13 @@
             "To explain a change in office hours"
           ],
           "answerIndex": 0,
-          "explanation": "Memo thông báo lịch kiểm tra thiết bị dùng chung trong các phòng ban."
+          "explanation": "Memo thông báo lịch kiểm tra thiết bị dùng chung trong các phòng ban.",
+          "choiceIds": [
+            "reading:part7-single-equipment-memo:1:choice:1",
+            "reading:part7-single-equipment-memo:1:choice:2",
+            "reading:part7-single-equipment-memo:1:choice:3",
+            "reading:part7-single-equipment-memo:1:choice:4"
+          ]
         },
         {
           "question": "When should urgent repairs be reported?",
@@ -1434,7 +1830,13 @@
             "After October 16"
           ],
           "answerIndex": 1,
-          "explanation": "Thông báo yêu cầu báo thiết bị cần sửa gấp trước ngày 11 tháng 10."
+          "explanation": "Thông báo yêu cầu báo thiết bị cần sửa gấp trước ngày 11 tháng 10.",
+          "choiceIds": [
+            "reading:part7-single-equipment-memo:2:choice:1",
+            "reading:part7-single-equipment-memo:2:choice:2",
+            "reading:part7-single-equipment-memo:2:choice:3",
+            "reading:part7-single-equipment-memo:2:choice:4"
+          ]
         },
         {
           "question": "What are supervisors asked to do?",
@@ -1445,7 +1847,13 @@
             "Submit a list of new employees"
           ],
           "answerIndex": 2,
-          "explanation": "Trưởng bộ phận cần bảo đảm thiết bị có thể tiếp cận trong thời gian kiểm tra."
+          "explanation": "Trưởng bộ phận cần bảo đảm thiết bị có thể tiếp cận trong thời gian kiểm tra.",
+          "choiceIds": [
+            "reading:part7-single-equipment-memo:3:choice:1",
+            "reading:part7-single-equipment-memo:3:choice:2",
+            "reading:part7-single-equipment-memo:3:choice:3",
+            "reading:part7-single-equipment-memo:3:choice:4"
+          ]
         },
         {
           "question": "What will supervisors receive by October 21?",
@@ -1456,7 +1864,13 @@
             "A summary of the inspection results"
           ],
           "answerIndex": 3,
-          "explanation": "Câu cuối nêu báo cáo tóm tắt kết quả được gửi trước ngày 21 tháng 10."
+          "explanation": "Câu cuối nêu báo cáo tóm tắt kết quả được gửi trước ngày 21 tháng 10.",
+          "choiceIds": [
+            "reading:part7-single-equipment-memo:4:choice:1",
+            "reading:part7-single-equipment-memo:4:choice:2",
+            "reading:part7-single-equipment-memo:4:choice:3",
+            "reading:part7-single-equipment-memo:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -1510,6 +1924,18 @@
             "Newly hired accounting staff",
             "External suppliers of office equipment",
             "Employees who manage building security"
+          ],
+          "choiceIds": [
+            "reading:part7-single-training-email:1:choice:1",
+            "reading:part7-single-training-email:1:choice:2",
+            "reading:part7-single-training-email:1:choice:3",
+            "reading:part7-single-training-email:1:choice:4"
+          ],
+          "legacyChoiceIds": [
+            "legacy:reading:part7-single-training-email:1:choice:1",
+            "legacy:reading:part7-single-training-email:1:choice:2",
+            "legacy:reading:part7-single-training-email:1:choice:3",
+            "legacy:reading:part7-single-training-email:1:choice:4"
           ]
         },
         {
@@ -1521,7 +1947,13 @@
             "A customer service branch"
           ],
           "answerIndex": 1,
-          "explanation": "Địa điểm được nêu rõ là Conference Room 3."
+          "explanation": "Địa điểm được nêu rõ là Conference Room 3.",
+          "choiceIds": [
+            "reading:part7-single-training-email:2:choice:1",
+            "reading:part7-single-training-email:2:choice:2",
+            "reading:part7-single-training-email:2:choice:3",
+            "reading:part7-single-training-email:2:choice:4"
+          ]
         },
         {
           "question": "Why will registration close early?",
@@ -1532,7 +1964,13 @@
             "Employees must complete an online test first"
           ],
           "answerIndex": 2,
-          "explanation": "Phòng chỉ có thể tiếp nhận 24 người."
+          "explanation": "Phòng chỉ có thể tiếp nhận 24 người.",
+          "choiceIds": [
+            "reading:part7-single-training-email:3:choice:1",
+            "reading:part7-single-training-email:3:choice:2",
+            "reading:part7-single-training-email:3:choice:3",
+            "reading:part7-single-training-email:3:choice:4"
+          ]
         },
         {
           "question": "When will participants receive the workbook?",
@@ -1543,7 +1981,13 @@
             "One day before the workshop"
           ],
           "answerIndex": 3,
-          "explanation": "Tài liệu số được cung cấp một ngày trước buổi học."
+          "explanation": "Tài liệu số được cung cấp một ngày trước buổi học.",
+          "choiceIds": [
+            "reading:part7-single-training-email:4:choice:1",
+            "reading:part7-single-training-email:4:choice:2",
+            "reading:part7-single-training-email:4:choice:3",
+            "reading:part7-single-training-email:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -1595,7 +2039,13 @@
             "To change the billing address"
           ],
           "answerIndex": 0,
-          "explanation": "Khách hàng muốn xác nhận tình trạng đơn NL-4817 vì trạng thái vận chuyển chưa cập nhật."
+          "explanation": "Khách hàng muốn xác nhận tình trạng đơn NL-4817 vì trạng thái vận chuyển chưa cập nhật.",
+          "choiceIds": [
+            "reading:part7-double-order-delay:1:choice:1",
+            "reading:part7-double-order-delay:1:choice:2",
+            "reading:part7-double-order-delay:1:choice:3",
+            "reading:part7-double-order-delay:1:choice:4"
+          ]
         },
         {
           "question": "What is the reason the shipment was held?",
@@ -1606,7 +2056,13 @@
             "Incorrect payment details"
           ],
           "answerIndex": 1,
-          "explanation": "Nhà cung cấp cho biết một pallet bị giữ để kiểm tra thêm."
+          "explanation": "Nhà cung cấp cho biết một pallet bị giữ để kiểm tra thêm.",
+          "choiceIds": [
+            "reading:part7-double-order-delay:2:choice:1",
+            "reading:part7-double-order-delay:2:choice:2",
+            "reading:part7-double-order-delay:2:choice:3",
+            "reading:part7-double-order-delay:2:choice:4"
+          ]
         },
         {
           "question": "What can Northline arrange at no extra charge?",
@@ -1617,7 +2073,13 @@
             "A storage service for one month"
           ],
           "answerIndex": 2,
-          "explanation": "Nhà cung cấp đề nghị giao phần hàng sẵn có vào ngày 12 tháng 6 miễn phí."
+          "explanation": "Nhà cung cấp đề nghị giao phần hàng sẵn có vào ngày 12 tháng 6 miễn phí.",
+          "choiceIds": [
+            "reading:part7-double-order-delay:3:choice:1",
+            "reading:part7-double-order-delay:3:choice:2",
+            "reading:part7-double-order-delay:3:choice:3",
+            "reading:part7-double-order-delay:3:choice:4"
+          ]
         },
         {
           "question": "What must Eva do by 3:00 p.m.?",
@@ -1628,7 +2090,13 @@
             "Confirm whether she wants a split shipment"
           ],
           "answerIndex": 3,
-          "explanation": "Khách hàng cần phản hồi trước 15:00 nếu muốn tách chuyến giao hàng."
+          "explanation": "Khách hàng cần phản hồi trước 15:00 nếu muốn tách chuyến giao hàng.",
+          "choiceIds": [
+            "reading:part7-double-order-delay:4:choice:1",
+            "reading:part7-double-order-delay:4:choice:2",
+            "reading:part7-double-order-delay:4:choice:3",
+            "reading:part7-double-order-delay:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -1684,7 +2152,13 @@
             "Five"
           ],
           "answerIndex": 0,
-          "explanation": "Email và xác nhận khách sạn đều nói có ba phòng tiêu chuẩn."
+          "explanation": "Email và xác nhận khách sạn đều nói có ba phòng tiêu chuẩn.",
+          "choiceIds": [
+            "reading:part7-triple-conference-arrangements:1:choice:1",
+            "reading:part7-triple-conference-arrangements:1:choice:2",
+            "reading:part7-triple-conference-arrangements:1:choice:3",
+            "reading:part7-triple-conference-arrangements:1:choice:4"
+          ]
         },
         {
           "question": "Until when is Ms. Patel’s room reserved?",
@@ -1695,7 +2169,13 @@
             "April 20"
           ],
           "answerIndex": 1,
-          "explanation": "Xác nhận khách sạn nêu rõ phòng của bà Patel được giữ đến hết ngày 19 tháng 4."
+          "explanation": "Xác nhận khách sạn nêu rõ phòng của bà Patel được giữ đến hết ngày 19 tháng 4.",
+          "choiceIds": [
+            "reading:part7-triple-conference-arrangements:2:choice:1",
+            "reading:part7-triple-conference-arrangements:2:choice:2",
+            "reading:part7-triple-conference-arrangements:2:choice:3",
+            "reading:part7-triple-conference-arrangements:2:choice:4"
+          ]
         },
         {
           "question": "What is included in the hotel reservation?",
@@ -1706,7 +2186,13 @@
             "An evening meal"
           ],
           "answerIndex": 2,
-          "explanation": "Email xác nhận đặt phòng cho biết bữa sáng đã nằm trong gói lưu trú."
+          "explanation": "Email xác nhận đặt phòng cho biết bữa sáng đã nằm trong gói lưu trú.",
+          "choiceIds": [
+            "reading:part7-triple-conference-arrangements:3:choice:1",
+            "reading:part7-triple-conference-arrangements:3:choice:2",
+            "reading:part7-triple-conference-arrangements:3:choice:3",
+            "reading:part7-triple-conference-arrangements:3:choice:4"
+          ]
         },
         {
           "question": "What is scheduled for 2:00 p.m. on April 18?",
@@ -1717,7 +2203,13 @@
             "A workshop on managing remote teams"
           ],
           "answerIndex": 3,
-          "explanation": "Theo agenda, workshop về quản lý nhóm làm việc từ xa bắt đầu lúc 14:00."
+          "explanation": "Theo agenda, workshop về quản lý nhóm làm việc từ xa bắt đầu lúc 14:00.",
+          "choiceIds": [
+            "reading:part7-triple-conference-arrangements:4:choice:1",
+            "reading:part7-triple-conference-arrangements:4:choice:2",
+            "reading:part7-triple-conference-arrangements:4:choice:3",
+            "reading:part7-triple-conference-arrangements:4:choice:4"
+          ]
         },
         {
           "question": "How often does the shuttle leave for the convention center?",
@@ -1728,7 +2220,13 @@
             "Twice a day"
           ],
           "answerIndex": 0,
-          "explanation": "Khách sạn cho biết xe shuttle khởi hành mỗi 30 phút."
+          "explanation": "Khách sạn cho biết xe shuttle khởi hành mỗi 30 phút.",
+          "choiceIds": [
+            "reading:part7-triple-conference-arrangements:5:choice:1",
+            "reading:part7-triple-conference-arrangements:5:choice:2",
+            "reading:part7-triple-conference-arrangements:5:choice:3",
+            "reading:part7-triple-conference-arrangements:5:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -1765,7 +2263,13 @@
             "are send"
           ],
           "answerIndex": 1,
-          "explanation": "Cụm yesterday chỉ thời điểm quá khứ; chủ ngữ guidelines nhận hành động nên dùng bị động quá khứ đơn were sent."
+          "explanation": "Cụm yesterday chỉ thời điểm quá khứ; chủ ngữ guidelines nhận hành động nên dùng bị động quá khứ đơn were sent.",
+          "choiceIds": [
+            "reading:part5-tense-voice-set-05:1:choice:1",
+            "reading:part5-tense-voice-set-05:1:choice:2",
+            "reading:part5-tense-voice-set-05:1:choice:3",
+            "reading:part5-tense-voice-set-05:1:choice:4"
+          ]
         },
         {
           "question": "Ms. Rivera _____ the monthly report before the department meeting begins.",
@@ -1776,7 +2280,13 @@
             "has completing"
           ],
           "answerIndex": 0,
-          "explanation": "Hành động hoàn tất trước một mốc tương lai dùng tương lai hoàn thành: will have completed."
+          "explanation": "Hành động hoàn tất trước một mốc tương lai dùng tương lai hoàn thành: will have completed.",
+          "choiceIds": [
+            "reading:part5-tense-voice-set-05:2:choice:1",
+            "reading:part5-tense-voice-set-05:2:choice:2",
+            "reading:part5-tense-voice-set-05:2:choice:3",
+            "reading:part5-tense-voice-set-05:2:choice:4"
+          ]
         },
         {
           "question": "The maintenance contract _____ automatically unless either party gives written notice.",
@@ -1787,7 +2297,13 @@
             "have renew"
           ],
           "answerIndex": 2,
-          "explanation": "Chủ ngữ contract nhận hành động gia hạn; cấu trúc bị động hiện tại đơn là is renewed."
+          "explanation": "Chủ ngữ contract nhận hành động gia hạn; cấu trúc bị động hiện tại đơn là is renewed.",
+          "choiceIds": [
+            "reading:part5-tense-voice-set-05:3:choice:1",
+            "reading:part5-tense-voice-set-05:3:choice:2",
+            "reading:part5-tense-voice-set-05:3:choice:3",
+            "reading:part5-tense-voice-set-05:3:choice:4"
+          ]
         },
         {
           "question": "Employees _____ their access cards at the security desk when they leave the company.",
@@ -1798,7 +2314,13 @@
             "must return"
           ],
           "answerIndex": 3,
-          "explanation": "Sau chủ ngữ Employees cần động từ chính; must return diễn tả nghĩa vụ."
+          "explanation": "Sau chủ ngữ Employees cần động từ chính; must return diễn tả nghĩa vụ.",
+          "choiceIds": [
+            "reading:part5-tense-voice-set-05:4:choice:1",
+            "reading:part5-tense-voice-set-05:4:choice:2",
+            "reading:part5-tense-voice-set-05:4:choice:3",
+            "reading:part5-tense-voice-set-05:4:choice:4"
+          ]
         },
         {
           "question": "By the time the visitors arrived, the conference room _____.",
@@ -1809,7 +2331,13 @@
             "will prepare"
           ],
           "answerIndex": 0,
-          "explanation": "Hành động chuẩn bị hoàn tất trước một mốc quá khứ khác; dùng quá khứ hoàn thành bị động had been prepared."
+          "explanation": "Hành động chuẩn bị hoàn tất trước một mốc quá khứ khác; dùng quá khứ hoàn thành bị động had been prepared.",
+          "choiceIds": [
+            "reading:part5-tense-voice-set-05:5:choice:1",
+            "reading:part5-tense-voice-set-05:5:choice:2",
+            "reading:part5-tense-voice-set-05:5:choice:3",
+            "reading:part5-tense-voice-set-05:5:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -1846,7 +2374,13 @@
             "efficiency"
           ],
           "answerIndex": 1,
-          "explanation": "Có than nên cần cấu trúc so sánh hơn; more efficient là dạng tính từ phù hợp."
+          "explanation": "Có than nên cần cấu trúc so sánh hơn; more efficient là dạng tính từ phù hợp.",
+          "choiceIds": [
+            "reading:part5-adjectives-adverbs-set-06:1:choice:1",
+            "reading:part5-adjectives-adverbs-set-06:1:choice:2",
+            "reading:part5-adjectives-adverbs-set-06:1:choice:3",
+            "reading:part5-adjectives-adverbs-set-06:1:choice:4"
+          ]
         },
         {
           "question": "Please review the figures _____ before submitting the expense claim.",
@@ -1857,7 +2391,13 @@
             "care"
           ],
           "answerIndex": 1,
-          "explanation": "Trạng từ carefully bổ nghĩa cho động từ review."
+          "explanation": "Trạng từ carefully bổ nghĩa cho động từ review.",
+          "choiceIds": [
+            "reading:part5-adjectives-adverbs-set-06:2:choice:1",
+            "reading:part5-adjectives-adverbs-set-06:2:choice:2",
+            "reading:part5-adjectives-adverbs-set-06:2:choice:3",
+            "reading:part5-adjectives-adverbs-set-06:2:choice:4"
+          ]
         },
         {
           "question": "The director was _____ satisfied with the revised proposal.",
@@ -1868,7 +2408,13 @@
             "higher"
           ],
           "answerIndex": 2,
-          "explanation": "Highly là trạng từ bổ nghĩa cho tính từ satisfied."
+          "explanation": "Highly là trạng từ bổ nghĩa cho tính từ satisfied.",
+          "choiceIds": [
+            "reading:part5-adjectives-adverbs-set-06:3:choice:1",
+            "reading:part5-adjectives-adverbs-set-06:3:choice:2",
+            "reading:part5-adjectives-adverbs-set-06:3:choice:3",
+            "reading:part5-adjectives-adverbs-set-06:3:choice:4"
+          ]
         },
         {
           "question": "All visitors must wear _____ identification badges inside the facility.",
@@ -1879,7 +2425,13 @@
             "vision"
           ],
           "answerIndex": 0,
-          "explanation": "Danh từ identification badges cần tính từ visible đứng trước để mô tả thẻ phải dễ nhìn thấy."
+          "explanation": "Danh từ identification badges cần tính từ visible đứng trước để mô tả thẻ phải dễ nhìn thấy.",
+          "choiceIds": [
+            "reading:part5-adjectives-adverbs-set-06:4:choice:1",
+            "reading:part5-adjectives-adverbs-set-06:4:choice:2",
+            "reading:part5-adjectives-adverbs-set-06:4:choice:3",
+            "reading:part5-adjectives-adverbs-set-06:4:choice:4"
+          ]
         },
         {
           "question": "The finance team completed the audit more _____ than expected.",
@@ -1890,7 +2442,13 @@
             "quicker"
           ],
           "answerIndex": 1,
-          "explanation": "Sau more cần trạng từ quickly để bổ nghĩa cho completed trong phép so sánh cách thức."
+          "explanation": "Sau more cần trạng từ quickly để bổ nghĩa cho completed trong phép so sánh cách thức.",
+          "choiceIds": [
+            "reading:part5-adjectives-adverbs-set-06:5:choice:1",
+            "reading:part5-adjectives-adverbs-set-06:5:choice:2",
+            "reading:part5-adjectives-adverbs-set-06:5:choice:3",
+            "reading:part5-adjectives-adverbs-set-06:5:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -1927,7 +2485,13 @@
             "Unless"
           ],
           "answerIndex": 1,
-          "explanation": "Sau chỗ trống là cụm danh từ the heavy rain; despite là giới từ phù hợp. Although cần một mệnh đề."
+          "explanation": "Sau chỗ trống là cụm danh từ the heavy rain; despite là giới từ phù hợp. Although cần một mệnh đề.",
+          "choiceIds": [
+            "reading:part5-connectors-prepositions-set-07:1:choice:1",
+            "reading:part5-connectors-prepositions-set-07:1:choice:2",
+            "reading:part5-connectors-prepositions-set-07:1:choice:3",
+            "reading:part5-connectors-prepositions-set-07:1:choice:4"
+          ]
         },
         {
           "question": "The shipment was delayed; _____, the customer was notified immediately.",
@@ -1938,7 +2502,13 @@
             "instead of"
           ],
           "answerIndex": 1,
-          "explanation": "Việc thông báo ngay là hệ quả của sự chậm trễ; therefore diễn tả kết quả."
+          "explanation": "Việc thông báo ngay là hệ quả của sự chậm trễ; therefore diễn tả kết quả.",
+          "choiceIds": [
+            "reading:part5-connectors-prepositions-set-07:2:choice:1",
+            "reading:part5-connectors-prepositions-set-07:2:choice:2",
+            "reading:part5-connectors-prepositions-set-07:2:choice:3",
+            "reading:part5-connectors-prepositions-set-07:2:choice:4"
+          ]
         },
         {
           "question": "Please submit the signed agreement _____ 5 p.m. on Friday.",
@@ -1949,7 +2519,13 @@
             "since"
           ],
           "answerIndex": 0,
-          "explanation": "By + thời điểm hạn cuối diễn tả phải hoàn thành không muộn hơn 5 giờ chiều thứ Sáu."
+          "explanation": "By + thời điểm hạn cuối diễn tả phải hoàn thành không muộn hơn 5 giờ chiều thứ Sáu.",
+          "choiceIds": [
+            "reading:part5-connectors-prepositions-set-07:3:choice:1",
+            "reading:part5-connectors-prepositions-set-07:3:choice:2",
+            "reading:part5-connectors-prepositions-set-07:3:choice:3",
+            "reading:part5-connectors-prepositions-set-07:3:choice:4"
+          ]
         },
         {
           "question": "The proposal was rejected _____ it did not include a cost estimate.",
@@ -1960,7 +2536,13 @@
             "despite"
           ],
           "answerIndex": 2,
-          "explanation": "Because nối mệnh đề nêu nguyên nhân proposal bị từ chối."
+          "explanation": "Because nối mệnh đề nêu nguyên nhân proposal bị từ chối.",
+          "choiceIds": [
+            "reading:part5-connectors-prepositions-set-07:4:choice:1",
+            "reading:part5-connectors-prepositions-set-07:4:choice:2",
+            "reading:part5-connectors-prepositions-set-07:4:choice:3",
+            "reading:part5-connectors-prepositions-set-07:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -2002,7 +2584,13 @@
             "to begin on September 18"
           ],
           "answerIndex": 0,
-          "explanation": "Câu có hai vị ngữ song song '... and will remain open'; chủ ngữ The registration period cần động từ chia hiện tại đơn begins."
+          "explanation": "Câu có hai vị ngữ song song '... and will remain open'; chủ ngữ The registration period cần động từ chia hiện tại đơn begins.",
+          "choiceIds": [
+            "reading:part6-product-workshop-registration:1:choice:1",
+            "reading:part6-product-workshop-registration:1:choice:2",
+            "reading:part6-product-workshop-registration:1:choice:3",
+            "reading:part6-product-workshop-registration:1:choice:4"
+          ]
         },
         {
           "question": "Choose the best phrase for blank (2).",
@@ -2013,7 +2601,13 @@
             "has provided"
           ],
           "answerIndex": 0,
-          "explanation": "Mệnh đề quan hệ bị động which will be provided bổ nghĩa cho tablet và xác định thiết bị sẽ do ban tổ chức cung cấp."
+          "explanation": "Mệnh đề quan hệ bị động which will be provided bổ nghĩa cho tablet và xác định thiết bị sẽ do ban tổ chức cung cấp.",
+          "choiceIds": [
+            "reading:part6-product-workshop-registration:2:choice:1",
+            "reading:part6-product-workshop-registration:2:choice:2",
+            "reading:part6-product-workshop-registration:2:choice:3",
+            "reading:part6-product-workshop-registration:2:choice:4"
+          ]
         },
         {
           "question": "Choose the best phrase for blank (3).",
@@ -2024,7 +2618,13 @@
             "Despite the registration deadline"
           ],
           "answerIndex": 1,
-          "explanation": "Người tham dự nên xem hướng dẫn trước khi dự buổi đầu tiên; Before attending tạo quan hệ thời gian hợp lý."
+          "explanation": "Người tham dự nên xem hướng dẫn trước khi dự buổi đầu tiên; Before attending tạo quan hệ thời gian hợp lý.",
+          "choiceIds": [
+            "reading:part6-product-workshop-registration:3:choice:1",
+            "reading:part6-product-workshop-registration:3:choice:2",
+            "reading:part6-product-workshop-registration:3:choice:3",
+            "reading:part6-product-workshop-registration:3:choice:4"
+          ]
         },
         {
           "question": "Choose the best sentence for blank (4).",
@@ -2035,7 +2635,13 @@
             "All product returns must be handled by the accounting department."
           ],
           "answerIndex": 1,
-          "explanation": "Câu B tiếp nối trực tiếp thông tin về buổi workshop và cung cấp thông tin hậu cần trước ngày diễn ra; các câu còn lại lạc chủ đề."
+          "explanation": "Câu B tiếp nối trực tiếp thông tin về buổi workshop và cung cấp thông tin hậu cần trước ngày diễn ra; các câu còn lại lạc chủ đề.",
+          "choiceIds": [
+            "reading:part6-product-workshop-registration:4:choice:1",
+            "reading:part6-product-workshop-registration:4:choice:2",
+            "reading:part6-product-workshop-registration:4:choice:3",
+            "reading:part6-product-workshop-registration:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -2093,6 +2699,18 @@
             "To request a discount on office rent",
             "To cancel a damaged desk",
             "To change the billing contact"
+          ],
+          "choiceIds": [
+            "reading:part7-double-equipment-order:1:choice:1",
+            "reading:part7-double-equipment-order:1:choice:2",
+            "reading:part7-double-equipment-order:1:choice:3",
+            "reading:part7-double-equipment-order:1:choice:4"
+          ],
+          "legacyChoiceIds": [
+            "legacy:reading:part7-double-equipment-order:1:choice:1",
+            "legacy:reading:part7-double-equipment-order:1:choice:2",
+            "legacy:reading:part7-double-equipment-order:1:choice:3",
+            "legacy:reading:part7-double-equipment-order:1:choice:4"
           ]
         },
         {
@@ -2104,7 +2722,13 @@
             "The office area is not ready"
           ],
           "answerIndex": 1,
-          "explanation": "Nhà cung cấp cho biết monitor arms đang chờ linh kiện thay thế."
+          "explanation": "Nhà cung cấp cho biết monitor arms đang chờ linh kiện thay thế.",
+          "choiceIds": [
+            "reading:part7-double-equipment-order:2:choice:1",
+            "reading:part7-double-equipment-order:2:choice:2",
+            "reading:part7-double-equipment-order:2:choice:3",
+            "reading:part7-double-equipment-order:2:choice:4"
+          ]
         },
         {
           "question": "What can Bright Office deliver on April 22?",
@@ -2115,7 +2739,13 @@
             "A replacement component"
           ],
           "answerIndex": 2,
-          "explanation": "Tám chiếc bàn đã qua kiểm tra và có thể giao riêng vào ngày 22 tháng 4."
+          "explanation": "Tám chiếc bàn đã qua kiểm tra và có thể giao riêng vào ngày 22 tháng 4.",
+          "choiceIds": [
+            "reading:part7-double-equipment-order:3:choice:1",
+            "reading:part7-double-equipment-order:3:choice:2",
+            "reading:part7-double-equipment-order:3:choice:3",
+            "reading:part7-double-equipment-order:3:choice:4"
+          ]
         },
         {
           "question": "What must Lena do by 2 p.m. tomorrow?",
@@ -2126,7 +2756,13 @@
             "Return the order confirmation"
           ],
           "answerIndex": 1,
-          "explanation": "Nhà cung cấp yêu cầu cô xác nhận trước 14 giờ nếu muốn tách đơn giao bàn trước."
+          "explanation": "Nhà cung cấp yêu cầu cô xác nhận trước 14 giờ nếu muốn tách đơn giao bàn trước.",
+          "choiceIds": [
+            "reading:part7-double-equipment-order:4:choice:1",
+            "reading:part7-double-equipment-order:4:choice:2",
+            "reading:part7-double-equipment-order:4:choice:3",
+            "reading:part7-double-equipment-order:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -2178,7 +2814,13 @@
             "$1,000"
           ],
           "answerIndex": 2,
-          "explanation": "Bản ghi nhớ quy định mức tối đa 600 đô la cho mỗi nhân viên mỗi năm."
+          "explanation": "Bản ghi nhớ quy định mức tối đa 600 đô la cho mỗi nhân viên mỗi năm.",
+          "choiceIds": [
+            "reading:part7-double-training-reimbursement:1:choice:1",
+            "reading:part7-double-training-reimbursement:1:choice:2",
+            "reading:part7-double-training-reimbursement:1:choice:3",
+            "reading:part7-double-training-reimbursement:1:choice:4"
+          ]
         },
         {
           "question": "Which document does Daniel already have?",
@@ -2189,7 +2831,13 @@
             "A travel itinerary"
           ],
           "answerIndex": 1,
-          "explanation": "Email của Daniel xác nhận anh có biên lai thanh toán và chứng nhận hoàn thành khóa học."
+          "explanation": "Email của Daniel xác nhận anh có biên lai thanh toán và chứng nhận hoàn thành khóa học.",
+          "choiceIds": [
+            "reading:part7-double-training-reimbursement:2:choice:1",
+            "reading:part7-double-training-reimbursement:2:choice:2",
+            "reading:part7-double-training-reimbursement:2:choice:3",
+            "reading:part7-double-training-reimbursement:2:choice:4"
+          ]
         },
         {
           "question": "Why does Daniel believe he may qualify for reimbursement?",
@@ -2200,7 +2848,13 @@
             "He has not yet paid the course fee"
           ],
           "answerIndex": 0,
-          "explanation": "Bản ghi nhớ loại trừ khóa học chưa được quản lý phê duyệt trước khi đăng ký; Daniel được duyệt từ tháng 5."
+          "explanation": "Bản ghi nhớ loại trừ khóa học chưa được quản lý phê duyệt trước khi đăng ký; Daniel được duyệt từ tháng 5.",
+          "choiceIds": [
+            "reading:part7-double-training-reimbursement:3:choice:1",
+            "reading:part7-double-training-reimbursement:3:choice:2",
+            "reading:part7-double-training-reimbursement:3:choice:3",
+            "reading:part7-double-training-reimbursement:3:choice:4"
+          ]
         },
         {
           "question": "When should Daniel submit his application according to the memo?",
@@ -2211,7 +2865,13 @@
             "Only at the end of the calendar year"
           ],
           "answerIndex": 0,
-          "explanation": "Bản ghi nhớ yêu cầu nộp đơn trong vòng 30 ngày kể từ ngày kết thúc khóa học."
+          "explanation": "Bản ghi nhớ yêu cầu nộp đơn trong vòng 30 ngày kể từ ngày kết thúc khóa học.",
+          "choiceIds": [
+            "reading:part7-double-training-reimbursement:4:choice:1",
+            "reading:part7-double-training-reimbursement:4:choice:2",
+            "reading:part7-double-training-reimbursement:4:choice:3",
+            "reading:part7-double-training-reimbursement:4:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -2273,6 +2933,18 @@
             "A parking receipt",
             "A printed hotel reservation",
             "A product sample"
+          ],
+          "choiceIds": [
+            "reading:part7-triple-regional-sales-meeting:1:choice:1",
+            "reading:part7-triple-regional-sales-meeting:1:choice:2",
+            "reading:part7-triple-regional-sales-meeting:1:choice:3",
+            "reading:part7-triple-regional-sales-meeting:1:choice:4"
+          ],
+          "legacyChoiceIds": [
+            "legacy:reading:part7-triple-regional-sales-meeting:1:choice:1",
+            "legacy:reading:part7-triple-regional-sales-meeting:1:choice:2",
+            "legacy:reading:part7-triple-regional-sales-meeting:1:choice:3",
+            "legacy:reading:part7-triple-regional-sales-meeting:1:choice:4"
           ]
         },
         {
@@ -2284,7 +2956,13 @@
             "1:00 p.m."
           ],
           "answerIndex": 1,
-          "explanation": "Theo agenda, workshop diễn ra từ 10:30 đến 11:15."
+          "explanation": "Theo agenda, workshop diễn ra từ 10:30 đến 11:15.",
+          "choiceIds": [
+            "reading:part7-triple-regional-sales-meeting:2:choice:1",
+            "reading:part7-triple-regional-sales-meeting:2:choice:2",
+            "reading:part7-triple-regional-sales-meeting:2:choice:3",
+            "reading:part7-triple-regional-sales-meeting:2:choice:4"
+          ]
         },
         {
           "question": "What should participants who drive do to receive parking validation?",
@@ -2295,7 +2973,13 @@
             "Send the ticket to Sales Operations"
           ],
           "answerIndex": 2,
-          "explanation": "Travel note hướng dẫn xác nhận vé đỗ xe tại quầy lễ tân."
+          "explanation": "Travel note hướng dẫn xác nhận vé đỗ xe tại quầy lễ tân.",
+          "choiceIds": [
+            "reading:part7-triple-regional-sales-meeting:3:choice:1",
+            "reading:part7-triple-regional-sales-meeting:3:choice:2",
+            "reading:part7-triple-regional-sales-meeting:3:choice:3",
+            "reading:part7-triple-regional-sales-meeting:3:choice:4"
+          ]
         }
       ],
       "contentSource": "original-editorial"
@@ -2351,7 +3035,13 @@
             "At the IT support office"
           ],
           "answerIndex": 1,
-          "explanation": "Thông báo tòa nhà chỉ rõ quầy tạm nằm bên cạnh cổng phía Bắc."
+          "explanation": "Thông báo tòa nhà chỉ rõ quầy tạm nằm bên cạnh cổng phía Bắc.",
+          "choiceIds": [
+            "reading:part7-triple-facility-renovation:1:choice:1",
+            "reading:part7-triple-facility-renovation:1:choice:2",
+            "reading:part7-triple-facility-renovation:1:choice:3",
+            "reading:part7-triple-facility-renovation:1:choice:4"
+          ]
         },
         {
           "question": "When may employee Wi-Fi be unavailable?",
@@ -2362,7 +3052,13 @@
             "Throughout the entire renovation"
           ],
           "answerIndex": 2,
-          "explanation": "Email IT cho biết thiết bị được di dời sau 18 giờ ngày 7 tháng 3 và Wi-Fi có thể ngắt tối đa một giờ."
+          "explanation": "Email IT cho biết thiết bị được di dời sau 18 giờ ngày 7 tháng 3 và Wi-Fi có thể ngắt tối đa một giờ.",
+          "choiceIds": [
+            "reading:part7-triple-facility-renovation:2:choice:1",
+            "reading:part7-triple-facility-renovation:2:choice:2",
+            "reading:part7-triple-facility-renovation:2:choice:3",
+            "reading:part7-triple-facility-renovation:2:choice:4"
+          ]
         },
         {
           "question": "What should employees do if they expect visitors after 5 p.m.?",
@@ -2379,6 +3075,18 @@
             "Ask IT to keep Wi-Fi on",
             "Use the south loading entrance",
             "Reschedule all meetings"
+          ],
+          "choiceIds": [
+            "reading:part7-triple-facility-renovation:3:choice:1",
+            "reading:part7-triple-facility-renovation:3:choice:2",
+            "reading:part7-triple-facility-renovation:3:choice:3",
+            "reading:part7-triple-facility-renovation:3:choice:4"
+          ],
+          "legacyChoiceIds": [
+            "legacy:reading:part7-triple-facility-renovation:3:choice:1",
+            "legacy:reading:part7-triple-facility-renovation:3:choice:2",
+            "legacy:reading:part7-triple-facility-renovation:3:choice:3",
+            "legacy:reading:part7-triple-facility-renovation:3:choice:4"
           ]
         }
       ],

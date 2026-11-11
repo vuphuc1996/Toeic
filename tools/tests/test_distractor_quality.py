@@ -80,8 +80,8 @@ class DistractorQualityTests(unittest.TestCase):
 
     def test_learning_progress_persists_selected_choice_index(self):
         app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')
-        self.assertIn('choiceIndex,choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()', app)
-        self.assertIn('prog.answers[index]={answered:true,choiceIndex,choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()}', app)
+        self.assertIn('choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()', app)
+        self.assertIn('prog.answers[index]={answered:true,choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()}', app)
 
 
 if __name__ == '__main__':

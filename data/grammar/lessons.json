@@ -67,7 +67,13 @@
             "documents"
           ],
           "answerIndex": 1,
-          "explanation": "Prepared là động từ quá khứ của prepare, diễn tả hành động chuẩn bị."
+          "explanation": "Prepared là động từ quá khứ của prepare, diễn tả hành động chuẩn bị.",
+          "choiceIds": [
+            "grammar:sentence-svo:1:choice:1",
+            "grammar:sentence-svo:1:choice:2",
+            "grammar:sentence-svo:1:choice:3",
+            "grammar:sentence-svo:1:choice:4"
+          ]
         },
         {
           "question": "Trong câu ‘Our team completed the project.’, cụm nào là tân ngữ?",
@@ -78,7 +84,13 @@
             "team completed"
           ],
           "answerIndex": 2,
-          "explanation": "The project là đối tượng nhận hành động completed."
+          "explanation": "The project là đối tượng nhận hành động completed.",
+          "choiceIds": [
+            "grammar:sentence-svo:2:choice:1",
+            "grammar:sentence-svo:2:choice:2",
+            "grammar:sentence-svo:2:choice:3",
+            "grammar:sentence-svo:2:choice:4"
+          ]
         }
       ]
     },
@@ -133,7 +145,13 @@
             "accurateness"
           ],
           "answerIndex": 2,
-          "explanation": "Accurately là trạng từ bổ nghĩa cho completed."
+          "explanation": "Accurately là trạng từ bổ nghĩa cho completed.",
+          "choiceIds": [
+            "grammar:parts-of-speech:1:choice:1",
+            "grammar:parts-of-speech:1:choice:2",
+            "grammar:parts-of-speech:1:choice:3",
+            "grammar:parts-of-speech:1:choice:4"
+          ]
         },
         {
           "question": "We need a _____ solution. Chọn dạng đúng của ‘rely’. ",
@@ -144,7 +162,13 @@
             "reliability"
           ],
           "answerIndex": 2,
-          "explanation": "Reliable là tính từ đứng trước danh từ solution."
+          "explanation": "Reliable là tính từ đứng trước danh từ solution.",
+          "choiceIds": [
+            "grammar:parts-of-speech:2:choice:1",
+            "grammar:parts-of-speech:2:choice:2",
+            "grammar:parts-of-speech:2:choice:3",
+            "grammar:parts-of-speech:2:choice:4"
+          ]
         }
       ]
     },
@@ -188,7 +212,13 @@
             "many paper"
           ],
           "answerIndex": 1,
-          "explanation": "Paper với nghĩa giấy là danh từ không đếm được; dùng much paper."
+          "explanation": "Paper với nghĩa giấy là danh từ không đếm được; dùng much paper.",
+          "choiceIds": [
+            "grammar:nouns-countability:1:choice:1",
+            "grammar:nouns-countability:1:choice:2",
+            "grammar:nouns-countability:1:choice:3",
+            "grammar:nouns-countability:1:choice:4"
+          ]
         },
         {
           "question": "The company purchased two new _____.",
@@ -199,7 +229,13 @@
             "pieces of equipment"
           ],
           "answerIndex": 3,
-          "explanation": "Equipment không đếm được; dùng two pieces of equipment."
+          "explanation": "Equipment không đếm được; dùng two pieces of equipment.",
+          "choiceIds": [
+            "grammar:nouns-countability:2:choice:1",
+            "grammar:nouns-countability:2:choice:2",
+            "grammar:nouns-countability:2:choice:3",
+            "grammar:nouns-countability:2:choice:4"
+          ]
         }
       ]
     },
@@ -248,7 +284,13 @@
             "be"
           ],
           "answerIndex": 1,
-          "explanation": "Chủ ngữ chính là list (số ít), nên dùng is."
+          "explanation": "Chủ ngữ chính là list (số ít), nên dùng is.",
+          "choiceIds": [
+            "grammar:subject-verb-agreement:1:choice:1",
+            "grammar:subject-verb-agreement:1:choice:2",
+            "grammar:subject-verb-agreement:1:choice:3",
+            "grammar:subject-verb-agreement:1:choice:4"
+          ]
         },
         {
           "question": "All department managers _____ the monthly meeting.",
@@ -259,7 +301,13 @@
             "has attend"
           ],
           "answerIndex": 1,
-          "explanation": "Managers là chủ ngữ số nhiều; hiện tại đơn dùng attend."
+          "explanation": "Managers là chủ ngữ số nhiều; hiện tại đơn dùng attend.",
+          "choiceIds": [
+            "grammar:subject-verb-agreement:2:choice:1",
+            "grammar:subject-verb-agreement:2:choice:2",
+            "grammar:subject-verb-agreement:2:choice:3",
+            "grammar:subject-verb-agreement:2:choice:4"
+          ]
         }
       ]
     },
@@ -308,7 +356,13 @@
             "is open"
           ],
           "answerIndex": 1,
-          "explanation": "Chủ ngữ the office số ít; hiện tại đơn dùng opens."
+          "explanation": "Chủ ngữ the office số ít; hiện tại đơn dùng opens.",
+          "choiceIds": [
+            "grammar:present-simple:1:choice:1",
+            "grammar:present-simple:1:choice:2",
+            "grammar:present-simple:1:choice:3",
+            "grammar:present-simple:1:choice:4"
+          ]
         },
         {
           "question": "_____ your supervisor approve these requests?",
@@ -319,7 +373,13 @@
             "Has"
           ],
           "answerIndex": 1,
-          "explanation": "Your supervisor là ngôi thứ ba số ít; dùng Does + V1."
+          "explanation": "Your supervisor là ngôi thứ ba số ít; dùng Does + V1.",
+          "choiceIds": [
+            "grammar:present-simple:2:choice:1",
+            "grammar:present-simple:2:choice:2",
+            "grammar:present-simple:2:choice:3",
+            "grammar:present-simple:2:choice:4"
+          ]
         }
       ]
     },
@@ -368,7 +428,13 @@
             "sending"
           ],
           "answerIndex": 1,
-          "explanation": "Send là động từ bất quy tắc; V2 là sent."
+          "explanation": "Send là động từ bất quy tắc; V2 là sent.",
+          "choiceIds": [
+            "grammar:past-simple:1:choice:1",
+            "grammar:past-simple:1:choice:2",
+            "grammar:past-simple:1:choice:3",
+            "grammar:past-simple:1:choice:4"
+          ]
         },
         {
           "question": "The manager did not _____ the proposal.",
@@ -379,7 +445,13 @@
             "approving"
           ],
           "answerIndex": 1,
-          "explanation": "Sau did not dùng động từ nguyên mẫu V1."
+          "explanation": "Sau did not dùng động từ nguyên mẫu V1.",
+          "choiceIds": [
+            "grammar:past-simple:2:choice:1",
+            "grammar:past-simple:2:choice:2",
+            "grammar:past-simple:2:choice:3",
+            "grammar:past-simple:2:choice:4"
+          ]
         }
       ]
     },
@@ -418,7 +490,13 @@
             "would"
           ],
           "answerIndex": 1,
-          "explanation": "Quyết định tức thời: I will answer it."
+          "explanation": "Quyết định tức thời: I will answer it.",
+          "choiceIds": [
+            "grammar:future-forms:1:choice:1",
+            "grammar:future-forms:1:choice:2",
+            "grammar:future-forms:1:choice:3",
+            "grammar:future-forms:1:choice:4"
+          ]
         },
         {
           "question": "They _____ open a new branch; the lease has already been signed.",
@@ -429,7 +507,13 @@
             "is going to"
           ],
           "answerIndex": 0,
-          "explanation": "Kế hoạch đã được chuẩn bị; chủ ngữ they dùng are going to."
+          "explanation": "Kế hoạch đã được chuẩn bị; chủ ngữ they dùng are going to.",
+          "choiceIds": [
+            "grammar:future-forms:2:choice:1",
+            "grammar:future-forms:2:choice:2",
+            "grammar:future-forms:2:choice:3",
+            "grammar:future-forms:2:choice:4"
+          ]
         }
       ]
     },
@@ -473,7 +557,13 @@
             "was"
           ],
           "answerIndex": 1,
-          "explanation": "She đi với has; cấu trúc has + V3."
+          "explanation": "She đi với has; cấu trúc has + V3.",
+          "choiceIds": [
+            "grammar:present-perfect:1:choice:1",
+            "grammar:present-perfect:1:choice:2",
+            "grammar:present-perfect:1:choice:3",
+            "grammar:present-perfect:1:choice:4"
+          ]
         },
         {
           "question": "We _____ the contract yesterday.",
@@ -484,7 +574,13 @@
             "sign"
           ],
           "answerIndex": 2,
-          "explanation": "Yesterday là mốc quá khứ đã kết thúc nên dùng quá khứ đơn signed."
+          "explanation": "Yesterday là mốc quá khứ đã kết thúc nên dùng quá khứ đơn signed.",
+          "choiceIds": [
+            "grammar:present-perfect:2:choice:1",
+            "grammar:present-perfect:2:choice:2",
+            "grammar:present-perfect:2:choice:3",
+            "grammar:present-perfect:2:choice:4"
+          ]
         }
       ]
     },
@@ -528,7 +624,13 @@
             "Did been"
           ],
           "answerIndex": 1,
-          "explanation": "Received là V3 trong hiện tại hoàn thành: Have + subject + V3."
+          "explanation": "Received là V3 trong hiện tại hoàn thành: Have + subject + V3.",
+          "choiceIds": [
+            "grammar:auxiliaries:1:choice:1",
+            "grammar:auxiliaries:1:choice:2",
+            "grammar:auxiliaries:1:choice:3",
+            "grammar:auxiliaries:1:choice:4"
+          ]
         },
         {
           "question": "The new system _____ being tested now.",
@@ -539,7 +641,13 @@
             "do"
           ],
           "answerIndex": 0,
-          "explanation": "Bị động tiếp diễn dùng is being + V3."
+          "explanation": "Bị động tiếp diễn dùng is being + V3.",
+          "choiceIds": [
+            "grammar:auxiliaries:2:choice:1",
+            "grammar:auxiliaries:2:choice:2",
+            "grammar:auxiliaries:2:choice:3",
+            "grammar:auxiliaries:2:choice:4"
+          ]
         }
       ]
     },
@@ -583,7 +691,13 @@
             "could have"
           ],
           "answerIndex": 0,
-          "explanation": "Must thể hiện yêu cầu bắt buộc."
+          "explanation": "Must thể hiện yêu cầu bắt buộc.",
+          "choiceIds": [
+            "grammar:modal-verbs:1:choice:1",
+            "grammar:modal-verbs:1:choice:2",
+            "grammar:modal-verbs:1:choice:3",
+            "grammar:modal-verbs:1:choice:4"
+          ]
         },
         {
           "question": "Could you _____ me the updated schedule?",
@@ -594,7 +708,13 @@
             "to send"
           ],
           "answerIndex": 2,
-          "explanation": "Sau could dùng V1 send."
+          "explanation": "Sau could dùng V1 send.",
+          "choiceIds": [
+            "grammar:modal-verbs:2:choice:1",
+            "grammar:modal-verbs:2:choice:2",
+            "grammar:modal-verbs:2:choice:3",
+            "grammar:modal-verbs:2:choice:4"
+          ]
         }
       ]
     },
@@ -638,7 +758,13 @@
             "no article"
           ],
           "answerIndex": 1,
-          "explanation": "Experienced bắt đầu bằng âm nguyên âm /ɪ/, dùng an."
+          "explanation": "Experienced bắt đầu bằng âm nguyên âm /ɪ/, dùng an.",
+          "choiceIds": [
+            "grammar:articles:1:choice:1",
+            "grammar:articles:1:choice:2",
+            "grammar:articles:1:choice:3",
+            "grammar:articles:1:choice:4"
+          ]
         },
         {
           "question": "_____ equipment in this room is new.",
@@ -649,7 +775,13 @@
             "Many"
           ],
           "answerIndex": 2,
-          "explanation": "The equipment xác định là thiết bị trong căn phòng này."
+          "explanation": "The equipment xác định là thiết bị trong căn phòng này.",
+          "choiceIds": [
+            "grammar:articles:2:choice:1",
+            "grammar:articles:2:choice:2",
+            "grammar:articles:2:choice:3",
+            "grammar:articles:2:choice:4"
+          ]
         }
       ]
     },
@@ -698,7 +830,13 @@
             "by"
           ],
           "answerIndex": 2,
-          "explanation": "Giờ cụ thể dùng at."
+          "explanation": "Giờ cụ thể dùng at.",
+          "choiceIds": [
+            "grammar:prepositions-time:1:choice:1",
+            "grammar:prepositions-time:1:choice:2",
+            "grammar:prepositions-time:1:choice:3",
+            "grammar:prepositions-time:1:choice:4"
+          ]
         },
         {
           "question": "Our annual review takes place _____ September.",
@@ -709,7 +847,13 @@
             "to"
           ],
           "answerIndex": 2,
-          "explanation": "Tháng dùng in."
+          "explanation": "Tháng dùng in.",
+          "choiceIds": [
+            "grammar:prepositions-time:2:choice:1",
+            "grammar:prepositions-time:2:choice:2",
+            "grammar:prepositions-time:2:choice:3",
+            "grammar:prepositions-time:2:choice:4"
+          ]
         }
       ]
     },
@@ -753,7 +897,13 @@
             "into"
           ],
           "answerIndex": 0,
-          "explanation": "At the reception desk chỉ vị trí/điểm chờ."
+          "explanation": "At the reception desk chỉ vị trí/điểm chờ.",
+          "choiceIds": [
+            "grammar:prepositions-place:1:choice:1",
+            "grammar:prepositions-place:1:choice:2",
+            "grammar:prepositions-place:1:choice:3",
+            "grammar:prepositions-place:1:choice:4"
+          ]
         },
         {
           "question": "The documents are _____ the top drawer.",
@@ -764,7 +914,13 @@
             "by"
           ],
           "answerIndex": 2,
-          "explanation": "In the drawer = bên trong ngăn kéo."
+          "explanation": "In the drawer = bên trong ngăn kéo.",
+          "choiceIds": [
+            "grammar:prepositions-place:2:choice:1",
+            "grammar:prepositions-place:2:choice:2",
+            "grammar:prepositions-place:2:choice:3",
+            "grammar:prepositions-place:2:choice:4"
+          ]
         }
       ]
     },
@@ -809,7 +965,13 @@
             "have review"
           ],
           "answerIndex": 1,
-          "explanation": "Last week là quá khứ; applications số nhiều nên were reviewed."
+          "explanation": "Last week là quá khứ; applications số nhiều nên were reviewed.",
+          "choiceIds": [
+            "grammar:passive-voice:1:choice:1",
+            "grammar:passive-voice:1:choice:2",
+            "grammar:passive-voice:1:choice:3",
+            "grammar:passive-voice:1:choice:4"
+          ]
         },
         {
           "question": "The meeting room _____ every evening.",
@@ -820,7 +982,13 @@
             "is cleaning"
           ],
           "answerIndex": 1,
-          "explanation": "Thói quen ở thể bị động: is cleaned."
+          "explanation": "Thói quen ở thể bị động: is cleaned.",
+          "choiceIds": [
+            "grammar:passive-voice:2:choice:1",
+            "grammar:passive-voice:2:choice:2",
+            "grammar:passive-voice:2:choice:3",
+            "grammar:passive-voice:2:choice:4"
+          ]
         }
       ]
     },
@@ -865,7 +1033,13 @@
             "to hear"
           ],
           "answerIndex": 1,
-          "explanation": "Look forward to + V-ing; to là giới từ."
+          "explanation": "Look forward to + V-ing; to là giới từ.",
+          "choiceIds": [
+            "grammar:gerund-infinitive:1:choice:1",
+            "grammar:gerund-infinitive:1:choice:2",
+            "grammar:gerund-infinitive:1:choice:3",
+            "grammar:gerund-infinitive:1:choice:4"
+          ]
         },
         {
           "question": "The director agreed _____ the proposal.",
@@ -876,7 +1050,13 @@
             "considered"
           ],
           "answerIndex": 2,
-          "explanation": "Agree thường đi với to-infinitive."
+          "explanation": "Agree thường đi với to-infinitive.",
+          "choiceIds": [
+            "grammar:gerund-infinitive:2:choice:1",
+            "grammar:gerund-infinitive:2:choice:2",
+            "grammar:gerund-infinitive:2:choice:3",
+            "grammar:gerund-infinitive:2:choice:4"
+          ]
         }
       ]
     },
@@ -920,7 +1100,13 @@
             "submitting"
           ],
           "answerIndex": 1,
-          "explanation": "Mệnh đề if loại 1 dùng hiện tại đơn: submits."
+          "explanation": "Mệnh đề if loại 1 dùng hiện tại đơn: submits.",
+          "choiceIds": [
+            "grammar:conditionals:1:choice:1",
+            "grammar:conditionals:1:choice:2",
+            "grammar:conditionals:1:choice:3",
+            "grammar:conditionals:1:choice:4"
+          ]
         },
         {
           "question": "If you heat water to 100°C, it _____.",
@@ -931,7 +1117,13 @@
             "boil"
           ],
           "answerIndex": 1,
-          "explanation": "Sự thật khoa học dùng điều kiện loại 0; chủ ngữ it dùng boils."
+          "explanation": "Sự thật khoa học dùng điều kiện loại 0; chủ ngữ it dùng boils.",
+          "choiceIds": [
+            "grammar:conditionals:2:choice:1",
+            "grammar:conditionals:2:choice:2",
+            "grammar:conditionals:2:choice:3",
+            "grammar:conditionals:2:choice:4"
+          ]
         }
       ]
     },
@@ -975,7 +1167,13 @@
             "where"
           ],
           "answerIndex": 1,
-          "explanation": "Consultant là người; đại từ quan hệ làm chủ ngữ nên dùng who."
+          "explanation": "Consultant là người; đại từ quan hệ làm chủ ngữ nên dùng who.",
+          "choiceIds": [
+            "grammar:relative-clauses:1:choice:1",
+            "grammar:relative-clauses:1:choice:2",
+            "grammar:relative-clauses:1:choice:3",
+            "grammar:relative-clauses:1:choice:4"
+          ]
         },
         {
           "question": "Please review the document _____ was sent this morning.",
@@ -986,7 +1184,13 @@
             "where"
           ],
           "answerIndex": 2,
-          "explanation": "Document là vật; dùng which hoặc that."
+          "explanation": "Document là vật; dùng which hoặc that.",
+          "choiceIds": [
+            "grammar:relative-clauses:2:choice:1",
+            "grammar:relative-clauses:2:choice:2",
+            "grammar:relative-clauses:2:choice:3",
+            "grammar:relative-clauses:2:choice:4"
+          ]
         }
       ]
     },
@@ -1030,7 +1234,13 @@
             "more fluent"
           ],
           "answerIndex": 1,
-          "explanation": "Fluently là trạng từ bổ nghĩa cho speaks."
+          "explanation": "Fluently là trạng từ bổ nghĩa cho speaks.",
+          "choiceIds": [
+            "grammar:adjective-adverb:1:choice:1",
+            "grammar:adjective-adverb:1:choice:2",
+            "grammar:adjective-adverb:1:choice:3",
+            "grammar:adjective-adverb:1:choice:4"
+          ]
         },
         {
           "question": "The instructions are very _____.",
@@ -1041,7 +1251,13 @@
             "clears"
           ],
           "answerIndex": 1,
-          "explanation": "Sau be dùng tính từ clear để mô tả instructions."
+          "explanation": "Sau be dùng tính từ clear để mô tả instructions.",
+          "choiceIds": [
+            "grammar:adjective-adverb:2:choice:1",
+            "grammar:adjective-adverb:2:choice:2",
+            "grammar:adjective-adverb:2:choice:3",
+            "grammar:adjective-adverb:2:choice:4"
+          ]
         }
       ]
     },
@@ -1085,7 +1301,13 @@
             "despite"
           ],
           "answerIndex": 0,
-          "explanation": "Sau because là mệnh đề đầy đủ (the director was ill)."
+          "explanation": "Sau because là mệnh đề đầy đủ (the director was ill).",
+          "choiceIds": [
+            "grammar:conjunctions:1:choice:1",
+            "grammar:conjunctions:1:choice:2",
+            "grammar:conjunctions:1:choice:3",
+            "grammar:conjunctions:1:choice:4"
+          ]
         },
         {
           "question": "_____ the high cost, the company approved the project.",
@@ -1096,7 +1318,13 @@
             "Therefore"
           ],
           "answerIndex": 2,
-          "explanation": "Despite + cụm danh từ: the high cost."
+          "explanation": "Despite + cụm danh từ: the high cost.",
+          "choiceIds": [
+            "grammar:conjunctions:2:choice:1",
+            "grammar:conjunctions:2:choice:2",
+            "grammar:conjunctions:2:choice:3",
+            "grammar:conjunctions:2:choice:4"
+          ]
         }
       ]
     },
@@ -1135,7 +1363,13 @@
             "the short"
           ],
           "answerIndex": 1,
-          "explanation": "So sánh hơn của short là shorter."
+          "explanation": "So sánh hơn của short là shorter.",
+          "choiceIds": [
+            "grammar:comparatives:1:choice:1",
+            "grammar:comparatives:1:choice:2",
+            "grammar:comparatives:1:choice:3",
+            "grammar:comparatives:1:choice:4"
+          ]
         },
         {
           "question": "It is the _____ solution available.",
@@ -1146,7 +1380,13 @@
             "much practical"
           ],
           "answerIndex": 0,
-          "explanation": "So sánh nhất của tính từ dài: the most practical."
+          "explanation": "So sánh nhất của tính từ dài: the most practical.",
+          "choiceIds": [
+            "grammar:comparatives:2:choice:1",
+            "grammar:comparatives:2:choice:2",
+            "grammar:comparatives:2:choice:3",
+            "grammar:comparatives:2:choice:4"
+          ]
         }
       ]
     },
@@ -1195,7 +1435,13 @@
             "has"
           ],
           "answerIndex": 1,
-          "explanation": "Located diễn tả vị trí; dùng be: is the department located."
+          "explanation": "Located diễn tả vị trí; dùng be: is the department located.",
+          "choiceIds": [
+            "grammar:question-forms:1:choice:1",
+            "grammar:question-forms:1:choice:2",
+            "grammar:question-forms:1:choice:3",
+            "grammar:question-forms:1:choice:4"
+          ]
         },
         {
           "question": "How often _____ the buses run?",
@@ -1206,7 +1452,13 @@
             "has"
           ],
           "answerIndex": 2,
-          "explanation": "Buses số nhiều; hiện tại đơn dùng do + subject + V1."
+          "explanation": "Buses số nhiều; hiện tại đơn dùng do + subject + V1.",
+          "choiceIds": [
+            "grammar:question-forms:2:choice:1",
+            "grammar:question-forms:2:choice:2",
+            "grammar:question-forms:2:choice:3",
+            "grammar:question-forms:2:choice:4"
+          ]
         }
       ]
     },
@@ -1260,7 +1512,13 @@
             "coordinated"
           ],
           "answerIndex": 0,
-          "explanation": "Scheduling là V-ing; coordinating tạo cấu trúc song song."
+          "explanation": "Scheduling là V-ing; coordinating tạo cấu trúc song song.",
+          "choiceIds": [
+            "grammar:parallel-structure-toeic:1:choice:1",
+            "grammar:parallel-structure-toeic:1:choice:2",
+            "grammar:parallel-structure-toeic:1:choice:3",
+            "grammar:parallel-structure-toeic:1:choice:4"
+          ]
         },
         {
           "question": "The report is intended to inform managers and _____ recommendations.",
@@ -1271,7 +1529,13 @@
             "provided"
           ],
           "answerIndex": 1,
-          "explanation": "Sau to inform dùng động từ nguyên mẫu; and nối với provide."
+          "explanation": "Sau to inform dùng động từ nguyên mẫu; and nối với provide.",
+          "choiceIds": [
+            "grammar:parallel-structure-toeic:2:choice:1",
+            "grammar:parallel-structure-toeic:2:choice:2",
+            "grammar:parallel-structure-toeic:2:choice:3",
+            "grammar:parallel-structure-toeic:2:choice:4"
+          ]
         },
         {
           "question": "The new system is both reliable and _____.",
@@ -1282,7 +1546,13 @@
             "to be efficient"
           ],
           "answerIndex": 2,
-          "explanation": "Reliable là tính từ; vị trí sau and cần tính từ efficient."
+          "explanation": "Reliable là tính từ; vị trí sau and cần tính từ efficient.",
+          "choiceIds": [
+            "grammar:parallel-structure-toeic:3:choice:1",
+            "grammar:parallel-structure-toeic:3:choice:2",
+            "grammar:parallel-structure-toeic:3:choice:3",
+            "grammar:parallel-structure-toeic:3:choice:4"
+          ]
         }
       ]
     },
@@ -1320,7 +1590,13 @@
             "interesting"
           ],
           "answerIndex": 3,
-          "explanation": "Presentation gây sự quan tâm nên dùng interesting."
+          "explanation": "Presentation gây sự quan tâm nên dùng interesting.",
+          "choiceIds": [
+            "grammar:participial-adjectives-toeic:1:choice:1",
+            "grammar:participial-adjectives-toeic:1:choice:2",
+            "grammar:participial-adjectives-toeic:1:choice:3",
+            "grammar:participial-adjectives-toeic:1:choice:4"
+          ]
         },
         {
           "question": "The participants were _____ in the new safety procedure.",
@@ -1331,7 +1607,13 @@
             "interests"
           ],
           "answerIndex": 0,
-          "explanation": "Participants là người có cảm nhận, dùng interested."
+          "explanation": "Participants là người có cảm nhận, dùng interested.",
+          "choiceIds": [
+            "grammar:participial-adjectives-toeic:2:choice:1",
+            "grammar:participial-adjectives-toeic:2:choice:2",
+            "grammar:participial-adjectives-toeic:2:choice:3",
+            "grammar:participial-adjectives-toeic:2:choice:4"
+          ]
         },
         {
           "question": "The instructions were confusing, so some users felt _____.",
@@ -1342,7 +1624,13 @@
             "confusion"
           ],
           "answerIndex": 1,
-          "explanation": "Users là người cảm thấy bối rối, dùng confused."
+          "explanation": "Users là người cảm thấy bối rối, dùng confused.",
+          "choiceIds": [
+            "grammar:participial-adjectives-toeic:3:choice:1",
+            "grammar:participial-adjectives-toeic:3:choice:2",
+            "grammar:participial-adjectives-toeic:3:choice:3",
+            "grammar:participial-adjectives-toeic:3:choice:4"
+          ]
         }
       ]
     },
@@ -1380,7 +1668,13 @@
             "considered"
           ],
           "answerIndex": 2,
-          "explanation": "Agree đi với to-infinitive: agree to consider."
+          "explanation": "Agree đi với to-infinitive: agree to consider.",
+          "choiceIds": [
+            "grammar:verb-patterns-toeic:1:choice:1",
+            "grammar:verb-patterns-toeic:1:choice:2",
+            "grammar:verb-patterns-toeic:1:choice:3",
+            "grammar:verb-patterns-toeic:1:choice:4"
+          ]
         },
         {
           "question": "Please avoid _____ confidential information by email.",
@@ -1391,7 +1685,13 @@
             "sending"
           ],
           "answerIndex": 3,
-          "explanation": "Avoid đi với V-ing."
+          "explanation": "Avoid đi với V-ing.",
+          "choiceIds": [
+            "grammar:verb-patterns-toeic:2:choice:1",
+            "grammar:verb-patterns-toeic:2:choice:2",
+            "grammar:verb-patterns-toeic:2:choice:3",
+            "grammar:verb-patterns-toeic:2:choice:4"
+          ]
         },
         {
           "question": "The supervisor asked all staff _____ the updated form.",
@@ -1402,7 +1702,13 @@
             "completed"
           ],
           "answerIndex": 0,
-          "explanation": "Ask + object + to-infinitive: asked all staff to complete."
+          "explanation": "Ask + object + to-infinitive: asked all staff to complete.",
+          "choiceIds": [
+            "grammar:verb-patterns-toeic:3:choice:1",
+            "grammar:verb-patterns-toeic:3:choice:2",
+            "grammar:verb-patterns-toeic:3:choice:3",
+            "grammar:verb-patterns-toeic:3:choice:4"
+          ]
         }
       ]
     },
@@ -1440,7 +1746,13 @@
             "whose"
           ],
           "answerIndex": 1,
-          "explanation": "Consultant là người và cần đại từ làm chủ ngữ, nên dùng who."
+          "explanation": "Consultant là người và cần đại từ làm chủ ngữ, nên dùng who.",
+          "choiceIds": [
+            "grammar:relative-clause-reference-toeic:1:choice:1",
+            "grammar:relative-clause-reference-toeic:1:choice:2",
+            "grammar:relative-clause-reference-toeic:1:choice:3",
+            "grammar:relative-clause-reference-toeic:1:choice:4"
+          ]
         },
         {
           "question": "The software _____ we installed last month is now fully operational.",
@@ -1451,7 +1763,13 @@
             "whose"
           ],
           "answerIndex": 2,
-          "explanation": "Software là vật; which làm tân ngữ của installed."
+          "explanation": "Software là vật; which làm tân ngữ của installed.",
+          "choiceIds": [
+            "grammar:relative-clause-reference-toeic:2:choice:1",
+            "grammar:relative-clause-reference-toeic:2:choice:2",
+            "grammar:relative-clause-reference-toeic:2:choice:3",
+            "grammar:relative-clause-reference-toeic:2:choice:4"
+          ]
         },
         {
           "question": "The branch _____ Ms. Lee works is located downtown.",
@@ -1462,7 +1780,13 @@
             "where"
           ],
           "answerIndex": 3,
-          "explanation": "Nói về địa điểm nơi làm việc, dùng where."
+          "explanation": "Nói về địa điểm nơi làm việc, dùng where.",
+          "choiceIds": [
+            "grammar:relative-clause-reference-toeic:3:choice:1",
+            "grammar:relative-clause-reference-toeic:3:choice:2",
+            "grammar:relative-clause-reference-toeic:3:choice:3",
+            "grammar:relative-clause-reference-toeic:3:choice:4"
+          ]
         }
       ]
     }

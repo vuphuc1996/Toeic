@@ -45,6 +45,7 @@ function toast(message, type='success') {
 }
 function normalizeText(value='') { return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/đ/g,'d').trim(); }
 function escapeHtml(value='') { return String(value).replace(/[&<>\"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[ch])); }
+function choiceIdAt(question,index){return Array.isArray(question?.choiceIds)?String(question.choiceIds[index]||''):'';}
 function savedChoiceText(question,saved){
   if(!saved?.answered)return '';
   if(typeof saved.choiceText==='string'&&saved.choiceText.trim())return saved.choiceText;
@@ -121,8 +122,32 @@ async function loadData() {
   state.grammarProgress=await dbGet('grammarProgress')||{};
   state.readingProgress=await dbGet('readingProgress')||{};
   state.listeningProgress=await dbGet('listeningProgress')||{};
+  await migrateChoiceIdentity();
   state.flashProgress=await dbGet('flashProgress')||{};
   updateOverview(); renderToeicPartInsights(); populateFilters(); renderDictionary(); renderDataTable(); renderGrammarLibrary(); renderReadingLibrary(); renderListeningLibrary(); updateStorageLabel();
+}
+async function migrateChoiceIdentity(){
+  const groups=[
+    {progress:state.readingProgress,items:state.readings,key:'readingProgress',questionsKey:'questions'},
+    {progress:state.listeningProgress,items:state.listening,key:'listeningProgress',questionsKey:'questions'},
+    {progress:state.grammarProgress,items:state.grammarLessons,key:'grammarProgress',questionsKey:'exercises'}
+  ];
+  for(const group of groups){
+    let changed=false;
+    for(const item of group.items){
+      const answers=group.progress[item.id]?.answers;
+      if(!answers||typeof answers!=='object')continue;
+      const questions=item[group.questionsKey]||[];
+      for(const [rawIndex,saved] of Object.entries(answers)){
+        if(!saved?.answered||saved.choiceId)continue;
+        const index=Number(rawIndex),choiceIndex=Number(saved.choiceIndex),question=questions[index];
+        if(!question||!Number.isInteger(choiceIndex)||choiceIndex<0||choiceIndex>=(question.choices||[]).length)continue;
+        const choiceId=Array.isArray(question.legacyChoiceIds)&&question.legacyChoices?.[choiceIndex]&&question.legacyChoices[choiceIndex]!==question.choices?.[choiceIndex]?String(question.legacyChoiceIds[choiceIndex]||''):choiceIdAt(question,choiceIndex);
+        if(choiceId){saved.choiceId=choiceId;changed=true;}
+      }
+    }
+    if(changed)await dbSet(group.key,group.progress);
+  }
 }
 function emptyPersonalVocabulary(){return {schemaVersion:3,additions:[],overrides:{},overrideBaseSigs:{},deletedBaseIds:[]};}
 function recordSignature(record){return JSON.stringify(normalizeRecord(record));}
@@ -1298,7 +1323,7 @@ function openGrammarLesson(id){
   const prog=state.grammarProgress[id]||{answers:{}};
   const exercises=(lesson.exercises||[]).map((ex,i)=>{
     const saved=prog.answers?.[i];
-    return `<article class="lesson-exercise" data-grammar-exercise="${i}"><div class="exercise-kicker">BÀI TẬP ${i+1}</div><h4>${escapeHtml(ex.question)}</h4><div class="exercise-choice-grid">${ex.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===ex.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==ex.answerIndex?'is-wrong':''}" data-grammar-choice data-lesson-id="${escapeHtml(id)}" data-exercise-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(ex.explanation):''}</p></article>`;
+    return `<article class="lesson-exercise" data-grammar-exercise="${i}"><div class="exercise-kicker">BÀI TẬP ${i+1}</div><h4>${escapeHtml(ex.question)}</h4><div class="exercise-choice-grid">${ex.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===ex.answerIndex?'is-correct':''} ${saved?.answered&&saved.choiceIndex===j&&j!==ex.answerIndex?'is-wrong':''}" data-grammar-choice data-lesson-id="${escapeHtml(id)}" data-exercise-index="${i}" data-choice-index="${j}" data-choice-id="${escapeHtml(choiceIdAt(ex,j))}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?escapeHtml(ex.explanation):''}</p></article>`;
   }).join('');
   $('#modalEyebrow').textContent=`GRAMMAR · ${lesson.category} · ${lesson.level}`;$('#modalTitle').textContent=lesson.title;
   $('#modalContent').innerHTML=`<div class="lesson-intro"><p>${escapeHtml(lesson.summary)}</p><div class="lesson-formula">${escapeHtml(lesson.formula)}</div></div><section class="detail-section"><h4>GIẢI THÍCH</h4><p class="lesson-explanation">${escapeHtml(lesson.explanation)}</p></section><section class="detail-section"><h4>VÍ DỤ VÀ PHÂN TÍCH</h4>${examples}</section><section class="detail-section"><h4>MẸO GHI NHỚ</h4><ul class="lesson-tips">${tips}</ul></section><section class="detail-section"><h4>LUYỆN TẬP</h4><div class="lesson-exercises">${exercises}</div></section><div class="modal-actions"><button class="primary-button" data-ai-lesson="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Tra cứu Google AI</button></div>`;
@@ -1307,7 +1332,7 @@ function openGrammarLesson(id){
 async function answerGrammarExercise(button){
   const id=button.dataset.lessonId,index=Number(button.dataset.exerciseIndex),choiceIndex=Number(button.dataset.choiceIndex),lesson=state.grammarLessons.find(x=>x.id===id),exercise=lesson?.exercises?.[index];
   if(!exercise)return;const prog=state.grammarProgress[id]||{answers:{}};prog.answers=prog.answers||{};if(prog.answers[index]?.answered)return;
-  const correct=choiceIndex===exercise.answerIndex;prog.answers[index]={answered:true,choiceIndex,correct,answeredAt:Date.now()};state.grammarProgress[id]=prog;await dbSet('grammarProgress',state.grammarProgress);
+  const correct=choiceIndex===exercise.answerIndex;prog.answers[index]={answered:true,choiceIndex,choiceId:choiceIdAt(exercise,choiceIndex),choiceText:exercise.choices[choiceIndex],correct,answeredAt:Date.now()};state.grammarProgress[id]=prog;await dbSet('grammarProgress',state.grammarProgress);
   const card=button.closest('.lesson-exercise');$$('[data-grammar-choice]',card).forEach(b=>{b.disabled=true;const selected=Number(b.dataset.choiceIndex);if(selected===exercise.answerIndex)b.classList.add('is-correct');if(selected===choiceIndex&&!correct)b.classList.add('is-wrong');});
   const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${exercise.explanation}`;renderGrammarLibrary();
 }
@@ -1324,7 +1349,7 @@ function openReadingDetail(id){
   const prog=state.readingProgress[id]||{answers:{}};
   const documents=(reading.documents||[]).map((doc,i)=>`<section class="reading-document-card"><div class="reading-passage-label">${escapeHtml(doc.label||`DOCUMENT ${i+1}`)}</div><pre class="reading-passage">${escapeHtml(doc.content||'')}</pre></section>`).join('');
   const passageMarkup=reading.part==='Part 5'?`<div class="reading-part-intro"><span class="learning-category">PART 5 · INCOMPLETE SENTENCES</span><p>Chọn từ hoặc cụm từ phù hợp nhất để hoàn thành từng câu.</p></div>`:(documents||reading.passage)?`<div class="reading-passage-card"><div class="reading-passage-label">${escapeHtml(reading.part||'PASSAGE')} · ${reading.wordCount||String(reading.passage||'').split(/\s+/).filter(Boolean).length} WORDS</div>${documents?documents:`<pre class="reading-passage">${escapeHtml(reading.passage||'')}</pre>`}</div>`:'';
-  const questions=(reading.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise reading-question" data-reading-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${savedChoiceWrongClass(q,saved,j)?'is-wrong':''}" data-reading-choice data-reading-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?`${savedChoiceHistoryMarkup(q,saved)}${escapeHtml(q.explanation)}`:''}</p></article>`;}).join('');
+  const questions=(reading.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise reading-question" data-reading-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${savedChoiceWrongClass(q,saved,j)?'is-wrong':''}" data-reading-choice data-reading-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" data-choice-id="${escapeHtml(choiceIdAt(q,j))}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?`${savedChoiceHistoryMarkup(q,saved)}${escapeHtml(q.explanation)}`:''}</p></article>`;}).join('');
   $('#modalEyebrow').textContent=`${reading.part||'READING'} · ${reading.documentType||reading.topic} · ${reading.level}`;$('#modalTitle').textContent=reading.title;
   const vocabMarkup=vocab?`<section class="detail-section"><h4>TỪ VỰNG TRONG BÀI · NHẤN ĐỂ TRA CỨU</h4><div class="reading-vocab-grid">${vocab}</div></section>`:'';
   $('#modalContent').innerHTML=`${passageMarkup}<details class="translation-details"><summary>Xem bản dịch tiếng Việt</summary><p>${escapeHtml(reading.translation||'Chưa có bản dịch.')}</p></details>${vocabMarkup}<section class="detail-section"><h4>${escapeHtml(reading.part||'READING')} · CÂU HỎI</h4><div class="lesson-exercises">${questions}</div></section><div class="modal-actions"><button class="primary-button" data-ai-reading="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bài đọc bằng Google AI</button></div>`;
@@ -1333,7 +1358,7 @@ function openReadingDetail(id){
 async function answerReadingQuestion(button){
   const id=button.dataset.readingId,index=Number(button.dataset.questionIndex),choiceIndex=Number(button.dataset.choiceIndex),reading=state.readings.find(x=>x.id===id),question=reading?.questions?.[index];
   if(!question)return;const prog=state.readingProgress[id]||{answers:{}};prog.answers=prog.answers||{};if(prog.answers[index]?.answered)return;
-  const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()};state.readingProgress[id]=prog;await dbSet('readingProgress',state.readingProgress);
+  const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()};state.readingProgress[id]=prog;await dbSet('readingProgress',state.readingProgress);
   const card=button.closest('.reading-question');$$('[data-reading-choice]',card).forEach(b=>{b.disabled=true;const selected=Number(b.dataset.choiceIndex);if(selected===question.answerIndex)b.classList.add('is-correct');if(selected===choiceIndex&&!correct)b.classList.add('is-wrong');});
   const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${question.explanation}`;renderReadingLibrary();renderToeicPartInsights();
 }
@@ -1347,7 +1372,7 @@ function renderListeningLibrary(){
 function openListeningDetail(id){
   stopSpeech();const item=state.listening.find(x=>x.id===id);if(!item)return;state.activeListening=id;
   const prog=state.listeningProgress[id]||{answers:{}};
-  const questions=(item.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise listening-question" data-listening-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${savedChoiceWrongClass(q,saved,j)?'is-wrong':''}" data-listening-choice data-listening-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?`${savedChoiceHistoryMarkup(q,saved)}${escapeHtml(q.explanation)}`:''}</p></article>`;}).join('');
+  const questions=(item.questions||[]).map((q,i)=>{const saved=prog.answers?.[i];return `<article class="lesson-exercise listening-question" data-listening-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${savedChoiceWrongClass(q,saved,j)?'is-wrong':''}" data-listening-choice data-listening-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" data-choice-id="${escapeHtml(choiceIdAt(q,j))}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div><p class="exercise-feedback ${saved?.answered?'visible':''}" ${saved?.answered?'':'hidden'}>${saved?.answered?`${savedChoiceHistoryMarkup(q,saved)}${escapeHtml(q.explanation)}`:''}</p></article>`;}).join('');
   const transcript=(item.segments||[]).map((seg,i)=>`<div class="transcript-line"><small>${escapeHtml(seg.speaker||`Speaker ${i+1}`)}</small><p>${escapeHtml(seg.text)}</p></div>`).join('');
   const illustrationMarkup=item.part==='Part 1'&&item.image?`<figure class="part1-illustration-frame"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt||item.title)}" loading="eager"><figcaption>HÌNH MINH HỌA · Quan sát hình trước khi nghe</figcaption></figure>`:'';
   const vocab=(item.vocabulary||[]).map(v=>`<button type="button" class="reading-vocab-chip" data-lookup-term="${escapeHtml(v.word)}"><strong>${escapeHtml(displayWord(v.word))}</strong><span>${escapeHtml(v.meaning)}</span></button>`).join('');
@@ -1534,7 +1559,7 @@ function bindTtsSettings(){
 async function answerListeningQuestion(button){
   const id=button.dataset.listeningId,index=Number(button.dataset.questionIndex),choiceIndex=Number(button.dataset.choiceIndex),item=state.listening.find(x=>x.id===id),question=item?.questions?.[index];
   if(!question)return;const prog=state.listeningProgress[id]||{answers:{}};prog.answers=prog.answers||{};if(prog.answers[index]?.answered)return;
-  const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()};state.listeningProgress[id]=prog;await dbSet('listeningProgress',state.listeningProgress);
+  const correct=choiceIndex===question.answerIndex;prog.answers[index]={answered:true,choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()};state.listeningProgress[id]=prog;await dbSet('listeningProgress',state.listeningProgress);
   const card=button.closest('.listening-question');$$('[data-listening-choice]',card).forEach(b=>{b.disabled=true;const selected=Number(b.dataset.choiceIndex);if(selected===question.answerIndex)b.classList.add('is-correct');if(selected===choiceIndex&&!correct)b.classList.add('is-wrong');});
   const feedback=$('.exercise-feedback',card);feedback.hidden=false;feedback.classList.add('visible');feedback.textContent=`${correct?'Chính xác.':'Chưa chính xác.'} ${question.explanation}`;renderListeningLibrary();renderToeicPartInsights();
 }

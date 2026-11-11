@@ -16,14 +16,17 @@ const context = {
     grammarProgress: {},
     activeReading: null,
     activeGrammarLesson: null,
+    listening: [], listeningProgress: {},
   },
   $,
   normalizeText: value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(),
   escapeHtml: value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]),
   displayWord: value => String(value || ''),
+  choiceIdAt: (question, index) => Array.isArray(question?.choiceIds) ? String(question.choiceIds[index] || '') : '',
   savedChoiceWrongClass: () => false,
   savedChoiceHistoryMarkup: () => '',
   icon: () => '<span></span>',
+  dbSet: async (key, value) => { context.persisted ??= {}; context.persisted[key] = structuredClone(value); },
 };
 vm.createContext(context);
 
@@ -79,4 +82,25 @@ openGrammarLesson('grammar-runtime-smoke');
 assert.match($('#modalContent').innerHTML, /goes/);
 assert.match($('#modalContent').innerHTML, /BÀI TẬP 1/);
 
-console.log('Runtime render smoke PASS: Reading Part 5, Reading Part 7 multi-document, Grammar detail.');
+
+const migrationStart = appSource.indexOf('async function migrateChoiceIdentity(');
+const migrationEnd = appSource.indexOf('function emptyPersonalVocabulary(', migrationStart);
+assert.notEqual(migrationStart, -1);
+assert.notEqual(migrationEnd, -1);
+vm.runInContext(`${appSource.slice(migrationStart, migrationEnd)}\nglobalThis.__migrate = migrateChoiceIdentity;`, context, { timeout: 1000 });
+const oldReading = { answered: true, choiceIndex: 1, choiceText: 'old distractor', correct: false, answeredAt: 123 };
+context.state.readings = [{ id: 'legacy-reading', questions: [{ choices: ['A', 'new distractor', 'C', 'D'], choiceIds: ['r-a', 'r-b', 'r-c', 'r-d'], legacyChoices: ['A', 'old distractor', 'C', 'D'], legacyChoiceIds: ['legacy:r-a', 'legacy:r-b', 'legacy:r-c', 'legacy:r-d'] }] }];
+context.state.readingProgress = { 'legacy-reading': { answers: { 0: oldReading } } };
+context.state.listening = [{ id: 'legacy-listening', questions: [{ choices: ['A', 'B', 'C', 'D'], choiceIds: ['l-a', 'l-b', 'l-c', 'l-d'] }] }];
+context.state.listeningProgress = { 'legacy-listening': { answers: { 0: { answered: true, choiceIndex: 2, correct: true, answeredAt: 456 } } } };
+context.state.grammarLessons = [{ id: 'legacy-grammar', exercises: [{ choices: ['A', 'B', 'C', 'D'], choiceIds: ['g-a', 'g-b', 'g-c', 'g-d'] }] }];
+context.state.grammarProgress = { 'legacy-grammar': { answers: { 0: { answered: true, choiceIndex: 3, correct: false, answeredAt: 789 } } } };
+await context.__migrate();
+assert.equal(context.state.readingProgress['legacy-reading'].answers[0].choiceId, 'legacy:r-b');
+assert.equal(context.state.readingProgress['legacy-reading'].answers[0].choiceIndex, 1);
+assert.equal(context.state.readingProgress['legacy-reading'].answers[0].choiceText, 'old distractor');
+assert.equal(context.state.listeningProgress['legacy-listening'].answers[0].choiceId, 'l-c');
+assert.equal(context.state.grammarProgress['legacy-grammar'].answers[0].choiceId, 'g-d');
+assert.equal(context.persisted.readingProgress['legacy-reading'].answers[0].correct, false);
+
+console.log('Runtime render/migration smoke PASS: Reading Part 5, Part 7 multi-document, Grammar and legacy choice identity migration.');
