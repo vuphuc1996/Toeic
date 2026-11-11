@@ -79,40 +79,7 @@
       "params": {
         "match": "token stem + up to 4 letters"
       },
-      "violations": [
-        {
-          "id": "apprentice-n",
-          "at": "/collocations/1"
-        },
-        {
-          "id": "event-coordinator-n",
-          "at": "/collocations/1"
-        },
-        {
-          "id": "fare-n",
-          "at": "/collocations/0"
-        },
-        {
-          "id": "replace-v",
-          "at": "/collocations/1"
-        },
-        {
-          "id": "reserve-v",
-          "at": "/collocations/1"
-        },
-        {
-          "id": "warehouseman-n",
-          "at": "/collocations/0"
-        },
-        {
-          "id": "warehouseman-n",
-          "at": "/collocations/1"
-        },
-        {
-          "id": "zero-based-budgeting-n",
-          "at": "/collocations/1"
-        }
-      ]
+      "violations": []
     },
     "TP002": {
       "params": {

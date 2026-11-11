@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "batchId": "TOEIC lexical cleanup — legacy FD001 collocations",
+  "baseDataVersion": "2.20.0",
+  "targetDataVersion": "2.21.0",
+  "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "operations": [
+    {
+      "id": "apprentice-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [
+          "apprentice electrician",
+          "apprenticeship program"
+        ]
+      },
+      "new": [
+        "apprentice electrician",
+        "apprentice mechanic"
+      ]
+    },
+    {
+      "id": "event-coordinator-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [
+          "event coordinator",
+          "coordinate an event"
+        ]
+      },
+      "new": [
+        "event coordinator",
+        "assistant event coordinator"
+      ]
+    },
+    {
+      "id": "fare-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [
+          "airfare",
+          "bus fare"
+        ]
+      },
+      "new": [
+        "bus fare",
+        "one-way fare"
+      ]
+    },
+    {
+      "id": "replace-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [
+          "replace a device",
+          "replacement part"
+        ]
+      },
+      "new": [
+        "replace a device",
+        "replace a battery"
+      ]
+    },
+    {
+      "id": "reserve-v",
+      "path": "/collocations",
+      "expect": {
+        "old": [
+          "reserve a room",
+          "make a reservation"
+        ]
+      },
+      "new": [
+        "reserve a room",
+        "reserve a seat"
+      ]
+    },
+    {
+      "id": "warehouseman-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [
+          "warehouse staff",
+          "warehouse supervisor"
+        ]
+      },
+      "new": [
+        "assistant warehouseman",
+        "bonded warehouseman"
+      ]
+    },
+    {
+      "id": "zero-based-budgeting-n",
+      "path": "/collocations",
+      "expect": {
+        "old": [
+          "zero-based budgeting process",
+          "zero-based budget"
+        ]
+      },
+      "new": [
+        "zero-based budgeting process",
+        "zero-based budgeting method"
+      ]
+    }
+  ],
+  "reviewNotes": [
+    "Replace collocations whose lexical head did not directly match the canonical headword with direct headword collocations.",
+    "Keep stable IDs, senses, definitions, examples, word-family data, and all learning/question content unchanged.",
+    "Sources are indexed in docs/sources/TOEIC_LEXICAL_CLEANUP_BATCH_011_v2.21.0.md."
+  ]
+}

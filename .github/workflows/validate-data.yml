@@ -44,7 +44,7 @@ jobs:
         with:
           node-version: "24"
       - name: Python syntax check
-        run: python -m py_compile tools/validate-data.py tools/validate-learning-content.py tools/audit-toeic-coverage.py tools/audit-question-evidence.py tools/audit-distractors.py tools/sync-version.py tools/patch-data.py tools/tests/test_vocabulary_detail_examples.py
+        run: python -m py_compile tools/validate-data.py tools/validate-learning-content.py tools/audit-toeic-coverage.py tools/audit-question-evidence.py tools/audit-distractors.py tools/sync-version.py tools/patch-data.py tools/tests/test_vocabulary_detail_examples.py tools/tests/test_legacy_collocation_cleanup.py
       - name: Unit tests — baseline_ids
         run: python -m unittest discover -s tools/tests -p 'test_baseline_ids.py' -v
       - name: Unit tests — patch_data
@@ -77,6 +77,8 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_remaining_content_review.py' -v
       - name: Unit tests — vocabulary_detail_examples
         run: python -m unittest discover -s tools/tests -p 'test_vocabulary_detail_examples.py' -v
+      - name: Unit tests — legacy_collocation_cleanup
+        run: python -m unittest discover -s tools/tests -p 'test_legacy_collocation_cleanup.py' -v
       - name: Validate vocabulary data (structure, ID integrity, APP_SHELL, ratchet baseline)
         run: python tools/validate-data.py
       - name: Validate TOEIC learning content (Listening/Reading/Grammar)
