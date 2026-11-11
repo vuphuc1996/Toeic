@@ -1459,6 +1459,7 @@ function openListeningDetail(id){
 let listeningPlaybackToken=0;
 let listeningGapTimer=null;
 let listeningGapResolve=null;
+let activeSpeechCancel=null;
 let speechVoicesCache=[];
 function getSpeechVoices(){
   if(!('speechSynthesis' in window))return [];
@@ -1530,6 +1531,9 @@ function stopSpeech(){
   listeningPlaybackToken++;
   if(listeningGapTimer){clearTimeout(listeningGapTimer);listeningGapTimer=null;}
   if(listeningGapResolve){const resolve=listeningGapResolve;listeningGapResolve=null;resolve(false);}
+  // Resolve the app-side playback promise before asking the browser to cancel.
+  // Some speech engines do not reliably emit an error event for canceled speech.
+  const cancelActive=activeSpeechCancel;activeSpeechCancel=null;if(cancelActive)cancelActive();
   if('speechSynthesis'in window)window.speechSynthesis.cancel();
   const status=$('#listeningPlayerStatus');if(status)status.textContent='Đã dừng audio.';
 }
@@ -1539,8 +1543,16 @@ function speakText(text,accent=null,speaker='',gender=null){
   stopSpeech();const cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})};
   const voice=chooseEnglishVoice(accent||cfg.accent,speaker,gender||cfg.defaultGender);
   const utterance=configureUtterance(new SpeechSynthesisUtterance(clean),{accent:accent||cfg.accent,gender:gender||cfg.defaultGender,voice});
-  utterance.onerror=()=>toast('Không thể phát âm thanh bằng voice đã chọn. Hãy thử voice khác trong Cấu hình.','error');
-  window.speechSynthesis.speak(utterance);
+  let settled=false,cancelActive=null;
+  const finish=event=>{
+    if(settled)return;settled=true;
+    if(activeSpeechCancel===cancelActive)activeSpeechCancel=null;
+    const reason=String(event?.error||'').toLowerCase();
+    if(event&&reason!=='canceled'&&reason!=='interrupted')toast('Không thể phát âm bằng voice đã chọn. Hãy thử voice khác trong Cấu hình.','error');
+  };
+  cancelActive=()=>finish({error:'canceled'});activeSpeechCancel=cancelActive;
+  utterance.onend=()=>finish();utterance.onerror=finish;
+  try{window.speechSynthesis.speak(utterance);}catch(error){finish({error:'failed'});}
 }
 function waitSpeechGap(ms,token){
   return new Promise(resolve=>{
@@ -1555,9 +1567,15 @@ function speakUtterance(text,{accent='en-US',voice=null,gender='female',rate=nul
   return new Promise(resolve=>{
     if(token!==listeningPlaybackToken)return resolve(false);
     const utterance=configureUtterance(new SpeechSynthesisUtterance(String(text||'')),{accent,gender,voice,rate});
-    let settled=false;const finish=ok=>{if(settled)return;settled=true;resolve(ok&&token===listeningPlaybackToken);};
+    let settled=false,cancelActive=null;
+    const finish=ok=>{
+      if(settled)return;settled=true;
+      if(activeSpeechCancel===cancelActive)activeSpeechCancel=null;
+      resolve(ok&&token===listeningPlaybackToken);
+    };
+    cancelActive=()=>finish(false);activeSpeechCancel=cancelActive;
     utterance.onend=()=>finish(true);utterance.onerror=()=>finish(false);
-    window.speechSynthesis.speak(utterance);
+    try{window.speechSynthesis.speak(utterance);}catch(error){finish(false);}
   });
 }
 async function playListeningAudio(id){

@@ -100,3 +100,4 @@ jobs:
           node --check sw.js
           for f in assets/js/*.js; do cp "$f" "/tmp/$(basename "$f" .js).mjs"; node --check "/tmp/$(basename "$f" .js).mjs"; done
           node tools/tests/runtime-render-smoke.mjs
+          node tools/tests/listening-tts-regression.mjs
