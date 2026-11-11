@@ -18,8 +18,8 @@ class DistractorQualityTests(unittest.TestCase):
         return next(item for item in items if item['id'] == item_id)
 
     def test_manual_review_scope_contains_132_part3_part4_part7_questions(self):
-        p3 = [x for x in self.listening if x.get('part') == 'Part 3']
-        p4 = [x for x in self.listening if x.get('part') == 'Part 4']
+        p3 = [x for x in self.listening if x.get('part') == 'Part 3' and x.get('editorialStatus') != 'reserve-pending-independent-review']
+        p4 = [x for x in self.listening if x.get('part') == 'Part 4' and x.get('editorialStatus') != 'reserve-pending-independent-review']
         p7 = [x for x in self.reading if x.get('part') == 'Part 7']
         self.assertEqual(sum(len(x.get('questions', [])) for x in p3), 39)
         self.assertEqual(sum(len(x.get('questions', [])) for x in p4), 30)
@@ -67,7 +67,7 @@ class DistractorQualityTests(unittest.TestCase):
         }
         actual = Counter()
         for item in self.listening + self.reading:
-            if item.get('part') not in expected:
+            if item.get('part') not in expected or item.get('editorialStatus') == 'reserve-pending-independent-review':
                 continue
             for question in item.get('questions', []):
                 actual[(item['part'], question['answerIndex'])] += 1
@@ -77,6 +77,18 @@ class DistractorQualityTests(unittest.TestCase):
         report = (ROOT / 'docs/reports/TOEIC_DISTRACTOR_AUDIT_v2.17.0.md').read_text(encoding='utf-8')
         self.assertIn('previousChoiceIds', report)
         self.assertIn('No random shuffle was used', report)
+
+
+    def test_batch_013_reserve_questions_are_not_in_the_old_balance_certificate(self):
+        reserve = [x for x in self.listening if x.get('editorialStatus') == 'reserve-pending-independent-review']
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 3'), 3)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 4'), 3)
+        for item in reserve:
+            expected_choice_count = 3 if item['part'] == 'Part 2' else 4
+            for q in item['questions']:
+                self.assertEqual(len(q['choices']), expected_choice_count, item['id'])
+                self.assertEqual(len(q['choices']), len(set(q['choices'])), item['id'])
+                self.assertIn(q['answerIndex'], range(expected_choice_count), item['id'])
 
     def test_learning_progress_persists_selected_choice_index(self):
         app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')

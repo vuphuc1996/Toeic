@@ -44,7 +44,7 @@ jobs:
         with:
           node-version: "24"
       - name: Python syntax check
-        run: python -m py_compile tools/validate-data.py tools/validate-learning-content.py tools/audit-toeic-coverage.py tools/audit-question-evidence.py tools/audit-distractors.py tools/sync-version.py tools/patch-data.py tools/tests/test_vocabulary_detail_examples.py tools/tests/test_legacy_collocation_cleanup.py
+        run: python -m py_compile tools/validate-data.py tools/validate-learning-content.py tools/audit-toeic-coverage.py tools/audit-question-evidence.py tools/audit-distractors.py tools/sync-version.py tools/patch-data.py tools/tests/test_vocabulary_detail_examples.py tools/tests/test_legacy_collocation_cleanup.py tools/validate-part1-photo-assets.py tools/tests/test_part1_photo_assets.py
       - name: Unit tests — baseline_ids
         run: python -m unittest discover -s tools/tests -p 'test_baseline_ids.py' -v
       - name: Unit tests — patch_data
@@ -75,6 +75,8 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_answer_position_balance.py' -v
       - name: Unit tests — remaining_content_review
         run: python -m unittest discover -s tools/tests -p 'test_remaining_content_review.py' -v
+      - name: Unit tests — part1_photo_assets
+        run: python -m unittest discover -s tools/tests -p 'test_part1_photo_assets.py' -v
       - name: Unit tests — vocabulary_detail_examples
         run: python -m unittest discover -s tools/tests -p 'test_vocabulary_detail_examples.py' -v
       - name: Unit tests — legacy_collocation_cleanup
@@ -83,6 +85,8 @@ jobs:
         run: python tools/validate-data.py
       - name: Validate TOEIC learning content (Listening/Reading/Grammar)
         run: python tools/validate-learning-content.py
+      - name: Validate licensed Part 1 photo binaries and attribution
+        run: python tools/validate-part1-photo-assets.py
       - name: Generate TOEIC coverage report
         run: python tools/audit-toeic-coverage.py
       - name: Generate answer-to-source evidence audit

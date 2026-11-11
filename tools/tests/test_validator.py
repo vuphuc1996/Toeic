@@ -219,6 +219,14 @@ class ValidatorTests(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn("SW001", out)
 
+    def test_missing_optional_cache_asset_is_not_a_structural_error(self):
+        self.clean_with_baseline()
+        sw = self.repo.root / "sw.js"
+        sw.write_text(sw.read_text(encoding="utf-8") + '\nconst OPTIONAL = ["./assets/topics/not-shipped.webp"];\n', encoding="utf-8")
+        code, out = self.repo.run()
+        self.assertEqual(code, 0, out)
+        self.assertIn("RESULT: PASS", out)
+
     def test_unlisted_asset_is_new_error(self):
         self.clean_with_baseline()
         self.repo.extra_assets = ["assets/topics/office.webp"]

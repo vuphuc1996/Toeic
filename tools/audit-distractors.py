@@ -40,8 +40,10 @@ def norm(value: str) -> str:
 
 
 def main() -> int:
-    listening = [x for x in load('data/listening/listening-library.json', 'listening')
-                 if x.get('part') in ('Part 3', 'Part 4')]
+    listening_all = [x for x in load('data/listening/listening-library.json', 'listening')
+                     if x.get('part') in ('Part 3', 'Part 4')]
+    reserve = [x for x in listening_all if x.get('editorialStatus') == 'reserve-pending-independent-review']
+    listening = [x for x in listening_all if x.get('editorialStatus') != 'reserve-pending-independent-review']
     reading = [x for x in load('data/readings/reading-library.json', 'readings')
                if x.get('part') == 'Part 7']
     scopes = [('Listening', 'Part 3', [x for x in listening if x['part'] == 'Part 3']),
@@ -77,6 +79,21 @@ def main() -> int:
                              [c for i, c in enumerate(choices) if i != answer_index],
                              q.get('question', '')))
         distributions[part] = distribution
+
+    # Reserve items are structurally checked but excluded from the historic answer-position balance
+    # until they receive an independent editorial/distractor review.
+    for item in reserve:
+        for qn, q in enumerate(item.get('questions', []), 1):
+            choices = q.get('choices', [])
+            if len(choices) != 4:
+                errors.append(f"{item['id']} Q{qn}: reserve item expected 4 choices, got {len(choices)}")
+                continue
+            normalized = [norm(c) for c in choices]
+            if len(normalized) != len(set(normalized)):
+                errors.append(f"{item['id']} Q{qn}: reserve item has duplicate normalized choices")
+            answer_index = q.get('answerIndex')
+            if not isinstance(answer_index, int) or not 0 <= answer_index < len(choices):
+                errors.append(f"{item['id']} Q{qn}: reserve item has invalid answerIndex {answer_index!r}")
 
     expected_counts = {'Part 3': 39, 'Part 4': 30, 'Part 7': 63}
     for part, expected in expected_counts.items():
@@ -133,7 +150,7 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text('\n'.join(lines), encoding='utf-8')
     print(f'Wrote {OUT.relative_to(ROOT)}')
-    print(f'Questions reviewed: {total}; revisions: {len(REVISIONS)}')
+    print(f'Questions reviewed: {total}; reserve structural checks: {sum(len(x.get("questions", [])) for x in reserve)}; revisions: {len(REVISIONS)}')
     for part in ('Part 3', 'Part 4', 'Part 7'):
         d = distributions[part]
         print(f"{part}: A={d[0]}, B={d[1]}, C={d[2]}, D={d[3]}")

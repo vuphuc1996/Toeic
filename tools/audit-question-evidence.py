@@ -44,7 +44,7 @@ def get_source(item: dict, kind: str) -> str:
 def evidence_status(kind: str, part: str, item: dict, q: dict, source: str, answer: str) -> tuple[str, str]:
     if kind == 'Listening' and part == 'Part 1':
         letter = 'ABCD'[q['answerIndex']]
-        return 'photo-checked', f"Compared the licensed photograph and keyed option {letter} with the image-specific explanation; photo `{item.get('photo','')}`; SVG fallback `{item.get('image','')}`. Source/license are recorded in `assets/listening/ATTRIBUTION.csv`."
+        return 'photo-source-reviewed', f"Reviewed the Pexels source-page description, keyed option {letter} and matching spoken action; photo path `{item.get('photo','')}`; SVG fallback `{item.get('image','')}`. Source/license are recorded in `assets/listening/ATTRIBUTION.csv`. Binary-level visual verification remains pending until the JPG bytes are available in the working copy."
     if kind == 'Listening' and part == 'Part 2':
         return 'response-fit-checked', 'Reviewed the spoken prompt, response, polarity/speech act and rationale; transcript translations were checked against the actual spoken lines.'
     if kind == 'Reading' and part == 'Part 5':
@@ -86,7 +86,8 @@ def main() -> int:
         f'- Questions indexed: **{total}** ({sum(counters["Listening"].values())} Listening + {sum(counters["Reading"].values())} Reading).',
         '- Every correct option is linked to its source transcript/passage or an explicit review category.',
         '- Direct/lexical matching is evidence discovery only. It does not prove that distractors are wrong or that a paraphrase/inference is unique.',
-        '- In this editorial pass, 6 low-overlap paraphrase/inference items were checked against their transcript/passage; 8 Part 1 visual keys, all 25 Part 2 response-fit items, all 30 Part 5 grammar items and all 16 Part 6 context-fit items were also reviewed.',
+        '- In this editorial pass, 6 low-overlap paraphrase/inference items were checked against their transcript/passage; 8 Part 1 Pexels source descriptions, all 30 Part 2 response-fit items, all 30 Part 5 grammar items and all 16 Part 6 context-fit items were also reviewed.',
+        '- Batch 013 adds 11 reserve Listening questions. They are included in the inventory/evidence index, but are not part of the 132-question Part 3/4/7 independent distractor-balance certificate until a separate review.',
         '- These are internal editorial checks, not two-person independent proofreading, psychometric validation or ETS approval.',
         '', '## Coverage by evidence type',
         '| Library | Evidence category | Questions |', '|---|---|---:|'
@@ -95,7 +96,7 @@ def main() -> int:
         'direct-text-match': 'Direct source phrase',
         'lexical-evidence': 'Source lexical evidence (paraphrase may remain)',
         'manual-paraphrase-verified': 'Manual paraphrase/inference checked against source',
-        'photo-checked': 'Part 1 licensed photograph/key comparison checked',
+        'photo-source-reviewed': 'Part 1 Pexels source description and keyed action reviewed',
         'response-fit-checked': 'Part 2 speech-act / response-fit checked',
         'grammar-checked': 'Part 5 sentence grammar checked',
         'context-fit-checked': 'Part 6 context/cohesion checked',

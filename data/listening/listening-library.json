@@ -1431,11 +1431,11 @@
       "id": "part1-warehouse-box",
       "part": "Part 1",
       "type": "photograph",
-      "title": "Stocking a warehouse shelf",
+      "title": "Organizing warehouse inventory",
       "topic": "Warehouse & Shipping",
       "level": "A2–B1",
       "image": "./assets/listening/part1-warehouse-box.svg",
-      "imageAlt": "A warehouse worker placing a cardboard carton onto a storage shelf",
+      "imageAlt": "A warehouse worker organizing cartons on storage shelving",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1445,7 +1445,7 @@
         },
         {
           "speaker": "Narrator",
-          "text": "A worker is placing a carton on a storage shelf.",
+          "text": "A worker is organizing cartons on a warehouse shelf.",
           "voice": "female",
           "accent": "en-GB"
         },
@@ -1472,7 +1472,7 @@
             "Option D"
           ],
           "answerIndex": 1,
-          "explanation": "Đáp án B: Ảnh chụp cho thấy người công nhân đang đặt một thùng carton lên kệ lưu trữ; lựa chọn B mô tả đúng hành động và vị trí. Các lựa chọn còn lại nói về quét sàn, chất hàng lên xe hoặc tháo kệ.",
+          "explanation": "Đáp án B: Ảnh chụp cho thấy nhân viên đang sắp xếp các thùng carton trên kệ kho. Các lựa chọn còn lại nói về quét sàn, chất hàng lên xe tải hoặc tháo kệ.",
           "choiceIds": [
             "listening:part1-warehouse-box:1:choice:1",
             "listening:part1-warehouse-box:1:choice:2",
@@ -1492,11 +1492,11 @@
       "id": "part1-technician-inspection",
       "part": "Part 1",
       "type": "photograph",
-      "title": "Inspecting an air-conditioning unit",
+      "title": "Repairing an outdoor air conditioner",
       "topic": "Facilities Maintenance",
       "level": "A2–B1",
       "image": "./assets/listening/part1-technician-inspection.svg",
-      "imageAlt": "A maintenance technician inspecting an outdoor air-conditioning unit with gauges",
+      "imageAlt": "A technician repairing an outdoor air-conditioning unit with a manifold gauge",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1512,7 +1512,7 @@
         },
         {
           "speaker": "Narrator",
-          "text": "A technician is inspecting an air-conditioning unit.",
+          "text": "A technician is repairing an air-conditioning unit outdoors.",
           "voice": "female",
           "accent": "en-CA"
         },
@@ -1533,7 +1533,7 @@
             "Option D"
           ],
           "answerIndex": 2,
-          "explanation": "Đáp án C: Ảnh chụp cho thấy kỹ thuật viên đang kiểm tra thiết bị điều hòa bằng dụng cụ đo; lựa chọn C khớp với người thực hiện và thiết bị được nhấn mạnh. Các lựa chọn A, B và D mô tả những hành động không xuất hiện trong ảnh.",
+          "explanation": "Đáp án C: Ảnh chụp cho thấy kỹ thuật viên đang sửa cụm điều hòa ngoài trời và sử dụng đồng hồ đo chuyên dụng. Các lựa chọn còn lại không mô tả hành động đang diễn ra.",
           "choiceIds": [
             "listening:part1-technician-inspection:1:choice:1",
             "listening:part1-technician-inspection:1:choice:2",
@@ -3721,6 +3721,468 @@
         }
       ],
       "contentSource": "original-editorial"
+    },
+    {
+      "id": "part2-monitor-delivery-arrival",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Replacement monitor delivery",
+      "topic": "Office & Equipment",
+      "level": "A2–B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "female",
+          "accent": "en-GB",
+          "text": "Has the replacement monitor arrived yet?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "The monitor has a wider screen.",
+            "Not yet; the courier expects it after lunch.",
+            "I ordered a desk lamp last week."
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu hỏi Has ... arrived yet? hỏi tình trạng hàng đã đến hay chưa. “Not yet” trả lời trực tiếp và mốc sau bữa trưa cung cấp thời gian dự kiến. Hai lựa chọn còn lại nói về đặc điểm thiết bị và một đơn hàng khác.",
+          "choiceIds": [
+            "listening:part2-monitor-delivery-arrival:1:choice:1",
+            "listening:part2-monitor-delivery-arrival:1:choice:2",
+            "listening:part2-monitor-delivery-arrival:1:choice:3"
+          ]
+        }
+      ],
+      "transcriptTranslation": "Màn hình thay thế đã được giao đến chưa? — Chưa; đơn vị chuyển phát dự kiến giao sau bữa trưa.",
+      "vocabulary": [
+        {
+          "word": "replacement",
+          "meaning": "vật thay thế"
+        },
+        {
+          "word": "courier",
+          "meaning": "đơn vị/người chuyển phát"
+        },
+        {
+          "word": "arrive",
+          "meaning": "đến nơi"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
+      "contentBatch": "batch-013-listening-reserve",
+      "editorialStatus": "reserve-pending-independent-review"
+    },
+    {
+      "id": "part2-revised-budget-approval",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Approval for a revised budget",
+      "topic": "Finance & Administration",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "male",
+          "accent": "en-GB",
+          "text": "Who needs to approve the revised budget?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "The regional director.",
+            "Before the end of the quarter.",
+            "It was reduced by five percent."
+          ],
+          "answerIndex": 0,
+          "explanation": "Who hỏi người cần thực hiện việc phê duyệt. “The regional director” xác định đúng người; hai phương án còn lại lần lượt là thời hạn và thông tin về mức ngân sách.",
+          "choiceIds": [
+            "listening:part2-revised-budget-approval:1:choice:1",
+            "listening:part2-revised-budget-approval:1:choice:2",
+            "listening:part2-revised-budget-approval:1:choice:3"
+          ]
+        }
+      ],
+      "transcriptTranslation": "Ai cần phê duyệt ngân sách đã điều chỉnh? — Giám đốc khu vực.",
+      "vocabulary": [
+        {
+          "word": "revised",
+          "meaning": "đã điều chỉnh"
+        },
+        {
+          "word": "budget",
+          "meaning": "ngân sách"
+        },
+        {
+          "word": "approve",
+          "meaning": "phê duyệt"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
+      "contentBatch": "batch-013-listening-reserve",
+      "editorialStatus": "reserve-pending-independent-review"
+    },
+    {
+      "id": "part2-visitor-parking",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Parking for visitors",
+      "topic": "Facilities & Directions",
+      "level": "A2–B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "female",
+          "accent": "en-GB",
+          "text": "Where should visitors park during the renovation?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "The renovation will begin on Monday.",
+            "A visitor badge is available at reception.",
+            "In the garage across from the main entrance."
+          ],
+          "answerIndex": 2,
+          "explanation": "Where hỏi địa điểm. “In the garage across from the main entrance” chỉ rõ nơi khách nên đỗ xe; các lựa chọn khác nói về ngày thi công và thẻ khách.",
+          "choiceIds": [
+            "listening:part2-visitor-parking:1:choice:1",
+            "listening:part2-visitor-parking:1:choice:2",
+            "listening:part2-visitor-parking:1:choice:3"
+          ]
+        }
+      ],
+      "transcriptTranslation": "Khách nên đỗ xe ở đâu trong thời gian sửa chữa? — Trong nhà để xe đối diện lối vào chính.",
+      "vocabulary": [
+        {
+          "word": "renovation",
+          "meaning": "việc cải tạo/sửa chữa"
+        },
+        {
+          "word": "garage",
+          "meaning": "nhà để xe"
+        },
+        {
+          "word": "entrance",
+          "meaning": "lối vào"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
+      "contentBatch": "batch-013-listening-reserve",
+      "editorialStatus": "reserve-pending-independent-review"
+    },
+    {
+      "id": "part2-training-session-reschedule",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Rescheduling a training session",
+      "topic": "Training & Scheduling",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "male",
+          "accent": "en-GB",
+          "text": "Would you mind moving the training session to Thursday?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "The training materials are in the cabinet.",
+            "That is fine; the instructor is available then.",
+            "It lasted about two hours."
+          ],
+          "answerIndex": 1,
+          "explanation": "Would you mind ...? là lời đề nghị lịch sự. “That is fine” chấp nhận đề nghị và thông tin giảng viên rảnh vào thứ Năm xác nhận việc đổi lịch khả thi. Các phương án còn lại không phản hồi yêu cầu.",
+          "choiceIds": [
+            "listening:part2-training-session-reschedule:1:choice:1",
+            "listening:part2-training-session-reschedule:1:choice:2",
+            "listening:part2-training-session-reschedule:1:choice:3"
+          ]
+        }
+      ],
+      "transcriptTranslation": "Bạn có phiền chuyển buổi đào tạo sang thứ Năm không? — Được thôi; giảng viên rảnh vào ngày đó.",
+      "vocabulary": [
+        {
+          "word": "would you mind",
+          "meaning": "bạn có phiền không"
+        },
+        {
+          "word": "session",
+          "meaning": "buổi học/buổi làm việc"
+        },
+        {
+          "word": "instructor",
+          "meaning": "giảng viên/người hướng dẫn"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
+      "contentBatch": "batch-013-listening-reserve",
+      "editorialStatus": "reserve-pending-independent-review"
+    },
+    {
+      "id": "part2-customer-survey-sent",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Customer survey distribution",
+      "topic": "Customer Relations",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "female",
+          "accent": "en-GB",
+          "text": "Haven't you sent the customer survey yet?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "I have; I emailed it to the mailing list this morning.",
+            "The survey includes six questions.",
+            "The customer service desk is downstairs."
+          ],
+          "answerIndex": 0,
+          "explanation": "Câu hỏi đuôi phủ định Haven’t you ... yet? hỏi việc gửi khảo sát đã hoàn thành chưa. “I have” xác nhận đã gửi và câu sau nêu cách thức, thời điểm gửi. Hai phương án khác nói về nội dung khảo sát và địa điểm.",
+          "choiceIds": [
+            "listening:part2-customer-survey-sent:1:choice:1",
+            "listening:part2-customer-survey-sent:1:choice:2",
+            "listening:part2-customer-survey-sent:1:choice:3"
+          ]
+        }
+      ],
+      "transcriptTranslation": "Bạn vẫn chưa gửi khảo sát khách hàng à? — Tôi gửi rồi; sáng nay tôi đã gửi email đến danh sách nhận thư.",
+      "vocabulary": [
+        {
+          "word": "survey",
+          "meaning": "khảo sát"
+        },
+        {
+          "word": "mailing list",
+          "meaning": "danh sách nhận thư"
+        },
+        {
+          "word": "email",
+          "meaning": "gửi thư điện tử"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
+      "contentBatch": "batch-013-listening-reserve",
+      "editorialStatus": "reserve-pending-independent-review"
+    },
+    {
+      "id": "part3-training-handouts",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Delayed workshop handouts",
+      "topic": "Training & Office Administration",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "accent": "en-GB",
+          "text": "The printed handouts for tomorrow’s workshop still haven’t arrived. Did the supplier give you an update?"
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "accent": "en-US",
+          "text": "Yes. The courier collected them late, so the package will not reach our office until tomorrow afternoon."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "accent": "en-GB",
+          "text": "That is too late. The workshop begins at nine in the morning, and the participants need the materials when they arrive."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "accent": "en-US",
+          "text": "I have the final PDF. I will upload it to the training portal this afternoon and email the participants a link."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What problem are the speakers discussing?",
+          "choices": [
+            "The printed handouts are delayed.",
+            "The workshop has been canceled.",
+            "The supplier sent the wrong invoice.",
+            "The training room is unavailable."
+          ],
+          "answerIndex": 0,
+          "explanation": "Người phụ nữ nói tài liệu in vẫn chưa đến; người đàn ông xác nhận chuyển phát muộn nên gói hàng sẽ đến sau thời điểm cần dùng.",
+          "choiceIds": [
+            "listening:part3-training-handouts:1:choice:1",
+            "listening:part3-training-handouts:1:choice:2",
+            "listening:part3-training-handouts:1:choice:3",
+            "listening:part3-training-handouts:1:choice:4"
+          ]
+        },
+        {
+          "question": "Why are the printed handouts needed earlier?",
+          "choices": [
+            "The supplier has closed its office.",
+            "The workshop begins before the materials will arrive.",
+            "The participants requested a different venue.",
+            "The final PDF has not been approved."
+          ],
+          "answerIndex": 1,
+          "explanation": "Buổi workshop bắt đầu lúc 9 giờ sáng, trong khi tài liệu in chỉ đến vào chiều hôm sau; vì vậy tài liệu sẽ đến quá muộn.",
+          "choiceIds": [
+            "listening:part3-training-handouts:2:choice:1",
+            "listening:part3-training-handouts:2:choice:2",
+            "listening:part3-training-handouts:2:choice:3",
+            "listening:part3-training-handouts:2:choice:4"
+          ]
+        },
+        {
+          "question": "What will the man do this afternoon?",
+          "choices": [
+            "Ask the courier to return the package.",
+            "Print a new set at the reception desk.",
+            "Upload the PDF and email a link.",
+            "Postpone the workshop until Friday."
+          ],
+          "answerIndex": 2,
+          "explanation": "Người đàn ông nói sẽ tải tệp PDF lên cổng đào tạo và gửi đường dẫn cho người tham dự qua email.",
+          "choiceIds": [
+            "listening:part3-training-handouts:3:choice:1",
+            "listening:part3-training-handouts:3:choice:2",
+            "listening:part3-training-handouts:3:choice:3",
+            "listening:part3-training-handouts:3:choice:4"
+          ]
+        }
+      ],
+      "transcriptTranslation": "Tài liệu in cho buổi workshop ngày mai vẫn chưa đến. Người phụ nữ hỏi thông tin từ nhà cung cấp. Người đàn ông giải thích đơn vị chuyển phát nhận hàng muộn nên gói hàng chỉ đến vào chiều hôm sau. Vì buổi workshop bắt đầu lúc 9 giờ sáng, người đàn ông sẽ tải bản PDF cuối cùng lên cổng đào tạo và gửi đường dẫn cho người tham dự trong chiều nay.",
+      "vocabulary": [
+        {
+          "word": "handout",
+          "meaning": "tài liệu phát cho người tham dự"
+        },
+        {
+          "word": "courier",
+          "meaning": "đơn vị chuyển phát"
+        },
+        {
+          "word": "participant",
+          "meaning": "người tham dự"
+        },
+        {
+          "word": "upload",
+          "meaning": "tải tệp lên hệ thống"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original TOEIC-style conversation written for this project; not copied from ETS material.",
+      "contentBatch": "batch-013-listening-reserve",
+      "editorialStatus": "reserve-pending-independent-review"
+    },
+    {
+      "id": "part4-east-elevator-maintenance",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Maintenance in the east elevator bank",
+      "topic": "Facilities & Workplace Announcements",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "accent": "en-GB",
+          "text": "Attention, employees. The elevators in the east wing will be out of service this Friday from one until four in the afternoon while technicians replace a control panel. During that time, please use the west elevator bank near the main lobby. Employees expecting large deliveries should arrange them before noon, when the service entrance will be staffed. We apologize for the inconvenience and appreciate your cooperation."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which facility will be unavailable?",
+          "choices": [
+            "The east wing elevators.",
+            "The main lobby doors.",
+            "The west stairwell.",
+            "The service entrance."
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo nói các thang máy ở cánh phía đông sẽ ngừng hoạt động để kỹ thuật viên thay bảng điều khiển.",
+          "choiceIds": [
+            "listening:part4-east-elevator-maintenance:1:choice:1",
+            "listening:part4-east-elevator-maintenance:1:choice:2",
+            "listening:part4-east-elevator-maintenance:1:choice:3",
+            "listening:part4-east-elevator-maintenance:1:choice:4"
+          ]
+        },
+        {
+          "question": "When will the maintenance take place?",
+          "choices": [
+            "On Thursday morning.",
+            "From noon until one.",
+            "From one until four on Friday.",
+            "Throughout the weekend."
+          ],
+          "answerIndex": 2,
+          "explanation": "Thời gian được nêu rõ là thứ Sáu, từ 1 giờ đến 4 giờ chiều.",
+          "choiceIds": [
+            "listening:part4-east-elevator-maintenance:2:choice:1",
+            "listening:part4-east-elevator-maintenance:2:choice:2",
+            "listening:part4-east-elevator-maintenance:2:choice:3",
+            "listening:part4-east-elevator-maintenance:2:choice:4"
+          ]
+        },
+        {
+          "question": "What are employees asked to do during the maintenance?",
+          "choices": [
+            "Use the east stairwell.",
+            "Use the west elevator bank.",
+            "Delay all office deliveries.",
+            "Contact the building manager."
+          ],
+          "answerIndex": 1,
+          "explanation": "Người thông báo hướng dẫn nhân viên sử dụng cụm thang máy phía tây gần sảnh chính.",
+          "choiceIds": [
+            "listening:part4-east-elevator-maintenance:3:choice:1",
+            "listening:part4-east-elevator-maintenance:3:choice:2",
+            "listening:part4-east-elevator-maintenance:3:choice:3",
+            "listening:part4-east-elevator-maintenance:3:choice:4"
+          ]
+        }
+      ],
+      "transcriptTranslation": "Thông báo cho nhân viên biết các thang máy ở cánh phía đông sẽ ngừng hoạt động vào thứ Sáu, từ 1 đến 4 giờ chiều, để kỹ thuật viên thay bảng điều khiển. Trong thời gian đó, nhân viên cần sử dụng cụm thang máy phía tây gần sảnh chính. Những người có đơn giao hàng lớn nên sắp xếp trước buổi trưa. Ban quản lý xin lỗi vì sự bất tiện và cảm ơn mọi người đã hợp tác.",
+      "vocabulary": [
+        {
+          "word": "out of service",
+          "meaning": "ngừng hoạt động"
+        },
+        {
+          "word": "control panel",
+          "meaning": "bảng điều khiển"
+        },
+        {
+          "word": "elevator bank",
+          "meaning": "cụm thang máy"
+        },
+        {
+          "word": "inconvenience",
+          "meaning": "sự bất tiện"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "sourceNote": "Original TOEIC-style announcement written for this project; not copied from ETS material.",
+      "contentBatch": "batch-013-listening-reserve",
+      "editorialStatus": "reserve-pending-independent-review"
     }
   ]
 }

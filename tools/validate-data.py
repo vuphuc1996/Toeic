@@ -509,6 +509,11 @@ def check_service_worker(ctx: Context) -> None:
             if p in ("./", "/"):
                 continue
             if not rel(ctx, p).exists():
+                # OPTIONAL resources may legitimately be absent from a source snapshot.
+                # Required app-shell resources remain hard errors; Part 1 photo binaries
+                # are additionally enforced by the strict photo release validator in CI.
+                if name == "OPTIONAL":
+                    continue
                 ctx.add("SW001", p, f"/{name}", f"{name} nhắc tới tệp không tồn tại")
     for sub in ("assets", "data"):
         base = ctx.root / sub

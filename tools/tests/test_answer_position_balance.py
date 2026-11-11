@@ -21,6 +21,8 @@ class AnswerPositionBalanceTests(unittest.TestCase):
         }
         actual = {part: Counter() for part in expected}
         for item in self.listening + self.reading:
+            if item.get('editorialStatus') == 'reserve-pending-independent-review':
+                continue
             part = item.get('part')
             if part in actual:
                 for q in item.get('questions', []):
@@ -66,7 +68,11 @@ class AnswerPositionBalanceTests(unittest.TestCase):
                 self.assertEqual(len(q['choiceIds']), 4, item['id'])
                 self.assertEqual(len(set(q['choiceIds'])), 4, item['id'])
                 self.assertIn(q['answerIndex'], range(4), item['id'])
-        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 102)
+        historical_listening = [x for x in self.listening if x.get('editorialStatus') != 'reserve-pending-independent-review']
+        reserve_listening = [x for x in self.listening if x.get('editorialStatus') == 'reserve-pending-independent-review']
+        self.assertEqual(sum(len(x.get('questions', [])) for x in historical_listening), 102)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve_listening), 11)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 113)
         self.assertEqual(sum(len(x.get('questions', [])) for x in self.reading), 109)
 
 

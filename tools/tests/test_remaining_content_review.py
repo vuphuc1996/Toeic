@@ -30,13 +30,13 @@ def selected_items():
 
 
 class RemainingContentReviewTests(unittest.TestCase):
-    def test_review_registry_covers_exactly_148_questions(self):
+    def test_review_registry_tracks_the_historical_148_questions(self):
         actual = {f"{u['id']}#Q{n}" for _, u, n, _ in selected_items()}
         recorded = [row["key"] for row in REGISTRY["items"]]
-        self.assertEqual(len(actual), 148)
         self.assertEqual(len(recorded), 148)
         self.assertEqual(len(set(recorded)), 148)
-        self.assertEqual(set(recorded), actual)
+        self.assertTrue(set(recorded).issubset(actual))
+        self.assertGreater(len(actual), len(recorded), 'new reserve questions must not invalidate the historical review set')
 
     def test_part_distribution_matches_learning_blueprint_pool(self):
         expected = {"Part 1": 8, "Part 2": 25, "Part 3": 39, "Part 4": 30, "Part 5": 30, "Part 6": 16}
@@ -47,9 +47,28 @@ class RemainingContentReviewTests(unittest.TestCase):
         self.assertEqual(observed, expected)
 
     def test_reviewed_data_fingerprints_have_not_drifted(self):
-        for relative, expected in REGISTRY["sourceSha256"].items():
-            actual = hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
-            self.assertEqual(actual, expected, f"Re-review required after content change: {relative}")
+        units = {
+            'listening': {x['id']: x for x in LISTENING},
+            'readings': {x['id']: x for x in READINGS},
+        }
+        for row in REGISTRY["items"]:
+            unit = units[row['collection']][row['unitId']]
+            unit_payload = {key: value for key, value in unit.items() if key != 'questions'}
+            payload = json.dumps(unit_payload, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+            actual = hashlib.sha256(payload).hexdigest()
+            self.assertEqual(actual, row['unitContentSha256'], f"Reviewed transcript/unit metadata drifted: {row['unitId']}")
+        for row in REGISTRY['items']:
+            question = units[row['collection']][row['unitId']]['questions'][row['questionNumber'] - 1]
+            payload = json.dumps(question, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+            actual = hashlib.sha256(payload).hexdigest()
+            self.assertEqual(actual, row['questionSha256'], f"Reviewed question drifted: {row['key']}")
+
+    def test_unreviewed_questions_must_be_marked_reserve_pending(self):
+        reviewed = {row["key"] for row in REGISTRY["items"]}
+        for _, unit, number, _question in selected_items():
+            key = f"{unit['id']}#Q{number}"
+            if key not in reviewed:
+                self.assertEqual(unit.get("editorialStatus"), "reserve-pending-independent-review", key)
 
     def test_keys_choices_choice_ids_and_explanations_are_well_formed(self):
         for collection, unit, number, question in selected_items():
@@ -66,13 +85,18 @@ class RemainingContentReviewTests(unittest.TestCase):
             self.assertEqual(len(set(choice_ids)), len(choice_ids), key)
             self.assertTrue(str(question.get("explanation", "")).strip(), key)
 
-    def test_registry_records_conservative_no_change_decisions(self):
+    def test_registry_records_conservative_decisions_and_approved_photo_amendments(self):
+        amendments = {row['unitId'] for row in REGISTRY.get('approvedAmendments', [])}
         for row in REGISTRY["items"]:
-            self.assertEqual(row["decision"], "retain-existing-key-and-options", row["key"])
+            if row['unitId'] in amendments:
+                self.assertEqual(row['decision'], 'approved-photo-description-amendment-preserving-answer-key-and-choice-identity', row['key'])
+            else:
+                self.assertEqual(row["decision"], "retain-existing-key-and-options", row["key"])
             self.assertTrue(row["reviewChecks"], row["key"])
         self.assertFalse(REGISTRY["reviewPolicy"]["answerKeysChanged"])
         self.assertFalse(REGISTRY["reviewPolicy"]["choiceTextChanged"])
         self.assertFalse(REGISTRY["reviewPolicy"]["choiceOrderChanged"])
+        self.assertTrue(REGISTRY["reviewPolicy"]["transcriptAndExplanationAmendments"])
         self.assertFalse(REGISTRY["reviewPolicy"]["personalIndexedDBTouched"])
 
 

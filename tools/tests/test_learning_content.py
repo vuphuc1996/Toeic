@@ -202,6 +202,50 @@ class LearningContentTests(unittest.TestCase):
             if item.get('part') == 'Part 1':
                 self.assertIn(item['image'], required)
 
+
+    def test_part1_photo_actions_match_keyed_statements(self):
+        expected = {
+            'part1-meeting-documents': (0, 'Two employees are reviewing documents at a table.'),
+            'part1-warehouse-box': (1, 'A worker is organizing cartons on a warehouse shelf.'),
+            'part1-technician-inspection': (2, 'A technician is repairing an air-conditioning unit outdoors.'),
+            'part1-airport-suitcase': (3, 'A traveler is pulling a suitcase through the terminal.'),
+            'part1-presentation-room': (0, 'A presentation screen has been set up at the front of the room.'),
+            'part1-reception-plant': (1, 'A woman is watering a potted plant indoors.'),
+            'part1-restaurant-setting': (2, 'A restaurant employee is setting the table.'),
+            'part1-photocopier': (3, 'An employee is operating a photocopier.'),
+        }
+        for ident, (answer, statement) in expected.items():
+            item = next(x for x in self.listening if x.get('id') == ident)
+            self.assertEqual(item['questions'][0]['answerIndex'], answer, ident)
+            self.assertEqual(item['segments'][answer]['text'], statement, ident)
+            self.assertIn(f'Đáp án {"ABCD"[answer]}', item['questions'][0]['explanation'], ident)
+
+    def test_listening_reserve_batch_counts_and_units(self):
+        counts = {f'Part {i}': sum(len(x.get('questions', [])) for x in self.listening if x.get('part') == f'Part {i}') for i in range(1, 5)}
+        self.assertEqual(counts, {'Part 1': 8, 'Part 2': 30, 'Part 3': 42, 'Part 4': 33})
+        p3 = next(x for x in self.listening if x.get('id') == 'part3-training-handouts')
+        p4 = next(x for x in self.listening if x.get('id') == 'part4-east-elevator-maintenance')
+        self.assertEqual(len(p3['segments']), 4)
+        self.assertEqual(len(p3['questions']), 3)
+        self.assertEqual(len({segment['speaker'] for segment in p3['segments']}), 2)
+        self.assertEqual(len(p4['segments']), 1)
+        self.assertEqual(len(p4['questions']), 3)
+
+    def test_reserve_question_ids_and_choice_ids_are_unique(self):
+        new_ids = {'part2-monitor-delivery-arrival','part2-revised-budget-approval','part2-visitor-parking',
+                   'part2-training-session-reschedule','part2-customer-survey-sent','part3-training-handouts',
+                   'part4-east-elevator-maintenance'}
+        chosen = [item for item in self.listening if item.get('id') in new_ids]
+        self.assertEqual({item['id'] for item in chosen}, new_ids)
+        all_choice_ids = []
+        for item in chosen:
+            for q in item.get('questions', []):
+                self.assertTrue(q.get('explanation'))
+                self.assertEqual(len(q['choiceIds']), len(q['choices']))
+                self.assertEqual(len(q['choiceIds']), len(set(q['choiceIds'])))
+                all_choice_ids.extend(q['choiceIds'])
+        self.assertEqual(len(all_choice_ids), len(set(all_choice_ids)))
+
     def test_part2_invoice_distractors_are_distinct_from_the_answer(self):
         item = next(x for x in self.listening if x.get("id") == "part2-invoice-approval")
         question = item["questions"][0]

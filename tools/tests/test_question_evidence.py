@@ -25,14 +25,14 @@ class QuestionEvidenceAuditTests(unittest.TestCase):
             raise RuntimeError(result.stdout + "\n" + result.stderr)
         cls.report = REPORT.read_text(encoding="utf-8")
 
-    def test_all_211_answer_keys_are_mapped(self):
-        self.assertIn("Questions indexed: **211** (102 Listening + 109 Reading).", self.report)
+    def test_all_222_answer_keys_are_mapped(self):
+        self.assertIn("Questions indexed: **222** (113 Listening + 109 Reading).", self.report)
 
     def test_all_manual_review_categories_have_expected_counts(self):
         for expected in (
             "Manual paraphrase/inference checked against source | 3",
-            "Part 1 licensed photograph/key comparison checked | 8",
-            "Part 2 speech-act / response-fit checked | 25",
+            "Part 1 Pexels source description and keyed action reviewed | 8",
+            "Part 2 speech-act / response-fit checked | 30",
             "Part 5 sentence grammar checked | 30",
             "Part 6 context/cohesion checked | 16",
         ):
