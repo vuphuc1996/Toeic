@@ -1,0 +1,303 @@
+{
+  "from": "2.16.0",
+  "to": "2.17.0",
+  "changes": [
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 3",
+      "itemId": "part3-budget-review",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Flights were booked at short notice",
+      "choiceId": "listening:part3-budget-review:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 3",
+      "itemId": "part3-business-trip",
+      "question": 2,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "The first hotel is fully booked.",
+      "choiceId": "listening:part3-business-trip:2:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 3",
+      "itemId": "part3-facility-repair",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "A noisy air conditioner",
+      "choiceId": "listening:part3-facility-repair:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 3",
+      "itemId": "part3-interview-schedule",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "An HR employee",
+      "choiceId": "listening:part3-interview-schedule:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 3",
+      "itemId": "part3-invoice-error",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "The delivery fee was added twice.",
+      "choiceId": "listening:part3-invoice-error:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 3",
+      "itemId": "part3-procurement-quotation",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Replacement monitors",
+      "choiceId": "listening:part3-procurement-quotation:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 3",
+      "itemId": "part3-shipping-delay",
+      "question": 2,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "There was road construction.",
+      "choiceId": "listening:part3-shipping-delay:2:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 3",
+      "itemId": "part3-software-upgrade",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Submit stock requests through the portal",
+      "choiceId": "listening:part3-software-upgrade:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 4",
+      "itemId": "part4-conference-update",
+      "question": 3,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "At the information desk",
+      "choiceId": "listening:part4-conference-update:3:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 4",
+      "itemId": "part4-office-announcement",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Customer service",
+      "choiceId": "listening:part4-office-announcement:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 4",
+      "itemId": "part4-product-launch",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "A department readiness checklist",
+      "choiceId": "listening:part4-product-launch:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 4",
+      "itemId": "part4-quarterly-town-hall",
+      "question": 3,
+      "oldIndex": 0,
+      "newIndex": 3,
+      "answer": "By using an online form",
+      "choiceId": "listening:part4-quarterly-town-hall:3:choice:1",
+      "previousAnswerIndex": 0
+    },
+    {
+      "file": "data/listening/listening-library.json",
+      "part": "Part 4",
+      "itemId": "part4-safety-announcement",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Use the marked pedestrian walkway",
+      "choiceId": "listening:part4-safety-announcement:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "business-travel",
+      "question": 1,
+      "oldIndex": 2,
+      "newIndex": 0,
+      "answer": "Three nights",
+      "choiceId": "reading:business-travel:1:choice:3",
+      "previousAnswerIndex": 2
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "customer-service",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "The address was incomplete",
+      "choiceId": "reading:customer-service:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "facility-maintenance",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Saturday morning",
+      "choiceId": "reading:facility-maintenance:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "facility-maintenance-notice",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Saturday morning",
+      "choiceId": "reading:facility-maintenance-notice:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "invoice-payment",
+      "question": 2,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "The transaction reference",
+      "choiceId": "reading:invoice-payment:2:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "invoice-payment",
+      "question": 3,
+      "oldIndex": 2,
+      "newIndex": 0,
+      "answer": "Maintenance services",
+      "choiceId": "reading:invoice-payment:3:choice:3",
+      "previousAnswerIndex": 2
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "job-opening",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Operations Coordinator",
+      "choiceId": "reading:job-opening:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "job-opening",
+      "question": 3,
+      "oldIndex": 2,
+      "newIndex": 0,
+      "answer": "July 1",
+      "choiceId": "reading:job-opening:3:choice:3",
+      "previousAnswerIndex": 2
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "job-posting-analyst",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "A résumé and cover letter",
+      "choiceId": "reading:job-posting-analyst:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "meeting-notice",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Thursday, April 18",
+      "choiceId": "reading:meeting-notice:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "office-schedule",
+      "question": 2,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Meeting Room B",
+      "choiceId": "reading:office-schedule:2:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "part7-single-equipment-memo",
+      "question": 2,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Before October 11",
+      "choiceId": "reading:part7-single-equipment-memo:2:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "part7-single-training-email",
+      "question": 2,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Conference Room 3",
+      "choiceId": "reading:part7-single-training-email:2:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "shipping-update",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "Severe weather",
+      "choiceId": "reading:shipping-update:1:choice:2",
+      "previousAnswerIndex": 1
+    }
+  ]
+}

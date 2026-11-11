@@ -58,18 +58,32 @@
           "question": "Where will the briefing take place?",
           "choices": [
             "The HR office",
+            "The supervisor's office",
+            "The reception area",
+            "Meeting Room B"
+          ],
+          "answerIndex": 3,
+          "explanation": "Buổi phổ biến sẽ diễn ra tại Meeting Room B.",
+          "choiceIds": [
+            "reading:office-schedule:2:choice:1",
+            "reading:office-schedule:2:choice:4",
+            "reading:office-schedule:2:choice:3",
+            "reading:office-schedule:2:choice:2"
+          ],
+          "previousChoices": [
+            "The HR office",
             "Meeting Room B",
             "The reception area",
             "The supervisor's office"
           ],
-          "answerIndex": 1,
-          "explanation": "Buổi phổ biến sẽ diễn ra tại Meeting Room B.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:office-schedule:2:choice:1",
             "reading:office-schedule:2:choice:2",
             "reading:office-schedule:2:choice:3",
             "reading:office-schedule:2:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What should employees update?",
@@ -133,18 +147,32 @@
           "question": "When is the meeting scheduled?",
           "choices": [
             "Tuesday afternoon",
+            "The following quarter",
+            "Friday morning",
+            "Thursday, April 18"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo ghi cuộc họp diễn ra vào thứ Năm, ngày 18 tháng 4; đây là thời điểm được hỏi.",
+          "choiceIds": [
+            "reading:meeting-notice:1:choice:1",
+            "reading:meeting-notice:1:choice:4",
+            "reading:meeting-notice:1:choice:3",
+            "reading:meeting-notice:1:choice:2"
+          ],
+          "previousChoices": [
+            "Tuesday afternoon",
             "Thursday, April 18",
             "Friday morning",
             "The following quarter"
           ],
-          "answerIndex": 1,
-          "explanation": "Thông báo ghi cuộc họp diễn ra vào thứ Năm, ngày 18 tháng 4; đây là thời điểm được hỏi.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:meeting-notice:1:choice:1",
             "reading:meeting-notice:1:choice:2",
             "reading:meeting-notice:1:choice:3",
             "reading:meeting-notice:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What must be submitted by Tuesday afternoon?",
@@ -224,19 +252,33 @@
         {
           "question": "How long will Ms. Nguyen stay at the hotel?",
           "choices": [
+            "Three nights",
+            "Two nights",
+            "One night",
+            "One week"
+          ],
+          "answerIndex": 0,
+          "explanation": "Phòng được đặt trong three nights.",
+          "choiceIds": [
+            "reading:business-travel:1:choice:3",
+            "reading:business-travel:1:choice:2",
+            "reading:business-travel:1:choice:1",
+            "reading:business-travel:1:choice:4"
+          ],
+          "previousChoices": [
             "One night",
             "Two nights",
             "Three nights",
             "One week"
           ],
-          "answerIndex": 2,
-          "explanation": "Phòng được đặt trong three nights.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:business-travel:1:choice:1",
             "reading:business-travel:1:choice:2",
             "reading:business-travel:1:choice:3",
             "reading:business-travel:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 2
         },
         {
           "question": "What should she keep for reimbursement?",
@@ -346,35 +388,63 @@
           "question": "What should the customer send if payment has been made?",
           "choices": [
             "A new invoice",
+            "A maintenance schedule",
+            "A purchase order",
+            "The transaction reference"
+          ],
+          "answerIndex": 3,
+          "explanation": "Cần gửi transaction reference để xác nhận khoản tiền đã chuyển.",
+          "choiceIds": [
+            "reading:invoice-payment:2:choice:1",
+            "reading:invoice-payment:2:choice:4",
+            "reading:invoice-payment:2:choice:3",
+            "reading:invoice-payment:2:choice:2"
+          ],
+          "previousChoices": [
+            "A new invoice",
             "The transaction reference",
             "A purchase order",
             "A maintenance schedule"
           ],
-          "answerIndex": 1,
-          "explanation": "Cần gửi transaction reference để xác nhận khoản tiền đã chuyển.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:invoice-payment:2:choice:1",
             "reading:invoice-payment:2:choice:2",
             "reading:invoice-payment:2:choice:3",
             "reading:invoice-payment:2:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What does the invoice cover?",
           "choices": [
+            "Maintenance services",
+            "Travel expenses",
+            "Office rent",
+            "New equipment"
+          ],
+          "answerIndex": 0,
+          "explanation": "Hóa đơn bao gồm dịch vụ bảo trì trong tháng Tư.",
+          "choiceIds": [
+            "reading:invoice-payment:3:choice:3",
+            "reading:invoice-payment:3:choice:2",
+            "reading:invoice-payment:3:choice:1",
+            "reading:invoice-payment:3:choice:4"
+          ],
+          "previousChoices": [
             "Office rent",
             "Travel expenses",
             "Maintenance services",
             "New equipment"
           ],
-          "answerIndex": 2,
-          "explanation": "Hóa đơn bao gồm dịch vụ bảo trì trong tháng Tư.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:invoice-payment:3:choice:1",
             "reading:invoice-payment:3:choice:2",
             "reading:invoice-payment:3:choice:3",
             "reading:invoice-payment:3:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 2
         }
       ],
       "part": "Part 7",
@@ -421,18 +491,32 @@
           "question": "Why was shipment SO-7812 delayed?",
           "choices": [
             "A customs document was missing",
+            "The customer changed the order",
+            "The warehouse was closed",
+            "Severe weather"
+          ],
+          "answerIndex": 3,
+          "explanation": "Lô hàng bị trễ do thời tiết xấu tại checkpoint.",
+          "choiceIds": [
+            "reading:shipping-update:1:choice:1",
+            "reading:shipping-update:1:choice:4",
+            "reading:shipping-update:1:choice:3",
+            "reading:shipping-update:1:choice:2"
+          ],
+          "previousChoices": [
+            "A customs document was missing",
             "Severe weather",
             "The warehouse was closed",
             "The customer changed the order"
           ],
-          "answerIndex": 1,
-          "explanation": "Lô hàng bị trễ do thời tiết xấu tại checkpoint.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:shipping-update:1:choice:1",
             "reading:shipping-update:1:choice:2",
             "reading:shipping-update:1:choice:3",
             "reading:shipping-update:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "When is the shipment expected to arrive?",
@@ -513,18 +597,32 @@
           "question": "What position is available?",
           "choices": [
             "Finance Manager",
+            "HR Assistant",
+            "Sales Representative",
+            "Operations Coordinator"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo tuyển dụng nêu vị trí đang cần tuyển là Operations Coordinator.",
+          "choiceIds": [
+            "reading:job-opening:1:choice:1",
+            "reading:job-opening:1:choice:4",
+            "reading:job-opening:1:choice:3",
+            "reading:job-opening:1:choice:2"
+          ],
+          "previousChoices": [
+            "Finance Manager",
             "Operations Coordinator",
             "Sales Representative",
             "HR Assistant"
           ],
-          "answerIndex": 1,
-          "explanation": "Thông báo tuyển dụng nêu vị trí đang cần tuyển là Operations Coordinator.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:job-opening:1:choice:1",
             "reading:job-opening:1:choice:2",
             "reading:job-opening:1:choice:3",
             "reading:job-opening:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "How should interested employees apply?",
@@ -546,19 +644,33 @@
         {
           "question": "When is the position expected to begin?",
           "choices": [
+            "July 1",
+            "The following week",
+            "June 12",
+            "August 1"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo ghi ngày dự kiến bắt đầu công việc là ngày 1 tháng 7.",
+          "choiceIds": [
+            "reading:job-opening:3:choice:3",
+            "reading:job-opening:3:choice:2",
+            "reading:job-opening:3:choice:1",
+            "reading:job-opening:3:choice:4"
+          ],
+          "previousChoices": [
             "June 12",
             "The following week",
             "July 1",
             "August 1"
           ],
-          "answerIndex": 2,
-          "explanation": "Thông báo ghi ngày dự kiến bắt đầu công việc là ngày 1 tháng 7.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:job-opening:3:choice:1",
             "reading:job-opening:3:choice:2",
             "reading:job-opening:3:choice:3",
             "reading:job-opening:3:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 2
         }
       ],
       "part": "Part 7",
@@ -605,18 +717,32 @@
           "question": "Why was the package returned?",
           "choices": [
             "The item was damaged",
+            "The warehouse was closed",
+            "The customer refused payment",
+            "The address was incomplete"
+          ],
+          "answerIndex": 3,
+          "explanation": "Địa chỉ giao hàng chưa đầy đủ.",
+          "choiceIds": [
+            "reading:customer-service:1:choice:1",
+            "reading:customer-service:1:choice:4",
+            "reading:customer-service:1:choice:3",
+            "reading:customer-service:1:choice:2"
+          ],
+          "previousChoices": [
+            "The item was damaged",
             "The address was incomplete",
             "The customer refused payment",
             "The warehouse was closed"
           ],
-          "answerIndex": 1,
-          "explanation": "Địa chỉ giao hàng chưa đầy đủ.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:customer-service:1:choice:1",
             "reading:customer-service:1:choice:2",
             "reading:customer-service:1:choice:3",
             "reading:customer-service:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What information does the customer need to confirm?",
@@ -697,18 +823,32 @@
           "question": "When will maintenance take place?",
           "choices": [
             "Friday evening",
+            "Monday morning",
+            "Sunday afternoon",
+            "Saturday morning"
+          ],
+          "answerIndex": 3,
+          "explanation": "Lịch bảo trì được ấn định vào sáng thứ Bảy, bắt đầu lúc 7:00.",
+          "choiceIds": [
+            "reading:facility-maintenance:1:choice:1",
+            "reading:facility-maintenance:1:choice:4",
+            "reading:facility-maintenance:1:choice:3",
+            "reading:facility-maintenance:1:choice:2"
+          ],
+          "previousChoices": [
+            "Friday evening",
             "Saturday morning",
             "Sunday afternoon",
             "Monday morning"
           ],
-          "answerIndex": 1,
-          "explanation": "Lịch bảo trì được ấn định vào sáng thứ Bảy, bắt đầu lúc 7:00.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:facility-maintenance:1:choice:1",
             "reading:facility-maintenance:1:choice:2",
             "reading:facility-maintenance:1:choice:3",
             "reading:facility-maintenance:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "Which area may have limited access?",
@@ -808,18 +948,32 @@
           "question": "When will the elevators be unavailable?",
           "choices": [
             "Friday afternoon",
+            "Monday morning",
+            "All day Sunday",
+            "Saturday morning"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo nêu thang máy ở cánh Đông sẽ ngừng hoạt động từ 7 giờ sáng đến trưa thứ Bảy.",
+          "choiceIds": [
+            "reading:facility-maintenance-notice:1:choice:1",
+            "reading:facility-maintenance-notice:1:choice:4",
+            "reading:facility-maintenance-notice:1:choice:3",
+            "reading:facility-maintenance-notice:1:choice:2"
+          ],
+          "previousChoices": [
+            "Friday afternoon",
             "Saturday morning",
             "All day Sunday",
             "Monday morning"
           ],
-          "answerIndex": 1,
-          "explanation": "Thông báo nêu thang máy ở cánh Đông sẽ ngừng hoạt động từ 7 giờ sáng đến trưa thứ Bảy.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:facility-maintenance-notice:1:choice:1",
             "reading:facility-maintenance-notice:1:choice:2",
             "reading:facility-maintenance-notice:1:choice:3",
             "reading:facility-maintenance-notice:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         }
       ],
       "part": "Part 7",
@@ -840,18 +994,32 @@
           "question": "What is required from applicants?",
           "choices": [
             "A driving license",
+            "A reference from a customer",
+            "A technical certificate only",
+            "A résumé and cover letter"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo tuyển dụng yêu cầu ứng viên gửi một bản résumé và thư xin việc ngắn; đây là hai tài liệu được liệt kê trong mục hồ sơ cần nộp.",
+          "choiceIds": [
+            "reading:job-posting-analyst:1:choice:1",
+            "reading:job-posting-analyst:1:choice:4",
+            "reading:job-posting-analyst:1:choice:3",
+            "reading:job-posting-analyst:1:choice:2"
+          ],
+          "previousChoices": [
+            "A driving license",
             "A résumé and cover letter",
             "A technical certificate only",
             "A reference from a customer"
           ],
-          "answerIndex": 1,
-          "explanation": "Thông báo tuyển dụng yêu cầu ứng viên gửi một bản résumé và thư xin việc ngắn; đây là hai tài liệu được liệt kê trong mục hồ sơ cần nộp.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:job-posting-analyst:1:choice:1",
             "reading:job-posting-analyst:1:choice:2",
             "reading:job-posting-analyst:1:choice:3",
             "reading:job-posting-analyst:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         }
       ],
       "part": "Part 7",
@@ -1825,18 +1993,32 @@
           "question": "When should urgent repairs be reported?",
           "choices": [
             "By October 14",
+            "After October 16",
+            "On October 21",
+            "Before October 11"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo yêu cầu báo thiết bị cần sửa gấp trước ngày 11 tháng 10.",
+          "choiceIds": [
+            "reading:part7-single-equipment-memo:2:choice:1",
+            "reading:part7-single-equipment-memo:2:choice:4",
+            "reading:part7-single-equipment-memo:2:choice:3",
+            "reading:part7-single-equipment-memo:2:choice:2"
+          ],
+          "previousChoices": [
+            "By October 14",
             "Before October 11",
             "On October 21",
             "After October 16"
           ],
-          "answerIndex": 1,
-          "explanation": "Thông báo yêu cầu báo thiết bị cần sửa gấp trước ngày 11 tháng 10.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:part7-single-equipment-memo:2:choice:1",
             "reading:part7-single-equipment-memo:2:choice:2",
             "reading:part7-single-equipment-memo:2:choice:3",
             "reading:part7-single-equipment-memo:2:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What are supervisors asked to do?",
@@ -1942,18 +2124,32 @@
           "question": "Where will the workshop be held?",
           "choices": [
             "The Training Office",
+            "A customer service branch",
+            "The main reception area",
+            "Conference Room 3"
+          ],
+          "answerIndex": 3,
+          "explanation": "Địa điểm được nêu rõ là Conference Room 3.",
+          "choiceIds": [
+            "reading:part7-single-training-email:2:choice:1",
+            "reading:part7-single-training-email:2:choice:4",
+            "reading:part7-single-training-email:2:choice:3",
+            "reading:part7-single-training-email:2:choice:2"
+          ],
+          "previousChoices": [
+            "The Training Office",
             "Conference Room 3",
             "The main reception area",
             "A customer service branch"
           ],
-          "answerIndex": 1,
-          "explanation": "Địa điểm được nêu rõ là Conference Room 3.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "reading:part7-single-training-email:2:choice:1",
             "reading:part7-single-training-email:2:choice:2",
             "reading:part7-single-training-email:2:choice:3",
             "reading:part7-single-training-email:2:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "Why will registration close early?",
@@ -2115,16 +2311,16 @@
         },
         {
           "label": "HOTEL CONFIRMATION",
-          "content": "Thank you for choosing Riverside Hotel. We have reserved three standard rooms under the name Reed Conference Group. Check-in begins at 2:00 p.m. on April 17. Breakfast is included, and a shuttle to the convention center departs every 30 minutes. Ms. Patel’s room is reserved through April 19; the other two rooms are reserved through April 18."
+          "content": "Thank you for choosing Riverside Hotel. We have reserved three standard rooms under the name Reed Conference Group. Check-in begins at 2:00 p.m. on April 17. Breakfast is included, and a shuttle to the convention center departs every 30 minutes. Ms. Patel’s room is reserved until her departure after the morning session on April 19; the other two rooms are reserved for the nights of April 17 and April 18."
         },
         {
           "label": "CONFERENCE AGENDA",
           "content": "April 18\n8:30 a.m. Registration\n9:00 a.m. Opening remarks\n10:15 a.m. Guest speaker session\n12:00 p.m. Networking lunch\n2:00 p.m. Workshop: Managing Remote Teams"
         }
       ],
-      "passage": "EMAIL\nPlease confirm the hotel arrangements for the three guest speakers arriving on April 17. Two speakers will stay for two nights, while Ms. Patel will depart on April 19 after the morning session. Please make sure the hotel has received the updated rooming list.\n\nHOTEL CONFIRMATION\nThree standard rooms are reserved under Reed Conference Group. Check-in begins at 2:00 p.m. on April 17. Breakfast is included, and a shuttle to the convention center departs every 30 minutes. Ms. Patel’s room is reserved through April 19; the other two rooms are reserved through April 18.\n\nCONFERENCE AGENDA\nApril 18: 8:30 Registration; 9:00 Opening remarks; 10:15 Guest speaker session; 12:00 Networking lunch; 2:00 Workshop: Managing Remote Teams.",
+      "passage": "EMAIL\nPlease confirm the hotel arrangements for the three guest speakers arriving on April 17. Two speakers will stay for two nights, while Ms. Patel will depart on April 19 after the morning session. Please make sure the hotel has received the updated rooming list.\n\nHOTEL CONFIRMATION\nThree standard rooms are reserved under Reed Conference Group. Check-in begins at 2:00 p.m. on April 17. Breakfast is included, and a shuttle to the convention center departs every 30 minutes. Ms. Patel’s room is reserved until her departure after the morning session on April 19; the other two rooms are reserved for the nights of April 17 and April 18.\n\nCONFERENCE AGENDA\nApril 18: 8:30 Registration; 9:00 Opening remarks; 10:15 Guest speaker session; 12:00 Networking lunch; 2:00 Workshop: Managing Remote Teams.",
       "wordCount": 147,
-      "translation": "Ban tổ chức cần xác nhận phòng khách sạn cho ba diễn giả đến ngày 17 tháng 4. Khách sạn xác nhận ba phòng; hai phòng đến hết ngày 18, phòng của bà Patel đến hết ngày 19. Nhận phòng từ 14:00 ngày 17; bữa sáng đã bao gồm và xe đưa đón đến trung tâm hội nghị chạy mỗi 30 phút. Chương trình ngày 18 tháng 4 gồm đăng ký, phát biểu khai mạc, phiên diễn giả, bữa trưa giao lưu và hội thảo về quản lý đội nhóm từ xa.",
+      "translation": "Ban tổ chức cần xác nhận phòng khách sạn cho ba diễn giả đến ngày 17 tháng 4. Khách sạn xác nhận ba phòng; hai phòng được đặt cho các đêm 17 và 18; phòng của bà Patel được giữ đến khi bà rời khách sạn sau phiên họp buổi sáng ngày 19. Nhận phòng từ 14:00 ngày 17; bữa sáng đã bao gồm và xe đưa đón đến trung tâm hội nghị chạy mỗi 30 phút. Chương trình ngày 18 tháng 4 gồm đăng ký, phát biểu khai mạc, phiên diễn giả, bữa trưa giao lưu và hội thảo về quản lý đội nhóm từ xa.",
       "vocabulary": [
         {
           "word": "accommodation",
@@ -2169,7 +2365,7 @@
             "April 20"
           ],
           "answerIndex": 1,
-          "explanation": "Xác nhận khách sạn nêu rõ phòng của bà Patel được giữ đến hết ngày 19 tháng 4.",
+          "explanation": "Xác nhận khách sạn cho biết phòng của bà Patel được giữ đến khi bà rời khách sạn sau phiên họp buổi sáng ngày 19 tháng 4.",
           "choiceIds": [
             "reading:part7-triple-conference-arrangements:2:choice:1",
             "reading:part7-triple-conference-arrangements:2:choice:2",
@@ -2781,7 +2977,7 @@
         },
         {
           "label": "EMAIL FROM EMPLOYEE",
-          "content": "To: hr@harborline.example\nFrom: daniel.cho@harborline.example\nSubject: Reimbursement question\n\nHello HR Team,\n\nI completed a project-management course on June 18. My manager approved the course in May, and I have both the payment receipt and completion certificate. Since the reimbursement program begins on July 1, may I submit my application in July?\n\nRegards,\nDaniel Cho"
+          "content": "To: hr@harborline.example\nFrom: daniel.cho@harborline.example\nSubject: Reimbursement question\n\nHello HR Team,\n\nI completed a project-management course on July 18. My manager approved the course in May, and I have both the payment receipt and completion certificate. Since the reimbursement program began on July 1, may I submit my application now?\n\nRegards,\nDaniel Cho"
         }
       ],
       "passage": "INTERNAL MEMO\nTo: Department Managers\nFrom: Human Resources\nSubject: Professional development reimbursement\n\nBeginning July 1, employees may request reimbursement for approved external courses related to their current roles. The annual limit is $600 per employee. Requests must include proof of payment and a course-completion certificate. Applications should be submitted within 30 days of the course end date. Courses that have not received manager approval before registration are not eligible.\n\nEMAIL FROM EMPLOYEE\nDaniel Cho completed a project-management course on June 18. His manager approved it in May, and he has the payment receipt and completion certificate. He asks whether he may apply in July.",

@@ -149,18 +149,32 @@
           "question": "Why was the truck delayed?",
           "choices": [
             "The driver was ill.",
+            "The order was incomplete.",
+            "The warehouse was closed.",
+            "There was road construction."
+          ],
+          "answerIndex": 3,
+          "explanation": "Người đàn ông nói xe tải bị giữ lại do công trình đường bộ gần trung tâm phân phối.",
+          "choiceIds": [
+            "listening:part3-shipping-delay:2:choice:1",
+            "listening:part3-shipping-delay:2:choice:4",
+            "listening:part3-shipping-delay:2:choice:3",
+            "listening:part3-shipping-delay:2:choice:2"
+          ],
+          "previousChoices": [
+            "The driver was ill.",
             "There was road construction.",
             "The warehouse was closed.",
             "The order was incomplete."
           ],
-          "answerIndex": 1,
-          "explanation": "Người đàn ông nói xe tải bị giữ lại do công trình đường bộ gần trung tâm phân phối.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part3-shipping-delay:2:choice:1",
             "listening:part3-shipping-delay:2:choice:2",
             "listening:part3-shipping-delay:2:choice:3",
             "listening:part3-shipping-delay:2:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What will the man probably do next?",
@@ -256,18 +270,32 @@
           "question": "Why did the woman choose another hotel?",
           "choices": [
             "It is less expensive.",
+            "A colleague recommended it.",
+            "It is closer to the airport.",
+            "The first hotel is fully booked."
+          ],
+          "answerIndex": 3,
+          "explanation": "Khách sạn gần trung tâm triển lãm đã kín phòng nên người phụ nữ chọn một khách sạn khác.",
+          "choiceIds": [
+            "listening:part3-business-trip:2:choice:1",
+            "listening:part3-business-trip:2:choice:4",
+            "listening:part3-business-trip:2:choice:3",
+            "listening:part3-business-trip:2:choice:2"
+          ],
+          "previousChoices": [
+            "It is less expensive.",
             "The first hotel is fully booked.",
             "It is closer to the airport.",
             "A colleague recommended it."
           ],
-          "answerIndex": 1,
-          "explanation": "Khách sạn gần trung tâm triển lãm đã kín phòng nên người phụ nữ chọn một khách sạn khác.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part3-business-trip:2:choice:1",
             "listening:part3-business-trip:2:choice:2",
             "listening:part3-business-trip:2:choice:3",
             "listening:part3-business-trip:2:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What will the woman do this afternoon?",
@@ -347,18 +375,32 @@
           "question": "Who is the woman?",
           "choices": [
             "A job applicant",
+            "A customer",
+            "A hiring manager",
+            "An HR employee"
+          ],
+          "answerIndex": 3,
+          "explanation": "Cô ấy tự giới thiệu là Maya từ Human Resources.",
+          "choiceIds": [
+            "listening:part3-interview-schedule:1:choice:1",
+            "listening:part3-interview-schedule:1:choice:4",
+            "listening:part3-interview-schedule:1:choice:3",
+            "listening:part3-interview-schedule:1:choice:2"
+          ],
+          "previousChoices": [
+            "A job applicant",
             "An HR employee",
             "A hiring manager",
             "A customer"
           ],
-          "answerIndex": 1,
-          "explanation": "Cô ấy tự giới thiệu là Maya từ Human Resources.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part3-interview-schedule:1:choice:1",
             "listening:part3-interview-schedule:1:choice:2",
             "listening:part3-interview-schedule:1:choice:3",
             "listening:part3-interview-schedule:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "Why must the interview be rescheduled?",
@@ -450,18 +492,32 @@
           "question": "What is wrong with the invoice?",
           "choices": [
             "The product code is missing.",
+            "The supplier's address has changed.",
+            "The payment date is incorrect.",
+            "The delivery fee was added twice."
+          ],
+          "answerIndex": 3,
+          "explanation": "Trong hội thoại, họ phát hiện phí giao hàng bị cộng hai lần, khiến tổng hóa đơn cao hơn.",
+          "choiceIds": [
+            "listening:part3-invoice-error:1:choice:1",
+            "listening:part3-invoice-error:1:choice:4",
+            "listening:part3-invoice-error:1:choice:3",
+            "listening:part3-invoice-error:1:choice:2"
+          ],
+          "previousChoices": [
+            "The product code is missing.",
             "The delivery fee was added twice.",
             "The payment date is incorrect.",
             "The supplier's address has changed."
           ],
-          "answerIndex": 1,
-          "explanation": "Trong hội thoại, họ phát hiện phí giao hàng bị cộng hai lần, khiến tổng hóa đơn cao hơn.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part3-invoice-error:1:choice:1",
             "listening:part3-invoice-error:1:choice:2",
             "listening:part3-invoice-error:1:choice:3",
             "listening:part3-invoice-error:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What does the man ask the woman to do?",
@@ -557,18 +613,32 @@
           "question": "What problem does the woman report?",
           "choices": [
             "A broken projector",
+            "A missing meeting table",
+            "A leaking water pipe",
+            "A noisy air conditioner"
+          ],
+          "answerIndex": 3,
+          "explanation": "Máy điều hòa trong Phòng họp A phát ra tiếng ồn lớn.",
+          "choiceIds": [
+            "listening:part3-facility-repair:1:choice:1",
+            "listening:part3-facility-repair:1:choice:4",
+            "listening:part3-facility-repair:1:choice:3",
+            "listening:part3-facility-repair:1:choice:2"
+          ],
+          "previousChoices": [
+            "A broken projector",
             "A noisy air conditioner",
             "A leaking water pipe",
             "A missing meeting table"
           ],
-          "answerIndex": 1,
-          "explanation": "Máy điều hòa trong Phòng họp A phát ra tiếng ồn lớn.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part3-facility-repair:1:choice:1",
             "listening:part3-facility-repair:1:choice:2",
             "listening:part3-facility-repair:1:choice:3",
             "listening:part3-facility-repair:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What happened last month?",
@@ -645,18 +715,32 @@
           "question": "What department is moving?",
           "choices": [
             "Accounting",
+            "Marketing",
+            "Human resources",
+            "Customer service"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo nêu rõ bộ phận customer service sẽ chuyển lên tầng bốn.",
+          "choiceIds": [
+            "listening:part4-office-announcement:1:choice:1",
+            "listening:part4-office-announcement:1:choice:4",
+            "listening:part4-office-announcement:1:choice:3",
+            "listening:part4-office-announcement:1:choice:2"
+          ],
+          "previousChoices": [
+            "Accounting",
             "Customer service",
             "Human resources",
             "Marketing"
           ],
-          "answerIndex": 1,
-          "explanation": "Thông báo nêu rõ bộ phận customer service sẽ chuyển lên tầng bốn.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part4-office-announcement:1:choice:1",
             "listening:part4-office-announcement:1:choice:2",
             "listening:part4-office-announcement:1:choice:3",
             "listening:part4-office-announcement:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "When should employees pack their belongings?",
@@ -767,18 +851,32 @@
           "question": "Where can participants get updated schedules?",
           "choices": [
             "At the hotel reception",
+            "From the workshop presenter",
+            "In the main lobby café",
+            "At the information desk"
+          ],
+          "answerIndex": 3,
+          "explanation": "Lịch cập nhật có tại quầy thông tin (information desk).",
+          "choiceIds": [
+            "listening:part4-conference-update:3:choice:1",
+            "listening:part4-conference-update:3:choice:4",
+            "listening:part4-conference-update:3:choice:3",
+            "listening:part4-conference-update:3:choice:2"
+          ],
+          "previousChoices": [
+            "At the hotel reception",
             "At the information desk",
             "In the main lobby café",
             "From the workshop presenter"
           ],
-          "answerIndex": 1,
-          "explanation": "Lịch cập nhật có tại quầy thông tin (information desk).",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part4-conference-update:3:choice:1",
             "listening:part4-conference-update:3:choice:2",
             "listening:part4-conference-update:3:choice:3",
             "listening:part4-conference-update:3:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         }
       ],
       "transcriptTranslation": "Người thuyết trình cập nhật lịch hội nghị kinh doanh ngày mai: đăng ký tại sảnh chính lúc 8:30, phần mở đầu lúc 9 giờ. Workshop buổi chiều chuyển sang phòng 310. Lịch mới được phát tại quầy thông tin.",
@@ -836,18 +934,32 @@
           "question": "Why are travel expenses higher than expected?",
           "choices": [
             "Two employees were hired",
+            "A client canceled a meeting",
+            "The hotel rates decreased",
+            "Flights were booked at short notice"
+          ],
+          "answerIndex": 3,
+          "explanation": "Người đàn ông giải thích rằng các chuyến bay phải được đặt trong thời gian gấp nên giá vé cao hơn dự kiến.",
+          "choiceIds": [
+            "listening:part3-budget-review:1:choice:1",
+            "listening:part3-budget-review:1:choice:4",
+            "listening:part3-budget-review:1:choice:3",
+            "listening:part3-budget-review:1:choice:2"
+          ],
+          "previousChoices": [
+            "Two employees were hired",
             "Flights were booked at short notice",
             "The hotel rates decreased",
             "A client canceled a meeting"
           ],
-          "answerIndex": 1,
-          "explanation": "Người đàn ông giải thích rằng các chuyến bay phải được đặt trong thời gian gấp nên giá vé cao hơn dự kiến.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part3-budget-review:1:choice:1",
             "listening:part3-budget-review:1:choice:2",
             "listening:part3-budget-review:1:choice:3",
             "listening:part3-budget-review:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What will the man do this afternoon?",
@@ -1008,18 +1120,32 @@
           "question": "What will employees be unable to do during the upgrade?",
           "choices": [
             "Use warehouse scanners",
+            "Access the building",
+            "Receive deliveries",
+            "Submit stock requests through the portal"
+          ],
+          "answerIndex": 3,
+          "explanation": "Người phụ nữ cho biết cổng thông tin sẽ tạm ngừng nhận yêu cầu xuất kho trong thời gian nâng cấp.",
+          "choiceIds": [
+            "listening:part3-software-upgrade:1:choice:1",
+            "listening:part3-software-upgrade:1:choice:4",
+            "listening:part3-software-upgrade:1:choice:3",
+            "listening:part3-software-upgrade:1:choice:2"
+          ],
+          "previousChoices": [
+            "Use warehouse scanners",
             "Submit stock requests through the portal",
             "Receive deliveries",
             "Access the building"
           ],
-          "answerIndex": 1,
-          "explanation": "Người phụ nữ cho biết cổng thông tin sẽ tạm ngừng nhận yêu cầu xuất kho trong thời gian nâng cấp.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part3-software-upgrade:1:choice:1",
             "listening:part3-software-upgrade:1:choice:2",
             "listening:part3-software-upgrade:1:choice:3",
             "listening:part3-software-upgrade:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "When will the inventory platform become available again?",
@@ -1084,18 +1210,32 @@
           "question": "What should visitors do?",
           "choices": [
             "Enter the inspection area alone",
+            "Wait outside the building",
+            "Move equipment without approval",
+            "Use the marked pedestrian walkway"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo yêu cầu khách và nhà thầu đi theo lối dành cho người đi bộ đã được đánh dấu.",
+          "choiceIds": [
+            "listening:part4-safety-announcement:1:choice:1",
+            "listening:part4-safety-announcement:1:choice:4",
+            "listening:part4-safety-announcement:1:choice:3",
+            "listening:part4-safety-announcement:1:choice:2"
+          ],
+          "previousChoices": [
+            "Enter the inspection area alone",
             "Use the marked pedestrian walkway",
             "Move equipment without approval",
             "Wait outside the building"
           ],
-          "answerIndex": 1,
-          "explanation": "Thông báo yêu cầu khách và nhà thầu đi theo lối dành cho người đi bộ đã được đánh dấu.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part4-safety-announcement:1:choice:1",
             "listening:part4-safety-announcement:1:choice:2",
             "listening:part4-safety-announcement:1:choice:3",
             "listening:part4-safety-announcement:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "When is the inspection expected to finish?",
@@ -1160,18 +1300,32 @@
           "question": "What must team leaders submit before the launch?",
           "choices": [
             "A customer survey",
+            "A monthly sales report",
+            "A revised product price",
+            "A department readiness checklist"
+          ],
+          "answerIndex": 3,
+          "explanation": "Diễn giả yêu cầu các trưởng nhóm nộp danh sách kiểm tra mức độ sẵn sàng của bộ phận trước khi ra mắt.",
+          "choiceIds": [
+            "listening:part4-product-launch:1:choice:1",
+            "listening:part4-product-launch:1:choice:4",
+            "listening:part4-product-launch:1:choice:3",
+            "listening:part4-product-launch:1:choice:2"
+          ],
+          "previousChoices": [
+            "A customer survey",
             "A department readiness checklist",
             "A revised product price",
             "A monthly sales report"
           ],
-          "answerIndex": 1,
-          "explanation": "Diễn giả yêu cầu các trưởng nhóm nộp danh sách kiểm tra mức độ sẵn sàng của bộ phận trước khi ra mắt.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part4-product-launch:1:choice:1",
             "listening:part4-product-launch:1:choice:2",
             "listening:part4-product-launch:1:choice:3",
             "listening:part4-product-launch:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "Which services are combined in the new platform?",
@@ -2642,18 +2796,32 @@
           "question": "What product are the speakers discussing?",
           "choices": [
             "Office chairs",
+            "Printer cartridges",
+            "Wireless keyboards",
+            "Replacement monitors"
+          ],
+          "answerIndex": 3,
+          "explanation": "Người nói đầu tiên xác định báo giá này dành cho các màn hình thay thế.",
+          "choiceIds": [
+            "listening:part3-procurement-quotation:1:choice:1",
+            "listening:part3-procurement-quotation:1:choice:4",
+            "listening:part3-procurement-quotation:1:choice:3",
+            "listening:part3-procurement-quotation:1:choice:2"
+          ],
+          "previousChoices": [
+            "Office chairs",
             "Replacement monitors",
             "Wireless keyboards",
             "Printer cartridges"
           ],
-          "answerIndex": 1,
-          "explanation": "Người nói đầu tiên xác định báo giá này dành cho các màn hình thay thế.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part3-procurement-quotation:1:choice:1",
             "listening:part3-procurement-quotation:1:choice:2",
             "listening:part3-procurement-quotation:1:choice:3",
             "listening:part3-procurement-quotation:1:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 1
         },
         {
           "question": "What is included in the quoted price?",
@@ -3068,19 +3236,33 @@
         {
           "question": "How can employees submit questions?",
           "choices": [
+            "By speaking to the security team",
+            "By calling the reception desk",
+            "By sending a paper letter",
+            "By using an online form"
+          ],
+          "answerIndex": 3,
+          "explanation": "Câu hỏi phải được gửi qua biểu mẫu trực tuyến trước chiều thứ Năm.",
+          "choiceIds": [
+            "listening:part4-quarterly-town-hall:3:choice:4",
+            "listening:part4-quarterly-town-hall:3:choice:2",
+            "listening:part4-quarterly-town-hall:3:choice:3",
+            "listening:part4-quarterly-town-hall:3:choice:1"
+          ],
+          "previousChoices": [
             "By using an online form",
             "By calling the reception desk",
             "By sending a paper letter",
             "By speaking to the security team"
           ],
-          "answerIndex": 0,
-          "explanation": "Câu hỏi phải được gửi qua biểu mẫu trực tuyến trước chiều thứ Năm.",
-          "choiceIds": [
+          "previousChoiceIds": [
             "listening:part4-quarterly-town-hall:3:choice:1",
             "listening:part4-quarterly-town-hall:3:choice:2",
             "listening:part4-quarterly-town-hall:3:choice:3",
             "listening:part4-quarterly-town-hall:3:choice:4"
-          ]
+          ],
+          "choiceOrderRevision": "2.17.0",
+          "previousAnswerIndex": 0
         }
       ],
       "transcriptTranslation": "Cuộc họp toàn thể hằng quý diễn ra lúc 10 giờ sáng thứ Sáu tại hội trường chính. Giám đốc vận hành sẽ điểm lại kết quả kinh doanh và ưu tiên quý tới. Nhân viên làm từ xa có thể tham gia qua liên kết trong lịch; câu hỏi gửi bằng biểu mẫu trực tuyến trước chiều thứ Năm.",

@@ -1,4 +1,5 @@
 """Regression tests for the traceable TOEIC answer-to-source audit."""
+import json
 import subprocess
 import sys
 import unittest
@@ -6,7 +7,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SCRIPT = ROOT / "tools" / "audit-question-evidence.py"
-REPORT = ROOT / "docs" / "reports" / "TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.15.0.md"
+VERSION = json.loads((ROOT / "data" / "manifest.json").read_text(encoding="utf-8"))["version"]
+REPORT = ROOT / "docs" / "reports" / f"TOEIC_EDITORIAL_EVIDENCE_AUDIT_v{VERSION}.md"
 
 
 class QuestionEvidenceAuditTests(unittest.TestCase):
@@ -38,6 +40,7 @@ class QuestionEvidenceAuditTests(unittest.TestCase):
 
     def test_remaining_distractor_audit_scope_is_explicit(self):
         self.assertIn("distractor plausibility and uniqueness for the 126 direct/lexical items plus six inference/paraphrase items were reviewed in v2.15.0", self.report.lower())
+        self.assertIn(f"TOEIC_DISTRACTOR_AUDIT_v{VERSION}.md", self.report)
 
     def test_no_unresolved_low_overlap_inference_label_remains(self):
         self.assertNotIn("Manual paraphrase/inference review |", self.report)

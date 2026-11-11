@@ -6,9 +6,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 CSS = (ROOT / "assets/css/design-system.css").read_text(encoding="utf-8")
+APP_CSS = (ROOT / "assets/css/app.css").read_text(encoding="utf-8")
 SW = (ROOT / "sw.js").read_text(encoding="utf-8")
 
 class DesignSystemTests(unittest.TestCase):
+    def test_desktop_sidebar_footer_stays_visible_and_navigation_scrolls(self):
+        self.assertRegex(APP_CSS, r"@media \(min-width: 851px\)[\s\S]*?\.side-nav \{[\s\S]*?overflow-y: auto;[\s\S]*?\.sidebar-bottom \{[\s\S]*?flex: 0 0 auto;")
+        self.assertRegex(APP_CSS, r"\.sidebar-bottom \{[\s\S]*?margin-top: auto;")
+
+    def test_short_laptop_viewports_use_compact_sidebar_without_hiding_status(self):
+        compact = re.search(r"@media \(min-width: 851px\) and \(max-height: 820px\) \{([\s\S]*?)\n\}", APP_CSS)
+        self.assertIsNotNone(compact)
+        self.assertIn(".local-state { padding: 8px 10px; }", compact.group(1))
+        self.assertIn(".sidebar-version { padding-top: 7px;", compact.group(1))
+        self.assertNotIn("display: none", compact.group(1))
+
     def test_design_system_stylesheet_is_linked_after_feature_styles(self):
         self.assertIn('href="./assets/css/app.css"', HTML)
         self.assertIn('href="./assets/css/design-system.css"', HTML)

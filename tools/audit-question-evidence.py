@@ -11,7 +11,8 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'docs' / 'reports' / 'TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.15.0.md'
+VERSION = json.loads((ROOT / 'data' / 'manifest.json').read_text(encoding='utf-8'))['version']
+OUT = ROOT / 'docs' / 'reports' / f'TOEIC_EDITORIAL_EVIDENCE_AUDIT_v{VERSION}.md'
 REVIEWED_INFERENCES = {
     ('part3-interview-schedule', 1): 'The transcript identifies Maya as working in Human Resources, supporting the answer that she is an HR employee.',
     ('part3-hotel-reservation', 1): 'The caller says the return flight was moved and asks to add one night, supporting an extension of the hotel stay.',
@@ -80,7 +81,7 @@ def main() -> int:
                 rows.append((kind, item.get('part', ''), item.get('id', ''), qi, q.get('question', ''), answer, status, note))
     total = len(rows)
     lines = [
-        '# TOEIC Editorial Evidence Audit — v2.15.0', '',
+        f'# TOEIC Editorial Evidence Audit — v{VERSION}', '',
         '## Scope and interpretation',
         f'- Questions indexed: **{total}** ({sum(counters["Listening"].values())} Listening + {sum(counters["Reading"].values())} Reading).',
         '- Every correct option is linked to its source transcript/passage or an explicit review category.',
@@ -105,7 +106,7 @@ def main() -> int:
             if value:
                 lines.append(f'| {lib} | {label} | {value} |')
     lines += ['', '## Editorial review record',
-              'The following sections record categories reviewed manually during this pass. Direct/lexical categories remain source-evidence pointers; distractor plausibility and uniqueness for the 126 direct/lexical items plus six inference/paraphrase items were reviewed in v2.15.0 (see the separate distractor audit report).',
+              'The following sections record categories reviewed manually during this pass. Direct/lexical categories remain source-evidence pointers; distractor plausibility and uniqueness for the 126 direct/lexical items plus six inference/paraphrase items were reviewed in v2.15.0. The current answer-position and option-identity audit is maintained separately in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
               '']
     for status, label in names.items():
         selected = [r for r in rows if r[6] == status]
@@ -127,7 +128,7 @@ def main() -> int:
         '- `part2-room-unavailable` now uses “That’s right…” to confirm the negative-tag statement without relying on a potentially confusing “Yes” response.',
         '',
         '## Remaining audit work',
-        '- Distractor plausibility and uniqueness for the 126 direct/lexical-evidence items plus six inference/paraphrase items were reviewed in v2.15.0; see `TOEIC_DISTRACTOR_AUDIT_v2.15.0.md`.',
+        '- The original 132-item distractor review was completed in v2.15.0; current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
         '- Verify browser audio playback, pacing and pronunciation on physical iPhone/iPad and Android voice packs; the current TTS remains browser-generated.',
         '- Obtain a second independent reviewer before releasing a scored mock. No official ETS scoring equivalence is claimed.',
         ''

@@ -57,11 +57,16 @@ function savedChoiceText(question,saved){
 }
 function savedChoiceIsArchived(question,saved){
   if(!saved?.answered)return false;
+  const choiceId=String(saved.choiceId||'');
+  if(choiceId&&Array.isArray(question?.choiceIds)&&question.choiceIds.includes(choiceId))return false;
+  if(choiceId&&Array.isArray(question?.legacyChoiceIds)&&question.legacyChoiceIds.includes(choiceId))return true;
   const index=Number(saved.choiceIndex),text=savedChoiceText(question,saved);
   return Number.isInteger(index)&&index>=0&&text!==String(question?.choices?.[index]??'');
 }
 function savedChoiceWrongClass(question,saved,index){
-  return Boolean(saved?.answered&&!savedChoiceIsArchived(question,saved)&&Number(saved.choiceIndex)===index&&index!==question.answerIndex);
+  const choiceId=String(saved?.choiceId||'');
+  const selectedIndex=choiceId&&Array.isArray(question?.choiceIds)?question.choiceIds.indexOf(choiceId):Number(saved?.choiceIndex);
+  return Boolean(saved?.answered&&!savedChoiceIsArchived(question,saved)&&selectedIndex===index&&index!==question.answerIndex);
 }
 function savedChoiceHistoryMarkup(question,saved){
   if(!savedChoiceIsArchived(question,saved))return '';
@@ -139,16 +144,62 @@ async function migrateChoiceIdentity(){
       if(!answers||typeof answers!=='object')continue;
       const questions=item[group.questionsKey]||[];
       for(const [rawIndex,saved] of Object.entries(answers)){
-        if(!saved?.answered||saved.choiceId)continue;
-        const index=Number(rawIndex),choiceIndex=Number(saved.choiceIndex),question=questions[index];
-        if(!question||!Number.isInteger(choiceIndex)||choiceIndex<0||choiceIndex>=(question.choices||[]).length)continue;
-        const choiceId=Array.isArray(question.legacyChoiceIds)&&question.legacyChoices?.[choiceIndex]&&question.legacyChoices[choiceIndex]!==question.choices?.[choiceIndex]?String(question.legacyChoiceIds[choiceIndex]||''):choiceIdAt(question,choiceIndex);
-        if(choiceId){saved.choiceId=choiceId;changed=true;}
+        if(!saved?.answered)continue;
+        const question=questions[Number(rawIndex)];
+        if(!question)continue;
+        const currentIds=Array.isArray(question.choiceIds)?question.choiceIds:[];
+        const storedId=String(saved.choiceId||'');
+        if(storedId){
+          const currentIndex=currentIds.indexOf(storedId);
+          if(currentIndex>=0){
+            const oldIndex=Number(saved.choiceIndex);
+            if(Number.isInteger(oldIndex)&&oldIndex>=0&&oldIndex!==currentIndex&&saved.previousChoiceIndex===undefined){saved.previousChoiceIndex=oldIndex;changed=true;}
+            if(oldIndex!==currentIndex){saved.choiceIndex=currentIndex;changed=true;}
+          }
+          continue;
+        }
+        const oldIndex=Number(saved.choiceIndex);
+        if(!Number.isInteger(oldIndex)||oldIndex<0)continue;
+        const previousIds=Array.isArray(question.previousChoiceIds)?question.previousChoiceIds:[];
+        const previousChoices=Array.isArray(question.previousChoices)?question.previousChoices:[];
+        const legacyIds=Array.isArray(question.legacyChoiceIds)?question.legacyChoiceIds:[];
+        const legacyChoices=Array.isArray(question.legacyChoices)?question.legacyChoices:[];
+        if(oldIndex>=(previousIds.length||question.choices?.length||0))continue;
+        let choiceId='',historicalText='';
+        if(previousIds[oldIndex]){
+          const legacyText=legacyChoices[oldIndex],previousText=previousChoices[oldIndex];
+          const archivedLegacy=Boolean(legacyIds[oldIndex]&&typeof legacyText==='string'&&legacyText!==previousText&&(!saved.choiceText||saved.choiceText===legacyText));
+          if(archivedLegacy){choiceId=String(legacyIds[oldIndex]);historicalText=legacyText;}
+          else{choiceId=String(previousIds[oldIndex]);historicalText=typeof previousText==='string'?previousText:'';}
+        }else{
+          const savedText=typeof saved.choiceText==='string'?saved.choiceText.trim():'';
+          const currentTextIndex=savedText?(question.choices||[]).findIndex(choice=>String(choice)===savedText):-1;
+          const legacyText=legacyChoices[oldIndex];
+          const hasLegacySnapshot=Boolean(legacyIds[oldIndex]&&typeof legacyText==='string'&&legacyText!==question.choices?.[oldIndex]);
+          if(hasLegacySnapshot&&(!savedText||savedText===legacyText)){
+            choiceId=String(legacyIds[oldIndex]);historicalText=legacyText;
+          }else if(currentTextIndex>=0){
+            choiceId=choiceIdAt(question,currentTextIndex);historicalText=savedText;
+          }else if(savedText){
+            // A non-matching stored text is ambiguous; preserve the record rather than guess its identity.
+            continue;
+          }else{
+            choiceId=choiceIdAt(question,oldIndex);
+            historicalText=String(question.choices?.[oldIndex]??'');
+          }
+        }
+        if(!choiceId)continue;
+        saved.choiceId=choiceId;changed=true;
+        if(saved.previousChoiceIndex===undefined){saved.previousChoiceIndex=oldIndex;changed=true;}
+        if((typeof saved.choiceText!=='string'||!saved.choiceText.trim())&&historicalText){saved.choiceText=historicalText;changed=true;}
+        const currentIndex=currentIds.indexOf(choiceId);
+        if(currentIndex>=0&&currentIndex!==oldIndex){saved.choiceIndex=currentIndex;changed=true;}
       }
     }
     if(changed)await dbSet(group.key,group.progress);
   }
 }
+
 function emptyPersonalVocabulary(){return {schemaVersion:3,additions:[],overrides:{},overrideBaseSigs:{},deletedBaseIds:[]};}
 function recordSignature(record){return JSON.stringify(normalizeRecord(record));}
 async function loadPersonalVocabulary(){

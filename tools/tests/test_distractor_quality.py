@@ -59,11 +59,11 @@ class DistractorQualityTests(unittest.TestCase):
             self.assertIn(text, question['choices'][expected_index].casefold(), item_id)
         self.assertEqual(len(expected), 12)
 
-    def test_known_answer_position_bias_is_reported_without_shuffling(self):
+    def test_answer_positions_are_balanced_after_audited_choice_reorder(self):
         expected = {
-            'Part 3': Counter({0: 10, 1: 18, 2: 10, 3: 1}),
-            'Part 4': Counter({0: 9, 1: 12, 2: 7, 3: 2}),
-            'Part 7': Counter({0: 13, 1: 27, 2: 19, 3: 4}),
+            'Part 3': Counter({0: 10, 1: 10, 2: 10, 3: 9}),
+            'Part 4': Counter({0: 8, 1: 8, 2: 7, 3: 7}),
+            'Part 7': Counter({0: 16, 1: 16, 2: 16, 3: 15}),
         }
         actual = Counter()
         for item in self.listening + self.reading:
@@ -74,9 +74,9 @@ class DistractorQualityTests(unittest.TestCase):
         for part, distribution in expected.items():
             for index in range(4):
                 self.assertEqual(actual[(part, index)], distribution[index], (part, index))
-        report = (ROOT / 'docs/reports/TOEIC_DISTRACTOR_AUDIT_v2.15.0.md').read_text(encoding='utf-8')
-        self.assertIn('choiceIndex', report)
-        self.assertIn('not shuffled', report.lower())
+        report = (ROOT / 'docs/reports/TOEIC_DISTRACTOR_AUDIT_v2.17.0.md').read_text(encoding='utf-8')
+        self.assertIn('previousChoiceIds', report)
+        self.assertIn('No random shuffle was used', report)
 
     def test_learning_progress_persists_selected_choice_index(self):
         app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')

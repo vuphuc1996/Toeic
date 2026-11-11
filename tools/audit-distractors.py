@@ -12,7 +12,8 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'docs' / 'reports' / 'TOEIC_DISTRACTOR_AUDIT_v2.15.0.md'
+VERSION = json.loads((ROOT / 'data' / 'manifest.json').read_text(encoding='utf-8'))['version']
+OUT = ROOT / 'docs' / 'reports' / f'TOEIC_DISTRACTOR_AUDIT_v{VERSION}.md'
 
 REVISIONS = [
     ('Listening', 'part3-hotel-reservation', 1, 'Replaced unrelated hotel-service alternatives with other plausible booking requests.'),
@@ -94,7 +95,7 @@ def main() -> int:
             errors.append(f'Missing revision target: {library}/{item_id}/Q{qn}')
 
     lines = [
-        '# TOEIC Distractor & Answer-Uniqueness Audit — v2.15.0', '',
+        f'# TOEIC Distractor & Answer-Uniqueness Audit — v{VERSION}', '',
         '## Scope and method',
         '- Reviewed **132 questions** across Listening Part 3 (39), Listening Part 4 (30) and Reading Part 7 (63). This covers the 126 direct/lexical evidence pointers and six paraphrase/inference items identified in the v2.14.0 evidence map.',
         '- Each question was examined with its full transcript or passage, keyed option and all three distractors. Review criteria: source support for the key, exactly one defensible answer, grammatical/semantic fit to the prompt, plausibility of distractors, and whether alternatives draw on realistic confusions or nearby details.',
@@ -114,14 +115,14 @@ def main() -> int:
     for library, item_id, qn, note in REVISIONS:
         lines.append(f'| {library} · `{item_id}` · Q{qn} | {note} |')
 
-    lines += ['', '## Answer-position distribution — retained, not shuffled',
+    lines += ['', '## Answer-position distribution — balanced with stable choice identity',
               '| Part | A | B | C | D | Total |', '|---|---:|---:|---:|---:|---:|']
     for part in ('Part 3', 'Part 4', 'Part 7'):
         d = distributions[part]
         lines.append(f"| {part} | {d[0]} | {d[1]} | {d[2]} | {d[3]} | {sum(d.values())} |")
     lines += [
         '',
-        '**Important finding:** answer positions are currently uneven, especially D in Part 3/4/7. They were deliberately not shuffled in this release because `readingProgress` and `listeningProgress` currently persist `choiceIndex` (A/B/C/D index) against question order. Reordering choices without a stable choice identity and migration would make previously saved answers appear to point at a different option. A future release must first add stable `choiceId`/choice-text persistence and a legacy progress migration, then rebalance answer positions with regression tests.',
+        '**Rebalancing method:** 27 question groups had only the keyed option exchanged with a distractor position: 8 in Part 3, 5 in Part 4 and 14 in Part 7. The answer text, source evidence, explanation, question IDs and question order were retained. Each changed question carries `previousChoices` and `previousChoiceIds` from v2.16.0; the matching `choiceIds` moved with the option. At startup, progress containing a v2.16 `choiceId` is relocated to its new index; older records without an ID are mapped through the v2.16 snapshot. The prior index is preserved in `previousChoiceIndex`. No random shuffle was used.',
         '', '## Quality decision and remaining limitations',
         '- The 12 revised groups now use distractors closer to the same document purpose, role, travel record, service request, business action or visitor-access context. The correct answer text and `answerIndex` were kept unchanged for every revised question.',
         '- Other reviewed groups were retained where the three alternatives are distinct and the transcript/passage supports one clear key. In particular, close dates/times, locations, meeting materials and process steps remain useful distractors when they are contradicted or not supported by the source.',

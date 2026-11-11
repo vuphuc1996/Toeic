@@ -1,0 +1,2217 @@
+{
+  "version": "2.19.0",
+  "reviewDate": "2026-11-11",
+  "reviewType": "internal-second-pass-editorial-review",
+  "scope": "All Listening Parts 1-4 and Reading Parts 5-6; excludes Part 7 which received its own second-pass in v2.18.0.",
+  "totalQuestions": 148,
+  "partCounts": {
+    "Part 1": 8,
+    "Part 2": 25,
+    "Part 3": 39,
+    "Part 4": 30,
+    "Part 5": 30,
+    "Part 6": 16
+  },
+  "sourceSha256": {
+    "data/listening/listening-library.json": "9746e82139a047a9c057dd489a12819251c5d25598435484828a242bf7711523",
+    "data/readings/reading-library.json": "792bd2774beb0ae7fae4a41b49b0be986a6a8b9decb17fdd58b5e86dfeddde2f"
+  },
+  "reviewPolicy": {
+    "answerKeysChanged": false,
+    "choiceTextChanged": false,
+    "choiceOrderChanged": false,
+    "questionOrderChanged": false,
+    "questionCountChanged": false,
+    "personalIndexedDBTouched": false,
+    "notes": "No content correction was justified by this pass. Retain existing content rather than make speculative edits. Automated checks below verify coverage and structural integrity only; they do not establish semantic validity."
+  },
+  "items": [
+    {
+      "key": "part2-report-deadline#Q1",
+      "collection": "listening",
+      "unitId": "part2-report-deadline",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-meeting-room#Q1",
+      "collection": "listening",
+      "unitId": "part2-meeting-room",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-shipping-delay#Q1",
+      "collection": "listening",
+      "unitId": "part3-shipping-delay",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-shipping-delay#Q2",
+      "collection": "listening",
+      "unitId": "part3-shipping-delay",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-shipping-delay#Q3",
+      "collection": "listening",
+      "unitId": "part3-shipping-delay",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-business-trip#Q1",
+      "collection": "listening",
+      "unitId": "part3-business-trip",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-business-trip#Q2",
+      "collection": "listening",
+      "unitId": "part3-business-trip",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-business-trip#Q3",
+      "collection": "listening",
+      "unitId": "part3-business-trip",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-interview-schedule#Q1",
+      "collection": "listening",
+      "unitId": "part3-interview-schedule",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-interview-schedule#Q2",
+      "collection": "listening",
+      "unitId": "part3-interview-schedule",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-interview-schedule#Q3",
+      "collection": "listening",
+      "unitId": "part3-interview-schedule",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-invoice-error#Q1",
+      "collection": "listening",
+      "unitId": "part3-invoice-error",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-invoice-error#Q2",
+      "collection": "listening",
+      "unitId": "part3-invoice-error",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-invoice-error#Q3",
+      "collection": "listening",
+      "unitId": "part3-invoice-error",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-facility-repair#Q1",
+      "collection": "listening",
+      "unitId": "part3-facility-repair",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-facility-repair#Q2",
+      "collection": "listening",
+      "unitId": "part3-facility-repair",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-facility-repair#Q3",
+      "collection": "listening",
+      "unitId": "part3-facility-repair",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-office-announcement#Q1",
+      "collection": "listening",
+      "unitId": "part4-office-announcement",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-office-announcement#Q2",
+      "collection": "listening",
+      "unitId": "part4-office-announcement",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-office-announcement#Q3",
+      "collection": "listening",
+      "unitId": "part4-office-announcement",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-conference-update#Q1",
+      "collection": "listening",
+      "unitId": "part4-conference-update",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-conference-update#Q2",
+      "collection": "listening",
+      "unitId": "part4-conference-update",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-conference-update#Q3",
+      "collection": "listening",
+      "unitId": "part4-conference-update",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-budget-review#Q1",
+      "collection": "listening",
+      "unitId": "part3-budget-review",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-budget-review#Q2",
+      "collection": "listening",
+      "unitId": "part3-budget-review",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-budget-review#Q3",
+      "collection": "listening",
+      "unitId": "part3-budget-review",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-interview-arrangement#Q1",
+      "collection": "listening",
+      "unitId": "part3-interview-arrangement",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-interview-arrangement#Q2",
+      "collection": "listening",
+      "unitId": "part3-interview-arrangement",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-interview-arrangement#Q3",
+      "collection": "listening",
+      "unitId": "part3-interview-arrangement",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-software-upgrade#Q1",
+      "collection": "listening",
+      "unitId": "part3-software-upgrade",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-software-upgrade#Q2",
+      "collection": "listening",
+      "unitId": "part3-software-upgrade",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-software-upgrade#Q3",
+      "collection": "listening",
+      "unitId": "part3-software-upgrade",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-safety-announcement#Q1",
+      "collection": "listening",
+      "unitId": "part4-safety-announcement",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-safety-announcement#Q2",
+      "collection": "listening",
+      "unitId": "part4-safety-announcement",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-safety-announcement#Q3",
+      "collection": "listening",
+      "unitId": "part4-safety-announcement",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-product-launch#Q1",
+      "collection": "listening",
+      "unitId": "part4-product-launch",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-product-launch#Q2",
+      "collection": "listening",
+      "unitId": "part4-product-launch",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-product-launch#Q3",
+      "collection": "listening",
+      "unitId": "part4-product-launch",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part1-meeting-documents#Q1",
+      "collection": "listening",
+      "unitId": "part1-meeting-documents",
+      "part": "Part 1",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "illustration-to-description match",
+        "visible detail and answer uniqueness",
+        "Vietnamese explanation accuracy"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part1-warehouse-box#Q1",
+      "collection": "listening",
+      "unitId": "part1-warehouse-box",
+      "part": "Part 1",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "illustration-to-description match",
+        "visible detail and answer uniqueness",
+        "Vietnamese explanation accuracy"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part1-technician-inspection#Q1",
+      "collection": "listening",
+      "unitId": "part1-technician-inspection",
+      "part": "Part 1",
+      "questionNumber": 1,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "illustration-to-description match",
+        "visible detail and answer uniqueness",
+        "Vietnamese explanation accuracy"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part1-airport-suitcase#Q1",
+      "collection": "listening",
+      "unitId": "part1-airport-suitcase",
+      "part": "Part 1",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "illustration-to-description match",
+        "visible detail and answer uniqueness",
+        "Vietnamese explanation accuracy"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part1-presentation-room#Q1",
+      "collection": "listening",
+      "unitId": "part1-presentation-room",
+      "part": "Part 1",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "illustration-to-description match",
+        "visible detail and answer uniqueness",
+        "Vietnamese explanation accuracy"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part1-reception-plant#Q1",
+      "collection": "listening",
+      "unitId": "part1-reception-plant",
+      "part": "Part 1",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "illustration-to-description match",
+        "visible detail and answer uniqueness",
+        "Vietnamese explanation accuracy"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part1-restaurant-setting#Q1",
+      "collection": "listening",
+      "unitId": "part1-restaurant-setting",
+      "part": "Part 1",
+      "questionNumber": 1,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "illustration-to-description match",
+        "visible detail and answer uniqueness",
+        "Vietnamese explanation accuracy"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part1-photocopier#Q1",
+      "collection": "listening",
+      "unitId": "part1-photocopier",
+      "part": "Part 1",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "illustration-to-description match",
+        "visible detail and answer uniqueness",
+        "Vietnamese explanation accuracy"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-visitor-badge#Q1",
+      "collection": "listening",
+      "unitId": "part2-visitor-badge",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-invoice-approval#Q1",
+      "collection": "listening",
+      "unitId": "part2-invoice-approval",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-training-date#Q1",
+      "collection": "listening",
+      "unitId": "part2-training-date",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-database-owner#Q1",
+      "collection": "listening",
+      "unitId": "part2-database-owner",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-printer-arrival#Q1",
+      "collection": "listening",
+      "unitId": "part2-printer-arrival",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-seat-preference#Q1",
+      "collection": "listening",
+      "unitId": "part2-seat-preference",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-room-unavailable#Q1",
+      "collection": "listening",
+      "unitId": "part2-room-unavailable",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-workshop-copies#Q1",
+      "collection": "listening",
+      "unitId": "part2-workshop-copies",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-sales-figures#Q1",
+      "collection": "listening",
+      "unitId": "part2-sales-figures",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-wrong-branch#Q1",
+      "collection": "listening",
+      "unitId": "part2-wrong-branch",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-business-trip#Q1",
+      "collection": "listening",
+      "unitId": "part2-business-trip",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-proposal-selection#Q1",
+      "collection": "listening",
+      "unitId": "part2-proposal-selection",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-airport-taxi#Q1",
+      "collection": "listening",
+      "unitId": "part2-airport-taxi",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-product-demo#Q1",
+      "collection": "listening",
+      "unitId": "part2-product-demo",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-access-code#Q1",
+      "collection": "listening",
+      "unitId": "part2-access-code",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-inspection-duration#Q1",
+      "collection": "listening",
+      "unitId": "part2-inspection-duration",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-missing-payment#Q1",
+      "collection": "listening",
+      "unitId": "part2-missing-payment",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-cafeteria-notice#Q1",
+      "collection": "listening",
+      "unitId": "part2-cafeteria-notice",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-contract-review#Q1",
+      "collection": "listening",
+      "unitId": "part2-contract-review",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-registration-extension#Q1",
+      "collection": "listening",
+      "unitId": "part2-registration-extension",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-first-shuttle#Q1",
+      "collection": "listening",
+      "unitId": "part2-first-shuttle",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-website-update#Q1",
+      "collection": "listening",
+      "unitId": "part2-website-update",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part2-supplier-samples#Q1",
+      "collection": "listening",
+      "unitId": "part2-supplier-samples",
+      "part": "Part 2",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "speech-act / question-type fit",
+        "response naturalness and relevance",
+        "distractor response mismatch"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-client-presentation#Q1",
+      "collection": "listening",
+      "unitId": "part3-client-presentation",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-client-presentation#Q2",
+      "collection": "listening",
+      "unitId": "part3-client-presentation",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-client-presentation#Q3",
+      "collection": "listening",
+      "unitId": "part3-client-presentation",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-procurement-quotation#Q1",
+      "collection": "listening",
+      "unitId": "part3-procurement-quotation",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-procurement-quotation#Q2",
+      "collection": "listening",
+      "unitId": "part3-procurement-quotation",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-procurement-quotation#Q3",
+      "collection": "listening",
+      "unitId": "part3-procurement-quotation",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-hotel-reservation#Q1",
+      "collection": "listening",
+      "unitId": "part3-hotel-reservation",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-hotel-reservation#Q2",
+      "collection": "listening",
+      "unitId": "part3-hotel-reservation",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-hotel-reservation#Q3",
+      "collection": "listening",
+      "unitId": "part3-hotel-reservation",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-marketing-campaign#Q1",
+      "collection": "listening",
+      "unitId": "part3-marketing-campaign",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-marketing-campaign#Q2",
+      "collection": "listening",
+      "unitId": "part3-marketing-campaign",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-marketing-campaign#Q3",
+      "collection": "listening",
+      "unitId": "part3-marketing-campaign",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-elevator-maintenance#Q1",
+      "collection": "listening",
+      "unitId": "part3-elevator-maintenance",
+      "part": "Part 3",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-elevator-maintenance#Q2",
+      "collection": "listening",
+      "unitId": "part3-elevator-maintenance",
+      "part": "Part 3",
+      "questionNumber": 2,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part3-elevator-maintenance#Q3",
+      "collection": "listening",
+      "unitId": "part3-elevator-maintenance",
+      "part": "Part 3",
+      "questionNumber": 3,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "transcript evidence",
+        "speaker / chronology / next-action accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-quarterly-town-hall#Q1",
+      "collection": "listening",
+      "unitId": "part4-quarterly-town-hall",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-quarterly-town-hall#Q2",
+      "collection": "listening",
+      "unitId": "part4-quarterly-town-hall",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-quarterly-town-hall#Q3",
+      "collection": "listening",
+      "unitId": "part4-quarterly-town-hall",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-customer-voicemail#Q1",
+      "collection": "listening",
+      "unitId": "part4-customer-voicemail",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-customer-voicemail#Q2",
+      "collection": "listening",
+      "unitId": "part4-customer-voicemail",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-customer-voicemail#Q3",
+      "collection": "listening",
+      "unitId": "part4-customer-voicemail",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-warehouse-safety-briefing#Q1",
+      "collection": "listening",
+      "unitId": "part4-warehouse-safety-briefing",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-warehouse-safety-briefing#Q2",
+      "collection": "listening",
+      "unitId": "part4-warehouse-safety-briefing",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-warehouse-safety-briefing#Q3",
+      "collection": "listening",
+      "unitId": "part4-warehouse-safety-briefing",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-training-registration#Q1",
+      "collection": "listening",
+      "unitId": "part4-training-registration",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-training-registration#Q2",
+      "collection": "listening",
+      "unitId": "part4-training-registration",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-training-registration#Q3",
+      "collection": "listening",
+      "unitId": "part4-training-registration",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-travel-service-update#Q1",
+      "collection": "listening",
+      "unitId": "part4-travel-service-update",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-travel-service-update#Q2",
+      "collection": "listening",
+      "unitId": "part4-travel-service-update",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-travel-service-update#Q3",
+      "collection": "listening",
+      "unitId": "part4-travel-service-update",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-quarterly-inventory-report#Q1",
+      "collection": "listening",
+      "unitId": "part4-quarterly-inventory-report",
+      "part": "Part 4",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-quarterly-inventory-report#Q2",
+      "collection": "listening",
+      "unitId": "part4-quarterly-inventory-report",
+      "part": "Part 4",
+      "questionNumber": 2,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part4-quarterly-inventory-report#Q3",
+      "collection": "listening",
+      "unitId": "part4-quarterly-inventory-report",
+      "part": "Part 4",
+      "questionNumber": 3,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "talk / announcement evidence",
+        "time, place, person and purpose accuracy",
+        "distractor plausibility and uniqueness",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-workplace-grammar-01#Q1",
+      "collection": "readings",
+      "unitId": "part5-workplace-grammar-01",
+      "part": "Part 5",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-workplace-grammar-01#Q2",
+      "collection": "readings",
+      "unitId": "part5-workplace-grammar-01",
+      "part": "Part 5",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-workplace-grammar-01#Q3",
+      "collection": "readings",
+      "unitId": "part5-workplace-grammar-01",
+      "part": "Part 5",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-workplace-grammar-01#Q4",
+      "collection": "readings",
+      "unitId": "part5-workplace-grammar-01",
+      "part": "Part 5",
+      "questionNumber": 4,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-business-vocabulary-02#Q1",
+      "collection": "readings",
+      "unitId": "part5-business-vocabulary-02",
+      "part": "Part 5",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-business-vocabulary-02#Q2",
+      "collection": "readings",
+      "unitId": "part5-business-vocabulary-02",
+      "part": "Part 5",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-business-vocabulary-02#Q3",
+      "collection": "readings",
+      "unitId": "part5-business-vocabulary-02",
+      "part": "Part 5",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-business-vocabulary-02#Q4",
+      "collection": "readings",
+      "unitId": "part5-business-vocabulary-02",
+      "part": "Part 5",
+      "questionNumber": 4,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-forms-and-agreement-03#Q1",
+      "collection": "readings",
+      "unitId": "part5-forms-and-agreement-03",
+      "part": "Part 5",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-forms-and-agreement-03#Q2",
+      "collection": "readings",
+      "unitId": "part5-forms-and-agreement-03",
+      "part": "Part 5",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-forms-and-agreement-03#Q3",
+      "collection": "readings",
+      "unitId": "part5-forms-and-agreement-03",
+      "part": "Part 5",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-forms-and-agreement-03#Q4",
+      "collection": "readings",
+      "unitId": "part5-forms-and-agreement-03",
+      "part": "Part 5",
+      "questionNumber": 4,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-prepositions-and-connectors-04#Q1",
+      "collection": "readings",
+      "unitId": "part5-prepositions-and-connectors-04",
+      "part": "Part 5",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-prepositions-and-connectors-04#Q2",
+      "collection": "readings",
+      "unitId": "part5-prepositions-and-connectors-04",
+      "part": "Part 5",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-prepositions-and-connectors-04#Q3",
+      "collection": "readings",
+      "unitId": "part5-prepositions-and-connectors-04",
+      "part": "Part 5",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-prepositions-and-connectors-04#Q4",
+      "collection": "readings",
+      "unitId": "part5-prepositions-and-connectors-04",
+      "part": "Part 5",
+      "questionNumber": 4,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-training-center-newsletter#Q1",
+      "collection": "readings",
+      "unitId": "part6-training-center-newsletter",
+      "part": "Part 6",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-training-center-newsletter#Q2",
+      "collection": "readings",
+      "unitId": "part6-training-center-newsletter",
+      "part": "Part 6",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-training-center-newsletter#Q3",
+      "collection": "readings",
+      "unitId": "part6-training-center-newsletter",
+      "part": "Part 6",
+      "questionNumber": 3,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-training-center-newsletter#Q4",
+      "collection": "readings",
+      "unitId": "part6-training-center-newsletter",
+      "part": "Part 6",
+      "questionNumber": 4,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-customer-service-email#Q1",
+      "collection": "readings",
+      "unitId": "part6-customer-service-email",
+      "part": "Part 6",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-customer-service-email#Q2",
+      "collection": "readings",
+      "unitId": "part6-customer-service-email",
+      "part": "Part 6",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-customer-service-email#Q3",
+      "collection": "readings",
+      "unitId": "part6-customer-service-email",
+      "part": "Part 6",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-customer-service-email#Q4",
+      "collection": "readings",
+      "unitId": "part6-customer-service-email",
+      "part": "Part 6",
+      "questionNumber": 4,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-job-posting#Q1",
+      "collection": "readings",
+      "unitId": "part6-job-posting",
+      "part": "Part 6",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-job-posting#Q2",
+      "collection": "readings",
+      "unitId": "part6-job-posting",
+      "part": "Part 6",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-job-posting#Q3",
+      "collection": "readings",
+      "unitId": "part6-job-posting",
+      "part": "Part 6",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-job-posting#Q4",
+      "collection": "readings",
+      "unitId": "part6-job-posting",
+      "part": "Part 6",
+      "questionNumber": 4,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-tense-voice-set-05#Q1",
+      "collection": "readings",
+      "unitId": "part5-tense-voice-set-05",
+      "part": "Part 5",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-tense-voice-set-05#Q2",
+      "collection": "readings",
+      "unitId": "part5-tense-voice-set-05",
+      "part": "Part 5",
+      "questionNumber": 2,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-tense-voice-set-05#Q3",
+      "collection": "readings",
+      "unitId": "part5-tense-voice-set-05",
+      "part": "Part 5",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-tense-voice-set-05#Q4",
+      "collection": "readings",
+      "unitId": "part5-tense-voice-set-05",
+      "part": "Part 5",
+      "questionNumber": 4,
+      "answerLetter": "D",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-tense-voice-set-05#Q5",
+      "collection": "readings",
+      "unitId": "part5-tense-voice-set-05",
+      "part": "Part 5",
+      "questionNumber": 5,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-adjectives-adverbs-set-06#Q1",
+      "collection": "readings",
+      "unitId": "part5-adjectives-adverbs-set-06",
+      "part": "Part 5",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-adjectives-adverbs-set-06#Q2",
+      "collection": "readings",
+      "unitId": "part5-adjectives-adverbs-set-06",
+      "part": "Part 5",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-adjectives-adverbs-set-06#Q3",
+      "collection": "readings",
+      "unitId": "part5-adjectives-adverbs-set-06",
+      "part": "Part 5",
+      "questionNumber": 3,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-adjectives-adverbs-set-06#Q4",
+      "collection": "readings",
+      "unitId": "part5-adjectives-adverbs-set-06",
+      "part": "Part 5",
+      "questionNumber": 4,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-adjectives-adverbs-set-06#Q5",
+      "collection": "readings",
+      "unitId": "part5-adjectives-adverbs-set-06",
+      "part": "Part 5",
+      "questionNumber": 5,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-connectors-prepositions-set-07#Q1",
+      "collection": "readings",
+      "unitId": "part5-connectors-prepositions-set-07",
+      "part": "Part 5",
+      "questionNumber": 1,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-connectors-prepositions-set-07#Q2",
+      "collection": "readings",
+      "unitId": "part5-connectors-prepositions-set-07",
+      "part": "Part 5",
+      "questionNumber": 2,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-connectors-prepositions-set-07#Q3",
+      "collection": "readings",
+      "unitId": "part5-connectors-prepositions-set-07",
+      "part": "Part 5",
+      "questionNumber": 3,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part5-connectors-prepositions-set-07#Q4",
+      "collection": "readings",
+      "unitId": "part5-connectors-prepositions-set-07",
+      "part": "Part 5",
+      "questionNumber": 4,
+      "answerLetter": "C",
+      "reviewChecks": [
+        "grammar rule and sentence syntax",
+        "single-best-answer check",
+        "distractor part-of-speech / form contrast",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-product-workshop-registration#Q1",
+      "collection": "readings",
+      "unitId": "part6-product-workshop-registration",
+      "part": "Part 6",
+      "questionNumber": 1,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-product-workshop-registration#Q2",
+      "collection": "readings",
+      "unitId": "part6-product-workshop-registration",
+      "part": "Part 6",
+      "questionNumber": 2,
+      "answerLetter": "A",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-product-workshop-registration#Q3",
+      "collection": "readings",
+      "unitId": "part6-product-workshop-registration",
+      "part": "Part 6",
+      "questionNumber": 3,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    },
+    {
+      "key": "part6-product-workshop-registration#Q4",
+      "collection": "readings",
+      "unitId": "part6-product-workshop-registration",
+      "part": "Part 6",
+      "questionNumber": 4,
+      "answerLetter": "B",
+      "reviewChecks": [
+        "blank-level grammar and cohesion",
+        "sentence insertion / discourse fit",
+        "paragraph continuity",
+        "Vietnamese rationale"
+      ],
+      "decision": "retain-existing-key-and-options"
+    }
+  ]
+}

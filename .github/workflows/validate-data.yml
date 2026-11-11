@@ -71,6 +71,10 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_learning_detail_scope.py' -v
       - name: Unit tests — choice_identity
         run: python -m unittest discover -s tools/tests -p 'test_choice_identity.py' -v
+      - name: Unit tests — answer_position_balance
+        run: python -m unittest discover -s tools/tests -p 'test_answer_position_balance.py' -v
+      - name: Unit tests — remaining_content_review
+        run: python -m unittest discover -s tools/tests -p 'test_remaining_content_review.py' -v
       - name: Validate vocabulary data (structure, ID integrity, APP_SHELL, ratchet baseline)
         run: python tools/validate-data.py
       - name: Validate TOEIC learning content (Listening/Reading/Grammar)
