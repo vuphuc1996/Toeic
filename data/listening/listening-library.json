@@ -1374,7 +1374,7 @@
       "topic": "Office & Administration",
       "level": "A2–B1",
       "image": "./assets/listening/part1-meeting-documents.svg",
-      "imageAlt": "Reviewing documents at a meeting",
+      "imageAlt": "Two coworkers seated at a desk reviewing printed documents together",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1403,7 +1403,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the illustration.",
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
           "choices": [
             "Option A",
             "Option B",
@@ -1411,7 +1411,7 @@
             "Option D"
           ],
           "answerIndex": 0,
-          "explanation": "Đáp án A: Hình minh họa cho thấy hai nhân viên ngồi đối diện tại bàn và đang cùng xem tài liệu; lựa chọn A khớp với người và hoạt động nổi bật. Các lựa chọn B–D lần lượt mô tả phục vụ bữa ăn, xếp hàng hoặc xếp ghế — những chi tiết không xuất hiện trong hình.",
+          "explanation": "Đáp án A: Ảnh chụp cho thấy hai nhân viên đang cùng xem tài liệu tại bàn; lựa chọn A mô tả đúng hành động nổi bật. Các lựa chọn B–D lần lượt nói về phục vụ bữa ăn, xếp hàng và xếp ghế — những chi tiết không xuất hiện trong ảnh.",
           "choiceIds": [
             "listening:part1-meeting-documents:1:choice:1",
             "listening:part1-meeting-documents:1:choice:2",
@@ -1423,8 +1423,9 @@
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
       "vocabulary": [],
       "contentSource": "original-editorial",
-      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording.",
-      "visualType": "illustration"
+      "sourceNote": "Licensed Pexels photograph by Mikhail Nilov; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-meeting-documents.jpg"
     },
     {
       "id": "part1-warehouse-box",
@@ -1434,7 +1435,7 @@
       "topic": "Warehouse & Shipping",
       "level": "A2–B1",
       "image": "./assets/listening/part1-warehouse-box.svg",
-      "imageAlt": "Stocking a warehouse shelf",
+      "imageAlt": "A warehouse worker placing a cardboard carton onto a storage shelf",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1463,7 +1464,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the illustration.",
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
           "choices": [
             "Option A",
             "Option B",
@@ -1471,7 +1472,7 @@
             "Option D"
           ],
           "answerIndex": 1,
-          "explanation": "Đáp án B: Người công nhân đang đặt một thùng carton lên kệ lưu trữ; lựa chọn B mô tả đúng hành động và vị trí trong hình. Các lựa chọn còn lại nói về quét sàn, chất hàng lên xe hoặc tháo kệ.",
+          "explanation": "Đáp án B: Ảnh chụp cho thấy người công nhân đang đặt một thùng carton lên kệ lưu trữ; lựa chọn B mô tả đúng hành động và vị trí. Các lựa chọn còn lại nói về quét sàn, chất hàng lên xe hoặc tháo kệ.",
           "choiceIds": [
             "listening:part1-warehouse-box:1:choice:1",
             "listening:part1-warehouse-box:1:choice:2",
@@ -1483,8 +1484,9 @@
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
       "vocabulary": [],
       "contentSource": "original-editorial",
-      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording.",
-      "visualType": "illustration"
+      "sourceNote": "Licensed Pexels photograph by cottonbro studio; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-warehouse-box.jpg"
     },
     {
       "id": "part1-technician-inspection",
@@ -1494,7 +1496,7 @@
       "topic": "Facilities Maintenance",
       "level": "A2–B1",
       "image": "./assets/listening/part1-technician-inspection.svg",
-      "imageAlt": "Inspecting an air-conditioning unit",
+      "imageAlt": "A maintenance technician inspecting an outdoor air-conditioning unit with gauges",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1523,7 +1525,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the illustration.",
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
           "choices": [
             "Option A",
             "Option B",
@@ -1531,7 +1533,7 @@
             "Option D"
           ],
           "answerIndex": 2,
-          "explanation": "Đáp án C: Hình cho thấy một kỹ thuật viên đang kiểm tra thiết bị điều hòa; lựa chọn C khớp với người thực hiện và thiết bị được nhấn mạnh. Các lựa chọn A, B và D mô tả những hành động khác không có trong hình.",
+          "explanation": "Đáp án C: Ảnh chụp cho thấy kỹ thuật viên đang kiểm tra thiết bị điều hòa bằng dụng cụ đo; lựa chọn C khớp với người thực hiện và thiết bị được nhấn mạnh. Các lựa chọn A, B và D mô tả những hành động không xuất hiện trong ảnh.",
           "choiceIds": [
             "listening:part1-technician-inspection:1:choice:1",
             "listening:part1-technician-inspection:1:choice:2",
@@ -1543,8 +1545,9 @@
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
       "vocabulary": [],
       "contentSource": "original-editorial",
-      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording.",
-      "visualType": "illustration"
+      "sourceNote": "Licensed Pexels photograph by José Andrés Pacheco Cortes; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-technician-inspection.jpg"
     },
     {
       "id": "part1-airport-suitcase",
@@ -1554,7 +1557,7 @@
       "topic": "Travel & Airport",
       "level": "A2–B1",
       "image": "./assets/listening/part1-airport-suitcase.svg",
-      "imageAlt": "Traveling through an airport",
+      "imageAlt": "A traveler pulling a wheeled suitcase beside an airport terminal",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1583,7 +1586,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the illustration.",
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
           "choices": [
             "Option A",
             "Option B",
@@ -1591,7 +1594,7 @@
             "Option D"
           ],
           "answerIndex": 3,
-          "explanation": "Đáp án D: Hành khách đang kéo một chiếc vali qua nhà ga; lựa chọn D mô tả đúng hành động chính. Hình không cho thấy hành khách lên máy bay bằng cầu thang, cân vali tại quầy hay xách nhiều túi mua sắm.",
+          "explanation": "Đáp án D: Hành khách đang kéo một chiếc vali có bánh xe qua khu vực nhà ga; lựa chọn D mô tả đúng hành động chính. Ảnh không cho thấy hành khách lên máy bay bằng cầu thang, cân vali tại quầy hay xách nhiều túi mua sắm.",
           "choiceIds": [
             "listening:part1-airport-suitcase:1:choice:1",
             "listening:part1-airport-suitcase:1:choice:2",
@@ -1603,8 +1606,9 @@
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
       "vocabulary": [],
       "contentSource": "original-editorial",
-      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording.",
-      "visualType": "illustration"
+      "sourceNote": "Licensed Pexels photograph by Gustavo Fring; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-airport-suitcase.jpg"
     },
     {
       "id": "part1-presentation-room",
@@ -1614,7 +1618,7 @@
       "topic": "Meetings & Presentations",
       "level": "A2–B1",
       "image": "./assets/listening/part1-presentation-room.svg",
-      "imageAlt": "Preparing a conference room",
+      "imageAlt": "An empty conference room with a projection screen set up at the front",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1643,7 +1647,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the illustration.",
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
           "choices": [
             "Option A",
             "Option B",
@@ -1651,7 +1655,7 @@
             "Option D"
           ],
           "answerIndex": 0,
-          "explanation": "Đáp án A: Màn hình trình chiếu đã được lắp ở phía trước phòng họp; lựa chọn A mô tả đúng chi tiết nổi bật. Các lựa chọn còn lại nói về khán giả rời phòng, viết lên cửa kính hoặc sắp xếp ghế quanh bàn ăn.",
+          "explanation": "Đáp án A: Ảnh chụp cho thấy phòng hội nghị đã được chuẩn bị với màn hình trình chiếu ở phía trước; lựa chọn A mô tả đúng chi tiết nổi bật. Các lựa chọn còn lại nói về khán giả rời phòng, viết lên cửa kính hoặc sắp xếp ghế quanh bàn ăn.",
           "choiceIds": [
             "listening:part1-presentation-room:1:choice:1",
             "listening:part1-presentation-room:1:choice:2",
@@ -1663,8 +1667,9 @@
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
       "vocabulary": [],
       "contentSource": "original-editorial",
-      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording.",
-      "visualType": "illustration"
+      "sourceNote": "Licensed Pexels photograph by Pavel Danilyuk; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-presentation-room.jpg"
     },
     {
       "id": "part1-reception-plant",
@@ -1674,7 +1679,7 @@
       "topic": "Office & Administration",
       "level": "A2–B1",
       "image": "./assets/listening/part1-reception-plant.svg",
-      "imageAlt": "Watering a plant at reception",
+      "imageAlt": "A woman watering an indoor potted plant with a watering can",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1684,7 +1689,7 @@
         },
         {
           "speaker": "Narrator",
-          "text": "A receptionist is watering a plant beside the counter.",
+          "text": "A woman is watering a potted plant indoors.",
           "voice": "female",
           "accent": "en-GB"
         },
@@ -1703,7 +1708,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the illustration.",
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
           "choices": [
             "Option A",
             "Option B",
@@ -1711,7 +1716,7 @@
             "Option D"
           ],
           "answerIndex": 1,
-          "explanation": "Đáp án B: Nhân viên lễ tân đang tưới chậu cây đặt cạnh quầy; lựa chọn B khớp với người và hành động trong hình. Các lựa chọn còn lại mô tả ký nhận hàng, chuyển cây ra ngoài hoặc đóng rèm cửa.",
+          "explanation": "Đáp án B: Người phụ nữ đang dùng bình tưới để tưới một chậu cây trong nhà; lựa chọn B mô tả đúng hành động trong ảnh. Các lựa chọn còn lại nói về ký nhận giấy giao hàng, chuyển cây ra ngoài hoặc đóng rèm cửa.",
           "choiceIds": [
             "listening:part1-reception-plant:1:choice:1",
             "listening:part1-reception-plant:1:choice:2",
@@ -1723,8 +1728,9 @@
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
       "vocabulary": [],
       "contentSource": "original-editorial",
-      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording.",
-      "visualType": "illustration"
+      "sourceNote": "Licensed Pexels photograph by Anastasiya Gepp; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-reception-plant.jpg"
     },
     {
       "id": "part1-restaurant-setting",
@@ -1734,7 +1740,7 @@
       "topic": "Restaurant & Hospitality",
       "level": "A2–B1",
       "image": "./assets/listening/part1-restaurant-setting.svg",
-      "imageAlt": "Setting a restaurant table",
+      "imageAlt": "A restaurant employee arranging tableware on a dining table",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1750,7 +1756,7 @@
         },
         {
           "speaker": "Narrator",
-          "text": "A restaurant employee is arranging plates on a table.",
+          "text": "A restaurant employee is setting the table.",
           "voice": "female",
           "accent": "en-CA"
         },
@@ -1763,7 +1769,7 @@
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the illustration.",
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
           "choices": [
             "Option A",
             "Option B",
@@ -1771,7 +1777,7 @@
             "Option D"
           ],
           "answerIndex": 2,
-          "explanation": "Đáp án C: Một nhân viên nhà hàng đang sắp xếp đĩa trên bàn; lựa chọn C mô tả đúng hoạt động chính. Hình không thể hiện việc thanh toán, mang bàn ra ngoài hay rửa bát trong bồn.",
+          "explanation": "Đáp án C: Nhân viên nhà hàng đang chuẩn bị bàn ăn và sắp xếp đồ dùng trên bàn; lựa chọn C mô tả đúng hoạt động chính. Ảnh không thể hiện việc thanh toán, mang bàn ra ngoài hay rửa bát trong bồn.",
           "choiceIds": [
             "listening:part1-restaurant-setting:1:choice:1",
             "listening:part1-restaurant-setting:1:choice:2",
@@ -1783,8 +1789,9 @@
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
       "vocabulary": [],
       "contentSource": "original-editorial",
-      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording.",
-      "visualType": "illustration"
+      "sourceNote": "Licensed Pexels photograph by Western Skyline Hotel; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-restaurant-setting.jpg"
     },
     {
       "id": "part1-photocopier",
@@ -1794,7 +1801,7 @@
       "topic": "Office & Administration",
       "level": "A2–B1",
       "image": "./assets/listening/part1-photocopier.svg",
-      "imageAlt": "Collecting printed documents",
+      "imageAlt": "An office employee operating a multifunction photocopier",
       "segments": [
         {
           "speaker": "Narrator",
@@ -1816,14 +1823,14 @@
         },
         {
           "speaker": "Narrator",
-          "text": "An employee is collecting pages from a photocopier.",
+          "text": "An employee is operating a photocopier.",
           "voice": "female",
           "accent": "en-AU"
         }
       ],
       "questions": [
         {
-          "question": "Listen to the four statements and select the one that best describes the illustration.",
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
           "choices": [
             "Option A",
             "Option B",
@@ -1831,7 +1838,7 @@
             "Option D"
           ],
           "answerIndex": 3,
-          "explanation": "Đáp án D: Nhân viên đang lấy các trang giấy từ máy photocopy; lựa chọn D khớp với hành động và thiết bị trong hình. Các lựa chọn còn lại mô tả sửa màn hình máy tính, cất giấy vào tủ hoặc vận hành máy hủy tài liệu.",
+          "explanation": "Đáp án D: Nhân viên đang thao tác với máy photocopy đa chức năng; lựa chọn D mô tả đúng thiết bị và hoạt động trong ảnh. Các lựa chọn còn lại nói về sửa màn hình máy tính, cất giấy vào tủ hoặc vận hành máy hủy tài liệu.",
           "choiceIds": [
             "listening:part1-photocopier:1:choice:1",
             "listening:part1-photocopier:1:choice:2",
@@ -1843,8 +1850,9 @@
       "transcriptTranslation": "Bốn câu mô tả được phát lần lượt. Hãy nghe và chọn câu mô tả chính xác nhất về bức ảnh.",
       "vocabulary": [],
       "contentSource": "original-editorial",
-      "sourceNote": "Original illustrative photograph and authored practice statements; not an ETS question or recording.",
-      "visualType": "illustration"
+      "sourceNote": "Licensed Pexels photograph by Mikhail Nilov; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-photocopier.jpg"
     },
     {
       "id": "part2-visitor-badge",

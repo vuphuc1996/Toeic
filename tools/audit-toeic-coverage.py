@@ -88,7 +88,7 @@ for part in LISTEN_TARGET:
 lines += [
     f"| **Total** | **{len(listening)}** | **{sum(LQ.values())}** |", "",
     f"- Spoken segments: {listening_segments}.",
-    f"- Part 1 original SVG illustrations: {sum(1 for item in listening if item.get('part') == 'Part 1' and item.get('image'))}; they are illustrations, not realistic photographs or official ETS assets.",
+    f"- Part 1 licensed Pexels photographs: {sum(1 for item in listening if item.get('part') == 'Part 1' and item.get('photo'))}; these are third-party licensed practice images, not official ETS assets.",
     "- Audio is browser SpeechSynthesis; it is synthesized audio, not recorded/native-speaker or ETS audio.", "",
     "## Reading coverage", "", "| Part | Resources | Questions |", "|---|---:|---:|"
 ]
@@ -114,7 +114,7 @@ for part, target in READ_TARGET.items():
     lines.append(f"| {part} | {current} | {target} | {current / target * 100:.1f}% |")
 lines.append(f"| **Reading total** | **{sum(RQ.values())}** | **100** | **{sum(RQ.values())}%** |")
 lines += [
-    "", "These ratios compare the current practice pool with the public distribution for one test form. They do not mean the app already contains a complete, validated mock test. Part 1 has 8 practice items versus 6 in the reference form, but the images are illustrations and need photo-quality improvement.", "",
+    "", "These ratios compare the current practice pool with the public distribution for one test form. They do not mean the app already contains a complete, validated mock test. Part 1 has 8 practice items versus 6 in the reference form; eight locally hosted licensed photographs are used with SVG fallbacks.", "",
     "## Answer-key balance (A/B/C/D counts)", "", "| Part | A | B | C | D |", "|---|---:|---:|---:|---:|"
 ]
 for part in list(LISTEN_TARGET) + list(READ_TARGET):
@@ -123,7 +123,7 @@ for part in list(LISTEN_TARGET) + list(READ_TARGET):
 
 lines += [
     "", "## Interpretation and gaps", "",
-    f"- Listening pool has {sum(LQ.values())} questions; blueprint minima are met for one form (P1 includes 8 practice illustrations versus 6 questions in a form).",
+    f"- Listening pool has {sum(LQ.values())} questions; blueprint minima are met for one form (P1 includes 8 practice photographs versus 6 questions in a form).",
     f"- Reading pool has {sum(RQ.values())} questions; Part 7 includes {p7_single_questions} single-passage and {p7_multiple_questions} multiple-passage questions, enough to select 29 + 25 for one form.",
     f"- Structured Part 7 double/triple passage resources: {p7_structured_multi_items}/{len(p7_multiple_items)}.",
     "- The bank is content-pool ready for one blueprint selection; a timed mock engine, review workflow and editorial semantic audit are still not implemented.",

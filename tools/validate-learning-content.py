@@ -85,11 +85,18 @@ def main():
             ERRORS.append(f"Listening {ident}: Part 2 transcriptTranslation is a generic instruction, not a Vietnamese translation")
         if part=='Part 1':
             if len(segments)!=4: ERRORS.append(f"Listening {ident}: Part 1 needs exactly four spoken statements")
-            image=item.get('image','')
+            image=item.get('image','')  # SVG fallback remains part of the base package
+            photo=item.get('photo','')
             if not image.startswith('./'):
-                ERRORS.append(f"Listening {ident}: Part 1 image must be a relative ./ path")
+                ERRORS.append(f"Listening {ident}: Part 1 fallback image must be a relative ./ path")
             elif not (ROOT/image[2:]).is_file():
-                ERRORS.append(f"Listening {ident}: missing image {image}")
+                ERRORS.append(f"Listening {ident}: missing fallback image {image}")
+            if not photo.startswith('./assets/listening/') or not photo.lower().endswith('.jpg'):
+                ERRORS.append(f"Listening {ident}: licensed photo must use a local ./assets/listening/*.jpg path")
+            elif not (ROOT/photo[2:]).is_file():
+                WARNINGS.append(f"Listening {ident}: licensed photo is not present in this source snapshot; SVG fallback remains available ({photo})")
+            if item.get('visualType') != 'photograph':
+                ERRORS.append(f"Listening {ident}: local Pexels asset must be labelled as photograph")
             if len(questions)!=1: ERRORS.append(f"Listening {ident}: Part 1 image item should have one answer question")
             elif len(questions[0].get('choices',[]))==4:
                 answer_index=questions[0].get('answerIndex')
@@ -98,7 +105,7 @@ def main():
                     expected_letter='ABCD'[answer_index]
                     if f'Đáp án {expected_letter}' not in str(questions[0].get('explanation','')):
                         ERRORS.append(f"Listening {ident}: Part 1 explanation does not identify the correct answer letter {expected_letter}")
-            if image.lower().endswith('.svg') and item.get('visualType') not in ('illustration', 'diagram'):
+            if image.lower().endswith('.svg') and not photo and item.get('visualType') not in ('illustration', 'diagram'):
                 WARNINGS.append(f"Listening {ident}: SVG visual should be explicitly labelled as an illustration/diagram")
 
     read_counts={f'Part {i}':0 for i in range(5,8)}

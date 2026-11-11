@@ -127,7 +127,7 @@ def main() -> int:
         '- The 12 revised groups now use distractors closer to the same document purpose, role, travel record, service request, business action or visitor-access context. The correct answer text and `answerIndex` were kept unchanged for every revised question.',
         '- Other reviewed groups were retained where the three alternatives are distinct and the transcript/passage supports one clear key. In particular, close dates/times, locations, meeting materials and process steps remain useful distractors when they are contradicted or not supported by the source.',
         '- This is editorial review of original-authored content. It is not official ETS content, two-person independent review, statistical item analysis, difficulty calibration or proof of score equivalence.',
-        '- Part 1 remains SVG illustration-based; Listening audio remains browser SpeechSynthesis. Physical-device audio/voice review is still pending.',
+        '- Part 1 uses licensed Pexels photographs with local SVG fallbacks; Listening audio remains browser SpeechSynthesis. Physical-device audio/voice review is still pending.',
         ''
     ]
     OUT.parent.mkdir(parents=True, exist_ok=True)

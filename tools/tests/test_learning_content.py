@@ -23,18 +23,21 @@ class LearningContentTests(unittest.TestCase):
     def test_all_four_listening_parts_exist(self):
         self.assertEqual({f'Part {i}' for i in range(1, 5)}, {x.get('part') for x in self.listening})
 
-    def test_part1_has_minimum_eight_original_image_sets(self):
+    def test_part1_has_minimum_eight_photograph_items(self):
         p1 = [x for x in self.listening if x.get('part') == 'Part 1']
         self.assertGreaterEqual(len(p1), 8)
         self.assertTrue(all(x.get('contentSource') == 'original-editorial' for x in p1))
-        self.assertTrue(all(x.get('visualType') == 'illustration' for x in p1 if x.get('image', '').lower().endswith('.svg')))
+        self.assertTrue(all(x.get('visualType') == 'photograph' and x.get('photo') for x in p1))
 
     def test_part1_images_exist_and_have_one_question(self):
         p1 = [x for x in self.listening if x.get('part') == 'Part 1']
         for item in p1:
             image = item.get('image', '')
+            photo = item.get('photo', '')
             self.assertTrue(image.startswith('./assets/listening/'))
             self.assertTrue((ROOT / image[2:]).is_file())
+            self.assertRegex(photo, r'^\./assets/listening/part1-[a-z-]+\.jpg$')
+            self.assertEqual(item.get('visualType'), 'photograph')
             self.assertEqual(len(item.get('questions', [])), 1)
             self.assertEqual(len(item.get('segments', [])), 4)
 
@@ -146,20 +149,58 @@ class LearningContentTests(unittest.TestCase):
                     self.assertRegex(rationale, vietnamese_words,
                                      f"{library_name} {item.get('id')} Q{index} must be explained in Vietnamese, not merely contain an accented English word")
 
-    def test_part1_prompt_does_not_call_svg_illustrations_photographs(self):
+    def test_part1_prompts_identify_the_new_licensed_photographs(self):
         for item in self.listening:
-            if item.get("part") == "Part 1" and item.get("visualType") == "illustration":
+            if item.get("part") == "Part 1":
                 for question in item.get("questions", []):
-                    self.assertIn("illustration", question.get("question", "").lower())
-                    self.assertNotIn("photograph", question.get("question", "").lower())
+                    self.assertIn("photograph", question.get("question", "").lower())
+                    self.assertNotIn("illustration", question.get("question", "").lower())
 
-    def test_part1_rendering_uses_illustration_semantics(self):
+    def test_part1_rendering_prefers_photo_and_falls_back_to_svg(self):
         app_js = (ROOT / "assets/js/app.js").read_text(encoding="utf-8")
         css = (ROOT / "assets/css/app.css").read_text(encoding="utf-8")
-        self.assertIn("illustrationMarkup", app_js)
-        self.assertIn("part1-illustration-frame", app_js)
-        self.assertIn(".part1-illustration-frame", css)
-        self.assertNotIn("photoMarkup", app_js)
+        self.assertIn("item.photo||item.image", app_js)
+        self.assertIn("data-fallback-src", app_js)
+        self.assertIn("HÌNH MINH HỌA · Dùng ảnh SVG dự phòng", app_js)
+        self.assertIn("ẢNH CHỤP", app_js)
+        self.assertIn("part1-photo-frame", app_js)
+        self.assertIn(".part1-photo-frame", css)
+
+    def test_part1_audio_keys_match_the_selected_photo_actions(self):
+        checks = {
+            'part1-reception-plant': (1, 'A woman is watering a potted plant indoors.'),
+            'part1-restaurant-setting': (2, 'A restaurant employee is setting the table.'),
+            'part1-photocopier': (3, 'An employee is operating a photocopier.'),
+        }
+        for ident, (index, expected) in checks.items():
+            item = next(x for x in self.listening if x.get('id') == ident)
+            self.assertEqual(item['questions'][0]['answerIndex'], {'part1-reception-plant':1,'part1-restaurant-setting':2,'part1-photocopier':3}[ident])
+            self.assertEqual(item['segments'][index]['text'], expected)
+
+    def test_part1_photo_paths_are_cached_as_optional_assets(self):
+        sw = (ROOT / 'sw.js').read_text(encoding='utf-8')
+        for item in self.listening:
+            if item.get('part') == 'Part 1':
+                self.assertIn(item['photo'], sw)
+
+    def test_part1_photo_attribution_covers_every_part1_item(self):
+        import csv
+        attribution = ROOT / 'assets/listening/ATTRIBUTION.csv'
+        with attribution.open(encoding='utf-8-sig', newline='') as handle:
+            rows = list(csv.DictReader(handle))
+        p1_ids = {x['id'] for x in self.listening if x.get('part') == 'Part 1'}
+        self.assertEqual({r['question_id'] for r in rows}, p1_ids)
+        for row in rows:
+            self.assertTrue(row['photographer'].strip())
+            self.assertIn('pexels.com/photo/', row['source_page'])
+            self.assertIn('pexels.com/license', row['license'])
+
+    def test_part1_svg_fallbacks_remain_required_assets(self):
+        sw = (ROOT / 'sw.js').read_text(encoding='utf-8')
+        required = sw.split('const REQUIRED = ', 1)[1].split(';', 1)[0]
+        for item in self.listening:
+            if item.get('part') == 'Part 1':
+                self.assertIn(item['image'], required)
 
     def test_part2_invoice_distractors_are_distinct_from_the_answer(self):
         item = next(x for x in self.listening if x.get("id") == "part2-invoice-approval")
@@ -186,7 +227,7 @@ class LearningContentTests(unittest.TestCase):
         self.assertIn('That’s right', q['choices'][q['answerIndex']])
         self.assertIn('xác nhận', q['explanation'].lower())
 
-    def test_part1_rationales_are_specific_to_the_illustration(self):
+    def test_part1_rationales_are_specific_to_the_photograph(self):
         for item in self.listening:
             if item.get("part") == "Part 1":
                 rationale = item["questions"][0].get("explanation", "")

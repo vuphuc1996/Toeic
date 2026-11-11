@@ -44,7 +44,7 @@ def get_source(item: dict, kind: str) -> str:
 def evidence_status(kind: str, part: str, item: dict, q: dict, source: str, answer: str) -> tuple[str, str]:
     if kind == 'Listening' and part == 'Part 1':
         letter = 'ABCD'[q['answerIndex']]
-        return 'visual-checked', f"Compared the illustration and keyed option {letter} with the image-specific explanation; asset `{item.get('image','')}`. This confirms only the current SVG illustration, not photo authenticity."
+        return 'photo-checked', f"Compared the licensed photograph and keyed option {letter} with the image-specific explanation; photo `{item.get('photo','')}`; SVG fallback `{item.get('image','')}`. Source/license are recorded in `assets/listening/ATTRIBUTION.csv`."
     if kind == 'Listening' and part == 'Part 2':
         return 'response-fit-checked', 'Reviewed the spoken prompt, response, polarity/speech act and rationale; transcript translations were checked against the actual spoken lines.'
     if kind == 'Reading' and part == 'Part 5':
@@ -95,7 +95,7 @@ def main() -> int:
         'direct-text-match': 'Direct source phrase',
         'lexical-evidence': 'Source lexical evidence (paraphrase may remain)',
         'manual-paraphrase-verified': 'Manual paraphrase/inference checked against source',
-        'visual-checked': 'Part 1 illustration/key comparison checked',
+        'photo-checked': 'Part 1 licensed photograph/key comparison checked',
         'response-fit-checked': 'Part 2 speech-act / response-fit checked',
         'grammar-checked': 'Part 5 sentence grammar checked',
         'context-fit-checked': 'Part 6 context/cohesion checked',
