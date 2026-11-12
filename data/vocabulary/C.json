@@ -3915,6 +3915,50 @@
       "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
     },
     {
+      "id": "convene-v",
+      "word": "convene",
+      "phonetic": {
+        "us": "/kənˈviːn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "triệu tập; tổ chức cuộc họp",
+          "definition_en": "to arrange for a group of people to come together for a meeting",
+          "synonyms": [
+            "assemble",
+            "gather"
+          ],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "convene",
+        "vs_es": "convenes",
+        "v2": "convened",
+        "v3": "convened",
+        "ving": "convening"
+      },
+      "examples": [
+        {
+          "en": "The committee will convene next Monday to review the proposal.",
+          "vi": "Ủy ban sẽ họp vào thứ Hai tới để xem xét đề xuất.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "convene a meeting",
+        "convene a committee"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "convenience-n",
       "word": "convenience",
       "phonetic": {
@@ -4344,6 +4388,43 @@
         "total cost",
         "operating costs"
       ]
+    },
+    {
+      "id": "counterpart-n",
+      "word": "counterpart",
+      "phonetic": {
+        "us": "/ˈkaʊn.t̬ɚ.pɑːrt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người hoặc bộ phận tương đương; đối tác cùng cấp",
+          "definition_en": "a person or organization with a similar role or position in another group",
+          "synonyms": [
+            "equivalent"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Our Singapore counterpart will coordinate the regional launch.",
+          "vi": "Đầu mối tương đương của chúng tôi tại Singapore sẽ điều phối đợt ra mắt trong khu vực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "overseas counterpart",
+        "counterpart organization"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "coupon-n",

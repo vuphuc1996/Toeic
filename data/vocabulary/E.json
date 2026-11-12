@@ -401,6 +401,50 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "embark-v",
+      "word": "embark",
+      "phonetic": {
+        "us": "/ɪmˈbɑːrk/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "bắt đầu; khởi sự",
+          "definition_en": "to begin a new project, activity, or journey",
+          "synonyms": [
+            "undertake",
+            "begin"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "embark",
+        "vs_es": "embarks",
+        "v2": "embarked",
+        "v3": "embarked",
+        "ving": "embarking"
+      },
+      "examples": [
+        {
+          "en": "The company will embark on a major expansion project next year.",
+          "vi": "Công ty sẽ bắt đầu một dự án mở rộng lớn vào năm tới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "embark on a project",
+        "embark on a journey"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "emerge-v",
       "word": "emerge",
       "phonetic": {
@@ -1310,6 +1354,50 @@
       ]
     },
     {
+      "id": "escalate-v",
+      "word": "escalate",
+      "phonetic": {
+        "us": "/ˈes.kə.leɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "làm leo thang; tăng lên; chuyển cấp xử lý",
+          "definition_en": "to become more serious or to refer an issue to a higher level of authority",
+          "synonyms": [
+            "intensify",
+            "raise"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "escalate",
+        "vs_es": "escalates",
+        "v2": "escalated",
+        "v3": "escalated",
+        "ving": "escalating"
+      },
+      "examples": [
+        {
+          "en": "Please escalate unresolved complaints to the service manager.",
+          "vi": "Vui lòng chuyển các khiếu nại chưa được giải quyết lên quản lý dịch vụ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "escalate a complaint",
+        "escalate an issue"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "establish-v",
       "word": "establish",
       "phonetic": {
@@ -2037,6 +2125,43 @@
         "date of expiration"
       ],
       "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "exposure-n",
+      "word": "exposure",
+      "phonetic": {
+        "us": "/ɪkˈspoʊ.ʒɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tiếp xúc; mức độ phơi nhiễm hoặc rủi ro",
+          "definition_en": "the state of being subjected to a condition, influence, or risk",
+          "synonyms": [
+            "susceptibility"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The review identified the company’s exposure to currency fluctuations.",
+          "vi": "Đợt rà soát xác định mức độ rủi ro của công ty trước biến động tiền tệ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "financial exposure",
+        "exposure to risk"
+      ],
+      "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {

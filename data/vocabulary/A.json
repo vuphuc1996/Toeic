@@ -1762,6 +1762,43 @@
       "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
     },
     {
+      "id": "allegation-n",
+      "word": "allegation",
+      "phonetic": {
+        "us": "/ˌæl.əˈɡeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cáo buộc; lời tố cáo",
+          "definition_en": "a claim that someone has done something wrong, which has not yet been proven",
+          "synonyms": [
+            "accusation"
+          ],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company denied the allegation of financial misconduct.",
+          "vi": "Công ty bác bỏ cáo buộc về hành vi sai phạm tài chính.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "allegation of misconduct",
+        "serious allegation"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "allocate-v",
       "word": "allocate",
       "cefr_level": "B2",
@@ -3100,6 +3137,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "arbitration-n",
+      "word": "arbitration",
+      "phonetic": {
+        "us": "/ˌɑːr.bəˈtreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phân xử bằng trọng tài",
+          "definition_en": "a process in which an independent person makes a decision to settle a dispute",
+          "synonyms": [
+            "mediation"
+          ],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract requires arbitration if the two parties cannot reach an agreement.",
+          "vi": "Hợp đồng yêu cầu phân xử bằng trọng tài nếu hai bên không thể đạt thỏa thuận.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "binding arbitration",
+        "arbitration process"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "architect-n",
       "word": "architect",
       "cefr_level": "B1",
@@ -3727,6 +3801,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "attire-n",
+      "word": "attire",
+      "phonetic": {
+        "us": "/əˈtaɪr/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "trang phục; quần áo",
+          "definition_en": "clothing, especially clothing worn for a particular occasion or purpose",
+          "synonyms": [
+            "clothing",
+            "outfit"
+          ],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees are expected to wear business attire when meeting clients.",
+          "vi": "Nhân viên được yêu cầu mặc trang phục công sở khi gặp khách hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "business attire",
+        "formal attire"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "attribute-nv",
       "word": "attribute",
       "phonetic": {
@@ -3892,6 +4004,49 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "authenticate-v",
+      "word": "authenticate",
+      "phonetic": {
+        "us": "/ɔːˈθen.tɪ.keɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "xác thực; chứng minh tính xác thực",
+          "definition_en": "to prove that a user, document, or item is genuine",
+          "synonyms": [
+            "verify"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "authenticate",
+        "vs_es": "authenticates",
+        "v2": "authenticated",
+        "v3": "authenticated",
+        "ving": "authenticating"
+      },
+      "examples": [
+        {
+          "en": "Users must authenticate their accounts before accessing the payment system.",
+          "vi": "Người dùng phải xác thực tài khoản trước khi truy cập hệ thống thanh toán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "authenticate an account",
+        "authenticate a document"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "authorization-n",
       "word": "authorization",
       "phonetic": {
@@ -3975,6 +4130,49 @@
       "collocations": [
         "authorize payment",
         "authorize access to the system"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "automate-v",
+      "word": "automate",
+      "phonetic": {
+        "us": "/ˈɔː.tə.meɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tự động hóa",
+          "definition_en": "to make a process operate automatically by using technology",
+          "synonyms": [
+            "mechanize"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "automate",
+        "vs_es": "automates",
+        "v2": "automated",
+        "v3": "automated",
+        "ving": "automating"
+      },
+      "examples": [
+        {
+          "en": "The warehouse plans to automate its inventory reports.",
+          "vi": "Kho hàng dự định tự động hóa các báo cáo tồn kho.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "automate a process",
+        "automate routine tasks"
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"

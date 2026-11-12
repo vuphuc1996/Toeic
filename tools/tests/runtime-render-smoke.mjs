@@ -5,7 +5,13 @@ import vm from 'node:vm';
 const appSource = fs.readFileSync(new URL('../../assets/js/app.js', import.meta.url), 'utf8');
 const nodes = new Map();
 function $(selector) {
-  if (!nodes.has(selector)) nodes.set(selector, { value: '', hidden: true, textContent: '', innerHTML: '' });
+  if (!nodes.has(selector)) {
+    const classes = new Set();
+    nodes.set(selector, {
+      value: '', hidden: true, textContent: '', innerHTML: '',
+      classList: { add: (...names) => names.forEach(name => classes.add(name)), remove: (...names) => names.forEach(name => classes.delete(name)), contains: name => classes.has(name) },
+    });
+  }
   return nodes.get(selector);
 }
 const context = {

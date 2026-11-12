@@ -1,31 +1,31 @@
 {
   "schemaVersion": 1,
-  "version": "2.26.0",
+  "version": "2.27.0",
   "letters": [
     {
       "letter": "A",
       "file": "./data/vocabulary/A.json",
-      "count": 102
+      "count": 107
     },
     {
       "letter": "B",
       "file": "./data/vocabulary/B.json",
-      "count": 33
+      "count": 34
     },
     {
       "letter": "C",
       "file": "./data/vocabulary/C.json",
-      "count": 124
+      "count": 126
     },
     {
       "letter": "D",
       "file": "./data/vocabulary/D.json",
-      "count": 63
+      "count": 67
     },
     {
       "letter": "E",
       "file": "./data/vocabulary/E.json",
-      "count": 52
+      "count": 55
     },
     {
       "letter": "F",
@@ -40,12 +40,12 @@
     {
       "letter": "H",
       "file": "./data/vocabulary/H.json",
-      "count": 11
+      "count": 12
     },
     {
       "letter": "I",
       "file": "./data/vocabulary/I.json",
-      "count": 53
+      "count": 57
     },
     {
       "letter": "J",
@@ -75,12 +75,12 @@
     {
       "letter": "O",
       "file": "./data/vocabulary/O.json",
-      "count": 31
+      "count": 33
     },
     {
       "letter": "P",
       "file": "./data/vocabulary/P.json",
-      "count": 75
+      "count": 82
     },
     {
       "letter": "Q",
@@ -90,27 +90,27 @@
     {
       "letter": "R",
       "file": "./data/vocabulary/R.json",
-      "count": 77
+      "count": 80
     },
     {
       "letter": "S",
       "file": "./data/vocabulary/S.json",
-      "count": 68
+      "count": 74
     },
     {
       "letter": "T",
       "file": "./data/vocabulary/T.json",
-      "count": 30
+      "count": 33
     },
     {
       "letter": "U",
       "file": "./data/vocabulary/U.json",
-      "count": 15
+      "count": 16
     },
     {
       "letter": "V",
       "file": "./data/vocabulary/V.json",
-      "count": 19
+      "count": 20
     },
     {
       "letter": "W",
@@ -134,13 +134,13 @@
     }
   ],
   "categories": "./data/categories.json",
-  "totalWords": 928,
+  "totalWords": 971,
   "cefrLevels": {
-    "B2": 294,
-    "B1": 276,
-    "A2": 227,
     "A1": 64,
-    "C1": 67
+    "A2": 228,
+    "B1": 279,
+    "B2": 325,
+    "C1": 75
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
   "totalTopics": 32

@@ -132,6 +132,50 @@
       ]
     },
     {
+      "id": "impose-v",
+      "word": "impose",
+      "phonetic": {
+        "us": "/ɪmˈpoʊz/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "áp đặt; ban hành hoặc yêu cầu thực hiện",
+          "definition_en": "to officially introduce a rule, restriction, or obligation",
+          "synonyms": [
+            "enforce",
+            "levy"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "impose",
+        "vs_es": "imposes",
+        "v2": "imposed",
+        "v3": "imposed",
+        "ving": "imposing"
+      },
+      "examples": [
+        {
+          "en": "The government may impose additional duties on imported goods.",
+          "vi": "Chính phủ có thể áp thêm thuế đối với hàng hóa nhập khẩu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "impose a restriction",
+        "impose a tax"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "improve-v",
       "word": "improve",
       "cefr_level": "A1",
@@ -697,6 +741,44 @@
       ]
     },
     {
+      "id": "indispensable-adj",
+      "word": "indispensable",
+      "phonetic": {
+        "us": "/ˌɪn.dɪˈspen.sə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "không thể thiếu; thiết yếu",
+          "definition_en": "so important or useful that something cannot be done without it",
+          "synonyms": [
+            "essential",
+            "vital"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Accurate records are indispensable for a successful audit.",
+          "vi": "Hồ sơ chính xác là yếu tố không thể thiếu để kiểm toán thành công.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "indispensable resource",
+        "indispensable to the team"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "induct-v",
       "word": "induct",
       "phonetic": {
@@ -847,6 +929,43 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "inflation-n",
+      "word": "inflation",
+      "phonetic": {
+        "us": "/ɪnˈfleɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lạm phát",
+          "definition_en": "a general increase in prices and the resulting decrease in purchasing power",
+          "synonyms": [
+            "price increase"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The finance department revised its forecast to account for inflation.",
+          "vi": "Phòng tài chính điều chỉnh dự báo để tính đến lạm phát.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "inflation rate",
+        "control inflation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "information-n",
@@ -1511,6 +1630,43 @@
         "health insurance",
         "insurance policy"
       ]
+    },
+    {
+      "id": "integration-n",
+      "word": "integration",
+      "phonetic": {
+        "us": "/ˌɪn.təˈɡreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tích hợp; sự hợp nhất",
+          "definition_en": "the process of combining separate systems, departments, or activities into one",
+          "synonyms": [
+            "combination"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The integration of the two booking systems will be completed this quarter.",
+          "vi": "Việc tích hợp hai hệ thống đặt chỗ sẽ hoàn tất trong quý này.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "system integration",
+        "integration process"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "interest-rate-n",

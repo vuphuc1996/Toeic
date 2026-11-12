@@ -3,6 +3,50 @@
   "letter": "H",
   "words": [
     {
+      "id": "hamper-v",
+      "word": "hamper",
+      "phonetic": {
+        "us": "/ˈhæm.pɚ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "cản trở; gây khó khăn",
+          "definition_en": "to make an activity or process difficult to do or complete",
+          "synonyms": [
+            "hinder",
+            "obstruct"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "hamper",
+        "vs_es": "hampers",
+        "v2": "hampered",
+        "v3": "hampered",
+        "ving": "hampering"
+      },
+      "examples": [
+        {
+          "en": "Severe weather may hamper deliveries across the region.",
+          "vi": "Thời tiết khắc nghiệt có thể cản trở việc giao hàng trên toàn khu vực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "hamper operations",
+        "hamper progress"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "handle-v",
       "word": "handle",
       "cefr_level": "A2",

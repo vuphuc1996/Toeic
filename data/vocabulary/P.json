@@ -205,6 +205,43 @@
       ]
     },
     {
+      "id": "patent-n",
+      "word": "patent",
+      "phonetic": {
+        "us": "/ˈpæt.ənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bằng sáng chế",
+          "definition_en": "an official legal right that protects an invention for a specified period",
+          "synonyms": [
+            "intellectual property right"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manufacturer filed a patent application for its new packaging design.",
+          "vi": "Nhà sản xuất đã nộp đơn xin cấp bằng sáng chế cho thiết kế bao bì mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "patent application",
+        "patent protection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "payable-adj",
       "word": "payable",
       "phonetic": {
@@ -456,6 +493,50 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "penetrate-v",
+      "word": "penetrate",
+      "phonetic": {
+        "us": "/ˈpen.ə.treɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thâm nhập; xâm nhập",
+          "definition_en": "to enter a market or group and become established there",
+          "synonyms": [
+            "enter",
+            "access"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "penetrate",
+        "vs_es": "penetrates",
+        "v2": "penetrated",
+        "v3": "penetrated",
+        "ving": "penetrating"
+      },
+      "examples": [
+        {
+          "en": "The retailer hopes to penetrate the regional market by opening three stores.",
+          "vi": "Nhà bán lẻ hy vọng thâm nhập thị trường khu vực bằng cách mở ba cửa hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "penetrate a market",
+        "market penetration"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "per-diem-n",
       "word": "per diem",
       "phonetic": {
@@ -650,6 +731,50 @@
         "work permit",
         "permit access"
       ]
+    },
+    {
+      "id": "persist-v",
+      "word": "persist",
+      "phonetic": {
+        "us": "/pɚˈsɪst/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "kiên trì; tiếp tục tồn tại",
+          "definition_en": "to continue doing something despite difficulty or opposition",
+          "synonyms": [
+            "continue",
+            "persevere"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "persist",
+        "vs_es": "persists",
+        "v2": "persisted",
+        "v3": "persisted",
+        "ving": "persisting"
+      },
+      "examples": [
+        {
+          "en": "If the technical issue persists, contact the support center.",
+          "vi": "Nếu sự cố kỹ thuật vẫn tiếp diễn, hãy liên hệ trung tâm hỗ trợ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "persist in doing",
+        "problem persists"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "personnel-n",
@@ -1272,6 +1397,43 @@
       ]
     },
     {
+      "id": "premise-n",
+      "word": "premise",
+      "phonetic": {
+        "us": "/ˈprem.ɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tiền đề; giả định làm cơ sở lập luận",
+          "definition_en": "an idea or statement that forms the basis of an argument or decision",
+          "synonyms": [
+            "assumption"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The proposal is based on the premise that customer demand will remain stable.",
+          "vi": "Đề xuất dựa trên giả định rằng nhu cầu khách hàng sẽ duy trì ổn định.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "on the premise that",
+        "underlying premise"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "premises-n",
       "word": "premises",
       "cefr_level": "B2",
@@ -1386,6 +1548,43 @@
       ]
     },
     {
+      "id": "prerequisite-n",
+      "word": "prerequisite",
+      "phonetic": {
+        "us": "/ˌpriːˈrek.wə.zɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điều kiện tiên quyết",
+          "definition_en": "something that must exist or be completed before another thing is possible",
+          "synonyms": [
+            "requirement"
+          ],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Previous supervisory experience is a prerequisite for the position.",
+          "vi": "Kinh nghiệm giám sát trước đó là điều kiện tiên quyết cho vị trí này.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "prerequisite for",
+        "meet a prerequisite"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "prescribe-v",
       "word": "prescribe",
       "phonetic": {
@@ -1457,6 +1656,50 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "preserve-v",
+      "word": "preserve",
+      "phonetic": {
+        "us": "/prɪˈzɝːv/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "bảo tồn; duy trì; giữ nguyên",
+          "definition_en": "to keep something in its original or existing condition",
+          "synonyms": [
+            "maintain",
+            "protect"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "preserve",
+        "vs_es": "preserves",
+        "v2": "preserved",
+        "v3": "preserved",
+        "ving": "preserving"
+      },
+      "examples": [
+        {
+          "en": "The archive team uses special equipment to preserve historical documents.",
+          "vi": "Nhóm lưu trữ sử dụng thiết bị đặc biệt để bảo quản tài liệu lịch sử.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "preserve records",
+        "preserve quality"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "prevent-v",
@@ -2614,6 +2857,44 @@
       "collocations": [
         "sole proprietor",
         "business proprietor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "prospect-n",
+      "word": "prospect",
+      "phonetic": {
+        "us": "/ˈprɑː.spekt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khách hàng tiềm năng; triển vọng",
+          "definition_en": "a person or organization that may become a customer, or a possibility for future success",
+          "synonyms": [
+            "potential customer",
+            "possibility"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The sales team contacted twelve prospective clients this week.",
+          "vi": "Đội ngũ bán hàng đã liên hệ mười hai khách hàng tiềm năng trong tuần này.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sales prospect",
+        "business prospects"
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"

@@ -754,6 +754,44 @@
         "sales volume",
         "order volume"
       ]
+    },
+    {
+      "id": "voluntary-adj",
+      "word": "voluntary",
+      "phonetic": {
+        "us": "/ˈvɑː.lən.ter.i/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "tự nguyện; không bắt buộc",
+          "definition_en": "done by choice rather than because it is required",
+          "synonyms": [
+            "optional",
+            "willing"
+          ],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Participation in the employee wellness program is voluntary.",
+          "vi": "Việc tham gia chương trình chăm sóc sức khỏe nhân viên là tự nguyện.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "voluntary participation",
+        "voluntary program"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

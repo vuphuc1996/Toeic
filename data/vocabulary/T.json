@@ -48,6 +48,43 @@
       ]
     },
     {
+      "id": "tariff-n",
+      "word": "tariff",
+      "phonetic": {
+        "us": "/ˈter.ɪf/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thuế quan; biểu thuế nhập khẩu",
+          "definition_en": "a tax charged by a government on goods imported from another country",
+          "synonyms": [
+            "customs duty"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The importer adjusted its prices after the new tariff took effect.",
+          "vi": "Nhà nhập khẩu đã điều chỉnh giá sau khi biểu thuế mới có hiệu lực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "import tariff",
+        "tariff rate"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "task-n",
       "word": "task",
       "cefr_level": "A1",
@@ -977,6 +1014,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "transition-n",
+      "word": "transition",
+      "phonetic": {
+        "us": "/trænˈzɪʃ.ən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự chuyển đổi; giai đoạn chuyển tiếp",
+          "definition_en": "the process of changing from one state, system, or activity to another",
+          "synonyms": [
+            "change",
+            "conversion"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The transition to the new payroll system will begin in January.",
+          "vi": "Việc chuyển đổi sang hệ thống tính lương mới sẽ bắt đầu vào tháng Một.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "transition period",
+        "smooth transition"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "transport-v",
       "word": "transport",
       "cefr_level": "A2",
@@ -1020,6 +1095,43 @@
         "public transport",
         "transport goods"
       ]
+    },
+    {
+      "id": "treasury-n",
+      "word": "treasury",
+      "phonetic": {
+        "us": "/ˈtreʒ.ɚ.i/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kho bạc; bộ phận quản lý ngân quỹ",
+          "definition_en": "the government department responsible for public finances, or a company function managing cash",
+          "synonyms": [
+            "finance office"
+          ],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The treasury team monitors cash flow and short-term investments.",
+          "vi": "Nhóm ngân quỹ theo dõi dòng tiền và các khoản đầu tư ngắn hạn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "treasury department",
+        "treasury management"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "treatment-n",

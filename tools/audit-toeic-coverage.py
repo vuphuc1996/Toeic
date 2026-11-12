@@ -127,7 +127,7 @@ lines += [
     f"- Reading pool has {sum(RQ.values())} questions; Part 7 includes {p7_single_questions} single-passage and {p7_multiple_questions} multiple-passage questions, enough to select 29 + 25 for one form.",
     f"- Structured Part 7 double/triple passage resources: {p7_structured_multi_items}/{len(p7_multiple_items)}.",
     "- V2.25.0 includes a timed 15/60/120-minute mock engine, answer review and local score analysis; it is an internal practice tool, not an officially equated TOEIC test. Independent editorial review remains pending for reserve content.",
-    "- Vocabulary is 928 headwords, below the 3,000–5,000 internal TOEIC planning target. That target is not an official ETS list.",
+    f"- Vocabulary is {len(vocab)} headwords, below the 3,000–5,000 internal TOEIC planning target. That target is not an official ETS list.",
     "- No score conversion should be described as an ETS score until a validated scoring/equating model exists; current per-Part analytics are local-practice indicators.",
     "- `tools/validate-learning-content.py` checks IDs, choices, answers, explanation presence, Part coverage, passages and image assets. It does not prove semantic correctness; editorial review remains required.", ""
 ]

@@ -1157,6 +1157,43 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "brokerage-n",
+      "word": "brokerage",
+      "phonetic": {
+        "us": "/ˈbroʊ.kɚ.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dịch vụ môi giới; công ty môi giới",
+          "definition_en": "the business of arranging transactions between buyers and sellers, especially in finance",
+          "synonyms": [
+            "intermediation"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The brokerage firm provides investment services to corporate clients.",
+          "vi": "Công ty môi giới cung cấp dịch vụ đầu tư cho khách hàng doanh nghiệp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "brokerage firm",
+        "brokerage account"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "budget-nv",
       "word": "budget",
       "phonetic": {

@@ -350,6 +350,80 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "offsite-adj",
+      "word": "offsite",
+      "phonetic": {
+        "us": "/ˌɔːfˈsaɪt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "được tổ chức ngoài địa điểm làm việc thường lệ",
+          "definition_en": "taking place away from the usual workplace or business site",
+          "synonyms": [
+            "external"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department will hold an offsite planning session next month.",
+          "vi": "Phòng ban sẽ tổ chức buổi lập kế hoạch bên ngoài văn phòng vào tháng tới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "offsite meeting",
+        "offsite training"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "onboarding-n",
+      "word": "onboarding",
+      "phonetic": {
+        "us": "/ˈɑːnˌbɔːr.dɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy trình tiếp nhận và hội nhập nhân viên mới",
+          "definition_en": "the process of introducing a new employee to an organization and preparing them for the job",
+          "synonyms": [
+            "orientation"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The onboarding process includes security training and a system access review.",
+          "vi": "Quy trình hội nhập nhân viên mới bao gồm đào tạo bảo mật và rà soát quyền truy cập hệ thống.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "employee onboarding",
+        "onboarding process"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "operate-v",
       "word": "operate",
       "phonetic": {

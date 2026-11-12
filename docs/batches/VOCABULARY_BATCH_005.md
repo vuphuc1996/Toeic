@@ -1,0 +1,129 @@
+# TOEIC Vocabulary Batch 005 — v2.9.7
+
+- Added unique headwords: **118**
+- Total vocabulary: **928**
+- Scope: TOEIC-focused HR, payroll, finance, accounting, legal/contracts, management, procurement/business operations, planning, manufacturing/workplace.
+- Each record includes a Vietnamese meaning, English definition, contextual example with Vietnamese translation, topic, editorial CEFR estimate, and selected collocations.
+- IPA US, synonyms/antonyms, word-family and verb forms remain blank/null where not verified; no automatic guesses were inserted.
+- CEFR levels are editorial estimates, not official ETS classifications.
+
+## Added terms
+
+- absorb (v) — tiếp nhận; hấp thụ
+- adherence (n) — sự tuân thủ
+- adjourn (v) — hoãn; tạm ngừng cuộc họp
+- administration (n) — sự quản lý; ban điều hành
+- affiliate (n/v) — đơn vị liên kết; liên kết
+- appoint (v) — bổ nhiệm; chỉ định
+- appraise (v) — đánh giá; định giá
+- apprenticeship (n) — chương trình học nghề
+- benchmark (n/v) — mốc chuẩn; đối chuẩn
+- biennial (adj) — hai năm một lần
+- certify (v) — chứng nhận; xác nhận
+- circulation (n) — sự lưu hành; số lượng phát hành
+- clerical (adj) — thuộc công việc văn thư
+- competency (n) — năng lực; khả năng chuyên môn
+- confidentiality (n) — tính bảo mật
+- consultancy (n) — dịch vụ tư vấn; công ty tư vấn
+- coordinator (n) — điều phối viên
+- credential (n) — bằng cấp; giấy chứng nhận; thông tin xác thực
+- delegation (n) — sự ủy quyền; đoàn đại biểu
+- designate (v) — chỉ định; định danh
+- designation (n) — chức danh; sự chỉ định
+- disburse (v) — giải ngân; chi trả
+- disbursement (n) — khoản chi; sự giải ngân
+- discretion (n) — quyền tùy nghi; sự thận trọng
+- discretionary (adj) — tùy nghi; không bắt buộc
+- entitlement (n) — quyền được hưởng
+- executive (n/adj) — lãnh đạo; thuộc ban điều hành
+- facilitator (n) — người điều phối; người hướng dẫn
+- fiscal (adj) — thuộc tài chính/ngân sách
+- fiscal year (n) — năm tài chính
+- foresee (v) — dự đoán trước
+- foreseeable (adj) — có thể dự đoán trước
+- franchise (n/v) — quyền kinh doanh nhượng quyền; nhượng quyền
+- franchisee (n) — bên nhận quyền nhượng quyền
+- franchisor (n) — bên nhượng quyền
+- grievance procedure (n) — quy trình giải quyết khiếu nại
+- headcount (n) — tổng số nhân sự
+- incurrence (n) — sự phát sinh (chi phí/nghĩa vụ)
+- indemnify (v) — bồi thường; bảo đảm không bị tổn thất
+- induction (n) — chương trình định hướng nhân viên mới
+- induct (v) — giới thiệu; kết nạp; hướng dẫn ban đầu
+- in-house (adj/adv) — nội bộ; tại công ty
+- incorporate (v) — kết hợp; sáp nhập; thành lập pháp nhân
+- incorporation (n) — việc thành lập công ty; sự hợp nhất
+- insolvency (n) — tình trạng mất khả năng thanh toán
+- insolvent (adj) — mất khả năng thanh toán
+- interim (adj/n) — tạm thời; trong thời gian chuyển tiếp
+- inventory control (n) — kiểm soát hàng tồn kho
+- invoiceable (adj) — có thể xuất hóa đơn
+- jurisdiction (n) — thẩm quyền; phạm vi quyền hạn
+- labor-intensive (adj) — thâm dụng lao động
+- liquidation (n) — sự thanh lý
+- logistical (adj) — thuộc hậu cần
+- mandate (n/v) — ủy quyền; chỉ thị; nhiệm vụ được giao
+- manpower (n) — nhân lực
+- merge (v) — sáp nhập; hợp nhất
+- milestone (n) — mốc quan trọng; cột mốc tiến độ
+- mobilize (v) — huy động; triển khai
+- mobilization (n) — sự huy động
+- moratorium (n) — lệnh tạm hoãn; thời hạn đình chỉ
+- negotiator (n) — nhà đàm phán
+- noncompliance (n) — sự không tuân thủ
+- noncompliant (adj) — không tuân thủ
+- notarize (v) — công chứng
+- notarized (adj) — đã được công chứng
+- obligatory (adj) — bắt buộc
+- occupational (adj) — thuộc nghề nghiệp; tại nơi làm việc
+- occupational safety (n) — an toàn lao động
+- overhead (n/adj) — chi phí chung; chi phí vận hành
+- overhead cost (n) — chi phí quản lý chung
+- payee (n) — người nhận tiền
+- payer (n) — người trả tiền
+- payroll deduction (n) — khoản khấu trừ lương
+- per diem (n/adj) — phụ cấp theo ngày; tính theo ngày
+- personnel file (n) — hồ sơ nhân sự
+- personnel manager (n) — quản lý nhân sự
+- placement (n) — sự bố trí; vị trí thực tập/việc làm
+- probation (n) — thời gian thử việc
+- probationary (adj) — thuộc thời gian thử việc
+- provision (n) — điều khoản; sự cung cấp; khoản dự phòng
+- provisionally (adv) — một cách tạm thời
+- quota (n) — hạn ngạch; chỉ tiêu
+- redundancy (n) — tình trạng dôi dư nhân sự; sự dư thừa
+- redundant (adj) — dôi dư; không còn cần thiết
+- remunerate (v) — trả công; thù lao
+- rescind (v) — hủy bỏ; thu hồi (quyết định/hợp đồng)
+- resignation (n) — sự từ chức; đơn xin nghỉ việc
+- resign (v) — từ chức; nghỉ việc
+- retainer (n) — phí giữ chân; khoản phí trả trước
+- retiree (n) — người đã nghỉ hưu
+- retirement (n) — sự nghỉ hưu
+- revenue stream (n) — nguồn doanh thu
+- severance (n) — trợ cấp thôi việc; sự chấm dứt quan hệ lao động
+- severance pay (n) — tiền trợ cấp thôi việc
+- stakeholder (n) — bên liên quan
+- subcontract (v/n) — giao thầu phụ; hợp đồng thầu phụ
+- subcontractor (n) — nhà thầu phụ
+- supervise (v) — giám sát
+- supervision (n) — sự giám sát
+- supervisor (n) — người giám sát; quản lý trực tiếp
+- sustainability (n) — tính bền vững
+- terminate (v) — chấm dứt; kết thúc
+- termination (n) — sự chấm dứt
+- thereafter (adv) — sau đó; kể từ thời điểm đó
+- threshold (n) — ngưỡng; mức giới hạn
+- underwriting (n) — nghiệp vụ thẩm định/bảo lãnh tài chính
+- underwrite (v) — bảo lãnh; thẩm định rủi ro
+- undertaking (n) — cam kết; nhiệm vụ được đảm nhận
+- utilize (v) — sử dụng; tận dụng
+- vest (v) — trao quyền/lợi ích chính thức
+- vested (adj) — đã được trao quyền; có quyền lợi chính thức
+- viability (n) — tính khả thi; khả năng tồn tại
+- withhold (v) — giữ lại; khấu lưu
+- withholding (n) — sự khấu lưu; khoản giữ lại
+- workplace (n) — nơi làm việc
+- workplace safety (n) — an toàn tại nơi làm việc
+- year-end (n/adj) — cuối năm; thời điểm kết thúc năm tài chính
+- zero-based budgeting (n) — lập ngân sách từ con số không

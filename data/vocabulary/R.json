@@ -1222,6 +1222,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "relocation-n",
+      "word": "relocation",
+      "phonetic": {
+        "us": "/ˌriː.loʊˈkeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc chuyển địa điểm; sự di dời",
+          "definition_en": "the process of moving a person, office, or business to a different place",
+          "synonyms": [
+            "move",
+            "transfer"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company will provide relocation assistance to employees transferring abroad.",
+          "vi": "Công ty sẽ hỗ trợ di dời cho nhân viên được điều chuyển ra nước ngoài.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "relocation assistance",
+        "office relocation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "remain-v",
       "word": "remain",
       "cefr_level": "B1",
@@ -1314,6 +1352,50 @@
         "remind someone of",
         "remind staff"
       ]
+    },
+    {
+      "id": "remit-v",
+      "word": "remit",
+      "phonetic": {
+        "us": "/rɪˈmɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chuyển tiền; gửi khoản thanh toán",
+          "definition_en": "to send money as payment to a person or organization",
+          "synonyms": [
+            "send",
+            "pay"
+          ],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "remit",
+        "vs_es": "remits",
+        "v2": "remitted",
+        "v3": "remitted",
+        "ving": "remitting"
+      },
+      "examples": [
+        {
+          "en": "Please remit the outstanding balance within ten business days.",
+          "vi": "Vui lòng chuyển khoản số dư còn nợ trong vòng mười ngày làm việc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "remit payment",
+        "remit funds"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "remittance-n",
@@ -2627,6 +2709,49 @@
         "staff retention",
         "customer retention"
       ]
+    },
+    {
+      "id": "retire-v",
+      "word": "retire",
+      "phonetic": {
+        "us": "/rɪˈtaɪɚ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "nghỉ hưu; thôi làm việc sau thời gian công tác",
+          "definition_en": "to leave one’s job permanently, usually after reaching a certain age",
+          "synonyms": [
+            "leave employment"
+          ],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "retire",
+        "vs_es": "retires",
+        "v2": "retired",
+        "v3": "retired",
+        "ving": "retiring"
+      },
+      "examples": [
+        {
+          "en": "The director plans to retire at the end of the year.",
+          "vi": "Giám đốc dự định nghỉ hưu vào cuối năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "retire from work",
+        "retire at age 65"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "retiree-n",

@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.26.0 – Flashcard Learning</title>
+  <title>TOEIC Dictionary v2.27.0 – Focus Learning Workspace</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -26,6 +26,7 @@
     <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
     <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
     <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10.5v5M12 7.5h.01"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"/></symbol>
     <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
     <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
     <symbol id="icon-edit" viewBox="0 0 24 24"><path d="m4 16.5-.8 4.3 4.3-.8L19 8.5a2.6 2.6 0 0 0-3.7-3.7z"/><path d="m13.8 6.3 3.7 3.7"/></symbol>
@@ -67,7 +68,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.26.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.27.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -148,7 +149,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.26.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.27.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
@@ -204,7 +205,7 @@
       </section>
 
       <section class="page" id="page-flashcards">
-        <div class="page-heading compact-heading"><div><p class="eyebrow">SMART FLASHCARD STUDIO</p><h1>Học từ vựng bằng Flashcard</h1><p class="muted">Học theo lượt 10 từ, có hình minh họa, phát âm, ví dụ và kiểm tra nhanh.</p></div><span class="library-count" id="flashcardMasteryLabel">Bắt đầu hành trình</span></div>
+        <div class="page-heading compact-heading"><div><p class="eyebrow">SMART FLASHCARD STUDIO</p><h1>Học từ vựng bằng Flashcard</h1><p class="muted">Học theo chủ đề bằng thẻ tương tác: chạm để lật, xem nghĩa và ví dụ, sau đó kiểm tra ghi nhớ.</p></div><span class="library-count" id="flashcardMasteryLabel">Bắt đầu hành trình</span></div>
         <section class="flash-welcome panel"><div><span class="flash-kicker">YOUR DAILY WORD QUEST</span><h2>Mỗi ngày tốt hơn 10 từ ✨</h2><p>Hệ thống ưu tiên từ mới, từ bạn hay quên và từ đã đến lịch ôn. Tiến độ chỉ lưu trên thiết bị này.</p><div class="flash-welcome-stats"><span><strong id="flashKnownCount">0</strong><small>Đã ghi nhớ</small></span><span><strong id="flashDueCount">0</strong><small>Cần ôn lại</small></span><span><strong id="flashStreakCount">0</strong><small>Đã học hôm nay</small></span></div></div><div class="flash-welcome-art" aria-hidden="true">🧠<span>✦</span><b>📚</b></div></section>
         <section class="flash-topic-section"><div class="section-heading"><div><h2>Chọn hành trình</h2><p>44 hành trình chủ đề · Chọn một chủ đề hoặc học tổng hợp tất cả.</p></div><label class="flash-batch-select">Số từ tiếp theo<select id="flashNextBatch"><option value="5">5 từ</option><option value="10" selected>10 từ</option></select></label></div><label class="flash-topic-search"><span>⌕</span><input id="flashTopicSearch" type="search" placeholder="Tìm chủ đề: Office, Banking, Travel..."></label><div class="flash-topic-grid" id="flashTopicGrid"></div></section>
         <section class="flash-session panel" id="flashSession" hidden><div class="flash-session-head"><div><span class="flash-kicker" id="flashSessionEyebrow">VOCABULARY QUEST</span><h2 id="flashSessionTitle">Lượt học của bạn</h2></div><div class="flash-progress-wrap"><strong id="flashProgressText">0 / 10</strong><div class="flash-progress"><span id="flashProgressBar"></span></div></div></div><div id="flashcardStage"></div><div class="flash-session-actions" id="flashSessionActions"></div></section>
@@ -213,15 +214,40 @@
       </section>
 
       <section class="page" id="page-practice">
-        <div class="page-heading compact-heading"><div><p class="eyebrow">SMART REVIEW WORKSPACE</p><h1>Trung tâm ôn tập</h1><p class="muted">Ôn từ mới, củng cố từ yếu và ghi nhớ theo khoảng cách phù hợp.</p></div><button class="primary-button" id="newQuestionButton"><svg class="ui-icon button-icon"><use href="#icon-refresh-cw"></use></svg> Câu hỏi mới</button></div>
+        <div class="page-heading compact-heading"><div><p class="eyebrow">SMART REVIEW WORKSPACE</p><h1>Trung tâm ôn tập</h1><p class="muted">Ôn từ mới, củng cố từ yếu và ghi nhớ theo khoảng cách phù hợp.</p></div><button class="primary-button" id="newQuestionButton"><svg class="ui-icon button-icon"><use href="#icon-play"></use></svg> Bắt đầu ôn tập</button></div>
         <div class="practice-stats">
           <article class="practice-stat"><span>Đã luyện tập</span><strong id="practiceReviewed">0</strong><small>Lượt trả lời</small></article>
           <article class="practice-stat"><span>Độ chính xác</span><strong id="practiceAccuracy">0%</strong><small>Tỷ lệ trả lời đúng</small></article>
           <article class="practice-stat"><span>Từ cần ôn</span><strong id="practiceDue">0</strong><small>Từ mới, đến hạn hoặc còn yếu</small></article>
           <article class="practice-stat"><span>Đã ghi nhớ</span><strong id="practiceMastered">0</strong><small>Ít nhất 3 lần đúng liên tiếp</small></article>
         </div>
+        <section class="practice-dashboard-grid">
+          <section class="panel practice-mode-panel">
+            <div class="panel-header"><div><h3>Chọn dạng ôn tập</h3><p class="muted">Chọn kiểu câu hỏi rồi bắt đầu một phiên tập trung.</p></div><span class="practice-mode-mark">✦</span></div>
+            <div class="practice-mode-grid" id="practiceModeGrid">
+              <button type="button" class="practice-mode-tile is-selected" data-practice-mode="random" aria-pressed="true"><b>🎯</b><span><strong>Thông minh</strong><small>Ưu tiên từ yếu và từ đến hạn</small></span></button>
+              <button type="button" class="practice-mode-tile" data-practice-mode="word-to-meaning" aria-pressed="false"><b>🔤</b><span><strong>Từ → Nghĩa</strong><small>Nhận biết nghĩa tiếng Việt</small></span></button>
+              <button type="button" class="practice-mode-tile" data-practice-mode="meaning-to-word" aria-pressed="false"><b>✍️</b><span><strong>Nghĩa → Từ</strong><small>Gợi nhớ cách viết tiếng Anh</small></span></button>
+              <button type="button" class="practice-mode-tile" data-practice-mode="missing" aria-pressed="false"><b>🧩</b><span><strong>Điền chữ thiếu</strong><small>Ghi nhớ mặt chữ</small></span></button>
+              <button type="button" class="practice-mode-tile" data-practice-mode="pos" aria-pressed="false"><b>🏷️</b><span><strong>Loại từ</strong><small>Nhận diện danh, động, tính từ</small></span></button>
+              <button type="button" class="practice-mode-tile" data-practice-mode="synonym" aria-pressed="false"><b>🔗</b><span><strong>Đồng nghĩa</strong><small>Mở rộng vốn từ liên quan</small></span></button>
+              <button type="button" class="practice-mode-tile" data-practice-mode="antonym" aria-pressed="false"><b>↔️</b><span><strong>Trái nghĩa</strong><small>Phân biệt sắc thái từ vựng</small></span></button>
+              <button type="button" class="practice-mode-tile" data-practice-mode="verb" aria-pressed="false"><b>📝</b><span><strong>Dạng động từ</strong><small>V1, V2, V3 và V-ing</small></span></button>
+            </div>
+          </section>
+          <aside class="practice-side">
+            <section class="panel weak-panel">
+              <div class="panel-header"><div><h3><svg class="ui-icon"><use href="#icon-trending"></use></svg> Từ cần củng cố</h3><p class="muted">Ưu tiên theo kết quả học</p></div></div>
+              <div id="weakWordList" class="weak-word-list"><p class="muted">Chưa có dữ liệu luyện tập.</p></div>
+            </section>
+            <section class="panel settings-shortcut-panel">
+              <div class="settings-shortcut-icon"><svg class="ui-icon"><use href="#icon-settings"></use></svg></div>
+              <h3>Cấu hình cách học</h3><p>Thiết lập chu kỳ nhắc, thông báo hệ thống và thời gian đếm lùi chuyển câu.</p><button class="secondary-button" data-go="settings">Mở cấu hình</button>
+            </section>
+          </aside>
+        </section>
         <div class="practice-layout">
-          <section class="panel quiz-panel">
+          <section class="panel quiz-panel" hidden>
             <div class="quiz-topline"><span class="quiz-kicker"><svg class="ui-icon"><use href="#icon-target"></use></svg> LUYỆN TẬP CÁ NHÂN</span><span class="quiz-counter" id="questionCounter">Câu hỏi ngẫu nhiên</span></div>
             <div class="quiz-controls">
               <label class="field"><span class="field-label">DẠNG BÀI</span><select id="practiceMode"><option value="random">Ngẫu nhiên thông minh</option><option value="missing">Điền chữ còn thiếu</option><option value="meaning-to-word">Nghĩa tiếng Việt → Từ tiếng Anh</option><option value="word-to-meaning">Từ tiếng Anh → Nghĩa tiếng Việt</option><option value="pos">Nhận diện loại từ</option><option value="synonym">Từ đồng nghĩa</option><option value="antonym">Từ trái nghĩa</option><option value="verb">Chia dạng động từ</option></select></label>
@@ -252,18 +278,6 @@
               <div class="quiz-actions"><button class="secondary-button" id="skipQuestionButton">Bỏ qua từ này</button><button class="primary-button" id="nextQuestionButton" disabled>Câu tiếp theo <svg class="ui-icon button-icon"><use href="#icon-arrow-right"></use></svg></button></div>
             </div>
           </section>
-          <aside class="practice-side">
-            <section class="panel weak-panel">
-              <div class="panel-header"><div><h3><svg class="ui-icon"><use href="#icon-trending"></use></svg> Từ cần củng cố</h3><p class="muted">Ưu tiên theo kết quả học</p></div></div>
-              <div id="weakWordList" class="weak-word-list"><p class="muted">Chưa có dữ liệu luyện tập.</p></div>
-            </section>
-            <section class="panel settings-shortcut-panel">
-              <div class="settings-shortcut-icon"><svg class="ui-icon"><use href="#icon-settings"></use></svg></div>
-              <h3>Cấu hình cách học</h3>
-              <p>Thiết lập chu kỳ nhắc, thông báo hệ thống và thời gian đếm lùi chuyển câu.</p>
-              <button class="secondary-button" data-go="settings">Mở cấu hình</button>
-            </section>
-          </aside>
         </div>
       </section>
 
@@ -362,7 +376,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.26.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.27.0</span></footer>
     </main>
   </div>
 
@@ -379,6 +393,12 @@
     <section class="mobile-group-sheet" role="dialog" aria-modal="true" aria-label="Menu phụ">
       <div class="mobile-group-sheet-head"><strong id="mobileGroupTitle">Học tập</strong><button type="button" data-group-close aria-label="Đóng">×</button></div>
       <div class="mobile-group-options" id="mobileGroupOptions"></div>
+    </section>
+  </div>
+  <div class="learning-focus-backdrop" id="learningFocusBackdrop" hidden>
+    <section class="learning-focus-dialog" role="dialog" aria-modal="true" aria-labelledby="learningFocusTitle">
+      <header class="learning-focus-header"><div><p class="eyebrow" id="learningFocusEyebrow">FOCUSED LEARNING</p><h2 id="learningFocusTitle">Không gian học tập</h2><p id="learningFocusSubtitle">Tập trung vào nội dung đang học.</p></div><button type="button" class="learning-focus-close" id="learningFocusClose" aria-label="Thoát phiên học">×</button></header>
+      <div class="learning-focus-content" id="learningFocusContent"></div>
     </section>
   </div>
   <div class="modal-backdrop" id="modalBackdrop" hidden>

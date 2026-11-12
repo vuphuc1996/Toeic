@@ -44,6 +44,43 @@
       ]
     },
     {
+      "id": "unanimous-adj",
+      "word": "unanimous",
+      "phonetic": {
+        "us": "/juˈnæn.ə.məs/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "nhất trí; đồng thuận tuyệt đối",
+          "definition_en": "agreed to by every member of a group",
+          "synonyms": [
+            "in agreement"
+          ],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The proposal received unanimous approval from the committee.",
+          "vi": "Đề xuất nhận được sự chấp thuận nhất trí từ ủy ban.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "unanimous decision",
+        "unanimous approval"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "undergo-v",
       "word": "undergo",
       "phonetic": {

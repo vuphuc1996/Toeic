@@ -1052,6 +1052,44 @@
       ]
     },
     {
+      "id": "solicitation-n",
+      "word": "solicitation",
+      "phonetic": {
+        "us": "/səˌlɪs.əˈteɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự chào mời; lời đề nghị kinh doanh chính thức",
+          "definition_en": "a formal request for business, support, information, or participation",
+          "synonyms": [
+            "request",
+            "appeal"
+          ],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company prohibits unsolicited sales solicitation by phone.",
+          "vi": "Công ty nghiêm cấm việc chào mời bán hàng qua điện thoại khi chưa được yêu cầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sales solicitation",
+        "solicitation letter"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "solution-n",
       "word": "solution",
       "cefr_level": "A2",
@@ -1290,6 +1328,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "sponsor-n",
+      "word": "sponsor",
+      "phonetic": {
+        "us": "/ˈspɑːn.sɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà tài trợ; đơn vị bảo trợ",
+          "definition_en": "a person or organization that provides money or support for an event or activity",
+          "synonyms": [
+            "supporter",
+            "backer"
+          ],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A local bank will be the main sponsor of the business conference.",
+          "vi": "Một ngân hàng địa phương sẽ là nhà tài trợ chính cho hội nghị kinh doanh.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "event sponsor",
+        "main sponsor"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "square-footage-n",
       "word": "square footage",
       "cefr_level": "B2",
@@ -1367,6 +1443,43 @@
         "staff meeting",
         "staff member"
       ]
+    },
+    {
+      "id": "staffing-n",
+      "word": "staffing",
+      "phonetic": {
+        "us": "/ˈstæf.ɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc bố trí và quản lý nhân sự",
+          "definition_en": "the process of supplying an organization with an appropriate number of employees",
+          "synonyms": [
+            "personnel planning"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manager reviewed staffing levels before approving the holiday schedule.",
+          "vi": "Quản lý đã xem xét số lượng nhân sự trước khi phê duyệt lịch nghỉ lễ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "staffing levels",
+        "staffing needs"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "stakeholder-n",
@@ -1529,6 +1642,43 @@
         "in stock",
         "stock level"
       ]
+    },
+    {
+      "id": "stockholder-n",
+      "word": "stockholder",
+      "phonetic": {
+        "us": "/ˈstɑːkˌhoʊl.dɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cổ đông",
+          "definition_en": "a person or organization that owns shares in a company",
+          "synonyms": [
+            "shareholder"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each stockholder received the annual financial report by email.",
+          "vi": "Mỗi cổ đông đã nhận báo cáo tài chính thường niên qua email.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "stockholder meeting",
+        "stockholder rights"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "stockroom-n",
@@ -1808,6 +1958,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "subsequent-adj",
+      "word": "subsequent",
+      "phonetic": {
+        "us": "/ˈsʌb.sɪ.kwənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "tiếp theo; xảy ra sau đó",
+          "definition_en": "happening or coming after something else",
+          "synonyms": [
+            "following",
+            "later"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TIME"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The initial review was followed by a subsequent inspection.",
+          "vi": "Đợt rà soát ban đầu được tiếp nối bằng một cuộc kiểm tra sau đó.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "subsequent meeting",
+        "subsequent changes"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "subsidiary-n",
       "word": "subsidiary",
       "phonetic": {
@@ -1882,6 +2070,43 @@
         "substantial increase",
         "substantial investment"
       ]
+    },
+    {
+      "id": "succession-n",
+      "word": "succession",
+      "phonetic": {
+        "us": "/səkˈseʃ.ən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự kế nhiệm; quá trình chuyển giao vị trí",
+          "definition_en": "the process of taking over a job, role, or position from another person",
+          "synonyms": [
+            "replacement"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The board approved a succession plan for senior management positions.",
+          "vi": "Hội đồng đã phê duyệt kế hoạch kế nhiệm cho các vị trí quản lý cấp cao.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "succession plan",
+        "order of succession"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "sufficient-adj",

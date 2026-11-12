@@ -843,6 +843,43 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "demolition-n",
+      "word": "demolition",
+      "phonetic": {
+        "us": "/ˌdem.əˈlɪʃ.ən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phá dỡ; việc tháo dỡ công trình",
+          "definition_en": "the act or process of tearing down a building or structure",
+          "synonyms": [
+            "destruction"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The demolition of the old office building is scheduled for July.",
+          "vi": "Việc phá dỡ tòa nhà văn phòng cũ được lên lịch vào tháng Bảy.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "demolition work",
+        "demolition project"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "demonstrate-v",
       "word": "demonstrate",
       "phonetic": {
@@ -1449,6 +1486,43 @@
       ]
     },
     {
+      "id": "diagnosis-n",
+      "word": "diagnosis",
+      "phonetic": {
+        "us": "/ˌdaɪ.əɡˈnoʊ.sɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự chẩn đoán; kết quả chẩn đoán",
+          "definition_en": "the identification of the nature or cause of a problem or illness",
+          "synonyms": [
+            "assessment"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A medical diagnosis is required before the insurance claim can be processed.",
+          "vi": "Cần có chẩn đoán y tế trước khi yêu cầu bảo hiểm được xử lý.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "medical diagnosis",
+        "accurate diagnosis"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "difference-n",
       "word": "difference",
       "cefr_level": "A1",
@@ -2049,6 +2123,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "disruption-n",
+      "word": "disruption",
+      "phonetic": {
+        "us": "/dɪsˈrʌp.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự gián đoạn; tình trạng làm gián đoạn hoạt động",
+          "definition_en": "an interruption that prevents a process or service from operating normally",
+          "synonyms": [
+            "interruption",
+            "disturbance"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The maintenance work is scheduled overnight to minimize service disruption.",
+          "vi": "Công việc bảo trì được lên lịch qua đêm để giảm thiểu gián đoạn dịch vụ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "service disruption",
+        "business disruption"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "distort-v",
       "word": "distort",
       "phonetic": {
@@ -2213,6 +2325,43 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "dividend-n",
+      "word": "dividend",
+      "phonetic": {
+        "us": "/ˈdɪv.ɪ.dend/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cổ tức",
+          "definition_en": "a portion of a company’s profits distributed to its shareholders",
+          "synonyms": [
+            "distribution"
+          ],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The board approved a dividend payment for eligible shareholders.",
+          "vi": "Hội đồng đã phê duyệt khoản chi trả cổ tức cho các cổ đông đủ điều kiện.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "pay a dividend",
+        "annual dividend"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "document-v",
