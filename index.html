@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.24.0 – Flashcard Learning</title>
+  <title>TOEIC Dictionary v2.26.0 – Flashcard Learning</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -56,6 +56,7 @@
         <button class="nav-item" data-page="dictionary" title="Từ vựng" aria-label="Từ vựng"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span>Từ vựng</button>
         <button class="nav-item" data-page="practice" title="Ôn tập" aria-label="Ôn tập"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-brain"></use></svg></span>Ôn tập</button>
         <div class="nav-group-label">HỌC TẬP</div>
+        <button class="nav-item nav-subitem" data-page="mock" title="Thi thử TOEIC" aria-label="Thi thử TOEIC"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-target"></use></svg></span>Thi thử TOEIC</button>
         <button class="nav-item nav-subitem" data-page="flashcards" title="Flashcard từ vựng" aria-label="Flashcard từ vựng"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Flashcard từ vựng</button>
         <button class="nav-item nav-subitem" data-page="grammar" title="Ngữ pháp" aria-label="Ngữ pháp"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span>Ngữ pháp</button>
         <button class="nav-item nav-subitem" data-page="reading" title="Đọc hiểu" aria-label="Đọc hiểu"><span class="nav-icon"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span>Đọc hiểu</button>
@@ -66,7 +67,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.24.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.26.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -137,6 +138,7 @@
             <div class="panel-header"><div><h3>Truy cập nhanh</h3><p class="muted">Các khu vực học tập và quản lý</p></div></div>
             <button class="quick-link" data-go="dictionary"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span><span><strong>Tra cứu từ vựng</strong><small>Alphabet, chủ đề và loại từ</small></span><b>→</b></button>
             <button class="quick-link" data-go="practice"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-brain"></use></svg></span><span><strong>Bắt đầu ôn tập</strong><small>Câu hỏi ngẫu nhiên, ưu tiên từ còn yếu</small></span><b>→</b></button>
+            <button class="quick-link" data-go="mock"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-target"></use></svg></span><span><strong>Thi thử TOEIC</strong><small>15 phút, 60 phút hoặc 200 câu · chấm điểm từng kỹ năng</small></span><b>→</b></button>
           <button class="quick-link" data-go="grammar"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-bookmark"></use></svg></span><span><strong>Học ngữ pháp</strong><small>Cấu trúc câu, thì và loại từ</small></span><b>→</b></button>
             <button class="quick-link" data-go="reading"><span class="quick-symbol violet"><svg class="ui-icon"><use href="#icon-grid"></use></svg></span><span><strong>Đọc hiểu TOEIC</strong><small>Đoạn văn, từ vựng và câu hỏi</small></span><b>→</b></button>
             <button class="quick-link" data-go="listening"><span class="quick-symbol"><svg class="ui-icon"><use href="#icon-bell"></use></svg></span><span><strong>Nghe hiểu TOEIC</strong><small>Hội thoại, thông báo và câu hỏi nghe</small></span><b>→</b></button>
@@ -146,7 +148,39 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.24.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.26.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+      </section>
+
+
+      <section class="page" id="page-mock">
+        <div class="mock-landing" id="mockLanding">
+          <div class="mock-hero">
+            <div class="mock-hero-copy"><p class="eyebrow">TOEIC LISTENING &amp; READING · MOCK EXAM</p><h1>Mô phỏng phòng thi TOEIC</h1><p>Chọn thời lượng, làm bài theo đồng hồ riêng cho Listening và Reading, sau đó xem kết quả và kế hoạch cải thiện theo từng Part.</p><div class="mock-hero-meta"><span>♫ 100 Listening</span><span>▤ 100 Reading</span><span>◷ Lưu tiến trình cục bộ</span></div></div>
+            <div class="mock-hero-score" aria-hidden="true"><span>TOEIC</span><strong>200</strong><small>QUESTIONS</small><i>LISTENING + READING</i></div>
+          </div>
+          <div class="mock-pool-strip" id="mockPoolStats"><span>Đang thống kê ngân hàng câu hỏi…</span></div>
+          <div class="mock-mode-heading"><div><p class="eyebrow">CHỌN HÌNH THỨC THI</p><h2>Bạn muốn luyện trong bao lâu?</h2><p>Ba chế độ dùng chung ngân hàng dữ liệu, tránh trùng trong từng đề và ưu tiên câu chưa dùng gần đây.</p></div><span class="mock-mode-tag">Tự động random</span></div>
+          <div class="mock-mode-grid">
+            <article class="mock-mode-card mock-mode-quick"><div class="mock-mode-top"><span class="mock-mode-icon">⚡</span><span class="mock-mode-label">KIỂM TRA NHANH</span></div><h3>Test nhanh</h3><div class="mock-mode-time">15 <small>phút</small></div><div class="mock-mode-count">25 câu · 12 Listening + 13 Reading · 5:22 + 9:38</div><p>Đánh giá nhanh khả năng hiện tại, phù hợp để kiểm tra thường xuyên.</p><button type="button" class="primary-button" data-mock-start="quick">Bắt đầu 15 phút <span>→</span></button></article>
+            <article class="mock-mode-card mock-mode-half"><div class="mock-mode-top"><span class="mock-mode-icon">◷</span><span class="mock-mode-label">THI THỬ RÚT GỌN</span></div><h3>Thi thử 1/2 thời lượng</h3><div class="mock-mode-time">60 <small>phút</small></div><div class="mock-mode-count">100 câu · 50 Listening + 50 Reading · 22:30 + 37:30</div><p>Luyện tập sức bền, phân bổ thời gian và làm quen cả bảy Parts.</p><button type="button" class="primary-button" data-mock-start="half">Bắt đầu 60 phút <span>→</span></button></article>
+            <article class="mock-mode-card mock-mode-full"><div class="mock-mode-top"><span class="mock-mode-icon">★</span><span class="mock-mode-label">TOEIC FULL TEST</span></div><h3>Thi đầy đủ 200 câu</h3><div class="mock-mode-time">120 <small>phút</small></div><div class="mock-mode-count">100 Listening + 100 Reading · 45 + 75 phút</div><p>Mô phỏng thời lượng hai phần thi tiêu chuẩn, đánh giá toàn diện hơn.</p><button type="button" class="primary-button" data-mock-start="full">Bắt đầu đề 200 câu <span>→</span></button></article>
+          </div>
+          <section class="mock-resume-panel panel" id="mockResumePanel" hidden><div><span class="learning-category">BÀI THI CHƯA HOÀN TẤT</span><h3 id="mockResumeTitle">Bạn đang có một bài thi dở dang</h3><p id="mockResumeDescription">Tiến trình được lưu trên thiết bị này.</p></div><div class="mock-resume-actions"><button type="button" class="secondary-button" id="mockDiscardButton">Bỏ bài thi</button><button type="button" class="primary-button" id="mockResumeButton">Tiếp tục làm bài</button></div></section>
+          <section class="mock-history-panel panel"><div class="panel-header"><div><h3>Lịch sử thi thử gần đây</h3><p class="muted">Kết quả các lần thi được lưu riêng, không can thiệp hồ sơ từ vựng IndexedDB.</p></div><strong id="mockHistoryCount">0 lượt</strong></div><div id="mockHistoryList" class="mock-history-list"><p class="muted">Bạn chưa hoàn thành bài thi nào.</p></div></section>
+          <p class="mock-integrity-note"><strong>Lưu ý về điểm số:</strong> hệ thống chấm số câu đúng và tỷ lệ chính xác, phân tích Listening/Reading và từng Part. Điểm quy đổi 10–990 của ETS chưa được mô phỏng vì cần bảng hiệu chuẩn theo từng đề; kết quả trong ứng dụng là chỉ số luyện tập, không phải chứng chỉ TOEIC.</p>
+        </div>
+
+        <section class="mock-exam-stage" id="mockExamStage" hidden>
+          <header class="mock-exam-header">
+            <div class="mock-exam-brand"><span class="mock-exam-mark">T</span><div><strong>TOEIC PRACTICE TEST</strong><small id="mockExamModeLabel">FULL MOCK TEST</small></div></div>
+            <div class="mock-exam-timer"><span id="mockTimerLabel">LISTENING REMAINING</span><strong id="mockTimerValue">45:00</strong><small id="mockTimerHint">Phần thi sẽ tự chuyển khi hết giờ</small></div>
+            <button type="button" class="mock-submit-button" id="mockSubmitButton">Nộp bài</button>
+          </header>
+          <div class="mock-exam-sectionbar"><div><span id="mockSectionEyebrow">SECTION I</span><h2 id="mockSectionTitle">Listening Comprehension</h2><p id="mockSectionDescription">100 questions · 45 minutes</p></div><div class="mock-section-progress"><strong id="mockAnsweredCount">0 / 100</strong><span>Đã trả lời</span><div><i id="mockAnsweredBar"></i></div></div></div>
+          <div class="mock-exam-layout"><aside class="mock-question-sidebar"><div class="mock-map-head"><strong>QUESTION MAP</strong><small id="mockMapCount">0 / 100</small></div><div class="mock-map-legend"><span><i class="is-answered"></i> Đã chọn</span><span><i class="is-flagged"></i> Đánh dấu</span></div><div class="mock-question-map" id="mockQuestionMap"></div><div class="mock-map-actions"><button type="button" class="secondary-button" id="mockClearFlagsButton">Bỏ đánh dấu</button></div></aside><div class="mock-exam-main"><div class="mock-test-rules" id="mockTestRules"><strong>Hướng dẫn:</strong> Chọn một đáp án A–D cho mỗi câu. Câu bỏ trống được tính là chưa đúng. Transcript và giải thích chỉ hiện sau khi nộp bài.</div><div class="mock-question-groups" id="mockQuestionGroups"></div><div class="mock-exam-bottom"><span id="mockBottomProgress">Câu 1–12</span><button type="button" class="primary-button" id="mockFinishSectionButton" hidden>Hoàn tất Listening <span>→</span></button></div></div></div>
+        </section>
+
+        <section class="mock-result-stage" id="mockResultStage" hidden></section>
       </section>
 
       <section class="page" id="page-dictionary">
@@ -328,7 +362,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.24.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.26.0</span></footer>
     </main>
   </div>
 

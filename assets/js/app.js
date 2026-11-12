@@ -1,4 +1,5 @@
 import { LocalNotificationProvider } from './notification-provider.js';
+import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js';
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const icon = (name, cls='ui-icon') => `<svg class="${cls}" aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
@@ -6,7 +7,7 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const DB_NAME = 'toeic-vocabulary-phase1';
 const DB_STORE = 'workspace';
 const DEFAULT_TTS_SETTINGS = { accent: 'en-US', defaultGender: 'female', maleVoiceURI: '', femaleVoiceURI: '', rate: 0.92, pitch: 1, volume: 1, wordPauseMs: 900, sentencePauseMs: 850 };
-const state = { words: [], baseWords: [], categories: [], relatedTerms: new Map(), personalVocabulary: { schemaVersion: 3, additions: [], overrides: {}, overrideBaseSigs: {}, deletedBaseIds: [] }, staleOverrideIds: [], wordSources: new Map(), grammarLessons: [], readings: [], listening: [], grammarProgress: {}, readingProgress: {}, listeningProgress: {}, activeListening: null, speechRate: 1, activeGrammarLesson: null, activeReading: null, activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3, tts: { ...DEFAULT_TTS_SETTINGS } }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionAnswered: false, practiceReviewPending: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceTransitionTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceDuration: 3000, autoAdvanceCancelled: false, autoAdvanceWaiting: false, lastGoogleContext: '', lastGoogleQuery: '', flashProgress: {}, flashSession: null, flashQuizIndex: 0, flashQuizAnswers: [] };
+const state = { words: [], baseWords: [], categories: [], relatedTerms: new Map(), personalVocabulary: { schemaVersion: 3, additions: [], overrides: {}, overrideBaseSigs: {}, deletedBaseIds: [] }, staleOverrideIds: [], wordSources: new Map(), grammarLessons: [], readings: [], listening: [], grammarProgress: {}, readingProgress: {}, listeningProgress: {}, activeListening: null, speechRate: 1, activeGrammarLesson: null, activeReading: null, activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3, tts: { ...DEFAULT_TTS_SETTINGS } }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionAnswered: false, practiceReviewPending: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceTransitionTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceDuration: 3000, autoAdvanceCancelled: false, autoAdvanceWaiting: false, lastGoogleContext: '', lastGoogleQuery: '', flashProgress: {}, flashSession: null, flashQuizIndex: 0, flashQuizAnswers: [], mockExam: null, mockHistory: [], mockUsageCounts: {}, mockTickTimer: null, lastMockResult: null };
 
 function openDB() {
   return new Promise((resolve, reject) => {
@@ -343,11 +344,12 @@ function populateFilters(){
 }
 function navigate(page){
   if(state.activePage==='listening'&&page!=='listening') stopSpeech();
+  if(state.activePage==='mock'&&page!=='mock'&&state.mockExam?.status==='active') stopSpeech();
   if(state.activePage==='practice'&&page!=='practice') pauseAutoAdvance();
   state.activePage=page;
   $$('.page').forEach(p=>p.classList.toggle('active',p.id===`page-${page}`));
   $$('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
-  const titles={dashboard:'Tổng quan',dictionary:'Từ vựng',flashcards:'Flashcard từ vựng',practice:'Ôn tập',grammar:'Ngữ pháp',reading:'Đọc hiểu',listening:'Nghe hiểu',data:'Từ vựng cá nhân',settings:'Cấu hình'};
+  const titles={dashboard:'Tổng quan',dictionary:'Từ vựng',flashcards:'Flashcard từ vựng',practice:'Ôn tập',mock:'Thi thử TOEIC',grammar:'Ngữ pháp',reading:'Đọc hiểu',listening:'Nghe hiểu',data:'Từ vựng cá nhân',settings:'Cấu hình'};
   $('#pageTitle').textContent=titles[page]||'Tổng quan';
   if(page==='dictionary') renderDictionary();
   if(page==='flashcards') renderFlashHome();
@@ -356,6 +358,7 @@ function navigate(page){
   if(page==='grammar') renderGrammarLibrary();
   if(page==='reading') renderReadingLibrary();
   if(page==='listening') renderListeningLibrary();
+  if(page==='mock') openMockWorkspace();
   if(page==='settings') renderReminderStatus();
   window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -1257,8 +1260,206 @@ function bindPracticeEvents() {
 
 function openMobileGroupMenu(group){
   const menu=$('#mobileGroupMenu'),title=$('#mobileGroupTitle'),options=$('#mobileGroupOptions');if(!menu||!title||!options)return;
-  const groups={learning:{title:'Học tập',items:[['flashcards','Flashcard từ vựng','Học theo lượt 10 từ và kiểm tra nhanh'],['grammar','Ngữ pháp','Cấu trúc câu và điểm ngữ pháp'],['reading','Đọc hiểu','Email, thông báo và bài đọc'],['listening','Nghe','Hội thoại và bài nói TOEIC']]},config:{title:'Cấu hình',items:[['settings','Cấu hình','Nhắc học và tùy chỉnh'],['data','Quản lý dữ liệu','Từ vựng cá nhân và sao lưu']]}};
+  const groups={learning:{title:'Học tập',items:[['mock','Thi thử TOEIC','15 phút, 60 phút hoặc Full Test 200 câu'],['flashcards','Flashcard từ vựng','Học theo lượt 10 từ và kiểm tra nhanh'],['grammar','Ngữ pháp','Cấu trúc câu và điểm ngữ pháp'],['reading','Đọc hiểu','Email, thông báo và bài đọc'],['listening','Nghe','Hội thoại và bài nói TOEIC']]},config:{title:'Cấu hình',items:[['settings','Cấu hình','Nhắc học và tùy chỉnh'],['data','Quản lý dữ liệu','Từ vựng cá nhân và sao lưu']]}};
   const data=groups[group];if(!data)return;title.textContent=data.title;options.innerHTML=data.items.map(([page,label,desc])=>`<button type="button" class="mobile-group-option" data-group-page="${page}"><strong>${label}</strong><small>${desc}</small><span>→</span></button>`).join('');menu.hidden=false;
+}
+
+
+const MOCK_HISTORY_KEY = 'toeic:mock-history:v1';
+const MOCK_ACTIVE_KEY = 'toeic:mock-active:v1';
+const MOCK_RESULT_KEY = 'toeic:mock-last-result:v1';
+const MOCK_USAGE_KEY = 'toeic:mock-usage:v1';
+const MOCK_PART_TIPS = {
+  'Part 1':'Luyện nhận diện người/vật, hành động chính, vị trí và trạng thái trong ảnh. Nghe động từ và cụm giới từ thay vì chỉ bắt danh từ.',
+  'Part 2':'Nhận diện từ để hỏi, ý định xác nhận/đề nghị và chọn câu đáp tự nhiên; cảnh giác câu trả lời đúng ngữ pháp nhưng sai ngữ cảnh.',
+  'Part 3':'Nghe mục đích cuộc gọi, vai trò người nói, vấn đề, thời gian và bước tiếp theo. Tập ghi nhớ thông tin xuyên suốt cả hội thoại.',
+  'Part 4':'Xác định loại thông báo, đối tượng nghe, mốc thời gian, địa điểm và hướng dẫn/hành động tiếp theo.',
+  'Part 5':'Ôn từ loại, hòa hợp chủ-vị, thì, dạng động từ, giới từ, liên từ và cấu trúc câu; đọc cả câu trước khi chọn.',
+  'Part 6':'Luyện liên kết câu/đoạn, tham chiếu đại từ, từ nối và câu chèn; đọc mạch văn trước và sau chỗ trống.',
+  'Part 7':'Đọc câu hỏi để xác định mục tiêu, định vị tên/ngày/số liệu, nhận diện paraphrase và đối chiếu chéo các tài liệu.'
+};
+function readMockStorage(key, fallback){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback;}catch(error){console.warn('Mock storage parse failed:',error);return fallback;}}
+function saveMockStorage(){try{localStorage.setItem(MOCK_HISTORY_KEY,JSON.stringify(state.mockHistory.slice(-60)));localStorage.setItem(MOCK_USAGE_KEY,JSON.stringify(state.mockUsageCounts||{}));if(state.mockExam?.status==='active')localStorage.setItem(MOCK_ACTIVE_KEY,JSON.stringify(state.mockExam));else localStorage.removeItem(MOCK_ACTIVE_KEY);if(state.lastMockResult)localStorage.setItem(MOCK_RESULT_KEY,JSON.stringify(state.lastMockResult));else localStorage.removeItem(MOCK_RESULT_KEY);}catch(error){console.warn('Không thể lưu bài thi thử:',error);toast('Không thể lưu tiến trình thi thử trên thiết bị này.','error');}}
+function loadMockState(){
+  const history=readMockStorage(MOCK_HISTORY_KEY,[]);state.mockHistory=Array.isArray(history)?history.slice(-60):[];
+  const storedUsage=readMockStorage(MOCK_USAGE_KEY,null);
+  if(storedUsage&&typeof storedUsage==='object'&&!Array.isArray(storedUsage)){state.mockUsageCounts=storedUsage;}
+  else{state.mockUsageCounts={};}
+  const recentUsage={};for(const attempt of state.mockHistory){for(const id of attempt.questionIds||[])recentUsage[id]=(Number(recentUsage[id])||0)+1;}
+  for(const [id,count] of Object.entries(recentUsage))state.mockUsageCounts[id]=Math.max(Number(state.mockUsageCounts[id])||0,count);
+  try{localStorage.setItem(MOCK_USAGE_KEY,JSON.stringify(state.mockUsageCounts));}catch(error){console.warn('Không thể khởi tạo lịch sử sử dụng câu hỏi thi thử:',error);}
+  const lastResult=readMockStorage(MOCK_RESULT_KEY,null);state.lastMockResult=lastResult?.exam&&lastResult?.score?lastResult:null;
+  const active=readMockStorage(MOCK_ACTIVE_KEY,null);
+  if(active&&active.status==='active'&&active.sections?.listening&&active.sections?.reading){state.mockExam=active;}else state.mockExam=null;
+}
+function mockPoolCount(rows,parts){return (rows||[]).filter(row=>parts.includes(row.part)&&row.editorialStatus!=='reserve-pending-independent-review').reduce((sum,row)=>sum+(row.questions||[]).length,0);}
+function mockFormatDuration(seconds){const value=Math.max(0,Math.floor(seconds));const h=Math.floor(value/3600),m=Math.floor(value%3600/60),s=value%60;return h?`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`:`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}
+function mockModeName(id){return MOCK_MODES[id]?.label||'Thi thử TOEIC';}
+function mockResultBand(accuracy){if(accuracy>=85)return 'Tốt';if(accuracy>=75)return 'Khá tốt';if(accuracy>=65)return 'Tiệm cận mục tiêu luyện tập';if(accuracy>=50)return 'Đang hình thành nền tảng';return 'Cần củng cố nền tảng';}
+function openMockWorkspace(){
+  if(state.mockExam?.status==='active'){
+    if(getMockSectionForTime(state.mockExam,Date.now())==='expired'){finishMockExam(true);return;}
+    renderMockHome();return;
+  }
+  if(state.lastMockResult){renderMockResult(state.lastMockResult.exam,state.lastMockResult.score);return;}
+  renderMockHome();
+}
+function renderMockHome(){
+  $('#mockLanding').hidden=false;$('#mockExamStage').hidden=true;$('#mockResultStage').hidden=true;
+  const listening=mockPoolCount(state.listening,['Part 1','Part 2','Part 3','Part 4']);
+  const reading=mockPoolCount(state.readings,['Part 5','Part 6','Part 7']);
+  const pending=state.listening.filter(item=>item.editorialStatus==='reserve-pending-independent-review').reduce((n,item)=>n+(item.questions||[]).length,0);
+  $('#mockPoolStats').innerHTML=`<div class="mock-pool-chip"><strong>${listening}</strong><span>Listening khả dụng</span></div><div class="mock-pool-chip"><strong>${reading}</strong><span>Reading khả dụng</span></div><div class="mock-pool-chip"><strong>${state.listening.length+state.readings.length}</strong><span>Cụm bài nguồn</span></div><div class="mock-pool-chip"><strong>${pending}</strong><span>Câu reserve đang chờ duyệt</span></div>`;
+  const resume=$('#mockResumePanel');resume.hidden=state.mockExam?.status!=='active';
+  if(!resume.hidden){const exam=state.mockExam,all=getExamQuestions(exam.sections.listening).length+getExamQuestions(exam.sections.reading).length,answered=Object.keys(exam.answers||{}).length;$('#mockResumeTitle').textContent=`${exam.modeLabel} · ${answered}/${all} câu đã trả lời`;
+    const remain=Math.max(0,Math.ceil((exam.totalDeadlineAt-Date.now())/60000));$('#mockResumeDescription').textContent=`Bắt đầu ${new Date(exam.startedAt).toLocaleString('vi-VN')} · còn khoảng ${remain} phút. Đồng hồ vẫn chạy khi bạn rời trang.`;}
+  $('#mockHistoryCount').textContent=`${state.mockHistory.filter(x=>x.status==='completed').length} lượt`;
+  renderMockHistory();
+  if(state.mockTickTimer){clearInterval(state.mockTickTimer);state.mockTickTimer=null;}
+}
+function renderMockHistory(){
+  const rows=state.mockHistory.filter(x=>x.status==='completed').slice(-5).reverse();
+  $('#mockHistoryList').innerHTML=rows.length?rows.map(item=>`<div class="mock-history-row"><strong>${escapeHtml(mockModeName(item.modeId))}</strong><span>${new Date(item.completedAt).toLocaleString('vi-VN')}</span><b>${Number(item.correct||0)}/${Number(item.questions||0)} · ${Number(item.accuracy||0)}%</b><small>Listening ${Number(item.listeningAccuracy||0)}% · Reading ${Number(item.readingAccuracy||0)}%</small></div>`).join(''):'<p class="muted">Bạn chưa hoàn thành bài thi nào.</p>';
+}
+function startMockExam(modeId){
+  if(state.mockExam?.status==='active'&&!window.confirm('Bạn đang có bài thi chưa hoàn tất. Bỏ bài hiện tại để tạo đề mới?'))return;
+  if(state.mockExam?.status==='active')markMockAttemptAbandoned();
+  try{
+    const used=state.mockUsageCounts||{};
+    const exam=createMockExam({modeId,listening:state.listening,readings:state.readings,usageCounts:used});
+    exam.reusedQuestionCount=exam.questionIds.filter(id=>(Number(used[id])||0)>0).length;
+    for(const id of exam.questionIds)state.mockUsageCounts[id]=(Number(state.mockUsageCounts[id])||0)+1;
+    state.mockExam=exam;state.lastMockResult=null;
+    state.mockHistory.push({attemptId:exam.id,modeId,status:'in-progress',startedAt:exam.startedAt,questionIds:[...exam.questionIds]});
+    state.mockHistory=state.mockHistory.slice(-60);saveMockStorage();if(exam.reusedQuestionCount)toast(`Đề mới có ${exam.reusedQuestionCount} câu từng xuất hiện trước đó; ngân hàng chưa đủ để tạo đề hoàn toàn mới ở mọi Part.`,'error');renderMockExam();
+  }catch(error){console.error(error);toast(error.message||'Không thể tạo đề thi thử.','error');}
+}
+function markMockAttemptAbandoned(){
+  const exam=state.mockExam;if(!exam)return;stopSpeech();if(state.mockTickTimer){clearInterval(state.mockTickTimer);state.mockTickTimer=null;}
+  const record=state.mockHistory.find(item=>item.attemptId===exam.id);if(record){record.status='abandoned';record.abandonedAt=Date.now();}
+  state.mockExam=null;saveMockStorage();
+}
+function resumeMockExam(){if(!state.mockExam)return;if(getMockSectionForTime(state.mockExam,Date.now())==='expired'){finishMockExam(true);return;}renderMockExam();}
+function discardMockExam(){if(!state.mockExam)return;if(!window.confirm('Bỏ bài thi đang làm? Các câu trả lời trong bài này sẽ bị xóa.'))return;markMockAttemptAbandoned();renderMockHome();}
+function getMockVisibleQuestions(){
+  const exam=state.mockExam;if(!exam)return[];
+  const area=exam.currentSection==='reading'?'reading':'listening';
+  const offset=area==='reading'?getExamQuestions(exam.sections.listening).length:0;
+  const rows=[];let number=offset;
+  for(const group of exam.sections[area].groups){for(const question of group.questions){number++;rows.push({group,question,number,area});}}
+  return rows;
+}
+function mockChoicesMarkup(group,question){
+  const isPart1=group.part==='Part 1';const choices=isPart1?['A','B','C','D']:question.choices;
+  return `<div class="mock-choice-grid">${choices.map((choice,index)=>`<button type="button" class="mock-choice-button ${state.mockExam.answers?.[question.id]===index?'is-selected':''}" data-mock-answer="${escapeHtml(question.id)}" data-choice-index="${index}" aria-pressed="${state.mockExam.answers?.[question.id]===index}"><strong>${String.fromCharCode(65+index)}</strong><span>${isPart1?'':escapeHtml(choice)}</span></button>`).join('')}</div>`;
+}
+function mockQuestionMarkup(group,question,number){
+  const flagged=(state.mockExam.flags||[]).includes(question.id);
+  return `<article class="mock-question-card" id="mock-question-${escapeHtml(question.id)}" data-mock-question-id="${escapeHtml(question.id)}"><div class="mock-question-line"><span class="mock-question-number">QUESTION ${number}</span><h4>${escapeHtml(question.question)}</h4><button type="button" class="mock-flag-button ${flagged?'is-flagged':''}" data-mock-flag="${escapeHtml(question.id)}" aria-pressed="${flagged}">${flagged?'★ Đã đánh dấu':'☆ Đánh dấu'}</button></div>${mockChoicesMarkup(group,question)}</article>`;
+}
+function mockGroupMarkup(group,numberById){
+  const first=group.questions[0],start=numberById.get(first?.id)||0;
+  const title=group.title||group.unitId;
+  const isListening=group.area==='listening';
+  let media='';
+  if(isListening){
+    const audioLabel=group.part==='Part 1'?'Nghe 4 mô tả ảnh':group.part==='Part 2'?'Nghe câu hỏi và chọn phản hồi':'Nghe toàn bộ nội dung trước khi trả lời';
+    media=`<div class="mock-group-audio"><button type="button" class="mock-audio-button" data-mock-audio="${escapeHtml(group.unitId)}">▶ Phát audio / TTS</button><small id="mock-audio-status-${escapeHtml(group.unitId)}">${audioLabel} · Transcript chỉ mở sau khi nộp bài.</small></div>`;
+    if(group.part==='Part 1')media+=`<figure class="mock-part1-frame"><img class="mock-part1-image" src="${escapeHtml(group.photo||group.image)}" data-fallback-src="${escapeHtml(group.image)}" alt="${escapeHtml(group.imageAlt)}" loading="lazy"><figcaption>PHOTOGRAPH · ${escapeHtml(title)}</figcaption></figure>`;
+  }else if(group.part!=='Part 5'){
+    const docs=group.documents||[];
+    if(docs.length)media=`<div class="mock-reading-passage">${docs.map(doc=>`<div class="reading-document-card"><span class="reading-passage-label">${escapeHtml(doc.label||'DOCUMENT')}</span><pre>${escapeHtml(doc.content||'')}</pre></div>`).join('')}</div>`;
+    else if(group.passage)media=`<div class="mock-reading-passage"><span class="reading-passage-label">${escapeHtml(group.documentType||group.part)}</span><pre>${escapeHtml(group.passage)}</pre></div>`;
+  }
+  const tip=group.part==='Part 2'?'Mỗi câu hỏi có một phản hồi phù hợp nhất.':group.part==='Part 3'||group.part==='Part 4'?'Nghe hết hội thoại/bài nói; các câu hỏi trong cùng nhóm được giữ nguyên thứ tự.':group.part==='Part 1'?'Quan sát ảnh và chọn câu mô tả đúng nhất.':'';
+  return `<section class="mock-question-group" data-mock-group="${escapeHtml(group.unitId)}"><header class="mock-group-header"><div><h3>${escapeHtml(title)}</h3><p>${escapeHtml(group.topic||tip)}</p></div><span class="mock-group-part">${escapeHtml(group.part)}</span></header>${media}${group.questions.map(question=>mockQuestionMarkup(group,question,numberById.get(question.id)||0)).join('')}</section>`;
+}
+function renderMockExam(){
+  const exam=state.mockExam;if(!exam)return;
+  $('#mockLanding').hidden=true;$('#mockResultStage').hidden=true;$('#mockExamStage').hidden=false;
+  const area=exam.currentSection==='reading'?'reading':'listening';const section=exam.sections[area];
+  const rows=getMockVisibleQuestions();const numberById=new Map(rows.map(row=>[row.question.id,row.number]));
+  const answered=rows.filter(row=>Number.isInteger(exam.answers?.[row.question.id])).length;
+  const flagged=(exam.flags||[]).filter(id=>rows.some(row=>row.question.id===id)).length;
+  $('#mockExamModeLabel').textContent=`${exam.modeLabel.toUpperCase()} · ${rows.length} CÂU TRONG PHẦN NÀY`;
+  $('#mockSectionEyebrow').textContent=area==='listening'?'SECTION I · LISTENING':'SECTION II · READING';
+  $('#mockSectionTitle').textContent=area==='listening'?'Listening Comprehension':'Reading Comprehension';
+  $('#mockSectionDescription').textContent=`${rows.length} câu hỏi · ${mockFormatDuration(section.seconds)} phút · ${section.groups.length} cụm bài`;
+  $('#mockAnsweredCount').textContent=`${answered} / ${rows.length}`;$('#mockAnsweredBar').style.width=`${rows.length?answered/rows.length*100:0}%`;
+  $('#mockMapCount').textContent=`${answered}/${rows.length} · ${flagged} đánh dấu`;
+  $('#mockQuestionMap').innerHTML=rows.map(row=>`<button type="button" class="mock-map-button ${Number.isInteger(exam.answers?.[row.question.id])?'is-answered':''} ${(exam.flags||[]).includes(row.question.id)?'is-flagged':''}" data-mock-jump="${escapeHtml(row.question.id)}" aria-label="Đến câu ${row.number}">${row.number}</button>`).join('');
+  $('#mockQuestionGroups').innerHTML=section.groups.map(group=>mockGroupMarkup(group,numberById)).join('');
+  $('#mockBottomProgress').textContent=`Đang hiển thị ${rows.length} câu · ${answered} đã chọn`;
+  $('#mockFinishSectionButton').hidden=true;$('#mockTestRules').innerHTML=area==='listening'?'<strong>Listening:</strong> nghe nội dung bằng nút phát; mỗi nhóm hội thoại/bài nói giữ nguyên các câu liên quan. Transcript và giải thích sẽ mở sau khi nộp bài. Hết giờ hệ thống tự chuyển sang Reading.':'<strong>Reading:</strong> quản lý thời gian cho từng câu, có thể đánh dấu câu cần quay lại. Không thể quay lại Listening sau khi phần này bắt đầu.';
+  updateMockTimer();
+  if(state.mockTickTimer)clearInterval(state.mockTickTimer);
+  state.mockTickTimer=setInterval(updateMockTimer,1000);
+}
+function updateMockTimer(){
+  const exam=state.mockExam;if(!exam||exam.status!=='active'){if(state.mockTickTimer){clearInterval(state.mockTickTimer);state.mockTickTimer=null;}return;}
+  const phase=getMockSectionForTime(exam,Date.now());
+  if(phase==='expired'){finishMockExam(true);return;}
+  if(phase!==exam.currentSection){exam.currentSection=phase;stopSpeech();saveMockStorage();toast('Đã hết giờ Listening. Hệ thống chuyển sang Reading.');renderMockExam();return;}
+  const end=phase==='listening'?exam.listeningDeadlineAt:exam.totalDeadlineAt;
+  const left=Math.max(0,Math.ceil((end-Date.now())/1000));
+  $('#mockTimerLabel').textContent=phase==='listening'?'LISTENING REMAINING':'READING REMAINING';
+  $('#mockTimerValue').textContent=mockFormatDuration(left);
+  $('#mockTimerHint').textContent=phase==='listening'?'Tự chuyển sang Reading khi hết giờ':'Tự nộp bài khi hết 120/60/15 phút';
+  $('#mockTimerValue').classList.toggle('is-urgent',left<=300);
+}
+function setMockAnswer(questionId,choiceIndex){
+  const exam=state.mockExam;if(!exam||exam.status!=='active')return;
+  const livePhase=getMockSectionForTime(exam,Date.now());if(livePhase==='expired'||livePhase!==exam.currentSection){updateMockTimer();return;}
+  const rows=getMockVisibleQuestions();if(!rows.some(row=>row.question.id===questionId))return;
+  const row=rows.find(item=>item.question.id===questionId);if(!Number.isInteger(choiceIndex)||choiceIndex<0||choiceIndex>=row.question.choices.length)return;
+  exam.answers[questionId]=choiceIndex;saveMockStorage();renderMockExam();
+  document.getElementById(`mock-question-${questionId}`)?.scrollIntoView({block:'nearest',behavior:'smooth'});
+}
+function toggleMockFlag(questionId){const exam=state.mockExam;if(!exam||exam.status!=='active')return;const flags=new Set(exam.flags||[]);flags.has(questionId)?flags.delete(questionId):flags.add(questionId);exam.flags=[...flags];saveMockStorage();renderMockExam();}
+function submitMockExam(){if(!state.mockExam||state.mockExam.status!=='active')return;const livePhase=getMockSectionForTime(state.mockExam,Date.now());if(livePhase==='expired'){finishMockExam(true);return;}if(livePhase!==state.mockExam.currentSection){updateMockTimer();return;}const score=scoreMockExam(state.mockExam);const left=score.total.questions-score.total.answered;if(!window.confirm(`Bạn đã trả lời ${score.total.answered}/${score.total.questions} câu. ${left?`${left} câu đang bỏ trống và sẽ tính là chưa đúng. `:''}Nộp bài và xem kết quả?`))return;finishMockExam(false);}
+function finishMockExam(timedOut=false){
+  const exam=state.mockExam;if(!exam||exam.status!=='active')return;
+  stopSpeech();if(state.mockTickTimer){clearInterval(state.mockTickTimer);state.mockTickTimer=null;}
+  exam.status='completed';exam.completedAt=Date.now();exam.timedOut=Boolean(timedOut);const score=scoreMockExam(exam);exam.score=score;
+  const record=state.mockHistory.find(item=>item.attemptId===exam.id);
+  if(record){Object.assign(record,{status:'completed',completedAt:exam.completedAt,correct:score.total.correct,questions:score.total.questions,accuracy:score.total.accuracy,listeningAccuracy:score.listening.accuracy,readingAccuracy:score.reading.accuracy});}
+  state.lastMockResult={exam,score};state.mockExam=null;saveMockStorage();renderMockResult(exam,score);
+}
+function mockSectionScoreMarkup(label,data,detail){
+  const title=label==='LISTENING'?'LISTENING · PART 1–4':'READING · PART 5–7';
+  const status=data.accuracy>=85?'Nền tảng tốt':data.accuracy>=75?'Đã đạt mốc luyện tập':data.accuracy>=50?'Cần tăng độ chính xác':'Cần củng cố ưu tiên';
+  const next=data.target75?`Cần thêm ${data.target75} câu đúng ở một bài cùng quy mô để chạm mốc 75%.`:'Bạn đã đạt mốc nội bộ 75%; bước tiếp theo là hướng tới 85%.';
+  return `<article class="mock-score-card"><div class="mock-score-head"><div><small>SECTION SCORE</small><strong>${title}</strong></div><span>${status}</span></div><div class="mock-score-body"><div class="mock-score-dial" style="--score-value:${data.accuracy}%"><div><strong>${data.accuracy}%</strong><small>CHÍNH XÁC</small></div></div><div class="mock-score-details"><div class="mock-score-raw"><strong>${data.correct}</strong><span>/ ${data.questions} câu đúng</span></div><p>${detail}</p><div class="mock-score-target"><strong>MỤC TIÊU 75%</strong><span>${next}</span></div><div class="mock-score-next">${data.unanswered?`${data.unanswered} câu bỏ trống cũng cần được xử lý.`:'Hãy tiếp tục giữ tốc độ và độ chính xác ở phần này.'}</div></div></div></article>`;
+}
+function mockReviewGroupMarkup(group,numberById,exam){
+  const listeningTranscript=group.area==='listening'&&(group.segments||[]).length?`<details class="mock-review-transcript"><summary>Transcript sau khi thi</summary><div>${group.segments.map(segment=>`<p><strong>${escapeHtml(segment.speaker||'Speaker')}:</strong> ${escapeHtml(segment.text||'')}</p>`).join('')}${group.translation?`<p class="mock-review-translation">${escapeHtml(group.translation)}</p>`:''}</div></details>`:'';
+  const readingText=(group.documents||[]).length?group.documents.map(doc=>`<div class="reading-document-card"><strong>${escapeHtml(doc.label||'DOCUMENT')}</strong><pre>${escapeHtml(doc.content||'')}</pre></div>`).join(''):group.passage?`<pre>${escapeHtml(group.passage)}</pre>`:'';
+  const readingContext=group.area==='reading'&&readingText?`<details class="mock-review-transcript"><summary>Xem lại đoạn đọc / tài liệu</summary><div>${readingText}</div></details>`:'';
+  return `<div class="mock-review-part"><h3>${escapeHtml(group.part)} · ${escapeHtml(group.title)}</h3>${listeningTranscript}${readingContext}${group.questions.map(question=>{
+    const selected=Number.isInteger(exam.answers?.[question.id])?exam.answers[question.id]:null;const correct=selected===question.answerIndex;const isP1=group.part==='Part 1';
+    const answerText=isP1?`(${String.fromCharCode(65+question.answerIndex)}) ${group.segments?.[question.answerIndex]?.text||''}`:`(${String.fromCharCode(65+question.answerIndex)}) ${question.choices[question.answerIndex]||''}`;
+    const selectedText=selected===null?'Chưa trả lời':isP1?String.fromCharCode(65+selected):`(${String.fromCharCode(65+selected)}) ${question.choices[selected]||''}`;
+    return `<article class="mock-review-question"><h4>Câu ${numberById.get(question.id)||''} · ${correct?'Đúng':selected===null?'Bỏ trống':'Chưa đúng'}</h4><div class="mock-review-answer">Bạn chọn: <strong class="${correct?'':'is-wrong'}">${escapeHtml(selectedText)}</strong><br>Đáp án: <strong>${escapeHtml(answerText)}</strong></div><p>${escapeHtml(question.explanation||'Chưa có giải thích biên tập cho câu này.')}</p></article>`;
+  }).join('')}</div>`;
+}
+function renderMockResult(exam,score){
+  if(state.mockTickTimer){clearInterval(state.mockTickTimer);state.mockTickTimer=null;}
+  $('#mockLanding').hidden=true;$('#mockExamStage').hidden=true;const stage=$('#mockResultStage');stage.hidden=false;
+  const used=Math.max(0,Math.min(exam.totalMinutes*60,Math.round(((exam.completedAt||Date.now())-exam.startedAt)/1000)));
+  const listeningAccuracy=score.listening.accuracy,readingAccuracy=score.reading.accuracy;
+  const partRows=Object.entries(score.parts).sort((a,b)=>Number(a[0].replace('Part ',''))-Number(b[0].replace('Part ','')));
+  const weakest=partRows.filter(([,item])=>item.accuracy<75).sort((a,b)=>a[1].accuracy-b[1].accuracy);
+  const recs=weakest.length?weakest.slice(0,4).map(([part,item],index)=>`<div class="mock-recommendation"><strong>${index===0?'ƯU TIÊN CAO':'CẦN CỦNG CỐ'} · ${escapeHtml(part)} · ${item.accuracy}% (${item.correct}/${item.questions})</strong><p>${escapeHtml(MOCK_PART_TIPS[part])} Sau khi ôn, hãy làm lại một nhóm câu mới cùng Part và đặt mục tiêu tối thiểu 75%.</p></div>`).join(''):'<div class="mock-recommendation"><strong>Tiếp tục duy trì</strong><p>Độ chính xác ở cả các Part đã đạt từ 75% trở lên. Hãy luyện đề mới để kiểm tra khả năng duy trì kết quả với câu hỏi chưa gặp và nâng dần mục tiêu lên 85%.</p></div>';
+  const lqs=getExamQuestions(exam.sections.listening),rqs=getExamQuestions(exam.sections.reading);const numberById=new Map([...lqs,...rqs].map((q,index)=>[q.id,index+1]));
+  const review=[...exam.sections.listening.groups,...exam.sections.reading.groups].map(group=>mockReviewGroupMarkup(group,numberById,exam)).join('');
+  const reused=Number(exam.reusedQuestionCount||0);
+  stage.innerHTML=`<div class="mock-result-hero"><div><p class="eyebrow">${escapeHtml(exam.modeLabel.toUpperCase())} · KẾT QUẢ LUYỆN TẬP</p><h1>${score.total.accuracy>=75?'Bạn đã đạt mốc luyện tập 75%!': 'Đã hoàn thành bài thi'}</h1><p>${new Date(exam.completedAt).toLocaleString('vi-VN')} · Thời gian thực tế ${mockFormatDuration(used)} ${exam.timedOut?'· Tự động nộp khi hết giờ':''}</p></div><div class="mock-result-total"><strong>${score.total.correct}/${score.total.questions}</strong><span>TỔNG CÂU ĐÚNG · ${score.total.accuracy}%</span></div></div>
+    <section class="mock-result-skills"><div class="mock-result-section-heading"><div><p class="eyebrow">YOUR TOEIC PRACTICE REPORT</p><h2>Kết quả theo hai kỹ năng</h2><p>Điểm số hiện tại theo số câu đúng và tỷ lệ chính xác của bài thi này.</p></div><span class="mock-result-target-chip">Mục tiêu nội bộ: ≥ 75%</span></div><div class="mock-result-score-grid">${mockSectionScoreMarkup('LISTENING',score.listening,`${score.listening.answered} đã trả lời · ${score.listening.unanswered} bỏ trống`)}${mockSectionScoreMarkup('READING',score.reading,`${score.reading.answered} đã trả lời · ${score.reading.unanswered} bỏ trống`)}</div></section>
+    <div class="mock-result-note"><strong>${escapeHtml(mockResultBand(score.total.accuracy))}.</strong> Đây là điểm luyện tập theo số câu đúng, chưa phải điểm TOEIC quy đổi. ETS báo Listening và Reading riêng trên thang 5–495, nhưng quy đổi số câu đúng bằng phương pháp equating theo từng đề; ứng dụng chưa có dữ liệu hiệu chuẩn tương ứng nên không tự tạo điểm /495 hoặc /990. Ngân hàng hiện tại được ưu tiên câu chưa dùng gần đây; lần này có ${reused} câu từng xuất hiện trong lịch sử cục bộ.</div>
+    <section class="panel"><div class="panel-header"><div><h3>Phân tích theo từng Part</h3><p class="muted">Mục tiêu luyện tập nội bộ: từ 75% đúng trở lên.</p></div></div><div class="mock-part-grid">${partRows.map(([part,item])=>`<div class="mock-part-result"><strong>${escapeHtml(part)}</strong><span>${item.correct}/${item.questions} đúng</span><b>${item.accuracy}%</b><div class="mock-part-track"><i style="width:${item.accuracy}%"></i></div></div>`).join('')}</div></section>
+    <section class="panel"><div class="panel-header"><div><h3>Bạn nên cố gắng ở đâu?</h3><p class="muted">Ưu tiên những Part có tỷ lệ chính xác thấp nhất.</p></div></div><div class="mock-recommendation-list">${recs}</div></section>
+    <div class="mock-result-actions"><button type="button" class="primary-button" data-mock-new="${escapeHtml(exam.modeId)}">Làm đề mới cùng chế độ</button><button type="button" class="secondary-button" data-mock-home>Về danh sách thi thử</button></div>
+    <details class="mock-review-details"><summary>Xem lại toàn bộ ${score.total.questions} câu, đáp án và giải thích</summary><div class="mock-review-body">${review}</div></details>`;
 }
 
 
@@ -1289,8 +1490,8 @@ function renderFlashHome(){
 function flashShuffle(a){const x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]];}return x;}
 function flashPickBatch(topic,size,exclude=[]){const now=Date.now(),pool=state.words.filter(w=>flashTopicMatches(w,topic)&&!exclude.includes(w.id));const due=pool.filter(w=>(state.flashProgress[w.id]?.dueAt||0)<=now);const ranked=flashShuffle(pool).sort((a,b)=>{const pa=state.flashProgress[a.id]||{},pb=state.flashProgress[b.id]||{};const score=x=>{const p=state.flashProgress[x.id]||{};return (p.lapses||0)*4+(p.dueAt&&p.dueAt<=now?8:0)-(p.interval||0)*.25;};return score(b)-score(a);});const dueRank=flashShuffle(due);const combined=[...dueRank,...ranked.filter(w=>!dueRank.some(d=>d.id===w.id))];return flashShuffle(combined.slice(0,Math.min(size,pool.length)));}
 function startFlashSession(topic='ALL',size=10,includeIds=[]){const words=includeIds.map(flashRecord).filter(Boolean);const selected=words.length?words:flashPickBatch(topic,size);if(!selected.length){toast('Chủ đề này chưa có từ vựng.','error');return;}state.flashSession={topic,size: selected.length,words:selected,index:0,flipped:false,reviewIds:includeIds};$('#flashQuiz').hidden=true;$('#flashResult').hidden=true;$('#flashSession').hidden=false;$('#flashSessionTitle').textContent=`${FLASH_TOPIC_META[topic]?.label||FLASH_TOPIC_GROUPS.find(x=>x.id===topic)?.label||'Học tổng hợp'} · ${selected.length} từ`;$('#flashSessionEyebrow').textContent=includeIds.length?'REVIEW · ÔN TỪ CHƯA NHỚ':'VOCABULARY QUEST';renderFlashCard();$('#flashSession').scrollIntoView({behavior:'smooth',block:'start'});}
-function renderFlashCard(){const ss=state.flashSession;if(!ss)return;const w=ss.words[ss.index];if(!w)return;const sense=getPrimarySense(w),example=w.examples?.[0]||{};const topic=w.topics?.[0]||'OFFICE',meta=FLASH_TOPIC_META[topic]||FLASH_TOPIC_META.ALL;$('#flashProgressText').textContent=`${ss.index+1} / ${ss.words.length}`;$('#flashProgressBar').style.width=`${(ss.index+1)/ss.words.length*100}%`;
- $('#flashcardStage').innerHTML=`<article class="flashcard ${ss.flipped?'is-flipped':''}"><div class="flashcard-art"><img loading="lazy" decoding="async" src="./assets/topics/${escapeHtml(meta.file||'office.webp')}" alt="Hình minh họa ${escapeHtml(meta.label||'từ vựng')}"><span class="flash-topic-pill">${escapeHtml(meta.label||topic)}</span><span class="flash-card-count">${ss.index+1}/${ss.words.length}</span></div><div class="flashcard-content">${ss.flipped?`<span class="flash-kicker">MEANING & USAGE</span><h2>${escapeHtml(displayWord(w.word))}</h2><p class="flash-ipa">${escapeHtml(w.phonetic?.us||'Chưa có IPA')} · ${escapeHtml(getAllPos(w).join(' / ')||'Vocabulary')}</p><h3>${escapeHtml(sense.meaning_vi||'Chưa có nghĩa')}</h3><p class="flash-definition">${escapeHtml(sense.definition_en||'')}</p><div class="flash-example"><small>IN CONTEXT</small><p>${escapeHtml(example.en||'')}</p><span>${escapeHtml(example.vi||'')}</span></div><div class="flash-collocations">${(w.collocations||[]).slice(0,3).map(x=>`<span>${escapeHtml(x)}</span>`).join('')}</div><div class="flash-related-grid"><div><small>ĐỒNG NGHĨA</small><p>${(sense.synonyms||[]).slice(0,3).map(escapeHtml).join(' · ')||'Đang cập nhật'}</p></div><div><small>TRÁI NGHĨA</small><p>${(sense.antonyms||[]).slice(0,3).map(escapeHtml).join(' · ')||'Đang cập nhật'}</p></div></div>${w.verb_forms?`<div class="flash-verb-forms"><span>V1 <b>${escapeHtml(w.verb_forms.v1||w.word)}</b></span><span>V2 <b>${escapeHtml(w.verb_forms.v2||'—')}</b></span><span>V3 <b>${escapeHtml(w.verb_forms.v3||'—')}</b></span><span>V-ing <b>${escapeHtml(w.verb_forms.ving||'—')}</b></span></div>`:''}`:`<span class="flash-kicker">GUESS THE WORD</span><h2>${escapeHtml(displayWord(w.word))}</h2><p class="flash-ipa">${escapeHtml(w.phonetic?.us||'')}</p><p class="flash-tap-hint">Bạn đoán nghĩa và cách dùng trước khi lật thẻ nhé!</p>`}<div class="flashcard-buttons"><button class="secondary-button" data-flash-speak="${escapeHtml(w.word)}">🔊 Nghe phát âm</button><button class="primary-button" data-flash-flip>${ss.flipped?'Đã xem · Tiếp tục':'Lật thẻ xem nghĩa'} ↻</button></div></div></article>`;
+function renderFlashCard(){const ss=state.flashSession;if(!ss)return;const w=ss.words[ss.index];if(!w)return;const sense=getPrimarySense(w),example=w.examples?.[0]||{};const topic=w.topics?.[0]||'OFFICE',meta=FLASH_TOPIC_META[topic]||FLASH_TOPIC_META.ALL;const imagePath=typeof w.image==='string'&&w.image.startsWith('./assets/vocabulary/')&&!w.image.includes('..')&&/\.(webp|avif|jpe?g|png)$/i.test(w.image)&&w.imageAlt&&w.imageStatus==='approved'?w.image:'';const imageMarkup=imagePath?`<div class="flashcard-art"><img loading="lazy" decoding="async" src="${escapeHtml(imagePath)}" alt="${escapeHtml(w.imageAlt)}"><span class="flash-topic-pill">${escapeHtml(meta.label||topic)}</span><span class="flash-card-count">${ss.index+1}/${ss.words.length}</span></div>`:'';$('#flashProgressText').textContent=`${ss.index+1} / ${ss.words.length}`;$('#flashProgressBar').style.width=`${(ss.index+1)/ss.words.length*100}%`;
+ $('#flashcardStage').innerHTML=`<article class="flashcard ${imageMarkup?'has-approved-art':'flashcard-no-art'} ${ss.flipped?'is-flipped':''}">${imageMarkup}<div class="flashcard-content"><div class="flashcard-meta"><span class="flash-topic-pill">${escapeHtml(meta.label||topic)}</span><span class="flash-card-count">${ss.index+1}/${ss.words.length}</span></div>${ss.flipped?`<span class="flash-kicker">MEANING & USAGE</span><h2>${escapeHtml(displayWord(w.word))}</h2><p class="flash-ipa">${escapeHtml(w.phonetic?.us||'Chưa có IPA')} · ${escapeHtml(getAllPos(w).join(' / ')||'Vocabulary')}</p><h3>${escapeHtml(sense.meaning_vi||'Chưa có nghĩa')}</h3><p class="flash-definition">${escapeHtml(sense.definition_en||'')}</p><div class="flash-example"><small>IN CONTEXT</small><p>${escapeHtml(example.en||'')}</p><span>${escapeHtml(example.vi||'')}</span></div><div class="flash-collocations">${(w.collocations||[]).slice(0,3).map(x=>`<span>${escapeHtml(x)}</span>`).join('')}</div><div class="flash-related-grid"><div><small>ĐỒNG NGHĨA</small><p>${(sense.synonyms||[]).slice(0,3).map(escapeHtml).join(' · ')||'Đang cập nhật'}</p></div><div><small>TRÁI NGHĨA</small><p>${(sense.antonyms||[]).slice(0,3).map(escapeHtml).join(' · ')||'Đang cập nhật'}</p></div></div>${w.verb_forms?`<div class="flash-verb-forms"><span>V1 <b>${escapeHtml(w.verb_forms.v1||w.word)}</b></span><span>V2 <b>${escapeHtml(w.verb_forms.v2||'—')}</b></span><span>V3 <b>${escapeHtml(w.verb_forms.v3||'—')}</b></span><span>V-ing <b>${escapeHtml(w.verb_forms.ving||'—')}</b></span></div>`:''}`:`<span class="flash-kicker">GUESS THE WORD</span><h2>${escapeHtml(displayWord(w.word))}</h2><p class="flash-ipa">${escapeHtml(w.phonetic?.us||'')}</p><p class="flash-tap-hint">Bạn đoán nghĩa và cách dùng trước khi lật thẻ nhé!</p>`}<div class="flashcard-buttons"><button class="secondary-button" data-flash-speak="${escapeHtml(w.word)}">🔊 Nghe phát âm</button><button class="primary-button" data-flash-flip>${ss.flipped?'Đã xem · Tiếp tục':'Lật thẻ xem nghĩa'} ↻</button></div></div></article>`;
  $('#flashSessionActions').innerHTML=`<button class="text-button" data-flash-exit>Thoát lượt học</button><span class="muted">${ss.flipped?'Đọc ví dụ và nghe phát âm trước khi tiếp tục.':'Hãy thử đoán nghĩa trước khi lật thẻ.'}</span>`;
 }
 function finishFlashLearning(){const ss=state.flashSession;if(!ss)return;ss.words.forEach(w=>{const p=state.flashProgress[w.id]||{};p.lastSeen=Date.now();p.reps=(p.reps||0)+1;p.dueAt=Date.now()+Math.max(1,p.interval||1)*86400000;state.flashProgress[w.id]=p;});dbSet('flashProgress',state.flashProgress);ss.quiz=flashShuffle(ss.words);state.flashQuizIndex=0;state.flashQuizAnswers=[];$('#flashSession').hidden=true;$('#flashQuiz').hidden=false;renderFlashQuiz();$('#flashQuiz').scrollIntoView({behavior:'smooth',block:'start'});}
@@ -1334,6 +1535,23 @@ function bindEvents(){
   $('#grammarSearch').addEventListener('input',renderGrammarLibrary); $('#grammarCategoryFilter').addEventListener('change',renderGrammarLibrary); $('#grammarLevelFilter').addEventListener('change',renderGrammarLibrary);
   $('#readingSearch').addEventListener('input',renderReadingLibrary); $('#readingPartFilter')?.addEventListener('change',renderReadingLibrary); $('#readingTopicFilter').addEventListener('change',renderReadingLibrary); $('#readingLevelFilter').addEventListener('change',renderReadingLibrary);
   $('#listeningSearch').addEventListener('input',renderListeningLibrary); $('#listeningPartFilter').addEventListener('change',renderListeningLibrary); $('#listeningLevelFilter').addEventListener('change',renderListeningLibrary);
+  $('#page-mock')?.addEventListener('click',e=>{
+    const start=e.target.closest('[data-mock-start]');if(start){startMockExam(start.dataset.mockStart);return;}
+    const answer=e.target.closest('[data-mock-answer]');if(answer){setMockAnswer(answer.dataset.mockAnswer,Number(answer.dataset.choiceIndex));return;}
+    const flag=e.target.closest('[data-mock-flag]');if(flag){toggleMockFlag(flag.dataset.mockFlag);return;}
+    const audio=e.target.closest('[data-mock-audio]');if(audio){playListeningAudio(audio.dataset.mockAudio,{statusElement:document.getElementById(`mock-audio-status-${audio.dataset.mockAudio}`)});return;}
+    const jump=e.target.closest('[data-mock-jump]');if(jump){document.getElementById(`mock-question-${jump.dataset.mockJump}`)?.scrollIntoView({behavior:'smooth',block:'center'});return;}
+    if(e.target.closest('#mockResumeButton')){resumeMockExam();return;}
+    if(e.target.closest('#mockDiscardButton')){discardMockExam();return;}
+    if(e.target.closest('#mockSubmitButton')){submitMockExam();return;}
+    if(e.target.closest('#mockClearFlagsButton')){if(state.mockExam){state.mockExam.flags=[];saveMockStorage();renderMockExam();}return;}
+    const newExam=e.target.closest('[data-mock-new]');if(newExam){state.lastMockResult=null;renderMockHome();startMockExam(newExam.dataset.mockNew);return;}
+    if(e.target.closest('[data-mock-home]')){state.lastMockResult=null;saveMockStorage();renderMockHome();return;}
+  });
+  document.addEventListener('error',event=>{
+    const image=event.target;if(!(image instanceof HTMLImageElement))return;
+    if(image.matches('.mock-part1-image')&&!image.dataset.fallbackApplied){const fallback=image.dataset.fallbackSrc;if(fallback&&image.src!==new URL(fallback,document.baseURI).href){image.dataset.fallbackApplied='1';image.src=fallback;return;}image.closest('.mock-part1-frame')?.classList.add('image-missing');}
+  },true);
   $('#flashTopicGrid')?.addEventListener('click',e=>{const b=e.target.closest('[data-flash-topic]');if(b)startFlashSession(b.dataset.flashTopic,10);});
   $('#flashTopicSearch')?.addEventListener('input',renderFlashHome);
   $('#flashcardStage')?.addEventListener('click',e=>{const flip=e.target.closest('[data-flash-flip]'),speak=e.target.closest('[data-flash-speak]');if(flip){const ss=state.flashSession;ss.flipped=!ss.flipped;if(ss.flipped)renderFlashCard();else{ss.index++;if(ss.index>=ss.words.length)finishFlashLearning();else renderFlashCard();}}if(speak)speakText(speak.dataset.flashSpeak,null,'',state.settings.tts?.defaultGender||'female');});
@@ -1578,12 +1796,12 @@ function speakUtterance(text,{accent='en-US',voice=null,gender='female',rate=nul
     try{window.speechSynthesis.speak(utterance);}catch(error){finish(false);}
   });
 }
-async function playListeningAudio(id){
+async function playListeningAudio(id, options={}){
   if(!('speechSynthesis'in window)||typeof SpeechSynthesisUtterance==='undefined'){toast('Thiết bị chưa hỗ trợ Text-to-Speech.','error');return;}
   const item=state.listening.find(x=>x.id===id);if(!item)return;
   stopSpeech();const playbackToken=++listeningPlaybackToken;
   const cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})};
-  const speed=Number($('#listeningSpeed')?.value||cfg.rate);const status=$('#listeningPlayerStatus');
+  const speed=Number(options.speed??$('#listeningSpeed')?.value??cfg.rate);const status=options.statusElement||$('#listeningPlayerStatus');
   const segments=item.segments||[];if(!segments.length)return;
   const speakerVoices=new Map();const usedVoiceNames={female:[],male:[]};
   const resolveSpeakerVoice=segment=>{
@@ -1741,5 +1959,5 @@ function renderDeviceGreeting(){
 
 function updateDate(){const now=new Date();$('#todayLabel').textContent=new Intl.DateTimeFormat('vi-VN',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(now);}
 async function registerSW(){if(!('serviceWorker'in navigator))return null;try{const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./'});await navigator.serviceWorker.ready;state.swRegistration=registration;state.notificationProvider=new LocalNotificationProvider(()=>state.swRegistration);return registration;}catch(err){console.warn('Service Worker chưa đăng ký được:',err);state.notificationProvider=new LocalNotificationProvider(()=>null);return null;}}
-async function init(){bindEvents();updateDate();renderDeviceGreeting();try{await loadData();await initializePractice();}catch(err){console.error(err);$('#metricWords').textContent='!';toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}await registerSW();initializeInstallInvite();}
+async function init(){bindEvents();updateDate();renderDeviceGreeting();try{await loadData();await initializePractice();loadMockState();}catch(err){console.error(err);$('#metricWords').textContent='!';toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}await registerSW();initializeInstallInvite();}
 init();

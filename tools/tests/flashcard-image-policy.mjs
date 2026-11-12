@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+
+const app = fs.readFileSync(new URL('../../assets/js/app.js', import.meta.url), 'utf8');
+const css = fs.readFileSync(new URL('../../assets/css/app.css', import.meta.url), 'utf8');
+const vocabularyFiles = fs.readdirSync(new URL('../../data/vocabulary/', import.meta.url)).filter(name => /^[A-Z]\.json$/.test(name));
+const words = vocabularyFiles.flatMap(name => JSON.parse(fs.readFileSync(new URL(`../../data/vocabulary/${name}`, import.meta.url), 'utf8')).words || []);
+assert.match(app, /w\.imageStatus==='approved'/, 'a vocabulary image must be explicitly approved');
+assert.match(app, /w\.imageAlt/, 'a vocabulary image must have descriptive alt text');
+assert.match(app, /\.\/assets\/vocabulary\//, 'vocabulary images must live in their dedicated asset folder');
+assert.match(app, /flashcard-no-art/, 'flashcards without a word-specific image must use the text-first layout');
+const cardRenderer = app.slice(app.indexOf('function renderFlashCard()'), app.indexOf('function finishFlashLearning()'));
+assert.doesNotMatch(cardRenderer, /assets\/topics\//, 'topic art must not be reused as an individual vocabulary image');
+assert.match(css, /\.flashcard-no-art\{grid-template-columns:minmax\(0,1fr\)/);
+assert.match(css, /\.flashcard\.has-approved-art \.flashcard-art\{aspect-ratio:4\/3/);
+assert.match(css, /@media\(max-width:760px\)[\s\S]*\.flashcard\.has-approved-art \.flashcard-art\{[^}]*aspect-ratio:4\/3/);
+assert.ok(words.length >= 900, 'canonical A–Z vocabulary corpus should be present');
+const unapproved = words.filter(word => word.image && word.imageStatus !== 'approved');
+assert.equal(unapproved.length, 0, 'no unapproved vocabulary image metadata may be introduced');
+console.log(`Flashcard image policy PASS: ${words.length} canonical words; no generic topic image on word cards; explicit approved image contract; responsive image frame.`);
