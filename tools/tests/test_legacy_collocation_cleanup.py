@@ -39,7 +39,10 @@ class LegacyCollocationCleanupTests(unittest.TestCase):
         batch = json.loads((ROOT / "data/vocabulary/batch-006.json").read_text(encoding="utf-8"))
         self.assertTrue(baseline.issubset(ids))
         self.assertEqual(len(batch["words"]), 43)
-        self.assertEqual(len(ids), 971)
+        batch_018 = json.loads((ROOT / "data/vocabulary/batch-007.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(batch_018["words"]), 8)
+        self.assertTrue({w["id"] for w in batch_018["words"]}.issubset(ids))
+        self.assertEqual(len(ids), 979)
 
 
 if __name__ == "__main__":

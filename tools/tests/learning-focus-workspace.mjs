@@ -43,12 +43,16 @@ assert.match(app, /indexedDB\.open\(DB_NAME, 1\)/, 'personal IndexedDB schema ve
 assert.doesNotMatch(app, /indexedDB\.open\(DB_NAME,\s*[2-9]/, 'no personal IndexedDB migration is introduced');
 
 const batch = JSON.parse(read('data/vocabulary/batch-006.json'));
+const batch018 = JSON.parse(read('data/vocabulary/batch-007.json'));
 assert.equal(batch.count, 43);
 assert.equal(batch.words.length, 43);
+assert.equal(batch018.words.length, 8);
 assert.match(batch.editorialStatus, /pending/i);
 const canonical = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').flatMap(letter => JSON.parse(read(`data/vocabulary/${letter}.json`)).words || []);
 const words = new Set(canonical.map(item => item.word.toLowerCase()));
+assert.ok(batch018.words.every(w => canonical.some(c => c.id === w.id)));
+assert.ok(batch018.words.every(w => words.has(w.word.toLowerCase())));
 for (const item of batch.words) assert.ok(words.has(item.word.toLowerCase()), `Batch 006 word not in A-Z vocabulary: ${item.word}`);
 assert.equal(canonical.length, new Set(canonical.map(item => item.id)).size, 'canonical vocabulary IDs must remain unique');
 
-console.log(`Learning focus workspace PASS: ${ids.length} unique IDs, flashcard/review flow, shared modal detail styling, responsive rules, unchanged IndexedDB v1, and 43 Batch 006 vocabulary additions (${canonical.length} canonical headwords).`);
+console.log(`Learning focus workspace PASS: ${ids.length} unique IDs, flashcard/review flow, shared modal detail styling, responsive rules, unchanged IndexedDB v1, and Batch 006/007 vocabulary additions (${canonical.length} canonical headwords).`);

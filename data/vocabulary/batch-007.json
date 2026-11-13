@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "batch": "007",
+  "version": "2.28.0",
+  "focus": "TOEIC vocabulary expansion: procurement, finance, HR, logistics and corporate operations",
+  "count": 8,
+  "words": [
+    {
+      "id": "bidder-n",
+      "word": "bidder",
+      "phonetic": {
+        "us": "/ˈbɪd.ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người dự thầu; bên trả giá",
+          "definition_en": "a person or company that offers to pay a particular amount in a competition or auction",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lowest bidder was awarded the construction contract.",
+          "vi": "Nhà thầu đưa ra giá thấp nhất đã được trao hợp đồng xây dựng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "successful bidder",
+        "potential bidder"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "affidavit-n",
+      "word": "affidavit",
+      "phonetic": {
+        "us": "/ˌæf.əˈdeɪ.vɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bản khai có tuyên thệ",
+          "definition_en": "a written statement that someone makes after promising that it is true",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The applicant submitted an affidavit confirming the address.",
+          "vi": "Người nộp đơn đã gửi bản khai xác nhận địa chỉ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sworn affidavit",
+        "file an affidavit"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "bond-n",
+      "word": "bond",
+      "phonetic": {
+        "us": "/bɑːnd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "trái phiếu; khoản bảo đảm",
+          "definition_en": "a financial agreement in which money is lent and repaid with interest, or a sum held as security",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company issued a bond to finance the expansion.",
+          "vi": "Công ty phát hành trái phiếu để tài trợ việc mở rộng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "government bond",
+        "performance bond"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "broker-n",
+      "word": "broker",
+      "phonetic": {
+        "us": "/ˈbroʊ.kɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "môi giới; nhà môi giới",
+          "definition_en": "a person or company that arranges transactions between buyers and sellers",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The broker negotiated a better rate for the client.",
+          "vi": "Nhà môi giới đã thương lượng mức giá tốt hơn cho khách hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "insurance broker",
+        "real estate broker"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "capital-n",
+      "word": "capital",
+      "phonetic": {
+        "us": "/ˈkæp.ɪ.t̬əl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vốn; nguồn vốn",
+          "definition_en": "money or property used to start or operate a business",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The firm needs additional capital to open a new branch.",
+          "vi": "Công ty cần thêm vốn để mở chi nhánh mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "working capital",
+        "capital investment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "claimant-n",
+      "word": "claimant",
+      "phonetic": {
+        "us": "/ˈkleɪ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người yêu cầu bồi thường; nguyên đơn",
+          "definition_en": "a person who makes a formal claim for money or a legal right",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The claimant provided receipts to support the insurance claim.",
+          "vi": "Người yêu cầu bồi thường cung cấp hóa đơn để chứng minh yêu cầu bảo hiểm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "insurance claimant",
+        "claimant information"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "lien-n",
+      "word": "lien",
+      "phonetic": {
+        "us": "/liːn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quyền giữ tài sản để bảo đảm khoản nợ",
+          "definition_en": "a legal right to keep or claim property until a debt is paid",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank placed a lien on the property.",
+          "vi": "Ngân hàng đặt quyền giữ tài sản đối với bất động sản.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "tax lien",
+        "place a lien on"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "margin-n",
+      "word": "margin",
+      "phonetic": {
+        "us": "/ˈmɑːr.dʒɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "biên lợi nhuận; mức chênh lệch",
+          "definition_en": "the difference between the cost of a product and its selling price",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The retailer increased its profit margin this year.",
+          "vi": "Nhà bán lẻ đã tăng biên lợi nhuận trong năm nay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "profit margin",
+        "gross margin"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    }
+  ]
+}

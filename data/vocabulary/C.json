@@ -5076,6 +5076,76 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "capital-n",
+      "word": "capital",
+      "phonetic": {
+        "us": "/ˈkæp.ɪ.t̬əl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vốn; nguồn vốn",
+          "definition_en": "money or property used to start or operate a business",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The firm needs additional capital to open a new branch.",
+          "vi": "Công ty cần thêm vốn để mở chi nhánh mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "working capital",
+        "capital investment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "claimant-n",
+      "word": "claimant",
+      "phonetic": {
+        "us": "/ˈkleɪ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người yêu cầu bồi thường; nguyên đơn",
+          "definition_en": "a person who makes a formal claim for money or a legal right",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The claimant provided receipts to support the insurance claim.",
+          "vi": "Người yêu cầu bồi thường cung cấp hóa đơn để chứng minh yêu cầu bảo hiểm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "insurance claimant",
+        "claimant information"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

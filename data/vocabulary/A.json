@@ -4383,6 +4383,41 @@
         "win an award",
         "award a contract"
       ]
+    },
+    {
+      "id": "affidavit-n",
+      "word": "affidavit",
+      "phonetic": {
+        "us": "/ˌæf.əˈdeɪ.vɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bản khai có tuyên thệ",
+          "definition_en": "a written statement that someone makes after promising that it is true",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The applicant submitted an affidavit confirming the address.",
+          "vi": "Người nộp đơn đã gửi bản khai xác nhận địa chỉ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sworn affidavit",
+        "file an affidavit"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

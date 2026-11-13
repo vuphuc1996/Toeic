@@ -1099,6 +1099,41 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "lien-n",
+      "word": "lien",
+      "phonetic": {
+        "us": "/liːn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quyền giữ tài sản để bảo đảm khoản nợ",
+          "definition_en": "a legal right to keep or claim property until a debt is paid",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank placed a lien on the property.",
+          "vi": "Ngân hàng đặt quyền giữ tài sản đối với bất động sản.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "tax lien",
+        "place a lien on"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

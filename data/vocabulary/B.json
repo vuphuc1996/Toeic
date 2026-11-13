@@ -1335,6 +1335,111 @@
         "potential buyer",
         "buyer information"
       ]
+    },
+    {
+      "id": "bidder-n",
+      "word": "bidder",
+      "phonetic": {
+        "us": "/ˈbɪd.ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người dự thầu; bên trả giá",
+          "definition_en": "a person or company that offers to pay a particular amount in a competition or auction",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lowest bidder was awarded the construction contract.",
+          "vi": "Nhà thầu đưa ra giá thấp nhất đã được trao hợp đồng xây dựng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "successful bidder",
+        "potential bidder"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "bond-n",
+      "word": "bond",
+      "phonetic": {
+        "us": "/bɑːnd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "trái phiếu; khoản bảo đảm",
+          "definition_en": "a financial agreement in which money is lent and repaid with interest, or a sum held as security",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company issued a bond to finance the expansion.",
+          "vi": "Công ty phát hành trái phiếu để tài trợ việc mở rộng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "government bond",
+        "performance bond"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "broker-n",
+      "word": "broker",
+      "phonetic": {
+        "us": "/ˈbroʊ.kɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "môi giới; nhà môi giới",
+          "definition_en": "a person or company that arranges transactions between buyers and sellers",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The broker negotiated a better rate for the client.",
+          "vi": "Nhà môi giới đã thương lượng mức giá tốt hơn cho khách hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "insurance broker",
+        "real estate broker"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

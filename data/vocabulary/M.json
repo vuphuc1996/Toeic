@@ -1294,6 +1294,41 @@
         "motivate a team",
         "highly motivated"
       ]
+    },
+    {
+      "id": "margin-n",
+      "word": "margin",
+      "phonetic": {
+        "us": "/ˈmɑːr.dʒɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "biên lợi nhuận; mức chênh lệch",
+          "definition_en": "the difference between the cost of a product and its selling price",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The retailer increased its profit margin this year.",
+          "vi": "Nhà bán lẻ đã tăng biên lợi nhuận trong năm nay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "profit margin",
+        "gross margin"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

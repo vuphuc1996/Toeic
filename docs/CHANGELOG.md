@@ -1,3 +1,11 @@
+## v2.28.0 — Vocabulary Batch 018 & two-version release rotation (2026-11-12)
+
+- Added 8 new TOEIC headwords after checking the existing canonical bank for duplicates; canonical total is 979. New records have sense-linked POS, Vietnamese meaning, English definition, example/translation, US IPA, topic and collocations. CEFR remains an editorial estimate pending independent review.
+- Added `data/vocabulary/batch-007.json` as the current editorial batch source; A–Z files remain the only canonical runtime vocabulary source. Existing stable IDs were preserved.
+- Introduced a two-version handoff policy: immediate previous stable baseline + current candidate. Older release notes are not carried forward as separate active files.
+- Consolidated superseded batch/test/coverage reports and the prior long Master snapshot into `docs/archive/PROJECT_HISTORY.md`; `docs/MASTER_STATUS.md` is now a concise active status/roadmap file, and `docs/COMPATIBILITY.md` is the only compatibility register. The competitor benchmark is in `docs/reference/`.
+- No IndexedDB schema/profile changes, no image binaries added, and no user-owned Listening JPGs deleted. Remote Actions/Pages and physical-device QA remain pending.
+
 ## v2.27.0 — Focus learning workspace & Vocabulary Batch 017 (2026-11-12)
 
 - Added one shared fixed focus workspace with a dimmed/blurred backdrop, internal scrolling and a persistent close (×) control. Flashcard sessions and their follow-up vocabulary check now share the same workspace; the first card tap flips to meaning/examples and the next tap advances to the next word. Closing returns to topic selection.

@@ -27,7 +27,10 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         batch = load_json("data/vocabulary/batch-006.json")
         self.assertTrue(baseline.issubset(set(ids)))
         self.assertEqual(len(batch["words"]), 43)
-        self.assertEqual(len(ids), 971)
+        batch_018 = load_json("data/vocabulary/batch-007.json")
+        self.assertEqual(len(batch_018["words"]), 8)
+        self.assertTrue({w["id"] for w in batch_018["words"]}.issubset(set(ids)))
+        self.assertEqual(len(ids), 979)
         self.assertEqual(len(ids), len(set(ids)))
 
     def test_each_example_points_to_an_existing_sense(self):
