@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "version": "2.29.0",
+  "version": "2.30.0",
   "letters": [
     {
       "letter": "A",
       "file": "./data/vocabulary/A.json",
-      "count": 108
+      "count": 109
     },
     {
       "letter": "B",
       "file": "./data/vocabulary/B.json",
-      "count": 37
+      "count": 38
     },
     {
       "letter": "C",
       "file": "./data/vocabulary/C.json",
-      "count": 128
+      "count": 132
     },
     {
       "letter": "D",
@@ -25,7 +25,7 @@
     {
       "letter": "E",
       "file": "./data/vocabulary/E.json",
-      "count": 55
+      "count": 56
     },
     {
       "letter": "F",
@@ -75,7 +75,7 @@
     {
       "letter": "O",
       "file": "./data/vocabulary/O.json",
-      "count": 33
+      "count": 34
     },
     {
       "letter": "P",
@@ -90,17 +90,17 @@
     {
       "letter": "R",
       "file": "./data/vocabulary/R.json",
-      "count": 80
+      "count": 82
     },
     {
       "letter": "S",
       "file": "./data/vocabulary/S.json",
-      "count": 74
+      "count": 75
     },
     {
       "letter": "T",
       "file": "./data/vocabulary/T.json",
-      "count": 33
+      "count": 35
     },
     {
       "letter": "U",
@@ -134,13 +134,13 @@
     }
   ],
   "categories": "./data/categories.json",
-  "totalWords": 979,
+  "totalWords": 992,
   "cefrLevels": {
     "A1": 64,
     "A2": 228,
-    "B1": 280,
-    "B2": 330,
-    "C1": 77
+    "B1": 281,
+    "B2": 334,
+    "C1": 85
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
   "totalTopics": 32

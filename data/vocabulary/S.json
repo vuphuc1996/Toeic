@@ -1681,6 +1681,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "stockout-n",
+      "word": "stockout",
+      "phonetic": {
+        "us": "/ˈstɑːk.aʊt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng hết hàng; thiếu hàng để bán",
+          "definition_en": "a situation in which a business has no units of a particular product available for sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The retailer increased its safety stock to reduce the risk of a stockout.",
+          "vi": "Nhà bán lẻ tăng lượng hàng dự trữ an toàn để giảm nguy cơ hết hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "stockout risk",
+        "prevent a stockout",
+        "stockout rate"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "stockroom-n",
       "word": "stockroom",
       "cefr_level": "B1",

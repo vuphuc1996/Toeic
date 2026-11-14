@@ -104,3 +104,4 @@ jobs:
           node tools/tests/mock-exam-engine.mjs
           node tools/tests/mock-ui-integrity.mjs
           node tools/tests/learning-focus-workspace.mjs
+          node tools/tests/practice-progress.mjs

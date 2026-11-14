@@ -652,6 +652,41 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "bidder-n",
+      "word": "bidder",
+      "phonetic": {
+        "us": "/ˈbɪd.ɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người dự thầu; bên trả giá",
+          "definition_en": "a person or company that offers to pay a particular amount in a competition or auction",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lowest bidder was awarded the construction contract.",
+          "vi": "Nhà thầu đưa ra giá thấp nhất đã được trao hợp đồng xây dựng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "successful bidder",
+        "potential bidder"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "biennial-adj",
       "word": "biennial",
       "phonetic": {
@@ -929,6 +964,41 @@
       "collocations": []
     },
     {
+      "id": "bond-n",
+      "word": "bond",
+      "phonetic": {
+        "us": "/bɑːnd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "trái phiếu; khoản bảo đảm",
+          "definition_en": "a financial agreement in which money is lent and repaid with interest, or a sum held as security",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company issued a bond to finance the expansion.",
+          "vi": "Công ty phát hành trái phiếu để tài trợ việc mở rộng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "government bond",
+        "performance bond"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "booking-n",
       "word": "booking",
       "phonetic": {
@@ -1008,6 +1078,44 @@
         "borrow money",
         "borrow equipment"
       ]
+    },
+    {
+      "id": "bottleneck-n",
+      "word": "bottleneck",
+      "phonetic": {
+        "us": "/ˈbɑː.t̬əl.nek/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điểm nghẽn; khâu gây tắc nghẽn hoặc làm chậm tiến độ",
+          "definition_en": "a point in a process or system that limits its overall speed or capacity and causes delays",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A shortage of trained technicians has become a bottleneck in the repair process.",
+          "vi": "Tình trạng thiếu kỹ thuật viên được đào tạo đã trở thành điểm nghẽn trong quy trình sửa chữa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "production bottleneck",
+        "process bottleneck",
+        "remove a bottleneck"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "branch-n",
@@ -1155,6 +1263,41 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "broker-n",
+      "word": "broker",
+      "phonetic": {
+        "us": "/ˈbroʊ.kɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "môi giới; nhà môi giới",
+          "definition_en": "a person or company that arranges transactions between buyers and sellers",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The broker negotiated a better rate for the client.",
+          "vi": "Nhà môi giới đã thương lượng mức giá tốt hơn cho khách hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "insurance broker",
+        "real estate broker"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "brokerage-n",
@@ -1335,111 +1478,6 @@
         "potential buyer",
         "buyer information"
       ]
-    },
-    {
-      "id": "bidder-n",
-      "word": "bidder",
-      "phonetic": {
-        "us": "/ˈbɪd.ɚ/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "người dự thầu; bên trả giá",
-          "definition_en": "a person or company that offers to pay a particular amount in a competition or auction",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "PURCHASING"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The lowest bidder was awarded the construction contract.",
-          "vi": "Nhà thầu đưa ra giá thấp nhất đã được trao hợp đồng xây dựng.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "successful bidder",
-        "potential bidder"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "bond-n",
-      "word": "bond",
-      "phonetic": {
-        "us": "/bɑːnd/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "trái phiếu; khoản bảo đảm",
-          "definition_en": "a financial agreement in which money is lent and repaid with interest, or a sum held as security",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "FINANCE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The company issued a bond to finance the expansion.",
-          "vi": "Công ty phát hành trái phiếu để tài trợ việc mở rộng.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "government bond",
-        "performance bond"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "broker-n",
-      "word": "broker",
-      "phonetic": {
-        "us": "/ˈbroʊ.kɚ/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "môi giới; nhà môi giới",
-          "definition_en": "a person or company that arranges transactions between buyers and sellers",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "FINANCE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The broker negotiated a better rate for the client.",
-          "vi": "Nhà môi giới đã thương lượng mức giá tốt hơn cho khách hàng.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "insurance broker",
-        "real estate broker"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

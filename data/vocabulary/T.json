@@ -625,6 +625,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "throughput-n",
+      "word": "throughput",
+      "phonetic": {
+        "us": "/ˈθruː.pʊt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lưu lượng xử lý; khối lượng công việc hoặc hàng hóa được xử lý trong một khoảng thời gian",
+          "definition_en": "the amount of work, data, people, or materials processed or handled during a given period of time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "SHIPPING",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new packing line increased warehouse throughput during peak season.",
+          "vi": "Dây chuyền đóng gói mới đã tăng năng suất xử lý hàng hóa của kho trong mùa cao điểm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "increase throughput",
+        "production throughput",
+        "throughput capacity"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "thunderstorm-n",
       "word": "thunderstorm",
       "cefr_level": "B1",
@@ -732,6 +770,43 @@
       ],
       "cefr_level": "A1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "timesheet-n",
+      "word": "timesheet",
+      "phonetic": {
+        "us": "/ˈtaɪm.ʃiːt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảng chấm công; bảng ghi số giờ làm việc",
+          "definition_en": "a record on which an employee enters the hours worked during a particular period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees must submit their timesheets by noon on the last working day of each month.",
+          "vi": "Nhân viên phải nộp bảng chấm công trước buổi trưa của ngày làm việc cuối cùng mỗi tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "submit a timesheet",
+        "timesheet approval",
+        "weekly timesheet"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "trade-v",

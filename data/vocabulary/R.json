@@ -196,6 +196,40 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "receivable-adj",
+      "word": "receivable",
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể thu được; còn phải được nhận (đặc biệt là khoản tiền)",
+          "definition_en": "still to be received by a person or company to whom money is owed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The finance team followed up on receivable balances before closing the accounts.",
+          "vi": "Nhóm tài chính đã đôn đốc các khoản phải thu trước khi khóa sổ kế toán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "accounts receivable",
+        "receivable balance",
+        "receivable amount"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {}
+    },
+    {
       "id": "receive-v",
       "word": "receive",
       "cefr_level": "A1",
@@ -1807,6 +1841,43 @@
         "replacement employee"
       ],
       "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "replenishment-n",
+      "word": "replenishment",
+      "phonetic": {
+        "us": "/rɪˈplen.ɪʃ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc bổ sung hoặc cấp bù hàng đã sử dụng hoặc bán ra",
+          "definition_en": "the process of filling a supply again by replacing goods or materials that have been used or sold",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Automatic replenishment helps the warehouse maintain adequate stock levels.",
+          "vi": "Cơ chế bổ sung hàng tự động giúp kho duy trì mức tồn kho phù hợp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "inventory replenishment",
+        "stock replenishment",
+        "replenishment schedule"
+      ],
+      "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {

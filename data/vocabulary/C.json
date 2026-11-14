@@ -168,6 +168,41 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "capital-n",
+      "word": "capital",
+      "phonetic": {
+        "us": "/ˈkæp.ɪ.t̬əl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vốn; nguồn vốn",
+          "definition_en": "money or property used to start or operate a business",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The firm needs additional capital to open a new branch.",
+          "vi": "Công ty cần thêm vốn để mở chi nhánh mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "working capital",
+        "capital investment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "career-n",
       "word": "career",
       "cefr_level": "A2",
@@ -1186,6 +1221,41 @@
       ]
     },
     {
+      "id": "claimant-n",
+      "word": "claimant",
+      "phonetic": {
+        "us": "/ˈkleɪ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người yêu cầu bồi thường; nguyên đơn",
+          "definition_en": "a person who makes a formal claim for money or a legal right",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The claimant provided receipts to support the insurance claim.",
+          "vi": "Người yêu cầu bồi thường cung cấp hóa đơn để chứng minh yêu cầu bảo hiểm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "insurance claimant",
+        "claimant information"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "clarify-v",
       "word": "clarify",
       "phonetic": {
@@ -1520,6 +1590,43 @@
       "collocations": [
         "coincide with an event",
         "dates coincide"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "collateral-n",
+      "word": "collateral",
+      "phonetic": {
+        "us": "/kəˈlæt̬.ɚ.əl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tài sản bảo đảm; tài sản thế chấp",
+          "definition_en": "property or another valuable asset pledged by a borrower to secure a loan and subject to seizure if the debt is not repaid",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank asked the company to provide additional collateral for the loan.",
+          "vi": "Ngân hàng yêu cầu công ty cung cấp thêm tài sản bảo đảm cho khoản vay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "provide collateral",
+        "collateral for a loan",
+        "adequate collateral"
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
@@ -3151,6 +3258,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "consignee-n",
+      "word": "consignee",
+      "phonetic": {
+        "us": "/kənˈsaɪ.niː/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người nhận hàng; bên được chỉ định nhận hàng",
+          "definition_en": "the person or company to whom goods or documents are officially sent or delivered",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consignee will be notified when the shipment reaches the distribution center.",
+          "vi": "Người nhận hàng sẽ được thông báo khi lô hàng đến trung tâm phân phối.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "named consignee",
+        "ultimate consignee",
+        "consignor and consignee"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "consignment-n",
       "word": "consignment",
       "phonetic": {
@@ -3184,6 +3328,41 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consignor-n",
+      "word": "consignor",
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người gửi hàng; bên giao hàng cho đơn vị vận chuyển hoặc bên nhận",
+          "definition_en": "a person or company that sends goods to another person or company, usually for delivery or sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consignor must provide the carrier with an accurate description of the shipment.",
+          "vi": "Người gửi hàng phải cung cấp cho đơn vị vận chuyển mô tả chính xác về lô hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "consignor details",
+        "name of the consignor",
+        "consignor and consignee"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {}
     },
     {
       "id": "consistently-adv",
@@ -4558,6 +4737,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "covenant-n",
+      "word": "covenant",
+      "phonetic": {
+        "us": "/ˈkʌv.ə.nənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điều khoản cam kết; giao ước có tính ràng buộc",
+          "definition_en": "a formal written promise or obligation in an agreement, contract, or loan document",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The borrower must comply with every financial covenant in the loan agreement.",
+          "vi": "Bên vay phải tuân thủ mọi điều khoản cam kết tài chính trong hợp đồng vay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "financial covenant",
+        "loan covenant",
+        "breach of covenant"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "coverage-n",
       "word": "coverage",
       "phonetic": {
@@ -5076,76 +5292,6 @@
         }
       ],
       "collocations": []
-    },
-    {
-      "id": "capital-n",
-      "word": "capital",
-      "phonetic": {
-        "us": "/ˈkæp.ɪ.t̬əl/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "vốn; nguồn vốn",
-          "definition_en": "money or property used to start or operate a business",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B1"
-        }
-      ],
-      "topics": [
-        "FINANCE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The firm needs additional capital to open a new branch.",
-          "vi": "Công ty cần thêm vốn để mở chi nhánh mới.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "working capital",
-        "capital investment"
-      ],
-      "cefr_level": "B1",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "claimant-n",
-      "word": "claimant",
-      "phonetic": {
-        "us": "/ˈkleɪ.mənt/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "người yêu cầu bồi thường; nguyên đơn",
-          "definition_en": "a person who makes a formal claim for money or a legal right",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "LEGAL"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The claimant provided receipts to support the insurance claim.",
-          "vi": "Người yêu cầu bồi thường cung cấp hóa đơn để chứng minh yêu cầu bảo hiểm.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "insurance claimant",
-        "claimant information"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

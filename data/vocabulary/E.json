@@ -1398,6 +1398,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "escrow-n",
+      "word": "escrow",
+      "phonetic": {
+        "us": "/ˈes.kroʊ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thỏa thuận ký quỹ; tài sản hoặc tiền được bên thứ ba giữ hộ",
+          "definition_en": "an arrangement in which money or property is held by a third party until specified conditions are met",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The buyer’s deposit will remain in escrow until both parties sign the agreement.",
+          "vi": "Khoản đặt cọc của người mua sẽ được bên thứ ba giữ cho đến khi cả hai bên ký thỏa thuận.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "escrow account",
+        "hold funds in escrow",
+        "place money in escrow"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "establish-v",
       "word": "establish",
       "phonetic": {

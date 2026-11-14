@@ -1,0 +1,488 @@
+{
+  "schemaVersion": 1,
+  "batch": "008",
+  "version": "2.30.0",
+  "focus": "TOEIC vocabulary: accounting and finance, logistics, inventory operations, contracts and HR records",
+  "count": 13,
+  "editorialStatus": "added locally; independent lexical review pending; CEFR levels are editorial estimates",
+  "sourcePolicy": "US IPA is included only where Cambridge explicitly provides a US pronunciation; consignor and receivable are left blank because the checked Cambridge pronunciation pages do not provide a US IPA entry. Definitions were checked against Cambridge Dictionary; examples and Vietnamese translations are original editorial content.",
+  "words": [
+    {
+      "id": "accrual-n",
+      "word": "accrual",
+      "phonetic": {
+        "us": "/əˈkruː.əl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản phát sinh được ghi nhận; sự tích lũy theo kỳ",
+          "definition_en": "an amount of income or expense that is recorded for a period even though the related cash has not yet been received or paid",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The accountant reviewed the accrual for unpaid utilities at month-end.",
+          "vi": "Kế toán viên đã rà soát khoản chi phí điện nước chưa thanh toán được ghi nhận vào cuối tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "expense accrual",
+        "interest accrual",
+        "accrual accounting"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "receivable-adj",
+      "word": "receivable",
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể thu được; còn phải được nhận (đặc biệt là khoản tiền)",
+          "definition_en": "still to be received by a person or company to whom money is owed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The finance team followed up on receivable balances before closing the accounts.",
+          "vi": "Nhóm tài chính đã đôn đốc các khoản phải thu trước khi khóa sổ kế toán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "accounts receivable",
+        "receivable balance",
+        "receivable amount"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {}
+    },
+    {
+      "id": "collateral-n",
+      "word": "collateral",
+      "phonetic": {
+        "us": "/kəˈlæt̬.ɚ.əl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tài sản bảo đảm; tài sản thế chấp",
+          "definition_en": "property or another valuable asset pledged by a borrower to secure a loan and subject to seizure if the debt is not repaid",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank asked the company to provide additional collateral for the loan.",
+          "vi": "Ngân hàng yêu cầu công ty cung cấp thêm tài sản bảo đảm cho khoản vay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "provide collateral",
+        "collateral for a loan",
+        "adequate collateral"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "escrow-n",
+      "word": "escrow",
+      "phonetic": {
+        "us": "/ˈes.kroʊ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thỏa thuận ký quỹ; tài sản hoặc tiền được bên thứ ba giữ hộ",
+          "definition_en": "an arrangement in which money or property is held by a third party until specified conditions are met",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The buyer’s deposit will remain in escrow until both parties sign the agreement.",
+          "vi": "Khoản đặt cọc của người mua sẽ được bên thứ ba giữ cho đến khi cả hai bên ký thỏa thuận.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "escrow account",
+        "hold funds in escrow",
+        "place money in escrow"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consignor-n",
+      "word": "consignor",
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người gửi hàng; bên giao hàng cho đơn vị vận chuyển hoặc bên nhận",
+          "definition_en": "a person or company that sends goods to another person or company, usually for delivery or sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consignor must provide the carrier with an accurate description of the shipment.",
+          "vi": "Người gửi hàng phải cung cấp cho đơn vị vận chuyển mô tả chính xác về lô hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "consignor details",
+        "name of the consignor",
+        "consignor and consignee"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {}
+    },
+    {
+      "id": "consignee-n",
+      "word": "consignee",
+      "phonetic": {
+        "us": "/kənˈsaɪ.niː/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người nhận hàng; bên được chỉ định nhận hàng",
+          "definition_en": "the person or company to whom goods or documents are officially sent or delivered",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consignee will be notified when the shipment reaches the distribution center.",
+          "vi": "Người nhận hàng sẽ được thông báo khi lô hàng đến trung tâm phân phối.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "named consignee",
+        "ultimate consignee",
+        "consignor and consignee"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "stockout-n",
+      "word": "stockout",
+      "phonetic": {
+        "us": "/ˈstɑːk.aʊt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng hết hàng; thiếu hàng để bán",
+          "definition_en": "a situation in which a business has no units of a particular product available for sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The retailer increased its safety stock to reduce the risk of a stockout.",
+          "vi": "Nhà bán lẻ tăng lượng hàng dự trữ an toàn để giảm nguy cơ hết hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "stockout risk",
+        "prevent a stockout",
+        "stockout rate"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "bottleneck-n",
+      "word": "bottleneck",
+      "phonetic": {
+        "us": "/ˈbɑː.t̬əl.nek/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điểm nghẽn; khâu gây tắc nghẽn hoặc làm chậm tiến độ",
+          "definition_en": "a point in a process or system that limits its overall speed or capacity and causes delays",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A shortage of trained technicians has become a bottleneck in the repair process.",
+          "vi": "Tình trạng thiếu kỹ thuật viên được đào tạo đã trở thành điểm nghẽn trong quy trình sửa chữa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "production bottleneck",
+        "process bottleneck",
+        "remove a bottleneck"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "throughput-n",
+      "word": "throughput",
+      "phonetic": {
+        "us": "/ˈθruː.pʊt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lưu lượng xử lý; khối lượng công việc hoặc hàng hóa được xử lý trong một khoảng thời gian",
+          "definition_en": "the amount of work, data, people, or materials processed or handled during a given period of time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "SHIPPING",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new packing line increased warehouse throughput during peak season.",
+          "vi": "Dây chuyền đóng gói mới đã tăng năng suất xử lý hàng hóa của kho trong mùa cao điểm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "increase throughput",
+        "production throughput",
+        "throughput capacity"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "outlay-n",
+      "word": "outlay",
+      "phonetic": {
+        "us": "/ˈaʊt.leɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản tiền chi ra; vốn đầu tư ban đầu",
+          "definition_en": "an amount of money spent for a particular purpose, especially an initial investment in equipment or a business activity",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The initial outlay for the new equipment will be recovered through lower operating costs.",
+          "vi": "Khoản đầu tư ban đầu cho thiết bị mới sẽ được bù đắp thông qua chi phí vận hành thấp hơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "initial outlay",
+        "capital outlay",
+        "annual outlay"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "covenant-n",
+      "word": "covenant",
+      "phonetic": {
+        "us": "/ˈkʌv.ə.nənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điều khoản cam kết; giao ước có tính ràng buộc",
+          "definition_en": "a formal written promise or obligation in an agreement, contract, or loan document",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The borrower must comply with every financial covenant in the loan agreement.",
+          "vi": "Bên vay phải tuân thủ mọi điều khoản cam kết tài chính trong hợp đồng vay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "financial covenant",
+        "loan covenant",
+        "breach of covenant"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "timesheet-n",
+      "word": "timesheet",
+      "phonetic": {
+        "us": "/ˈtaɪm.ʃiːt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảng chấm công; bảng ghi số giờ làm việc",
+          "definition_en": "a record on which an employee enters the hours worked during a particular period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees must submit their timesheets by noon on the last working day of each month.",
+          "vi": "Nhân viên phải nộp bảng chấm công trước buổi trưa của ngày làm việc cuối cùng mỗi tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "submit a timesheet",
+        "timesheet approval",
+        "weekly timesheet"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "replenishment-n",
+      "word": "replenishment",
+      "phonetic": {
+        "us": "/rɪˈplen.ɪʃ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc bổ sung hoặc cấp bù hàng đã sử dụng hoặc bán ra",
+          "definition_en": "the process of filling a supply again by replacing goods or materials that have been used or sold",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Automatic replenishment helps the warehouse maintain adequate stock levels.",
+          "vi": "Cơ chế bổ sung hàng tự động giúp kho duy trì mức tồn kho phù hợp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "inventory replenishment",
+        "stock replenishment",
+        "replenishment schedule"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    }
+  ]
+}

@@ -21,7 +21,7 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         cls.app_js = (ROOT / "assets/js/app.js").read_text(encoding="utf-8")
         cls.app_css = (ROOT / "assets/css/app.css").read_text(encoding="utf-8")
 
-    def test_base_vocabulary_id_set_is_preserved_with_batch_017_additions(self):
+    def test_base_vocabulary_id_set_is_preserved_with_batches_017_to_020(self):
         ids = [record["id"] for record in self.records]
         baseline = set(load_json("tools/baseline-ids.json")["ids"])
         batch = load_json("data/vocabulary/batch-006.json")
@@ -30,7 +30,10 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         batch_018 = load_json("data/vocabulary/batch-007.json")
         self.assertEqual(len(batch_018["words"]), 8)
         self.assertTrue({w["id"] for w in batch_018["words"]}.issubset(set(ids)))
-        self.assertEqual(len(ids), 979)
+        batch_020 = load_json("data/vocabulary/batch-008.json")
+        self.assertEqual(len(batch_020["words"]), 13)
+        self.assertTrue({w["id"] for w in batch_020["words"]}.issubset(set(ids)))
+        self.assertEqual(len(ids), 992)
         self.assertEqual(len(ids), len(set(ids)))
 
     def test_each_example_points_to_an_existing_sense(self):

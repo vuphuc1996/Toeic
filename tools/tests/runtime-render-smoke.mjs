@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import { ensurePracticeProgress, countAttemptedPracticeQuestions, getPracticeAttemptHistory, getPracticeAttemptCount, recordPracticeAnswer, archivePracticeAnswerForRetry, archiveAllPracticeAnswersForRetry } from '../../assets/js/practice-progress.js';
 
 const appSource = fs.readFileSync(new URL('../../assets/js/app.js', import.meta.url), 'utf8');
 const nodes = new Map();
@@ -32,6 +33,10 @@ const context = {
   savedChoiceWrongClass: () => false,
   savedChoiceHistoryMarkup: () => '',
   icon: () => '<span></span>',
+  ensurePracticeProgress, countAttemptedPracticeQuestions, getPracticeAttemptHistory, getPracticeAttemptCount, recordPracticeAnswer, archivePracticeAnswerForRetry, archiveAllPracticeAnswersForRetry,
+  requestAnimationFrame: callback => callback(),
+  renderToeicPartInsights: () => {}, renderReadingLibrary: () => {}, renderListeningLibrary: () => {}, renderGrammarLibrary: () => {},
+  toast: () => {}, window: { confirm: () => true },
   stopSpeech: () => {},
   openLearningFocus: () => {},
   dbSet: async (key, value) => { context.persisted ??= {}; context.persisted[key] = structuredClone(value); context.persistedWrites = (context.persistedWrites || 0) + 1; },
@@ -39,7 +44,9 @@ const context = {
 vm.createContext(context);
 
 function exposeFunction(name, nextToken) {
-  const start = appSource.indexOf(`function ${name}(`);
+  const asyncStart = appSource.indexOf(`async function ${name}(`);
+  const normalStart = appSource.indexOf(`function ${name}(`);
+  const start = asyncStart >= 0 && (normalStart < 0 || asyncStart < normalStart) ? asyncStart : normalStart;
   assert.notEqual(start, -1, `missing ${name}`);
   const end = appSource.indexOf(nextToken, start);
   assert.notEqual(end, -1, `missing boundary after ${name}`);
@@ -48,10 +55,19 @@ function exposeFunction(name, nextToken) {
   return context.__render;
 }
 
+exposeFunction('practiceAttemptHistoryMarkup', 'function practiceRetryActionMarkup');
+exposeFunction('practiceRetryActionMarkup', 'function practiceRetryAllToolbar');
+exposeFunction('practiceRetryAllToolbar', 'async function retryPracticeQuestion');
 const renderReadingLibrary = exposeFunction('renderReadingLibrary', 'function openReadingDetail(');
 const openReadingDetail = exposeFunction('openReadingDetail', 'async function answerReadingQuestion(');
+const answerReadingQuestion = exposeFunction('answerReadingQuestion', 'function renderListeningLibrary(');
+const retryPracticeQuestion = exposeFunction('retryPracticeQuestion', 'async function retryAllPracticeQuestions(');
+const retryAllPracticeQuestions = exposeFunction('retryAllPracticeQuestions', 'function renderGrammarLibrary(');
 exposeFunction('openLearningDetail', 'function closeLearningFocus(');
 const openGrammarLesson = exposeFunction('openGrammarLesson', 'async function answerGrammarExercise(');
+const answerGrammarExercise = exposeFunction('answerGrammarExercise', 'function renderReadingLibrary(');
+const openListeningDetail = exposeFunction('openListeningDetail', 'let listeningPlaybackToken');
+const answerListeningQuestion = exposeFunction('answerListeningQuestion', 'function buildListeningAIPrompt(');
 
 const part5 = {
   id: 'part5-runtime-smoke', part: 'Part 5', topic: 'Workplace', documentType: 'Incomplete sentences',
@@ -93,6 +109,55 @@ openGrammarLesson('grammar-runtime-smoke');
 assert.match($('#modalContent').innerHTML, /goes/);
 assert.match($('#modalContent').innerHTML, /BÀI TẬP 1/);
 assert.match($('#modalContent').innerHTML, /learning-detail-surface/);
+
+
+// Exercise Reading answer → per-question retry → second attempt → full-lesson retry.
+context.state.readings = [part7];
+context.state.readingProgress = {};
+openReadingDetail(part7.id);
+await answerReadingQuestion({ dataset: { readingId: part7.id, questionIndex: '0', choiceIndex: '0' } });
+assert.equal(context.state.readingProgress[part7.id].answers[0].correct, false);
+assert.match($('#modalContent').innerHTML, /data-practice-retry="reading"/);
+await retryPracticeQuestion({ dataset: { practiceRetry: 'reading', practiceId: part7.id, questionIndex: '0' } });
+assert.equal(context.state.readingProgress[part7.id].answers[0], undefined, 'per-question retry unlocks the selected Reading question');
+assert.equal(context.state.readingProgress[part7.id].attemptHistory[0].length, 1, 'per-question retry archives the first response');
+assert.match($('#modalContent').innerHTML, /Lịch sử 1 lần trước/);
+await answerReadingQuestion({ dataset: { readingId: part7.id, questionIndex: '0', choiceIndex: '1' } });
+assert.equal(context.state.readingProgress[part7.id].answers[0].correct, true, 'learner can submit a new response after retry');
+assert.equal(context.state.readingProgress[part7.id].answers[0].attemptNumber, 2);
+await retryAllPracticeQuestions({ dataset: { practiceRetryAll: 'reading', practiceId: part7.id } });
+assert.equal(context.state.readingProgress[part7.id].answers[0], undefined, 'whole-lesson retry unlocks active Reading answers');
+assert.equal(context.state.readingProgress[part7.id].attemptHistory[0].length, 2, 'whole-lesson retry preserves both attempts');
+assert.equal(context.state.readingProgress[part7.id].attemptHistory[0][0].correctChoiceText, 'Tomorrow');
+assert.equal(context.state.readingProgress[part7.id].attemptHistory[0][0].explanation, 'Thông tin nằm trong thư trả lời.');
+
+// Exercise Grammar retry: legacy-compatible progress, per-question retry and full-lesson retry.
+context.state.grammarProgress = {};
+openGrammarLesson('grammar-runtime-smoke');
+await answerGrammarExercise({ dataset: { lessonId: 'grammar-runtime-smoke', exerciseIndex: '0', choiceIndex: '0' } });
+assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].answers[0].correct, false);
+await retryPracticeQuestion({ dataset: { practiceRetry: 'grammar', practiceId: 'grammar-runtime-smoke', questionIndex: '0' } });
+assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].answers[0], undefined);
+await answerGrammarExercise({ dataset: { lessonId: 'grammar-runtime-smoke', exerciseIndex: '0', choiceIndex: '1' } });
+assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].answers[0].correct, true);
+await retryAllPracticeQuestions({ dataset: { practiceRetryAll: 'grammar', practiceId: 'grammar-runtime-smoke' } });
+assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].answers[0], undefined);
+assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].attemptHistory[0].length, 2);
+
+// Exercise Listening retry through the same shared persistence and render path.
+context.state.listening = [{ id: 'listening-runtime-smoke', part: 'Part 2', type: 'question-response', topic: 'Workplace', level: 'A2', title: 'Part 2 retry smoke', segments: [{ speaker: 'Woman', text: 'When will the report be ready?' }], vocabulary: [], questions: [{ question: 'When will the report be ready?', choices: ['By noon', 'At reception', 'The finance team'], answerIndex: 0, explanation: 'The response gives a time.' }] }];
+context.state.listeningProgress = {};
+openListeningDetail('listening-runtime-smoke');
+await answerListeningQuestion({ dataset: { listeningId: 'listening-runtime-smoke', questionIndex: '0', choiceIndex: '1' } });
+assert.equal(context.state.listeningProgress['listening-runtime-smoke'].answers[0].correct, false);
+await retryPracticeQuestion({ dataset: { practiceRetry: 'listening', practiceId: 'listening-runtime-smoke', questionIndex: '0' } });
+assert.equal(context.state.listeningProgress['listening-runtime-smoke'].answers[0], undefined);
+await answerListeningQuestion({ dataset: { listeningId: 'listening-runtime-smoke', questionIndex: '0', choiceIndex: '0' } });
+assert.equal(context.state.listeningProgress['listening-runtime-smoke'].answers[0].correct, true);
+await retryAllPracticeQuestions({ dataset: { practiceRetryAll: 'listening', practiceId: 'listening-runtime-smoke' } });
+assert.equal(context.state.listeningProgress['listening-runtime-smoke'].answers[0], undefined);
+assert.equal(context.state.listeningProgress['listening-runtime-smoke'].attemptHistory[0].length, 2);
+
 
 
 const migrationStart = appSource.indexOf('async function migrateChoiceIdentity(');
@@ -164,4 +229,4 @@ vm.runInContext(`${appSource.slice(wrongBlockStart, wrongBlockEnd)}\nglobalThis.
 assert.equal(context.__wrongClass(movedCurrentQuestion, savedWrongChoice, 1), true);
 assert.equal(context.__wrongClass(movedCurrentQuestion, savedWrongChoice, 3), false);
 
-console.log('Runtime render/migration smoke PASS: Reading/Listening/Grammar, archived options, v2.15→v2.17 and v2.16→v2.17 choice-ID migration, stale-index rendering and idempotency.');
+console.log('Runtime render/migration smoke PASS: Reading/Listening/Grammar rendering, per-question and full-lesson retry, saved attempt history, archived options, stable choice-ID migration and idempotency.');

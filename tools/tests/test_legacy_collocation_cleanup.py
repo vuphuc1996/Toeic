@@ -33,7 +33,7 @@ class LegacyCollocationCleanupTests(unittest.TestCase):
     def test_no_fd001_legacy_debt_remains(self):
         self.assertEqual(self.baseline["rules"]["FD001"]["violations"], [])
 
-    def test_stable_vocabulary_identity_keeps_928_baseline_plus_batch_017(self):
+    def test_stable_vocabulary_identity_keeps_base_and_all_release_batches(self):
         ids = set(self.records)
         baseline = set(json.loads((ROOT / "tools/baseline-ids.json").read_text(encoding="utf-8"))["ids"])
         batch = json.loads((ROOT / "data/vocabulary/batch-006.json").read_text(encoding="utf-8"))
@@ -42,7 +42,10 @@ class LegacyCollocationCleanupTests(unittest.TestCase):
         batch_018 = json.loads((ROOT / "data/vocabulary/batch-007.json").read_text(encoding="utf-8"))
         self.assertEqual(len(batch_018["words"]), 8)
         self.assertTrue({w["id"] for w in batch_018["words"]}.issubset(ids))
-        self.assertEqual(len(ids), 979)
+        batch_020 = json.loads((ROOT / "data/vocabulary/batch-008.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(batch_020["words"]), 13)
+        self.assertTrue({w["id"] for w in batch_020["words"]}.issubset(ids))
+        self.assertEqual(len(ids), 992)
 
 
 if __name__ == "__main__":

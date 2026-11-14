@@ -1,6 +1,6 @@
 # TOEIC Dictionary — Design System
 
-**Current implementation:** v2.29.0  
+**Current implementation:** v2.30.0  
 **Scope:** every learning page, shared controls, responsive shell and PWA navigation.
 
 ## 1. Design principles
@@ -77,7 +77,7 @@ Automated Chromium screenshots are a regression aid, not a substitute for physic
 - Update this guide and `docs/MASTER_STATUS.md` whenever the global design rules change.
 
 
-## 7. Shared learning workspace (v2.29.0)
+## 7. Shared learning workspace (baseline v2.29.0; retry/history extension v2.30.0)
 
 Flashcard, Vocabulary Review, Grammar, Reading and Listening detail views use the same `#learningFocusBackdrop` / `#learningFocusDialog` shell and shared header/content regions. New learning detail views must enter through `openLearningDetail()`; do not create one modal/backdrop implementation per feature.
 

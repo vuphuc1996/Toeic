@@ -44,6 +44,16 @@ Use source notes and patch operations. Each data patch must pin `baseDataVersion
 - Preserve the statement that the figures are internal learning indicators, not an ETS score conversion. Do not introduce an estimated official score without a separate validated model.
 - Maintain responsive layouts at desktop, tablet and narrow mobile widths; every Part tile must remain keyboard-focusable and the live priority status must be announced to assistive technology.
 
+
+## 5.1 Repeatable practice and attempt history
+
+- Reading, Listening and Grammar keep the latest submitted answer in the existing `answers` map and append earlier answers to `attemptHistory`, keyed by stable question index.
+- “Làm lại câu này” archives only that question's current answer and unlocks its choices. “Làm lại toàn bộ bài” archives all currently answered questions after explicit confirmation.
+- Each new attempt records selected text/index, stable `choiceId`, correct answer text, correctness, explanation, timestamp and attempt number. Never delete previous attempts as part of retry.
+- Coverage counts unique questions attempted; accuracy uses the latest submitted attempt for each question. Total attempts is a separate metric and must not inflate the unique-question denominator.
+- The additive history field must continue to work with legacy v1 progress objects that contain only `answers`. Do not increment IndexedDB version or add an object store for this behavior.
+- Any change to question ordering, stable choice IDs or the progress object requires a migration regression test using both legacy and current progress fixtures.
+
 ## 6. Content lifecycle
 
 `Draft → source check → editorial review → schema validation → patch dry-run → apply → automated content QA → coverage report → version sync → unit tests → ZIP integrity → extracted-package recheck → Master/Changelog update`.

@@ -56,8 +56,8 @@ class ChoiceHistoryTests(unittest.TestCase):
         self.assertIn('Lựa chọn đã lưu trước lần cập nhật:', self.app)
 
     def test_new_reading_and_listening_attempts_store_selected_text(self):
-        self.assertIn('choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()};state.readingProgress', self.app)
-        self.assertIn('choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()};state.listeningProgress', self.app)
+        self.assertIn('recordPracticeAnswer(prog,index,{choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correctChoiceText:question.choices[question.answerIndex],explanation:question.explanation,correct,answeredAt:Date.now()});state.readingProgress', self.app)
+        self.assertIn('recordPracticeAnswer(prog,index,{choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correctChoiceText:question.choices[question.answerIndex],explanation:question.explanation,correct,answeredAt:Date.now()});state.listeningProgress', self.app)
 
     def test_archived_text_is_html_escaped_and_rendered_in_both_libraries(self):
         self.assertIn('escapeHtml(savedChoiceText(question,saved))', self.app)

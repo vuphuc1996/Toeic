@@ -629,6 +629,42 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "accrual-n",
+      "word": "accrual",
+      "phonetic": {
+        "us": "/əˈkruː.əl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản phát sinh được ghi nhận; sự tích lũy theo kỳ",
+          "definition_en": "an amount of income or expense that is recorded for a period even though the related cash has not yet been received or paid",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The accountant reviewed the accrual for unpaid utilities at month-end.",
+          "vi": "Kế toán viên đã rà soát khoản chi phí điện nước chưa thanh toán được ghi nhận vào cuối tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "expense accrual",
+        "interest accrual",
+        "accrual accounting"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "accrue-v",
       "word": "accrue",
       "phonetic": {
@@ -1537,6 +1573,41 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "affidavit-n",
+      "word": "affidavit",
+      "phonetic": {
+        "us": "/ˌæf.əˈdeɪ.vɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bản khai có tuyên thệ",
+          "definition_en": "a written statement that someone makes after promising that it is true",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The applicant submitted an affidavit confirming the address.",
+          "vi": "Người nộp đơn đã gửi bản khai xác nhận địa chỉ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sworn affidavit",
+        "file an affidavit"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "affiliate-n",
@@ -4383,41 +4454,6 @@
         "win an award",
         "award a contract"
       ]
-    },
-    {
-      "id": "affidavit-n",
-      "word": "affidavit",
-      "phonetic": {
-        "us": "/ˌæf.əˈdeɪ.vɪt/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "bản khai có tuyên thệ",
-          "definition_en": "a written statement that someone makes after promising that it is true",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "C1"
-        }
-      ],
-      "topics": [
-        "LEGAL"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The applicant submitted an affidavit confirming the address.",
-          "vi": "Người nộp đơn đã gửi bản khai xác nhận địa chỉ.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "sworn affidavit",
-        "file an affidavit"
-      ],
-      "cefr_level": "C1",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

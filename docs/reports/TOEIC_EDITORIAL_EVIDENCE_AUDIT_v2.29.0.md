@@ -23,7 +23,7 @@
 | Reading | Part 6 context/cohesion checked | 16 |
 
 ## Editorial review record
-The following sections record categories reviewed manually during this pass. Direct/lexical categories remain source-evidence pointers; distractor plausibility and uniqueness for the 126 direct/lexical items plus six inference/paraphrase items were reviewed in v2.15.0. The current answer-position and option-identity audit is maintained separately in `TOEIC_DISTRACTOR_AUDIT_v2.29.0.md`.
+The following sections record categories reviewed manually during this pass. Direct/lexical categories remain source-evidence pointers; distractor plausibility and uniqueness for the 126 direct/lexical items plus six inference/paraphrase items were reviewed in v2.15.0. The current answer-position and option-identity audit is maintained separately in `../../tools/answer-position-balance-v2.17.0.json` and `../archive/PROJECT_HISTORY.md`.
 
 ### Direct source phrase (67)
 | Part / ID / Q | Prompt | Correct option | Evidence note |
@@ -281,6 +281,6 @@ The following sections record categories reviewed manually during this pass. Dir
 - `part2-room-unavailable` now uses “That’s right…” to confirm the negative-tag statement without relying on a potentially confusing “Yes” response.
 
 ## Remaining audit work
-- The original 132-item distractor review was completed in v2.15.0; current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v2.29.0.md`.
+- The original 132-item distractor review was completed in v2.15.0; current answer-position distribution and stable-choice mapping are recorded in `../../tools/answer-position-balance-v2.17.0.json` and `../archive/PROJECT_HISTORY.md`.
 - Verify browser audio playback, pacing and pronunciation on physical iPhone/iPad and Android voice packs; the current TTS remains browser-generated.
 - Obtain a second independent reviewer before releasing a scored mock. No official ETS scoring equivalence is claimed.

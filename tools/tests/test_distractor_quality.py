@@ -74,9 +74,10 @@ class DistractorQualityTests(unittest.TestCase):
         for part, distribution in expected.items():
             for index in range(4):
                 self.assertEqual(actual[(part, index)], distribution[index], (part, index))
-        report = (ROOT / 'docs/reports/TOEIC_DISTRACTOR_AUDIT_v2.17.0.md').read_text(encoding='utf-8')
-        self.assertIn('previousChoiceIds', report)
-        self.assertIn('No random shuffle was used', report)
+        history = (ROOT / 'docs/archive/PROJECT_HISTORY.md').read_text(encoding='utf-8')
+        self.assertIn('TOEIC Distractor & Answer-Uniqueness Audit', history)
+        self.assertIn('Reviewed 132 questions', history)
+        self.assertIn('exactly one defensible answer', history)
 
 
     def test_batch_013_reserve_questions_are_not_in_the_old_balance_certificate(self):
@@ -92,8 +93,9 @@ class DistractorQualityTests(unittest.TestCase):
 
     def test_learning_progress_persists_selected_choice_index(self):
         app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')
-        self.assertIn('choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()', app)
-        self.assertIn('prog.answers[index]={answered:true,choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correct,answeredAt:Date.now()}', app)
+        self.assertIn('recordPracticeAnswer(prog,index,{choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correctChoiceText:question.choices[question.answerIndex],explanation:question.explanation,correct,answeredAt:Date.now()})', app)
+        self.assertIn('attemptHistory', app)
+        self.assertIn('retryPracticeQuestion', app)
 
 
 if __name__ == '__main__':

@@ -814,6 +814,43 @@
       ]
     },
     {
+      "id": "outlay-n",
+      "word": "outlay",
+      "phonetic": {
+        "us": "/ˈaʊt.leɪ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản tiền chi ra; vốn đầu tư ban đầu",
+          "definition_en": "an amount of money spent for a particular purpose, especially an initial investment in equipment or a business activity",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The initial outlay for the new equipment will be recovered through lower operating costs.",
+          "vi": "Khoản đầu tư ban đầu cho thiết bị mới sẽ được bù đắp thông qua chi phí vận hành thấp hơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "initial outlay",
+        "capital outlay",
+        "annual outlay"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "outlook-n",
       "word": "outlook",
       "cefr_level": "B2",
