@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.30.0 – Focus Learning Workspace</title>
+  <title>TOEIC Dictionary v2.39.0 – Focus Learning Workspace</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -68,7 +68,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.30.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.39.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -149,7 +149,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.30.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.39.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
@@ -160,6 +160,7 @@
             <div class="mock-hero-score" aria-hidden="true"><span>TOEIC</span><strong>200</strong><small>QUESTIONS</small><i>LISTENING + READING</i></div>
           </div>
           <div class="mock-pool-strip" id="mockPoolStats"><span>Đang thống kê ngân hàng câu hỏi…</span></div>
+          <section class="mock-pool-readiness" id="mockPoolReadiness" aria-live="polite"><p>Đang kiểm tra số lượng Listening đủ điều kiện và câu dự trữ.</p></section>
           <div class="mock-mode-heading"><div><p class="eyebrow">CHỌN HÌNH THỨC THI</p><h2>Bạn muốn luyện trong bao lâu?</h2><p>Ba chế độ dùng chung ngân hàng dữ liệu, tránh trùng trong từng đề và ưu tiên câu chưa dùng gần đây.</p></div><span class="mock-mode-tag">Tự động random</span></div>
           <div class="mock-mode-grid">
             <article class="mock-mode-card mock-mode-quick"><div class="mock-mode-top"><span class="mock-mode-icon">⚡</span><span class="mock-mode-label">KIỂM TRA NHANH</span></div><h3>Test nhanh</h3><div class="mock-mode-time">15 <small>phút</small></div><div class="mock-mode-count">25 câu · 12 Listening + 13 Reading · 5:22 + 9:38</div><p>Đánh giá nhanh khả năng hiện tại, phù hợp để kiểm tra thường xuyên.</p><button type="button" class="primary-button" data-mock-start="quick">Bắt đầu 15 phút <span>→</span></button></article>
@@ -233,6 +234,7 @@
               <button type="button" class="practice-mode-tile" data-practice-mode="synonym" aria-pressed="false"><b>🔗</b><span><strong>Đồng nghĩa</strong><small>Mở rộng vốn từ liên quan</small></span></button>
               <button type="button" class="practice-mode-tile" data-practice-mode="antonym" aria-pressed="false"><b>↔️</b><span><strong>Trái nghĩa</strong><small>Phân biệt sắc thái từ vựng</small></span></button>
               <button type="button" class="practice-mode-tile" data-practice-mode="verb" aria-pressed="false"><b>📝</b><span><strong>Dạng động từ</strong><small>V1, V2, V3 và V-ing</small></span></button>
+              <button type="button" class="practice-mode-tile practice-mode-tile-featured" data-practice-mode="sentence-completion" aria-pressed="false"><b>🧩</b><span><strong>TOEIC Part 5 · Điền từ</strong><small>Hoàn thành câu theo ngữ pháp và ngữ cảnh</small></span></button>
             </div>
           </section>
           <aside class="practice-side">
@@ -250,13 +252,14 @@
           <section class="panel quiz-panel" hidden>
             <div class="quiz-topline"><span class="quiz-kicker"><svg class="ui-icon"><use href="#icon-target"></use></svg> LUYỆN TẬP CÁ NHÂN</span><span class="quiz-counter" id="questionCounter">Câu hỏi ngẫu nhiên</span></div>
             <div class="quiz-controls">
-              <label class="field"><span class="field-label">DẠNG BÀI</span><select id="practiceMode"><option value="random">Ngẫu nhiên thông minh</option><option value="missing">Điền chữ còn thiếu</option><option value="meaning-to-word">Nghĩa tiếng Việt → Từ tiếng Anh</option><option value="word-to-meaning">Từ tiếng Anh → Nghĩa tiếng Việt</option><option value="pos">Nhận diện loại từ</option><option value="synonym">Từ đồng nghĩa</option><option value="antonym">Từ trái nghĩa</option><option value="verb">Chia dạng động từ</option></select></label>
+              <label class="field"><span class="field-label">DẠNG BÀI</span><select id="practiceMode"><option value="random">Ngẫu nhiên thông minh</option><option value="missing">Điền chữ còn thiếu</option><option value="meaning-to-word">Nghĩa tiếng Việt → Từ tiếng Anh</option><option value="word-to-meaning">Từ tiếng Anh → Nghĩa tiếng Việt</option><option value="pos">Nhận diện loại từ</option><option value="synonym">Từ đồng nghĩa</option><option value="antonym">Từ trái nghĩa</option><option value="verb">Chia dạng động từ</option><option value="sentence-completion">TOEIC Part 5 · Điền từ vào câu</option></select></label>
               <span class="priority-pill" id="questionPriority">Ưu tiên từ cần học</span>
             </div>
             <div class="question-area" id="questionArea" aria-live="polite">
               <div class="question-type" id="questionType">ĐANG CHUẨN BỊ</div>
               <h2 id="questionPrompt">Chọn “Câu hỏi mới” để bắt đầu.</h2>
               <p class="question-hint" id="questionHint">Câu hỏi sẽ được chọn từ kho từ vựng hiện tại.</p>
+              <div class="sentence-completion-display" id="sentenceCompletionDisplay" hidden></div>
               <div class="choice-list" id="choiceList" hidden></div>
               <form class="answer-form" id="answerForm">
                 <label class="field answer-field"><span class="field-label" id="answerLabel">CÂU TRẢ LỜI</span><input id="answerInput" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Nhập câu trả lời của bạn..."></label>
@@ -282,8 +285,8 @@
       </section>
 
       <section class="page" id="page-grammar">
-        <div class="page-heading compact-heading"><div><p class="eyebrow">GRAMMAR LEARNING</p><h1>Thư viện ngữ pháp</h1><p class="muted">Học cấu trúc câu, loại từ, trợ động từ, các thì và ngữ pháp thường gặp trong TOEIC.</p></div><span class="library-count" id="grammarCount">— bài học</span></div>
-        <section class="panel library-toolbar"><label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="grammarSearch" type="search" placeholder="Tìm cấu trúc, chủ điểm ngữ pháp..." autocomplete="off"></label><label class="field"><span class="field-label">NHÓM KIẾN THỨC</span><select id="grammarCategoryFilter"><option value="">Tất cả nhóm</option></select></label><label class="field"><span class="field-label">CẤP ĐỘ</span><select id="grammarLevelFilter"><option value="">Tất cả cấp độ</option><option>A1–A2</option><option>A2–B1</option><option>B1</option><option>B1–B2</option></select></label></section>
+        <div class="page-heading compact-heading"><div><p class="eyebrow">GRAMMAR LEARNING</p><h1>Thư viện ngữ pháp</h1><p class="muted">Học ngữ pháp theo dạng bài TOEIC Part 5 và Part 6, từ nhận diện cấu trúc đến liên kết văn bản.</p></div><span class="library-count" id="grammarCount">— bài học</span></div>
+        <section class="panel library-toolbar grammar-library-toolbar"><label class="field search-field"><span><svg class="ui-icon"><use href="#icon-search"></use></svg></span><input id="grammarSearch" type="search" placeholder="Tìm cấu trúc, chủ điểm ngữ pháp..." autocomplete="off"></label><label class="field"><span class="field-label">PHẦN THI TOEIC</span><select id="grammarPartFilter"><option value="">Tất cả Part</option><option value="Part 5">Part 5 · Incomplete Sentences</option><option value="Part 6">Part 6 · Text Completion</option></select></label><label class="field"><span class="field-label">NHÓM KIẾN THỨC</span><select id="grammarCategoryFilter"><option value="">Tất cả nhóm</option></select></label><label class="field"><span class="field-label">CẤP ĐỘ</span><select id="grammarLevelFilter"><option value="">Tất cả cấp độ</option><option>A1–A2</option><option>A2–B1</option><option>B1</option><option>B1–B2</option></select></label></section>
         <div class="learning-card-grid" id="grammarCardList"></div>
         <div class="empty-state" id="grammarEmpty" hidden><div>∑</div><strong>Không tìm thấy bài học</strong><p>Thử từ khóa hoặc bộ lọc khác.</p></div>
       </section>
@@ -376,7 +379,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.30.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.39.0</span></footer>
     </main>
   </div>
 

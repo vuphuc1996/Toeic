@@ -375,7 +375,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "notarized",
+          "pos": "adj",
+          "meaning_vi": "đã được công chứng"
+        }
+      ],
       "verb_forms": {
         "v1": "notarize",
         "vs_es": "notarizes",
@@ -416,7 +422,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "notarize",
+          "pos": "v",
+          "meaning_vi": "công chứng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

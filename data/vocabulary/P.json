@@ -56,7 +56,13 @@
       "topics": [
         "MEETING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "participate",
+          "pos": "v",
+          "meaning_vi": "tham gia"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -96,7 +102,13 @@
         "HR",
         "MEETING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "participant",
+          "pos": "n",
+          "meaning_vi": "người tham gia"
+        }
+      ],
       "verb_forms": {
         "v1": "participate",
         "vs_es": "participates",
@@ -598,7 +610,13 @@
         "BUSINESS",
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "performance",
+          "pos": "n",
+          "meaning_vi": "hiệu suất; kết quả thực hiện"
+        }
+      ],
       "verb_forms": {
         "v1": "perform",
         "vs_es": "performs",
@@ -637,7 +655,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "perform",
+          "pos": "v",
+          "meaning_vi": "thực hiện; biểu diễn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1225,7 +1249,13 @@
         "MEETING",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "postponement",
+          "pos": "n",
+          "meaning_vi": "sự trì hoãn; việc hoãn lại"
+        }
+      ],
       "verb_forms": {
         "v1": "postpone",
         "vs_es": "postpones",
@@ -1266,7 +1296,13 @@
       "topics": [
         "TIME"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "postpone",
+          "pos": "v",
+          "meaning_vi": "hoãn; trì hoãn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2629,7 +2665,13 @@
         "HR",
         "MARKETING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "promotion",
+          "pos": "n",
+          "meaning_vi": "sự thăng chức; khuyến mãi"
+        }
+      ],
       "verb_forms": {
         "v1": "promote",
         "vs_es": "promotes",
@@ -2670,7 +2712,13 @@
       "topics": [
         "CAREER"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "promote",
+          "pos": "v",
+          "meaning_vi": "thăng chức; quảng bá"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

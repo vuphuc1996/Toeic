@@ -34,6 +34,7 @@ class ReleaseRotationTests(unittest.TestCase):
         self.legacy_source.write_text("# Legacy source audit\n\n- Source URLs reviewed.\n", encoding="utf-8")
         for version in ("2.28.0", "2.29.0", "2.30.0"):
             (self.root / f"V{version}_UPDATE_NOTES.txt").write_text(f"Release v{version}\n", encoding="utf-8")
+            (self.root / f"V{version}_OVERLAY_MANIFEST.txt").write_text(f"Overlay manifest v{version}\n", encoding="utf-8")
         (self.root / "assets").mkdir()
         (self.root / "assets/user-photo.jpg").write_bytes(b"keep-me")
 
@@ -52,6 +53,7 @@ class ReleaseRotationTests(unittest.TestCase):
         self.assertIn("DRY RUN", result.stdout)
         self.assertTrue(self.old_batch.exists())
         self.assertTrue((self.root / "V2.28.0_UPDATE_NOTES.txt").exists())
+        self.assertTrue((self.root / "V2.28.0_OVERLAY_MANIFEST.txt").exists())
 
     def test_apply_keeps_two_release_generations_and_compacts_history(self):
         result = self.run_rotation("--apply")
@@ -61,13 +63,33 @@ class ReleaseRotationTests(unittest.TestCase):
         self.assertTrue(self.previous_report.exists())
         self.assertTrue(self.current_report.exists())
         self.assertFalse((self.root / "V2.28.0_UPDATE_NOTES.txt").exists())
+        self.assertFalse((self.root / "V2.28.0_OVERLAY_MANIFEST.txt").exists())
         self.assertTrue((self.root / "V2.29.0_UPDATE_NOTES.txt").exists())
         self.assertTrue((self.root / "V2.30.0_UPDATE_NOTES.txt").exists())
+        self.assertTrue((self.root / "V2.29.0_OVERLAY_MANIFEST.txt").exists())
+        self.assertTrue((self.root / "V2.30.0_OVERLAY_MANIFEST.txt").exists())
         history = (self.root / "docs/archive/PROJECT_HISTORY.md").read_text(encoding="utf-8")
         self.assertIn("OLD_BATCH_v2.28.0.md", history)
         self.assertIn("OLD_SOURCE_v2.10.2.md", history)
+        self.assertIn("V2.28.0_OVERLAY_MANIFEST.txt", history)
         self.assertTrue((self.root / "assets/user-photo.jpg").exists())
         self.assertEqual((self.root / "assets/user-photo.jpg").read_bytes(), b"keep-me")
+
+
+    def test_apply_consolidates_repeated_history_headings(self):
+        history_path = self.root / "docs/archive/PROJECT_HISTORY.md"
+        history_path.write_text(
+            "# Consolidated Project History\n\n"
+            "## Newly retired documents\n\n- Older record A\n\n"
+            "## Newly retired documents\n\n- Older record B\n",
+            encoding="utf-8",
+        )
+        self.run_rotation("--apply")
+        history = history_path.read_text(encoding="utf-8")
+        self.assertEqual(history.count("## Newly retired documents"), 1)
+        self.assertIn("Older record A", history)
+        self.assertIn("Older record B", history)
+        self.assertIn("OLD_BATCH_v2.28.0.md", history)
 
 
 if __name__ == "__main__":

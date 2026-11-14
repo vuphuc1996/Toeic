@@ -147,7 +147,13 @@
         "BUSINESS",
         "DAILY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "value",
+          "pos": "n",
+          "meaning_vi": "giá trị; coi trọng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -186,7 +192,13 @@
         "FINANCE",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "valuable",
+          "pos": "adj",
+          "meaning_vi": "có giá trị; quý giá"
+        }
+      ],
       "verb_forms": {
         "v1": "value",
         "vs_es": "values",

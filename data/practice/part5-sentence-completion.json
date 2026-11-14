@@ -1,0 +1,2355 @@
+{
+  "schemaVersion": 1,
+  "bankId": "toeic-part5-sentence-completion-001",
+  "bankTitle": "TOEIC Part 5 — Sentence Completion Practice Bank",
+  "questionType": "sentence-completion",
+  "contentSource": "original-editorial",
+  "editorialStatus": "reserve-pending-independent-review",
+  "reviewNote": "internal-author-check; independent-second-review-pending",
+  "questions": [
+    {
+      "id": "p5-sc-001",
+      "wordId": "complete-v",
+      "sentence": "The HR manager asked all new employees to _____ the orientation form by Friday.",
+      "choices": [
+        "complete",
+        "completion",
+        "completely",
+        "completed"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Office Administration",
+      "grammarPoint": "Verb pattern: ask + object + to-infinitive",
+      "explanation": "Sau tân ngữ “all new employees”, cấu trúc “ask someone to do something” cần động từ nguyên mẫu có “to”. “Complete the form” cũng đúng nghĩa là hoàn tất biểu mẫu.",
+      "translationVi": "Quản lý nhân sự yêu cầu tất cả nhân viên mới hoàn thành biểu mẫu định hướng trước thứ Sáu.",
+      "singleAnswerReason": "“to” đứng ngay trước chỗ trống nên chỉ động từ nguyên mẫu “complete” phù hợp; các lựa chọn còn lại là danh từ, trạng từ hoặc quá khứ phân từ.",
+      "optionExplanations": [
+        "Đúng: động từ nguyên mẫu sau “to”, tạo thành cụm “to complete”.",
+        "Sai: “completion” là danh từ, không thể làm động từ sau “to” trong cấu trúc này.",
+        "Sai: “completely” là trạng từ, không thể làm động từ chính sau “to”.",
+        "Sai: “completed” là dạng quá khứ/phân từ; sau “to” cần dạng nguyên mẫu."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Infinitives and Verb Patterns"
+    },
+    {
+      "id": "p5-sc-002",
+      "wordId": "release-v",
+      "sentence": "The shipment will be _____ as soon as the customs documents are approved.",
+      "choices": [
+        "released",
+        "release",
+        "releasing",
+        "releases"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Shipping and Logistics",
+      "grammarPoint": "Passive voice: will be + past participle",
+      "explanation": "Chủ ngữ “the shipment” nhận hành động giải phóng/giao hàng, không tự thực hiện hành động. Sau “will be” trong câu bị động cần quá khứ phân từ “released”.",
+      "translationVi": "Lô hàng sẽ được thông quan/giải phóng ngay khi chứng từ hải quan được phê duyệt.",
+      "singleAnswerReason": "Cấu trúc bị động “will be + V3” xác định dạng phân từ; các dạng còn lại không hoàn thành cấu trúc bị động chuẩn.",
+      "optionExplanations": [
+        "Đúng: “released” là V3, phù hợp cấu trúc “will be released”.",
+        "Sai: “release” là nguyên mẫu, thiếu dạng phân từ sau “will be” trong câu bị động.",
+        "Sai: “releasing” là V-ing, không dùng sau “will be” để tạo bị động này.",
+        "Sai: “releases” là hiện tại đơn ngôi thứ ba, không phù hợp cấu trúc."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Passive Voice"
+    },
+    {
+      "id": "p5-sc-003",
+      "wordId": "select-v",
+      "sentence": "The interview panel will _____ three finalists for the management position.",
+      "choices": [
+        "select",
+        "selection",
+        "selected",
+        "selecting"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Office Administration",
+      "grammarPoint": "Modal verb: will + base form",
+      "explanation": "Sau động từ khuyết thiếu “will” phải dùng động từ nguyên mẫu không “to”. “Select three finalists” nghĩa là chọn ba ứng viên cuối cùng.",
+      "translationVi": "Hội đồng phỏng vấn sẽ chọn ba ứng viên cuối cùng cho vị trí quản lý.",
+      "singleAnswerReason": "“will” là dấu hiệu trực tiếp yêu cầu động từ nguyên mẫu; “selection” là danh từ, “selected” và “selecting” không đúng dạng sau modal.",
+      "optionExplanations": [
+        "Đúng: “select” là động từ nguyên mẫu sau “will”.",
+        "Sai: “selection” là danh từ chỉ sự lựa chọn.",
+        "Sai: “selected” là quá khứ/phân từ, không đứng sau “will” theo cấu trúc này.",
+        "Sai: “selecting” là V-ing, không dùng sau modal “will”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Infinitives and Verb Patterns"
+    },
+    {
+      "id": "p5-sc-004",
+      "wordId": "prepare-v",
+      "sentence": "Ms. Patel is responsible for _____ the monthly sales report.",
+      "choices": [
+        "prepare",
+        "prepares",
+        "prepared",
+        "preparing"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Office Administration",
+      "grammarPoint": "Gerund after a preposition: responsible for + V-ing",
+      "explanation": "“For” là giới từ trong cụm “responsible for”; sau giới từ dùng danh từ hoặc V-ing. Ở đây “preparing” diễn tả nhiệm vụ chuẩn bị báo cáo.",
+      "translationVi": "Bà Patel chịu trách nhiệm chuẩn bị báo cáo doanh số hằng tháng.",
+      "singleAnswerReason": "Giới từ “for” đứng ngay trước chỗ trống buộc dùng dạng V-ing; ba lựa chọn còn lại không phù hợp vị trí này.",
+      "optionExplanations": [
+        "Sai: “prepare” là nguyên mẫu, không theo sau trực tiếp giới từ “for”.",
+        "Sai: “prepares” là hiện tại đơn ngôi thứ ba, không dùng sau giới từ.",
+        "Sai: “prepared” là dạng quá khứ/phân từ, không phù hợp sau giới từ trong cụm này.",
+        "Đúng: “preparing” là danh động từ sau giới từ “for”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Gerunds and Infinitives"
+    },
+    {
+      "id": "p5-sc-005",
+      "wordId": "operate-v",
+      "sentence": "Only trained technicians are authorized to _____ the equipment.",
+      "choices": [
+        "operation",
+        "operating",
+        "operated",
+        "operate"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Maintenance",
+      "grammarPoint": "Adjective + to-infinitive: authorized to + V1",
+      "explanation": "Cụm “be authorized to do something” có nghĩa là được phép làm việc gì. Sau “to” cần động từ nguyên mẫu “operate”.",
+      "translationVi": "Chỉ kỹ thuật viên đã qua đào tạo mới được phép vận hành thiết bị.",
+      "singleAnswerReason": "Cụm cố định “authorized to” đòi hỏi động từ nguyên mẫu; “operation” là danh từ và các dạng còn lại sai hình thái.",
+      "optionExplanations": [
+        "Sai: “operation” là danh từ, không phải động từ nguyên mẫu.",
+        "Sai: “operating” là V-ing, không theo sau “to” trong cấu trúc này.",
+        "Sai: “operated” là quá khứ/phân từ.",
+        "Đúng: “operate” là động từ nguyên mẫu sau “authorized to”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Infinitives and Verb Patterns"
+    },
+    {
+      "id": "p5-sc-006",
+      "wordId": "additional-adj",
+      "sentence": "Please contact the supplier if you need _____ information about the delivery schedule.",
+      "choices": [
+        "additional",
+        "additionally",
+        "addition",
+        "add"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Shipping and Logistics",
+      "grammarPoint": "Adjective before a noun",
+      "explanation": "Chỗ trống bổ nghĩa cho danh từ không đếm được “information”, vì vậy cần tính từ “additional” (bổ sung).",
+      "translationVi": "Vui lòng liên hệ nhà cung cấp nếu bạn cần thêm thông tin về lịch giao hàng.",
+      "singleAnswerReason": "Từ đứng trước danh từ “information” phải là tính từ; “additionally” là trạng từ, “addition” là danh từ và “add” là động từ.",
+      "optionExplanations": [
+        "Đúng: “additional” là tính từ bổ nghĩa cho “information”.",
+        "Sai: “additionally” là trạng từ, không bổ nghĩa trực tiếp cho danh từ ở đây.",
+        "Sai: “addition” là danh từ; cụm “addition information” không đúng.",
+        "Sai: “add” là động từ, không thể đứng trước “information” theo cấu trúc này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Adjectives and Adverbs"
+    },
+    {
+      "id": "p5-sc-007",
+      "wordId": "review-v",
+      "sentence": "The finance director will _____ the budget proposal before approving it.",
+      "choices": [
+        "review",
+        "reviewed",
+        "reviewing",
+        "reviewer"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Finance",
+      "grammarPoint": "Modal verb: will + base form",
+      "explanation": "Sau “will” phải dùng động từ nguyên mẫu. “Review the budget proposal” phù hợp nghĩa xem xét đề xuất ngân sách trước khi phê duyệt.",
+      "translationVi": "Giám đốc tài chính sẽ xem xét đề xuất ngân sách trước khi phê duyệt.",
+      "singleAnswerReason": "Modal “will” yêu cầu dạng nguyên mẫu; các lựa chọn khác là quá khứ phân từ, V-ing hoặc danh từ chỉ người.",
+      "optionExplanations": [
+        "Đúng: động từ nguyên mẫu sau “will”.",
+        "Sai: quá khứ phân từ không dùng sau modal “will”.",
+        "Sai: V-ing không dùng trực tiếp sau “will” trong câu này.",
+        "Sai: “reviewer” là danh từ chỉ người đánh giá, không thể làm động từ."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Verb Tense and Aspect"
+    },
+    {
+      "id": "p5-sc-008",
+      "wordId": "receipt-n",
+      "sentence": "Customers must present the original _____ to request a refund.",
+      "choices": [
+        "receipt",
+        "receive",
+        "receiver",
+        "receptive"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Retail and Customer Service",
+      "grammarPoint": "Noun selection and word meaning",
+      "explanation": "“Present the original receipt” là cụm tự nhiên khi khách hàng cần xuất trình biên lai để yêu cầu hoàn tiền.",
+      "translationVi": "Khách hàng phải xuất trình biên lai gốc để yêu cầu hoàn tiền.",
+      "singleAnswerReason": "Ngữ cảnh yêu cầu một chứng từ mua hàng; “receipt” là biên lai. Các lựa chọn còn lại không mang nghĩa chứng từ này.",
+      "optionExplanations": [
+        "Đúng: “receipt” là danh từ chỉ biên lai/giấy biên nhận.",
+        "Sai: “receive” là động từ nhận.",
+        "Sai: “receiver” là người hoặc thiết bị nhận.",
+        "Sai: “receptive” là tính từ mang nghĩa dễ tiếp nhận."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-009",
+      "wordId": "effective-adj",
+      "sentence": "The new attendance policy will become _____ on July 1.",
+      "choices": [
+        "effective",
+        "effect",
+        "effectively",
+        "effects"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Human Resources",
+      "grammarPoint": "Linking verb become + adjective",
+      "explanation": "“Become” là động từ nối; theo sau nó thường là tính từ mô tả trạng thái mới. “Become effective” nghĩa là bắt đầu có hiệu lực.",
+      "translationVi": "Chính sách chấm công mới sẽ bắt đầu có hiệu lực vào ngày 1 tháng 7.",
+      "singleAnswerReason": "Vị trí sau động từ nối “become” cần tính từ; “effective” là tính từ, còn các lựa chọn khác là danh từ hoặc trạng từ.",
+      "optionExplanations": [
+        "Đúng: “effective” là tính từ trong cụm “become effective”.",
+        "Sai: “effect” là danh từ hoặc động từ, không diễn tả trạng thái sau “become” ở đây.",
+        "Sai: “effectively” là trạng từ, không dùng làm bổ ngữ tính từ sau “become”.",
+        "Sai: “effects” là danh từ số nhiều/động từ chia ngôi, không phù hợp."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Adjectives and Adverbs"
+    },
+    {
+      "id": "p5-sc-010",
+      "wordId": "within-adv",
+      "sentence": "The invoice must be paid _____ 30 days of receipt.",
+      "choices": [
+        "within",
+        "among",
+        "across",
+        "between"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Finance",
+      "grammarPoint": "Preposition of time: within + time period",
+      "explanation": "“Within 30 days of receipt” nghĩa là trong vòng 30 ngày kể từ khi nhận được hóa đơn.",
+      "translationVi": "Hóa đơn phải được thanh toán trong vòng 30 ngày kể từ ngày nhận.",
+      "singleAnswerReason": "Chỉ “within” diễn đạt thời hạn không vượt quá một khoảng thời gian; “between” cần hai mốc, “among” chỉ ở giữa nhiều đối tượng và “across” không dùng theo nghĩa thời hạn này.",
+      "optionExplanations": [
+        "Đúng: “within” chỉ thời hạn trong vòng 30 ngày.",
+        "Sai: “among” dùng cho quan hệ giữa nhiều người/vật.",
+        "Sai: “across” không diễn đạt thời hạn thanh toán trong cấu trúc này.",
+        "Sai: “between” thường cần hai mốc hoặc hai đối tượng được xác định."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Prepositions and Collocations"
+    },
+    {
+      "id": "p5-sc-011",
+      "wordId": "establish-v",
+      "sentence": "The company plans to _____ a regional office in Da Nang next year.",
+      "choices": [
+        "established",
+        "establishment",
+        "establishing",
+        "establish"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Business Expansion",
+      "grammarPoint": "Verb pattern: plan to + base form",
+      "explanation": "Động từ “plan” theo sau bởi “to-infinitive”. Vì vậy dùng “establish” để diễn tả kế hoạch thành lập văn phòng.",
+      "translationVi": "Công ty dự định thành lập một văn phòng khu vực tại Đà Nẵng vào năm tới.",
+      "singleAnswerReason": "Cấu trúc “plans to + V1” chỉ chấp nhận động từ nguyên mẫu ở chỗ trống; các lựa chọn khác sai dạng.",
+      "optionExplanations": [
+        "Sai: “established” là quá khứ/phân từ.",
+        "Sai: “establishment” là danh từ.",
+        "Sai: “establishing” là V-ing, không phù hợp sau “plans to”.",
+        "Đúng: “establish” là nguyên mẫu sau “plans to”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Infinitives and Verb Patterns"
+    },
+    {
+      "id": "p5-sc-012",
+      "wordId": "replace-v",
+      "sentence": "The supplier agreed to _____ the defective printer at no additional cost.",
+      "choices": [
+        "replacement",
+        "replaced",
+        "replacing",
+        "replace"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Procurement",
+      "grammarPoint": "Verb pattern: agree to + base form",
+      "explanation": "“Agree to do something” nghĩa là đồng ý làm việc gì. Động từ sau “to” cần ở dạng nguyên mẫu “replace”.",
+      "translationVi": "Nhà cung cấp đồng ý thay thế máy in bị lỗi mà không tính thêm phí.",
+      "singleAnswerReason": "Cụm “agreed to” yêu cầu nguyên mẫu; “replacement” là danh từ, còn “replaced/replacing” không đúng dạng.",
+      "optionExplanations": [
+        "Sai: “replacement” là danh từ chỉ sự thay thế.",
+        "Sai: “replaced” là dạng quá khứ/phân từ.",
+        "Sai: “replacing” là V-ing.",
+        "Đúng: “replace” là nguyên mẫu theo sau “agreed to”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Infinitives and Verb Patterns"
+    },
+    {
+      "id": "p5-sc-013",
+      "wordId": "approval-n",
+      "sentence": "The purchase order requires written _____ from the manager.",
+      "choices": [
+        "approval",
+        "approve",
+        "approved",
+        "approving"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Procurement",
+      "grammarPoint": "Noun after a possessive determiner",
+      "explanation": "Sau tính từ “written” cần một danh từ chỉ quyết định/chấp thuận. “Written approval” là cụm danh từ tự nhiên trong quy trình mua hàng.",
+      "translationVi": "Đơn đặt hàng yêu cầu phải có sự phê duyệt bằng văn bản từ quản lý.",
+      "singleAnswerReason": "Cụm “written + noun” yêu cầu danh từ; “approval” là danh từ. “Approve” là động từ, “approved” là phân từ/tính từ và “approving” là V-ing nên không phù hợp.",
+      "optionExplanations": [
+        "Đúng: “approval” là danh từ trong cụm “written approval”.",
+        "Sai: “approve” là động từ, không thể đứng sau “written” làm danh từ trung tâm.",
+        "Sai: “approved” là quá khứ phân từ/tính từ, không phải danh từ sau “written”.",
+        "Sai: “approving” là V-ing; cụm danh từ trong câu cần danh từ “approval”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-014",
+      "wordId": "comprehensive-adj",
+      "sentence": "The report provides a _____ overview of last quarter’s operating costs.",
+      "choices": [
+        "comprehensive",
+        "comprehensively",
+        "comprehend",
+        "comprehension"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Finance",
+      "grammarPoint": "Adjective before a noun",
+      "explanation": "Chỗ trống đứng trước danh từ “overview” và sau mạo từ “a”, nên cần tính từ “comprehensive” (toàn diện).",
+      "translationVi": "Báo cáo cung cấp cái nhìn tổng quan toàn diện về chi phí vận hành của quý trước.",
+      "singleAnswerReason": "Cấu trúc “a + adjective + noun” cần tính từ; ba lựa chọn còn lại lần lượt là trạng từ, động từ và danh từ.",
+      "optionExplanations": [
+        "Đúng: “comprehensive” là tính từ bổ nghĩa cho “overview”.",
+        "Sai: “comprehensively” là trạng từ.",
+        "Sai: “comprehend” là động từ.",
+        "Sai: “comprehension” là danh từ."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Adjectives and Adverbs"
+    },
+    {
+      "id": "p5-sc-015",
+      "wordId": "process-v",
+      "sentence": "The HR department will _____ all applications within five business days.",
+      "choices": [
+        "process",
+        "processing",
+        "processed",
+        "processor"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Human Resources",
+      "grammarPoint": "Modal verb: will + base form",
+      "explanation": "Sau “will” phải dùng động từ nguyên mẫu “process”. Cụm “process applications” nghĩa là xử lý hồ sơ.",
+      "translationVi": "Phòng nhân sự sẽ xử lý tất cả hồ sơ trong vòng năm ngày làm việc.",
+      "singleAnswerReason": "Modal “will” xác định dạng động từ nguyên mẫu; các lựa chọn khác là V-ing, quá khứ phân từ hoặc danh từ chỉ thiết bị/người xử lý.",
+      "optionExplanations": [
+        "Đúng: “process” là động từ nguyên mẫu sau “will”.",
+        "Sai: “processing” là V-ing/danh từ hóa, không đứng sau “will”.",
+        "Sai: “processed” là quá khứ/phân từ.",
+        "Sai: “processor” là danh từ chỉ người/thiết bị xử lý."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Verb Tense and Aspect"
+    },
+    {
+      "id": "p5-sc-016",
+      "wordId": "provide-v",
+      "sentence": "Applicants are required to _____ two professional references.",
+      "choices": [
+        "provides",
+        "provided",
+        "providing",
+        "provide"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Recruitment",
+      "grammarPoint": "Passive reporting phrase: be required to + base form",
+      "explanation": "Cấu trúc “be required to do something” yêu cầu động từ nguyên mẫu sau “to”. “Provide references” nghĩa là cung cấp người tham chiếu.",
+      "translationVi": "Ứng viên được yêu cầu cung cấp hai người tham chiếu chuyên môn.",
+      "singleAnswerReason": "“to” trong cấu trúc “are required to” cần động từ nguyên mẫu; các lựa chọn còn lại không hợp lệ về hình thái.",
+      "optionExplanations": [
+        "Sai: “provides” là hiện tại đơn ngôi thứ ba.",
+        "Sai: “provided” là quá khứ/phân từ.",
+        "Sai: “providing” là V-ing.",
+        "Đúng: “provide” là nguyên mẫu trong cụm “required to provide”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Infinitives and Verb Patterns"
+    },
+    {
+      "id": "p5-sc-017",
+      "wordId": "purchase-nv",
+      "sentence": "The company made a large _____ of office supplies before the relocation.",
+      "choices": [
+        "purchasing",
+        "purchased",
+        "purchaser",
+        "purchase"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Procurement",
+      "grammarPoint": "Article + adjective + noun / collocation make a purchase",
+      "explanation": "Sau mạo từ “a” và tính từ “large” cần danh từ. “Make a purchase” là cụm tự nhiên chỉ việc mua hàng.",
+      "translationVi": "Công ty đã mua một lượng lớn vật dụng văn phòng trước khi chuyển địa điểm.",
+      "singleAnswerReason": "Vị trí sau “a large” cần danh từ số ít; “purchase” là danh từ phù hợp. “Purchaser” chỉ người mua, còn các dạng khác không phù hợp cấu trúc.",
+      "optionExplanations": [
+        "Sai: “purchasing” thường là danh động từ hoặc hiện tại phân từ; không phải danh từ đếm được đơn phù hợp ở đây.",
+        "Sai: “purchased” là quá khứ/phân từ, không phải danh từ.",
+        "Sai: “purchaser” là người mua, không phù hợp nghĩa của cụm này.",
+        "Đúng: “purchase” là danh từ trong collocation “make a purchase”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-018",
+      "wordId": "order-v",
+      "sentence": "The purchasing department plans to _____ additional laptops before the new employees arrive.",
+      "choices": [
+        "order",
+        "ordering",
+        "ordered",
+        "orders"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Procurement",
+      "grammarPoint": "Verb pattern: plan to + base form",
+      "explanation": "“Plans to” phải theo sau bởi động từ nguyên mẫu “order”. Ngữ cảnh bộ phận mua hàng đặt thêm máy tính phù hợp với nghĩa của động từ này.",
+      "translationVi": "Phòng mua hàng dự định đặt thêm máy tính xách tay trước khi nhân viên mới đến.",
+      "singleAnswerReason": "“to” trong “plans to” yêu cầu động từ nguyên mẫu; ba lựa chọn còn lại là V-ing, quá khứ phân từ hoặc dạng chia ngôi.",
+      "optionExplanations": [
+        "Đúng: “order” là động từ nguyên mẫu sau “plans to”.",
+        "Sai: “ordering” là V-ing.",
+        "Sai: “ordered” là quá khứ/phân từ.",
+        "Sai: “orders” là hiện tại đơn ngôi thứ ba."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Infinitives and Verb Patterns"
+    },
+    {
+      "id": "p5-sc-019",
+      "wordId": "submit-v",
+      "sentence": "Please _____ your expense claims through the employee portal by Friday.",
+      "choices": [
+        "submission",
+        "submits",
+        "submitted",
+        "submit"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Finance",
+      "grammarPoint": "Imperative sentence: base verb",
+      "explanation": "Câu bắt đầu bằng “Please” là câu yêu cầu/lời đề nghị; động từ chính dùng dạng nguyên mẫu “submit”.",
+      "translationVi": "Vui lòng nộp yêu cầu thanh toán chi phí qua cổng thông tin nhân viên trước thứ Sáu.",
+      "singleAnswerReason": "Câu mệnh lệnh lịch sự bắt đầu bằng “Please” dùng động từ nguyên mẫu; các lựa chọn khác là danh từ hoặc dạng chia động từ.",
+      "optionExplanations": [
+        "Sai: “submission” là danh từ chỉ việc nộp.",
+        "Sai: “submits” là dạng hiện tại đơn ngôi thứ ba.",
+        "Sai: “submitted” là quá khứ/phân từ.",
+        "Đúng: “submit” là động từ nguyên mẫu trong câu yêu cầu."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Imperatives and Verb Forms"
+    },
+    {
+      "id": "p5-sc-020",
+      "wordId": "distribute-v",
+      "sentence": "The revised schedule will be _____ to all department heads tomorrow.",
+      "choices": [
+        "distributing",
+        "distributes",
+        "distribute",
+        "distributed"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Office Administration",
+      "grammarPoint": "Passive voice: will be + past participle",
+      "explanation": "Lịch trình được gửi đến các trưởng bộ phận, vì vậy câu dùng bị động “will be distributed”.",
+      "translationVi": "Lịch trình đã sửa đổi sẽ được phân phát đến tất cả trưởng bộ phận vào ngày mai.",
+      "singleAnswerReason": "“will be” kết hợp với V3 để tạo bị động; “distributed” là quá khứ phân từ của “distribute”.",
+      "optionExplanations": [
+        "Sai: “distributing” là V-ing, không hoàn thành dạng bị động này.",
+        "Sai: “distributes” là hiện tại đơn ngôi thứ ba.",
+        "Sai: “distribute” là nguyên mẫu; thiếu phân từ trong cấu trúc bị động.",
+        "Đúng: “distributed” là V3 sau “will be”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Passive Voice"
+    },
+    {
+      "id": "p5-sc-021",
+      "wordId": "branch-n",
+      "sentence": "The company will open a new _____ near the central station.",
+      "choices": [
+        "branch",
+        "branching",
+        "branched",
+        "branches"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Business Expansion",
+      "grammarPoint": "Singular count noun after a new",
+      "explanation": "Cụm “a new” cần danh từ đếm được số ít. “A new branch” nghĩa là một chi nhánh mới.",
+      "translationVi": "Công ty sẽ mở một chi nhánh mới gần nhà ga trung tâm.",
+      "singleAnswerReason": "Mạo từ “a” và tính từ “new” xác định danh từ đếm được số ít; “branches” là số nhiều, còn “branching/branched” không phù hợp.",
+      "optionExplanations": [
+        "Đúng: “branch” là danh từ số ít sau “a new”.",
+        "Sai: “branching” là V-ing/danh từ chỉ quá trình phân nhánh.",
+        "Sai: “branched” là quá khứ phân từ/tính từ, không phải danh từ cần thiết.",
+        "Sai: “branches” là số nhiều, không đi với “a”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-022",
+      "wordId": "equipment-n",
+      "sentence": "All office _____ must be inspected before the building reopens.",
+      "choices": [
+        "equipments",
+        "equipped",
+        "equipment",
+        "equipping"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Office Administration",
+      "grammarPoint": "Uncountable noun",
+      "explanation": "“Equipment” là danh từ không đếm được trong tiếng Anh chuẩn; không thêm “s” khi nói chung về thiết bị.",
+      "translationVi": "Toàn bộ thiết bị văn phòng phải được kiểm tra trước khi tòa nhà mở cửa trở lại.",
+      "singleAnswerReason": "Ngữ cảnh cần danh từ không đếm được “equipment”; “equipments” là dạng số nhiều không chuẩn trong nghĩa chung, còn các lựa chọn khác không phải danh từ phù hợp.",
+      "optionExplanations": [
+        "Sai: “equipments” không dùng như danh từ số nhiều thông thường của “equipment”.",
+        "Sai: “equipped” là quá khứ phân từ/tính từ.",
+        "Đúng: “equipment” là danh từ không đếm được.",
+        "Sai: “equipping” là V-ing, không phù hợp sau “office” ở đây."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-023",
+      "wordId": "schedule-nv",
+      "sentence": "The revised _____ for next week’s product briefing is posted on the intranet.",
+      "choices": [
+        "scheduled",
+        "scheduler",
+        "scheduling",
+        "schedule"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Meetings",
+      "grammarPoint": "Noun as the head of a noun phrase",
+      "explanation": "Cụm “the revised schedule for ...” cần danh từ chỉ lịch trình. “Schedule” là lịch cụ thể được đăng trên mạng nội bộ.",
+      "translationVi": "Lịch trình đã chỉnh sửa cho buổi giới thiệu sản phẩm tuần tới được đăng trên mạng nội bộ.",
+      "singleAnswerReason": "Sau mạo từ “the” và tính từ “revised” cần danh từ chỉ lịch; “schedule” đáp ứng cả cấu trúc và nghĩa. “scheduled” là phân từ/tính từ, “scheduling” chỉ quá trình lên lịch, “scheduler” chỉ người/công cụ lập lịch.",
+      "optionExplanations": [
+        "Sai: “scheduled” là quá khứ phân từ/tính từ, không phải danh từ chỉ lịch.",
+        "Sai: “scheduler” là người hoặc công cụ lập lịch, không phải lịch trình.",
+        "Sai: “scheduling” chỉ quá trình lên lịch, không phải lịch trình cụ thể được đăng.",
+        "Đúng: “schedule” là danh từ chỉ lịch trình cụ thể được đăng trên intranet."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-024",
+      "wordId": "require-v",
+      "sentence": "The position will _____ frequent travel to regional offices.",
+      "choices": [
+        "require",
+        "requirement",
+        "required",
+        "requiring"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Recruitment",
+      "grammarPoint": "Modal verb: will + base form",
+      "explanation": "Sau “will” dùng động từ nguyên mẫu. “Require frequent travel” nghĩa là đòi hỏi phải đi công tác thường xuyên.",
+      "translationVi": "Vị trí này sẽ yêu cầu đi công tác thường xuyên đến các văn phòng khu vực.",
+      "singleAnswerReason": "Modal “will” buộc dùng V1; “requirement” là danh từ, “required” là quá khứ/phân từ, “requiring” là V-ing.",
+      "optionExplanations": [
+        "Đúng: “require” là động từ nguyên mẫu sau “will”.",
+        "Sai: “requirement” là danh từ chỉ yêu cầu.",
+        "Sai: “required” là quá khứ/phân từ.",
+        "Sai: “requiring” là V-ing."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Modal Verbs"
+    },
+    {
+      "id": "p5-sc-025",
+      "wordId": "available-adj",
+      "sentence": "Conference Room B is not _____ until after 2 p.m.",
+      "choices": [
+        "availability",
+        "avail",
+        "availably",
+        "available"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Meetings",
+      "grammarPoint": "Linking verb be + adjective",
+      "explanation": "Sau động từ nối “is not” cần tính từ mô tả tình trạng phòng họp. “Available” có nghĩa là có sẵn/trống để sử dụng.",
+      "translationVi": "Phòng họp B sẽ không trống cho đến sau 2 giờ chiều.",
+      "singleAnswerReason": "Vị trí sau “is not” yêu cầu tính từ; “available” là tính từ, “availability” là danh từ và “availably” không tự nhiên trong cấu trúc này.",
+      "optionExplanations": [
+        "Sai: “availability” là danh từ.",
+        "Sai: “avail” không phải dạng tính từ cần thiết trong câu này.",
+        "Sai: “availably” là trạng từ hiếm và không làm bổ ngữ sau “is”.",
+        "Đúng: “available” là tính từ sau động từ “is”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Adjectives and Adverbs"
+    },
+    {
+      "id": "p5-sc-026",
+      "wordId": "respond-v",
+      "sentence": "As part of its service policy, the customer service department _____ to all inquiries within one business day.",
+      "choices": [
+        "response",
+        "responded",
+        "responsive",
+        "responds"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Customer Service",
+      "grammarPoint": "Present simple subject–verb agreement",
+      "explanation": "Câu mô tả chính sách thường lệ nên dùng hiện tại đơn. “The customer service department” là chủ ngữ số ít, vì vậy động từ cần dạng “responds”.",
+      "translationVi": "Theo chính sách dịch vụ, phòng chăm sóc khách hàng phản hồi tất cả yêu cầu trong vòng một ngày làm việc.",
+      "singleAnswerReason": "Cụm “As part of its service policy” xác định hành động thường lệ; “department” là chủ ngữ số ít nên hiện tại đơn cần “responds”. “Response” là danh từ, “responsive” là tính từ, “responded” là quá khứ.",
+      "optionExplanations": [
+        "Sai: “response” là danh từ chỉ sự phản hồi.",
+        "Sai: “responded” là quá khứ, không phù hợp quy trình thường lệ đang mô tả.",
+        "Sai: “responsive” là tính từ.",
+        "Đúng: “responds” là hiện tại đơn ngôi thứ ba số ít, phù hợp “team”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Subject–Verb Agreement"
+    },
+    {
+      "id": "p5-sc-027",
+      "wordId": "quantity-n",
+      "sentence": "Please verify the _____ of each item before signing the delivery receipt.",
+      "choices": [
+        "quantify",
+        "quantitatively",
+        "quantitative",
+        "quantity"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Shipping and Logistics",
+      "grammarPoint": "Noun after the definite article",
+      "explanation": "Sau “the” cần danh từ làm trung tâm cụm “the quantity of each item”. “Quantity” chỉ số lượng.",
+      "translationVi": "Vui lòng xác minh số lượng của từng mặt hàng trước khi ký biên nhận giao hàng.",
+      "singleAnswerReason": "Cấu trúc “the ___ of each item” cần danh từ “quantity”; các lựa chọn còn lại là động từ, tính từ và trạng từ.",
+      "optionExplanations": [
+        "Sai: “quantify” là động từ nghĩa là định lượng.",
+        "Sai: “quantitatively” là trạng từ.",
+        "Sai: “quantitative” là tính từ.",
+        "Đúng: “quantity” là danh từ chỉ số lượng."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-028",
+      "wordId": "remain-v",
+      "sentence": "The reception desk will _____ open until 8 p.m. during the exhibition.",
+      "choices": [
+        "remains",
+        "remaining",
+        "remain",
+        "remained"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Events",
+      "grammarPoint": "Modal verb: will + base form",
+      "explanation": "Sau “will” phải là động từ nguyên mẫu. “Remain open” diễn tả trạng thái tiếp tục mở cửa.",
+      "translationVi": "Quầy lễ tân sẽ tiếp tục mở cửa đến 8 giờ tối trong thời gian triển lãm.",
+      "singleAnswerReason": "“will” yêu cầu nguyên mẫu “remain”; ba dạng còn lại không đứng trực tiếp sau modal này.",
+      "optionExplanations": [
+        "Sai: “remains” là hiện tại đơn ngôi thứ ba.",
+        "Sai: “remaining” là V-ing/phân từ.",
+        "Đúng: “remain” là nguyên mẫu sau “will”.",
+        "Sai: “remained” là quá khứ."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Linking Verbs"
+    },
+    {
+      "id": "p5-sc-029",
+      "wordId": "verify-v",
+      "sentence": "Staff members must _____ each customer’s identity before changing account details.",
+      "choices": [
+        "verification",
+        "verified",
+        "verify",
+        "verifying"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Customer Service",
+      "grammarPoint": "Modal verb: must + base form",
+      "explanation": "“Must” là động từ khuyết thiếu, theo sau bởi động từ nguyên mẫu. “Verify identity” nghĩa là xác minh danh tính.",
+      "translationVi": "Nhân viên phải xác minh danh tính từng khách hàng trước khi thay đổi thông tin tài khoản.",
+      "singleAnswerReason": "Sau modal “must” chỉ dùng động từ nguyên mẫu “verify”; danh từ và các dạng phân từ không phù hợp.",
+      "optionExplanations": [
+        "Sai: “verification” là danh từ.",
+        "Sai: “verified” là quá khứ/phân từ.",
+        "Đúng: “verify” là nguyên mẫu sau “must”.",
+        "Sai: “verifying” là V-ing."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Modal Verbs"
+    },
+    {
+      "id": "p5-sc-030",
+      "wordId": "invoice-nv",
+      "sentence": "Please attach a copy of the _____ to your reimbursement request.",
+      "choices": [
+        "invoicing",
+        "invoiced",
+        "invoice",
+        "invoicer"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Finance",
+      "grammarPoint": "Noun after the definite article",
+      "explanation": "Cụm “a copy of the invoice” chỉ bản sao hóa đơn cần đính kèm với yêu cầu hoàn tiền.",
+      "translationVi": "Vui lòng đính kèm một bản sao hóa đơn vào yêu cầu hoàn tiền của bạn.",
+      "singleAnswerReason": "Sau “the” trong cụm “the ___” cần danh từ chỉ chứng từ; “invoice” là hóa đơn.",
+      "optionExplanations": [
+        "Sai: “invoicing” chỉ hoạt động lập hóa đơn.",
+        "Sai: “invoiced” là quá khứ phân từ/tính từ.",
+        "Đúng: “invoice” là danh từ chỉ hóa đơn.",
+        "Sai: “invoicer” không phải danh từ thông dụng chỉ chứng từ hóa đơn."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Articles and Determiners"
+    },
+    {
+      "id": "p5-sc-031",
+      "wordId": "application-n",
+      "sentence": "The hiring manager received more than 200 _____ for the position.",
+      "choices": [
+        "applicant",
+        "applications",
+        "apply",
+        "applying"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Recruitment",
+      "grammarPoint": "Plural count noun after a number",
+      "explanation": "Sau số lượng “more than 200” cần danh từ đếm được số nhiều. “Applications” là các đơn/hồ sơ ứng tuyển.",
+      "translationVi": "Quản lý tuyển dụng đã nhận hơn 200 hồ sơ cho vị trí này.",
+      "singleAnswerReason": "Số lượng lớn hơn một yêu cầu danh từ đếm được số nhiều; “applications” là danh từ chỉ hồ sơ, còn các lựa chọn khác sai từ loại hoặc số.",
+      "optionExplanations": [
+        "Sai: “applicant” là danh từ chỉ người ứng tuyển và ở dạng số ít.",
+        "Đúng: “applications” là danh từ số nhiều chỉ các hồ sơ ứng tuyển.",
+        "Sai: “apply” là động từ.",
+        "Sai: “applying” là V-ing, không phải danh từ đếm được phù hợp."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-032",
+      "wordId": "candidate-n",
+      "sentence": "The successful _____ will be notified by email next week.",
+      "choices": [
+        "candidacy",
+        "candidate",
+        "candid",
+        "candidly"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Recruitment",
+      "grammarPoint": "Adjective + singular count noun",
+      "explanation": "Tính từ “successful” cần bổ nghĩa cho danh từ chỉ người. “Candidate” là ứng viên được lựa chọn.",
+      "translationVi": "Ứng viên thành công sẽ được thông báo qua email vào tuần tới.",
+      "singleAnswerReason": "Vị trí sau tính từ “successful” cần danh từ chỉ người; các lựa chọn còn lại là danh từ trừu tượng, tính từ hoặc trạng từ.",
+      "optionExplanations": [
+        "Sai: “candidacy” là danh từ chỉ tư cách/việc ứng cử, không phải người.",
+        "Đúng: “candidate” là danh từ chỉ ứng viên.",
+        "Sai: “candid” là tính từ nghĩa là thẳng thắn.",
+        "Sai: “candidly” là trạng từ."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-033",
+      "wordId": "manager-n",
+      "sentence": "The new store _____, Ms. Ortiz, will approve the staff schedule before it is posted.",
+      "choices": [
+        "manage",
+        "management",
+        "manager",
+        "managerial"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Retail and Customer Service",
+      "grammarPoint": "Compound noun: noun modifier + noun head",
+      "explanation": "Tên riêng “Ms. Ortiz” đứng sau dấu phẩy để giải thích người giữ chức vụ; chỗ trống cần danh từ chỉ người là “manager”.",
+      "translationVi": "Quản lý cửa hàng mới, bà Ortiz, sẽ phê duyệt lịch làm việc của nhân viên trước khi lịch được đăng.",
+      "singleAnswerReason": "Tên người “Ms. Ortiz” ở vị trí đồng vị xác định chỗ trống phải là danh từ chỉ người. “Management” là hoạt động/bộ phận quản lý, không chỉ một cá nhân; các lựa chọn còn lại không phải danh từ chỉ người.",
+      "optionExplanations": [
+        "Sai: “manage” là động từ, không phải danh từ chỉ người.",
+        "Sai: “management” chỉ hoạt động/bộ phận quản lý, không phải cá nhân được giải thích bằng “Ms. Ortiz”.",
+        "Đúng: “manager” là danh từ chỉ cá nhân giữ vai trò quản lý; “Ms. Ortiz” là phần đồng vị xác nhận.",
+        "Sai: “managerial” là tính từ."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Word Forms and Nouns"
+    },
+    {
+      "id": "p5-sc-034",
+      "wordId": "shipment-n",
+      "sentence": "The carrier confirmed that the replacement parts would be sent in a single _____.",
+      "choices": [
+        "shipper",
+        "shipment",
+        "shipping",
+        "ships"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Shipping and Logistics",
+      "grammarPoint": "Article + adjective + singular count noun",
+      "explanation": "Sau mạo từ “a” và tính từ “single”, câu cần một danh từ đếm được số ít. “Shipment” là một lô hàng, phù hợp với ngữ cảnh các phụ tùng được gửi cùng một lần.",
+      "translationVi": "Đơn vị vận chuyển xác nhận các phụ tùng thay thế sẽ được gửi trong một lô hàng duy nhất.",
+      "singleAnswerReason": "Cụm “a single + singular count noun” yêu cầu danh từ đếm được số ít chỉ lô hàng. “Shipment” đúng nghĩa; “shipping” là hoạt động vận chuyển, “shipper” là người/đơn vị gửi và “ships” là dạng số nhiều của “ship”.",
+      "optionExplanations": [
+        "Sai: “shipper” chỉ người hoặc đơn vị gửi hàng, không phải một lô hàng.",
+        "Đúng: “shipment” là danh từ đếm được chỉ một lô hàng; phù hợp với “a single”.",
+        "Sai: “shipping” thường chỉ hoạt động/dịch vụ vận chuyển, không phải một lô hàng cụ thể trong câu này.",
+        "Sai: “ships” là danh từ số nhiều hoặc động từ chia ngôi; sau “a single” cần danh từ số ít."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Articles and Determiners"
+    },
+    {
+      "id": "p5-sc-035",
+      "wordId": "inspect-v",
+      "sentence": "The technician will _____ the air-conditioning system before the office opens.",
+      "choices": [
+        "inspection",
+        "inspected",
+        "inspecting",
+        "inspect"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Maintenance",
+      "grammarPoint": "Modal verb: will + base form",
+      "explanation": "Sau “will” cần động từ nguyên mẫu “inspect”. Ngữ cảnh nói về kỹ thuật viên kiểm tra hệ thống điều hòa trước giờ mở cửa.",
+      "translationVi": "Kỹ thuật viên sẽ kiểm tra hệ thống điều hòa trước khi văn phòng mở cửa.",
+      "singleAnswerReason": "Modal “will” yêu cầu V1; “inspection” là danh từ, “inspected” là quá khứ/phân từ và “inspecting” là V-ing.",
+      "optionExplanations": [
+        "Sai: “inspection” là danh từ chỉ cuộc kiểm tra.",
+        "Sai: “inspected” là quá khứ/phân từ.",
+        "Sai: “inspecting” là V-ing, không đứng sau “will”.",
+        "Đúng: “inspect” là động từ nguyên mẫu sau “will”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "grammarCategory": "Verb Tense and Aspect"
+    },
+    {
+      "id": "p5-sc-036",
+      "wordId": "approve-v",
+      "sentence": "The board _____ the revised travel budget at yesterday’s meeting.",
+      "choices": [
+        "approves",
+        "approval",
+        "approved",
+        "approving"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Finance",
+      "grammarCategory": "Verb Tense and Aspect",
+      "grammarPoint": "Past simple with a completed past-time marker",
+      "explanation": "“Yesterday’s meeting” xác định một sự kiện đã kết thúc trong quá khứ, vì vậy động từ cần ở quá khứ đơn: “approved”.",
+      "translationVi": "Hội đồng đã phê duyệt ngân sách đi lại sửa đổi tại cuộc họp ngày hôm qua.",
+      "singleAnswerReason": "Chỉ “approved” phù hợp với chủ ngữ “The board” và mốc thời gian “yesterday”; các lựa chọn còn lại sai loại từ hoặc sai dạng thì.",
+      "optionExplanations": [
+        "Sai: hiện tại đơn không phù hợp với mốc thời gian đã kết thúc “yesterday”.",
+        "Sai: danh từ “approval” không thể làm vị ngữ chính ở vị trí này.",
+        "Đúng: quá khứ đơn diễn tả quyết định đã được đưa ra tại cuộc họp hôm qua.",
+        "Sai: V-ing không thể đứng một mình làm động từ chính trong câu này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-037",
+      "wordId": "arrange-v",
+      "sentence": "By 8 a.m. tomorrow, the reception team _____ all transportation arrangements for the visiting delegates.",
+      "choices": [
+        "will have arranged",
+        "had arranged",
+        "will arranging",
+        "has arranged"
+      ],
+      "answerIndex": 0,
+      "level": "B2",
+      "topic": "Travel and Events",
+      "grammarCategory": "Verb Tense and Aspect",
+      "grammarPoint": "Future perfect with “by” + future time",
+      "explanation": "Cụm “By 8 a.m. tomorrow” yêu cầu nhấn mạnh công việc sẽ hoàn tất trước thời điểm đó; dùng “will have + past participle”.",
+      "translationVi": "Trước 8 giờ sáng ngày mai, nhóm lễ tân sẽ hoàn tất mọi sắp xếp phương tiện đi lại cho các đại biểu đến thăm.",
+      "singleAnswerReason": "Chỉ “will have arranged” thể hiện đúng hành động hoàn tất trước mốc 8 giờ sáng ngày mai.",
+      "optionExplanations": [
+        "Đúng: tương lai hoàn thành diễn tả việc sẽ hoàn tất trước một mốc thời gian trong tương lai.",
+        "Sai: quá khứ hoàn thành cần một mốc tham chiếu trong quá khứ, không phải “tomorrow”.",
+        "Sai: sau “will” phải dùng động từ nguyên mẫu, không dùng V-ing trực tiếp.",
+        "Sai: hiện tại hoàn thành không phù hợp với mốc tương lai “by 8 a.m. tomorrow”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-038",
+      "wordId": "authorize-v",
+      "sentence": "The policy requires the finance director to _____ any refund exceeding $500.",
+      "choices": [
+        "authorization",
+        "authorize",
+        "authorizing",
+        "authorized"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Finance",
+      "grammarCategory": "Infinitives and Verb Patterns",
+      "grammarPoint": "Require + object + to-infinitive",
+      "explanation": "Động từ “requires” có cấu trúc “require + object + to-infinitive”. “Authorize a refund” nghĩa là cho phép/phê duyệt khoản hoàn tiền.",
+      "translationVi": "Chính sách yêu cầu giám đốc tài chính phê duyệt mọi khoản hoàn tiền vượt quá 500 đô la.",
+      "singleAnswerReason": "Sau “the finance director to” cần động từ nguyên mẫu “authorize”; các đáp án khác không tạo được cấu trúc đúng.",
+      "optionExplanations": [
+        "Sai: danh từ không thể đứng sau “to” trong cấu trúc “require someone to do”.",
+        "Đúng: “to” được theo sau bởi động từ nguyên mẫu; “authorize a refund” là kết hợp đúng nghĩa.",
+        "Sai: V-ing không phù hợp sau dấu hiệu “to” của động từ nguyên mẫu.",
+        "Sai: quá khứ/phân từ không phù hợp trong cụm nguyên mẫu “to ___”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-039",
+      "wordId": "calculate-v",
+      "sentence": "The accounting department _____ the monthly depreciation expense at the end of each quarter.",
+      "choices": [
+        "calculate",
+        "calculating",
+        "calculates",
+        "calculation"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Finance",
+      "grammarCategory": "Subject–Verb Agreement",
+      "grammarPoint": "Singular collective/department noun + present simple verb",
+      "explanation": "“The accounting department” được xem là một đơn vị số ít trong cấu trúc này, nên động từ hiện tại đơn nhận đuôi -s.",
+      "translationVi": "Phòng kế toán tính chi phí khấu hao hằng tháng vào cuối mỗi quý.",
+      "singleAnswerReason": "Chủ ngữ trung tâm là “department” số ít; chỉ “calculates” hòa hợp về chủ-vị và đúng chức năng động từ.",
+      "optionExplanations": [
+        "Sai: chủ ngữ số ít “department” ở hiện tại đơn cần động từ có -s.",
+        "Sai: V-ing không thể đứng một mình làm động từ chính ở đây.",
+        "Đúng: chủ ngữ “department” là danh từ số ít; hiện tại đơn cần “calculates”.",
+        "Sai: danh từ “calculation” không thể làm vị ngữ chính trong câu này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-040",
+      "wordId": "cancel-v",
+      "sentence": "Because of the severe weather alert, the airline has _____ all evening flights.",
+      "choices": [
+        "cancel",
+        "cancelling",
+        "cancels",
+        "canceled"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Travel and Transportation",
+      "grammarCategory": "Verb Tense and Aspect",
+      "grammarPoint": "Present perfect: has + past participle",
+      "explanation": "Cấu trúc “has + past participle” diễn tả quyết định hủy chuyến đã được đưa ra và có hiệu lực hiện tại.",
+      "translationVi": "Do cảnh báo thời tiết khắc nghiệt, hãng hàng không đã hủy tất cả các chuyến bay buổi tối.",
+      "singleAnswerReason": "Sau “has” chỉ dạng phân từ “canceled” phù hợp; ba dạng còn lại không thể đi sau trợ động từ này.",
+      "optionExplanations": [
+        "Sai: sau trợ động từ “has” cần quá khứ phân từ, không phải nguyên mẫu.",
+        "Sai: V-ing không dùng sau “has” để tạo hiện tại hoàn thành.",
+        "Sai: dạng hiện tại đơn không thể đứng sau trợ động từ “has”.",
+        "Đúng: “has + past participle” tạo hiện tại hoàn thành; “canceled” là phân từ của “cancel”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-041",
+      "wordId": "clarify-v",
+      "sentence": "The revised instructions were issued to _____ the procedure for submitting travel claims.",
+      "choices": [
+        "clarification",
+        "clarifying",
+        "clarify",
+        "clarified"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Office Administration",
+      "grammarCategory": "Infinitives and Verb Patterns",
+      "grammarPoint": "To-infinitive of purpose",
+      "explanation": "Cụm “to clarify” nêu mục đích của việc ban hành hướng dẫn: làm rõ quy trình gửi yêu cầu thanh toán công tác phí.",
+      "translationVi": "Hướng dẫn sửa đổi được ban hành nhằm làm rõ quy trình nộp yêu cầu thanh toán công tác phí.",
+      "singleAnswerReason": "Vị trí sau “to” chỉ mục đích cần động từ nguyên mẫu “clarify”; danh từ, V-ing và quá khứ phân từ đều không phù hợp.",
+      "optionExplanations": [
+        "Sai: danh từ không phù hợp sau “to” chỉ mục đích.",
+        "Sai: V-ing không phù hợp trong cụm nguyên mẫu chỉ mục đích “to ___”.",
+        "Đúng: “to + base verb” diễn tả mục đích ban hành hướng dẫn.",
+        "Sai: quá khứ/phân từ không phù hợp sau “to” trong cấu trúc này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-042",
+      "wordId": "confirm-v",
+      "sentence": "Please contact the supplier with the specific purpose of _____ the delivery date before arranging the installation.",
+      "choices": [
+        "confirm",
+        "confirmation",
+        "confirmed",
+        "confirming"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Procurement",
+      "grammarCategory": "Infinitives and Verb Patterns",
+      "grammarPoint": "Preposition + gerund: purpose of + V-ing",
+      "explanation": "Giới từ “of” trong cụm “with the specific purpose of” được theo sau bởi danh động từ “confirming”.",
+      "translationVi": "Vui lòng liên hệ nhà cung cấp với mục đích cụ thể là xác nhận ngày giao hàng trước khi sắp xếp việc lắp đặt.",
+      "singleAnswerReason": "Cấu trúc cố định “purpose of + V-ing” chỉ chấp nhận danh động từ sau “of”; do đó “confirming” là đáp án duy nhất.",
+      "optionExplanations": [
+        "Sai: sau giới từ “of” cần danh động từ V-ing, không dùng động từ nguyên mẫu.",
+        "Sai: danh từ “confirmation” không hoàn thành cấu trúc “purpose of + V-ing” đang được kiểm tra.",
+        "Sai: quá khứ/phân từ không phù hợp sau giới từ “of” trong cấu trúc này.",
+        "Đúng: sau giới từ “of” dùng danh động từ; “purpose of confirming” diễn tả mục đích xác nhận."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-043",
+      "wordId": "extend-v",
+      "sentence": "The committee is considering _____ the application deadline by one week.",
+      "choices": [
+        "extend",
+        "extension",
+        "extending",
+        "extended"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Recruitment",
+      "grammarCategory": "Gerunds and Infinitives",
+      "grammarPoint": "Consider + gerund",
+      "explanation": "“Consider” được theo sau bởi danh động từ khi nói đến việc cân nhắc thực hiện một hành động.",
+      "translationVi": "Ủy ban đang cân nhắc gia hạn thời hạn nộp đơn thêm một tuần.",
+      "singleAnswerReason": "Chỉ “extending” tạo đúng mẫu “consider + V-ing” và phù hợp nghĩa gia hạn thời hạn nộp đơn.",
+      "optionExplanations": [
+        "Sai: sau “consider” khi mang nghĩa cân nhắc làm gì, động từ cần ở dạng V-ing.",
+        "Sai: danh từ không phù hợp làm bổ ngữ động từ trong cấu trúc “consider doing”.",
+        "Đúng: “consider + gerund” là cấu trúc chuẩn; “extending the deadline” nghĩa là gia hạn hạn chót.",
+        "Sai: quá khứ phân từ không phù hợp sau “considering” trong ngữ cảnh này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-044",
+      "wordId": "deliver-v",
+      "sentence": "By 5 p.m. yesterday, the courier _____ all urgent documents to the head office.",
+      "choices": [
+        "has delivered",
+        "had delivered",
+        "delivers",
+        "delivering"
+      ],
+      "answerIndex": 1,
+      "level": "B2",
+      "topic": "Shipping and Logistics",
+      "grammarCategory": "Verb Tense and Aspect",
+      "grammarPoint": "Past perfect with a past reference point",
+      "explanation": "Cấu trúc “by 5 p.m. yesterday” đặt một hạn hoàn thành trong quá khứ; hành động đã xảy ra trước hạn đó dùng quá khứ hoàn thành.",
+      "translationVi": "Đến 5 giờ chiều hôm qua, nhân viên chuyển phát đã giao toàn bộ tài liệu khẩn đến trụ sở chính.",
+      "singleAnswerReason": "Chỉ “had delivered” diễn tả đúng quan hệ thời gian trước-mốc-quá-khứ; hiện tại hoàn thành, hiện tại đơn và V-ing đều sai.",
+      "optionExplanations": [
+        "Sai: hiện tại hoàn thành không phù hợp với mốc quá khứ đã kết thúc “yesterday”.",
+        "Đúng: quá khứ hoàn thành diễn tả việc giao tài liệu đã hoàn tất trước mốc 5 giờ chiều hôm qua.",
+        "Sai: hiện tại đơn không diễn tả hành động đã hoàn tất trước một mốc trong quá khứ.",
+        "Sai: V-ing không thể đứng một mình làm vị ngữ chính."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-045",
+      "wordId": "develop-v",
+      "sentence": "The company _____ a new customer portal since January, and development is still ongoing.",
+      "choices": [
+        "developed",
+        "has developed",
+        "has been developing",
+        "is develop"
+      ],
+      "answerIndex": 2,
+      "level": "B2",
+      "topic": "Technology",
+      "grammarCategory": "Verb Tense and Aspect",
+      "grammarPoint": "Present perfect continuous with “since”",
+      "explanation": "“Since January” kết hợp với thông tin dự án vẫn đang phát triển cho thấy hành động bắt đầu trong quá khứ và tiếp tục đến hiện tại.",
+      "translationVi": "Công ty đã và đang phát triển một cổng thông tin khách hàng mới kể từ tháng Một, và việc phát triển vẫn đang tiếp tục.",
+      "singleAnswerReason": "“Has been developing” là lựa chọn duy nhất diễn tả rõ quá trình liên tục còn đang diễn ra; “has developed” thiên về kết quả hoàn tất.",
+      "optionExplanations": [
+        "Sai: quá khứ đơn không thể hiện quá trình bắt đầu trong quá khứ và vẫn đang tiếp diễn.",
+        "Sai: có thể diễn tả kết quả hoàn tất, nhưng mệnh đề “development is still ongoing” nhấn mạnh quá trình vẫn tiếp diễn.",
+        "Đúng: hiện tại hoàn thành tiếp diễn nhấn mạnh hoạt động bắt đầu từ January và vẫn đang diễn ra.",
+        "Sai: sau “is” cần V-ing hoặc phân từ; không dùng nguyên mẫu “develop”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-046",
+      "wordId": "coordinate-v",
+      "sentence": "Neither the sales manager nor the assistants _____ the product demonstration schedule.",
+      "choices": [
+        "coordinates",
+        "coordination",
+        "coordinate",
+        "coordinating"
+      ],
+      "answerIndex": 2,
+      "level": "B2",
+      "topic": "Sales and Marketing",
+      "grammarCategory": "Subject–Verb Agreement",
+      "grammarPoint": "Neither…nor: agreement with the nearer subject",
+      "explanation": "Với “neither...nor”, động từ thường hòa hợp với thành phần chủ ngữ đứng gần nó nhất. Ở đây là “the assistants” số nhiều.",
+      "translationVi": "Cả quản lý bán hàng lẫn các trợ lý đều không điều phối lịch trình buổi giới thiệu sản phẩm.",
+      "singleAnswerReason": "Chủ ngữ gần động từ nhất là “assistants”, vì vậy dùng “coordinate”, không thêm -s.",
+      "optionExplanations": [
+        "Sai: trong cấu trúc “neither...nor”, động từ thường hòa hợp với chủ ngữ gần nhất; “assistants” là số nhiều.",
+        "Sai: danh từ không thể làm vị ngữ chính.",
+        "Đúng: chủ ngữ gần nhất “the assistants” là số nhiều, nên dùng động từ nguyên mẫu ở hiện tại đơn.",
+        "Sai: V-ing không thể đứng một mình làm vị ngữ chính."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-047",
+      "wordId": "increase-v",
+      "sentence": "The number of online orders _____ by 12 percent in October.",
+      "choices": [
+        "increase",
+        "increased",
+        "increasing",
+        "increases"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "E-commerce",
+      "grammarCategory": "Subject–Verb Agreement",
+      "grammarPoint": "“The number of” + plural noun takes a singular verb",
+      "explanation": "Trong cụm “the number of + danh từ số nhiều”, chủ ngữ chính là “number” số ít. “In October” ở đây nói về một tháng đã qua nên dùng quá khứ đơn.",
+      "translationVi": "Số lượng đơn đặt hàng trực tuyến đã tăng 12% trong tháng Mười.",
+      "singleAnswerReason": "“Increased” vừa hòa hợp với chủ ngữ số ít ở dạng quá khứ, vừa phù hợp mốc thời gian quá khứ.",
+      "optionExplanations": [
+        "Sai: chủ ngữ trung tâm “The number” là số ít và câu có mốc quá khứ “in October”.",
+        "Đúng: “The number” là chủ ngữ số ít; quá khứ đơn “increased” phù hợp với mốc thời gian đã kết thúc.",
+        "Sai: V-ing không thể đứng một mình làm động từ chính.",
+        "Sai: hiện tại đơn không phù hợp với mốc thời gian quá khứ của câu."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-048",
+      "wordId": "contribute-v",
+      "sentence": "The new safety procedures _____ to a reduction in workplace accidents.",
+      "choices": [
+        "contributes",
+        "contribution",
+        "contributing",
+        "contribute"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Workplace Safety",
+      "grammarCategory": "Subject–Verb Agreement",
+      "grammarPoint": "Plural subject + base-form present simple verb",
+      "explanation": "Chủ ngữ “The new safety procedures” là số nhiều. Động từ hiện tại đơn tương ứng là “contribute”.",
+      "translationVi": "Các quy trình an toàn mới góp phần làm giảm tai nạn tại nơi làm việc.",
+      "singleAnswerReason": "Chỉ “contribute” hòa hợp với chủ ngữ số nhiều và tạo được kết hợp “contribute to a reduction”.",
+      "optionExplanations": [
+        "Sai: chủ ngữ “procedures” là số nhiều nên không dùng động từ thêm -s.",
+        "Sai: danh từ không thể làm động từ chính.",
+        "Sai: V-ing không thể đứng một mình làm vị ngữ trong câu này.",
+        "Đúng: chủ ngữ số nhiều “procedures” đi với động từ nguyên mẫu ở hiện tại đơn."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-049",
+      "wordId": "convert-v",
+      "sentence": "The updated software _____ each scanned receipt into a searchable PDF.",
+      "choices": [
+        "converts",
+        "convert",
+        "conversion",
+        "converting"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Technology",
+      "grammarCategory": "Subject–Verb Agreement",
+      "grammarPoint": "Singular uncountable subject + present simple -s",
+      "explanation": "“Software” là danh từ không đếm được và được xem là số ít; động từ hiện tại đơn cần dạng “converts”.",
+      "translationVi": "Phần mềm được cập nhật chuyển mỗi biên lai đã quét thành một tệp PDF có thể tìm kiếm.",
+      "singleAnswerReason": "“Converts” là lựa chọn duy nhất vừa hòa hợp với chủ ngữ số ít vừa hoàn chỉnh cấu trúc “convert A into B”.",
+      "optionExplanations": [
+        "Đúng: chủ ngữ số ít “software” dùng động từ hiện tại đơn có -s; “convert A into B” là cấu trúc đúng.",
+        "Sai: động từ thiếu -s khi chủ ngữ là danh từ số ít ở hiện tại đơn.",
+        "Sai: danh từ không thể làm vị ngữ chính.",
+        "Sai: V-ing không thể đứng một mình làm động từ chính."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-050",
+      "wordId": "specify-v",
+      "sentence": "The contract _____ which party is responsible for customs fees.",
+      "choices": [
+        "specify",
+        "specification",
+        "specifies",
+        "specifying"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Legal and Procurement",
+      "grammarCategory": "Subject–Verb Agreement",
+      "grammarPoint": "Singular subject in present simple",
+      "explanation": "Chủ ngữ “The contract” là số ít và câu diễn tả nội dung thường trực của hợp đồng, nên dùng hiện tại đơn “specifies”.",
+      "translationVi": "Hợp đồng nêu rõ bên nào chịu trách nhiệm thanh toán phí hải quan.",
+      "singleAnswerReason": "“Specifies” là dạng duy nhất phù hợp với chủ ngữ số ít và vị trí động từ chính.",
+      "optionExplanations": [
+        "Sai: chủ ngữ số ít “contract” cần động từ có -s ở hiện tại đơn.",
+        "Sai: danh từ không thể làm vị ngữ chính.",
+        "Đúng: “contract” là chủ ngữ số ít; động từ hiện tại đơn là “specifies”.",
+        "Sai: V-ing không thể đứng một mình làm động từ chính trong câu."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-051",
+      "wordId": "handle-v",
+      "sentence": "Customer complaints should be _____ promptly and documented in the service log.",
+      "choices": [
+        "handling",
+        "handled",
+        "handle",
+        "handler"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Customer Service",
+      "grammarCategory": "Passive Voice",
+      "grammarPoint": "Modal + be + past participle",
+      "explanation": "Khiếu nại là đối tượng nhận hành động xử lý, do đó dùng bị động “should be handled”.",
+      "translationVi": "Khiếu nại của khách hàng cần được xử lý kịp thời và ghi lại trong nhật ký dịch vụ.",
+      "singleAnswerReason": "Chỉ quá khứ phân từ “handled” hoàn thành cấu trúc bị động sau “should be”.",
+      "optionExplanations": [
+        "Sai: sau “should be” trong câu bị động cần quá khứ phân từ, không phải V-ing.",
+        "Đúng: “should be + past participle” tạo câu bị động; khiếu nại là đối tượng được xử lý.",
+        "Sai: nguyên mẫu không thể đứng sau “should be” trong câu bị động.",
+        "Sai: danh từ chỉ người xử lý không thể điền vào vị trí phân từ bị động."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-052",
+      "wordId": "update-nv",
+      "sentence": "The customer database _____ automatically every night by the system.",
+      "choices": [
+        "updates",
+        "is updated",
+        "is updating",
+        "has update"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Technology",
+      "grammarCategory": "Passive Voice",
+      "grammarPoint": "Present simple passive for routine system actions",
+      "explanation": "Cơ sở dữ liệu nhận hành động cập nhật; “every night” cho biết quy trình thường xuyên, nên dùng hiện tại đơn bị động “is updated”.",
+      "translationVi": "Cơ sở dữ liệu khách hàng được hệ thống tự động cập nhật mỗi đêm.",
+      "singleAnswerReason": "“Is updated” là lựa chọn duy nhất vừa đúng bị động vừa đúng thì hiện tại đơn của một tác vụ lặp lại.",
+      "optionExplanations": [
+        "Sai: câu có “by the system” và database là đối tượng được cập nhật, nên cần dạng bị động.",
+        "Đúng: hiện tại đơn bị động “is + past participle” diễn tả việc cập nhật tự động theo lịch.",
+        "Sai: cấu trúc này mang nghĩa database đang chủ động cập nhật thứ gì đó.",
+        "Sai: sau “has” cần quá khứ phân từ; đồng thời câu cần cấu trúc bị động."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-053",
+      "wordId": "transfer-nv",
+      "sentence": "The remaining funds were _____ to the reserve account on Friday.",
+      "choices": [
+        "transferring",
+        "transfer",
+        "transferred",
+        "transfers"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Banking and Finance",
+      "grammarCategory": "Passive Voice",
+      "grammarPoint": "Past simple passive: was/were + past participle",
+      "explanation": "Khoản tiền là đối tượng được chuyển; “on Friday” chỉ thời điểm đã xảy ra nên dùng quá khứ đơn bị động.",
+      "translationVi": "Khoản tiền còn lại đã được chuyển vào tài khoản dự phòng vào thứ Sáu.",
+      "singleAnswerReason": "Chỉ “transferred” tạo đúng cấu trúc “were + past participle”.",
+      "optionExplanations": [
+        "Sai: sau “were” trong câu bị động cần quá khứ phân từ, không phải V-ing.",
+        "Sai: nguyên mẫu không hoàn thành cấu trúc bị động “were + past participle”.",
+        "Đúng: “were transferred” là quá khứ đơn bị động; “on Friday” xác định thời điểm đã qua.",
+        "Sai: dạng hiện tại ngôi thứ ba số ít không phù hợp sau “were”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-054",
+      "wordId": "adequate-adj",
+      "sentence": "The current storage area is not _____ for the additional inventory.",
+      "choices": [
+        "adequacy",
+        "adequate",
+        "adequately",
+        "adequateness"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Warehouse and Logistics",
+      "grammarCategory": "Adjectives and Adverbs",
+      "grammarPoint": "Linking verb + adjective; adequate for",
+      "explanation": "Sau động từ nối “is” cần tính từ mô tả chủ ngữ “storage area”. Cụm “adequate for” diễn tả đủ chỗ cho lượng hàng bổ sung.",
+      "translationVi": "Khu vực lưu trữ hiện tại không đủ chỗ cho lượng hàng tồn kho bổ sung.",
+      "singleAnswerReason": "Chỉ tính từ “adequate” phù hợp sau “is” và kết hợp đúng với giới từ “for”.",
+      "optionExplanations": [
+        "Sai: danh từ “adequacy” không thể bổ nghĩa sau động từ nối “is”.",
+        "Đúng: sau “is not” cần tính từ làm bổ ngữ; “adequate for” nghĩa là đủ cho.",
+        "Sai: trạng từ không thể làm bổ ngữ tính từ cho chủ ngữ sau “is”.",
+        "Sai: danh từ hóa này không phù hợp vị trí và không phải cách dùng tự nhiên."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-055",
+      "wordId": "adjacent-adj",
+      "sentence": "The training room is adjacent _____ the main conference hall.",
+      "choices": [
+        "with",
+        "at",
+        "to",
+        "from"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Office Facilities",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Adjective + fixed preposition: adjacent to",
+      "explanation": "Tính từ “adjacent” luôn kết hợp với “to” khi chỉ vị trí kế bên một địa điểm khác.",
+      "translationVi": "Phòng đào tạo nằm liền kề hội trường hội nghị chính.",
+      "singleAnswerReason": "Cụm “adjacent to” là kết hợp chuẩn; các giới từ còn lại không đi với “adjacent” trong cấu trúc này.",
+      "optionExplanations": [
+        "Sai: tính từ “adjacent” kết hợp với giới từ “to”, không dùng “with”.",
+        "Sai: “adjacent at” không phải kết hợp giới từ chuẩn.",
+        "Đúng: cụm cố định là “adjacent to”, nghĩa là nằm liền kề với.",
+        "Sai: “adjacent from” không phải cấu trúc chuẩn trong nghĩa vị trí này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-056",
+      "wordId": "annual-adj",
+      "sentence": "The company conducts _____ annual review of each supplier’s performance.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "no article"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Procurement",
+      "grammarCategory": "Articles and Determiners",
+      "grammarPoint": "Indefinite article an before a vowel sound",
+      "explanation": "“Review” là danh từ đếm được số ít nên cần mạo từ. “Annual” bắt đầu bằng âm nguyên âm, vì vậy dùng “an”.",
+      "translationVi": "Công ty tiến hành một cuộc đánh giá hằng năm về hiệu suất của từng nhà cung cấp.",
+      "singleAnswerReason": "Chỉ “an” vừa đáp ứng yêu cầu mạo từ trước danh từ đếm được số ít, vừa đúng âm đầu của “annual”.",
+      "optionExplanations": [
+        "Sai: “annual” bắt đầu bằng âm nguyên âm /ˈæn/ nên không dùng mạo từ “a”.",
+        "Đúng: “annual” bắt đầu bằng âm nguyên âm, vì vậy cần “an”.",
+        "Sai: câu nói về một cuộc đánh giá theo quy trình chung, không xác định một cuộc đánh giá đã biết trước.",
+        "Sai: danh từ đếm được số ít “review” cần một từ hạn định đứng trước."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-057",
+      "wordId": "beneficial-adj",
+      "sentence": "Flexible working hours can be beneficial _____ employees with long commutes.",
+      "choices": [
+        "on",
+        "with",
+        "at",
+        "to"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Human Resources",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Adjective + preposition: beneficial to",
+      "explanation": "Cấu trúc “be beneficial to + người/vật” diễn tả điều gì đó có lợi cho một đối tượng.",
+      "translationVi": "Giờ làm việc linh hoạt có thể có lợi cho những nhân viên phải di chuyển quãng đường dài.",
+      "singleAnswerReason": "“To” là giới từ theo sau “beneficial” khi nêu đối tượng nhận lợi ích; các lựa chọn còn lại không tạo kết hợp đúng trong cấu trúc này.",
+      "optionExplanations": [
+        "Sai: “beneficial on employees” không phải kết hợp tính từ–giới từ đúng.",
+        "Sai: “beneficial with employees” không diễn tả đối tượng được hưởng lợi.",
+        "Sai: “beneficial at employees” sai cấu trúc.",
+        "Đúng: tính từ “beneficial” kết hợp với “to” trước đối tượng được hưởng lợi."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-058",
+      "wordId": "competitive-adj",
+      "sentence": "To remain _____ in the regional market, the company has lowered its delivery fees.",
+      "choices": [
+        "competition",
+        "competitively",
+        "competitive",
+        "compete"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Sales and Marketing",
+      "grammarCategory": "Adjectives and Adverbs",
+      "grammarPoint": "Linking verb remain + adjective",
+      "explanation": "“Remain” là động từ nối; theo sau nó cần tính từ mô tả trạng thái của công ty.",
+      "translationVi": "Để duy trì khả năng cạnh tranh trên thị trường khu vực, công ty đã giảm phí giao hàng.",
+      "singleAnswerReason": "“Competitive” là tính từ duy nhất phù hợp về từ loại và ý nghĩa với “remain”.",
+      "optionExplanations": [
+        "Sai: danh từ không thể làm bổ ngữ tính từ sau “remain”.",
+        "Sai: trạng từ không phù hợp sau động từ nối “remain” khi cần mô tả trạng thái của công ty.",
+        "Đúng: “remain + adjective” diễn tả duy trì trạng thái có tính cạnh tranh.",
+        "Sai: động từ nguyên mẫu không thể làm bổ ngữ sau “remain”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-059",
+      "wordId": "confidential-adj",
+      "sentence": "All salary information must remain strictly _____.",
+      "choices": [
+        "confidential",
+        "confidentially",
+        "confidentiality",
+        "confide"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Human Resources",
+      "grammarCategory": "Adjectives and Adverbs",
+      "grammarPoint": "Adverb + adjective after a linking verb",
+      "explanation": "“Strictly” là trạng từ bổ nghĩa cho tính từ “confidential”; sau “remain” cần một tính từ mô tả trạng thái thông tin.",
+      "translationVi": "Mọi thông tin về tiền lương phải luôn được giữ bí mật nghiêm ngặt.",
+      "singleAnswerReason": "“Confidential” là tính từ duy nhất hoàn thành cấu trúc “remain + adjective”; các dạng còn lại sai từ loại.",
+      "optionExplanations": [
+        "Đúng: sau “remain” cần tính từ; “strictly” bổ nghĩa cho tính từ “confidential”.",
+        "Sai: trạng từ không thể làm bổ ngữ cho chủ ngữ sau động từ nối “remain”.",
+        "Sai: danh từ không phù hợp vị trí bổ ngữ tính từ.",
+        "Sai: động từ không thể đứng ở vị trí tính từ sau “remain”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-060",
+      "wordId": "consecutive-adj",
+      "sentence": "The warehouse has operated without an incident for 120 _____ days.",
+      "choices": [
+        "consecutively",
+        "consecutive",
+        "consequence",
+        "consecutiveness"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Warehouse and Logistics",
+      "grammarCategory": "Adjectives and Adverbs",
+      "grammarPoint": "Adjective before a plural count noun",
+      "explanation": "Khoảng trống đứng trước danh từ “days” nên cần tính từ “consecutive” (liên tiếp).",
+      "translationVi": "Kho hàng đã hoạt động 120 ngày liên tiếp mà không xảy ra sự cố.",
+      "singleAnswerReason": "Chỉ “consecutive” là tính từ phù hợp cả vị trí lẫn nghĩa; “consecutively” là trạng từ.",
+      "optionExplanations": [
+        "Sai: trạng từ không thể trực tiếp bổ nghĩa cho danh từ “days” trong vị trí này.",
+        "Đúng: danh từ “days” cần tính từ “consecutive” để chỉ các ngày liên tiếp.",
+        "Sai: danh từ “consequence” không mang nghĩa liên tiếp và không bổ nghĩa được cho “days”.",
+        "Sai: danh từ trừu tượng không phù hợp trước danh từ “days”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-061",
+      "wordId": "flexible-adj",
+      "sentence": "The company offers _____ working hours during the summer to accommodate parents with school-age children.",
+      "choices": [
+        "flexibility",
+        "flexibly",
+        "flexible",
+        "flex"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Human Resources",
+      "grammarCategory": "Adjectives and Adverbs",
+      "grammarPoint": "Adjective + noun",
+      "explanation": "Vị trí trước cụm danh từ “working hours” cần tính từ. “Flexible working hours” là kết hợp tự nhiên trong ngữ cảnh nhân sự.",
+      "translationVi": "Công ty cung cấp giờ làm việc linh hoạt vào mùa hè để hỗ trợ phụ huynh có con trong độ tuổi đi học.",
+      "singleAnswerReason": "“Flexible” là tính từ duy nhất bổ nghĩa đúng cho “working hours”; các lựa chọn khác sai từ loại hoặc sắc thái.",
+      "optionExplanations": [
+        "Sai: danh từ không thể trực tiếp bổ nghĩa cho “working hours” theo cấu trúc này.",
+        "Sai: trạng từ không phù hợp trước cụm danh từ.",
+        "Đúng: tính từ “flexible” bổ nghĩa cho danh từ “working hours”.",
+        "Sai: “flex” không phải tính từ phù hợp trong văn phong công việc trang trọng này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-062",
+      "wordId": "delay-v",
+      "sentence": "The flight was delayed _____ heavy fog at the airport.",
+      "choices": [
+        "although",
+        "because of",
+        "despite",
+        "unless"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Travel and Transportation",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Cause phrase: because of + noun phrase",
+      "explanation": "“Heavy fog” là cụm danh từ nêu nguyên nhân, do đó dùng “because of” để giải thích lý do chuyến bay bị trì hoãn.",
+      "translationVi": "Chuyến bay bị trì hoãn do sương mù dày đặc tại sân bay.",
+      "singleAnswerReason": "Chỉ “because of” vừa đi với cụm danh từ vừa diễn đạt nguyên nhân; “although/unless” cần mệnh đề và “despite” mang nghĩa nhượng bộ.",
+      "optionExplanations": [
+        "Sai: liên từ này cần một mệnh đề theo sau, nhưng “heavy fog” là cụm danh từ.",
+        "Đúng: “because of” theo sau bởi cụm danh từ để nêu nguyên nhân.",
+        "Sai: “despite” mang nghĩa mặc dù, không phù hợp để nêu nguyên nhân gây trì hoãn.",
+        "Sai: “unless” cần một mệnh đề và diễn tả điều kiện, không phải nguyên nhân."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-063",
+      "wordId": "notify-v",
+      "sentence": "The HR department must notify all applicants _____ any change in the interview schedule.",
+      "choices": [
+        "for",
+        "of",
+        "with",
+        "at"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Recruitment",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Verb + object + fixed preposition: notify someone of something",
+      "explanation": "Động từ “notify” dùng cấu trúc “notify + người + of + thông tin”.",
+      "translationVi": "Phòng nhân sự phải thông báo cho tất cả ứng viên về mọi thay đổi trong lịch phỏng vấn.",
+      "singleAnswerReason": "“Of” là giới từ theo sau tân ngữ người trong kết hợp “notify all applicants of any change”; các lựa chọn còn lại không tạo mẫu này.",
+      "optionExplanations": [
+        "Sai: “notify someone for a change” không đúng kết hợp thông báo thông tin.",
+        "Đúng: cấu trúc chuẩn là “notify someone of something”.",
+        "Sai: “notify someone with a change” không phù hợp cấu trúc thông báo thông tin này.",
+        "Sai: “notify someone at a change” sai cấu trúc."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-064",
+      "wordId": "obtain-v",
+      "sentence": "Employees can obtain a parking permit _____ the facilities office.",
+      "choices": [
+        "from",
+        "to",
+        "among",
+        "during"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Office Facilities",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Obtain something from a source",
+      "explanation": "Văn phòng cơ sở vật chất là nơi cấp giấy phép đỗ xe, vì vậy cần giới từ nguồn “from”.",
+      "translationVi": "Nhân viên có thể nhận giấy phép đỗ xe từ văn phòng cơ sở vật chất.",
+      "singleAnswerReason": "Chỉ “from” nêu đúng nguồn mà nhân viên nhận giấy phép; các lựa chọn khác chỉ vị trí/thời gian hoặc sai quan hệ.",
+      "optionExplanations": [
+        "Đúng: “obtain something from someone/an office” diễn tả nhận hoặc xin được thứ gì từ một nơi.",
+        "Sai: “obtain a permit to the office” không đúng quan hệ nguồn cấp trong câu.",
+        "Sai: “among” dùng cho vị trí giữa nhiều đối tượng, không diễn tả nơi cấp giấy phép.",
+        "Sai: “during” chỉ thời gian, không thể hiện nguồn cấp giấy phép."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-065",
+      "wordId": "participate-v",
+      "sentence": "All employees are expected to participate _____ the annual safety drill.",
+      "choices": [
+        "at",
+        "on",
+        "with",
+        "in"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Workplace Safety",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Verb + preposition: participate in",
+      "explanation": "Động từ “participate” kết hợp với giới từ “in” trước tên hoạt động hoặc sự kiện.",
+      "translationVi": "Tất cả nhân viên được kỳ vọng tham gia buổi diễn tập an toàn hằng năm.",
+      "singleAnswerReason": "“Participate in the annual safety drill” là kết hợp đúng; các giới từ còn lại không phù hợp với hoạt động được tham gia.",
+      "optionExplanations": [
+        "Sai: “participate” không kết hợp với “at” trong nghĩa tham gia hoạt động.",
+        "Sai: “participate on” không phải kết hợp chuẩn với tên một hoạt động.",
+        "Sai: “participate with” có thể chỉ người đồng hành trong một số ngữ cảnh, nhưng không đi với sự kiện ở câu này.",
+        "Đúng: cụm chuẩn là “participate in an activity/event”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-066",
+      "wordId": "prevent-v",
+      "sentence": "The new filter helps prevent dust _____ entering the ventilation system.",
+      "choices": [
+        "to",
+        "from",
+        "for",
+        "by"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Facilities and Maintenance",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Prevent + object + from + gerund",
+      "explanation": "Cấu trúc “prevent + object + from + V-ing” diễn tả ngăn một vật hoặc người thực hiện hành động.",
+      "translationVi": "Bộ lọc mới giúp ngăn bụi xâm nhập vào hệ thống thông gió.",
+      "singleAnswerReason": "Chỉ “from” tạo đúng mẫu “prevent dust from entering”; các giới từ còn lại sai kết hợp.",
+      "optionExplanations": [
+        "Sai: “prevent” không dùng cấu trúc “prevent something to do”.",
+        "Đúng: cấu trúc chuẩn là “prevent something from doing something”.",
+        "Sai: “prevent dust for entering” không đúng mẫu động từ.",
+        "Sai: “by entering” sẽ làm thay đổi vai nghĩa và không tạo cấu trúc ngăn bụi xâm nhập."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-067",
+      "wordId": "reduce-v",
+      "sentence": "The company plans to reduce operating costs _____ consolidating two warehouse locations.",
+      "choices": [
+        "by",
+        "at",
+        "since",
+        "unless"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Finance and Logistics",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "By + gerund to express method",
+      "explanation": "Cụm “by consolidating” nêu cách công ty sẽ giảm chi phí vận hành: hợp nhất hai địa điểm kho.",
+      "translationVi": "Công ty dự định giảm chi phí vận hành bằng cách hợp nhất hai địa điểm kho.",
+      "singleAnswerReason": "“By” là giới từ chỉ phương thức và được theo sau bởi V-ing; các lựa chọn khác không đúng cấu trúc.",
+      "optionExplanations": [
+        "Đúng: “by + V-ing” chỉ phương thức hoặc cách thức đạt được mục tiêu.",
+        "Sai: “at consolidating” không diễn tả phương thức trong cấu trúc này.",
+        "Sai: “since” chỉ mốc thời gian hoặc nguyên nhân, không phù hợp trước V-ing ở đây.",
+        "Sai: “unless” cần một mệnh đề điều kiện, không thể đứng trước V-ing đơn lẻ."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-068",
+      "wordId": "reject-v",
+      "sentence": "The committee rejected the proposal _____ it did not include a cost estimate.",
+      "choices": [
+        "despite",
+        "because",
+        "however",
+        "during"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Procurement",
+      "grammarCategory": "Conjunctions and Clauses",
+      "grammarPoint": "Because + subject + verb clause",
+      "explanation": "Mệnh đề sau chỗ trống giải thích nguyên nhân ủy ban từ chối đề xuất, nên cần liên từ “because”.",
+      "translationVi": "Ủy ban đã từ chối đề xuất vì đề xuất không bao gồm ước tính chi phí.",
+      "singleAnswerReason": "Chỉ “because” nối trực tiếp mệnh đề nguyên nhân hoàn chỉnh “it did not include a cost estimate”.",
+      "optionExplanations": [
+        "Sai: “despite” cần một danh từ/V-ing, không đi trực tiếp với mệnh đề “it did not include…”.",
+        "Đúng: “because” mở đầu mệnh đề chỉ nguyên nhân giải thích lý do đề xuất bị từ chối.",
+        "Sai: trạng từ liên kết này cần dấu câu/cấu trúc riêng, không đặt trực tiếp như liên từ phụ thuộc ở vị trí này.",
+        "Sai: giới từ thời gian không thể nối hai mệnh đề theo cấu trúc câu này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-069",
+      "wordId": "renew-v",
+      "sentence": "The supplier must submit its renewal application _____ the current certification expires.",
+      "choices": [
+        "after",
+        "before",
+        "while",
+        "since"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Procurement",
+      "grammarCategory": "Conjunctions and Clauses",
+      "grammarPoint": "Time conjunction: before + present simple clause",
+      "explanation": "Từ “before” nối mệnh đề thời gian và đặt hành động nộp hồ sơ trước thời điểm chứng nhận hết hạn.",
+      "translationVi": "Nhà cung cấp phải nộp hồ sơ gia hạn trước khi chứng nhận hiện tại hết hiệu lực.",
+      "singleAnswerReason": "Câu yêu cầu nộp hồ sơ gia hạn trước ngày chứng nhận hiện tại hết hiệu lực; “before” diễn đạt đúng thứ tự đó.",
+      "optionExplanations": [
+        "Sai: “after” sẽ đặt việc nộp hồ sơ sau khi chứng nhận đã hết hiệu lực.",
+        "Đúng: “before” yêu cầu nộp hồ sơ trước thời điểm chứng nhận hiện tại hết hạn.",
+        "Sai: “while” diễn tả hai việc đồng thời, không thể hiện hạn chót trước khi hết hiệu lực.",
+        "Sai: “since” không thể hiện yêu cầu hoàn tất hồ sơ trước một mốc tương lai trong câu này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-070",
+      "wordId": "reserve-v",
+      "sentence": "The conference room is being kept available _____ the visiting auditors during next week’s inspection.",
+      "choices": [
+        "at",
+        "for",
+        "with",
+        "from"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Office Administration",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Reserved for + intended recipient",
+      "explanation": "Cụm “available for” xác định nhóm người mà phòng được giữ sẵn dành cho.",
+      "translationVi": "Phòng hội nghị đang được giữ sẵn dành cho các kiểm toán viên đến thăm trong đợt kiểm tra tuần tới.",
+      "singleAnswerReason": "Cấu trúc tự nhiên trong ngữ cảnh này là “keep the room available for someone”: phòng được giữ sẵn để nhóm kiểm toán sử dụng.",
+      "optionExplanations": [
+        "Sai: “available at the visiting auditors” không đúng cấu trúc để nêu nhóm được dành phòng.",
+        "Đúng: “keep something available for someone” nghĩa là giữ thứ gì sẵn sàng dành cho người đó.",
+        "Sai: “available with the visiting auditors” không diễn tả đối tượng được dành phòng.",
+        "Sai: “available from” thường chỉ nguồn cung cấp, không phù hợp với nhóm sử dụng phòng."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-071",
+      "wordId": "retain-v",
+      "sentence": "The company offers professional development opportunities to retain employees _____ demonstrate strong leadership potential.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "answerIndex": 2,
+      "level": "B2",
+      "topic": "Human Resources",
+      "grammarCategory": "Conjunctions and Clauses",
+      "grammarPoint": "Relative pronoun who for people",
+      "explanation": "Mệnh đề “_____ demonstrate strong leadership potential” bổ nghĩa cho “employees”; vì antecedent là người và đại từ làm chủ ngữ, dùng “who”.",
+      "translationVi": "Công ty cung cấp cơ hội phát triển nghề nghiệp để giữ chân những nhân viên thể hiện tiềm năng lãnh đạo mạnh mẽ.",
+      "singleAnswerReason": "“Who” là đại từ quan hệ duy nhất phù hợp với người và làm chủ ngữ trước động từ “demonstrate”.",
+      "optionExplanations": [
+        "Sai: “which” thường thay cho vật/ý tưởng trong mệnh đề quan hệ; ở đây đại từ thay cho “employees” là người.",
+        "Sai: “whose” cần theo sau bởi một danh từ sở hữu, nhưng sau chỗ trống là động từ “demonstrate”.",
+        "Đúng: “who” thay cho người “employees” và làm chủ ngữ của mệnh đề quan hệ “who demonstrate…”.",
+        "Sai: “where” thay cho địa điểm, không thể thay cho “employees”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-072",
+      "wordId": "supervise-v",
+      "sentence": "The technician _____ the night shift must complete the safety log before leaving.",
+      "choices": [
+        "supervise",
+        "supervises",
+        "supervising",
+        "supervised"
+      ],
+      "answerIndex": 2,
+      "level": "B2",
+      "topic": "Facilities and Maintenance",
+      "grammarCategory": "Participles and Reduced Relative Clauses",
+      "grammarPoint": "Present participle clause modifying a noun",
+      "explanation": "Kỹ thuật viên là người chủ động giám sát ca đêm. Cụm V-ing rút gọn từ “who supervises the night shift”.",
+      "translationVi": "Kỹ thuật viên đang giám sát ca đêm phải hoàn thành nhật ký an toàn trước khi rời đi.",
+      "singleAnswerReason": "“Supervising” là phân từ hiện tại phù hợp với nghĩa chủ động và chức năng bổ nghĩa cho “technician”.",
+      "optionExplanations": [
+        "Sai: nguyên mẫu không thể trực tiếp bổ nghĩa cho danh từ “technician” trong cấu trúc rút gọn này.",
+        "Sai: động từ chia ngôi không thể đứng trực tiếp sau danh từ mà không có đại từ quan hệ.",
+        "Đúng: cụm V-ing “supervising the night shift” là mệnh đề quan hệ rút gọn chủ động bổ nghĩa cho “technician”.",
+        "Sai: phân từ quá khứ gợi nghĩa bị động; ở đây kỹ thuật viên chủ động giám sát ca đêm."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-073",
+      "wordId": "encourage-v",
+      "sentence": "The new recognition program is designed to _____ employees to share practical ideas.",
+      "choices": [
+        "encouraging",
+        "encouragement",
+        "encourage",
+        "encouraged"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Human Resources",
+      "grammarCategory": "Infinitives and Verb Patterns",
+      "grammarPoint": "Be designed to + base verb",
+      "explanation": "Cấu trúc “is designed to encourage” cho biết mục tiêu được thiết kế của chương trình là khuyến khích nhân viên chia sẻ ý tưởng.",
+      "translationVi": "Chương trình ghi nhận mới được thiết kế nhằm khuyến khích nhân viên chia sẻ các ý tưởng thiết thực.",
+      "singleAnswerReason": "Sau “to” của cụm “be designed to” cần động từ nguyên mẫu “encourage”.",
+      "optionExplanations": [
+        "Sai: sau “to” trong cụm nguyên mẫu chỉ mục đích cần động từ nguyên mẫu.",
+        "Sai: danh từ không thể đứng sau “to” để tạo cụm nguyên mẫu.",
+        "Đúng: “be designed to + base verb” diễn tả mục tiêu của chương trình.",
+        "Sai: quá khứ/phân từ không phù hợp sau “to” trong cấu trúc này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-074",
+      "wordId": "ensure-v",
+      "sentence": "Managers must _____ that all visitors sign in at reception.",
+      "choices": [
+        "ensuring",
+        "ensures",
+        "ensured",
+        "ensure"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Office Administration",
+      "grammarCategory": "Infinitives and Verb Patterns",
+      "grammarPoint": "Modal verb + base form",
+      "explanation": "Sau động từ khuyết thiếu “must”, động từ chính luôn ở dạng nguyên mẫu không “to”.",
+      "translationVi": "Các quản lý phải bảo đảm tất cả khách đến thăm đăng ký tại quầy lễ tân.",
+      "singleAnswerReason": "“Ensure” là dạng nguyên mẫu duy nhất đi sau “must”; các lựa chọn khác sai dạng động từ.",
+      "optionExplanations": [
+        "Sai: sau động từ khuyết thiếu “must” cần động từ nguyên mẫu.",
+        "Sai: động từ không thêm -s sau “must”.",
+        "Sai: quá khứ/phân từ không phù hợp sau “must”.",
+        "Đúng: modal “must” được theo sau bởi động từ nguyên mẫu không “to”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-075",
+      "wordId": "forward-v",
+      "sentence": "Please forward the signed contract _____ the legal department for review.",
+      "choices": [
+        "to",
+        "at",
+        "for",
+        "with"
+      ],
+      "answerIndex": 0,
+      "level": "B1",
+      "topic": "Legal and Administration",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Forward something to a recipient",
+      "explanation": "Bộ phận pháp chế là nơi nhận hợp đồng được chuyển tiếp, vì vậy dùng “to”.",
+      "translationVi": "Vui lòng chuyển tiếp hợp đồng đã ký đến bộ phận pháp chế để xem xét.",
+      "singleAnswerReason": "“To the legal department” xác định đích đến của tài liệu; các giới từ còn lại không thể hiện quan hệ chuyển tiếp này.",
+      "optionExplanations": [
+        "Đúng: “forward something to someone/a department” là cấu trúc chuyển tiếp tài liệu đến nơi nhận.",
+        "Sai: “forward to” mới là kết hợp chỉ người/bộ phận nhận; “at” không phù hợp.",
+        "Sai: “for” chỉ mục đích hoặc người hưởng lợi, không chỉ nơi chuyển tài liệu.",
+        "Sai: “forward with the department” không diễn tả nơi nhận tài liệu."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-076",
+      "wordId": "improve-v",
+      "sentence": "The company plans to _____ its response time by introducing an online support desk.",
+      "choices": [
+        "improvement",
+        "improved",
+        "improving",
+        "improve"
+      ],
+      "answerIndex": 3,
+      "level": "B1",
+      "topic": "Customer Service",
+      "grammarCategory": "Infinitives and Verb Patterns",
+      "grammarPoint": "Plan + to-infinitive",
+      "explanation": "“Plan” được theo sau bởi động từ nguyên mẫu có “to”; “improve its response time” diễn tả mục tiêu cải thiện tốc độ phản hồi.",
+      "translationVi": "Công ty dự định cải thiện thời gian phản hồi bằng cách triển khai quầy hỗ trợ trực tuyến.",
+      "singleAnswerReason": "Chỉ “improve” tạo đúng mẫu “plans to + base verb”.",
+      "optionExplanations": [
+        "Sai: danh từ không thể đứng sau “to” trong cấu trúc “plan to do”.",
+        "Sai: quá khứ/phân từ không phù hợp sau “to”.",
+        "Sai: V-ing không phù hợp sau “to” của động từ nguyên mẫu.",
+        "Đúng: “plan to + base verb” cần động từ nguyên mẫu “improve”."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-077",
+      "wordId": "maintain-v",
+      "sentence": "The facilities team spends two hours each morning _____ the public areas.",
+      "choices": [
+        "maintain",
+        "maintaining",
+        "maintenance",
+        "maintained"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Facilities and Maintenance",
+      "grammarCategory": "Gerunds and Infinitives",
+      "grammarPoint": "Spend time + gerund",
+      "explanation": "Cấu trúc “spend + thời gian + V-ing” diễn tả thời gian dành cho một hoạt động; do đó dùng “maintaining”.",
+      "translationVi": "Nhóm cơ sở vật chất dành hai giờ mỗi sáng để bảo trì các khu vực công cộng.",
+      "singleAnswerReason": "Chỉ “maintaining” hoàn thành cấu trúc “spends two hours ...”; danh từ hoặc nguyên mẫu không phù hợp.",
+      "optionExplanations": [
+        "Sai: sau “spend time” để nói dành thời gian làm gì, dùng V-ing.",
+        "Đúng: cấu trúc “spend time + V-ing” diễn tả hoạt động dành thời gian thực hiện.",
+        "Sai: danh từ không phù hợp sau cấu trúc “spends two hours” nếu không có giới từ “on”.",
+        "Sai: quá khứ/phân từ không phù hợp sau danh từ chỉ thời lượng trong cấu trúc này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-078",
+      "wordId": "accomplish-v",
+      "sentence": "The project team managed to accomplish its goals _____ the original deadline.",
+      "choices": [
+        "among",
+        "beyond",
+        "within",
+        "beside"
+      ],
+      "answerIndex": 2,
+      "level": "B1",
+      "topic": "Project Management",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Within + time limit/deadline",
+      "explanation": "Nhóm dự án đạt mục tiêu trong giới hạn thời gian đã đặt ra, vì vậy dùng “within the original deadline”.",
+      "translationVi": "Nhóm dự án đã hoàn thành các mục tiêu trong thời hạn ban đầu.",
+      "singleAnswerReason": "“Within” là giới từ duy nhất diễn tả hoàn thành trong giới hạn thời gian; “beyond” mang nghĩa ngược lại.",
+      "optionExplanations": [
+        "Sai: “among” chỉ vị trí giữa nhiều đối tượng, không diễn tả giới hạn thời gian.",
+        "Sai: “beyond the deadline” nghĩa là vượt quá hạn chót, trái với ngữ cảnh thành công đúng hạn.",
+        "Đúng: “within the deadline” nghĩa là trong phạm vi thời hạn được quy định.",
+        "Sai: “beside” chỉ vị trí bên cạnh, không dùng cho thời hạn."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-079",
+      "wordId": "adapt-v",
+      "sentence": "New employees must adapt _____ the company’s safety procedures before starting work.",
+      "choices": [
+        "with",
+        "to",
+        "for",
+        "at"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Human Resources",
+      "grammarCategory": "Prepositions and Collocations",
+      "grammarPoint": "Adapt to + noun",
+      "explanation": "Trong nghĩa làm quen và điều chỉnh để phù hợp, động từ “adapt” kết hợp với giới từ “to”.",
+      "translationVi": "Nhân viên mới phải thích nghi với các quy trình an toàn của công ty trước khi bắt đầu làm việc.",
+      "singleAnswerReason": "“Adapt to the company’s safety procedures” là kết hợp chuẩn; các giới từ còn lại không mang nghĩa thích nghi với quy trình.",
+      "optionExplanations": [
+        "Sai: “adapt” không dùng “with” trong cấu trúc thích nghi với quy trình.",
+        "Đúng: “adapt to something” nghĩa là thích nghi với điều gì.",
+        "Sai: “adapt for” thường chỉ điều chỉnh thứ gì cho mục đích/đối tượng khác, không phù hợp với nghĩa câu này.",
+        "Sai: “adapt at” không phải kết hợp chuẩn."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "p5-sc-080",
+      "wordId": "monthly-adjadv",
+      "sentence": "Payroll is processed _____, on the last working day of each month.",
+      "choices": [
+        "month",
+        "monthly",
+        "monthly basis",
+        "month’s"
+      ],
+      "answerIndex": 1,
+      "level": "B1",
+      "topic": "Finance",
+      "grammarCategory": "Adjectives and Adverbs",
+      "grammarPoint": "Adverb of frequency: monthly",
+      "explanation": "Khoảng trống bổ nghĩa cho động từ “is processed” và câu xác định quy trình diễn ra vào ngày làm việc cuối cùng mỗi tháng, nên dùng trạng từ tần suất “monthly”.",
+      "translationVi": "Bảng lương được xử lý hằng tháng, vào ngày làm việc cuối cùng của mỗi tháng.",
+      "singleAnswerReason": "“Monthly” là trạng từ duy nhất có thể đứng độc lập ở vị trí này; “monthly basis” cần giới từ và mạo từ “on a”.",
+      "optionExplanations": [
+        "Sai: danh từ “month” không thể dùng độc lập làm trạng từ bổ nghĩa cho “is processed”.",
+        "Đúng: trạng từ “monthly” bổ nghĩa cho động từ bị động “is processed”, nghĩa là mỗi tháng một lần.",
+        "Sai: cụm này cần cấu trúc “on a monthly basis”, không thể đứng độc lập ở vị trí trạng từ.",
+        "Sai: sở hữu cách không thể bổ nghĩa cho động từ theo cách này."
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "016",
+      "contentBatch": "batch-016-part5-grammar-expansion",
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    }
+  ],
+  "questionGroups": [
+    {
+      "id": "core-001-035",
+      "title": "Core Sentence Completion",
+      "questionCount": 35,
+      "status": "reserve-pending-independent-review"
+    },
+    {
+      "id": "batch-016-036-080",
+      "title": "Grammar and Structure Expansion",
+      "questionCount": 45,
+      "status": "reserve-pending-independent-review"
+    }
+  ]
+}

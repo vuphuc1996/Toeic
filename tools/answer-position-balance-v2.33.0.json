@@ -1,0 +1,91 @@
+{
+  "from": "v2.33.0 pre-balance new Part 7 batch",
+  "to": "v2.33.0 balanced new Part 7 batch",
+  "scope": "Six keyed-option swaps among the 45 new Part 7 questions; all pre-existing baseline items remain unchanged.",
+  "beforeDistribution": {
+    "A": 11,
+    "B": 13,
+    "C": 15,
+    "D": 6
+  },
+  "afterDistribution": {
+    "A": 11,
+    "B": 11,
+    "C": 11,
+    "D": 12
+  },
+  "wholePart7DistributionAfter": {
+    "A": 27,
+    "B": 27,
+    "C": 27,
+    "D": 27
+  },
+  "changes": [
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "part7-single-safety-procedure-update",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "To explain updated warehouse pedestrian routes",
+      "choiceId": "reading:part7-single-safety-procedure-update:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "part7-single-facility-reservation",
+      "question": 1,
+      "oldIndex": 1,
+      "newIndex": 3,
+      "answer": "A reservation for a training room",
+      "choiceId": "reading:part7-single-facility-reservation:1:choice:2",
+      "previousAnswerIndex": 1
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "part7-single-contract-renewal-notice",
+      "question": 1,
+      "oldIndex": 2,
+      "newIndex": 3,
+      "answer": "Renew the cleaning agreement for twelve months",
+      "choiceId": "reading:part7-single-contract-renewal-notice:1:choice:3",
+      "previousAnswerIndex": 2
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "part7-single-vendor-delivery-calendar",
+      "question": 2,
+      "oldIndex": 2,
+      "newIndex": 3,
+      "answer": "December 12",
+      "choiceId": "reading:part7-single-vendor-delivery-calendar:2:choice:3",
+      "previousAnswerIndex": 2
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "part7-double-vendor-credit",
+      "question": 3,
+      "oldIndex": 2,
+      "newIndex": 3,
+      "answer": "$1,260",
+      "choiceId": "reading:part7-double-vendor-credit:3:choice:3",
+      "previousAnswerIndex": 2
+    },
+    {
+      "file": "data/readings/reading-library.json",
+      "part": "Part 7",
+      "itemId": "part7-triple-regional-sales-meeting",
+      "question": 5,
+      "oldIndex": 2,
+      "newIndex": 3,
+      "answer": "One-to-one discussions with the sales director",
+      "choiceId": "reading:part7-triple-regional-sales-meeting:5:choice:3",
+      "previousAnswerIndex": 2
+    }
+  ]
+}

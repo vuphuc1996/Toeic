@@ -21,7 +21,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "facilitator",
+          "pos": "n",
+          "meaning_vi": "người điều phối; người hướng dẫn"
+        }
+      ],
       "verb_forms": {
         "v1": "facilitate",
         "vs_es": "facilitates",
@@ -62,7 +68,13 @@
       "topics": [
         "MEETING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "facilitate",
+          "pos": "v",
+          "meaning_vi": "tạo điều kiện; hỗ trợ tiến trình"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1234,7 +1246,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "fulfillment",
+          "pos": "n",
+          "meaning_vi": "việc hoàn tất đơn hàng; sự đáp ứng"
+        }
+      ],
       "verb_forms": {
         "v1": "fulfill",
         "vs_es": "fulfills",
@@ -1275,7 +1293,13 @@
       "topics": [
         "SHIPPING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "fulfill",
+          "pos": "v",
+          "meaning_vi": "hoàn thành; đáp ứng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

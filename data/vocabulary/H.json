@@ -73,7 +73,13 @@
         "OFFICE",
         "CUSTOMER"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "handling",
+          "pos": "n",
+          "meaning_vi": "việc xử lý; thao tác"
+        }
+      ],
       "verb_forms": {
         "v1": "handle",
         "vs_es": "handles",
@@ -112,7 +118,13 @@
       "topics": [
         "SHIPPING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "handle",
+          "pos": "v",
+          "meaning_vi": "xử lý; tay cầm"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

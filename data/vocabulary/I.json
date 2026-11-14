@@ -68,7 +68,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "implementation",
+          "pos": "n",
+          "meaning_vi": "việc triển khai; thực hiện"
+        }
+      ],
       "verb_forms": {
         "v1": "implement",
         "vs_es": "implements",
@@ -117,7 +123,13 @@
         "BUSINESS",
         "TECHNOLOGY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "implement",
+          "pos": "v",
+          "meaning_vi": "triển khai; thực hiện"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2052,7 +2064,13 @@
         "PURCHASING",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "invoicing",
+          "pos": "n",
+          "meaning_vi": "việc lập và phát hành hóa đơn"
+        }
+      ],
       "verb_forms": {
         "v1": "invoice",
         "vs_es": "invoices",
@@ -2133,7 +2151,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "invoice",
+          "pos": "v",
+          "meaning_vi": "xuất hóa đơn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

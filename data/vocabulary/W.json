@@ -642,7 +642,13 @@
         "BUSINESS",
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "withdrawal",
+          "pos": "n",
+          "meaning_vi": "việc rút tiền; sự rút lui"
+        }
+      ],
       "verb_forms": {
         "v1": "withdraw",
         "vs_es": "withdraws",
@@ -683,7 +689,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "withdraw",
+          "pos": "v",
+          "meaning_vi": "rút lại; rút tiền; rút lui"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

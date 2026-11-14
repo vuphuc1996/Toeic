@@ -29,6 +29,23 @@ def selected_items():
     return rows
 
 
+# v2.33 additions received an internal editorial pass (structure, keyed answer,
+# explanation and source/evidence checks). They are not part of the historical
+# 148-question independent review certificate and must not be misreported as such.
+V233_INTERNAL_REVIEWED_READING_UNITS = {
+    "part5-business-collocations-set-08",
+    "part5-pronoun-reference-set-09",
+    "part5-conditionals-reporting-set-10",
+    "part5-word-forms-set-11",
+    "part5-participial-clauses-set-12",
+    "part5-quantifiers-parallelism-set-13",
+    "part6-supplier-service-bulletin",
+    "part6-quarterly-billing-update",
+    "part6-staff-development-newsletter",
+    "part6-facility-service-notice",
+}
+
+
 class RemainingContentReviewTests(unittest.TestCase):
     def test_review_registry_tracks_the_historical_148_questions(self):
         actual = {f"{u['id']}#Q{n}" for _, u, n, _ in selected_items()}
@@ -68,7 +85,18 @@ class RemainingContentReviewTests(unittest.TestCase):
         for _, unit, number, _question in selected_items():
             key = f"{unit['id']}#Q{number}"
             if key not in reviewed:
-                self.assertEqual(unit.get("editorialStatus"), "reserve-pending-independent-review", key)
+                if unit["id"] in V233_INTERNAL_REVIEWED_READING_UNITS:
+                    self.assertEqual(unit.get("editorialStatus"), "internal-editorial-reviewed", key)
+                else:
+                    self.assertEqual(unit.get("editorialStatus"), "reserve-pending-independent-review", key)
+
+    def test_v233_reading_additions_are_internal_review_not_independent_certification(self):
+        by_id = {unit["id"]: unit for unit in READINGS}
+        self.assertTrue(V233_INTERNAL_REVIEWED_READING_UNITS.issubset(by_id))
+        for unit_id in V233_INTERNAL_REVIEWED_READING_UNITS:
+            unit = by_id[unit_id]
+            self.assertEqual(unit.get("editorialStatus"), "internal-editorial-reviewed", unit_id)
+            self.assertEqual(unit.get("contentSource"), "original-editorial", unit_id)
 
     def test_keys_choices_choice_ids_and_explanations_are_well_formed(self):
         for collection, unit, number, question in selected_items():

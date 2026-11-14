@@ -21,10 +21,13 @@ def question_counts(items):
         result[item.get("part", "Unassigned")] += len(item.get("questions", []))
     return result
 
+def is_mock_eligible(item):
+    return not item.get("editorialStatus") or item.get("editorialStatus") in ("approved-for-mock", "internal-editorial-reviewed")
+
 def answer_distribution(items, part):
     result = collections.Counter(
         q.get("answerIndex")
-        for item in items if item.get("part") == part
+        for item in items if item.get("part") == part and is_mock_eligible(item)
         for q in item.get("questions", [])
     )
     return [result.get(i, 0) for i in range(4)]
@@ -36,15 +39,29 @@ for file in sorted((ROOT / "data/vocabulary").glob("[A-Z].json")):
 listening = load("data/listening/listening-library.json").get("listening", [])
 readings = load("data/readings/reading-library.json").get("readings", [])
 grammar = load("data/grammar/lessons.json").get("lessons", [])
+sentence_bank = load("data/practice/part5-sentence-completion.json")
+sentence_questions = sentence_bank.get("questions", [])
+grammar_part_coverage = {
+    part: {"lessons": sum(1 for item in grammar if part in item.get("parts", [])),
+           "exercises": sum(len(item.get("exercises", [])) for item in grammar if part in item.get("parts", []))}
+    for part in ("Part 5", "Part 6")
+}
+sentence_category_counts = collections.Counter(item.get("grammarCategory", "Unassigned") for item in sentence_questions)
+sentence_batch_counts = collections.Counter(item.get("editorialBatch", "core") for item in sentence_questions)
+sentence_answer_counts = collections.Counter(item.get("answerIndex") for item in sentence_questions)
 
 ipa = sum(bool((word.get("phonetic") or {}).get("us")) for word in vocab)
 family = sum(bool(word.get("word_family")) for word in vocab)
+family_links = sum(len(word.get("word_family", [])) for word in vocab)
 verb = sum(bool(word.get("verb_forms")) for word in vocab)
 collocations = sum(bool(word.get("collocations")) for word in vocab)
 cefr = collections.Counter(word.get("cefr_level", "Unassigned") for word in vocab)
 L = collections.Counter(item.get("part", "Unassigned") for item in listening)
 R = collections.Counter(item.get("part", "Unassigned") for item in readings)
 LQ = question_counts(listening)
+ELQ = question_counts([item for item in listening if is_mock_eligible(item)])
+PENDING = [item for item in listening if item.get("editorialStatus") == "reserve-pending-independent-review"]
+PQ = question_counts(PENDING)
 RQ = question_counts(readings)
 reading_words = sum(
     word_count(item.get("passage", "")) if not item.get("documents")
@@ -59,6 +76,8 @@ READ_TARGET = {"Part 5": 30, "Part 6": 16, "Part 7": 54}
 p7_single_questions = sum(len(item.get("questions", [])) for item in readings if item.get("part") == "Part 7" and item.get("documentType") not in ("DOUBLE PASSAGE", "TRIPLE PASSAGE"))
 p7_multiple_items = [item for item in readings if item.get("part") == "Part 7" and item.get("documentType") in ("DOUBLE PASSAGE", "TRIPLE PASSAGE")]
 p7_multiple_questions = sum(len(item.get("questions", [])) for item in p7_multiple_items)
+p7_single_items = [item for item in readings if item.get("part") == "Part 7" and item.get("documentType") not in ("DOUBLE PASSAGE", "TRIPLE PASSAGE")]
+p7_complete_multi_blocks = sum(1 for item in p7_multiple_items if len(item.get("questions", [])) == 5)
 p7_structured_multi_items = sum(
     1 for item in p7_multiple_items
     if len(item.get("documents", [])) == (2 if item.get("documentType") == "DOUBLE PASSAGE" else 3)
@@ -74,6 +93,7 @@ lines = [
     f"| Headwords | {len(vocab)} | — |",
     f"| US IPA present | {ipa} | {ipa / len(vocab) * 100:.1f}% |",
     f"| Word-family records | {family} | {family / len(vocab) * 100:.1f}% |",
+    f"| Word-family links | {family_links} | — |",
     f"| Verb-form records | {verb} | {verb / len(vocab) * 100:.1f}% |",
     f"| Collocation records | {collocations} | {collocations / len(vocab) * 100:.1f}% |",
     f"| CEFR assigned | {sum(cefr.values())} | {sum(cefr.values()) / len(vocab) * 100:.1f}% |", "",
@@ -89,7 +109,9 @@ lines += [
     f"| **Total** | **{len(listening)}** | **{sum(LQ.values())}** |", "",
     f"- Spoken segments: {listening_segments}.",
     f"- Part 1 licensed Pexels photographs: {sum(1 for item in listening if item.get('part') == 'Part 1' and item.get('photo'))}; these are third-party licensed practice images, not official ETS assets.",
-    "- Audio is browser SpeechSynthesis; it is synthesized audio, not recorded/native-speaker or ETS audio.", "",
+    "- Audio is browser SpeechSynthesis; it is synthesized audio, not recorded/native-speaker or ETS audio.",
+    f"- Mock-eligible Listening pool: {sum(ELQ.values())} questions; pending independent review: {sum(PQ.values())} questions. Pending content remains available for practice but is excluded from Mock.",
+    f"- Pending batch counts: " + ", ".join(f"Batch {batch}: {sum(len(u.get('questions', [])) for u in PENDING if u.get('editorialBatch', 'legacy') == batch)}" for batch in sorted({u.get('editorialBatch', 'legacy') for u in PENDING})) + ".", "",
     "## Reading coverage", "", "| Part | Resources | Questions |", "|---|---:|---:|"
 ]
 for part in READ_TARGET:
@@ -98,17 +120,35 @@ lines += [
     f"| **Total** | **{len(readings)}** | **{sum(RQ.values())}** |", "",
     f"- Reading text word count (current passages/documents): {reading_words}.",
     f"- Part 7 question mix: {p7_single_questions} single-passage questions / {p7_multiple_questions} multiple-passage questions.",
-    f"- Structured Part 7 multi-document resources: {p7_structured_multi_items}/{len(p7_multiple_items)} double/triple passages.", "",
+    f"- Structured Part 7 multi-document resources: {p7_structured_multi_items}/{len(p7_multiple_items)} double/triple passages.",
+    f"- Complete five-question Part 7 multiple-passage blocks: {p7_complete_multi_blocks}/{len(p7_multiple_items)}; single-passage blocks with 2–4 questions: {sum(1 for item in p7_single_items if 2 <= len(item.get('questions', [])) <= 4)}/{len(p7_single_items)}.", "",
     "## Grammar", "",
     f"- Lessons: {len(grammar)}.",
-    f"- Exercises: {sum(len(item.get('exercises', [])) for item in grammar)}.", "",
+    f"- Exercises: {sum(len(item.get('exercises', [])) for item in grammar)}.",
+    f"- Part 5-tagged lessons/exercises: {grammar_part_coverage['Part 5']['lessons']} / {grammar_part_coverage['Part 5']['exercises']}.",
+    f"- Part 6-tagged lessons/exercises: {grammar_part_coverage['Part 6']['lessons']} / {grammar_part_coverage['Part 6']['exercises']}.",
+    "- Part-focus totals may overlap when one lesson supports both Parts 5 and 6.", "",
+    "## Adaptive TOEIC Part 5 Sentence Completion Practice", "",
+    f"- Separate sentence-completion questions: {len(sentence_questions)}.",
+    f"- Editorial status: `{sentence_bank.get('editorialStatus', 'missing')}`; content source: `{sentence_bank.get('contentSource', 'missing')}`.",
+    "- Each item has one blank, four A–D choices, one answer key, four option explanations, grammar focus, Vietnamese translation and a single-answer rationale.",
+    "- This adaptive practice bank is separate from Reading Part 5 and is not included in Reading Mock inventory or scoring.",
+    "- Independent second-person review is pending; automated validation does not approve items for Mock.",
+    f"- Batch distribution: " + ", ".join(f"{batch}: {count}" for batch, count in sorted(sentence_batch_counts.items())) + ".",
+    f"- Keyed answer positions A/B/C/D: {sentence_answer_counts.get(0,0)} / {sentence_answer_counts.get(1,0)} / {sentence_answer_counts.get(2,0)} / {sentence_answer_counts.get(3,0)}.", "",
+    "### Grammar-group coverage", "", "| Grammar group | Questions |", "|---|---:|",
     "## Reference question distribution — one TOEIC L&R form", "",
     "| Part | Current pool | Reference per form | Coverage |", "|---|---:|---:|---:|"
 ]
+sentence_table_anchor = lines.index("## Reference question distribution — one TOEIC L&R form")
+for category in sorted(sentence_category_counts):
+    lines.insert(sentence_table_anchor, f"| {category} | {sentence_category_counts[category]} |")
+    sentence_table_anchor += 1
+
 for part, target in LISTEN_TARGET.items():
-    current = LQ.get(part, 0)
-    lines.append(f"| {part} | {current} | {target} | {current / target * 100:.1f}% |")
-lines.append(f"| **Listening total** | **{sum(LQ.values())}** | **100** | **{sum(LQ.values())}%** |")
+    current = ELQ.get(part, 0)
+    lines.append(f"| {part} | {current} eligible | {target} | {current / target * 100:.1f}% |")
+lines.append(f"| **Listening eligible total** | **{sum(ELQ.values())}** | **100** | **{sum(ELQ.values())}%** |")
 for part, target in READ_TARGET.items():
     current = RQ.get(part, 0)
     lines.append(f"| {part} | {current} | {target} | {current / target * 100:.1f}% |")
@@ -123,8 +163,9 @@ for part in list(LISTEN_TARGET) + list(READ_TARGET):
 
 lines += [
     "", "## Interpretation and gaps", "",
-    f"- Listening pool has {sum(LQ.values())} questions; blueprint minima are met for one form (P1 includes 8 practice photographs versus 6 questions in a form).",
-    f"- Reading pool has {sum(RQ.values())} questions; Part 7 includes {p7_single_questions} single-passage and {p7_multiple_questions} multiple-passage questions, enough to select 29 + 25 for one form.",
+    f"- Listening learning inventory has {sum(LQ.values())} questions ({len(listening)} source units); currently {sum(ELQ.values())} are Mock-eligible and {sum(PQ.values())} remain pending independent review. The eligible pool supports one full 100-question form; at 102 eligible questions the next Full Listening form reuses 98 questions.",
+    f"- If all pending Listening questions were independently approved, projected per-Part inventory would be P1={ELQ.get('Part 1',0)+PQ.get('Part 1',0)}, P2={ELQ.get('Part 2',0)+PQ.get('Part 2',0)}, P3={ELQ.get('Part 3',0)+PQ.get('Part 3',0)}, P4={ELQ.get('Part 4',0)+PQ.get('Part 4',0)}. It would still be short by 4 Part 1 items for two entirely non-repeating Full forms.",
+    f"- Reading pool has {sum(RQ.values())} questions; Part 7 includes {p7_single_questions} single-passage and {p7_multiple_questions} multiple-passage questions. The v2.33 Mock regression verifies two consecutive 100-question Reading forms with zero reused question IDs.",
     f"- Structured Part 7 double/triple passage resources: {p7_structured_multi_items}/{len(p7_multiple_items)}.",
     "- V2.25.0 includes a timed 15/60/120-minute mock engine, answer review and local score analysis; it is an internal practice tool, not an officially equated TOEIC test. Independent editorial review remains pending for reserve content.",
     f"- Vocabulary is {len(vocab)} headwords, below the 3,000–5,000 internal TOEIC planning target. That target is not an official ETS list.",
@@ -135,4 +176,4 @@ report = ROOT / f"docs/reports/TOEIC_CONTENT_COVERAGE_v{version}.md"
 report.parent.mkdir(parents=True, exist_ok=True)
 report.write_text("\n".join(lines), encoding="utf-8")
 print(report.relative_to(ROOT))
-print(f"Vocabulary {len(vocab)} | IPA {ipa} | Word family {family} | Listening {len(listening)}/{sum(LQ.values())} | Reading {len(readings)}/{sum(RQ.values())} | P7 single/multi {p7_single_questions}/{p7_multiple_questions} | Grammar {len(grammar)}")
+print(f"Vocabulary {len(vocab)} | IPA {ipa} | Word family {family} | Listening {len(listening)}/{sum(LQ.values())} | Reading {len(readings)}/{sum(RQ.values())} | P7 single/multi {p7_single_questions}/{p7_multiple_questions} | Grammar {len(grammar)} | Sentence Completion Practice {len(sentence_questions)}")

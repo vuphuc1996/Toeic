@@ -3,6 +3,8 @@ import unittest
 from collections import Counter
 from pathlib import Path
 
+from helpers import PART7_BASELINE_QUESTION_COUNTS_V232
+
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -24,9 +26,14 @@ class AnswerPositionBalanceTests(unittest.TestCase):
             if item.get('editorialStatus') == 'reserve-pending-independent-review':
                 continue
             part = item.get('part')
-            if part in actual:
-                for q in item.get('questions', []):
-                    actual[part][q['answerIndex']] += 1
+            if part not in actual:
+                continue
+            questions = item.get('questions', [])
+            if part == 'Part 7':
+                # Keep the historical v2.17 certificate scoped to the original v2.32.0 items.
+                questions = questions[:PART7_BASELINE_QUESTION_COUNTS_V232.get(item.get('id'), 0)]
+            for q in questions:
+                actual[part][q['answerIndex']] += 1
         for part, distribution in expected.items():
             self.assertEqual([actual[part][index] for index in range(4)], distribution, part)
             self.assertEqual(sum(actual[part].values()), sum(distribution), part)
@@ -71,9 +78,27 @@ class AnswerPositionBalanceTests(unittest.TestCase):
         historical_listening = [x for x in self.listening if x.get('editorialStatus') != 'reserve-pending-independent-review']
         reserve_listening = [x for x in self.listening if x.get('editorialStatus') == 'reserve-pending-independent-review']
         self.assertEqual(sum(len(x.get('questions', [])) for x in historical_listening), 102)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve_listening), 11)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 113)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in self.reading), 109)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve_listening), 98)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 200)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in self.reading), 200)
+
+    def test_v233_new_part7_answer_balance_keeps_choice_identity(self):
+        mapping = json.loads((ROOT / 'tools/answer-position-balance-v2.33.0.json').read_text(encoding='utf-8'))
+        self.assertEqual(len(mapping['changes']), 6)
+        self.assertEqual(mapping['beforeDistribution'], {'A': 11, 'B': 13, 'C': 15, 'D': 6})
+        self.assertEqual(mapping['afterDistribution'], {'A': 11, 'B': 11, 'C': 11, 'D': 12})
+        for change in mapping['changes']:
+            item = next(x for x in self.reading if x['id'] == change['itemId'])
+            q = item['questions'][change['question'] - 1]
+            self.assertEqual(q['previousChoices'][change['oldIndex']], change['answer'])
+            self.assertEqual(q['previousChoiceIds'][change['oldIndex']], change['choiceId'])
+            self.assertEqual(q['previousAnswerIndex'], change['previousAnswerIndex'])
+            self.assertEqual(q['choices'][change['newIndex']], change['answer'])
+            self.assertEqual(q['choiceIds'][change['newIndex']], change['choiceId'])
+            self.assertEqual(q['answerIndex'], change['newIndex'])
+            self.assertEqual(q['choiceOrderRevision'], '2.33.0')
+            self.assertCountEqual(q['choices'], q['previousChoices'])
+            self.assertCountEqual(q['choiceIds'], q['previousChoiceIds'])
 
 
 if __name__ == '__main__':

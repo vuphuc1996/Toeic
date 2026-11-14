@@ -2757,7 +2757,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "suspension",
+          "pos": "n",
+          "meaning_vi": "sự tạm ngừng; đình chỉ"
+        }
+      ],
       "verb_forms": {
         "v1": "suspend",
         "vs_es": "suspends",
@@ -2798,7 +2804,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "suspend",
+          "pos": "v",
+          "meaning_vi": "tạm ngừng; đình chỉ"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

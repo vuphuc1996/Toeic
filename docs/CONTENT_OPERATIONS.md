@@ -1,112 +1,145 @@
 # TOEIC Content Operations — governed update workflow
 
+> Quy trình chuẩn cho dữ liệu học tập, kiểm duyệt nội dung, Mock Exam và phát hành. Không tạo tài liệu hướng dẫn riêng cho từng module nếu có thể bổ sung quy tắc tại đây.
+
 ## 1. Scope
 
-Only TOEIC Listening & Reading content is in active development. Do not add IELTS/Academic materials, filters, data tags or lessons until the Master acceptance gates are satisfied and the user approves the scope change.
+- Chỉ phát triển TOEIC Listening & Reading cho đến khi Master ghi nhận đủ cổng nghiệm thu và người dùng đồng ý chuyển giai đoạn.
+- Nội dung mới là tài liệu luyện tập do dự án tự biên soạn; không sao chép câu hỏi/audio ETS.
+- Phân biệt rõ `draft`, `internal-editorial-reviewed`, `reserve-pending-independent-review` và kết quả kiểm thử tự động. Không dùng automated PASS để tuyên bố đã có reviewer độc lập.
 
-## 2. Source-of-truth files
+## 2. Canonical sources
 
 | Content | Canonical path | Rule |
 |---|---|---|
-| Vocabulary | `data/vocabulary/[A-Z].json` | 26 alphabet files are runtime source; preserve record IDs; UI treats base data as read-only. |
-| Topic list | `data/categories.json` | Do not invent topic IDs in a vocabulary patch. |
-| Related gloss | `data/related-terms.json` | Only add a gloss when the relation and Vietnamese meaning are supportable. |
-| Listening | `data/listening/listening-library.json` | Every unit needs Part, type, title, topic, level, source status, segments, question(s), answer and explanation. |
-| Reading | `data/readings/reading-library.json` | Every unit needs Part 5/6/7, documentType, topic, level, passage/documents, questions, answer and explanation. |
-| Grammar | `data/grammar/lessons.json` | Every exercise needs unique id, four choices, answerIndex and explanation. |
+| Vocabulary | `data/vocabulary/[A-Z].json` | 26 file A–Z là runtime source duy nhất; giữ stable IDs. |
+| Vocabulary batches | `data/vocabulary/batch-*.json` | Provenance biên tập, không phải runtime source thứ hai. |
+| Topics | `data/categories.json` | Không tự tạo topic ID ngoài danh mục chuẩn. |
+| Related gloss | `data/related-terms.json` | Chỉ thêm gloss khi nghĩa/quan hệ có cơ sở. |
+| Listening | `data/listening/listening-library.json` | Part, unit, transcript/segments, choices, key, explanation và editorial status. |
+| Reading | `data/readings/reading-library.json` | Part, document type, passage/documents, questions, key, explanation và source evidence. |
+| Grammar | `data/grammar/lessons.json` | Stable lesson/exercise IDs, bốn choices, answerIndex và rationale. |
 
-## 3. Vocabulary record quality
+## 3. Vocabulary quality
 
-For each headword, review stable `id`, spelling/lemma, POS by sense, Vietnamese meaning, English definition, CEFR estimate, US/UK IPA, examples + translations, topics, word family, verb forms, collocations and lexical relations. Fields are conditional: do not force verb forms onto nouns, antonyms onto words without a clear antonym, or IPA values without a source. Keep multi-sense meaning distinct. CEFR is an editorial estimate unless independently verified per sense.
+- Rà spelling/lemma, POS theo sense, Vietnamese meaning, English definition, examples + translations, topics và CEFR estimate.
+- IPA chỉ ghi khi xác định được đúng giọng US/UK và có nguồn; không suy đoán để lấp trường trống.
+- Word family, verb forms, synonyms, antonyms và collocations là trường có điều kiện; không ép thêm dữ liệu không tự nhiên.
+- Word-family chỉ liên kết các lemma có quan hệ hình thái/từ loại rõ ràng. Ưu tiên từ đã tồn tại trong từ điển; POS và `meaning_vi` phải khớp sense tương ứng của mục được liên kết. Không suy diễn quan hệ chỉ vì hai từ giống mặt chữ; tránh các trường hợp khác nghĩa hoặc chỉ liên quan theo chủ đề.
+- Khi một cặp có hai mục từ trong kho, giữ liên kết hai chiều nếu phù hợp với POS. Không thay ID, thứ tự sense, ví dụ hoặc tiến độ học của headword hiện hữu.
+- Mỗi data patch pin `baseDataVersion`, `targetDataVersion`, ID-set hash, stable ID, JSON Pointer và `expect.old`; dry-run trước khi apply.
 
-Use source notes and patch operations. Each data patch must pin `baseDataVersion`, `targetDataVersion`, `idSetSha256`, stable ID, JSON Pointer and `expect.old`. Run dry-run before apply. Do not edit production A–Z JSON by hand when a patch is applicable.
+## 4. Listening quality and reserve lifecycle
 
-## 4. Listening content quality
+- **Part 1:** một ảnh, bốn câu mô tả, một đáp án; phân biệt photograph và SVG illustration; giữ attribution và fallback.
+- **Part 2:** một prompt và ba phản hồi tự nhiên; chỉ một phản hồi tốt nhất.
+- **Part 3:** hội thoại nhiều lượt, ít nhất hai speaker, ba câu liên kết.
+- **Part 4:** một bài nói/thông báo có ba câu liên kết.
+- Giải thích cần nêu dấu hiệu trong transcript và lý do; TTS là audio tổng hợp, không phải bản ghi ETS/native speaker.
+- Unit chờ reviewer thứ hai phải có `editorialStatus: "reserve-pending-independent-review"`. Vẫn cho phép luyện Listening thông thường nhưng Mock sampler loại toàn unit, không cắt riêng một số câu của Part 3/4.
+- Mock eligibility fail-closed: status-less legacy và trạng thái `internal-editorial-reviewed` đã tồn tại ở v2.33 được giữ tương thích; `approved-for-mock` được phép. Reserve và trạng thái chưa biết bị loại. Nội dung mới không được gắn `internal-editorial-reviewed` để lách vòng duyệt; sau reviewer thứ hai mới chuyển reserve sang `approved-for-mock`.
+- Internal source/key/rationale check không thay thế independent review. Chỉ chuyển trạng thái sau khi reviewer ghi nhận transcript grounding, key, distractors, naturalness, tiếng Việt, stable IDs và quyết định cụ thể.
 
-- Part 1: one image prompt, four short spoken descriptions, exactly one correct answer; answer keys distributed across A–D; no text transcript printed as a hint before answer. Label vector artwork as illustrations; the prompt must say “illustration” (or neutral “image”), never “photograph” when the asset is an SVG.
-- Part 2: short question/prompt and three natural response options; one best response.
-- Part 3: multi-turn conversation with realistic workplace context, speaker identity continuity, multiple questions per conversation, detail/inference/purpose questions.
-- Part 4: one short talk/announcement with multiple linked questions; use natural announcement/report/briefing discourse.
-- Include transcript and Vietnamese explanation in review mode. Explanations must state the supporting clue and reasoning, not only repeat the correct option. A locale check must not accept an English token with an accent (for example, “résumé”) as proof of Vietnamese text. Browser TTS is synthesized audio and must not be presented as official or recorded ETS audio. Use accent variation in content where the voice is available; keep manual user voice choice higher priority than defaults.
+## 5. Reading quality and block integrity
 
-## 5. Reading content quality
+- **Part 5:** một câu incomplete sentence, một blank, bốn lựa chọn song song; giải thích grammar/meaning cue.
+- **Part 6:** text completion/cohesion/sentence insertion khi phù hợp; số blank marker phải khớp số câu. Mỗi text là block bốn câu và Mock sampler lấy nguyên block.
+- **Part 7:** single, double, triple passages; câu hỏi detail, purpose, inference, reference, vocabulary và cross-document. Single passage giữ block 2–4 câu; double/triple giữ block 5 câu và đủ 2/3 tài liệu có label/content.
+- Câu hỏi mới cần stable IDs, bốn lựa chọn phân biệt, key, rationale tiếng Việt, `evidence.sourceLabels` và `evidence.quotes` đúng văn bản. Append câu hỏi; không reorder hoặc thay index cũ.
+- Evidence quote chứng minh khả năng truy vết, không tự chứng minh mọi distractor đều sai. Phân biệt internal editorial review với independent semantic review.
+- Các bộ câu đã qua internal review có thể xuất hiện trong Mock luyện tập nội bộ; không mô tả đó là đề ETS, đề đã equate hoặc chứng nhận psychometric. Chỉ nâng trạng thái chất lượng khi có hồ sơ reviewer thứ hai.
 
-- Part 5: incomplete sentence, one blank, four parallel choices; explain grammar/meaning/discourse cues.
-- Part 6: text completion with blank markers matching question count; include word/phrase and sentence-insertion item types where meaningful.
-- Part 7: single, double and triple documents; connect questions to information across documents; include purpose, detail, inference, reference, vocabulary and insert-sentence questions.
-- Each passage/document needs a documentType label (EMAIL, NOTICE, MEMO, ADVERTISEMENT, ARTICLE, SCHEDULE, POLICY, INVOICE/ORDER, etc.) and workplace/real-life context.
-- Explanations must justify the right answer and explain why distractors fail, not just repeat the answer.
+## 6. Grammar Part 5/6
 
-## 6.1 Dashboard content presentation
+- Dùng một Grammar library và một Focus Workspace. `parts` là metadata lọc, không tạo runtime library riêng cho từng Part.
+- Part 5 luyện sentence grammar, word form, tense, agreement, collocation, determiner, preposition và clause structure.
+- Part 6 phải xét ngữ cảnh cả trước/sau blank; bổ sung cohesion, reference, transition và sentence insertion khi phù hợp.
+- Không duplicate lesson/exercise. Giữ stable IDs và thứ tự bài đã có progress.
+- Reference links chỉ hỗ trợ rule; ví dụ/câu hỏi là nội dung dự án tự biên soạn.
 
-- The TOEIC Learning Diagnostics section uses an open section heading and short explanatory copy, not a second generic `.panel` card surrounding all metrics.
-- Keep Listening and Reading as clearly separated groups. Frame only the seven interactive Part tiles; keep priority guidance as a light note below the groups.
-- Preserve the statement that the figures are internal learning indicators, not an ETS score conversion. Do not introduce an estimated official score without a separate validated model.
-- Maintain responsive layouts at desktop, tablet and narrow mobile widths; every Part tile must remain keyboard-focusable and the live priority status must be announced to assistive technology.
+## 7. Retry, attempt history and learner progress
 
+- Reading, Listening và Grammar dùng `answers` cho kết quả mới nhất và `attemptHistory` để giữ các lần trước.
+- “Làm lại câu này” chỉ mở khóa một câu; “Làm lại toàn bộ bài” phải xác nhận và archive tất cả câu đã trả lời.
+- Mỗi attempt giữ selected text/index, stable `choiceId`, key, correctness, explanation, timestamp và attempt number.
+- Coverage đếm câu duy nhất; accuracy theo lần mới nhất; số lượt thử báo riêng.
+- IndexedDB giữ `toeic-vocabulary-phase1`, version 1, store `workspace`; field bổ sung phải tương thích progress cũ. Không reset/import/export/inspect/migrate hồ sơ cá nhân trong release thông thường.
 
-## 5.1 Repeatable practice and attempt history
+## 8. Shared learning UI
 
-- Reading, Listening and Grammar keep the latest submitted answer in the existing `answers` map and append earlier answers to `attemptHistory`, keyed by stable question index.
-- “Làm lại câu này” archives only that question's current answer and unlocks its choices. “Làm lại toàn bộ bài” archives all currently answered questions after explicit confirmation.
-- Each new attempt records selected text/index, stable `choiceId`, correct answer text, correctness, explanation, timestamp and attempt number. Never delete previous attempts as part of retry.
-- Coverage counts unique questions attempted; accuracy uses the latest submitted attempt for each question. Total attempts is a separate metric and must not inflate the unique-question denominator.
-- The additive history field must continue to work with legacy v1 progress objects that contain only `answers`. Do not increment IndexedDB version or add an object store for this behavior.
-- Any change to question ordering, stable choice IDs or the progress object requires a migration regression test using both legacy and current progress fixtures.
+- Flashcard, Review, Grammar, Reading và Listening detail dùng shared Focus Workspace.
+- Chỉ `.learning-focus-content` sở hữu cuộn dọc; content bên trong không tự tạo nested vertical scrolling.
+- Nội dung ngắn co tự nhiên; nội dung dài cuộn một lần ở outer workspace.
+- Thay đổi shared shell ở stylesheet/helper hiện có; không tạo backdrop, modal, CSS và logic cuộn riêng cho từng module.
+- Giữ keyboard access, focus-visible, touch target khoảng 44px, mobile safe-area và `prefers-reduced-motion`.
 
-## 6. Content lifecycle
+## 9. Mock Exam integrity
 
-`Draft → source check → editorial review → schema validation → patch dry-run → apply → automated content QA → coverage report → version sync → unit tests → ZIP integrity → extracted-package recheck → Master/Changelog update`.
+- Giữ Quick 15m/25Q, Half 60m/100Q và Full 120m/200Q.
+- Listening/Reading phải đủ blueprint cho mỗi form; Part 3/4, Part 6 và Part 7 resource blocks không được cắt.
+- Không lấy item/unit có `reserve-pending-independent-review` hoặc editorial status không nhận diện vào Mock. Báo cáo số câu eligible và reserve tách riêng. Existing v2.33 `internal-editorial-reviewed` Reading units remain eligible for backward compatibility; this legacy exception does not authorize new content to skip second review.
+- Dùng cả attempt history và lifetime-use ledger để ưu tiên câu chưa dùng; kiểm tra ID uniqueness trong từng form và độ giao nhau giữa các form liên tiếp.
+- Không tuyên bố điểm ETS/CEFR hoặc tương đương psychometric nếu chưa có mô hình equating/validation.
 
-Any item whose source or answer is uncertain stays `draft-review` and must not be mixed into a production-ready test form. Keep original authoring provenance; do not copy ETS copyrighted sample questions/audio without explicit permission/licence. Official format facts may be referenced with citations, but must not be reproduced as proprietary item content.
+## 10. Content lifecycle and release gates
 
-## 7. Required release commands
+`Draft → source check → internal editorial review → schema validation → evidence/distractor audit → patch dry-run → apply → content QA → coverage report → version sync → unit tests → ZIP integrity → clean overlay reconstruction → Master/Changelog update`.
+
+Required core commands:
 
 ```bash
-python -m py_compile tools/validate-data.py tools/validate-learning-content.py tools/audit-toeic-coverage.py tools/sync-version.py tools/patch-data.py
 python tools/validate-data.py
 python tools/validate-learning-content.py
 python tools/audit-toeic-coverage.py
+python tools/audit-question-evidence.py
+python tools/audit-distractors.py
 python tools/sync-version.py --check
 node --check assets/js/app.js
+node --check assets/js/mock-engine.js
 node --check sw.js
 ```
 
-Run unit tests separately by module: `test_baseline_ids.py`, `test_patch_data.py`, `test_sync_version.py`, `test_validator.py`, `test_learning_content.py` and `test_dashboard_layout.py`. After packaging, unzip into a clean directory and run data validator, content validator, sync-version, JS syntax and ZIP CRC again.
+Chạy unit tests theo module phù hợp thay vì dựa vào một lệnh discovery dài có thể timeout. Báo cáo phải ghi đúng số suite/test thực tế và phân biệt structural PASS với semantic review.
 
-## 8. Coverage report and release record
+## 11. Coverage and documentation lifecycle
 
-Every release updates the same central documents:
-- `docs/MASTER_STATUS.md`: current totals, Part coverage, blockers, acceptance gate and next action.
-- `docs/CHANGELOG.md`: one concise release entry; the only detailed chronological release log.
-- `docs/COMPATIBILITY.md`: only when support, storage, route, cache or data contracts change.
-- `docs/DESIGN_SYSTEM.md`: only when shared interaction/layout rules change.
-- `docs/batches/` and `docs/reports/`: keep one detailed record for the previous release and one for the current release only. The current file supersedes the older one when the next version is published.
-- Source links and editorial method are recorded inside the current batch document; do not create one source Markdown file per batch.
+- `docs/MASTER_STATUS.md`: trạng thái, số liệu, blockers và next action duy nhất.
+- `docs/CHANGELOG.md`: chronological release log duy nhất.
+- `docs/COMPATIBILITY.md`: storage/data/cache/support contract.
+- `docs/DESIGN_SYSTEM.md`: layout và interaction dùng chung.
+- `docs/CONTENT_OPERATIONS.md`: quy trình này.
+- `docs/batches/` và `docs/reports/`: chỉ giữ file chi tiết của previous + current release.
+- `docs/archive/PROJECT_HISTORY.md`: mô tả ngắn tài liệu đã nghỉ hưu; không chép lại toàn văn báo cáo cũ.
+- Nguồn và editorial method ghi trong batch hiện tại; không tạo một source `.md` riêng cho mỗi nhóm.
 
-All Markdown stays inside `docs/`. Keep one Master only. State clearly what has not been tested on target devices/remote GitHub.
-
-## 9. One-form question-pool gate
-
-The v2.12.0 minimum needed to select one TOEIC L&R form is: Listening P1≥6, P2=25, P3=39, P4=30; Reading P5=30, P6=16, P7≥29 single-passage questions + 25 multiple-passage questions (double/triple). These are blueprint minima for one form, not a guarantee of multiple non-repeating forms.
-
-- Each Part 2 record contains exactly one question and three response options.
-- Each Part 3 conversation and Part 4 talk contains exactly three linked questions. Part 3 must identify at least two distinct speakers.
-- Each Part 7 DOUBLE PASSAGE record must contain exactly two `documents[]` items; TRIPLE PASSAGE must contain exactly three. Each document requires a non-empty `label` and `content`. Retain `passage` where current UI compatibility still depends on it.
-- Extend existing sets by appending questions only. Never reorder or replace an existing question index because learners may already have local progress keyed to that item. New sets get unique stable resource IDs.
-- Keep visual and audio provenance explicit: licensed Part 1 photographs use `visualType: photograph` and record creator/source/license in `assets/listening/ATTRIBUTION.csv`; SVG fallback artwork remains `visualType: illustration` when used as the primary asset. Browser SpeechSynthesis is synthesized audio, not a recorded native-speaker asset or ETS audio. Cache user-facing photo files locally and keep SVG fallback assets in the required app shell.
-- Passing automated checks confirms structural integrity only. Before Full Mock, manually review every item's transcript/passage grounding, correct answer, distractors and Vietnamese rationale.
+Khi xuất bản phiên bản mới: current thành previous; previous cũ được tóm tắt vào Project History rồi nghỉ hưu. Chạy `python tools/rotate-release-files.py` trước, rà danh sách, rồi mới chạy `--apply`. Rotator không được đụng app source, canonical JSON, assets, PWA shell, patches hoặc learner profiles.
 
 
-## 10. Documentation consolidation and two-release rotation
+## 12. CI coverage and development-to-acceptance sequencing
 
-The active documentation set is deliberately small: `MASTER_STATUS.md`, `COMPATIBILITY.md`, `CHANGELOG.md`, `DESIGN_SYSTEM.md`, `CONTENT_OPERATIONS.md`, `README.md`, one archive index, and the previous/current release batch + test report. `reference/` is reserved for one-off external research that is still actively used.
+- Every `tools/tests/test_*.py` module and every `tools/tests/*.mjs` suite must be called by `.github/workflows/validate-data.yml`. `test_ci_coverage.py` checks that relationship; include it in CI whenever the test inventory changes.
+- A suite being listed in the workflow is not the same as a remote workflow run passing. Keep local test evidence and remote Actions evidence separate.
+- During active development, prioritize fixes to demonstrated failure modes and high-risk flows. Do not issue a broad acceptance checklist or reminder while core development work is still open.
+- After the development backlog is closed, create one risk-weighted acceptance/test plan focused on mock assembly and section boundaries, saved attempts/Retry history, IndexedDB continuity, PWA cache/offline/reconnect, responsive layout and real device/browser voice behavior. Avoid repeating a 100% manual sweep of stable areas unless a changed component puts them at risk.
 
-When a new release is prepared:
-1. Copy the previous current release batch/test record forward as the previous release file; add one new batch file and one new test report for the current release.
-2. Update the Master, Changelog and Compatibility only where facts changed.
-3. Run `python tools/rotate-release-files.py` and review every planned retirement.
-4. Run `python tools/rotate-release-files.py --apply` only after verifying the two files retained in each release-specific folder. Old batch/report/source documents are converted into short index entries in `archive/PROJECT_HISTORY.md`; complete old copies are not duplicated.
-5. Never create separate roadmap, Master, design-system, compatibility, or per-feature UI guide files. Put each decision in its existing central document.
 
-The rotator is restricted to Markdown under `docs/batches/`, `docs/reports/`, `docs/sources/` and root `V*_UPDATE_NOTES.txt`. It must never touch application source, canonical JSON, `assets/`, PWA resources, patches or local learner profiles.
+## 13. Author-pass refinements to reserve Listening content
+
+- An internal author pass may correct demonstrable answer-response, transcript or evidence-pointer issues before an independent reviewer sees the material.
+- Keep reserve status unchanged after an author pass. A correction is not a second-person approval, and neither evidence-text matching nor automated regression checks can promote an item into Mock.
+- When a corrected option is only clarified, preserve its existing `choiceId` and index so saved selections remain linked to the same answer concept. If the option meaning or identity changes, create a new choice ID and record an explicit migration path rather than silently reusing the old identity.
+- For an answer with multiple supporting transcript details, evidence text should point to the complete supporting phrase or the question should be narrowed so the key does not claim more than the cited source.
+
+## 14. TOEIC Part 5 Sentence Completion practice bank
+
+- Canonical file: `data/practice/part5-sentence-completion.json`. This is a separate adaptive practice bank, not a duplicate of `data/readings/reading-library.json` Part 5 and not part of the Mock Exam pool.
+- Every item has exactly one `_____` gap, four unique A–D choices, one `answerIndex`, four aligned `optionExplanations`, a canonical `wordId`, a supported `grammarCategory`, `grammarPoint`, full explanation, Vietnamese translation and a reason why the intended answer is uniquely best.
+- Allowed grammar categories are the 14 named in `data/practice/part5-sentence-completion.json`; each question must be represented in the generated coverage report. Batch 016 uses `editorialBatch="016"` and `contentBatch="batch-016-part5-grammar-expansion"`.
+- Keep answer-key positions balanced across A/B/C/D over the complete authored bank, and preserve choice/explanation identity whenever an answer index is rebalanced.
+- The key must satisfy grammar, part of speech, agreement/tense/verb pattern and sentence meaning. Distractors should be plausible but demonstrably wrong in the actual sentence; avoid prompts where two choices become valid under different unstated assumptions.
+- Prefer familiar TOEIC contexts (office administration, HR/recruitment, finance, purchasing, customer service, shipping/logistics, travel and facilities). Keep vocabulary IDs stable; do not add a duplicate headword just to support a practice item.
+- The UI shuffles choices, so answer-specific explanations must be shuffled in lockstep. Tests must assert that the keyed explanation remains attached to the correct choice after randomization.
+- The Part 5 seen-question list uses question IDs and is stored as optional `sentenceCompletionSeenIds` inside the existing `practiceSession` record. Do not reuse `sessionSeenIds` from other modes. Correct/incorrect outcomes still update the linked vocabulary word's existing `studyProgress` entry.
+- The complete 80-question bank remains `reserve-pending-independent-review` and practice-only until a second reviewer checks grammar, naturalness, semantic uniqueness, key and all distractors. Internal author review and automated validation are not independent approval. Automated schema/selector tests and an internal author pass are not independent approval and never add these records to Mock.
+- Include the bank JSON and selector module in Service Worker `REQUIRED` and `APP_SHELL`; keep the DB at `toeic-vocabulary-phase1` version 1 unless a separately justified storage migration is approved.
+

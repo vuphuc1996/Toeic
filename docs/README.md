@@ -1,20 +1,21 @@
-# TOEIC Dictionary v2.30.0 — Documentation Center
+# TOEIC Dictionary v2.39.0 — Documentation Center
 
 ## Active release pair
 
-- **Current candidate — v2.30.0:** [Master status](MASTER_STATUS.md), [test report](reports/TEST_REPORT_TOEIC_Dictionary_v2.30.0.md), [Vocabulary Batch 020](batches/TOEIC_VOCABULARY_BATCH_020_v2.30.0.md), [update notes](../V2.30.0_UPDATE_NOTES.txt).
-- **Previous baseline — v2.29.0:** [test report](reports/TEST_REPORT_TOEIC_Dictionary_v2.29.0.md), [Shared Learning Workspace Batch 019](batches/TOEIC_SHARED_LEARNING_WORKSPACE_BATCH_019_v2.29.0.md), [update notes](../V2.29.0_UPDATE_NOTES.txt).
+- **Current candidate — v2.39.0:** [Master status](MASTER_STATUS.md), [Part 5 Grammar and Structure Expansion](batches/TOEIC_PART5_GRAMMAR_EXPANSION_BATCH_016_v2.39.0.md), [test report](reports/TEST_REPORT_TOEIC_Dictionary_v2.39.0.md), [content coverage](reports/TOEIC_CONTENT_COVERAGE_v2.39.0.md), [update notes](../V2.39.0_UPDATE_NOTES.txt).
+- **Previous baseline — v2.38.0:** [Part 5 Sentence Completion](batches/TOEIC_PART5_SENTENCE_COMPLETION_v2.38.0.md), [test report](reports/TEST_REPORT_TOEIC_Dictionary_v2.38.0.md), [update notes](../V2.38.0_UPDATE_NOTES.txt).
 
 ## Central documents
 
-- [Master status and roadmap](MASTER_STATUS.md) — the only source of current scope, status and priorities.
+- [Master status and development roadmap](MASTER_STATUS.md) — the only source of current scope, status and priorities.
 - [Compatibility and retirement](COMPATIBILITY.md) — the only support/deprecation register.
 - [Changelog](CHANGELOG.md) — the single concise chronological release log.
 - [Design system](DESIGN_SYSTEM.md) — shared layouts, controls and responsive behavior.
-- [Content operations](CONTENT_OPERATIONS.md) — source, editorial review, patch, attempt-history, test and release workflow.
+- [Content operations](CONTENT_OPERATIONS.md) — source, editorial, reserve, mock, attempt-history, test and release workflow.
 - [Project history](archive/PROJECT_HISTORY.md) — compact index of retired documents; not active instructions.
-- [TOEIC platform benchmark](reference/TOEIC_APP_BENCHMARK_2026.md) — current comparative reference.
 
 ## Documentation rule
 
-Keep only the previous/current release pair in `batches/`, `reports/` and root update notes. Archive older release-specific Markdown as concise index entries, not whole duplicate documents. Update the existing Master/Changelog/Compatibility/Design System instead of creating a standalone guide for each feature.
+Keep only the previous/current release pair in `batches/`, `reports/` and root update notes/manifests. Archive older release-specific Markdown as concise entries, not whole duplicate documents. Update existing central files instead of creating independent guides.
+
+The project remains in active development. The consolidated acceptance and final testing plan is deferred until the internal development backlog is closed.

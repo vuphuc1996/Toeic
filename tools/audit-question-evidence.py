@@ -42,6 +42,13 @@ def get_source(item: dict, kind: str) -> str:
     return ' '.join([item.get('passage', '')] + docs)
 
 def evidence_status(kind: str, part: str, item: dict, q: dict, source: str, answer: str) -> tuple[str, str]:
+    if kind == 'Listening' and item.get('editorialStatus') == 'reserve-pending-independent-review':
+        evidence = str(q.get('evidenceText', '')).strip()
+        if part == 'Part 2':
+            return 'reserve-pending-independent-review', 'The spoken question prompt is recorded; response-option fit and the keyed answer still require independent review.'
+        if evidence and norm(evidence) in norm(source):
+            return 'reserve-pending-independent-review', 'The batch evidence phrase appears in the transcript; keyed-answer correctness and distractor uniqueness still require independent review.'
+        return 'reserve-pending-independent-review', 'Reserve status retained; transcript evidence pointer requires manual second-person verification.'
     if kind == 'Listening' and part == 'Part 1':
         letter = 'ABCD'[q['answerIndex']]
         return 'photo-source-reviewed', f"Reviewed the Pexels source-page description, keyed option {letter} and matching spoken action; photo path `{item.get('photo','')}`; SVG fallback `{item.get('image','')}`. Source/license are recorded in `assets/listening/ATTRIBUTION.csv`. Binary-level visual verification remains pending until the JPG bytes are available in the working copy."
@@ -51,6 +58,27 @@ def evidence_status(kind: str, part: str, item: dict, q: dict, source: str, answ
         return 'grammar-checked', 'Reviewed all four choices against the sentence syntax and grammar pattern; this is an editorial check, not independent certification.'
     if kind == 'Reading' and part == 'Part 6':
         return 'context-fit-checked', 'Reviewed the numbered blank with surrounding sentence/paragraph grammar, cohesion and meaning.'
+    explicit = q.get('evidence') if kind == 'Reading' and part == 'Part 7' else None
+    if explicit:
+        docs = item.get('documents', [])
+        label_map = {doc.get('label', '').strip(): doc.get('content', '') for doc in docs if doc.get('label')}
+        # A single passage may identify its source by documentType rather than a separate documents[] label.
+        document_type = str(item.get('documentType', '')).strip()
+        if document_type and item.get('passage'):
+            label_map.setdefault(document_type, item.get('passage', ''))
+        labels = [str(label).strip() for label in explicit.get('sourceLabels', []) if str(label).strip()]
+        quotes = [str(quote) for quote in explicit.get('quotes', []) if str(quote)]
+        missing_labels = [label for label in labels if label not in label_map]
+        eligible_sources = [label_map[label] for label in labels if label in label_map]
+        missing_quotes = [quote for quote in quotes if not any(quote in text for text in eligible_sources)]
+        if labels and quotes and not missing_labels and not missing_quotes:
+            return 'explicit-source-evidence', f"Explicit source evidence: {', '.join(labels)}; quote(s): {' / '.join(quotes)}"
+        problems = []
+        if missing_labels:
+            problems.append('unknown source label(s): ' + ', '.join(missing_labels))
+        if missing_quotes:
+            problems.append('quote not found in its labelled source: ' + ' / '.join(missing_quotes))
+        return 'editorial-review', 'Invalid explicit evidence metadata — ' + '; '.join(problems or ['labels/quotes missing'])
     if (item.get('id', ''), q.get('_question_number', 0)) in REVIEWED_INFERENCES:
         detail = REVIEWED_INFERENCES[(item.get('id', ''), q.get('_question_number', 0))]
         return 'manual-paraphrase-verified', detail
@@ -86,8 +114,8 @@ def main() -> int:
         f'- Questions indexed: **{total}** ({sum(counters["Listening"].values())} Listening + {sum(counters["Reading"].values())} Reading).',
         '- Every correct option is linked to its source transcript/passage or an explicit review category.',
         '- Direct/lexical matching is evidence discovery only. It does not prove that distractors are wrong or that a paraphrase/inference is unique.',
-        '- In this editorial pass, 6 low-overlap paraphrase/inference items were checked against their transcript/passage; 8 Part 1 Pexels source descriptions, all 30 Part 2 response-fit items, all 30 Part 5 grammar items and all 16 Part 6 context-fit items were also reviewed.',
-        '- Batch 013 adds 11 reserve Listening questions. They are included in the inventory/evidence index, but are not part of the 132-question Part 3/4/7 independent distractor-balance certificate until a separate review.',
+        f'- In this editorial pass, 6 low-overlap paraphrase/inference items were checked against their transcript/passage; 8 Part 1 Pexels source descriptions, {sum(len(x.get("questions", [])) for x in listening if x.get("part") == "Part 2" and not x.get("editorialStatus"))} baseline Part 2 response-fit items, all {sum(len(x.get("questions", [])) for x in reading if x.get("part") == "Part 5")} Part 5 grammar items and all {sum(len(x.get("questions", [])) for x in reading if x.get("part") == "Part 6")} Part 6 context-fit items were also reviewed.',
+        f'- {sum(len(x.get("questions", [])) for x in listening if x.get("editorialStatus") == "reserve-pending-independent-review")} Listening questions remain explicitly reserve-pending-independent-review: 11 Batch 013, 17 Batch 014 and 70 Batch 015. Batch 015 Part 2 evidence identifies the spoken prompt; Parts 3/4 carry transcript phrase pointers. All reserve answers and distractor uniqueness still require an independent second reviewer; automated evidence mapping does not approve them.',
         '- These are internal editorial checks, not two-person independent proofreading, psychometric validation or ETS approval.',
         '', '## Coverage by evidence type',
         '| Library | Evidence category | Questions |', '|---|---|---:|'
@@ -100,6 +128,8 @@ def main() -> int:
         'response-fit-checked': 'Part 2 speech-act / response-fit checked',
         'grammar-checked': 'Part 5 sentence grammar checked',
         'context-fit-checked': 'Part 6 context/cohesion checked',
+        'explicit-source-evidence': 'Explicit Part 7 passage/document quotation (v2.33.0 additions)',
+        'reserve-pending-independent-review': 'Listening reserve — not approved for Mock',
     }
     for lib in ('Listening', 'Reading'):
         for status, label in names.items():
@@ -129,7 +159,7 @@ def main() -> int:
         '- `part2-room-unavailable` now uses “That’s right…” to confirm the negative-tag statement without relying on a potentially confusing “Yes” response.',
         '',
         '## Remaining audit work',
-        '- The original 132-item distractor review was completed in v2.15.0; current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
+        '- The historical 132-item distractor review was completed in v2.15.0; 45 added Part 7 questions in v2.33.0 carry explicit source-label and quotation metadata. The 98 Listening reserve questions remain excluded from Mock pending second-person review. Current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
         '- Verify browser audio playback, pacing and pronunciation on physical iPhone/iPad and Android voice packs; the current TTS remains browser-generated.',
         '- Obtain a second independent reviewer before releasing a scored mock. No official ETS scoring equivalence is claimed.',
         ''

@@ -2336,7 +2336,13 @@
         "OFFICE",
         "QUALITY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "completion",
+          "pos": "n",
+          "meaning_vi": "sự hoàn thành"
+        }
+      ],
       "verb_forms": {
         "v1": "complete",
         "vs_es": "completes",
@@ -2375,7 +2381,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "complete",
+          "pos": "v",
+          "meaning_vi": "hoàn thành; đầy đủ"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

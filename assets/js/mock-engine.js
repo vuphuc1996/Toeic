@@ -9,13 +9,13 @@ export const MOCK_MODES = Object.freeze({
     id: 'quick', label: 'Test nhanh', minutes: 15,
     listeningSeconds: 322, readingSeconds: 578,
     listening: { p1: 1, p2: 2, p3Units: 2, p4Units: 1 },
-    reading: { p5: 4, p6Questions: 4, p7Single: 4, p7Multiple: 1 },
+    reading: { p5: 2, p6Questions: 4, p7Single: 2, p7Multiple: 5 },
   }),
   half: Object.freeze({
     id: 'half', label: 'Thi thử rút gọn', minutes: 60,
     listeningSeconds: 1350, readingSeconds: 2250,
     listening: { p1: 3, p2: [11, 14], p3Units: [6, 7], p4Units: 5 },
-    reading: { p5: 15, p6Questions: 8, p7Single: 14, p7Multiple: 13 },
+    reading: { p5: 15, p6Questions: 8, p7Single: 17, p7Multiple: 10 },
   }),
   full: Object.freeze({
     id: 'full', label: 'Thi TOEIC đầy đủ', minutes: 120,
@@ -143,7 +143,14 @@ function pickBlocksExact(units, target, historyCounts, area, random) {
 }
 
 function countPool(list, part) {
-  return list.filter(item => item.part === part).reduce((sum, item) => sum + (item.questions || []).length, 0);
+  return list.filter(item => item.part === part && isMockEligible(item)).reduce((sum, item) => sum + (item.questions || []).length, 0);
+}
+
+// Legacy status-less source and the established v2.33 internal-editorial-reviewed state
+// remain eligible for backward compatibility. New reserve/unknown states fail closed;
+// reserve-pending-independent-review is never sampled until explicitly approved.
+export function isMockEligible(item) {
+  return !item?.editorialStatus || ['approved-for-mock', 'internal-editorial-reviewed'].includes(item.editorialStatus);
 }
 
 function addSelectedUsage(groups, counts) {
@@ -155,7 +162,7 @@ function sortGroupsByPart(groups, area, random) {
 }
 
 function makeListening(mode, data, historyCounts, random) {
-  const all = data.filter(item => item.editorialStatus !== 'reserve-pending-independent-review' && ['Part 1', 'Part 2', 'Part 3', 'Part 4'].includes(item.part));
+  const all = data.filter(item => isMockEligible(item) && ['Part 1', 'Part 2', 'Part 3', 'Part 4'].includes(item.part));
   const spec = mode.listening;
   const halfVariant = mode.id === 'half' && randomValue(random) >= 0.5;
   const groups = [];
@@ -185,7 +192,7 @@ function makeListening(mode, data, historyCounts, random) {
 }
 
 function makeReading(mode, data, historyCounts, random) {
-  const all = data.filter(item => item.editorialStatus !== 'reserve-pending-independent-review' && ['Part 5', 'Part 6', 'Part 7'].includes(item.part));
+  const all = data.filter(item => isMockEligible(item) && ['Part 5', 'Part 6', 'Part 7'].includes(item.part));
   const spec = mode.reading;
   const groups = [];
 

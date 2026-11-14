@@ -36,6 +36,20 @@ def compact_summary(path: Path, text: str) -> str:
     return f"- **v{version} · {title}** (`{path.as_posix()}`): {summary}"
 
 
+def append_archive_entries(existing: str, additions: list[str]) -> str:
+    """Keep a single history-index heading while preserving every entry."""
+    heading = "## Newly retired documents"
+    if heading in existing:
+        prefix, *chunks = existing.split(heading)
+        historic_entries = "\n\n".join(chunk.strip() for chunk in chunks if chunk.strip())
+        new_entries = "\n".join(additions)
+        body = "\n\n".join(part for part in (historic_entries, new_entries) if part)
+        return prefix.rstrip() + "\n\n" + heading + ("\n\n" + body.rstrip() if body else "") + "\n"
+    if not additions:
+        return existing
+    return existing.rstrip() + "\n\n" + heading + "\n\n" + "\n".join(additions) + "\n"
+
+
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--apply',action='store_true',help='perform the planned retirement; default is dry-run')
@@ -46,10 +60,14 @@ def main():
     # If current patch is .0, keep the immediately prior minor's latest patch as fallback.
     if patch==0: prev=f'{major}.{max(0,minor-1)}.0'
     keep={current,prev}
-    notes=[]
-    for p in ROOT.glob('V*_UPDATE_NOTES.txt'):
-        m=re.fullmatch(r'V(\d+\.\d+\.\d+)_UPDATE_NOTES\.txt',p.name)
-        if m and m.group(1) not in keep: notes.append(p)
+    root_release_files=[]
+    for pattern, rx in [
+        ('V*_UPDATE_NOTES.txt', r'V(\d+\.\d+\.\d+)_UPDATE_NOTES\.txt'),
+        ('V*_OVERLAY_MANIFEST.txt', r'V(\d+\.\d+\.\d+)_OVERLAY_MANIFEST\.txt'),
+    ]:
+        for p in ROOT.glob(pattern):
+            m=re.fullmatch(rx,p.name)
+            if m and m.group(1) not in keep: root_release_files.append(p)
     docs=[]
     for folder in [ROOT/'docs/batches',ROOT/'docs/reports',ROOT/'docs/sources']:
         if not folder.exists(): continue
@@ -58,21 +76,22 @@ def main():
             if not versions or not (versions & keep): docs.append(p)
     print(f'Current={current}; keep={sorted(keep)}')
     for p in docs: print('ARCHIVE + RETIRE',p.relative_to(ROOT))
-    for p in notes: print('RETIRE',p.relative_to(ROOT))
+    for p in root_release_files: print('RETIRE',p.relative_to(ROOT))
     if not args.apply:
-        print(f'DRY RUN: {len(docs)} markdown files and {len(notes)} root notes would be retired.')
+        print(f'DRY RUN: {len(docs)} markdown files and {len(root_release_files)} root release files would be retired.')
         return 0
     ARCHIVE.parent.mkdir(parents=True,exist_ok=True)
     existing=ARCHIVE.read_text(encoding='utf-8') if ARCHIVE.exists() else '# Consolidated Project History\n'
     additions=[]
-    for p in docs:
+    for p in docs + root_release_files:
         rel=p.relative_to(ROOT).as_posix()
         marker=f'`{rel}`'
         if marker not in existing:
             additions.append(compact_summary(p.relative_to(ROOT),p.read_text(encoding='utf-8')))
-    if additions:
-        ARCHIVE.write_text(existing.rstrip()+"\n\n## Newly retired documents\n\n"+'\n'.join(additions)+'\n',encoding='utf-8')
-    for p in docs+notes: p.unlink(missing_ok=True)
-    print(f'APPLIED: archived {len(docs)} markdown files; retired {len(notes)} old release notes.')
+    updated_archive = append_archive_entries(existing, additions)
+    if updated_archive != existing:
+        ARCHIVE.write_text(updated_archive, encoding='utf-8')
+    for p in docs+root_release_files: p.unlink(missing_ok=True)
+    print(f'APPLIED: archived {len(docs)} markdown files; retired {len(root_release_files)} old root release files.')
     return 0
 if __name__=='__main__': raise SystemExit(main())

@@ -1,109 +1,99 @@
 # TOEIC DICTIONARY — MASTER STATUS
 
-> **Nguồn trạng thái và lộ trình duy nhất.** Mọi release cập nhật trực tiếp file này; không tạo Master/Roadmap riêng. Chi tiết phát hành nằm trong `CHANGELOG.md`; tài liệu đã nghỉ hưu nằm trong `archive/PROJECT_HISTORY.md`; tương thích nằm trong `COMPATIBILITY.md`.
+> **Nguồn trạng thái và lộ trình duy nhất.** Mọi release cập nhật trực tiếp file này. `CHANGELOG.md` là log phát hành; `archive/PROJECT_HISTORY.md` là chỉ mục tài liệu đã nghỉ hưu; `COMPATIBILITY.md` là sổ tương thích duy nhất.
 
 - **Ngày kiểm kê:** 2026-11-14.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.30.0 (Repeatable Practice, Attempt History & Vocabulary Batch 020; local candidate).
-- **Current candidate:** v2.30.0, phát triển từ v2.29.0.
-- **Previous baseline:** v2.29.0.
-- **Repository:** `vuphuc1996/Toeic`; app source nằm ở root repository.
-- **Nền tảng:** GitHub Pages + static PWA; không backend/GAS/iframe/Cloudflare.
-- **Mục tiêu:** hoàn tất các hạng mục có thể kiểm chứng trước 2026-12-01 để người dùng bắt đầu học. Không cam kết “hoàn hảo 100%” tuyệt đối; bắt buộc phân biệt automated PASS, editorial review, remote deployment và physical-device QA.
-- **Trạng thái triển khai:** local candidate; code-level release gates cho retry + Batch 020 PASS. Remote GitHub Actions/Pages và QA thiết bị thật chưa xác nhận.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.39.0 (TOEIC Part 5 Grammar and Structure Expansion; local candidate).
+- **Current candidate:** v2.39.0 — TOEIC Part 5 Grammar and Structure Expansion.
+- **Previous baseline:** v2.38.0 — TOEIC Part 5 Sentence Completion Practice.
+- **Base:** v2.38.0; app remains GitHub Pages + static PWA, no backend/GAS/iframe/Cloudflare.
+- **Release state:** local candidate. Remote GitHub Actions, Pages deployment and physical-device behavior are not verified from this workspace.
+- **Development rule:** finish the internal product/content backlog first. Do not issue acceptance reminders or a broad acceptance checklist while development is active. The eventual test plan should focus on high-risk user flows rather than repeat a 100% inventory sweep.
 
-## 1. Tóm tắt thay đổi v2.30.0
+## 1. v2.39.0 changes
 
-### Luyện tập và làm lại câu hỏi
+### TOEIC Part 5 · Grammar and Structure Expansion
 
-1. Reading, Listening và Grammar có nút **Làm lại câu này** sau khi đã trả lời. Lựa chọn được mở lại nhưng kết quả cũ không bị xóa.
-2. Có nút **Làm lại toàn bộ bài** để mở lại các câu đã trả lời hiện tại; thao tác yêu cầu xác nhận.
-3. `answers` tiếp tục lưu kết quả hiện tại/lần gần nhất; `attemptHistory` lưu các lần trước theo chỉ số câu hỏi.
-4. Mỗi attempt mới lưu đáp án đã chọn, stable `choiceId`, đúng/sai, đáp án chuẩn, giải thích, timestamp và số thứ tự lần làm. Các attempt cũ được hiển thị lại bên dưới câu hỏi.
-5. Độ phủ câu hỏi tính theo **câu duy nhất đã từng làm**, không cộng dồn số lần thử. Accuracy theo kết quả lần làm mới nhất; tổng số lần thử được hiển thị riêng.
-6. Không nâng IndexedDB: vẫn DB `toeic-vocabulary-phase1`, version `1`, store `workspace`. Dữ liệu progress v1 cũ không có `attemptHistory` vẫn hoạt động; history là trường additive trong cùng object.
-7. Choice-ID migration xử lý cả đáp án hiện tại và attempt đã archive; không đổi question index/ID.
+- Expanded the separate adaptive sentence-completion practice bank from 35 to **80 original questions**: 35 initial questions plus 45 new Batch 016 questions (`p5-sc-036`–`p5-sc-080`).
+- Tagged all 80 questions with a grammar category. Coverage spans 14 groups: adjectives/adverbs (10), articles/determiners (3), conjunctions/clauses (3), gerunds/infinitives (3), imperatives/verb forms (1), infinitives/verb patterns (13), linking verbs (1), modal verbs (2), participles/reduced relative clauses (1), passive voice (5), prepositions/collocations (13), subject–verb agreement (7), verb tense/aspect (8), and word forms/nouns (10).
+- Balanced the authored answer key positions A/B/C/D at 20/20/20/20. Runtime answer shuffling still preserves the corresponding option explanations.
+- The Focus Workspace now shows the question's grammar group above the sentence and repeats it in the answer-review explanation. No separate screen or new storage system was added.
+- Kept a unique `question ID` history for Part 5 and the existing canonical vocabulary `wordId` progress weighting. All 80 question targets resolve to distinct pre-existing vocabulary IDs; no headwords were added and no ID was changed.
+- Added batch metadata (`editorialBatch=016`, `contentBatch=batch-016-part5-grammar-expansion`) and validation for grammar tags, group totals, option feedback prefixes and review status.
+- Improved distractor wording in several preposition items to remove accepted alternative constructions (including `beneficial for`, `notify about`, and agent/beneficiary readings of `by/for`).
+- All 80 items remain `reserve-pending-independent-review`. This release includes an internal author re-check and automated structural/runtime checks, not an independent second-person review. The bank remains practice-only and is excluded from Reading Mock inventory/scoring.
 
-### Vocabulary Batch 020
+### Compatibility and unchanged areas
 
-- Bổ sung 13 từ: `accrual`, `receivable`, `collateral`, `escrow`, `consignor`, `consignee`, `stockout`, `bottleneck`, `throughput`, `outlay`, `covenant`, `timesheet`, `replenishment`.
-- Canonical bank tăng từ 979 lên **992 headwords**; 979 ID cũ được giữ nguyên, 13 ID mới được thêm.
-- `data/vocabulary/A.json`–`Z.json` vẫn là runtime source duy nhất; `batch-008.json` chỉ là provenance.
-- US IPA chỉ được điền khi nguồn kiểm tra có cung cấp; `consignor` và `receivable` không có US transcription trên trang Cambridge đã kiểm tra nên được để trống, không suy đoán.
-- CEFR remains editorial estimate; chưa được chuyên gia độc lập chứng nhận.
+- Vocabulary remains 992 headwords; the v2.37 word-family relationships remain unchanged.
+- Official Reading remains 200 questions (Part 5=60, Part 6=32, Part 7=108). The separate 80-question Part 5 practice bank is not included in those counts or Mock.
+- Listening remains 200 questions, Grammar remains 33 lessons/86 exercises, and Mock blueprints/eligibility, TTS, stable resource/question/choice IDs and other study modes are unchanged.
+- IndexedDB remains `toeic-vocabulary-phase1`, version 1, store `workspace`. Existing `sentenceCompletionSeenIds` and `studyProgress` behavior are preserved; no database version bump, reset or migration is introduced.
+- Service Worker already lists the Part 5 module and data bank in `REQUIRED` and `APP_SHELL`; their updated files remain covered without adding a new runtime path.
 
-## 2. Baseline dữ liệu và module
+## 2. Baseline inventory
 
-| Hạng mục | Baseline v2.30.0 |
-|---|---:|
-| Vocabulary canonical | **992 headwords** |
-| US IPA | Được ghi khi có nguồn US rõ ràng; không ép đủ 100% |
-| Word-family records | 131 (trước Batch 020; batch mới không thêm family) |
-| Verb-form records | 303 (trước Batch 020; batch mới không thêm verb) |
-| Collocations | 822 (cập nhật từ 809; kiểm tra validator) |
-| Listening | 63 units / 113 questions |
-| Reading | 35 resources / 109 questions |
-| Grammar | 25 lessons / 54 exercises |
-| Mock practice | 15m/25Q · 60m/100Q · 120m/200Q |
+| Area | Current inventory | Current development status |
+|---|---:|---|
+| Vocabulary | 992 headwords | 207 records with word-family links; 292 total links; US IPA on 642 records |
+| Listening | **200 questions / 106 units** | 102 Mock-eligible; 98 reserve-pending-independent-review |
+| Reading | **200 questions / 51 resources** | Two Full Reading forms can be selected without repeated eligible question IDs |
+| Grammar | **33 lessons / 86 exercises** | Retry and shared Focus Workspace preserved |
+| Separate TOEIC Part 5 practice | **80 sentence-completion questions** | 14 grammar groups; A–D positions 20/20/20/20; practice-only, all pending independent review |
+| Mock formats | 15m/25Q · 60m/100Q · 120m/200Q | Blueprint and indivisible passage/conversation blocks preserved |
 
-Các con số là kiểm kê cấu trúc dữ liệu; không tự chứng minh độ đúng ngữ nghĩa, chất lượng đề thi hoặc tương đương ETS. Mock score là practice indicator, không phải điểm ETS quy đổi.
+## 3. Content readiness and known limits
 
-## 3. Ràng buộc kỹ thuật và dữ liệu
+1. Listening totals by Part: P1=8, P2=51, P3=81, P4=60. The 98 pending questions are Batch 013=11, Batch 014=17 and Batch 015=70. They remain available for ordinary practice but excluded from Mock until a second independent reviewer records a decision.
+2. Current eligible Listening pool: P1=8, P2=25, P3=39, P4=30. One 100-question Listening form can be assembled; a second currently reuses 98/100 question IDs.
+3. Once all 98 reserves are approved, the eligible pool would become P1=8, P2=51, P3=81, P4=60. Two zero-repeat Full Listening forms still require four more distinct Part 1 photo-description items, taking the target P1 pool from 8 to 12.
+4. Eight original Part 1 Pexels photographs have existing user-owned JPGs and attribution on the user's repository; the supplied source snapshot intentionally omits those eight JPG bytes. The eight SVG fallbacks are present. Do not overwrite or remove the user's original JPGs.
+5. Part 1 strict-photo validation is therefore not certified by this source snapshot. SVG fallback availability is not equivalent to confirming all photograph binaries.
+6. Reading's 200-question bank already supports two zero-overlap Full forms according to the local inventory audit. The 45 expanded Part 7 questions still need semantic second-person review of key/distractor quality.
+7. All 80 Part 5 practice items are original practice material, not ETS items. The initial 35 plus Batch 016=45 have not received independent second-person approval; a well-formed single key and passing automated checks do not prove every distractor is semantically unique. Do not promote the bank to Mock.
+8. Mock results are raw practice correct-count and accuracy indicators, not official ETS-equated Listening/Reading scores. No ETS questions or recordings are included.
+9. Vocabulary has 992 headwords, below the internal 3,000–5,000 planning target. US IPA is present on 642/992 records; word-family links on 207/992. Remaining gaps in IPA, verb forms, collocations, synonyms/antonyms and definitions require sense-by-sense curation. CEFR assignments are editorial estimates unless individually marked with a verified basis.
 
-1. `data/vocabulary/A.json`–`Z.json` là runtime source duy nhất. `batch-*.json` chỉ là editorial provenance.
-2. Giữ stable vocabulary IDs, reading/listening/grammar resource IDs, question indices và choice IDs. Chỉ append question mới; không reorder câu đã có progress.
-3. IndexedDB giữ `toeic-vocabulary-phase1`, version `1`, store `workspace`. Không import/export, inspect, reset hoặc migrate hồ sơ cá nhân nếu chưa có yêu cầu riêng.
-4. `attemptHistory` là trường bổ sung trong object progress hiện tại, không tạo object store hay schema version mới. `answers` giữ kết quả hiện tại; lịch sử không xóa khi retry.
-5. Bảo toàn `assets/listening/*.jpg` thuộc người dùng và SVG fallbacks. Snapshot ZIP hiện không kèm 8 JPG Part 1; phải giữ ảnh đã có trên GitHub khi merge.
-6. Browser SpeechSynthesis là audio tổng hợp, không phải ETS audio/recording native speaker. Mock analytics không phải điểm TOEIC chính thức.
-7. Local PASS không chứng minh remote Actions, Pages hay kiểm thử browser/device.
+## 4. Runtime and learning behavior
 
-## 4. Quy chuẩn giao diện dùng chung
+- Canonical vocabulary remains `data/vocabulary/A.json`–`Z.json`; `batch-*.json` is provenance only. Stable IDs are immutable.
+- Keep stable Vocabulary/Listening/Reading/Grammar resource, question and choice IDs. Append new questions; do not reorder existing indexes linked to local progress.
+- IndexedDB remains `toeic-vocabulary-phase1`, version 1, store `workspace`; no profile reset/import/export/inspection/migration in v2.39.0. The Part 5 seen-question list remains an optional additive field in the existing practice-session object.
+- Retry and Attempt History remain device-local and preserve latest answer plus prior attempts.
+- Flashcard images remain text-first; a word-specific image is shown only when its `imageStatus` is explicitly approved.
+- TTS remains browser SpeechSynthesis. Voice availability and quality vary by OS/browser; the app can select and pace available voices but cannot supply missing native voice packs.
+- Service Worker and app-shell validation remain static source checks. Actual GitHub Pages deployment, browser offline/reconnect and physical-device rendering are not verified here.
 
-- Flashcard, Review, Grammar, Reading và Listening detail dùng một Focus Workspace shell.
-- Chỉ `.learning-focus-content` sở hữu cuộn dọc; không tạo scrollbar lồng trong question/card detail.
-- Nội dung ngắn co tự nhiên; nội dung dài cuộn ở workspace. Mobile/tablet giữ cùng thứ bậc nội dung, không tạo UI học thứ hai.
-- Thay đổi shell trong CSS/JS dùng chung; không thêm modal/backdrop riêng theo từng module nếu không có lý do chức năng rõ ràng.
-- Giữ keyboard access, focus visible, touch target khoảng 44px và `prefers-reduced-motion`.
+## 5. Active development backlog
 
-## 5. Cổng nghiệm thu TOEIC — IELTS vẫn tạm hoãn
-
-1. Blueprint 200 câu: Listening P1=6, P2=25, P3=39, P4=30; Reading P5=30, P6=16, P7=54 (29 single +25 multiple).
-2. Mở rộng reserve để hỗ trợ nhiều full forms; pool-size không thay thế editorial/psychometric review.
-3. Duyệt transcript, passage, distractor và tiếng Việt cho mọi câu trước khi đưa reserve vào Mock.
-4. Vocabulary target 3,000–5,000 TOEIC-priority headwords là mục tiêu nội bộ, không phải danh sách ETS chính thức.
-5. Duy trì Grammar coverage, local progress, retry/history, mock timer/submit/review và score integrity.
-6. Chỉ chuyển IELTS khi cổng TOEIC đạt, ít nhất một full 200-question mock hoàn chỉnh đã được review và người dùng đồng ý rõ ràng.
-
-## 6. Lộ trình và mục tiêu trước 2026-12-01
-
-| Ưu tiên | Hạng mục | Trạng thái / tiêu chí hoàn thành |
+| Priority | Workstream | Current state / next implementation |
 |---|---|---|
-| P0 | v2.30 practice retry | **LOCAL PASS** — Reading/Listening/Grammar retry từng câu + toàn bài; history, stable choice ID, stats và legacy v1 regression đạt |
-| P0 | Vocabulary Batch 020 | **LOCAL PASS** — 13 từ có source note, ID duy nhất, A–Z canonical, ví dụ/dịch và IPA không suy đoán; editorial review vẫn cần |
-| P0 | Remote + device QA | **PENDING USER QA** — GitHub Actions/Pages, laptop 15.6 inch 100%, tablet, iPhone Safari, Android Chrome; ghi PASS/FAIL cụ thể |
-| P0 | Part 1 photo gate | **BLOCKED IN SNAPSHOT** — cần xác nhận đủ 8 JPG thực tế trên repository và strict photo validator đạt |
-| P1 | Grammar expansion | Chưa triển khai — tăng phủ Part 5/6, bài tập không trùng, rationale và distractor được rà soát |
-| P1 | Listening reserve | Chưa triển khai — duyệt độc lập 11 câu Batch 013; sau đó mở rộng P2/P3/P4 để giảm lặp |
-| P1 | Reading/Mock pool | Bổ sung resource/question có source trace; nâng số đề ít lặp hơn 1 full form |
-| P2 | Vocabulary quality pass | Ưu tiên kiểm tra definition/example, collocation, IPA và lexical relation của ngân hàng cũ; không ép đủ trường |
+| P0 | Listening reserve content | Complete source-grounded second-person review of 98 pending questions; correct key, evidence, distractors and naturalness before approval |
+| P0 | Part 1 photo pool | Add four distinct photo-description items and local assets without touching the existing eight JPGs; target 12 distinct Part 1 items |
+| P1 | Part 5 editorial review | Obtain an independent second-person review of all 80 questions; do not expand further or promote into Mock until key, distractor, grammar and naturalness decisions are recorded |
+| P1 | Reading editorial quality | Complete semantic second review of the 45 expanded Part 7 questions; source-quote existence alone is not approval |
+| P1 | Vocabulary | Continue sense-level work: IPA (350 currently missing), word families, verb forms, collocations, relation data, definitions and example accuracy; prioritize common TOEIC business/travel words |
+| P1 | PWA/device behavior | Keep hardening high-risk display, offline cache, reconnect and asset-fallback behavior; reserve physical QA for the eventual final test plan |
 
-Thứ tự triển khai: kiểm tra v2.30 code-level retry + data → Vocabulary/Grammar → Listening/Reading reserve → Mock pool → remote/device QA và tổng nghiệm thu. Có thể triển khai song song chỉ khi không đụng cùng dữ liệu/ID.
+IELTS remains deferred until the TOEIC development backlog is closed and the user explicitly approves the phase change.
 
-## 7. Kiểm thử và giới hạn v2.30.0
-
-- Chi tiết kết quả từng command/test chỉ ghi trong `reports/TEST_REPORT_TOEIC_Dictionary_v2.30.0.md` sau khi chạy thực tế; không điền PASS trước.
-- Validator kiểm tra cấu trúc, không xác nhận đầy đủ độ tự nhiên/đúng nghĩa của tất cả từ/câu hỏi.
-- Strict Part 1 photo gate chỉ PASS khi đủ 8 JPG thực tế trong repository.
-- GitHub Actions/Pages chỉ PASS sau khi có run/deployment thực tế; browser/device QA phải có kết quả từ thiết bị thật.
-
-## 8. Quy trình phát hành hai thế hệ
+## 6. Focused verification commands for this release
 
 ```bash
-python tools/rotate-release-files.py          # dry-run
-python tools/rotate-release-files.py --apply  # only after review
-python tools/validate-data.py
+python -m unittest discover -s tools/tests -p 'test_sentence_completion.py' -v
+python -m unittest discover -s tools/tests -p 'test_pwa_readiness.py' -v
+python -m unittest discover -s tools/tests -p 'test_ci_coverage.py' -v
+node tools/tests/sentence-completion.mjs
+node tools/tests/learning-focus-workspace.mjs
+node tools/tests/practice-progress.mjs
 python tools/validate-learning-content.py
+python tools/validate-data.py
+python tools/audit-toeic-coverage.py
 python tools/sync-version.py --check
 ```
 
-Mỗi bản bàn giao chỉ giữ release-specific docs của previous + current. Khi v2.31.0 được xuất bản, v2.30.0 trở thành previous; v2.29.0 được tóm tắt vào `archive/PROJECT_HISTORY.md` rồi nghỉ hưu khỏi batch/report/update-notes đang hoạt động. Rotator không được chạm app source, canonical JSON, assets, PWA shell hay local learner profiles.
+These checks target the new practice bank, Focus Workspace/session continuity, app-shell registration and core data integrity. They are not a declaration that remote deployment, browser offline/reconnect or physical-device behavior has been completed.
+
+## 7. Two-generation documentation rotation
+
+Current pair: v2.38.0 (previous) + v2.39.0 (current). When v2.40.0 is published, v2.38.0 will be summarized into `archive/PROJECT_HISTORY.md` and retired from active batch/report/root note/manifest files. Rotator must never touch app source, canonical JSON, assets, patches or learner profiles.

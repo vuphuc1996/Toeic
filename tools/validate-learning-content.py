@@ -7,6 +7,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
 WARNINGS: list[str] = []
+SENTENCE_GRAMMAR_CATEGORIES = {
+    'Adjectives and Adverbs', 'Articles and Determiners', 'Conjunctions and Clauses',
+    'Gerunds and Infinitives', 'Imperatives and Verb Forms', 'Infinitives and Verb Patterns',
+    'Linking Verbs', 'Modal Verbs', 'Participles and Reduced Relative Clauses',
+    'Passive Voice', 'Prepositions and Collocations', 'Subject–Verb Agreement',
+    'Verb Tense and Aspect', 'Word Forms and Nouns'
+}
 
 def read_json(rel: str):
     path = ROOT / rel
@@ -47,7 +54,55 @@ def main():
     listening=read_json('data/listening/listening-library.json').get('listening',[])
     reading=read_json('data/readings/reading-library.json').get('readings',[])
     grammar=read_json('data/grammar/lessons.json').get('lessons',[])
+    sentence_bank=read_json('data/practice/part5-sentence-completion.json')
+    sentence_questions=sentence_bank.get('questions',[]) if isinstance(sentence_bank,dict) else []
+    vocabulary_manifest=read_json('data/manifest.json')
+    vocabulary_ids=set()
+    for entry in vocabulary_manifest.get('letters',[]):
+        letter_data=read_json(entry.get('file','').removeprefix('./').replace('\\','/')) if entry.get('file') else {}
+        vocabulary_ids.update(word.get('id') for word in letter_data.get('words',[]) if isinstance(word,dict) and word.get('id'))
     unique_ids(listening,'Listening'); unique_ids(reading,'Reading'); unique_ids(grammar,'Grammar')
+    unique_ids(sentence_questions,'Sentence Completion')
+    if sentence_bank.get('editorialStatus') != 'reserve-pending-independent-review':
+        ERRORS.append('Sentence Completion: bank must remain pending independent review')
+    if sentence_bank.get('reviewNote') != 'internal-author-check; independent-second-review-pending':
+        ERRORS.append('Sentence Completion: independent review note is missing or inconsistent')
+    groups=sentence_bank.get('questionGroups',[])
+    if not isinstance(groups,list) or sum(group.get('questionCount',0) for group in groups if isinstance(group,dict)) != len(sentence_questions):
+        ERRORS.append('Sentence Completion: questionGroups count does not match the bank inventory')
+    seen_sentence_targets=set()
+    for item in sentence_questions:
+        ident=item.get('id','?')
+        if item.get('wordId') not in vocabulary_ids:
+            ERRORS.append(f'Sentence Completion {ident}: wordId does not resolve to canonical vocabulary')
+        if item.get('wordId') in seen_sentence_targets:
+            ERRORS.append(f'Sentence Completion {ident}: duplicate target wordId')
+        seen_sentence_targets.add(item.get('wordId'))
+        sentence=str(item.get('sentence',''))
+        if sentence.count('_____') != 1:
+            ERRORS.append(f'Sentence Completion {ident}: sentence must contain exactly one blank marker')
+        choices=item.get('choices')
+        if not isinstance(choices,list) or len(choices)!=4 or any(not isinstance(x,str) or not x.strip() for x in choices):
+            ERRORS.append(f'Sentence Completion {ident}: exactly four non-empty choices are required')
+        elif len({x.strip().casefold() for x in choices}) != 4:
+            ERRORS.append(f'Sentence Completion {ident}: choices must be unique')
+        if not isinstance(item.get('answerIndex'),int) or item.get('answerIndex') not in range(4):
+            ERRORS.append(f'Sentence Completion {ident}: invalid answerIndex')
+        notes=item.get('optionExplanations')
+        if not isinstance(notes,list) or len(notes)!=4 or any(not str(x).strip() for x in notes):
+            ERRORS.append(f'Sentence Completion {ident}: four option-specific explanations are required')
+        elif isinstance(item.get('answerIndex'),int) and item.get('answerIndex') in range(4):
+            if not str(notes[item['answerIndex']]).startswith('Đúng:'):
+                ERRORS.append(f'Sentence Completion {ident}: correct option explanation must start with Đúng:')
+            if any(not str(notes[index]).startswith('Sai:') for index in range(4) if index != item['answerIndex']):
+                ERRORS.append(f'Sentence Completion {ident}: distractor explanations must start with Sai:')
+        if item.get('grammarCategory') not in SENTENCE_GRAMMAR_CATEGORIES: ERRORS.append(f'Sentence Completion {ident}: missing or unsupported grammarCategory')
+        if item.get('editorialBatch') == '016' and item.get('contentBatch') != 'batch-016-part5-grammar-expansion': ERRORS.append(f'Sentence Completion {ident}: Batch 016 contentBatch is missing or inconsistent')
+        for field in ('grammarPoint','explanation','translationVi','singleAnswerReason'):
+            if not str(item.get(field,'')).strip(): ERRORS.append(f'Sentence Completion {ident}: missing {field}')
+        if item.get('contentSource')!='original-editorial': ERRORS.append(f'Sentence Completion {ident}: source must be original-editorial')
+        if item.get('editorialStatus')!='reserve-pending-independent-review': ERRORS.append(f'Sentence Completion {ident}: item must remain pending independent review')
+        if item.get('reviewNote')!='internal-author-check; independent-second-review-pending': ERRORS.append(f'Sentence Completion {ident}: independent-review note is missing or inconsistent')
 
     listen_counts={f'Part {i}':0 for i in range(1,5)}
     listen_questions={f'Part {i}':0 for i in range(1,5)}
@@ -67,6 +122,23 @@ def main():
             ERRORS.append(f"Listening {ident}: {part} set must contain exactly three questions")
         if item.get('contentSource') not in ('original-editorial','licensed','official-permission'):
             WARNINGS.append(f"Listening {ident}: contentSource is not explicitly tagged")
+        editorial_status=item.get('editorialStatus')
+        if editorial_status and editorial_status not in ('reserve-pending-independent-review','approved-for-mock'):
+            ERRORS.append(f"Listening {ident}: unsupported editorialStatus {editorial_status!r}")
+        if item.get('editorialBatch') == '015':
+            if editorial_status != 'reserve-pending-independent-review':
+                ERRORS.append(f"Listening {ident}: Batch 015 must remain pending independent review")
+            if item.get('reviewNote') != 'internal-author-check; independent-second-review-pending':
+                ERRORS.append(f"Listening {ident}: Batch 015 reviewNote is missing or inconsistent")
+            source_text=' '.join(str(seg.get('text','')) for seg in segments).casefold()
+            for qi,question in enumerate(questions,1):
+                pointer=str(question.get('evidenceText','')).strip().casefold()
+                if not pointer:
+                    ERRORS.append(f"Listening {ident} Q{qi}: Batch 015 evidenceText is required")
+                elif part == 'Part 2' and pointer not in source_text:
+                    ERRORS.append(f"Listening {ident} Q{qi}: Part 2 evidenceText must identify the spoken prompt in the transcript")
+                elif part in ('Part 3','Part 4') and pointer not in source_text:
+                    ERRORS.append(f"Listening {ident} Q{qi}: transcript evidenceText not found in source audio transcript")
         if not segments:
             ERRORS.append(f"Listening {ident}: no speech segments")
         if part=='Part 3':
@@ -153,7 +225,14 @@ def main():
             p7_single_questions+=count
 
     grammar_count=0
+    grammar_part_counts = {'Part 5': {'lessons': 0, 'exercises': 0}, 'Part 6': {'lessons': 0, 'exercises': 0}}
     for lesson in grammar:
+        parts = lesson.get('parts', [])
+        if parts and (not isinstance(parts, list) or not set(parts).issubset(grammar_part_counts)):
+            ERRORS.append(f"Grammar {lesson.get('id','?')}: parts must contain only Part 5 and/or Part 6")
+        for part in parts if isinstance(parts, list) else []:
+            grammar_part_counts[part]['lessons'] += 1
+            grammar_part_counts[part]['exercises'] += len(lesson.get('exercises') or [])
         for j,q in enumerate(lesson.get('exercises') or []):
             grammar_count+=1
             validate_question(q,f"Grammar {lesson.get('id','?')} Q{j+1}",4)
@@ -188,6 +267,9 @@ def main():
     for p in read_counts: print(f'  {p}: {read_counts[p]} units / {read_questions[p]} questions')
     print(f'Part 7 passage mix: {p7_single_questions} single-passage / {p7_multiple_questions} multiple-passage questions')
     print(f'Grammar: {len(grammar)} lessons / {grammar_count} exercises')
+    print(f'TOEIC Part 5 Sentence Completion: {len(sentence_questions)} curated questions (practice only; pending independent review)')
+    for part, counts in grammar_part_counts.items():
+        print(f"  {part} tagged: {counts['lessons']} lessons / {counts['exercises']} exercises")
     print(f'Errors: {len(ERRORS)} | Warnings: {len(WARNINGS)}')
     for x in ERRORS: print('ERROR:',x)
     for x in WARNINGS: print('WARNING:',x)

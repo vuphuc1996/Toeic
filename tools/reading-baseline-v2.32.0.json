@@ -1,0 +1,217 @@
+{
+  "baselineVersion": "2.32.0",
+  "resourceCount": 35,
+  "questionCount": 109,
+  "units": {
+    "office-schedule": {
+      "questionCount": 3,
+      "sha256": "7575eca96485705009680810da42c55ab34b7e9ba40d03cdde6fd430b8d0c021",
+      "part": "Part 7",
+      "documentType": "ANNOUNCEMENT"
+    },
+    "meeting-notice": {
+      "questionCount": 3,
+      "sha256": "4d8880d2245afd77dc47229a5628eaacde322e7d648f5d4767cb0044a90a1105",
+      "part": "Part 7",
+      "documentType": "NOTICE"
+    },
+    "business-travel": {
+      "questionCount": 3,
+      "sha256": "4897f0767efc323b55b4853b4f3d0fe9fd929a0d3fcea01affacf11fce0192e3",
+      "part": "Part 7",
+      "documentType": "ITINERARY"
+    },
+    "invoice-payment": {
+      "questionCount": 3,
+      "sha256": "92fbc001938505874137f420e3fba014b5006ac8086ecfe04deb667b45fa396b",
+      "part": "Part 7",
+      "documentType": "EMAIL"
+    },
+    "shipping-update": {
+      "questionCount": 3,
+      "sha256": "c13594fee94a5336108cf19103ef3bebd2da94c8e601abf35703aafd35cd10ab",
+      "part": "Part 7",
+      "documentType": "EMAIL"
+    },
+    "job-opening": {
+      "questionCount": 3,
+      "sha256": "05545ed9aa1f1b38242ed1daf1613d4f28f8fdc427ff5fc34bb1a1f6f56b1396",
+      "part": "Part 7",
+      "documentType": "JOB POSTING"
+    },
+    "customer-service": {
+      "questionCount": 3,
+      "sha256": "4adfc0ae5982e9d531071a5767131dbce18dc8ffce6a2704876d66ee47054739",
+      "part": "Part 7",
+      "documentType": "EMAIL"
+    },
+    "facility-maintenance": {
+      "questionCount": 3,
+      "sha256": "09cb3f47d1dd8e0c321ff9bf0bbd44ad8c0aa156d607b5a387aba47f85a17a7e",
+      "part": "Part 7",
+      "documentType": "NOTICE"
+    },
+    "customer-refund-email": {
+      "questionCount": 1,
+      "sha256": "7f933d225079793aee3214b9e847e1dac88217a9bd58bc1726f14e564ede4830",
+      "part": "Part 7",
+      "documentType": "EMAIL"
+    },
+    "facility-maintenance-notice": {
+      "questionCount": 1,
+      "sha256": "ab34679ebb5e0656fd9c2a2ab8d881886640a4a83382a12a885a620af90c82c8",
+      "part": "Part 7",
+      "documentType": "NOTICE"
+    },
+    "job-posting-analyst": {
+      "questionCount": 1,
+      "sha256": "708782eda5ecb4a16e4de130af292eaf9f67ce8e3d9909cc3eaea9cf60bad79c",
+      "part": "Part 7",
+      "documentType": "JOB POSTING"
+    },
+    "supplier-invoice-followup": {
+      "questionCount": 1,
+      "sha256": "13d9525df8dc005da39818335d912a314e8e063844ec0a44a639545509f01bae",
+      "part": "Part 7",
+      "documentType": "EMAIL"
+    },
+    "travel-itinerary": {
+      "questionCount": 1,
+      "sha256": "9d3ba39d6c17534ebfcc81871dab7138d81fd43068e2a71081727266d00140f1",
+      "part": "Part 7",
+      "documentType": "ITINERARY"
+    },
+    "double-passage-order": {
+      "questionCount": 1,
+      "sha256": "259d676c6d978ebe85761036898b47361b308fa95a8d37d788c61f683e39c853",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE"
+    },
+    "training-announcement": {
+      "questionCount": 1,
+      "sha256": "cb879e110797e4e4cb3b5cb7194d773f9549b9c070b80986048b36c32d983d37",
+      "part": "Part 7",
+      "documentType": "ANNOUNCEMENT"
+    },
+    "triple-passage-meeting": {
+      "questionCount": 1,
+      "sha256": "4d1ea5694c7b2c1328ca46afb0bf6d8f12eff2af0586c38263da90d282fe7c7b",
+      "part": "Part 7",
+      "documentType": "TRIPLE PASSAGE"
+    },
+    "part5-workplace-grammar-01": {
+      "questionCount": 4,
+      "sha256": "028fdee9d988d17e0e8aa0db183ebc0ed22fe126d6aea8e29b709bd532d64dcb",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES"
+    },
+    "part5-business-vocabulary-02": {
+      "questionCount": 4,
+      "sha256": "f09c22f404f5c33d5dc56b599b576da057ea643d37f20af6559260b1fa2a17b4",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES"
+    },
+    "part5-forms-and-agreement-03": {
+      "questionCount": 4,
+      "sha256": "4f8a451eb63f3a3cc813682c13628cfe045ad6a0c04149e7fa563dd4aa8e7435",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES"
+    },
+    "part5-prepositions-and-connectors-04": {
+      "questionCount": 4,
+      "sha256": "a32d0932fe1860b687771efbaa6d14efb6604451b3a27af0ac293eef268141a8",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES"
+    },
+    "part6-training-center-newsletter": {
+      "questionCount": 4,
+      "sha256": "818a3468ee8609fc323b4d00c8e007bf5a03506ce27c997e2f57e68ef5bc97f8",
+      "part": "Part 6",
+      "documentType": "NEWSLETTER"
+    },
+    "part6-customer-service-email": {
+      "questionCount": 4,
+      "sha256": "f4feea04a3567aa750d88684a07d430c88ddc851592a945bd65b2f5d541e95f5",
+      "part": "Part 6",
+      "documentType": "EMAIL"
+    },
+    "part6-job-posting": {
+      "questionCount": 4,
+      "sha256": "202419f1c3f2aec3b8a7aed0651d48aa8695328e7489568795c9ac7614c3aaf0",
+      "part": "Part 6",
+      "documentType": "JOB POSTING"
+    },
+    "part7-single-equipment-memo": {
+      "questionCount": 4,
+      "sha256": "a32ee2b9926ddb1d0f16d337a5316068a050084ee3287d4d6a3732502975ae8a",
+      "part": "Part 7",
+      "documentType": "MEMO"
+    },
+    "part7-single-training-email": {
+      "questionCount": 4,
+      "sha256": "430aaa50716a5f1b01bb4e552468b260b5baaa53eba81271945c691fca870563",
+      "part": "Part 7",
+      "documentType": "EMAIL"
+    },
+    "part7-double-order-delay": {
+      "questionCount": 4,
+      "sha256": "bc3d0b463f1311b1e97794f61aeb5502627de61d7cb73056c67fa744ba02d6fd",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE"
+    },
+    "part7-triple-conference-arrangements": {
+      "questionCount": 5,
+      "sha256": "0ec2d7073c5044c3a1146d25dedad78c958fc4a8cf4b85cb8db5c366eb40d1ed",
+      "part": "Part 7",
+      "documentType": "TRIPLE PASSAGE"
+    },
+    "part5-tense-voice-set-05": {
+      "questionCount": 5,
+      "sha256": "436ccae129b5d201d66a60f0471d0b0d2363c650af6898584b475d7f66ddb2d2",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES"
+    },
+    "part5-adjectives-adverbs-set-06": {
+      "questionCount": 5,
+      "sha256": "2132535ab75e7d0cf3ed8cb81ae88319c13f2e03e3f6acfeefab8775e24d7e84",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES"
+    },
+    "part5-connectors-prepositions-set-07": {
+      "questionCount": 4,
+      "sha256": "1e0bc5eeae29d9e090f6be9c3ebf1e2cd7d74e6f54350925b080adf5a23f7067",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES"
+    },
+    "part6-product-workshop-registration": {
+      "questionCount": 4,
+      "sha256": "fc49fefd085e7ce1d1a644606f64d029f9aa411aaa84a4ca4108b6842b20171f",
+      "part": "Part 6",
+      "documentType": "EMAIL"
+    },
+    "part7-double-equipment-order": {
+      "questionCount": 4,
+      "sha256": "4872575baee3b807cbf3d50ed5449fa6f4ae5d9f6ccead149e5da3568e67d6ac",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE"
+    },
+    "part7-double-training-reimbursement": {
+      "questionCount": 4,
+      "sha256": "b2c1f5fd7ea156ade427c8ed98d6293161058ddab79e206dbd45a334cd37dd13",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE"
+    },
+    "part7-triple-regional-sales-meeting": {
+      "questionCount": 3,
+      "sha256": "e6f598d3ff7347cd81c6b949ef759619e144eba96f6b25d3dc24373b80950884",
+      "part": "Part 7",
+      "documentType": "TRIPLE PASSAGE"
+    },
+    "part7-triple-facility-renovation": {
+      "questionCount": 3,
+      "sha256": "4cfa1d7674ec7b4ebdce6f9d43d144ab813c3172ac6a330c04dafb23fd6b3650",
+      "part": "Part 7",
+      "documentType": "TRIPLE PASSAGE"
+    }
+  }
+}

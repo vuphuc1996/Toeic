@@ -275,6 +275,8 @@ body.install-invite-open{overflow:hidden}
 /* v2.5.0 – Phase 3 learning libraries, personal data separation and Google AI Search panel */
 .library-count{display:inline-flex;align-items:center;white-space:nowrap;padding:8px 11px;border:1px solid #dfe8f2;border-radius:999px;background:#f7faff;color:#41688f;font-size:11px;font-weight:750}
 .library-toolbar{display:grid;grid-template-columns:minmax(220px,1.6fr) minmax(170px,.8fr) minmax(140px,.65fr);gap:12px;align-items:end;padding:15px;margin-bottom:16px}
+.grammar-library-toolbar{grid-template-columns:minmax(220px,1.5fr) minmax(190px,.9fr) minmax(170px,.85fr) minmax(135px,.65fr)}
+@media(max-width:980px){.grammar-library-toolbar{grid-template-columns:1fr 1fr}.grammar-library-toolbar .search-field{grid-column:1/-1}}
 .library-toolbar .field{margin:0;min-width:0}
 .learning-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;align-items:stretch}
 .learning-card{display:flex;flex-direction:column;min-width:0;min-height:218px;padding:17px;border:1px solid #e3eaf3;border-radius:16px;background:#fff;box-shadow:0 5px 18px rgba(25,55,88,.045);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
@@ -986,3 +988,32 @@ body.has-learning-focus{overflow:hidden}
 @media(max-width:760px){.flashcard-stack.has-approved-art .flashcard-front-layout{grid-template-columns:minmax(0,1fr);}.flashcard-stack .flashcard-art{max-width:100%;max-height:clamp(140px,42vw,230px);}.flashcard-front-panel{min-height:180px;padding:18px;}.flashcard-details-panel{padding:16px;}.learning-focus-content>.modal-content>.learning-detail-surface{padding:14px;gap:13px;}}
 @media(max-width:390px){.flashcard-front-panel{padding:15px;gap:13px;}.flashcard-front-copy h2{font-size:29px;}.flashcard-details-panel{padding:13px;}.learning-focus-content>.modal-content>.learning-detail-surface{padding:11px;}}
 @media(prefers-reduced-motion:reduce){.flashcard-details-panel{animation:none!important;}}
+
+
+/* v2.34.0 — Listening reserve visibility and two-form readiness */
+.listening-reserve-note{margin:10px 0 0!important;padding:8px 10px;border:1px solid #f0dfb6;border-radius:8px;background:#fff9eb;color:#7e5c20;font-size:11px!important;line-height:1.5!important;font-weight:650}
+.mock-pool-readiness{margin:0 0 26px;padding:15px 17px;border:1px solid #dfe8f2;border-radius:13px;background:#fbfdff;color:#274666}
+.mock-readiness-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px}
+.mock-readiness-head strong,.mock-readiness-head small{display:block}.mock-readiness-head strong{font-size:14px}.mock-readiness-head small{margin-top:3px;color:#75869a;font-size:11px}.mock-readiness-head>span{white-space:nowrap;color:#426e9b;font-size:11px;font-weight:750}
+.mock-readiness-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.mock-readiness-row{display:grid;gap:4px;padding:10px;border:1px solid #e7edf4;border-radius:9px;background:#fff;font-size:10px;color:#74859a}
+.mock-readiness-row strong{font-size:12px;color:#284b70}.mock-readiness-row b{font-size:13px;color:#1f5f95;font-variant-numeric:tabular-nums}
+.mock-pool-readiness>p{margin:10px 0 0;color:#7d6a45;font-size:11px;line-height:1.55}
+@media(max-width:760px){.mock-readiness-head{display:grid}.mock-readiness-head>span{white-space:normal}.mock-readiness-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:380px){.mock-readiness-grid{grid-template-columns:1fr}}
+
+/* TOEIC Part 5 sentence completion — contextual fill-in-the-blank practice */
+.practice-mode-tile-featured{border-color:#c4d9f0;background:linear-gradient(135deg,#f4f8ff 0%,#eefaf5 100%)}
+.practice-mode-tile-featured>b{background:#e5efff;color:#2f6fb0}
+.sentence-completion-display{width:min(900px,100%);margin:0 auto 20px;padding:clamp(17px,2.2vw,25px);border:1px solid #d9e7f5;border-radius:17px;background:linear-gradient(140deg,#f7faff 0%,#f1f8ff 55%,#f5fbf8 100%);text-align:left;box-shadow:0 8px 24px rgba(30,75,120,.06)}
+.sentence-completion-display[hidden]{display:none!important}
+.sentence-context-label{display:block;margin-bottom:10px;color:#6483a5;font-size:10px;font-weight:850;letter-spacing:.12em}
+.sentence-completion-display p{margin:0;color:#173d68;font-size:clamp(19px,2.2vw,27px);font-weight:700;line-height:1.65;overflow-wrap:anywhere}
+.sentence-category-label{display:inline-flex;align-items:center;margin:0 0 12px;padding:5px 9px;border-radius:999px;background:#e4effc;color:#315f8b;font-size:11px;font-weight:750;letter-spacing:.01em}
+.sentence-blank{display:inline-block;min-width:108px;margin:0 3px;padding:0 9px 2px;border-bottom:3px solid #4285c5;border-radius:4px 4px 0 0;background:#e6f1ff;color:#2e6ea9;text-align:center;letter-spacing:.12em}
+.sentence-answer-review{margin:0 0 16px;padding:15px 16px;border:1px solid #d5e6f5;border-radius:13px;background:#f5f9ff}
+.sentence-answer-review h3{margin:0 0 9px;color:#244d77;font-size:14px}
+.sentence-answer-review p{margin:7px 0;color:#526b84;font-size:13px;line-height:1.6}
+.sentence-answer-review .sentence-completed-text{color:#153e68;font-size:16px;font-weight:650}
+.sentence-completed-text strong{padding:1px 5px;border-radius:5px;background:#dff3e8;color:#16734e}
+@media(max-width:640px){.sentence-completion-display{margin:0 0 15px;padding:15px 13px;border-radius:13px}.sentence-completion-display p{font-size:19px;line-height:1.65}.sentence-blank{min-width:83px}.sentence-answer-review{padding:13px 12px}}

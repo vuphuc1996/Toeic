@@ -8,11 +8,11 @@ const app = read('assets/js/app.js');
 const css = read('assets/css/app.css');
 const ids = [...html.matchAll(/\bid=["']([^"']+)["']/g)].map(m => m[1]);
 assert.equal(ids.length, new Set(ids).size, 'all HTML IDs must be unique');
-for (const id of ['flashTopicGrid','flashSession','flashQuiz','flashResult','practiceModeGrid','weakWordList','newQuestionButton','learningFocusBackdrop','learningFocusTitle','learningFocusSubtitle','learningFocusClose','learningFocusContent']) {
+for (const id of ['flashTopicGrid','flashSession','flashQuiz','flashResult','sentenceCompletionDisplay','practiceModeGrid','weakWordList','newQuestionButton','learningFocusBackdrop','learningFocusTitle','learningFocusSubtitle','learningFocusClose','learningFocusContent']) {
   assert.ok(ids.includes(id), `missing #${id}`);
 }
 assert.match(html, /<section class="panel quiz-panel" hidden>/, 'practice questions must not be visible on the dashboard before Start');
-for (const mode of ['random','word-to-meaning','meaning-to-word','missing','pos','synonym','antonym','verb']) {
+for (const mode of ['random','word-to-meaning','meaning-to-word','missing','pos','synonym','antonym','verb','sentence-completion']) {
   assert.ok(html.includes(`data-practice-mode="${mode}"`), `missing practice mode ${mode}`);
 }
 assert.match(app, /function openLearningFocus\(/);
@@ -35,6 +35,9 @@ assert.match(app, /practiceAttemptHistoryMarkup\(prog,i\)/, 'previous attempts r
 assert.match(app, /correctChoiceText:/, 'attempt history keeps the correct answer alongside the selected answer');
 assert.match(app, /attemptHistory/, 'prior attempts are stored as additive progress data');
 assert.match(app, /openLearningDetail\(\{title:lesson\.title/, 'Grammar uses the shared learning shell');
+assert.ok(ids.includes('grammarPartFilter'), 'Grammar library exposes Part 5/6 focus filtering');
+assert.match(app, /grammarPartFilter/);
+assert.match(app, /parts\.includes\(part\)/, 'Grammar Part filter uses lesson metadata rather than duplicating libraries');
 assert.match(app, /openLearningDetail\(\{title:reading\.title/, 'Reading uses the shared learning shell');
 assert.match(app, /openLearningDetail\(\{title:item\.title/, 'Listening uses the shared learning shell');
 assert.doesNotMatch(app, /classList\.add\('is-learning-detail'\)/, 'learning detail no longer opens a separate modal shell');
@@ -58,6 +61,11 @@ assert.match(css, /\.learning-focus-content\.*/);
 assert.match(css, /@media\(max-width:640px\)[\s\S]*\.learning-focus-dialog/);
 assert.match(css, /@media\(prefers-reduced-motion:reduce\)/);
 assert.match(css, /body\.has-learning-focus\{overflow:hidden\}/);
+assert.match(app, /sentenceCompletionSeenIds/, 'Part 5 has its own question-ID session history');
+assert.match(app, /sentenceCompletionSeenIds: state\.sentenceCompletionSeenIds/, 'Part 5 session history is persisted additively');
+assert.match(app, /state\.sentenceCompletionSeenIds=Array\.isArray\(session\.sentenceCompletionSeenIds\)/, 'Part 5 history restores when an existing practice session is resumed');
+assert.match(app, /sentenceCompletionSeenIds\.length} câu đã gặp/, 'Part 5 counter measures questions rather than vocabulary words');
+assert.match(app, /if\(q\.mode==='sentence-completion'\)state\.sentenceCompletionSeenIds\.push\(q\.id\)/, 'Part 5 completion is tracked by question ID, separate from vocabulary modes');
 assert.match(app, /indexedDB\.open\(DB_NAME, 1\)/, 'personal IndexedDB schema version remains unchanged');
 assert.doesNotMatch(app, /indexedDB\.open\(DB_NAME,\s*[2-9]/, 'no personal IndexedDB migration is introduced');
 

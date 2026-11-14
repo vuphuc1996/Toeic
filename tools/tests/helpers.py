@@ -112,3 +112,33 @@ def run_tool(script: Path, *args: str) -> tuple[int, str]:
 
 def clone(obj):
     return copy.deepcopy(obj)
+
+# Reading Part 7 source blocks that existed before v2.33.0. This snapshot keeps
+# the historical v2.17 answer-position certificate scoped to its original 63 items
+# while allowing later batches to append new questions to those same passages.
+PART7_BASELINE_QUESTION_COUNTS_V232 = {
+    'office-schedule': 3,
+    'meeting-notice': 3,
+    'business-travel': 3,
+    'invoice-payment': 3,
+    'shipping-update': 3,
+    'job-opening': 3,
+    'customer-service': 3,
+    'facility-maintenance': 3,
+    'customer-refund-email': 1,
+    'facility-maintenance-notice': 1,
+    'job-posting-analyst': 1,
+    'supplier-invoice-followup': 1,
+    'travel-itinerary': 1,
+    'double-passage-order': 1,
+    'training-announcement': 1,
+    'triple-passage-meeting': 1,
+    'part7-single-equipment-memo': 4,
+    'part7-single-training-email': 4,
+    'part7-double-order-delay': 4,
+    'part7-triple-conference-arrangements': 5,
+    'part7-double-equipment-order': 4,
+    'part7-double-training-reimbursement': 4,
+    'part7-triple-regional-sales-meeting': 3,
+    'part7-triple-facility-renovation': 3,
+}

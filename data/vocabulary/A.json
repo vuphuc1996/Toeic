@@ -647,7 +647,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "accrue",
+          "pos": "v",
+          "meaning_vi": "tích lũy; phát sinh dần"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -683,7 +689,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "accrual",
+          "pos": "n",
+          "meaning_vi": "khoản phát sinh được ghi nhận; sự tích lũy theo kỳ"
+        }
+      ],
       "verb_forms": {
         "v1": "accrue",
         "vs_es": "accrues",
@@ -2141,7 +2153,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "amendment",
+          "pos": "n",
+          "meaning_vi": "sự sửa đổi; bản sửa đổi"
+        }
+      ],
       "verb_forms": {
         "v1": "amend",
         "vs_es": "amends",
@@ -2182,7 +2200,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "amend",
+          "pos": "v",
+          "meaning_vi": "sửa đổi; bổ sung (văn bản)"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2778,7 +2802,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "appointment",
+          "pos": "n",
+          "meaning_vi": "cuộc hẹn; lịch hẹn"
+        }
+      ],
       "verb_forms": {
         "v1": "appoint",
         "vs_es": "appoints",
@@ -2824,7 +2854,13 @@
         "OFFICE",
         "CUSTOMER"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "appoint",
+          "pos": "v",
+          "meaning_vi": "bổ nhiệm; chỉ định"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2861,7 +2897,13 @@
       "topics": [
         "CAREER"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "appraise",
+          "pos": "v",
+          "meaning_vi": "đánh giá; định giá"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2891,7 +2933,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "appraisal",
+          "pos": "n",
+          "meaning_vi": "đánh giá hiệu suất"
+        }
+      ],
       "verb_forms": {
         "v1": "appraise",
         "vs_es": "appraises",
@@ -2932,7 +2980,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "apprenticeship",
+          "pos": "n",
+          "meaning_vi": "chương trình học nghề"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2967,7 +3021,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "apprentice",
+          "pos": "n",
+          "meaning_vi": "người học nghề"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -3459,7 +3519,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "assessment",
+          "pos": "n",
+          "meaning_vi": "sự đánh giá; bài đánh giá"
+        }
+      ],
       "verb_forms": {
         "v1": "assess",
         "vs_es": "assesses",
@@ -3500,7 +3566,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "assess",
+          "pos": "v",
+          "meaning_vi": "đánh giá; thẩm định"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -4226,7 +4298,13 @@
       "topics": [
         "TECHNOLOGY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "automated",
+          "pos": "adj",
+          "meaning_vi": "được tự động hóa"
+        }
+      ],
       "verb_forms": {
         "v1": "automate",
         "vs_es": "automates",
@@ -4267,7 +4345,13 @@
       "topics": [
         "TECHNOLOGY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "automate",
+          "pos": "v",
+          "meaning_vi": "tự động hóa"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

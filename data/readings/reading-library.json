@@ -928,6 +928,31 @@
             "legacy:reading:customer-refund-email:1:choice:3",
             "legacy:reading:customer-refund-email:1:choice:4"
           ]
+        },
+        {
+          "question": "Which supporting materials did the customer attach?",
+          "choices": [
+            "Photographs of the damaged keyboard and the original receipt",
+            "A delivery schedule and a warranty certificate",
+            "A replacement invoice and a bank statement",
+            "A copy of the product manual and a return label"
+          ],
+          "answerIndex": 0,
+          "explanation": "Khách hàng nêu rõ đã đính kèm ảnh của bàn phím bị hỏng và biên lai gốc.",
+          "choiceIds": [
+            "reading:customer-refund-email:2:choice:1",
+            "reading:customer-refund-email:2:choice:2",
+            "reading:customer-refund-email:2:choice:3",
+            "reading:customer-refund-email:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL"
+            ],
+            "quotes": [
+              "I have attached photographs of the item and the original receipt."
+            ]
+          }
         }
       ],
       "part": "Part 7",
@@ -974,6 +999,31 @@
           ],
           "choiceOrderRevision": "2.17.0",
           "previousAnswerIndex": 1
+        },
+        {
+          "question": "Which elevators should employees use to reach floors above the fifth level?",
+          "choices": [
+            "The east-wing elevators",
+            "The west-wing elevators",
+            "The service elevator",
+            "The elevators beside the loading entrance"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông báo hướng dẫn người cần lên các tầng trên tầng năm sử dụng thang máy ở cánh tây.",
+          "choiceIds": [
+            "reading:facility-maintenance-notice:2:choice:1",
+            "reading:facility-maintenance-notice:2:choice:2",
+            "reading:facility-maintenance-notice:2:choice:3",
+            "reading:facility-maintenance-notice:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "NOTICE"
+            ],
+            "quotes": [
+              "should use the west-wing elevators."
+            ]
+          }
         }
       ],
       "part": "Part 7",
@@ -1020,6 +1070,31 @@
           ],
           "choiceOrderRevision": "2.17.0",
           "previousAnswerIndex": 1
+        },
+        {
+          "question": "Where must applicants submit their materials?",
+          "choices": [
+            "By sending them to the warehouse supervisor",
+            "At the regional reception desk",
+            "Through the careers portal",
+            "By delivering them to the finance department"
+          ],
+          "answerIndex": 2,
+          "explanation": "Tin tuyển dụng nêu rõ ứng viên cần gửi hồ sơ qua cổng tuyển dụng trực tuyến.",
+          "choiceIds": [
+            "reading:job-posting-analyst:2:choice:1",
+            "reading:job-posting-analyst:2:choice:2",
+            "reading:job-posting-analyst:2:choice:3",
+            "reading:job-posting-analyst:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "JOB POSTING"
+            ],
+            "quotes": [
+              "must be submitted through the careers portal"
+            ]
+          }
         }
       ],
       "part": "Part 7",
@@ -1064,6 +1139,31 @@
             "legacy:reading:supplier-invoice-followup:1:choice:3",
             "legacy:reading:supplier-invoice-followup:1:choice:4"
           ]
+        },
+        {
+          "question": "When will payment be processed?",
+          "choices": [
+            "Immediately after the supplier replies",
+            "Within five business days after document verification",
+            "On the same day the corrected invoice is issued",
+            "At the end of the following month"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thanh toán được xử lý trong vòng năm ngày làm việc sau khi chứng từ được xác minh.",
+          "choiceIds": [
+            "reading:supplier-invoice-followup:2:choice:1",
+            "reading:supplier-invoice-followup:2:choice:2",
+            "reading:supplier-invoice-followup:2:choice:3",
+            "reading:supplier-invoice-followup:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL"
+            ],
+            "quotes": [
+              "within five business days after the documents have been verified."
+            ]
+          }
         }
       ],
       "part": "Part 7",
@@ -1096,6 +1196,31 @@
             "reading:travel-itinerary:1:choice:3",
             "reading:travel-itinerary:1:choice:4"
           ]
+        },
+        {
+          "question": "By when should dietary requirement changes be sent?",
+          "choices": [
+            "No later than Monday",
+            "Before the group reaches the hotel",
+            "On Wednesday morning",
+            "By Thursday at 1:30 p.m."
+          ],
+          "answerIndex": 0,
+          "explanation": "Lịch trình nêu rõ người tham gia cần gửi mọi thay đổi về chế độ ăn muộn nhất vào thứ Hai.",
+          "choiceIds": [
+            "reading:travel-itinerary:2:choice:1",
+            "reading:travel-itinerary:2:choice:2",
+            "reading:travel-itinerary:2:choice:3",
+            "reading:travel-itinerary:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "ITINERARY"
+            ],
+            "quotes": [
+              "no later than Monday."
+            ]
+          }
         }
       ],
       "part": "Part 7",
@@ -1140,6 +1265,106 @@
             "legacy:reading:double-passage-order:1:choice:3",
             "legacy:reading:double-passage-order:1:choice:4"
           ]
+        },
+        {
+          "question": "What action has the warehouse already taken to address the delay?",
+          "choices": [
+            "It has relabeled the incorrectly marked carton",
+            "It has cancelled the entire shipment",
+            "It has moved the products to another branch",
+            "It has issued a refund to the customer"
+          ],
+          "answerIndex": 0,
+          "explanation": "Phản hồi xác nhận carton bị dán nhãn sai đã được dán nhãn lại.",
+          "choiceIds": [
+            "reading:double-passage-order:2:choice:1",
+            "reading:double-passage-order:2:choice:2",
+            "reading:double-passage-order:2:choice:3",
+            "reading:double-passage-order:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "WAREHOUSE RESPONSE"
+            ],
+            "quotes": [
+              "The carton has now been relabeled"
+            ]
+          }
+        },
+        {
+          "question": "When were the items originally expected to arrive?",
+          "choices": [
+            "October 31",
+            "November 3",
+            "November 4",
+            "The following Monday"
+          ],
+          "answerIndex": 1,
+          "explanation": "Email khách hàng cho biết cổng theo dõi hiển thị ngày giao dự kiến là 3 tháng 11.",
+          "choiceIds": [
+            "reading:double-passage-order:3:choice:1",
+            "reading:double-passage-order:3:choice:2",
+            "reading:double-passage-order:3:choice:3",
+            "reading:double-passage-order:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CUSTOMER EMAIL"
+            ],
+            "quotes": [
+              "expected delivery date of November 3"
+            ]
+          }
+        },
+        {
+          "question": "What does the supplier offer to deliver first?",
+          "choices": [
+            "The replacement carton only",
+            "All items after the product launch",
+            "The available items in a partial delivery",
+            "A new order of display materials"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhà kho đề nghị giao trước các mặt hàng sẵn có vào sáng hôm sau.",
+          "choiceIds": [
+            "reading:double-passage-order:4:choice:1",
+            "reading:double-passage-order:4:choice:2",
+            "reading:double-passage-order:4:choice:3",
+            "reading:double-passage-order:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "WAREHOUSE RESPONSE"
+            ],
+            "quotes": [
+              "partial delivery of the available items tomorrow morning"
+            ]
+          }
+        },
+        {
+          "question": "Why are the items needed soon?",
+          "choices": [
+            "A quarterly audit is beginning",
+            "A new branch is opening",
+            "The warehouse is closing for renovation",
+            "A product launch is scheduled for the following week"
+          ],
+          "answerIndex": 3,
+          "explanation": "Khách hàng nêu rõ hàng cần cho sự kiện ra mắt sản phẩm tuần sau.",
+          "choiceIds": [
+            "reading:double-passage-order:5:choice:1",
+            "reading:double-passage-order:5:choice:2",
+            "reading:double-passage-order:5:choice:3",
+            "reading:double-passage-order:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CUSTOMER EMAIL"
+            ],
+            "quotes": [
+              "required for a product launch next week"
+            ]
+          }
         }
       ],
       "part": "Part 7",
@@ -1194,6 +1419,31 @@
             "legacy:reading:training-announcement:1:choice:3",
             "legacy:reading:training-announcement:1:choice:4"
           ]
+        },
+        {
+          "question": "What will employees receive after securing a place?",
+          "choices": [
+            "A reimbursement form",
+            "A revised job description",
+            "A confirmation email",
+            "A printed training certificate"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thông báo cho biết email xác nhận sẽ được gửi tới người đã giữ được chỗ.",
+          "choiceIds": [
+            "reading:training-announcement:2:choice:1",
+            "reading:training-announcement:2:choice:2",
+            "reading:training-announcement:2:choice:3",
+            "reading:training-announcement:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "ANNOUNCEMENT"
+            ],
+            "quotes": [
+              "A confirmation email will be sent to everyone who secures a place."
+            ]
+          }
         }
       ],
       "part": "Part 7",
@@ -1226,6 +1476,106 @@
             "reading:triple-passage-meeting:1:choice:3",
             "reading:triple-passage-meeting:1:choice:4"
           ]
+        },
+        {
+          "question": "What is the date of the annual partners conference?",
+          "choices": [
+            "March 10",
+            "March 11",
+            "March 12",
+            "March 13"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thư mời nêu hội nghị diễn ra ngày 12 tháng 3.",
+          "choiceIds": [
+            "reading:triple-passage-meeting:2:choice:1",
+            "reading:triple-passage-meeting:2:choice:2",
+            "reading:triple-passage-meeting:2:choice:3",
+            "reading:triple-passage-meeting:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "INVITATION"
+            ],
+            "quotes": [
+              "will take place on March 12"
+            ]
+          }
+        },
+        {
+          "question": "When does registration open?",
+          "choices": [
+            "7:00 a.m.",
+            "8:00 a.m.",
+            "9:00 a.m.",
+            "9:30 a.m."
+          ],
+          "answerIndex": 1,
+          "explanation": "Thư mời ghi giờ mở đăng ký là 8:00 sáng.",
+          "choiceIds": [
+            "reading:triple-passage-meeting:3:choice:1",
+            "reading:triple-passage-meeting:3:choice:2",
+            "reading:triple-passage-meeting:3:choice:3",
+            "reading:triple-passage-meeting:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "INVITATION"
+            ],
+            "quotes": [
+              "Registration opens at 8:00 a.m."
+            ]
+          }
+        },
+        {
+          "question": "Where should exhibitors deliver their display materials?",
+          "choices": [
+            "Through the north-side loading entrance",
+            "At the registration desk",
+            "Through the main lobby",
+            "At the hotel reception"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo địa điểm cho biết vật liệu trưng bày được giao qua lối bốc dỡ phía bắc.",
+          "choiceIds": [
+            "reading:triple-passage-meeting:4:choice:1",
+            "reading:triple-passage-meeting:4:choice:2",
+            "reading:triple-passage-meeting:4:choice:3",
+            "reading:triple-passage-meeting:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "VENUE NOTICE"
+            ],
+            "quotes": [
+              "through the loading entrance on the north side"
+            ]
+          }
+        },
+        {
+          "question": "Until what time will the registration desk remain open?",
+          "choices": [
+            "9:00 a.m.",
+            "9:30 a.m.",
+            "9:45 a.m.",
+            "10:00 a.m."
+          ],
+          "answerIndex": 3,
+          "explanation": "Email của ban tổ chức nêu rõ quầy đăng ký vẫn mở đến 10 giờ.",
+          "choiceIds": [
+            "reading:triple-passage-meeting:5:choice:1",
+            "reading:triple-passage-meeting:5:choice:2",
+            "reading:triple-passage-meeting:5:choice:3",
+            "reading:triple-passage-meeting:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "ORGANIZER EMAIL"
+            ],
+            "quotes": [
+              "remain open until 10:00 a.m."
+            ]
+          }
         }
       ],
       "part": "Part 7",
@@ -2293,6 +2643,31 @@
             "reading:part7-double-order-delay:4:choice:3",
             "reading:part7-double-order-delay:4:choice:4"
           ]
+        },
+        {
+          "question": "When are the remaining pallets expected to arrive?",
+          "choices": [
+            "June 11",
+            "June 12",
+            "June 13",
+            "June 14"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhà cung cấp nêu rõ các pallet còn lại dự kiến đến ngày 13 tháng 6.",
+          "choiceIds": [
+            "reading:part7-double-order-delay:5:choice:1",
+            "reading:part7-double-order-delay:5:choice:2",
+            "reading:part7-double-order-delay:5:choice:3",
+            "reading:part7-double-order-delay:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY FROM SUPPLIER"
+            ],
+            "quotes": [
+              "expected to arrive on June 13"
+            ]
+          }
         }
       ],
       "contentSource": "original-editorial"
@@ -2959,6 +3334,31 @@
             "reading:part7-double-equipment-order:4:choice:3",
             "reading:part7-double-equipment-order:4:choice:4"
           ]
+        },
+        {
+          "question": "When are the monitor arms now expected to ship?",
+          "choices": [
+            "April 20",
+            "April 22",
+            "April 23",
+            "April 24"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhà cung cấp nêu monitor arms dự kiến xuất kho ngày 23 tháng 4.",
+          "choiceIds": [
+            "reading:part7-double-equipment-order:5:choice:1",
+            "reading:part7-double-equipment-order:5:choice:2",
+            "reading:part7-double-equipment-order:5:choice:3",
+            "reading:part7-double-equipment-order:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY FROM SUPPLIER"
+            ],
+            "quotes": [
+              "expected to ship on April 23"
+            ]
+          }
         }
       ],
       "contentSource": "original-editorial"
@@ -3068,6 +3468,31 @@
             "reading:part7-double-training-reimbursement:4:choice:3",
             "reading:part7-double-training-reimbursement:4:choice:4"
           ]
+        },
+        {
+          "question": "When did the reimbursement program begin?",
+          "choices": [
+            "May 1",
+            "June 1",
+            "July 1",
+            "July 18"
+          ],
+          "answerIndex": 2,
+          "explanation": "Memo cho biết chương trình bắt đầu từ ngày 1 tháng 7.",
+          "choiceIds": [
+            "reading:part7-double-training-reimbursement:5:choice:1",
+            "reading:part7-double-training-reimbursement:5:choice:2",
+            "reading:part7-double-training-reimbursement:5:choice:3",
+            "reading:part7-double-training-reimbursement:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "INTERNAL MEMO"
+            ],
+            "quotes": [
+              "Beginning July 1"
+            ]
+          }
         }
       ],
       "contentSource": "original-editorial"
@@ -3176,6 +3601,70 @@
             "reading:part7-triple-regional-sales-meeting:3:choice:3",
             "reading:part7-triple-regional-sales-meeting:3:choice:4"
           ]
+        },
+        {
+          "question": "How long does it take to walk from Central Station to the meeting venue?",
+          "choices": [
+            "Five minutes",
+            "Ten minutes",
+            "Fifteen minutes",
+            "Twenty minutes"
+          ],
+          "answerIndex": 0,
+          "explanation": "Travel note cho biết trung tâm cách ga Central năm phút đi bộ.",
+          "choiceIds": [
+            "reading:part7-triple-regional-sales-meeting:4:choice:1",
+            "reading:part7-triple-regional-sales-meeting:4:choice:2",
+            "reading:part7-triple-regional-sales-meeting:4:choice:3",
+            "reading:part7-triple-regional-sales-meeting:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "TRAVEL NOTE"
+            ],
+            "quotes": [
+              "a five-minute walk from Central Station"
+            ]
+          }
+        },
+        {
+          "question": "What is planned for the afternoon?",
+          "choices": [
+            "A customer-retention workshop",
+            "A networking lunch",
+            "The quarterly performance review",
+            "One-to-one discussions with the sales director"
+          ],
+          "answerIndex": 3,
+          "explanation": "Agenda nêu phiên buổi chiều dành cho các cuộc trao đổi riêng với giám đốc bán hàng.",
+          "choiceIds": [
+            "reading:part7-triple-regional-sales-meeting:5:choice:1",
+            "reading:part7-triple-regional-sales-meeting:5:choice:2",
+            "reading:part7-triple-regional-sales-meeting:5:choice:4",
+            "reading:part7-triple-regional-sales-meeting:5:choice:3"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "MEETING AGENDA"
+            ],
+            "quotes": [
+              "The afternoon session will be reserved for one-to-one discussions with the sales director."
+            ]
+          },
+          "previousChoices": [
+            "A customer-retention workshop",
+            "A networking lunch",
+            "One-to-one discussions with the sales director",
+            "The quarterly performance review"
+          ],
+          "previousChoiceIds": [
+            "reading:part7-triple-regional-sales-meeting:5:choice:1",
+            "reading:part7-triple-regional-sales-meeting:5:choice:2",
+            "reading:part7-triple-regional-sales-meeting:5:choice:3",
+            "reading:part7-triple-regional-sales-meeting:5:choice:4"
+          ],
+          "previousAnswerIndex": 2,
+          "choiceOrderRevision": "2.33.0"
         }
       ],
       "contentSource": "original-editorial"
@@ -3284,9 +3773,2092 @@
             "legacy:reading:part7-triple-facility-renovation:3:choice:3",
             "legacy:reading:part7-triple-facility-renovation:3:choice:4"
           ]
+        },
+        {
+          "question": "Which service will not be affected by the network equipment relocation?",
+          "choices": [
+            "Employee Wi-Fi",
+            "Wired connections in meeting rooms",
+            "The temporary reception desk",
+            "The loading entrance"
+          ],
+          "answerIndex": 1,
+          "explanation": "Email IT xác nhận kết nối có dây trong phòng họp không bị ảnh hưởng.",
+          "choiceIds": [
+            "reading:part7-triple-facility-renovation:4:choice:1",
+            "reading:part7-triple-facility-renovation:4:choice:2",
+            "reading:part7-triple-facility-renovation:4:choice:3",
+            "reading:part7-triple-facility-renovation:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL FROM IT"
+            ],
+            "quotes": [
+              "Wired connections in the meeting rooms will not be affected."
+            ]
+          }
+        },
+        {
+          "question": "Which entrance should delivery drivers continue to use?",
+          "choices": [
+            "The north entrance",
+            "The east stairwell",
+            "The main lobby entrance",
+            "The south-side loading entrance"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo nêu rõ tài xế giao hàng cần tiếp tục sử dụng lối bốc dỡ phía nam.",
+          "choiceIds": [
+            "reading:part7-triple-facility-renovation:5:choice:1",
+            "reading:part7-triple-facility-renovation:5:choice:2",
+            "reading:part7-triple-facility-renovation:5:choice:3",
+            "reading:part7-triple-facility-renovation:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY FROM FACILITIES"
+            ],
+            "quotes": [
+              "loading entrance on the south side of the building"
+            ]
+          }
         }
       ],
       "contentSource": "original-editorial"
+    },
+    {
+      "id": "part5-business-collocations-set-08",
+      "title": "Part 5 · Business Collocations Set 8",
+      "topic": "Business & Administration",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES",
+      "level": "B1–B2",
+      "wordCount": 0,
+      "passage": "",
+      "translation": "Bộ câu tập trung vào cụm từ và giới từ thường gặp trong quy trình mua hàng, báo giá và quản trị.",
+      "vocabulary": [
+        {
+          "word": "quotation",
+          "pos": "n",
+          "meaning": "báo giá"
+        },
+        {
+          "word": "on behalf of",
+          "pos": "phrase",
+          "meaning": "thay mặt"
+        },
+        {
+          "word": "consistent with",
+          "pos": "phrase",
+          "meaning": "nhất quán với"
+        }
+      ],
+      "questions": [
+        {
+          "question": "The procurement team is responsible _____ reviewing all supplier quotations.",
+          "choices": [
+            "at",
+            "for",
+            "with",
+            "to"
+          ],
+          "answerIndex": 1,
+          "explanation": "Responsible đi với giới từ for khi nói về trách nhiệm thực hiện một công việc.",
+          "choiceIds": [
+            "reading:part5-business-collocations-set-08:1:choice:1",
+            "reading:part5-business-collocations-set-08:1:choice:2",
+            "reading:part5-business-collocations-set-08:1:choice:3",
+            "reading:part5-business-collocations-set-08:1:choice:4"
+          ]
+        },
+        {
+          "question": "The revised price list will take effect _____ July 1.",
+          "choices": [
+            "in",
+            "at",
+            "on",
+            "by"
+          ],
+          "answerIndex": 2,
+          "explanation": "Dùng on với ngày cụ thể: on July 1.",
+          "choiceIds": [
+            "reading:part5-business-collocations-set-08:2:choice:1",
+            "reading:part5-business-collocations-set-08:2:choice:2",
+            "reading:part5-business-collocations-set-08:2:choice:3",
+            "reading:part5-business-collocations-set-08:2:choice:4"
+          ]
+        },
+        {
+          "question": "The branch manager submitted the request _____ behalf of the regional team.",
+          "choices": [
+            "on",
+            "at",
+            "by",
+            "for"
+          ],
+          "answerIndex": 0,
+          "explanation": "Cụm cố định là on behalf of, nghĩa là thay mặt.",
+          "choiceIds": [
+            "reading:part5-business-collocations-set-08:3:choice:1",
+            "reading:part5-business-collocations-set-08:3:choice:2",
+            "reading:part5-business-collocations-set-08:3:choice:3",
+            "reading:part5-business-collocations-set-08:3:choice:4"
+          ]
+        },
+        {
+          "question": "A five-percent discount is available _____ orders exceeding 500 units.",
+          "choices": [
+            "at",
+            "to",
+            "with",
+            "on"
+          ],
+          "answerIndex": 3,
+          "explanation": "Discount on an order là cách kết hợp tự nhiên khi nói giảm giá trên đơn hàng.",
+          "choiceIds": [
+            "reading:part5-business-collocations-set-08:4:choice:1",
+            "reading:part5-business-collocations-set-08:4:choice:2",
+            "reading:part5-business-collocations-set-08:4:choice:3",
+            "reading:part5-business-collocations-set-08:4:choice:4"
+          ]
+        },
+        {
+          "question": "Please ensure that the signed agreement is consistent _____ the approved quotation.",
+          "choices": [
+            "to",
+            "with",
+            "for",
+            "by"
+          ],
+          "answerIndex": 1,
+          "explanation": "Consistent đi với giới từ with.",
+          "choiceIds": [
+            "reading:part5-business-collocations-set-08:5:choice:1",
+            "reading:part5-business-collocations-set-08:5:choice:2",
+            "reading:part5-business-collocations-set-08:5:choice:3",
+            "reading:part5-business-collocations-set-08:5:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part5-pronoun-reference-set-09",
+      "title": "Part 5 · Pronouns & Reference Set 9",
+      "topic": "Human Resources & Office",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES",
+      "level": "B1–B2",
+      "wordCount": 0,
+      "passage": "",
+      "translation": "Bộ câu luyện đại từ thay thế, sở hữu và hòa hợp chủ-vị trong thông báo nhân sự.",
+      "vocabulary": [
+        {
+          "word": "applicant",
+          "pos": "n",
+          "meaning": "ứng viên"
+        },
+        {
+          "word": "reference",
+          "pos": "n",
+          "meaning": "người/thông tin tham chiếu"
+        },
+        {
+          "word": "portfolio",
+          "pos": "n",
+          "meaning": "hồ sơ năng lực"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Each of the applicants _____ asked to provide two professional references.",
+          "choices": [
+            "were",
+            "have been",
+            "was",
+            "are"
+          ],
+          "answerIndex": 2,
+          "explanation": "Each of + danh từ số nhiều vẫn lấy động từ số ít; ngữ cảnh quá khứ dùng was.",
+          "choiceIds": [
+            "reading:part5-pronoun-reference-set-09:1:choice:1",
+            "reading:part5-pronoun-reference-set-09:1:choice:2",
+            "reading:part5-pronoun-reference-set-09:1:choice:3",
+            "reading:part5-pronoun-reference-set-09:1:choice:4"
+          ]
+        },
+        {
+          "question": "The directors reviewed the proposals and selected _____ that met the new budget limit.",
+          "choices": [
+            "those",
+            "that",
+            "one",
+            "every"
+          ],
+          "answerIndex": 0,
+          "explanation": "Those thay thế cho proposals số nhiều và làm tân ngữ của selected.",
+          "choiceIds": [
+            "reading:part5-pronoun-reference-set-09:2:choice:1",
+            "reading:part5-pronoun-reference-set-09:2:choice:2",
+            "reading:part5-pronoun-reference-set-09:2:choice:3",
+            "reading:part5-pronoun-reference-set-09:2:choice:4"
+          ]
+        },
+        {
+          "question": "Neither the purchasing manager nor the assistants _____ available to sign the documents yesterday.",
+          "choices": [
+            "was",
+            "is",
+            "has been",
+            "were"
+          ],
+          "answerIndex": 3,
+          "explanation": "Với neither...nor, động từ hòa hợp với chủ ngữ gần nhất là assistants; thời điểm yesterday dùng were.",
+          "choiceIds": [
+            "reading:part5-pronoun-reference-set-09:3:choice:1",
+            "reading:part5-pronoun-reference-set-09:3:choice:2",
+            "reading:part5-pronoun-reference-set-09:3:choice:3",
+            "reading:part5-pronoun-reference-set-09:3:choice:4"
+          ]
+        },
+        {
+          "question": "Employees should update _____ emergency contact details before the end of the month.",
+          "choices": [
+            "his",
+            "their",
+            "its",
+            "them"
+          ],
+          "answerIndex": 1,
+          "explanation": "Employees là danh từ số nhiều; tính từ sở hữu phù hợp là their.",
+          "choiceIds": [
+            "reading:part5-pronoun-reference-set-09:4:choice:1",
+            "reading:part5-pronoun-reference-set-09:4:choice:2",
+            "reading:part5-pronoun-reference-set-09:4:choice:3",
+            "reading:part5-pronoun-reference-set-09:4:choice:4"
+          ]
+        },
+        {
+          "question": "The candidate _____ portfolio best demonstrates project experience will be invited to a second interview.",
+          "choices": [
+            "who",
+            "whose",
+            "which",
+            "whom"
+          ],
+          "answerIndex": 1,
+          "explanation": "Whose được dùng để chỉ quan hệ sở hữu giữa ứng viên và hồ sơ năng lực.",
+          "choiceIds": [
+            "reading:part5-pronoun-reference-set-09:5:choice:1",
+            "reading:part5-pronoun-reference-set-09:5:choice:2",
+            "reading:part5-pronoun-reference-set-09:5:choice:3",
+            "reading:part5-pronoun-reference-set-09:5:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part5-conditionals-reporting-set-10",
+      "title": "Part 5 · Conditions & Reported Statements Set 10",
+      "topic": "Business & Operations",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES",
+      "level": "B2",
+      "wordCount": 0,
+      "passage": "",
+      "translation": "Bộ câu luyện điều kiện, tường thuật và cấu trúc trang trọng trong giao tiếp công việc.",
+      "vocabulary": [
+        {
+          "word": "roster",
+          "pos": "n",
+          "meaning": "bảng phân công/lịch nhân sự"
+        },
+        {
+          "word": "subjunctive",
+          "pos": "n",
+          "meaning": "thức giả định"
+        },
+        {
+          "word": "publication",
+          "pos": "n",
+          "meaning": "việc công bố"
+        }
+      ],
+      "questions": [
+        {
+          "question": "The shipment will be released _____ the customs documents are approved.",
+          "choices": [
+            "unless",
+            "provided that",
+            "despite",
+            "whereas"
+          ],
+          "answerIndex": 1,
+          "explanation": "Provided that diễn tả điều kiện cần có để hàng được thông quan.",
+          "choiceIds": [
+            "reading:part5-conditionals-reporting-set-10:1:choice:1",
+            "reading:part5-conditionals-reporting-set-10:1:choice:2",
+            "reading:part5-conditionals-reporting-set-10:1:choice:3",
+            "reading:part5-conditionals-reporting-set-10:1:choice:4"
+          ]
+        },
+        {
+          "question": "The supervisor said that the updated roster _____ to all employees the following morning.",
+          "choices": [
+            "would be distributed",
+            "will distribute",
+            "has distributed",
+            "distributes"
+          ],
+          "answerIndex": 0,
+          "explanation": "Reported speech với động từ tường thuật quá khứ lùi will thành would; roster nhận hành động nên dùng bị động.",
+          "choiceIds": [
+            "reading:part5-conditionals-reporting-set-10:2:choice:1",
+            "reading:part5-conditionals-reporting-set-10:2:choice:2",
+            "reading:part5-conditionals-reporting-set-10:2:choice:3",
+            "reading:part5-conditionals-reporting-set-10:2:choice:4"
+          ]
+        },
+        {
+          "question": "_____ the supplier confirms the revised quantity today, the delivery date will remain unchanged.",
+          "choices": [
+            "If",
+            "Although",
+            "Because of",
+            "Despite"
+          ],
+          "answerIndex": 0,
+          "explanation": "If mở đầu mệnh đề điều kiện cho kết quả ở mệnh đề chính.",
+          "choiceIds": [
+            "reading:part5-conditionals-reporting-set-10:3:choice:1",
+            "reading:part5-conditionals-reporting-set-10:3:choice:2",
+            "reading:part5-conditionals-reporting-set-10:3:choice:3",
+            "reading:part5-conditionals-reporting-set-10:3:choice:4"
+          ]
+        },
+        {
+          "question": "The finance director requested that the final figures _____ checked before publication.",
+          "choices": [
+            "are",
+            "were",
+            "be",
+            "being"
+          ],
+          "answerIndex": 2,
+          "explanation": "Sau request that trong văn phong trang trọng dùng subjunctive base form be.",
+          "choiceIds": [
+            "reading:part5-conditionals-reporting-set-10:4:choice:1",
+            "reading:part5-conditionals-reporting-set-10:4:choice:2",
+            "reading:part5-conditionals-reporting-set-10:4:choice:3",
+            "reading:part5-conditionals-reporting-set-10:4:choice:4"
+          ]
+        },
+        {
+          "question": "The company will not issue a replacement _____ the damaged item has been returned.",
+          "choices": [
+            "as soon as",
+            "until",
+            "because",
+            "while"
+          ],
+          "answerIndex": 1,
+          "explanation": "Not...until diễn tả chỉ phát hành hàng thay thế sau khi sản phẩm hỏng được trả lại.",
+          "choiceIds": [
+            "reading:part5-conditionals-reporting-set-10:5:choice:1",
+            "reading:part5-conditionals-reporting-set-10:5:choice:2",
+            "reading:part5-conditionals-reporting-set-10:5:choice:3",
+            "reading:part5-conditionals-reporting-set-10:5:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part5-word-forms-set-11",
+      "title": "Part 5 · Word Forms in Business Context Set 11",
+      "topic": "Finance & Management",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES",
+      "level": "B1–B2",
+      "wordCount": 0,
+      "passage": "",
+      "translation": "Bộ câu kiểm tra word form qua ngữ cảnh kế toán, phần mềm và vận hành kho.",
+      "vocabulary": [
+        {
+          "word": "reconciliation",
+          "pos": "n",
+          "meaning": "việc đối chiếu"
+        },
+        {
+          "word": "discrepancy",
+          "pos": "n",
+          "meaning": "sự sai lệch"
+        },
+        {
+          "word": "compulsory",
+          "pos": "adj",
+          "meaning": "bắt buộc"
+        }
+      ],
+      "questions": [
+        {
+          "question": "The accounting team completed the reconciliation _____ and reported no discrepancies.",
+          "choices": [
+            "accurate",
+            "accuracy",
+            "accurately",
+            "accurateness"
+          ],
+          "answerIndex": 2,
+          "explanation": "Trạng từ accurately bổ nghĩa cho động từ completed.",
+          "choiceIds": [
+            "reading:part5-word-forms-set-11:1:choice:1",
+            "reading:part5-word-forms-set-11:1:choice:2",
+            "reading:part5-word-forms-set-11:1:choice:3",
+            "reading:part5-word-forms-set-11:1:choice:4"
+          ]
+        },
+        {
+          "question": "The new software has improved the _____ of monthly inventory reports.",
+          "choices": [
+            "reliable",
+            "reliably",
+            "reliability",
+            "rely"
+          ],
+          "answerIndex": 2,
+          "explanation": "Sau mạo từ the và trước of cần danh từ reliability.",
+          "choiceIds": [
+            "reading:part5-word-forms-set-11:2:choice:1",
+            "reading:part5-word-forms-set-11:2:choice:2",
+            "reading:part5-word-forms-set-11:2:choice:3",
+            "reading:part5-word-forms-set-11:2:choice:4"
+          ]
+        },
+        {
+          "question": "The supplier responded _____ to the request for an updated quotation.",
+          "choices": [
+            "prompt",
+            "promptly",
+            "promptness",
+            "prompting"
+          ],
+          "answerIndex": 1,
+          "explanation": "Promptly là trạng từ bổ nghĩa cho responded.",
+          "choiceIds": [
+            "reading:part5-word-forms-set-11:3:choice:1",
+            "reading:part5-word-forms-set-11:3:choice:2",
+            "reading:part5-word-forms-set-11:3:choice:3",
+            "reading:part5-word-forms-set-11:3:choice:4"
+          ]
+        },
+        {
+          "question": "Participation in the safety briefing is _____ for all warehouse employees.",
+          "choices": [
+            "compulsion",
+            "compulsory",
+            "compel",
+            "compulsively"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sau is cần tính từ compulsory để mô tả tính bắt buộc.",
+          "choiceIds": [
+            "reading:part5-word-forms-set-11:4:choice:1",
+            "reading:part5-word-forms-set-11:4:choice:2",
+            "reading:part5-word-forms-set-11:4:choice:3",
+            "reading:part5-word-forms-set-11:4:choice:4"
+          ]
+        },
+        {
+          "question": "The proposal was rejected because its cost estimate was not sufficiently _____.",
+          "choices": [
+            "realistic",
+            "realistically",
+            "realism",
+            "realize"
+          ],
+          "answerIndex": 0,
+          "explanation": "Sau was not sufficiently cần tính từ realistic làm bổ ngữ.",
+          "choiceIds": [
+            "reading:part5-word-forms-set-11:5:choice:1",
+            "reading:part5-word-forms-set-11:5:choice:2",
+            "reading:part5-word-forms-set-11:5:choice:3",
+            "reading:part5-word-forms-set-11:5:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part5-participial-clauses-set-12",
+      "title": "Part 5 · Participial & Reduced Clauses Set 12",
+      "topic": "Office & Administration",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES",
+      "level": "B2",
+      "wordCount": 0,
+      "passage": "",
+      "translation": "Bộ câu về phân từ và mệnh đề rút gọn trong các thông báo công việc.",
+      "vocabulary": [
+        {
+          "word": "forward",
+          "pos": "v",
+          "meaning": "chuyển tiếp"
+        },
+        {
+          "word": "venue",
+          "pos": "n",
+          "meaning": "địa điểm tổ chức"
+        },
+        {
+          "word": "candidate",
+          "pos": "n",
+          "meaning": "ứng viên"
+        }
+      ],
+      "questions": [
+        {
+          "question": "_____ the revised contract, Ms. Lin forwarded it to the legal department.",
+          "choices": [
+            "Review",
+            "Having reviewed",
+            "To reviewing",
+            "Reviews"
+          ],
+          "answerIndex": 1,
+          "explanation": "Having reviewed diễn tả hành động xem xét hoàn tất trước hành động forwarded.",
+          "choiceIds": [
+            "reading:part5-participial-clauses-set-12:1:choice:1",
+            "reading:part5-participial-clauses-set-12:1:choice:2",
+            "reading:part5-participial-clauses-set-12:1:choice:3",
+            "reading:part5-participial-clauses-set-12:1:choice:4"
+          ]
+        },
+        {
+          "question": "All documents _____ after 5 p.m. will be processed on the next business day.",
+          "choices": [
+            "receive",
+            "receiving",
+            "received",
+            "to receive"
+          ],
+          "answerIndex": 2,
+          "explanation": "Received là phân từ quá khứ rút gọn mệnh đề quan hệ bị động: documents that are received.",
+          "choiceIds": [
+            "reading:part5-participial-clauses-set-12:2:choice:1",
+            "reading:part5-participial-clauses-set-12:2:choice:2",
+            "reading:part5-participial-clauses-set-12:2:choice:3",
+            "reading:part5-participial-clauses-set-12:2:choice:4"
+          ]
+        },
+        {
+          "question": "The technician checked the equipment _____ for the demonstration.",
+          "choices": [
+            "prepare",
+            "prepared",
+            "preparing",
+            "preparation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Equipment prepared for the demonstration là cụm phân từ quá khứ mang nghĩa bị động.",
+          "choiceIds": [
+            "reading:part5-participial-clauses-set-12:3:choice:1",
+            "reading:part5-participial-clauses-set-12:3:choice:2",
+            "reading:part5-participial-clauses-set-12:3:choice:3",
+            "reading:part5-participial-clauses-set-12:3:choice:4"
+          ]
+        },
+        {
+          "question": "While _____ for the interview, candidates may use the waiting area on the left.",
+          "choices": [
+            "wait",
+            "waiting",
+            "waited",
+            "to waiting"
+          ],
+          "answerIndex": 1,
+          "explanation": "While waiting là mệnh đề trạng ngữ rút gọn với chủ ngữ ngầm chỉ candidates.",
+          "choiceIds": [
+            "reading:part5-participial-clauses-set-12:4:choice:1",
+            "reading:part5-participial-clauses-set-12:4:choice:2",
+            "reading:part5-participial-clauses-set-12:4:choice:3",
+            "reading:part5-participial-clauses-set-12:4:choice:4"
+          ]
+        },
+        {
+          "question": "The department _____ the annual conference is responsible for confirming the venue.",
+          "choices": [
+            "organize",
+            "organized",
+            "organizing",
+            "organization"
+          ],
+          "answerIndex": 2,
+          "explanation": "Department organizing the conference là cụm phân từ hiện tại chủ động bổ nghĩa cho department.",
+          "choiceIds": [
+            "reading:part5-participial-clauses-set-12:5:choice:1",
+            "reading:part5-participial-clauses-set-12:5:choice:2",
+            "reading:part5-participial-clauses-set-12:5:choice:3",
+            "reading:part5-participial-clauses-set-12:5:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part5-quantifiers-parallelism-set-13",
+      "title": "Part 5 · Quantifiers & Parallel Structures Set 13",
+      "topic": "Business & Human Resources",
+      "part": "Part 5",
+      "documentType": "INCOMPLETE SENTENCES",
+      "level": "B1–B2",
+      "wordCount": 0,
+      "passage": "",
+      "translation": "Bộ câu luyện lượng từ và cấu trúc song song trong quy trình doanh nghiệp.",
+      "vocabulary": [
+        {
+          "word": "paperwork",
+          "pos": "n",
+          "meaning": "giấy tờ, thủ tục"
+        },
+        {
+          "word": "procedure",
+          "pos": "n",
+          "meaning": "quy trình"
+        },
+        {
+          "word": "invoice",
+          "pos": "n",
+          "meaning": "hóa đơn"
+        }
+      ],
+      "questions": [
+        {
+          "question": "The revised process requires _____ paperwork than the previous procedure.",
+          "choices": [
+            "fewer",
+            "less",
+            "many",
+            "few"
+          ],
+          "answerIndex": 1,
+          "explanation": "Paperwork là danh từ không đếm được; dùng less trong so sánh số lượng.",
+          "choiceIds": [
+            "reading:part5-quantifiers-parallelism-set-13:1:choice:1",
+            "reading:part5-quantifiers-parallelism-set-13:1:choice:2",
+            "reading:part5-quantifiers-parallelism-set-13:1:choice:3",
+            "reading:part5-quantifiers-parallelism-set-13:1:choice:4"
+          ]
+        },
+        {
+          "question": "A number of employees _____ requested additional training this quarter.",
+          "choices": [
+            "has",
+            "is",
+            "have",
+            "was"
+          ],
+          "answerIndex": 2,
+          "explanation": "A number of + danh từ số nhiều đi với động từ số nhiều have.",
+          "choiceIds": [
+            "reading:part5-quantifiers-parallelism-set-13:2:choice:1",
+            "reading:part5-quantifiers-parallelism-set-13:2:choice:2",
+            "reading:part5-quantifiers-parallelism-set-13:2:choice:3",
+            "reading:part5-quantifiers-parallelism-set-13:2:choice:4"
+          ]
+        },
+        {
+          "question": "The training program is designed for _____ new supervisors and experienced team leaders.",
+          "choices": [
+            "either",
+            "neither",
+            "both",
+            "whether"
+          ],
+          "answerIndex": 2,
+          "explanation": "Both...and nối hai nhóm đối tượng cùng được hưởng chương trình.",
+          "choiceIds": [
+            "reading:part5-quantifiers-parallelism-set-13:3:choice:1",
+            "reading:part5-quantifiers-parallelism-set-13:3:choice:2",
+            "reading:part5-quantifiers-parallelism-set-13:3:choice:3",
+            "reading:part5-quantifiers-parallelism-set-13:3:choice:4"
+          ]
+        },
+        {
+          "question": "Applicants may submit the form _____ by email or through the careers portal.",
+          "choices": [
+            "neither",
+            "either",
+            "both",
+            "not only"
+          ],
+          "answerIndex": 1,
+          "explanation": "Either...or diễn tả lựa chọn một trong hai phương thức.",
+          "choiceIds": [
+            "reading:part5-quantifiers-parallelism-set-13:4:choice:1",
+            "reading:part5-quantifiers-parallelism-set-13:4:choice:2",
+            "reading:part5-quantifiers-parallelism-set-13:4:choice:3",
+            "reading:part5-quantifiers-parallelism-set-13:4:choice:4"
+          ]
+        },
+        {
+          "question": "Every invoice and purchase order _____ checked before payment is released.",
+          "choices": [
+            "are",
+            "were",
+            "have been",
+            "is"
+          ],
+          "answerIndex": 3,
+          "explanation": "Every đứng trước chủ ngữ ghép bằng and có thể phân phối từng thành phần; cấu trúc này lấy động từ số ít is.",
+          "choiceIds": [
+            "reading:part5-quantifiers-parallelism-set-13:5:choice:1",
+            "reading:part5-quantifiers-parallelism-set-13:5:choice:2",
+            "reading:part5-quantifiers-parallelism-set-13:5:choice:3",
+            "reading:part5-quantifiers-parallelism-set-13:5:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part6-supplier-service-bulletin",
+      "title": "Part 6 · Supplier Service Bulletin",
+      "topic": "Purchasing & Logistics",
+      "part": "Part 6",
+      "documentType": "NOTICE",
+      "level": "B1–B2",
+      "passage": "To: Purchasing Representatives\nFrom: Supplier Relations\nSubject: Updated order confirmation process\n\nBeginning next month, order acknowledgments [1] through the supplier portal rather than by fax. Buyers should check the listed quantities carefully [2] approving the confirmation. If an item is temporarily unavailable, [3] is displayed beside its product code. [4]. Please contact Supplier Relations if a confirmation does not appear within one business day.",
+      "translation": "Bắt đầu từ tháng tới, xác nhận đơn hàng sẽ được gửi qua cổng nhà cung cấp thay vì fax. Người mua cần kiểm tra số lượng trước khi phê duyệt. Nếu mặt hàng tạm thời không có sẵn, trạng thái sẽ xuất hiện cạnh mã sản phẩm. Các đơn hàng đã xác nhận vẫn có thể được theo dõi trong mục Lịch sử đơn hàng.",
+      "wordCount": 64,
+      "vocabulary": [
+        {
+          "word": "acknowledgment",
+          "pos": "n",
+          "meaning": "xác nhận đã nhận"
+        },
+        {
+          "word": "temporarily",
+          "pos": "adv",
+          "meaning": "tạm thời"
+        },
+        {
+          "word": "portal",
+          "pos": "n",
+          "meaning": "cổng thông tin"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the best phrase for blank (1).",
+          "choices": [
+            "will be issued",
+            "issuing",
+            "has issue",
+            "will issue them"
+          ],
+          "answerIndex": 0,
+          "explanation": "Chủ ngữ order acknowledgments nhận hành động; cấu trúc tương lai bị động will be issued phù hợp.",
+          "choiceIds": [
+            "reading:part6-supplier-service-bulletin:1:choice:1",
+            "reading:part6-supplier-service-bulletin:1:choice:2",
+            "reading:part6-supplier-service-bulletin:1:choice:3",
+            "reading:part6-supplier-service-bulletin:1:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best phrase for blank (2).",
+          "choices": [
+            "unless",
+            "despite",
+            "before",
+            "whereas"
+          ],
+          "answerIndex": 2,
+          "explanation": "Cần kiểm tra trước khi phê duyệt; before thể hiện đúng quan hệ thời gian.",
+          "choiceIds": [
+            "reading:part6-supplier-service-bulletin:2:choice:1",
+            "reading:part6-supplier-service-bulletin:2:choice:2",
+            "reading:part6-supplier-service-bulletin:2:choice:3",
+            "reading:part6-supplier-service-bulletin:2:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best phrase for blank (3).",
+          "choices": [
+            "a status label",
+            "they",
+            "those",
+            "it"
+          ],
+          "answerIndex": 0,
+          "explanation": "Cụm a status label làm chủ ngữ cho is displayed và chỉ trạng thái mặt hàng trong ngữ cảnh.",
+          "choiceIds": [
+            "reading:part6-supplier-service-bulletin:3:choice:1",
+            "reading:part6-supplier-service-bulletin:3:choice:2",
+            "reading:part6-supplier-service-bulletin:3:choice:3",
+            "reading:part6-supplier-service-bulletin:3:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best sentence for blank (4).",
+          "choices": [
+            "The company picnic will take place in August.",
+            "Confirmed orders can still be tracked in the Order History section.",
+            "The supplier changed its logo last year.",
+            "All visitors must use the north parking lot."
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu B tiếp nối trực tiếp quy trình xác nhận đơn hàng và thông tin trạng thái sản phẩm.",
+          "choiceIds": [
+            "reading:part6-supplier-service-bulletin:4:choice:1",
+            "reading:part6-supplier-service-bulletin:4:choice:2",
+            "reading:part6-supplier-service-bulletin:4:choice:3",
+            "reading:part6-supplier-service-bulletin:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part6-quarterly-billing-update",
+      "title": "Part 6 · Quarterly Billing Update",
+      "topic": "Finance & Accounting",
+      "part": "Part 6",
+      "documentType": "NOTICE",
+      "level": "B2",
+      "passage": "To: Business Account Customers\nFrom: Billing Department\nSubject: Quarter-end statement schedule\n\nThe next account statements [1] on September 30. Customers who have recently changed their billing address should update their details [2] the online account center. [3], paper statements will continue to be mailed to customers who have not selected electronic delivery. Please review the account balance and notify Billing of any discrepancy. [4].",
+      "translation": "Sao kê tài khoản kỳ tới sẽ được phát hành vào ngày 30 tháng 9. Khách hàng vừa thay đổi địa chỉ thanh toán nên cập nhật thông tin tại trung tâm tài khoản trực tuyến. Ngoài ra, sao kê giấy vẫn được gửi tới khách chưa chọn hình thức điện tử. Mọi thắc mắc về số dư cần được gửi trước ngày 7 tháng 10.",
+      "wordCount": 64,
+      "vocabulary": [
+        {
+          "word": "statement",
+          "pos": "n",
+          "meaning": "bản sao kê"
+        },
+        {
+          "word": "discrepancy",
+          "pos": "n",
+          "meaning": "sự sai lệch"
+        },
+        {
+          "word": "electronic delivery",
+          "pos": "phrase",
+          "meaning": "gửi bằng phương thức điện tử"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the best phrase for blank (1).",
+          "choices": [
+            "will be issued",
+            "issued them",
+            "will issue",
+            "are issuing by"
+          ],
+          "answerIndex": 0,
+          "explanation": "Statements là đối tượng được phát hành; tương lai bị động will be issued.",
+          "choiceIds": [
+            "reading:part6-quarterly-billing-update:1:choice:1",
+            "reading:part6-quarterly-billing-update:1:choice:2",
+            "reading:part6-quarterly-billing-update:1:choice:3",
+            "reading:part6-quarterly-billing-update:1:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best preposition for blank (2).",
+          "choices": [
+            "at",
+            "in",
+            "on",
+            "by"
+          ],
+          "answerIndex": 1,
+          "explanation": "In the online account center là cách diễn đạt tự nhiên cho thao tác cập nhật trong không gian tài khoản trực tuyến.",
+          "choiceIds": [
+            "reading:part6-quarterly-billing-update:2:choice:1",
+            "reading:part6-quarterly-billing-update:2:choice:2",
+            "reading:part6-quarterly-billing-update:2:choice:3",
+            "reading:part6-quarterly-billing-update:2:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best connector for blank (3).",
+          "choices": [
+            "Nevertheless",
+            "In addition",
+            "For example",
+            "Instead of"
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu bổ sung một hình thức gửi sao kê khác vẫn được duy trì; In addition phù hợp.",
+          "choiceIds": [
+            "reading:part6-quarterly-billing-update:3:choice:1",
+            "reading:part6-quarterly-billing-update:3:choice:2",
+            "reading:part6-quarterly-billing-update:3:choice:3",
+            "reading:part6-quarterly-billing-update:3:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best sentence for blank (4).",
+          "choices": [
+            "Please submit questions about the statement balance before October 7.",
+            "The annual staff picnic is scheduled for October 7.",
+            "The billing office moved to another city in June.",
+            "New employees must attend orientation next week."
+          ],
+          "answerIndex": 0,
+          "explanation": "Câu A hoàn tất hướng dẫn liên hệ Billing bằng cách nêu hạn phản hồi liên quan trực tiếp đến sao kê.",
+          "choiceIds": [
+            "reading:part6-quarterly-billing-update:4:choice:1",
+            "reading:part6-quarterly-billing-update:4:choice:2",
+            "reading:part6-quarterly-billing-update:4:choice:3",
+            "reading:part6-quarterly-billing-update:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part6-staff-development-newsletter",
+      "title": "Part 6 · Staff Development Newsletter",
+      "topic": "Human Resources & Training",
+      "part": "Part 6",
+      "documentType": "NOTICE",
+      "level": "B1–B2",
+      "passage": "To: All Employees\nFrom: Learning and Development\nSubject: November skills sessions\n\nA new series of short skills sessions [1] at the central training room next month. Each session focuses on a practical workplace topic, including spreadsheet reporting and customer communication. Employees may register for more than one session, [2] each workshop has a separate attendance limit. [3] wish to attend should complete the online form by November 10. [4]. A confirmation message will be sent after the registration has been recorded.",
+      "translation": "Chuỗi buổi kỹ năng ngắn mới sẽ được tổ chức tại phòng đào tạo trung tâm vào tháng tới. Mỗi buổi tập trung vào một chủ đề thực tiễn như báo cáo bảng tính và giao tiếp khách hàng. Nhân viên có thể đăng ký nhiều buổi, nhưng mỗi hội thảo có giới hạn người tham dự riêng. Người muốn tham gia cần hoàn tất biểu mẫu trước ngày 10 tháng 11. Lịch chi tiết sẽ được gửi cho người đăng ký.",
+      "wordCount": 81,
+      "vocabulary": [
+        {
+          "word": "session",
+          "pos": "n",
+          "meaning": "buổi học/phiên"
+        },
+        {
+          "word": "attendance limit",
+          "pos": "phrase",
+          "meaning": "giới hạn số người tham dự"
+        },
+        {
+          "word": "record",
+          "pos": "v",
+          "meaning": "ghi nhận"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the best phrase for blank (1).",
+          "choices": [
+            "will be held",
+            "holding",
+            "has held by",
+            "will hold them"
+          ],
+          "answerIndex": 0,
+          "explanation": "A series of sessions nhận hành động tổ chức; dùng tương lai bị động will be held.",
+          "choiceIds": [
+            "reading:part6-staff-development-newsletter:1:choice:1",
+            "reading:part6-staff-development-newsletter:1:choice:2",
+            "reading:part6-staff-development-newsletter:1:choice:3",
+            "reading:part6-staff-development-newsletter:1:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best connector for blank (2).",
+          "choices": [
+            "because",
+            "unless",
+            "but",
+            "therefore"
+          ],
+          "answerIndex": 2,
+          "explanation": "Hai ý có quan hệ tương phản nhẹ: được đăng ký nhiều buổi nhưng mỗi buổi có giới hạn riêng.",
+          "choiceIds": [
+            "reading:part6-staff-development-newsletter:2:choice:1",
+            "reading:part6-staff-development-newsletter:2:choice:2",
+            "reading:part6-staff-development-newsletter:2:choice:3",
+            "reading:part6-staff-development-newsletter:2:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best phrase for blank (3).",
+          "choices": [
+            "Those who",
+            "Which",
+            "Whose",
+            "Much"
+          ],
+          "answerIndex": 0,
+          "explanation": "Those who tạo cụm đại từ chỉ những nhân viên muốn tham dự.",
+          "choiceIds": [
+            "reading:part6-staff-development-newsletter:3:choice:1",
+            "reading:part6-staff-development-newsletter:3:choice:2",
+            "reading:part6-staff-development-newsletter:3:choice:3",
+            "reading:part6-staff-development-newsletter:3:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best sentence for blank (4).",
+          "choices": [
+            "The building cafeteria serves breakfast from 7 a.m.",
+            "A detailed timetable will be sent to registered employees.",
+            "The company was established in the previous century.",
+            "Parking permits are handled by the security office."
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu B liên kết với tiến trình đăng ký và xác nhận tham dự.",
+          "choiceIds": [
+            "reading:part6-staff-development-newsletter:4:choice:1",
+            "reading:part6-staff-development-newsletter:4:choice:2",
+            "reading:part6-staff-development-newsletter:4:choice:3",
+            "reading:part6-staff-development-newsletter:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part6-facility-service-notice",
+      "title": "Part 6 · Facility Service Notice",
+      "topic": "Office & Facilities",
+      "part": "Part 6",
+      "documentType": "NOTICE",
+      "level": "B1–B2",
+      "passage": "To: Building Tenants\nFrom: Property Management\nSubject: Weekend maintenance\n\nThe main lobby entrance [1] during the scheduled maintenance on Saturday. Visitors should use the west entrance and follow the signs to the temporary reception desk. [2], the delivery entrance on the south side will remain available for scheduled shipments. Tenants expecting large deliveries should notify the property office [3] the end of the day on Friday. [4]. We appreciate your cooperation while the work is completed.",
+      "translation": "Cửa chính sảnh sẽ đóng trong thời gian bảo trì theo lịch vào thứ Bảy. Khách cần sử dụng lối vào phía tây và đi theo biển chỉ dẫn tới quầy lễ tân tạm thời. Tuy nhiên, lối giao hàng phía nam vẫn mở cho các chuyến hàng đã đặt lịch. Khách thuê dự kiến nhận hàng lớn cần báo cho văn phòng quản lý trước cuối ngày thứ Sáu. Việc bảo trì dự kiến hoàn tất trước 2 giờ chiều.",
+      "wordCount": 76,
+      "vocabulary": [
+        {
+          "word": "scheduled maintenance",
+          "pos": "phrase",
+          "meaning": "bảo trì theo lịch"
+        },
+        {
+          "word": "tenant",
+          "pos": "n",
+          "meaning": "bên thuê"
+        },
+        {
+          "word": "shipment",
+          "pos": "n",
+          "meaning": "lô hàng"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the best phrase for blank (1).",
+          "choices": [
+            "will be closed",
+            "closing it",
+            "has close",
+            "will closing"
+          ],
+          "answerIndex": 0,
+          "explanation": "Cửa chính là đối tượng bị đóng; tương lai bị động will be closed.",
+          "choiceIds": [
+            "reading:part6-facility-service-notice:1:choice:1",
+            "reading:part6-facility-service-notice:1:choice:2",
+            "reading:part6-facility-service-notice:1:choice:3",
+            "reading:part6-facility-service-notice:1:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best connector for blank (2).",
+          "choices": [
+            "For instance",
+            "However",
+            "As a result",
+            "Similarly"
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu sau nêu ngoại lệ rằng lối giao hàng vẫn mở trong khi cửa chính đóng; However diễn tả tương phản.",
+          "choiceIds": [
+            "reading:part6-facility-service-notice:2:choice:1",
+            "reading:part6-facility-service-notice:2:choice:2",
+            "reading:part6-facility-service-notice:2:choice:3",
+            "reading:part6-facility-service-notice:2:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best preposition for blank (3).",
+          "choices": [
+            "by",
+            "at",
+            "until",
+            "from"
+          ],
+          "answerIndex": 0,
+          "explanation": "Cụm từ này đặt yêu cầu gửi thông báo trước thứ Sáu, theo đúng hướng dẫn trong thông báo.",
+          "choiceIds": [
+            "reading:part6-facility-service-notice:3:choice:1",
+            "reading:part6-facility-service-notice:3:choice:2",
+            "reading:part6-facility-service-notice:3:choice:3",
+            "reading:part6-facility-service-notice:3:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the best sentence for blank (4).",
+          "choices": [
+            "The maintenance is expected to be completed by 2 p.m.",
+            "The lobby furniture was purchased last year.",
+            "All tenant invoices are due on the first day of each month.",
+            "The company picnic will be held next spring."
+          ],
+          "answerIndex": 0,
+          "explanation": "Câu A nối trực tiếp với thông báo bảo trì và cung cấp thời điểm dự kiến hoàn tất.",
+          "choiceIds": [
+            "reading:part6-facility-service-notice:4:choice:1",
+            "reading:part6-facility-service-notice:4:choice:2",
+            "reading:part6-facility-service-notice:4:choice:3",
+            "reading:part6-facility-service-notice:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part7-single-vendor-delivery-calendar",
+      "title": "Part 7 · Single Passage: Vendor Delivery Calendar",
+      "topic": "Purchasing & Logistics",
+      "part": "Part 7",
+      "documentType": "NOTICE",
+      "level": "B1–B2",
+      "documents": [
+        {
+          "label": "DELIVERY NOTICE",
+          "content": "To: Department Coordinators\nFrom: Central Purchasing\nSubject: December delivery calendar\n\nThe final office-supply deliveries for the year will be made on December 18 and 19. Departments that require printer paper or mailing materials before the holiday closure must submit orders through the purchasing portal by December 12. Orders received after that date will be included in the January delivery cycle. The receiving desk will operate from 8:30 a.m. to 3:30 p.m. on both delivery days. Coordinators should ensure that a staff member is available to sign for large packages. Items requiring special handling must be identified in the order notes."
+        }
+      ],
+      "passage": "DELIVERY NOTICE\nTo: Department Coordinators\nFrom: Central Purchasing\nSubject: December delivery calendar\n\nThe final office-supply deliveries for the year will be made on December 18 and 19. Departments that require printer paper or mailing materials before the holiday closure must submit orders through the purchasing portal by December 12. Orders received after that date will be included in the January delivery cycle. The receiving desk will operate from 8:30 a.m. to 3:30 p.m. on both delivery days. Coordinators should ensure that a staff member is available to sign for large packages. Items requiring special handling must be identified in the order notes.",
+      "wordCount": 106,
+      "translation": "Thông báo nêu lịch giao văn phòng phẩm cuối năm vào ngày 18 và 19 tháng 12. Các phòng ban cần gửi đơn trước ngày 12 tháng 12 nếu muốn nhận trước kỳ nghỉ. Đơn gửi muộn hơn sẽ chuyển sang đợt giao tháng 1. Quầy nhận hàng mở từ 8:30 đến 15:30; phòng ban cần bố trí người ký nhận kiện lớn và ghi chú hàng cần xử lý đặc biệt.",
+      "vocabulary": [
+        {
+          "word": "delivery cycle",
+          "pos": "phrase",
+          "meaning": "chu kỳ giao hàng"
+        },
+        {
+          "word": "receiving desk",
+          "pos": "phrase",
+          "meaning": "quầy tiếp nhận hàng"
+        },
+        {
+          "word": "special handling",
+          "pos": "phrase",
+          "meaning": "xử lý đặc biệt"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the purpose of the notice?",
+          "choices": [
+            "To announce the final office-supply delivery schedule",
+            "To introduce a new purchasing manager",
+            "To explain the annual inventory audit",
+            "To request the return of unused equipment"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo nêu ngày giao văn phòng phẩm cuối năm và các mốc đặt hàng.",
+          "choiceIds": [
+            "reading:part7-single-vendor-delivery-calendar:1:choice:1",
+            "reading:part7-single-vendor-delivery-calendar:1:choice:2",
+            "reading:part7-single-vendor-delivery-calendar:1:choice:3",
+            "reading:part7-single-vendor-delivery-calendar:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "DELIVERY NOTICE"
+            ],
+            "quotes": [
+              "The final office-supply deliveries for the year will be made on December 18 and 19."
+            ]
+          }
+        },
+        {
+          "question": "By when must departments submit orders for delivery before the holiday closure?",
+          "choices": [
+            "December 18",
+            "December 19",
+            "January 1",
+            "December 12"
+          ],
+          "answerIndex": 3,
+          "explanation": "Hạn gửi đơn là ngày 12 tháng 12.",
+          "choiceIds": [
+            "reading:part7-single-vendor-delivery-calendar:2:choice:1",
+            "reading:part7-single-vendor-delivery-calendar:2:choice:2",
+            "reading:part7-single-vendor-delivery-calendar:2:choice:4",
+            "reading:part7-single-vendor-delivery-calendar:2:choice:3"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "DELIVERY NOTICE"
+            ],
+            "quotes": [
+              "by December 12."
+            ]
+          },
+          "previousChoices": [
+            "December 18",
+            "December 19",
+            "December 12",
+            "January 1"
+          ],
+          "previousChoiceIds": [
+            "reading:part7-single-vendor-delivery-calendar:2:choice:1",
+            "reading:part7-single-vendor-delivery-calendar:2:choice:2",
+            "reading:part7-single-vendor-delivery-calendar:2:choice:3",
+            "reading:part7-single-vendor-delivery-calendar:2:choice:4"
+          ],
+          "previousAnswerIndex": 2,
+          "choiceOrderRevision": "2.33.0"
+        },
+        {
+          "question": "What happens to orders received after December 12?",
+          "choices": [
+            "They are cancelled automatically",
+            "They are included in the January delivery cycle",
+            "They are delivered on December 19",
+            "They must be collected from the warehouse"
+          ],
+          "answerIndex": 1,
+          "explanation": "Đơn đến sau ngày 12 được đưa vào chu kỳ giao tháng 1.",
+          "choiceIds": [
+            "reading:part7-single-vendor-delivery-calendar:3:choice:1",
+            "reading:part7-single-vendor-delivery-calendar:3:choice:2",
+            "reading:part7-single-vendor-delivery-calendar:3:choice:3",
+            "reading:part7-single-vendor-delivery-calendar:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "DELIVERY NOTICE"
+            ],
+            "quotes": [
+              "included in the January delivery cycle."
+            ]
+          }
+        },
+        {
+          "question": "What are department coordinators asked to do?",
+          "choices": [
+            "Close the receiving desk early",
+            "Move all packages to the purchasing office",
+            "Prepare January invoices",
+            "Make sure someone can sign for large packages"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo yêu cầu bố trí nhân viên có mặt để ký nhận kiện hàng lớn.",
+          "choiceIds": [
+            "reading:part7-single-vendor-delivery-calendar:4:choice:1",
+            "reading:part7-single-vendor-delivery-calendar:4:choice:2",
+            "reading:part7-single-vendor-delivery-calendar:4:choice:3",
+            "reading:part7-single-vendor-delivery-calendar:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "DELIVERY NOTICE"
+            ],
+            "quotes": [
+              "a staff member is available to sign for large packages."
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part7-single-safety-procedure-update",
+      "title": "Part 7 · Single Passage: Warehouse Safety Procedure",
+      "topic": "Safety & Operations",
+      "part": "Part 7",
+      "documentType": "MEMO",
+      "level": "B1–B2",
+      "documents": [
+        {
+          "label": "SAFETY MEMO",
+          "content": "To: Warehouse Personnel\nFrom: Operations Safety\nSubject: Updated pedestrian routes\n\nStarting Monday, all employees and visitors must use the marked pedestrian lanes when moving between the loading area and the main warehouse. Forklift operators have been instructed to reduce speed near the packing stations, but pedestrians should still remain inside the painted walkways. High-visibility vests are available from the security desk for temporary visitors. Staff members who notice damaged floor markings should report the location through the safety portal before the end of their shift. The new route map is posted beside the time clock."
+        }
+      ],
+      "passage": "SAFETY MEMO\nTo: Warehouse Personnel\nFrom: Operations Safety\nSubject: Updated pedestrian routes\n\nStarting Monday, all employees and visitors must use the marked pedestrian lanes when moving between the loading area and the main warehouse. Forklift operators have been instructed to reduce speed near the packing stations, but pedestrians should still remain inside the painted walkways. High-visibility vests are available from the security desk for temporary visitors. Staff members who notice damaged floor markings should report the location through the safety portal before the end of their shift. The new route map is posted beside the time clock.",
+      "wordCount": 97,
+      "translation": "Bản ghi nhớ yêu cầu nhân viên và khách đi bộ sử dụng làn dành riêng giữa khu vực bốc dỡ và nhà kho. Xe nâng phải giảm tốc gần khu đóng gói. Áo phản quang được cấp tại quầy an ninh cho khách tạm thời. Nhân viên cần báo vị trí có vạch sàn hỏng qua cổng an toàn trước khi hết ca. Sơ đồ lối đi mới được dán cạnh máy chấm công.",
+      "vocabulary": [
+        {
+          "word": "pedestrian lane",
+          "pos": "phrase",
+          "meaning": "làn đường dành cho người đi bộ"
+        },
+        {
+          "word": "high-visibility",
+          "pos": "adj",
+          "meaning": "có khả năng nhìn thấy rõ"
+        },
+        {
+          "word": "floor marking",
+          "pos": "phrase",
+          "meaning": "vạch đánh dấu trên sàn"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the main purpose of the memo?",
+          "choices": [
+            "To announce a new shift rotation",
+            "To change the visitor registration system",
+            "To introduce a forklift purchase plan",
+            "To explain updated warehouse pedestrian routes"
+          ],
+          "answerIndex": 3,
+          "explanation": "Memo tập trung vào quy định sử dụng lối đi bộ mới trong nhà kho.",
+          "choiceIds": [
+            "reading:part7-single-safety-procedure-update:1:choice:1",
+            "reading:part7-single-safety-procedure-update:1:choice:4",
+            "reading:part7-single-safety-procedure-update:1:choice:3",
+            "reading:part7-single-safety-procedure-update:1:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SAFETY MEMO"
+            ],
+            "quotes": [
+              "all employees and visitors must use the marked pedestrian lanes"
+            ]
+          },
+          "previousChoices": [
+            "To announce a new shift rotation",
+            "To explain updated warehouse pedestrian routes",
+            "To introduce a forklift purchase plan",
+            "To change the visitor registration system"
+          ],
+          "previousChoiceIds": [
+            "reading:part7-single-safety-procedure-update:1:choice:1",
+            "reading:part7-single-safety-procedure-update:1:choice:2",
+            "reading:part7-single-safety-procedure-update:1:choice:3",
+            "reading:part7-single-safety-procedure-update:1:choice:4"
+          ],
+          "previousAnswerIndex": 1,
+          "choiceOrderRevision": "2.33.0"
+        },
+        {
+          "question": "Where can temporary visitors obtain a high-visibility vest?",
+          "choices": [
+            "Beside the time clock",
+            "At the packing station",
+            "From the security desk",
+            "Inside the loading office"
+          ],
+          "answerIndex": 2,
+          "explanation": "Áo phản quang dành cho khách được cấp tại quầy an ninh.",
+          "choiceIds": [
+            "reading:part7-single-safety-procedure-update:2:choice:1",
+            "reading:part7-single-safety-procedure-update:2:choice:2",
+            "reading:part7-single-safety-procedure-update:2:choice:3",
+            "reading:part7-single-safety-procedure-update:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SAFETY MEMO"
+            ],
+            "quotes": [
+              "available from the security desk"
+            ]
+          }
+        },
+        {
+          "question": "What should employees do if floor markings are damaged?",
+          "choices": [
+            "Report the location through the safety portal",
+            "Repaint the markings themselves",
+            "Close the warehouse entrance",
+            "Notify the forklift manufacturer"
+          ],
+          "answerIndex": 0,
+          "explanation": "Nhân viên phải báo vị trí qua safety portal.",
+          "choiceIds": [
+            "reading:part7-single-safety-procedure-update:3:choice:1",
+            "reading:part7-single-safety-procedure-update:3:choice:2",
+            "reading:part7-single-safety-procedure-update:3:choice:3",
+            "reading:part7-single-safety-procedure-update:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SAFETY MEMO"
+            ],
+            "quotes": [
+              "report the location through the safety portal"
+            ]
+          }
+        },
+        {
+          "question": "Where is the new route map displayed?",
+          "choices": [
+            "At the loading entrance",
+            "On the warehouse website only",
+            "In the break room",
+            "Beside the time clock"
+          ],
+          "answerIndex": 3,
+          "explanation": "Vị trí sơ đồ được nêu rõ là bên cạnh máy chấm công.",
+          "choiceIds": [
+            "reading:part7-single-safety-procedure-update:4:choice:1",
+            "reading:part7-single-safety-procedure-update:4:choice:2",
+            "reading:part7-single-safety-procedure-update:4:choice:3",
+            "reading:part7-single-safety-procedure-update:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SAFETY MEMO"
+            ],
+            "quotes": [
+              "posted beside the time clock"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part7-single-contract-renewal-notice",
+      "title": "Part 7 · Single Passage: Service Contract Renewal",
+      "topic": "Contracts & Finance",
+      "part": "Part 7",
+      "documentType": "LETTER",
+      "level": "B2",
+      "documents": [
+        {
+          "label": "CONTRACT NOTICE",
+          "content": "To: Greenway Office Services\nFrom: Meridian Properties\nSubject: Renewal of cleaning agreement\n\nThe current cleaning agreement for Meridian's three office locations will expire on February 28. We would like to renew the agreement for another twelve months, beginning March 1. Please review the attached service schedule and confirm whether the proposed evening cleaning hours are acceptable. Any changes to the monthly fee must be listed separately in your response. To avoid an interruption in service, please return the signed renewal document by February 10. Our facilities coordinator will arrange a review meeting if any details require discussion."
+        }
+      ],
+      "passage": "CONTRACT NOTICE\nTo: Greenway Office Services\nFrom: Meridian Properties\nSubject: Renewal of cleaning agreement\n\nThe current cleaning agreement for Meridian's three office locations will expire on February 28. We would like to renew the agreement for another twelve months, beginning March 1. Please review the attached service schedule and confirm whether the proposed evening cleaning hours are acceptable. Any changes to the monthly fee must be listed separately in your response. To avoid an interruption in service, please return the signed renewal document by February 10. Our facilities coordinator will arrange a review meeting if any details require discussion.",
+      "wordCount": 99,
+      "translation": "Hợp đồng vệ sinh tại ba văn phòng sẽ hết hạn ngày 28 tháng 2. Meridian muốn gia hạn thêm 12 tháng từ ngày 1 tháng 3. Nhà cung cấp cần xem lịch dịch vụ, xác nhận giờ vệ sinh buổi tối và liệt kê riêng thay đổi phí hàng tháng. Văn bản gia hạn có chữ ký phải được gửi lại trước ngày 10 tháng 2 để tránh gián đoạn.",
+      "vocabulary": [
+        {
+          "word": "expire",
+          "pos": "v",
+          "meaning": "hết hạn"
+        },
+        {
+          "word": "renewal",
+          "pos": "n",
+          "meaning": "việc gia hạn"
+        },
+        {
+          "word": "interruption",
+          "pos": "n",
+          "meaning": "sự gián đoạn"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does Meridian want to do?",
+          "choices": [
+            "Terminate the cleaning agreement",
+            "Move its offices to another city",
+            "Replace the facilities coordinator",
+            "Renew the cleaning agreement for twelve months"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo nêu rõ Meridian muốn gia hạn hợp đồng thêm 12 tháng.",
+          "choiceIds": [
+            "reading:part7-single-contract-renewal-notice:1:choice:1",
+            "reading:part7-single-contract-renewal-notice:1:choice:2",
+            "reading:part7-single-contract-renewal-notice:1:choice:4",
+            "reading:part7-single-contract-renewal-notice:1:choice:3"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CONTRACT NOTICE"
+            ],
+            "quotes": [
+              "renew the agreement for another twelve months"
+            ]
+          },
+          "previousChoices": [
+            "Terminate the cleaning agreement",
+            "Move its offices to another city",
+            "Renew the cleaning agreement for twelve months",
+            "Replace the facilities coordinator"
+          ],
+          "previousChoiceIds": [
+            "reading:part7-single-contract-renewal-notice:1:choice:1",
+            "reading:part7-single-contract-renewal-notice:1:choice:2",
+            "reading:part7-single-contract-renewal-notice:1:choice:3",
+            "reading:part7-single-contract-renewal-notice:1:choice:4"
+          ],
+          "previousAnswerIndex": 2,
+          "choiceOrderRevision": "2.33.0"
+        },
+        {
+          "question": "When should the renewed agreement begin?",
+          "choices": [
+            "February 10",
+            "February 28",
+            "March 1",
+            "March 31"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thời hạn gia hạn bắt đầu từ ngày 1 tháng 3.",
+          "choiceIds": [
+            "reading:part7-single-contract-renewal-notice:2:choice:1",
+            "reading:part7-single-contract-renewal-notice:2:choice:2",
+            "reading:part7-single-contract-renewal-notice:2:choice:3",
+            "reading:part7-single-contract-renewal-notice:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CONTRACT NOTICE"
+            ],
+            "quotes": [
+              "beginning March 1."
+            ]
+          }
+        },
+        {
+          "question": "What must Greenway do by February 10?",
+          "choices": [
+            "Return the signed renewal document",
+            "Pay the annual service fee",
+            "Submit a new staff roster",
+            "Arrange cleaning at a fourth location"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo yêu cầu gửi lại văn bản gia hạn có chữ ký trước ngày 10 tháng 2.",
+          "choiceIds": [
+            "reading:part7-single-contract-renewal-notice:3:choice:1",
+            "reading:part7-single-contract-renewal-notice:3:choice:2",
+            "reading:part7-single-contract-renewal-notice:3:choice:3",
+            "reading:part7-single-contract-renewal-notice:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CONTRACT NOTICE"
+            ],
+            "quotes": [
+              "return the signed renewal document by February 10."
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part7-single-facility-reservation",
+      "title": "Part 7 · Single Passage: Conference Room Reservation",
+      "topic": "Meetings & Facilities",
+      "part": "Part 7",
+      "documentType": "EMAIL",
+      "level": "B1–B2",
+      "documents": [
+        {
+          "label": "EMAIL",
+          "content": "To: Facilities Booking\nFrom: Oliver Chen, Product Team\nSubject: Request for training room\n\nCould you reserve Training Room 2 for our product demonstration on Wednesday, September 16? We expect 18 attendees and will need a projector, a wireless microphone, and access to the guest network. The session is scheduled from 10:00 a.m. until noon. If Training Room 2 is unavailable, Conference Room 4 would also be suitable, provided it can accommodate the demonstration equipment. Please confirm the reservation by Friday so that we can send the calendar invitation to participants."
+        }
+      ],
+      "passage": "EMAIL\nTo: Facilities Booking\nFrom: Oliver Chen, Product Team\nSubject: Request for training room\n\nCould you reserve Training Room 2 for our product demonstration on Wednesday, September 16? We expect 18 attendees and will need a projector, a wireless microphone, and access to the guest network. The session is scheduled from 10:00 a.m. until noon. If Training Room 2 is unavailable, Conference Room 4 would also be suitable, provided it can accommodate the demonstration equipment. Please confirm the reservation by Friday so that we can send the calendar invitation to participants.",
+      "wordCount": 93,
+      "translation": "Oliver Chen yêu cầu đặt Phòng Đào tạo 2 vào thứ Tư ngày 16 tháng 9, từ 10 giờ đến 12 giờ cho 18 người. Nhóm cần máy chiếu, micro không dây và mạng khách. Nếu phòng này không có sẵn, Phòng Hội nghị 4 cũng phù hợp nếu đủ chỗ cho thiết bị. Nhóm cần xác nhận trước thứ Sáu để gửi lời mời lịch.",
+      "vocabulary": [
+        {
+          "word": "attendee",
+          "pos": "n",
+          "meaning": "người tham dự"
+        },
+        {
+          "word": "accommodate",
+          "pos": "v",
+          "meaning": "đủ chỗ/đáp ứng"
+        },
+        {
+          "word": "reservation",
+          "pos": "n",
+          "meaning": "việc đặt chỗ"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is Oliver requesting?",
+          "choices": [
+            "A change to the product launch date",
+            "A list of conference speakers",
+            "Permission to install a guest network",
+            "A reservation for a training room"
+          ],
+          "answerIndex": 3,
+          "explanation": "Email yêu cầu đặt phòng để tổ chức buổi trình diễn sản phẩm.",
+          "choiceIds": [
+            "reading:part7-single-facility-reservation:1:choice:1",
+            "reading:part7-single-facility-reservation:1:choice:4",
+            "reading:part7-single-facility-reservation:1:choice:3",
+            "reading:part7-single-facility-reservation:1:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL"
+            ],
+            "quotes": [
+              "reserve Training Room 2"
+            ]
+          },
+          "previousChoices": [
+            "A change to the product launch date",
+            "A reservation for a training room",
+            "Permission to install a guest network",
+            "A list of conference speakers"
+          ],
+          "previousChoiceIds": [
+            "reading:part7-single-facility-reservation:1:choice:1",
+            "reading:part7-single-facility-reservation:1:choice:2",
+            "reading:part7-single-facility-reservation:1:choice:3",
+            "reading:part7-single-facility-reservation:1:choice:4"
+          ],
+          "previousAnswerIndex": 1,
+          "choiceOrderRevision": "2.33.0"
+        },
+        {
+          "question": "How many people are expected to attend?",
+          "choices": [
+            "12",
+            "16",
+            "18",
+            "24"
+          ],
+          "answerIndex": 2,
+          "explanation": "Email cho biết dự kiến có 18 người tham dự.",
+          "choiceIds": [
+            "reading:part7-single-facility-reservation:2:choice:1",
+            "reading:part7-single-facility-reservation:2:choice:2",
+            "reading:part7-single-facility-reservation:2:choice:3",
+            "reading:part7-single-facility-reservation:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL"
+            ],
+            "quotes": [
+              "We expect 18 attendees"
+            ]
+          }
+        },
+        {
+          "question": "Which equipment is requested?",
+          "choices": [
+            "A projector and a wireless microphone",
+            "Two desktop computers",
+            "A video camera and speakers",
+            "A printer and a document scanner"
+          ],
+          "answerIndex": 0,
+          "explanation": "Hai thiết bị được nêu rõ là máy chiếu và micro không dây.",
+          "choiceIds": [
+            "reading:part7-single-facility-reservation:3:choice:1",
+            "reading:part7-single-facility-reservation:3:choice:2",
+            "reading:part7-single-facility-reservation:3:choice:3",
+            "reading:part7-single-facility-reservation:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL"
+            ],
+            "quotes": [
+              "a projector, a wireless microphone"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part7-double-vendor-credit",
+      "title": "Part 7 · Double Passage: Vendor Credit Adjustment",
+      "topic": "Finance & Purchasing",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B2",
+      "documents": [
+        {
+          "label": "EMAIL FROM CUSTOMER",
+          "content": "To: accounts@harboroffice.example\nFrom: Nina Patel, Westbridge Consulting\nSubject: Credit for returned chairs\n\nOur office returned six conference chairs under return authorization RA-640 on May 6 because the fabric color did not match the approved sample. The carrier's tracking record shows that the cartons were delivered to your returns warehouse on May 9. However, the May statement still lists the full amount of the original order. Could you confirm when the credit will appear on our account?"
+        },
+        {
+          "label": "REPLY FROM ACCOUNTS",
+          "content": "To: Nina Patel\nFrom: Harbor Office Accounts\nSubject: Re: Credit for returned chairs\n\nThank you for sending the tracking details. Our returns team inspected the six chairs on May 10 and approved the return that afternoon. A credit of $1,260 has been entered and will appear on the next statement dated May 31. The original delivery charge is not included in the credit because the order was delivered as scheduled. If the amount does not appear on the May statement, please contact our accounts team with reference RA-640."
+        }
+      ],
+      "passage": "EMAIL FROM CUSTOMER\nTo: accounts@harboroffice.example\nFrom: Nina Patel, Westbridge Consulting\nSubject: Credit for returned chairs\n\nOur office returned six conference chairs under return authorization RA-640 on May 6 because the fabric color did not match the approved sample. The carrier's tracking record shows that the cartons were delivered to your returns warehouse on May 9. However, the May statement still lists the full amount of the original order. Could you confirm when the credit will appear on our account?\n\nREPLY FROM ACCOUNTS\nTo: Nina Patel\nFrom: Harbor Office Accounts\nSubject: Re: Credit for returned chairs\n\nThank you for sending the tracking details. Our returns team inspected the six chairs on May 10 and approved the return that afternoon. A credit of $1,260 has been entered and will appear on the next statement dated May 31. The original delivery charge is not included in the credit because the order was delivered as scheduled. If the amount does not appear on the May statement, please contact our accounts team with reference RA-640.",
+      "wordCount": 173,
+      "translation": "Westbridge đã trả lại sáu ghế vì màu vải không khớp mẫu được duyệt. Hệ thống vận chuyển ghi nhận hàng đến kho trả hàng ngày 9 tháng 5. Bộ phận tài khoản đã kiểm tra và chấp thuận việc trả hàng ngày 10 tháng 5, ghi có 1.260 đô la vào sao kê ngày 31 tháng 5. Phí giao hàng ban đầu không được hoàn lại vì đơn đã được giao đúng lịch.",
+      "vocabulary": [
+        {
+          "word": "return authorization",
+          "pos": "phrase",
+          "meaning": "mã chấp thuận trả hàng"
+        },
+        {
+          "word": "credit",
+          "pos": "n",
+          "meaning": "khoản ghi có/hoàn vào tài khoản"
+        },
+        {
+          "word": "statement",
+          "pos": "n",
+          "meaning": "bản sao kê"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why did Westbridge return the chairs?",
+          "choices": [
+            "The chairs arrived after the agreed date",
+            "The fabric color differed from the approved sample",
+            "The order contained fewer chairs than requested",
+            "The chairs were damaged during installation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Email khách hàng cho biết màu vải không khớp mẫu đã duyệt.",
+          "choiceIds": [
+            "reading:part7-double-vendor-credit:1:choice:1",
+            "reading:part7-double-vendor-credit:1:choice:2",
+            "reading:part7-double-vendor-credit:1:choice:3",
+            "reading:part7-double-vendor-credit:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL FROM CUSTOMER"
+            ],
+            "quotes": [
+              "the fabric color did not match the approved sample"
+            ]
+          }
+        },
+        {
+          "question": "When did the cartons arrive at Harbor Office’s returns warehouse?",
+          "choices": [
+            "May 6",
+            "May 9",
+            "May 10",
+            "May 31"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông tin theo dõi cho biết kiện hàng được giao tới kho trả hàng ngày 9 tháng 5.",
+          "choiceIds": [
+            "reading:part7-double-vendor-credit:2:choice:1",
+            "reading:part7-double-vendor-credit:2:choice:2",
+            "reading:part7-double-vendor-credit:2:choice:3",
+            "reading:part7-double-vendor-credit:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL FROM CUSTOMER"
+            ],
+            "quotes": [
+              "delivered to your returns warehouse on May 9"
+            ]
+          }
+        },
+        {
+          "question": "How much credit has been approved?",
+          "choices": [
+            "$960",
+            "$1,090",
+            "$1,620",
+            "$1,260"
+          ],
+          "answerIndex": 3,
+          "explanation": "Email phản hồi xác nhận khoản ghi có là 1.260 đô la.",
+          "choiceIds": [
+            "reading:part7-double-vendor-credit:3:choice:1",
+            "reading:part7-double-vendor-credit:3:choice:2",
+            "reading:part7-double-vendor-credit:3:choice:4",
+            "reading:part7-double-vendor-credit:3:choice:3"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY FROM ACCOUNTS"
+            ],
+            "quotes": [
+              "A credit of $1,260 has been entered"
+            ]
+          },
+          "previousChoices": [
+            "$960",
+            "$1,090",
+            "$1,260",
+            "$1,620"
+          ],
+          "previousChoiceIds": [
+            "reading:part7-double-vendor-credit:3:choice:1",
+            "reading:part7-double-vendor-credit:3:choice:2",
+            "reading:part7-double-vendor-credit:3:choice:3",
+            "reading:part7-double-vendor-credit:3:choice:4"
+          ],
+          "previousAnswerIndex": 2,
+          "choiceOrderRevision": "2.33.0"
+        },
+        {
+          "question": "When should the credit appear on the account?",
+          "choices": [
+            "On the May 31 statement",
+            "On the May 10 statement",
+            "Within two business days of the return",
+            "At the end of June"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bộ phận tài khoản cho biết khoản ghi có sẽ xuất hiện trên sao kê ngày 31 tháng 5.",
+          "choiceIds": [
+            "reading:part7-double-vendor-credit:4:choice:1",
+            "reading:part7-double-vendor-credit:4:choice:2",
+            "reading:part7-double-vendor-credit:4:choice:3",
+            "reading:part7-double-vendor-credit:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY FROM ACCOUNTS"
+            ],
+            "quotes": [
+              "will appear on the next statement dated May 31"
+            ]
+          }
+        },
+        {
+          "question": "Why is the original delivery charge excluded from the credit?",
+          "choices": [
+            "The customer did not request a refund",
+            "The carrier has not submitted an invoice",
+            "The chairs were returned after the warranty expired",
+            "The order was delivered according to schedule"
+          ],
+          "answerIndex": 3,
+          "explanation": "Phản hồi nêu phí giao hàng không được ghi có vì đơn được giao đúng lịch.",
+          "choiceIds": [
+            "reading:part7-double-vendor-credit:5:choice:1",
+            "reading:part7-double-vendor-credit:5:choice:2",
+            "reading:part7-double-vendor-credit:5:choice:3",
+            "reading:part7-double-vendor-credit:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY FROM ACCOUNTS"
+            ],
+            "quotes": [
+              "because the order was delivered as scheduled"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part7-triple-conference-exhibitor-logistics",
+      "title": "Part 7 · Triple Passage: Conference Exhibitor Logistics",
+      "topic": "Meetings & Logistics",
+      "part": "Part 7",
+      "documentType": "TRIPLE PASSAGE",
+      "level": "B2",
+      "documents": [
+        {
+          "label": "EMAIL FROM EXHIBITOR",
+          "content": "To: Events Office\nFrom: Marco Silva, Apex Displays\nSubject: Booth materials for the supplier forum\n\nOur team will exhibit at the Supplier Forum on October 21. We plan to send two display panels and one demonstration unit to the venue the previous afternoon. Please confirm the delivery window and let us know whether a technician can access the booth before the hall opens."
+        },
+        {
+          "label": "VENUE OPERATIONS NOTICE",
+          "content": "Exhibitor deliveries will be accepted through Loading Bay C between 2:00 p.m. and 5:00 p.m. on October 20. All packages must show the exhibitor's company name and booth number. The exhibition hall opens to exhibitors at 7:30 a.m. on October 21. Public admission begins at 9:00 a.m. Vehicles may remain in the loading area for no more than 20 minutes."
+        },
+        {
+          "label": "EVENT SCHEDULE",
+          "content": "October 21\n7:30 a.m. Exhibitor access begins\n8:15 a.m. Final booth inspection\n9:00 a.m. Doors open to visitors\n11:30 a.m. Product demonstration session\n3:45 p.m. Supplier networking reception\n4:30 p.m. Exhibition closes"
+        }
+      ],
+      "passage": "EMAIL FROM EXHIBITOR\nTo: Events Office\nFrom: Marco Silva, Apex Displays\nSubject: Booth materials for the supplier forum\n\nOur team will exhibit at the Supplier Forum on October 21. We plan to send two display panels and one demonstration unit to the venue the previous afternoon. Please confirm the delivery window and let us know whether a technician can access the booth before the hall opens.\n\nVENUE OPERATIONS NOTICE\nExhibitor deliveries will be accepted through Loading Bay C between 2:00 p.m. and 5:00 p.m. on October 20. All packages must show the exhibitor's company name and booth number. The exhibition hall opens to exhibitors at 7:30 a.m. on October 21. Public admission begins at 9:00 a.m. Vehicles may remain in the loading area for no more than 20 minutes.\n\nEVENT SCHEDULE\nOctober 21\n7:30 a.m. Exhibitor access begins\n8:15 a.m. Final booth inspection\n9:00 a.m. Doors open to visitors\n11:30 a.m. Product demonstration session\n3:45 p.m. Supplier networking reception\n4:30 p.m. Exhibition closes",
+      "wordCount": 183,
+      "translation": "Apex Displays dự định gửi hai bảng trưng bày và một thiết bị demo đến địa điểm vào chiều hôm trước sự kiện. Ban vận hành cho biết hàng được nhận tại Loading Bay C từ 14:00 đến 17:00 ngày 20 tháng 10; kiện hàng phải ghi tên công ty và số gian hàng. Nhà triển lãm được vào hội trường từ 7:30 sáng ngày 21, khách tham quan vào từ 9:00. Lịch chương trình gồm kiểm tra gian hàng, trình diễn sản phẩm và tiệc kết nối nhà cung cấp.",
+      "vocabulary": [
+        {
+          "word": "exhibitor",
+          "pos": "n",
+          "meaning": "đơn vị/người trưng bày"
+        },
+        {
+          "word": "loading bay",
+          "pos": "phrase",
+          "meaning": "khu vực bốc dỡ hàng"
+        },
+        {
+          "word": "booth",
+          "pos": "n",
+          "meaning": "gian hàng"
+        }
+      ],
+      "questions": [
+        {
+          "question": "When does Apex Displays plan to deliver its materials?",
+          "choices": [
+            "On the morning of October 21",
+            "During the afternoon of October 20",
+            "After the exhibition closes",
+            "On October 22"
+          ],
+          "answerIndex": 1,
+          "explanation": "Email nêu rõ hàng được gửi đến địa điểm vào chiều hôm trước sự kiện, tức ngày 20 tháng 10.",
+          "choiceIds": [
+            "reading:part7-triple-conference-exhibitor-logistics:1:choice:1",
+            "reading:part7-triple-conference-exhibitor-logistics:1:choice:2",
+            "reading:part7-triple-conference-exhibitor-logistics:1:choice:3",
+            "reading:part7-triple-conference-exhibitor-logistics:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL FROM EXHIBITOR",
+              "VENUE OPERATIONS NOTICE"
+            ],
+            "quotes": [
+              "the previous afternoon",
+              "Exhibitor deliveries will be accepted through Loading Bay C between 2:00 p.m. and 5:00 p.m. on October 20."
+            ]
+          }
+        },
+        {
+          "question": "Where should the delivery vehicle unload the materials?",
+          "choices": [
+            "At the main visitor entrance",
+            "Beside the registration desk",
+            "Through Loading Bay C",
+            "At the exhibition hall reception"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thông báo địa điểm chỉ định Loading Bay C cho hàng của đơn vị trưng bày.",
+          "choiceIds": [
+            "reading:part7-triple-conference-exhibitor-logistics:2:choice:1",
+            "reading:part7-triple-conference-exhibitor-logistics:2:choice:2",
+            "reading:part7-triple-conference-exhibitor-logistics:2:choice:3",
+            "reading:part7-triple-conference-exhibitor-logistics:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "VENUE OPERATIONS NOTICE"
+            ],
+            "quotes": [
+              "through Loading Bay C"
+            ]
+          }
+        },
+        {
+          "question": "What information must appear on all packages?",
+          "choices": [
+            "The exhibitor company name and booth number",
+            "The driver's name and vehicle registration",
+            "The product price and invoice number",
+            "The name of the event organizer"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo nêu rõ người gửi cần ghi tên công ty triển lãm và số gian hàng lên tất cả kiện hàng.",
+          "choiceIds": [
+            "reading:part7-triple-conference-exhibitor-logistics:3:choice:1",
+            "reading:part7-triple-conference-exhibitor-logistics:3:choice:2",
+            "reading:part7-triple-conference-exhibitor-logistics:3:choice:3",
+            "reading:part7-triple-conference-exhibitor-logistics:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "VENUE OPERATIONS NOTICE"
+            ],
+            "quotes": [
+              "company name and booth number"
+            ]
+          }
+        },
+        {
+          "question": "At what time can the Apex team first enter the exhibition hall on October 21?",
+          "choices": [
+            "7:00 a.m.",
+            "7:30 a.m.",
+            "8:15 a.m.",
+            "9:00 a.m."
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông báo và lịch chương trình cùng nêu quyền vào của nhà triển lãm bắt đầu lúc 7:30.",
+          "choiceIds": [
+            "reading:part7-triple-conference-exhibitor-logistics:4:choice:1",
+            "reading:part7-triple-conference-exhibitor-logistics:4:choice:2",
+            "reading:part7-triple-conference-exhibitor-logistics:4:choice:3",
+            "reading:part7-triple-conference-exhibitor-logistics:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "VENUE OPERATIONS NOTICE",
+              "EVENT SCHEDULE"
+            ],
+            "quotes": [
+              "opens to exhibitors at 7:30 a.m.",
+              "7:30 a.m. Exhibitor access begins"
+            ]
+          }
+        },
+        {
+          "question": "How much time is available between the start of exhibitor access and the final booth inspection?",
+          "choices": [
+            "30 minutes",
+            "45 minutes",
+            "One hour",
+            "One hour and fifteen minutes"
+          ],
+          "answerIndex": 1,
+          "explanation": "Lịch trình nêu rõ quyền vào bắt đầu lúc 7:30 và kiểm tra gian hàng lúc 8:15, cách nhau 45 phút.",
+          "choiceIds": [
+            "reading:part7-triple-conference-exhibitor-logistics:5:choice:1",
+            "reading:part7-triple-conference-exhibitor-logistics:5:choice:2",
+            "reading:part7-triple-conference-exhibitor-logistics:5:choice:3",
+            "reading:part7-triple-conference-exhibitor-logistics:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EVENT SCHEDULE"
+            ],
+            "quotes": [
+              "7:30 a.m. Exhibitor access begins",
+              "8:15 a.m. Final booth inspection"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "023",
+      "editorialStatus": "internal-editorial-reviewed"
     }
   ]
 }

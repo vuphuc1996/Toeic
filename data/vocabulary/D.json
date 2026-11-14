@@ -1667,7 +1667,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "disbursement",
+          "pos": "n",
+          "meaning_vi": "khoản chi; sự giải ngân"
+        }
+      ],
       "verb_forms": {
         "v1": "disburse",
         "vs_es": "disburses",
@@ -1708,7 +1714,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "disburse",
+          "pos": "v",
+          "meaning_vi": "giải ngân; chi trả"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2232,7 +2244,13 @@
       "topics": [
         "SHIPPING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "distributor",
+          "pos": "n",
+          "meaning_vi": "nhà phân phối"
+        }
+      ],
       "verb_forms": {
         "v1": "distribute",
         "vs_es": "distributes",
@@ -2273,7 +2291,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "distribute",
+          "pos": "v",
+          "meaning_vi": "phân phối"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

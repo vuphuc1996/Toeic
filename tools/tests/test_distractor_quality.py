@@ -4,6 +4,8 @@ import unittest
 from collections import Counter
 from pathlib import Path
 
+from helpers import PART7_BASELINE_QUESTION_COUNTS_V232
+
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -17,14 +19,14 @@ class DistractorQualityTests(unittest.TestCase):
     def find(items, item_id):
         return next(item for item in items if item['id'] == item_id)
 
-    def test_manual_review_scope_contains_132_part3_part4_part7_questions(self):
+    def test_current_distractor_audit_scope_contains_177_part3_part4_part7_questions(self):
         p3 = [x for x in self.listening if x.get('part') == 'Part 3' and x.get('editorialStatus') != 'reserve-pending-independent-review']
         p4 = [x for x in self.listening if x.get('part') == 'Part 4' and x.get('editorialStatus') != 'reserve-pending-independent-review']
         p7 = [x for x in self.reading if x.get('part') == 'Part 7']
         self.assertEqual(sum(len(x.get('questions', [])) for x in p3), 39)
         self.assertEqual(sum(len(x.get('questions', [])) for x in p4), 30)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in p7), 63)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in p3 + p4 + p7), 132)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in p7), 108)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in p3 + p4 + p7), 177)
 
     def test_reviewed_questions_have_four_unique_choices_and_valid_keys(self):
         scope = [x for x in self.listening if x.get('part') in ('Part 3', 'Part 4')]
@@ -69,7 +71,11 @@ class DistractorQualityTests(unittest.TestCase):
         for item in self.listening + self.reading:
             if item.get('part') not in expected or item.get('editorialStatus') == 'reserve-pending-independent-review':
                 continue
-            for question in item.get('questions', []):
+            questions = item.get('questions', [])
+            if item.get('part') == 'Part 7':
+                # Historical answer-position balance applies to the original 63 questions only.
+                questions = questions[:PART7_BASELINE_QUESTION_COUNTS_V232.get(item.get('id'), 0)]
+            for question in questions:
                 actual[(item['part'], question['answerIndex'])] += 1
         for part, distribution in expected.items():
             for index in range(4):
@@ -82,8 +88,17 @@ class DistractorQualityTests(unittest.TestCase):
 
     def test_batch_013_reserve_questions_are_not_in_the_old_balance_certificate(self):
         reserve = [x for x in self.listening if x.get('editorialStatus') == 'reserve-pending-independent-review']
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 3'), 3)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 4'), 3)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 3'), 42)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 4'), 30)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 2'), 26)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve), 98)
+        batch014 = [x for x in reserve if x.get('editorialBatch') == '014']
+        self.assertEqual(len(batch014), 9)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in batch014), 17)
+        batch015 = [x for x in reserve if x.get('editorialBatch') == '015']
+        self.assertEqual(len(batch015), 34)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in batch015), 70)
+        self.assertEqual(Counter(x['part'] for x in batch015), Counter({'Part 2': 16, 'Part 3': 11, 'Part 4': 7}))
         for item in reserve:
             expected_choice_count = 3 if item['part'] == 'Part 2' else 4
             for q in item['questions']:

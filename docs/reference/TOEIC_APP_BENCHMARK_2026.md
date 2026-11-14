@@ -20,46 +20,51 @@ The IIBC official English site describes TOEIC Listening & Reading as 200 questi
 | Voca Prep TOEIC Test 2026 | App Store listing describes timed mock tests, section practice, 30 grammar topics, daily dictation with 1,000+ lessons, accent/speed settings and wrong-answer review. | This app has voice selection and spacing controls, but lacks that breadth of dictation and full test content. | App Store developer description; catalogue/version may change. [App Store listing](https://apps.apple.com/vn/app/voca-prep-toeic-test-2026/id6745513706). |
 | Quizlet Learn | Converts flashcard sets into adaptive multiple-choice, true/false and written questions; focuses practice based on past study behavior; syncs across devices. | This app has TOEIC-specific curated records and local flashcards; Quizlet has stronger general flashcard ecosystem and cross-device sync. | Official Quizlet feature page; not a TOEIC exam-format product. [Quizlet Learn](https://quizlet.com/features/learn). |
 
-## Where the current app stands
+## Where the current app stands — v2.36.0 (internal inventory checked 2026-11-14)
 
 ### Competitive strengths
 
-1. **Owner-controlled static PWA:** no app backend required for the current experience; content is local JSON; can be hosted under GitHub Pages and cached offline.
-2. **Transparent data lineage:** stable word IDs, patch files, source notes, validators, quality baseline and a single Master are explicit. This is a maintainability advantage, not a claim of better pedagogy.
-3. **Local privacy/control:** personal words, progress and preferences are designed to remain in IndexedDB/local storage with export/import; there is no remote learner profile service in this architecture.
-4. **Custom listening voice settings:** selectable device voices, rate/pitch/volume and gaps support personal listening practice. It is still OS/browser TTS, not studio-recorded dialogue.
-5. **Current TOEIC coverage:** all seven Parts are now represented, and per-Part progress/accuracy can direct the learner to weaker areas.
+1. **Owner-controlled static PWA:** no app backend is needed for the current experience; canonical content is local JSON; GitHub Pages hosting and a versioned Service Worker provide the intended deployment model.
+2. **Transparent content governance:** stable word/question/choice IDs, patch tooling, validators, editorial states, a quality baseline and a single Master make content changes traceable.
+3. **Local-first learning data:** study progress, preferences and practice history are stored on the device in IndexedDB. The project does not provide server-side cross-device learner sync.
+4. **Multi-module practice:** the app includes Vocabulary, Listening, Reading, Grammar and Flashcards, with Retry/Attempt History and a shared Focus Workspace.
+5. **Mock exam workflow:** Quick 25-question, Half 100-question and Full 200-question modes have section timing, question navigation, flag/review and local results. Reading currently supports two Full forms without repeated eligible question IDs.
+6. **Custom listening playback:** device voice selection, accent, rate, pitch, volume, word pauses and speaker-turn pauses are available. This is browser/OS SpeechSynthesis, not studio-recorded TOEIC audio.
 
-### Gaps versus leading specialist apps
+### Current catalogue and limitations
 
-1. **Content volume:** current library has 36 Listening questions and 77 Reading questions. This is not enough for a full 100+100 test bank; many practice repeats would appear quickly.
-2. **Authenticity:** Part 1 art is original SVG illustration, not realistic photography; all synthesized listening is browser TTS, not recorded test audio. No ETS licensed questions/audio are present.
-3. **Full mock engine:** no 200-question timed test, section timer, navigation/flag/review flow, multi-form test bank or validated score equating yet.
-4. **Adaptive study:** per-Part local practice stats exist, but a mature spaced-repetition scheduler, daily study plan, robust wrong-answer queue and item-level weakness model remain to be completed.
-5. **Cross-device sync / AI:** no server sync, AI tutor, AI speaking/writing grader or teacher/community layer. This is a deliberate consequence of static local-first architecture.
-6. **Quality assurance:** data and content validators are now in CI, but remote GitHub Actions, deployed GitHub Pages, iPhone Safari, Android Chrome and real voice-pack QA still need explicit testing.
+| Area | Current inventory | Important qualification |
+|---|---:|---|
+| Vocabulary | 992 headwords | Quality-controlled growth remains in progress; 3,000–5,000 is an internal target, not a completion claim |
+| Listening | 200 questions / 106 units | Only 102 are Mock-eligible; 98 remain reserve-pending-independent-review |
+| Reading | 200 questions / 51 resources | Local inventory supports two non-overlapping Full forms; semantic second review remains separate |
+| Grammar | 33 lessons / 86 exercises | Part metadata supports the TOEIC-focused Grammar library |
+| Mock | 15m/25Q · 60m/100Q · 120m/200Q | Results show raw correct-count and accuracy, not ETS-equated 5–495 / 10–990 estimates |
+| Part 1 photos | 8 referenced Pexels photos + 8 SVG fallbacks | The supplied source snapshot omits the 8 original user-owned JPG bytes; preserve the repository originals. Four more distinct photo items are required for two zero-repeat Full Listening forms after reserve approval. |
 
-## Recommended roadmap to become a strong TOEIC L&R app
+### Important quality boundaries
 
-1. **Finish content integrity first:** complete sense-level vocabulary meanings, usage notes, IPA, word families and relation glosses; no synthetic fill values.
-2. **Build genuine test depth:** move from 36/77 Listening/Reading questions toward complete, independently authored test forms; enforce the official per-Part blueprint.
-3. **Improve Listening:** replace illustrative P1 art with photo-realistic licensed/original scenes; build broader P2–P4 conversations/talks with multiple speakers and varied accents; keep text/translations in review mode only.
-4. **Improve Reading:** add realistic email/memo/notice/advertisement/schedule/order/policy/article single/double/triple passages, sentence-insertion, inference and cross-document questions.
-5. **Adaptive revision:** schedule wrong answers/bookmarks with an explainable local spaced-repetition algorithm; add daily plan and mastery indicators while preserving local data export.
-6. **Mock test and score reporting:** implement a 200-question timed practice test only when enough content exists. Score display must say “practice estimate”; do not claim ETS-equivalent scaling without validated equating.
-7. **Release quality:** full desktop/mobile/offline/export-import test matrix; optionally consider sync/AI only as a separate architecture decision after TOEIC content gates.
+- The 98 Listening reserve questions remain practice-only until a second independent reviewer records a decision. Automated schema, evidence and distractor checks do not replace that review.
+- Current eligible Listening inventory can form one Full Listening section. A second currently repeats 98/100 IDs. After the 98 reserves are approved, four new Part 1 photo-description items are still required to make two non-overlapping forms.
+- Part 1 SVG fallbacks protect display when a photo is unavailable; they do not satisfy the strict photograph-binary gate.
+- SpeechSynthesis voice quality depends on installed browser/OS voice packs. The app can prefer a clearer voice and adjust pacing, but cannot provide a missing voice or claim native/studio audio.
+- The app has not been validated as an ETS-equivalent score predictor. ETS score conversion uses form-specific equating; this app deliberately reports raw practice accuracy only.
+- Static PWA/source checks do not prove remote GitHub Pages deployment, offline/reconnect behavior or physical-device display/voice quality.
+
+## Development roadmap — active work, not acceptance checklist
+
+1. **Close Listening content quality:** complete the independent second-person review of Batch 013/014/015 and correct any answer, evidence or distractor issue before approving whole units for Mock.
+2. **Build the second Listening form:** add four distinct Part 1 photo-description items with their own original/licensed photo assets, while preserving the eight user-owned existing JPGs.
+3. **Improve Reading content reliability:** finish semantic review of the 200-question bank, focusing on Part 7 cross-document and inference items where distractor plausibility is most difficult.
+4. **Scale Vocabulary with quality gates:** improve sense-level meanings, examples/translations, source-backed IPA, word families, verb forms and relation glosses before accelerating growth toward the internal 3,000–5,000 target.
+5. **Strengthen revision loops:** continue developing weak-answer routing and explainable local review scheduling without resetting local progress or introducing duplicate learning stores.
+6. **Maintain PWA/runtime reliability:** focus fixes on asset fallback, cache version changes, navigation, saved attempts and responsive layout when code changes affect those flows.
+7. **Defer final acceptance planning:** after the development backlog is closed, create one risk-weighted test plan around the highest failure-impact paths instead of repeating a full manual sweep of every stable component.
 
 ## Bottom line
 
-At v2.11.0 this app is best described as a **customizable, offline-first TOEIC study workspace with transparent content governance**, not yet a complete competitor to official or specialist TOEIC preparation platforms. Its strongest differentiator is control and traceability; its biggest gap is validated test-quality content at scale plus a full mock engine. The correct strategy is not to add IELTS now or imitate every competitor feature, but to finish TOEIC content depth, exam authenticity, adaptive revision and complete timed practice first.
+At v2.36.0 this is a substantial **offline-first TOEIC learning and practice PWA** with a local 200-question Listening library, a 200-question Reading bank, Grammar exercises and a timed Mock workflow. It is not equivalent to ETS official preparation content: Listening has 98 items held out of Mock pending independent review, two zero-repeat Full Listening forms still need four more Part 1 photo items, and real deployment/device behavior is not certified by local checks. The right strategy remains to finish TOEIC content quality and runtime reliability before IELTS or server-side features.
 
+## Reference dates and sources
 
-## Updated public-page check (2026-11-09)
-
-- The official IIBC format page confirms 200 questions, about 2 hours, Listening 45 minutes/100 questions and Reading 75 minutes/100 questions. Per-Part blueprint: Listening 6/25/39/30; Reading 30/16/54. ETS also states Listening audio is recorded English and Reading is self-paced within its section.
-- ETS Global’s October 2025 Super Prepa update describes 600 official questions, 600 pedagogical explanations, 60 grammar lessons and 10 mock tests (5 full 2-hour/200-question and 5 semi-real). Its current regional landing page continues to advertise 10 tests.
-- Toey currently advertises 3,200 ETS questions, full 200-question tests, per-Part analysis, AI tutor and adaptive study paths. Treat these as vendor statements, not verified independent quality claims.
-- Voca Prep’s current App Store listing advertises 2,000+ practice questions, full timed tests, 30 grammar topics, 1,000+ dictation lessons and section-based wrong-answer review.
-- Migii publicly presents 30/60/90/160-day learning paths and targeted vocabulary, grammar, listening and reading practice. ProTOEIC describes 120-minute/200-question mock tests and server-side score/answer workflows. Quizlet Learn offers adaptive formats and cross-device sync but is a general study platform, not a TOEIC exam simulator.
-
-Sources: [IIBC official format](https://www.iibc-global.org/english/toeic/test/lr/about/format.html); [ETS L&R overview](https://www.ets.org/content/ets-org/ca/en/toeic/test-takers/about/listening-reading.html); [ETS Super Prepa update](https://www.etsglobal.org/nc/en/blog/news/new-features-super-prepa-app); [Toey](https://toey.app/en/toeic); [Voca Prep App Store](https://apps.apple.com/vn/app/voca-prep-toeic-test-2026/id6745513706); [Migii](https://migii.net/vi/toeic); [ProTOEIC](https://protoeic.com/); [Quizlet Learn](https://quizlet.com/features/learn).
+The competitor feature comparison above is a public-page snapshot last checked 2026-11-09; provider claims and catalogue counts may change. The internal app inventory was checked 2026-11-14. Official TOEIC structure sources: [IIBC — Test Format and Content](https://www.iibc-global.org/english/toeic/test/lr/about/format.html); [Official TOEIC Korea — test structure](https://exam.toeic.co.kr/common/template/viewContents.php?contentsCode=19). Vendor feature pages are self-reported and do not independently establish instructional quality, answer accuracy, audio quality or score validity.

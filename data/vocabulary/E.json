@@ -908,7 +908,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "endorsement",
+          "pos": "n",
+          "meaning_vi": "sự chứng thực; sự ủng hộ"
+        }
+      ],
       "verb_forms": {
         "v1": "endorse",
         "vs_es": "endorses",
@@ -949,7 +955,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "endorse",
+          "pos": "v",
+          "meaning_vi": "tán thành; chứng thực"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1064,7 +1076,13 @@
       "topics": [
         "EDUCATION"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "enrollment",
+          "pos": "n",
+          "meaning_vi": "việc đăng ký; ghi danh"
+        }
+      ],
       "verb_forms": {
         "v1": "enroll",
         "vs_es": "enrolls",
@@ -1103,7 +1121,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "enroll",
+          "pos": "v",
+          "meaning_vi": "đăng ký học"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2228,7 +2252,13 @@
         "TIME",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "extension",
+          "pos": "n",
+          "meaning_vi": "sự gia hạn; số máy lẻ"
+        }
+      ],
       "verb_forms": {
         "v1": "extend",
         "vs_es": "extends",
@@ -2267,7 +2297,13 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "extend",
+          "pos": "v",
+          "meaning_vi": "gia hạn; mở rộng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

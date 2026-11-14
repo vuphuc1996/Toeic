@@ -901,7 +901,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "outsourcing",
+          "pos": "n",
+          "meaning_vi": "việc thuê ngoài"
+        }
+      ],
       "verb_forms": {
         "v1": "outsource",
         "vs_es": "outsources",
@@ -942,7 +948,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "outsource",
+          "pos": "v",
+          "meaning_vi": "thuê ngoài; giao cho bên ngoài thực hiện"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

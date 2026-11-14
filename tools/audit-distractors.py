@@ -42,8 +42,9 @@ def norm(value: str) -> str:
 def main() -> int:
     listening_all = [x for x in load('data/listening/listening-library.json', 'listening')
                      if x.get('part') in ('Part 3', 'Part 4')]
+    reserve_all = [x for x in load('data/listening/listening-library.json', 'listening') if x.get('editorialStatus') == 'reserve-pending-independent-review']
     reserve = [x for x in listening_all if x.get('editorialStatus') == 'reserve-pending-independent-review']
-    listening = [x for x in listening_all if x.get('editorialStatus') != 'reserve-pending-independent-review']
+    listening = [x for x in listening_all if not x.get('editorialStatus') or x.get('editorialStatus') == 'approved-for-mock']
     reading = [x for x in load('data/readings/reading-library.json', 'readings')
                if x.get('part') == 'Part 7']
     scopes = [('Listening', 'Part 3', [x for x in listening if x['part'] == 'Part 3']),
@@ -95,13 +96,13 @@ def main() -> int:
             if not isinstance(answer_index, int) or not 0 <= answer_index < len(choices):
                 errors.append(f"{item['id']} Q{qn}: reserve item has invalid answerIndex {answer_index!r}")
 
-    expected_counts = {'Part 3': 39, 'Part 4': 30, 'Part 7': 63}
+    expected_counts = {'Part 3': 39, 'Part 4': 30, 'Part 7': 108}
     for part, expected in expected_counts.items():
         if counts[part] != expected:
-            errors.append(f'{part}: expected {expected} reviewed questions, got {counts[part]}')
+            errors.append(f'{part}: expected {expected} questions in the structural audit scope, got {counts[part]}')
     total = sum(counts.values())
-    if total != 132:
-        errors.append(f'Expected 132 questions in Part 3/4/7 review scope, got {total}')
+    if total != 177:
+        errors.append(f'Expected 177 questions in Part 3/4/7 audit scope, got {total}')
 
     # Every revision target must be present, and its answer index must still be valid.
     by_library = {'Listening': load('data/listening/listening-library.json', 'listening'),
@@ -114,16 +115,16 @@ def main() -> int:
     lines = [
         f'# TOEIC Distractor & Answer-Uniqueness Audit — v{VERSION}', '',
         '## Scope and method',
-        '- Reviewed **132 questions** across Listening Part 3 (39), Listening Part 4 (30) and Reading Part 7 (63). This covers the 126 direct/lexical evidence pointers and six paraphrase/inference items identified in the v2.14.0 evidence map.',
-        '- Each question was examined with its full transcript or passage, keyed option and all three distractors. Review criteria: source support for the key, exactly one defensible answer, grammatical/semantic fit to the prompt, plausibility of distractors, and whether alternatives draw on realistic confusions or nearby details.',
+        '- Scope covers **177 questions** across Listening Part 3 (39), Listening Part 4 (30) and Reading Part 7 (108). The 63-question historical Part 7 review baseline remains traceable in Project History. The 45 new Part 7 questions in v2.33.0 include source-label/quotation evidence and passed structural key/choice checks; they are not represented as independently reviewed or covered by the historical 132-item semantic distractor certificate.',
+        '- The historical 132-item semantic review was performed against full transcripts/passages, keyed options and distractors. For the v2.33 additions, this release adds traceable source quotes, answer-key checks, four-distinct-choice checks, stable choice IDs and balanced answer positions. Semantic distractor uniqueness for new items still requires second-person review.',
         '- Structural checks in this script verify four distinct options and a valid key. They do **not** certify semantic uniqueness by algorithm and are not a substitute for a second human reviewer or psychometric analysis.',
         '', '## Reviewed coverage',
-        '| Library | Part | Sets | Questions |', '|---|---|---:|---:|'
+        '| Library | Part | Sets | Questions in audit scope |', '|---|---|---:|---:|'
     ]
     for _library, part, items in scopes:
         lines.append(f"| {_library} | {part} | {len(items)} | {counts[part]} |")
     lines += ['', '### Question sets included',
-              '| Library | Set ID | Questions reviewed |', '|---|---|---:|']
+              '| Library | Set ID | Questions in audit scope |', '|---|---|---:|']
     for library, item_id, qcount in item_rows:
         lines.append(f'| {library} | `{item_id}` | {qcount} |')
 
@@ -142,7 +143,8 @@ def main() -> int:
         '**Rebalancing method:** 27 question groups had only the keyed option exchanged with a distractor position: 8 in Part 3, 5 in Part 4 and 14 in Part 7. The answer text, source evidence, explanation, question IDs and question order were retained. Each changed question carries `previousChoices` and `previousChoiceIds` from v2.16.0; the matching `choiceIds` moved with the option. At startup, progress containing a v2.16 `choiceId` is relocated to its new index; older records without an ID are mapped through the v2.16 snapshot. The prior index is preserved in `previousChoiceIndex`. No random shuffle was used.',
         '', '## Quality decision and remaining limitations',
         '- The 12 revised groups now use distractors closer to the same document purpose, role, travel record, service request, business action or visitor-access context. The correct answer text and `answerIndex` were kept unchanged for every revised question.',
-        '- Other reviewed groups were retained where the three alternatives are distinct and the transcript/passage supports one clear key. In particular, close dates/times, locations, meeting materials and process steps remain useful distractors when they are contradicted or not supported by the source.',
+        '- Historical reviewed groups were retained where the three alternatives are distinct and the transcript/passage supports one clear key. For the new v2.33 Part 7 groups, close dates/times, locations, delivery steps and document-purpose alternatives were authored to be plausible, but an independent reviewer must confirm that exactly one option is defensible.',
+        f'- Listening reserve total: {sum(len(x.get("questions", [])) for x in reserve_all)} questions across {len(reserve_all)} units. This script structurally checks Part 3/4 reserve blocks; Part 2 response-fit is tracked separately. Structural checks never approve a reserve for Mock.',
         '- This is editorial review of original-authored content. It is not official ETS content, two-person independent review, statistical item analysis, difficulty calibration or proof of score equivalence.',
         '- Part 1 uses licensed Pexels photographs with local SVG fallbacks; Listening audio remains browser SpeechSynthesis. Physical-device audio/voice review is still pending.',
         ''
@@ -150,7 +152,7 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text('\n'.join(lines), encoding='utf-8')
     print(f'Wrote {OUT.relative_to(ROOT)}')
-    print(f'Questions reviewed: {total}; reserve structural checks: {sum(len(x.get("questions", [])) for x in reserve)}; revisions: {len(REVISIONS)}')
+    print(f'Questions in audit scope: {total}; reserve structural checks: {sum(len(x.get("questions", [])) for x in reserve)}; revisions: {len(REVISIONS)}')
     for part in ('Part 3', 'Part 4', 'Part 7'):
         d = distributions[part]
         print(f"{part}: A={d[0]}, B={d[1]}, C={d[2]}, D={d[3]}")

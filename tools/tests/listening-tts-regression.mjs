@@ -68,6 +68,14 @@ context.state.settings.tts.maleVoiceURI = '';
 assert.equal(context.__recommendedMaleVoice(), danielUK);
 assert.equal(context.__chooseEnglishVoice('en-US', 'Man', 'male'), danielUK);
 
+// A second male speaker should use another available male voice rather than
+// reusing Daniel for every speaker in the same dialogue.
+const secondMale = { name: 'Microsoft Ryan Online (Natural)', voiceURI: 'ryan-us', lang: 'en-US', localService: false };
+voices = [femaleUS, secondMale, danielUK];
+assert.equal(context.__chooseEnglishVoice('en-GB', 'Man 1', 'male', []), danielUK);
+assert.equal(context.__chooseEnglishVoice('en-US', 'Man 2', 'male', ['Daniel']), secondMale);
+voices = [femaleUS, maleUS, danielUK];
+
 // Multi-speaker playback keeps a stable voice for each named speaker and preserves the configured turn pause.
 context.state.settings.tts.sentencePauseMs = 1000;
 context.state.settings.tts.maleVoiceURI = 'ryan-us';

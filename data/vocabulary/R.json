@@ -921,7 +921,13 @@
         "OFFICE",
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "registration",
+          "pos": "n",
+          "meaning_vi": "việc đăng ký"
+        }
+      ],
       "verb_forms": {
         "v1": "register",
         "vs_es": "registers",
@@ -962,7 +968,13 @@
       "topics": [
         "EVENT"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "register",
+          "pos": "v",
+          "meaning_vi": "đăng ký; sổ đăng ký"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1072,7 +1084,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "reimbursement",
+          "pos": "n",
+          "meaning_vi": "sự hoàn trả chi phí"
+        }
+      ],
       "verb_forms": {
         "v1": "reimburse",
         "vs_es": "reimburses",
@@ -1113,7 +1131,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "reimburse",
+          "pos": "v",
+          "meaning_vi": "hoàn tiền; bồi hoàn chi phí"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1561,7 +1585,18 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "renewal",
+          "pos": "n",
+          "meaning_vi": "sự gia hạn; đổi mới"
+        },
+        {
+          "word": "renewable",
+          "pos": "adj",
+          "meaning_vi": "có thể tái tạo"
+        }
+      ],
       "verb_forms": {
         "v1": "renew",
         "vs_es": "renews",
@@ -1604,7 +1639,13 @@
       "topics": [
         "ENVIRONMENT"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "renew",
+          "pos": "v",
+          "meaning_vi": "gia hạn; làm mới"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1634,7 +1675,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "renew",
+          "pos": "v",
+          "meaning_vi": "gia hạn; làm mới"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1788,7 +1835,13 @@
         "TECHNOLOGY",
         "FACILITY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "replacement",
+          "pos": "n",
+          "meaning_vi": "sự thay thế; vật thay thế"
+        }
+      ],
       "verb_forms": {
         "v1": "replace",
         "vs_es": "replaces",
@@ -1827,7 +1880,13 @@
       "topics": [
         "CUSTOMER"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "replace",
+          "pos": "v",
+          "meaning_vi": "thay thế"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1952,7 +2011,13 @@
         "BUSINESS",
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "requirement",
+          "pos": "n",
+          "meaning_vi": "yêu cầu; điều kiện cần"
+        }
+      ],
       "verb_forms": {
         "v1": "require",
         "vs_es": "requires",
@@ -1991,7 +2056,13 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "require",
+          "pos": "v",
+          "meaning_vi": "yêu cầu; đòi hỏi"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2194,7 +2265,7 @@
         {
           "word": "reserve",
           "pos": "v",
-          "meaning_vi": "đặt trước; dành riêng"
+          "meaning_vi": "đặt trước; dự trữ"
         },
         {
           "word": "reserved",
@@ -2244,7 +2315,13 @@
         "TRAVEL",
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "reservation",
+          "pos": "n",
+          "meaning_vi": "sự đặt chỗ; đặt phòng"
+        }
+      ],
       "verb_forms": {
         "v1": "reserve",
         "vs_es": "reserves",
@@ -2802,7 +2879,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "retirement",
+          "pos": "n",
+          "meaning_vi": "sự nghỉ hưu"
+        }
+      ],
       "verb_forms": {
         "v1": "retire",
         "vs_es": "retires",
@@ -2878,7 +2961,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "retire",
+          "pos": "v",
+          "meaning_vi": "nghỉ hưu; thôi làm việc sau thời gian công tác"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

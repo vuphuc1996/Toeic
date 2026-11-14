@@ -1789,6 +1789,986 @@
           ]
         }
       ]
+    },
+    {
+      "id": "determiners-quantifiers-toeic",
+      "title": "Từ hạn định và lượng từ trong TOEIC",
+      "category": "DETERMINERS",
+      "level": "B1–B2",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Chọn each, every, either, neither, fewer, less, many và much theo loại danh từ và ý nghĩa câu.",
+      "formula": "Determiner + (adjective) + noun  |  fewer + countable plural  |  less + uncountable",
+      "explanation": "Từ hạn định đứng trước cụm danh từ và phải phù hợp với loại danh từ. Many/fewer đi với danh từ đếm được số nhiều; much/less đi với danh từ không đếm được. Each, every, either và neither thường đi với danh từ đếm được số ít và động từ số ít. Phân biệt a few (một vài, sắc thái tích cực) với few (rất ít/không đủ), và a little với little.",
+      "examples": [
+        {
+          "en": "Each department submits a separate budget.",
+          "vi": "Mỗi phòng ban nộp một ngân sách riêng.",
+          "breakdown": [
+            {
+              "part": "Determiner",
+              "text": "Each",
+              "meaning": "mỗi"
+            },
+            {
+              "part": "Subject",
+              "text": "department",
+              "meaning": "phòng ban, số ít"
+            },
+            {
+              "part": "Verb",
+              "text": "submits",
+              "meaning": "động từ số ít"
+            }
+          ]
+        },
+        {
+          "en": "The new system requires less paperwork and fewer manual checks.",
+          "vi": "Hệ thống mới cần ít giấy tờ hơn và ít bước kiểm tra thủ công hơn.",
+          "breakdown": [
+            {
+              "part": "less",
+              "text": "less paperwork",
+              "meaning": "paperwork không đếm được"
+            },
+            {
+              "part": "fewer",
+              "text": "fewer manual checks",
+              "meaning": "checks đếm được số nhiều"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Xác định danh từ là đếm được hay không đếm được trước khi chọn lượng từ.",
+        "Each/every + danh từ số ít thường kéo theo động từ số ít.",
+        "Đừng chọn less chỉ vì câu có nghĩa “ít hơn”; kiểm tra danh từ theo sau."
+      ],
+      "exercises": [
+        {
+          "question": "Each of the shortlisted candidates _____ asked to attend a second interview.",
+          "choices": [
+            "was",
+            "were",
+            "have been",
+            "are"
+          ],
+          "answerIndex": 0,
+          "explanation": "Each of + cụm danh từ số nhiều đi với động từ số ít trong văn phong chuẩn: was asked.",
+          "choiceIds": [
+            "grammar:determiners-quantifiers-toeic:1:choice:1",
+            "grammar:determiners-quantifiers-toeic:1:choice:2",
+            "grammar:determiners-quantifiers-toeic:1:choice:3",
+            "grammar:determiners-quantifiers-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "The updated policy gives employees _____ flexibility in choosing their shifts than the previous policy.",
+          "choices": [
+            "more",
+            "many",
+            "most",
+            "few"
+          ],
+          "answerIndex": 0,
+          "explanation": "Flexibility là danh từ không đếm được; more flexibility là cấu trúc so sánh phù hợp.",
+          "choiceIds": [
+            "grammar:determiners-quantifiers-toeic:2:choice:1",
+            "grammar:determiners-quantifiers-toeic:2:choice:2",
+            "grammar:determiners-quantifiers-toeic:2:choice:3",
+            "grammar:determiners-quantifiers-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "The warehouse has _____ space left for additional pallets.",
+          "choices": [
+            "few",
+            "a few",
+            "little",
+            "many"
+          ],
+          "answerIndex": 2,
+          "explanation": "Space theo nghĩa diện tích/dung lượng là danh từ không đếm được; little space diễn tả còn rất ít.",
+          "choiceIds": [
+            "grammar:determiners-quantifiers-toeic:3:choice:1",
+            "grammar:determiners-quantifiers-toeic:3:choice:2",
+            "grammar:determiners-quantifiers-toeic:3:choice:3",
+            "grammar:determiners-quantifiers-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "Neither of the two proposals _____ suitable for the current budget.",
+          "choices": [
+            "are",
+            "has",
+            "is",
+            "be"
+          ],
+          "answerIndex": 2,
+          "explanation": "Neither of + danh từ số nhiều thường dùng động từ số ít trong cấu trúc trang trọng: neither proposal is suitable.",
+          "choiceIds": [
+            "grammar:determiners-quantifiers-toeic:4:choice:1",
+            "grammar:determiners-quantifiers-toeic:4:choice:2",
+            "grammar:determiners-quantifiers-toeic:4:choice:3",
+            "grammar:determiners-quantifiers-toeic:4:choice:4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-subject-verb-agreement-toeic",
+      "title": "Hòa hợp chủ ngữ – động từ nâng cao",
+      "category": "SUBJECT–VERB AGREEMENT",
+      "level": "B1–B2",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Nhận diện chủ ngữ chính khi có cụm chen giữa, cấu trúc a number of/the number of và chủ ngữ ghép.",
+      "formula": "A number of + plural noun + plural verb  |  The number of + plural noun + singular verb",
+      "explanation": "Động từ hòa hợp với chủ ngữ chính, không nhất thiết với danh từ đứng gần nó nhất. Cụm giới từ hoặc cụm chen giữa như along with, as well as, together with không làm thay đổi số của chủ ngữ. A number of nghĩa là “nhiều” nên đi với động từ số nhiều; the number of nói về con số/tổng số nên đi với động từ số ít. Every + danh từ số ít; khi nối hai danh từ bằng every ... and ..., cấu trúc thường dùng động từ số ít.",
+      "examples": [
+        {
+          "en": "The director, together with two managers, is reviewing the proposal.",
+          "vi": "Giám đốc, cùng với hai quản lý, đang xem xét đề xuất.",
+          "breakdown": [
+            {
+              "part": "Subject",
+              "text": "The director",
+              "meaning": "chủ ngữ chính, số ít"
+            },
+            {
+              "part": "Inserted phrase",
+              "text": "together with two managers",
+              "meaning": "cụm chen giữa"
+            },
+            {
+              "part": "Verb",
+              "text": "is reviewing",
+              "meaning": "động từ số ít"
+            }
+          ]
+        },
+        {
+          "en": "A number of applications have been received.",
+          "vi": "Một số lượng lớn đơn đăng ký đã được tiếp nhận.",
+          "breakdown": [
+            {
+              "part": "Subject phrase",
+              "text": "A number of applications",
+              "meaning": "nhiều đơn đăng ký"
+            },
+            {
+              "part": "Verb",
+              "text": "have been received",
+              "meaning": "động từ số nhiều"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Gạch chân chủ ngữ chính trước khi nhìn đáp án.",
+        "A number of = many; the number of = the total.",
+        "Không để cụm together with/as well as đánh lạc hướng số ít/số nhiều."
+      ],
+      "exercises": [
+        {
+          "question": "A number of applicants _____ requested an extension of the submission deadline.",
+          "choices": [
+            "has",
+            "have",
+            "is",
+            "was"
+          ],
+          "answerIndex": 1,
+          "explanation": "A number of mang nghĩa “nhiều”, nên đi với động từ số nhiều have requested.",
+          "choiceIds": [
+            "grammar:advanced-subject-verb-agreement-toeic:1:choice:1",
+            "grammar:advanced-subject-verb-agreement-toeic:1:choice:2",
+            "grammar:advanced-subject-verb-agreement-toeic:1:choice:3",
+            "grammar:advanced-subject-verb-agreement-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "The number of unresolved customer complaints _____ fallen since Monday.",
+          "choices": [
+            "have",
+            "are",
+            "has",
+            "were"
+          ],
+          "answerIndex": 2,
+          "explanation": "Chủ ngữ chính là the number (số lượng), số ít; hiện tại hoàn thành dùng has fallen.",
+          "choiceIds": [
+            "grammar:advanced-subject-verb-agreement-toeic:2:choice:1",
+            "grammar:advanced-subject-verb-agreement-toeic:2:choice:2",
+            "grammar:advanced-subject-verb-agreement-toeic:2:choice:3",
+            "grammar:advanced-subject-verb-agreement-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "The revised schedule, together with the route map, _____ available on the intranet.",
+          "choices": [
+            "are",
+            "have been",
+            "were",
+            "is"
+          ],
+          "answerIndex": 3,
+          "explanation": "Chủ ngữ chính là schedule, số ít. Cụm together with the route map chỉ bổ sung thông tin.",
+          "choiceIds": [
+            "grammar:advanced-subject-verb-agreement-toeic:3:choice:1",
+            "grammar:advanced-subject-verb-agreement-toeic:3:choice:2",
+            "grammar:advanced-subject-verb-agreement-toeic:3:choice:3",
+            "grammar:advanced-subject-verb-agreement-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "Every employee and every contractor _____ required to complete the safety briefing.",
+          "choices": [
+            "is",
+            "are",
+            "have",
+            "were"
+          ],
+          "answerIndex": 0,
+          "explanation": "Every đứng trước từng danh từ trong cấu trúc này làm chủ ngữ được hiểu là từng người; dùng is required.",
+          "choiceIds": [
+            "grammar:advanced-subject-verb-agreement-toeic:4:choice:1",
+            "grammar:advanced-subject-verb-agreement-toeic:4:choice:2",
+            "grammar:advanced-subject-verb-agreement-toeic:4:choice:3",
+            "grammar:advanced-subject-verb-agreement-toeic:4:choice:4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dependent-prepositions-business-toeic",
+      "title": "Giới từ đi kèm động từ, tính từ và danh từ",
+      "category": "PREPOSITION & COLLOCATION",
+      "level": "B1–B2",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Học giới từ theo cụm cố định trong email, hợp đồng, tuyển dụng, mua hàng và vận hành doanh nghiệp.",
+      "formula": "verb + preposition  |  adjective + preposition  |  noun + preposition",
+      "explanation": "Nhiều động từ, tính từ và danh từ thường kết hợp với một giới từ nhất định. Cần học chúng như một cụm thay vì dịch từng từ riêng lẻ. Ví dụ: comply with regulations, be eligible for reimbursement, participate in a meeting, an increase in demand, apply for a position. Sau giới từ là danh từ, đại từ hoặc V-ing; không dùng trực tiếp động từ nguyên mẫu.",
+      "examples": [
+        {
+          "en": "All suppliers must comply with the company’s quality standards.",
+          "vi": "Tất cả nhà cung cấp phải tuân thủ tiêu chuẩn chất lượng của công ty.",
+          "breakdown": [
+            {
+              "part": "Verb",
+              "text": "comply",
+              "meaning": "tuân thủ"
+            },
+            {
+              "part": "Preposition",
+              "text": "with",
+              "meaning": "đi với comply"
+            },
+            {
+              "part": "Object",
+              "text": "the company’s quality standards",
+              "meaning": "tiêu chuẩn chất lượng của công ty"
+            }
+          ]
+        },
+        {
+          "en": "Employees are eligible for reimbursement after submitting the receipts.",
+          "vi": "Nhân viên đủ điều kiện được hoàn tiền sau khi nộp hóa đơn.",
+          "breakdown": [
+            {
+              "part": "Adjective",
+              "text": "eligible",
+              "meaning": "đủ điều kiện"
+            },
+            {
+              "part": "Preposition",
+              "text": "for",
+              "meaning": "đi với eligible"
+            },
+            {
+              "part": "Noun",
+              "text": "reimbursement",
+              "meaning": "khoản hoàn trả"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Ghi nhớ cả cụm, ví dụ comply with thay vì chỉ học comply.",
+        "Sau giới từ dùng danh từ hoặc V-ing: interested in learning.",
+        "Phân biệt apply for a position với apply to a company."
+      ],
+      "exercises": [
+        {
+          "question": "All contractors must comply _____ the site’s safety regulations.",
+          "choices": [
+            "with",
+            "to",
+            "at",
+            "by"
+          ],
+          "answerIndex": 0,
+          "explanation": "Comply đi với giới từ with: comply with regulations.",
+          "choiceIds": [
+            "grammar:dependent-prepositions-business-toeic:1:choice:1",
+            "grammar:dependent-prepositions-business-toeic:1:choice:2",
+            "grammar:dependent-prepositions-business-toeic:1:choice:3",
+            "grammar:dependent-prepositions-business-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "Employees who travel for work may be eligible _____ reimbursement.",
+          "choices": [
+            "to",
+            "with",
+            "at",
+            "for"
+          ],
+          "answerIndex": 3,
+          "explanation": "Eligible đi với for khi nói đủ điều kiện nhận một quyền lợi/khoản chi trả.",
+          "choiceIds": [
+            "grammar:dependent-prepositions-business-toeic:2:choice:1",
+            "grammar:dependent-prepositions-business-toeic:2:choice:2",
+            "grammar:dependent-prepositions-business-toeic:2:choice:3",
+            "grammar:dependent-prepositions-business-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "The procurement team will participate _____ the supplier evaluation next week.",
+          "choices": [
+            "in",
+            "on",
+            "at",
+            "for"
+          ],
+          "answerIndex": 0,
+          "explanation": "Participate đi với in: participate in an activity.",
+          "choiceIds": [
+            "grammar:dependent-prepositions-business-toeic:3:choice:1",
+            "grammar:dependent-prepositions-business-toeic:3:choice:2",
+            "grammar:dependent-prepositions-business-toeic:3:choice:3",
+            "grammar:dependent-prepositions-business-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "The company reported a significant increase _____ demand for replacement parts.",
+          "choices": [
+            "at",
+            "in",
+            "on",
+            "to"
+          ],
+          "answerIndex": 1,
+          "explanation": "Increase đi với in khi nêu lĩnh vực/đại lượng có sự gia tăng.",
+          "choiceIds": [
+            "grammar:dependent-prepositions-business-toeic:4:choice:1",
+            "grammar:dependent-prepositions-business-toeic:4:choice:2",
+            "grammar:dependent-prepositions-business-toeic:4:choice:3",
+            "grammar:dependent-prepositions-business-toeic:4:choice:4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pronouns-reference-agreement-toeic",
+      "title": "Đại từ và sự quy chiếu trong văn bản công việc",
+      "category": "PRONOUNS & REFERENCE",
+      "level": "B1–B2",
+      "parts": [
+        "Part 5",
+        "Part 6"
+      ],
+      "summary": "Chọn đại từ chủ ngữ, tân ngữ, sở hữu và phản thân; xác định danh từ mà đại từ thay thế.",
+      "formula": "Subject pronoun + verb  |  verb/preposition + object pronoun  |  possessive determiner + noun",
+      "explanation": "Đại từ phải phù hợp với danh từ được thay thế về số và ngôi, đồng thời đúng chức năng trong câu. Dùng I/he/she/they làm chủ ngữ; me/him/her/us/them làm tân ngữ; my/his/her/our/their đứng trước danh từ; mine/hers/ours/theirs dùng độc lập. Đại từ phản thân như themselves dùng khi chủ thể và đối tượng là cùng người/vật hoặc để nhấn mạnh. Trong văn bản dài, cần đảm bảo it/they/this/these có một đối tượng quy chiếu rõ ràng.",
+      "examples": [
+        {
+          "en": "Each branch must submit its quarterly inventory report.",
+          "vi": "Mỗi chi nhánh phải nộp báo cáo tồn kho hằng quý của mình.",
+          "breakdown": [
+            {
+              "part": "Antecedent",
+              "text": "Each branch",
+              "meaning": "mỗi chi nhánh, số ít"
+            },
+            {
+              "part": "Pronoun",
+              "text": "its",
+              "meaning": "đại từ sở hữu phù hợp với branch"
+            }
+          ]
+        },
+        {
+          "en": "The director invited Ms. Patel and me to the review meeting.",
+          "vi": "Giám đốc mời bà Patel và tôi tham dự cuộc họp đánh giá.",
+          "breakdown": [
+            {
+              "part": "Verb",
+              "text": "invited",
+              "meaning": "động từ cần tân ngữ"
+            },
+            {
+              "part": "Object",
+              "text": "Ms. Patel and me",
+              "meaning": "me là đại từ tân ngữ"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Xác định danh từ được thay thế trước khi chọn đại từ.",
+        "Sau động từ hoặc giới từ thường cần đại từ tân ngữ.",
+        "This/these phải trỏ rõ đến một sự việc hoặc nhóm danh từ trước đó."
+      ],
+      "exercises": [
+        {
+          "question": "The company revised _____ travel policy to include stricter booking rules.",
+          "choices": [
+            "its",
+            "their",
+            "it’s",
+            "it"
+          ],
+          "answerIndex": 0,
+          "explanation": "The company là chủ thể số ít; cần tính từ sở hữu its đứng trước travel policy.",
+          "choiceIds": [
+            "grammar:pronouns-reference-agreement-toeic:1:choice:1",
+            "grammar:pronouns-reference-agreement-toeic:1:choice:2",
+            "grammar:pronouns-reference-agreement-toeic:1:choice:3",
+            "grammar:pronouns-reference-agreement-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "The supervisor asked Daniel and _____ to review the applications.",
+          "choices": [
+            "I",
+            "me",
+            "my",
+            "myself"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sau động từ asked là tân ngữ; dùng me, song song với Daniel.",
+          "choiceIds": [
+            "grammar:pronouns-reference-agreement-toeic:2:choice:1",
+            "grammar:pronouns-reference-agreement-toeic:2:choice:2",
+            "grammar:pronouns-reference-agreement-toeic:2:choice:3",
+            "grammar:pronouns-reference-agreement-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "The two branches submitted _____ quarterly reports before the deadline.",
+          "choices": [
+            "its",
+            "his",
+            "their",
+            "them"
+          ],
+          "answerIndex": 2,
+          "explanation": "The two branches là danh từ số nhiều; their là tính từ sở hữu đứng trước reports.",
+          "choiceIds": [
+            "grammar:pronouns-reference-agreement-toeic:3:choice:1",
+            "grammar:pronouns-reference-agreement-toeic:3:choice:2",
+            "grammar:pronouns-reference-agreement-toeic:3:choice:3",
+            "grammar:pronouns-reference-agreement-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "All visitors must sign in at reception. _____ must also wear a visitor badge.",
+          "choices": [
+            "It",
+            "He",
+            "She",
+            "They"
+          ],
+          "answerIndex": 3,
+          "explanation": "They thay cho all visitors, danh từ số nhiều, và làm chủ ngữ của must wear.",
+          "choiceIds": [
+            "grammar:pronouns-reference-agreement-toeic:4:choice:1",
+            "grammar:pronouns-reference-agreement-toeic:4:choice:2",
+            "grammar:pronouns-reference-agreement-toeic:4:choice:3",
+            "grammar:pronouns-reference-agreement-toeic:4:choice:4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perfect-tense-sequence-toeic",
+      "title": "Thì hoàn thành và trình tự thời gian",
+      "category": "TENSE & ASPECT",
+      "level": "B1–B2",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Phân biệt present perfect, past perfect, past perfect continuous và future perfect theo mốc thời gian.",
+      "formula": "has/have + V3  |  had + V3  |  had been + V-ing  |  will have + V3",
+      "explanation": "Present perfect liên hệ kết quả hoặc khoảng thời gian từ quá khứ đến hiện tại; past perfect chỉ hành động đã hoàn tất trước một mốc quá khứ khác; past perfect continuous nhấn mạnh quá trình kéo dài trước một mốc quá khứ; future perfect diễn tả việc sẽ hoàn tất trước một mốc tương lai. Các cụm since/for, by the time, before và by the end of thường giúp xác định mốc nhưng phải đọc toàn bộ quan hệ thời gian.",
+      "examples": [
+        {
+          "en": "By the time the auditors arrived, the finance team had finalized the accounts.",
+          "vi": "Khi kiểm toán viên đến, nhóm tài chính đã hoàn tất sổ sách.",
+          "breakdown": [
+            {
+              "part": "Earlier action",
+              "text": "had finalized",
+              "meaning": "quá khứ hoàn thành"
+            },
+            {
+              "part": "Later past event",
+              "text": "arrived",
+              "meaning": "mốc quá khứ xảy ra sau"
+            }
+          ]
+        },
+        {
+          "en": "The department will have processed all claims by Friday.",
+          "vi": "Phòng ban sẽ xử lý xong toàn bộ yêu cầu trước thứ Sáu.",
+          "breakdown": [
+            {
+              "part": "Tense",
+              "text": "will have processed",
+              "meaning": "tương lai hoàn thành"
+            },
+            {
+              "part": "Deadline",
+              "text": "by Friday",
+              "meaning": "mốc hoàn tất trong tương lai"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Vẽ trục thời gian khi câu có hai mốc quá khứ.",
+        "Since thường đi cùng present perfect khi khoảng thời gian còn liên quan đến hiện tại.",
+        "By + mốc tương lai thường là dấu hiệu cần cân nhắc future perfect."
+      ],
+      "exercises": [
+        {
+          "question": "By the time the auditors arrived, the finance team _____ the annual accounts.",
+          "choices": [
+            "had finalized",
+            "has finalized",
+            "will finalize",
+            "finalizes"
+          ],
+          "answerIndex": 0,
+          "explanation": "Việc hoàn tất sổ sách xảy ra trước khi kiểm toán viên đến (mốc quá khứ), nên dùng had finalized.",
+          "choiceIds": [
+            "grammar:perfect-tense-sequence-toeic:1:choice:1",
+            "grammar:perfect-tense-sequence-toeic:1:choice:2",
+            "grammar:perfect-tense-sequence-toeic:1:choice:3",
+            "grammar:perfect-tense-sequence-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "The company _____ three regional offices since 2022.",
+          "choices": [
+            "opened",
+            "opens",
+            "has opened",
+            "had open"
+          ],
+          "answerIndex": 2,
+          "explanation": "Since 2022 nối quá khứ với hiện tại; chủ ngữ số ít company dùng has opened.",
+          "choiceIds": [
+            "grammar:perfect-tense-sequence-toeic:2:choice:1",
+            "grammar:perfect-tense-sequence-toeic:2:choice:2",
+            "grammar:perfect-tense-sequence-toeic:2:choice:3",
+            "grammar:perfect-tense-sequence-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "Before the new tracking system was introduced, staff _____ shipment records manually for several years.",
+          "choices": [
+            "record",
+            "have recorded",
+            "will be recording",
+            "had been keeping"
+          ],
+          "answerIndex": 3,
+          "explanation": "Quá trình kéo dài nhiều năm trước một mốc quá khứ khác; past perfect continuous nhấn mạnh thời lượng.",
+          "choiceIds": [
+            "grammar:perfect-tense-sequence-toeic:3:choice:1",
+            "grammar:perfect-tense-sequence-toeic:3:choice:2",
+            "grammar:perfect-tense-sequence-toeic:3:choice:3",
+            "grammar:perfect-tense-sequence-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "By the end of this quarter, the department _____ all overdue invoices.",
+          "choices": [
+            "processes",
+            "will have processed",
+            "had processed",
+            "has process"
+          ],
+          "answerIndex": 1,
+          "explanation": "By the end of this quarter là hạn chót tương lai; dùng future perfect will have + V3.",
+          "choiceIds": [
+            "grammar:perfect-tense-sequence-toeic:4:choice:1",
+            "grammar:perfect-tense-sequence-toeic:4:choice:2",
+            "grammar:perfect-tense-sequence-toeic:4:choice:3",
+            "grammar:perfect-tense-sequence-toeic:4:choice:4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reduced-relative-participial-clauses-toeic",
+      "title": "Mệnh đề quan hệ rút gọn và phân từ",
+      "category": "PARTICIPIAL CLAUSES",
+      "level": "B1–B2",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Dùng V-ing cho nghĩa chủ động và V3 cho nghĩa bị động trong cụm bổ nghĩa rút gọn.",
+      "formula": "active: noun + V-ing  |  passive: noun + V3  |  reduced relative clause",
+      "explanation": "Mệnh đề quan hệ xác định có thể được rút gọn thành cụm phân từ khi đại từ quan hệ và động từ be có thể lược bỏ. Dùng V-ing khi danh từ thực hiện hành động (employees participating); dùng V3 khi danh từ nhận hành động (documents submitted). Không rút gọn máy móc nếu chủ thể thực hiện hành động không rõ hoặc câu cần một mệnh đề hữu hạn để giữ nghĩa/thời gian.",
+      "examples": [
+        {
+          "en": "The files stored on the shared drive are accessible to all managers.",
+          "vi": "Các tệp được lưu trên ổ dùng chung có thể truy cập bởi tất cả quản lý.",
+          "breakdown": [
+            {
+              "part": "Reduced clause",
+              "text": "stored on the shared drive",
+              "meaning": "which are stored on the shared drive; nghĩa bị động"
+            }
+          ]
+        },
+        {
+          "en": "Employees participating in the orientation must sign the attendance sheet.",
+          "vi": "Nhân viên tham gia buổi định hướng phải ký vào bảng điểm danh.",
+          "breakdown": [
+            {
+              "part": "Reduced clause",
+              "text": "participating in the orientation",
+              "meaning": "who participate in the orientation; nghĩa chủ động"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Tự khôi phục who/which + be để kiểm tra cụm có nghĩa chủ động hay bị động.",
+        "Danh từ làm hành động: V-ing; danh từ nhận hành động: V3.",
+        "Đảm bảo cụm phân từ bổ nghĩa đúng danh từ ngay trước nó."
+      ],
+      "exercises": [
+        {
+          "question": "The files _____ on the shared drive are accessible to all department managers.",
+          "choices": [
+            "storing",
+            "stored",
+            "store",
+            "to store"
+          ],
+          "answerIndex": 1,
+          "explanation": "Files nhận hành động lưu; dạng rút gọn bị động là stored (which are stored).",
+          "choiceIds": [
+            "grammar:reduced-relative-participial-clauses-toeic:1:choice:1",
+            "grammar:reduced-relative-participial-clauses-toeic:1:choice:2",
+            "grammar:reduced-relative-participial-clauses-toeic:1:choice:3",
+            "grammar:reduced-relative-participial-clauses-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "Staff members _____ the orientation program must sign the attendance sheet.",
+          "choices": [
+            "completed",
+            "completing",
+            "completion",
+            "to completed"
+          ],
+          "answerIndex": 1,
+          "explanation": "Staff members chủ động tham gia chương trình; dùng V-ing completing (who are completing/participating).",
+          "choiceIds": [
+            "grammar:reduced-relative-participial-clauses-toeic:2:choice:1",
+            "grammar:reduced-relative-participial-clauses-toeic:2:choice:2",
+            "grammar:reduced-relative-participial-clauses-toeic:2:choice:3",
+            "grammar:reduced-relative-participial-clauses-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "The contract _____ by both parties becomes effective on Monday.",
+          "choices": [
+            "signing",
+            "sign",
+            "signed",
+            "to sign"
+          ],
+          "answerIndex": 2,
+          "explanation": "Contract nhận hành động ký; dùng V3 signed (which is signed).",
+          "choiceIds": [
+            "grammar:reduced-relative-participial-clauses-toeic:3:choice:1",
+            "grammar:reduced-relative-participial-clauses-toeic:3:choice:2",
+            "grammar:reduced-relative-participial-clauses-toeic:3:choice:3",
+            "grammar:reduced-relative-participial-clauses-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "Customers _____ a refund should complete the online request form.",
+          "choices": [
+            "request",
+            "requested",
+            "to requesting",
+            "requesting"
+          ],
+          "answerIndex": 3,
+          "explanation": "Customers là bên chủ động yêu cầu hoàn tiền; cụm V-ing requesting rút gọn who request.",
+          "choiceIds": [
+            "grammar:reduced-relative-participial-clauses-toeic:4:choice:1",
+            "grammar:reduced-relative-participial-clauses-toeic:4:choice:2",
+            "grammar:reduced-relative-participial-clauses-toeic:4:choice:3",
+            "grammar:reduced-relative-participial-clauses-toeic:4:choice:4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transition-connectors-part6-toeic",
+      "title": "Từ nối và trạng từ chuyển ý trong văn bản",
+      "category": "DISCOURSE CONNECTORS",
+      "level": "B1–B2",
+      "parts": [
+        "Part 5",
+        "Part 6"
+      ],
+      "summary": "Phân biệt liên từ phụ thuộc, giới từ và trạng từ nối câu theo ngữ pháp và quan hệ ý nghĩa.",
+      "formula": "because + clause  |  because of/despite + noun phrase  |  ; however, + clause  |  ; therefore, + clause",
+      "explanation": "Because và although là liên từ phụ thuộc, theo sau bởi mệnh đề có chủ ngữ và động từ. Because of và despite là giới từ/cụm giới từ, theo sau bởi danh từ, đại từ hoặc V-ing. However, therefore và consequently là trạng từ liên kết; chúng không tự nối hai mệnh đề độc lập bằng dấu phẩy đơn. Trong TOEIC Part 6, cần xét quan hệ nguyên nhân, kết quả, tương phản hay bổ sung giữa các câu trước khi chọn từ nối.",
+      "examples": [
+        {
+          "en": "The shipment was delayed because the port was closed.",
+          "vi": "Lô hàng bị chậm vì cảng đóng cửa.",
+          "breakdown": [
+            {
+              "part": "Connector",
+              "text": "because",
+              "meaning": "liên từ theo sau bởi mệnh đề"
+            },
+            {
+              "part": "Clause",
+              "text": "the port was closed",
+              "meaning": "có chủ ngữ và động từ"
+            }
+          ]
+        },
+        {
+          "en": "The route is longer; however, it avoids downtown traffic.",
+          "vi": "Tuyến đường dài hơn; tuy nhiên, nó tránh được giao thông đông đúc ở trung tâm.",
+          "breakdown": [
+            {
+              "part": "Punctuation",
+              "text": "; however,",
+              "meaning": "dấu chấm phẩy trước trạng từ nối"
+            },
+            {
+              "part": "Contrast",
+              "text": "longer / avoids traffic",
+              "meaning": "quan hệ tương phản"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Sau because/although thường là mệnh đề; sau because of/despite là danh từ hoặc V-ing.",
+        "However nêu tương phản; therefore/consequently nêu kết quả.",
+        "Không dùng dấu phẩy đơn để nối hai mệnh đề độc lập chỉ bằng however/therefore."
+      ],
+      "exercises": [
+        {
+          "question": "The supplier offered a substantial discount; _____, the purchasing manager placed a larger order.",
+          "choices": [
+            "although",
+            "despite",
+            "therefore",
+            "because"
+          ],
+          "answerIndex": 2,
+          "explanation": "Câu thứ hai là kết quả của việc giảm giá; therefore là trạng từ nối chỉ kết quả, dùng sau dấu chấm phẩy.",
+          "choiceIds": [
+            "grammar:transition-connectors-part6-toeic:1:choice:1",
+            "grammar:transition-connectors-part6-toeic:1:choice:2",
+            "grammar:transition-connectors-part6-toeic:1:choice:3",
+            "grammar:transition-connectors-part6-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "The warehouse closed early _____ a power outage affected the loading system.",
+          "choices": [
+            "because",
+            "despite",
+            "however",
+            "therefore"
+          ],
+          "answerIndex": 0,
+          "explanation": "Sau chỗ trống là mệnh đề đầy đủ (a power outage affected...), nên dùng because.",
+          "choiceIds": [
+            "grammar:transition-connectors-part6-toeic:2:choice:1",
+            "grammar:transition-connectors-part6-toeic:2:choice:2",
+            "grammar:transition-connectors-part6-toeic:2:choice:3",
+            "grammar:transition-connectors-part6-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "The new route is longer. _____, it avoids the congestion near the city center.",
+          "choices": [
+            "Because",
+            "Despite",
+            "Although",
+            "However"
+          ],
+          "answerIndex": 3,
+          "explanation": "Hai câu có quan hệ tương phản: tuyến đường dài hơn nhưng tránh ùn tắc; dùng However ở đầu câu.",
+          "choiceIds": [
+            "grammar:transition-connectors-part6-toeic:3:choice:1",
+            "grammar:transition-connectors-part6-toeic:3:choice:2",
+            "grammar:transition-connectors-part6-toeic:3:choice:3",
+            "grammar:transition-connectors-part6-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "_____ the unexpected delay, the installation team completed the work on time.",
+          "choices": [
+            "Although",
+            "Despite",
+            "Because",
+            "However"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sau chỗ trống là cụm danh từ the unexpected delay, nên dùng giới từ despite.",
+          "choiceIds": [
+            "grammar:transition-connectors-part6-toeic:4:choice:1",
+            "grammar:transition-connectors-part6-toeic:4:choice:2",
+            "grammar:transition-connectors-part6-toeic:4:choice:3",
+            "grammar:transition-connectors-part6-toeic:4:choice:4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "text-cohesion-part6-toeic",
+      "title": "Liên kết ý và quy chiếu trong TOEIC Part 6",
+      "category": "TEXT COHESION",
+      "level": "B1–B2",
+      "parts": [
+        "Part 6"
+      ],
+      "summary": "Chọn câu bổ sung, đại từ và câu kết dựa trên mạch nội dung của email, thông báo và memo.",
+      "formula": "Reference → clear antecedent  |  sentence insertion → topic + logical link + placement",
+      "explanation": "Part 6 kiểm tra khả năng hoàn thiện văn bản chứ không chỉ ghép từ riêng lẻ. Khi chọn một câu, hãy xác định chủ đề của đoạn, thông tin đã nêu, quan hệ với câu trước/sau và mục đích văn bản. Đại từ it/they/these phải có tiền ngữ rõ ràng. Một câu thêm vào nên phát triển đúng chủ đề và không lặp lại hoặc đưa thông tin không liên quan. Đọc cả câu trước và câu sau, không chỉ nhìn một chỗ trống.",
+      "examples": [
+        {
+          "en": "The company will replace its access-control system this weekend. The installation will begin at 7:00 a.m. on Saturday.",
+          "vi": "Công ty sẽ thay hệ thống kiểm soát ra vào vào cuối tuần này. Việc lắp đặt sẽ bắt đầu lúc 7 giờ sáng thứ Bảy.",
+          "breakdown": [
+            {
+              "part": "Topic",
+              "text": "access-control system",
+              "meaning": "chủ đề của hai câu"
+            },
+            {
+              "part": "Reference",
+              "text": "The installation",
+              "meaning": "việc lắp đặt hệ thống vừa nêu"
+            }
+          ]
+        },
+        {
+          "en": "The service desk introduced a new ticketing platform. It assigns each request a unique reference number.",
+          "vi": "Bộ phận hỗ trợ đã giới thiệu nền tảng quản lý yêu cầu mới. Nền tảng này cấp cho mỗi yêu cầu một mã tham chiếu riêng.",
+          "breakdown": [
+            {
+              "part": "Antecedent",
+              "text": "a new ticketing platform",
+              "meaning": "danh từ được nhắc đến trước"
+            },
+            {
+              "part": "Pronoun",
+              "text": "It",
+              "meaning": "thay thế cho platform"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Đọc cả đoạn trước khi xem bốn đáp án câu hoàn thiện văn bản.",
+        "Tìm danh từ mà it/they/these thay thế; kiểm tra số ít/số nhiều.",
+        "Loại câu không cùng chủ đề hoặc sai trình tự thời gian dù ngữ pháp riêng lẻ đúng."
+      ],
+      "exercises": [
+        {
+          "question": "Choose the sentence that best completes the notice.\n“The company will replace the building’s access-control system this weekend. _____. Employees should use the south entrance while the work is underway.”",
+          "choices": [
+            "The installation is scheduled to begin at 7:00 a.m. on Saturday.",
+            "The finance team submitted its annual budget yesterday.",
+            "New cafeteria menus are available in the staff lounge.",
+            "All travel claims must be approved before payment."
+          ],
+          "answerIndex": 0,
+          "explanation": "Câu A tiếp nối trực tiếp thông tin về việc thay hệ thống kiểm soát ra vào và dẫn hợp lý đến hướng dẫn dùng lối vào phía nam.",
+          "choiceIds": [
+            "grammar:text-cohesion-part6-toeic:1:choice:1",
+            "grammar:text-cohesion-part6-toeic:1:choice:2",
+            "grammar:text-cohesion-part6-toeic:1:choice:3",
+            "grammar:text-cohesion-part6-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the sentence that best completes the paragraph.\n“The purchasing team compared bids from four suppliers and selected the offer with the shortest delivery time. _____. The first shipment is expected next Monday.”",
+          "choices": [
+            "The company’s annual picnic will be held in June.",
+            "The selected supplier has confirmed that all items are in stock.",
+            "Several employees requested new parking spaces.",
+            "The finance director will present the quarterly results."
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông tin nhà cung cấp xác nhận hàng có sẵn giải thích hợp lý vì sao lô hàng đầu tiên dự kiến đến vào thứ Hai.",
+          "choiceIds": [
+            "grammar:text-cohesion-part6-toeic:2:choice:1",
+            "grammar:text-cohesion-part6-toeic:2:choice:2",
+            "grammar:text-cohesion-part6-toeic:2:choice:3",
+            "grammar:text-cohesion-part6-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the sentence that best completes the paragraph.\n“A revised travel policy will take effect on 1 December. Managers should explain the new approval process to their teams. _____. Employees can find the full policy in the HR portal.”",
+          "choices": [
+            "The company opened its first branch ten years ago.",
+            "The cafeteria will close early on Friday.",
+            "It also introduces a new limit for hotel expenses.",
+            "They were delivered to the warehouse this morning."
+          ],
+          "answerIndex": 2,
+          "explanation": "It thay thế cho a revised travel policy; nội dung giới hạn chi phí khách sạn bổ sung một thay đổi của chính sách.",
+          "choiceIds": [
+            "grammar:text-cohesion-part6-toeic:3:choice:1",
+            "grammar:text-cohesion-part6-toeic:3:choice:2",
+            "grammar:text-cohesion-part6-toeic:3:choice:3",
+            "grammar:text-cohesion-part6-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "Choose the sentence that best completes the paragraph.\n“The service desk has introduced a new ticketing platform. _____. As a result, requests can now be tracked from submission to completion.”",
+          "choices": [
+            "The supplier will send the invoice next week.",
+            "The office cafeteria has changed its opening hours.",
+            "Several job applicants attended the interview.",
+            "The platform assigns each request a unique reference number."
+          ],
+          "answerIndex": 3,
+          "explanation": "Câu D giải thích tính năng của nền tảng mới; As a result nối tính năng đó với khả năng theo dõi yêu cầu.",
+          "choiceIds": [
+            "grammar:text-cohesion-part6-toeic:4:choice:1",
+            "grammar:text-cohesion-part6-toeic:4:choice:2",
+            "grammar:text-cohesion-part6-toeic:4:choice:3",
+            "grammar:text-cohesion-part6-toeic:4:choice:4"
+          ]
+        }
+      ]
     }
   ]
 }

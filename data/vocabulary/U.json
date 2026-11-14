@@ -183,7 +183,13 @@
         "BUSINESS",
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "undertaking",
+          "pos": "n",
+          "meaning_vi": "cam kết; nhiệm vụ được đảm nhận"
+        }
+      ],
       "verb_forms": {
         "v1": "undertake",
         "vs_es": "undertakes",
@@ -222,7 +228,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "undertake",
+          "pos": "v",
+          "meaning_vi": "đảm nhận; cam kết thực hiện"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -257,7 +269,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "underwriting",
+          "pos": "n",
+          "meaning_vi": "nghiệp vụ thẩm định/bảo lãnh tài chính"
+        }
+      ],
       "verb_forms": {
         "v1": "underwrite",
         "vs_es": "underwrites",
@@ -298,7 +316,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "underwrite",
+          "pos": "v",
+          "meaning_vi": "bảo lãnh; thẩm định rủi ro"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

@@ -309,7 +309,13 @@
         "PURCHASING",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "quote",
+          "pos": "v",
+          "meaning_vi": "báo giá; trích dẫn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -348,7 +354,13 @@
         "PURCHASING",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "quotation",
+          "pos": "n",
+          "meaning_vi": "báo giá; câu trích dẫn"
+        }
+      ],
       "verb_forms": {
         "v1": "quote",
         "vs_es": "quotes",

@@ -93,6 +93,20 @@ class LearningContentTests(unittest.TestCase):
                 self.assertTrue(q.get('question', '').strip())
                 self.assertTrue(q.get('explanation', '').strip())
 
+    def test_listening_reserve_batch_014_has_unique_unit_and_choice_ids(self):
+        batch = [x for x in self.listening if x.get('editorialBatch') == '014']
+        unit_ids = [x['id'] for x in batch]
+        self.assertEqual(len(unit_ids), len(set(unit_ids)))
+        choice_ids = [cid for item in batch for q in item.get('questions', []) for cid in q.get('choiceIds', [])]
+        self.assertEqual(len(choice_ids), len(set(choice_ids)))
+        self.assertEqual(sum(len(x.get('questions', [])) for x in batch), 17)
+        self.assertEqual({x['id'] for x in batch}, {
+            'part2-vendor-credit-note','part2-warehouse-shipment-hold','part2-purchase-order-return',
+            'part2-orientation-leader','part2-inventory-report-frequency',
+            'part3-printer-maintenance-contract','part3-branch-inventory-transfer',
+            'part4-expense-reimbursement-procedure','part4-new-employee-orientation-room-change'
+        })
+
     def test_question_pool_meets_one_form_blueprint(self):
         listen = {f'Part {i}': 0 for i in range(1, 5)}
         for item in self.listening:
@@ -222,7 +236,7 @@ class LearningContentTests(unittest.TestCase):
 
     def test_listening_reserve_batch_counts_and_units(self):
         counts = {f'Part {i}': sum(len(x.get('questions', [])) for x in self.listening if x.get('part') == f'Part {i}') for i in range(1, 5)}
-        self.assertEqual(counts, {'Part 1': 8, 'Part 2': 30, 'Part 3': 42, 'Part 4': 33})
+        self.assertEqual(counts, {'Part 1': 8, 'Part 2': 51, 'Part 3': 81, 'Part 4': 60})
         p3 = next(x for x in self.listening if x.get('id') == 'part3-training-handouts')
         p4 = next(x for x in self.listening if x.get('id') == 'part4-east-elevator-maintenance')
         self.assertEqual(len(p3['segments']), 4)
@@ -230,6 +244,21 @@ class LearningContentTests(unittest.TestCase):
         self.assertEqual(len({segment['speaker'] for segment in p3['segments']}), 2)
         self.assertEqual(len(p4['segments']), 1)
         self.assertEqual(len(p4['questions']), 3)
+
+    def test_listening_batch_014_reserve_counts_and_units(self):
+        batch = [x for x in self.listening if x.get('editorialBatch') == '014']
+        self.assertEqual(len(batch), 9)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in batch), 17)
+        expected = {'Part 2': 5, 'Part 3': 6, 'Part 4': 6}
+        actual = {part: sum(len(x.get('questions', [])) for x in batch if x.get('part') == part) for part in expected}
+        self.assertEqual(actual, expected)
+        for item in batch:
+            self.assertEqual(item.get('editorialStatus'), 'reserve-pending-independent-review', item['id'])
+            self.assertEqual(item.get('contentSource'), 'original-editorial', item['id'])
+            if item['part'] == 'Part 3':
+                self.assertGreaterEqual(len({s.get('speaker') for s in item.get('segments', [])}), 2, item['id'])
+            if item['part'] in ('Part 3', 'Part 4'):
+                self.assertEqual(len(item.get('questions', [])), 3, item['id'])
 
     def test_reserve_question_ids_and_choice_ids_are_unique(self):
         new_ids = {'part2-monitor-delivery-arrival','part2-revised-budget-approval','part2-visitor-parking',

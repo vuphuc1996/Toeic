@@ -937,7 +937,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "mobilize",
+          "pos": "v",
+          "meaning_vi": "huy động; triển khai"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -972,7 +978,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "mobilization",
+          "pos": "n",
+          "meaning_vi": "sự huy động"
+        }
+      ],
       "verb_forms": {
         "v1": "mobilize",
         "vs_es": "mobilizes",

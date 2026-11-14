@@ -1,35 +1,44 @@
 # Compatibility & Retirement Register
 
-> One active register for supported releases, storage/data contracts and retirement decisions. Update this file only when a release changes compatibility or the active support window.
+> One active register for release support, storage/data contracts and retirement decisions.
 
 ## Current support window — 2026-11-14
 
 | Role | Version | Policy |
 |---|---|---|
-| Previous baseline | v2.29.0 | Immediate base and rollback reference for v2.30.0. |
-| Current candidate | v2.30.0 | Adds practice retry/history and Vocabulary Batch 020; local candidate pending remote/device QA. |
-| Older releases | ≤ v2.28.0 | Retired from active handoff; concise history remains in `archive/PROJECT_HISTORY.md` and `CHANGELOG.md`. |
+| Previous baseline | v2.38.0 | Immediate overlay base and rollback reference for v2.39.0. |
+| Current candidate | v2.39.0 | Expands separate TOEIC Part 5 practice to 80 questions with grammar-group metadata; no DB version bump or vocabulary ID change. |
+| Older releases | ≤ v2.37.0 | Retired from active handoff; concise history remains in `archive/PROJECT_HISTORY.md` and `CHANGELOG.md`. |
 
-## Runtime and data contracts
+## Runtime/data contracts
 
-- **Deployment:** GitHub Pages + static PWA; no GAS, iframe, backend or Cloudflare dependency.
-- **Vocabulary:** `data/vocabulary/A.json`–`Z.json` are the sole canonical runtime source. `data/vocabulary/batch-*.json` files are editorial provenance only. Stable vocabulary IDs are immutable.
-- **Learning content:** Listening, Reading and Grammar resource/question/choice IDs remain stable. Append new material; never reorder or replace existing question indices when learner progress may refer to them.
-- **Practice progress:** existing `answers` maps remain readable. v2.30 adds optional `attemptHistory` keyed by question index to the same Reading/Listening/Grammar progress objects. This is additive data, not a database schema migration. Old v1 progress without the field remains valid.
-- **Choice identity:** current and archived attempts retain stable `choiceId`; migration may update `choiceIndex` by ID while preserving the original index in `previousChoiceIndex`.
-- **Local profile:** IndexedDB database `toeic-vocabulary-phase1`, version `1`, object store `workspace`. v2.30 does not import/export, inspect, reset or migrate personal profiles.
-- **Presentation:** Flashcard, Review, Grammar, Reading and Listening detail share the `learningFocusBackdrop` shell. One vertical scroll owner is `.learning-focus-content`.
-- **Service worker:** `VERSION` and cache name sync from `data/manifest.json`; run `python tools/sync-version.py --check` for every release. `assets/js/practice-progress.js` is a required/app-shell module.
-- **Images:** preserve user-owned `assets/listening/*.jpg` and SVG fallbacks. Current source snapshot may omit the eight Part 1 JPG binaries; absence from ZIP does not prove absence on GitHub.
-- **Audio/scoring:** browser SpeechSynthesis is synthesized audio, not ETS/native-speaker recording. Mock analytics are practice indicators, not equated ETS scores.
+- Deployment remains GitHub Pages + static PWA; no backend/GAS/iframe/Cloudflare dependency.
+- Canonical vocabulary is `data/vocabulary/A.json`–`Z.json`; batch JSON is editorial provenance only. Stable IDs remain immutable.
+- Listening/Reading/Grammar resource, question and choice IDs stay stable. Listening Batch 013/014/015 reserve statuses remain unchanged.
+- **Mock eligibility:** legacy status-less units and existing v2.33 `internal-editorial-reviewed` Reading records remain eligible for backwards compatibility; `approved-for-mock` is eligible; `reserve-pending-independent-review` and unknown statuses are excluded. New content must not receive an eligible status without the required review decision.
+- Part 3/4 conversations/talks are indivisible three-question blocks. Part 6 is an indivisible four-question text; Part 7 single passages 2–4 questions and multiple passages 5 questions.
+- Retry/attempt history: `answers` stores latest answer and `attemptHistory` stores prior attempts. Legacy progress without history remains readable.
+- IndexedDB remains `toeic-vocabulary-phase1`, v1, store `workspace`; v2.38.0 performs no profile reset/import/export/inspection/migration; `sentenceCompletionSeenIds` is an optional additive field in the existing `practiceSession` object.
+- Focus Workspace remains shared; `.learning-focus-content` is the only vertical scroll owner. The Part 5 Sentence Completion mode uses this shell and the existing answer-feedback/auto-next behavior.
+- `data/practice/part5-sentence-completion.json` is a separate 35-question original practice bank; it is not part of the 200-question Reading Mock bank. All items remain pending independent review and are practice-only.
+- Service Worker cache markers sync from `data/manifest.json`; `REQUIRED`/`APP_SHELL` include `assets/js/sentence-completion.js` and `data/practice/part5-sentence-completion.json`, with static integrity checked by `test_pwa_readiness.py`. This does not replace browser offline/reconnect QA.
+- Preserve user-owned `assets/listening/*.jpg`, attribution and SVG fallbacks. Eight JPG binaries are intentionally absent from this source snapshot; never overwrite or delete the repository originals.
+- Browser SpeechSynthesis is synthesized audio, not ETS/native recording. Multi-speaker voice differentiation is best-effort and depends on installed OS/browser voices.
+- Mock metrics are practice correct-count/accuracy, not ETS-equated scores.
 
-## Retired / incompatible references
+## CI test contract
 
-- Legacy GAS/iframe/cloud-backend proposals are historical and must not be reintroduced without an explicit architecture decision.
-- Never overlay a non-adjacent release blindly. Use the immediate previous release overlay or review a Full Source migration.
-- Do not add compatibility aliases, legacy fallbacks or duplicate runtime data sources just to preserve obsolete code paths.
-- Old batch/report/source Markdown is summarized into `archive/PROJECT_HISTORY.md` when outside the previous/current window.
+- `.github/workflows/validate-data.yml` must invoke every `tools/tests/test_*.py` module and every `tools/tests/*.mjs` regression suite.
+- `test_ci_coverage.py` enforces this wiring so future tests are not silently skipped.
+- A passing local coverage guard confirms workflow declarations only; it does not prove a remote GitHub Actions run passed.
 
-## Rotation rule
+## Retirement / rotation
 
-Keep exactly the immediate previous and current release-specific documents. When v2.31.0 is published, v2.30.0 becomes previous and v2.29.0 is retired from the active handoff. Archive concise descriptions before retiring old batch/report/source documents and root notes. Run `tools/rotate-release-files.py` in dry-run mode, review the list, then use `--apply`. Never rotate runtime data, assets, local profiles or source code.
+- Keep only the current and immediately previous release-specific batch/report/update notes/manifest files.
+- Old docs are compacted into `archive/PROJECT_HISTORY.md`; do not clone old reports into new paths.
+- Do not overlay a non-adjacent version blindly. Do not touch app source, canonical JSON, assets, PWA shell, patches or learner profiles during document rotation.
+
+## Retired/incompatible references
+
+- Legacy GAS/iframe/cloud-backend proposals remain historical.
+- Do not create duplicate canonical runtime data, standalone roadmap/master or feature-specific design system copies.
