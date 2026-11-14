@@ -1,6 +1,6 @@
 # TOEIC Dictionary — Design System
 
-**Current implementation:** v2.15.0  
+**Current implementation:** v2.29.0  
 **Scope:** every learning page, shared controls, responsive shell and PWA navigation.
 
 ## 1. Design principles
@@ -75,3 +75,17 @@ Automated Chromium screenshots are a regression aid, not a substitute for physic
 - A feature-specific exception must be documented in the relevant CSS block and have a regression test if it can cause clipping/overflow. Do not reduce type or tap targets ad hoc to make a card fit; reflow the layout first.
 - New shared controls should use the shared button/input/icon scale.
 - Update this guide and `docs/MASTER_STATUS.md` whenever the global design rules change.
+
+
+## 7. Shared learning workspace (v2.29.0)
+
+Flashcard, Vocabulary Review, Grammar, Reading and Listening detail views use the same `#learningFocusBackdrop` / `#learningFocusDialog` shell and shared header/content regions. New learning detail views must enter through `openLearningDetail()`; do not create one modal/backdrop implementation per feature.
+
+- The focus dialog header is fixed; `.learning-focus-content` is the only vertical scroll owner for learning detail content.
+- Nested content such as `#modalContent`, Flashcard cards, passages, transcript and question lists must remain `overflow: visible` unless a separate horizontal-only scroller is required for a specific control.
+- Flashcard uses a word panel on top and reveals a meaning/example panel beneath it. The expanded panel participates in the same outer scroll; it must not impose a fixed height or its own vertical scrollbar.
+- Short learning sessions remain naturally sized and do not create a scrollbar. Long passages, explanation sets or review lists scroll once in the shared workspace.
+- On phones and tablets, the same hierarchy stacks to one column and respects safe areas. Do not reintroduce sticky inner action bars that create nested scroll traps.
+- The generic vocabulary editor/detail modal and focused Smart Review answer explanation remain separate utilities because their interaction purpose is not a learning-unit detail view; their overlays must preserve correct stacking above the focus shell when invoked.
+
+Regression gate: `node tools/tests/learning-focus-workspace.mjs`, `node tools/tests/flashcard-image-policy.mjs`, `node tools/tests/runtime-render-smoke.mjs`; manually inspect 320–430px phone, tablet portrait/landscape and 1280–1920px desktop. Record actual device/browser separately from viewport simulation.

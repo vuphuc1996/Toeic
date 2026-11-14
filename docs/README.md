@@ -1,18 +1,20 @@
-# TOEIC Dictionary v2.28.0 — Documentation Center
+# TOEIC Dictionary v2.29.0 — Documentation Center
 
-## Active release window
+## Active release pair
 
-- **Current candidate — v2.28.0:** [Master status & roadmap](MASTER_STATUS.md), [test report](reports/TEST_REPORT_TOEIC_Dictionary_v2.28.0.md), [coverage](reports/TOEIC_CONTENT_COVERAGE_v2.28.0.md), [Vocabulary Batch 018](batches/TOEIC_VOCABULARY_BATCH_018_v2.28.0.md), [update notes](../V2.28.0_UPDATE_NOTES.txt).
-- **Previous baseline — v2.27.0:** [test report](reports/TEST_REPORT_TOEIC_Dictionary_v2.27.0.md), [coverage](reports/TOEIC_CONTENT_COVERAGE_v2.27.0.md), [Batch 017 / Focus Workspace](batches/TOEIC_FOCUSED_LEARNING_AND_VOCAB_BATCH_017_v2.27.0.md), [previous update notes](../V2.27.0_UPDATE_NOTES.txt).
+- **Current candidate — v2.29.0:** [Master status](MASTER_STATUS.md), [test report](reports/TEST_REPORT_TOEIC_Dictionary_v2.29.0.md), [Shared Learning Workspace batch](batches/TOEIC_SHARED_LEARNING_WORKSPACE_BATCH_019_v2.29.0.md), [update notes](../V2.29.0_UPDATE_NOTES.txt).
+- **Previous baseline — v2.28.0:** [test report](reports/TEST_REPORT_TOEIC_Dictionary_v2.28.0.md), [Vocabulary Batch 018](batches/TOEIC_VOCABULARY_BATCH_018_v2.28.0.md), [update notes](../V2.28.0_UPDATE_NOTES.txt).
 
-## Central references
+## Central documents
 
-- [Compatibility & retirement register](COMPATIBILITY.md) — only current compatibility/deprecation register.
-- [Content operations](CONTENT_OPERATIONS.md) — guarded content and release workflow.
-- [Design system](DESIGN_SYSTEM.md) — UI implementation rules.
-- [Platform benchmark](reference/TOEIC_APP_BENCHMARK_2026.md).
-- [Project History](archive/PROJECT_HISTORY.md) — consolidated historical evidence; not current instructions.
+- [Master status and roadmap](MASTER_STATUS.md) — the only source of current scope and next priorities.
+- [Compatibility and retirement](COMPATIBILITY.md) — the only support/deprecation register.
+- [Changelog](CHANGELOG.md) — the single chronological release log.
+- [Design system](DESIGN_SYSTEM.md) — shared layouts, controls and responsive behavior.
+- [Content operations](CONTENT_OPERATIONS.md) — source, review, patch, test and release workflow.
+- [Project history](archive/PROJECT_HISTORY.md) — compact index of retired documents; not active instructions.
+- [TOEIC platform benchmark](reference/TOEIC_APP_BENCHMARK_2026.md) — one current comparative reference.
 
-## File governance
+## Documentation rule
 
-Keep only the previous and current release generations in `docs/batches/`, `docs/reports/` and root update notes. Before retiring older release-specific files, preview and run `python tools/rotate-release-files.py` / `python tools/rotate-release-files.py --apply`. Update `MASTER_STATUS.md` and `CHANGELOG.md`; do not create another version-specific Master or duplicate roadmap.
+Keep only the previous/current release pair in `batches/`, `reports/` and root update notes. Archive older Markdown as concise index entries, not whole duplicate documents. Update the existing Master/Changelog/Compatibility/Design System instead of creating a new standalone guide for each feature.

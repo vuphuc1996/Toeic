@@ -32,6 +32,8 @@ const context = {
   savedChoiceWrongClass: () => false,
   savedChoiceHistoryMarkup: () => '',
   icon: () => '<span></span>',
+  stopSpeech: () => {},
+  openLearningFocus: () => {},
   dbSet: async (key, value) => { context.persisted ??= {}; context.persisted[key] = structuredClone(value); context.persistedWrites = (context.persistedWrites || 0) + 1; },
 };
 vm.createContext(context);
@@ -48,6 +50,7 @@ function exposeFunction(name, nextToken) {
 
 const renderReadingLibrary = exposeFunction('renderReadingLibrary', 'function openReadingDetail(');
 const openReadingDetail = exposeFunction('openReadingDetail', 'async function answerReadingQuestion(');
+exposeFunction('openLearningDetail', 'function closeLearningFocus(');
 const openGrammarLesson = exposeFunction('openGrammarLesson', 'async function answerGrammarExercise(');
 
 const part5 = {
@@ -64,7 +67,8 @@ assert.match($('#readingCardList').innerHTML, /1 câu đã làm/);
 openReadingDetail(part5.id);
 assert.match($('#modalContent').innerHTML, /reviews/);
 assert.match($('#modalContent').innerHTML, /PART 5 · INCOMPLETE SENTENCES/);
-assert.equal($('#modalBackdrop').hidden, false);
+assert.equal($('#modalBackdrop').hidden, true, 'learning detail must use the common focus shell, not the legacy detail modal');
+assert.match($('#modalContent').innerHTML, /learning-detail-surface/);
 
 const part7 = {
   id: 'part7-runtime-smoke', part: 'Part 7', topic: 'Orders', documentType: 'Double passage', level: 'B1',
@@ -78,6 +82,7 @@ openReadingDetail(part7.id);
 assert.match($('#modalContent').innerHTML, /Please review the purchase order/);
 assert.match($('#modalContent').innerHTML, /We will ship the items tomorrow/);
 assert.match($('#modalContent').innerHTML, /Tomorrow/);
+assert.match($('#modalContent').innerHTML, /learning-detail-surface/);
 
 context.state.grammarLessons = [{
   id: 'grammar-runtime-smoke', category: 'Tenses', level: 'A2', title: 'Present simple',
@@ -87,6 +92,7 @@ context.state.grammarLessons = [{
 openGrammarLesson('grammar-runtime-smoke');
 assert.match($('#modalContent').innerHTML, /goes/);
 assert.match($('#modalContent').innerHTML, /BÀI TẬP 1/);
+assert.match($('#modalContent').innerHTML, /learning-detail-surface/);
 
 
 const migrationStart = appSource.indexOf('async function migrateChoiceIdentity(');

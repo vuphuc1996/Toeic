@@ -15,6 +15,27 @@ ARCHIVE=ROOT/'docs/archive/PROJECT_HISTORY.md'
 
 def version_tuple(s): return tuple(map(int,s.split('.')))
 
+def compact_summary(path: Path, text: str) -> str:
+    """Create a short archive index entry instead of copying entire retired docs."""
+    lines=[line.strip() for line in text.splitlines()]
+    title=next((line.lstrip('#').strip() for line in lines if line.startswith('#') and line.lstrip('#').strip()),path.stem.replace('_',' '))
+    version_match=re.search(r'v?(\d+\.\d+\.\d+)',path.name)
+    version=version_match.group(1) if version_match else 'legacy'
+    highlights=[]
+    for line in lines:
+        if not line or line.startswith('#') or line.startswith('|') or line.startswith('```') or line.startswith('---'):
+            continue
+        if line.startswith(('**','- ','* ')):
+            candidate=re.sub(r'^[-*]\s*','',line).strip()
+            candidate=re.sub(r'\*\*','',candidate)
+            if len(candidate)>220: candidate=candidate[:217].rstrip()+'…'
+            if candidate and candidate not in highlights:
+                highlights.append(candidate)
+        if len(highlights)>=3: break
+    summary='; '.join(highlights) if highlights else 'Tài liệu lịch sử đã được rút gọn; nội dung release chính được truy vết trong docs/CHANGELOG.md.'
+    return f"- **v{version} · {title}** (`{path.as_posix()}`): {summary}"
+
+
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--apply',action='store_true',help='perform the planned retirement; default is dry-run')
@@ -30,7 +51,7 @@ def main():
         m=re.fullmatch(r'V(\d+\.\d+\.\d+)_UPDATE_NOTES\.txt',p.name)
         if m and m.group(1) not in keep: notes.append(p)
     docs=[]
-    for folder in [ROOT/'docs/batches',ROOT/'docs/reports']:
+    for folder in [ROOT/'docs/batches',ROOT/'docs/reports',ROOT/'docs/sources']:
         if not folder.exists(): continue
         for p in folder.glob('*.md'):
             versions=set(re.findall(r'v(\d+\.\d+\.\d+)',p.name))
@@ -46,10 +67,11 @@ def main():
     additions=[]
     for p in docs:
         rel=p.relative_to(ROOT).as_posix()
-        marker=f'## Archived source: `{rel}`'
+        marker=f'`{rel}`'
         if marker not in existing:
-            additions.append(f'\n---\n\n{marker}\n\n{p.read_text(encoding="utf-8")}\n')
-    if additions: ARCHIVE.write_text(existing+'\n'.join(additions),encoding='utf-8')
+            additions.append(compact_summary(p.relative_to(ROOT),p.read_text(encoding='utf-8')))
+    if additions:
+        ARCHIVE.write_text(existing.rstrip()+"\n\n## Newly retired documents\n\n"+'\n'.join(additions)+'\n',encoding='utf-8')
     for p in docs+notes: p.unlink(missing_ok=True)
     print(f'APPLIED: archived {len(docs)} markdown files; retired {len(notes)} old release notes.')
     return 0

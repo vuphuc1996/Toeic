@@ -66,14 +66,15 @@ Run unit tests separately by module: `test_baseline_ids.py`, `test_patch_data.py
 
 ## 8. Coverage report and release record
 
-Every release updates:
+Every release updates the same central documents:
 - `docs/MASTER_STATUS.md`: current totals, Part coverage, blockers, acceptance gate and next action.
-- `docs/CHANGELOG.md`: one release entry.
-- `docs/batches/`: exact changes and IDs/patch count.
-- `docs/sources/`: source links and editorial method.
-- `docs/reports/`: validator/test/coverage report.
+- `docs/CHANGELOG.md`: one concise release entry; the only detailed chronological release log.
+- `docs/COMPATIBILITY.md`: only when support, storage, route, cache or data contracts change.
+- `docs/DESIGN_SYSTEM.md`: only when shared interaction/layout rules change.
+- `docs/batches/` and `docs/reports/`: keep one detailed record for the previous release and one for the current release only. The current file supersedes the older one when the next version is published.
+- Source links and editorial method are recorded inside the current batch document; do not create one source Markdown file per batch.
 
-All markdown stays inside `docs/`. Keep one Master only. State clearly what has not been tested on target devices/remote GitHub.
+All Markdown stays inside `docs/`. Keep one Master only. State clearly what has not been tested on target devices/remote GitHub.
 
 ## 9. One-form question-pool gate
 
@@ -85,3 +86,17 @@ The v2.12.0 minimum needed to select one TOEIC L&R form is: Listening P1≥6, P2
 - Extend existing sets by appending questions only. Never reorder or replace an existing question index because learners may already have local progress keyed to that item. New sets get unique stable resource IDs.
 - Keep visual and audio provenance explicit: licensed Part 1 photographs use `visualType: photograph` and record creator/source/license in `assets/listening/ATTRIBUTION.csv`; SVG fallback artwork remains `visualType: illustration` when used as the primary asset. Browser SpeechSynthesis is synthesized audio, not a recorded native-speaker asset or ETS audio. Cache user-facing photo files locally and keep SVG fallback assets in the required app shell.
 - Passing automated checks confirms structural integrity only. Before Full Mock, manually review every item's transcript/passage grounding, correct answer, distractors and Vietnamese rationale.
+
+
+## 10. Documentation consolidation and two-release rotation
+
+The active documentation set is deliberately small: `MASTER_STATUS.md`, `COMPATIBILITY.md`, `CHANGELOG.md`, `DESIGN_SYSTEM.md`, `CONTENT_OPERATIONS.md`, `README.md`, one archive index, and the previous/current release batch + test report. `reference/` is reserved for one-off external research that is still actively used.
+
+When a new release is prepared:
+1. Copy the previous current release batch/test record forward as the previous release file; add one new batch file and one new test report for the current release.
+2. Update the Master, Changelog and Compatibility only where facts changed.
+3. Run `python tools/rotate-release-files.py` and review every planned retirement.
+4. Run `python tools/rotate-release-files.py --apply` only after verifying the two files retained in each release-specific folder. Old batch/report/source documents are converted into short index entries in `archive/PROJECT_HISTORY.md`; complete old copies are not duplicated.
+5. Never create separate roadmap, Master, design-system, compatibility, or per-feature UI guide files. Put each decision in its existing central document.
+
+The rotator is restricted to Markdown under `docs/batches/`, `docs/reports/`, `docs/sources/` and root `V*_UPDATE_NOTES.txt`. It must never touch application source, canonical JSON, `assets/`, PWA resources, patches or local learner profiles.
