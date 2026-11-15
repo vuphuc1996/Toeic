@@ -38,7 +38,7 @@
       "id": "absenteeism-n",
       "word": "absenteeism",
       "phonetic": {
-        "us": ""
+        "us": "/ˌæb.sən.ˈti.ɪ.zəm/"
       },
       "senses": [
         {
@@ -407,7 +407,7 @@
       "id": "accomplish-v",
       "word": "accomplish",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈkɑm.plɪʃ/"
       },
       "senses": [
         {
@@ -448,7 +448,7 @@
       "id": "accordance-n",
       "word": "accordance",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈkɔr.dəns/"
       },
       "senses": [
         {
@@ -711,7 +711,7 @@
       "id": "accrue-v",
       "word": "accrue",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈkru/"
       },
       "senses": [
         {
@@ -1143,7 +1143,7 @@
       "id": "adherence-n",
       "word": "adherence",
       "phonetic": {
-        "us": ""
+        "us": "/əd.ˈhɪ.rəns/"
       },
       "senses": [
         {
@@ -1210,7 +1210,7 @@
       "id": "adjourn-v",
       "word": "adjourn",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈdʒɝn/"
       },
       "senses": [
         {
@@ -1251,7 +1251,7 @@
       "id": "adjustment-n",
       "word": "adjustment",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈdʒʌst.mənt/"
       },
       "senses": [
         {
@@ -1332,7 +1332,7 @@
       "id": "administrative-adj",
       "word": "administrative",
       "phonetic": {
-        "us": ""
+        "us": "/əd.ˈmɪ.nə.ˌstreɪ.tɪv/"
       },
       "senses": [
         {
@@ -1378,7 +1378,7 @@
       "id": "administrator-n",
       "word": "administrator",
       "phonetic": {
-        "us": ""
+        "us": "/əd.ˈmɪ.nə.ˌstreɪ.tɚ/"
       },
       "senses": [
         {
@@ -1456,7 +1456,7 @@
       "id": "adopt-v",
       "word": "adopt",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈdɑpt/"
       },
       "senses": [
         {
@@ -1536,7 +1536,7 @@
       "id": "advisory-adj",
       "word": "advisory",
       "phonetic": {
-        "us": ""
+        "us": "/æd.ˈvaɪ.zɚ.i/"
       },
       "senses": [
         {
@@ -1739,6 +1739,44 @@
       ]
     },
     {
+      "id": "agent-n",
+      "word": "agent",
+      "phonetic": {
+        "us": "/ˈeɪ.dʒənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên đại diện; đại lý",
+          "definition_en": "a person who acts for an organization or assists customers on its behalf",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A customer service agent will contact you after reviewing the request.",
+          "vi": "Nhân viên chăm sóc khách hàng sẽ liên hệ với bạn sau khi xem xét yêu cầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "customer service agent",
+        "travel agent",
+        "sales agent"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "aggregate-nv",
       "word": "aggregate",
       "phonetic": {
@@ -1778,6 +1816,43 @@
         "in the aggregate"
       ],
       "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "airfare-n",
+      "word": "airfare",
+      "phonetic": {
+        "us": "/ˈer.ˌfer/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giá vé máy bay",
+          "definition_en": "the price charged for a journey by airplane",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The airfare includes one checked bag on this international route.",
+          "vi": "Giá vé máy bay đã bao gồm một kiện hành lý ký gửi trên tuyến quốc tế này.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "airfare costs",
+        "round-trip airfare",
+        "discounted airfare"
+      ],
+      "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
@@ -1848,7 +1923,7 @@
       "id": "albeit-conj",
       "word": "albeit",
       "phonetic": {
-        "us": ""
+        "us": "/ɔl.ˈbi.ɪt/"
       },
       "senses": [
         {
@@ -1945,7 +2020,13 @@
         "BUSINESS",
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "allocation",
+          "pos": "n",
+          "meaning_vi": "sự phân bổ; khoản được phân bổ"
+        }
+      ],
       "verb_forms": {
         "v1": "allocate",
         "vs_es": "allocates",
@@ -1969,7 +2050,7 @@
       "id": "allocation-n",
       "word": "allocation",
       "phonetic": {
-        "us": ""
+        "us": "/ˌæ.lə.ˈkeɪ.ʃən/"
       },
       "senses": [
         {
@@ -1984,7 +2065,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "allocate",
+          "pos": "v",
+          "meaning_vi": "phân bổ; cấp phát"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2212,7 +2299,7 @@
       "id": "amend-v",
       "word": "amend",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈmend/"
       },
       "senses": [
         {
@@ -2259,7 +2346,7 @@
       "id": "amendment-n",
       "word": "amendment",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈmend.mənt/"
       },
       "senses": [
         {
@@ -2403,7 +2490,7 @@
       "id": "analyze-v",
       "word": "analyze",
       "phonetic": {
-        "us": ""
+        "us": "/ˈæ.nə.ˌlaɪz/"
       },
       "senses": [
         {
@@ -2601,7 +2688,7 @@
       "id": "anticipate-v",
       "word": "anticipate",
       "phonetic": {
-        "us": ""
+        "us": "/æn.ˈtɪ.sə.ˌpeɪt/"
       },
       "senses": [
         {
@@ -2643,7 +2730,7 @@
       "id": "apologize-v",
       "word": "apologize",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈpɑ.lə.ˌdʒaɪz/"
       },
       "senses": [
         {
@@ -2681,10 +2768,47 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "apology-n",
+      "word": "apology",
+      "phonetic": {
+        "us": "/ə.ˈpɑ.lə.ˌdʒi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lời xin lỗi",
+          "definition_en": "something that is said or written to express regret for a mistake or problem",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manager sent a written apology to customers affected by the delay.",
+          "vi": "Người quản lý đã gửi lời xin lỗi bằng văn bản đến những khách hàng bị ảnh hưởng bởi sự chậm trễ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "formal apology",
+        "written apology",
+        "sincere apology"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "apparent-adj",
       "word": "apparent",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈpe.rənt/"
       },
       "senses": [
         {
@@ -3065,7 +3189,7 @@
       "id": "appraise-v",
       "word": "appraise",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈpreɪz/"
       },
       "senses": [
         {
@@ -3153,7 +3277,7 @@
       "id": "apprenticeship-n",
       "word": "apprenticeship",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈpren.təs.ˌʃɪp/"
       },
       "senses": [
         {
@@ -3341,7 +3465,7 @@
       "id": "approximately-adv",
       "word": "approximately",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈprɑk.sə.mət.li/"
       },
       "senses": [
         {
@@ -3581,7 +3705,7 @@
       "id": "arrears-n",
       "word": "arrears",
       "phonetic": {
-        "us": ""
+        "us": "/ɚ.ˈɪrz/"
       },
       "senses": [
         {
@@ -3613,10 +3737,48 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "arrival-n",
+      "word": "arrival",
+      "phonetic": {
+        "us": "/ɚ.ˈaɪ.vəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự đến nơi; thời điểm đến",
+          "definition_en": "the act of reaching a place, or the time when someone or something reaches it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "AIRPORT",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Passengers should check the arrival board for updated gate information.",
+          "vi": "Hành khách nên kiểm tra bảng thông tin chuyến đến để cập nhật cửa ra máy bay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "arrival time",
+        "arrival gate",
+        "arrival lounge"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "assembly-n",
       "word": "assembly",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈsem.bli/"
       },
       "senses": [
         {
@@ -3689,7 +3851,7 @@
       "id": "assess-v",
       "word": "assess",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈses/"
       },
       "senses": [
         {
@@ -3736,7 +3898,7 @@
       "id": "assessment-n",
       "word": "assessment",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈse.smənt/"
       },
       "senses": [
         {
@@ -3865,7 +4027,7 @@
       "id": "assistance-n",
       "word": "assistance",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈsɪ.stəns/"
       },
       "senses": [
         {
@@ -3941,7 +4103,7 @@
       "id": "assumption-n",
       "word": "assumption",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈsʌmp.ʃən/"
       },
       "senses": [
         {
@@ -4010,7 +4172,7 @@
       "id": "attain-v",
       "word": "attain",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈteɪn/"
       },
       "senses": [
         {
@@ -4261,7 +4423,7 @@
       "id": "audit-n",
       "word": "audit",
       "phonetic": {
-        "us": ""
+        "us": "/ˈɔ.dɪt/"
       },
       "senses": [
         {
@@ -4296,7 +4458,7 @@
       "id": "auditor-n",
       "word": "auditor",
       "phonetic": {
-        "us": ""
+        "us": "/ˈɔ.dɪ.tɚ/"
       },
       "senses": [
         {
@@ -4462,7 +4624,7 @@
       "id": "authorize-v",
       "word": "authorize",
       "phonetic": {
-        "us": ""
+        "us": "/ˈɔ.θɚ.ˌaɪz/"
       },
       "senses": [
         {
@@ -4558,7 +4720,7 @@
       "id": "automated-adj",
       "word": "automated",
       "phonetic": {
-        "us": ""
+        "us": "/ˈɔ.tə.ˌmeɪ.tɪd/"
       },
       "senses": [
         {

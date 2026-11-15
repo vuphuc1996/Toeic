@@ -227,7 +227,7 @@
       "id": "efficiently-adv",
       "word": "efficiently",
       "phonetic": {
-        "us": ""
+        "us": "/ɪ.ˈfɪ.ʃənt.li/"
       },
       "senses": [
         {
@@ -309,7 +309,7 @@
       "id": "electronic-adj",
       "word": "electronic",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪ.ˌlek.ˈtrɑ.nɪk/"
       },
       "senses": [
         {
@@ -344,7 +344,7 @@
       "id": "eligibility-n",
       "word": "eligibility",
       "phonetic": {
-        "us": ""
+        "us": "/ˌe.lɪ.dʒə.ˈbɪ.lɪ.ti/"
       },
       "senses": [
         {
@@ -583,7 +583,7 @@
       "id": "emission-n",
       "word": "emission",
       "phonetic": {
-        "us": ""
+        "us": "/ɪ.ˈmɪ.ʃən/"
       },
       "senses": [
         {
@@ -817,7 +817,7 @@
       "id": "enclose-v",
       "word": "enclose",
       "phonetic": {
-        "us": ""
+        "us": "/ɪn.ˈkloʊz/"
       },
       "senses": [
         {
@@ -953,7 +953,7 @@
       "id": "endorse-v",
       "word": "endorse",
       "phonetic": {
-        "us": ""
+        "us": "/en.ˈdɔrs/"
       },
       "senses": [
         {
@@ -1000,7 +1000,7 @@
       "id": "endorsement-n",
       "word": "endorsement",
       "phonetic": {
-        "us": ""
+        "us": "/en.ˈdɔr.smənt/"
       },
       "senses": [
         {
@@ -1041,7 +1041,7 @@
       "id": "enhance-v",
       "word": "enhance",
       "phonetic": {
-        "us": ""
+        "us": "/en.ˈhæns/"
       },
       "senses": [
         {
@@ -1084,7 +1084,7 @@
       "id": "enquiry-n",
       "word": "enquiry",
       "phonetic": {
-        "us": ""
+        "us": "/ɪn.ˈkwaɪ.ˌri/"
       },
       "senses": [
         {
@@ -1166,7 +1166,7 @@
       "id": "enrollment-n",
       "word": "enrollment",
       "phonetic": {
-        "us": ""
+        "us": "/en.ˈroʊl.mənt/"
       },
       "senses": [
         {
@@ -1254,7 +1254,7 @@
       "id": "entitlement-n",
       "word": "entitlement",
       "phonetic": {
-        "us": ""
+        "us": "/en.ˈtaɪ.təl.mənt/"
       },
       "senses": [
         {
@@ -1403,7 +1403,7 @@
       "id": "equivalent-adj",
       "word": "equivalent",
       "phonetic": {
-        "us": ""
+        "us": "/ɪ.ˈkwɪ.və.lənt/"
       },
       "senses": [
         {
@@ -1520,6 +1520,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "escalation-n",
+      "word": "escalation",
+      "phonetic": {
+        "us": "/ˌe.skə.ˈleɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc chuyển vấn đề lên cấp xử lý cao hơn; sự leo thang",
+          "definition_en": "the process of referring a problem to someone with greater authority, or a situation becoming more serious",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The support agent followed the escalation process when the payment issue remained unresolved.",
+          "vi": "Nhân viên hỗ trợ đã thực hiện quy trình chuyển cấp xử lý khi vấn đề thanh toán vẫn chưa được giải quyết.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "escalation process",
+        "escalation procedure",
+        "escalation policy"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "escrow-n",
       "word": "escrow",
       "phonetic": {
@@ -1560,7 +1598,7 @@
       "id": "establish-v",
       "word": "establish",
       "phonetic": {
-        "us": ""
+        "us": "/ɪ.ˈstæ.blɪʃ/"
       },
       "senses": [
         {
@@ -1786,7 +1824,7 @@
       "id": "evidence-n",
       "word": "evidence",
       "phonetic": {
-        "us": ""
+        "us": "/ˈe.və.dəns/"
       },
       "senses": [
         {
@@ -1823,7 +1861,7 @@
       "id": "exceed-v",
       "word": "exceed",
       "phonetic": {
-        "us": ""
+        "us": "/ɪk.ˈsid/"
       },
       "senses": [
         {
@@ -1910,10 +1948,46 @@
       ]
     },
     {
+      "id": "excursion-n",
+      "word": "excursion",
+      "phonetic": {
+        "us": "/ɪk.ˈskɝ.ʒən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyến tham quan ngắn; chuyến đi trong ngày",
+          "definition_en": "a short organized journey made for pleasure or to visit a place",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The travel agent arranged a guided excursion to the historic district.",
+          "vi": "Đại lý du lịch đã sắp xếp một chuyến tham quan có hướng dẫn đến khu phố lịch sử.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "guided excursion",
+        "day excursion",
+        "shore excursion"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "executive-n",
       "word": "executive",
       "phonetic": {
-        "us": ""
+        "us": "/ɪɡ.ˈzek.jə.tɪv/"
       },
       "senses": [
         {
@@ -1948,7 +2022,7 @@
       "id": "exempt-adj",
       "word": "exempt",
       "phonetic": {
-        "us": ""
+        "us": "/ɪɡ.ˈzempt/"
       },
       "senses": [
         {
@@ -2298,7 +2372,7 @@
       "id": "expiration-n",
       "word": "expiration",
       "phonetic": {
-        "us": ""
+        "us": "/ˌek.spɚ.ˈeɪ.ʃən/"
       },
       "senses": [
         {
@@ -2460,7 +2534,7 @@
       "id": "extension-n",
       "word": "extension",
       "phonetic": {
-        "us": ""
+        "us": "/ɪk.ˈsten.ʃən/"
       },
       "senses": [
         {

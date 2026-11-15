@@ -125,7 +125,7 @@
       "id": "laboratory-n",
       "word": "laboratory",
       "phonetic": {
-        "us": ""
+        "us": "/ˈlæ.brə.ˌtɔ.ri/"
       },
       "senses": [
         {
@@ -541,7 +541,7 @@
       "id": "ledger-n",
       "word": "ledger",
       "phonetic": {
-        "us": ""
+        "us": "/ˈle.dʒɚ/"
       },
       "senses": [
         {
@@ -664,7 +664,7 @@
       "id": "lessee-n",
       "word": "lessee",
       "phonetic": {
-        "us": ""
+        "us": "/le.ˈsi/"
       },
       "senses": [
         {
@@ -699,7 +699,7 @@
       "id": "lessor-n",
       "word": "lessor",
       "phonetic": {
-        "us": ""
+        "us": "/ˈle.sɚ/"
       },
       "senses": [
         {
@@ -771,7 +771,7 @@
       "id": "liability-n",
       "word": "liability",
       "phonetic": {
-        "us": ""
+        "us": "/ˌlaɪ.ə.ˈbɪ.lɪ.ti/"
       },
       "senses": [
         {
@@ -932,7 +932,7 @@
       "id": "liquidate-v",
       "word": "liquidate",
       "phonetic": {
-        "us": ""
+        "us": "/ˈlɪ.kwɪ.ˌdeɪt/"
       },
       "senses": [
         {
@@ -973,7 +973,7 @@
       "id": "liquidation-n",
       "word": "liquidation",
       "phonetic": {
-        "us": ""
+        "us": "/ˌlɪ.kwɪ.ˈdeɪ.ʃən/"
       },
       "senses": [
         {
@@ -1188,7 +1188,7 @@
       "id": "logistical-adj",
       "word": "logistical",
       "phonetic": {
-        "us": ""
+        "us": "/lə.ˈdʒɪ.stɪ.kəl/"
       },
       "senses": [
         {
@@ -1257,6 +1257,44 @@
         "logistics provider",
         "logistics costs"
       ]
+    },
+    {
+      "id": "loyalty-n",
+      "word": "loyalty",
+      "phonetic": {
+        "us": "/ˈlɔɪ.əl.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lòng trung thành; sự gắn bó của khách hàng",
+          "definition_en": "the quality of remaining supportive of a person, organization, product, or brand",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The loyalty program rewards customers who make frequent purchases.",
+          "vi": "Chương trình khách hàng thân thiết thưởng cho những khách hàng thường xuyên mua sắm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "customer loyalty",
+        "loyalty program",
+        "brand loyalty"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "luggage-n",

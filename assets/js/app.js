@@ -11,7 +11,7 @@ import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionL
 import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.68.0';
+const APP_RELEASE_VERSION = '2.70.0';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);

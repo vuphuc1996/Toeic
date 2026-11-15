@@ -5,11 +5,14 @@ class ProjectProgressTests(unittest.TestCase):
     def test_report_uses_explicit_targets_and_marks_unknown_targets(self):
         result=subprocess.run([sys.executable,'tools/report-project-progress.py'],cwd=ROOT,text=True,capture_output=True,check=True)
         out=result.stdout
-        self.assertIn('1,063 | 3,000 minimum | **35.4%**',out)
-        self.assertIn('1,063 | 5,000 planning ceiling | **21.3%**',out)
+        self.assertIn('1,100 | 3,000 minimum | **36.7%**',out)
+        self.assertIn('1,100 | 5,000 planning ceiling | **22.0%**',out)
         self.assertIn('16/16 | All diagnostic questions | **100.0%**',out)
         self.assertIn('Chưa đo được',out)
         self.assertIn('not editorial approval',out)
+        self.assertIn('US IPA | 1,009/1,100 | **91.7%**',out)
+        self.assertIn('Word family | 267/1,100 | **24.3%**',out)
+        self.assertIn('Word-family directed links | 365 links',out)
     def test_report_includes_foundation_listening_bank_coverage(self):
         result=subprocess.run([sys.executable,'tools/report-project-progress.py'],cwd=ROOT,text=True,capture_output=True,check=True)
         self.assertIn('Foundation Listening scripts mapped | 10/10 | **100.0%**',result.stdout)

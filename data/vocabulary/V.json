@@ -434,7 +434,7 @@
       "id": "verification-n",
       "word": "verification",
       "phonetic": {
-        "us": ""
+        "us": "/ˌve.rə.fə.ˈkeɪ.ʃən/"
       },
       "senses": [
         {
@@ -449,7 +449,13 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "verify",
+          "pos": "v",
+          "meaning_vi": "xác minh; kiểm chứng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -495,7 +501,7 @@
         {
           "word": "verification",
           "pos": "n",
-          "meaning_vi": "sự xác minh"
+          "meaning_vi": "sự xác minh; kiểm chứng"
         },
         {
           "word": "verifiable",
@@ -567,7 +573,7 @@
       "id": "vest-v",
       "word": "vest",
       "phonetic": {
-        "us": ""
+        "us": "/vest/"
       },
       "senses": [
         {
@@ -608,7 +614,7 @@
       "id": "vested-adj",
       "word": "vested",
       "phonetic": {
-        "us": ""
+        "us": "/ˈve.stɪd/"
       },
       "senses": [
         {
@@ -643,7 +649,7 @@
       "id": "viability-n",
       "word": "viability",
       "phonetic": {
-        "us": ""
+        "us": "/vaɪ.ə.ˈbɪ.lə.ti/"
       },
       "senses": [
         {
@@ -714,6 +720,43 @@
         "viable option",
         "financially viable"
       ]
+    },
+    {
+      "id": "visa-n",
+      "word": "visa",
+      "phonetic": {
+        "us": "/ˈvi.zə/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thị thực; giấy phép nhập cảnh",
+          "definition_en": "an official mark or document that allows someone to enter, stay in, or leave a country for a specified period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Check the visa requirements before confirming your travel dates.",
+          "vi": "Hãy kiểm tra yêu cầu về thị thực trước khi xác nhận ngày đi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "visa application",
+        "visa requirements",
+        "work visa"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "visitor-n",
@@ -859,6 +902,44 @@
       "collocations": [
         "voluntary participation",
         "voluntary program"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "voucher-n",
+      "word": "voucher",
+      "phonetic": {
+        "us": "/ˈvaʊ.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiếu mua hàng; phiếu dịch vụ; phiếu thanh toán",
+          "definition_en": "a document or code that can be exchanged for goods, services, or a stated amount of money",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "FINANCE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please present the hotel voucher at the reception desk when you arrive.",
+          "vi": "Vui lòng xuất trình phiếu xác nhận khách sạn tại quầy lễ tân khi bạn đến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "meal voucher",
+        "travel voucher",
+        "discount voucher"
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"

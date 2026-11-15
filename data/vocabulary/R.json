@@ -194,6 +194,49 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "rebook-v",
+      "word": "rebook",
+      "phonetic": {
+        "us": "/ri.ˈbʊk/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đặt lại vé hoặc chỗ sau khi thay đổi kế hoạch",
+          "definition_en": "to make a new reservation for someone after the original booking has changed or been canceled",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "rebook",
+        "vs_es": "rebooks",
+        "v2": "rebooked",
+        "v3": "rebooked",
+        "ving": "rebooking"
+      },
+      "examples": [
+        {
+          "en": "The airline will rebook affected passengers on the next available flight.",
+          "vi": "Hãng hàng không sẽ đặt lại vé cho những hành khách bị ảnh hưởng trên chuyến bay sớm nhất còn chỗ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "rebook a flight",
+        "rebook a ticket",
+        "rebook a passenger"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "receipt-n",
       "word": "receipt",
       "phonetic": {
@@ -264,7 +307,9 @@
       ],
       "cefr_level": "C1",
       "level_basis": "editorial-estimate; verify by sense",
-      "phonetic": {}
+      "phonetic": {
+        "us": "/rɪ.ˈsi.və.bəl/"
+      }
     },
     {
       "id": "receive-v",
@@ -484,7 +529,7 @@
       "id": "reconciliation-n",
       "word": "reconciliation",
       "phonetic": {
-        "us": ""
+        "us": "/ˌre.kən.ˌsɪ.li.ˈeɪ.ʃən/"
       },
       "senses": [
         {
@@ -818,7 +863,7 @@
       "id": "redundancy-n",
       "word": "redundancy",
       "phonetic": {
-        "us": ""
+        "us": "/rɪ.ˈdʌn.dən.si/"
       },
       "senses": [
         {
@@ -853,7 +898,7 @@
       "id": "redundant-adj",
       "word": "redundant",
       "phonetic": {
-        "us": ""
+        "us": "/rɪ.ˈdʌn.dənt/"
       },
       "senses": [
         {
@@ -1106,7 +1151,7 @@
       "id": "reimburse-v",
       "word": "reimburse",
       "phonetic": {
-        "us": ""
+        "us": "/ˌri.ɪm.ˈbɝs/"
       },
       "senses": [
         {
@@ -1153,7 +1198,7 @@
       "id": "reimbursement-n",
       "word": "reimbursement",
       "phonetic": {
-        "us": ""
+        "us": "/ˌri.ɪm.ˈbɝ.smənt/"
       },
       "senses": [
         {
@@ -1581,7 +1626,7 @@
       "id": "remunerate-v",
       "word": "remunerate",
       "phonetic": {
-        "us": ""
+        "us": "/rɪm.ˌju.nɚ.ˈeɪt/"
       },
       "senses": [
         {
@@ -1622,7 +1667,7 @@
       "id": "remuneration-n",
       "word": "remuneration",
       "phonetic": {
-        "us": ""
+        "us": "/rɪm.ˌju.nɚ.ˈeɪ.ʃən/"
       },
       "senses": [
         {
@@ -1657,7 +1702,7 @@
       "id": "renew-v",
       "word": "renew",
       "phonetic": {
-        "us": ""
+        "us": "/rɪ.ˈnu/"
       },
       "senses": [
         {
@@ -1747,7 +1792,7 @@
       "id": "renewal-n",
       "word": "renewal",
       "phonetic": {
-        "us": ""
+        "us": "/rɪ.ˈnu.əl/"
       },
       "senses": [
         {
@@ -1989,7 +2034,7 @@
       "id": "replacement-n",
       "word": "replacement",
       "phonetic": {
-        "us": ""
+        "us": "/rɪ.ˈpleɪ.smənt/"
       },
       "senses": [
         {
@@ -2165,7 +2210,7 @@
       "id": "requirement-n",
       "word": "requirement",
       "phonetic": {
-        "us": ""
+        "us": "/rɪ.ˈkwaɪr.mənt/"
       },
       "senses": [
         {
@@ -2203,7 +2248,7 @@
       "id": "requisition-n",
       "word": "requisition",
       "phonetic": {
-        "us": ""
+        "us": "/ˌre.kwə.ˈzɪ.ʃən/"
       },
       "senses": [
         {
@@ -2238,7 +2283,7 @@
       "id": "reschedule-v",
       "word": "reschedule",
       "phonetic": {
-        "us": ""
+        "us": "/ri.ˈske.dʒul/"
       },
       "senses": [
         {
@@ -2542,6 +2587,100 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "resolution-n",
+      "word": "resolution",
+      "phonetic": {
+        "us": "/ˌre.zə.ˈlu.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cách giải quyết; sự giải quyết vấn đề",
+          "definition_en": "the action or process of solving a problem, disagreement, or complaint",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "resolve",
+          "pos": "v",
+          "meaning_vi": "giải quyết; xử lý dứt điểm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The service team aims to provide a resolution within two business days.",
+          "vi": "Nhóm dịch vụ đặt mục tiêu đưa ra phương án giải quyết trong vòng hai ngày làm việc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "issue resolution",
+        "complaint resolution",
+        "resolution time"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "resolve-v",
+      "word": "resolve",
+      "phonetic": {
+        "us": "/ri.ˈzɑlv/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giải quyết; xử lý dứt điểm",
+          "definition_en": "to find an acceptable solution to a problem or disagreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "resolution",
+          "pos": "n",
+          "meaning_vi": "cách giải quyết; sự giải quyết vấn đề"
+        }
+      ],
+      "verb_forms": {
+        "v1": "resolve",
+        "vs_es": "resolves",
+        "v2": "resolved",
+        "v3": "resolved",
+        "ving": "resolving"
+      },
+      "examples": [
+        {
+          "en": "Our technician will resolve the account access issue as soon as possible.",
+          "vi": "Kỹ thuật viên của chúng tôi sẽ giải quyết vấn đề truy cập tài khoản sớm nhất có thể.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "resolve an issue",
+        "resolve a complaint",
+        "resolve a dispute"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "resource-n",
       "word": "resource",
       "cefr_level": "B1",
@@ -2711,6 +2850,92 @@
         "take responsibility",
         "job responsibility"
       ]
+    },
+    {
+      "id": "responsive-adj",
+      "word": "responsive",
+      "phonetic": {
+        "us": "/rɪ.ˈspɑn.sɪv/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "phản hồi nhanh; sẵn sàng đáp ứng",
+          "definition_en": "reacting quickly and helpfully to requests, questions, or needs",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "responsiveness",
+          "pos": "n",
+          "meaning_vi": "khả năng phản hồi nhanh và phù hợp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The responsive support team answered every inquiry before the end of the day.",
+          "vi": "Nhóm hỗ trợ phản hồi nhanh đã trả lời mọi yêu cầu trước khi kết thúc ngày làm việc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "responsive customer service",
+        "responsive support team",
+        "highly responsive"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "responsiveness-n",
+      "word": "responsiveness",
+      "phonetic": {
+        "us": "/rɪ.ˈspɑn.sɪv.nəs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khả năng phản hồi nhanh và phù hợp",
+          "definition_en": "the quality of reacting quickly and appropriately to requests, questions, or changes",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "responsive",
+          "pos": "adj",
+          "meaning_vi": "phản hồi nhanh; sẵn sàng đáp ứng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers praised the support team for its responsiveness during the outage.",
+          "vi": "Khách hàng đánh giá cao khả năng phản hồi của nhóm hỗ trợ trong thời gian hệ thống gián đoạn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "customer responsiveness",
+        "responsiveness to inquiries",
+        "service responsiveness"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "restaurant-n",
@@ -3294,7 +3519,13 @@
         "OFFICE",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "revision",
+          "pos": "n",
+          "meaning_vi": "sự sửa đổi; bản chỉnh sửa"
+        }
+      ],
       "verb_forms": {
         "v1": "revise",
         "vs_es": "revises",
@@ -3318,7 +3549,7 @@
       "id": "revision-n",
       "word": "revision",
       "phonetic": {
-        "us": ""
+        "us": "/ri.ˈvɪ.ʒən/"
       },
       "senses": [
         {
@@ -3333,7 +3564,13 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "revise",
+          "pos": "v",
+          "meaning_vi": "điều chỉnh; sửa đổi"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

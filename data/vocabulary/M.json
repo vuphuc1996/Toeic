@@ -32,7 +32,7 @@
         {
           "word": "maintenance",
           "pos": "n",
-          "meaning_vi": "sự bảo trì"
+          "meaning_vi": "bảo trì; sự duy tu"
         },
         {
           "word": "maintainable",
@@ -80,7 +80,13 @@
       "topics": [
         "FACILITY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "maintain",
+          "pos": "v",
+          "meaning_vi": "duy trì; bảo trì; giữ gìn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -254,7 +260,7 @@
       "id": "mandate-n",
       "word": "mandate",
       "phonetic": {
-        "us": ""
+        "us": "/ˈmæn.ˌdeɪt/"
       },
       "senses": [
         {
@@ -295,7 +301,7 @@
       "id": "mandatory-adj",
       "word": "mandatory",
       "phonetic": {
-        "us": ""
+        "us": "/ˈmæn.də.ˌtɔ.ri/"
       },
       "senses": [
         {
@@ -327,7 +333,7 @@
       "id": "manpower-n",
       "word": "manpower",
       "phonetic": {
-        "us": ""
+        "us": "/ˈmæn.ˌpaʊ.ɚ/"
       },
       "senses": [
         {
@@ -701,7 +707,7 @@
       "id": "merge-v",
       "word": "merge",
       "phonetic": {
-        "us": ""
+        "us": "/mɝdʒ/"
       },
       "senses": [
         {
@@ -854,7 +860,7 @@
       "id": "milestone-n",
       "word": "milestone",
       "phonetic": {
-        "us": ""
+        "us": "/ˈmaɪl.ˌstoʊn/"
       },
       "senses": [
         {
@@ -971,7 +977,7 @@
       "id": "mitigate-v",
       "word": "mitigate",
       "phonetic": {
-        "us": ""
+        "us": "/ˈmɪ.tə.ˌɡeɪt/"
       },
       "senses": [
         {
@@ -1055,7 +1061,7 @@
       "id": "mobilize-v",
       "word": "mobilize",
       "phonetic": {
-        "us": ""
+        "us": "/ˈmoʊ.bə.ˌlaɪz/"
       },
       "senses": [
         {
@@ -1289,7 +1295,7 @@
       "id": "moratorium-n",
       "word": "moratorium",
       "phonetic": {
-        "us": ""
+        "us": "/ˌmɔ.rə.ˈtɔ.ri.əm/"
       },
       "senses": [
         {

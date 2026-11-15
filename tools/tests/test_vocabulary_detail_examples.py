@@ -62,6 +62,23 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
             self.assertTrue(entry.get('phonetic', {}).get('us'), entry['id'])
         self.assertEqual(sum(bool(x.get('phonetic', {}).get('us')) for x in batch['words']), 37)
 
+    def test_batch011_records_match_canonical_a_to_z_and_have_editorial_fields(self):
+        batch = load_json('data/vocabulary/batch-011.json')
+        self.assertEqual(batch['count'], 37)
+        self.assertEqual(len(batch['words']), 37)
+        self.assertIn('independent lexical review pending', batch['editorialStatus'])
+        canonical = {record['id']: record for record in self.records}
+        for entry in batch['words']:
+            self.assertIn(entry['id'], canonical)
+            self.assertEqual(canonical[entry['id']]['word'], entry['word'])
+            self.assertEqual(canonical[entry['id']]['senses'], entry['senses'])
+            self.assertTrue(entry['examples'])
+            self.assertEqual({e['sense_index'] for e in entry['examples']}, {0})
+            self.assertTrue(all(e.get('en') and e.get('vi') for e in entry['examples']))
+            self.assertGreaterEqual(len(entry.get('collocations', [])), 3)
+            self.assertTrue(entry.get('phonetic', {}).get('us'), entry['id'])
+        self.assertEqual(sum(bool(x.get('phonetic', {}).get('us')) for x in batch['words']), 37)
+
     def test_base_vocabulary_id_set_is_preserved_with_batches_017_to_020(self):
         ids = [record["id"] for record in self.records]
         baseline = set(load_json("tools/baseline-ids.json")["ids"])
@@ -74,7 +91,7 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         batch_020 = load_json("data/vocabulary/batch-008.json")
         self.assertEqual(len(batch_020["words"]), 13)
         self.assertTrue({w["id"] for w in batch_020["words"]}.issubset(set(ids)))
-        self.assertEqual(len(ids), 1063)
+        self.assertEqual(len(ids), 1100)
         self.assertEqual(len(ids), len(set(ids)))
         batch_009 = load_json('data/vocabulary/batch-009.json')
         self.assertEqual(len(batch_009['words']), 34)

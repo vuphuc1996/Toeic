@@ -132,6 +132,15 @@ Vocabulary must be organized by level, topic, communicative function and sense. 
 
 Internal planning target: 3,000–5,000 useful headwords for the foundational TOEIC-oriented lexicon, then expand based on topic gaps and learner evidence. This is a project target, not an ETS vocabulary requirement.
 
+### 4.4 Release progress and next content sequence
+- v2.70.0 inventory: **1,100 / 3,000** minimum target (36.7%); 1,100 / 5,000 planning ceiling (22.0%). This is headword quantity coverage, not overall product completion or lexical quality approval.
+- Batch 010 covers manufacturing, production operations, quality control, maintenance and supply chain (+37).
+- Batch 011 covers Customer Service and Travel (+37). Those topics remain open for further expansion; a batch does not mark an entire topic as complete.
+- Next planned vocabulary sequence: Contracts / legal-administration and Facilities / property-maintenance, followed by evidence-led gap filling across Travel, Customer Service, Technology and procurement.
+- Batch 011 independent lexical review and CEFR-by-sense review remain pending. Do not treat CMUdict-derived IPA or automated validators as human editorial approval.
+- Keep the 3,000–5,000 range as an internal planning target only; do not present it as an ETS-mandated word count.
+
+
 ## 5. Four-skill learning framework
 
 ### Listening

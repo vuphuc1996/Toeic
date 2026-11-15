@@ -363,7 +363,7 @@
       "id": "tender-n",
       "word": "tender",
       "phonetic": {
-        "us": ""
+        "us": "/ˈten.dɚ/"
       },
       "senses": [
         {
@@ -519,7 +519,7 @@
       "id": "terminate-v",
       "word": "terminate",
       "phonetic": {
-        "us": ""
+        "us": "/ˈtɝ.mə.ˌneɪt/"
       },
       "senses": [
         {
@@ -534,7 +534,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "termination",
+          "pos": "n",
+          "meaning_vi": "sự chấm dứt"
+        }
+      ],
       "verb_forms": {
         "v1": "terminate",
         "vs_es": "terminates",
@@ -560,7 +566,7 @@
       "id": "termination-n",
       "word": "termination",
       "phonetic": {
-        "us": ""
+        "us": "/tɚ.mə.ˈneɪ.ʃən/"
       },
       "senses": [
         {
@@ -575,7 +581,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "terminate",
+          "pos": "v",
+          "meaning_vi": "chấm dứt; kết thúc"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -595,7 +607,7 @@
       "id": "thereafter-adv",
       "word": "thereafter",
       "phonetic": {
-        "us": ""
+        "us": "/ðe.ˈræf.tɚ/"
       },
       "senses": [
         {
@@ -630,7 +642,7 @@
       "id": "threshold-n",
       "word": "threshold",
       "phonetic": {
-        "us": ""
+        "us": "/ˈθre.ˌʃoʊld/"
       },
       "senses": [
         {
@@ -765,6 +777,44 @@
       ],
       "cefr_level": "A1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "ticketing-n",
+      "word": "ticketing",
+      "phonetic": {
+        "us": "/ˈtɪ.kə.tɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc bán, phát hành và quản lý vé",
+          "definition_en": "the process or system of selling, issuing, and managing tickets",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new ticketing system allows customers to change reservations online.",
+          "vi": "Hệ thống bán vé mới cho phép khách hàng thay đổi đặt chỗ trực tuyến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "ticketing system",
+        "ticketing office",
+        "online ticketing"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "time-n",
@@ -971,7 +1021,7 @@
       "id": "transact-v",
       "word": "transact",
       "phonetic": {
-        "us": ""
+        "us": "/træn.ˈzækt/"
       },
       "senses": [
         {
@@ -986,7 +1036,13 @@
       "topics": [
         "BANKING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "transaction",
+          "pos": "n",
+          "meaning_vi": "giao dịch"
+        }
+      ],
       "verb_forms": {
         "v1": "transact",
         "vs_es": "transacts",
@@ -1036,7 +1092,7 @@
         {
           "word": "transact",
           "pos": "v",
-          "meaning_vi": "giao dịch"
+          "meaning_vi": "thực hiện giao dịch"
         },
         {
           "word": "transactional",
@@ -1132,7 +1188,7 @@
       "id": "transit-n",
       "word": "transit",
       "phonetic": {
-        "us": ""
+        "us": "/ˈtræn.zɪt/"
       },
       "senses": [
         {
@@ -1284,6 +1340,44 @@
       ]
     },
     {
+      "id": "transportation-n",
+      "word": "transportation",
+      "phonetic": {
+        "us": "/ˌtræn.spɚ.ˈteɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự vận chuyển; phương tiện giao thông",
+          "definition_en": "the movement of people or goods from one place to another, or the vehicles used for this purpose",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The conference organizer will provide transportation from the hotel to the venue.",
+          "vi": "Ban tổ chức hội nghị sẽ bố trí phương tiện đưa đón từ khách sạn đến địa điểm tổ chức.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "public transportation",
+        "ground transportation",
+        "transportation costs"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "treasury-n",
       "word": "treasury",
       "phonetic": {
@@ -1392,6 +1486,100 @@
       ]
     },
     {
+      "id": "troubleshoot-v",
+      "word": "troubleshoot",
+      "phonetic": {
+        "us": "/ˈtrʌ.bəl.ˌʃut/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "xác định và khắc phục sự cố",
+          "definition_en": "to identify the cause of a problem in a machine or system and correct it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "troubleshooting",
+          "pos": "n",
+          "meaning_vi": "quá trình xác định và khắc phục sự cố"
+        }
+      ],
+      "verb_forms": {
+        "v1": "troubleshoot",
+        "vs_es": "troubleshoots",
+        "v2": "troubleshot",
+        "v3": "troubleshot",
+        "ving": "troubleshooting"
+      },
+      "examples": [
+        {
+          "en": "The help desk can troubleshoot connection problems over the phone.",
+          "vi": "Bộ phận hỗ trợ có thể xác định và khắc phục sự cố kết nối qua điện thoại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "troubleshoot a problem",
+        "troubleshoot a device",
+        "troubleshoot remotely"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "troubleshooting-n",
+      "word": "troubleshooting",
+      "phonetic": {
+        "us": "/ˈtrʌ.bəl.ˌʃu.tɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quá trình xác định và khắc phục sự cố",
+          "definition_en": "the process of finding the cause of a problem and correcting it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "troubleshoot",
+          "pos": "v",
+          "meaning_vi": "xác định và khắc phục sự cố"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The troubleshooting guide lists the steps for restoring network access.",
+          "vi": "Tài liệu hướng dẫn khắc phục sự cố liệt kê các bước khôi phục quyền truy cập mạng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "troubleshooting guide",
+        "troubleshooting steps",
+        "technical troubleshooting"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "tuesday-n",
       "word": "Tuesday",
       "phonetic": {
@@ -1430,7 +1618,7 @@
       "id": "turnover-n",
       "word": "turnover",
       "phonetic": {
-        "us": ""
+        "us": "/ˈtɝ.ˌnoʊ.vɚ/"
       },
       "senses": [
         {

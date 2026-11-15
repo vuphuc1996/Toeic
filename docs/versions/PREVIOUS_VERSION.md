@@ -1,4 +1,4 @@
 # Previous version
 
-- Version: **v2.67.0**
-- Change: JPG-only Listening Part 1 cleanup and Vocabulary Batch 009 (+34 headwords).
+- Version: **v2.69.0**
+- Change: CMUdict-based US IPA population (972/1,063), word-family quality pass, canonical progress baseline and version synchronization. No new headwords.

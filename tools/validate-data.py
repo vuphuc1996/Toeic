@@ -604,18 +604,19 @@ def check_debt_and_info(ctx: Context) -> None:
         # IPA
         ph = r.get("phonetic")
         us = ph.get("us") if isinstance(ph, dict) else None
-        if isinstance(us, str):
-            if not us.strip():
-                coverage["ipa_missing"] += 1
-            else:
-                coverage["ipa"] += 1
-                if not re.fullmatch(r"/[^/;()\[\]]+/", us):
-                    ctx.add("IP001", rid, "/phonetic/us", f"IPA không đúng dạng /…/ đơn: {us[:50]!r}")
-                if "ər" in us:
-                    ctx.add("IP004", rid, "/phonetic/us", f"dùng 'ər': {us}")
-                groups = len(re.findall(r"[aeiouæɑɔəɚɪʊʌɝ]+ː?", us))
-                if groups >= 2 and "ˈ" not in us and re.fullmatch(r"/[^/;()\[\]]+/", us):
-                    ctx.add("IP003", rid, "/phonetic/us", f"nhiều âm tiết nhưng không có dấu nhấn: {us}")
+        if not isinstance(us, str) or not us.strip():
+            # Count every canonical record without a usable US IPA, including
+            # absent phonetic objects and missing/non-string `us` values.
+            coverage["ipa_missing"] += 1
+        else:
+            coverage["ipa"] += 1
+            if not re.fullmatch(r"/[^/;()\[\]]+/", us):
+                ctx.add("IP001", rid, "/phonetic/us", f"IPA không đúng dạng /…/ đơn: {us[:50]!r}")
+            if "ər" in us:
+                ctx.add("IP004", rid, "/phonetic/us", f"dùng 'ər': {us}")
+            groups = len(re.findall(r"[aeiouæɑɔəɚɪʊʌɝ]+ː?", us))
+            if groups >= 2 and "ˈ" not in us and re.fullmatch(r"/[^/;()\[\]]+/", us):
+                ctx.add("IP003", rid, "/phonetic/us", f"nhiều âm tiết nhưng không có dấu nhấn: {us}")
         # collocations
         for i, c in enumerate(r.get("collocations", []) if isinstance(r.get("collocations"), list) else []):
             if isinstance(c, str) and not contains_headword(c, word):

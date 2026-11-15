@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "version": "2.68.0",
+  "version": "2.70.0",
   "letters": [
     {
       "letter": "A",
       "file": "./data/vocabulary/A.json",
-      "count": 115
+      "count": 119
     },
     {
       "letter": "B",
@@ -15,22 +15,22 @@
     {
       "letter": "C",
       "file": "./data/vocabulary/C.json",
-      "count": 141
+      "count": 147
     },
     {
       "letter": "D",
       "file": "./data/vocabulary/D.json",
-      "count": 73
+      "count": 75
     },
     {
       "letter": "E",
       "file": "./data/vocabulary/E.json",
-      "count": 60
+      "count": 62
     },
     {
       "letter": "F",
       "file": "./data/vocabulary/F.json",
-      "count": 37
+      "count": 39
     },
     {
       "letter": "G",
@@ -40,12 +40,12 @@
     {
       "letter": "H",
       "file": "./data/vocabulary/H.json",
-      "count": 12
+      "count": 13
     },
     {
       "letter": "I",
       "file": "./data/vocabulary/I.json",
-      "count": 58
+      "count": 60
     },
     {
       "letter": "J",
@@ -60,7 +60,7 @@
     {
       "letter": "L",
       "file": "./data/vocabulary/L.json",
-      "count": 33
+      "count": 34
     },
     {
       "letter": "M",
@@ -75,12 +75,12 @@
     {
       "letter": "O",
       "file": "./data/vocabulary/O.json",
-      "count": 35
+      "count": 36
     },
     {
       "letter": "P",
       "file": "./data/vocabulary/P.json",
-      "count": 93
+      "count": 96
     },
     {
       "letter": "Q",
@@ -90,17 +90,17 @@
     {
       "letter": "R",
       "file": "./data/vocabulary/R.json",
-      "count": 87
+      "count": 92
     },
     {
       "letter": "S",
       "file": "./data/vocabulary/S.json",
-      "count": 86
+      "count": 88
     },
     {
       "letter": "T",
       "file": "./data/vocabulary/T.json",
-      "count": 38
+      "count": 42
     },
     {
       "letter": "U",
@@ -110,7 +110,7 @@
     {
       "letter": "V",
       "file": "./data/vocabulary/V.json",
-      "count": 21
+      "count": 23
     },
     {
       "letter": "W",
@@ -134,31 +134,55 @@
     }
   ],
   "categories": "./data/categories.json",
-  "totalWords": 1063,
+  "totalWords": 1100,
   "cefrLevels": {
     "A1": 64,
-    "A2": 228,
-    "B1": 292,
-    "B2": 372,
-    "C1": 107
+    "A2": 233,
+    "B1": 305,
+    "B2": 384,
+    "C1": 114
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
   "totalTopics": 32,
-  "previousReleaseTotalWords": 979,
+  "previousReleaseTotalWords": 1063,
   "releaseAdditionIds": [
-    "accrual-n",
-    "receivable-adj",
-    "collateral-n",
-    "escrow-n",
-    "consignor-n",
-    "consignee-n",
-    "stockout-n",
-    "bottleneck-n",
-    "throughput-n",
-    "outlay-n",
-    "covenant-n",
-    "timesheet-n",
-    "replenishment-n"
+    "airfare-n",
+    "overbooking-n",
+    "voucher-n",
+    "excursion-n",
+    "arrival-n",
+    "passport-n",
+    "immigration-n",
+    "shuttle-n",
+    "charter-n",
+    "disembark-v",
+    "cruise-n",
+    "ferry-n",
+    "porter-n",
+    "steward-n",
+    "rebook-v",
+    "ticketing-n",
+    "visa-n",
+    "transportation-n",
+    "escalation-n",
+    "responsiveness-n",
+    "dissatisfied-adj",
+    "loyalty-n",
+    "courteous-adj",
+    "cancellation-n",
+    "agent-n",
+    "resolution-n",
+    "resolve-v",
+    "troubleshoot-v",
+    "troubleshooting-n",
+    "hotline-n",
+    "consumer-n",
+    "apology-n",
+    "faulty-adj",
+    "complain-v",
+    "responsive-adj",
+    "punctuality-n",
+    "inconvenience-n"
   ],
   "releaseRepairProfiles": [
     {
@@ -247,7 +271,44 @@
         "packaging-n",
         "packaging-line-n",
         "procurement-cycle-n",
-        "purchase-order-n"
+        "purchase-order-n",
+        "airfare-n",
+        "overbooking-n",
+        "voucher-n",
+        "excursion-n",
+        "arrival-n",
+        "passport-n",
+        "immigration-n",
+        "shuttle-n",
+        "charter-n",
+        "disembark-v",
+        "cruise-n",
+        "ferry-n",
+        "porter-n",
+        "steward-n",
+        "rebook-v",
+        "ticketing-n",
+        "visa-n",
+        "transportation-n",
+        "escalation-n",
+        "responsiveness-n",
+        "dissatisfied-adj",
+        "loyalty-n",
+        "courteous-adj",
+        "cancellation-n",
+        "agent-n",
+        "resolution-n",
+        "resolve-v",
+        "troubleshoot-v",
+        "troubleshooting-n",
+        "hotline-n",
+        "consumer-n",
+        "apology-n",
+        "faulty-adj",
+        "complain-v",
+        "responsive-adj",
+        "punctuality-n",
+        "inconvenience-n"
       ]
     },
     {
@@ -323,7 +384,44 @@
         "packaging-n",
         "packaging-line-n",
         "procurement-cycle-n",
-        "purchase-order-n"
+        "purchase-order-n",
+        "airfare-n",
+        "overbooking-n",
+        "voucher-n",
+        "excursion-n",
+        "arrival-n",
+        "passport-n",
+        "immigration-n",
+        "shuttle-n",
+        "charter-n",
+        "disembark-v",
+        "cruise-n",
+        "ferry-n",
+        "porter-n",
+        "steward-n",
+        "rebook-v",
+        "ticketing-n",
+        "visa-n",
+        "transportation-n",
+        "escalation-n",
+        "responsiveness-n",
+        "dissatisfied-adj",
+        "loyalty-n",
+        "courteous-adj",
+        "cancellation-n",
+        "agent-n",
+        "resolution-n",
+        "resolve-v",
+        "troubleshoot-v",
+        "troubleshooting-n",
+        "hotline-n",
+        "consumer-n",
+        "apology-n",
+        "faulty-adj",
+        "complain-v",
+        "responsive-adj",
+        "punctuality-n",
+        "inconvenience-n"
       ]
     },
     {
@@ -365,7 +463,86 @@
         "packaging-n",
         "packaging-line-n",
         "procurement-cycle-n",
-        "purchase-order-n"
+        "purchase-order-n",
+        "airfare-n",
+        "overbooking-n",
+        "voucher-n",
+        "excursion-n",
+        "arrival-n",
+        "passport-n",
+        "immigration-n",
+        "shuttle-n",
+        "charter-n",
+        "disembark-v",
+        "cruise-n",
+        "ferry-n",
+        "porter-n",
+        "steward-n",
+        "rebook-v",
+        "ticketing-n",
+        "visa-n",
+        "transportation-n",
+        "escalation-n",
+        "responsiveness-n",
+        "dissatisfied-adj",
+        "loyalty-n",
+        "courteous-adj",
+        "cancellation-n",
+        "agent-n",
+        "resolution-n",
+        "resolve-v",
+        "troubleshoot-v",
+        "troubleshooting-n",
+        "hotline-n",
+        "consumer-n",
+        "apology-n",
+        "faulty-adj",
+        "complain-v",
+        "responsive-adj",
+        "punctuality-n",
+        "inconvenience-n"
+      ]
+    },
+    {
+      "previousTotalWords": 1063,
+      "releaseAdditionIds": [
+        "airfare-n",
+        "overbooking-n",
+        "voucher-n",
+        "excursion-n",
+        "arrival-n",
+        "passport-n",
+        "immigration-n",
+        "shuttle-n",
+        "charter-n",
+        "disembark-v",
+        "cruise-n",
+        "ferry-n",
+        "porter-n",
+        "steward-n",
+        "rebook-v",
+        "ticketing-n",
+        "visa-n",
+        "transportation-n",
+        "escalation-n",
+        "responsiveness-n",
+        "dissatisfied-adj",
+        "loyalty-n",
+        "courteous-adj",
+        "cancellation-n",
+        "agent-n",
+        "resolution-n",
+        "resolve-v",
+        "troubleshoot-v",
+        "troubleshooting-n",
+        "hotline-n",
+        "consumer-n",
+        "apology-n",
+        "faulty-adj",
+        "complain-v",
+        "responsive-adj",
+        "punctuality-n",
+        "inconvenience-n"
       ]
     }
   ]

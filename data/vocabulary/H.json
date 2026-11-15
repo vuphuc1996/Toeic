@@ -176,7 +176,7 @@
       "id": "headcount-n",
       "word": "headcount",
       "phonetic": {
-        "us": ""
+        "us": "/ˈhed.ˌkaʊnt/"
       },
       "senses": [
         {
@@ -391,6 +391,43 @@
         "host a conference",
         "event host"
       ]
+    },
+    {
+      "id": "hotline-n",
+      "word": "hotline",
+      "phonetic": {
+        "us": "/ˈhɑt.ˌlaɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đường dây nóng; số điện thoại hỗ trợ chuyên biệt",
+          "definition_en": "a special telephone service that people can call for information or help",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can call the hotline to report a damaged delivery.",
+          "vi": "Khách hàng có thể gọi đường dây nóng để báo cáo việc giao hàng bị hư hỏng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "customer hotline",
+        "emergency hotline",
+        "hotline number"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "hour-n",

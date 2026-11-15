@@ -176,6 +176,24 @@ class ValidatorTests(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn("EX003", out)
 
+
+    def test_ipa_missing_counter_includes_absent_phonetic_object(self):
+        self.clean_with_baseline()
+        del self.repo.words["A"][0]["phonetic"]
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1, out)  # missing required `phonetic` remains a structural error
+        self.assertIn("DQ004", out)
+        self.assertIn("IPA thiếu=1", out)
+
+    def test_ipa_missing_counter_includes_missing_us_key(self):
+        self.clean_with_baseline()
+        self.repo.words["A"][0]["phonetic"] = {}
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 0, out)
+        self.assertIn("IPA thiếu=1", out)
+
     def test_invalid_ipa_character(self):
         self.clean_with_baseline()
         self.repo.words["A"][0]["phonetic"]["us"] = "/ˈæl.fə😀/"

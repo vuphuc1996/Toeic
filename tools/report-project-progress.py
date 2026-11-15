@@ -46,6 +46,7 @@ def main():
       'Synonyms':sum(any(s.get('synonyms') for s in x.get('senses',[])) for x in vocab_records),
       'Antonyms':sum(any(s.get('antonyms') for s in x.get('senses',[])) for x in vocab_records),
     }
+    word_family_links=sum(len(x.get('word_family') or []) for x in vocab_records)
     lines=[
       '# Project Progress Snapshot — generated',
       '',f"- Source version: **{manifest['version']}**",'- Basis: canonical JSON inventory; counts are not editorial approval.',
@@ -77,6 +78,7 @@ def main():
       '', f'## Vocabulary field coverage (against current {vocab:,}-headword base; not editorial approval)',
       '', '| Field | Records | Coverage |', '|---|---:|---:|',
       *[f'| {name} | {count:,}/{vocab:,} | **{pct(count,vocab)}** |' for name,count in field_counts.items()],
+      f'| Word-family directed links | {word_family_links:,} links | — |',
       '', 'These ratios show whether a field is populated, not whether its content is accurate, natural or complete. Relationship counts are reported separately from headword counts.',
       '', '## Quality / verification status',
       '', '- Content counts do not equal completed learning outcomes.',

@@ -334,7 +334,7 @@
       "id": "decline-vn",
       "word": "decline",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈklaɪn/"
       },
       "senses": [
         {
@@ -390,7 +390,7 @@
       "id": "deduct-v",
       "word": "deduct",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈdʌkt/"
       },
       "senses": [
         {
@@ -485,7 +485,7 @@
       "id": "deduction-n",
       "word": "deduction",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈdʌk.ʃən/"
       },
       "senses": [
         {
@@ -569,7 +569,7 @@
       "id": "defective-adj",
       "word": "defective",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈfek.tɪv/"
       },
       "senses": [
         {
@@ -644,7 +644,7 @@
       "id": "deficit-n",
       "word": "deficit",
       "phonetic": {
-        "us": ""
+        "us": "/ˈde.fə.sət/"
       },
       "senses": [
         {
@@ -767,7 +767,7 @@
       "id": "delegation-n",
       "word": "delegation",
       "phonetic": {
-        "us": ""
+        "us": "/ˌde.lə.ˈɡeɪ.ʃən/"
       },
       "senses": [
         {
@@ -1227,7 +1227,7 @@
       "id": "departure-n",
       "word": "departure",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈpɑr.tʃɚ/"
       },
       "senses": [
         {
@@ -1242,7 +1242,13 @@
       "topics": [
         "TRAVEL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "depart",
+          "pos": "v",
+          "meaning_vi": "khởi hành; rời đi"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1306,7 +1312,7 @@
       "id": "depreciation-n",
       "word": "depreciation",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˌpri.ʃi.ˈeɪ.ʃən/"
       },
       "senses": [
         {
@@ -1341,7 +1347,7 @@
       "id": "derive-v",
       "word": "derive",
       "phonetic": {
-        "us": ""
+        "us": "/dɚ.ˈaɪv/"
       },
       "senses": [
         {
@@ -1444,7 +1450,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "designation",
+          "pos": "n",
+          "meaning_vi": "chức danh; sự chỉ định"
+        }
+      ],
       "verb_forms": {
         "v1": "designate",
         "vs_es": "designates",
@@ -1485,7 +1497,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "designate",
+          "pos": "v",
+          "meaning_vi": "chỉ định; định danh"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1546,7 +1564,7 @@
       "id": "detect-v",
       "word": "detect",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈtekt/"
       },
       "senses": [
         {
@@ -1798,7 +1816,7 @@
       "id": "disburse-v",
       "word": "disburse",
       "phonetic": {
-        "us": ""
+        "us": "/dɪs.ˈbɝs/"
       },
       "senses": [
         {
@@ -1845,7 +1863,7 @@
       "id": "disbursement-n",
       "word": "disbursement",
       "phonetic": {
-        "us": ""
+        "us": "/dɪs.ˈbɝ.smənt/"
       },
       "senses": [
         {
@@ -1886,7 +1904,7 @@
       "id": "disclose-v",
       "word": "disclose",
       "phonetic": {
-        "us": ""
+        "us": "/dɪs.ˈkloʊz/"
       },
       "senses": [
         {
@@ -1991,7 +2009,7 @@
       "id": "discrepancy-n",
       "word": "discrepancy",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈskre.pən.si/"
       },
       "senses": [
         {
@@ -2059,7 +2077,7 @@
       "id": "discretion-n",
       "word": "discretion",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈskre.ʃən/"
       },
       "senses": [
         {
@@ -2094,7 +2112,7 @@
       "id": "discretionary-adj",
       "word": "discretionary",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈskre.ʃə.ˌne.ri/"
       },
       "senses": [
         {
@@ -2179,6 +2197,49 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "disembark-v",
+      "word": "disembark",
+      "phonetic": {
+        "us": "/dɪ.sem.ˈbɑrk/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "rời tàu hoặc máy bay; xuống phương tiện",
+          "definition_en": "to leave a ship, aircraft, or other vehicle after a journey",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "disembark",
+        "vs_es": "disembarks",
+        "v2": "disembarked",
+        "v3": "disembarked",
+        "ving": "disembarking"
+      },
+      "examples": [
+        {
+          "en": "Passengers may disembark after the crew has secured the aircraft door.",
+          "vi": "Hành khách có thể rời máy bay sau khi phi hành đoàn đã cố định cửa máy bay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "disembark safely",
+        "disembark the vessel",
+        "disembark from the aircraft"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "dish-n",
       "word": "dish",
       "cefr_level": "A2",
@@ -2214,7 +2275,7 @@
       "id": "dispatch-n",
       "word": "dispatch",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈspætʃ/"
       },
       "senses": [
         {
@@ -2249,7 +2310,7 @@
       "id": "dispatching-n",
       "word": "dispatching",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈspæ.tʃɪŋ/"
       },
       "senses": [
         {
@@ -2356,6 +2417,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "dissatisfied-adj",
+      "word": "dissatisfied",
+      "phonetic": {
+        "us": "/dɪ.ˈsæ.təs.ˌfaɪd/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "không hài lòng; không thỏa mãn",
+          "definition_en": "not pleased or satisfied with a product, service, or situation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Dissatisfied customers may request a refund through the online service portal.",
+          "vi": "Khách hàng không hài lòng có thể yêu cầu hoàn tiền thông qua cổng dịch vụ trực tuyến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "dissatisfied customer",
+        "dissatisfied with the service",
+        "highly dissatisfied"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "distort-v",
       "word": "distort",
       "phonetic": {
@@ -2412,7 +2510,7 @@
       "id": "distribute-v",
       "word": "distribute",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈstrɪb.jut/"
       },
       "senses": [
         {
@@ -2550,7 +2648,7 @@
       "id": "distributor-n",
       "word": "distributor",
       "phonetic": {
-        "us": ""
+        "us": "/dɪ.ˈstrɪb.jə.tɚ/"
       },
       "senses": [
         {
@@ -2786,7 +2884,7 @@
       "id": "downtime-n",
       "word": "downtime",
       "phonetic": {
-        "us": ""
+        "us": "/ˈdaʊn.ˌtaɪm/"
       },
       "senses": [
         {
@@ -2970,7 +3068,7 @@
       "id": "durable-adj",
       "word": "durable",
       "phonetic": {
-        "us": ""
+        "us": "/ˈdʊ.rə.bəl/"
       },
       "senses": [
         {

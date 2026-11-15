@@ -24,6 +24,7 @@
 
 - Rà spelling/lemma, POS theo sense, Vietnamese meaning, English definition, examples + translations, topics và CEFR estimate.
 - IPA chỉ ghi khi xác định được đúng giọng US/UK và có nguồn; không suy đoán để lấp trường trống.
+- CMUdict ARPABET có thể được chuẩn hóa sang US IPA bằng công cụ `tools/cmudict_ipa.py` chỉ khi headword khớp chính xác, có đúng một cách đọc và một trọng âm chính. Phải lưu ARPABET nguồn, IPA kết quả, phương pháp chuyển đổi và giấy phép trong ledger; từ có nhiều cách đọc/không có entry rõ vẫn để trống chờ xác minh. IPA chuyển đổi là ứng viên biên tập có nguồn, không phải chứng nhận độc lập.
 - Word family, verb forms, synonyms, antonyms và collocations là trường có điều kiện; không ép thêm dữ liệu không tự nhiên.
 - Word-family chỉ liên kết các lemma có quan hệ hình thái/từ loại rõ ràng. Ưu tiên từ đã tồn tại trong từ điển; POS và `meaning_vi` phải khớp sense tương ứng của mục được liên kết. Không suy diễn quan hệ chỉ vì hai từ giống mặt chữ; tránh các trường hợp khác nghĩa hoặc chỉ liên quan theo chủ đề.
 - Khi một cặp có hai mục từ trong kho, giữ liên kết hai chiều nếu phù hợp với POS. Không thay ID, thứ tự sense, ví dụ hoặc tiến độ học của headword hiện hữu.

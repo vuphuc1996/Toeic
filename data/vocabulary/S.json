@@ -1147,6 +1147,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "shuttle-n",
+      "word": "shuttle",
+      "phonetic": {
+        "us": "/ˈʃʌ.təl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "xe trung chuyển; dịch vụ đưa đón theo tuyến",
+          "definition_en": "a vehicle or service that travels regularly between two places",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A complimentary shuttle runs between the terminal and the airport hotel.",
+          "vi": "Xe trung chuyển miễn phí hoạt động giữa nhà ga và khách sạn sân bay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "airport shuttle",
+        "shuttle bus",
+        "shuttle service"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "significant-adj",
       "word": "significant",
       "cefr_level": "B1",
@@ -1439,7 +1477,7 @@
       "id": "solvent-adj",
       "word": "solvent",
       "phonetic": {
-        "us": ""
+        "us": "/ˈsɑl.vənt/"
       },
       "senses": [
         {
@@ -1583,7 +1621,13 @@
         "TECHNOLOGY",
         "PURCHASING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "specify",
+          "pos": "v",
+          "meaning_vi": "quy định rõ; nêu cụ thể"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1601,7 +1645,7 @@
       "id": "specify-v",
       "word": "specify",
       "phonetic": {
-        "us": ""
+        "us": "/ˈspe.sə.ˌfaɪ/"
       },
       "senses": [
         {
@@ -1616,7 +1660,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "specification",
+          "pos": "n",
+          "meaning_vi": "thông số kỹ thuật; bản mô tả yêu cầu"
+        }
+      ],
       "verb_forms": {
         "v1": "specify",
         "vs_es": "specifies",
@@ -1796,7 +1846,7 @@
       "id": "stakeholder-n",
       "word": "stakeholder",
       "phonetic": {
-        "us": ""
+        "us": "/ˈsteɪk.ˌhoʊl.dɚ/"
       },
       "senses": [
         {
@@ -1906,6 +1956,44 @@
         "bank statement",
         "official statement"
       ]
+    },
+    {
+      "id": "steward-n",
+      "word": "steward",
+      "phonetic": {
+        "us": "/ˈstu.ɚd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tiếp viên; nhân viên phục vụ trên phương tiện hoặc tại sự kiện",
+          "definition_en": "a person who serves passengers on a ship or aircraft, or helps supervise an event",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The steward explained the safety procedures before the vessel departed.",
+          "vi": "Nhân viên phục vụ đã giải thích các quy trình an toàn trước khi tàu khởi hành.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "flight steward",
+        "cabin steward",
+        "steward service"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "stock-v",
@@ -2143,7 +2231,7 @@
       "id": "subcontract-v",
       "word": "subcontract",
       "phonetic": {
-        "us": ""
+        "us": "/səb.ˈkɑn.ˌtrækt/"
       },
       "senses": [
         {
@@ -2238,7 +2326,7 @@
       "id": "subcontractor-n",
       "word": "subcontractor",
       "phonetic": {
-        "us": ""
+        "us": "/səb.ˈkɑn.ˌtræk.tɚ/"
       },
       "senses": [
         {
@@ -2331,7 +2419,7 @@
       "id": "subscribe-v",
       "word": "subscribe",
       "phonetic": {
-        "us": ""
+        "us": "/səb.ˈskraɪb/"
       },
       "senses": [
         {
@@ -2372,7 +2460,7 @@
       "id": "subscription-n",
       "word": "subscription",
       "phonetic": {
-        "us": ""
+        "us": "/səb.ˈskrɪp.ʃən/"
       },
       "senses": [
         {
@@ -2445,7 +2533,7 @@
       "id": "subsidiary-n",
       "word": "subsidiary",
       "phonetic": {
-        "us": ""
+        "us": "/səb.ˈsɪ.di.ˌe.ri/"
       },
       "senses": [
         {
@@ -2595,7 +2683,7 @@
       "id": "sufficient-adj",
       "word": "sufficient",
       "phonetic": {
-        "us": ""
+        "us": "/sə.ˈfɪ.ʃənt/"
       },
       "senses": [
         {
@@ -2630,7 +2718,7 @@
       "id": "sufficiently-adv",
       "word": "sufficiently",
       "phonetic": {
-        "us": ""
+        "us": "/sə.ˈfɪ.ʃənt.li/"
       },
       "senses": [
         {
@@ -2779,7 +2867,7 @@
       "id": "supervise-v",
       "word": "supervise",
       "phonetic": {
-        "us": ""
+        "us": "/ˈsu.pɚ.ˌvaɪz/"
       },
       "senses": [
         {
@@ -2831,7 +2919,7 @@
       "id": "supervision-n",
       "word": "supervision",
       "phonetic": {
-        "us": ""
+        "us": "/ˌsu.pɚ.ˈvɪ.ʒən/"
       },
       "senses": [
         {
@@ -2877,7 +2965,7 @@
       "id": "supervisor-n",
       "word": "supervisor",
       "phonetic": {
-        "us": ""
+        "us": "/ˈsu.pɚ.ˌvaɪ.zɚ/"
       },
       "senses": [
         {
@@ -3146,7 +3234,7 @@
       "id": "surplus-n",
       "word": "surplus",
       "phonetic": {
-        "us": ""
+        "us": "/ˈsɝ.pləs/"
       },
       "senses": [
         {
@@ -3226,7 +3314,7 @@
       "id": "suspend-v",
       "word": "suspend",
       "phonetic": {
-        "us": ""
+        "us": "/sə.ˈspend/"
       },
       "senses": [
         {
@@ -3273,7 +3361,7 @@
       "id": "suspension-n",
       "word": "suspension",
       "phonetic": {
-        "us": ""
+        "us": "/sə.ˈspen.ʃən/"
       },
       "senses": [
         {
@@ -3314,7 +3402,7 @@
       "id": "sustain-v",
       "word": "sustain",
       "phonetic": {
-        "us": ""
+        "us": "/sə.ˈsteɪn/"
       },
       "senses": [
         {
@@ -3357,7 +3445,7 @@
       "id": "sustainability-n",
       "word": "sustainability",
       "phonetic": {
-        "us": ""
+        "us": "/sə.ˌsteɪ.nə.ˈbɪ.lɪ.ti/"
       },
       "senses": [
         {

@@ -1,3 +1,25 @@
+## v2.70.0 — Customer Service and Travel vocabulary expansion; IPA coverage counter correction
+
+- Added Vocabulary Batch 011 with 37 original TOEIC headwords across Customer Service and Travel, increasing the canonical dictionary from 1,063 to 1,100 entries. Each new record includes an English definition, Vietnamese gloss, a contextual bilingual example, at least three collocations, a sense-level editorial CEFR estimate, and one US IPA candidate sourced from a single exact-match CMUdict pronunciation.
+- Added four reciprocal, POS/sense-checked word-family pairs: cancel/cancellation, resolve/resolution, responsive/responsiveness, and troubleshoot/troubleshooting. No speculative synonyms or antonyms were added.
+- Cumulative CMUdict ledger now contains 298 source-linked entries. The original 91 unresolved IPA records from the v2.69 base remain blank; no IPA is guessed. Current US IPA population is 1,009/1,100 (91.7%).
+- Vocabulary quantity coverage increases to 1,100/3,000 (36.7%) and 1,100/5,000 (22.0%). These are quantity ratios only, not quality, CEFR mastery, or an overall product-completion percentage.
+- Fixed the validator's IPA missing counter so absent `phonetic` objects and missing/non-string `us` values count as missing. Added regression coverage for both forms.
+- Extended migration-repair profiles to recognize the 1,063-word v2.69.0 snapshot and cumulatively restore the exact known release additions without changing unrelated local deletions or learner progress.
+- No IndexedDB schema/store migration, learning-question IDs, answer keys, user progress, personal vocabulary, or study settings were reset. Independent lexical review remains pending; CMUdict-derived IPA is not independently pronunciation-certified.
+- Strict Part 1 photo validation remains blocked by eight missing repository-owned original JPG binaries. Remote GitHub Actions, Pages deployment and physical-device QA are not claimed.
+
+## v2.69.0 — US IPA coverage backfill and word-family quality pass
+
+- Added **261 US IPA entries** for exact headword matches with a single CMUdict General American ARPABET pronunciation and a single primary stress. CMUdict provides ARPABET, not IPA; the project uses a documented, deterministic broad-GA conversion. The source warns that its entries may contain errors or inconsistencies, so these remain source-linked editorial candidates rather than independent pronunciation certification. Provenance, raw ARPABET, conversion rules and exclusions are recorded in `docs/reports/CMUDICT_IPA_BACKFILL_v2.69.0.json`; the CMUdict data license is retained in `docs/licenses/CMUdict-DATA-LICENSE.txt`.
+- Increased US IPA field coverage from 711/1,063 (66.9%) to **972/1,063 (91.4%)**, a gain of 261 records / 24.5 percentage points. The remaining 91 entries stay blank by design: 60 have multiple CMUdict pronunciations, 25 have no exact entry, and 6 have multiple primary-stress patterns. No IPA was guessed for excluded items.
+- Expanded word-family metadata from 240 to **259 headwords** and from 338 to **357 directed links** (+19). Added reciprocal, POS/sense-aligned relationships; corrected the Vietnamese gloss for the `transaction → transact` link without changing IDs.
+- Added deterministic `tools/cmudict_ipa.py`, an embedded source/provenance ledger, a license notice and five focused tests. CI now runs the IPA ledger check and test module. Progress reporting now includes word-family directed-link counts.
+- Vocabulary remains **1,063/3,000 = 35.4%** of the minimum planning target and **1,063/5,000 = 21.3%** of the planning ceiling. This release improves metadata quality and does not add new headwords. Next planned content batch remains Customer Service, Travel, Contracts and Facilities after review of the 91 IPA exceptions.
+- No vocabulary stable IDs, question IDs, answer keys, IndexedDB schema/stores, personal vocabulary, hidden-word state or learning progress were reset.
+- **Local verification:** vocabulary validator 1,063 records / 0 errors / 0 warnings; CMUdict IPA ledger check PASS (261 source-linked records); focused CMUdict IPA tests 5/5; word-family-link tests 5/5; project-progress tests 4/4. Full test and asset status are recorded in `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.69.0.md`.
+- CMUdict is a source dictionary and may contain errors, omissions or inconsistencies; the conversion and single-pronunciation filter reduce ambiguity but do not constitute human independent lexical review. CEFR labels remain editorial estimates. Remote GitHub Actions, GitHub Pages and physical-device QA are not claimed. Strict Part 1 photo validation remains blocked by eight original JPG binaries absent from this source workspace.
+
 ## v2.68.0 — verified Part 1 fingerprint refresh and TOEIC Vocabulary Batch 010
 
 - Fixed the remaining-content fingerprint CI failure by recording the approved removal of the legacy Part 1 SVG `image` metadata field. All eight historic unit hashes are reproducible by restoring the exact old SVG path; all question hashes remain unchanged. Added a second fingerprint refresh audit entry and fail-closed verification.

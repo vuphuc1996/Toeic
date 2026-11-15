@@ -70,6 +70,22 @@ PAIRS = [
     ('defect', 'defective', 'n', 'adj'),
     ('reliable', 'reliability', 'adj', 'n'),
     ('package', 'packaging', 'v', 'n'),
+    ('claim', 'claimant', 'n/v', 'n'),
+    ('designate', 'designation', 'v', 'n'),
+    ('revise', 'revision', 'v', 'n'),
+    ('specify', 'specification', 'v', 'n'),
+    ('terminate', 'termination', 'v', 'n'),
+    ('transact', 'transaction', 'v', 'n'),
+    ('contract', 'contractual', 'n/v', 'adj'),
+    ('allocate', 'allocation', 'v', 'n'),
+    ('depart', 'departure', 'v', 'n'),
+    ('maintain', 'maintenance', 'v', 'n'),
+    ('operate', 'operation', 'v', 'n'),
+    ('verify', 'verification', 'v', 'n'),
+    ('cancel', 'cancellation', 'v', 'n'),
+    ('resolve', 'resolution', 'v', 'n'),
+    ('responsive', 'responsiveness', 'adj', 'n'),
+    ('troubleshoot', 'troubleshooting', 'v', 'n'),
 ]
 
 
@@ -105,7 +121,7 @@ class VocabularyFamilyLinkTests(unittest.TestCase):
         return matches[0]
 
     def test_all_curated_pairs_exist_in_both_directions(self):
-        self.assertEqual(len(PAIRS), 62)
+        self.assertEqual(len(PAIRS), 78)
         for base, derivative, base_pos, derivative_pos in PAIRS:
             self.assertIn(base, self.records)
             self.assertIn(derivative, self.records)
@@ -131,7 +147,7 @@ class VocabularyFamilyLinkTests(unittest.TestCase):
 
     def test_family_coverage_clears_two_hundred_headwords(self):
         count = sum(bool(record.get('word_family')) for record in self.records.values())
-        self.assertGreaterEqual(count, 200)
+        self.assertGreaterEqual(count, 250)
 
     def test_existing_reservation_links_are_preserved(self):
         reservation = self.records['reservation']

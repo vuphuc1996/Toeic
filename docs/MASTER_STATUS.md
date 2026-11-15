@@ -4,11 +4,11 @@
 
 - **Ngày kiểm kê:** 2026-11-15.
 - **Quy ước báo cáo tiến độ:** luôn có % khi tồn tại target/denominator rõ; tách độ phủ số lượng, chất lượng nội dung, kiểm thử phiên bản và xác minh triển khai. Không có target thì ghi “Chưa đo được”.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.68.0 (verified Part 1 fingerprint refresh and Vocabulary Batch 010; local release candidate).
-- **Current candidate:** v2.68.0 — recorded a verified metadata-only fingerprint refresh after removing the obsolete SVG `image` field from eight reviewed Part 1 units; historic unit hashes reproduce when that exact field is restored and all eight question hashes remain unchanged. Added 37 canonical TOEIC vocabulary headwords in Batch 010. Independent lexical review of Batch 010 remains pending; CEFR levels are editorial estimates.
-- **Previous release:** v2.67.0 — JPG-only Listening Part 1 cleanup and Vocabulary Batch 009 (+34).
-- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.68.0.md`; vocabulary 1,063/3,000 minimum (35.4%) and 1,063/5,000 planning ceiling (21.3%); 10/10 objective groups have linked resources and 281/281 canonical resource records are linked. Outcome criteria: 30/30 defined (framework coverage only); TOEIC objective evidence is wired for 9/10 groups. Foundation inventory: recognition 30/30, contextual application 10/10, reading 10 passages/20 questions, listening 10 scripts/20 questions and A–Z 26/26 records. These are inventory/structural coverage figures, not learner mastery or independent editorial approval.
-- **Immediate base:** v2.67.0; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.70.0 (Customer Service/Travel vocabulary expansion and IPA coverage counter correction; local release candidate).
+- **Current candidate:** v2.70.0 — vocabulary Batch 011 added 37 headwords for Customer Service and Travel; total 1,100. US IPA population is 1,009/1,100 (91.7%) with 298 cumulative source-linked CMUdict entries; the 91 unresolved IPA records are kept blank. Word-family coverage is 267/1,100 (24.3%) with 365 directed links.
+- **Previous release:** v2.69.0 — CMUdict IPA coverage backfill and word-family quality pass; v2.68.0 was the 37-word manufacturing/operations release.
+- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.70.0.md`; vocabulary 1,100/3,000 minimum (36.7%) and 1,100/5,000 planning ceiling (22.0%); US IPA 1,009/1,100 (91.7%); word-family records 267/1,100 (24.3%) and 365 directed links; 10/10 objective groups have linked resources and 281/281 canonical resource records are linked. Outcome criteria: 30/30 defined (framework coverage only); TOEIC objective evidence is wired for 9/10 groups. Foundation inventory: recognition 30/30, contextual application 10/10, reading 10 passages/20 questions, listening 10 scripts/20 questions and A–Z 26/26 records. These are inventory/structural coverage figures, not learner mastery or independent editorial approval.
+- **Immediate base:** v2.69.0; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
 - **Release state:** local candidate — deployment hold. Part 1 is now JPG-only and has no SVG fallback, but strict photo validation remains blocked because eight original JPG binaries are missing from this inherited source snapshot (1/9 present). Preserve/restore those repository-owned JPG files when merging; do not replace them with generated images. Remote GitHub Actions, Pages deployment, physical-device audio and visual behavior are not verified from this workspace.
 - **Development rule:** finish the internal product/content backlog first. Do not issue acceptance reminders or a broad acceptance checklist while development is active. The eventual test plan should target high-risk flows rather than repeat a 100% manual inventory sweep.
 
@@ -17,6 +17,27 @@
 
 
 
+
+## v2.70.0 changes — Customer Service and Travel vocabulary expansion; IPA coverage counter correction
+
+- Added `data/vocabulary/batch-011.json` and **37 canonical A–Z headwords** about customer support, complaints, issue resolution, reservations, airports and travel transport. Vocabulary grows 1,063 → **1,100 headwords** (+37): **36.7%** of the 3,000-headword minimum and **22.0%** of the 5,000-headword planning ceiling.
+- Every new headword contains an English definition, Vietnamese gloss, original bilingual context example, at least three collocations, editorial CEFR estimate, and a candidate US IPA converted from a single exact-match CMUdict ARPABET pronunciation. Independent lexical review and CEFR-by-sense review remain pending.
+- Added four reciprocal, POS/sense-checked word-family pairs: cancel/cancellation, resolve/resolution, responsive/responsiveness, and troubleshoot/troubleshooting. Coverage is 267/1,100 (24.3%) with 365 directed links.
+- Cumulative CMUdict IPA ledger contains 298 entries; current coverage is 1,009/1,100 (91.7%). The 91 inherited unresolved records remain blank: 60 have multiple CMUdict pronunciations, 25 have no exact match, and 6 have multiple primary-stress patterns.
+- Corrected the IPA-missing information counter to count a missing phonetic object and a missing/non-string `phonetic.us`; now reports the canonical total of 91 missing records. Two new validator regression tests cover these shapes.
+- Extended release migration profiles for legacy 979/992/1026-word workspaces and added the exact 1,063-word v2.69.0 profile. Existing learner changes outside the exact release fingerprint are not eligible for automatic repair.
+- Structural validation: 1,100 records / 0 errors / 0 warnings; content validation: 0 errors / 8 known missing-JPG warnings; CMUdict IPA ledger: 298/298; design-profile and version sync pass. Focused Python tests: 27/27 and missing-counter regressions: 2/2.
+- Strict Part 1 asset validator remains blocked because eight repository-owned original JPG binaries are absent from this source archive (1/9 present). No AI-generated replacements are permitted. Remote GitHub Actions/Pages and physical-device QA are not claimed.
+
+## v2.69.0 changes — US IPA coverage and word-family quality pass
+
+- Added 261 US IPA transcriptions derived from exact-match, single-pronunciation CMUdict General American ARPABET records. CMUdict does not supply IPA; source pronunciations are converted by the documented project broad-GA conversion and remain editorial candidates, not independently certified pronunciations.
+- US IPA coverage rose from 711/1,063 (66.9%) to 972/1,063 (91.4%). The 91 remaining blanks are deliberate: 60 multi-pronunciation entries, 25 no-exact-match entries and 6 with multiple primary-stress patterns.
+- Added provenance and raw ARPABET ledger at `docs/reports/CMUDICT_IPA_BACKFILL_v2.69.0.json`; retained `docs/licenses/CMUdict-DATA-LICENSE.txt`; added deterministic checker `tools/cmudict_ipa.py` and five CI tests.
+- Word-family records rose from 240 to 259; directed relationships rose from 338 to 357 (+19). Reciprocal relationships are checked for POS/sense consistency; no stable IDs changed.
+- Vocabulary remains 1,063/3,000 (35.4%) and 1,063/5,000 (21.3%). This is a metadata-quality release, not a headword-growth release. Next planned batch: Customer Service, Travel, Contracts and Facilities, after conservative review of remaining IPA exceptions.
+- Validation: `validate-data.py` 1,063 records / 0 errors / 0 warnings; CMUdict ledger check PASS (261); CMUdict IPA tests 5/5; word-family link tests 5/5; project progress tests 4/4. Overall selected test run and limitations are recorded in the v2.69.0 test report.
+- CMUdict warns its data may contain errors, omissions and inconsistencies; IPA conversion is not independent review. CEFR remains editorial-estimate. No IndexedDB schema, stable vocabulary/question IDs or learner progress reset. Deployment remains on hold pending eight missing original Part 1 JPG binaries; remote CI/Pages and device QA are not claimed.
 
 ## v2.68.0 changes — verified Part 1 metadata fingerprint refresh and Vocabulary Batch 010
 
@@ -299,13 +320,13 @@
 - New Part 1 item remains `reserve-pending-independent-review`: normal practice only, excluded from Mock until independent review. No answer/choice IDs changed.
 - Focused checks: `test_learning_content.py` 34/34 PASS; `test_pwa_readiness.py` 3/3 PASS; `test_part1_photo_assets.py` 4/4 PASS; JS syntax checks for `assets/js/app.js` and `sw.js` PASS.
 - `validate-learning-content.py`: 0 errors and 8 warnings because eight original Pexels JPG binaries are omitted from this source snapshot. `validate-part1-photo-assets.py --allow-missing`: PASS with 1/9 photo bytes present here and 8 known missing-Pexels-JPG warnings. The user's original eight JPGs must remain in GitHub for strict CI photo validation.
-- No IndexedDB change: `toeic-vocabulary-phase1`, v1, store `workspace`. Vocabulary 1,063, Reading 200, Grammar 33 lessons/86 exercises, separate Part 5 bank 80; no changes to their IDs or progress.
+- No IndexedDB change: `toeic-vocabulary-phase1`, v1, store `workspace`. Vocabulary 1,100, Reading 200, Grammar 33 lessons/86 exercises, separate Part 5 bank 80; no changes to their IDs or progress.
 
 ## 6. Baseline inventory
 
 | Area | Inventory | Current development status |
 |---|---:|---|
-| Vocabulary | 1,063 headwords | 240 word-family records; 338 word-family links; US IPA 711/1,063; collocations 893/1,063 |
+| Vocabulary | 1,100 headwords | 267 word-family records; 365 word-family links; US IPA 1,009/1,100; collocations 930/1,100 |
 | Listening | **201 questions / 107 units** | P1=9, P2=51, P3=81, P4=60; 102 Mock-eligible; 99 pending independent review |
 | Reading | **200 questions / 51 resources** | Two Full Reading forms can be selected without repeated eligible IDs |
 | Grammar | **33 lessons / 86 exercises** | Retry and shared Focus Workspace preserved |
@@ -324,7 +345,7 @@
 7. Reading's 200-question bank supports two zero-overlap Full forms according to the local inventory audit. The 45 expanded Part 7 questions still need semantic second-person review.
 8. All 80 separate Part 5 practice items remain pending independent review and practice-only. Do not promote to Mock until key uniqueness, distractors, grammar and naturalness have independent review.
 9. Mock scores are raw practice counts/accuracy, not ETS-equated results. No ETS questions or recordings are included.
-10. Vocabulary contains 1,063 headwords (35.4% of the 3,000 minimum planning target), still below the 3,000–5,000 target. Sense-level IPA, word families, definitions, examples, synonyms/antonyms and independent lexical review remain active editorial work.
+10. Vocabulary contains 1,100 headwords (36.7% of the 3,000 minimum planning target), still below the 3,000–5,000 target. Sense-level IPA, word families, definitions, examples, synonyms/antonyms and independent lexical review remain active editorial work.
 
 ## 8. Runtime and storage compatibility
 

@@ -6,7 +6,7 @@
       "id": "facilitate-v",
       "word": "facilitate",
       "phonetic": {
-        "us": ""
+        "us": "/fə.ˈsɪ.lə.ˌteɪt/"
       },
       "senses": [
         {
@@ -53,7 +53,7 @@
       "id": "facilitator-n",
       "word": "facilitator",
       "phonetic": {
-        "us": ""
+        "us": "/fə.ˈsɪ.lə.ˌteɪ.tɚ/"
       },
       "senses": [
         {
@@ -214,7 +214,7 @@
       "id": "fare-n",
       "word": "fare",
       "phonetic": {
-        "us": ""
+        "us": "/fer/"
       },
       "senses": [
         {
@@ -278,10 +278,48 @@
       "collocations": []
     },
     {
+      "id": "faulty-adj",
+      "word": "faulty",
+      "phonetic": {
+        "us": "/ˈfɔl.ti/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "bị lỗi; không hoạt động đúng",
+          "definition_en": "not working correctly because of a fault or defect",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier replaced the faulty printer under the warranty agreement.",
+          "vi": "Nhà cung cấp đã thay máy in bị lỗi theo thỏa thuận bảo hành.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "faulty equipment",
+        "faulty product",
+        "faulty component"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "feasibility-n",
       "word": "feasibility",
       "phonetic": {
-        "us": ""
+        "us": "/ˌfi.zə.ˈbɪ.lə.ti/"
       },
       "senses": [
         {
@@ -316,7 +354,7 @@
       "id": "feasible-adj",
       "word": "feasible",
       "phonetic": {
-        "us": ""
+        "us": "/ˈfi.zə.bəl/"
       },
       "senses": [
         {
@@ -421,6 +459,43 @@
         "customer feedback",
         "provide feedback"
       ]
+    },
+    {
+      "id": "ferry-n",
+      "word": "ferry",
+      "phonetic": {
+        "us": "/ˈfe.ri/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phà; tàu chở khách và phương tiện qua sông hoặc biển",
+          "definition_en": "a boat or ship that carries passengers and vehicles across a stretch of water on a regular route",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The last ferry to the island departs at 9:30 p.m.",
+          "vi": "Chuyến phà cuối cùng ra đảo khởi hành lúc 9 giờ 30 tối.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "ferry service",
+        "ferry terminal",
+        "ferry crossing"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "finance-v",
@@ -584,7 +659,7 @@
       "id": "fiscal-adj",
       "word": "fiscal",
       "phonetic": {
-        "us": ""
+        "us": "/ˈfɪ.skəl/"
       },
       "senses": [
         {
@@ -654,7 +729,7 @@
       "id": "fleet-n",
       "word": "fleet",
       "phonetic": {
-        "us": ""
+        "us": "/flit/"
       },
       "senses": [
         {
@@ -689,7 +764,7 @@
       "id": "flexibility-n",
       "word": "flexibility",
       "phonetic": {
-        "us": ""
+        "us": "/ˌflek.sə.ˈbɪ.lə.ti/"
       },
       "senses": [
         {
@@ -972,7 +1047,7 @@
       "id": "foresee-v",
       "word": "foresee",
       "phonetic": {
-        "us": ""
+        "us": "/fɔr.ˈsi/"
       },
       "senses": [
         {
@@ -1013,7 +1088,7 @@
       "id": "foreseeable-adj",
       "word": "foreseeable",
       "phonetic": {
-        "us": ""
+        "us": "/fɔr.ˈsi.ə.bəl/"
       },
       "senses": [
         {
@@ -1089,7 +1164,7 @@
       "id": "franchise-n",
       "word": "franchise",
       "phonetic": {
-        "us": ""
+        "us": "/ˈfræn.ˌtʃaɪz/"
       },
       "senses": [
         {
@@ -1318,7 +1393,7 @@
       "id": "fulfill-v",
       "word": "fulfill",
       "phonetic": {
-        "us": ""
+        "us": "/fʊl.ˈfɪl/"
       },
       "senses": [
         {
@@ -1365,7 +1440,7 @@
       "id": "fulfillment-n",
       "word": "fulfillment",
       "phonetic": {
-        "us": ""
+        "us": "/fʊl.ˈfɪl.mənt/"
       },
       "senses": [
         {

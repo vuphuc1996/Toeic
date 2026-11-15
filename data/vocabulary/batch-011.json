@@ -1,0 +1,1489 @@
+{
+  "schemaVersion": 1,
+  "batch": "011",
+  "version": "2.70.0",
+  "focus": "TOEIC vocabulary expansion: Travel operations and Customer Service",
+  "count": 37,
+  "editorialStatus": "original editorial draft; structural validation pending; independent lexical review pending; CEFR levels are editorial estimates by sense",
+  "sourcePolicy": "Definitions, Vietnamese glosses, bilingual examples and collocations are project-authored learning content. IPA is a broad-GA conversion from exact headword matches with one python-cmudict 1.1.3 ARPABET pronunciation and one primary stress; it is not independent dictionary certification. No speculative synonyms or antonyms were added. The content is not ETS material.",
+  "sources": [
+    {
+      "name": "CMU Pronouncing Dictionary (CMUdict)",
+      "url": "https://github.com/cmusphinx/cmudict",
+      "use": "Exact headword ARPABET candidates for the 37 IPA transcriptions; conversion and licensing caveat are documented in the cumulative v2.70.0 ledger."
+    },
+    {
+      "name": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/",
+      "use": "Recommended independent lexical/pronunciation review source; no claim of full independent review is made in this batch."
+    }
+  ],
+  "words": [
+    {
+      "id": "airfare-n",
+      "word": "airfare",
+      "phonetic": {
+        "us": "/ˈer.ˌfer/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giá vé máy bay",
+          "definition_en": "the price charged for a journey by airplane",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The airfare includes one checked bag on this international route.",
+          "vi": "Giá vé máy bay đã bao gồm một kiện hành lý ký gửi trên tuyến quốc tế này.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "airfare costs",
+        "round-trip airfare",
+        "discounted airfare"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "overbooking-n",
+      "word": "overbooking",
+      "phonetic": {
+        "us": "/ˈoʊ.vɚ.ˌbʊ.kɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng đặt chỗ vượt quá số chỗ có sẵn",
+          "definition_en": "the practice of accepting more reservations than there are available seats or rooms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "HOTEL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The airline offered meal vouchers after overbooking caused a long delay.",
+          "vi": "Hãng hàng không cung cấp phiếu ăn sau khi tình trạng đặt chỗ vượt số ghế gây ra sự chậm trễ kéo dài.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "overbooking policy",
+        "overbooking compensation",
+        "flight overbooking"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "voucher-n",
+      "word": "voucher",
+      "phonetic": {
+        "us": "/ˈvaʊ.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiếu mua hàng; phiếu dịch vụ; phiếu thanh toán",
+          "definition_en": "a document or code that can be exchanged for goods, services, or a stated amount of money",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "FINANCE",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please present the hotel voucher at the reception desk when you arrive.",
+          "vi": "Vui lòng xuất trình phiếu xác nhận khách sạn tại quầy lễ tân khi bạn đến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "meal voucher",
+        "travel voucher",
+        "discount voucher"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "excursion-n",
+      "word": "excursion",
+      "phonetic": {
+        "us": "/ɪk.ˈskɝ.ʒən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyến tham quan ngắn; chuyến đi trong ngày",
+          "definition_en": "a short organized journey made for pleasure or to visit a place",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The travel agent arranged a guided excursion to the historic district.",
+          "vi": "Đại lý du lịch đã sắp xếp một chuyến tham quan có hướng dẫn đến khu phố lịch sử.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "guided excursion",
+        "day excursion",
+        "shore excursion"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "arrival-n",
+      "word": "arrival",
+      "phonetic": {
+        "us": "/ɚ.ˈaɪ.vəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự đến nơi; thời điểm đến",
+          "definition_en": "the act of reaching a place, or the time when someone or something reaches it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "AIRPORT",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Passengers should check the arrival board for updated gate information.",
+          "vi": "Hành khách nên kiểm tra bảng thông tin chuyến đến để cập nhật cửa ra máy bay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "arrival time",
+        "arrival gate",
+        "arrival lounge"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "passport-n",
+      "word": "passport",
+      "phonetic": {
+        "us": "/ˈpæ.ˌspɔrt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hộ chiếu",
+          "definition_en": "an official document issued by a government that proves a person’s identity and nationality when traveling internationally",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All passengers must show a valid passport before boarding the international flight.",
+          "vi": "Tất cả hành khách phải xuất trình hộ chiếu còn hiệu lực trước khi lên chuyến bay quốc tế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "valid passport",
+        "passport number",
+        "passport control"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "immigration-n",
+      "word": "immigration",
+      "phonetic": {
+        "us": "/ˌɪ.məɡ.ˈreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quầy hoặc thủ tục xuất nhập cảnh; sự nhập cư",
+          "definition_en": "the official process of checking people entering or leaving a country, or the movement of people to another country to live",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "AIRPORT",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Allow extra time to complete immigration checks before your connecting flight.",
+          "vi": "Hãy dành thêm thời gian để hoàn tất thủ tục xuất nhập cảnh trước chuyến bay nối chuyến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "immigration control",
+        "immigration officer",
+        "immigration procedures"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "shuttle-n",
+      "word": "shuttle",
+      "phonetic": {
+        "us": "/ˈʃʌ.təl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "xe trung chuyển; dịch vụ đưa đón theo tuyến",
+          "definition_en": "a vehicle or service that travels regularly between two places",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A complimentary shuttle runs between the terminal and the airport hotel.",
+          "vi": "Xe trung chuyển miễn phí hoạt động giữa nhà ga và khách sạn sân bay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "airport shuttle",
+        "shuttle bus",
+        "shuttle service"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "charter-n",
+      "word": "charter",
+      "phonetic": {
+        "us": "/ˈtʃɑr.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyến thuê riêng; hợp đồng thuê phương tiện",
+          "definition_en": "the hiring of an aircraft, ship, or vehicle for private use, or the agreement that makes this possible",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company arranged a charter flight for employees attending the conference.",
+          "vi": "Công ty đã sắp xếp một chuyến bay thuê riêng cho nhân viên tham dự hội nghị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "charter flight",
+        "charter service",
+        "charter agreement"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "disembark-v",
+      "word": "disembark",
+      "phonetic": {
+        "us": "/dɪ.sem.ˈbɑrk/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "rời tàu hoặc máy bay; xuống phương tiện",
+          "definition_en": "to leave a ship, aircraft, or other vehicle after a journey",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "disembark",
+        "vs_es": "disembarks",
+        "v2": "disembarked",
+        "v3": "disembarked",
+        "ving": "disembarking"
+      },
+      "examples": [
+        {
+          "en": "Passengers may disembark after the crew has secured the aircraft door.",
+          "vi": "Hành khách có thể rời máy bay sau khi phi hành đoàn đã cố định cửa máy bay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "disembark safely",
+        "disembark the vessel",
+        "disembark from the aircraft"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cruise-n",
+      "word": "cruise",
+      "phonetic": {
+        "us": "/kruz/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyến du lịch bằng tàu biển",
+          "definition_en": "a holiday or journey on a ship that visits several places",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The travel package includes a five-night cruise along the coast.",
+          "vi": "Gói du lịch bao gồm chuyến đi tàu biển năm đêm dọc theo bờ biển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cruise ship",
+        "cruise terminal",
+        "cruise package"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "ferry-n",
+      "word": "ferry",
+      "phonetic": {
+        "us": "/ˈfe.ri/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phà; tàu chở khách và phương tiện qua sông hoặc biển",
+          "definition_en": "a boat or ship that carries passengers and vehicles across a stretch of water on a regular route",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The last ferry to the island departs at 9:30 p.m.",
+          "vi": "Chuyến phà cuối cùng ra đảo khởi hành lúc 9 giờ 30 tối.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "ferry service",
+        "ferry terminal",
+        "ferry crossing"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "porter-n",
+      "word": "porter",
+      "phonetic": {
+        "us": "/ˈpɔr.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên khuân vác hành lý",
+          "definition_en": "a person whose job is to carry travelers’ bags at a station, hotel, or airport",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A porter brought the guests’ suitcases to their rooms.",
+          "vi": "Nhân viên khuân vác đã mang vali của khách lên phòng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "hotel porter",
+        "luggage porter",
+        "porter service"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "steward-n",
+      "word": "steward",
+      "phonetic": {
+        "us": "/ˈstu.ɚd/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tiếp viên; nhân viên phục vụ trên phương tiện hoặc tại sự kiện",
+          "definition_en": "a person who serves passengers on a ship or aircraft, or helps supervise an event",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The steward explained the safety procedures before the vessel departed.",
+          "vi": "Nhân viên phục vụ đã giải thích các quy trình an toàn trước khi tàu khởi hành.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "flight steward",
+        "cabin steward",
+        "steward service"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "rebook-v",
+      "word": "rebook",
+      "phonetic": {
+        "us": "/ri.ˈbʊk/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đặt lại vé hoặc chỗ sau khi thay đổi kế hoạch",
+          "definition_en": "to make a new reservation for someone after the original booking has changed or been canceled",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "rebook",
+        "vs_es": "rebooks",
+        "v2": "rebooked",
+        "v3": "rebooked",
+        "ving": "rebooking"
+      },
+      "examples": [
+        {
+          "en": "The airline will rebook affected passengers on the next available flight.",
+          "vi": "Hãng hàng không sẽ đặt lại vé cho những hành khách bị ảnh hưởng trên chuyến bay sớm nhất còn chỗ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "rebook a flight",
+        "rebook a ticket",
+        "rebook a passenger"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "ticketing-n",
+      "word": "ticketing",
+      "phonetic": {
+        "us": "/ˈtɪ.kə.tɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc bán, phát hành và quản lý vé",
+          "definition_en": "the process or system of selling, issuing, and managing tickets",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new ticketing system allows customers to change reservations online.",
+          "vi": "Hệ thống bán vé mới cho phép khách hàng thay đổi đặt chỗ trực tuyến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "ticketing system",
+        "ticketing office",
+        "online ticketing"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "visa-n",
+      "word": "visa",
+      "phonetic": {
+        "us": "/ˈvi.zə/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thị thực; giấy phép nhập cảnh",
+          "definition_en": "an official mark or document that allows someone to enter, stay in, or leave a country for a specified period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Check the visa requirements before confirming your travel dates.",
+          "vi": "Hãy kiểm tra yêu cầu về thị thực trước khi xác nhận ngày đi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "visa application",
+        "visa requirements",
+        "work visa"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "transportation-n",
+      "word": "transportation",
+      "phonetic": {
+        "us": "/ˌtræn.spɚ.ˈteɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự vận chuyển; phương tiện giao thông",
+          "definition_en": "the movement of people or goods from one place to another, or the vehicles used for this purpose",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The conference organizer will provide transportation from the hotel to the venue.",
+          "vi": "Ban tổ chức hội nghị sẽ bố trí phương tiện đưa đón từ khách sạn đến địa điểm tổ chức.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "public transportation",
+        "ground transportation",
+        "transportation costs"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "escalation-n",
+      "word": "escalation",
+      "phonetic": {
+        "us": "/ˌe.skə.ˈleɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc chuyển vấn đề lên cấp xử lý cao hơn; sự leo thang",
+          "definition_en": "the process of referring a problem to someone with greater authority, or a situation becoming more serious",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The support agent followed the escalation process when the payment issue remained unresolved.",
+          "vi": "Nhân viên hỗ trợ đã thực hiện quy trình chuyển cấp xử lý khi vấn đề thanh toán vẫn chưa được giải quyết.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "escalation process",
+        "escalation procedure",
+        "escalation policy"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "responsiveness-n",
+      "word": "responsiveness",
+      "phonetic": {
+        "us": "/rɪ.ˈspɑn.sɪv.nəs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khả năng phản hồi nhanh và phù hợp",
+          "definition_en": "the quality of reacting quickly and appropriately to requests, questions, or changes",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "responsive",
+          "pos": "adj",
+          "meaning_vi": "phản hồi nhanh; sẵn sàng đáp ứng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers praised the support team for its responsiveness during the outage.",
+          "vi": "Khách hàng đánh giá cao khả năng phản hồi của nhóm hỗ trợ trong thời gian hệ thống gián đoạn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "customer responsiveness",
+        "responsiveness to inquiries",
+        "service responsiveness"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "dissatisfied-adj",
+      "word": "dissatisfied",
+      "phonetic": {
+        "us": "/dɪ.ˈsæ.təs.ˌfaɪd/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "không hài lòng; không thỏa mãn",
+          "definition_en": "not pleased or satisfied with a product, service, or situation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Dissatisfied customers may request a refund through the online service portal.",
+          "vi": "Khách hàng không hài lòng có thể yêu cầu hoàn tiền thông qua cổng dịch vụ trực tuyến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "dissatisfied customer",
+        "dissatisfied with the service",
+        "highly dissatisfied"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "loyalty-n",
+      "word": "loyalty",
+      "phonetic": {
+        "us": "/ˈlɔɪ.əl.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lòng trung thành; sự gắn bó của khách hàng",
+          "definition_en": "the quality of remaining supportive of a person, organization, product, or brand",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The loyalty program rewards customers who make frequent purchases.",
+          "vi": "Chương trình khách hàng thân thiết thưởng cho những khách hàng thường xuyên mua sắm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "customer loyalty",
+        "loyalty program",
+        "brand loyalty"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "courteous-adj",
+      "word": "courteous",
+      "phonetic": {
+        "us": "/ˈkɝ.ti.əs/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "lịch sự; nhã nhặn",
+          "definition_en": "polite, respectful, and considerate toward other people",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please remain courteous when responding to a customer complaint.",
+          "vi": "Vui lòng giữ thái độ lịch sự khi phản hồi khiếu nại của khách hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "courteous service",
+        "courteous response",
+        "courteous staff"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cancellation-n",
+      "word": "cancellation",
+      "phonetic": {
+        "us": "/ˌkæn.sə.ˈleɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc hủy bỏ; sự hủy đặt chỗ",
+          "definition_en": "the act of ending an arrangement, order, reservation, or event before it takes place",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "TRAVEL",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "cancel",
+          "pos": "v",
+          "meaning_vi": "hủy"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A cancellation fee applies when a reservation is withdrawn less than 24 hours in advance.",
+          "vi": "Phí hủy áp dụng khi đặt chỗ bị hủy trước thời điểm sử dụng chưa đến 24 giờ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cancellation fee",
+        "cancellation policy",
+        "flight cancellation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "agent-n",
+      "word": "agent",
+      "phonetic": {
+        "us": "/ˈeɪ.dʒənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên đại diện; đại lý",
+          "definition_en": "a person who acts for an organization or assists customers on its behalf",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A customer service agent will contact you after reviewing the request.",
+          "vi": "Nhân viên chăm sóc khách hàng sẽ liên hệ với bạn sau khi xem xét yêu cầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "customer service agent",
+        "travel agent",
+        "sales agent"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "resolution-n",
+      "word": "resolution",
+      "phonetic": {
+        "us": "/ˌre.zə.ˈlu.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cách giải quyết; sự giải quyết vấn đề",
+          "definition_en": "the action or process of solving a problem, disagreement, or complaint",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "resolve",
+          "pos": "v",
+          "meaning_vi": "giải quyết; xử lý dứt điểm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The service team aims to provide a resolution within two business days.",
+          "vi": "Nhóm dịch vụ đặt mục tiêu đưa ra phương án giải quyết trong vòng hai ngày làm việc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "issue resolution",
+        "complaint resolution",
+        "resolution time"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "resolve-v",
+      "word": "resolve",
+      "phonetic": {
+        "us": "/ri.ˈzɑlv/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "giải quyết; xử lý dứt điểm",
+          "definition_en": "to find an acceptable solution to a problem or disagreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "resolution",
+          "pos": "n",
+          "meaning_vi": "cách giải quyết; sự giải quyết vấn đề"
+        }
+      ],
+      "verb_forms": {
+        "v1": "resolve",
+        "vs_es": "resolves",
+        "v2": "resolved",
+        "v3": "resolved",
+        "ving": "resolving"
+      },
+      "examples": [
+        {
+          "en": "Our technician will resolve the account access issue as soon as possible.",
+          "vi": "Kỹ thuật viên của chúng tôi sẽ giải quyết vấn đề truy cập tài khoản sớm nhất có thể.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "resolve an issue",
+        "resolve a complaint",
+        "resolve a dispute"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "troubleshoot-v",
+      "word": "troubleshoot",
+      "phonetic": {
+        "us": "/ˈtrʌ.bəl.ˌʃut/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "xác định và khắc phục sự cố",
+          "definition_en": "to identify the cause of a problem in a machine or system and correct it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "troubleshooting",
+          "pos": "n",
+          "meaning_vi": "quá trình xác định và khắc phục sự cố"
+        }
+      ],
+      "verb_forms": {
+        "v1": "troubleshoot",
+        "vs_es": "troubleshoots",
+        "v2": "troubleshot",
+        "v3": "troubleshot",
+        "ving": "troubleshooting"
+      },
+      "examples": [
+        {
+          "en": "The help desk can troubleshoot connection problems over the phone.",
+          "vi": "Bộ phận hỗ trợ có thể xác định và khắc phục sự cố kết nối qua điện thoại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "troubleshoot a problem",
+        "troubleshoot a device",
+        "troubleshoot remotely"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "troubleshooting-n",
+      "word": "troubleshooting",
+      "phonetic": {
+        "us": "/ˈtrʌ.bəl.ˌʃu.tɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quá trình xác định và khắc phục sự cố",
+          "definition_en": "the process of finding the cause of a problem and correcting it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "troubleshoot",
+          "pos": "v",
+          "meaning_vi": "xác định và khắc phục sự cố"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The troubleshooting guide lists the steps for restoring network access.",
+          "vi": "Tài liệu hướng dẫn khắc phục sự cố liệt kê các bước khôi phục quyền truy cập mạng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "troubleshooting guide",
+        "troubleshooting steps",
+        "technical troubleshooting"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "hotline-n",
+      "word": "hotline",
+      "phonetic": {
+        "us": "/ˈhɑt.ˌlaɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đường dây nóng; số điện thoại hỗ trợ chuyên biệt",
+          "definition_en": "a special telephone service that people can call for information or help",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can call the hotline to report a damaged delivery.",
+          "vi": "Khách hàng có thể gọi đường dây nóng để báo cáo việc giao hàng bị hư hỏng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "customer hotline",
+        "emergency hotline",
+        "hotline number"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consumer-n",
+      "word": "consumer",
+      "phonetic": {
+        "us": "/kən.ˈsu.mɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người tiêu dùng",
+          "definition_en": "a person who buys or uses goods and services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consumer has the right to receive accurate information about the service.",
+          "vi": "Người tiêu dùng có quyền nhận thông tin chính xác về dịch vụ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "consumer rights",
+        "consumer protection",
+        "consumer survey"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "apology-n",
+      "word": "apology",
+      "phonetic": {
+        "us": "/ə.ˈpɑ.lə.ˌdʒi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lời xin lỗi",
+          "definition_en": "something that is said or written to express regret for a mistake or problem",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manager sent a written apology to customers affected by the delay.",
+          "vi": "Người quản lý đã gửi lời xin lỗi bằng văn bản đến những khách hàng bị ảnh hưởng bởi sự chậm trễ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "formal apology",
+        "written apology",
+        "sincere apology"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "faulty-adj",
+      "word": "faulty",
+      "phonetic": {
+        "us": "/ˈfɔl.ti/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "bị lỗi; không hoạt động đúng",
+          "definition_en": "not working correctly because of a fault or defect",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier replaced the faulty printer under the warranty agreement.",
+          "vi": "Nhà cung cấp đã thay máy in bị lỗi theo thỏa thuận bảo hành.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "faulty equipment",
+        "faulty product",
+        "faulty component"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "complain-v",
+      "word": "complain",
+      "phonetic": {
+        "us": "/kəm.ˈpleɪn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "phàn nàn; khiếu nại",
+          "definition_en": "to say that something is wrong or unsatisfactory, often to seek a response or remedy",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "complain",
+        "vs_es": "complains",
+        "v2": "complained",
+        "v3": "complained",
+        "ving": "complaining"
+      },
+      "examples": [
+        {
+          "en": "Customers may complain directly to the branch manager about poor service.",
+          "vi": "Khách hàng có thể trực tiếp khiếu nại với quản lý chi nhánh về dịch vụ kém.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "complain about a service",
+        "complain to the manager",
+        "formally complain"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "responsive-adj",
+      "word": "responsive",
+      "phonetic": {
+        "us": "/rɪ.ˈspɑn.sɪv/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "phản hồi nhanh; sẵn sàng đáp ứng",
+          "definition_en": "reacting quickly and helpfully to requests, questions, or needs",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "responsiveness",
+          "pos": "n",
+          "meaning_vi": "khả năng phản hồi nhanh và phù hợp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The responsive support team answered every inquiry before the end of the day.",
+          "vi": "Nhóm hỗ trợ phản hồi nhanh đã trả lời mọi yêu cầu trước khi kết thúc ngày làm việc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "responsive customer service",
+        "responsive support team",
+        "highly responsive"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "punctuality-n",
+      "word": "punctuality",
+      "phonetic": {
+        "us": "/ˌpʌŋk.tʃu.ˈæ.lɪ.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính đúng giờ; sự đúng giờ",
+          "definition_en": "the habit or quality of arriving or doing something at the agreed time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Punctuality is a key requirement for staff who handle scheduled customer visits.",
+          "vi": "Tính đúng giờ là yêu cầu quan trọng đối với nhân viên phụ trách các lượt thăm khách theo lịch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "punctuality record",
+        "punctuality policy",
+        "value punctuality"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "inconvenience-n",
+      "word": "inconvenience",
+      "phonetic": {
+        "us": "/ˌɪn.kən.ˈvin.jəns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự bất tiện; điều gây phiền hà",
+          "definition_en": "a problem or difficulty that makes a situation less convenient",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We apologize for any inconvenience caused by the temporary service interruption.",
+          "vi": "Chúng tôi xin lỗi vì những bất tiện do việc gián đoạn dịch vụ tạm thời gây ra.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cause inconvenience",
+        "any inconvenience",
+        "inconvenience caused"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    }
+  ],
+  "notes": [
+    "All 37 words are added to canonical A–Z files and included in the manifest release delta.",
+    "Customer Service and Travel are the two planned domains addressed in this batch; Contracts and Facilities remain for subsequent content batches.",
+    "Four reciprocal word-family pairs are curated: cancel/cancellation, resolve/resolution, responsive/responsiveness, and troubleshoot/troubleshooting.",
+    "No pre-existing vocabulary IDs, learning-content IDs, answer keys, or user progress are intentionally changed."
+  ]
+}

@@ -188,7 +188,7 @@
       "id": "parcel-n",
       "word": "parcel",
       "phonetic": {
-        "us": ""
+        "us": "/ˈpɑr.səl/"
       },
       "senses": [
         {
@@ -223,7 +223,7 @@
       "id": "participant-n",
       "word": "participant",
       "phonetic": {
-        "us": ""
+        "us": "/pɑr.ˈtɪ.sə.pənt/"
       },
       "senses": [
         {
@@ -399,6 +399,43 @@
       ]
     },
     {
+      "id": "passport-n",
+      "word": "passport",
+      "phonetic": {
+        "us": "/ˈpæ.ˌspɔrt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hộ chiếu",
+          "definition_en": "an official document issued by a government that proves a person’s identity and nationality when traveling internationally",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All passengers must show a valid passport before boarding the international flight.",
+          "vi": "Tất cả hành khách phải xuất trình hộ chiếu còn hiệu lực trước khi lên chuyến bay quốc tế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "valid passport",
+        "passport number",
+        "passport control"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "patent-n",
       "word": "patent",
       "phonetic": {
@@ -439,7 +476,7 @@
       "id": "payable-adj",
       "word": "payable",
       "phonetic": {
-        "us": ""
+        "us": "/ˈpeɪ.ə.bəl/"
       },
       "senses": [
         {
@@ -474,7 +511,7 @@
       "id": "payee-n",
       "word": "payee",
       "phonetic": {
-        "us": ""
+        "us": "/ˌpeɪ.ˈi/"
       },
       "senses": [
         {
@@ -509,7 +546,7 @@
       "id": "payer-n",
       "word": "payer",
       "phonetic": {
-        "us": ""
+        "us": "/ˈpeɪ.ɚ/"
       },
       "senses": [
         {
@@ -585,7 +622,7 @@
       "id": "payroll-n",
       "word": "payroll",
       "phonetic": {
-        "us": ""
+        "us": "/ˈpeɪ.ˌroʊl/"
       },
       "senses": [
         {
@@ -655,7 +692,7 @@
       "id": "penalty-n",
       "word": "penalty",
       "phonetic": {
-        "us": ""
+        "us": "/ˈpe.nəl.ti/"
       },
       "senses": [
         {
@@ -859,7 +896,7 @@
       "id": "performance-n",
       "word": "performance",
       "phonetic": {
-        "us": ""
+        "us": "/pɚ.ˈfɔr.məns/"
       },
       "senses": [
         {
@@ -897,7 +934,7 @@
       "id": "perishable-adj",
       "word": "perishable",
       "phonetic": {
-        "us": ""
+        "us": "/ˈpe.rɪ.ʃə.bəl/"
       },
       "senses": [
         {
@@ -1165,7 +1202,7 @@
       "id": "placement-n",
       "word": "placement",
       "phonetic": {
-        "us": ""
+        "us": "/ˈpleɪ.smənt/"
       },
       "senses": [
         {
@@ -1334,10 +1371,47 @@
       "collocations": []
     },
     {
+      "id": "porter-n",
+      "word": "porter",
+      "phonetic": {
+        "us": "/ˈpɔr.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên khuân vác hành lý",
+          "definition_en": "a person whose job is to carry travelers’ bags at a station, hotel, or airport",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A porter brought the guests’ suitcases to their rooms.",
+          "vi": "Nhân viên khuân vác đã mang vali của khách lên phòng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "hotel porter",
+        "luggage porter",
+        "porter service"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "portfolio-n",
       "word": "portfolio",
       "phonetic": {
-        "us": ""
+        "us": "/pɔrt.ˈfoʊ.li.ˌoʊ/"
       },
       "senses": [
         {
@@ -1582,7 +1656,7 @@
       "id": "precaution-n",
       "word": "precaution",
       "phonetic": {
-        "us": ""
+        "us": "/pri.ˈkɔ.ʃən/"
       },
       "senses": [
         {
@@ -1724,7 +1798,7 @@
       "id": "premium-n",
       "word": "premium",
       "phonetic": {
-        "us": ""
+        "us": "/ˈpri.mi.əm/"
       },
       "senses": [
         {
@@ -2118,7 +2192,7 @@
       "id": "priority-n",
       "word": "priority",
       "phonetic": {
-        "us": ""
+        "us": "/praɪ.ˈɔ.rə.ti/"
       },
       "senses": [
         {
@@ -2150,7 +2224,7 @@
       "id": "probation-n",
       "word": "probation",
       "phonetic": {
-        "us": ""
+        "us": "/proʊ.ˈbeɪ.ʃən/"
       },
       "senses": [
         {
@@ -2185,7 +2259,7 @@
       "id": "probationary-adj",
       "word": "probationary",
       "phonetic": {
-        "us": ""
+        "us": "/proʊ.ˈbeɪ.ʃə.ˌne.ˌri/"
       },
       "senses": [
         {
@@ -2649,7 +2723,7 @@
       "id": "proficiency-n",
       "word": "proficiency",
       "phonetic": {
-        "us": ""
+        "us": "/prə.ˈfɪ.ʃən.si/"
       },
       "senses": [
         {
@@ -2684,7 +2758,7 @@
       "id": "proficient-adj",
       "word": "proficient",
       "phonetic": {
-        "us": ""
+        "us": "/prɑ.ˈfɪ.ʃənt/"
       },
       "senses": [
         {
@@ -2948,7 +3022,7 @@
       "id": "prolong-v",
       "word": "prolong",
       "phonetic": {
-        "us": ""
+        "us": "/prə.ˈlɔŋ/"
       },
       "senses": [
         {
@@ -2989,7 +3063,7 @@
       "id": "prolonged-adj",
       "word": "prolonged",
       "phonetic": {
-        "us": ""
+        "us": "/prə.ˈlɔŋd/"
       },
       "senses": [
         {
@@ -3182,7 +3256,7 @@
       "id": "proportion-n",
       "word": "proportion",
       "phonetic": {
-        "us": ""
+        "us": "/prə.ˈpɔr.ʃən/"
       },
       "senses": [
         {
@@ -3260,7 +3334,7 @@
       "id": "proprietor-n",
       "word": "proprietor",
       "phonetic": {
-        "us": ""
+        "us": "/prə.ˈpraɪ.ə.tɚ/"
       },
       "senses": [
         {
@@ -3450,7 +3524,7 @@
       "id": "provision-n",
       "word": "provision",
       "phonetic": {
-        "us": ""
+        "us": "/prə.ˈvɪ.ʒən/"
       },
       "senses": [
         {
@@ -3485,7 +3559,7 @@
       "id": "provisional-adj",
       "word": "provisional",
       "phonetic": {
-        "us": ""
+        "us": "/prə.ˈvɪ.ʒə.nəl/"
       },
       "senses": [
         {
@@ -3546,6 +3620,44 @@
         "provisionally scheduled"
       ],
       "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "punctuality-n",
+      "word": "punctuality",
+      "phonetic": {
+        "us": "/ˌpʌŋk.tʃu.ˈæ.lɪ.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính đúng giờ; sự đúng giờ",
+          "definition_en": "the habit or quality of arriving or doing something at the agreed time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Punctuality is a key requirement for staff who handle scheduled customer visits.",
+          "vi": "Tính đúng giờ là yêu cầu quan trọng đối với nhân viên phụ trách các lượt thăm khách theo lịch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "punctuality record",
+        "punctuality policy",
+        "value punctuality"
+      ],
+      "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {

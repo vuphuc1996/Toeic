@@ -50,10 +50,48 @@
       ]
     },
     {
+      "id": "immigration-n",
+      "word": "immigration",
+      "phonetic": {
+        "us": "/ˌɪ.məɡ.ˈreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quầy hoặc thủ tục xuất nhập cảnh; sự nhập cư",
+          "definition_en": "the official process of checking people entering or leaving a country, or the movement of people to another country to live",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "AIRPORT",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Allow extra time to complete immigration checks before your connecting flight.",
+          "vi": "Hãy dành thêm thời gian để hoàn tất thủ tục xuất nhập cảnh trước chuyến bay nối chuyến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "immigration control",
+        "immigration officer",
+        "immigration procedures"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "implement-v",
       "word": "implement",
       "phonetic": {
-        "us": ""
+        "us": "/ˈɪm.plə.mənt/"
       },
       "senses": [
         {
@@ -238,7 +276,7 @@
       "id": "in-house-adj",
       "word": "in-house",
       "phonetic": {
-        "us": ""
+        "us": "/ɪn.ˈhaʊs/"
       },
       "senses": [
         {
@@ -431,10 +469,48 @@
       ]
     },
     {
+      "id": "inconvenience-n",
+      "word": "inconvenience",
+      "phonetic": {
+        "us": "/ˌɪn.kən.ˈvin.jəns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự bất tiện; điều gây phiền hà",
+          "definition_en": "a problem or difficulty that makes a situation less convenient",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "We apologize for any inconvenience caused by the temporary service interruption.",
+          "vi": "Chúng tôi xin lỗi vì những bất tiện do việc gián đoạn dịch vụ tạm thời gây ra.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cause inconvenience",
+        "any inconvenience",
+        "inconvenience caused"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "incorporate-v",
       "word": "incorporate",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈkɔr.pɚ.ˌeɪt/"
       },
       "senses": [
         {
@@ -475,7 +551,7 @@
       "id": "incorporation-n",
       "word": "incorporation",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˌkɔr.pɚ.ˈeɪ.ʃən/"
       },
       "senses": [
         {
@@ -557,7 +633,7 @@
       "id": "incur-v",
       "word": "incur",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈkɝ/"
       },
       "senses": [
         {
@@ -633,7 +709,7 @@
       "id": "indemnify-v",
       "word": "indemnify",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈdem.nə.ˌfaɪ/"
       },
       "senses": [
         {
@@ -794,7 +870,7 @@
       "id": "induct-v",
       "word": "induct",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈdʌkt/"
       },
       "senses": [
         {
@@ -835,7 +911,7 @@
       "id": "induction-n",
       "word": "induction",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈdʌk.ʃən/"
       },
       "senses": [
         {
@@ -909,7 +985,7 @@
       "id": "inevitable-adj",
       "word": "inevitable",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪ.ˈne.və.tə.bəl/"
       },
       "senses": [
         {
@@ -1166,7 +1242,7 @@
       "id": "inquire-v",
       "word": "inquire",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈkwaɪr/"
       },
       "senses": [
         {
@@ -1239,7 +1315,7 @@
       "id": "insolvency-n",
       "word": "insolvency",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈsɑl.vən.si/"
       },
       "senses": [
         {
@@ -1274,7 +1350,7 @@
       "id": "insolvent-adj",
       "word": "insolvent",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈsɑl.vənt/"
       },
       "senses": [
         {
@@ -1372,7 +1448,7 @@
       "id": "inspection-n",
       "word": "inspection",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈspek.ʃən/"
       },
       "senses": [
         {
@@ -1415,7 +1491,7 @@
       "id": "inspector-n",
       "word": "inspector",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈspek.tɚ/"
       },
       "senses": [
         {
@@ -1508,7 +1584,7 @@
       "id": "installment-n",
       "word": "installment",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈstɔl.mənt/"
       },
       "senses": [
         {
@@ -1789,7 +1865,7 @@
       "id": "interpret-v",
       "word": "interpret",
       "phonetic": {
-        "us": ""
+        "us": "/ˌɪn.ˈtɝ.prət/"
       },
       "senses": [
         {
@@ -2180,7 +2256,7 @@
       "id": "invoicing-n",
       "word": "invoicing",
       "phonetic": {
-        "us": ""
+        "us": "/ˈɪn.ˌvɔɪ.sɪŋ/"
       },
       "senses": [
         {

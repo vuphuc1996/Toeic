@@ -88,7 +88,7 @@
       "id": "obligatory-adj",
       "word": "obligatory",
       "phonetic": {
-        "us": ""
+        "us": "/ə.ˈblɪ.ɡə.ˌtɔ.ri/"
       },
       "senses": [
         {
@@ -169,7 +169,7 @@
       "id": "occupancy-n",
       "word": "occupancy",
       "phonetic": {
-        "us": ""
+        "us": "/ˈɑk.jə.pən.si/"
       },
       "senses": [
         {
@@ -201,7 +201,7 @@
       "id": "occupational-adj",
       "word": "occupational",
       "phonetic": {
-        "us": ""
+        "us": "/ɑk.jə.ˈpeɪ.ʃə.nəl/"
       },
       "senses": [
         {
@@ -318,7 +318,7 @@
       "id": "officeholder-n",
       "word": "officeholder",
       "phonetic": {
-        "us": ""
+        "us": "/ˈɔ.fəs.ˌhoʊl.dɚ/"
       },
       "senses": [
         {
@@ -451,7 +451,7 @@
         {
           "word": "operation",
           "pos": "n",
-          "meaning_vi": "hoạt động; ca phẫu thuật"
+          "meaning_vi": "hoạt động; vận hành"
         },
         {
           "word": "operator",
@@ -512,7 +512,13 @@
         "BUSINESS",
         "TECHNOLOGY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "operate",
+          "pos": "v",
+          "meaning_vi": "vận hành; hoạt động; điều hành"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -886,7 +892,7 @@
       "id": "outsource-v",
       "word": "outsource",
       "phonetic": {
-        "us": ""
+        "us": "/ˌaʊt.ˈsɔrs/"
       },
       "senses": [
         {
@@ -933,7 +939,7 @@
       "id": "outsourcing-n",
       "word": "outsourcing",
       "phonetic": {
-        "us": ""
+        "us": "/ˌaʊt.ˈsɔr.sɪŋ/"
       },
       "senses": [
         {
@@ -974,7 +980,7 @@
       "id": "outstanding-adj",
       "word": "outstanding",
       "phonetic": {
-        "us": ""
+        "us": "/ˌaʊt.ˈstæn.dɪŋ/"
       },
       "senses": [
         {
@@ -1000,6 +1006,44 @@
       ],
       "collocations": [],
       "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "overbooking-n",
+      "word": "overbooking",
+      "phonetic": {
+        "us": "/ˈoʊ.vɚ.ˌbʊ.kɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tình trạng đặt chỗ vượt quá số chỗ có sẵn",
+          "definition_en": "the practice of accepting more reservations than there are available seats or rooms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "HOTEL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The airline offered meal vouchers after overbooking caused a long delay.",
+          "vi": "Hãng hàng không cung cấp phiếu ăn sau khi tình trạng đặt chỗ vượt số ghế gây ra sự chậm trễ kéo dài.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "overbooking policy",
+        "overbooking compensation",
+        "flight overbooking"
+      ],
+      "cefr_level": "C1",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
@@ -1102,7 +1146,7 @@
       "id": "overhaul-n",
       "word": "overhaul",
       "phonetic": {
-        "us": ""
+        "us": "/ˈoʊ.vɚ.ˌhɔl/"
       },
       "senses": [
         {
@@ -1317,7 +1361,7 @@
       "id": "overtime-n",
       "word": "overtime",
       "phonetic": {
-        "us": ""
+        "us": "/ˈoʊ.vɚ.ˌtaɪm/"
       },
       "senses": [
         {

@@ -170,7 +170,13 @@
         "TIME",
         "TRAVEL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "cancellation",
+          "pos": "n",
+          "meaning_vi": "việc hủy bỏ; sự hủy đặt chỗ"
+        }
+      ],
       "verb_forms": {
         "v1": "cancel",
         "vs_es": "cancels",
@@ -189,6 +195,50 @@
         "cancel a booking",
         "cancel a meeting"
       ]
+    },
+    {
+      "id": "cancellation-n",
+      "word": "cancellation",
+      "phonetic": {
+        "us": "/ˌkæn.sə.ˈleɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc hủy bỏ; sự hủy đặt chỗ",
+          "definition_en": "the act of ending an arrangement, order, reservation, or event before it takes place",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "TRAVEL",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "cancel",
+          "pos": "v",
+          "meaning_vi": "hủy"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A cancellation fee applies when a reservation is withdrawn less than 24 hours in advance.",
+          "vi": "Phí hủy áp dụng khi đặt chỗ bị hủy trước thời điểm sử dụng chưa đến 24 giờ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cancellation fee",
+        "cancellation policy",
+        "flight cancellation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "candidate-n",
@@ -418,7 +468,7 @@
       "id": "cargo-n",
       "word": "cargo",
       "phonetic": {
-        "us": ""
+        "us": "/ˈkɑr.ˌɡoʊ/"
       },
       "senses": [
         {
@@ -709,7 +759,7 @@
       "id": "cease-v",
       "word": "cease",
       "phonetic": {
-        "us": ""
+        "us": "/sis/"
       },
       "senses": [
         {
@@ -1033,6 +1083,44 @@
       ]
     },
     {
+      "id": "charter-n",
+      "word": "charter",
+      "phonetic": {
+        "us": "/ˈtʃɑr.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyến thuê riêng; hợp đồng thuê phương tiện",
+          "definition_en": "the hiring of an aircraft, ship, or vehicle for private use, or the agreement that makes this possible",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "TRANSPORT",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company arranged a charter flight for employees attending the conference.",
+          "vi": "Công ty đã sắp xếp một chuyến bay thuê riêng cho nhân viên tham dự hội nghị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "charter flight",
+        "charter service",
+        "charter agreement"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "check-in-n",
       "word": "check-in",
       "cefr_level": "A2",
@@ -1237,7 +1325,7 @@
       "id": "circulation-n",
       "word": "circulation",
       "phonetic": {
-        "us": ""
+        "us": "/ˈsɝk.jə.ˌleɪ.ʃən/"
       },
       "senses": [
         {
@@ -1272,7 +1360,7 @@
       "id": "circumstance-n",
       "word": "circumstance",
       "phonetic": {
-        "us": ""
+        "us": "/ˈsɝ.kəm.ˌstæns/"
       },
       "senses": [
         {
@@ -1332,7 +1420,13 @@
         "FINANCE",
         "CUSTOMER"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "claimant",
+          "pos": "n",
+          "meaning_vi": "người yêu cầu bồi thường; nguyên đơn"
+        }
+      ],
       "verb_forms": {
         "v1": "claim",
         "vs_es": "claims",
@@ -1371,7 +1465,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "claim",
+          "pos": "n/v",
+          "meaning_vi": "yêu cầu bồi thường; tuyên bố"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1432,7 +1532,7 @@
       "id": "clearance-n",
       "word": "clearance",
       "phonetic": {
-        "us": ""
+        "us": "/ˈklɪ.rəns/"
       },
       "senses": [
         {
@@ -1576,7 +1676,7 @@
       "id": "clientele-n",
       "word": "clientele",
       "phonetic": {
-        "us": ""
+        "us": "/ˌklaɪ.ən.ˈtel/"
       },
       "senses": [
         {
@@ -1640,7 +1740,7 @@
       "id": "coherent-adj",
       "word": "coherent",
       "phonetic": {
-        "us": ""
+        "us": "/koʊ.ˈhɪ.rənt/"
       },
       "senses": [
         {
@@ -2242,7 +2342,7 @@
       "id": "competency-n",
       "word": "competency",
       "phonetic": {
-        "us": ""
+        "us": "/ˈkɑm.pə.tɪn.si/"
       },
       "senses": [
         {
@@ -2351,7 +2451,7 @@
       "id": "compile-v",
       "word": "compile",
       "phonetic": {
-        "us": ""
+        "us": "/kəm.ˈpaɪl/"
       },
       "senses": [
         {
@@ -2389,6 +2489,49 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "complain-v",
+      "word": "complain",
+      "phonetic": {
+        "us": "/kəm.ˈpleɪn/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "phàn nàn; khiếu nại",
+          "definition_en": "to say that something is wrong or unsatisfactory, often to seek a response or remedy",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "complain",
+        "vs_es": "complains",
+        "v2": "complained",
+        "v3": "complained",
+        "ving": "complaining"
+      },
+      "examples": [
+        {
+          "en": "Customers may complain directly to the branch manager about poor service.",
+          "vi": "Khách hàng có thể trực tiếp khiếu nại với quản lý chi nhánh về dịch vụ kém.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "complain about a service",
+        "complain to the manager",
+        "formally complain"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "complaint-n",
@@ -2536,7 +2679,7 @@
       "id": "completion-n",
       "word": "completion",
       "phonetic": {
-        "us": ""
+        "us": "/kəm.ˈpli.ʃən/"
       },
       "senses": [
         {
@@ -2624,7 +2767,7 @@
       "id": "complimentary-adj",
       "word": "complimentary",
       "phonetic": {
-        "us": ""
+        "us": "/ˌkɑm.plə.ˈmen.tɚ.i/"
       },
       "senses": [
         {
@@ -2747,7 +2890,7 @@
       "id": "comprehensive-adj",
       "word": "comprehensive",
       "phonetic": {
-        "us": ""
+        "us": "/ˌkɑm.pri.ˈhen.sɪv/"
       },
       "senses": [
         {
@@ -3085,7 +3228,7 @@
       "id": "confidential-adj",
       "word": "confidential",
       "phonetic": {
-        "us": ""
+        "us": "/ˌkɑn.fə.ˈden.ʃəl/"
       },
       "senses": [
         {
@@ -3212,7 +3355,7 @@
       "id": "confirmation-n",
       "word": "confirmation",
       "phonetic": {
-        "us": ""
+        "us": "/ˌkɑn.fɚ.ˈmeɪ.ʃən/"
       },
       "senses": [
         {
@@ -3250,7 +3393,7 @@
       "id": "consecutive-adj",
       "word": "consecutive",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈsek.jə.tɪv/"
       },
       "senses": [
         {
@@ -3318,7 +3461,7 @@
       "id": "consent-n",
       "word": "consent",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈsent/"
       },
       "senses": [
         {
@@ -3517,7 +3660,7 @@
       "id": "consignment-n",
       "word": "consignment",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈsaɪn.mənt/"
       },
       "senses": [
         {
@@ -3587,7 +3730,7 @@
       "id": "consistently-adv",
       "word": "consistently",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈsɪ.stənt.li/"
       },
       "senses": [
         {
@@ -3624,7 +3767,7 @@
       "id": "consolidate-v",
       "word": "consolidate",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈsɑ.lɪ.ˌdeɪt/"
       },
       "senses": [
         {
@@ -3718,7 +3861,7 @@
       "id": "consultancy-n",
       "word": "consultancy",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈsʌl.tən.si/"
       },
       "senses": [
         {
@@ -3858,7 +4001,7 @@
       "id": "consumable-n",
       "word": "consumable",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈsu.mə.bəl/"
       },
       "senses": [
         {
@@ -3938,6 +4081,44 @@
       "collocations": [
         "consume energy",
         "consume resources"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "consumer-n",
+      "word": "consumer",
+      "phonetic": {
+        "us": "/kən.ˈsu.mɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người tiêu dùng",
+          "definition_en": "a person who buys or uses goods and services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The consumer has the right to receive accurate information about the service.",
+          "vi": "Người tiêu dùng có quyền nhận thông tin chính xác về dịch vụ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "consumer rights",
+        "consumer protection",
+        "consumer survey"
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
@@ -4223,7 +4404,13 @@
         "BUSINESS",
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "contractual",
+          "pos": "adj",
+          "meaning_vi": "thuộc hợp đồng; theo hợp đồng"
+        }
+      ],
       "verb_forms": {
         "v1": "contract",
         "vs_es": "contracts",
@@ -4279,7 +4466,7 @@
       "id": "contractual-adj",
       "word": "contractual",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈtræk.tʃu.əl/"
       },
       "senses": [
         {
@@ -4294,7 +4481,13 @@
       "topics": [
         "LEGAL"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "contract",
+          "pos": "n/v",
+          "meaning_vi": "hợp đồng; ký hợp đồng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -4367,7 +4560,7 @@
       "id": "contribute-v",
       "word": "contribute",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈtrɪb.jut/"
       },
       "senses": [
         {
@@ -4454,7 +4647,7 @@
       "id": "convenience-n",
       "word": "convenience",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈvin.jəns/"
       },
       "senses": [
         {
@@ -4630,7 +4823,7 @@
       "id": "convey-v",
       "word": "convey",
       "phonetic": {
-        "us": ""
+        "us": "/kən.ˈveɪ/"
       },
       "senses": [
         {
@@ -4805,7 +4998,7 @@
       "id": "coordinator-n",
       "word": "coordinator",
       "phonetic": {
-        "us": ""
+        "us": "/koʊ.ˈɔr.də.ˌneɪ.tɚ/"
       },
       "senses": [
         {
@@ -4992,7 +5185,7 @@
       "id": "courier-n",
       "word": "courier",
       "phonetic": {
-        "us": ""
+        "us": "/ˈkɝ.i.ɚ/"
       },
       "senses": [
         {
@@ -5056,10 +5249,47 @@
       "collocations": []
     },
     {
+      "id": "courteous-adj",
+      "word": "courteous",
+      "phonetic": {
+        "us": "/ˈkɝ.ti.əs/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "lịch sự; nhã nhặn",
+          "definition_en": "polite, respectful, and considerate toward other people",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please remain courteous when responding to a customer complaint.",
+          "vi": "Vui lòng giữ thái độ lịch sự khi phản hồi khiếu nại của khách hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "courteous service",
+        "courteous response",
+        "courteous staff"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "courtesy-n",
       "word": "courtesy",
       "phonetic": {
-        "us": ""
+        "us": "/ˈkɝ.tə.si/"
       },
       "senses": [
         {
@@ -5353,7 +5583,7 @@
       "id": "criteria-n",
       "word": "criteria",
       "phonetic": {
-        "us": ""
+        "us": "/kraɪ.ˈtɪ.ri.ə/"
       },
       "senses": [
         {
@@ -5426,6 +5656,42 @@
         "crucial factor"
       ],
       "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cruise-n",
+      "word": "cruise",
+      "phonetic": {
+        "us": "/kruz/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyến du lịch bằng tàu biển",
+          "definition_en": "a holiday or journey on a ship that visits several places",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The travel package includes a five-night cruise along the coast.",
+          "vi": "Gói du lịch bao gồm chuyến đi tàu biển năm đêm dọc theo bờ biển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cruise ship",
+        "cruise terminal",
+        "cruise package"
+      ],
+      "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
