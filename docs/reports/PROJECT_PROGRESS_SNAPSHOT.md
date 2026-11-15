@@ -1,6 +1,6 @@
 # Project Progress Snapshot — generated
 
-- Source version: **2.63.0**
+- Source version: **2.65.0**
 - Basis: canonical JSON inventory; counts are not editorial approval.
 
 ## Target-based progress
@@ -15,6 +15,7 @@
 | Learning objectives with linked resources | 10/10 | 100.0% | Availability only; review and mastery separate |
 | Foundation Listening scripts mapped | 10/10 | **100.0%** | One device-synthesized script per existing Pre-A1/A1 lesson |
 | Foundation Listening questions | 20/20 | **100.0%** | Two questions per existing lesson; TTS practice, not ETS audio |
+| Foundation A–Z letter records | 26/26 | **100.0%** | Complete letter-data coverage only; not pronunciation accuracy or learner mastery |
 | Outcome criteria defined | 30/30 | 100.0% | Framework coverage only; criterion-level mastery remains separate |
 | TOEIC objective practice evidence wired | 9/10 | 90.0% | Latest result per unique question; practice threshold only, foundation rubric outcomes not yet instrumented |
 | Delayed-recall scheduling across wired TOEIC groups | 9/9 | 100.0% | 1/3-day scheduling rule; not a retention guarantee |
@@ -30,6 +31,7 @@
 | Separate Part 5 practice | 80 questions | Chưa đo được — no agreed size target; independent review remains separate |
 | Foundation Reading | 10/10 passages / 20 questions | 100.0% within current Pre-A1/A1 scope | Separate reading bank; not Foundation mastery |
 | Foundation Listening | 10/10 scripts / 20 questions | 100.0% within current Pre-A1/A1 scope | Device Speech Synthesis; not authentic ETS recordings |
+| Foundation A–Z sound lab | 26/26 letters | 100.0% | Two TTS actions per letter; action count is not pronunciation mastery |
 
 ## Vocabulary field coverage (against current 992-headword base; not editorial approval)
 
@@ -53,6 +55,7 @@ These ratios show whether a field is populated, not whether its content is accur
 - Listening Part 1 currently has 8 eligible unique questions (one additional mapped item is reserve-pending), below the 10-item minimum; at least 2 more unique, reviewed questions are needed before it can reach the practice threshold.
 - Foundation production/retention rubrics and explanation scoring remain uninstrumented; delayed recall and response-time capture are instrumented for the 9 wired TOEIC objective groups.
 - Foundation Listening stores attempts under a separate localStorage key; its bank coverage does not imply the learner has completed the questions or met the local practice threshold.
+- Foundation A–Z records TTS play-button actions in `toeic:alphabet-sound-progress:v1`; no pronunciation analysis or mastery inference is performed.
 - Part 5 practice: pending independent review; do not count as Mock-eligible.
 - Listening pending-review pool and Mock-eligible counts must be tracked separately from raw inventory.
 - Placement is a short sample, not official CEFR/ETS certification.

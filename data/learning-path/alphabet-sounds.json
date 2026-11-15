@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "title": "Alphabet and Initial Sound Lab",
+  "track": "Pre-A1",
+  "description": "Practice the 26 English letter names and one common example word for each letter. Example sounds are introductory patterns, not a complete phonics or pronunciation rule set.",
+  "practicePolicy": {
+    "audio": "browser-speech-synthesis",
+    "usesCurrentAppVoiceSettings": true,
+    "progressStorageKey": "toeic:alphabet-sound-progress:v1",
+    "progressMeaning": "playback exposure only; not pronunciation accuracy or mastery"
+  },
+  "letters": [
+    {"id":"A","letter":"A","lowercase":"a","letterNameIpa":"/eɪ/","exampleWord":"apple","exampleIpa":"/ˈæp.əl/","exampleMeaning":"quả táo","focusSound":"/æ/","note":"Âm tiêu biểu ở đầu từ apple."},
+    {"id":"B","letter":"B","lowercase":"b","letterNameIpa":"/biː/","exampleWord":"book","exampleIpa":"/bʊk/","exampleMeaning":"quyển sách","focusSound":"/b/","note":"Âm /b/ ở đầu từ book."},
+    {"id":"C","letter":"C","lowercase":"c","letterNameIpa":"/siː/","exampleWord":"cat","exampleIpa":"/kæt/","exampleMeaning":"con mèo","focusSound":"/k/","note":"C có thể đọc /k/ như cat hoặc /s/ như city."},
+    {"id":"D","letter":"D","lowercase":"d","letterNameIpa":"/diː/","exampleWord":"desk","exampleIpa":"/desk/","exampleMeaning":"bàn làm việc","focusSound":"/d/","note":"Âm /d/ ở đầu từ desk."},
+    {"id":"E","letter":"E","lowercase":"e","letterNameIpa":"/iː/","exampleWord":"egg","exampleIpa":"/eɡ/","exampleMeaning":"quả trứng","focusSound":"/e/","note":"Âm đầu trong egg khác tên chữ E."},
+    {"id":"F","letter":"F","lowercase":"f","letterNameIpa":"/ɛf/","exampleWord":"fish","exampleIpa":"/fɪʃ/","exampleMeaning":"con cá","focusSound":"/f/","note":"Âm /f/ ở đầu từ fish."},
+    {"id":"G","letter":"G","lowercase":"g","letterNameIpa":"/dʒiː/","exampleWord":"go","exampleIpa":"/ɡoʊ/","exampleMeaning":"đi","focusSound":"/ɡ/","note":"G có thể đọc /ɡ/ như go hoặc /dʒ/ như giant."},
+    {"id":"H","letter":"H","lowercase":"h","letterNameIpa":"/eɪtʃ/","exampleWord":"hotel","exampleIpa":"/hoʊˈtel/","exampleMeaning":"khách sạn","focusSound":"/h/","note":"Âm /h/ ở đầu từ hotel."},
+    {"id":"I","letter":"I","lowercase":"i","letterNameIpa":"/aɪ/","exampleWord":"in","exampleIpa":"/ɪn/","exampleMeaning":"ở trong","focusSound":"/ɪ/","note":"Âm đầu trong in khác tên chữ I."},
+    {"id":"J","letter":"J","lowercase":"j","letterNameIpa":"/dʒeɪ/","exampleWord":"job","exampleIpa":"/dʒɑːb/","exampleMeaning":"công việc","focusSound":"/dʒ/","note":"Âm /dʒ/ ở đầu từ job."},
+    {"id":"K","letter":"K","lowercase":"k","letterNameIpa":"/keɪ/","exampleWord":"key","exampleIpa":"/kiː/","exampleMeaning":"chìa khóa","focusSound":"/k/","note":"Âm /k/ ở đầu từ key."},
+    {"id":"L","letter":"L","lowercase":"l","letterNameIpa":"/ɛl/","exampleWord":"lamp","exampleIpa":"/læmp/","exampleMeaning":"đèn bàn","focusSound":"/l/","note":"Âm /l/ ở đầu từ lamp."},
+    {"id":"M","letter":"M","lowercase":"m","letterNameIpa":"/ɛm/","exampleWord":"map","exampleIpa":"/mæp/","exampleMeaning":"bản đồ","focusSound":"/m/","note":"Âm /m/ ở đầu từ map."},
+    {"id":"N","letter":"N","lowercase":"n","letterNameIpa":"/ɛn/","exampleWord":"name","exampleIpa":"/neɪm/","exampleMeaning":"tên","focusSound":"/n/","note":"Âm /n/ ở đầu từ name."},
+    {"id":"O","letter":"O","lowercase":"o","letterNameIpa":"/oʊ/","exampleWord":"office","exampleIpa":"/ˈɔːfɪs/","exampleMeaning":"văn phòng","focusSound":"/ɔː/","note":"Âm đầu trong office khác tên chữ O."},
+    {"id":"P","letter":"P","lowercase":"p","letterNameIpa":"/piː/","exampleWord":"pen","exampleIpa":"/pen/","exampleMeaning":"cây bút","focusSound":"/p/","note":"Âm /p/ ở đầu từ pen."},
+    {"id":"Q","letter":"Q","lowercase":"q","letterNameIpa":"/kjuː/","exampleWord":"question","exampleIpa":"/ˈkwestʃən/","exampleMeaning":"câu hỏi","focusSound":"/kw/","note":"Q thường đi cùng U trong cách viết tiếng Anh."},
+    {"id":"R","letter":"R","lowercase":"r","letterNameIpa":"/ɑːr/","exampleWord":"room","exampleIpa":"/ruːm/","exampleMeaning":"phòng","focusSound":"/r/","note":"Âm /r/ đầu từ thay đổi theo giọng Anh-Mỹ/Anh-Anh."},
+    {"id":"S","letter":"S","lowercase":"s","letterNameIpa":"/ɛs/","exampleWord":"staff","exampleIpa":"/stæf/","exampleMeaning":"nhân viên","focusSound":"/s/","note":"Âm /s/ ở đầu từ staff."},
+    {"id":"T","letter":"T","lowercase":"t","letterNameIpa":"/tiː/","exampleWord":"team","exampleIpa":"/tiːm/","exampleMeaning":"đội nhóm","focusSound":"/t/","note":"Âm /t/ ở đầu từ team."},
+    {"id":"U","letter":"U","lowercase":"u","letterNameIpa":"/juː/","exampleWord":"umbrella","exampleIpa":"/ʌmˈbrelə/","exampleMeaning":"cái ô","focusSound":"/ʌ/","note":"Âm đầu trong umbrella khác tên chữ U."},
+    {"id":"V","letter":"V","lowercase":"v","letterNameIpa":"/viː/","exampleWord":"visit","exampleIpa":"/ˈvɪzɪt/","exampleMeaning":"thăm, ghé thăm","focusSound":"/v/","note":"Âm /v/ ở đầu từ visit."},
+    {"id":"W","letter":"W","lowercase":"w","letterNameIpa":"/ˈdʌbəl.juː/","exampleWord":"work","exampleIpa":"/wɝːk/","exampleMeaning":"làm việc","focusSound":"/w/","note":"Tên chữ W có nhiều âm tiết; từ work bắt đầu bằng /w/."},
+    {"id":"X","letter":"X","lowercase":"x","letterNameIpa":"/ɛks/","exampleWord":"box","exampleIpa":"/bɑːks/","exampleMeaning":"cái hộp","focusSound":"/ks/","note":"Trong box, chữ X đứng cuối và biểu thị cụm âm /ks/."},
+    {"id":"Y","letter":"Y","lowercase":"y","letterNameIpa":"/waɪ/","exampleWord":"yellow","exampleIpa":"/ˈjeloʊ/","exampleMeaning":"màu vàng","focusSound":"/j/","note":"Y ở đầu yellow biểu thị âm /j/."},
+    {"id":"Z","letter":"Z","lowercase":"z","letterNameIpa":"/ziː/","exampleWord":"zero","exampleIpa":"/ˈzɪroʊ/","exampleMeaning":"số không","focusSound":"/z/","note":"Tên chữ Z có thể khác giữa các biến thể tiếng Anh."}
+  ]
+}

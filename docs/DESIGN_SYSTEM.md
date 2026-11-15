@@ -1,6 +1,6 @@
 # TOEIC Dictionary — Design System & UI Governance
 
-**Effective candidate:** v2.63.0  
+**Effective candidate:** v2.64.0  
 **Profile:** `Calm Study Blue` (`design/design-profile.json`)  
 **Status:** implemented as the shared default; visual preferences awaiting owner selection  
 **Runtime stylesheet:** `assets/css/design-system.css` (loaded after `assets/css/app.css`)
@@ -101,6 +101,16 @@ Panels use the panel radius and low elevation. Cards use the card radius and sub
 
 A feature can add a layout class, not a private theme. It should reuse `.panel`, `.panel-header`, `.learning-card`, `.primary-button`, `.secondary-button` and the semantic type tokens wherever possible.
 
+
+### Media frames and card-content balance (v2.64.0)
+
+- Listening Part 1 illustrations and photographs share the `--ds-image-ratio: 4 / 3` frame. Images fill the frame with `object-fit: cover`; the source file is never resized or overwritten as part of CSS layout work.
+- The photocopier image uses the stable `data-photo-id="part1-photocopier"` selector with focal point `50% 42%`. If an original photo is unavailable, the existing SVG fallback uses the same frame, radius and caption geometry.
+- New image units must use the same frame component and must declare a stable `data-photo-id` only when a reviewed crop focal point is necessary. Do not add unique width/height rules to an individual image.
+- Cards in the same grid row have equal outer height and a common footer baseline. Titles reserve a two-line baseline; normal descriptions reserve three lines as a minimum but are never clipped or line-clamped. Longer copy expands the row naturally.
+- Card buttons may wrap to multiple lines, keep a minimum 44 px touch target, and must not force `white-space: nowrap`. Internal content uses `min-width: 0` and `overflow-wrap: anywhere` where long labels or IDs could otherwise escape the card.
+- Responsive alphabet-sound cards use four columns on desktop, three at 851–1100 px, two at 641–850 px and 320–640 px, and one at 360 px or less. Other card grids select columns from available content width and their documented breakpoints. Do not assume the CSS viewport equals the physical display diagonal.
+
 ## 6. Responsive layout contract
 
 Breakpoints are CSS viewport widths, not physical device sizes or diagonal inches.
@@ -145,4 +155,4 @@ python -m unittest discover -s tools/tests -p 'test_design_system.py' -v
 python -m unittest discover -s tools/tests -p 'test_design_profile.py' -v
 ```
 
-Also run `tools/tests/test_learning_surface_consistency.py` and the responsive test group. Browser viewport simulation must be described as simulation; it is not proof of physical-device QA. Remote GitHub Actions, GitHub Pages and iOS/Android PWA QA must be reported separately.
+Also run `tools/tests/test_learning_surface_consistency.py`, `test_visual_composition.py`, `test_alphabet_sound_lab.py` and the responsive test group. Browser viewport simulation must be described as simulation; it is not proof of physical-device QA. Remote GitHub Actions, GitHub Pages and iOS/Android PWA QA must be reported separately.

@@ -1,5 +1,5 @@
 /*
- * TOEIC Dictionary Design System — v2.63.0
+ * TOEIC Dictionary Design System — v2.64.0
  * Shared visual rules for phone, tablet, laptop and desktop.
  * Keep feature-specific behavior in app.css; this file owns common scale and responsive guardrails.
  */
@@ -408,7 +408,7 @@ img, svg, video, canvas { max-width: 100%; }
 
 
 /* -------------------------------------------------------------------------
-   v2.63.0 — canonical design contract enforcement.
+   v2.64.0 — canonical design contract enforcement.
    Edit design/design-profile.json, then run tools/sync-design-profile.py --apply.
    Do not introduce per-feature font, color, radius or spacing scales.
    ------------------------------------------------------------------------- */
@@ -465,6 +465,9 @@ img, svg, video, canvas { max-width: 100%; }
   --ds-motion-fast: 140ms;
   --ds-motion-base: 200ms;
   --ds-motion-slow: 280ms;
+  --ds-image-ratio: 4 / 3;
+  --ds-card-copy-lines: 3;
+  --ds-card-title-lines: 2;
 }
 /* DESIGN_PROFILE_TOKENS:END */
 
@@ -1407,4 +1410,303 @@ body button :where(span, small, strong) { font-size: inherit !important; }
 body :where(.mock-exam-brand strong, .mock-exam-timer span,
   .mock-score-head strong, .mock-question-line h4, .mock-review-question h4) {
   font-size: var(--ds-font-support) !important;
+}
+
+/* v2.64.0 — consistent media frame and balanced card composition across viewports. */
+.part1-illustration-frame {
+  width: min(100%, 920px);
+  margin-inline: auto;
+  padding: clamp(8px, 1.2vw, 12px);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-panel);
+  background: var(--ds-color-surface-subtle);
+  overflow: hidden;
+}
+.part1-illustration-frame img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: var(--ds-image-ratio);
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  border-radius: calc(var(--ds-radius-control) - 2px);
+  background: #edf2f7;
+}
+.part1-photo-frame img[data-photo-id="part1-photocopier"],
+.mock-part1-frame img[data-photo-id="part1-photocopier"] {
+  object-position: 50% 42%;
+}
+.mock-part1-frame {
+  width: min(100%, 620px);
+  margin: 11px auto;
+  padding: clamp(8px, 1.2vw, 12px);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-panel);
+  background: var(--ds-color-surface-subtle);
+  overflow: hidden;
+}
+.mock-part1-frame img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: var(--ds-image-ratio);
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  border-radius: calc(var(--ds-radius-control) - 2px);
+  background: #edf2f7;
+}
+.part1-illustration-frame figcaption,
+.mock-part1-frame figcaption {
+  padding: 10px 4px 2px;
+  color: var(--ds-color-muted);
+  font-size: var(--ds-font-caption);
+  line-height: var(--ds-line-caption);
+  letter-spacing: .045em;
+  overflow-wrap: anywhere;
+}
+
+/* Equal-height outer cards; content remains readable and is never clipped. */
+.panel,
+.detail-section,
+.learning-card,
+.foundation-card,
+.mock-mode-card { min-width: 0; }
+.primary-button,
+.secondary-button,
+.text-button {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+.learning-card-grid,
+.foundation-card-grid,
+.practice-mode-grid,
+.mock-mode-grid,
+.objective-progress-grid {
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+  min-width: 0;
+}
+.learning-card,
+.foundation-card,
+.mock-mode-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: visible;
+}
+.learning-card h3,
+.foundation-card h3,
+.mock-mode-card h3 {
+  min-width: 0;
+  min-height: calc(2 * var(--ds-font-card-title) * var(--ds-line-heading));
+  font-size: var(--ds-font-card-title);
+  line-height: var(--ds-line-heading);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+.learning-card > p,
+.foundation-card > p,
+.mock-mode-card > p {
+  min-width: 0;
+  min-height: calc(3 * var(--ds-font-support) * 1.58);
+  margin-block: 0 var(--ds-space-3);
+  font-size: var(--ds-font-support) !important;
+  line-height: 1.58;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+.learning-card-footer,
+.foundation-card-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(118px, .9fr);
+  align-items: end;
+  gap: var(--ds-space-3);
+  width: 100%;
+  min-width: 0;
+  margin-top: auto;
+  padding-top: var(--ds-space-3);
+}
+.learning-card-footer small,
+.foundation-card-footer small {
+  min-width: 0;
+  max-width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  font-size: var(--ds-font-caption) !important;
+  line-height: var(--ds-line-caption);
+}
+.learning-card-footer .secondary-button,
+.foundation-card-footer .secondary-button,
+.mock-mode-card > .primary-button {
+  width: 100%;
+  min-width: 0;
+  min-height: var(--ds-touch-target);
+  white-space: normal;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+.foundation-card-evidence {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--ds-space-2);
+  margin-block: var(--ds-space-3);
+  min-width: 0;
+}
+.foundation-card-evidence > span {
+  display: flex;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 40px;
+  padding: 8px 9px;
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-control);
+  background: var(--ds-color-surface-subtle);
+  color: var(--ds-color-muted-strong);
+  font-size: var(--ds-font-caption) !important;
+  line-height: var(--ds-line-caption);
+  overflow-wrap: anywhere;
+}
+.objective-progress-card {
+  display: grid;
+  align-content: start;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100%;
+  min-width: 0;
+  min-height: 190px;
+  gap: var(--ds-space-3);
+}
+.objective-progress-top,
+.objective-progress-meta,
+.objective-progress-extra { min-width: 0; overflow-wrap: anywhere; }
+.practice-mode-tile {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
+  min-width: 0;
+  min-height: 96px;
+}
+.practice-mode-tile > span,
+.practice-mode-tile > strong,
+.practice-mode-tile > small { min-width: 0; overflow-wrap: anywhere; }
+.mock-mode-card > p {
+  flex: 1 1 auto;
+  min-height: calc(3 * var(--ds-font-support) * 1.62);
+}
+.mock-mode-card > .primary-button { margin-top: auto; }
+
+/* Alphabet and sound lab uses the same learning-card language as the rest of Foundation. */
+.alphabet-sound-lab { min-width: 0; }
+.alphabet-sound-lab-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--ds-space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--ds-space-4);
+}
+.alphabet-sound-lab-heading > div:first-child { min-width: 0; flex: 1 1 320px; }
+.alphabet-sound-lab-heading h4 { margin: 0 0 var(--ds-space-2); color: var(--ds-color-ink); font-size: var(--ds-font-label); }
+.alphabet-sound-lab-heading p { margin: 0; color: var(--ds-color-muted); font-size: var(--ds-font-support); line-height: var(--ds-line-body); }
+.alphabet-sound-progress {
+  flex: 0 1 auto;
+  padding: 9px 12px;
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-color-surface-tint);
+  color: var(--ds-color-brand-deep);
+  font-size: var(--ds-font-caption);
+  line-height: var(--ds-line-caption);
+  font-weight: 750;
+}
+.alphabet-sound-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: var(--ds-space-3);
+  min-width: 0;
+}
+.alphabet-sound-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-3);
+  min-width: 0;
+  min-height: 265px;
+  padding: var(--ds-space-4);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-card);
+  background: var(--ds-color-surface);
+  box-shadow: var(--ds-shadow-card);
+}
+.alphabet-sound-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--ds-space-2);
+  min-width: 0;
+}
+.alphabet-sound-card-head > strong { color: var(--ds-color-brand-deep); font-size: 28px; line-height: 1.1; }
+.alphabet-sound-card-head > strong span { color: var(--ds-color-muted); font-size: 21px; font-weight: 600; }
+.alphabet-sound-letter-tag { color: var(--ds-color-muted); font-size: var(--ds-font-caption); font-weight: 700; }
+.alphabet-sound-example { display: grid; gap: 3px; min-height: 54px; }
+.alphabet-sound-example > strong { color: var(--ds-color-ink); font-size: 18px; line-height: 1.3; overflow-wrap: anywhere; }
+.alphabet-sound-example > span { color: var(--ds-color-muted); font-size: var(--ds-font-caption); line-height: var(--ds-line-caption); overflow-wrap: anywhere; }
+.alphabet-sound-focus { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 10px; margin-top: auto; }
+.alphabet-sound-focus > span { color: var(--ds-color-muted); font-size: var(--ds-font-caption); }
+.alphabet-sound-focus > strong { color: var(--ds-color-accent); font-size: 17px; }
+.alphabet-sound-focus > small { grid-column: 1 / -1; color: var(--ds-color-muted); font-size: var(--ds-font-caption); line-height: var(--ds-line-caption); overflow-wrap: anywhere; }
+.alphabet-sound-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ds-space-2); }
+.alphabet-sound-actions button { min-width: 0; min-height: 44px; padding-inline: 7px; font-size: var(--ds-font-caption); line-height: 1.3; white-space: normal; }
+.alphabet-sound-status { min-height: 2.8em; color: var(--ds-color-muted); font-size: var(--ds-font-caption); line-height: var(--ds-line-caption); overflow-wrap: anywhere; }
+.alphabet-sound-disclaimer { margin: var(--ds-space-4) 0 0; color: var(--ds-color-muted); font-size: var(--ds-font-caption); line-height: var(--ds-line-caption); }
+
+@media (min-width: 641px) and (max-width: 1100px) {
+  .learning-card-grid,
+  .foundation-card-grid,
+  .practice-mode-grid,
+  .objective-progress-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mock-mode-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .alphabet-sound-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 641px) and (max-width: 850px) {
+  .alphabet-sound-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .learning-card-grid,
+  .foundation-card-grid,
+  .practice-mode-grid,
+  .mock-mode-grid,
+  .objective-progress-grid { grid-template-columns: minmax(0, 1fr); }
+  .learning-card-footer,
+  .foundation-card-footer { grid-template-columns: minmax(0, 1fr); align-items: stretch; }
+  .learning-card-footer .secondary-button,
+  .foundation-card-footer .secondary-button { max-width: none; }
+  .foundation-card-evidence { grid-template-columns: minmax(0, 1fr); }
+  .alphabet-sound-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ds-space-2); }
+  .alphabet-sound-card { min-height: 285px; padding: 12px; gap: 10px; }
+  .alphabet-sound-actions { grid-template-columns: minmax(0, 1fr); }
+  .alphabet-sound-actions button { width: 100%; }
+  .part1-illustration-frame img { aspect-ratio: var(--ds-image-ratio); }
+}
+@media (max-width: 360px) {
+  .alphabet-sound-grid { grid-template-columns: minmax(0, 1fr); }
+  .alphabet-sound-card { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .alphabet-sound-card { transition: none !important; }
 }

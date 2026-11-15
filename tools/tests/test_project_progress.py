@@ -15,6 +15,11 @@ class ProjectProgressTests(unittest.TestCase):
         self.assertIn('Foundation Listening scripts mapped | 10/10 | **100.0%**',result.stdout)
         self.assertIn('Foundation Listening questions | 20/20 | **100.0%**',result.stdout)
         self.assertIn('not authentic ETS recordings',result.stdout)
+    def test_report_includes_alphabet_sound_bank_coverage_without_mastery_claim(self):
+        result=subprocess.run([sys.executable,'tools/report-project-progress.py'],cwd=ROOT,text=True,capture_output=True,check=True)
+        self.assertIn('Foundation A–Z letter records | 26/26 | **100.0%**',result.stdout)
+        self.assertIn('action count is not pronunciation mastery',result.stdout)
+        self.assertIn('toeic:alphabet-sound-progress:v1',result.stdout)
     def test_report_does_not_mislabel_inventory_as_completion(self):
         result=subprocess.run([sys.executable,'tools/report-project-progress.py'],cwd=ROOT,text=True,capture_output=True,check=True)
         self.assertIn('Content counts do not equal completed learning outcomes.',result.stdout)
