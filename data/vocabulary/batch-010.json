@@ -1,0 +1,1589 @@
+{
+  "schemaVersion": 1,
+  "batch": "010",
+  "version": "2.68.0",
+  "focus": "TOEIC vocabulary expansion: manufacturing, operations, quality assurance, maintenance, and supply chain",
+  "count": 37,
+  "editorialStatus": "added locally; internal author review completed; independent lexical review pending; CEFR levels are editorial estimates",
+  "sourcePolicy": "Headwords, Vietnamese glosses, definitions, examples and collocations are original editorial content informed by the listed dictionary/industry references. US IPA values are editorial General American transcriptions cross-checked against CMUdict ARPABET and Cambridge pronunciation entries where available. CEFR labels are editorial estimates by sense, not official alignment. These are original learning items, not ETS material.",
+  "sources": [
+    {
+      "name": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/",
+      "use": "Lexical meanings and selected US pronunciation cross-checks for assembly line, calibration, contamination, prototype, lead time, stocktaking, quality assurance, quality control, defect, pallet, loading dock, conveyor belt, overstock and purchase order."
+    },
+    {
+      "name": "CMU Pronouncing Dictionary",
+      "url": "https://github.com/cmusphinx/cmudict",
+      "use": "General American ARPABET pronunciation reference; basis for editorial IPA transcriptions where stable entries were available."
+    },
+    {
+      "name": "Institute of Industrial and Systems Engineers — Lean Definitions",
+      "url": "https://www.iise.org/Details.aspx?id=1104",
+      "use": "Operational terminology context for inventory turnover and lead time."
+    },
+    {
+      "name": "National Academies / NCBI Bookshelf — Critical Concepts of Supply Chain Flow and Resilience",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK556355/",
+      "use": "Conceptual context for supply-chain capacity, process flow and utilization."
+    }
+  ],
+  "words": [
+    {
+      "id": "assembly-line-n",
+      "word": "assembly line",
+      "phonetic": {
+        "us": "/əˈsem.bli ˌlaɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dây chuyền lắp ráp",
+          "definition_en": "a sequence of workstations where a product is assembled in stages as it moves through a factory",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The assembly line will stop briefly for scheduled equipment calibration.",
+          "vi": "Dây chuyền lắp ráp sẽ tạm dừng để hiệu chuẩn thiết bị theo lịch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "automated assembly line",
+        "assembly line worker",
+        "assembly line supervisor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "malfunction-nv",
+      "word": "malfunction",
+      "phonetic": {
+        "us": "/ˌmælˈfʌŋk.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự trục trặc; sự hoạt động sai chức năng",
+          "definition_en": "a failure of a machine or system to operate correctly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "bị trục trặc; hoạt động không đúng",
+          "definition_en": "to fail to operate or work correctly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "FACILITY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "malfunction",
+        "vs_es": "malfunctions",
+        "v2": "malfunctioned",
+        "v3": "malfunctioned",
+        "ving": "malfunctioning"
+      },
+      "examples": [
+        {
+          "en": "The equipment malfunction delayed the morning production shift.",
+          "vi": "Sự cố thiết bị đã làm chậm ca sản xuất buổi sáng.",
+          "sense_index": 0
+        },
+        {
+          "en": "If the scanner begins to malfunction, notify the floor supervisor.",
+          "vi": "Nếu máy quét bắt đầu hoạt động bất thường, hãy báo cho giám sát khu vực.",
+          "sense_index": 1
+        }
+      ],
+      "collocations": [
+        "equipment malfunction",
+        "system malfunction",
+        "report a malfunction"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "calibration-n",
+      "word": "calibration",
+      "phonetic": {
+        "us": "/ˌkæl.əˈbreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hiệu chuẩn",
+          "definition_en": "the process of checking and adjusting a measuring instrument so that its readings are accurate",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [
+        {
+          "word": "calibrate",
+          "pos": "v",
+          "meaning_vi": "hiệu chuẩn; điều chỉnh thiết bị đo"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Technicians completed the calibration before releasing the measuring equipment.",
+          "vi": "Các kỹ thuật viên hoàn tất việc hiệu chuẩn trước khi đưa thiết bị đo vào sử dụng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "instrument calibration",
+        "annual calibration",
+        "calibration certificate"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "calibrate-v",
+      "word": "calibrate",
+      "phonetic": {
+        "us": "/ˈkæl.əˌbreɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hiệu chuẩn; điều chỉnh thiết bị đo",
+          "definition_en": "to check or adjust a measuring instrument so that it gives accurate results",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [
+        {
+          "word": "calibration",
+          "pos": "n",
+          "meaning_vi": "sự hiệu chuẩn"
+        }
+      ],
+      "verb_forms": {
+        "v1": "calibrate",
+        "vs_es": "calibrates",
+        "v2": "calibrated",
+        "v3": "calibrated",
+        "ving": "calibrating"
+      },
+      "examples": [
+        {
+          "en": "Staff must calibrate the scale before weighing each outgoing shipment.",
+          "vi": "Nhân viên phải hiệu chuẩn cân trước khi cân từng lô hàng gửi đi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "calibrate the scale",
+        "calibrate measuring equipment",
+        "calibrate a sensor"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "contamination-n",
+      "word": "contamination",
+      "phonetic": {
+        "us": "/kənˌtæm.əˈneɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự nhiễm bẩn; sự nhiễm tạp chất",
+          "definition_en": "the presence or introduction of an unwanted or harmful substance into something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "HEALTH",
+        "FOOD"
+      ],
+      "word_family": [
+        {
+          "word": "contaminate",
+          "pos": "v",
+          "meaning_vi": "làm nhiễm bẩn; làm nhiễm tạp chất"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The audit found no contamination in the food storage area.",
+          "vi": "Cuộc kiểm tra không phát hiện sự nhiễm bẩn trong khu vực bảo quản thực phẩm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "risk of contamination",
+        "prevent contamination",
+        "contamination control"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "contaminate-v",
+      "word": "contaminate",
+      "phonetic": {
+        "us": "/kənˈtæm.əˌneɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "làm nhiễm bẩn; làm nhiễm tạp chất",
+          "definition_en": "to make something impure or unsafe by adding an unwanted or harmful substance",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "HEALTH",
+        "FOOD"
+      ],
+      "word_family": [
+        {
+          "word": "contamination",
+          "pos": "n",
+          "meaning_vi": "sự nhiễm bẩn; sự nhiễm tạp chất"
+        }
+      ],
+      "verb_forms": {
+        "v1": "contaminate",
+        "vs_es": "contaminates",
+        "v2": "contaminated",
+        "v3": "contaminated",
+        "ving": "contaminating"
+      },
+      "examples": [
+        {
+          "en": "Workers must seal the containers to prevent dust from contaminating the product.",
+          "vi": "Công nhân phải niêm kín các thùng chứa để ngăn bụi làm nhiễm bẩn sản phẩm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contaminate food products",
+        "contaminate a work surface",
+        "contaminate stored materials"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "prototype-n",
+      "word": "prototype",
+      "phonetic": {
+        "us": "/ˈproʊ.t̬əˌtaɪp/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mẫu thử; nguyên mẫu",
+          "definition_en": "an early model of a product made to test its design or performance before full production",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Engineers tested the prototype before approving the final production design.",
+          "vi": "Các kỹ sư thử nghiệm mẫu thử trước khi phê duyệt thiết kế sản xuất cuối cùng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "prototype model",
+        "test a prototype",
+        "prototype development"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "defect-n",
+      "word": "defect",
+      "phonetic": {
+        "us": "/ˈdiː.fekt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lỗi; khiếm khuyết",
+          "definition_en": "a fault or imperfection that prevents a product or component from meeting the required standard",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "defective",
+          "pos": "adj",
+          "meaning_vi": "bị lỗi; có khuyết tật"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspector documented a defect in the metal casing.",
+          "vi": "Nhân viên kiểm định đã ghi nhận một lỗi trên vỏ kim loại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "manufacturing defect",
+        "product defect",
+        "detect a defect"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "lead-time-n",
+      "word": "lead time",
+      "phonetic": {
+        "us": "/ˈliːd ˌtaɪm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian từ khi đặt hàng đến khi nhận hàng",
+          "definition_en": "the period between placing an order and receiving the requested goods or services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "SHIPPING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier reduced lead time by holding key components in stock.",
+          "vi": "Nhà cung cấp rút ngắn thời gian giao hàng bằng cách dự trữ các linh kiện chủ chốt.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "shorten lead time",
+        "lead time estimate",
+        "supplier lead time"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "stocktaking-n",
+      "word": "stocktaking",
+      "phonetic": {
+        "us": "/ˈstɑːkˌteɪ.kɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc kiểm kê hàng hóa; kiểm kê kho",
+          "definition_en": "the activity of counting all goods and materials held by a business at a particular time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "PURCHASING",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The annual stocktaking will close the warehouse for one afternoon.",
+          "vi": "Đợt kiểm kê hằng năm sẽ khiến kho đóng cửa trong một buổi chiều.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "annual stocktaking",
+        "stocktaking procedure",
+        "stocktaking period"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "pallet-n",
+      "word": "pallet",
+      "phonetic": {
+        "us": "/ˈpæl.ɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "pallet; tấm kê hàng",
+          "definition_en": "a flat platform, usually made of wood or plastic, used to stack and move goods with a forklift",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each pallet must be wrapped before it enters the loading area.",
+          "vi": "Mỗi pallet phải được quấn màng bọc trước khi đưa vào khu vực bốc xếp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "wooden pallet",
+        "load a pallet",
+        "pallet storage"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "loading-dock-n",
+      "word": "loading dock",
+      "phonetic": {
+        "us": "/ˈloʊ.dɪŋ ˌdɑk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khu vực bốc dỡ hàng",
+          "definition_en": "an area beside a warehouse or building where trucks are loaded and unloaded",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The delivery truck is waiting at the loading dock.",
+          "vi": "Xe tải giao hàng đang chờ tại khu vực bốc dỡ hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "loading dock schedule",
+        "loading dock area",
+        "loading dock equipment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "conveyor-belt-n",
+      "word": "conveyor belt",
+      "phonetic": {
+        "us": "/kənˈveɪ.ɚ ˌbelt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "băng chuyền; băng tải",
+          "definition_en": "a continuous moving belt used to transport materials or products from one place to another",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A technician repaired the conveyor belt before the morning shift.",
+          "vi": "Kỹ thuật viên đã sửa băng chuyền trước ca làm buổi sáng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "conveyor belt system",
+        "conveyor belt speed",
+        "conveyor belt maintenance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "work-order-n",
+      "word": "work order",
+      "phonetic": {
+        "us": "/ˈwɝk ˌɔr.dɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiếu yêu cầu công việc; lệnh công việc",
+          "definition_en": "a document that authorizes and describes a specific repair, maintenance task, or job",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please attach the work order to the maintenance report.",
+          "vi": "Vui lòng đính kèm phiếu yêu cầu công việc vào báo cáo bảo trì.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "issue a work order",
+        "work order number",
+        "work order request"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "preventive-maintenance-n",
+      "word": "preventive maintenance",
+      "phonetic": {
+        "us": "/prɪˌven.tɪv ˈmeɪn.tə.nəns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảo trì phòng ngừa; bảo dưỡng định kỳ",
+          "definition_en": "planned maintenance carried out regularly to reduce the likelihood of equipment breakdowns",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Preventive maintenance helps reduce unexpected equipment downtime.",
+          "vi": "Bảo trì phòng ngừa giúp giảm thời gian thiết bị ngừng hoạt động ngoài dự kiến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "preventive maintenance schedule",
+        "preventive maintenance plan",
+        "preventive maintenance task"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "equipment-failure-n",
+      "word": "equipment failure",
+      "phonetic": {
+        "us": "/ɪˈkwɪp.mənt ˌfeɪl.jɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự cố thiết bị; tình trạng thiết bị ngừng hoạt động",
+          "definition_en": "an event in which a machine or piece of equipment stops performing its required function",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The equipment failure delayed production for nearly two hours.",
+          "vi": "Sự cố thiết bị đã làm chậm hoạt động sản xuất gần hai giờ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "equipment failure rate",
+        "equipment failure report",
+        "prevent equipment failure"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "production-quota-n",
+      "word": "production quota",
+      "phonetic": {
+        "us": "/prəˈdʌk.ʃən ˌkwoʊ.tə/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chỉ tiêu sản lượng",
+          "definition_en": "a fixed amount of goods that a worker or facility is expected to produce within a period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The factory met its production quota ahead of schedule.",
+          "vi": "Nhà máy đã hoàn thành chỉ tiêu sản lượng sớm hơn kế hoạch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "daily production quota",
+        "meet a production quota",
+        "production quota target"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "inventory-turnover-n",
+      "word": "inventory turnover",
+      "phonetic": {
+        "us": "/ˈɪn.vənˌtɔr.i ˈtɝːnˌoʊ.vɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vòng quay hàng tồn kho",
+          "definition_en": "the rate at which a business sells and replaces its inventory during a given period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "SHIPPING",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Higher inventory turnover helped reduce warehouse storage costs.",
+          "vi": "Vòng quay hàng tồn kho cao hơn đã giúp giảm chi phí lưu kho.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "inventory turnover ratio",
+        "improve inventory turnover",
+        "low inventory turnover"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cold-storage-n",
+      "word": "cold storage",
+      "phonetic": {
+        "us": "/ˈkoʊld ˌstɔr.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kho lạnh; bảo quản lạnh",
+          "definition_en": "the storage of goods at a low controlled temperature, especially food or other perishable items",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "FOOD",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Fresh ingredients must remain in cold storage until delivery.",
+          "vi": "Nguyên liệu tươi phải được giữ trong kho lạnh cho đến khi giao hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cold storage facility",
+        "cold storage unit",
+        "cold storage temperature"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "overstock-nv",
+      "word": "overstock",
+      "phonetic": {
+        "us": "/ˈoʊ.vɚ.stɑk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lượng hàng tồn vượt nhu cầu",
+          "definition_en": "goods or supplies held in quantities greater than are needed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "tồn trữ quá nhiều hàng",
+          "definition_en": "to have or buy more goods or supplies than are needed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "SHOPPING",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "overstock",
+        "vs_es": "overstocks",
+        "v2": "overstocked",
+        "v3": "overstocked",
+        "ving": "overstocking"
+      },
+      "examples": [
+        {
+          "en": "The retailer discounted its overstock before the new season.",
+          "vi": "Nhà bán lẻ giảm giá lượng hàng tồn vượt mức trước mùa mới.",
+          "sense_index": 0
+        },
+        {
+          "en": "Stores should review demand forecasts before they overstock seasonal items.",
+          "vi": "Các cửa hàng nên rà soát dự báo nhu cầu trước khi nhập quá nhiều hàng theo mùa.",
+          "sense_index": 1
+        }
+      ],
+      "collocations": [
+        "clear overstock",
+        "overstock inventory",
+        "overstock levels"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "safety-protocol-n",
+      "word": "safety protocol",
+      "phonetic": {
+        "us": "/ˈseɪf.ti ˌproʊ.tə.kɔl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy trình an toàn",
+          "definition_en": "a set of established rules and steps designed to prevent injury or reduce workplace risk",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HEALTH",
+        "FACILITY",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Every new employee must review the safety protocol before entering the plant.",
+          "vi": "Mỗi nhân viên mới phải xem lại quy trình an toàn trước khi vào nhà máy.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "follow the safety protocol",
+        "safety protocol training",
+        "safety protocol checklist"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "quality-assurance-n",
+      "word": "quality assurance",
+      "phonetic": {
+        "us": "/ˈkwɑ.lə.ti əˌʃʊr.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đảm bảo chất lượng",
+          "definition_en": "planned activities and procedures used to make sure that a product or service meets required standards throughout its development or production",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Quality assurance staff reviewed the process before the new product launch.",
+          "vi": "Nhân viên đảm bảo chất lượng đã rà soát quy trình trước khi ra mắt sản phẩm mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "quality assurance team",
+        "quality assurance process",
+        "quality assurance standards"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "quality-control-n",
+      "word": "quality control",
+      "phonetic": {
+        "us": "/ˈkwɑ.lə.ti kənˌtroʊl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kiểm soát chất lượng",
+          "definition_en": "the inspection and testing of products during or after production to check that they meet required standards",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Quality control inspectors sampled each batch before packaging.",
+          "vi": "Nhân viên kiểm soát chất lượng lấy mẫu từng lô trước khi đóng gói.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "quality control inspection",
+        "quality control process",
+        "quality control standards"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "distribution-network-n",
+      "word": "distribution network",
+      "phonetic": {
+        "us": "/ˌdɪs.trɪˈbju.ʃən ˈnet.wɝk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mạng lưới phân phối",
+          "definition_en": "the connected warehouses, transport routes, distributors, and other facilities used to move goods to customers",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "BUSINESS",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company expanded its distribution network to reach rural retailers.",
+          "vi": "Công ty mở rộng mạng lưới phân phối để tiếp cận các nhà bán lẻ ở nông thôn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "regional distribution network",
+        "distribution network capacity",
+        "distribution network expansion"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "supply-chain-n",
+      "word": "supply chain",
+      "phonetic": {
+        "us": "/səˈplaɪ ˌtʃeɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuỗi cung ứng",
+          "definition_en": "the connected organizations, people, activities, and resources involved in making and delivering a product to its final customer",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A delayed shipment disrupted the entire supply chain.",
+          "vi": "Một lô hàng bị chậm đã làm gián đoạn toàn bộ chuỗi cung ứng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "supply chain disruption",
+        "supply chain management",
+        "supply chain partner"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "service-interval-n",
+      "word": "service interval",
+      "phonetic": {
+        "us": "/ˈsɝ.vɪs ˌɪn.tɚ.vəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chu kỳ bảo dưỡng; khoảng cách giữa các lần bảo dưỡng",
+          "definition_en": "the recommended period of time or distance between scheduled maintenance services for a vehicle or machine",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TRANSPORT",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manual lists a service interval for each vehicle model.",
+          "vi": "Sổ tay ghi chu kỳ bảo dưỡng cho từng mẫu xe.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "recommended service interval",
+        "service interval reminder",
+        "service interval schedule"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "capacity-utilization-n",
+      "word": "capacity utilization",
+      "phonetic": {
+        "us": "/kəˈpæs.ə.ti ˌju.tə.ləˈzeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mức độ sử dụng công suất",
+          "definition_en": "the proportion of a factory or system’s available production capacity that is actually being used",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Capacity utilization increased after the second production shift began.",
+          "vi": "Mức độ sử dụng công suất tăng sau khi ca sản xuất thứ hai bắt đầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "capacity utilization rate",
+        "improve capacity utilization",
+        "capacity utilization report"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "shipment-tracking-n",
+      "word": "shipment tracking",
+      "phonetic": {
+        "us": "/ˈʃɪp.mənt ˌtræk.ɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc theo dõi lô hàng",
+          "definition_en": "the process of checking the location and delivery status of goods while they are being transported",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "CUSTOMER",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can use shipment tracking to monitor each delivery.",
+          "vi": "Khách hàng có thể dùng chức năng theo dõi lô hàng để giám sát từng lần giao.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "shipment tracking number",
+        "shipment tracking system",
+        "real-time shipment tracking"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "tolerance-n",
+      "word": "tolerance",
+      "phonetic": {
+        "us": "/ˈtɑ.lɚ.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dung sai; mức sai lệch cho phép",
+          "definition_en": "the permitted amount of variation from a specified measurement, limit, or standard",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "CONSTRUCTION",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The component must remain within the specified tolerance during production.",
+          "vi": "Linh kiện phải nằm trong giới hạn dung sai quy định trong quá trình sản xuất.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "within tolerance",
+        "tolerance limit",
+        "manufacturing tolerance"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "reliability-n",
+      "word": "reliability",
+      "phonetic": {
+        "us": "/rɪˌlaɪ.əˈbɪl.ə.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "độ tin cậy; tính ổn định",
+          "definition_en": "the ability of a machine, product, or system to work consistently without failing",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "TECHNOLOGY",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "reliable",
+          "pos": "adj",
+          "meaning_vi": "đáng tin cậy"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Equipment reliability improved after the maintenance schedule was revised.",
+          "vi": "Độ tin cậy của thiết bị được cải thiện sau khi lịch bảo trì được điều chỉnh.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "equipment reliability",
+        "reliability test",
+        "reliability rating"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "rework-nv",
+      "word": "rework",
+      "phonetic": {
+        "us": "/ˌriːˈwɝk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc làm lại để sửa lỗi",
+          "definition_en": "work that must be done again to correct a problem or defect",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "làm lại; chỉnh sửa để khắc phục lỗi",
+          "definition_en": "to do or make something again in order to improve it or correct a fault",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "rework",
+        "vs_es": "reworks",
+        "v2": "reworked",
+        "v3": "reworked",
+        "ving": "reworking"
+      },
+      "examples": [
+        {
+          "en": "The rejected units require rework before they can be shipped.",
+          "vi": "Các sản phẩm bị loại cần được làm lại trước khi có thể xuất hàng.",
+          "sense_index": 0
+        },
+        {
+          "en": "The engineering team will rework the component to meet the new specification.",
+          "vi": "Nhóm kỹ thuật sẽ chỉnh sửa linh kiện để đáp ứng thông số kỹ thuật mới.",
+          "sense_index": 1
+        }
+      ],
+      "collocations": [
+        "rework cost",
+        "rework process",
+        "rework time"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "scrap-nv",
+      "word": "scrap",
+      "phonetic": {
+        "us": "/skræp/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phế liệu; phần vật liệu bị loại bỏ",
+          "definition_en": "material or products that are rejected or no longer useful",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "loại bỏ; loại khỏi quy trình sử dụng",
+          "definition_en": "to discard something because it is no longer wanted, useful, or acceptable",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "FACILITY",
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "scrap",
+        "vs_es": "scraps",
+        "v2": "scrapped",
+        "v3": "scrapped",
+        "ving": "scrapping"
+      },
+      "examples": [
+        {
+          "en": "The factory separates scrap from reusable production materials.",
+          "vi": "Nhà máy tách phế liệu khỏi các vật liệu sản xuất có thể tái sử dụng.",
+          "sense_index": 0
+        },
+        {
+          "en": "Management decided to scrap the outdated packaging machine.",
+          "vi": "Ban quản lý quyết định loại bỏ máy đóng gói đã lỗi thời.",
+          "sense_index": 1
+        }
+      ],
+      "collocations": [
+        "scrap material",
+        "scrap rate",
+        "scrap metal"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "package-nv",
+      "word": "package",
+      "phonetic": {
+        "us": "/ˈpæk.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "gói hàng; kiện hàng",
+          "definition_en": "a group of goods wrapped or placed together in a container for storage, transport, or sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "đóng gói",
+          "definition_en": "to put goods into a container or protective covering for storage, transport, or sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "SHOPPING",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "packaging",
+          "pos": "n",
+          "meaning_vi": "việc đóng gói; vật liệu bao bì"
+        }
+      ],
+      "verb_forms": {
+        "v1": "package",
+        "vs_es": "packages",
+        "v2": "packaged",
+        "v3": "packaged",
+        "ving": "packaging"
+      },
+      "examples": [
+        {
+          "en": "The courier collected the package from the reception desk.",
+          "vi": "Nhân viên chuyển phát đã nhận kiện hàng tại quầy lễ tân.",
+          "sense_index": 0
+        },
+        {
+          "en": "Please package the spare parts securely before dispatch.",
+          "vi": "Vui lòng đóng gói các phụ tùng chắc chắn trước khi gửi đi.",
+          "sense_index": 1
+        }
+      ],
+      "collocations": [
+        "package the equipment",
+        "package goods securely",
+        "package a shipment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "packaging-n",
+      "word": "packaging",
+      "phonetic": {
+        "us": "/ˈpæk.ɪ.dʒɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc đóng gói; vật liệu bao bì",
+          "definition_en": "the materials or process used to wrap or protect goods for storage, transport, or sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "SHOPPING",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "package",
+          "pos": "v",
+          "meaning_vi": "đóng gói"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new packaging protects fragile items during long-distance transport.",
+          "vi": "Bao bì mới bảo vệ các mặt hàng dễ vỡ trong quá trình vận chuyển đường dài.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "protective packaging",
+        "packaging material",
+        "packaging design"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "packaging-line-n",
+      "word": "packaging line",
+      "phonetic": {
+        "us": "/ˈpæk.ɪ.dʒɪŋ ˌlaɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dây chuyền đóng gói",
+          "definition_en": "a production line where finished products are placed into containers, wrapped, labeled, and prepared for shipment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The packaging line will operate during the night shift.",
+          "vi": "Dây chuyền đóng gói sẽ hoạt động trong ca đêm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "packaging line operator",
+        "packaging line speed",
+        "packaging line maintenance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "procurement-cycle-n",
+      "word": "procurement cycle",
+      "phonetic": {
+        "us": "/prəˈkjʊr.mənt ˌsaɪ.kəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chu trình mua sắm; quy trình thu mua",
+          "definition_en": "the sequence of steps an organization follows to identify a need, select a supplier, place an order, and complete a purchase",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The procurement cycle begins when a department submits a purchase request.",
+          "vi": "Chu trình mua sắm bắt đầu khi một phòng ban gửi yêu cầu mua hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "procurement cycle time",
+        "procurement cycle process",
+        "shorten the procurement cycle"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "purchase-order-n",
+      "word": "purchase order",
+      "phonetic": {
+        "us": "/ˈpɝ.tʃəs ˌɔr.dɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đơn đặt hàng chính thức",
+          "definition_en": "a formal document sent by a buyer to a supplier that specifies the goods or services, quantities, and agreed terms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier cannot begin production without an approved purchase order.",
+          "vi": "Nhà cung cấp không thể bắt đầu sản xuất nếu chưa có đơn đặt hàng được phê duyệt.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "purchase order number",
+        "purchase order approval",
+        "issue a purchase order"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    }
+  ]
+}

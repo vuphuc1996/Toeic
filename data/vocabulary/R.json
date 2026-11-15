@@ -157,6 +157,43 @@
       "collocations": []
     },
     {
+      "id": "rebate-n",
+      "word": "rebate",
+      "phonetic": {
+        "us": "/ˈribeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản hoàn tiền; khoản giảm giá sau mua",
+          "definition_en": "an amount of money returned to a buyer after a purchase or deducted under specified conditions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can claim a rebate by submitting the receipt within thirty days.",
+          "vi": "Khách hàng có thể yêu cầu hoàn tiền bằng cách gửi biên lai trong vòng 30 ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cash rebate",
+        "mail-in rebate",
+        "receive a rebate"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "receipt-n",
       "word": "receipt",
       "phonetic": {
@@ -1248,6 +1285,50 @@
       ]
     },
     {
+      "id": "reliability-n",
+      "word": "reliability",
+      "phonetic": {
+        "us": "/rɪˌlaɪ.əˈbɪl.ə.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "độ tin cậy; tính ổn định",
+          "definition_en": "the ability of a machine, product, or system to work consistently without failing",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "TECHNOLOGY",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "reliable",
+          "pos": "adj",
+          "meaning_vi": "đáng tin cậy"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Equipment reliability improved after the maintenance schedule was revised.",
+          "vi": "Độ tin cậy của thiết bị được cải thiện sau khi lịch bảo trì được điều chỉnh.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "equipment reliability",
+        "reliability test",
+        "reliability rating"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "reliable-adj",
       "word": "reliable",
       "phonetic": {
@@ -1266,7 +1347,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "reliability",
+          "pos": "n",
+          "meaning_vi": "độ tin cậy; tính ổn định"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1807,6 +1894,43 @@
         "pay monthly rent",
         "rent office space"
       ]
+    },
+    {
+      "id": "repayment-n",
+      "word": "repayment",
+      "phonetic": {
+        "us": "/riˈpeɪmənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc hoàn trả; khoản tiền trả nợ",
+          "definition_en": "the act of paying back money that has been borrowed, or an amount paid back",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The first repayment is due thirty days after the funds are transferred.",
+          "vi": "Khoản hoàn trả đầu tiên đến hạn 30 ngày sau khi tiền được chuyển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "monthly repayment",
+        "loan repayment",
+        "repayment schedule"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "replace-v",
@@ -2621,6 +2745,44 @@
       "collocations": []
     },
     {
+      "id": "restructuring-n",
+      "word": "restructuring",
+      "phonetic": {
+        "us": "/riˈstrʌktʃɚɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tái cơ cấu; việc tổ chức lại",
+          "definition_en": "the process of changing the organization or financial structure of a company or institution",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Management announced a restructuring plan to simplify regional operations.",
+          "vi": "Ban lãnh đạo công bố kế hoạch tái cơ cấu nhằm đơn giản hóa hoạt động khu vực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "corporate restructuring",
+        "debt restructuring",
+        "restructuring plan"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "result-v",
       "word": "result",
       "cefr_level": "A1",
@@ -3188,6 +3350,63 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "rework-nv",
+      "word": "rework",
+      "phonetic": {
+        "us": "/ˌriːˈwɝk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc làm lại để sửa lỗi",
+          "definition_en": "work that must be done again to correct a problem or defect",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "làm lại; chỉnh sửa để khắc phục lỗi",
+          "definition_en": "to do or make something again in order to improve it or correct a fault",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "rework",
+        "vs_es": "reworks",
+        "v2": "reworked",
+        "v3": "reworked",
+        "ving": "reworking"
+      },
+      "examples": [
+        {
+          "en": "The rejected units require rework before they can be shipped.",
+          "vi": "Các sản phẩm bị loại cần được làm lại trước khi có thể xuất hàng.",
+          "sense_index": 0
+        },
+        {
+          "en": "The engineering team will rework the component to meet the new specification.",
+          "vi": "Nhóm kỹ thuật sẽ chỉnh sửa linh kiện để đáp ứng thông số kỹ thuật mới.",
+          "sense_index": 1
+        }
+      ],
+      "collocations": [
+        "rework cost",
+        "rework process",
+        "rework time"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "risk-v",
       "word": "risk",
       "cefr_level": "B1",
@@ -3375,118 +3594,6 @@
         }
       ],
       "collocations": []
-    },
-    {
-      "id": "rebate-n",
-      "word": "rebate",
-      "phonetic": {
-        "us": "/ˈribeɪt/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "khoản hoàn tiền; khoản giảm giá sau mua",
-          "definition_en": "an amount of money returned to a buyer after a purchase or deducted under specified conditions",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B1"
-        }
-      ],
-      "topics": [
-        "FINANCE",
-        "SHOPPING"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "Customers can claim a rebate by submitting the receipt within thirty days.",
-          "vi": "Khách hàng có thể yêu cầu hoàn tiền bằng cách gửi biên lai trong vòng 30 ngày.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "cash rebate",
-        "mail-in rebate",
-        "receive a rebate"
-      ],
-      "cefr_level": "B1",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "repayment-n",
-      "word": "repayment",
-      "phonetic": {
-        "us": "/riˈpeɪmənt/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "việc hoàn trả; khoản tiền trả nợ",
-          "definition_en": "the act of paying back money that has been borrowed, or an amount paid back",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B1"
-        }
-      ],
-      "topics": [
-        "FINANCE",
-        "BANKING"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The first repayment is due thirty days after the funds are transferred.",
-          "vi": "Khoản hoàn trả đầu tiên đến hạn 30 ngày sau khi tiền được chuyển.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "monthly repayment",
-        "loan repayment",
-        "repayment schedule"
-      ],
-      "cefr_level": "B1",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "restructuring-n",
-      "word": "restructuring",
-      "phonetic": {
-        "us": "/riˈstrʌktʃɚɪŋ/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "sự tái cơ cấu; việc tổ chức lại",
-          "definition_en": "the process of changing the organization or financial structure of a company or institution",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "BUSINESS",
-        "FINANCE",
-        "HR"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "Management announced a restructuring plan to simplify regional operations.",
-          "vi": "Ban lãnh đạo công bố kế hoạch tái cơ cấu nhằm đơn giản hóa hoạt động khu vực.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "corporate restructuring",
-        "debt restructuring",
-        "restructuring plan"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

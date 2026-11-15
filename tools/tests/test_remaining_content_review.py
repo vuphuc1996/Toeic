@@ -80,17 +80,37 @@ class RemainingContentReviewTests(unittest.TestCase):
             actual = hashlib.sha256(payload).hexdigest()
             self.assertEqual(actual, row['questionSha256'], f"Reviewed question drifted: {row['key']}")
 
-    def test_part1_metadata_fingerprint_refresh_is_logged_and_question_hashes_stay_fixed(self):
+    def test_part1_photo_metadata_fingerprint_history_is_logged_and_question_hashes_stay_fixed(self):
         log = REGISTRY.get("fingerprintRefreshLog", [])
-        self.assertEqual(len(log), 1)
-        entry = log[0]
-        self.assertEqual(entry["fieldAdded"], "photoSourceType")
-        self.assertEqual(entry["expectedFieldValue"], "licensed-stock")
-        self.assertEqual(entry["changedUnitCount"], 8)
-        self.assertEqual(len(entry["units"]), 8)
-        self.assertIn("question hashes", entry["scope"])
-        self.assertTrue(all(row["oldHashMatchesAfterRemovingField"] for row in entry["units"]))
-        self.assertTrue(all(row["questionSha256Unchanged"] for row in entry["units"]))
+        self.assertEqual(len(log), 2)
+
+        added = log[0]
+        self.assertEqual(added["fieldAdded"], "photoSourceType")
+        self.assertEqual(added["expectedFieldValue"], "licensed-stock")
+        self.assertEqual(added["changedUnitCount"], 8)
+        self.assertEqual(len(added["units"]), 8)
+        self.assertTrue(all(row["oldHashMatchesAfterRemovingField"] for row in added["units"]))
+        self.assertTrue(all(row["questionSha256Unchanged"] for row in added["units"]))
+
+        removed = log[1]
+        self.assertEqual(removed["fieldRemoved"], "image")
+        self.assertEqual(removed["expectedRemovedValuePattern"], "./assets/listening/<unitId>.svg")
+        self.assertEqual(removed["changedUnitCount"], 8)
+        self.assertEqual(len(removed["units"]), 8)
+        self.assertIn("JPG-only", removed["reason"])
+        self.assertTrue(all(row["oldHashMatchesAfterRestoringField"] for row in removed["units"]))
+        self.assertTrue(all(row["questionSha256Unchanged"] for row in removed["units"]))
+
+    def test_reviewed_part1_uses_only_jpg_photo_metadata(self):
+        reviewed_part1 = [
+            unit for unit in LISTENING
+            if unit.get("part") == "Part 1" and any(row["unitId"] == unit.get("id") for row in REGISTRY["items"])
+        ]
+        self.assertEqual(len(reviewed_part1), 8)
+        for unit in reviewed_part1:
+            self.assertEqual(unit.get("photo"), f"./assets/listening/{unit['id']}.jpg")
+            self.assertEqual(unit.get("photoSourceType"), "licensed-stock")
+            self.assertNotIn("image", unit)
 
     def test_unreviewed_questions_must_be_marked_reserve_pending(self):
         reviewed = {row["key"] for row in REGISTRY["items"]}

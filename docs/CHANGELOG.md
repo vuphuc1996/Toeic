@@ -1,3 +1,11 @@
+## v2.68.0 — verified Part 1 fingerprint refresh and TOEIC Vocabulary Batch 010
+
+- Fixed the remaining-content fingerprint CI failure by recording the approved removal of the legacy Part 1 SVG `image` metadata field. All eight historic unit hashes are reproducible by restoring the exact old SVG path; all question hashes remain unchanged. Added a second fingerprint refresh audit entry and fail-closed verification.
+- Added 37 stable vocabulary headwords in Batch 010 for manufacturing, production operations, quality assurance/control, maintenance, warehouse operations and supply chain. Total rises 1,026 → **1,063** (+37; 35.4% of the 3,000 minimum target, 21.3% of the 5,000 planning ceiling).
+- All 37 entries include definitions, Vietnamese glosses, original bilingual examples, at least three collocations and editorial US IPA. Added five reciprocal word-family pairs. CEFR is editorial-estimate; independent lexical review remains pending.
+- Updated legacy hidden-word repair profiles: 979→84 known additions, 992→71, 1,026→37. Only exact matching historical snapshots can trigger a restore; no IndexedDB schema change or reset.
+- Strict Part 1 photo validation remains blocked because this source snapshot contains only 1/9 original JPG binaries. Keep the eight repository-owned JPG originals when merging; deployment remains on hold until strict validation reaches 9/9.
+
 ## v2.67.0 — JPG-only Listening media and TOEIC Vocabulary Batch 009
 
 - Removed the redundant public UI label “Nội dung bổ sung · đang chờ kiểm duyệt độc lập · chưa dùng trong Mock Exam”. The underlying `editorialStatus=reserve-pending-independent-review` metadata and fail-closed Mock exclusion remain intact; this is a presentation cleanup, not an approval or content-promotion change.

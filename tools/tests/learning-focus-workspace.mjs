@@ -73,12 +73,15 @@ const batch = JSON.parse(read('data/vocabulary/batch-006.json'));
 const batch018 = JSON.parse(read('data/vocabulary/batch-007.json'));
 const batch020 = JSON.parse(read('data/vocabulary/batch-008.json'));
 const batch021 = JSON.parse(read('data/vocabulary/batch-009.json'));
+const batch022 = JSON.parse(read('data/vocabulary/batch-010.json'));
 assert.equal(batch.count, 43);
 assert.equal(batch.words.length, 43);
 assert.equal(batch018.words.length, 8);
 assert.equal(batch020.words.length, 13);
 assert.equal(batch021.count, 34);
 assert.equal(batch021.words.length, 34);
+assert.equal(batch022.count, 37);
+assert.equal(batch022.words.length, 37);
 assert.match(batch021.editorialStatus, /independent lexical review pending/i);
 assert.match(batch020.editorialStatus, /pending/i);
 assert.match(batch.editorialStatus, /pending/i);
@@ -99,6 +102,13 @@ for (const item of batch021.words) {
   assert.ok(item.examples?.length && item.examples.every(e => e.en && e.vi), `Batch 009 bilingual example missing: ${item.id}`);
   assert.ok(item.collocations?.length >= 3, `Batch 009 needs three collocations: ${item.id}`);
 }
+for (const item of batch022.words) {
+  assert.ok(canonical.some(c => c.id === item.id), `Batch 010 ID missing from canonical A-Z: ${item.id}`);
+  assert.ok(words.has(item.word.toLowerCase()), `Batch 010 headword missing from canonical A-Z: ${item.word}`);
+  assert.ok(item.senses?.length && item.senses.every(s => s.meaning_vi && s.definition_en), `Batch 010 sense incomplete: ${item.id}`);
+  assert.ok(item.examples?.length && item.examples.every(e => e.en && e.vi), `Batch 010 bilingual example missing: ${item.id}`);
+  assert.ok(item.collocations?.length >= 3, `Batch 010 needs three collocations: ${item.id}`);
+}
 assert.equal(canonical.length, new Set(canonical.map(item => item.id)).size, 'canonical vocabulary IDs must remain unique');
 
-console.log(`Learning focus workspace PASS: ${ids.length} unique IDs, flashcard/review flow, shared modal detail styling, responsive rules, unchanged IndexedDB v1, and Batch 006/007/008/009 vocabulary additions (${canonical.length} canonical headwords) and practice retry/history behavior.`);
+console.log(`Learning focus workspace PASS: ${ids.length} unique IDs, flashcard/review flow, shared modal detail styling, responsive rules, unchanged IndexedDB v1, and Batch 006/007/008/009/010 vocabulary additions (${canonical.length} canonical headwords) and practice retry/history behavior.`);

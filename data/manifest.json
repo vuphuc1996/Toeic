@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "version": "2.67.0",
+  "version": "2.68.0",
   "letters": [
     {
       "letter": "A",
       "file": "./data/vocabulary/A.json",
-      "count": 114
+      "count": 115
     },
     {
       "letter": "B",
@@ -15,17 +15,17 @@
     {
       "letter": "C",
       "file": "./data/vocabulary/C.json",
-      "count": 134
+      "count": 141
     },
     {
       "letter": "D",
       "file": "./data/vocabulary/D.json",
-      "count": 71
+      "count": 73
     },
     {
       "letter": "E",
       "file": "./data/vocabulary/E.json",
-      "count": 59
+      "count": 60
     },
     {
       "letter": "F",
@@ -45,7 +45,7 @@
     {
       "letter": "I",
       "file": "./data/vocabulary/I.json",
-      "count": 57
+      "count": 58
     },
     {
       "letter": "J",
@@ -60,12 +60,12 @@
     {
       "letter": "L",
       "file": "./data/vocabulary/L.json",
-      "count": 31
+      "count": 33
     },
     {
       "letter": "M",
       "file": "./data/vocabulary/M.json",
-      "count": 32
+      "count": 33
     },
     {
       "letter": "N",
@@ -75,32 +75,32 @@
     {
       "letter": "O",
       "file": "./data/vocabulary/O.json",
-      "count": 34
+      "count": 35
     },
     {
       "letter": "P",
       "file": "./data/vocabulary/P.json",
-      "count": 84
+      "count": 93
     },
     {
       "letter": "Q",
       "file": "./data/vocabulary/Q.json",
-      "count": 9
+      "count": 11
     },
     {
       "letter": "R",
       "file": "./data/vocabulary/R.json",
-      "count": 85
+      "count": 87
     },
     {
       "letter": "S",
       "file": "./data/vocabulary/S.json",
-      "count": 80
+      "count": 86
     },
     {
       "letter": "T",
       "file": "./data/vocabulary/T.json",
-      "count": 37
+      "count": 38
     },
     {
       "letter": "U",
@@ -115,7 +115,7 @@
     {
       "letter": "W",
       "file": "./data/vocabulary/W.json",
-      "count": 28
+      "count": 29
     },
     {
       "letter": "X",
@@ -134,13 +134,13 @@
     }
   ],
   "categories": "./data/categories.json",
-  "totalWords": 1026,
+  "totalWords": 1063,
   "cefrLevels": {
+    "A1": 64,
     "A2": 228,
-    "B2": 350,
-    "C1": 98,
-    "B1": 286,
-    "A1": 64
+    "B1": 292,
+    "B2": 372,
+    "C1": 107
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
   "totalTopics": 32,
@@ -210,7 +210,44 @@
         "settlement-n",
         "valuation-n",
         "levy-n",
-        "subcontracting-n"
+        "subcontracting-n",
+        "assembly-line-n",
+        "malfunction-nv",
+        "calibration-n",
+        "calibrate-v",
+        "contamination-n",
+        "contaminate-v",
+        "prototype-n",
+        "defect-n",
+        "lead-time-n",
+        "stocktaking-n",
+        "pallet-n",
+        "loading-dock-n",
+        "conveyor-belt-n",
+        "work-order-n",
+        "preventive-maintenance-n",
+        "equipment-failure-n",
+        "production-quota-n",
+        "inventory-turnover-n",
+        "cold-storage-n",
+        "overstock-nv",
+        "safety-protocol-n",
+        "quality-assurance-n",
+        "quality-control-n",
+        "distribution-network-n",
+        "supply-chain-n",
+        "service-interval-n",
+        "capacity-utilization-n",
+        "shipment-tracking-n",
+        "tolerance-n",
+        "reliability-n",
+        "rework-nv",
+        "scrap-nv",
+        "package-nv",
+        "packaging-n",
+        "packaging-line-n",
+        "procurement-cycle-n",
+        "purchase-order-n"
       ]
     },
     {
@@ -249,7 +286,86 @@
         "settlement-n",
         "valuation-n",
         "levy-n",
-        "subcontracting-n"
+        "subcontracting-n",
+        "assembly-line-n",
+        "malfunction-nv",
+        "calibration-n",
+        "calibrate-v",
+        "contamination-n",
+        "contaminate-v",
+        "prototype-n",
+        "defect-n",
+        "lead-time-n",
+        "stocktaking-n",
+        "pallet-n",
+        "loading-dock-n",
+        "conveyor-belt-n",
+        "work-order-n",
+        "preventive-maintenance-n",
+        "equipment-failure-n",
+        "production-quota-n",
+        "inventory-turnover-n",
+        "cold-storage-n",
+        "overstock-nv",
+        "safety-protocol-n",
+        "quality-assurance-n",
+        "quality-control-n",
+        "distribution-network-n",
+        "supply-chain-n",
+        "service-interval-n",
+        "capacity-utilization-n",
+        "shipment-tracking-n",
+        "tolerance-n",
+        "reliability-n",
+        "rework-nv",
+        "scrap-nv",
+        "package-nv",
+        "packaging-n",
+        "packaging-line-n",
+        "procurement-cycle-n",
+        "purchase-order-n"
+      ]
+    },
+    {
+      "previousTotalWords": 1026,
+      "releaseAdditionIds": [
+        "assembly-line-n",
+        "malfunction-nv",
+        "calibration-n",
+        "calibrate-v",
+        "contamination-n",
+        "contaminate-v",
+        "prototype-n",
+        "defect-n",
+        "lead-time-n",
+        "stocktaking-n",
+        "pallet-n",
+        "loading-dock-n",
+        "conveyor-belt-n",
+        "work-order-n",
+        "preventive-maintenance-n",
+        "equipment-failure-n",
+        "production-quota-n",
+        "inventory-turnover-n",
+        "cold-storage-n",
+        "overstock-nv",
+        "safety-protocol-n",
+        "quality-assurance-n",
+        "quality-control-n",
+        "distribution-network-n",
+        "supply-chain-n",
+        "service-interval-n",
+        "capacity-utilization-n",
+        "shipment-tracking-n",
+        "tolerance-n",
+        "reliability-n",
+        "rework-nv",
+        "scrap-nv",
+        "package-nv",
+        "packaging-n",
+        "packaging-line-n",
+        "procurement-cycle-n",
+        "purchase-order-n"
       ]
     }
   ]

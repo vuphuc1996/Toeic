@@ -1159,6 +1159,43 @@
       ]
     },
     {
+      "id": "break-even-adj",
+      "word": "break-even",
+      "phonetic": {
+        "us": "/ˌbreɪkˈiːvən/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "hòa vốn; không lãi cũng không lỗ",
+          "definition_en": "at a level where total revenue is equal to total costs, resulting in neither a profit nor a loss",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new store is expected to reach the break-even point within its first year.",
+          "vi": "Cửa hàng mới dự kiến đạt điểm hòa vốn trong năm hoạt động đầu tiên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "break-even point",
+        "break-even analysis",
+        "reach break-even"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "breakdown-n",
       "word": "breakdown",
       "phonetic": {
@@ -1478,43 +1515,6 @@
         "potential buyer",
         "buyer information"
       ]
-    },
-    {
-      "id": "break-even-adj",
-      "word": "break-even",
-      "phonetic": {
-        "us": "/ˌbreɪkˈiːvən/"
-      },
-      "senses": [
-        {
-          "pos": "adj",
-          "meaning_vi": "hòa vốn; không lãi cũng không lỗ",
-          "definition_en": "at a level where total revenue is equal to total costs, resulting in neither a profit nor a loss",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "FINANCE",
-        "BUSINESS"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The new store is expected to reach the break-even point within its first year.",
-          "vi": "Cửa hàng mới dự kiến đạt điểm hòa vốn trong năm hoạt động đầu tiên.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "break-even point",
-        "break-even analysis",
-        "reach break-even"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

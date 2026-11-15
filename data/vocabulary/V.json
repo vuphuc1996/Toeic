@@ -173,6 +173,54 @@
       ]
     },
     {
+      "id": "valuation-n",
+      "word": "valuation",
+      "phonetic": {
+        "us": "/ˌvæljuˈeɪʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự định giá; kết quả xác định giá trị",
+          "definition_en": "the process of estimating the monetary value of a business, property, or asset",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "value",
+          "pos": "n/v",
+          "meaning_vi": "giá trị; coi trọng"
+        },
+        {
+          "word": "valuable",
+          "pos": "adj",
+          "meaning_vi": "có giá trị; quý giá"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "An independent valuation is required before the property can be sold.",
+          "vi": "Cần có kết quả định giá độc lập trước khi bất động sản được bán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "property valuation",
+        "independent valuation",
+        "company valuation"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "value-v",
       "word": "value",
       "cefr_level": "A2",
@@ -813,54 +861,6 @@
         "voluntary program"
       ],
       "cefr_level": "B1",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "valuation-n",
-      "word": "valuation",
-      "phonetic": {
-        "us": "/ˌvæljuˈeɪʃən/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "sự định giá; kết quả xác định giá trị",
-          "definition_en": "the process of estimating the monetary value of a business, property, or asset",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "C1"
-        }
-      ],
-      "topics": [
-        "FINANCE",
-        "REAL_ESTATE"
-      ],
-      "word_family": [
-        {
-          "word": "value",
-          "pos": "n/v",
-          "meaning_vi": "giá trị; coi trọng"
-        },
-        {
-          "word": "valuable",
-          "pos": "adj",
-          "meaning_vi": "có giá trị; quý giá"
-        }
-      ],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "An independent valuation is required before the property can be sold.",
-          "vi": "Cần có kết quả định giá độc lập trước khi bất động sản được bán.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "property valuation",
-        "independent valuation",
-        "company valuation"
-      ],
-      "cefr_level": "C1",
       "level_basis": "editorial-estimate; verify by sense"
     }
   ]

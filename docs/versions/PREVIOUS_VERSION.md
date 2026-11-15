@@ -1,4 +1,4 @@
 # Previous version
 
-- Version: **v2.66.1**
-- Change: fixed Listening Part 1 TTS pacing and corrected the stale CI distractor-quality assertion.
+- Version: **v2.67.0**
+- Change: JPG-only Listening Part 1 cleanup and Vocabulary Batch 009 (+34 headwords).

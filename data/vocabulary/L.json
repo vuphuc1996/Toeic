@@ -359,6 +359,44 @@
       ]
     },
     {
+      "id": "lead-time-n",
+      "word": "lead time",
+      "phonetic": {
+        "us": "/ˈliːd ˌtaɪm/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian từ khi đặt hàng đến khi nhận hàng",
+          "definition_en": "the period between placing an order and receiving the requested goods or services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "SHIPPING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier reduced lead time by holding key components in stock.",
+          "vi": "Nhà cung cấp rút ngắn thời gian giao hàng bằng cách dự trữ các linh kiện chủ chốt.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "shorten lead time",
+        "lead time estimate",
+        "supplier lead time"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "lease-nv",
       "word": "lease",
       "phonetic": {
@@ -455,6 +493,49 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "leasehold-n",
+      "word": "leasehold",
+      "phonetic": {
+        "us": "/ˈlisˌhoʊld/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quyền sử dụng tài sản theo hợp đồng thuê có thời hạn",
+          "definition_en": "property or a right to use property for a specified period under a lease agreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "lease",
+          "pos": "n",
+          "meaning_vi": "hợp đồng thuê; thời hạn thuê"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company acquired a leasehold interest in the office building.",
+          "vi": "Công ty đã có được quyền sử dụng mặt bằng văn phòng theo hợp đồng thuê.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "leasehold property",
+        "leasehold interest",
+        "leasehold agreement"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "ledger-n",
@@ -650,6 +731,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "levy-n",
+      "word": "levy",
+      "phonetic": {
+        "us": "/ˈlevi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản thuế hoặc phí do cơ quan có thẩm quyền áp đặt",
+          "definition_en": "a tax or fee imposed by a government or other authorized body",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The municipality introduced a small levy to fund public transportation improvements.",
+          "vi": "Chính quyền đô thị áp dụng một khoản phí nhỏ để tài trợ việc cải thiện giao thông công cộng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "impose a levy",
+        "annual levy",
+        "local service levy"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "liability-n",
       "word": "liability",
       "phonetic": {
@@ -727,6 +845,41 @@
         "business license",
         "driver's license"
       ]
+    },
+    {
+      "id": "lien-n",
+      "word": "lien",
+      "phonetic": {
+        "us": "/liːn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quyền giữ tài sản để bảo đảm khoản nợ",
+          "definition_en": "a legal right to keep or claim property until a debt is paid",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank placed a lien on the property.",
+          "vi": "Ngân hàng đặt quyền giữ tài sản đối với bất động sản.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "tax lien",
+        "place a lien on"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "limit-v",
@@ -882,6 +1035,43 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "loading-dock-n",
+      "word": "loading dock",
+      "phonetic": {
+        "us": "/ˈloʊ.dɪŋ ˌdɑk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khu vực bốc dỡ hàng",
+          "definition_en": "an area beside a warehouse or building where trucks are loaded and unloaded",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The delivery truck is waiting at the loading dock.",
+          "vi": "Xe tải giao hàng đang chờ tại khu vực bốc dỡ hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "loading dock schedule",
+        "loading dock area",
+        "loading dock equipment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "loan-n",
@@ -1105,121 +1295,6 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
-    },
-    {
-      "id": "lien-n",
-      "word": "lien",
-      "phonetic": {
-        "us": "/liːn/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "quyền giữ tài sản để bảo đảm khoản nợ",
-          "definition_en": "a legal right to keep or claim property until a debt is paid",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "C1"
-        }
-      ],
-      "topics": [
-        "LEGAL"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The bank placed a lien on the property.",
-          "vi": "Ngân hàng đặt quyền giữ tài sản đối với bất động sản.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "tax lien",
-        "place a lien on"
-      ],
-      "cefr_level": "C1",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "leasehold-n",
-      "word": "leasehold",
-      "phonetic": {
-        "us": "/ˈlisˌhoʊld/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "quyền sử dụng tài sản theo hợp đồng thuê có thời hạn",
-          "definition_en": "property or a right to use property for a specified period under a lease agreement",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "C1"
-        }
-      ],
-      "topics": [
-        "REAL_ESTATE",
-        "LEGAL"
-      ],
-      "word_family": [
-        {
-          "word": "lease",
-          "pos": "n",
-          "meaning_vi": "hợp đồng thuê; thời hạn thuê"
-        }
-      ],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The company acquired a leasehold interest in the office building.",
-          "vi": "Công ty đã có được quyền sử dụng mặt bằng văn phòng theo hợp đồng thuê.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "leasehold property",
-        "leasehold interest",
-        "leasehold agreement"
-      ],
-      "cefr_level": "C1",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "levy-n",
-      "word": "levy",
-      "phonetic": {
-        "us": "/ˈlevi/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "khoản thuế hoặc phí do cơ quan có thẩm quyền áp đặt",
-          "definition_en": "a tax or fee imposed by a government or other authorized body",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "C1"
-        }
-      ],
-      "topics": [
-        "FINANCE",
-        "LEGAL"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The municipality introduced a small levy to fund public transportation improvements.",
-          "vi": "Chính quyền đô thị áp dụng một khoản phí nhỏ để tài trợ việc cải thiện giao thông công cộng.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "impose a levy",
-        "annual levy",
-        "local service levy"
-      ],
-      "cefr_level": "C1",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

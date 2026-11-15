@@ -4,11 +4,11 @@
 
 - **Ngày kiểm kê:** 2026-11-15.
 - **Quy ước báo cáo tiến độ:** luôn có % khi tồn tại target/denominator rõ; tách độ phủ số lượng, chất lượng nội dung, kiểm thử phiên bản và xác minh triển khai. Không có target thì ghi “Chưa đo được”.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.67.0 (balanced exam/skill progress layout, deferred result reveal, and time-guided Mock Exam; local candidate).
-- **Current candidate:** v2.67.0 — removed the redundant reserve-status UI label while retaining the underlying review gate; switched all nine Listening Part 1 records and runtime paths to JPG-only; removed eight obsolete Part 1 SVGs; added 34 canonical TOEIC vocabulary headwords in Batch 009; added exact legacy hidden-word repair profiles for 979- and 992-word snapshots. Independent lexical review of Batch 009 is pending.
-- **Previous release:** v2.66.1 — fixed Listening Part 1 TTS sequence and corrected a stale GitHub test assertion.
-- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.67.0.md`; vocabulary 1,026/3,000 minimum (34.2%) and 1,026/5,000 planning ceiling (20.5%); 10/10 objective groups have linked resources and 281/281 canonical resource records are linked. Outcome criteria: 30/30 defined (framework coverage only); objective-level TOEIC evidence remains wired for 9/10 groups, with delayed recall and response-time capture across the 9 wired groups. Foundation inventory: recognition 30/30, contextual application 10/10, reading 10 passages/20 questions, listening 10 scripts/20 questions and A–Z 26/26 records. These are inventory/structural coverage figures, not learner mastery or independent editorial approval.
-- **Immediate base:** v2.66.1; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.68.0 (verified Part 1 fingerprint refresh and Vocabulary Batch 010; local release candidate).
+- **Current candidate:** v2.68.0 — recorded a verified metadata-only fingerprint refresh after removing the obsolete SVG `image` field from eight reviewed Part 1 units; historic unit hashes reproduce when that exact field is restored and all eight question hashes remain unchanged. Added 37 canonical TOEIC vocabulary headwords in Batch 010. Independent lexical review of Batch 010 remains pending; CEFR levels are editorial estimates.
+- **Previous release:** v2.67.0 — JPG-only Listening Part 1 cleanup and Vocabulary Batch 009 (+34).
+- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.68.0.md`; vocabulary 1,063/3,000 minimum (35.4%) and 1,063/5,000 planning ceiling (21.3%); 10/10 objective groups have linked resources and 281/281 canonical resource records are linked. Outcome criteria: 30/30 defined (framework coverage only); TOEIC objective evidence is wired for 9/10 groups. Foundation inventory: recognition 30/30, contextual application 10/10, reading 10 passages/20 questions, listening 10 scripts/20 questions and A–Z 26/26 records. These are inventory/structural coverage figures, not learner mastery or independent editorial approval.
+- **Immediate base:** v2.67.0; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
 - **Release state:** local candidate — deployment hold. Part 1 is now JPG-only and has no SVG fallback, but strict photo validation remains blocked because eight original JPG binaries are missing from this inherited source snapshot (1/9 present). Preserve/restore those repository-owned JPG files when merging; do not replace them with generated images. Remote GitHub Actions, Pages deployment, physical-device audio and visual behavior are not verified from this workspace.
 - **Development rule:** finish the internal product/content backlog first. Do not issue acceptance reminders or a broad acceptance checklist while development is active. The eventual test plan should target high-risk flows rather than repeat a 100% manual inventory sweep.
 
@@ -17,6 +17,18 @@
 
 
 
+
+## v2.68.0 changes — verified Part 1 metadata fingerprint refresh and Vocabulary Batch 010
+
+- Fixed the remaining-content fingerprint CI failure in `test_reviewed_data_fingerprints_have_not_drifted`. The only Part 1 unit-metadata change was the intentional removal of the obsolete SVG fallback field `image` after runtime and records moved to JPG-only. For all eight historically reviewed Part 1 units, restoring the exact previous metadata field `image: ./assets/listening/<unitId>.svg` reproduces the previously certified unit hash; all eight question hashes remain unchanged. No transcript, question, choice, answer key, order, translation, title or review decision changed.
+- Added a second `fingerprintRefreshLog` entry with old/new unit hashes, exact field removed, approval context and question-hash invariance. The one-off refresh utility is fail-closed: it aborts if any difference beyond removal of the exact SVG metadata field is detected or if a question hash changes.
+- Updated the remaining-content review tests to validate both historical metadata refreshes and JPG-only Part 1 records. The exact GitHub Actions command `python -m unittest discover -s tools/tests -p 'test_remaining_content_review.py' -v` passes **9/9 tests**.
+- Added `data/vocabulary/batch-010.json` and **37 canonical A–Z headwords** about manufacturing, production operations, quality assurance/control, maintenance, warehouse processes and supply chain. Vocabulary grows 1,026 → **1,063 headwords** (+37): **35.4%** of the 3,000-headword minimum and **21.3%** of the 5,000-headword planning ceiling.
+- Batch 010 includes English definitions, Vietnamese glosses, original bilingual TOEIC-context examples, at least three collocations per entry and editorial US IPA on all 37 entries. Added five reciprocal, POS/sense-checked word-family pairs (calibrate/calibration, contaminate/contamination, defect/defective, reliable/reliability, package/packaging). CEFR levels remain editorial estimates and independent lexical review is pending. No speculative synonyms/antonyms were added to inflate field coverage.
+- Added cumulative migration repair profiles: legacy 979-headword snapshots can restore only 84 known additions through Batch 010; 992-headword snapshots can restore 71; 1,026-headword snapshots can restore only 37. Exact source count and ID fingerprints are required; unrelated hidden words, overrides and learner progress are preserved. No IndexedDB schema/store migration.
+- **Local verification:** 21/21 JavaScript regression suites PASS; 40/41 Python test modules completed successfully (291 assertions/tests passed across the 40 modules). `test_validator.py` did not complete within the execution window at `test_missing_id_against_baseline_is_error`; its partial run is not counted as PASS. The remaining-content review suite is 9/9; vocabulary detail/examples 12/12; word-family links 5/5; project progress 4/4; legacy collocation cleanup 3/3; CI coverage 2/2. Data validator reports 1,063 records / 0 errors / 0 warnings; version sync and design-profile sync PASS.
+- Content audits: Listening 107 units / 201 questions; Reading 51 resources / 200 questions; the question-evidence audit indexed 401 questions; distractor structural audit passed for 177 questions. These automated audits do not constitute independent semantic certification.
+- **Deployment hold:** strict Part 1 photo validation reports 1/9 original JPG bytes present in this workspace and 8 missing repository-owned JPG files. Keep the eight original JPG assets when merging; do not synthesize replacements or disable strict validation. Remote GitHub Actions, GitHub Pages and physical-device QA are not verified here.
 
 ## v2.67.0 changes — Listening JPG-only cleanup and Vocabulary Batch 009
 
@@ -287,13 +299,13 @@
 - New Part 1 item remains `reserve-pending-independent-review`: normal practice only, excluded from Mock until independent review. No answer/choice IDs changed.
 - Focused checks: `test_learning_content.py` 34/34 PASS; `test_pwa_readiness.py` 3/3 PASS; `test_part1_photo_assets.py` 4/4 PASS; JS syntax checks for `assets/js/app.js` and `sw.js` PASS.
 - `validate-learning-content.py`: 0 errors and 8 warnings because eight original Pexels JPG binaries are omitted from this source snapshot. `validate-part1-photo-assets.py --allow-missing`: PASS with 1/9 photo bytes present here and 8 known missing-Pexels-JPG warnings. The user's original eight JPGs must remain in GitHub for strict CI photo validation.
-- No IndexedDB change: `toeic-vocabulary-phase1`, v1, store `workspace`. Vocabulary 992, Reading 200, Grammar 33 lessons/86 exercises, separate Part 5 bank 80; no changes to their IDs or progress.
+- No IndexedDB change: `toeic-vocabulary-phase1`, v1, store `workspace`. Vocabulary 1,063, Reading 200, Grammar 33 lessons/86 exercises, separate Part 5 bank 80; no changes to their IDs or progress.
 
 ## 6. Baseline inventory
 
 | Area | Inventory | Current development status |
 |---|---:|---|
-| Vocabulary | 1,026 headwords | 230 word-family records; 328 word-family links; US IPA 674/1,026; collocations 856/1,026 |
+| Vocabulary | 1,063 headwords | 240 word-family records; 338 word-family links; US IPA 711/1,063; collocations 893/1,063 |
 | Listening | **201 questions / 107 units** | P1=9, P2=51, P3=81, P4=60; 102 Mock-eligible; 99 pending independent review |
 | Reading | **200 questions / 51 resources** | Two Full Reading forms can be selected without repeated eligible IDs |
 | Grammar | **33 lessons / 86 exercises** | Retry and shared Focus Workspace preserved |
@@ -306,13 +318,13 @@
 1. Listening pending pool: 99 questions (Batch 013=11, Batch 014=17, Batch 015=70, Batch 017 Part 1=1). Pending questions are available for ordinary practice but excluded from Mock until a second reviewer records an approval decision.
 2. Current eligible Listening pool remains 102: P1=8, P2=25, P3=39, P4=30. One Full Listening form can be assembled; a second currently reuses 98/100 question IDs. After all 99 pending items are approved, two zero-repeat Full forms still require three additional distinct Part 1 items beyond the current photo-only item.
 3. Part 1 has eight licensed Pexels records and one AI-generated project asset. `ATTRIBUTION.csv` must cover exactly the Part 1 IDs. AI-generated provenance must not be labelled as Pexels or assigned an invented human photographer.
-4. Eight original licensed JPG bytes are absent from this source snapshot; all eight obsolete Part 1 SVG fallbacks have now been removed. The office-cleaning JPG is present. Do not overwrite or remove repository-owned original JPGs when merging.
+4. Eight original licensed JPG bytes are absent from this source snapshot; all eight obsolete Part 1 SVG fallbacks have now been removed. The office-cleaning JPG is present in this workspace. Do not overwrite or remove repository-owned original JPGs when merging.
 5. The new office-cleaning record is photo-only. No `image` fallback is declared; do not add `part1-office-cleaning.svg` to JSON, Service Worker arrays, mock rendering or tests as a required file.
 6. Part 1 strict photo validation is not certified by this source snapshot because only 1/9 JPG binaries are present. The source validator passes only with `--allow-missing`; strict CI on GitHub requires all nine JPG files.
 7. Reading's 200-question bank supports two zero-overlap Full forms according to the local inventory audit. The 45 expanded Part 7 questions still need semantic second-person review.
 8. All 80 separate Part 5 practice items remain pending independent review and practice-only. Do not promote to Mock until key uniqueness, distractors, grammar and naturalness have independent review.
 9. Mock scores are raw practice counts/accuracy, not ETS-equated results. No ETS questions or recordings are included.
-10. Vocabulary contains 1,026 headwords (34.2% of the 3,000 minimum planning target), still below the 3,000–5,000 target. Sense-level IPA, word families, definitions, examples, synonyms/antonyms and independent lexical review remain active editorial work.
+10. Vocabulary contains 1,063 headwords (35.4% of the 3,000 minimum planning target), still below the 3,000–5,000 target. Sense-level IPA, word families, definitions, examples, synonyms/antonyms and independent lexical review remain active editorial work.
 
 ## 8. Runtime and storage compatibility
 

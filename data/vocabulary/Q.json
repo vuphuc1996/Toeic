@@ -75,6 +75,80 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "quality-assurance-n",
+      "word": "quality assurance",
+      "phonetic": {
+        "us": "/ˈkwɑ.lə.ti əˌʃʊr.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đảm bảo chất lượng",
+          "definition_en": "planned activities and procedures used to make sure that a product or service meets required standards throughout its development or production",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Quality assurance staff reviewed the process before the new product launch.",
+          "vi": "Nhân viên đảm bảo chất lượng đã rà soát quy trình trước khi ra mắt sản phẩm mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "quality assurance team",
+        "quality assurance process",
+        "quality assurance standards"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "quality-control-n",
+      "word": "quality control",
+      "phonetic": {
+        "us": "/ˈkwɑ.lə.ti kənˌtroʊl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kiểm soát chất lượng",
+          "definition_en": "the inspection and testing of products during or after production to check that they meet required standards",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Quality control inspectors sampled each batch before packaging.",
+          "vi": "Nhân viên kiểm soát chất lượng lấy mẫu từng lô trước khi đóng gói.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "quality control inspection",
+        "quality control process",
+        "quality control standards"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "quantity-n",
       "word": "quantity",
       "cefr_level": "B1",

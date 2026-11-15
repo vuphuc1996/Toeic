@@ -94,6 +94,63 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "malfunction-nv",
+      "word": "malfunction",
+      "phonetic": {
+        "us": "/ˌmælˈfʌŋk.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự trục trặc; sự hoạt động sai chức năng",
+          "definition_en": "a failure of a machine or system to operate correctly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "bị trục trặc; hoạt động không đúng",
+          "definition_en": "to fail to operate or work correctly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "FACILITY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "malfunction",
+        "vs_es": "malfunctions",
+        "v2": "malfunctioned",
+        "v3": "malfunctioned",
+        "ving": "malfunctioning"
+      },
+      "examples": [
+        {
+          "en": "The equipment malfunction delayed the morning production shift.",
+          "vi": "Sự cố thiết bị đã làm chậm ca sản xuất buổi sáng.",
+          "sense_index": 0
+        },
+        {
+          "en": "If the scanner begins to malfunction, notify the floor supervisor.",
+          "vi": "Nếu máy quét bắt đầu hoạt động bất thường, hãy báo cho giám sát khu vực.",
+          "sense_index": 1
+        }
+      ],
+      "collocations": [
+        "equipment malfunction",
+        "system malfunction",
+        "report a malfunction"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "manage-v",
       "word": "manage",
       "cefr_level": "A2",
@@ -393,6 +450,41 @@
         "equipment manufacturer"
       ],
       "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "margin-n",
+      "word": "margin",
+      "phonetic": {
+        "us": "/ˈmɑːr.dʒɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "biên lợi nhuận; mức chênh lệch",
+          "definition_en": "the difference between the cost of a product and its selling price",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The retailer increased its profit margin this year.",
+          "vi": "Nhà bán lẻ đã tăng biên lợi nhuận trong năm nay.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "profit margin",
+        "gross margin"
+      ],
+      "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
@@ -1306,41 +1398,6 @@
         "motivate a team",
         "highly motivated"
       ]
-    },
-    {
-      "id": "margin-n",
-      "word": "margin",
-      "phonetic": {
-        "us": "/ˈmɑːr.dʒɪn/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "biên lợi nhuận; mức chênh lệch",
-          "definition_en": "the difference between the cost of a product and its selling price",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "FINANCE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The retailer increased its profit margin this year.",
-          "vi": "Nhà bán lẻ đã tăng biên lợi nhuận trong năm nay.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "profit margin",
-        "gross margin"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

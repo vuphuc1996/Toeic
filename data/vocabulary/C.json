@@ -50,6 +50,100 @@
       ]
     },
     {
+      "id": "calibrate-v",
+      "word": "calibrate",
+      "phonetic": {
+        "us": "/ˈkæl.əˌbreɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "hiệu chuẩn; điều chỉnh thiết bị đo",
+          "definition_en": "to check or adjust a measuring instrument so that it gives accurate results",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [
+        {
+          "word": "calibration",
+          "pos": "n",
+          "meaning_vi": "sự hiệu chuẩn"
+        }
+      ],
+      "verb_forms": {
+        "v1": "calibrate",
+        "vs_es": "calibrates",
+        "v2": "calibrated",
+        "v3": "calibrated",
+        "ving": "calibrating"
+      },
+      "examples": [
+        {
+          "en": "Staff must calibrate the scale before weighing each outgoing shipment.",
+          "vi": "Nhân viên phải hiệu chuẩn cân trước khi cân từng lô hàng gửi đi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "calibrate the scale",
+        "calibrate measuring equipment",
+        "calibrate a sensor"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "calibration-n",
+      "word": "calibration",
+      "phonetic": {
+        "us": "/ˌkæl.əˈbreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hiệu chuẩn",
+          "definition_en": "the process of checking and adjusting a measuring instrument so that its readings are accurate",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [
+        {
+          "word": "calibrate",
+          "pos": "v",
+          "meaning_vi": "hiệu chuẩn; điều chỉnh thiết bị đo"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Technicians completed the calibration before releasing the measuring equipment.",
+          "vi": "Các kỹ thuật viên hoàn tất việc hiệu chuẩn trước khi đưa thiết bị đo vào sử dụng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "instrument calibration",
+        "annual calibration",
+        "calibration certificate"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "cancel-v",
       "word": "cancel",
       "cefr_level": "A2",
@@ -165,6 +259,44 @@
       ],
       "collocations": [],
       "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "capacity-utilization-n",
+      "word": "capacity utilization",
+      "phonetic": {
+        "us": "/kəˈpæs.ə.ti ˌju.tə.ləˈzeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mức độ sử dụng công suất",
+          "definition_en": "the proportion of a factory or system’s available production capacity that is actually being used",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Capacity utilization increased after the second production shift began.",
+          "vi": "Mức độ sử dụng công suất tăng sau khi ca sản xuất thứ hai bắt đầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "capacity utilization rate",
+        "improve capacity utilization",
+        "capacity utilization report"
+      ],
+      "cefr_level": "C1",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
@@ -1595,6 +1727,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "cold-storage-n",
+      "word": "cold storage",
+      "phonetic": {
+        "us": "/ˈkoʊld ˌstɔr.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "kho lạnh; bảo quản lạnh",
+          "definition_en": "the storage of goods at a low controlled temperature, especially food or other perishable items",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "FOOD",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Fresh ingredients must remain in cold storage until delivery.",
+          "vi": "Nguyên liệu tươi phải được giữ trong kho lạnh cho đến khi giao hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cold storage facility",
+        "cold storage unit",
+        "cold storage temperature"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "collateral-n",
       "word": "collateral",
       "phonetic": {
@@ -2712,6 +2882,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "concession-n",
+      "word": "concession",
+      "phonetic": {
+        "us": "/kənˈseʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự nhượng bộ; khoản giảm giá/ưu đãi được chấp thuận",
+          "definition_en": "a special allowance, reduced price, or change in terms granted during an agreement or negotiation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier offered a price concession in exchange for a longer contract.",
+          "vi": "Nhà cung cấp đưa ra mức giảm giá để đổi lấy hợp đồng dài hạn hơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "price concession",
+        "make a concession",
+        "concession agreement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "concierge-n",
       "word": "concierge",
       "cefr_level": "B2",
@@ -3815,6 +4022,100 @@
       ]
     },
     {
+      "id": "contaminate-v",
+      "word": "contaminate",
+      "phonetic": {
+        "us": "/kənˈtæm.əˌneɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "làm nhiễm bẩn; làm nhiễm tạp chất",
+          "definition_en": "to make something impure or unsafe by adding an unwanted or harmful substance",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "HEALTH",
+        "FOOD"
+      ],
+      "word_family": [
+        {
+          "word": "contamination",
+          "pos": "n",
+          "meaning_vi": "sự nhiễm bẩn; sự nhiễm tạp chất"
+        }
+      ],
+      "verb_forms": {
+        "v1": "contaminate",
+        "vs_es": "contaminates",
+        "v2": "contaminated",
+        "v3": "contaminated",
+        "ving": "contaminating"
+      },
+      "examples": [
+        {
+          "en": "Workers must seal the containers to prevent dust from contaminating the product.",
+          "vi": "Công nhân phải niêm kín các thùng chứa để ngăn bụi làm nhiễm bẩn sản phẩm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contaminate food products",
+        "contaminate a work surface",
+        "contaminate stored materials"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "contamination-n",
+      "word": "contamination",
+      "phonetic": {
+        "us": "/kənˌtæm.əˈneɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự nhiễm bẩn; sự nhiễm tạp chất",
+          "definition_en": "the presence or introduction of an unwanted or harmful substance into something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "HEALTH",
+        "FOOD"
+      ],
+      "word_family": [
+        {
+          "word": "contaminate",
+          "pos": "v",
+          "meaning_vi": "làm nhiễm bẩn; làm nhiễm tạp chất"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The audit found no contamination in the food storage area.",
+          "vi": "Cuộc kiểm tra không phát hiện sự nhiễm bẩn trong khu vực bảo quản thực phẩm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "risk of contamination",
+        "prevent contamination",
+        "contamination control"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "contemporary-nv",
       "word": "contemporary",
       "phonetic": {
@@ -4367,6 +4668,44 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; batch-1 draft, verify by sense"
+    },
+    {
+      "id": "conveyor-belt-n",
+      "word": "conveyor belt",
+      "phonetic": {
+        "us": "/kənˈveɪ.ɚ ˌbelt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "băng chuyền; băng tải",
+          "definition_en": "a continuous moving belt used to transport materials or products from one place to another",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A technician repaired the conveyor belt before the morning shift.",
+          "vi": "Kỹ thuật viên đã sửa băng chuyền trước ca làm buổi sáng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "conveyor belt system",
+        "conveyor belt speed",
+        "conveyor belt maintenance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "cooperate-v",
@@ -5242,6 +5581,43 @@
       "collocations": []
     },
     {
+      "id": "custody-n",
+      "word": "custody",
+      "phonetic": {
+        "us": "/ˈkʌstədi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự lưu giữ và bảo quản; quyền kiểm soát",
+          "definition_en": "the care, protection, or control of a person, document, or asset",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Original contracts must remain in the secure custody of the legal department.",
+          "vi": "Các hợp đồng gốc phải được phòng pháp chế lưu giữ an toàn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "in safe custody",
+        "take custody of",
+        "custody of documents"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "customs-n",
       "word": "customs",
       "cefr_level": "B1",
@@ -5304,80 +5680,6 @@
         }
       ],
       "collocations": []
-    },
-    {
-      "id": "concession-n",
-      "word": "concession",
-      "phonetic": {
-        "us": "/kənˈseʃən/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "sự nhượng bộ; khoản giảm giá/ưu đãi được chấp thuận",
-          "definition_en": "a special allowance, reduced price, or change in terms granted during an agreement or negotiation",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "BUSINESS",
-        "PURCHASING"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The supplier offered a price concession in exchange for a longer contract.",
-          "vi": "Nhà cung cấp đưa ra mức giảm giá để đổi lấy hợp đồng dài hạn hơn.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "price concession",
-        "make a concession",
-        "concession agreement"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "custody-n",
-      "word": "custody",
-      "phonetic": {
-        "us": "/ˈkʌstədi/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "sự lưu giữ và bảo quản; quyền kiểm soát",
-          "definition_en": "the care, protection, or control of a person, document, or asset",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "LEGAL",
-        "FINANCE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "Original contracts must remain in the secure custody of the legal department.",
-          "vi": "Các hợp đồng gốc phải được phòng pháp chế lưu giữ an toàn.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "in safe custody",
-        "take custody of",
-        "custody of documents"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

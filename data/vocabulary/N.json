@@ -57,6 +57,43 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "negligence-n",
+      "word": "negligence",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự sơ suất; sự thiếu cẩn trọng",
+          "definition_en": "failure to take the care that a reasonable person would take in a particular situation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspection found no evidence of negligence by the maintenance team.",
+          "vi": "Cuộc kiểm tra không tìm thấy bằng chứng về sự sơ suất của đội bảo trì.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "professional negligence",
+        "gross negligence",
+        "allege negligence"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "negotiate-v",
       "word": "negotiate",
       "phonetic": {
@@ -553,43 +590,6 @@
         "notify customers",
         "notify in advance"
       ]
-    },
-    {
-      "id": "negligence-n",
-      "word": "negligence",
-      "phonetic": {
-        "us": ""
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "sự sơ suất; sự thiếu cẩn trọng",
-          "definition_en": "failure to take the care that a reasonable person would take in a particular situation",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "C1"
-        }
-      ],
-      "topics": [
-        "LEGAL",
-        "HEALTH"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The inspection found no evidence of negligence by the maintenance team.",
-          "vi": "Cuộc kiểm tra không tìm thấy bằng chứng về sự sơ suất của đội bảo trì.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "professional negligence",
-        "gross negligence",
-        "allege negligence"
-      ],
-      "cefr_level": "C1",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

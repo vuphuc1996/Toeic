@@ -1257,6 +1257,63 @@
       ]
     },
     {
+      "id": "overstock-nv",
+      "word": "overstock",
+      "phonetic": {
+        "us": "/ˈoʊ.vɚ.stɑk/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lượng hàng tồn vượt nhu cầu",
+          "definition_en": "goods or supplies held in quantities greater than are needed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "tồn trữ quá nhiều hàng",
+          "definition_en": "to have or buy more goods or supplies than are needed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "SHOPPING",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "overstock",
+        "vs_es": "overstocks",
+        "v2": "overstocked",
+        "v3": "overstocked",
+        "ving": "overstocking"
+      },
+      "examples": [
+        {
+          "en": "The retailer discounted its overstock before the new season.",
+          "vi": "Nhà bán lẻ giảm giá lượng hàng tồn vượt mức trước mùa mới.",
+          "sense_index": 0
+        },
+        {
+          "en": "Stores should review demand forecasts before they overstock seasonal items.",
+          "vi": "Các cửa hàng nên rà soát dự báo nhu cầu trước khi nhập quá nhiều hàng theo mùa.",
+          "sense_index": 1
+        }
+      ],
+      "collocations": [
+        "clear overstock",
+        "overstock inventory",
+        "overstock levels"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "overtime-n",
       "word": "overtime",
       "phonetic": {

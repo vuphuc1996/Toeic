@@ -65,6 +65,11 @@ PAIRS = [
     ('valuable', 'valuation', 'adj', 'n'),
     ('subcontract', 'subcontracting', 'v/n', 'n'),
     ('subcontractor', 'subcontracting', 'n', 'n'),
+    ('calibrate', 'calibration', 'v', 'n'),
+    ('contaminate', 'contamination', 'v', 'n'),
+    ('defect', 'defective', 'n', 'adj'),
+    ('reliable', 'reliability', 'adj', 'n'),
+    ('package', 'packaging', 'v', 'n'),
 ]
 
 
@@ -100,7 +105,7 @@ class VocabularyFamilyLinkTests(unittest.TestCase):
         return matches[0]
 
     def test_all_curated_pairs_exist_in_both_directions(self):
-        self.assertEqual(len(PAIRS), 57)
+        self.assertEqual(len(PAIRS), 62)
         for base, derivative, base_pos, derivative_pos in PAIRS:
             self.assertIn(base, self.records)
             self.assertIn(derivative, self.records)

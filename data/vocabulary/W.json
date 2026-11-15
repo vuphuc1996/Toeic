@@ -876,6 +876,44 @@
       ]
     },
     {
+      "id": "work-order-n",
+      "word": "work order",
+      "phonetic": {
+        "us": "/ˈwɝk ˌɔr.dɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiếu yêu cầu công việc; lệnh công việc",
+          "definition_en": "a document that authorizes and describes a specific repair, maintenance task, or job",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please attach the work order to the maintenance report.",
+          "vi": "Vui lòng đính kèm phiếu yêu cầu công việc vào báo cáo bảo trì.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "issue a work order",
+        "work order number",
+        "work order request"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "workforce-n",
       "word": "workforce",
       "phonetic": {

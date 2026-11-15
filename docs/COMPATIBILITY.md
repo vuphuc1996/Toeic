@@ -6,9 +6,9 @@
 
 | Role | Version | Policy |
 |---|---|---|
-| Previous release | v2.66.1 | Rollback/reference baseline; Listening Part 1 uses a shared fixed TTS sequence. |
-| Current candidate | v2.67.0 | JPG-only Listening Part 1, removes legacy SVG fallbacks, adds 34 TOEIC vocabulary headwords and cumulative migration repair profiles. Deployment is held until all original JPG bytes pass strict validation. |
-| Older releases | ≤ v2.66.0 | Historical; concise release notes remain in `CHANGELOG.md` and `archive/PROJECT_HISTORY.md`. |
+| Previous release | v2.67.0 | JPG-only Listening Part 1 and Vocabulary Batch 009 (+34). |
+| Current candidate | v2.68.0 | Verified Part 1 SVG-metadata fingerprint refresh; Vocabulary Batch 010 (+37); cumulative legacy repair profiles for 979/992/1,026-word snapshots. Deployment remains held until all original JPG bytes pass strict validation. |
+| Older releases | ≤ v2.66.1 | Historical; concise release notes remain in `CHANGELOG.md` and `archive/PROJECT_HISTORY.md`. |
 
 ## Runtime/data contracts
 

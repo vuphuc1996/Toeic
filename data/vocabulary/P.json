@@ -3,6 +3,188 @@
   "letter": "P",
   "words": [
     {
+      "id": "package-nv",
+      "word": "package",
+      "phonetic": {
+        "us": "/ˈpæk.ɪdʒ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "gói hàng; kiện hàng",
+          "definition_en": "a group of goods wrapped or placed together in a container for storage, transport, or sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        },
+        {
+          "pos": "v",
+          "meaning_vi": "đóng gói",
+          "definition_en": "to put goods into a container or protective covering for storage, transport, or sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "SHOPPING",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "packaging",
+          "pos": "n",
+          "meaning_vi": "việc đóng gói; vật liệu bao bì"
+        }
+      ],
+      "verb_forms": {
+        "v1": "package",
+        "vs_es": "packages",
+        "v2": "packaged",
+        "v3": "packaged",
+        "ving": "packaging"
+      },
+      "examples": [
+        {
+          "en": "The courier collected the package from the reception desk.",
+          "vi": "Nhân viên chuyển phát đã nhận kiện hàng tại quầy lễ tân.",
+          "sense_index": 0
+        },
+        {
+          "en": "Please package the spare parts securely before dispatch.",
+          "vi": "Vui lòng đóng gói các phụ tùng chắc chắn trước khi gửi đi.",
+          "sense_index": 1
+        }
+      ],
+      "collocations": [
+        "package the equipment",
+        "package goods securely",
+        "package a shipment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "packaging-n",
+      "word": "packaging",
+      "phonetic": {
+        "us": "/ˈpæk.ɪ.dʒɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc đóng gói; vật liệu bao bì",
+          "definition_en": "the materials or process used to wrap or protect goods for storage, transport, or sale",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "SHOPPING",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "package",
+          "pos": "v",
+          "meaning_vi": "đóng gói"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new packaging protects fragile items during long-distance transport.",
+          "vi": "Bao bì mới bảo vệ các mặt hàng dễ vỡ trong quá trình vận chuyển đường dài.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "protective packaging",
+        "packaging material",
+        "packaging design"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "packaging-line-n",
+      "word": "packaging line",
+      "phonetic": {
+        "us": "/ˈpæk.ɪ.dʒɪŋ ˌlaɪn/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dây chuyền đóng gói",
+          "definition_en": "a production line where finished products are placed into containers, wrapped, labeled, and prepared for shipment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The packaging line will operate during the night shift.",
+          "vi": "Dây chuyền đóng gói sẽ hoạt động trong ca đêm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "packaging line operator",
+        "packaging line speed",
+        "packaging line maintenance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "pallet-n",
+      "word": "pallet",
+      "phonetic": {
+        "us": "/ˈpæl.ɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "pallet; tấm kê hàng",
+          "definition_en": "a flat platform, usually made of wood or plastic, used to stack and move goods with a forklift",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each pallet must be wrapped before it enters the loading area.",
+          "vi": "Mỗi pallet phải được quấn màng bọc trước khi đưa vào khu vực bốc xếp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "wooden pallet",
+        "load a pallet",
+        "pallet storage"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "parcel-n",
       "word": "parcel",
       "phonetic": {
@@ -546,6 +728,43 @@
         "market penetration"
       ],
       "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "pension-n",
+      "word": "pension",
+      "phonetic": {
+        "us": "/ˈpenʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lương hưu; khoản trợ cấp hưu trí",
+          "definition_en": "a regular payment made to someone after retirement, usually based on previous employment or contributions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees may increase their pension contributions during the annual enrollment period.",
+          "vi": "Nhân viên có thể tăng mức đóng góp vào quỹ hưu trí trong kỳ đăng ký hằng năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "pension plan",
+        "pension contribution",
+        "receive a pension"
+      ],
+      "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
@@ -1785,6 +2004,44 @@
       ]
     },
     {
+      "id": "preventive-maintenance-n",
+      "word": "preventive maintenance",
+      "phonetic": {
+        "us": "/prɪˌven.tɪv ˈmeɪn.tə.nəns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảo trì phòng ngừa; bảo dưỡng định kỳ",
+          "definition_en": "planned maintenance carried out regularly to reduce the likelihood of equipment breakdowns",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Preventive maintenance helps reduce unexpected equipment downtime.",
+          "vi": "Bảo trì phòng ngừa giúp giảm thời gian thiết bị ngừng hoạt động ngoài dự kiến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "preventive maintenance schedule",
+        "preventive maintenance plan",
+        "preventive maintenance task"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "previous-adj",
       "word": "previous",
       "cefr_level": "A2",
@@ -2118,6 +2375,44 @@
       ]
     },
     {
+      "id": "procurement-cycle-n",
+      "word": "procurement cycle",
+      "phonetic": {
+        "us": "/prəˈkjʊr.mənt ˌsaɪ.kəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chu trình mua sắm; quy trình thu mua",
+          "definition_en": "the sequence of steps an organization follows to identify a need, select a supplier, place an order, and complete a purchase",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The procurement cycle begins when a department submits a purchase request.",
+          "vi": "Chu trình mua sắm bắt đầu khi một phòng ban gửi yêu cầu mua hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "procurement cycle time",
+        "procurement cycle process",
+        "shorten the procurement cycle"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "produce-v",
       "word": "produce",
       "cefr_level": "A2",
@@ -2224,6 +2519,44 @@
         "new product",
         "product launch"
       ]
+    },
+    {
+      "id": "production-quota-n",
+      "word": "production quota",
+      "phonetic": {
+        "us": "/prəˈdʌk.ʃən ˌkwoʊ.tə/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chỉ tiêu sản lượng",
+          "definition_en": "a fixed amount of goods that a worker or facility is expected to produce within a period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The factory met its production quota ahead of schedule.",
+          "vi": "Nhà máy đã hoàn thành chỉ tiêu sản lượng sớm hơn kế hoạch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "daily production quota",
+        "meet a production quota",
+        "production quota target"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "productivity-n",
@@ -2567,6 +2900,49 @@
         "project manager",
         "project budget"
       ]
+    },
+    {
+      "id": "projection-n",
+      "word": "projection",
+      "phonetic": {
+        "us": "/prəˈdʒekʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dự báo; ước tính về kết quả trong tương lai",
+          "definition_en": "an estimate of a future amount, result, or trend based on current information",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "project",
+          "pos": "n/v",
+          "meaning_vi": "dự án; dự báo"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The finance team revised its revenue projection after reviewing the latest figures.",
+          "vi": "Nhóm tài chính điều chỉnh dự báo doanh thu sau khi xem xét số liệu mới nhất.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sales projection",
+        "revenue projection",
+        "growth projection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "prolong-v",
@@ -2986,6 +3362,44 @@
       "collocations": []
     },
     {
+      "id": "prototype-n",
+      "word": "prototype",
+      "phonetic": {
+        "us": "/ˈproʊ.t̬əˌtaɪp/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mẫu thử; nguyên mẫu",
+          "definition_en": "an early model of a product made to test its design or performance before full production",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "TECHNOLOGY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Engineers tested the prototype before approving the final production design.",
+          "vi": "Các kỹ sư thử nghiệm mẫu thử trước khi phê duyệt thiết kế sản xuất cuối cùng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "prototype model",
+        "test a prototype",
+        "prototype development"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "provide-v",
       "word": "provide",
       "cefr_level": "A1",
@@ -3209,6 +3623,44 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "purchase-order-n",
+      "word": "purchase order",
+      "phonetic": {
+        "us": "/ˈpɝ.tʃəs ˌɔr.dɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đơn đặt hàng chính thức",
+          "definition_en": "a formal document sent by a buyer to a supplier that specifies the goods or services, quantities, and agreed terms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier cannot begin production without an approved purchase order.",
+          "vi": "Nhà cung cấp không thể bắt đầu sản xuất nếu chưa có đơn đặt hàng được phê duyệt.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "purchase order number",
+        "purchase order approval",
+        "issue a purchase order"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "purpose-n",
       "word": "purpose",
       "cefr_level": "A2",
@@ -3246,86 +3698,6 @@
         "for this purpose",
         "main purpose"
       ]
-    },
-    {
-      "id": "pension-n",
-      "word": "pension",
-      "phonetic": {
-        "us": "/ˈpenʃən/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "lương hưu; khoản trợ cấp hưu trí",
-          "definition_en": "a regular payment made to someone after retirement, usually based on previous employment or contributions",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B1"
-        }
-      ],
-      "topics": [
-        "HR",
-        "FINANCE"
-      ],
-      "word_family": [],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "Employees may increase their pension contributions during the annual enrollment period.",
-          "vi": "Nhân viên có thể tăng mức đóng góp vào quỹ hưu trí trong kỳ đăng ký hằng năm.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "pension plan",
-        "pension contribution",
-        "receive a pension"
-      ],
-      "cefr_level": "B1",
-      "level_basis": "editorial-estimate; verify by sense"
-    },
-    {
-      "id": "projection-n",
-      "word": "projection",
-      "phonetic": {
-        "us": "/prəˈdʒekʃən/"
-      },
-      "senses": [
-        {
-          "pos": "n",
-          "meaning_vi": "dự báo; ước tính về kết quả trong tương lai",
-          "definition_en": "an estimate of a future amount, result, or trend based on current information",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "B2"
-        }
-      ],
-      "topics": [
-        "BUSINESS",
-        "FINANCE"
-      ],
-      "word_family": [
-        {
-          "word": "project",
-          "pos": "n/v",
-          "meaning_vi": "dự án; dự báo"
-        }
-      ],
-      "verb_forms": null,
-      "examples": [
-        {
-          "en": "The finance team revised its revenue projection after reviewing the latest figures.",
-          "vi": "Nhóm tài chính điều chỉnh dự báo doanh thu sau khi xem xét số liệu mới nhất.",
-          "sense_index": 0
-        }
-      ],
-      "collocations": [
-        "sales projection",
-        "revenue projection",
-        "growth projection"
-      ],
-      "cefr_level": "B2",
-      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

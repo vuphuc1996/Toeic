@@ -1995,6 +1995,44 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "inventory-turnover-n",
+      "word": "inventory turnover",
+      "phonetic": {
+        "us": "/ˈɪn.vənˌtɔr.i ˈtɝːnˌoʊ.vɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vòng quay hàng tồn kho",
+          "definition_en": "the rate at which a business sells and replaces its inventory during a given period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "SHIPPING",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Higher inventory turnover helped reduce warehouse storage costs.",
+          "vi": "Vòng quay hàng tồn kho cao hơn đã giúp giảm chi phí lưu kho.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "inventory turnover ratio",
+        "improve inventory turnover",
+        "low inventory turnover"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "investment-n",
       "word": "investment",
       "cefr_level": "B1",

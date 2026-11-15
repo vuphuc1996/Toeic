@@ -5,8 +5,8 @@ class ProjectProgressTests(unittest.TestCase):
     def test_report_uses_explicit_targets_and_marks_unknown_targets(self):
         result=subprocess.run([sys.executable,'tools/report-project-progress.py'],cwd=ROOT,text=True,capture_output=True,check=True)
         out=result.stdout
-        self.assertIn('1,026 | 3,000 minimum | **34.2%**',out)
-        self.assertIn('1,026 | 5,000 planning ceiling | **20.5%**',out)
+        self.assertIn('1,063 | 3,000 minimum | **35.4%**',out)
+        self.assertIn('1,063 | 5,000 planning ceiling | **21.3%**',out)
         self.assertIn('16/16 | All diagnostic questions | **100.0%**',out)
         self.assertIn('Chưa đo được',out)
         self.assertIn('not editorial approval',out)
