@@ -30,6 +30,8 @@ class SyncVersionTests(unittest.TestCase):
         (self.root / "data").mkdir(exist_ok=True)
         (self.root / "docs").mkdir(exist_ok=True)
         (self.root / "data" / "manifest.json").write_text(json.dumps({"version": v, "x": 1}, indent=2) + "\n", encoding="utf-8")
+        (self.root / "assets" / "js").mkdir(parents=True, exist_ok=True)
+        (self.root / "assets" / "js" / "app.js").write_text(f"const APP_RELEASE_VERSION = '{v}';\n", encoding="utf-8")
         (self.root / "sw.js").write_text(sw or f"const VERSION = '{v}'; // @version\n", encoding="utf-8")
         (self.root / "index.html").write_text(index or INDEX.format(v=v), encoding="utf-8")
         (self.root / "docs" / "README.md").write_text(readme or f"# TOEIC Dictionary v{v}\n\ntext v0.0.1 stays\n", encoding="utf-8")

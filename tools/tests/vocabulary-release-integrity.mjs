@@ -8,7 +8,7 @@ const sw = await readFile(new URL('../../sw.js', import.meta.url), 'utf8');
 const html = await readFile(new URL('../../index.html', import.meta.url), 'utf8');
 const batch008 = JSON.parse(await readFile(new URL('../../data/vocabulary/batch-008.json', import.meta.url), 'utf8'));
 
-assert.equal(manifest.version, '2.60.0');
+assert.equal(manifest.version, '2.61.0');
 assert.equal(manifest.totalWords, 992);
 assert.equal(manifest.previousReleaseTotalWords, 979);
 assert.equal(manifest.releaseAdditionIds.length, 13);
@@ -48,7 +48,7 @@ assert.deepEqual(detectLegacyReleaseAdditionRepair({
   releaseAdditionIds: manifest.releaseAdditionIds,
   previousTotalWords: 979, currentTotalWords: 992
 }), [], 'missing or incomplete legacy snapshot must not trigger automatic repair');
-assert.match(app, /const APP_RELEASE_VERSION = '2\.60\.0'/);
+assert.match(app, /const APP_RELEASE_VERSION = '2\.61\.0'/);
 assert.match(app, /detectLegacyReleaseAdditionRepair/);
 assert.match(app, /personal\.deletedBaseIds=\[\]/);
 assert.match(app, /searchParams\.set\('__release', version\)/);
@@ -56,7 +56,7 @@ assert.match(app, /payload\.words\.length!==entry\.count/);
 assert.match(app, /loaded\.length!==manifest\.totalWords/);
 assert.match(app, /navigator\.serviceWorker\.addEventListener\('controllerchange'/);
 assert.match(app, /registration\.update\(\)/);
-assert.match(sw, /const VERSION = '2\.60\.0'/);
+assert.match(sw, /const VERSION = '2\.61\.0'/);
 assert.match(sw, /cacheUrl\.searchParams\.delete\('__release'\)/);
 assert.match(html, /id="metricWordsStatus"/);
 console.log('Vocabulary release integrity: PASS (26 files, 992 records, 979→992 legacy migration repair, unique IDs/headwords, cache-bust and PWA update guards).');

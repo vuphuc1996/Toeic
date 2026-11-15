@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.60.0 – Personalized Learning Path</title>
+  <title>TOEIC Dictionary v2.61.0 – Personalized Learning Path</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -69,7 +69,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.60.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.61.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -127,7 +127,14 @@
           <div class="objective-progress-grid" id="learningObjectiveProgress"><p class="muted">Đang tải dữ liệu mục tiêu học tập…</p></div>
         </section>
         <section class="panel recall-queue-panel" aria-label="Hàng đợi ôn nhớ lại">
-          <header class="recall-queue-header"><div><p class="eyebrow">SPACED RECALL</p><h2>Hàng đợi ôn nhớ lại</h2><p class="muted">Các câu hỏi đã đến lịch ôn theo kết quả luyện tập. Mở đúng khu vực nội dung để làm lại; việc mở hàng đợi không tự ghi nhận kết quả.</p></div><span class="recall-queue-count" id="learningRecallQueueCount">0</span></header>
+          <header class="panel-header recall-queue-header">
+            <div class="recall-queue-heading">
+              <p class="eyebrow">SPACED RECALL</p>
+              <h2>Hàng đợi ôn nhớ lại</h2>
+              <p class="muted">Các câu hỏi đến hạn theo lịch ôn cá nhân. Mở một mục sẽ đưa bạn đến đúng nội dung để luyện lại; thao tác mở không tự ghi nhận kết quả.</p>
+            </div>
+            <span class="library-count recall-queue-count" id="learningRecallQueueCount" aria-label="Số mục đến hạn">0 mục đến hạn</span>
+          </header>
           <div class="recall-queue-list" id="learningRecallQueue"><p class="muted">Đang tải lịch ôn…</p></div>
         </section>
         <section class="panel level-meter-panel" aria-label="Chỉ số năng lực học tập">
@@ -158,15 +165,44 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.60.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>GitHub-only v2.61.0:</strong> TOEIC-first — từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Google AI Mode được mở từ bảng tra cứu nhỏ; Grammar TOEIC, Reading Part 5–7, Listening Part 1–4 và phát âm được tổ chức trong cùng không gian học. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
       <section class="page" id="page-foundation">
         <div class="page-heading compact-heading"><div><p class="eyebrow">PERSONAL LEARNING PATH</p><h1>Lộ trình học theo trình độ</h1><p class="muted">Chọn điểm bắt đầu phù hợp. Bạn không cần học lại những cấp độ đã nắm vững.</p></div></div>
-        <section class="foundation-intro panel"><div><span class="foundation-kicker">YOUR LEVEL · YOUR CHOICE</span><h2>Học đúng phần bạn cần</h2><p>Chọn cấp độ bắt đầu hoặc xem toàn bộ lộ trình. Bạn có thể đổi lựa chọn bất cứ lúc nào; nội dung từ điển luôn mở ở mọi cấp độ.</p><button type="button" class="primary-button" id="startPlacementDiagnostic">Đánh giá trình độ đầu vào →</button><label class="foundation-level-picker" for="foundationStartLevel">Bắt đầu từ cấp độ<select id="foundationStartLevel"><option value="ALL">Tất cả cấp độ</option><option value="PRE-A1">Pre-A1 · Mới bắt đầu</option><option value="A1">A1 · Cơ bản</option><option value="A2">A2 · Sơ cấp</option><option value="B1">B1 · Trung cấp</option><option value="B2">B2 · Trung cao cấp</option><option value="C1">C1 · Nâng cao</option></select></label></div><div class="foundation-progress"><strong id="foundationProgressPercent">0%</strong><div class="foundation-progress-track"><span id="foundationProgressBar"></span></div><span id="foundationProgressLabel">0 / 0 bài</span><small id="foundationProgressHint">Chọn cấp độ và bắt đầu học.</small></div></section>
-        <div class="foundation-path-note" id="foundationPathNote" role="status"></div>
-        <div class="foundation-card-grid" id="foundationLessonList"></div>
+        <section class="panel foundation-intro" aria-label="Thiết lập lộ trình học">
+          <header class="panel-header foundation-intro-header">
+            <div>
+              <p class="eyebrow">YOUR LEVEL · YOUR CHOICE</p>
+              <h2>Học đúng phần bạn cần</h2>
+              <p class="muted">Chọn cấp độ bắt đầu hoặc xem toàn bộ lộ trình. Bạn có thể đổi lựa chọn bất cứ lúc nào; từ điển và thư viện luyện tập vẫn dùng được ở mọi cấp độ.</p>
+            </div>
+          </header>
+          <div class="foundation-intro-body">
+            <div class="foundation-intro-actions">
+              <button type="button" class="primary-button" id="startPlacementDiagnostic">Đánh giá trình độ đầu vào →</button>
+              <label class="foundation-level-picker" for="foundationStartLevel">Bắt đầu từ cấp độ
+                <select id="foundationStartLevel">
+                  <option value="ALL">Tất cả cấp độ</option>
+                  <option value="PRE-A1">Pre-A1 · Mới bắt đầu</option>
+                  <option value="A1">A1 · Cơ bản</option>
+                  <option value="A2">A2 · Sơ cấp</option>
+                  <option value="B1">B1 · Trung cấp</option>
+                  <option value="B2">B2 · Trung cao cấp</option>
+                  <option value="C1">C1 · Nâng cao</option>
+                </select>
+              </label>
+            </div>
+            <div class="foundation-progress" id="foundationProgressMeter" role="progressbar" aria-label="Tiến độ lộ trình" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="foundation-progress-top"><strong id="foundationProgressPercent">0%</strong><span id="foundationProgressLabel">0 / 0 bài đạt ngưỡng</span></div>
+              <div class="foundation-progress-track"><span id="foundationProgressBar"></span></div>
+              <small id="foundationProgressHint">Chọn cấp độ và bắt đầu học.</small>
+            </div>
+          </div>
+        </section>
+        <div class="phase-note foundation-path-note" role="status"><span aria-hidden="true">ⓘ</span><p id="foundationPathNote">Đang tải lộ trình học…</p></div>
+        <div class="learning-card-grid foundation-card-grid" id="foundationLessonList"></div>
       </section>
 
       <section class="page" id="page-mock">
@@ -395,7 +431,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.60.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub-only · v2.61.0</span></footer>
     </main>
   </div>
 

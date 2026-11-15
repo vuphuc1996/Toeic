@@ -720,7 +720,7 @@
       "decision": "retain-existing-key-and-options",
       "questionSha256": "3de45c7ecaddd948acaba5930fb81edc600613f83b5f58c00efa4322cc717561",
       "approvedRevision": "v2.19.0-second-pass",
-      "unitContentSha256": "55f52782329aa1881e6ccd7600a3ed40f513f493d94259e0356bd76cc7a7ef72"
+      "unitContentSha256": "b6ba4ebd7eb52d7f0a409ace76b755c16b151a14fe06a3f26aec9bc1a35c6c72"
     },
     {
       "key": "part1-warehouse-box#Q1",
@@ -737,7 +737,7 @@
       "decision": "approved-photo-description-amendment-preserving-answer-key-and-choice-identity",
       "questionSha256": "251aad81711138336698b259084ab19eddaffd279fa17b6311a816d47638b3ea",
       "approvedRevision": "v2.23.0-photo-precision",
-      "unitContentSha256": "3a9ae48715f039f60606de8fef2ef7cfb0552bf4a73d320de7518d4d66106e7d"
+      "unitContentSha256": "01a9d5b6bf80cf983bd19ea7294cc143d13464bf1b36a97037422cacc64c6df2"
     },
     {
       "key": "part1-technician-inspection#Q1",
@@ -754,7 +754,7 @@
       "decision": "approved-photo-description-amendment-preserving-answer-key-and-choice-identity",
       "questionSha256": "854c1cf3c7b2483b307f8b46a02f04a4e49e525b5a1b57157384137d0656ad0e",
       "approvedRevision": "v2.23.0-photo-precision",
-      "unitContentSha256": "6d5d0eec7fa87a2bbc4403af75b5377b2e795f82c1afe254eff9bd73a9d7ac31"
+      "unitContentSha256": "d20e93d4ed1437f5fa61d5170f76fe83cea8fff8766765846065d867dfa537e3"
     },
     {
       "key": "part1-airport-suitcase#Q1",
@@ -771,7 +771,7 @@
       "decision": "retain-existing-key-and-options",
       "questionSha256": "48c46ab22ebf3a2f2d0a14e2fa48f025f703b821a898eef10bfed1882a466bd5",
       "approvedRevision": "v2.19.0-second-pass",
-      "unitContentSha256": "9ca999554c8b013930571afa2654004b68e934393f8dfda17c079d83540f8f4c"
+      "unitContentSha256": "ca6317bb569cbf8af91c700b1ba8a4e8cebc50b13261c9529f52be8cbe3f2e2b"
     },
     {
       "key": "part1-presentation-room#Q1",
@@ -788,7 +788,7 @@
       "decision": "retain-existing-key-and-options",
       "questionSha256": "3604df3df030e93256f9ca8d454052b5bd2c6b076ea2ea02475927e754d8ffc4",
       "approvedRevision": "v2.19.0-second-pass",
-      "unitContentSha256": "b9e9b3222cc8be0033303158a26796e2f800d11fdbc061a21db5b7350302c9b8"
+      "unitContentSha256": "ac3c7864e87fda0b4a71c0148f54bcf2b1abb8f07e754f638667e442e987e1d3"
     },
     {
       "key": "part1-reception-plant#Q1",
@@ -805,7 +805,7 @@
       "decision": "approved-photo-description-amendment-preserving-answer-key-and-choice-identity",
       "questionSha256": "ba674d6b9be0dd3a824060525135918c31ec66ad91d07de0a6519c6484973b51",
       "approvedRevision": "v2.22.0-photo-alignment",
-      "unitContentSha256": "40e25b2be3ccebf08226aee328add742190badbec5d7265c6529495bae5afd2d"
+      "unitContentSha256": "427f17f112076349e3bcb46212c13a36a7ec8b426745e579b46dfc8a2e25f738"
     },
     {
       "key": "part1-restaurant-setting#Q1",
@@ -822,7 +822,7 @@
       "decision": "approved-photo-description-amendment-preserving-answer-key-and-choice-identity",
       "questionSha256": "4fa7aa6ea44f63a02babbf7bb8561bb4dcd6557846ba8956c11fd8adfc1f9812",
       "approvedRevision": "v2.22.0-photo-alignment",
-      "unitContentSha256": "cfc9c6837ef630f8c2109ccc527a7d332b09d198018928a83ab4fd5dbe6f31c6"
+      "unitContentSha256": "be7a3fc112c1109e22ae4e950091ceb744937d9e05c56a1da0e0ba068de21f8a"
     },
     {
       "key": "part1-photocopier#Q1",
@@ -839,7 +839,7 @@
       "decision": "approved-photo-description-amendment-preserving-answer-key-and-choice-identity",
       "questionSha256": "839078119b397f8b2e73f096c1398751ada30f3eb88ef51bd533856b48873a37",
       "approvedRevision": "v2.22.0-photo-alignment",
-      "unitContentSha256": "cc40a3a8a8ba1b679b6a3bf4fa840e76e2d24a6d90a6d271b6c8aad215cb2628"
+      "unitContentSha256": "adb9d3877e47e53cd4f93c7f2199bb1c22df881ecb823c0f95791b92cb0a4124"
     },
     {
       "key": "part2-visitor-badge#Q1",
@@ -2682,5 +2682,74 @@
       "reason": "Spoken correct statement aligned to the photo page description of an outdoor air-conditioning repair."
     }
   ],
-  "unitFingerprintPolicy": "SHA-256 of each reviewed unit excluding questions; protects transcript segments, translations, title/topic/source metadata. Question objects are protected by questionSha256. Additive questions are allowed only when marked reserve-pending-independent-review."
+  "unitFingerprintPolicy": "SHA-256 of each reviewed unit excluding questions; protects transcript segments, translations, title/topic/source metadata. Question objects are protected by questionSha256. Additive questions are allowed only when marked reserve-pending-independent-review.",
+  "fingerprintRefreshLog": [
+    {
+      "date": "2026-11-15",
+      "reason": "Metadata-only addition of photoSourceType to the eight reviewed Listening Part 1 units",
+      "approvalContext": "The user instructed continuation after fixing the listed issues in the 2026-11-15 conversation",
+      "scope": "unitContentSha256 only; no question hashes, transcripts, translations, titles, choices, answer keys, ordering, or review decisions changed",
+      "fieldAdded": "photoSourceType",
+      "expectedFieldValue": "licensed-stock",
+      "changedUnitCount": 8,
+      "units": [
+        {
+          "unitId": "part1-meeting-documents",
+          "oldUnitContentSha256": "55f52782329aa1881e6ccd7600a3ed40f513f493d94259e0356bd76cc7a7ef72",
+          "newUnitContentSha256": "b6ba4ebd7eb52d7f0a409ace76b755c16b151a14fe06a3f26aec9bc1a35c6c72",
+          "oldHashMatchesAfterRemovingField": true,
+          "questionSha256Unchanged": true
+        },
+        {
+          "unitId": "part1-warehouse-box",
+          "oldUnitContentSha256": "3a9ae48715f039f60606de8fef2ef7cfb0552bf4a73d320de7518d4d66106e7d",
+          "newUnitContentSha256": "01a9d5b6bf80cf983bd19ea7294cc143d13464bf1b36a97037422cacc64c6df2",
+          "oldHashMatchesAfterRemovingField": true,
+          "questionSha256Unchanged": true
+        },
+        {
+          "unitId": "part1-technician-inspection",
+          "oldUnitContentSha256": "6d5d0eec7fa87a2bbc4403af75b5377b2e795f82c1afe254eff9bd73a9d7ac31",
+          "newUnitContentSha256": "d20e93d4ed1437f5fa61d5170f76fe83cea8fff8766765846065d867dfa537e3",
+          "oldHashMatchesAfterRemovingField": true,
+          "questionSha256Unchanged": true
+        },
+        {
+          "unitId": "part1-airport-suitcase",
+          "oldUnitContentSha256": "9ca999554c8b013930571afa2654004b68e934393f8dfda17c079d83540f8f4c",
+          "newUnitContentSha256": "ca6317bb569cbf8af91c700b1ba8a4e8cebc50b13261c9529f52be8cbe3f2e2b",
+          "oldHashMatchesAfterRemovingField": true,
+          "questionSha256Unchanged": true
+        },
+        {
+          "unitId": "part1-presentation-room",
+          "oldUnitContentSha256": "b9e9b3222cc8be0033303158a26796e2f800d11fdbc061a21db5b7350302c9b8",
+          "newUnitContentSha256": "ac3c7864e87fda0b4a71c0148f54bcf2b1abb8f07e754f638667e442e987e1d3",
+          "oldHashMatchesAfterRemovingField": true,
+          "questionSha256Unchanged": true
+        },
+        {
+          "unitId": "part1-reception-plant",
+          "oldUnitContentSha256": "40e25b2be3ccebf08226aee328add742190badbec5d7265c6529495bae5afd2d",
+          "newUnitContentSha256": "427f17f112076349e3bcb46212c13a36a7ec8b426745e579b46dfc8a2e25f738",
+          "oldHashMatchesAfterRemovingField": true,
+          "questionSha256Unchanged": true
+        },
+        {
+          "unitId": "part1-restaurant-setting",
+          "oldUnitContentSha256": "cfc9c6837ef630f8c2109ccc527a7d332b09d198018928a83ab4fd5dbe6f31c6",
+          "newUnitContentSha256": "be7a3fc112c1109e22ae4e950091ceb744937d9e05c56a1da0e0ba068de21f8a",
+          "oldHashMatchesAfterRemovingField": true,
+          "questionSha256Unchanged": true
+        },
+        {
+          "unitId": "part1-photocopier",
+          "oldUnitContentSha256": "cc40a3a8a8ba1b679b6a3bf4fa840e76e2d24a6d90a6d271b6c8aad215cb2628",
+          "newUnitContentSha256": "adb9d3877e47e53cd4f93c7f2199bb1c22df881ecb823c0f95791b92cb0a4124",
+          "oldHashMatchesAfterRemovingField": true,
+          "questionSha256Unchanged": true
+        }
+      ]
+    }
+  ]
 }

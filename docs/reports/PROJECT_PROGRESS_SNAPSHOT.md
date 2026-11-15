@@ -1,6 +1,6 @@
 # Project Progress Snapshot — generated
 
-- Source version: **2.60.0**
+- Source version: **2.61.0**
 - Basis: canonical JSON inventory; counts are not editorial approval.
 
 ## Target-based progress
@@ -51,9 +51,21 @@ These ratios show whether a field is populated, not whether its content is accur
 - Part 5 practice: pending independent review; do not count as Mock-eligible.
 - Listening pending-review pool and Mock-eligible counts must be tracked separately from raw inventory.
 - Placement is a short sample, not official CEFR/ETS certification.
-- Remote CI, GitHub Pages deployment and physical-device QA are not inferred from local checks.
+- Selected Python regression tests: **134/134 PASS** across relevant modules; full Python discovery exceeded the 300-second execution window and is not claimed as complete.
+- JavaScript regression scripts: **17/17 PASS**; JavaScript syntax checks pass. Version sync passes.
+- Vocabulary data validation: **992 records, 0 errors, 0 warnings**. Learning content validation: **0 errors, 8 known missing-Part-1-JPG warnings** with SVG fallbacks.
+- Objective resource links: **281/281 PASS**; outcome criteria: **30/30 PASS**.
+- Chromium localhost preview is blocked by environment policy. Remote CI, GitHub Pages deployment and physical-device QA are not inferred from local checks.
 
 ## Reporting rule
 
 A percentage is shown only when a defensible target or denominator exists. Otherwise the report says “Chưa đo được” and records the current inventory without inventing a target.
 
+
+## v2.61.0 quality / interface progress
+
+- Scope-test correction: **1/1** (100%).
+- Metadata-only Listening Part 1 fingerprint refresh: **8/8** (100%); all eight question hashes preserved.
+- Shared UI surfaces: **2/2** (100% source-level design alignment).
+- New responsive/UI regression assertions: **5/5** (100%).
+- Learner attainment and physical-device presentation: **not measured**; source/CSS checks do not prove real-world mastery or device rendering.

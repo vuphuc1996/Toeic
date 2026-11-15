@@ -37,6 +37,7 @@ class Marker:
 
 
 MARKERS: tuple[Marker, ...] = (
+    Marker("app.js release version", "assets/js/app.js", (rf"const APP_RELEASE_VERSION = '({SEMVER})';",)),
     Marker("sw.js version", "sw.js", (
         rf"const VERSION = '({SEMVER})';",                              # v2.9.8+ layout
         rf"CACHE_NAME = 'toeic-vocab-github-only-v({SEMVER})';",         # v2.9.7 layout

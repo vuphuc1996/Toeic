@@ -8,7 +8,7 @@ import { recordFoundationReadingAttempt, summarizeFoundationReading } from './fo
 import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.60.0';
+const APP_RELEASE_VERSION = '2.61.0';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -1883,14 +1883,26 @@ function renderFoundationPath(){
  const selector=$('#foundationStartLevel');if(selector)selector.value=state.foundationStartLevel||'ALL';
  const all=state.foundationLessons||[],selected=state.foundationStartLevel||'ALL';
  const rows=selected==='ALL'?all:all.filter(x=>(rank[x.level]??99)>=(rank[selected]??0));
- const done=rows.filter(x=>summarizeFoundationLesson(state.foundationProgress,x.id).status==='practice_threshold_met').length,pct=rows.length?Math.round(done/rows.length*100):0;
- const label=$('#foundationProgressLabel'),percent=$('#foundationProgressPercent'),bar=$('#foundationProgressBar'),hint=$('#foundationProgressHint'),list=$('#foundationLessonList'),note=$('#foundationPathNote');
+ const done=rows.filter(lesson=>summarizeFoundationLesson(state.foundationProgress,lesson.id).status==='practice_threshold_met').length;
+ const pct=rows.length?Math.round(done/rows.length*100):0;
+ const label=$('#foundationProgressLabel'),percent=$('#foundationProgressPercent'),bar=$('#foundationProgressBar'),hint=$('#foundationProgressHint'),list=$('#foundationLessonList'),note=$('#foundationPathNote'),meter=$('#foundationProgressMeter');
  if(!label||!percent||!bar||!hint||!list||!note)return;
- label.textContent=`${done} / ${rows.length} bài đạt ngưỡng nhận biết`;percent.textContent=`${pct}%`;bar.style.width=`${pct}%`;
- hint.textContent=rows.length?(done?`${done} bài đạt ngưỡng nhận biết/hiểu dựa trên câu hỏi độc lập; vận dụng được theo dõi riêng.`:'Chỉ tính bằng chứng nhận biết/hiểu từ câu hỏi độc lập; vận dụng được theo dõi riêng.'):'Chưa có bài học được phát hành ở cấp độ này.';
+ label.textContent=`${done} / ${rows.length} bài đạt ngưỡng`;
+ percent.textContent=`${pct}%`;
+ bar.style.width=`${pct}%`;
+ meter?.setAttribute('aria-valuenow',String(pct));
+ hint.textContent=rows.length?(done?`${done} bài đạt ngưỡng nhận biết/hiểu dựa trên câu hỏi độc lập; bằng chứng vận dụng và đọc hiểu được theo dõi riêng.`:'Chỉ tính bằng chứng nhận biết/hiểu từ câu hỏi độc lập; vận dụng và đọc hiểu được theo dõi riêng.'):'Chưa có bài học được phát hành ở cấp độ này.';
  const levelName=selected==='ALL'?'tất cả cấp độ':selected;
- note.textContent=selected==='ALL'?'Bạn đang xem toàn bộ bài học hiện có.':`Bạn đang bắt đầu từ ${levelName}. Các cấp độ thấp hơn được ẩn khỏi lộ trình, không bị xóa và có thể mở lại bằng cách đổi lựa chọn. ${rows.length?'':'Nội dung '+levelName+' trở lên chưa được phát hành đầy đủ; bạn vẫn có thể dùng từ điển và các thư viện luyện tập hiện có.'}`;
- list.innerHTML=rows.length?rows.map((x,i)=>{const saved=state.foundationProgress[x.id]||{},evidence=summarizeFoundationLesson(state.foundationProgress,x.id),application=summarizeFoundationApplication(state.foundationProgress,x.id),status=evidence.status==='practice_threshold_met'?`Nhận biết: đạt · ${evidence.accuracyPercent}%`:evidence.uniqueQuestions?`Nhận biết: ${evidence.uniqueQuestions}/3 câu`:'Nhận biết: chưa có bằng chứng',applicationStatus=application.uniqueTasks?`Vận dụng: ${application.accuracyPercent}% đúng gần nhất`:'Vận dụng: chưa thực hiện',reading=summarizeFoundationReading(state.foundationReadingProgress,x.id),readingStatus=reading.uniqueQuestions?`Đọc hiểu: ${reading.uniqueQuestions}/2 câu · ${reading.accuracyPercent}%`:'Đọc hiểu: chưa thực hiện';return `<article class="foundation-card"><div class="foundation-card-top"><span class="foundation-number">${String(i+1).padStart(2,'0')}</span><span class="foundation-level">${escapeHtml(x.level)}</span></div><h3>${escapeHtml(x.title)}</h3><p>${escapeHtml(x.objective)}</p><div class="foundation-card-bottom"><small>${status}<br>${applicationStatus}<br>${readingStatus}</small><button type="button" class="secondary-button" data-foundation-open="${escapeHtml(x.id)}">${evidence.uniqueQuestions?'Tiếp tục ôn':'Bắt đầu học'} →</button></div></article>`}).join(''):`<article class="foundation-card foundation-empty"><h3>Chặng ${escapeHtml(selected)} đang được xây dựng</h3><p>Không tự động đưa bạn quay về Pre-A1/A1. Hãy tiếp tục sử dụng các thư viện Từ vựng, Ngữ pháp, Đọc hiểu, Nghe và Thi thử đang có; lộ trình có cấu trúc cho cấp độ này sẽ được bổ sung ở các bản tiếp theo.</p><button type="button" class="secondary-button" data-go="dictionary">Mở từ điển toàn bộ →</button></article>`;
+ note.textContent=selected==='ALL'?'Bạn đang xem toàn bộ bài học hiện có.':`Bạn đang bắt đầu từ ${levelName}. Các cấp độ thấp hơn chỉ được ẩn khỏi lộ trình, không bị xóa và có thể mở lại bằng cách đổi lựa chọn. ${rows.length?'':'Nội dung '+levelName+' trở lên chưa được phát hành đầy đủ; bạn vẫn có thể dùng từ điển và các thư viện luyện tập hiện có.'}`;
+ list.innerHTML=rows.length?rows.map((lesson,index)=>{
+   const evidence=summarizeFoundationLesson(state.foundationProgress,lesson.id);
+   const application=summarizeFoundationApplication(state.foundationProgress,lesson.id);
+   const reading=summarizeFoundationReading(state.foundationReadingProgress,lesson.id);
+   const recognitionStatus=evidence.status==='practice_threshold_met'?`Nhận biết: đạt · ${evidence.accuracyPercent}%`:evidence.uniqueQuestions?`Nhận biết: ${evidence.uniqueQuestions}/3 câu`:'Nhận biết: chưa có bằng chứng';
+   const applicationStatus=application.uniqueTasks?`Vận dụng: ${application.accuracyPercent}% đúng gần nhất`:'Vận dụng: chưa thực hiện';
+   const readingStatus=reading.uniqueQuestions?`Đọc hiểu: ${reading.uniqueQuestions}/2 câu · ${reading.accuracyPercent}%`:'Đọc hiểu: chưa thực hiện';
+   return `<article class="learning-card foundation-card"><div class="learning-card-top"><span class="learning-category">Bài ${String(index+1).padStart(2,'0')}</span><span class="learning-level">${escapeHtml(lesson.level)}</span></div><h3>${escapeHtml(lesson.title)}</h3><p>${escapeHtml(lesson.objective)}</p><div class="foundation-card-evidence"><span>${recognitionStatus}</span><span>${applicationStatus}</span><span>${readingStatus}</span></div><div class="learning-card-footer foundation-card-footer"><small>${evidence.uniqueQuestions} câu nhận biết độc lập</small><button type="button" class="secondary-button" data-foundation-open="${escapeHtml(lesson.id)}">${evidence.uniqueQuestions?'Tiếp tục ôn':'Bắt đầu học'} →</button></div></article>`;
+ }).join(''):`<article class="learning-card foundation-card foundation-empty"><div class="learning-card-top"><span class="learning-category">${escapeHtml(selected)}</span><span class="learning-level">Đang xây dựng</span></div><h3>Chặng ${escapeHtml(selected)} chưa được phát hành</h3><p>Không tự động đưa bạn quay về Pre-A1/A1. Bạn vẫn có thể tiếp tục với từ điển, Ngữ pháp, Đọc hiểu, Nghe và Thi thử hiện có.</p><div class="learning-card-footer"><small>Nội dung sẽ được bổ sung theo lộ trình.</small><button type="button" class="secondary-button" data-go="dictionary">Mở từ điển →</button></div></article>`;
 }
 function openFoundationLesson(id){
  const x=state.foundationLessons.find(item=>item.id===id);if(!x)return;
@@ -2006,15 +2018,16 @@ function renderRecallQueue() {
   if (!host || !state.objectiveResourceMap) return;
   const due = listDueRecallItems(state.objectiveProgress, state.objectiveResourceMap, Date.now(), 60);
   const count = $('#learningRecallQueueCount');
-  if (count) count.textContent = String(due.length);
+  if (count) count.textContent = `${due.length} mục đến hạn`;
   if (!due.length) {
-    host.innerHTML = '<div class="recall-queue-empty"><strong>Chưa có câu TOEIC đến hạn ôn.</strong><span>Lịch ôn sẽ xuất hiện sau khi bạn luyện câu hỏi và đến mốc nhớ lại.</span></div>';
+    host.innerHTML = '<div class="recall-queue-empty"><strong>Chưa có câu TOEIC đến hạn ôn.</strong><span>Lịch ôn sẽ xuất hiện sau khi bạn luyện câu hỏi và đến mốc nhớ lại. Hàng đợi sẽ tự cập nhật khi mở lại ứng dụng hoặc quay về cửa sổ này.</span></div>';
     return;
   }
   host.innerHTML = due.map(item => {
     const status = item.latestCorrect ? 'Lần gần nhất: đúng' : 'Lần gần nhất: cần củng cố';
-    const date = new Date(item.dueAt).toLocaleString('vi-VN', { day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit' });
-    return `<article class="recall-queue-item"><div class="recall-queue-copy"><strong>${escapeHtml(item.objectiveTitle)}</strong><span>${escapeHtml(item.part || item.kind)} · ${escapeHtml(item.itemId)}</span><small>Đến hạn ${escapeHtml(date)} · ${status} · ${item.attempts} lượt làm</small></div><button type="button" class="secondary-button" data-recall-open="${escapeHtml(item.objectiveId)}" data-recall-item="${escapeHtml(item.itemId)}">Mở ôn tập</button></article>`;
+    const date = new Date(item.dueAt).toLocaleString('vi-VN', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+    const partLabel = item.part || item.kind || 'Luyện tập';
+    return `<article class="learning-card recall-queue-item"><div class="learning-card-top"><span class="learning-category">${escapeHtml(partLabel)}</span><span class="learning-level">${item.latestCorrect?'Đã trả lời đúng':'Cần củng cố'}</span></div><h3>${escapeHtml(item.objectiveTitle)}</h3><p>Đến hạn ${escapeHtml(date)} · ${item.attempts} lượt làm</p><div class="learning-card-footer"><small>${escapeHtml(status)} · Câu hỏi đã đến lịch ôn</small><button type="button" class="secondary-button" data-recall-open="${escapeHtml(item.objectiveId)}" data-recall-item="${escapeHtml(item.itemId)}">Mở ôn tập →</button></div></article>`;
   }).join('');
 }
 

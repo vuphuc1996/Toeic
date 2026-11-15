@@ -4,12 +4,12 @@
 
 - **Ngày kiểm kê:** 2026-11-15.
 - **Quy ước báo cáo tiến độ:** luôn có % khi tồn tại target/denominator rõ; tách độ phủ số lượng, chất lượng nội dung, kiểm thử phiên bản và xác minh triển khai. Không có target thì ghi “Chưa đo được”.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.60.0 (vocabulary release integrity; local candidate).
-- **Current candidate:** v2.60.0 — vocabulary release integrity, cache-busted data loading, runtime count verification and legacy 979→992 migration repair.
-- **Previous release:** v2.59.0 — Foundation short-reading passages / 20 comprehension questions.
-- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.60.0.md`; vocabulary 992/3,000 minimum (33.1%); 10/10 objective groups with resources (100% availability); 281/281 unique canonical resource records linked (100% link coverage). These are not quality or mastery scores. Outcome criteria: 30/30 defined (100% framework coverage); objective-level TOEIC practice evidence is wired for 9/10 groups; delayed recall is instrumented for the 9 wired TOEIC objective groups; response-time evidence covers structured Grammar/Reading/Listening and separate Part 5 practice (9/9 wired TOEIC groups). Part 5 explanation self-report is instrumented for 1/9 TOEIC objective groups; due recall is now surfaced in a dashboard queue; actual explanation quality and CEFR/real-world mastery remain unverified. Foundation recognition bank is 30/30 (100%); contextual application is 10/10 (100%); short reading is 10/10 passages and 20/20 questions (100% bank coverage). Reading evidence is isolated in `toeic:foundation-reading-progress:v1`; threshold is 2 unique questions and 80% latest-result accuracy, not CEFR certification. Learner attainment remains unmeasured in this source-only snapshot.
-- **Immediate base:** v2.59.0; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
-- **Release state:** local candidate. Remote GitHub Actions, Pages deployment and physical-device behavior are not verified from this workspace.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.61.0 (vocabulary release integrity; local candidate).
+- **Current candidate:** v2.61.0 — test-scope correction, metadata-only Part 1 fingerprint refresh with audit log, and unified Spaced Recall/Foundation UI.
+- **Previous release:** v2.60.0 — vocabulary release integrity, cache-busted data loading, runtime count verification and legacy 979→992 migration repair.
+- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.61.0.md`; vocabulary 992/3,000 minimum (33.1%); 10/10 objective groups with resources (100% availability); 281/281 unique canonical resource records linked (100% link coverage). These are not quality or mastery scores. Outcome criteria: 30/30 defined (100% framework coverage); objective-level TOEIC practice evidence is wired for 9/10 groups; delayed recall is instrumented for the 9 wired TOEIC objective groups; response-time evidence covers structured Grammar/Reading/Listening and separate Part 5 practice (9/9 wired TOEIC groups). Part 5 explanation self-report is instrumented for 1/9 TOEIC objective groups; due recall is now surfaced in a dashboard queue; actual explanation quality and CEFR/real-world mastery remain unverified. Foundation recognition bank is 30/30 (100%); contextual application is 10/10 (100%); short reading is 10/10 passages and 20/20 questions (100% bank coverage). Reading evidence is isolated in `toeic:foundation-reading-progress:v1`; threshold is 2 unique questions and 80% latest-result accuracy, not CEFR certification. Learner attainment remains unmeasured in this source-only snapshot.
+- **Immediate base:** v2.60.0; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
+- **Release state:** local candidate — deployment hold. The strict Part 1 photo validator currently fails because eight original JPG binaries are missing from the inherited v2.60.0 source archive. Remote GitHub Actions, Pages deployment and physical-device behavior are not verified from this workspace.
 - **Development rule:** finish the internal product/content backlog first. Do not issue acceptance reminders or a broad acceptance checklist while development is active. The eventual test plan should target high-risk flows rather than repeat a 100% manual inventory sweep.
 
 
@@ -17,6 +17,19 @@
 
 
 
+
+## v2.61.0 changes — test integrity and unified learning surfaces
+
+- Corrected `test_learning_detail_scope.py`: test extraction now stops at the next top-level function declaration, so helper functions inserted later cannot contaminate the scope check. Added a regression assertion that confirms `renderRecallQueue()` legitimately uses its own callback parameter `item` outside the grammar lesson function.
+- Confirmed all eight historical Listening Part 1 rows are affected only by the addition of `photoSourceType: "licensed-stock"`. Removing only that property reproduces each old `unitContentSha256`; all eight `questionSha256` values remain exact. Refreshed the eight unit digests and recorded old/new values, field, rationale and verification flags in `fingerprintRefreshLog`. The operation is also reproducible through `tools/refresh-photo-source-fingerprints.py`, which aborts before writing if any other field or question hash differs.
+- Rebuilt Spaced Recall with the common panel/header/card/count/button components. The question's stable ID is carried only in the button's action metadata, not printed in user-facing copy; opening the queue remains read-only.
+- Rebuilt the Foundation path overview with shared panel, page heading, learning-card grid, category/level indicators and shared buttons. Body and status typography now use readable fluid sizes with minimums; progress has `role="progressbar"` and `aria-valuenow`.
+- Responsive cards use `auto-fit` and content-width constraints; breakpoints use CSS pixels, not device inches. No content IDs, progress keys, IndexedDB stores/schema, personal vocabulary, or learning progress were changed/reset.
+- CI now includes `test_learning_surface_consistency.py`; version sync checks the app release constant as well.
+- Local verification: 130 selected Python regression tests pass; 17/17 JavaScript regression scripts pass; `sw.js` and all `assets/js/*.js` pass syntax checks; vocabulary validation is 992 records / 0 errors / 0 warnings; learning-content validation has 0 errors and 8 known missing-JPG warnings; objective resources 281/281 and outcome criteria 30/30 pass; version synchronization passes. Full Python discovery exceeded 300 seconds and is not claimed as complete.
+- Browser visual QA is not claimed: Chromium in this environment is blocked from accessing localhost.
+- Strict `python tools/validate-part1-photo-assets.py` fails 8 missing JPG checks; SVG fallbacks remain, but CI calls the strict validator. See `docs/reports/PART1_PHOTO_ASSET_RECOVERY_v2.61.0.md`; restore the original binaries before deployment.
+- Local source verification only. Remote GitHub Actions / Pages and physical iOS/Android PWA visual behavior remain unverified until deployment.
 
 ## v2.60.0 changes — vocabulary release integrity and legacy migration repair
 

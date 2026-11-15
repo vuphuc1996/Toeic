@@ -80,6 +80,18 @@ class RemainingContentReviewTests(unittest.TestCase):
             actual = hashlib.sha256(payload).hexdigest()
             self.assertEqual(actual, row['questionSha256'], f"Reviewed question drifted: {row['key']}")
 
+    def test_part1_metadata_fingerprint_refresh_is_logged_and_question_hashes_stay_fixed(self):
+        log = REGISTRY.get("fingerprintRefreshLog", [])
+        self.assertEqual(len(log), 1)
+        entry = log[0]
+        self.assertEqual(entry["fieldAdded"], "photoSourceType")
+        self.assertEqual(entry["expectedFieldValue"], "licensed-stock")
+        self.assertEqual(entry["changedUnitCount"], 8)
+        self.assertEqual(len(entry["units"]), 8)
+        self.assertIn("question hashes", entry["scope"])
+        self.assertTrue(all(row["oldHashMatchesAfterRemovingField"] for row in entry["units"]))
+        self.assertTrue(all(row["questionSha256Unchanged"] for row in entry["units"]))
+
     def test_unreviewed_questions_must_be_marked_reserve_pending(self):
         reviewed = {row["key"] for row in REGISTRY["items"]}
         for _, unit, number, _question in selected_items():

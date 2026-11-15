@@ -15,7 +15,7 @@ class LearningStartLevelTests(unittest.TestCase):
  def test_higher_level_selection_does_not_force_beginner_lessons(self):
   js=(ROOT/'assets/js/app.js').read_text(encoding='utf-8')
   self.assertIn("(rank[x.level]??99)>=(rank[selected]??0)",js)
-  self.assertIn('Chặng ${escapeHtml(selected)} đang được xây dựng',js)
+  self.assertIn('Chặng ${escapeHtml(selected)} chưa được phát hành',js)
   self.assertIn('data-go="dictionary"',js)
  def test_dictionary_remains_separate_from_learning_start_level(self):
   js=(ROOT/'assets/js/app.js').read_text(encoding='utf-8')
