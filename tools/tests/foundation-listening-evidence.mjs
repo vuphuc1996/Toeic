@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import { recordFoundationListeningAttempt, summarizeFoundationListening } from '../../assets/js/foundation-listening-evidence.js';
+
+let progress = {};
+progress = recordFoundationListeningAttempt(progress, 'pa1-alphabet', 'pa1-alphabet::listening1::q1', true, 100);
+let summary = summarizeFoundationListening(progress, 'pa1-alphabet');
+assert.equal(summary.uniqueQuestions, 1);
+assert.equal(summary.status, 'insufficient_evidence');
+progress = recordFoundationListeningAttempt(progress, 'pa1-alphabet', 'pa1-alphabet::listening1::q1', false, 200);
+summary = summarizeFoundationListening(progress, 'pa1-alphabet');
+assert.equal(summary.uniqueQuestions, 1, 'retry must not inflate unique question count');
+assert.equal(summary.accuracyPercent, 0, 'latest result must replace the prior result');
+assert.equal(summary.totalAttempts, 2);
+progress = recordFoundationListeningAttempt(progress, 'pa1-alphabet', 'pa1-alphabet::listening1::q2', true, 300);
+summary = summarizeFoundationListening(progress, 'pa1-alphabet');
+assert.equal(summary.uniqueQuestions, 2);
+assert.equal(summary.accuracyPercent, 50);
+assert.equal(summary.status, 'in_progress');
+progress = recordFoundationListeningAttempt(progress, 'pa1-alphabet', 'pa1-alphabet::listening1::q1', true, 400);
+summary = summarizeFoundationListening(progress, 'pa1-alphabet');
+assert.equal(summary.uniqueQuestions, 2);
+assert.equal(summary.accuracyPercent, 100);
+assert.equal(summary.status, 'practice_threshold_met');
+assert.equal(summarizeFoundationListening(progress, 'a1-office').uniqueQuestions, 0);
+const invalid = recordFoundationListeningAttempt(progress, '', 'q3', true, 500);
+assert.equal(invalid, progress, 'invalid IDs should not mutate progress');
+console.log('Foundation listening evidence: PASS');

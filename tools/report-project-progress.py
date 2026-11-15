@@ -13,6 +13,8 @@ def main():
     listening=load('data/listening/listening-library.json')['listening']
     readings=load('data/readings/reading-library.json')['readings']
     foundation=load('data/learning-path/pre-a1-a1.json')['lessons']
+    foundation_listening=load('data/learning-path/foundation-listening.json')['clips']
+    foundation_reading=load('data/learning-path/foundation-reading.json')['passages']
     p5=load('data/practice/part5-sentence-completion.json')
     objective_map=load('data/learning-path/objective-resource-map.json')['objectives']
     wired_toeic=[x for x in objective_map if x.get('kind') in {'grammar','listening','reading','practice'}]
@@ -28,6 +30,8 @@ def main():
     listening_q=sum(len(x.get('questions',[])) for x in listening)
     reading_q=sum(len(x.get('questions',[])) for x in readings)
     p5n=len(p5.get('questions',[]))
+    foundation_listening_questions=sum(len(x.get('questions',[])) for x in foundation_listening)
+    foundation_reading_questions=sum(len(x.get('questions',[])) for x in foundation_reading)
     # Field-level metadata coverage is reported against the current headword base, not as a project target.
     vocab_files=[ROOT / x['file'].replace('./','',1) for x in manifest['letters']]
     vocab_records=[]
@@ -53,6 +57,8 @@ def main():
       f'| Placement question mapping | {len(load("data/learning-path/placement-objective-map.json")["questionMappings"])}/{len(diag)} | All diagnostic questions | **{pct(len(load("data/learning-path/placement-objective-map.json")["questionMappings"]),len(diag))}** | Structural mapping coverage only |',
       f'| Canonical objective-resource links | {objective_mapped}/{objective_total} | {pct(objective_mapped,objective_total)} | ID links only; not learning-outcome completion |',
       f'| Learning objectives with linked resources | {sum(bool(x.get("resourceIds")) for x in objective_map)}/{len(objective_map)} | {pct(sum(bool(x.get("resourceIds")) for x in objective_map),len(objective_map))} | Availability only; review and mastery separate |',
+      f'| Foundation Listening scripts mapped | {len(foundation_listening)}/{len(foundation)} | **{pct(len(foundation_listening),len(foundation))}** | One device-synthesized script per existing Pre-A1/A1 lesson |',
+      f'| Foundation Listening questions | {foundation_listening_questions}/{len(foundation)*2} | **{pct(foundation_listening_questions,len(foundation)*2)}** | Two questions per existing lesson; TTS practice, not ETS audio |',
       f'| Outcome criteria defined | {outcome_defined}/{outcome_total} | {pct(outcome_defined,outcome_total)} | Framework coverage only; criterion-level mastery remains separate |',
       f'| TOEIC objective practice evidence wired | {len(wired_toeic)}/{len(objective_map)} | {pct(len(wired_toeic),len(objective_map))} | Latest result per unique question; practice threshold only, foundation rubric outcomes not yet instrumented |',
       f'| Delayed-recall scheduling across wired TOEIC groups | {len(wired_toeic)}/{len(wired_toeic)} | {pct(len(wired_toeic),len(wired_toeic))} | 1/3-day scheduling rule; not a retention guarantee |',
@@ -63,6 +69,8 @@ def main():
       f'| Listening | {len(listening)} units / {listening_q} questions | Chưa đo được — no agreed unit/question target |',
       f'| Reading | {len(readings)} resources / {reading_q} questions | Chưa đo được — no agreed resource/question target |',
       f'| Separate Part 5 practice | {p5n} questions | Chưa đo được — no agreed size target; independent review remains separate |',
+      f'| Foundation Reading | {len(foundation_reading)}/{len(foundation)} passages / {foundation_reading_questions} questions | {pct(len(foundation_reading),len(foundation))} within current Pre-A1/A1 scope | Separate reading bank; not Foundation mastery |',
+      f'| Foundation Listening | {len(foundation_listening)}/{len(foundation)} scripts / {foundation_listening_questions} questions | {pct(len(foundation_listening),len(foundation))} within current Pre-A1/A1 scope | Device Speech Synthesis; not authentic ETS recordings |',
       '', '## Vocabulary field coverage (against current 992-headword base; not editorial approval)',
       '', '| Field | Records | Coverage |', '|---|---:|---:|',
       *[f'| {name} | {count:,}/{vocab:,} | **{pct(count,vocab)}** |' for name,count in field_counts.items()],
@@ -74,6 +82,7 @@ def main():
       '- Objective evidence is connected for Grammar, Listening Parts 1–4, Reading Parts 5–7 and separate Part 5 practice. Reserve Listening items are excluded until editorial review; Reading Part 7 remains second-review-gated; the separate 80-item Part 5 practice pool is review-pending and cannot earn a threshold status.',
       '- Listening Part 1 currently has 8 eligible unique questions (one additional mapped item is reserve-pending), below the 10-item minimum; at least 2 more unique, reviewed questions are needed before it can reach the practice threshold.',
       '- Foundation production/retention rubrics and explanation scoring remain uninstrumented; delayed recall and response-time capture are instrumented for the 9 wired TOEIC objective groups.',
+      '- Foundation Listening stores attempts under a separate localStorage key; its bank coverage does not imply the learner has completed the questions or met the local practice threshold.',
       '- Part 5 practice: pending independent review; do not count as Mock-eligible.',
       '- Listening pending-review pool and Mock-eligible counts must be tracked separately from raw inventory.',
       '- Placement is a short sample, not official CEFR/ETS certification.',

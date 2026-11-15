@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 APP = (ROOT / "assets/js/app.js").read_text(encoding="utf-8")
-CSS = (ROOT / "assets/css/app.css").read_text(encoding="utf-8")
+CSS = (ROOT / "assets/css/app.css").read_text(encoding="utf-8") + "\n" + (ROOT / "assets/css/design-system.css").read_text(encoding="utf-8")
 
 
 class LearningSurfaceConsistencyTests(unittest.TestCase):
@@ -24,10 +24,10 @@ class LearningSurfaceConsistencyTests(unittest.TestCase):
         self.assertIn('class="page-heading compact-heading"', HTML)
 
     def test_learning_surface_typography_has_readable_floors(self):
-        for selector in (".foundation-card h3", ".foundation-card>p", ".foundation-card-evidence span", ".recall-queue-heading h2", ".recall-queue-item>p"):
+        for selector in (".foundation-card h3", ".foundation-card>p", ".foundation-card-evidence span", ".recall-queue-heading h2", ".recall-queue-item>p", ".objective-progress-top strong", ".practice-mode-tile strong", ".mock-mode-card > p"):
             matches = re.findall(re.escape(selector) + r"\s*\{([^}]+)\}", CSS)
             self.assertTrue(matches, selector)
-            self.assertIn("clamp(", matches[-1], selector)
+            self.assertTrue(any(token in matches[-1] for token in ("clamp(", "font-size: 15px", "font-size: 14px", "font-size: 13.5px", "font-size: 13px", "font-size: 12.5px", "max(13.5px")), selector)
 
     def test_learning_surfaces_use_viewport_and_content_width_breakpoints(self):
         self.assertIn("grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))", CSS)

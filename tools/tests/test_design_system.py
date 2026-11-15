@@ -78,5 +78,27 @@ class DesignSystemTests(unittest.TestCase):
         self.assertRegex(CSS, r"@media \(pointer: coarse\)[\s\S]*?\.icon-action,[\s\S]*?min-width: 44px; min-height: 44px")
         self.assertIn(".alphabet-chip { min-width: 44px; min-height: 44px; }", CSS)
 
+
+    def test_requested_learning_sections_use_the_shared_readable_scale(self):
+        for token in ("--ds-font-card-title", "--ds-font-section-title", "--ds-font-caption"):
+            self.assertIn(token, CSS)
+        for selector in (".objective-progress-top strong", ".objective-progress-meta", ".foundation-intro-header h2", ".foundation-level-picker select", ".practice-mode-tile strong", ".practice-mode-tile small", ".mock-mode-label", ".mock-mode-card > p"):
+            self.assertIn(selector, CSS, selector)
+
+    def test_application_wide_typography_floor_covers_legacy_feature_copy(self):
+        self.assertIn("Final floor for legacy feature CSS", CSS)
+        self.assertIn("font-size: max(13.5px, 1em) !important", CSS)
+        self.assertIn("font-size: max(12px, 1em) !important", CSS)
+        for selector in (".objective-progress-meta", ".practice-mode-tile small", ".mock-mode-label", ".mock-exam-timer span", ".mock-result-note", ".mobile-bottom-nav button small"):
+            self.assertIn(selector, CSS, selector)
+
+    def test_foundation_intro_resets_legacy_two_column_template(self):
+        self.assertRegex(CSS, r"\.foundation-intro\.panel\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)")
+
+    def test_practice_and_mock_cards_reflow_without_microcopy(self):
+        self.assertIn("grid-template-columns: repeat(auto-fit, minmax(min(100%, 225px), 1fr))", CSS)
+        self.assertRegex(CSS, r"@media \(max-width: 1100px\)[\s\S]*?\.mock-mode-grid \{ grid-template-columns: repeat\(2, minmax\(0, 1fr\)\); ")
+        self.assertRegex(CSS, r"\.practice-mode-tile small \{\s*font-size: clamp\(12\.5px")
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "title": "Foundation Short Listening",
+  "description": "Original beginner scripts read aloud with the device's English speech voice. This is synthesized listening practice, not licensed or ETS-recorded audio.",
+  "evidencePolicy": {
+    "minimumUniqueQuestions": 2,
+    "practiceAccuracyThreshold": 0.8,
+    "scope": "device-tts-short-listening-mcq-only; not authentic recorded audio, CEFR certification or independent listening mastery"
+  },
+  "playback": {
+    "engine": "browser-speech-synthesis",
+    "scriptHiddenByDefault": true,
+    "transcriptAvailableOnRequest": true,
+    "usesCurrentAppVoiceSettings": true
+  },
+  "clips": [
+    {
+      "id": "pa1-alphabet::listening1",
+      "lessonId": "pa1-alphabet",
+      "level": "PRE-A1",
+      "title": "A Name and a Classroom",
+      "script": "Hello. My name is Lan Nguyen. I am a new student. My English class is in Room 12, next to the library. The class starts at eight thirty. Please bring a blue notebook.",
+      "questions": [
+        {
+          "id": "pa1-alphabet::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Who is speaking?",
+          "choices": [
+            "Lan Nguyen",
+            "The teacher",
+            "A receptionist",
+            "Mr. Lee"
+          ],
+          "answerIndex": 0,
+          "rationale": "The speaker introduces herself as Lan Nguyen."
+        },
+        {
+          "id": "pa1-alphabet::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "What should the student bring?",
+          "choices": [
+            "A red pen",
+            "A blue notebook",
+            "A library card",
+            "A new bag"
+          ],
+          "answerIndex": 1,
+          "rationale": "The final sentence asks the student to bring a blue notebook."
+        }
+      ]
+    },
+    {
+      "id": "pa1-greetings::listening1",
+      "lessonId": "pa1-greetings",
+      "level": "PRE-A1",
+      "title": "A Visitor at Green Office",
+      "script": "Good morning, Mr. Lee. Welcome to Green Office. Please sign the visitor book at the front desk. Then take a visitor badge. Your meeting with Ms. Hoa is at ten fifteen in Room 3.",
+      "questions": [
+        {
+          "id": "pa1-greetings::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Where should Mr. Lee sign the book?",
+          "choices": [
+            "In Room 3",
+            "Near the kitchen",
+            "At the front desk",
+            "Outside the office"
+          ],
+          "answerIndex": 2,
+          "rationale": "The visitor book is at the front desk."
+        },
+        {
+          "id": "pa1-greetings::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "What time is the meeting?",
+          "choices": [
+            "Nine fifteen",
+            "Ten o'clock",
+            "Ten thirty",
+            "Ten fifteen"
+          ],
+          "answerIndex": 3,
+          "rationale": "The meeting is at ten fifteen."
+        }
+      ]
+    },
+    {
+      "id": "pa1-pronouns::listening1",
+      "lessonId": "pa1-pronouns",
+      "level": "PRE-A1",
+      "title": "Mai's Workday",
+      "script": "This is Mai. She works in the sales team. Her desk is near the window. She starts work at nine and checks emails first. Her manager is Mr. Nam.",
+      "questions": [
+        {
+          "id": "pa1-pronouns::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Which team does Mai work in?",
+          "choices": [
+            "Sales",
+            "Finance",
+            "Human Resources",
+            "IT"
+          ],
+          "answerIndex": 0,
+          "rationale": "The speaker says Mai works in the sales team."
+        },
+        {
+          "id": "pa1-pronouns::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "What does Mai do first at work?",
+          "choices": [
+            "She calls her manager.",
+            "She checks emails.",
+            "She opens the shop.",
+            "She reads a report."
+          ],
+          "answerIndex": 1,
+          "rationale": "She checks emails first after starting work."
+        }
+      ]
+    },
+    {
+      "id": "pa1-be::listening1",
+      "lessonId": "pa1-be",
+      "level": "PRE-A1",
+      "title": "The Training Room",
+      "script": "The training room is on the second floor. It is next to the kitchen. The room is bright and has a large table. There are eight chairs. The training starts at two o'clock.",
+      "questions": [
+        {
+          "id": "pa1-be::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Where is the training room?",
+          "choices": [
+            "On the first floor",
+            "Near the car park",
+            "Behind the kitchen",
+            "On the second floor"
+          ],
+          "answerIndex": 3,
+          "rationale": "The first sentence says it is on the second floor."
+        },
+        {
+          "id": "pa1-be::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "How many chairs are in the room?",
+          "choices": [
+            "Four",
+            "Six",
+            "Eight",
+            "Ten"
+          ],
+          "answerIndex": 2,
+          "rationale": "There are eight chairs in the room."
+        }
+      ]
+    },
+    {
+      "id": "a1-present-simple::listening1",
+      "lessonId": "a1-present-simple",
+      "level": "A1",
+      "title": "Tom's Morning Routine",
+      "script": "Every weekday, Tom opens the shop at seven. He turns on the lights and checks the cash register. Customers usually arrive at eight. Tom takes a short break at eleven.",
+      "questions": [
+        {
+          "id": "a1-present-simple::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What time does Tom open the shop?",
+          "choices": [
+            "At seven",
+            "At eight",
+            "At nine",
+            "At eleven"
+          ],
+          "answerIndex": 0,
+          "rationale": "Tom opens the shop at seven every weekday."
+        },
+        {
+          "id": "a1-present-simple::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "When do customers usually arrive?",
+          "choices": [
+            "At seven",
+            "At eight",
+            "At ten",
+            "At eleven"
+          ],
+          "answerIndex": 1,
+          "rationale": "Customers usually arrive at eight."
+        }
+      ]
+    },
+    {
+      "id": "a1-articles::listening1",
+      "lessonId": "a1-articles",
+      "level": "A1",
+      "title": "An ID Card and a Folder",
+      "script": "Please bring an ID card to the office. The card is for Mr. Long. Take a folder from the reception desk. Use the blue folder, not the red folder. The meeting starts at two.",
+      "questions": [
+        {
+          "id": "a1-articles::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What should the visitor bring?",
+          "choices": [
+            "A folder",
+            "A notebook",
+            "An ID card",
+            "A visitor badge"
+          ],
+          "answerIndex": 2,
+          "rationale": "The first sentence asks the visitor to bring an ID card."
+        },
+        {
+          "id": "a1-articles::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "Which folder should the visitor use?",
+          "choices": [
+            "The red folder",
+            "The green folder",
+            "The yellow folder",
+            "The blue folder"
+          ],
+          "answerIndex": 3,
+          "rationale": "The speaker clearly says to use the blue folder, not the red one."
+        }
+      ]
+    },
+    {
+      "id": "a1-questions::listening1",
+      "lessonId": "a1-questions",
+      "level": "A1",
+      "title": "A Training Session",
+      "script": "Where is the training session? It is in Room 8. What time does it begin? It begins at eleven. Who is the teacher? Ms. Hoa is the teacher. Please arrive five minutes early.",
+      "questions": [
+        {
+          "id": "a1-questions::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Where is the training session?",
+          "choices": [
+            "In Room 8",
+            "In Room 6",
+            "In the lobby",
+            "In the library"
+          ],
+          "answerIndex": 0,
+          "rationale": "The session is in Room 8."
+        },
+        {
+          "id": "a1-questions::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "What time does the session begin?",
+          "choices": [
+            "At ten o’clock",
+            "At eleven",
+            "At eleven thirty",
+            "At noon"
+          ],
+          "answerIndex": 1,
+          "rationale": "The session begins at eleven."
+        }
+      ]
+    },
+    {
+      "id": "a1-there-prepositions::listening1",
+      "lessonId": "a1-there-prepositions",
+      "level": "A1",
+      "title": "A Delivery for Two Teams",
+      "script": "The delivery boxes are under the table near the main door. Three small boxes are for the finance team. The large box is for Human Resources. Please move it to Room 5 before lunch.",
+      "questions": [
+        {
+          "id": "a1-there-prepositions::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Where are the delivery boxes?",
+          "choices": [
+            "Beside the lift",
+            "On the table",
+            "Under the table",
+            "In Room 5"
+          ],
+          "answerIndex": 2,
+          "rationale": "The boxes are under the table near the main door."
+        },
+        {
+          "id": "a1-there-prepositions::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "Which team will receive the large box?",
+          "choices": [
+            "The sales team",
+            "The finance team",
+            "The IT team",
+            "Human Resources"
+          ],
+          "answerIndex": 3,
+          "rationale": "The large box is for Human Resources."
+        }
+      ]
+    },
+    {
+      "id": "a1-plurals::listening1",
+      "lessonId": "a1-plurals",
+      "level": "A1",
+      "title": "Chairs, Tables and Boxes",
+      "script": "There are four chairs in the meeting room and two tables near the window. Three boxes are by the door. Please move the boxes to the storage room before lunch.",
+      "questions": [
+        {
+          "id": "a1-plurals::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "How many chairs are in the meeting room?",
+          "choices": [
+            "Four",
+            "Two",
+            "Three",
+            "Six"
+          ],
+          "answerIndex": 0,
+          "rationale": "The speaker says there are four chairs."
+        },
+        {
+          "id": "a1-plurals::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "Where should the boxes go?",
+          "choices": [
+            "To the kitchen",
+            "To the storage room",
+            "To the reception desk",
+            "To the meeting room"
+          ],
+          "answerIndex": 1,
+          "rationale": "The boxes should be moved to the storage room."
+        }
+      ]
+    },
+    {
+      "id": "a1-past-future::listening1",
+      "lessonId": "a1-past-future",
+      "level": "A1",
+      "title": "A Sales Report",
+      "script": "Yesterday, Anna sent the sales report to her manager. Today, she is preparing a new price list. She will email it to the team before three o'clock. The manager will review it tomorrow.",
+      "questions": [
+        {
+          "id": "a1-past-future::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What did Anna send yesterday?",
+          "choices": [
+            "A new price list",
+            "A meeting invitation",
+            "The sales report",
+            "A team schedule"
+          ],
+          "answerIndex": 2,
+          "rationale": "Yesterday, Anna sent the sales report to her manager."
+        },
+        {
+          "id": "a1-past-future::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "When will Anna email the price list?",
+          "choices": [
+            "Tomorrow morning",
+            "After the meeting",
+            "At four o'clock",
+            "Before three o'clock"
+          ],
+          "answerIndex": 3,
+          "rationale": "She will email it before three o'clock."
+        }
+      ]
+    }
+  ]
+}

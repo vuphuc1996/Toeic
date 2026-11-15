@@ -4,11 +4,11 @@
 
 - **Ngày kiểm kê:** 2026-11-15.
 - **Quy ước báo cáo tiến độ:** luôn có % khi tồn tại target/denominator rõ; tách độ phủ số lượng, chất lượng nội dung, kiểm thử phiên bản và xác minh triển khai. Không có target thì ghi “Chưa đo được”.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.61.0 (vocabulary release integrity; local candidate).
-- **Current candidate:** v2.61.0 — test-scope correction, metadata-only Part 1 fingerprint refresh with audit log, and unified Spaced Recall/Foundation UI.
-- **Previous release:** v2.60.0 — vocabulary release integrity, cache-busted data loading, runtime count verification and legacy 979→992 migration repair.
-- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.61.0.md`; vocabulary 992/3,000 minimum (33.1%); 10/10 objective groups with resources (100% availability); 281/281 unique canonical resource records linked (100% link coverage). These are not quality or mastery scores. Outcome criteria: 30/30 defined (100% framework coverage); objective-level TOEIC practice evidence is wired for 9/10 groups; delayed recall is instrumented for the 9 wired TOEIC objective groups; response-time evidence covers structured Grammar/Reading/Listening and separate Part 5 practice (9/9 wired TOEIC groups). Part 5 explanation self-report is instrumented for 1/9 TOEIC objective groups; due recall is now surfaced in a dashboard queue; actual explanation quality and CEFR/real-world mastery remain unverified. Foundation recognition bank is 30/30 (100%); contextual application is 10/10 (100%); short reading is 10/10 passages and 20/20 questions (100% bank coverage). Reading evidence is isolated in `toeic:foundation-reading-progress:v1`; threshold is 2 unique questions and 80% latest-result accuracy, not CEFR certification. Learner attainment remains unmeasured in this source-only snapshot.
-- **Immediate base:** v2.60.0; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.62.0 (application-wide typography, Foundation Listening; local candidate).
+- **Current candidate:** v2.62.0 — application-wide typography normalization, responsive learning surfaces, and Foundation Listening (TTS) for all 10 Pre-A1/A1 lessons.
+- **Previous release:** v2.61.0 — test-scope correction, metadata-only Part 1 fingerprint refresh with audit log, and unified Spaced Recall/Foundation UI.
+- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.62.0.md`; vocabulary 992/3,000 minimum (33.1%); 10/10 objective groups with resources (100% availability); 281/281 unique canonical resource records linked (100% link coverage). These are not quality or mastery scores. Outcome criteria: 30/30 defined (100% framework coverage); objective-level TOEIC practice evidence is wired for 9/10 groups; delayed recall is instrumented for the 9 wired TOEIC objective groups; response-time evidence covers structured Grammar/Reading/Listening and separate Part 5 practice (9/9 wired TOEIC groups). Part 5 explanation self-report is instrumented for 1/9 TOEIC objective groups; due recall is now surfaced in a dashboard queue; actual explanation quality and CEFR/real-world mastery remain unverified. Foundation recognition bank is 30/30 (100%); contextual application is 10/10 (100%); short reading is 10/10 passages and 20/20 questions (100% bank coverage); Foundation Listening is 10/10 scripts and 20/20 questions (100% bank coverage; synthesized TTS, not ETS recordings). Listening evidence is isolated in `toeic:foundation-listening-progress:v1`. Reading evidence is isolated in `toeic:foundation-reading-progress:v1`; threshold is 2 unique questions and 80% latest-result accuracy, not CEFR certification. Learner attainment remains unmeasured in this source-only snapshot.
+- **Immediate base:** v2.61.0; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
 - **Release state:** local candidate — deployment hold. The strict Part 1 photo validator currently fails because eight original JPG binaries are missing from the inherited v2.60.0 source archive. Remote GitHub Actions, Pages deployment and physical-device behavior are not verified from this workspace.
 - **Development rule:** finish the internal product/content backlog first. Do not issue acceptance reminders or a broad acceptance checklist while development is active. The eventual test plan should target high-risk flows rather than repeat a 100% manual inventory sweep.
 
@@ -17,6 +17,17 @@
 
 
 
+
+## v2.62.0 changes — application-wide typography and Foundation Listening
+
+- Added a consistent typography layer across the existing application: learning objective cards, practice-mode chooser, TOEIC mock-test setup/results/review, common cards/panels, forms, captions and mobile bottom navigation. Ordinary reading copy is at least 13.5px; supporting metadata is at least 12px, with control labels at 14px or larger. Scores and timers keep their distinct visual hierarchy.
+- Explicitly reset `.foundation-intro.panel` to a one-column layout to remove the legacy two-column inheritance. Objective/practice/mock grids now reflow based on available content width; breakpoints are viewport-based, not physical device inches.
+- Added `data/learning-path/foundation-listening.json`: 10 original short scripts mapped one-to-one to the existing 10 Pre-A1/A1 lesson IDs, with two comprehension questions each (20 total). Answer-key positions are balanced 5/5/5/5.
+- Added `assets/js/foundation-listening-evidence.js`, keeping latest-result and attempt history in the separate localStorage key `toeic:foundation-listening-progress:v1`. It does not affect recognition-question denominators or previous reading/application progress.
+- Playback uses browser/device Speech Synthesis and the learner's existing TTS voice settings. Transcript is opt-in; the feature is explicitly not represented as authentic recorded TOEIC/ETS audio or official CEFR evidence.
+- Added the helper/data to Service Worker REQUIRED and APP_SHELL and added Python/JavaScript/CI regression tests.
+- Preserved all previous stable lesson/question IDs, 992 vocabulary records, prior localStorage keys, IndexedDB stores/schema, personal vocabulary and existing learner progress. No reset or destructive migration.
+- Local regression only. Strict Part 1 photo-asset validation remains a pre-deployment blocker inherited from v2.60.0/v2.61.0: eight original licensed JPG binaries are absent from the source archive. Do not disable the strict validator or substitute synthetic image files. Browser visual QA, remote CI, Pages and physical-device QA remain unverified.
 
 ## v2.61.0 changes — test integrity and unified learning surfaces
 

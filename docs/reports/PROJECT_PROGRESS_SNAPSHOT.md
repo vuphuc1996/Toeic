@@ -1,6 +1,6 @@
 # Project Progress Snapshot — generated
 
-- Source version: **2.61.0**
+- Source version: **2.62.0**
 - Basis: canonical JSON inventory; counts are not editorial approval.
 
 ## Target-based progress
@@ -13,6 +13,8 @@
 | Placement question mapping | 16/16 | All diagnostic questions | **100.0%** | Structural mapping coverage only |
 | Canonical objective-resource links | 281/281 | 100.0% | ID links only; not learning-outcome completion |
 | Learning objectives with linked resources | 10/10 | 100.0% | Availability only; review and mastery separate |
+| Foundation Listening scripts mapped | 10/10 | **100.0%** | One device-synthesized script per existing Pre-A1/A1 lesson |
+| Foundation Listening questions | 20/20 | **100.0%** | Two questions per existing lesson; TTS practice, not ETS audio |
 | Outcome criteria defined | 30/30 | 100.0% | Framework coverage only; criterion-level mastery remains separate |
 | TOEIC objective practice evidence wired | 9/10 | 90.0% | Latest result per unique question; practice threshold only, foundation rubric outcomes not yet instrumented |
 | Delayed-recall scheduling across wired TOEIC groups | 9/9 | 100.0% | 1/3-day scheduling rule; not a retention guarantee |
@@ -26,6 +28,8 @@
 | Listening | 107 units / 201 questions | Chưa đo được — no agreed unit/question target |
 | Reading | 51 resources / 200 questions | Chưa đo được — no agreed resource/question target |
 | Separate Part 5 practice | 80 questions | Chưa đo được — no agreed size target; independent review remains separate |
+| Foundation Reading | 10/10 passages / 20 questions | 100.0% within current Pre-A1/A1 scope | Separate reading bank; not Foundation mastery |
+| Foundation Listening | 10/10 scripts / 20 questions | 100.0% within current Pre-A1/A1 scope | Device Speech Synthesis; not authentic ETS recordings |
 
 ## Vocabulary field coverage (against current 992-headword base; not editorial approval)
 
@@ -48,24 +52,13 @@ These ratios show whether a field is populated, not whether its content is accur
 - Objective evidence is connected for Grammar, Listening Parts 1–4, Reading Parts 5–7 and separate Part 5 practice. Reserve Listening items are excluded until editorial review; Reading Part 7 remains second-review-gated; the separate 80-item Part 5 practice pool is review-pending and cannot earn a threshold status.
 - Listening Part 1 currently has 8 eligible unique questions (one additional mapped item is reserve-pending), below the 10-item minimum; at least 2 more unique, reviewed questions are needed before it can reach the practice threshold.
 - Foundation production/retention rubrics and explanation scoring remain uninstrumented; delayed recall and response-time capture are instrumented for the 9 wired TOEIC objective groups.
+- Foundation Listening stores attempts under a separate localStorage key; its bank coverage does not imply the learner has completed the questions or met the local practice threshold.
 - Part 5 practice: pending independent review; do not count as Mock-eligible.
 - Listening pending-review pool and Mock-eligible counts must be tracked separately from raw inventory.
 - Placement is a short sample, not official CEFR/ETS certification.
-- Selected Python regression tests: **134/134 PASS** across relevant modules; full Python discovery exceeded the 300-second execution window and is not claimed as complete.
-- JavaScript regression scripts: **17/17 PASS**; JavaScript syntax checks pass. Version sync passes.
-- Vocabulary data validation: **992 records, 0 errors, 0 warnings**. Learning content validation: **0 errors, 8 known missing-Part-1-JPG warnings** with SVG fallbacks.
-- Objective resource links: **281/281 PASS**; outcome criteria: **30/30 PASS**.
-- Chromium localhost preview is blocked by environment policy. Remote CI, GitHub Pages deployment and physical-device QA are not inferred from local checks.
+- Remote CI, GitHub Pages deployment and physical-device QA are not inferred from local checks.
 
 ## Reporting rule
 
 A percentage is shown only when a defensible target or denominator exists. Otherwise the report says “Chưa đo được” and records the current inventory without inventing a target.
 
-
-## v2.61.0 quality / interface progress
-
-- Scope-test correction: **1/1** (100%).
-- Metadata-only Listening Part 1 fingerprint refresh: **8/8** (100%); all eight question hashes preserved.
-- Shared UI surfaces: **2/2** (100% source-level design alignment).
-- New responsive/UI regression assertions: **5/5** (100%).
-- Learner attainment and physical-device presentation: **not measured**; source/CSS checks do not prove real-world mastery or device rendering.

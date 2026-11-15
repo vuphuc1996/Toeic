@@ -561,3 +561,431 @@ img, svg, video, canvas { max-width: 100%; }
 .pronunciation-toolbar .secondary-button {
   font-size: 14px !important;
 }
+
+/* v2.62.0 — one readable typography scale for all learning surfaces. */
+:root {
+  --ds-font-body: clamp(14px, .92rem + .08vw, 15.5px);
+  --ds-font-card-title: clamp(16px, 1rem + .18vw, 18px);
+  --ds-font-section-title: clamp(18px, 1.1rem + .25vw, 22px);
+  --ds-font-caption: 12px;
+  --ds-font-control: 14px;
+}
+
+/* Shared panel headings and summaries: feature panels must not invent microtype. */
+.panel-header h3,
+.panel-header > div > h3 {
+  font-size: var(--ds-font-card-title);
+  line-height: 1.35;
+}
+.panel-header .muted,
+.panel-header > div > .muted {
+  font-size: clamp(13px, .86rem + .08vw, 14px);
+  line-height: 1.55;
+}
+.learning-card h3 {
+  font-size: var(--ds-font-card-title);
+  line-height: 1.4;
+}
+.learning-card > p {
+  font-size: clamp(13.5px, .88rem + .08vw, 14.5px);
+  line-height: 1.62;
+}
+.learning-card-footer small,
+.learning-category,
+.learning-level {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* Learning outcome tracker — readable content, compact but balanced cards. */
+.objective-progress-panel { padding: clamp(16px, 1.8vw, 24px); }
+.objective-progress-header h2 {
+  font-size: var(--ds-font-section-title);
+  line-height: 1.32;
+}
+.objective-progress-header .muted {
+  max-width: 900px;
+  font-size: clamp(13px, .88rem + .06vw, 14.5px);
+  line-height: 1.62;
+}
+.objective-progress-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: clamp(10px, 1vw, 14px);
+}
+.objective-progress-card {
+  display: grid;
+  gap: 8px;
+  padding: clamp(14px, 1.2vw, 17px);
+  border-radius: var(--ds-radius-md);
+}
+.objective-progress-top { align-items: flex-start; gap: 12px; }
+.objective-progress-top strong {
+  font-size: clamp(14px, .94rem + .06vw, 15.5px);
+  line-height: 1.45;
+}
+.objective-progress-top > span {
+  font-size: clamp(16px, 1.05rem + .1vw, 18px);
+  line-height: 1.2;
+}
+.objective-progress-meta {
+  gap: 6px 12px;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.objective-progress-meta small { font-size: 12px; }
+.objective-progress-extra {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 5px 12px;
+  margin-top: 2px;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* Foundation intro: explicitly one column. This removes a legacy two-column leak. */
+.foundation-intro.panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: clamp(16px, 1.7vw, 22px);
+  padding: clamp(18px, 2vw, 26px);
+}
+.foundation-intro-header { width: 100%; }
+.foundation-intro-header h2 {
+  font-size: clamp(21px, 1.55vw, 25px);
+  line-height: 1.3;
+}
+.foundation-intro-header .muted {
+  max-width: 900px;
+  font-size: clamp(14px, .9rem + .06vw, 15px);
+  line-height: 1.65;
+}
+.foundation-intro-body {
+  grid-template-columns: minmax(0, 1.05fr) minmax(260px, .75fr);
+  align-items: end;
+  gap: clamp(16px, 2vw, 24px);
+}
+.foundation-intro-actions { gap: 12px; }
+.foundation-intro-actions > .primary-button {
+  min-height: 48px;
+  font-size: 14.5px;
+}
+.foundation-level-picker {
+  gap: 7px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.foundation-level-picker select { font-size: 15px; }
+.foundation-progress { padding: clamp(14px, 1.4vw, 18px); }
+.foundation-progress-top span { font-size: 13px; }
+.foundation-progress small { font-size: 12.5px; }
+.foundation-path-note p {
+  font-size: clamp(13.5px, .9rem + .05vw, 14.5px);
+}
+.foundation-card-evidence span {
+  font-size: clamp(12.5px, .84rem + .06vw, 13.5px);
+  line-height: 1.55;
+}
+
+/* Practice mode chooser — labels and descriptions share the same card scale. */
+.practice-mode-panel { padding: clamp(16px, 1.5vw, 21px); }
+.practice-mode-panel .panel-header h3 { font-size: var(--ds-font-card-title); }
+.practice-mode-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 225px), 1fr));
+  gap: clamp(9px, 1vw, 13px);
+}
+.practice-mode-tile {
+  min-height: 76px;
+  padding: 12px;
+  gap: 11px;
+  border-radius: 13px;
+}
+.practice-mode-tile > b {
+  flex-basis: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 19px;
+}
+.practice-mode-tile > span { gap: 4px; }
+.practice-mode-tile strong {
+  font-size: clamp(14px, .9rem + .04vw, 15px);
+  line-height: 1.35;
+}
+.practice-mode-tile small {
+  font-size: clamp(12.5px, .82rem + .04vw, 13.5px);
+  line-height: 1.45;
+}
+
+/* Mock exam landing — avoid squeezed copy and low-contrast micro labels. */
+.mock-hero { gap: clamp(18px, 2.2vw, 30px); }
+.mock-hero-copy > p:not(.eyebrow) {
+  font-size: clamp(14px, .92rem + .05vw, 15px);
+  line-height: 1.65;
+}
+.mock-hero-meta span { font-size: 12px; line-height: 1.35; }
+.mock-hero-score > small { font-size: 11px; }
+.mock-hero-score > i { font-size: 10px; }
+.mock-pool-strip { gap: 10px; }
+.mock-pool-chip { min-height: 54px; padding: 11px 14px; }
+.mock-pool-chip span { font-size: 12.5px; line-height: 1.4; }
+.mock-pool-chip strong { font-size: 18px; }
+.mock-mode-heading h2 { font-size: var(--ds-font-section-title); }
+.mock-mode-heading p:not(.eyebrow) {
+  max-width: 780px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.mock-mode-tag { font-size: 12px; }
+.mock-mode-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.2vw, 17px);
+  align-items: stretch;
+}
+.mock-mode-card {
+  min-height: 0;
+  padding: clamp(16px, 1.5vw, 21px);
+  border-radius: var(--ds-radius-md);
+}
+.mock-mode-label { font-size: 11px; line-height: 1.4; letter-spacing: .09em; }
+.mock-mode-card h3 {
+  margin: 15px 0 4px;
+  font-size: clamp(17px, 1.05rem + .08vw, 19px);
+  line-height: 1.35;
+}
+.mock-mode-time { font-size: clamp(34px, 2.6vw, 40px); }
+.mock-mode-count { font-size: 13px; line-height: 1.5; }
+.mock-mode-card > p {
+  margin: 10px 0 18px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.mock-mode-card .primary-button { min-height: 46px; font-size: 14px; }
+.mock-resume-panel h3 { font-size: 16px; }
+.mock-resume-panel p { font-size: 13px; line-height: 1.55; }
+.mock-history-panel .panel-header h3 { font-size: var(--ds-font-card-title); }
+.mock-history-row strong { font-size: 13px; }
+.mock-history-row span,
+.mock-history-row small { font-size: 12px; line-height: 1.45; }
+.mock-history-row b { font-size: 14px; }
+.mock-integrity-note { font-size: 13px; line-height: 1.6; }
+
+@media (max-width: 1100px) {
+  .mock-mode-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .foundation-intro-body { grid-template-columns: minmax(0, 1fr); }
+  .foundation-intro-actions { grid-template-columns: minmax(0, 1fr); }
+  .foundation-intro-actions > .primary-button { width: 100%; }
+  .mock-hero { align-items: flex-start; }
+  .mock-hero-score { flex-basis: 126px; height: 126px; }
+  .mock-pool-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mock-mode-grid { grid-template-columns: minmax(0, 1fr); }
+  .objective-progress-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .mock-hero { flex-direction: column; }
+  .mock-hero-score { align-self: center; }
+  .mock-pool-chip { align-items: flex-start; flex-direction: column; }
+  .objective-progress-extra { grid-template-columns: minmax(0, 1fr); }
+}
+
+
+/* Foundation listening: transcript is opt-in and uses the standard learning-detail surface. */
+.foundation-listening-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 12px;
+}
+.foundation-listening-actions .secondary-button { min-height: 44px; font-size: 14px; }
+.foundation-listening-actions .text-button { font-size: 14px; }
+.foundation-listening-transcript {
+  margin: 10px 0 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-md);
+  background: #f7fafe;
+}
+.foundation-listening-transcript strong { display: block; margin-bottom: 5px; font-size: 13px; }
+.foundation-listening-transcript p { margin: 0; font-size: 14px; line-height: 1.7; }
+.foundation-listening .foundation-question { margin-top: 14px; }
+.foundation-listening .foundation-question > p { font-size: 14px; line-height: 1.6; }
+.foundation-listening .foundation-choice { min-height: 46px; font-size: 14px; line-height: 1.45; }
+.foundation-listening [data-foundation-listening-summary] { margin-top: 12px; }
+
+/* v2.62.0 — application-wide typography audit: no microtype for essential UI. */
+:root {
+  --ds-font-caption: 12.5px;
+  --ds-font-control: 14px;
+}
+body { font-size: 15px; line-height: 1.55; }
+button, input, select, textarea { font-size: 14px; }
+.primary-button, .secondary-button { min-height: 42px; font-size: 14px; line-height: 1.35; }
+.text-button { font-size: 13.5px; line-height: 1.4; }
+
+/* Navigation, page headings and global controls. */
+.brand small, .local-state strong, .local-state small,
+.sidebar-caption, .sidebar-version, .nav-group-label,
+.breadcrumb, .heading-date, .eyebrow, .panel-kicker,
+.field-label, .global-search kbd, .source-badge, .detail-pill {
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+.nav-item { font-size: 14px; }
+.global-search input, .field input, .field select,
+.filter-row input, .filter-row select { font-size: 14px; }
+.muted, .panel-header .muted, .phase-note p, .data-warning p,
+.quick-link small, .metric-card span, .metric-card small {
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.quick-link strong { font-size: 14px; line-height: 1.4; }
+.primary-button, .secondary-button, .toolbar-actions button,
+.page-heading > .primary-button, .page-heading > .secondary-button {
+  font-size: 14px;
+}
+
+/* Dashboard cards and shared content cards. */
+.welcome-panel p, .quick-panel p, .panel > p,
+.dashboard-grid .muted, .phase-note p, .data-warning p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.metric-card span, .metric-card small { font-size: 13px; }
+.learning-card h3 { font-size: var(--ds-font-card-title); }
+.learning-card > p, .learning-card .learning-card-description {
+  font-size: 14px;
+  line-height: 1.62;
+}
+.learning-card-footer small, .learning-category, .learning-level,
+.foundation-card-bottom small, .foundation-kicker,
+.foundation-level, .foundation-progress small,
+.foundation-progress-top span, .foundation-card-evidence span,
+.recall-queue-item-meta, .recall-queue-item small {
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* Learning objectives: both the main outcome and the supporting evidence. */
+.objective-progress-top strong { font-size: 15px; line-height: 1.45; }
+.objective-progress-meta, .objective-progress-extra,
+.objective-progress-meta small { font-size: 13px; line-height: 1.55; }
+.objective-progress-extra > *, .objective-progress-meta > * { min-width: 0; }
+
+/* Practice selection, lesson cards and answer controls. */
+.practice-mode-tile strong { font-size: 15px; line-height: 1.4; }
+.practice-mode-tile small { font-size: 13.5px; line-height: 1.5; }
+.practice-stat small, .practice-home-metrics span,
+.practice-home-panel p, .practice-mode-panel .muted {
+  font-size: 13px;
+  line-height: 1.55;
+}
+.exercise-kicker, .quiz-kicker, .question-type,
+.exercise-retry-row > span, .practice-retry-hint,
+.practice-attempt-history li small, .practice-attempt-history summary {
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+.exercise-choice, .choice-option, .foundation-choice,
+.mock-choice-button { font-size: 14px; line-height: 1.5; }
+.detail-section h4, .detail-section > p, .lesson-explanation,
+.example-card span, .lesson-tips, .foundation-question > p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* TOEIC mock-test setup, live test, result, review and history. */
+.mock-hero-copy > p:not(.eyebrow), .mock-mode-heading p:not(.eyebrow),
+.mock-mode-card > p, .mock-result-hero p, .mock-recommendation p,
+.mock-review-question p, .mock-score-details > p,
+.mock-integrity-note, .mock-result-note {
+  font-size: 13.5px;
+  line-height: 1.62;
+}
+.mock-hero-meta span, .mock-hero-score > small, .mock-hero-score > i,
+.mock-mode-label, .mock-mode-tag, .mock-mode-count,
+.mock-pool-chip span, .mock-history-row span, .mock-history-row small,
+.mock-score-head span, .mock-score-head small,
+.mock-score-dial small, .mock-score-target, .mock-part-result span,
+.mock-result-total span, .mock-result-section-heading .eyebrow,
+.mock-review-details > summary, .mock-review-answer,
+.mock-review-question h4, .mock-question-number,
+.mock-group-part, .mock-map-legend span, .mock-section-progress > span,
+.mock-submit-button, .mock-exam-brand small, .mock-exam-timer span,
+.mock-exam-timer small, .mock-exam-bottom, .mock-part1-frame figcaption {
+  font-size: 12.5px;
+  line-height: 1.45;
+  letter-spacing: normal;
+}
+.mock-mode-card h3 { font-size: 18px; line-height: 1.38; }
+.mock-mode-card .primary-button, .mock-submit-button { min-height: 42px; font-size: 13.5px; }
+.mock-exam-brand strong { font-size: 13px; }
+.mock-choice-button { min-height: 46px; }
+.mock-review-question p { font-size: 13.5px; }
+
+/* Tables, reading/listening captions and supporting details. */
+.word-table th, .reading-passage-label, .reading-card-meta,
+.reading-vocab-chip small, .transcript-line small,
+.sentence-breakdown small, .sentence-breakdown span,
+.reference-sense small, .sense-example-label,
+.toeic-part-meta, .toeic-part-name, .toeic-progress-heading small,
+.listening-player-head small, .pronunciation-note,
+.flash-detail-section > small, .flash-example small {
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.word-table td, .word-name, .reading-passage-text,
+.flash-detail-section p, .reference-sense p,
+.answer-reference > p, .transcript-line, .flash-example span {
+  font-size: 13.5px;
+  line-height: 1.58;
+}
+
+/* Bottom navigation: keep every destination readable on narrow phones. */
+.mobile-bottom-nav button small {
+  font-size: 12px !important;
+  line-height: 1.25;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+}
+.mobile-bottom-nav button { min-height: 56px; }
+.app-footer { font-size: 12px; line-height: 1.5; }
+
+@media (max-width: 760px) {
+  .page { padding-inline: clamp(14px, 4vw, 22px); }
+  .panel-header { align-items: flex-start; }
+  .objective-progress-card { padding: 14px; }
+  .mock-exam-header { flex-wrap: wrap; }
+  .mock-exam-brand { flex: 1 1 130px; }
+  .mock-exam-brand strong { font-size: 12.5px; }
+  .mock-exam-brand small { font-size: 11.5px; }
+  .mock-exam-timer { min-width: 96px; }
+  .mock-exam-timer span, .mock-exam-timer small { font-size: 11.5px; }
+  .mock-submit-button { font-size: 12.5px; }
+  .mock-choice-button { font-size: 14px; }
+  .mobile-bottom-nav button small { font-size: 12px !important; }
+}
+@media (max-width: 380px) {
+  .mobile-bottom-nav { gap: 0; }
+  .mobile-bottom-nav button { min-width: 0; padding-inline: 2px; }
+  .mobile-bottom-nav button small { font-size: 12px !important; }
+  .mock-exam-header { padding-inline: 9px; }
+  .mock-exam-brand { flex-basis: 118px; }
+  .mock-submit-button { padding-inline: 8px; }
+}
+
+/* Final floor for legacy feature CSS: all ordinary reading copy remains legible. */
+body :where(p, li, dd, dt, td, th, figcaption, summary, blockquote) {
+  font-size: max(13.5px, 1em) !important;
+  line-height: 1.58;
+}
+body :where(small, .muted, .eyebrow, .panel-kicker, .field-label,
+  .source-badge, .topic-tag, .pos-tag, .priority-pill,
+  .reading-passage-label, .question-type, .quiz-kicker,
+  .exercise-kicker, .toeic-part-meta, .sidebar-caption) {
+  font-size: max(12px, 1em) !important;
+  line-height: 1.45;
+}
+body :where(input, select, textarea, button) { font-size: max(14px, 1em); }
