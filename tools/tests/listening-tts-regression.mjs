@@ -10,7 +10,7 @@ assert.notEqual(end, -1, 'TTS implementation boundary must exist');
 
 const DEFAULT_TTS_SETTINGS = {
   accent: 'en-US', defaultGender: 'female', maleVoiceURI: '', femaleVoiceURI: '',
-  rate: 0.92, pitch: 1, volume: 1, wordPauseMs: 900, sentencePauseMs: 850, startupDelayMs: 750, part1LeadInPauseMs: 1000, part1OptionPauseMs: 1300,
+  rate: 0.92, pitch: 1, volume: 1, wordPauseMs: 900, sentencePauseMs: 850,
 };
 const statusNode = { textContent: '' };
 const readingAudioStatus = { textContent: '' };
@@ -59,6 +59,11 @@ class MockUtterance {
 const context = {
   DEFAULT_TTS_SETTINGS,
   PART1_LEAD_IN_TEXT: 'Now, listen to the four statements.',
+  TTS_PREPARATION_DELAY_MS: 2000,
+  PART1_TITLE_PAUSE_MS: 1000,
+  PART1_LEAD_IN_PAUSE_MS: 1000,
+  PART1_OPTION_LABEL_PAUSE_MS: 1500,
+  PART1_OPTION_GAP_MS: 1300,
   state: { settings: { tts: { ...DEFAULT_TTS_SETTINGS } }, listening: [], listeningProgress: {}, readings: [] },
   window: { speechSynthesis },
   SpeechSynthesisUtterance: MockUtterance,
@@ -163,12 +168,9 @@ assert.deepEqual(gapDurations.slice(-2), [1000, 1000]);
 assert.equal(spoken[audioStart].rate, 0.85, 'per-lesson playback speed should be applied');
 assert.match(statusNode.textContent, /Đã phát xong/);
 
-// Part 1 A-D playback waits for the voice catalogue and startup buffer before the first choice,
-// then applies the longer dedicated pause between each of the four descriptions.
-context.state.settings.tts.startupDelayMs = 750;
-context.state.settings.tts.part1LeadInPauseMs = 1000;
-context.state.settings.tts.part1OptionPauseMs = 1300;
-context.state.listening = [{ id: 'tts-part1-four-options', part: 'Part 1', segments: [
+// Part 1 uses a fixed and explicit spoken sequence: 2s preparation, title, 1s pause,
+// lead-in, 1s pause, then each letter label, 1.5s pause, and its description.
+context.state.listening = [{ id: 'tts-part1-four-options', part: 'Part 1', topic: 'Warehouse & Shipping', title: 'Organizing warehouse inventory', segments: [
   { speaker: 'Narrator', voice: 'female', text: 'Passengers are boarding an aircraft by stairs.' },
   { speaker: 'Narrator', voice: 'female', text: 'B. A worker is moving a chair.' },
   { speaker: 'Narrator', voice: 'female', text: 'A worker is cleaning the window.' },
@@ -179,28 +181,42 @@ const part1GapStart = gapDurations.length;
 voicesLoading = true;
 voiceCatalogReads = 0;
 const part1Promise = context.__playListeningAudio('tts-part1-four-options');
-await waitFor(() => spoken.length > part1Start, 'Part 1 lead-in must start before option A');
-assert.equal(spoken[part1Start].text, 'Now, listen to the four statements.');
+await waitFor(() => spoken.length > part1Start, 'Part 1 title must start after the fixed two-second engine preparation');
+assert.equal(spoken[part1Start].text, 'Part 1: Warehouse & Shipping');
 spoken[part1Start].onend();
-await waitFor(() => spoken.length > part1Start + 1, 'Part 1 option A must start after the lead-in pause');
+await waitFor(() => spoken.length > part1Start + 1, 'Part 1 lead-in must start after the title pause');
+assert.equal(spoken[part1Start + 1].text, 'Now, listen to the four statements.');
+spoken[part1Start + 1].onend();
+let utteranceIndex = part1Start + 2;
 for (let index = 0; index < 4; index++) {
-  await waitFor(() => spoken.length > part1Start + 1 + index, `Part 1 option ${String.fromCharCode(65 + index)} must start`);
-  const utterance = spoken[part1Start + 1 + index];
-  assert.match(utterance.text, new RegExp(`^${String.fromCharCode(65 + index)}\\. `));
-  if (index === 0) assert.equal(utterance.text, 'A. Passengers are boarding an aircraft by stairs.');
-  if (index === 1) assert.equal(utterance.text, 'B. A worker is moving a chair.', 'an existing option prefix must not be duplicated');
+  const letter = String.fromCharCode(65 + index);
+  await waitFor(() => spoken.length > utteranceIndex, `Part 1 option ${letter} label must be queued`);
+  const labelUtterance = spoken[utteranceIndex++];
+  assert.equal(labelUtterance.text, `${letter}.`, `Part 1 option ${letter} label is spoken separately`);
+  labelUtterance.onend();
+  await waitFor(() => spoken.length > utteranceIndex, `Part 1 option ${letter} description must wait for its 1.5s label gap`);
+  const descriptionUtterance = spoken[utteranceIndex++];
+  const expectedDescriptions = [
+    'Passengers are boarding an aircraft by stairs.',
+    'A worker is moving a chair.',
+    'A worker is cleaning the window.',
+    'A worker is carrying a box.',
+  ];
+  assert.equal(descriptionUtterance.text, expectedDescriptions[index], `Part 1 option ${letter} description follows its label without duplicate prefixes`);
   if (index === 0) assert.ok(voiceCatalogReads >= 2, 'voice catalogue must be checked again when it was initially empty');
-  utterance.onend();
+  descriptionUtterance.onend();
 }
 await part1Promise;
 voicesLoading = false;
-assert.ok(gapDurations.slice(part1GapStart).includes(750), 'the 750ms voice startup buffer must be applied');
-assert.ok(gapDurations.slice(part1GapStart).includes(1000), 'Part 1 must pause 1.0s after the lead-in and before A');
-assert.deepEqual(gapDurations.slice(-3), [1300, 1300, 1300], 'Part 1 A-D options need the dedicated 1.3s gap');
-assert.match(statusNode.textContent, /câu dẫn và bốn lựa chọn A–D/);
+const part1Gaps = gapDurations.slice(part1GapStart);
+assert.ok(part1Gaps.includes(2000), 'every spoken route uses a fixed 2.0s preparation delay');
+assert.ok(part1Gaps.includes(1000), 'Part 1 waits 1.0s after the spoken topic title and after the lead-in');
+assert.equal(part1Gaps.filter(gap => gap === 1500).length, 4, 'each A/B/C/D label is followed by a fixed 1.5s pause');
+assert.deepEqual(part1Gaps.filter(gap => gap === 1300), [1300, 1300, 1300], 'Part 1 pauses 1.3s between the descriptions');
+assert.match(statusNode.textContent, /tên Part, câu dẫn và bốn lựa chọn A–D/);
 
 // Stopping after the lead-in but before option A must cancel the transition and never start an option late.
-context.state.listening = [{ id: 'tts-part1-stop-after-lead-in', part: 'Part 1', segments: [
+context.state.listening = [{ id: 'tts-part1-stop-after-lead-in', part: 'Part 1', topic: 'Office & Facilities', segments: [
   { speaker: 'Narrator', voice: 'female', text: 'One.' },
   { speaker: 'Narrator', voice: 'female', text: 'Two.' },
   { speaker: 'Narrator', voice: 'female', text: 'Three.' },
@@ -209,7 +225,10 @@ context.state.listening = [{ id: 'tts-part1-stop-after-lead-in', part: 'Part 1',
 const stopAfterLeadStart = spoken.length;
 holdGapTimers = false;
 const stopAfterLeadPromise = context.__playListeningAudio('tts-part1-stop-after-lead-in');
-await waitFor(() => spoken.length === stopAfterLeadStart + 1, 'Part 1 lead-in before cancellable transition');
+await waitFor(() => spoken.length === stopAfterLeadStart + 1, 'Part 1 title before lead-in');
+assert.equal(spoken.at(-1).text, 'Part 1: Office & Facilities');
+spoken.at(-1).onend();
+await waitFor(() => spoken.length === stopAfterLeadStart + 2, 'Part 1 lead-in before cancellable transition');
 assert.equal(spoken.at(-1).text, 'Now, listen to the four statements.');
 holdGapTimers = true;
 spoken.at(-1).onend();
@@ -217,7 +236,7 @@ await waitFor(() => pendingGapTimers.size > 0, 'Part 1 lead-in transition pause 
 context.__stopSpeech();
 holdGapTimers = false;
 await stopAfterLeadPromise;
-assert.equal(spoken.length, stopAfterLeadStart + 1, 'Stop in the lead-in pause must prevent option A from starting');
+assert.equal(spoken.length, stopAfterLeadStart + 2, 'Stop in the lead-in pause must prevent option A from starting');
 
 // Vocabulary playback uses one utterance per word and the exact configured inter-word pause.
 context.state.settings.tts.wordPauseMs = 1200;
@@ -275,10 +294,14 @@ assert.match(readingAudioStatus.textContent, /Đã đọc xong/);
 // Reading and listening controls are present in source, and every speech route goes through the guarded queue.
 assert.match(appSource, /data-reading-speak=/);
 assert.equal((appSource.match(/speechSynthesis\.speak\(/g) || []).length, 1, 'all TTS playback must use the shared guarded utterance function');
-assert.match(appSource, /prepareSpeechEngine\(playbackToken,cfg\.startupDelayMs\)/);
-assert.match(appSource, /Math\.max\(800,Number\(cfg\.part1LeadInPauseMs\)\|\|1000\)/);
-assert.match(appSource, /Math\.max\(1000,Number\(cfg\.part1OptionPauseMs\)\|\|1300\)/);
-assert.match(appSource, /const speechText=isPart1\?`\$\{letter\}\. \$\{optionText\}`:segment\.text/);
+assert.match(appSource, /const TTS_PREPARATION_DELAY_MS = 2000/);
+assert.match(appSource, /const PART1_TITLE_PAUSE_MS = 1000/);
+assert.match(appSource, /const PART1_LEAD_IN_PAUSE_MS = 1000/);
+assert.match(appSource, /const PART1_OPTION_LABEL_PAUSE_MS = 1500/);
+assert.match(appSource, /prepareSpeechEngine\(playbackToken\)/);
+assert.match(appSource, /speakUtterance\(`\$\{letter\}\.`,/);
+assert.match(appSource, /speakUtterance\(isPart1\?optionText:segment\.text,/);
+assert.match(appSource, /Part 1: \$\{String\(item\.topic/);
 
 console.log('Listening/TTS regression PASS: voice readiness, Part 1 lead-in, spoken A-D labels, lead-in/options pauses, shared practice/mock playback, stable speaker voices, safe cancellation, vocabulary pacing and Reading read-aloud.');
 

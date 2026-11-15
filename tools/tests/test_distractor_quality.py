@@ -107,9 +107,16 @@ class DistractorQualityTests(unittest.TestCase):
                 self.assertEqual(len(q['choices']), len(set(q['choices'])), item['id'])
                 self.assertIn(q['answerIndex'], range(expected_choice_count), item['id'])
 
-    def test_learning_progress_persists_selected_choice_index(self):
+    def test_learning_progress_stages_choice_and_commits_after_complete_set(self):
         app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')
-        self.assertIn('recordPracticeAnswer(prog,index,{choiceIndex,choiceId:choiceIdAt(question,choiceIndex),choiceText:question.choices[choiceIndex],correctChoiceText:question.choices[question.answerIndex],explanation:question.explanation,correct,answeredAt:Date.now()})', app)
+        progress = (ROOT / 'assets/js/practice-progress.js').read_text(encoding='utf-8')
+        stage = app[app.index('async function stagePracticeBatchAnswer('):app.index('async function confirmPracticeBatchResult(', app.index('async function stagePracticeBatchAnswer('))]
+        confirm = app[app.index('async function confirmPracticeBatchResult('):app.index('function returnToPracticeBatch(', app.index('async function confirmPracticeBatchResult('))]
+        self.assertIn('stagePracticeChoice(batch.progress,index,choiceIndex,now,startedAt)', stage)
+        self.assertNotIn('recordPracticeAnswer(', stage, 'answer selection must stay a draft until the complete set is confirmed')
+        self.assertIn('commitPracticeDraftSet(batch.progress,batch.questions', confirm)
+        self.assertIn('recordPracticeAnswer(p, index, record)', progress)
+        self.assertIn('draftAnswers', progress)
         self.assertIn('attemptHistory', app)
         self.assertIn('retryPracticeQuestion', app)
 

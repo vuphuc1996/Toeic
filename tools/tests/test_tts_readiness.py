@@ -1,20 +1,23 @@
-from pathlib import Path
+import json
 import re
 import unittest
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 APP = (ROOT / "assets/js/app.js").read_text(encoding="utf-8")
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 CSS = (ROOT / "assets/css/app.css").read_text(encoding="utf-8")
 WORKFLOW = (ROOT / ".github/workflows/validate-data.yml").read_text(encoding="utf-8")
-LISTENING = __import__("json").loads((ROOT / "data/listening/listening-library.json").read_text(encoding="utf-8"))["listening"]
+LISTENING = json.loads((ROOT / "data/listening/listening-library.json").read_text(encoding="utf-8"))["listening"]
 
 
 class SpeechReadinessTests(unittest.TestCase):
-    def test_safe_default_delays_are_defined(self):
-        self.assertRegex(APP, r"startupDelayMs:\s*750")
-        self.assertRegex(APP, r"part1LeadInPauseMs:\s*1000")
-        self.assertRegex(APP, r"part1OptionPauseMs:\s*1300")
+    def test_fixed_audio_timing_contract_is_defined(self):
+        self.assertRegex(APP, r"TTS_PREPARATION_DELAY_MS\s*=\s*2000")
+        self.assertRegex(APP, r"PART1_TITLE_PAUSE_MS\s*=\s*1000")
+        self.assertRegex(APP, r"PART1_LEAD_IN_PAUSE_MS\s*=\s*1000")
+        self.assertRegex(APP, r"PART1_OPTION_LABEL_PAUSE_MS\s*=\s*1500")
+        self.assertRegex(APP, r"PART1_OPTION_GAP_MS\s*=\s*1300")
 
     def test_voice_selector_refresh_helper_is_defined_and_used(self):
         self.assertRegex(APP, r"function\s+refreshSpeechVoiceSelectors\s*\(")
@@ -25,53 +28,68 @@ class SpeechReadinessTests(unittest.TestCase):
         self.assertIn("select.disabled=!voices.length", helper)
         self.assertIn("refreshSpeechVoiceSelectors", APP[APP.index("function bindTtsSettings("):APP.index("async function answerListeningQuestion(")])
 
-    def test_voice_catalogue_is_checked_before_engine_buffer(self):
+    def test_voice_catalogue_is_checked_before_fixed_engine_buffer(self):
         prepare = APP[APP.index("async function prepareSpeechEngine("):APP.index("async function speakText(")]
         self.assertIn("await waitForSpeechVoiceCatalog(token,1200)", prepare)
-        self.assertIn("return waitSpeechGap(readinessDelay,token)", prepare)
+        self.assertIn("return waitSpeechGap(TTS_PREPARATION_DELAY_MS,token)", prepare)
         self.assertIn("synth.cancel()", prepare)
+        self.assertNotIn("cfg.startupDelayMs", prepare)
 
-    def test_all_single_utterance_routes_use_shared_preparation(self):
+    def test_all_single_utterance_routes_use_shared_fixed_preparation(self):
         speak = APP[APP.index("async function speakText("):APP.index("function speakUtterance(")]
-        self.assertIn("await prepareSpeechEngine(token,cfg.startupDelayMs)", speak)
+        self.assertIn("await prepareSpeechEngine(token)", speak)
         self.assertIn("await speakUtterance(clean", speak)
         self.assertEqual(len(re.findall(r"speechSynthesis\.speak\(", APP)), 1)
 
-    def test_listening_prepares_before_first_segment(self):
+    def test_part1_uses_title_lead_in_separate_labels_and_descriptions(self):
         play = APP[APP.index("async function playListeningAudio("):APP.index("async function playListeningVocabulary(")]
-        self.assertLess(play.index("await prepareSpeechEngine(playbackToken,cfg.startupDelayMs)"), play.index("for(let index=0;index<segments.length;index++)"))
-        self.assertIn("Math.max(1000,Number(cfg.part1OptionPauseMs)||1300)", play)
-        self.assertIn("PART1_LEAD_IN_TEXT", play)
-        self.assertIn("Lựa chọn ${letter}/4", play)
-        self.assertIn("const speechText=isPart1?`${letter}. ${optionText}`:segment.text", play)
-        self.assertIn("part1LeadInPauseMs", play)
+        self.assertLess(play.index("await prepareSpeechEngine(playbackToken)"), play.index("const partHeader="))
+        self.assertIn("Part 1: ${String(item.topic||item.title||'Photographs').trim()}", play)
+        self.assertIn("speakUtterance(partHeader", play)
+        self.assertIn("waitSpeechGap(PART1_TITLE_PAUSE_MS,playbackToken)", play)
+        self.assertIn("speakUtterance(PART1_LEAD_IN_TEXT", play)
+        self.assertIn("waitSpeechGap(PART1_LEAD_IN_PAUSE_MS,playbackToken)", play)
+        self.assertIn("speakUtterance(`${letter}.`", play)
+        self.assertIn("waitSpeechGap(PART1_OPTION_LABEL_PAUSE_MS,playbackToken)", play)
+        self.assertIn("speakUtterance(isPart1?optionText:segment.text", play)
+        self.assertIn("const gap=isPart1?PART1_OPTION_GAP_MS", play)
+        self.assertIn("waitSpeechGap(gap,playbackToken)", play)
+        self.assertNotIn("cfg.part1LeadInPauseMs", play)
+        self.assertNotIn("cfg.part1OptionPauseMs", play)
 
     def test_every_part1_unit_has_four_clean_description_segments(self):
         part1 = [item for item in LISTENING if item.get("part") == "Part 1"]
         self.assertTrue(part1, "Listening library must include Part 1 units")
         for item in part1:
             self.assertEqual(len(item.get("segments", [])), 4, item.get("id"))
+            self.assertTrue(item.get("topic"), item.get("id"))
             for segment in item["segments"]:
                 self.assertIsInstance(segment.get("text"), str)
                 self.assertTrue(segment["text"].strip())
 
-    def test_practice_and_mock_part1_use_the_same_audio_pipeline(self):
+    def test_practice_and_mock_part1_use_the_same_full_audio_pipeline(self):
         self.assertIn("playListeningAudio(play.dataset.listeningPlay)", APP)
         self.assertIn("playListeningAudio(audio.dataset.mockAudio", APP)
-        mock_markup = APP[APP.index("function mockGroupMarkup("):APP.index("function renderMockExam(")]
-        self.assertIn("Câu dẫn → A → B → C → D", mock_markup)
-        self.assertIn("có khoảng ngừng riêng", mock_markup)
+        mock = APP[APP.index("function updateMockGuidedFlow("):APP.index("function renderMockExam(")]
+        self.assertIn("if(group.part==='Part 1'){", mock)
+        self.assertIn("playListeningAudio(group.unitId,{statusElement});", mock)
+        self.assertIn("Part 1 owns its full title → lead-in → A/B/C/D script", mock)
+        self.assertIn("Part 1: ${group.topic||group.title||'Photographs'}. ${PART1_LEAD_IN_TEXT}", mock)
+        markup = APP[APP.index("function mockGroupMarkup("):APP.index("function ensureMockGuidedFlow(")]
+        self.assertIn("nhãn A/B/C/D (nghỉ 1,5 giây)", markup)
 
-    def test_part1_transcript_exposes_lead_in_and_letter_labels(self):
+    def test_practice_transcript_exposes_part_title_lead_in_and_letter_labels(self):
         detail = APP[APP.index("function openListeningDetail("):APP.index("let listeningPlaybackToken=0;")]
+        self.assertIn("transcript-part-title", detail)
+        self.assertIn("Part 1: ${escapeHtml(item.topic||item.title||'Photographs')}", detail)
         self.assertIn("transcript-lead-in", detail)
         self.assertIn("OPTION ${letter}", detail)
         self.assertIn("${letter}. ", detail)
         self.assertIn("Now, listen to the four statements.", APP)
 
-    def test_vocabulary_playback_prepares_before_reading(self):
+    def test_vocabulary_playback_uses_fixed_preparation(self):
         play = APP[APP.index("async function playListeningVocabulary("):APP.index("function saveTtsSetting(")]
-        self.assertIn("await prepareSpeechEngine(token,cfg.startupDelayMs)", play)
+        self.assertIn("await prepareSpeechEngine(token)", play)
         self.assertLess(play.index("await prepareSpeechEngine"), play.index("for(let i=0;i<words.length;i++)"))
 
     def test_reading_passages_use_the_same_tts_pipeline(self):
@@ -81,14 +99,12 @@ class SpeechReadinessTests(unittest.TestCase):
         self.assertIn("onStart:", reader)
         self.assertIn("onEnd:", reader)
 
-    def test_tts_configuration_controls_are_persisted(self):
+    def test_fixed_timing_is_not_user_configurable(self):
         for control in ("ttsStartupDelay", "ttsPart1LeadInPause", "ttsPart1OptionPause"):
-            self.assertIn(f'id="{control}"', HTML)
-            self.assertIn(f"['{control}'", APP)
-        self.assertIn("startupDelayMs", APP)
-        self.assertIn("part1LeadInPauseMs", APP)
-        self.assertIn("part1OptionPauseMs", APP)
-        self.assertIn("ttsPart1LeadInPause:String(tts.part1LeadInPauseMs)", APP)
+            self.assertNotIn(f'id="{control}"', HTML)
+            self.assertNotIn(f"['{control}'", APP)
+        self.assertIn("Mọi lượt đọc chờ voice và chuẩn bị engine 2 giây", HTML)
+        self.assertIn("nghỉ 1,5 giây rồi mới đọc mô tả", HTML)
 
     def test_reading_audio_toolbar_is_responsive_and_accessible(self):
         self.assertIn('aria-live="polite"', APP[APP.index("const readerToolbar="):APP.index("const content=", APP.index("const readerToolbar="))])

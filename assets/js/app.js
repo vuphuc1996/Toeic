@@ -11,7 +11,7 @@ import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionL
 import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.66.0';
+const APP_RELEASE_VERSION = '2.66.1';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -91,7 +91,12 @@ function startPracticeFocus(forcedItemId=null){
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const DB_NAME = 'toeic-vocabulary-phase1';
 const DB_STORE = 'workspace';
-const DEFAULT_TTS_SETTINGS = { accent: 'en-US', defaultGender: 'female', maleVoiceURI: '', femaleVoiceURI: '', rate: 0.92, pitch: 1, volume: 1, wordPauseMs: 900, sentencePauseMs: 850, startupDelayMs: 750, part1LeadInPauseMs: 1000, part1OptionPauseMs: 1300 };
+const DEFAULT_TTS_SETTINGS = { accent: 'en-US', defaultGender: 'female', maleVoiceURI: '', femaleVoiceURI: '', rate: 0.92, pitch: 1, volume: 1, wordPauseMs: 900, sentencePauseMs: 850 };
+const TTS_PREPARATION_DELAY_MS = 2000;
+const PART1_TITLE_PAUSE_MS = 1000;
+const PART1_LEAD_IN_PAUSE_MS = 1000;
+const PART1_OPTION_LABEL_PAUSE_MS = 1500;
+const PART1_OPTION_GAP_MS = 1300;
 const PART1_LEAD_IN_TEXT = 'Now, listen to the four statements.';
 const state = { words: [], baseWords: [], dataManifest: null, vocabularyMigrationRestoredCount: 0, categories: [], sentenceCompletionItems: [], sentenceCompletionSeenIds: [], relatedTerms: new Map(), personalVocabulary: { schemaVersion: 3, additions: [], overrides: {}, overrideBaseSigs: {}, deletedBaseIds: [] }, staleOverrideIds: [], wordSources: new Map(), grammarLessons: [], foundationLessons: [], foundationReadingPassages: [], foundationReadingProgress: {}, foundationListeningClips: [], foundationListeningProgress: {}, alphabetSoundItems: [], alphabetSoundProgress: {}, placementQuestions: [], placementObjectiveMap: null, objectiveResourceMap: null, objectiveResourceIndex: {}, objectiveProgress: {}, placementState: null, foundationProgress: {}, foundationStartLevel: 'ALL', readings: [], listening: [], grammarProgress: {}, readingProgress: {}, listeningProgress: {}, activeListening: null, speechRate: 1, activeGrammarLesson: null, activeReading: null, activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3, tts: { ...DEFAULT_TTS_SETTINGS } }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionStartedAt: null, questionAnswered: false, practiceReviewPending: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceTransitionTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceDuration: 3000, autoAdvanceCancelled: false, autoAdvanceWaiting: false, lastGoogleContext: '', lastGoogleQuery: '', flashProgress: {}, flashSession: null, flashQuizIndex: 0, flashQuizAnswers: [], pendingPracticeBatch: null, pendingFoundationAssessment: null, pendingSinglePractice: null, pendingFlashQuizResult: null, pendingPlacementResult: false, pendingMockResult: null, foundationAssessmentDrafts: {}, mockExam: null, mockHistory: [], mockUsageCounts: {}, mockTickTimer: null, lastMockResult: null };
 
@@ -1436,7 +1441,7 @@ function syncSettingsUI(){
   const delay=$('#autoNextDelay');if(delay)delay.value=String([3,5,10].includes(Number(state.settings.autoNextDelaySeconds))?state.settings.autoNextDelaySeconds:3);
   renderReminderStatus();
   const tts={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})};
-  const controls={ttsAccent:tts.accent,ttsDefaultGender:tts.defaultGender,ttsRate:String(tts.rate),ttsPitch:String(tts.pitch),ttsVolume:String(tts.volume),ttsWordPause:String(tts.wordPauseMs),ttsSentencePause:String(tts.sentencePauseMs),ttsStartupDelay:String(tts.startupDelayMs),ttsPart1LeadInPause:String(tts.part1LeadInPauseMs),ttsPart1OptionPause:String(tts.part1OptionPauseMs)};
+  const controls={ttsAccent:tts.accent,ttsDefaultGender:tts.defaultGender,ttsRate:String(tts.rate),ttsPitch:String(tts.pitch),ttsVolume:String(tts.volume),ttsWordPause:String(tts.wordPauseMs),ttsSentencePause:String(tts.sentencePauseMs)};
   for(const [id,value] of Object.entries(controls)){const el=$(`#${id}`);if(el)el.value=value;}
   refreshSpeechVoiceSelectors();
 }
@@ -1578,7 +1583,7 @@ function mockGroupMarkup(group,numberById){
   const isListening=group.area==='listening';
   let media='';
   if(isListening){
-    const audioLabel=group.part==='Part 1'?'Câu dẫn → A → B → C → D, có khoảng nghỉ':group.part==='Part 2'?'Nghe câu hỏi và chọn phản hồi':'Nghe toàn bộ nội dung trước khi trả lời';
+    const audioLabel=group.part==='Part 1'?`Part 1: ${group.topic||title} → câu dẫn → nhãn A/B/C/D (nghỉ 1,5 giây) → mô tả`:group.part==='Part 2'?'Nghe câu hỏi và chọn phản hồi':'Nghe toàn bộ nội dung trước khi trả lời';
     media=`<div class="mock-group-audio"><button type="button" class="mock-audio-button" data-mock-audio="${escapeHtml(group.unitId)}">▶ Phát audio / TTS</button><small id="mock-audio-status-${escapeHtml(group.unitId)}">${audioLabel} · Transcript chỉ mở sau khi nộp bài.</small></div>`;
     if(group.part==='Part 1'){const fallbackAttr=group.image?` data-fallback-src="${escapeHtml(group.image)}"`:'';media+=`<figure class="mock-part1-frame"><img class="mock-part1-image" data-photo-id="${escapeHtml(group.unitId)}" src="${escapeHtml(group.photo||group.image)}"${fallbackAttr} alt="${escapeHtml(group.imageAlt)}" loading="lazy"><figcaption>PHOTOGRAPH · ${escapeHtml(title)}</figcaption></figure>`;}
   }else if(group.part!=='Part 5'){
@@ -1586,7 +1591,7 @@ function mockGroupMarkup(group,numberById){
     if(docs.length)media=`<div class="mock-reading-passage">${docs.map(doc=>`<div class="reading-document-card"><span class="reading-passage-label">${escapeHtml(doc.label||'DOCUMENT')}</span><pre>${escapeHtml(doc.content||'')}</pre></div>`).join('')}</div>`;
     else if(group.passage)media=`<div class="mock-reading-passage"><span class="reading-passage-label">${escapeHtml(group.documentType||group.part)}</span><pre>${escapeHtml(group.passage)}</pre></div>`;
   }
-  const tip=group.part==='Part 2'?'Mỗi câu hỏi có một phản hồi phù hợp nhất.':group.part==='Part 3'||group.part==='Part 4'?'Nghe hết hội thoại/bài nói; các câu hỏi trong cùng nhóm được giữ nguyên thứ tự.':group.part==='Part 1'?'Nghe câu dẫn, sau đó nghe lần lượt A., B., C. và D.; mỗi lựa chọn có khoảng ngừng riêng. Quan sát ảnh và chọn câu mô tả đúng nhất.':'';
+  const tip=group.part==='Part 2'?'Mỗi câu hỏi có một phản hồi phù hợp nhất.':group.part==='Part 3'||group.part==='Part 4'?'Nghe hết hội thoại/bài nói; các câu hỏi trong cùng nhóm được giữ nguyên thứ tự.':group.part==='Part 1'?'Nghe tên chủ đề Part 1, câu dẫn, từng nhãn A–D; mỗi nhãn nghỉ 1,5 giây trước khi đọc mô tả. Quan sát ảnh và chọn câu mô tả đúng nhất.':'';
   return `<section class="mock-question-group" data-mock-group="${escapeHtml(group.unitId)}"><header class="mock-group-header"><div><h3>${escapeHtml(title)}</h3><p>${escapeHtml(group.topic||tip)}</p></div><span class="mock-group-part">${escapeHtml(group.part)}</span></header>${media}${group.questions.map(question=>mockQuestionMarkup(group,question,numberById.get(question.id)||0)).join('')}</section>`;
 }
 
@@ -1609,7 +1614,7 @@ function updateMockGuidedFlow(timestamp=Date.now()){
  const changed=flow.activeQuestionIds[area]!==slot.questionId;
  if(changed){
    flow.activeQuestionIds[area]=slot.questionId;flow.lastAnnouncedIds[area]=slot.questionId;saveMockStorage();
-   const leadIn=getMockTransitionLeadIn(previous,slot,sectionQuestions.length);
+   const leadIn=group?.part==='Part 1'?`Part 1: ${group.topic||group.title||'Photographs'}. ${PART1_LEAD_IN_TEXT}`:getMockTransitionLeadIn(previous,slot,sectionQuestions.length);
    const label=`${area==='listening'?'Listening':'Reading'} · ${slot.part} · Câu ${slot.questionNumber}`;
    const copy=$('#mockFlowQuestionLabel'),lead=$('#mockFlowLeadIn'),status=$('#mockFlowStatus');
    if(copy)copy.textContent=label;if(lead)lead.textContent=leadIn;if(status)status.textContent=area==='listening'?'Đang chuẩn bị nội dung nghe':'Đang chuyển câu đọc';
@@ -1621,7 +1626,12 @@ function updateMockGuidedFlow(timestamp=Date.now()){
      const previousGroupChanged=!previous||previous.unitId!==slot.unitId;
      if(area==='listening'&&group&&previousGroupChanged){
        const statusElement=document.getElementById(`mock-audio-status-${group.unitId}`);
-       speakText(leadIn,null,'',state.settings.tts?.defaultGender||'female',{onStart:()=>{if(status)status.textContent='Đang đọc câu dẫn';},onEnd:()=>{if(state.mockExam?.id===exam.id&&state.mockExam.currentSection==='listening')playListeningAudio(group.unitId,{statusElement,skipLeadIn:true});}});
+       if(group.part==='Part 1'){
+         // Part 1 owns its full title → lead-in → A/B/C/D script in the shared player.
+         playListeningAudio(group.unitId,{statusElement});
+       }else{
+         speakText(leadIn,null,'',state.settings.tts?.defaultGender||'female',{onStart:()=>{if(status)status.textContent='Đang đọc câu dẫn';},onEnd:()=>{if(state.mockExam?.id===exam.id&&state.mockExam.currentSection==='listening')playListeningAudio(group.unitId,{statusElement,skipLeadIn:true});}});
+       }
      }else{
        speakText(leadIn,null,'',state.settings.tts?.defaultGender||'female',{onStart:()=>{if(status)status.textContent='Đang đọc câu dẫn';},onEnd:()=>{if(status)status.textContent=area==='listening'?'Tiếp tục cùng audio hiện tại':'Đã chuyển đến câu hiện tại';}});
      }
@@ -2391,7 +2401,7 @@ function openListeningDetail(id){
   const prog=ensurePracticeProgress(state.listeningProgress[id]||{});
   const questions=(item.questions||[]).map((q,i)=>{const saved=prog.answers?.[i],draftChoice=getPracticeDraftChoice(prog,i),history=getPracticeAttemptHistory(prog,i),attemptLabel=history.length&&!saved?` · LÀM LẠI LẦN ${history.length+1}`:'';const feedback=saved?.answered?`<p class="exercise-feedback visible">${savedChoiceHistoryMarkup(q,saved)}${escapeHtml(q.explanation)}</p>${practiceRetryActionMarkup('listening',id,i,prog,saved)}`:`<p class="exercise-feedback" hidden></p>${history.length?`<small class="practice-retry-hint">Đã lưu ${history.length} lần trước. Bạn đang làm lại câu này.</small>${practiceAttemptHistoryMarkup(prog,i)}`:''}`;return `<article class="lesson-exercise listening-question" data-started-at="${Date.now()}" data-listening-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}${attemptLabel}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${savedChoiceWrongClass(q,saved,j)?'is-wrong':''} ${!saved?.answered&&draftChoice===j?'is-selected':''}" data-listening-choice data-listening-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" data-choice-id="${escapeHtml(choiceIdAt(q,j))}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div>${feedback}</article>`;}).join('');
   const transcript=(item.segments||[]).map((seg,i)=>{const isPart1=item.part==='Part 1',letter=String.fromCharCode(65+i);return `<div class="transcript-line"><small>${isPart1?`OPTION ${letter}`:escapeHtml(seg.speaker||`Speaker ${i+1}`)}</small><p>${isPart1?`${letter}. `:''}${escapeHtml(seg.text)}</p></div>`;}).join('');
-  const part1LeadInTranscript=item.part==='Part 1'?`<div class="transcript-line transcript-lead-in"><small>LEAD-IN</small><p>${escapeHtml(PART1_LEAD_IN_TEXT)}</p></div>`:'';
+  const part1LeadInTranscript=item.part==='Part 1'?`<div class="transcript-line transcript-part-title"><small>PART TITLE</small><p>Part 1: ${escapeHtml(item.topic||item.title||'Photographs')}</p></div><div class="transcript-line transcript-lead-in"><small>LEAD-IN</small><p>${escapeHtml(PART1_LEAD_IN_TEXT)}</p></div>`:'';
   const photoSrc=item.part==='Part 1'?(item.photo||item.image):'';
   const photoFallback=item.part==='Part 1'&&item.photo&&item.image?`data-fallback-src="${escapeHtml(item.image)}" onerror="if(this.dataset.fallbackSrc){this.onerror=null;this.src=this.dataset.fallbackSrc;const c=this.closest(\'figure\')&&this.closest(\'figure\').querySelector(\'figcaption\');if(c)c.textContent=\'HÌNH MINH HỌA · Dùng ảnh SVG dự phòng\';}"`:'';
   const illustrationMarkup=item.part==='Part 1'&&photoSrc?`<figure class="part1-illustration-frame part1-photo-frame"><img data-photo-id="${escapeHtml(item.id)}" src="${escapeHtml(photoSrc)}" ${photoFallback} alt="${escapeHtml(item.imageAlt||item.title)}" loading="eager" decoding="async"><figcaption>${item.photo?'ẢNH CHỤP · Quan sát ảnh trước khi nghe':'HÌNH MINH HỌA · Quan sát hình trước khi nghe'}</figcaption></figure>`:'';
@@ -2399,7 +2409,7 @@ function openListeningDetail(id){
   const vocabMarkup=vocab?`<section class="detail-section"><h4>TỪ VỰNG TRỌNG TÂM</h4><div class="reading-vocab-grid">${vocab}</div></section>`:'';
   const vocabPlayButton=vocab?`<button type="button" class="secondary-button" data-listening-vocab-play="${escapeHtml(id)}">Đọc từ vựng chậm</button>`:'';
   const playLabel=item.part==='Part 1'?'Nghe bốn mô tả A–D':'Nghe toàn bộ';
-  const content=`${illustrationMarkup}<div class="listening-player-card"><div class="listening-player-head"><span class="listening-wave">♫</span><div><strong>${escapeHtml(item.part)} · ${escapeHtml(item.type==='photograph'?'Mô tả ảnh':item.type==='conversation'?'Hội thoại':item.type==='talk'?'Bài nói ngắn':'Câu hỏi – đáp')}</strong><small>${escapeHtml(item.topic)} · ${item.segments.length} lượt lời</small></div></div><div class="listening-player-actions"><button type="button" class="primary-button" data-listening-play="${escapeHtml(id)}">${icon('volume-2','ui-icon button-icon')} ${playLabel}</button>${vocabPlayButton}<button type="button" class="secondary-button" data-listening-stop>⏹ Dừng</button></div><div class="listening-player-status" id="listeningPlayerStatus" aria-live="polite">Sẵn sàng phát audio. Bạn nên nghe trước khi mở transcript.</div><div class="listening-speed-row"><label for="listeningSpeed">Tốc độ đọc trong bài này</label><select id="listeningSpeed"><option value="0.75">x0.75 · Chậm</option><option value="0.85">x0.85 · Rõ ràng</option><option value="0.92" selected>x0.92 · Tự nhiên</option><option value="1">x1.0 · Bình thường</option><option value="1.1">x1.1 · Nhanh</option></select></div><p class="tts-inline-note">Giọng nam/nữ, cao độ giọng và khoảng nghỉ được điều chỉnh trong mục Cấu hình → Giọng đọc.</p></div><section class="detail-section"><h4>QUESTIONS · CÂU HỎI NGHE HIỂU</h4><p class="listening-hint">${item.part==='Part 1'?'Nghe câu dẫn, sau đó nghe từng lựa chọn A–D có khoảng nghỉ riêng. Quan sát ảnh và chọn mô tả khớp nhất. Transcript chỉ mở sau khi bạn đã làm.':'Nghe nội dung, sau đó chọn đáp án. Transcript và bản dịch được để bên dưới để bạn tự kiểm tra sau.'}</p>${practiceRetryAllToolbar('listening',id,prog,item.questions||[])}${practiceDraftToolbar('listening',id,prog,item.questions||[])}<div class="lesson-exercises">${questions}</div></section><details class="transcript-details"><summary>Hiện transcript tiếng Anh</summary><div class="transcript-content">${part1LeadInTranscript}${transcript}</div><p class="transcript-translation"><strong>Dịch nghĩa:</strong> ${item.part==='Part 1'?'Bây giờ, hãy nghe bốn câu mô tả. ':''}${escapeHtml(item.transcriptTranslation||'Chưa có bản dịch.')}</p></details>${vocabMarkup}<div class="modal-actions"><button class="secondary-button" data-ai-listening="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bài nghe một chiều bằng Google AI</button></div>`;
+  const content=`${illustrationMarkup}<div class="listening-player-card"><div class="listening-player-head"><span class="listening-wave">♫</span><div><strong>${escapeHtml(item.part)} · ${escapeHtml(item.type==='photograph'?'Mô tả ảnh':item.type==='conversation'?'Hội thoại':item.type==='talk'?'Bài nói ngắn':'Câu hỏi – đáp')}</strong><small>${escapeHtml(item.topic)} · ${item.segments.length} lượt lời</small></div></div><div class="listening-player-actions"><button type="button" class="primary-button" data-listening-play="${escapeHtml(id)}">${icon('volume-2','ui-icon button-icon')} ${playLabel}</button>${vocabPlayButton}<button type="button" class="secondary-button" data-listening-stop>⏹ Dừng</button></div><div class="listening-player-status" id="listeningPlayerStatus" aria-live="polite">Sẵn sàng phát audio. Bạn nên nghe trước khi mở transcript.</div><div class="listening-speed-row"><label for="listeningSpeed">Tốc độ đọc trong bài này</label><select id="listeningSpeed"><option value="0.75">x0.75 · Chậm</option><option value="0.85">x0.85 · Rõ ràng</option><option value="0.92" selected>x0.92 · Tự nhiên</option><option value="1">x1.0 · Bình thường</option><option value="1.1">x1.1 · Nhanh</option></select></div><p class="tts-inline-note">Giọng nam/nữ, cao độ giọng và khoảng nghỉ được điều chỉnh trong mục Cấu hình → Giọng đọc.</p></div><section class="detail-section"><h4>QUESTIONS · CÂU HỎI NGHE HIỂU</h4><p class="listening-hint">${item.part==='Part 1'?'Nghe tên chủ đề Part 1, câu dẫn, từng nhãn A–D; mỗi nhãn nghỉ 1,5 giây trước khi đọc mô tả. Quan sát ảnh và chọn mô tả khớp nhất. Transcript chỉ mở sau khi bạn đã làm.':'Nghe nội dung, sau đó chọn đáp án. Transcript và bản dịch được để bên dưới để bạn tự kiểm tra sau.'}</p>${practiceRetryAllToolbar('listening',id,prog,item.questions||[])}${practiceDraftToolbar('listening',id,prog,item.questions||[])}<div class="lesson-exercises">${questions}</div></section><details class="transcript-details"><summary>Hiện transcript tiếng Anh</summary><div class="transcript-content">${part1LeadInTranscript}${transcript}</div><p class="transcript-translation"><strong>Dịch nghĩa:</strong> ${item.part==='Part 1'?'Bây giờ, hãy nghe bốn câu mô tả. ':''}${escapeHtml(item.transcriptTranslation||'Chưa có bản dịch.')}</p></details>${vocabMarkup}<div class="modal-actions"><button class="secondary-button" data-ai-listening="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bài nghe một chiều bằng Google AI</button></div>`;
   openLearningDetail({title:item.title,subtitle:`${item.part} · ${item.topic} · ${item.level}`,eyebrow:'LISTENING · TOEIC LEARNING',content});
   maybeShowPracticeBatchResult('listening',id);
 }
@@ -2535,7 +2545,7 @@ async function waitForSpeechVoiceCatalog(token,timeoutMs=1200){
   // In that case, let SpeechSynthesis use its own fallback rather than blocking playback forever.
   return token===listeningPlaybackToken&&hasSpeechVoiceCatalog();
 }
-async function prepareSpeechEngine(token,delayMs=null){
+async function prepareSpeechEngine(token){
   if(token!==listeningPlaybackToken||!('speechSynthesis'in window))return false;
   const synth=window.speechSynthesis;
   await waitForSpeechVoiceCatalog(token,1200);
@@ -2543,17 +2553,16 @@ async function prepareSpeechEngine(token,delayMs=null){
   // A previous cancel() can leave the platform speech engine in a transition state.
   // Cancel residual work and wait before the first real utterance is queued.
   if(synth.speaking||synth.pending){try{synth.cancel();}catch(error){console.warn('Không thể làm sạch hàng đợi TTS:',error);}}
-  const cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})};
-  const requested=Number(delayMs??cfg.startupDelayMs)||750;
-  const readinessDelay=Math.min(1600,Math.max(350,requested));
-  return waitSpeechGap(readinessDelay,token);
+  // Fixed two-second readiness buffer across every spoken learning/exam route.
+  // This is intentionally not user-configurable so practice and mock timing cannot drift.
+  return waitSpeechGap(TTS_PREPARATION_DELAY_MS,token);
 }
 async function speakText(text,accent=null,speaker='',gender=null,lifecycle={}){
   if(!('speechSynthesis'in window)||typeof SpeechSynthesisUtterance==='undefined'){toast('Trình duyệt/thiết bị này chưa hỗ trợ đọc phát âm.','error');lifecycle.onError?.();return false;}
   const clean=String(text||'').trim();if(!clean)return false;
   stopSpeech();const token=listeningPlaybackToken;const cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})};
   if(lifecycle.onPrepare)lifecycle.onPrepare();
-  const ready=await prepareSpeechEngine(token,cfg.startupDelayMs);
+  const ready=await prepareSpeechEngine(token);
   if(!ready||token!==listeningPlaybackToken)return false;
   const voice=chooseEnglishVoice(accent||cfg.accent,speaker,gender||cfg.defaultGender);
   const ok=await speakUtterance(clean,{accent:accent||cfg.accent,gender:gender||cfg.defaultGender,voice,rate:cfg.rate,onStart:lifecycle.onStart},token);
@@ -2599,20 +2608,26 @@ async function playListeningAudio(id, options={}){
     if(voice){speakerVoices.set(key,voice);(usedVoiceNames[gender]||[]).push(voice.name);}return voice;
   };
   if(status)status.textContent='Đang tải voice và chuẩn bị bộ đọc…';
-  const prepared=await prepareSpeechEngine(playbackToken,cfg.startupDelayMs);
+  const prepared=await prepareSpeechEngine(playbackToken);
   if(!prepared||playbackToken!==listeningPlaybackToken)return;
   if(status)status.textContent=`Đã sẵn sàng · ${isPart1?'đọc câu dẫn rồi phát A–D':'bắt đầu bài nghe'}…`;
   if(isPart1){
     const first=segments[0],leadGender=classifyVoiceHint(first.voice||first.speaker)||cfg.defaultGender,leadVoice=resolveSpeakerVoice(first);
     if(!options.skipLeadIn){
+      const partHeader=`Part 1: ${String(item.topic||item.title||'Photographs').trim()}`;
+      if(status)status.textContent=`Đang giới thiệu ${partHeader}…`;
+      const titleOk=await speakUtterance(partHeader,{accent:first.accent||cfg.accent,gender:leadGender,voice:leadVoice,rate:speed,onStart:()=>{if(status)status.textContent=partHeader;}},playbackToken);
+      if(playbackToken!==listeningPlaybackToken)return;
+      if(!titleOk){if(status)status.textContent='Voice gặp lỗi khi đọc tên Part. Bạn có thể chọn voice khác trong Cấu hình.';return;}
+      if(status)status.textContent='Đã giới thiệu Part · nghỉ 1 giây trước câu dẫn…';
+      if(!await waitSpeechGap(PART1_TITLE_PAUSE_MS,playbackToken))return;
       if(status)status.textContent='Đang đọc câu dẫn Part 1…';
-      const leadOk=await speakUtterance(PART1_LEAD_IN_TEXT,{accent:first.accent||cfg.accent,gender:leadGender,voice:leadVoice,rate:speed,onStart:()=>{if(status)status.textContent='Now, listen to the four statements…';}},playbackToken);
+      const leadOk=await speakUtterance(PART1_LEAD_IN_TEXT,{accent:first.accent||cfg.accent,gender:leadGender,voice:leadVoice,rate:speed,onStart:()=>{if(status)status.textContent=PART1_LEAD_IN_TEXT;}},playbackToken);
       if(playbackToken!==listeningPlaybackToken)return;
       if(!leadOk){if(status)status.textContent='Voice gặp lỗi khi đọc câu dẫn. Bạn có thể chọn voice khác trong Cấu hình.';return;}
+      if(status)status.textContent='Câu dẫn đã kết thúc · nghỉ 1 giây trước lựa chọn A…';
+      if(!await waitSpeechGap(PART1_LEAD_IN_PAUSE_MS,playbackToken))return;
     }
-    const leadGap=Math.max(800,Number(cfg.part1LeadInPauseMs)||1000);
-    if(status)status.textContent=`Câu dẫn đã kết thúc · chuẩn bị lựa chọn A trong ${(leadGap/1000).toFixed(2)} giây…`;
-    if(!await waitSpeechGap(leadGap,playbackToken))return;
   }
   for(let index=0;index<segments.length;index++){
     if(playbackToken!==listeningPlaybackToken)return;
@@ -2622,18 +2637,24 @@ async function playListeningAudio(id, options={}){
     const letter=String.fromCharCode(65+index);
     const segmentLabel=isPart1?`Lựa chọn ${letter}/4`:`${speaker} (${index+1}/${segments.length})`;
     const optionText=String(segment.text||'').replace(/^\s*[A-D][.)]\s+/i,'').trim();
-    const speechText=isPart1?`${letter}. ${optionText}`:segment.text;
     if(status)status.textContent=`Đang phát ${segmentLabel}…`;
-    const ok=await speakUtterance(speechText,{accent:segment.accent||cfg.accent,gender,voice,rate:speed,onStart:()=>{if(status)status.textContent=`Đang nghe ${segmentLabel}…`; }},playbackToken);
+    if(isPart1){
+      const labelOk=await speakUtterance(`${letter}.`,{accent:segment.accent||cfg.accent,gender,voice,rate:speed,onStart:()=>{if(status)status.textContent=`Đang đọc nhãn ${letter}…`; }},playbackToken);
+      if(playbackToken!==listeningPlaybackToken)return;
+      if(!labelOk){if(status)status.textContent='Voice gặp lỗi khi đọc nhãn lựa chọn.';return;}
+      if(status)status.textContent=`Đã đọc nhãn ${letter} · nghỉ 1,5 giây trước nội dung…`;
+      if(!await waitSpeechGap(PART1_OPTION_LABEL_PAUSE_MS,playbackToken))return;
+    }
+    const optionOk=await speakUtterance(isPart1?optionText:segment.text,{accent:segment.accent||cfg.accent,gender,voice,rate:speed,onStart:()=>{if(status)status.textContent=`Đang nghe ${segmentLabel}…`; }},playbackToken);
     if(playbackToken!==listeningPlaybackToken)return;
-    if(!ok){if(status)status.textContent='Voice gặp lỗi khi phát. Bạn có thể chọn voice khác trong Cấu hình.';return;}
+    if(!optionOk){if(status)status.textContent='Voice gặp lỗi khi phát nội dung. Bạn có thể chọn voice khác trong Cấu hình.';return;}
     if(index<segments.length-1){
-      const gap=isPart1?Math.max(1000,Number(cfg.part1OptionPauseMs)||1300):Math.max(500,Number(cfg.sentencePauseMs)||850);
+      const gap=isPart1?PART1_OPTION_GAP_MS:Math.max(500,Number(cfg.sentencePauseMs)||850);
       if(status)status.textContent=`${segmentLabel} vừa kết thúc · chuẩn bị lượt tiếp theo trong ${(gap/1000).toFixed(2)} giây…`;
       if(!await waitSpeechGap(gap,playbackToken))return;
     }
   }
-  if(playbackToken===listeningPlaybackToken&&status)status.textContent=isPart1?'Đã phát xong câu dẫn và bốn lựa chọn A–D. Bạn có thể nghe lại hoặc mở transcript.':'Đã phát xong. Bạn có thể nghe lại hoặc mở transcript.';
+  if(playbackToken===listeningPlaybackToken&&status)status.textContent=isPart1?'Đã phát xong tên Part, câu dẫn và bốn lựa chọn A–D. Bạn có thể nghe lại hoặc mở transcript.':'Đã phát xong. Bạn có thể nghe lại hoặc mở transcript.';
 }
 async function playListeningVocabulary(id){
   if(!('speechSynthesis'in window)||typeof SpeechSynthesisUtterance==='undefined'){toast('Thiết bị chưa hỗ trợ Text-to-Speech.','error');return;}
@@ -2642,7 +2663,7 @@ async function playListeningVocabulary(id){
   if(!words.length){toast('Bài nghe này chưa có danh sách từ vựng để phát.','error');return;}
   stopSpeech();const token=++listeningPlaybackToken,cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})},status=$('#listeningPlayerStatus');
   if(status)status.textContent='Đang chuẩn bị voice trước khi đọc danh sách từ…';
-  if(!await prepareSpeechEngine(token,cfg.startupDelayMs)||token!==listeningPlaybackToken)return;
+  if(!await prepareSpeechEngine(token)||token!==listeningPlaybackToken)return;
   if(status)status.textContent=`Đang đọc chậm danh sách ${words.length} từ…`;
   for(let i=0;i<words.length;i++){
     if(token!==listeningPlaybackToken)return;
@@ -2656,13 +2677,13 @@ async function playListeningVocabulary(id){
 }
 function saveTtsSetting(key,value){
   if(!state.settings.tts)state.settings.tts={...DEFAULT_TTS_SETTINGS};
-  const limits={startupDelayMs:[350,1600],part1LeadInPauseMs:[800,1800],part1OptionPauseMs:[1000,2500],wordPauseMs:[300,2500],sentencePauseMs:[300,2500]};
+  const limits={wordPauseMs:[300,2500],sentencePauseMs:[300,2500]};
   if(limits[key])value=Math.min(limits[key][1],Math.max(limits[key][0],Number(value)||limits[key][0]));
   state.settings.tts[key]=value;
   dbSet('appSettings',state.settings).catch(err=>console.warn('Không lưu được cấu hình giọng đọc:',err));
 }
 function bindTtsSettings(){
-  const bindings=[['ttsAccent','accent',v=>v],['ttsDefaultGender','defaultGender',v=>v],['ttsRate','rate',Number],['ttsPitch','pitch',Number],['ttsVolume','volume',Number],['ttsWordPause','wordPauseMs',Number],['ttsSentencePause','sentencePauseMs',Number],['ttsStartupDelay','startupDelayMs',Number],['ttsPart1LeadInPause','part1LeadInPauseMs',Number],['ttsPart1OptionPause','part1OptionPauseMs',Number],['ttsMaleVoice','maleVoiceURI',v=>v],['ttsFemaleVoice','femaleVoiceURI',v=>v]];
+  const bindings=[['ttsAccent','accent',v=>v],['ttsDefaultGender','defaultGender',v=>v],['ttsRate','rate',Number],['ttsPitch','pitch',Number],['ttsVolume','volume',Number],['ttsWordPause','wordPauseMs',Number],['ttsSentencePause','sentencePauseMs',Number],['ttsMaleVoice','maleVoiceURI',v=>v],['ttsFemaleVoice','femaleVoiceURI',v=>v]];
   for(const [id,key,cast] of bindings){const el=$(`#${id}`);if(!el)continue;el.addEventListener('change',()=>saveTtsSetting(key,cast(el.value)));}
   $('#refreshSpeechVoices')?.addEventListener('click',()=>{if('speechSynthesis'in window)window.speechSynthesis.getVoices();refreshSpeechVoiceSelectors();toast('Đã làm mới danh sách voice từ thiết bị.');});
   $('#previewMaleVoice')?.addEventListener('click',()=>speakText('Good morning. The meeting will begin in ten minutes.',null,'','male'));
