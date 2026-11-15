@@ -4,12 +4,12 @@
 
 - **Ngày kiểm kê:** 2026-11-15.
 - **Quy ước báo cáo tiến độ:** luôn có % khi tồn tại target/denominator rõ; tách độ phủ số lượng, chất lượng nội dung, kiểm thử phiên bản và xác minh triển khai. Không có target thì ghi “Chưa đo được”.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.66.1 (balanced exam/skill progress layout, deferred result reveal, and time-guided Mock Exam; local candidate).
-- **Current candidate:** v2.66.1 — includes the v2.66.0 skill-group dashboard and draft-before-result assessment flow, plus fixed 2-second TTS preparation and an explicit Listening Part 1 script: topic title → 1-second gap → shared lead-in → 1-second gap → separate A/B/C/D letter utterances → 1.5-second gap → each description, with 1.3 seconds between descriptions. Practice and Mock Exam use the same Part 1 player. Timing is fixed, not user-configurable. An outdated CI test was corrected to assert the deferred-draft/commit contract rather than immediate scoring. Existing IndexedDB stores, answer history, vocabulary, voice selection and progress are retained.
-- **Previous release:** v2.65.2 — Listening Part 1 lead-in and spoken A–D choices.
-- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.66.1.md`; vocabulary 992/3,000 minimum (33.1%); 10/10 objective groups with resources (100% availability); 281/281 unique canonical resource records linked (100% link coverage). These are not quality or mastery scores. Outcome criteria: 30/30 defined (100% framework coverage); objective-level TOEIC practice evidence is wired for 9/10 groups; delayed recall is instrumented for the 9 wired TOEIC objective groups; response-time evidence covers structured Grammar/Reading/Listening and separate Part 5 practice (9/9 wired TOEIC groups). Part 5 explanation self-report is instrumented for 1/9 TOEIC objective groups; due recall is now surfaced in a dashboard queue; actual explanation quality and CEFR/real-world mastery remain unverified. Foundation recognition bank is 30/30 (100%); contextual application is 10/10 (100%); short reading is 10/10 passages and 20/20 questions (100% bank coverage); Foundation Listening is 10/10 scripts and 20/20 questions (100% bank coverage; synthesized TTS, not ETS recordings). Listening evidence is isolated in `toeic:foundation-listening-progress:v1`. Foundation A–Z sound lab contains 26/26 letter records (100% bank-data coverage only; no pronunciation accuracy or mastery claim), with playback-button actions isolated in `toeic:alphabet-sound-progress:v1`. Reading evidence is isolated in `toeic:foundation-reading-progress:v1`; threshold is 2 unique questions and 80% latest-result accuracy, not CEFR certification. Learner attainment remains unmeasured in this source-only snapshot.
-- **Immediate base:** v2.66.0; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
-- **Release state:** local candidate — deployment hold. Strict Part 1 photo validation remains blocked because eight original JPG binaries are missing from the inherited source snapshot (1/9 present). Remote GitHub Actions, Pages deployment, physical-device audio and visual behavior are not verified from this workspace.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.67.0 (balanced exam/skill progress layout, deferred result reveal, and time-guided Mock Exam; local candidate).
+- **Current candidate:** v2.67.0 — removed the redundant reserve-status UI label while retaining the underlying review gate; switched all nine Listening Part 1 records and runtime paths to JPG-only; removed eight obsolete Part 1 SVGs; added 34 canonical TOEIC vocabulary headwords in Batch 009; added exact legacy hidden-word repair profiles for 979- and 992-word snapshots. Independent lexical review of Batch 009 is pending.
+- **Previous release:** v2.66.1 — fixed Listening Part 1 TTS sequence and corrected a stale GitHub test assertion.
+- **Current progress snapshot:** `docs/reports/PROJECT_PROGRESS_SNAPSHOT_v2.67.0.md`; vocabulary 1,026/3,000 minimum (34.2%) and 1,026/5,000 planning ceiling (20.5%); 10/10 objective groups have linked resources and 281/281 canonical resource records are linked. Outcome criteria: 30/30 defined (framework coverage only); objective-level TOEIC evidence remains wired for 9/10 groups, with delayed recall and response-time capture across the 9 wired groups. Foundation inventory: recognition 30/30, contextual application 10/10, reading 10 passages/20 questions, listening 10 scripts/20 questions and A–Z 26/26 records. These are inventory/structural coverage figures, not learner mastery or independent editorial approval.
+- **Immediate base:** v2.66.1; static GitHub Pages PWA, no backend/GAS/iframe/Cloudflare dependency.
+- **Release state:** local candidate — deployment hold. Part 1 is now JPG-only and has no SVG fallback, but strict photo validation remains blocked because eight original JPG binaries are missing from this inherited source snapshot (1/9 present). Preserve/restore those repository-owned JPG files when merging; do not replace them with generated images. Remote GitHub Actions, Pages deployment, physical-device audio and visual behavior are not verified from this workspace.
 - **Development rule:** finish the internal product/content backlog first. Do not issue acceptance reminders or a broad acceptance checklist while development is active. The eventual test plan should target high-risk flows rather than repeat a 100% manual inventory sweep.
 
 
@@ -17,6 +17,17 @@
 
 
 
+
+## v2.67.0 changes — Listening JPG-only cleanup and Vocabulary Batch 009
+
+- Removed the redundant UI label `Nội dung bổ sung · đang chờ kiểm duyệt độc lập · chưa dùng trong Mock Exam` from Listening cards. The `editorialStatus: reserve-pending-independent-review` metadata remains in the canonical data and Mock sampler continues to exclude those units. This does not approve or promote reserve content.
+- All nine Part 1 records now use only `photo: ./assets/listening/*.jpg`; no Part 1 record declares `image`. Removed eight obsolete Part 1 SVG files from `assets/listening/`, removed their Service Worker entries and deleted SVG fallback/onerror behavior from both Listening practice and Mock rendering. Other unrelated application/topic SVG icons are unchanged.
+- The source archive contains only 1/9 JPG binaries. Eight original licensed JPG files, including `part1-photocopier.jpg`, are not present in this workspace. The runtime references their repository-owned JPG paths only; retain those originals when merging. `validate-learning-content.py` reports 0 errors / 8 missing-byte warnings; strict `validate-part1-photo-assets.py` remains a release blocker. Do not disable the strict validator or substitute synthetic media.
+- Added `data/vocabulary/batch-009.json` and 34 canonical A–Z records: allotment, anomaly, amortization, attest, deductible, expedite, negligence, rebate, tenure, accreditation, break-even, deferment, disqualification, exporter, leasehold, pension, repayment, restructuring, shareholder, subsidy, solvency, transparency, underwriter, concession, custody, distribution, efficiency, financing, foreclosure, projection, settlement, valuation, levy and subcontracting.
+- Vocabulary count rises 992 → 1,026 (+34), or 34.2% of the 3,000-headword lower-bound planning target. Batch 009 provides English definitions, Vietnamese glosses, original TOEIC-context examples, collocations and editorial CEFR estimates. 32 entries have editorial US IPA transcriptions derived from CMUdict General American ARPABET where a single stable reading was selected; IPA remains blank for `negligence` and `financing` pending dictionary-level confirmation. Added reciprocal POS/sense-checked word-family links; no speculative synonyms/antonyms were invented. Independent lexical review remains pending; CEFR labels remain estimates, not official alignment.
+- Added cumulative migration repair profiles: old 979-headword snapshots can restore only the exact 47 known release additions (Batch 008 + Batch 009); 992-headword snapshots can restore only the 34 Batch 009 IDs. Repair requires the exact profile, matching source counts and all candidate IDs incorrectly marked hidden; all other hidden IDs and personal overrides are preserved. No IndexedDB schema or store migration.
+- **Local verification:** vocabulary validator 1,026 records / 0 errors / 0 warnings; focused vocabulary family tests 5/5; JPG-only PWA readiness 3/3; Learning Content 34/34; Part 1 photo-contract tests 5/5; vocabulary detail/examples 11/11; legacy collocation tests 3/3; progress tests 4/4; 79/79 selected Python tests overall; release-integrity Node test PASS; version/design synchronization PASS after documentation update; all JavaScript syntax checks PASS. Learning-content validator has 0 errors / 8 missing JPG warnings. Strict Part 1 photos remain 1/9 in this workspace.
+- Existing vocabulary IDs and learner progress, listening/reading question IDs and answer keys, attribution rows, IndexedDB schema/stores and personal data are preserved. No remote GitHub Actions, GitHub Pages deployment or real-device visual/audio pass is claimed.
 
 ## v2.66.1 changes — fixed Part 1 TTS sequence and GitHub test correction
 
@@ -282,7 +293,7 @@
 
 | Area | Inventory | Current development status |
 |---|---:|---|
-| Vocabulary | 992 headwords | 207 word-family records; 292 links; US IPA 642/992 |
+| Vocabulary | 1,026 headwords | 230 word-family records; 328 word-family links; US IPA 674/1,026; collocations 856/1,026 |
 | Listening | **201 questions / 107 units** | P1=9, P2=51, P3=81, P4=60; 102 Mock-eligible; 99 pending independent review |
 | Reading | **200 questions / 51 resources** | Two Full Reading forms can be selected without repeated eligible IDs |
 | Grammar | **33 lessons / 86 exercises** | Retry and shared Focus Workspace preserved |
@@ -295,20 +306,20 @@
 1. Listening pending pool: 99 questions (Batch 013=11, Batch 014=17, Batch 015=70, Batch 017 Part 1=1). Pending questions are available for ordinary practice but excluded from Mock until a second reviewer records an approval decision.
 2. Current eligible Listening pool remains 102: P1=8, P2=25, P3=39, P4=30. One Full Listening form can be assembled; a second currently reuses 98/100 question IDs. After all 99 pending items are approved, two zero-repeat Full forms still require three additional distinct Part 1 items beyond the current photo-only item.
 3. Part 1 has eight licensed Pexels records and one AI-generated project asset. `ATTRIBUTION.csv` must cover exactly the Part 1 IDs. AI-generated provenance must not be labelled as Pexels or assigned an invented human photographer.
-4. Eight original Pexels JPG bytes are intentionally absent from this source snapshot; the eight old SVG fallbacks remain. The new office-cleaning JPG is present at 1448×1086. Do not overwrite or remove repository-owned original Pexels JPGs.
+4. Eight original licensed JPG bytes are absent from this source snapshot; all eight obsolete Part 1 SVG fallbacks have now been removed. The office-cleaning JPG is present. Do not overwrite or remove repository-owned original JPGs when merging.
 5. The new office-cleaning record is photo-only. No `image` fallback is declared; do not add `part1-office-cleaning.svg` to JSON, Service Worker arrays, mock rendering or tests as a required file.
 6. Part 1 strict photo validation is not certified by this source snapshot because only 1/9 JPG binaries are present. The source validator passes only with `--allow-missing`; strict CI on GitHub requires all nine JPG files.
 7. Reading's 200-question bank supports two zero-overlap Full forms according to the local inventory audit. The 45 expanded Part 7 questions still need semantic second-person review.
 8. All 80 separate Part 5 practice items remain pending independent review and practice-only. Do not promote to Mock until key uniqueness, distractors, grammar and naturalness have independent review.
 9. Mock scores are raw practice counts/accuracy, not ETS-equated results. No ETS questions or recordings are included.
-10. Vocabulary remains 992 headwords, below the internal 3,000–5,000 planning target. Sense-level IPA, word families, verb forms, collocations, synonyms/antonyms, definitions and examples remain active editorial work.
+10. Vocabulary contains 1,026 headwords (34.2% of the 3,000 minimum planning target), still below the 3,000–5,000 target. Sense-level IPA, word families, definitions, examples, synonyms/antonyms and independent lexical review remain active editorial work.
 
 ## 8. Runtime and storage compatibility
 
 - Stable vocabulary/resource/question/choice IDs are immutable. Append new records; do not reorder legacy question indexes linked to saved progress.
 - IndexedDB remains `toeic-vocabulary-phase1`, version 1, store `workspace`; no profile reset, import/export or migration in v2.44.0. New foundation progress is isolated in localStorage.
 - Retry and Attempt History remain device-local; latest answer and prior attempts are preserved.
-- Part 1 image rule: `photo` is the primary local JPG. `image` is an optional SVG fallback only when the file exists and is listed in Service Worker `REQUIRED`/`APP_SHELL`. Photo-only records are valid.
+- Part 1 image rule (current): JPG-only. `photo` is required; `image` SVG fallback is prohibited in JSON, runtime, assets and Service Worker. Keep the strict JPG validator enabled.
 - Service Worker static array tests do not prove real browser offline/reconnect behavior. Browser SpeechSynthesis remains synthesized audio, not ETS/native recordings.
 
 ## 9. Active development backlog
@@ -326,7 +337,7 @@
 | P1 | Part 5 editorial review | Independent item-level review of all 80 sentence-completion questions; no expansion/promotion to Mock before review |
 | P1 | Reading editorial quality | Second review of 45 expanded Part 7 questions, focusing on semantics and distractor uniqueness |
 | P1 | Vocabulary | Continue sense-level work on IPA, word family, verb forms, collocations, definitions and example accuracy |
-| P1 | PWA/device behavior | Continue targeted hardening for offline cache, reconnect and image fallback; reserve full physical-device QA for the eventual final test plan |
+| P1 | PWA/device behavior | Continue targeted hardening for offline cache, reconnect and JPG media delivery; reserve full physical-device QA for the eventual final test plan |
 | P0 | Beginner pathway | First implementation milestone: Pre-A1/A1 guided lessons with stable objective IDs, prerequisites, examples, guided/independent practice, explanations and mastery gates using the existing shared workspace |
 | P0 | Placement & objective map | Map existing content to objective IDs and design diagnostic placement without resetting IndexedDB v1 or duplicating canonical records |
 | P1 | Shared architecture | Build dependency map and tests around existing shared learning workspace before extracting runtime components |

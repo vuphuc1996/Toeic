@@ -31,7 +31,7 @@
 
 ## 4. Listening quality and reserve lifecycle
 
-- **Part 1:** một ảnh chụp, bốn câu mô tả, một đáp án; JPG cục bộ là ảnh chính. SVG chỉ là fallback tùy chọn khi record khai báo `image`; record photo-only được phép nếu `photo` và `ATTRIBUTION.csv` hợp lệ. Không được để runtime hoặc Service Worker tham chiếu SVG đã bị loại bỏ.
+- **Part 1:** một ảnh chụp JPG cục bộ, bốn câu mô tả, một đáp án. Hợp đồng hiện hành là JPG-only: mỗi record bắt buộc có `photo` và một dòng `ATTRIBUTION.csv`; không khai báo `image`, không có SVG fallback/onerror và không đưa Part 1 SVG vào Service Worker. Nếu source snapshot thiếu byte JPG gốc, phải giữ nguyên strict release gate và khôi phục file từ repository; tuyệt đối không thay bằng hình giả.
 - **Part 2:** một prompt và ba phản hồi tự nhiên; chỉ một phản hồi tốt nhất.
 - **Part 3:** hội thoại nhiều lượt, ít nhất hai speaker, ba câu liên kết.
 - **Part 4:** một bài nói/thông báo có ba câu liên kết.
@@ -149,5 +149,5 @@ Khi xuất bản phiên bản mới: current thành previous; previous cũ đư�
 - Every Part 1 photo must have exactly one matching row in `assets/listening/ATTRIBUTION.csv`.
 - Use `source_type=licensed-stock` for third-party stock images and retain photographer, source page and license URL.
 - Use `source_type=ai-generated` for project-created AI imagery; record the provider, generation provenance and usage note. Never label AI-generated artwork as Pexels photography or invent a human photographer.
-- A Part 1 record must declare a valid local JPG in `photo`. An SVG fallback is optional and must only be declared when the file exists and is included in the Service Worker required shell. Photo-only records are valid; never recreate a deleted fallback merely to satisfy an outdated rule.
+- Every Part 1 record must declare its local JPG in `photo`. The current product contract is JPG-only: do not add an SVG fallback, fallback-onerror code or Part 1 SVG to the Service Worker. Keep any missing original JPGs in the repository; a source snapshot without the original bytes must remain release-blocked rather than substituting an illustration.
 - Newly authored photo-description questions stay `reserve-pending-independent-review` and out of Mock until an independent reviewer approves them.

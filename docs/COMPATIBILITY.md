@@ -2,13 +2,13 @@
 
 > One active register for release support, storage/data contracts and retirement decisions.
 
-## Current support window — 2026-11-14
+## Current support window — 2026-11-15
 
 | Role | Version | Policy |
 |---|---|---|
-| Previous baseline | v2.39.0 | Immediate overlay base and rollback reference for v2.40.0. |
-| Current candidate | v2.40.0 | Removes the obsolete Part 1 SVG reference for the AI-generated office-cleaning photo; synchronizes its Listening record and attribution row; keeps other declared SVG fallbacks. |
-| Older releases | ≤ v2.38.0 | Retired from active handoff; concise history remains in `archive/PROJECT_HISTORY.md` and `CHANGELOG.md`. |
+| Previous release | v2.66.1 | Rollback/reference baseline; Listening Part 1 uses a shared fixed TTS sequence. |
+| Current candidate | v2.67.0 | JPG-only Listening Part 1, removes legacy SVG fallbacks, adds 34 TOEIC vocabulary headwords and cumulative migration repair profiles. Deployment is held until all original JPG bytes pass strict validation. |
+| Older releases | ≤ v2.66.0 | Historical; concise release notes remain in `CHANGELOG.md` and `archive/PROJECT_HISTORY.md`. |
 
 ## Runtime/data contracts
 
@@ -22,7 +22,7 @@
 - Focus Workspace remains shared; `.learning-focus-content` is the only vertical scroll owner. The Part 5 Sentence Completion mode uses this shell and the existing answer-feedback/auto-next behavior.
 - `data/practice/part5-sentence-completion.json` is a separate 35-question original practice bank; it is not part of the 200-question Reading Mock bank. All items remain pending independent review and are practice-only.
 - Service Worker cache markers sync from `data/manifest.json`; `REQUIRED`/`APP_SHELL` include `assets/js/sentence-completion.js` and `data/practice/part5-sentence-completion.json`, with static integrity checked by `test_pwa_readiness.py`. This does not replace browser offline/reconnect QA.
-- Preserve user-owned `assets/listening/*.jpg` and mixed-source attribution. SVG fallback is optional per Part 1 record: only paths present in `image` are required/app-shell resources; `part1-office-cleaning` is photo-only and must not reference `part1-office-cleaning.svg`. Eight original Pexels JPG binaries are absent from this source snapshot; never overwrite or delete repository originals.
+- Preserve user-owned `assets/listening/*.jpg` and mixed-source attribution. Listening Part 1 is now photo-only: each record declares its JPG in `photo`; no per-item SVG fallback is declared, cached, referenced or retained. Eight original licensed JPG binaries are absent from this source snapshot; never overwrite or delete repository originals when merging.
 - Browser SpeechSynthesis is synthesized audio, not ETS/native recording. Multi-speaker voice differentiation is best-effort and depends on installed OS/browser voices.
 - Mock metrics are practice correct-count/accuracy, not ETS-equated scores.
 

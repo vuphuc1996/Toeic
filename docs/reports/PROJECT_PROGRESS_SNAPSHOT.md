@@ -1,14 +1,14 @@
 # Project Progress Snapshot — generated
 
-- Source version: **2.66.1**
+- Source version: **2.67.0**
 - Basis: canonical JSON inventory; counts are not editorial approval.
 
 ## Target-based progress
 
 | Workstream | Current | Target / denominator | Progress | Interpretation |
 |---|---:|---:|---:|---|
-| Vocabulary headwords | 992 | 3,000 minimum | **33.1%** | Lower-bound target coverage; quality review separate |
-| Vocabulary headwords | 992 | 5,000 planning ceiling | **19.8%** | Conservative ceiling coverage; not a quality score |
+| Vocabulary headwords | 1,026 | 3,000 minimum | **34.2%** | Lower-bound target coverage; quality review separate |
+| Vocabulary headwords | 1,026 | 5,000 planning ceiling | **20.5%** | Conservative ceiling coverage; not a quality score |
 | Guided pathway stages represented | 2/6 | Pre-A1, A1, A2, B1, B2, C1 | **33.3%** | Stage presence only; not full-stage completion |
 | Placement question mapping | 16/16 | All diagnostic questions | **100.0%** | Structural mapping coverage only |
 | Canonical objective-resource links | 281/281 | 100.0% | ID links only; not learning-outcome completion |
@@ -33,16 +33,16 @@
 | Foundation Listening | 10/10 scripts / 20 questions | 100.0% within current Pre-A1/A1 scope | Device Speech Synthesis; not authentic ETS recordings |
 | Foundation A–Z sound lab | 26/26 letters | 100.0% | Two TTS actions per letter; action count is not pronunciation mastery |
 
-## Vocabulary field coverage (against current 992-headword base; not editorial approval)
+## Vocabulary field coverage (against current 1,026-headword base; not editorial approval)
 
 | Field | Records | Coverage |
 |---|---:|---:|
-| US IPA | 642/992 | **64.7%** |
-| Word family | 207/992 | **20.9%** |
-| Verb forms | 303/992 | **30.5%** |
-| Collocations | 822/992 | **82.9%** |
-| Synonyms | 404/992 | **40.7%** |
-| Antonyms | 213/992 | **21.5%** |
+| US IPA | 674/1,026 | **65.7%** |
+| Word family | 230/1,026 | **22.4%** |
+| Verb forms | 305/1,026 | **29.7%** |
+| Collocations | 856/1,026 | **83.4%** |
+| Synonyms | 404/1,026 | **39.4%** |
+| Antonyms | 213/1,026 | **20.8%** |
 
 These ratios show whether a field is populated, not whether its content is accurate, natural or complete. Relationship counts are reported separately from headword counts.
 

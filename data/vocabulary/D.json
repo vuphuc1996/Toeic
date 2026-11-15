@@ -405,7 +405,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "deductible",
+          "pos": "n",
+          "meaning_vi": "mức khấu trừ bảo hiểm"
+        }
+      ],
       "verb_forms": {
         "v1": "deduct",
         "vs_es": "deducts",
@@ -446,7 +452,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "deductible",
+          "pos": "n",
+          "meaning_vi": "mức khấu trừ bảo hiểm"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2249,6 +2261,11 @@
           "word": "distributor",
           "pos": "n",
           "meaning_vi": "nhà phân phối"
+        },
+        {
+          "word": "distribution",
+          "pos": "n",
+          "meaning_vi": "sự phân phối; quá trình đưa hàng đến nơi tiêu thụ"
         }
       ],
       "verb_forms": {
@@ -2296,6 +2313,11 @@
           "word": "distribute",
           "pos": "v",
           "meaning_vi": "phân phối"
+        },
+        {
+          "word": "distribution",
+          "pos": "n",
+          "meaning_vi": "sự phân phối; quá trình đưa hàng đến nơi tiêu thụ"
         }
       ],
       "verb_forms": null,
@@ -2794,6 +2816,176 @@
         "job duties",
         "duty manager"
       ]
+    },
+    {
+      "id": "deductible-n",
+      "word": "deductible",
+      "phonetic": {
+        "us": "/dɪˈdʌktəbəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mức khấu trừ bảo hiểm",
+          "definition_en": "the amount an insured person must pay before an insurance provider begins covering eligible costs",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "HEALTHCARE"
+      ],
+      "word_family": [
+        {
+          "word": "deduct",
+          "pos": "v",
+          "meaning_vi": "khấu trừ; trừ đi"
+        },
+        {
+          "word": "deduction",
+          "pos": "n",
+          "meaning_vi": "khoản khấu trừ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The policy has a five-hundred-dollar deductible for each claim.",
+          "vi": "Hợp đồng bảo hiểm quy định mức khấu trừ 500 đô la cho mỗi yêu cầu bồi thường.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "annual deductible",
+        "insurance deductible",
+        "meet the deductible"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deferment-n",
+      "word": "deferment",
+      "phonetic": {
+        "us": "/dɪˈfɝmənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hoãn lại; việc gia hạn thời điểm",
+          "definition_en": "an official arrangement that delays an event, payment, or obligation until a later time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lender approved a six-month deferment of the first repayment.",
+          "vi": "Bên cho vay đã chấp thuận hoãn khoản hoàn trả đầu tiên sáu tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "payment deferment",
+        "request a deferment",
+        "temporary deferment"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "disqualification-n",
+      "word": "disqualification",
+      "phonetic": {
+        "us": "/dɪsˌkwɑləfəˈkeɪʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự loại khỏi tư cách đủ điều kiện",
+          "definition_en": "the act or state of making someone ineligible to take part in an activity or receive a benefit",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Submitting an incomplete application may result in disqualification.",
+          "vi": "Nộp hồ sơ không đầy đủ có thể dẫn đến việc bị loại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "risk disqualification",
+        "automatic disqualification",
+        "grounds for disqualification"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "distribution-n",
+      "word": "distribution",
+      "phonetic": {
+        "us": "/ˌdɪstrəˈbjuʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phân phối; quá trình đưa hàng đến nơi tiêu thụ",
+          "definition_en": "the process of supplying goods from a producer or central location to stores, customers, or other destinations",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "distribute",
+          "pos": "v",
+          "meaning_vi": "phân phối"
+        },
+        {
+          "word": "distributor",
+          "pos": "n",
+          "meaning_vi": "nhà phân phối"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new distribution center will serve retailers across the northern region.",
+          "vi": "Trung tâm phân phối mới sẽ phục vụ các nhà bán lẻ trên khắp khu vực phía Bắc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "distribution center",
+        "distribution network",
+        "distribution channel"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

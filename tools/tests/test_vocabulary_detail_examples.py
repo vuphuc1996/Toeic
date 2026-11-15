@@ -21,6 +21,28 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         cls.app_js = (ROOT / "assets/js/app.js").read_text(encoding="utf-8")
         cls.app_css = (ROOT / "assets/css/app.css").read_text(encoding="utf-8")
 
+    def test_batch009_records_match_canonical_a_to_z_and_have_editorial_fields(self):
+        batch = json.loads((ROOT / 'data/vocabulary/batch-009.json').read_text(encoding='utf-8'))
+        self.assertEqual(batch['count'], 34)
+        self.assertEqual(len(batch['words']), 34)
+        self.assertIn('independent lexical review pending', batch['editorialStatus'])
+        manifest = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf-8'))
+        canonical = {}
+        for item in manifest['letters']:
+            path = ROOT / item['file'].replace('./', '', 1)
+            for word in json.loads(path.read_text(encoding='utf-8'))['words']:
+                canonical[word['id']] = word
+        for entry in batch['words']:
+            self.assertIn(entry['id'], canonical)
+            current = canonical[entry['id']]
+            self.assertEqual(current['word'], entry['word'])
+            self.assertTrue(entry['senses'])
+            self.assertTrue(all(s.get('meaning_vi') and s.get('definition_en') for s in entry['senses']))
+            self.assertTrue(entry.get('examples'))
+            self.assertTrue(all(e.get('en') and e.get('vi') for e in entry['examples']))
+            self.assertGreaterEqual(len(entry.get('collocations', [])), 3)
+        self.assertEqual(sum(bool(x.get('phonetic', {}).get('us')) for x in batch['words']), 32)
+
     def test_base_vocabulary_id_set_is_preserved_with_batches_017_to_020(self):
         ids = [record["id"] for record in self.records]
         baseline = set(load_json("tools/baseline-ids.json")["ids"])
@@ -33,8 +55,11 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         batch_020 = load_json("data/vocabulary/batch-008.json")
         self.assertEqual(len(batch_020["words"]), 13)
         self.assertTrue({w["id"] for w in batch_020["words"]}.issubset(set(ids)))
-        self.assertEqual(len(ids), 992)
+        self.assertEqual(len(ids), 1026)
         self.assertEqual(len(ids), len(set(ids)))
+        batch_009 = load_json('data/vocabulary/batch-009.json')
+        self.assertEqual(len(batch_009['words']), 34)
+        self.assertTrue({w['id'] for w in batch_009['words']}.issubset(set(ids)))
 
     def test_each_example_points_to_an_existing_sense(self):
         for record in self.records:

@@ -5304,6 +5304,80 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "concession-n",
+      "word": "concession",
+      "phonetic": {
+        "us": "/kənˈseʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự nhượng bộ; khoản giảm giá/ưu đãi được chấp thuận",
+          "definition_en": "a special allowance, reduced price, or change in terms granted during an agreement or negotiation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier offered a price concession in exchange for a longer contract.",
+          "vi": "Nhà cung cấp đưa ra mức giảm giá để đổi lấy hợp đồng dài hạn hơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "price concession",
+        "make a concession",
+        "concession agreement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "custody-n",
+      "word": "custody",
+      "phonetic": {
+        "us": "/ˈkʌstədi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự lưu giữ và bảo quản; quyền kiểm soát",
+          "definition_en": "the care, protection, or control of a person, document, or asset",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Original contracts must remain in the secure custody of the legal department.",
+          "vi": "Các hợp đồng gốc phải được phòng pháp chế lưu giữ an toàn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "in safe custody",
+        "take custody of",
+        "custody of documents"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

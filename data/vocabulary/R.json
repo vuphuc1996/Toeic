@@ -3375,6 +3375,118 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "rebate-n",
+      "word": "rebate",
+      "phonetic": {
+        "us": "/ˈribeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản hoàn tiền; khoản giảm giá sau mua",
+          "definition_en": "an amount of money returned to a buyer after a purchase or deducted under specified conditions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can claim a rebate by submitting the receipt within thirty days.",
+          "vi": "Khách hàng có thể yêu cầu hoàn tiền bằng cách gửi biên lai trong vòng 30 ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cash rebate",
+        "mail-in rebate",
+        "receive a rebate"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "repayment-n",
+      "word": "repayment",
+      "phonetic": {
+        "us": "/riˈpeɪmənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc hoàn trả; khoản tiền trả nợ",
+          "definition_en": "the act of paying back money that has been borrowed, or an amount paid back",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The first repayment is due thirty days after the funds are transferred.",
+          "vi": "Khoản hoàn trả đầu tiên đến hạn 30 ngày sau khi tiền được chuyển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "monthly repayment",
+        "loan repayment",
+        "repayment schedule"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "restructuring-n",
+      "word": "restructuring",
+      "phonetic": {
+        "us": "/riˈstrʌktʃɚɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tái cơ cấu; việc tổ chức lại",
+          "definition_en": "the process of changing the organization or financial structure of a company or institution",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Management announced a restructuring plan to simplify regional operations.",
+          "vi": "Ban lãnh đạo công bố kế hoạch tái cơ cấu nhằm đơn giản hóa hoạt động khu vực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "corporate restructuring",
+        "debt restructuring",
+        "restructuring plan"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

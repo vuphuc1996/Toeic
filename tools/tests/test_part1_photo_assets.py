@@ -35,6 +35,19 @@ class Part1PhotoAssetTests(unittest.TestCase):
                 self.assertIn('AI-generated', row['license'])
                 self.assertTrue(row['usage_basis'])
 
+    def test_part1_runtime_is_jpg_only_without_svg_fallbacks(self):
+        data = json.loads((ROOT / 'data/listening/listening-library.json').read_text(encoding='utf-8'))
+        p1 = [item for item in data['listening'] if item.get('part') == 'Part 1']
+        self.assertEqual(len(p1), 9)
+        self.assertTrue(all(item.get('photo', '').endswith('.jpg') for item in p1))
+        self.assertTrue(all('image' not in item for item in p1))
+        app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')
+        sw = (ROOT / 'sw.js').read_text(encoding='utf-8')
+        self.assertNotIn('data-fallback-src', app)
+        self.assertNotIn('part1-warehouse-box.svg', sw)
+        self.assertNotIn('part1-photocopier.svg', sw)
+        self.assertNotIn('Nội dung bổ sung · đang chờ kiểm duyệt độc lập · chưa dùng trong Mock Exam', app)
+
     def test_valid_jpeg_dimensions_are_read(self):
         # A minimal JPEG SOF fixture is enough to exercise the dimension parser without Pillow.
         with tempfile.TemporaryDirectory() as tmp:

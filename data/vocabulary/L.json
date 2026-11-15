@@ -391,7 +391,13 @@
         "FACILITY",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "leasehold",
+          "pos": "n",
+          "meaning_vi": "quyền sử dụng tài sản theo hợp đồng thuê có thời hạn"
+        }
+      ],
       "verb_forms": {
         "v1": "lease",
         "vs_es": "leases",
@@ -1131,6 +1137,86 @@
       "collocations": [
         "tax lien",
         "place a lien on"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "leasehold-n",
+      "word": "leasehold",
+      "phonetic": {
+        "us": "/ˈlisˌhoʊld/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quyền sử dụng tài sản theo hợp đồng thuê có thời hạn",
+          "definition_en": "property or a right to use property for a specified period under a lease agreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "lease",
+          "pos": "n",
+          "meaning_vi": "hợp đồng thuê; thời hạn thuê"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company acquired a leasehold interest in the office building.",
+          "vi": "Công ty đã có được quyền sử dụng mặt bằng văn phòng theo hợp đồng thuê.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "leasehold property",
+        "leasehold interest",
+        "leasehold agreement"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "levy-n",
+      "word": "levy",
+      "phonetic": {
+        "us": "/ˈlevi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản thuế hoặc phí do cơ quan có thẩm quyền áp đặt",
+          "definition_en": "a tax or fee imposed by a government or other authorized body",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The municipality introduced a small levy to fund public transportation improvements.",
+          "vi": "Chính quyền đô thị áp dụng một khoản phí nhỏ để tài trợ việc cải thiện giao thông công cộng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "impose a levy",
+        "annual levy",
+        "local service levy"
       ],
       "cefr_level": "C1",
       "level_basis": "editorial-estimate; verify by sense"

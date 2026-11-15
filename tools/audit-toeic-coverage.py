@@ -154,7 +154,7 @@ for part, target in READ_TARGET.items():
     lines.append(f"| {part} | {current} | {target} | {current / target * 100:.1f}% |")
 lines.append(f"| **Reading total** | **{sum(RQ.values())}** | **100** | **{sum(RQ.values())}%** |")
 lines += [
-    "", "These ratios compare the current practice pool with the public distribution for one test form. They do not mean the app already contains a complete, validated mock test. Part 1 Mock-eligible and total pools are tracked separately; each record has a source-specific attribution row; an SVG fallback is required only when the item declares an `image` path.", "",
+    "", "These ratios compare the current practice pool with the public distribution for one test form. They do not mean the app already contains a complete, validated mock test. Part 1 Mock-eligible and total pools are tracked separately; each record has a source-specific attribution row and a JPG-only `photo` path; no SVG fallback is part of the active contract.", "",
     "## Answer-key balance (A/B/C/D counts)", "", "| Part | A | B | C | D |", "|---|---:|---:|---:|---:|"
 ]
 for part in list(LISTEN_TARGET) + list(READ_TARGET):

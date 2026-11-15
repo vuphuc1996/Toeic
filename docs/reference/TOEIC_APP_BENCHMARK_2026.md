@@ -40,13 +40,13 @@ The IIBC official English site describes TOEIC Listening & Reading as 200 questi
 | Reading | 200 questions / 51 resources | Local inventory supports two non-overlapping Full forms; semantic second review remains separate |
 | Grammar | 33 lessons / 86 exercises | Part metadata supports the TOEIC-focused Grammar library |
 | Mock | 15m/25Q · 60m/100Q · 120m/200Q | Results show raw correct-count and accuracy, not ETS-equated 5–495 / 10–990 estimates |
-| Part 1 photos | 8 referenced Pexels photos + 8 SVG fallbacks | The supplied source snapshot omits the 8 original user-owned JPG bytes; preserve the repository originals. Four more distinct photo items are required for two zero-repeat Full Listening forms after reserve approval. |
+| Part 1 photos | 9 source-tracked JPG paths (8 licensed Pexels + 1 AI-generated) | Current runtime is JPG-only with no SVG fallback. The supplied source snapshot contains only 1/9 JPG bytes; preserve/restore the eight repository originals before strict release validation. Four more distinct photo items are required for two zero-repeat Full Listening forms after reserve approval. |
 
 ### Important quality boundaries
 
 - The 98 Listening reserve questions remain practice-only until a second independent reviewer records a decision. Automated schema, evidence and distractor checks do not replace that review.
 - Current eligible Listening inventory can form one Full Listening section. A second currently repeats 98/100 IDs. After the 98 reserves are approved, four new Part 1 photo-description items are still required to make two non-overlapping forms.
-- Part 1 SVG fallbacks protect display when a photo is unavailable; they do not satisfy the strict photograph-binary gate.
+- Part 1 has no SVG fallback in the current product contract. Missing JPG bytes must remain visible as a release blocker; never substitute artwork.
 - SpeechSynthesis voice quality depends on installed browser/OS voice packs. The app can prefer a clearer voice and adjust pacing, but cannot provide a missing voice or claim native/studio audio.
 - The app has not been validated as an ETS-equivalent score predictor. ETS score conversion uses form-specific equating; this app deliberately reports raw practice accuracy only.
 - Static PWA/source checks do not prove remote GitHub Pages deployment, offline/reconnect behavior or physical-device display/voice quality.

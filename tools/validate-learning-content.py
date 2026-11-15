@@ -157,16 +157,14 @@ def main():
             ERRORS.append(f"Listening {ident}: Part 2 transcriptTranslation is a generic instruction, not a Vietnamese translation")
         if part=='Part 1':
             if len(segments)!=4: ERRORS.append(f"Listening {ident}: Part 1 needs exactly four spoken statements")
-            image=str(item.get('image') or '').strip()  # Optional SVG fallback; photo-only records are valid.
+            image=str(item.get('image') or '').strip()
             photo=item.get('photo','')
-            if image and not image.startswith('./'):
-                ERRORS.append(f"Listening {ident}: optional fallback image must be a relative ./ path")
-            elif image and not (ROOT/image[2:]).is_file():
-                ERRORS.append(f"Listening {ident}: missing optional fallback image {image}")
+            if image:
+                ERRORS.append(f"Listening {ident}: Part 1 is JPG-only; remove the legacy SVG fallback field")
             if not photo.startswith('./assets/listening/') or not photo.lower().endswith('.jpg'):
                 ERRORS.append(f"Listening {ident}: photo must use a local ./assets/listening/*.jpg path")
             elif not (ROOT/photo[2:]).is_file():
-                WARNINGS.append(f"Listening {ident}: Part 1 photo bytes are not present in this source snapshot; SVG fallback remains available ({photo})")
+                WARNINGS.append(f"Listening {ident}: original Part 1 JPG bytes are absent from this source snapshot; restore the repository-owned JPG before release ({photo})")
             if item.get('visualType') != 'photograph':
                 ERRORS.append(f"Listening {ident}: Part 1 local photo must be labelled as photograph")
             if item.get('photoSourceType') == 'ai-generated' and 'AI-generated' not in str(item.get('sourceNote', '')):

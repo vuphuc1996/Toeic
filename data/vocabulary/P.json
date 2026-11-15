@@ -2542,7 +2542,13 @@
         "BUSINESS",
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "projection",
+          "pos": "n",
+          "meaning_vi": "dự báo; ước tính về kết quả trong tương lai"
+        }
+      ],
       "verb_forms": {
         "v1": "project",
         "vs_es": "projects",
@@ -3240,6 +3246,86 @@
         "for this purpose",
         "main purpose"
       ]
+    },
+    {
+      "id": "pension-n",
+      "word": "pension",
+      "phonetic": {
+        "us": "/ˈpenʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lương hưu; khoản trợ cấp hưu trí",
+          "definition_en": "a regular payment made to someone after retirement, usually based on previous employment or contributions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees may increase their pension contributions during the annual enrollment period.",
+          "vi": "Nhân viên có thể tăng mức đóng góp vào quỹ hưu trí trong kỳ đăng ký hằng năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "pension plan",
+        "pension contribution",
+        "receive a pension"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "projection-n",
+      "word": "projection",
+      "phonetic": {
+        "us": "/prəˈdʒekʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dự báo; ước tính về kết quả trong tương lai",
+          "definition_en": "an estimate of a future amount, result, or trend based on current information",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "project",
+          "pos": "n/v",
+          "meaning_vi": "dự án; dự báo"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The finance team revised its revenue projection after reviewing the latest figures.",
+          "vi": "Nhóm tài chính điều chỉnh dự báo doanh thu sau khi xem xét số liệu mới nhất.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sales projection",
+        "revenue projection",
+        "growth projection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

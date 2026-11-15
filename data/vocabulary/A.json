@@ -4538,6 +4538,196 @@
         "win an award",
         "award a contract"
       ]
+    },
+    {
+      "id": "allotment-n",
+      "word": "allotment",
+      "phonetic": {
+        "us": "/əˈlɑtmənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "suất/khoản được phân bổ",
+          "definition_en": "an amount of something assigned to a person, department, or purpose",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department received an additional travel allotment for the upcoming conference.",
+          "vi": "Phòng ban nhận thêm một khoản ngân sách đi lại được phân bổ cho hội nghị sắp tới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "annual allotment",
+        "budget allotment",
+        "allotment of funds"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "anomaly-n",
+      "word": "anomaly",
+      "phonetic": {
+        "us": "/əˈnɑməli/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điểm bất thường; hiện tượng khác thường",
+          "definition_en": "something that differs from what is usual or expected, especially in a set of figures or results",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The auditor investigated an anomaly in the monthly expense report.",
+          "vi": "Kiểm toán viên đã điều tra một điểm bất thường trong báo cáo chi phí hằng tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "identify an anomaly",
+        "data anomaly",
+        "anomaly in the data"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "amortization-n",
+      "word": "amortization",
+      "phonetic": {
+        "us": "/ˌæmɚtəˈzeɪʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phân bổ/hoàn trả dần theo kỳ",
+          "definition_en": "the gradual repayment of a loan or the systematic allocation of an intangible asset cost over time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank provided an amortization schedule showing each monthly payment.",
+          "vi": "Ngân hàng cung cấp lịch hoàn trả dần thể hiện từng khoản thanh toán hằng tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "amortization schedule",
+        "loan amortization",
+        "amortization expense"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "attest-v",
+      "word": "attest",
+      "phonetic": {
+        "us": "/əˈtest/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "xác nhận; chứng thực tính đúng đắn",
+          "definition_en": "to state or show that something is true, genuine, or accurate",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "attest",
+        "vs_es": "attests",
+        "v2": "attested",
+        "v3": "attested",
+        "ving": "attesting"
+      },
+      "examples": [
+        {
+          "en": "Please attest that the information on the application form is accurate.",
+          "vi": "Vui lòng xác nhận rằng thông tin trên mẫu đơn đăng ký là chính xác.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "attest to the accuracy",
+        "attest a document",
+        "person authorized to attest"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accreditation-n",
+      "word": "accreditation",
+      "phonetic": {
+        "us": "/əˌkredəˈteɪʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự công nhận/chứng nhận đạt tiêu chuẩn",
+          "definition_en": "official recognition that an organization or program meets established standards",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training center renewed its accreditation for another three years.",
+          "vi": "Trung tâm đào tạo đã gia hạn chứng nhận chất lượng thêm ba năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "professional accreditation",
+        "receive accreditation",
+        "accreditation standards"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

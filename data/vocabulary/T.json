@@ -1377,6 +1377,80 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "tenure-n",
+      "word": "tenure",
+      "phonetic": {
+        "us": "/ˈtenjɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian đảm nhiệm chức vụ; nhiệm kỳ",
+          "definition_en": "the period during which someone holds a particular job, office, or position",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "During her tenure as branch manager, customer satisfaction improved steadily.",
+          "vi": "Trong thời gian bà đảm nhiệm vị trí quản lý chi nhánh, mức độ hài lòng của khách hàng đã cải thiện đều đặn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "during her tenure",
+        "tenure of office",
+        "long tenure"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "transparency-n",
+      "word": "transparency",
+      "phonetic": {
+        "us": "/trænˈsperənsi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính minh bạch; sự công khai rõ ràng",
+          "definition_en": "the quality of being open and clear about decisions, activities, or information",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The revised policy is intended to improve transparency in supplier selection.",
+          "vi": "Chính sách sửa đổi nhằm tăng tính minh bạch trong việc lựa chọn nhà cung cấp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "financial transparency",
+        "transparency in reporting",
+        "improve transparency"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

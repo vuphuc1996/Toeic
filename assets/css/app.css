@@ -1001,7 +1001,7 @@ body.has-learning-focus{overflow:hidden}
 
 
 /* v2.34.0 — Listening reserve visibility and two-form readiness */
-.listening-reserve-note{margin:10px 0 0!important;padding:8px 10px;border:1px solid #f0dfb6;border-radius:8px;background:#fff9eb;color:#7e5c20;font-size:11px!important;line-height:1.5!important;font-weight:650}
+
 .mock-pool-readiness{margin:0 0 26px;padding:15px 17px;border:1px solid #dfe8f2;border-radius:13px;background:#fbfdff;color:#274666}
 .mock-readiness-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px}
 .mock-readiness-head strong,.mock-readiness-head small{display:block}.mock-readiness-head strong{font-size:14px}.mock-readiness-head small{margin-top:3px;color:#75869a;font-size:11px}.mock-readiness-head>span{white-space:nowrap;color:#426e9b;font-size:11px;font-weight:750}

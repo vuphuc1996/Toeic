@@ -274,6 +274,11 @@
           "word": "underwriting",
           "pos": "n",
           "meaning_vi": "nghiệp vụ thẩm định/bảo lãnh tài chính"
+        },
+        {
+          "word": "underwriter",
+          "pos": "n",
+          "meaning_vi": "người/đơn vị thẩm định và nhận bảo lãnh rủi ro"
         }
       ],
       "verb_forms": {
@@ -321,6 +326,11 @@
           "word": "underwrite",
           "pos": "v",
           "meaning_vi": "bảo lãnh; thẩm định rủi ro"
+        },
+        {
+          "word": "underwriter",
+          "pos": "n",
+          "meaning_vi": "người/đơn vị thẩm định và nhận bảo lãnh rủi ro"
         }
       ],
       "verb_forms": null,
@@ -719,6 +729,54 @@
         "utilize space"
       ],
       "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "underwriter-n",
+      "word": "underwriter",
+      "phonetic": {
+        "us": "/ˈʌndɚˌraɪtɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người/đơn vị thẩm định và nhận bảo lãnh rủi ro",
+          "definition_en": "a person or organization that evaluates financial risk and agrees to insure or guarantee it under specified terms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "underwrite",
+          "pos": "v",
+          "meaning_vi": "bảo lãnh; thẩm định rủi ro"
+        },
+        {
+          "word": "underwriting",
+          "pos": "n",
+          "meaning_vi": "nghiệp vụ thẩm định/bảo lãnh tài chính"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The underwriter requested updated financial statements before issuing the policy.",
+          "vi": "Đơn vị thẩm định bảo hiểm yêu cầu báo cáo tài chính cập nhật trước khi phát hành hợp đồng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "insurance underwriter",
+        "lead underwriter",
+        "underwriter approval"
+      ],
+      "cefr_level": "C1",
       "level_basis": "editorial-estimate; verify by sense"
     }
   ]

@@ -1289,7 +1289,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "solvency",
+          "pos": "n",
+          "meaning_vi": "khả năng thanh toán nợ đến hạn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

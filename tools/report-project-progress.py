@@ -74,7 +74,7 @@ def main():
       f'| Foundation Reading | {len(foundation_reading)}/{len(foundation)} passages / {foundation_reading_questions} questions | {pct(len(foundation_reading),len(foundation))} within current Pre-A1/A1 scope | Separate reading bank; not Foundation mastery |',
       f'| Foundation Listening | {len(foundation_listening)}/{len(foundation)} scripts / {foundation_listening_questions} questions | {pct(len(foundation_listening),len(foundation))} within current Pre-A1/A1 scope | Device Speech Synthesis; not authentic ETS recordings |',
       f'| Foundation A–Z sound lab | {len(alphabet_sounds)}/26 letters | {pct(len(alphabet_sounds),26)} | Two TTS actions per letter; action count is not pronunciation mastery |',
-      '', '## Vocabulary field coverage (against current 992-headword base; not editorial approval)',
+      '', f'## Vocabulary field coverage (against current {vocab:,}-headword base; not editorial approval)',
       '', '| Field | Records | Coverage |', '|---|---:|---:|',
       *[f'| {name} | {count:,}/{vocab:,} | **{pct(count,vocab)}** |' for name,count in field_counts.items()],
       '', 'These ratios show whether a field is populated, not whether its content is accurate, natural or complete. Relationship counts are reported separately from headword counts.',

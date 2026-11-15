@@ -47,6 +47,24 @@ PAIRS = [
     ('promote', 'promotion', 'v', 'n'),
     ('register', 'registration', 'v', 'n'),
     ('withdraw', 'withdrawal', 'v', 'n'),
+    ('deduct', 'deductible', 'v', 'n'),
+    ('deduction', 'deductible', 'n', 'n'),
+    ('lease', 'leasehold', 'n', 'n'),
+    ('solvent', 'solvency', 'adj', 'n'),
+    ('insolvent', 'solvency', 'adj', 'n'),
+    ('underwrite', 'underwriter', 'v', 'n'),
+    ('underwriting', 'underwriter', 'n', 'n'),
+    ('distribute', 'distribution', 'v', 'n'),
+    ('distributor', 'distribution', 'n', 'n'),
+    ('efficient', 'efficiency', 'adj', 'n'),
+    ('efficiently', 'efficiency', 'adv', 'n'),
+    ('finance', 'financing', 'n/v', 'n'),
+    ('project', 'projection', 'n/v', 'n'),
+    ('settle', 'settlement', 'v', 'n'),
+    ('value', 'valuation', 'n/v', 'n'),
+    ('valuable', 'valuation', 'adj', 'n'),
+    ('subcontract', 'subcontracting', 'v/n', 'n'),
+    ('subcontractor', 'subcontracting', 'n', 'n'),
 ]
 
 
@@ -82,7 +100,7 @@ class VocabularyFamilyLinkTests(unittest.TestCase):
         return matches[0]
 
     def test_all_curated_pairs_exist_in_both_directions(self):
-        self.assertEqual(len(PAIRS), 39)
+        self.assertEqual(len(PAIRS), 57)
         for base, derivative, base_pos, derivative_pos in PAIRS:
             self.assertIn(base, self.records)
             self.assertIn(derivative, self.records)

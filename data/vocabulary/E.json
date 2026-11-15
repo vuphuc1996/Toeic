@@ -155,7 +155,13 @@
         "BUSINESS",
         "QUALITY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "efficiency",
+          "pos": "n",
+          "meaning_vi": "hiệu suất; khả năng đạt kết quả với ít hao phí"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -188,7 +194,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "efficiency",
+          "pos": "n",
+          "meaning_vi": "hiệu suất; khả năng đạt kết quả với ít hao phí"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -2313,6 +2325,134 @@
         }
       ],
       "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "expedite-v",
+      "word": "expedite",
+      "phonetic": {
+        "us": "/ˈekspɪˌdaɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đẩy nhanh; xúc tiến nhanh",
+          "definition_en": "to make a process or action happen sooner or more quickly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "expedite",
+        "vs_es": "expedites",
+        "v2": "expedited",
+        "v3": "expedited",
+        "ving": "expediting"
+      },
+      "examples": [
+        {
+          "en": "The supplier agreed to expedite the delivery of the replacement parts.",
+          "vi": "Nhà cung cấp đồng ý đẩy nhanh việc giao các phụ tùng thay thế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "expedite a shipment",
+        "expedite the process",
+        "expedite approval"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "exporter-n",
+      "word": "exporter",
+      "phonetic": {
+        "us": "/ɪkˈspɔrtɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà xuất khẩu; doanh nghiệp xuất khẩu",
+          "definition_en": "a person or company that sells goods or services to customers in another country",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The exporter must provide the carrier with the required customs documents.",
+          "vi": "Nhà xuất khẩu phải cung cấp cho đơn vị vận chuyển các chứng từ hải quan cần thiết.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "licensed exporter",
+        "major exporter",
+        "exporter of record"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "efficiency-n",
+      "word": "efficiency",
+      "phonetic": {
+        "us": "/ɪˈfɪʃənsi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hiệu suất; khả năng đạt kết quả với ít hao phí",
+          "definition_en": "the ability to achieve a result while using as little time, effort, or resources as necessary",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [
+        {
+          "word": "efficient",
+          "pos": "adj",
+          "meaning_vi": "hiệu suất cao; tiết kiệm nguồn lực"
+        },
+        {
+          "word": "efficiently",
+          "pos": "adv",
+          "meaning_vi": "một cách hiệu quả"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The scheduling system improved efficiency by reducing duplicate appointments.",
+          "vi": "Hệ thống lập lịch nâng cao hiệu suất bằng cách giảm các cuộc hẹn trùng lặp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "operational efficiency",
+        "energy efficiency",
+        "improve efficiency"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     }

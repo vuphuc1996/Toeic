@@ -105,7 +105,7 @@ A feature can add a layout class, not a private theme. It should reuse `.panel`,
 ### Media frames and card-content balance (v2.64.0)
 
 - Listening Part 1 illustrations and photographs share the `--ds-image-ratio: 4 / 3` frame. Images fill the frame with `object-fit: cover`; the source file is never resized or overwritten as part of CSS layout work.
-- The photocopier image uses the stable `data-photo-id="part1-photocopier"` selector with focal point `50% 42%`. If an original photo is unavailable, the existing SVG fallback uses the same frame, radius and caption geometry.
+- The photocopier image uses the stable `data-photo-id="part1-photocopier"` selector with focal point `50% 42%`. Part 1 uses the local JPG source only. Missing JPG bytes are a release blocker; do not introduce an SVG fallback or generated placeholder.
 - New image units must use the same frame component and must declare a stable `data-photo-id` only when a reviewed crop focal point is necessary. Do not add unique width/height rules to an individual image.
 - Cards in the same grid row have equal outer height and a common footer baseline. Titles reserve a two-line baseline; normal descriptions reserve three lines as a minimum but are never clipped or line-clamped. Longer copy expands the row naturally.
 - Card buttons may wrap to multiple lines, keep a minimum 44 px touch target, and must not force `white-space: nowrap`. Internal content uses `min-width: 0` and `overflow-wrap: anywhere` where long labels or IDs could otherwise escape the card.

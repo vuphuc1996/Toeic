@@ -672,7 +672,13 @@
         "FINANCE",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "settlement",
+          "pos": "n",
+          "meaning_vi": "sự dàn xếp; khoản thanh toán để giải quyết tranh chấp/nghĩa vụ"
+        }
+      ],
       "verb_forms": {
         "v1": "settle",
         "vs_es": "settles",
@@ -1149,7 +1155,13 @@
       "topics": [
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "solvency",
+          "pos": "n",
+          "meaning_vi": "khả năng thanh toán nợ đến hạn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -1809,7 +1821,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "subcontracting",
+          "pos": "n",
+          "meaning_vi": "việc giao một phần công việc cho nhà thầu phụ"
+        }
+      ],
       "verb_forms": {
         "v1": "subcontract",
         "vs_es": "subcontracts",
@@ -1850,7 +1868,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "subcontracting",
+          "pos": "n",
+          "meaning_vi": "việc giao một phần công việc cho nhà thầu phụ"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -3015,6 +3039,219 @@
         "computer system",
         "payment system"
       ]
+    },
+    {
+      "id": "shareholder-n",
+      "word": "shareholder",
+      "phonetic": {
+        "us": "/ˈʃerˌhoʊldɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cổ đông",
+          "definition_en": "a person or organization that owns shares in a company",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Shareholders will vote on the proposed merger at the annual meeting.",
+          "vi": "Các cổ đông sẽ bỏ phiếu về đề xuất sáp nhập tại cuộc họp thường niên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "major shareholder",
+        "shareholder meeting",
+        "shareholder approval"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "subsidy-n",
+      "word": "subsidy",
+      "phonetic": {
+        "us": "/ˈsʌbsədi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản trợ cấp; khoản trợ giá",
+          "definition_en": "money given by a government or organization to reduce costs or support an activity",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manufacturer received a subsidy to upgrade its energy-efficient equipment.",
+          "vi": "Nhà sản xuất nhận được khoản trợ cấp để nâng cấp thiết bị tiết kiệm năng lượng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "government subsidy",
+        "energy subsidy",
+        "provide a subsidy"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "solvency-n",
+      "word": "solvency",
+      "phonetic": {
+        "us": "/ˈsɑlvənsi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khả năng thanh toán nợ đến hạn",
+          "definition_en": "the ability of a person or organization to pay debts and meet financial obligations",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BANKING"
+      ],
+      "word_family": [
+        {
+          "word": "solvent",
+          "pos": "adj",
+          "meaning_vi": "có khả năng thanh toán; đủ khả năng trả nợ"
+        },
+        {
+          "word": "insolvent",
+          "pos": "adj",
+          "meaning_vi": "mất khả năng thanh toán"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lender reviewed the company’s solvency before approving the credit facility.",
+          "vi": "Bên cho vay đã xem xét khả năng thanh toán của công ty trước khi phê duyệt hạn mức tín dụng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "financial solvency",
+        "solvency ratio",
+        "assess solvency"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "settlement-n",
+      "word": "settlement",
+      "phonetic": {
+        "us": "/ˈsetəlmənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự dàn xếp; khoản thanh toán để giải quyết tranh chấp/nghĩa vụ",
+          "definition_en": "an agreement or payment that resolves a dispute, claim, or outstanding obligation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "settle",
+          "pos": "v",
+          "meaning_vi": "thanh toán; giải quyết; ổn định"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Both companies reached a settlement before the dispute went to court.",
+          "vi": "Hai công ty đạt được thỏa thuận dàn xếp trước khi tranh chấp được đưa ra tòa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "out-of-court settlement",
+        "final settlement",
+        "settlement amount"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "subcontracting-n",
+      "word": "subcontracting",
+      "phonetic": {
+        "us": "/ˌsʌbkənˈtræktɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc giao một phần công việc cho nhà thầu phụ",
+          "definition_en": "the practice of hiring another company or individual to perform part of a contracted project or service",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "CONSTRUCTION"
+      ],
+      "word_family": [
+        {
+          "word": "subcontract",
+          "pos": "v/n",
+          "meaning_vi": "giao thầu phụ; hợp đồng thầu phụ"
+        },
+        {
+          "word": "subcontractor",
+          "pos": "n",
+          "meaning_vi": "nhà thầu phụ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project manager must approve all subcontracting arrangements in advance.",
+          "vi": "Quản lý dự án phải phê duyệt trước mọi thỏa thuận giao thầu phụ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "subcontracting agreement",
+        "subcontracting work",
+        "subcontracting arrangement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

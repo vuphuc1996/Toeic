@@ -1,0 +1,1390 @@
+{
+  "schemaVersion": 1,
+  "batch": "009",
+  "version": "2.67.0",
+  "focus": "TOEIC vocabulary expansion: finance, legal compliance, procurement, HR and logistics",
+  "count": 34,
+  "editorialStatus": "added locally; internal author review completed; independent lexical review pending; CEFR levels are editorial estimates",
+  "sourcePolicy": "Headwords, Vietnamese glosses, definitions, collocations and example sentences are original editorial content. US IPA values are editorial IPA transcriptions derived from Carnegie Mellon Pronouncing Dictionary (CMUdict) General American ARPABET pronunciations where a stable single reading was selected; ambiguous/multiple-pronunciation entries are left blank for later dictionary-level confirmation. Examples are original TOEIC-context sentences and are not ETS material.",
+  "sources": [
+    {
+      "name": "CMU Pronouncing Dictionary",
+      "url": "https://github.com/cmusphinx/cmudict",
+      "use": "General American ARPABET pronunciation reference; basis for editorial IPA transcription"
+    }
+  ],
+  "words": [
+    {
+      "id": "allotment-n",
+      "word": "allotment",
+      "phonetic": {
+        "us": "/əˈlɑtmənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "suất/khoản được phân bổ",
+          "definition_en": "an amount of something assigned to a person, department, or purpose",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The department received an additional travel allotment for the upcoming conference.",
+          "vi": "Phòng ban nhận thêm một khoản ngân sách đi lại được phân bổ cho hội nghị sắp tới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "annual allotment",
+        "budget allotment",
+        "allotment of funds"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "anomaly-n",
+      "word": "anomaly",
+      "phonetic": {
+        "us": "/əˈnɑməli/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điểm bất thường; hiện tượng khác thường",
+          "definition_en": "something that differs from what is usual or expected, especially in a set of figures or results",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The auditor investigated an anomaly in the monthly expense report.",
+          "vi": "Kiểm toán viên đã điều tra một điểm bất thường trong báo cáo chi phí hằng tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "identify an anomaly",
+        "data anomaly",
+        "anomaly in the data"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "amortization-n",
+      "word": "amortization",
+      "phonetic": {
+        "us": "/ˌæmɚtəˈzeɪʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phân bổ/hoàn trả dần theo kỳ",
+          "definition_en": "the gradual repayment of a loan or the systematic allocation of an intangible asset cost over time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank provided an amortization schedule showing each monthly payment.",
+          "vi": "Ngân hàng cung cấp lịch hoàn trả dần thể hiện từng khoản thanh toán hằng tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "amortization schedule",
+        "loan amortization",
+        "amortization expense"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "attest-v",
+      "word": "attest",
+      "phonetic": {
+        "us": "/əˈtɛst/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "xác nhận; chứng thực tính đúng đắn",
+          "definition_en": "to state or show that something is true, genuine, or accurate",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "attest",
+        "vs_es": "attests",
+        "v2": "attested",
+        "v3": "attested",
+        "ving": "attesting"
+      },
+      "examples": [
+        {
+          "en": "Please attest that the information on the application form is accurate.",
+          "vi": "Vui lòng xác nhận rằng thông tin trên mẫu đơn đăng ký là chính xác.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "attest to the accuracy",
+        "attest a document",
+        "person authorized to attest"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deductible-n",
+      "word": "deductible",
+      "phonetic": {
+        "us": "/dɪˈdʌktəbəl/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mức khấu trừ bảo hiểm",
+          "definition_en": "the amount an insured person must pay before an insurance provider begins covering eligible costs",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "HEALTHCARE"
+      ],
+      "word_family": [
+        {
+          "word": "deduct",
+          "pos": "v",
+          "meaning_vi": "khấu trừ; trừ đi"
+        },
+        {
+          "word": "deduction",
+          "pos": "n",
+          "meaning_vi": "khoản khấu trừ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The policy has a five-hundred-dollar deductible for each claim.",
+          "vi": "Hợp đồng bảo hiểm quy định mức khấu trừ 500 đô la cho mỗi yêu cầu bồi thường.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "annual deductible",
+        "insurance deductible",
+        "meet the deductible"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "expedite-v",
+      "word": "expedite",
+      "phonetic": {
+        "us": "/ˈɛkspɪˌdaɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "đẩy nhanh; xúc tiến nhanh",
+          "definition_en": "to make a process or action happen sooner or more quickly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "expedite",
+        "vs_es": "expedites",
+        "v2": "expedited",
+        "v3": "expedited",
+        "ving": "expediting"
+      },
+      "examples": [
+        {
+          "en": "The supplier agreed to expedite the delivery of the replacement parts.",
+          "vi": "Nhà cung cấp đồng ý đẩy nhanh việc giao các phụ tùng thay thế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "expedite a shipment",
+        "expedite the process",
+        "expedite approval"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "negligence-n",
+      "word": "negligence",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự sơ suất; sự thiếu cẩn trọng",
+          "definition_en": "failure to take the care that a reasonable person would take in a particular situation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspection found no evidence of negligence by the maintenance team.",
+          "vi": "Cuộc kiểm tra không tìm thấy bằng chứng về sự sơ suất của đội bảo trì.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "professional negligence",
+        "gross negligence",
+        "allege negligence"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "rebate-n",
+      "word": "rebate",
+      "phonetic": {
+        "us": "/ˈribeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản hoàn tiền; khoản giảm giá sau mua",
+          "definition_en": "an amount of money returned to a buyer after a purchase or deducted under specified conditions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers can claim a rebate by submitting the receipt within thirty days.",
+          "vi": "Khách hàng có thể yêu cầu hoàn tiền bằng cách gửi biên lai trong vòng 30 ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cash rebate",
+        "mail-in rebate",
+        "receive a rebate"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "tenure-n",
+      "word": "tenure",
+      "phonetic": {
+        "us": "/ˈtɛnjɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian đảm nhiệm chức vụ; nhiệm kỳ",
+          "definition_en": "the period during which someone holds a particular job, office, or position",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "During her tenure as branch manager, customer satisfaction improved steadily.",
+          "vi": "Trong thời gian bà đảm nhiệm vị trí quản lý chi nhánh, mức độ hài lòng của khách hàng đã cải thiện đều đặn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "during her tenure",
+        "tenure of office",
+        "long tenure"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accreditation-n",
+      "word": "accreditation",
+      "phonetic": {
+        "us": "/əˌkrɛdəˈteɪʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự công nhận/chứng nhận đạt tiêu chuẩn",
+          "definition_en": "official recognition that an organization or program meets established standards",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "EDUCATION",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training center renewed its accreditation for another three years.",
+          "vi": "Trung tâm đào tạo đã gia hạn chứng nhận chất lượng thêm ba năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "professional accreditation",
+        "receive accreditation",
+        "accreditation standards"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "break-even-adj",
+      "word": "break-even",
+      "phonetic": {
+        "us": "/ˌbreɪkˈiːvən/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "hòa vốn; không lãi cũng không lỗ",
+          "definition_en": "at a level where total revenue is equal to total costs, resulting in neither a profit nor a loss",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new store is expected to reach the break-even point within its first year.",
+          "vi": "Cửa hàng mới dự kiến đạt điểm hòa vốn trong năm hoạt động đầu tiên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "break-even point",
+        "break-even analysis",
+        "reach break-even"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deferment-n",
+      "word": "deferment",
+      "phonetic": {
+        "us": "/dɪˈfɝmənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hoãn lại; việc gia hạn thời điểm",
+          "definition_en": "an official arrangement that delays an event, payment, or obligation until a later time",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lender approved a six-month deferment of the first repayment.",
+          "vi": "Bên cho vay đã chấp thuận hoãn khoản hoàn trả đầu tiên sáu tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "payment deferment",
+        "request a deferment",
+        "temporary deferment"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "disqualification-n",
+      "word": "disqualification",
+      "phonetic": {
+        "us": "/dɪsˌkwɑləfəˈkeɪʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự loại khỏi tư cách đủ điều kiện",
+          "definition_en": "the act or state of making someone ineligible to take part in an activity or receive a benefit",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Submitting an incomplete application may result in disqualification.",
+          "vi": "Nộp hồ sơ không đầy đủ có thể dẫn đến việc bị loại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "risk disqualification",
+        "automatic disqualification",
+        "grounds for disqualification"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "exporter-n",
+      "word": "exporter",
+      "phonetic": {
+        "us": "/ɪkˈspɔrtɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhà xuất khẩu; doanh nghiệp xuất khẩu",
+          "definition_en": "a person or company that sells goods or services to customers in another country",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "SHIPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The exporter must provide the carrier with the required customs documents.",
+          "vi": "Nhà xuất khẩu phải cung cấp cho đơn vị vận chuyển các chứng từ hải quan cần thiết.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "licensed exporter",
+        "major exporter",
+        "exporter of record"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "leasehold-n",
+      "word": "leasehold",
+      "phonetic": {
+        "us": "/ˈlisˌhoʊld/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quyền sử dụng tài sản theo hợp đồng thuê có thời hạn",
+          "definition_en": "property or a right to use property for a specified period under a lease agreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "lease",
+          "pos": "n",
+          "meaning_vi": "hợp đồng thuê; thời hạn thuê"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company acquired a leasehold interest in the office building.",
+          "vi": "Công ty đã có được quyền sử dụng mặt bằng văn phòng theo hợp đồng thuê.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "leasehold property",
+        "leasehold interest",
+        "leasehold agreement"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "pension-n",
+      "word": "pension",
+      "phonetic": {
+        "us": "/ˈpɛnʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lương hưu; khoản trợ cấp hưu trí",
+          "definition_en": "a regular payment made to someone after retirement, usually based on previous employment or contributions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HR",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees may increase their pension contributions during the annual enrollment period.",
+          "vi": "Nhân viên có thể tăng mức đóng góp vào quỹ hưu trí trong kỳ đăng ký hằng năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "pension plan",
+        "pension contribution",
+        "receive a pension"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "repayment-n",
+      "word": "repayment",
+      "phonetic": {
+        "us": "/riˈpeɪmənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc hoàn trả; khoản tiền trả nợ",
+          "definition_en": "the act of paying back money that has been borrowed, or an amount paid back",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The first repayment is due thirty days after the funds are transferred.",
+          "vi": "Khoản hoàn trả đầu tiên đến hạn 30 ngày sau khi tiền được chuyển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "monthly repayment",
+        "loan repayment",
+        "repayment schedule"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "restructuring-n",
+      "word": "restructuring",
+      "phonetic": {
+        "us": "/riˈstrʌktʃɚɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự tái cơ cấu; việc tổ chức lại",
+          "definition_en": "the process of changing the organization or financial structure of a company or institution",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Management announced a restructuring plan to simplify regional operations.",
+          "vi": "Ban lãnh đạo công bố kế hoạch tái cơ cấu nhằm đơn giản hóa hoạt động khu vực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "corporate restructuring",
+        "debt restructuring",
+        "restructuring plan"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "shareholder-n",
+      "word": "shareholder",
+      "phonetic": {
+        "us": "/ˈʃɛrˌhoʊldɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cổ đông",
+          "definition_en": "a person or organization that owns shares in a company",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Shareholders will vote on the proposed merger at the annual meeting.",
+          "vi": "Các cổ đông sẽ bỏ phiếu về đề xuất sáp nhập tại cuộc họp thường niên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "major shareholder",
+        "shareholder meeting",
+        "shareholder approval"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "subsidy-n",
+      "word": "subsidy",
+      "phonetic": {
+        "us": "/ˈsʌbsədi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản trợ cấp; khoản trợ giá",
+          "definition_en": "money given by a government or organization to reduce costs or support an activity",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manufacturer received a subsidy to upgrade its energy-efficient equipment.",
+          "vi": "Nhà sản xuất nhận được khoản trợ cấp để nâng cấp thiết bị tiết kiệm năng lượng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "government subsidy",
+        "energy subsidy",
+        "provide a subsidy"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "solvency-n",
+      "word": "solvency",
+      "phonetic": {
+        "us": "/ˈsɑlvənsi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khả năng thanh toán nợ đến hạn",
+          "definition_en": "the ability of a person or organization to pay debts and meet financial obligations",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BANKING"
+      ],
+      "word_family": [
+        {
+          "word": "solvent",
+          "pos": "adj",
+          "meaning_vi": "có khả năng thanh toán; đủ khả năng trả nợ"
+        },
+        {
+          "word": "insolvent",
+          "pos": "adj",
+          "meaning_vi": "mất khả năng thanh toán"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The lender reviewed the company’s solvency before approving the credit facility.",
+          "vi": "Bên cho vay đã xem xét khả năng thanh toán của công ty trước khi phê duyệt hạn mức tín dụng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "financial solvency",
+        "solvency ratio",
+        "assess solvency"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "transparency-n",
+      "word": "transparency",
+      "phonetic": {
+        "us": "/trænˈspɛrənsi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tính minh bạch; sự công khai rõ ràng",
+          "definition_en": "the quality of being open and clear about decisions, activities, or information",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The revised policy is intended to improve transparency in supplier selection.",
+          "vi": "Chính sách sửa đổi nhằm tăng tính minh bạch trong việc lựa chọn nhà cung cấp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "financial transparency",
+        "transparency in reporting",
+        "improve transparency"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "underwriter-n",
+      "word": "underwriter",
+      "phonetic": {
+        "us": "/ˈʌndɚˌraɪtɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người/đơn vị thẩm định và nhận bảo lãnh rủi ro",
+          "definition_en": "a person or organization that evaluates financial risk and agrees to insure or guarantee it under specified terms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "INSURANCE"
+      ],
+      "word_family": [
+        {
+          "word": "underwrite",
+          "pos": "v",
+          "meaning_vi": "bảo lãnh; thẩm định rủi ro"
+        },
+        {
+          "word": "underwriting",
+          "pos": "n",
+          "meaning_vi": "nghiệp vụ thẩm định/bảo lãnh tài chính"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The underwriter requested updated financial statements before issuing the policy.",
+          "vi": "Đơn vị thẩm định bảo hiểm yêu cầu báo cáo tài chính cập nhật trước khi phát hành hợp đồng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "insurance underwriter",
+        "lead underwriter",
+        "underwriter approval"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "concession-n",
+      "word": "concession",
+      "phonetic": {
+        "us": "/kənˈsɛʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự nhượng bộ; khoản giảm giá/ưu đãi được chấp thuận",
+          "definition_en": "a special allowance, reduced price, or change in terms granted during an agreement or negotiation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier offered a price concession in exchange for a longer contract.",
+          "vi": "Nhà cung cấp đưa ra mức giảm giá để đổi lấy hợp đồng dài hạn hơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "price concession",
+        "make a concession",
+        "concession agreement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "custody-n",
+      "word": "custody",
+      "phonetic": {
+        "us": "/ˈkʌstədi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự lưu giữ và bảo quản; quyền kiểm soát",
+          "definition_en": "the care, protection, or control of a person, document, or asset",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Original contracts must remain in the secure custody of the legal department.",
+          "vi": "Các hợp đồng gốc phải được phòng pháp chế lưu giữ an toàn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "in safe custody",
+        "take custody of",
+        "custody of documents"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "distribution-n",
+      "word": "distribution",
+      "phonetic": {
+        "us": "/ˌdɪstrəˈbjuʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự phân phối; quá trình đưa hàng đến nơi tiêu thụ",
+          "definition_en": "the process of supplying goods from a producer or central location to stores, customers, or other destinations",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "distribute",
+          "pos": "v",
+          "meaning_vi": "phân phối"
+        },
+        {
+          "word": "distributor",
+          "pos": "n",
+          "meaning_vi": "nhà phân phối"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new distribution center will serve retailers across the northern region.",
+          "vi": "Trung tâm phân phối mới sẽ phục vụ các nhà bán lẻ trên khắp khu vực phía Bắc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "distribution center",
+        "distribution network",
+        "distribution channel"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "efficiency-n",
+      "word": "efficiency",
+      "phonetic": {
+        "us": "/ɪˈfɪʃənsi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hiệu suất; khả năng đạt kết quả với ít hao phí",
+          "definition_en": "the ability to achieve a result while using as little time, effort, or resources as necessary",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "QUALITY"
+      ],
+      "word_family": [
+        {
+          "word": "efficient",
+          "pos": "adj",
+          "meaning_vi": "hiệu suất cao; tiết kiệm nguồn lực"
+        },
+        {
+          "word": "efficiently",
+          "pos": "adv",
+          "meaning_vi": "một cách hiệu quả"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The scheduling system improved efficiency by reducing duplicate appointments.",
+          "vi": "Hệ thống lập lịch nâng cao hiệu suất bằng cách giảm các cuộc hẹn trùng lặp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "operational efficiency",
+        "energy efficiency",
+        "improve efficiency"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "financing-n",
+      "word": "financing",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc cấp vốn; nguồn tài trợ tài chính",
+          "definition_en": "the provision of money or credit needed to pay for a project, purchase, or business activity",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "finance",
+          "pos": "n/v",
+          "meaning_vi": "tài chính; tài trợ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The buyer secured financing before signing the equipment purchase agreement.",
+          "vi": "Người mua đã thu xếp được nguồn vốn trước khi ký hợp đồng mua thiết bị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "project financing",
+        "secure financing",
+        "financing arrangement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "foreclosure-n",
+      "word": "foreclosure",
+      "phonetic": {
+        "us": "/fɔrˈkloʊʒɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thủ tục thu hồi tài sản thế chấp do không trả nợ",
+          "definition_en": "the legal process by which a lender takes ownership of property when a borrower fails to meet loan obligations",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank began foreclosure proceedings after several missed mortgage payments.",
+          "vi": "Ngân hàng bắt đầu thủ tục thu hồi tài sản thế chấp sau nhiều kỳ thanh toán khoản vay mua nhà bị bỏ lỡ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "foreclosure proceedings",
+        "face foreclosure",
+        "foreclosure notice"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "projection-n",
+      "word": "projection",
+      "phonetic": {
+        "us": "/prəˈdʒɛkʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dự báo; ước tính về kết quả trong tương lai",
+          "definition_en": "an estimate of a future amount, result, or trend based on current information",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "project",
+          "pos": "n/v",
+          "meaning_vi": "dự án; dự báo"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The finance team revised its revenue projection after reviewing the latest figures.",
+          "vi": "Nhóm tài chính điều chỉnh dự báo doanh thu sau khi xem xét số liệu mới nhất.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sales projection",
+        "revenue projection",
+        "growth projection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "settlement-n",
+      "word": "settlement",
+      "phonetic": {
+        "us": "/ˈsɛtəlmənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự dàn xếp; khoản thanh toán để giải quyết tranh chấp/nghĩa vụ",
+          "definition_en": "an agreement or payment that resolves a dispute, claim, or outstanding obligation",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "settle",
+          "pos": "v",
+          "meaning_vi": "thanh toán; giải quyết; ổn định"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Both companies reached a settlement before the dispute went to court.",
+          "vi": "Hai công ty đạt được thỏa thuận dàn xếp trước khi tranh chấp được đưa ra tòa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "out-of-court settlement",
+        "final settlement",
+        "settlement amount"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "valuation-n",
+      "word": "valuation",
+      "phonetic": {
+        "us": "/ˌvæljuˈeɪʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự định giá; kết quả xác định giá trị",
+          "definition_en": "the process of estimating the monetary value of a business, property, or asset",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "value",
+          "pos": "n/v",
+          "meaning_vi": "giá trị; coi trọng"
+        },
+        {
+          "word": "valuable",
+          "pos": "adj",
+          "meaning_vi": "có giá trị; quý giá"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "An independent valuation is required before the property can be sold.",
+          "vi": "Cần có kết quả định giá độc lập trước khi bất động sản được bán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "property valuation",
+        "independent valuation",
+        "company valuation"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "levy-n",
+      "word": "levy",
+      "phonetic": {
+        "us": "/ˈlɛvi/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khoản thuế hoặc phí do cơ quan có thẩm quyền áp đặt",
+          "definition_en": "a tax or fee imposed by a government or other authorized body",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The municipality introduced a small levy to fund public transportation improvements.",
+          "vi": "Chính quyền đô thị áp dụng một khoản phí nhỏ để tài trợ việc cải thiện giao thông công cộng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "impose a levy",
+        "annual levy",
+        "local service levy"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "subcontracting-n",
+      "word": "subcontracting",
+      "phonetic": {
+        "us": "/ˌsʌbkənˈtræktɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc giao một phần công việc cho nhà thầu phụ",
+          "definition_en": "the practice of hiring another company or individual to perform part of a contracted project or service",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "CONSTRUCTION"
+      ],
+      "word_family": [
+        {
+          "word": "subcontract",
+          "pos": "v/n",
+          "meaning_vi": "giao thầu phụ; hợp đồng thầu phụ"
+        },
+        {
+          "word": "subcontractor",
+          "pos": "n",
+          "meaning_vi": "nhà thầu phụ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project manager must approve all subcontracting arrangements in advance.",
+          "vi": "Quản lý dự án phải phê duyệt trước mọi thỏa thuận giao thầu phụ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "subcontracting agreement",
+        "subcontracting work",
+        "subcontracting arrangement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    }
+  ]
+}

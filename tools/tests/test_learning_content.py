@@ -32,11 +32,8 @@ class LearningContentTests(unittest.TestCase):
     def test_part1_images_exist_and_have_one_question(self):
         p1 = [x for x in self.listening if x.get('part') == 'Part 1']
         for item in p1:
-            image = item.get('image', '')
             photo = item.get('photo', '')
-            if image:  # SVG is an optional fallback, not a required Part 1 asset.
-                self.assertTrue(image.startswith('./assets/listening/'))
-                self.assertTrue((ROOT / image[2:]).is_file())
+            self.assertNotIn('image', item, f"{item.get('id')} must use the JPG-only Part 1 contract")
             self.assertRegex(photo, r'^\./assets/listening/part1-[a-z-]+\.jpg$')
             self.assertEqual(item.get('visualType'), 'photograph')
             self.assertEqual(len(item.get('questions', [])), 1)
@@ -171,15 +168,18 @@ class LearningContentTests(unittest.TestCase):
                     self.assertIn("photograph", question.get("question", "").lower())
                     self.assertNotIn("illustration", question.get("question", "").lower())
 
-    def test_part1_rendering_prefers_photo_and_falls_back_to_svg(self):
+    def test_part1_rendering_uses_only_declared_jpg_photos(self):
         app_js = (ROOT / "assets/js/app.js").read_text(encoding="utf-8")
         css = (ROOT / "assets/css/app.css").read_text(encoding="utf-8")
-        self.assertIn("item.photo||item.image", app_js)
-        self.assertIn("data-fallback-src", app_js)
-        self.assertIn("HÌNH MINH HỌA · Dùng ảnh SVG dự phòng", app_js)
+        self.assertIn("const photoSrc=item.part==='Part 1'?item.photo:''", app_js)
+        self.assertIn('src=\"${escapeHtml(photoSrc)}\"', app_js)
+        self.assertNotIn("data-fallback-src", app_js)
+        self.assertNotIn("SVG dự phòng", app_js)
+        self.assertIn("src=\"${escapeHtml(group.photo)}\"", app_js)
         self.assertIn("ẢNH CHỤP", app_js)
         self.assertIn("part1-photo-frame", app_js)
         self.assertIn(".part1-photo-frame", css)
+        self.assertNotIn("Nội dung bổ sung · đang chờ kiểm duyệt độc lập · chưa dùng trong Mock Exam", app_js)
 
     def test_part1_audio_keys_match_the_selected_photo_actions(self):
         checks = {
@@ -219,12 +219,14 @@ class LearningContentTests(unittest.TestCase):
             else:
                 self.fail(f"Unsupported attribution source type: {row['source_type']}")
 
-    def test_part1_svg_fallbacks_remain_required_assets_when_declared(self):
+    def test_part1_has_no_svg_fallbacks_in_records_service_worker_or_assets(self):
         sw = (ROOT / 'sw.js').read_text(encoding='utf-8')
-        required = sw.split('const REQUIRED = ', 1)[1].split(';', 1)[0]
-        for item in self.listening:
-            if item.get('part') == 'Part 1' and item.get('image'):
-                self.assertIn(item['image'], required)
+        app_js = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')
+        p1 = [item for item in self.listening if item.get('part') == 'Part 1']
+        self.assertTrue(all('image' not in item for item in p1))
+        self.assertNotIn('part1-', sw.split('const REQUIRED = ', 1)[1].split(';', 1)[0])
+        self.assertNotIn('data-fallback-src', app_js)
+        self.assertFalse(list((ROOT / 'assets/listening').glob('part1-*.svg')))
 
     def test_ai_generated_part1_photo_does_not_reference_deleted_svg(self):
         item = next(x for x in self.listening if x.get('id') == 'part1-office-cleaning')

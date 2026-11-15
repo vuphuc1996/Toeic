@@ -11,7 +11,7 @@ import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionL
 import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.66.1';
+const APP_RELEASE_VERSION = '2.67.0';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -361,7 +361,7 @@ async function loadPersonalVocabulary(){
       }
     }
     state.personalVocabulary={schemaVersion:3,additions:saved.additions.map(normalizeRecord),overrides,overrideBaseSigs,deletedBaseIds:[...new Set(saved.deletedBaseIds.map(String))]};
-    // Repair the known legacy 979 -> 992 migration artifact without clearing
+    // Repair exact legacy 979/992-word migration artifacts without clearing
     // any other user-hidden words or personal overrides.
     const legacySnapshot=await dbGet('workspace');
     const repairIds=detectLegacyReleaseAdditionRepair({
@@ -370,6 +370,7 @@ async function loadPersonalVocabulary(){
       baseWords:state.baseWords,
       releaseAdditionIds:state.dataManifest?.releaseAdditionIds||[],
       previousTotalWords:state.dataManifest?.previousReleaseTotalWords,
+      releaseRepairProfiles:state.dataManifest?.releaseRepairProfiles||[],
       currentTotalWords:state.dataManifest?.totalWords
     });
     if(repairIds.length){
@@ -1527,7 +1528,7 @@ function renderMockHome(){
   const projectedByPart=Object.fromEntries(listeningParts.map(part=>[part,eligibleByPart[part]+pendingByPart[part]]));
   const readinessRows=listeningParts.map(part=>`<div class="mock-readiness-row"><strong>${part}</strong><span>Đang dùng: ${eligibleByPart[part]}</span><span>Chờ duyệt: ${pendingByPart[part]}</span><b>${projectedByPart[part]} / ${twoFormTargets[part]}</b></div>`).join('');
   const projectedTotal=listeningParts.reduce((n,part)=>n+projectedByPart[part],0);
-  const part1Gap=Math.max(0,twoFormTargets['Part 1']-projectedByPart['Part 1']);const approvedText=`Sau khi được duyệt toàn bộ, ngân hàng dự kiến có ${projectedTotal} câu. Part 1 hiện có ${projectedByPart['Part 1']} câu hình ảnh đã có nguồn và SVG dự phòng; còn thiếu ${part1Gap} ảnh riêng để đạt 12 vị trí cho hai đề không lặp.`;
+  const part1Gap=Math.max(0,twoFormTargets['Part 1']-projectedByPart['Part 1']);const approvedText=`Sau khi được duyệt toàn bộ, ngân hàng dự kiến có ${projectedTotal} câu. Part 1 hiện có ${projectedByPart['Part 1']} câu ảnh JPG đã khai báo nguồn; còn thiếu ${part1Gap} ảnh riêng để đạt 12 vị trí cho hai đề không lặp.`;
   const readiness=$('#mockPoolReadiness');
   if(readiness)readiness.innerHTML=`<div class="mock-readiness-head"><div><strong>Khả năng tạo hai đề Listening 100 câu</strong><small>Chỉ nội dung đã được phê duyệt mới được đưa vào Mock Exam.</small></div><span>${listening} khả dụng · ${pending} chờ duyệt</span></div><div class="mock-readiness-grid">${readinessRows}</div><p>${approvedText}</p>`;
   const resume=$('#mockResumePanel');resume.hidden=state.mockExam?.status!=='active';
@@ -1585,7 +1586,7 @@ function mockGroupMarkup(group,numberById){
   if(isListening){
     const audioLabel=group.part==='Part 1'?`Part 1: ${group.topic||title} → câu dẫn → nhãn A/B/C/D (nghỉ 1,5 giây) → mô tả`:group.part==='Part 2'?'Nghe câu hỏi và chọn phản hồi':'Nghe toàn bộ nội dung trước khi trả lời';
     media=`<div class="mock-group-audio"><button type="button" class="mock-audio-button" data-mock-audio="${escapeHtml(group.unitId)}">▶ Phát audio / TTS</button><small id="mock-audio-status-${escapeHtml(group.unitId)}">${audioLabel} · Transcript chỉ mở sau khi nộp bài.</small></div>`;
-    if(group.part==='Part 1'){const fallbackAttr=group.image?` data-fallback-src="${escapeHtml(group.image)}"`:'';media+=`<figure class="mock-part1-frame"><img class="mock-part1-image" data-photo-id="${escapeHtml(group.unitId)}" src="${escapeHtml(group.photo||group.image)}"${fallbackAttr} alt="${escapeHtml(group.imageAlt)}" loading="lazy"><figcaption>PHOTOGRAPH · ${escapeHtml(title)}</figcaption></figure>`;}
+    if(group.part==='Part 1'){media+=`<figure class="mock-part1-frame"><img class="mock-part1-image" data-photo-id="${escapeHtml(group.unitId)}" src="${escapeHtml(group.photo)}" alt="${escapeHtml(group.imageAlt)}" loading="lazy"><figcaption>PHOTOGRAPH · ${escapeHtml(title)}</figcaption></figure>`;}
   }else if(group.part!=='Part 5'){
     const docs=group.documents||[];
     if(docs.length)media=`<div class="mock-reading-passage">${docs.map(doc=>`<div class="reading-document-card"><span class="reading-passage-label">${escapeHtml(doc.label||'DOCUMENT')}</span><pre>${escapeHtml(doc.content||'')}</pre></div>`).join('')}</div>`;
@@ -2393,7 +2394,7 @@ function renderListeningLibrary(){
   const q=normalizeText($('#listeningSearch')?.value||''),part=$('#listeningPartFilter')?.value||'',level=$('#listeningLevelFilter')?.value||'';
   const list=state.listening.filter(item=>{if(part&&item.part!==part)return false;if(level&&item.level!==level)return false;return !q||normalizeText([item.title,item.topic,item.part,item.level,(item.segments||[]).map(x=>x.text).join(' '),(item.vocabulary||[]).map(x=>x.word).join(' ')].join(' ')).includes(q);});
   $('#listeningCount').textContent=`${list.length} / ${state.listening.length} bài nghe`;
-  $('#listeningCardList').innerHTML=list.map(item=>{const prog=ensurePracticeProgress(state.listeningProgress[item.id]||{});const done=countAttemptedPracticeQuestions(prog,(item.questions||[]).length);const count=(item.questions||[]).length;const kind=item.part==='Part 1'?'Image Description':item.part==='Part 2'?'Question–Response':item.part==='Part 3'?'Conversation':'Short Talk';const reserve=item.editorialStatus==='reserve-pending-independent-review';const reserveNote=reserve?'<p class="listening-reserve-note">Nội dung bổ sung · đang chờ kiểm duyệt độc lập · chưa dùng trong Mock Exam</p>':'';return `<article class="learning-card listening-card"><div class="learning-card-top"><span class="learning-category">${escapeHtml(item.part)} · ${escapeHtml(kind)}</span><span class="learning-level">${escapeHtml(item.level)}</span></div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.topic)} · ${(item.segments||[]).length} lượt lời · ${count} câu hỏi</p><div class="reading-card-meta"><span>${done}/${count} câu đã làm</span><span>Audio tổng hợp</span></div>${reserveNote}<div class="learning-card-footer"><small>Listening Practice · ${escapeHtml(item.topic)}</small><button class="secondary-button" data-listening-open="${escapeHtml(item.id)}">Bắt đầu nghe <span>→</span></button></div></article>`;}).join('');
+  $('#listeningCardList').innerHTML=list.map(item=>{const prog=ensurePracticeProgress(state.listeningProgress[item.id]||{});const done=countAttemptedPracticeQuestions(prog,(item.questions||[]).length);const count=(item.questions||[]).length;const kind=item.part==='Part 1'?'Image Description':item.part==='Part 2'?'Question–Response':item.part==='Part 3'?'Conversation':'Short Talk';return `<article class="learning-card listening-card"><div class="learning-card-top"><span class="learning-category">${escapeHtml(item.part)} · ${escapeHtml(kind)}</span><span class="learning-level">${escapeHtml(item.level)}</span></div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.topic)} · ${(item.segments||[]).length} lượt lời · ${count} câu hỏi</p><div class="reading-card-meta"><span>${done}/${count} câu đã làm</span><span>Audio tổng hợp</span></div><div class="learning-card-footer"><small>Listening Practice · ${escapeHtml(item.topic)}</small><button class="secondary-button" data-listening-open="${escapeHtml(item.id)}">Bắt đầu nghe <span>→</span></button></div></article>`;}).join('');
   $('#listeningEmpty').hidden=list.length>0;
 }
 function openListeningDetail(id){
@@ -2402,9 +2403,8 @@ function openListeningDetail(id){
   const questions=(item.questions||[]).map((q,i)=>{const saved=prog.answers?.[i],draftChoice=getPracticeDraftChoice(prog,i),history=getPracticeAttemptHistory(prog,i),attemptLabel=history.length&&!saved?` · LÀM LẠI LẦN ${history.length+1}`:'';const feedback=saved?.answered?`<p class="exercise-feedback visible">${savedChoiceHistoryMarkup(q,saved)}${escapeHtml(q.explanation)}</p>${practiceRetryActionMarkup('listening',id,i,prog,saved)}`:`<p class="exercise-feedback" hidden></p>${history.length?`<small class="practice-retry-hint">Đã lưu ${history.length} lần trước. Bạn đang làm lại câu này.</small>${practiceAttemptHistoryMarkup(prog,i)}`:''}`;return `<article class="lesson-exercise listening-question" data-started-at="${Date.now()}" data-listening-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}${attemptLabel}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${savedChoiceWrongClass(q,saved,j)?'is-wrong':''} ${!saved?.answered&&draftChoice===j?'is-selected':''}" data-listening-choice data-listening-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" data-choice-id="${escapeHtml(choiceIdAt(q,j))}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${item.part==='Part 1'?'':escapeHtml(choice)}</button>`).join('')}</div>${feedback}</article>`;}).join('');
   const transcript=(item.segments||[]).map((seg,i)=>{const isPart1=item.part==='Part 1',letter=String.fromCharCode(65+i);return `<div class="transcript-line"><small>${isPart1?`OPTION ${letter}`:escapeHtml(seg.speaker||`Speaker ${i+1}`)}</small><p>${isPart1?`${letter}. `:''}${escapeHtml(seg.text)}</p></div>`;}).join('');
   const part1LeadInTranscript=item.part==='Part 1'?`<div class="transcript-line transcript-part-title"><small>PART TITLE</small><p>Part 1: ${escapeHtml(item.topic||item.title||'Photographs')}</p></div><div class="transcript-line transcript-lead-in"><small>LEAD-IN</small><p>${escapeHtml(PART1_LEAD_IN_TEXT)}</p></div>`:'';
-  const photoSrc=item.part==='Part 1'?(item.photo||item.image):'';
-  const photoFallback=item.part==='Part 1'&&item.photo&&item.image?`data-fallback-src="${escapeHtml(item.image)}" onerror="if(this.dataset.fallbackSrc){this.onerror=null;this.src=this.dataset.fallbackSrc;const c=this.closest(\'figure\')&&this.closest(\'figure\').querySelector(\'figcaption\');if(c)c.textContent=\'HÌNH MINH HỌA · Dùng ảnh SVG dự phòng\';}"`:'';
-  const illustrationMarkup=item.part==='Part 1'&&photoSrc?`<figure class="part1-illustration-frame part1-photo-frame"><img data-photo-id="${escapeHtml(item.id)}" src="${escapeHtml(photoSrc)}" ${photoFallback} alt="${escapeHtml(item.imageAlt||item.title)}" loading="eager" decoding="async"><figcaption>${item.photo?'ẢNH CHỤP · Quan sát ảnh trước khi nghe':'HÌNH MINH HỌA · Quan sát hình trước khi nghe'}</figcaption></figure>`:'';
+  const photoSrc=item.part==='Part 1'?item.photo:'';
+  const illustrationMarkup=item.part==='Part 1'&&photoSrc?`<figure class="part1-illustration-frame part1-photo-frame"><img data-photo-id="${escapeHtml(item.id)}" src="${escapeHtml(photoSrc)}" alt="${escapeHtml(item.imageAlt||item.title)}" loading="eager" decoding="async"><figcaption>ẢNH CHỤP · Quan sát ảnh trước khi nghe</figcaption></figure>`:'';
   const vocab=(item.vocabulary||[]).map(v=>`<button type="button" class="reading-vocab-chip" data-lookup-term="${escapeHtml(v.word)}"><strong>${escapeHtml(displayWord(v.word))}</strong><span>${escapeHtml(v.meaning)}</span></button>`).join('');
   const vocabMarkup=vocab?`<section class="detail-section"><h4>TỪ VỰNG TRỌNG TÂM</h4><div class="reading-vocab-grid">${vocab}</div></section>`:'';
   const vocabPlayButton=vocab?`<button type="button" class="secondary-button" data-listening-vocab-play="${escapeHtml(id)}">Đọc từ vựng chậm</button>`:'';

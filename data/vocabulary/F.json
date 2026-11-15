@@ -447,7 +447,13 @@
         "FINANCE",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "financing",
+          "pos": "n",
+          "meaning_vi": "việc cấp vốn; nguồn tài trợ tài chính"
+        }
+      ],
       "verb_forms": {
         "v1": "finance",
         "vs_es": "finances",
@@ -1361,6 +1367,87 @@
         "main function",
         "function properly"
       ]
+    },
+    {
+      "id": "financing-n",
+      "word": "financing",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc cấp vốn; nguồn tài trợ tài chính",
+          "definition_en": "the provision of money or credit needed to pay for a project, purchase, or business activity",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "finance",
+          "pos": "n/v",
+          "meaning_vi": "tài chính; tài trợ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The buyer secured financing before signing the equipment purchase agreement.",
+          "vi": "Người mua đã thu xếp được nguồn vốn trước khi ký hợp đồng mua thiết bị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "project financing",
+        "secure financing",
+        "financing arrangement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "foreclosure-n",
+      "word": "foreclosure",
+      "phonetic": {
+        "us": "/fɔrˈkloʊʒɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thủ tục thu hồi tài sản thế chấp do không trả nợ",
+          "definition_en": "the legal process by which a lender takes ownership of property when a borrower fails to meet loan obligations",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The bank began foreclosure proceedings after several missed mortgage payments.",
+          "vi": "Ngân hàng bắt đầu thủ tục thu hồi tài sản thế chấp sau nhiều kỳ thanh toán khoản vay mua nhà bị bỏ lỡ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "foreclosure proceedings",
+        "face foreclosure",
+        "foreclosure notice"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }
