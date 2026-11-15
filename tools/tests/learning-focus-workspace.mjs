@@ -65,7 +65,7 @@ assert.match(app, /sentenceCompletionSeenIds/, 'Part 5 has its own question-ID s
 assert.match(app, /sentenceCompletionSeenIds: state\.sentenceCompletionSeenIds/, 'Part 5 session history is persisted additively');
 assert.match(app, /state\.sentenceCompletionSeenIds=Array\.isArray\(session\.sentenceCompletionSeenIds\)/, 'Part 5 history restores when an existing practice session is resumed');
 assert.match(app, /sentenceCompletionSeenIds\.length} câu đã gặp/, 'Part 5 counter measures questions rather than vocabulary words');
-assert.match(app, /if\(q\.mode==='sentence-completion'\)state\.sentenceCompletionSeenIds\.push\(q\.id\)/, 'Part 5 completion is tracked by question ID, separate from vocabulary modes');
+assert.match(app, /if\(q\.mode==='sentence-completion'\)\{\s*if\(!state\.sentenceCompletionSeenIds\.includes\(q\.id\)\)state\.sentenceCompletionSeenIds\.push\(q\.id\)/, 'Part 5 completion is tracked once by question ID, separate from vocabulary modes and only after confirmation');
 assert.match(app, /indexedDB\.open\(DB_NAME, 1\)/, 'personal IndexedDB schema version remains unchanged');
 assert.doesNotMatch(app, /indexedDB\.open\(DB_NAME,\s*[2-9]/, 'no personal IndexedDB migration is introduced');
 

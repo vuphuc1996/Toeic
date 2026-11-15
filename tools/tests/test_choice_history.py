@@ -55,15 +55,25 @@ class ChoiceHistoryTests(unittest.TestCase):
         self.assertIn('savedChoiceWrongClass(q,saved,j)?\'is-wrong\':\'\'', self.app)
         self.assertIn('Lựa chọn đã lưu trước lần cập nhật:', self.app)
 
-    def test_new_reading_and_listening_attempts_store_selected_text(self):
-        for handler, progress_key in [('answerReadingQuestion', 'readingProgress'), ('answerListeningQuestion', 'listeningProgress')]:
+    def test_new_reading_and_listening_attempts_store_selected_text_after_confirmation(self):
+        for handler, kind in [('answerReadingQuestion', 'reading'), ('answerListeningQuestion', 'listening')]:
             start = self.app.index(f'async function {handler}')
             end = self.app.find('\n}', start)
             body = self.app[start:end]
-            self.assertIn('choiceText:question.choices[choiceIndex]', body)
-            self.assertIn('correctChoiceText:question.choices[question.answerIndex]', body)
-            self.assertIn(f'state.{progress_key}[id]=prog', body)
-            self.assertLess(body.index('recordPracticeAnswer('), body.index('state.' + progress_key + '[id]=prog'))
+            self.assertIn(f"stagePracticeBatchAnswer('{kind}'", body)
+            self.assertNotIn('recordPracticeAnswer(', body, 'selecting an option must not commit correctness')
+        stage_start = self.app.index('async function stagePracticeBatchAnswer(')
+        stage_end = self.app.index('async function confirmPracticeBatchResult(', stage_start)
+        stage_body = self.app[stage_start:stage_end]
+        self.assertIn('stagePracticeChoice(', stage_body)
+        self.assertNotIn('correctChoiceText:', stage_body, 'staged answers must not contain answer text')
+        confirm_start = self.app.index('async function confirmPracticeBatchResult(')
+        confirm_end = self.app.index('function returnToPracticeBatch(', confirm_start)
+        confirm_body = self.app[confirm_start:confirm_end]
+        self.assertIn('commitPracticeDraftSet(', confirm_body)
+        self.assertIn('choiceText:question.choices[choiceIndex]', confirm_body)
+        self.assertIn('correctChoiceText:question.choices[question.answerIndex]', confirm_body)
+        self.assertIn('explanation:question.explanation', confirm_body)
 
     def test_archived_text_is_html_escaped_and_rendered_in_both_libraries(self):
         self.assertIn('escapeHtml(savedChoiceText(question,saved))', self.app)

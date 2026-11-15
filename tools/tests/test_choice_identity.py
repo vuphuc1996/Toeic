@@ -23,7 +23,9 @@ class ChoiceIdentityTests(unittest.TestCase):
         self.assertIn('const currentIndex=currentIds.indexOf(choiceId);',app)
         self.assertIn('saved.previousChoiceIndex=oldIndex;',app)
         self.assertIn('choiceId:choiceIdAt(question,choiceIndex)',app)
-        self.assertIn('choiceId:choiceIdAt(exercise,choiceIndex)',app)
+        self.assertIn('function stagePracticeBatchAnswer(',app)
+        self.assertIn('commitPracticeDraftSet(batch.progress,batch.questions',app)
+        self.assertNotIn('choiceId:choiceIdAt(exercise,choiceIndex)',app, 'Grammar/Reading/Listening choice identity is committed through the shared confirmation path')
     def test_choice_ids_are_rendered_on_all_learning_controls(self):
         app=(ROOT/'assets/js/app.js').read_text(encoding='utf-8')
         self.assertGreaterEqual(app.count('data-choice-id="${escapeHtml(choiceIdAt('),3)

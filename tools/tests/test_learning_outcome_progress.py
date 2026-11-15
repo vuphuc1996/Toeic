@@ -12,7 +12,13 @@ class LearningOutcomeProgressTests(unittest.TestCase):
     def test_runtime_is_wired_to_all_toeic_practice_areas(self):
         app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')
         self.assertIn("dbGet('objectiveProgress')", app)
-        self.assertGreaterEqual(app.count('trackObjectivePractice(id,'), 3)
+        self.assertIn('function stagePracticeBatchAnswer(', app)
+        self.assertIn('async function confirmPracticeBatchResult(', app)
+        self.assertIn('trackObjectivePractice(batch.id,{...question,__index:row.index}', app)
+        self.assertIn('trackObjectivePractice(q.id,{id:q.id,choiceIds:[`part5:${q.id}`]},pending.correct', app)
+        self.assertIn('grammar:{items:state.grammarLessons', app)
+        self.assertIn('reading:{items:state.readings', app)
+        self.assertIn('listening:{items:state.listening', app)
         self.assertIn("q.mode==='sentence-completion'", app)
         self.assertIn("dbSet('objectiveProgress'", app)
 

@@ -1710,3 +1710,124 @@ body :where(.mock-exam-brand strong, .mock-exam-timer span,
 @media (prefers-reduced-motion: reduce) {
   .alphabet-sound-card { transition: none !important; }
 }
+
+/* v2.66.0 — assessment progress is stacked by skill, never split into unequal columns. */
+.toeic-progress-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
+  min-width: 0;
+}
+.toeic-progress-group {
+  min-width: 0;
+  padding: 0 0 20px;
+  border-bottom: 1px solid var(--ds-border, #e2e8f0);
+}
+.toeic-progress-group:last-child { padding-bottom: 0; border-bottom: 0; }
+.toeic-part-grid,
+.toeic-progress-group:last-child .toeic-part-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+.toeic-part-card { min-height: 124px; height: 100%; }
+@media (max-width: 900px) {
+  .toeic-progress-columns { grid-template-columns: minmax(0, 1fr); }
+  .toeic-part-grid,
+  .toeic-progress-group:last-child .toeic-part-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 380px) {
+  .toeic-part-grid,
+  .toeic-progress-group:last-child .toeic-part-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Time-boxed exam navigation: the highlighted question moves automatically. */
+.mock-guided-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px 18px;
+  align-items: center;
+  margin: 12px 18px 0;
+  padding: 13px 15px 17px;
+  border: 1px solid var(--ds-border, #dfe7ef);
+  border-radius: 14px;
+  background: linear-gradient(110deg, #f7fbff, #ffffff);
+}
+.mock-guided-flow-copy { min-width: 0; display: grid; gap: 3px; }
+.mock-guided-flow-copy .eyebrow { margin: 0; font-size: 10px; }
+.mock-guided-flow-copy strong { color: #23496b; font-size: 15px; line-height: 1.35; }
+.mock-guided-flow-copy p { margin: 0; color: #72859a; font-size: 12px; line-height: 1.45; }
+.mock-guided-flow-time { min-width: 86px; display: grid; justify-items: end; gap: 2px; }
+.mock-guided-flow-time small { color: #8292a4; font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.mock-guided-flow-time strong { color: #1d568f; font-size: 23px; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.mock-guided-flow-time span { color: #8292a4; font-size: 10px; }
+.mock-guided-flow-track { position: absolute; height: 4px; inset: auto 15px 8px; overflow: hidden; border-radius: 99px; background: #e8eef4; }
+.mock-guided-flow-track i { display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #2f78ae, #62ad95); transition: width .25s linear; }
+.mock-question-card.is-current { position: relative; border-radius: 12px; background: #f4f9ff; box-shadow: 0 0 0 2px #6a9bc7 inset; padding-inline: 10px; }
+.mock-question-card.is-current::before { content: "ĐANG LÀM"; display: inline-block; margin: 0 0 7px; padding: 3px 7px; border-radius: 99px; background: #dcecf8; color: #245983; font-size: 9px; font-weight: 850; letter-spacing: .08em; }
+.mock-map-button.is-current { outline: 2px solid #2f78ae; outline-offset: 2px; background: #e7f2fb; color: #1d568f; font-weight: 900; }
+.mock-question-card { scroll-margin-top: 190px; }
+@media (max-width: 760px) {
+  .mock-guided-flow { margin: 8px 9px 0; padding: 11px 12px 15px; gap: 7px 10px; }
+  .mock-guided-flow-copy strong { font-size: 13px; }
+  .mock-guided-flow-copy p { font-size: 11px; }
+  .mock-guided-flow-time { min-width: 66px; }
+  .mock-guided-flow-time strong { font-size: 19px; }
+  .mock-guided-flow-time small { font-size: 8px; }
+  .mock-question-card { scroll-margin-top: 150px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mock-guided-flow-track i { transition: none; }
+}
+
+
+/* v2.66.0 — deferred assessment reveal and guided exam states */
+.assessment-result-modal {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid var(--color-border, #dfe7ef);
+  border-radius: var(--radius-xl, 18px);
+  background: var(--color-surface, #fff);
+}
+.assessment-result-modal > :not(.assessment-result-confetti) { position: relative; z-index: 1; }
+.assessment-result-modal > p:first-of-type { max-width: 58ch; margin: 0 0 16px; color: var(--color-text-secondary, #60738a); font-size: var(--font-body, 15px); line-height: 1.6; }
+.assessment-result-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 16px 0; }
+.assessment-result-stats article { display: grid; gap: 3px; min-width: 0; padding: 14px 10px; border: 1px solid var(--color-border, #dfe7ef); border-radius: var(--radius-md, 12px); background: var(--color-surface-soft, #f5f8fb); text-align: center; }
+.assessment-result-stats strong { color: var(--color-text, #1b2f49); font-size: clamp(22px, 4vw, 30px); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.assessment-result-stats span { color: var(--color-text-secondary, #60738a); font-size: 13px; font-weight: 650; }
+.assessment-result-note { margin: 12px 0 18px; color: var(--color-text-secondary, #60738a); font-size: 13px; line-height: 1.55; }
+.assessment-result-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+.assessment-result-confetti { position: absolute; z-index: 0; inset: 0; overflow: hidden; pointer-events: none; }
+.assessment-result-confetti i { position: absolute; left: var(--confetti-x); bottom: -16px; width: 7px; height: 12px; border-radius: 3px; opacity: 0; background: #2f78ae; transform: rotate(var(--confetti-rotation)); animation: assessment-confetti-rise 1.65s cubic-bezier(.16,.72,.28,1) var(--confetti-delay) both; }
+.assessment-result-confetti i:nth-child(3n) { background: #16876c; }
+.assessment-result-confetti i:nth-child(3n + 1) { background: #e4ad4c; }
+.assessment-result-confetti i:nth-child(4n) { width: 5px; height: 5px; border-radius: 50%; }
+@keyframes assessment-confetti-rise { 0% { opacity: 0; transform: translate3d(0, 8px, 0) rotate(0deg) scale(.5); } 12% { opacity: .9; } 100% { opacity: 0; transform: translate3d(12px, -235px, 0) rotate(210deg) scale(1); } }
+.assessment-draft-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin: 14px 0; padding: 12px 14px; border: 1px solid var(--color-border, #dfe7ef); border-radius: var(--radius-md, 12px); background: var(--color-surface-soft, #f5f8fb); color: var(--color-text-secondary, #60738a); font-size: 13px; line-height: 1.5; }
+.assessment-draft-note { margin: 0; color: var(--color-text-secondary, #60738a); font-size: 14px; line-height: 1.55; }
+.foundation-choice.is-selected, .exercise-choice.is-selected { border-color: var(--color-primary, #1d568f); background: var(--color-primary-soft, #edf4fb); box-shadow: inset 0 0 0 1px var(--color-primary, #1d568f); }
+.flash-quiz-review { display: grid; gap: 10px; margin: 18px 0; }
+.flash-quiz-review > h3 { margin: 0; font-size: 17px; }
+.flash-quiz-review-row { padding: 12px 14px; border: 1px solid var(--color-border, #dfe7ef); border-radius: var(--radius-md, 12px); background: var(--color-surface, #fff); }
+.flash-quiz-review-row > div { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.flash-quiz-review-row > div strong { color: var(--color-text, #1b2f49); font-size: 15px; }
+.flash-quiz-review-row > div span { font-size: 12px; font-weight: 750; }
+.flash-quiz-review-row p { margin: 7px 0 0; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+.flash-quiz-review-row.is-correct { border-left: 4px solid #16876c; }
+.flash-quiz-review-row.is-wrong { border-left: 4px solid #cf765e; }
+.mock-question-group.is-current-group { border-color: var(--color-primary, #1d568f); box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary, #1d568f) 12%, transparent); }
+.mock-question-card.is-current { scroll-margin-block: 115px; }
+@media (max-width: 560px) {
+  .assessment-result-stats { gap: 7px; }
+  .assessment-result-stats article { padding: 11px 6px; }
+  .assessment-result-stats span { font-size: 12px; }
+  .assessment-result-actions { display: grid; grid-template-columns: 1fr; }
+  .assessment-result-actions button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .assessment-result-confetti i { animation: none; opacity: 0; }
+}

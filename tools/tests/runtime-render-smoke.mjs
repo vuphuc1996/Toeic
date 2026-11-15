@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
-import { ensurePracticeProgress, countAttemptedPracticeQuestions, getPracticeAttemptHistory, getPracticeAttemptCount, recordPracticeAnswer, archivePracticeAnswerForRetry, archiveAllPracticeAnswersForRetry } from '../../assets/js/practice-progress.js';
+import { ensurePracticeProgress, countAttemptedPracticeQuestions, getPracticeAttemptHistory, getPracticeAttemptCount, recordPracticeAnswer, archivePracticeAnswerForRetry, archiveAllPracticeAnswersForRetry, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete } from '../../assets/js/practice-progress.js';
 import { ensureObjectiveProgress, recordObjectiveAttempt } from '../../assets/js/learning-outcome-progress.js';
 
 const appSource = fs.readFileSync(new URL('../../assets/js/app.js', import.meta.url), 'utf8');
@@ -34,7 +34,8 @@ const context = {
   savedChoiceWrongClass: () => false,
   savedChoiceHistoryMarkup: () => '',
   icon: () => '<span></span>',
-  ensurePracticeProgress, countAttemptedPracticeQuestions, getPracticeAttemptHistory, getPracticeAttemptCount, recordPracticeAnswer, archivePracticeAnswerForRetry, archiveAllPracticeAnswersForRetry, ensureObjectiveProgress, recordObjectiveAttempt, renderLearningObjectiveProgress: () => {},
+  ensurePracticeProgress, countAttemptedPracticeQuestions, getPracticeAttemptHistory, getPracticeAttemptCount, recordPracticeAnswer, archivePracticeAnswerForRetry, archiveAllPracticeAnswersForRetry, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, ensureObjectiveProgress, recordObjectiveAttempt, renderLearningObjectiveProgress: () => {},
+  practiceDraftToolbar: (kind,id,progress,questions) => { const count=getPracticeDraftEntries(progress).filter(entry=>entry.index<questions.length).length; return count ? `<div class=\"assessment-draft-toolbar\">Đã chọn tạm ${count}/${questions.length} câu</div>` : ''; }, maybeShowPracticeBatchResult: (kind,id) => { context.lastPracticeBatch = { kind, id }; },
   requestAnimationFrame: callback => callback(),
   renderToeicPartInsights: () => {}, renderReadingLibrary: () => {}, renderListeningLibrary: () => {}, renderGrammarLibrary: () => {},
   toast: () => {}, window: { confirm: () => true },
@@ -49,8 +50,12 @@ function exposeFunction(name, nextToken) {
   const normalStart = appSource.indexOf(`function ${name}(`);
   const start = asyncStart >= 0 && (normalStart < 0 || asyncStart < normalStart) ? asyncStart : normalStart;
   assert.notEqual(start, -1, `missing ${name}`);
-  const end = appSource.indexOf(nextToken, start);
-  assert.notEqual(end, -1, `missing boundary after ${name}`);
+  const next = appSource.indexOf(nextToken, start);
+  assert.notEqual(next, -1, `missing boundary after ${name}`);
+  // Extract only the top-level function body; adjacent helper declarations must
+  // not be accidentally re-evaluated into the shared VM context.
+  const close = appSource.indexOf('\n}', start);
+  const end = close >= 0 && close + 2 <= next ? close + 2 : next;
   const source = appSource.slice(start, end);
   vm.runInContext(`${source}\nglobalThis.__render = ${name};`, context, { timeout: 1000 });
   return context.__render;
@@ -64,13 +69,28 @@ exposeFunction('practiceRetryAllToolbar', 'async function retryPracticeQuestion'
 const renderReadingLibrary = exposeFunction('renderReadingLibrary', 'function openReadingDetail(');
 const openReadingDetail = exposeFunction('openReadingDetail', 'async function answerReadingQuestion(');
 const answerReadingQuestion = exposeFunction('answerReadingQuestion', 'function renderListeningLibrary(');
+context.openReadingDetail = openReadingDetail;
 const retryPracticeQuestion = exposeFunction('retryPracticeQuestion', 'async function retryAllPracticeQuestions(');
 const retryAllPracticeQuestions = exposeFunction('retryAllPracticeQuestions', 'function renderGrammarLibrary(');
 exposeFunction('openLearningDetail', 'function closeLearningFocus(');
 const openGrammarLesson = exposeFunction('openGrammarLesson', 'async function answerGrammarExercise(');
+context.openGrammarLesson = openGrammarLesson;
 const answerGrammarExercise = exposeFunction('answerGrammarExercise', 'function renderReadingLibrary(');
 const openListeningDetail = exposeFunction('openListeningDetail', 'let listeningPlaybackToken');
+context.openListeningDetail = openListeningDetail;
 const answerListeningQuestion = exposeFunction('answerListeningQuestion', 'function buildListeningAIPrompt(');
+context.stagePracticeBatchAnswer = async (kind, id, index, choiceIndex) => {
+  const config = { reading: ['readingProgress', 'openReadingDetail'], grammar: ['grammarProgress', 'openGrammarLesson'], listening: ['listeningProgress', 'openListeningDetail'] }[kind];
+  assert.ok(config, `unknown staged practice kind ${kind}`);
+  const progressStore = context.state[config[0]];
+  const progress = ensurePracticeProgress(progressStore[id] || {});
+  const now = Date.now();
+  assert.equal(stagePracticeChoice(progress, index, choiceIndex, now, now), true);
+  progressStore[id] = progress;
+  context.lastStagedAnswer = { kind, id, index, choiceIndex };
+  await context.dbSet(config[0], progressStore);
+  context[config[1]](id);
+};
 
 const part5 = {
   id: 'part5-runtime-smoke', part: 'Part 5', topic: 'Workplace', documentType: 'Incomplete sentences',
@@ -114,54 +134,30 @@ assert.match($('#modalContent').innerHTML, /BÀI TẬP 1/);
 assert.match($('#modalContent').innerHTML, /learning-detail-surface/);
 
 
-// Exercise Reading answer → per-question retry → second attempt → full-lesson retry.
-context.state.readings = [part7];
-context.state.readingProgress = {};
-openReadingDetail(part7.id);
+// Exercise Reading/Grammar/Listening answer handlers: choices must remain drafts until confirmation.
+context.readingProgress = {};
 await answerReadingQuestion({ dataset: { readingId: part7.id, questionIndex: '0', choiceIndex: '0' } });
-assert.equal(context.state.readingProgress[part7.id].answers[0].correct, false);
-assert.match($('#modalContent').innerHTML, /data-practice-retry="reading"/);
-await retryPracticeQuestion({ dataset: { practiceRetry: 'reading', practiceId: part7.id, questionIndex: '0' } });
-assert.equal(context.state.readingProgress[part7.id].answers[0], undefined, 'per-question retry unlocks the selected Reading question');
-assert.equal(context.state.readingProgress[part7.id].attemptHistory[0].length, 1, 'per-question retry archives the first response');
-assert.match($('#modalContent').innerHTML, /Lịch sử 1 lần trước/);
-await answerReadingQuestion({ dataset: { readingId: part7.id, questionIndex: '0', choiceIndex: '1' } });
-assert.equal(context.state.readingProgress[part7.id].answers[0].correct, true, 'learner can submit a new response after retry');
-assert.equal(context.state.readingProgress[part7.id].answers[0].attemptNumber, 2);
-assert.equal(context.state.objectiveProgress.objectives['reading-part-7'].items['part7-runtime-smoke::index:0::'].latestCorrect, true, 'Reading answer updates objective evidence using latest attempt');
-assert.equal(context.persisted.objectiveProgress.objectives['reading-part-7'].items['part7-runtime-smoke::index:0::'].attempts.length, 2, 'objective evidence preserves retry history');
-await retryAllPracticeQuestions({ dataset: { practiceRetryAll: 'reading', practiceId: part7.id } });
-assert.equal(context.state.readingProgress[part7.id].answers[0], undefined, 'whole-lesson retry unlocks active Reading answers');
-assert.equal(context.state.readingProgress[part7.id].attemptHistory[0].length, 2, 'whole-lesson retry preserves both attempts');
-assert.equal(context.state.readingProgress[part7.id].attemptHistory[0][0].correctChoiceText, 'Tomorrow');
-assert.equal(context.state.readingProgress[part7.id].attemptHistory[0][0].explanation, 'Thông tin nằm trong thư trả lời.');
+assert.equal(context.lastStagedAnswer.kind, 'reading');
+assert.equal(context.state.readingProgress[part7.id].answers[0], undefined, 'Reading must not commit correctness when a choice is selected');
+assert.equal(context.state.readingProgress[part7.id].draftAnswers['0'].choiceIndex, 0, 'Reading stores the selected choice as a draft');
+assert.match($('#modalContent').innerHTML, /is-selected/, 'the selected Reading choice remains visibly selected');
+assert.doesNotMatch($('#modalContent').innerHTML, /Thông tin nằm trong thư trả lời/, 'Reading explanation stays hidden before confirmation');
 
-// Exercise Grammar retry: legacy-compatible progress, per-question retry and full-lesson retry.
 context.state.grammarProgress = {};
-openGrammarLesson('grammar-runtime-smoke');
 await answerGrammarExercise({ dataset: { lessonId: 'grammar-runtime-smoke', exerciseIndex: '0', choiceIndex: '0' } });
-assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].answers[0].correct, false);
-await retryPracticeQuestion({ dataset: { practiceRetry: 'grammar', practiceId: 'grammar-runtime-smoke', questionIndex: '0' } });
-assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].answers[0], undefined);
-await answerGrammarExercise({ dataset: { lessonId: 'grammar-runtime-smoke', exerciseIndex: '0', choiceIndex: '1' } });
-assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].answers[0].correct, true);
-await retryAllPracticeQuestions({ dataset: { practiceRetryAll: 'grammar', practiceId: 'grammar-runtime-smoke' } });
-assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].answers[0], undefined);
-assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].attemptHistory[0].length, 2);
+assert.equal(context.lastStagedAnswer.kind, 'grammar');
+assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].answers[0], undefined, 'Grammar must not commit correctness when a choice is selected');
+assert.equal(context.state.grammarProgress['grammar-runtime-smoke'].draftAnswers['0'].choiceIndex, 0);
+assert.doesNotMatch($('#modalContent').innerHTML, /She là ngôi thứ ba số ít/, 'Grammar explanation stays hidden before confirmation');
 
-// Exercise Listening retry through the same shared persistence and render path.
 context.state.listening = [{ id: 'listening-runtime-smoke', part: 'Part 2', type: 'question-response', topic: 'Workplace', level: 'A2', title: 'Part 2 retry smoke', segments: [{ speaker: 'Woman', text: 'When will the report be ready?' }], vocabulary: [], questions: [{ question: 'When will the report be ready?', choices: ['By noon', 'At reception', 'The finance team'], answerIndex: 0, explanation: 'The response gives a time.' }] }];
 context.state.listeningProgress = {};
 openListeningDetail('listening-runtime-smoke');
 await answerListeningQuestion({ dataset: { listeningId: 'listening-runtime-smoke', questionIndex: '0', choiceIndex: '1' } });
-assert.equal(context.state.listeningProgress['listening-runtime-smoke'].answers[0].correct, false);
-await retryPracticeQuestion({ dataset: { practiceRetry: 'listening', practiceId: 'listening-runtime-smoke', questionIndex: '0' } });
-assert.equal(context.state.listeningProgress['listening-runtime-smoke'].answers[0], undefined);
-await answerListeningQuestion({ dataset: { listeningId: 'listening-runtime-smoke', questionIndex: '0', choiceIndex: '0' } });
-assert.equal(context.state.listeningProgress['listening-runtime-smoke'].answers[0].correct, true);
-await retryAllPracticeQuestions({ dataset: { practiceRetryAll: 'listening', practiceId: 'listening-runtime-smoke' } });
-assert.equal(context.state.listeningProgress['listening-runtime-smoke'].answers[0], undefined);
-assert.equal(context.state.listeningProgress['listening-runtime-smoke'].attemptHistory[0].length, 2);
+assert.equal(context.lastStagedAnswer.kind, 'listening');
+assert.equal(context.state.listeningProgress['listening-runtime-smoke'].answers[0], undefined, 'Listening must not commit correctness when a choice is selected');
+assert.equal(context.state.listeningProgress['listening-runtime-smoke'].draftAnswers['0'].choiceIndex, 1);
+assert.doesNotMatch($('#modalContent').innerHTML, /The response gives a time/, 'Listening explanation stays hidden before confirmation');
 
 
 
@@ -234,4 +230,4 @@ vm.runInContext(`${appSource.slice(wrongBlockStart, wrongBlockEnd)}\nglobalThis.
 assert.equal(context.__wrongClass(movedCurrentQuestion, savedWrongChoice, 1), true);
 assert.equal(context.__wrongClass(movedCurrentQuestion, savedWrongChoice, 3), false);
 
-console.log('Runtime render/migration smoke PASS: Reading/Listening/Grammar rendering, per-question and full-lesson retry, saved attempt history, archived options, stable choice-ID migration and idempotency.');
+console.log('Runtime render/migration smoke PASS: Reading/Listening/Grammar rendering, deferred answer drafts without correctness or explanations, archived options, stable choice-ID migration and idempotency.');

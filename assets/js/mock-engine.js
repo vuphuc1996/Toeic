@@ -1,3 +1,5 @@
+import { buildMockQuestionSchedule } from './mock-flow.js';
+
 /**
  * TOEIC Mock Test engine.
  * Pure data selection and scoring helpers; deliberately independent from IndexedDB.
@@ -261,6 +263,16 @@ export function createMockExam({ modeId, listening = [], readings = [], history 
     flags: [],
     questionIds,
     sections: { listening: listeningSection, reading: readingSection },
+    flow: {
+      enabled: true,
+      voiceEnabled: true,
+      activeQuestionIds: { listening: null, reading: null },
+      lastAnnouncedIds: { listening: null, reading: null },
+      schedules: {
+        listening: buildMockQuestionSchedule(listeningSection, 'listening', startedAt, listeningSection.seconds, 0),
+        reading: buildMockQuestionSchedule(readingSection, 'reading', listeningDeadlineAt, readingSection.seconds, getExamQuestions(listeningSection).length),
+      },
+    },
   };
 }
 
