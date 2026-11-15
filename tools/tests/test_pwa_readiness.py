@@ -28,13 +28,16 @@ class PWAReadinessTests(unittest.TestCase):
         self.assertIn("./assets/js/sentence-completion.js", required)
         self.assertIn("./data/practice/part5-sentence-completion.json", required)
 
-    def test_part1_fallbacks_are_required_and_jpgs_are_optional(self):
+    def test_declared_part1_fallbacks_are_required_and_jpgs_are_optional(self):
         required = self.array("REQUIRED")
         optional = self.array("OPTIONAL")
         for jpg in [p for p in optional if p.endswith(".jpg")]:
             self.assertNotIn(jpg, required)
-        svg = [p for p in required if p.startswith("./assets/listening/part1-") and p.endswith(".svg")]
-        self.assertEqual(len(svg), 8)
+        part1 = [item for item in json.loads((ROOT / "data/listening/listening-library.json").read_text(encoding="utf-8"))["listening"] if item.get("part") == "Part 1"]
+        declared_fallbacks = {item["image"] for item in part1 if item.get("image")}
+        svg = {p for p in required if p.startswith("./assets/listening/part1-") and p.endswith(".svg")}
+        self.assertEqual(svg, declared_fallbacks)
+        self.assertNotIn("./assets/listening/part1-office-cleaning.svg", required)
 
     def test_cache_version_matches_data_manifest(self):
         version = self.manifest["version"]

@@ -108,7 +108,7 @@ for part in LISTEN_TARGET:
 lines += [
     f"| **Total** | **{len(listening)}** | **{sum(LQ.values())}** |", "",
     f"- Spoken segments: {listening_segments}.",
-    f"- Part 1 licensed Pexels photographs: {sum(1 for item in listening if item.get('part') == 'Part 1' and item.get('photo'))}; these are third-party licensed practice images, not official ETS assets.",
+    f"- Part 1 photo assets: {sum(1 for item in listening if item.get('part') == 'Part 1' and item.get('photoSourceType', 'licensed-stock') == 'licensed-stock')} licensed Pexels + {sum(1 for item in listening if item.get('part') == 'Part 1' and item.get('photoSourceType') == 'ai-generated')} AI-generated; each source type is tracked separately in ATTRIBUTION.csv.",
     "- Audio is browser SpeechSynthesis; it is synthesized audio, not recorded/native-speaker or ETS audio.",
     f"- Mock-eligible Listening pool: {sum(ELQ.values())} questions; pending independent review: {sum(PQ.values())} questions. Pending content remains available for practice but is excluded from Mock.",
     f"- Pending batch counts: " + ", ".join(f"Batch {batch}: {sum(len(u.get('questions', [])) for u in PENDING if u.get('editorialBatch', 'legacy') == batch)}" for batch in sorted({u.get('editorialBatch', 'legacy') for u in PENDING})) + ".", "",
@@ -154,7 +154,7 @@ for part, target in READ_TARGET.items():
     lines.append(f"| {part} | {current} | {target} | {current / target * 100:.1f}% |")
 lines.append(f"| **Reading total** | **{sum(RQ.values())}** | **100** | **{sum(RQ.values())}%** |")
 lines += [
-    "", "These ratios compare the current practice pool with the public distribution for one test form. They do not mean the app already contains a complete, validated mock test. Part 1 has 8 practice items versus 6 in the reference form; eight locally hosted licensed photographs are used with SVG fallbacks.", "",
+    "", "These ratios compare the current practice pool with the public distribution for one test form. They do not mean the app already contains a complete, validated mock test. Part 1 Mock-eligible and total pools are tracked separately; each record has a source-specific attribution row; an SVG fallback is required only when the item declares an `image` path.", "",
     "## Answer-key balance (A/B/C/D counts)", "", "| Part | A | B | C | D |", "|---|---:|---:|---:|---:|"
 ]
 for part in list(LISTEN_TARGET) + list(READ_TARGET):
@@ -164,7 +164,7 @@ for part in list(LISTEN_TARGET) + list(READ_TARGET):
 lines += [
     "", "## Interpretation and gaps", "",
     f"- Listening learning inventory has {sum(LQ.values())} questions ({len(listening)} source units); currently {sum(ELQ.values())} are Mock-eligible and {sum(PQ.values())} remain pending independent review. The eligible pool supports one full 100-question form; at 102 eligible questions the next Full Listening form reuses 98 questions.",
-    f"- If all pending Listening questions were independently approved, projected per-Part inventory would be P1={ELQ.get('Part 1',0)+PQ.get('Part 1',0)}, P2={ELQ.get('Part 2',0)+PQ.get('Part 2',0)}, P3={ELQ.get('Part 3',0)+PQ.get('Part 3',0)}, P4={ELQ.get('Part 4',0)+PQ.get('Part 4',0)}. It would still be short by 4 Part 1 items for two entirely non-repeating Full forms.",
+    f"- If all pending Listening questions were independently approved, projected per-Part inventory would be P1={ELQ.get('Part 1',0)+PQ.get('Part 1',0)}, P2={ELQ.get('Part 2',0)+PQ.get('Part 2',0)}, P3={ELQ.get('Part 3',0)+PQ.get('Part 3',0)}, P4={ELQ.get('Part 4',0)+PQ.get('Part 4',0)}. It would still be short by {max(0, 12 - (ELQ.get('Part 1',0)+PQ.get('Part 1',0)))} Part 1 items for two entirely non-repeating Full forms.",
     f"- Reading pool has {sum(RQ.values())} questions; Part 7 includes {p7_single_questions} single-passage and {p7_multiple_questions} multiple-passage questions. The v2.33 Mock regression verifies two consecutive 100-question Reading forms with zero reused question IDs.",
     f"- Structured Part 7 double/triple passage resources: {p7_structured_multi_items}/{len(p7_multiple_items)}.",
     "- V2.25.0 includes a timed 15/60/120-minute mock engine, answer review and local score analysis; it is an internal practice tool, not an officially equated TOEIC test. Independent editorial review remains pending for reserve content.",

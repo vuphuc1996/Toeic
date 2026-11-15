@@ -1,7 +1,7 @@
 # TOEIC Dictionary — Design System
 
-**Current implementation:** v2.30.0  
-**Scope:** every learning page, shared controls, responsive shell and PWA navigation.
+**Current implementation baseline:** v2.40.0; governance target v2.41.0  
+**Scope:** every learning page, shared controls, responsive shell and PWA navigation. See `MASTER_CURRICULUM.md` for product/content scope.
 
 ## 1. Design principles
 

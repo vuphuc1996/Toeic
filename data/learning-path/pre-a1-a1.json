@@ -1,0 +1,824 @@
+{
+  "schemaVersion": 1,
+  "track": "Pre-A1 → A1",
+  "title": "Nền tảng tiếng Anh từ con số 0",
+  "description": "Lộ trình nhập môn có hướng dẫn; đây là chặng đầu, chưa phải toàn bộ chương trình TOEIC.",
+  "lessons": [
+    {
+      "id": "pa1-alphabet",
+      "order": 1,
+      "title": "Làm quen bảng chữ cái",
+      "level": "PRE-A1",
+      "objective": "Nhận diện 26 chữ cái và đánh vần tên đơn giản.",
+      "explanation": "English has 26 letters. Letter names are different from their sounds.",
+      "focus": "A a · B b · C c · D d",
+      "examples": [
+        {
+          "en": "A: /eɪ/ · B: /biː/ · C: /siː/ · D: /diː/",
+          "vi": ""
+        },
+        {
+          "en": "My name is Lan.",
+          "vi": "Tên tôi là Lan."
+        }
+      ],
+      "tip": "Chữ cái là tên gọi; khi đọc từ, hãy học âm của chữ trong từng từ.",
+      "question": "Which letter comes after B?",
+      "choices": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "answerIndex": 1,
+      "rationale": "C đứng sau B.",
+      "questionBank": [
+        {
+          "id": "pa1-alphabet::q1",
+          "question": "Which letter comes after B?",
+          "choices": [
+            "A",
+            "C",
+            "D",
+            "E"
+          ],
+          "answerIndex": 1,
+          "rationale": "C đứng sau B."
+        },
+        {
+          "id": "pa1-alphabet::q2",
+          "question": "Which letter comes before D?",
+          "choices": [
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          "answerIndex": 1,
+          "rationale": "C đứng ngay trước D."
+        },
+        {
+          "id": "pa1-alphabet::q3",
+          "question": "Which pair shows the same letter in uppercase and lowercase?",
+          "choices": [
+            "A / a",
+            "B / d",
+            "C / e",
+            "D / b"
+          ],
+          "answerIndex": 0,
+          "rationale": "A và a là cùng một chữ cái ở hai dạng."
+        }
+      ],
+      "applicationTask": {
+        "id": "pa1-alphabet::apply1",
+        "prompt": "Choose the correct spelling when filling in a visitor form.",
+        "choices": [
+          "My name is Lan.",
+          "My name are Lan.",
+          "I name Lan.",
+          "My names Lan."
+        ],
+        "answerIndex": 0,
+        "rationale": "A visitor form needs a complete, correctly formed introduction: “My name is Lan.”",
+        "focus": "Use a simple personal introduction in a real form.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "pa1-greetings",
+      "order": 2,
+      "title": "Chào hỏi và giới thiệu",
+      "level": "PRE-A1",
+      "objective": "Chào hỏi, nói tên và hỏi tên người khác.",
+      "explanation": "Use “Hello” or “Hi” to greet. Say “My name is …” to introduce yourself.",
+      "focus": "Hello. / Hi. / Good morning.",
+      "examples": [
+        {
+          "en": "What is your name?",
+          "vi": "My name is Minh."
+        },
+        {
+          "en": "Nice to meet you.",
+          "vi": "Rất vui được gặp bạn."
+        }
+      ],
+      "tip": "Trong giao tiếp lịch sự, có thể dùng “Nice to meet you”.",
+      "question": "Choose the correct introduction.",
+      "choices": [
+        "My name am An.",
+        "My name is An.",
+        "I name An.",
+        "Name is I An."
+      ],
+      "answerIndex": 1,
+      "rationale": "Cấu trúc đúng là My name is + tên.",
+      "questionBank": [
+        {
+          "id": "pa1-greetings::q1",
+          "question": "Choose the correct introduction.",
+          "choices": [
+            "My name am An.",
+            "My name is An.",
+            "I name An.",
+            "Name is I An."
+          ],
+          "answerIndex": 1,
+          "rationale": "Cấu trúc đúng là My name is + tên."
+        },
+        {
+          "id": "pa1-greetings::q2",
+          "question": "What can you say when you meet someone in the morning?",
+          "choices": [
+            "Good night.",
+            "Good morning.",
+            "Goodbye.",
+            "See you yesterday."
+          ],
+          "answerIndex": 1,
+          "rationale": "Good morning dùng để chào vào buổi sáng."
+        },
+        {
+          "id": "pa1-greetings::q3",
+          "question": "Choose a polite response to “Nice to meet you.”",
+          "choices": [
+            "Nice to meet you, too.",
+            "I am twenty.",
+            "Good night yesterday.",
+            "My name are Mai."
+          ],
+          "answerIndex": 0,
+          "rationale": "Có thể đáp lại bằng Nice to meet you, too."
+        }
+      ],
+      "applicationTask": {
+        "id": "pa1-greetings::apply1",
+        "prompt": "You meet a colleague at 9:00 a.m. What is a suitable greeting?",
+        "choices": [
+          "Good night.",
+          "Good morning.",
+          "Good evening.",
+          "Goodbye."
+        ],
+        "answerIndex": 1,
+        "rationale": "At 9:00 a.m., “Good morning” is the suitable greeting.",
+        "focus": "Choose a greeting that matches the time of day.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "pa1-pronouns",
+      "order": 3,
+      "title": "Đại từ nhân xưng",
+      "level": "PRE-A1",
+      "objective": "Dùng I, you, he, she, it, we, they làm chủ ngữ.",
+      "explanation": "A subject pronoun replaces a person or thing before the verb.",
+      "focus": "I = tôi · you = bạn · he = anh ấy · she = cô ấy · it = nó · we = chúng tôi · they = họ",
+      "examples": [
+        {
+          "en": "She is my teacher.",
+          "vi": "Cô ấy là giáo viên của tôi."
+        },
+        {
+          "en": "They are employees.",
+          "vi": "Họ là nhân viên."
+        }
+      ],
+      "tip": "Không dùng “he” cho nữ; “they” dùng cho số nhiều hoặc một người khi chưa rõ giới tính.",
+      "question": "Which pronoun replaces “Lan”?",
+      "choices": [
+        "he",
+        "she",
+        "it",
+        "we"
+      ],
+      "answerIndex": 1,
+      "rationale": "Lan là tên nữ trong ví dụ; dùng she.",
+      "questionBank": [
+        {
+          "id": "pa1-pronouns::q1",
+          "question": "Which pronoun replaces “Lan”?",
+          "choices": [
+            "he",
+            "she",
+            "it",
+            "we"
+          ],
+          "answerIndex": 1,
+          "rationale": "Lan là tên nữ trong ví dụ; dùng she."
+        },
+        {
+          "id": "pa1-pronouns::q2",
+          "question": "Choose the correct pronoun: “Tom and I” = …",
+          "choices": [
+            "he",
+            "we",
+            "they",
+            "it"
+          ],
+          "answerIndex": 1,
+          "rationale": "Tom and I tương ứng với we."
+        },
+        {
+          "id": "pa1-pronouns::q3",
+          "question": "Which sentence uses a subject pronoun correctly?",
+          "choices": [
+            "Her is happy.",
+            "They are ready.",
+            "Us are here.",
+            "Him works here."
+          ],
+          "answerIndex": 1,
+          "rationale": "They là đại từ chủ ngữ và đi với are."
+        }
+      ],
+      "applicationTask": {
+        "id": "pa1-pronouns::apply1",
+        "prompt": "A colleague asks about two coworkers. Choose the correct sentence.",
+        "choices": [
+          "They is ready.",
+          "He are ready.",
+          "They are ready.",
+          "She am ready."
+        ],
+        "answerIndex": 2,
+        "rationale": "“They” takes “are”: “They are ready.”",
+        "focus": "Match the subject pronoun with the correct form of BE.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "pa1-be",
+      "order": 4,
+      "title": "Động từ BE: am / is / are",
+      "level": "A1",
+      "objective": "Chọn am, is, are theo chủ ngữ và tạo câu giới thiệu đơn giản.",
+      "explanation": "BE links the subject to a name, role, place or description.",
+      "focus": "I am · He/She/It is · You/We/They are",
+      "examples": [
+        {
+          "en": "The office is clean.",
+          "vi": "Văn phòng sạch sẽ."
+        },
+        {
+          "en": "We are ready.",
+          "vi": "Chúng tôi đã sẵn sàng."
+        }
+      ],
+      "tip": "Không bỏ BE trong câu như “She happy”; phải nói “She is happy”.",
+      "question": "Choose the correct sentence.",
+      "choices": [
+        "They is ready.",
+        "I are ready.",
+        "She is ready.",
+        "He am ready."
+      ],
+      "answerIndex": 2,
+      "rationale": "She đi với is.",
+      "questionBank": [
+        {
+          "id": "pa1-be::q1",
+          "question": "Choose the correct sentence.",
+          "choices": [
+            "They is ready.",
+            "I are ready.",
+            "She is ready.",
+            "He am ready."
+          ],
+          "answerIndex": 2,
+          "rationale": "She đi với is."
+        },
+        {
+          "id": "pa1-be::q2",
+          "question": "Complete: “You ___ a student.”",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answerIndex": 2,
+          "rationale": "You đi với are."
+        },
+        {
+          "id": "pa1-be::q3",
+          "question": "Complete: “My colleagues ___ friendly.”",
+          "choices": [
+            "is",
+            "am",
+            "are",
+            "be"
+          ],
+          "answerIndex": 2,
+          "rationale": "My colleagues là chủ ngữ số nhiều nên dùng are."
+        }
+      ],
+      "applicationTask": {
+        "id": "pa1-be::apply1",
+        "prompt": "A customer wants one item, not several. Complete: “I need ___ receipt.”",
+        "choices": [
+          "a",
+          "an",
+          "the are",
+          "many"
+        ],
+        "answerIndex": 0,
+        "rationale": "“Receipt” begins with a consonant sound, so use “a”.",
+        "focus": "Use an article when referring to one countable item.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "a1-articles",
+      "order": 5,
+      "title": "A / An / The",
+      "level": "A1",
+      "objective": "Dùng mạo từ cơ bản trước danh từ đếm được số ít.",
+      "explanation": "Use a before a consonant sound, an before a vowel sound; the refers to something specific.",
+      "focus": "a desk · an office · the manager",
+      "examples": [
+        {
+          "en": "She works in an office.",
+          "vi": "Cô ấy làm việc trong một văn phòng."
+        },
+        {
+          "en": "Please open the door.",
+          "vi": "Vui lòng mở cánh cửa đó."
+        }
+      ],
+      "tip": "Chọn a/an theo âm đầu, không chỉ theo chữ cái đầu.",
+      "question": "Choose the correct phrase.",
+      "choices": [
+        "a employee",
+        "an employee",
+        "the employee (first mention, non-specific)",
+        "an desk"
+      ],
+      "answerIndex": 1,
+      "rationale": "Employee bắt đầu bằng âm nguyên âm nên dùng an.",
+      "questionBank": [
+        {
+          "id": "a1-articles::q1",
+          "question": "Choose the correct phrase.",
+          "choices": [
+            "a employee",
+            "an employee",
+            "the employee (first mention, non-specific)",
+            "an desk"
+          ],
+          "answerIndex": 1,
+          "rationale": "Employee bắt đầu bằng âm nguyên âm nên dùng an."
+        },
+        {
+          "id": "a1-articles::q2",
+          "question": "Choose the correct phrase.",
+          "choices": [
+            "a umbrella",
+            "an umbrella",
+            "an university",
+            "a hour"
+          ],
+          "answerIndex": 1,
+          "rationale": "Umbrella bắt đầu bằng âm nguyên âm nên dùng an."
+        },
+        {
+          "id": "a1-articles::q3",
+          "question": "Complete: “Please speak to ___ manager we met yesterday.”",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ],
+          "answerIndex": 2,
+          "rationale": "Người quản lý đã được xác định bằng mệnh đề we met yesterday."
+        }
+      ],
+      "applicationTask": {
+        "id": "a1-articles::apply1",
+        "prompt": "An office has three computers. Choose the correct label.",
+        "choices": [
+          "three computer",
+          "three computers",
+          "three computres",
+          "three a computer"
+        ],
+        "answerIndex": 1,
+        "rationale": "A regular countable noun takes -s in the plural: “computers”.",
+        "focus": "Describe quantities with the correct plural noun form.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "a1-plurals",
+      "order": 6,
+      "title": "Danh từ số nhiều",
+      "level": "A1",
+      "objective": "Nhận biết danh từ số nhiều thông dụng và cách thêm -s/-es.",
+      "explanation": "Most countable nouns add -s. Add -es after s, sh, ch, x or z sounds.",
+      "focus": "one desk → two desks · one box → two boxes",
+      "examples": [
+        {
+          "en": "There are five boxes.",
+          "vi": "Có năm chiếc hộp."
+        },
+        {
+          "en": "The employees are busy.",
+          "vi": "Các nhân viên đang bận."
+        }
+      ],
+      "tip": "Sau số đếm lớn hơn một, danh từ đếm được thường ở dạng số nhiều.",
+      "question": "Choose the plural of “box”.",
+      "choices": [
+        "boxs",
+        "boxes",
+        "boxies",
+        "box"
+      ],
+      "answerIndex": 1,
+      "rationale": "Box kết thúc bằng x, thêm -es.",
+      "questionBank": [
+        {
+          "id": "a1-plurals::q1",
+          "question": "Choose the plural of “box”.",
+          "choices": [
+            "boxs",
+            "boxes",
+            "boxies",
+            "box"
+          ],
+          "answerIndex": 1,
+          "rationale": "Box kết thúc bằng x, thêm -es."
+        },
+        {
+          "id": "a1-plurals::q2",
+          "question": "Choose the plural form of “city”.",
+          "choices": [
+            "citys",
+            "cities",
+            "cityes",
+            "city"
+          ],
+          "answerIndex": 1,
+          "rationale": "Phụ âm + y đổi thành -ies."
+        },
+        {
+          "id": "a1-plurals::q3",
+          "question": "Complete: “There are three ___ on the table.”",
+          "choices": [
+            "box",
+            "boxs",
+            "boxes",
+            "boxies"
+          ],
+          "answerIndex": 2,
+          "rationale": "Box thêm -es ở dạng số nhiều."
+        }
+      ],
+      "applicationTask": {
+        "id": "a1-plurals::apply1",
+        "prompt": "A staff member describes a daily routine: “She ___ the office at eight.”",
+        "choices": [
+          "open",
+          "opens",
+          "opening",
+          "is open"
+        ],
+        "answerIndex": 1,
+        "rationale": "With “she” in the present simple, the verb takes -s: “opens”.",
+        "focus": "Use present simple for regular routines.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "a1-present-simple",
+      "order": 7,
+      "title": "Hiện tại đơn cơ bản",
+      "level": "A1",
+      "objective": "Nói thói quen, lịch làm việc và sự thật đơn giản.",
+      "explanation": "Use the base verb with I/you/we/they. Add -s/-es with he/she/it.",
+      "focus": "I work. · She works. · They start at nine.",
+      "examples": [
+        {
+          "en": "The store opens at 9 a.m.",
+          "vi": "Cửa hàng mở cửa lúc 9 giờ sáng."
+        },
+        {
+          "en": "He checks the emails every morning.",
+          "vi": "Anh ấy kiểm tra email mỗi sáng."
+        }
+      ],
+      "tip": "Dấu hiệu often, usually, every day thường gợi ý hiện tại đơn.",
+      "question": "Choose the correct sentence.",
+      "choices": [
+        "She work every day.",
+        "She works every day.",
+        "She working every day.",
+        "She is work every day."
+      ],
+      "answerIndex": 1,
+      "rationale": "Chủ ngữ she cần động từ thêm -s.",
+      "questionBank": [
+        {
+          "id": "a1-present-simple::q1",
+          "question": "Choose the correct sentence.",
+          "choices": [
+            "She work every day.",
+            "She works every day.",
+            "She working every day.",
+            "She is work every day."
+          ],
+          "answerIndex": 1,
+          "rationale": "Chủ ngữ she cần động từ thêm -s."
+        },
+        {
+          "id": "a1-present-simple::q2",
+          "question": "Complete: “Our office ___ at 8 a.m.”",
+          "choices": [
+            "open",
+            "opens",
+            "opening",
+            "is openning"
+          ],
+          "answerIndex": 1,
+          "rationale": "Chủ ngữ số ít ngôi thứ ba dùng động từ thêm -s."
+        },
+        {
+          "id": "a1-present-simple::q3",
+          "question": "Choose the correct negative sentence.",
+          "choices": [
+            "She do not work here.",
+            "She does not works here.",
+            "She does not work here.",
+            "She not works here."
+          ],
+          "answerIndex": 2,
+          "rationale": "Does not đi với động từ nguyên mẫu work."
+        }
+      ],
+      "applicationTask": {
+        "id": "a1-present-simple::apply1",
+        "prompt": "You need to ask a coworker about their work location. Choose the correct question.",
+        "choices": [
+          "Where you work?",
+          "Where does you work?",
+          "Where do you work?",
+          "Where are work you?"
+        ],
+        "answerIndex": 2,
+        "rationale": "“Where do you work?” is the correct present-simple question with “you”.",
+        "focus": "Form a question with question word + do + subject + base verb.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "a1-questions",
+      "order": 8,
+      "title": "Câu hỏi Yes/No và Wh-",
+      "level": "A1",
+      "objective": "Hỏi thông tin cơ bản bằng be, do/does và từ để hỏi.",
+      "explanation": "Use be before the subject: Are you…? Use do/does + base verb for action verbs.",
+      "focus": "Where are you? · Do you work here? · Does he drive?",
+      "examples": [
+        {
+          "en": "What time does the meeting start?",
+          "vi": "Cuộc họp bắt đầu lúc mấy giờ?"
+        },
+        {
+          "en": "Are they available?",
+          "vi": "Họ có rảnh không?"
+        }
+      ],
+      "tip": "Sau does, động từ chính trở về nguyên mẫu: Does she work?",
+      "question": "Choose the correct question.",
+      "choices": [
+        "Does she works here?",
+        "Do she work here?",
+        "Does she work here?",
+        "Is she work here?"
+      ],
+      "answerIndex": 2,
+      "rationale": "Does + chủ ngữ + động từ nguyên mẫu.",
+      "questionBank": [
+        {
+          "id": "a1-questions::q1",
+          "question": "Choose the correct question.",
+          "choices": [
+            "Does she works here?",
+            "Do she work here?",
+            "Does she work here?",
+            "Is she work here?"
+          ],
+          "answerIndex": 2,
+          "rationale": "Does + chủ ngữ + động từ nguyên mẫu."
+        },
+        {
+          "id": "a1-questions::q2",
+          "question": "Choose the correct question.",
+          "choices": [
+            "Where you work?",
+            "Where do you work?",
+            "Where does you work?",
+            "Where are you work?"
+          ],
+          "answerIndex": 1,
+          "rationale": "Với động từ thường và chủ ngữ you, dùng do + chủ ngữ + động từ nguyên mẫu."
+        },
+        {
+          "id": "a1-questions::q3",
+          "question": "Complete: “___ does the train leave?”",
+          "choices": [
+            "What time",
+            "How many time",
+            "How much times",
+            "Which time do"
+          ],
+          "answerIndex": 0,
+          "rationale": "What time dùng để hỏi giờ."
+        }
+      ],
+      "applicationTask": {
+        "id": "a1-questions::apply1",
+        "prompt": "A visitor is waiting inside the lobby. Complete: “Please wait ___ the reception desk.”",
+        "choices": [
+          "at",
+          "on",
+          "between",
+          "under"
+        ],
+        "answerIndex": 0,
+        "rationale": "“At the reception desk” identifies the point or place where the visitor should wait.",
+        "focus": "Use a location preposition that fits the context.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "a1-there-prepositions",
+      "order": 9,
+      "title": "There is / are và giới từ vị trí",
+      "level": "A1",
+      "objective": "Mô tả nơi chốn, đồ vật và vị trí đơn giản.",
+      "explanation": "There is + singular noun; there are + plural noun. Common prepositions: in, on, under, next to.",
+      "focus": "There is a printer on the desk.",
+      "examples": [
+        {
+          "en": "The files are in the cabinet.",
+          "vi": "Các tập hồ sơ ở trong tủ."
+        },
+        {
+          "en": "The meeting room is next to the reception.",
+          "vi": "Phòng họp cạnh quầy lễ tân."
+        }
+      ],
+      "tip": "Phân biệt in (bên trong), on (trên bề mặt), under (bên dưới).",
+      "question": "Choose the correct sentence.",
+      "choices": [
+        "There are a printer.",
+        "There is a printer.",
+        "There is two printers.",
+        "There be a printer."
+      ],
+      "answerIndex": 1,
+      "rationale": "A printer là danh từ số ít; dùng there is.",
+      "questionBank": [
+        {
+          "id": "a1-there-prepositions::q1",
+          "question": "Choose the correct sentence.",
+          "choices": [
+            "There are a printer.",
+            "There is a printer.",
+            "There is two printers.",
+            "There be a printer."
+          ],
+          "answerIndex": 1,
+          "rationale": "A printer là danh từ số ít; dùng there is."
+        },
+        {
+          "id": "a1-there-prepositions::q2",
+          "question": "Complete: “The keys are ___ the drawer.”",
+          "choices": [
+            "in",
+            "between to",
+            "at under",
+            "next"
+          ],
+          "answerIndex": 0,
+          "rationale": "In diễn tả vật ở bên trong ngăn kéo."
+        },
+        {
+          "id": "a1-there-prepositions::q3",
+          "question": "Choose the correct sentence.",
+          "choices": [
+            "There are a meeting room.",
+            "There is two meeting rooms.",
+            "There are two meeting rooms.",
+            "There be two meeting rooms."
+          ],
+          "answerIndex": 2,
+          "rationale": "Danh từ số nhiều meeting rooms đi với there are."
+        }
+      ],
+      "applicationTask": {
+        "id": "a1-there-prepositions::apply1",
+        "prompt": "Yesterday, a colleague finished a report. Choose the correct sentence.",
+        "choices": [
+          "She finish the report yesterday.",
+          "She finished the report yesterday.",
+          "She finishes the report yesterday.",
+          "She finishing the report yesterday."
+        ],
+        "answerIndex": 1,
+        "rationale": "“Yesterday” signals the past; the regular verb “finish” becomes “finished”.",
+        "focus": "Use past simple for a completed past action.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "a1-past-future",
+      "order": 10,
+      "title": "Quá khứ và tương lai nhập môn",
+      "level": "A1",
+      "objective": "Nhận biết was/were, động từ quá khứ quen thuộc và will cho dự định đơn giản.",
+      "explanation": "Use was/were for past states. Use will + base verb for simple future decisions or predictions.",
+      "focus": "I was at work yesterday. · They were busy. · We will call you.",
+      "examples": [
+        {
+          "en": "The shipment arrived yesterday.",
+          "vi": "Lô hàng đã đến hôm qua."
+        },
+        {
+          "en": "I will send the report tomorrow.",
+          "vi": "Tôi sẽ gửi báo cáo ngày mai."
+        }
+      ],
+      "tip": "Yesterday thường đi với quá khứ; tomorrow thường đi với tương lai.",
+      "question": "Choose the correct sentence.",
+      "choices": [
+        "They was late yesterday.",
+        "They were late yesterday.",
+        "They are late yesterday.",
+        "They be late yesterday."
+      ],
+      "answerIndex": 1,
+      "rationale": "They đi với were ở quá khứ.",
+      "questionBank": [
+        {
+          "id": "a1-past-future::q1",
+          "question": "Choose the correct sentence.",
+          "choices": [
+            "They was late yesterday.",
+            "They were late yesterday.",
+            "They are late yesterday.",
+            "They be late yesterday."
+          ],
+          "answerIndex": 1,
+          "rationale": "They đi với were ở quá khứ."
+        },
+        {
+          "id": "a1-past-future::q2",
+          "question": "Complete: “We ___ at the office yesterday.”",
+          "choices": [
+            "was",
+            "were",
+            "are",
+            "be"
+          ],
+          "answerIndex": 1,
+          "rationale": "We đi với were ở quá khứ."
+        },
+        {
+          "id": "a1-past-future::q3",
+          "question": "Complete: “I will ___ the client tomorrow.”",
+          "choices": [
+            "called",
+            "calling",
+            "calls",
+            "call"
+          ],
+          "answerIndex": 3,
+          "rationale": "Will đi với động từ nguyên mẫu."
+        }
+      ],
+      "applicationTask": {
+        "id": "a1-past-future::apply1",
+        "prompt": "A meeting is planned for tomorrow. Complete: “We ___ meet the client tomorrow.”",
+        "choices": [
+          "met",
+          "meeting",
+          "will",
+          "will meet"
+        ],
+        "answerIndex": 3,
+        "rationale": "“Will meet” expresses a future plan or prediction.",
+        "focus": "Use will + base verb to refer to the future.",
+        "evidenceType": "contextual-application-mcq"
+      }
+    }
+  ],
+  "evidencePolicy": {
+    "minimumUniqueQuestions": 3,
+    "practiceAccuracyThreshold": 0.8,
+    "label": "practice_threshold_met",
+    "disclaimer": "A lesson practice threshold is a local learning signal, not CEFR certification or proof of transfer to real communication. Listening and speaking are not measured by this question bank."
+  }
+}

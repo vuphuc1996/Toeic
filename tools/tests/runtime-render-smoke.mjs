@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import { ensurePracticeProgress, countAttemptedPracticeQuestions, getPracticeAttemptHistory, getPracticeAttemptCount, recordPracticeAnswer, archivePracticeAnswerForRetry, archiveAllPracticeAnswersForRetry } from '../../assets/js/practice-progress.js';
+import { ensureObjectiveProgress, recordObjectiveAttempt } from '../../assets/js/learning-outcome-progress.js';
 
 const appSource = fs.readFileSync(new URL('../../assets/js/app.js', import.meta.url), 'utf8');
 const nodes = new Map();
@@ -23,7 +24,7 @@ const context = {
     grammarProgress: {},
     activeReading: null,
     activeGrammarLesson: null,
-    listening: [], listeningProgress: {},
+    listening: [], listeningProgress: {}, objectiveProgress: {}, objectiveResourceIndex: { 'part7-runtime-smoke': ['reading-part-7'], 'grammar-runtime-smoke': ['grammar-core'], 'listening-runtime-smoke': ['listening-part-2'] }, objectiveResourceMap: null,
   },
   $,
   normalizeText: value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(),
@@ -33,7 +34,7 @@ const context = {
   savedChoiceWrongClass: () => false,
   savedChoiceHistoryMarkup: () => '',
   icon: () => '<span></span>',
-  ensurePracticeProgress, countAttemptedPracticeQuestions, getPracticeAttemptHistory, getPracticeAttemptCount, recordPracticeAnswer, archivePracticeAnswerForRetry, archiveAllPracticeAnswersForRetry,
+  ensurePracticeProgress, countAttemptedPracticeQuestions, getPracticeAttemptHistory, getPracticeAttemptCount, recordPracticeAnswer, archivePracticeAnswerForRetry, archiveAllPracticeAnswersForRetry, ensureObjectiveProgress, recordObjectiveAttempt, renderLearningObjectiveProgress: () => {},
   requestAnimationFrame: callback => callback(),
   renderToeicPartInsights: () => {}, renderReadingLibrary: () => {}, renderListeningLibrary: () => {}, renderGrammarLibrary: () => {},
   toast: () => {}, window: { confirm: () => true },
@@ -55,6 +56,8 @@ function exposeFunction(name, nextToken) {
   return context.__render;
 }
 
+exposeFunction('trackObjectivePractice', 'async function saveObjectivePractice(');
+exposeFunction('saveObjectivePractice', 'function renderLearningObjectiveProgress(');
 exposeFunction('practiceAttemptHistoryMarkup', 'function practiceRetryActionMarkup');
 exposeFunction('practiceRetryActionMarkup', 'function practiceRetryAllToolbar');
 exposeFunction('practiceRetryAllToolbar', 'async function retryPracticeQuestion');
@@ -125,6 +128,8 @@ assert.match($('#modalContent').innerHTML, /Lịch sử 1 lần trước/);
 await answerReadingQuestion({ dataset: { readingId: part7.id, questionIndex: '0', choiceIndex: '1' } });
 assert.equal(context.state.readingProgress[part7.id].answers[0].correct, true, 'learner can submit a new response after retry');
 assert.equal(context.state.readingProgress[part7.id].answers[0].attemptNumber, 2);
+assert.equal(context.state.objectiveProgress.objectives['reading-part-7'].items['part7-runtime-smoke::index:0::'].latestCorrect, true, 'Reading answer updates objective evidence using latest attempt');
+assert.equal(context.persisted.objectiveProgress.objectives['reading-part-7'].items['part7-runtime-smoke::index:0::'].attempts.length, 2, 'objective evidence preserves retry history');
 await retryAllPracticeQuestions({ dataset: { practiceRetryAll: 'reading', practiceId: part7.id } });
 assert.equal(context.state.readingProgress[part7.id].answers[0], undefined, 'whole-lesson retry unlocks active Reading answers');
 assert.equal(context.state.readingProgress[part7.id].attemptHistory[0].length, 2, 'whole-lesson retry preserves both attempts');

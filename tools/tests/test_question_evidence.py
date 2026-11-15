@@ -25,15 +25,15 @@ class QuestionEvidenceAuditTests(unittest.TestCase):
             raise RuntimeError(result.stdout + "\n" + result.stderr)
         cls.report = REPORT.read_text(encoding="utf-8")
 
-    def test_all_400_answer_keys_are_mapped(self):
-        self.assertIn("Questions indexed: **400** (200 Listening + 200 Reading).", self.report)
+    def test_all_401_answer_keys_are_mapped(self):
+        self.assertIn("Questions indexed: **401** (201 Listening + 200 Reading).", self.report)
 
     def test_all_manual_review_categories_have_expected_counts(self):
         for expected in (
             "Manual paraphrase/inference checked against source | 3",
-            "Part 1 Pexels source description and keyed action reviewed | 8",
+            "Part 1 source description and keyed action reviewed (Pexels or project-generated asset) | 8",
             "Part 2 speech-act / response-fit checked | 25",
-            "Listening reserve — not approved for Mock | 98",
+            "Listening reserve — not approved for Mock | 99",
             "Part 5 sentence grammar checked | 60",
             "Part 6 context/cohesion checked | 32",
             "Explicit Part 7 passage/document quotation (v2.33.0 additions) | 45",
@@ -52,7 +52,7 @@ class QuestionEvidenceAuditTests(unittest.TestCase):
         self.assertNotIn("Manual paraphrase/inference review |", self.report)
         self.assertEqual(self.report.count("manual-paraphrase-verified"), 0)
         self.assertIn("6 low-overlap paraphrase/inference items were checked", self.report)
-        self.assertIn("98 Listening questions remain explicitly reserve-pending-independent-review", self.report)
+        self.assertIn("99 Listening questions remain explicitly reserve-pending-independent-review", self.report)
 
 
 if __name__ == "__main__":

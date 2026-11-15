@@ -146,7 +146,7 @@ def main() -> int:
         '- Historical reviewed groups were retained where the three alternatives are distinct and the transcript/passage supports one clear key. For the new v2.33 Part 7 groups, close dates/times, locations, delivery steps and document-purpose alternatives were authored to be plausible, but an independent reviewer must confirm that exactly one option is defensible.',
         f'- Listening reserve total: {sum(len(x.get("questions", [])) for x in reserve_all)} questions across {len(reserve_all)} units. This script structurally checks Part 3/4 reserve blocks; Part 2 response-fit is tracked separately. Structural checks never approve a reserve for Mock.',
         '- This is editorial review of original-authored content. It is not official ETS content, two-person independent review, statistical item analysis, difficulty calibration or proof of score equivalence.',
-        '- Part 1 uses licensed Pexels photographs with local SVG fallbacks; Listening audio remains browser SpeechSynthesis. Physical-device audio/voice review is still pending.',
+        '- Part 1 uses source-tracked licensed Pexels and AI-generated photographs with local SVG fallbacks; Listening audio remains browser SpeechSynthesis. Physical-device audio/voice review is still pending.',
         ''
     ]
     OUT.parent.mkdir(parents=True, exist_ok=True)

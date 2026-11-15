@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "title": "Đánh giá điểm bắt đầu (bản thử nghiệm)",
+  "description": "16 câu trắc nghiệm ngôn ngữ đọc hiểu; không phải chứng chỉ CEFR/ETS và chưa đánh giá nghe, nói, viết.",
+  "questions": [
+    {
+      "id": "place-prea1-01",
+      "level": "PRE-A1",
+      "prompt": "Chọn lời chào phù hợp vào buổi sáng.",
+      "choices": [
+        "Good morning.",
+        "Good night.",
+        "Goodbye.",
+        "See you yesterday."
+      ],
+      "answerIndex": 0,
+      "rationale": "Good morning dùng để chào vào buổi sáng."
+    },
+    {
+      "id": "place-prea1-02",
+      "level": "PRE-A1",
+      "prompt": "Complete: My name ___ Anna.",
+      "choices": [
+        "am",
+        "is",
+        "are",
+        "be"
+      ],
+      "answerIndex": 1,
+      "rationale": "My name là chủ ngữ số ít, dùng is."
+    },
+    {
+      "id": "place-prea1-03",
+      "level": "PRE-A1",
+      "prompt": "Which word means “nhân viên”?",
+      "choices": [
+        "customer",
+        "employee",
+        "meeting",
+        "schedule"
+      ],
+      "answerIndex": 1,
+      "rationale": "Employee nghĩa là nhân viên."
+    },
+    {
+      "id": "place-prea1-04",
+      "level": "PRE-A1",
+      "prompt": "Choose the correct pronoun: “Tom is a manager. ___ works here.”",
+      "choices": [
+        "She",
+        "They",
+        "He",
+        "We"
+      ],
+      "answerIndex": 2,
+      "rationale": "Tom được thay bằng đại từ he."
+    },
+    {
+      "id": "place-a1-05",
+      "level": "A1",
+      "prompt": "Choose the correct sentence.",
+      "choices": [
+        "She work in a bank.",
+        "She works in a bank.",
+        "She working in a bank.",
+        "She is work in a bank."
+      ],
+      "answerIndex": 1,
+      "rationale": "Hiện tại đơn với she: động từ thêm -s."
+    },
+    {
+      "id": "place-a1-06",
+      "level": "A1",
+      "prompt": "There ___ two meeting rooms on this floor.",
+      "choices": [
+        "is",
+        "are",
+        "be",
+        "has"
+      ],
+      "answerIndex": 1,
+      "rationale": "Danh từ số nhiều two meeting rooms đi với are."
+    },
+    {
+      "id": "place-a1-07",
+      "level": "A1",
+      "prompt": "The report is ___ the desk.",
+      "choices": [
+        "on",
+        "at",
+        "between",
+        "during"
+      ],
+      "answerIndex": 0,
+      "rationale": "On the desk diễn tả vị trí trên bề mặt bàn."
+    },
+    {
+      "id": "place-a1-08",
+      "level": "A1",
+      "prompt": "Choose the correct question.",
+      "choices": [
+        "Where you work?",
+        "Where does you work?",
+        "Where do you work?",
+        "Where are you work?"
+      ],
+      "answerIndex": 2,
+      "rationale": "Do + you + động từ nguyên mẫu."
+    },
+    {
+      "id": "place-a2-09",
+      "level": "A2",
+      "prompt": "The train ___ at 8:15, so please arrive early.",
+      "choices": [
+        "leave",
+        "leaves",
+        "leaving",
+        "left"
+      ],
+      "answerIndex": 1,
+      "rationale": "Lịch trình cố định thường dùng hiện tại đơn; train là chủ ngữ số ít."
+    },
+    {
+      "id": "place-a2-10",
+      "level": "A2",
+      "prompt": "We have worked with this supplier ___ 2022.",
+      "choices": [
+        "for",
+        "since",
+        "during",
+        "while"
+      ],
+      "answerIndex": 1,
+      "rationale": "Since đi với mốc thời gian bắt đầu."
+    },
+    {
+      "id": "place-a2-11",
+      "level": "A2",
+      "prompt": "The meeting was postponed ___ the manager was ill.",
+      "choices": [
+        "although",
+        "because",
+        "unless",
+        "despite"
+      ],
+      "answerIndex": 1,
+      "rationale": "Because nối mệnh đề chỉ nguyên nhân."
+    },
+    {
+      "id": "place-a2-12",
+      "level": "A2",
+      "prompt": "Read: “Please submit your expense form by Friday.” What is required?",
+      "choices": [
+        "Attend a meeting on Friday.",
+        "Send the expense form no later than Friday.",
+        "Pay the supplier on Monday.",
+        "Cancel the expense form."
+      ],
+      "answerIndex": 1,
+      "rationale": "By Friday nghĩa là chậm nhất vào thứ Sáu."
+    },
+    {
+      "id": "place-b1-13",
+      "level": "B1",
+      "prompt": "If the shipment ___ today, we will notify the client.",
+      "choices": [
+        "arrive",
+        "arrives",
+        "arrived",
+        "will arrive"
+      ],
+      "answerIndex": 1,
+      "rationale": "Mệnh đề điều kiện loại 1 dùng hiện tại đơn sau if."
+    },
+    {
+      "id": "place-b1-14",
+      "level": "B1",
+      "prompt": "The proposal, ___ was revised yesterday, is ready for review.",
+      "choices": [
+        "who",
+        "where",
+        "which",
+        "whose"
+      ],
+      "answerIndex": 2,
+      "rationale": "Which thay cho vật/sự việc trong mệnh đề quan hệ không xác định."
+    },
+    {
+      "id": "place-b1-15",
+      "level": "B1",
+      "prompt": "Despite ___ the deadline, the team requested an extension.",
+      "choices": [
+        "meet",
+        "met",
+        "meeting",
+        "to meet"
+      ],
+      "answerIndex": 2,
+      "rationale": "Despite là giới từ, theo sau bởi danh từ hoặc V-ing."
+    },
+    {
+      "id": "place-b1-16",
+      "level": "B1",
+      "prompt": "Read: “Applicants must provide two references; incomplete applications will not be considered.” Which statement is true?",
+      "choices": [
+        "One reference is sufficient.",
+        "References are optional.",
+        "Two references are required.",
+        "Late applications are automatically accepted."
+      ],
+      "answerIndex": 2,
+      "rationale": "Thông báo yêu cầu hai người/thư tham chiếu."
+    }
+  ]
+}

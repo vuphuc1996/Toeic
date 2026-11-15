@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2.39.0",
+  "version": "2.60.0",
   "letters": [
     {
       "letter": "A",
@@ -143,5 +143,21 @@
     "C1": 85
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
-  "totalTopics": 32
+  "totalTopics": 32,
+  "previousReleaseTotalWords": 979,
+  "releaseAdditionIds": [
+    "accrual-n",
+    "receivable-adj",
+    "collateral-n",
+    "escrow-n",
+    "consignor-n",
+    "consignee-n",
+    "stockout-n",
+    "bottleneck-n",
+    "throughput-n",
+    "outlay-n",
+    "covenant-n",
+    "timesheet-n",
+    "replenishment-n"
+  ]
 }

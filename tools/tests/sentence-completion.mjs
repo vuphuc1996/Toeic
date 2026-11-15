@@ -41,6 +41,9 @@ const unrelatedVocabularyHistory = [bank.questions[0].wordId];
 const isolated = chooseSentenceCompletionQuestion(bank.questions, words, {}, unrelatedVocabularyHistory, () => 0);
 assert.ok(isolated, 'Part 5 cycling state is independent from vocabulary-mode seen-word IDs');
 assert.equal(isolated.id, bank.questions[0].id, 'a vocabulary word-ID must not mark its linked Part 5 question as seen');
+const forcedId = bank.questions[37].id;
+const forcedRecall = chooseSentenceCompletionQuestion(bank.questions, words, {}, bank.questions.map(item => item.id), () => 0, forcedId);
+assert.equal(forcedRecall.id, forcedId, 'a due Recall Queue item is selected exactly even when it is already in the seen list');
 
 const corrupted = structuredClone(bank.questions[0]);
 corrupted.sentence = 'This sentence has no gap.';

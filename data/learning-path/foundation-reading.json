@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "title": "Foundation Short Reading",
+  "description": "Short, level-appropriate texts for locating information and understanding simple purpose. Reading evidence is separate from recognition and contextual application.",
+  "evidencePolicy": {
+    "minimumUniqueQuestions": 2,
+    "practiceAccuracyThreshold": 0.8,
+    "scope": "short-reading-mcq-only; not CEFR certification or independent reading mastery"
+  },
+  "passages": [
+    {
+      "id": "pa1-alphabet::reading1",
+      "lessonId": "pa1-alphabet",
+      "title": "A Name Card",
+      "level": "PRE-A1",
+      "text": "Lan is a new visitor at Green Office. She writes her name on a card. The card says: “Lan Nguyen”. She gives the card to the receptionist.",
+      "questions": [
+        {
+          "id": "pa1-alphabet::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Who is the visitor?",
+          "choices": [
+            "Lan Nguyen",
+            "Green Office",
+            "The receptionist",
+            "A teacher"
+          ],
+          "answerIndex": 0,
+          "rationale": "The card gives the visitor’s name: Lan Nguyen."
+        },
+        {
+          "id": "pa1-alphabet::reading1::q2",
+          "skill": "find-detail",
+          "prompt": "What does Lan give to the receptionist?",
+          "choices": [
+            "A book",
+            "A name card",
+            "A key",
+            "A phone"
+          ],
+          "answerIndex": 1,
+          "rationale": "The passage says she gives the card to the receptionist."
+        }
+      ]
+    },
+    {
+      "id": "pa1-greetings::reading1",
+      "lessonId": "pa1-greetings",
+      "title": "A Morning Greeting",
+      "level": "PRE-A1",
+      "text": "It is 8:30 a.m. Minh enters the office. He sees Ms. Hoa near the door. Minh smiles and says, “Good morning, Ms. Hoa.” She says, “Good morning, Minh.”",
+      "questions": [
+        {
+          "id": "pa1-greetings::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "When does Minh enter the office?",
+          "choices": [
+            "At night",
+            "At noon",
+            "In the morning",
+            "In the evening"
+          ],
+          "answerIndex": 2,
+          "rationale": "8:30 a.m. is in the morning."
+        },
+        {
+          "id": "pa1-greetings::reading1::q2",
+          "skill": "find-detail",
+          "prompt": "What does Minh say?",
+          "choices": [
+            "Good night",
+            "Goodbye",
+            "Thank you",
+            "Good morning"
+          ],
+          "answerIndex": 3,
+          "rationale": "He greets Ms. Hoa with “Good morning”."
+        }
+      ]
+    },
+    {
+      "id": "pa1-pronouns::reading1",
+      "lessonId": "pa1-pronouns",
+      "title": "About Mai",
+      "level": "PRE-A1",
+      "text": "Mai works in the sales team. She is 24 years old. Her desk is near the window. Mai likes her team because the people are friendly.",
+      "questions": [
+        {
+          "id": "pa1-pronouns::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Which team does Mai work in?",
+          "choices": [
+            "Finance",
+            "Sales",
+            "IT",
+            "HR"
+          ],
+          "answerIndex": 1,
+          "rationale": "The first sentence says Mai works in the sales team."
+        },
+        {
+          "id": "pa1-pronouns::reading1::q2",
+          "skill": "main-idea",
+          "prompt": "What is the passage mainly about?",
+          "choices": [
+            "Mai and her friendly sales team",
+            "The office café menu",
+            "The people are friendly",
+            "The window near the desk"
+          ],
+          "answerIndex": 2,
+          "rationale": "The passage gives basic information about Mai and says she likes her friendly team."
+        }
+      ]
+    },
+    {
+      "id": "pa1-be::reading1",
+      "lessonId": "pa1-be",
+      "title": "Office Information",
+      "level": "PRE-A1",
+      "text": "The meeting room is on the second floor. It is next to the kitchen. The room is small but bright. There are six chairs and one table in the room.",
+      "questions": [
+        {
+          "id": "pa1-be::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Where is the meeting room?",
+          "choices": [
+            "On the first floor",
+            "Near the car park",
+            "Behind the kitchen",
+            "On the second floor"
+          ],
+          "answerIndex": 3,
+          "rationale": "The first sentence locates the room on the second floor."
+        },
+        {
+          "id": "pa1-be::reading1::q2",
+          "skill": "simple-inference",
+          "prompt": "What can you understand about the meeting room?",
+          "choices": [
+            "Six",
+            "It is on the first floor",
+            "It has no table",
+            "It is inside the kitchen"
+          ],
+          "answerIndex": 0,
+          "rationale": "There are six chairs and one table, so a small group can use the room."
+        }
+      ]
+    },
+    {
+      "id": "a1-articles::reading1",
+      "lessonId": "a1-articles",
+      "title": "A Desk",
+      "level": "PRE-A1",
+      "text": "There is a computer on the desk. An orange notebook is beside the computer. The notebook belongs to Nam. He uses it to write his daily tasks.",
+      "questions": [
+        {
+          "id": "a1-articles::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "What is on the desk?",
+          "choices": [
+            "A printer",
+            "A telephone",
+            "A computer",
+            "A lamp"
+          ],
+          "answerIndex": 2,
+          "rationale": "The first sentence says there is a computer on the desk."
+        },
+        {
+          "id": "a1-articles::reading1::q2",
+          "skill": "purpose",
+          "prompt": "What does Nam use the notebook for?",
+          "choices": [
+            "Reading news",
+            "Drawing maps",
+            "Making calls",
+            "Writing daily tasks"
+          ],
+          "answerIndex": 3,
+          "rationale": "The final sentence explains its purpose."
+        }
+      ]
+    },
+    {
+      "id": "a1-plurals::reading1",
+      "lessonId": "a1-plurals",
+      "title": "Items for a Meeting",
+      "level": "A1",
+      "text": "The team needs three notebooks, two pens and four name cards for the meeting. Hoa puts the items in a blue box. She takes the box to Room 2 at 9:00.",
+      "questions": [
+        {
+          "id": "a1-plurals::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "How many pens does the team need?",
+          "choices": [
+            "Two",
+            "Three",
+            "Four",
+            "Nine"
+          ],
+          "answerIndex": 0,
+          "rationale": "The list says two pens."
+        },
+        {
+          "id": "a1-plurals::reading1::q2",
+          "skill": "find-detail",
+          "prompt": "Where does Hoa take the box?",
+          "choices": [
+            "Room 9",
+            "Room 2",
+            "The kitchen",
+            "The reception"
+          ],
+          "answerIndex": 1,
+          "rationale": "The final sentence says she takes it to Room 2."
+        }
+      ]
+    },
+    {
+      "id": "a1-present-simple::reading1",
+      "lessonId": "a1-present-simple",
+      "title": "The Office Café",
+      "level": "A1",
+      "text": "The office café opens at 7:00 a.m. every weekday. It serves coffee, tea and sandwiches. Many employees have breakfast there before work. The café closes at 5:00 p.m.",
+      "questions": [
+        {
+          "id": "a1-present-simple::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "When does the café open?",
+          "choices": [
+            "5:00 p.m.",
+            "8:00 p.m.",
+            "12:00 p.m.",
+            "7:00 a.m."
+          ],
+          "answerIndex": 3,
+          "rationale": "The opening time is stated in the first sentence."
+        },
+        {
+          "id": "a1-present-simple::reading1::q2",
+          "skill": "purpose",
+          "prompt": "Why do employees visit the café in the morning?",
+          "choices": [
+            "To have breakfast",
+            "To attend a meeting",
+            "To buy books",
+            "To use a computer"
+          ],
+          "answerIndex": 0,
+          "rationale": "The passage says many employees have breakfast there."
+        }
+      ]
+    },
+    {
+      "id": "a1-questions::reading1",
+      "lessonId": "a1-questions",
+      "title": "A Delivery",
+      "level": "A1",
+      "text": "A delivery driver calls the office at 10:15. He has two packages for Ms. Linh. The receptionist asks him to wait in the lobby. Ms. Linh comes down five minutes later.",
+      "questions": [
+        {
+          "id": "a1-questions::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Who are the packages for?",
+          "choices": [
+            "The receptionist",
+            "Ms. Linh",
+            "The manager",
+            "The driver"
+          ],
+          "answerIndex": 1,
+          "rationale": "The passage says the packages are for Ms. Linh."
+        },
+        {
+          "id": "a1-questions::reading1::q2",
+          "skill": "find-detail",
+          "prompt": "Where does the driver wait?",
+          "choices": [
+            "In the kitchen",
+            "Outside Room 2",
+            "In the lobby",
+            "On the second floor"
+          ],
+          "answerIndex": 2,
+          "rationale": "The receptionist asks him to wait in the lobby."
+        }
+      ]
+    },
+    {
+      "id": "a1-there-prepositions::reading1",
+      "lessonId": "a1-there-prepositions",
+      "title": "Finding the Printer",
+      "level": "A1",
+      "text": "The printer is between the meeting room and the manager’s office. A small table is in front of it. Paper is inside the cabinet under the table.",
+      "questions": [
+        {
+          "id": "a1-there-prepositions::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Where is the printer?",
+          "choices": [
+            "Between two rooms",
+            "Behind the kitchen",
+            "Inside the cabinet",
+            "Next to the window"
+          ],
+          "answerIndex": 0,
+          "rationale": "The first sentence gives the printer’s location."
+        },
+        {
+          "id": "a1-there-prepositions::reading1::q2",
+          "skill": "find-detail",
+          "prompt": "Where is the paper?",
+          "choices": [
+            "On the printer",
+            "Behind the meeting room",
+            "In the cabinet under the table",
+            "Inside the manager’s office"
+          ],
+          "answerIndex": 2,
+          "rationale": "The last sentence states where the paper is kept."
+        }
+      ]
+    },
+    {
+      "id": "a1-past-future::reading1",
+      "lessonId": "a1-past-future",
+      "title": "Tomorrow’s Training",
+      "level": "A1",
+      "text": "The staff training was on Monday. It finished at 4:00 p.m. The next session is on Friday at 9:00 a.m. Employees will learn how to use the new booking system.",
+      "questions": [
+        {
+          "id": "a1-past-future::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "When did the previous training finish?",
+          "choices": [
+            "Friday at 9:00 a.m.",
+            "Monday at 4:00 p.m.",
+            "Monday at 9:00 a.m.",
+            "Friday at 4:00 p.m."
+          ],
+          "answerIndex": 1,
+          "rationale": "The second sentence gives the previous session’s finish time."
+        },
+        {
+          "id": "a1-past-future::reading1::q2",
+          "skill": "main-idea",
+          "prompt": "What is the main idea of the passage?",
+          "choices": [
+            "A new employee’s first day",
+            "A meeting room and its equipment",
+            "The office café opening hours",
+            "The previous session and the next training topic"
+          ],
+          "answerIndex": 3,
+          "rationale": "The passage tells when the previous training finished and what employees will learn in the next session."
+        }
+      ]
+    }
+  ]
+}

@@ -18,7 +18,7 @@ for (const mode of ['random','word-to-meaning','meaning-to-word','missing','pos'
 assert.match(app, /function openLearningFocus\(/);
 assert.match(app, /function closeLearningFocus\(/);
 assert.match(app, /function startPracticeFocus\(/);
-assert.match(app, /nextQuestion\(mode\)\.then\(started=>\{/,'Start always generates a question in the mode selected on the dashboard');
+assert.match(app, /nextQuestion\(mode,forcedItemId\)\.then\(started=>\{/, 'Start generates the selected mode and optionally forces a Recall Queue item');
 assert.match(app, /function advanceFlashCard\(/);
 assert.match(app, /ss\.flipped=true;renderFlashCard\(\);return;/, 'first flashcard tap must reveal details');
 assert.match(app, /ss\.index\+\+;ss\.flipped=false/, 'second flashcard tap must advance');

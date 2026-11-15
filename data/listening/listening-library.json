@@ -3,6 +3,71 @@
   "source": "Original TOEIC-style practice content. Audio is synthesized by the browser SpeechSynthesis API.",
   "listening": [
     {
+      "id": "part1-office-cleaning",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Sweeping an office hallway",
+      "topic": "Office & Facilities",
+      "level": "A2–B1",
+      "imageAlt": "A maintenance worker is sweeping the tiled floor of an office hallway with a broom. A cleaning cart stands nearby.",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "A maintenance worker is sweeping the floor in a hallway.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A cleaner is wiping the glass doors with a cloth.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A worker is pushing a cleaning cart down the corridor.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Several chairs are being arranged near the entrance.",
+          "voice": "female",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 0,
+          "explanation": "Đáp án A: Người công nhân đang dùng chổi quét sàn hành lang. Xe vệ sinh chỉ đang đặt bên cạnh, không được đẩy đi. Ảnh không cho thấy người này lau cửa kính hoặc sắp xếp ghế.",
+          "choiceIds": [
+            "listening:part1-office-cleaning:1:choice:1",
+            "listening:part1-office-cleaning:1:choice:2",
+            "listening:part1-office-cleaning:1:choice:3",
+            "listening:part1-office-cleaning:1:choice:4"
+          ]
+        }
+      ],
+      "transcriptTranslation": "A. Một nhân viên bảo trì đang quét sàn hành lang. B. Một nhân viên vệ sinh đang lau cửa kính bằng khăn. C. Một công nhân đang đẩy xe vệ sinh dọc hành lang. D. Một số chiếc ghế đang được sắp xếp gần lối vào.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "AI-generated image created for the TOEIC Dictionary project using OpenAI image generation. Asset origin and usage notes are recorded in assets/listening/ATTRIBUTION.csv. Practice content is original editorial material and is not official ETS content.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-office-cleaning.jpg",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "017",
+      "contentBatch": "batch-017-part1-ai-generated-photo",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "photoSourceType": "ai-generated"
+    },
+    {
       "id": "part2-report-deadline",
       "part": "Part 2",
       "type": "question-response",
@@ -1425,7 +1490,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Licensed Pexels photograph by Mikhail Nilov; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
       "visualType": "photograph",
-      "photo": "./assets/listening/part1-meeting-documents.jpg"
+      "photo": "./assets/listening/part1-meeting-documents.jpg",
+      "photoSourceType": "licensed-stock"
     },
     {
       "id": "part1-warehouse-box",
@@ -1486,7 +1552,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Licensed Pexels photograph by cottonbro studio; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
       "visualType": "photograph",
-      "photo": "./assets/listening/part1-warehouse-box.jpg"
+      "photo": "./assets/listening/part1-warehouse-box.jpg",
+      "photoSourceType": "licensed-stock"
     },
     {
       "id": "part1-technician-inspection",
@@ -1547,7 +1614,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Licensed Pexels photograph by José Andrés Pacheco Cortes; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
       "visualType": "photograph",
-      "photo": "./assets/listening/part1-technician-inspection.jpg"
+      "photo": "./assets/listening/part1-technician-inspection.jpg",
+      "photoSourceType": "licensed-stock"
     },
     {
       "id": "part1-airport-suitcase",
@@ -1608,7 +1676,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Licensed Pexels photograph by Gustavo Fring; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
       "visualType": "photograph",
-      "photo": "./assets/listening/part1-airport-suitcase.jpg"
+      "photo": "./assets/listening/part1-airport-suitcase.jpg",
+      "photoSourceType": "licensed-stock"
     },
     {
       "id": "part1-presentation-room",
@@ -1669,7 +1738,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Licensed Pexels photograph by Pavel Danilyuk; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
       "visualType": "photograph",
-      "photo": "./assets/listening/part1-presentation-room.jpg"
+      "photo": "./assets/listening/part1-presentation-room.jpg",
+      "photoSourceType": "licensed-stock"
     },
     {
       "id": "part1-reception-plant",
@@ -1730,7 +1800,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Licensed Pexels photograph by Anastasiya Gepp; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
       "visualType": "photograph",
-      "photo": "./assets/listening/part1-reception-plant.jpg"
+      "photo": "./assets/listening/part1-reception-plant.jpg",
+      "photoSourceType": "licensed-stock"
     },
     {
       "id": "part1-restaurant-setting",
@@ -1791,7 +1862,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Licensed Pexels photograph by Western Skyline Hotel; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
       "visualType": "photograph",
-      "photo": "./assets/listening/part1-restaurant-setting.jpg"
+      "photo": "./assets/listening/part1-restaurant-setting.jpg",
+      "photoSourceType": "licensed-stock"
     },
     {
       "id": "part1-photocopier",
@@ -1852,7 +1924,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Licensed Pexels photograph by Mikhail Nilov; source page and license are recorded in assets/listening/ATTRIBUTION.csv. Practice content is editorial and is not official ETS material.",
       "visualType": "photograph",
-      "photo": "./assets/listening/part1-photocopier.jpg"
+      "photo": "./assets/listening/part1-photocopier.jpg",
+      "photoSourceType": "licensed-stock"
     },
     {
       "id": "part2-visitor-badge",

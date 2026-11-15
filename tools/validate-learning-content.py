@@ -157,18 +157,20 @@ def main():
             ERRORS.append(f"Listening {ident}: Part 2 transcriptTranslation is a generic instruction, not a Vietnamese translation")
         if part=='Part 1':
             if len(segments)!=4: ERRORS.append(f"Listening {ident}: Part 1 needs exactly four spoken statements")
-            image=item.get('image','')  # SVG fallback remains part of the base package
+            image=str(item.get('image') or '').strip()  # Optional SVG fallback; photo-only records are valid.
             photo=item.get('photo','')
-            if not image.startswith('./'):
-                ERRORS.append(f"Listening {ident}: Part 1 fallback image must be a relative ./ path")
-            elif not (ROOT/image[2:]).is_file():
-                ERRORS.append(f"Listening {ident}: missing fallback image {image}")
+            if image and not image.startswith('./'):
+                ERRORS.append(f"Listening {ident}: optional fallback image must be a relative ./ path")
+            elif image and not (ROOT/image[2:]).is_file():
+                ERRORS.append(f"Listening {ident}: missing optional fallback image {image}")
             if not photo.startswith('./assets/listening/') or not photo.lower().endswith('.jpg'):
-                ERRORS.append(f"Listening {ident}: licensed photo must use a local ./assets/listening/*.jpg path")
+                ERRORS.append(f"Listening {ident}: photo must use a local ./assets/listening/*.jpg path")
             elif not (ROOT/photo[2:]).is_file():
-                WARNINGS.append(f"Listening {ident}: licensed photo is not present in this source snapshot; SVG fallback remains available ({photo})")
+                WARNINGS.append(f"Listening {ident}: Part 1 photo bytes are not present in this source snapshot; SVG fallback remains available ({photo})")
             if item.get('visualType') != 'photograph':
-                ERRORS.append(f"Listening {ident}: local Pexels asset must be labelled as photograph")
+                ERRORS.append(f"Listening {ident}: Part 1 local photo must be labelled as photograph")
+            if item.get('photoSourceType') == 'ai-generated' and 'AI-generated' not in str(item.get('sourceNote', '')):
+                ERRORS.append(f"Listening {ident}: AI-generated photo provenance must be stated in sourceNote")
             if len(questions)!=1: ERRORS.append(f"Listening {ident}: Part 1 image item should have one answer question")
             elif len(questions[0].get('choices',[]))==4:
                 answer_index=questions[0].get('answerIndex')

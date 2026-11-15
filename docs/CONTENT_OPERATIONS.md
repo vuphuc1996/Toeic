@@ -4,7 +4,7 @@
 
 ## 1. Scope
 
-- Chỉ phát triển TOEIC Listening & Reading cho đến khi Master ghi nhận đủ cổng nghiệm thu và người dùng đồng ý chuyển giai đoạn.
+- TOEIC-first remains fixed. Develop foundations from Pre-A1 through C1 and all four skills (Listening, Reading, Speaking, Writing). Listening & Reading are the primary TOEIC exam track; Speaking & Writing are complementary tracks. IELTS remains deferred until the TOEIC curriculum/backlog is closed and the owner approves a phase change.
 - Nội dung mới là tài liệu luyện tập do dự án tự biên soạn; không sao chép câu hỏi/audio ETS.
 - Phân biệt rõ `draft`, `internal-editorial-reviewed`, `reserve-pending-independent-review` và kết quả kiểm thử tự động. Không dùng automated PASS để tuyên bố đã có reviewer độc lập.
 
@@ -31,7 +31,7 @@
 
 ## 4. Listening quality and reserve lifecycle
 
-- **Part 1:** một ảnh, bốn câu mô tả, một đáp án; phân biệt photograph và SVG illustration; giữ attribution và fallback.
+- **Part 1:** một ảnh chụp, bốn câu mô tả, một đáp án; JPG cục bộ là ảnh chính. SVG chỉ là fallback tùy chọn khi record khai báo `image`; record photo-only được phép nếu `photo` và `ATTRIBUTION.csv` hợp lệ. Không được để runtime hoặc Service Worker tham chiếu SVG đã bị loại bỏ.
 - **Part 2:** một prompt và ba phản hồi tự nhiên; chỉ một phản hồi tốt nhất.
 - **Part 3:** hội thoại nhiều lượt, ít nhất hai speaker, ba câu liên kết.
 - **Part 4:** một bài nói/thông báo có ba câu liên kết.
@@ -143,3 +143,11 @@ Khi xuất bản phiên bản mới: current thành previous; previous cũ đư�
 - The complete 80-question bank remains `reserve-pending-independent-review` and practice-only until a second reviewer checks grammar, naturalness, semantic uniqueness, key and all distractors. Internal author review and automated validation are not independent approval. Automated schema/selector tests and an internal author pass are not independent approval and never add these records to Mock.
 - Include the bank JSON and selector module in Service Worker `REQUIRED` and `APP_SHELL`; keep the DB at `toeic-vocabulary-phase1` version 1 unless a separately justified storage migration is approved.
 
+
+## Listening Part 1 photo provenance
+
+- Every Part 1 photo must have exactly one matching row in `assets/listening/ATTRIBUTION.csv`.
+- Use `source_type=licensed-stock` for third-party stock images and retain photographer, source page and license URL.
+- Use `source_type=ai-generated` for project-created AI imagery; record the provider, generation provenance and usage note. Never label AI-generated artwork as Pexels photography or invent a human photographer.
+- A Part 1 record must declare a valid local JPG in `photo`. An SVG fallback is optional and must only be declared when the file exists and is included in the Service Worker required shell. Photo-only records are valid; never recreate a deleted fallback merely to satisfy an outdated rule.
+- Newly authored photo-description questions stay `reserve-pending-independent-review` and out of Mock until an independent reviewer approves them.

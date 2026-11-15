@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "title": "Bản đồ minh bạch nội dung đánh giá đầu vào",
+  "scope": "Chỉ phân loại các câu hỏi mẫu theo nhóm nội dung được kiểm tra; không đại diện cho toàn bộ kỹ năng hoặc CEFR.",
+  "domains": [
+    {
+      "id": "vocabulary",
+      "label": "Từ vựng và chức năng giao tiếp",
+      "objectiveId": "PL-VOC-01",
+      "description": "Nhận biết từ thông dụng và cách dùng trong ngữ cảnh cơ bản."
+    },
+    {
+      "id": "grammar",
+      "label": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01",
+      "description": "Nhận biết cấu trúc câu, thì, giới từ và liên kết câu."
+    },
+    {
+      "id": "reading",
+      "label": "Đọc hiểu thông tin",
+      "objectiveId": "PL-READ-01",
+      "description": "Đọc chỉ dẫn và thông báo ngắn để xác định thông tin."
+    }
+  ],
+  "questionMappings": [
+    {
+      "questionId": "place-prea1-01",
+      "domain": "vocabulary",
+      "domainLabel": "Từ vựng và chức năng giao tiếp",
+      "objectiveId": "PL-VOC-01"
+    },
+    {
+      "questionId": "place-prea1-02",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-prea1-03",
+      "domain": "vocabulary",
+      "domainLabel": "Từ vựng và chức năng giao tiếp",
+      "objectiveId": "PL-VOC-01"
+    },
+    {
+      "questionId": "place-prea1-04",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-a1-05",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-a1-06",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-a1-07",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-a1-08",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-a2-09",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-a2-10",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-a2-11",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-a2-12",
+      "domain": "reading",
+      "domainLabel": "Đọc hiểu thông tin",
+      "objectiveId": "PL-READ-01"
+    },
+    {
+      "questionId": "place-b1-13",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-b1-14",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-b1-15",
+      "domain": "grammar",
+      "domainLabel": "Ngữ pháp và cấu trúc câu",
+      "objectiveId": "PL-GRA-01"
+    },
+    {
+      "questionId": "place-b1-16",
+      "domain": "reading",
+      "domainLabel": "Đọc hiểu thông tin",
+      "objectiveId": "PL-READ-01"
+    }
+  ]
+}

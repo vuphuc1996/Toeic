@@ -51,7 +51,13 @@ def evidence_status(kind: str, part: str, item: dict, q: dict, source: str, answ
         return 'reserve-pending-independent-review', 'Reserve status retained; transcript evidence pointer requires manual second-person verification.'
     if kind == 'Listening' and part == 'Part 1':
         letter = 'ABCD'[q['answerIndex']]
-        return 'photo-source-reviewed', f"Reviewed the Pexels source-page description, keyed option {letter} and matching spoken action; photo path `{item.get('photo','')}`; SVG fallback `{item.get('image','')}`. Source/license are recorded in `assets/listening/ATTRIBUTION.csv`. Binary-level visual verification remains pending until the JPG bytes are available in the working copy."
+        source_type = item.get('photoSourceType', 'licensed-stock')
+        if source_type == 'ai-generated':
+            detail = 'project-generated image provenance and visible action'
+        else:
+            detail = 'Pexels source-page description and visible action'
+        fallback = f"SVG fallback `{item['image']}`" if item.get('image') else 'photo-only rendering (no SVG fallback)'
+        return 'photo-source-reviewed', f"Reviewed the {detail}, keyed option {letter} and matching spoken statement; photo path `{item.get('photo','')}`; {fallback}. Source/usage metadata are recorded in `assets/listening/ATTRIBUTION.csv`."
     if kind == 'Listening' and part == 'Part 2':
         return 'response-fit-checked', 'Reviewed the spoken prompt, response, polarity/speech act and rationale; transcript translations were checked against the actual spoken lines.'
     if kind == 'Reading' and part == 'Part 5':
@@ -115,7 +121,7 @@ def main() -> int:
         '- Every correct option is linked to its source transcript/passage or an explicit review category.',
         '- Direct/lexical matching is evidence discovery only. It does not prove that distractors are wrong or that a paraphrase/inference is unique.',
         f'- In this editorial pass, 6 low-overlap paraphrase/inference items were checked against their transcript/passage; 8 Part 1 Pexels source descriptions, {sum(len(x.get("questions", [])) for x in listening if x.get("part") == "Part 2" and not x.get("editorialStatus"))} baseline Part 2 response-fit items, all {sum(len(x.get("questions", [])) for x in reading if x.get("part") == "Part 5")} Part 5 grammar items and all {sum(len(x.get("questions", [])) for x in reading if x.get("part") == "Part 6")} Part 6 context-fit items were also reviewed.',
-        f'- {sum(len(x.get("questions", [])) for x in listening if x.get("editorialStatus") == "reserve-pending-independent-review")} Listening questions remain explicitly reserve-pending-independent-review: 11 Batch 013, 17 Batch 014 and 70 Batch 015. Batch 015 Part 2 evidence identifies the spoken prompt; Parts 3/4 carry transcript phrase pointers. All reserve answers and distractor uniqueness still require an independent second reviewer; automated evidence mapping does not approve them.',
+        f'- {sum(len(x.get("questions", [])) for x in listening if x.get("editorialStatus") == "reserve-pending-independent-review")} Listening questions remain explicitly reserve-pending-independent-review: 1 Batch 017 Part 1 image-description item, 11 Batch 013, 17 Batch 014 and 70 Batch 015. Batch 015 Part 2 evidence identifies the spoken prompt; Parts 3/4 carry transcript phrase pointers. The new AI-generated Part 1 item is intentionally held out of Mock until independent visual/content review. All reserve answers and distractor uniqueness still require an independent second reviewer; automated evidence mapping does not approve them.',
         '- These are internal editorial checks, not two-person independent proofreading, psychometric validation or ETS approval.',
         '', '## Coverage by evidence type',
         '| Library | Evidence category | Questions |', '|---|---|---:|'
@@ -124,7 +130,7 @@ def main() -> int:
         'direct-text-match': 'Direct source phrase',
         'lexical-evidence': 'Source lexical evidence (paraphrase may remain)',
         'manual-paraphrase-verified': 'Manual paraphrase/inference checked against source',
-        'photo-source-reviewed': 'Part 1 Pexels source description and keyed action reviewed',
+        'photo-source-reviewed': 'Part 1 source description and keyed action reviewed (Pexels or project-generated asset)',
         'response-fit-checked': 'Part 2 speech-act / response-fit checked',
         'grammar-checked': 'Part 5 sentence grammar checked',
         'context-fit-checked': 'Part 6 context/cohesion checked',
@@ -159,7 +165,7 @@ def main() -> int:
         '- `part2-room-unavailable` now uses “That’s right…” to confirm the negative-tag statement without relying on a potentially confusing “Yes” response.',
         '',
         '## Remaining audit work',
-        '- The historical 132-item distractor review was completed in v2.15.0; 45 added Part 7 questions in v2.33.0 carry explicit source-label and quotation metadata. The 98 Listening reserve questions remain excluded from Mock pending second-person review. Current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
+        '- The historical 132-item distractor review was completed in v2.15.0; 45 added Part 7 questions in v2.33.0 carry explicit source-label and quotation metadata. The 99 Listening reserve questions remain excluded from Mock pending second-person review. Current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
         '- Verify browser audio playback, pacing and pronunciation on physical iPhone/iPad and Android voice packs; the current TTS remains browser-generated.',
         '- Obtain a second independent reviewer before releasing a scored mock. No official ETS scoring equivalence is claimed.',
         ''

@@ -34,8 +34,9 @@ class LearningContentTests(unittest.TestCase):
         for item in p1:
             image = item.get('image', '')
             photo = item.get('photo', '')
-            self.assertTrue(image.startswith('./assets/listening/'))
-            self.assertTrue((ROOT / image[2:]).is_file())
+            if image:  # SVG is an optional fallback, not a required Part 1 asset.
+                self.assertTrue(image.startswith('./assets/listening/'))
+                self.assertTrue((ROOT / image[2:]).is_file())
             self.assertRegex(photo, r'^\./assets/listening/part1-[a-z-]+\.jpg$')
             self.assertEqual(item.get('visualType'), 'photograph')
             self.assertEqual(len(item.get('questions', [])), 1)
@@ -163,7 +164,7 @@ class LearningContentTests(unittest.TestCase):
                     self.assertRegex(rationale, vietnamese_words,
                                      f"{library_name} {item.get('id')} Q{index} must be explained in Vietnamese, not merely contain an accented English word")
 
-    def test_part1_prompts_identify_the_new_licensed_photographs(self):
+    def test_part1_prompts_identify_photographs_not_illustrations(self):
         for item in self.listening:
             if item.get("part") == "Part 1":
                 for question in item.get("questions", []):
@@ -185,10 +186,11 @@ class LearningContentTests(unittest.TestCase):
             'part1-reception-plant': (1, 'A woman is watering a potted plant indoors.'),
             'part1-restaurant-setting': (2, 'A restaurant employee is setting the table.'),
             'part1-photocopier': (3, 'An employee is operating a photocopier.'),
+            'part1-office-cleaning': (0, 'A maintenance worker is sweeping the floor in a hallway.'),
         }
         for ident, (index, expected) in checks.items():
             item = next(x for x in self.listening if x.get('id') == ident)
-            self.assertEqual(item['questions'][0]['answerIndex'], {'part1-reception-plant':1,'part1-restaurant-setting':2,'part1-photocopier':3}[ident])
+            self.assertEqual(item['questions'][0]['answerIndex'], index)
             self.assertEqual(item['segments'][index]['text'], expected)
 
     def test_part1_photo_paths_are_cached_as_optional_assets(self):
@@ -206,15 +208,32 @@ class LearningContentTests(unittest.TestCase):
         self.assertEqual({r['question_id'] for r in rows}, p1_ids)
         for row in rows:
             self.assertTrue(row['photographer'].strip())
-            self.assertIn('pexels.com/photo/', row['source_page'])
-            self.assertIn('pexels.com/license', row['license'])
+            self.assertTrue(row['source_type'].strip())
+            self.assertTrue(row['provider'].strip())
+            if row['source_type'] == 'licensed-stock':
+                self.assertIn('pexels.com/photo/', row['source_page'])
+                self.assertIn('pexels.com/license', row['license'])
+            elif row['source_type'] == 'ai-generated':
+                self.assertIn('AI-generated', row['license'])
+                self.assertTrue(row['usage_basis'].strip())
+            else:
+                self.fail(f"Unsupported attribution source type: {row['source_type']}")
 
-    def test_part1_svg_fallbacks_remain_required_assets(self):
+    def test_part1_svg_fallbacks_remain_required_assets_when_declared(self):
         sw = (ROOT / 'sw.js').read_text(encoding='utf-8')
         required = sw.split('const REQUIRED = ', 1)[1].split(';', 1)[0]
         for item in self.listening:
-            if item.get('part') == 'Part 1':
+            if item.get('part') == 'Part 1' and item.get('image'):
                 self.assertIn(item['image'], required)
+
+    def test_ai_generated_part1_photo_does_not_reference_deleted_svg(self):
+        item = next(x for x in self.listening if x.get('id') == 'part1-office-cleaning')
+        self.assertEqual(item.get('photoSourceType'), 'ai-generated')
+        self.assertFalse(item.get('image'))
+        self.assertEqual(item.get('photo'), './assets/listening/part1-office-cleaning.jpg')
+        sw = (ROOT / 'sw.js').read_text(encoding='utf-8')
+        self.assertNotIn('part1-office-cleaning.svg', sw)
+        self.assertIn(item['photo'], sw)
 
 
     def test_part1_photo_actions_match_keyed_statements(self):
@@ -227,6 +246,7 @@ class LearningContentTests(unittest.TestCase):
             'part1-reception-plant': (1, 'A woman is watering a potted plant indoors.'),
             'part1-restaurant-setting': (2, 'A restaurant employee is setting the table.'),
             'part1-photocopier': (3, 'An employee is operating a photocopier.'),
+            'part1-office-cleaning': (0, 'A maintenance worker is sweeping the floor in a hallway.'),
         }
         for ident, (answer, statement) in expected.items():
             item = next(x for x in self.listening if x.get('id') == ident)
@@ -236,7 +256,7 @@ class LearningContentTests(unittest.TestCase):
 
     def test_listening_reserve_batch_counts_and_units(self):
         counts = {f'Part {i}': sum(len(x.get('questions', [])) for x in self.listening if x.get('part') == f'Part {i}') for i in range(1, 5)}
-        self.assertEqual(counts, {'Part 1': 8, 'Part 2': 51, 'Part 3': 81, 'Part 4': 60})
+        self.assertEqual(counts, {'Part 1': 9, 'Part 2': 51, 'Part 3': 81, 'Part 4': 60})
         p3 = next(x for x in self.listening if x.get('id') == 'part3-training-handouts')
         p4 = next(x for x in self.listening if x.get('id') == 'part4-east-elevator-maintenance')
         self.assertEqual(len(p3['segments']), 4)

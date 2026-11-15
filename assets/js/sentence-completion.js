@@ -68,12 +68,13 @@ function reviewWeight(progress = {}) {
   return 2;
 }
 
-export function chooseSentenceCompletionQuestion(questions, words, progress = {}, seenQuestionIds = [], random = Math.random) {
+export function chooseSentenceCompletionQuestion(questions, words, progress = {}, seenQuestionIds = [], random = Math.random, forcedQuestionId = null) {
   const wordMap = new Map((words || []).map(word => [String(word.id), word]));
   const eligible = (questions || []).filter(question => wordMap.has(String(question.wordId)));
   if (!eligible.length) return null;
+  const forced = forcedQuestionId ? eligible.find(question => question.id === forcedQuestionId) : null;
   const unseen = eligible.filter(question => !seenQuestionIds.includes(question.id));
-  const pool = unseen.length ? unseen : eligible;
+  const pool = forced ? [forced] : unseen.length ? unseen : eligible;
   const weighted = pool.map(question => ({ question, weight: reviewWeight(progress[question.wordId] || {}) }));
   const total = weighted.reduce((sum, item) => sum + item.weight, 0);
   let point = Math.max(0, Math.min(0.999999999, Number(random()) || 0)) * total;
