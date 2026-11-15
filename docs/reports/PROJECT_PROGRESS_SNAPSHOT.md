@@ -3,6 +3,10 @@
 - Source version: **2.65.0**
 - Basis: canonical JSON inventory; counts are not editorial approval.
 
+## v2.65.1 hotfix effect
+
+This is a runtime hotfix only. It does not change the vocabulary, objective-resource, Foundation, TOEIC Listening/Reading or learning-evidence inventory measured below.
+
 ## Target-based progress
 
 | Workstream | Current | Target / denominator | Progress | Interpretation |

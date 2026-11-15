@@ -14,6 +14,21 @@ const DEFAULT_TTS_SETTINGS = {
 };
 const statusNode = { textContent: '' };
 const readingAudioStatus = { textContent: '' };
+const voiceStatusNode = { textContent: '' };
+function createSelectMock() {
+  let values = [];
+  return {
+    value: '', disabled: false,
+    set innerHTML(html) {
+      values = [...String(html).matchAll(/<option value=\"([^\"]*)\">/g)].map(match => ({ value: match[1], textContent: '' }));
+      this.value = values[0]?.value || '';
+    },
+    get options() { return values; },
+    append(option) { values.push(option); this.value = option.value; },
+  };
+}
+const maleVoiceSelect = createSelectMock();
+const femaleVoiceSelect = createSelectMock();
 const speedNode = { value: '0.85' };
 const spoken = [];
 const gapDurations = [];
@@ -46,7 +61,9 @@ const context = {
   state: { settings: { tts: { ...DEFAULT_TTS_SETTINGS } }, listening: [], listeningProgress: {}, readings: [] },
   window: { speechSynthesis },
   SpeechSynthesisUtterance: MockUtterance,
-  $: selector => selector === '#listeningSpeed' ? speedNode : selector.includes('data-reading-audio-status') ? readingAudioStatus : statusNode,
+  $: selector => selector === '#listeningSpeed' ? speedNode : selector === '#ttsMaleVoice' ? maleVoiceSelect : selector === '#ttsFemaleVoice' ? femaleVoiceSelect : selector === '#ttsVoiceStatus' ? voiceStatusNode : selector.includes('data-reading-audio-status') ? readingAudioStatus : statusNode,
+  document: { createElement: () => ({ value: '', textContent: '' }), querySelectorAll: () => [] },
+  escapeHtml: value => String(value ?? '').replaceAll('&', '&amp;').replaceAll('\"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;'),
   toast: message => { context.toasts.push(message); },
   toasts: [],
   setTimeout(callback, ms) { gapDurations.push(ms); const id = ++nextTimerId; if (holdGapTimers) pendingGapTimers.set(id, callback); else queueMicrotask(callback); return id; },
@@ -57,6 +74,7 @@ vm.createContext(context);
 vm.runInContext(`${appSource.slice(start, end)}
 globalThis.__chooseEnglishVoice = chooseEnglishVoice;
 globalThis.__recommendedMaleVoice = recommendedMaleVoice;
+globalThis.__refreshSpeechVoiceSelectors = refreshSpeechVoiceSelectors;
 globalThis.__playListeningAudio = playListeningAudio;
 globalThis.__playListeningVocabulary = playListeningVocabulary;
 globalThis.__stopSpeech = stopSpeech;
@@ -68,6 +86,12 @@ const readingEnd = appSource.indexOf('async function answerReadingQuestion(', re
 assert.notEqual(readingStart, -1, 'Reading aloud action must exist');
 assert.notEqual(readingEnd, -1, 'Reading aloud action boundary must exist');
 vm.runInContext(`${appSource.slice(readingStart, readingEnd)}\nglobalThis.__playReadingText = playReadingText;`, context, { timeout: 1000 });
+
+// The settings UI helper must exist and safely handle an empty, delayed or populated device voice list.
+context.__refreshSpeechVoiceSelectors();
+assert.equal(maleVoiceSelect.disabled, true, 'voice selectors are disabled while the device has no English voice catalogue');
+assert.equal(femaleVoiceSelect.disabled, true);
+assert.match(voiceStatusNode.textContent, /chưa cung cấp voice tiếng Anh/);
 
 const femaleUS = { name: 'Ava Enhanced', voiceURI: 'ava-us', lang: 'en-US', localService: true };
 const maleUS = { name: 'Microsoft Ryan Online (Natural)', voiceURI: 'ryan-us', lang: 'en-US', localService: false };
@@ -90,6 +114,15 @@ voices = [femaleUS, secondMale, danielUK];
 assert.equal(context.__chooseEnglishVoice('en-GB', 'Man 1', 'male', []), danielUK);
 assert.equal(context.__chooseEnglishVoice('en-US', 'Man 2', 'male', ['Daniel']), secondMale);
 voices = [femaleUS, maleUS, danielUK];
+context.state.settings.tts.maleVoiceURI = 'ryan-us';
+context.state.settings.tts.femaleVoiceURI = 'missing-female-uri';
+context.__refreshSpeechVoiceSelectors();
+assert.equal(maleVoiceSelect.disabled, false, 'selectors become enabled after the voice catalogue is published');
+assert.equal(maleVoiceSelect.value, 'ryan-us', 'a manually saved male voice remains selected');
+assert.equal(femaleVoiceSelect.value, 'missing-female-uri', 'a saved voice missing on this device is preserved instead of silently overwritten');
+assert.ok(femaleVoiceSelect.options.some(option => option.value === 'missing-female-uri'));
+assert.match(voiceStatusNode.textContent, /3 voice tiếng Anh/);
+context.state.settings.tts.femaleVoiceURI = '';
 
 // Stop during the pre-play buffer cancels startup and must not enqueue the first utterance.
 context.state.listening = [{ id: 'tts-stop-during-prep', part: 'Part 1', segments: [

@@ -14,6 +14,15 @@ class SpeechReadinessTests(unittest.TestCase):
         self.assertRegex(APP, r"startupDelayMs:\s*750")
         self.assertRegex(APP, r"part1OptionPauseMs:\s*1300")
 
+    def test_voice_selector_refresh_helper_is_defined_and_used(self):
+        self.assertRegex(APP, r"function\s+refreshSpeechVoiceSelectors\s*\(")
+        helper = APP[APP.index("function refreshSpeechVoiceSelectors("):APP.index("function chooseEnglishVoice(")]
+        self.assertIn("getSpeechVoices()", helper)
+        self.assertIn("gender==='male'?'Male':'Female'", helper)
+        self.assertIn("ttsVoiceStatus", helper)
+        self.assertIn("select.disabled=!voices.length", helper)
+        self.assertIn("refreshSpeechVoiceSelectors", APP[APP.index("function bindTtsSettings("):APP.index("async function answerListeningQuestion(")])
+
     def test_voice_catalogue_is_checked_before_engine_buffer(self):
         prepare = APP[APP.index("async function prepareSpeechEngine("):APP.index("async function speakText(")]
         self.assertIn("await waitForSpeechVoiceCatalog(token,1200)", prepare)

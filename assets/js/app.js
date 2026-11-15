@@ -10,7 +10,7 @@ import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './a
 import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.65.0';
+const APP_RELEASE_VERSION = '2.65.1';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -2233,6 +2233,40 @@ function recommendedMaleVoice(voices=getSpeechVoices()){
   // The learner confirmed iOS Daniel (en-GB) sounds clearer than the default male voice.
   return voices.find(v=>/\bdaniel\b/i.test(v.name||'')&&String(v.lang||'').toLowerCase()==='en-gb')
     || voices.find(v=>/\bdaniel\b/i.test(v.name||'')) || null;
+}
+function refreshSpeechVoiceSelectors(){
+  // Keep the settings controls synchronized with the device's asynchronously loaded voice catalogue.
+  const voices=getSpeechVoices();
+  const suggestedMale=recommendedMaleVoice(voices);
+  const options=voices.map(v=>{
+    const gender=classifyVoiceGender(v);
+    const label=v===suggestedMale?' · gợi ý rõ ràng trên iPhone':gender==='male'?' · nhận diện nam':gender==='female'?' · nhận diện nữ':' · chưa xác định giới tính';
+    return `<option value="${escapeHtml(v.voiceURI||v.name)}">${escapeHtml(v.name)} — ${escapeHtml(v.lang||'en')}${label}</option>`;
+  }).join('');
+  for(const gender of ['male','female']){
+    const select=$(`#tts${gender==='male'?'Male':'Female'}Voice`);
+    if(!select)continue;
+    const saved=state.settings?.tts?.[`${gender}VoiceURI`]||'';
+    select.innerHTML=`<option value="">Tự chọn voice phù hợp</option>${options}`;
+    const selected=saved||(gender==='male'&&suggestedMale?(suggestedMale.voiceURI||suggestedMale.name):'');
+    if(selected){
+      if(Array.from(select.options||[]).some(option=>option.value===selected))select.value=selected;
+      else if(typeof document!=='undefined'&&document.createElement){
+        const missing=document.createElement('option');
+        missing.value=selected;
+        missing.textContent='Voice đã lưu nhưng thiết bị hiện tại không cung cấp';
+        select.append(missing);
+        select.value=selected;
+      }
+    }
+    select.disabled=!voices.length;
+  }
+  const status=$('#ttsVoiceStatus');
+  if(status){
+    status.textContent=voices.length
+      ?`Đã tìm thấy ${voices.length} voice tiếng Anh trên thiết bị này.${suggestedMale?' Giọng nam gợi ý: '+suggestedMale.name+' — '+suggestedMale.lang+'.':''}`
+      :'Trình duyệt chưa cung cấp voice tiếng Anh. Thử tải lại danh sách hoặc kiểm tra cài đặt giọng nói của hệ điều hành.';
+  }
 }
 function chooseEnglishVoice(accent='en-US',speaker='',voiceHint='',excludeNames=[]){
   const voices=getSpeechVoices();if(!voices.length)return null;
