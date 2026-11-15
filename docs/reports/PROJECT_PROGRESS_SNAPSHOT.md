@@ -1,6 +1,6 @@
 # Project Progress Snapshot — generated
 
-- Source version: **2.62.0**
+- Source version: **2.63.0**
 - Basis: canonical JSON inventory; counts are not editorial approval.
 
 ## Target-based progress

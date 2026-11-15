@@ -27,7 +27,7 @@ class LearningSurfaceConsistencyTests(unittest.TestCase):
         for selector in (".foundation-card h3", ".foundation-card>p", ".foundation-card-evidence span", ".recall-queue-heading h2", ".recall-queue-item>p", ".objective-progress-top strong", ".practice-mode-tile strong", ".mock-mode-card > p"):
             matches = re.findall(re.escape(selector) + r"\s*\{([^}]+)\}", CSS)
             self.assertTrue(matches, selector)
-            self.assertTrue(any(token in matches[-1] for token in ("clamp(", "font-size: 15px", "font-size: 14px", "font-size: 13.5px", "font-size: 13px", "font-size: 12.5px", "max(13.5px")), selector)
+            self.assertTrue(any(token in matches[-1] for token in ("clamp(", "font-size: 15px", "font-size: 14px", "font-size: 13.5px", "font-size: 13px", "font-size: 12.5px", "max(13.5px", "var(--ds-font-card-title)", "var(--ds-font-support)")), selector)
 
     def test_learning_surfaces_use_viewport_and_content_width_breakpoints(self):
         self.assertIn("grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))", CSS)

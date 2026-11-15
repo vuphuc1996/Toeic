@@ -1,5 +1,5 @@
 /*
- * TOEIC Dictionary Design System — v2.14.0
+ * TOEIC Dictionary Design System — v2.63.0
  * Shared visual rules for phone, tablet, laptop and desktop.
  * Keep feature-specific behavior in app.css; this file owns common scale and responsive guardrails.
  */
@@ -407,243 +407,852 @@ img, svg, video, canvas { max-width: 100%; }
 }
 
 
-/* Readability floor: replace legacy micro-labels with a consistent, legible minimum. */
-.advance-count-label,
-.advance-indicator>span b,
-.advance-indicator>span small,
-.advance-prep-copy>small,
-.advance-prep-kicker,
-.advance-stage em,
-.ai-oneway-context summary,
-.ai-oneway-context>small,
-.ai-oneway-intro p,
-.ai-prompt-intro p,
-.ai-prompt-note,
-.alphabet-chip,
-.answer-reference small,
-.answer-reference>p,
-.answer-reference>span,
-.app-footer,
-.auto-next-wait-kicker,
-.auto-next-wait-ring small,
-.brand small,
-.brand-copy small,
-.breadcrumb strong,
-.cefr-badge,
-.char-cell small,
-.choice-option>span,
-.choice-review-head em,
-.choice-review-item p,
-.choice-review-letter,
-.choice-review-title span,
-.data-footer-actions .muted,
-.data-warning p,
-.detail-cefr,
-.detail-pill,
-.detail-section h4,
-.device-greeting-copy em,
-.device-greeting-copy small,
-.device-greeting-copy strong,
-.editor-help,
-.empty-state p,
-.example-card span,
-.exercise-choice,
-.exercise-choice>span,
-.exercise-feedback,
-.exercise-kicker,
-.eyebrow,
-.field-label,
-.flash-collocations span,
-.flash-example small,
-.flash-kicker,
-.flash-related-grid small,
-.flash-topic-copy small,
-.flash-verb-forms span,
-.github-local-note p,
-.github-local-note strong,
-.global-search input,
-.global-search kbd,
-.google-context-details summary,
-.google-search-note,
-.install-invite-footnote,
-.learning-card-footer small,
-.learning-category,
-.learning-formula,
-.learning-level,
-.lesson-example>span,
-.letter-tile small,
-.listening-hint,
-.listening-intro p,
-.listening-player-head small,
-.listening-player-status,
-.listening-speed-control label,
-.listening-speed-row,
-.local-state small,
-.meaning-line .meaning-pos,
-.meaning-line small,
-.metric-card small,
-.metric-card span,
-.mobile-bottom-nav button small,
-.nav-group-label,
-.notification-platform-help,
-.panel-header .muted,
-.panel-kicker,
-.part1-illustration-frame figcaption,
-.personal-editor-note,
-.phase-note p,
-.pos-tag,
-.practice-home-copy p:last-child,
-.practice-home-metrics span,
-.practice-review-answer-grid small,
-.practice-stat small,
-.practice-stat span,
-.priority-pill,
-.pronunciation-note,
-.question-type,
-.quick-link small,
-.quick-symbol,
-.quiz-controls .field-label,
-.quiz-counter,
-.quiz-kicker,
-.read-only-label,
-.reading-card-meta,
-.reading-passage-label,
-.reading-vocab-chip small,
-.reading-vocab-chip span,
-.reference-example,
-.reference-sense p,
-.reference-sense small,
-.reference-title-row span,
-.reminder-info,
-.reminder-limit,
-.reminder-popup-actions>span,
-.reminder-popup-open,
-.reminder-toggle small,
-.results-bar,
-.row-action,
-.sentence-breakdown b,
-.sentence-breakdown small,
-.sentence-breakdown span,
-.settings-help,
-.settings-shortcut-panel p,
-.sidebar-caption,
-.sidebar-version,
-.source-badge,
-.toeic-part-card>strong small,
-.toeic-part-meta,
-.toeic-part-name,
-.toeic-progress-heading small,
-.topic-disc small,
-.topic-tag,
-.transcript-line small,
-.transcript-translation,
-.weak-word-item em,
-.weak-word-item small,
-.welcome-book-art span,
-.word-ipa,
-.word-origin-note,
-.word-table td,
-.word-table th {
-  font-size: max(11px, .86em) !important;
-}
-
-/* Button copy remains comfortably readable even in compact feature rows. */
-.page-heading > .primary-button,
-.toolbar-actions button,
-.quiz-actions button,
-.learning-card-footer .secondary-button,
-.auto-advance-row .text-button,
-.feedback-ai-row .secondary-button,
-.google-search-actions .secondary-button,
-.notification-actions button,
-.practice-home-panel > .primary-button,
-.settings-shortcut-panel button,
-.pronunciation-toolbar .secondary-button {
-  font-size: 14px !important;
-}
-
-/* v2.62.0 — one readable typography scale for all learning surfaces. */
+/* -------------------------------------------------------------------------
+   v2.63.0 — canonical design contract enforcement.
+   Edit design/design-profile.json, then run tools/sync-design-profile.py --apply.
+   Do not introduce per-feature font, color, radius or spacing scales.
+   ------------------------------------------------------------------------- */
+/* DESIGN_PROFILE_TOKENS:BEGIN */
 :root {
-  --ds-font-body: clamp(14px, .92rem + .08vw, 15.5px);
-  --ds-font-card-title: clamp(16px, 1rem + .18vw, 18px);
-  --ds-font-section-title: clamp(18px, 1.1rem + .25vw, 22px);
-  --ds-font-caption: 12px;
-  --ds-font-control: 14px;
+  --ds-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+  --ds-font-body: clamp(15px, calc(14.6px + .08vw), 16px);
+  --ds-font-support: 14px;
+  --ds-font-caption: 12.5px;
+  --ds-font-label: 13px;
+  --ds-font-control: 14.5px;
+  --ds-font-button: 14.5px;
+  --ds-font-card-title: clamp(17px, calc(16.5px + .16vw), 19px);
+  --ds-font-section-title: clamp(20px, calc(19px + .24vw), 23px);
+  --ds-font-page-title: clamp(25px, 2.1vw, 34px);
+  --ds-font-passage: 15px;
+  --ds-line-body: 1.62;
+  --ds-line-heading: 1.3;
+  --ds-line-caption: 1.45;
+  --ds-color-canvas: #F4F7FB;
+  --ds-color-surface: #FFFFFF;
+  --ds-color-surface-subtle: #F8FAFD;
+  --ds-color-surface-tint: #EDF4FC;
+  --ds-color-ink: #1B2F49;
+  --ds-color-muted: #63758C;
+  --ds-color-muted-strong: #4C617A;
+  --ds-color-border: #E0E7F0;
+  --ds-color-border-strong: #CBD7E5;
+  --ds-color-brand: #1D568F;
+  --ds-color-brand-deep: #153C70;
+  --ds-color-brand-soft: #EAF2FC;
+  --ds-color-accent: #16876C;
+  --ds-color-success: #16865C;
+  --ds-color-warning: #A96A19;
+  --ds-color-danger: #C64D4D;
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 20px;
+  --ds-space-6: 24px;
+  --ds-space-8: 32px;
+  --ds-space-10: 40px;
+  --ds-radius-control: 10px;
+  --ds-radius-card: 16px;
+  --ds-radius-panel: 18px;
+  --ds-radius-pill: 999px;
+  --ds-shadow-panel: 0 2px 10px rgba(22, 48, 78, .035);
+  --ds-shadow-card: 0 4px 16px rgba(22, 48, 78, .055);
+  --ds-shadow-float: 0 16px 44px rgba(22, 48, 78, .16);
+  --ds-touch-target: 44px;
+  --ds-content-max: 1600px;
+  --ds-page-gutter: clamp(16px, 2.4vw, 36px);
+  --ds-motion-fast: 140ms;
+  --ds-motion-base: 200ms;
+  --ds-motion-slow: 280ms;
+}
+/* DESIGN_PROFILE_TOKENS:END */
+
+:root {
+  /* Legacy aliases are intentionally mapped to the canonical profile. */
+  --font: var(--ds-font-family);
+  --canvas: var(--ds-color-canvas);
+  --surface: var(--ds-color-surface);
+  --ink: var(--ds-color-ink);
+  --muted: var(--ds-color-muted);
+  --line: var(--ds-color-border);
+  --navy: var(--ds-color-brand-deep);
+  --navy-2: var(--ds-color-brand);
+  --blue-soft: var(--ds-color-brand-soft);
+  --radius: var(--ds-radius-card);
+  --panel-radius: var(--ds-radius-panel);
 }
 
-/* Shared panel headings and summaries: feature panels must not invent microtype. */
+/* Global type hierarchy — every screen consumes the same semantic roles. */
+html { background: var(--ds-color-canvas); }
+body {
+  color: var(--ds-color-ink);
+  background: var(--ds-color-canvas);
+  font-family: var(--ds-font-family);
+  font-size: var(--ds-font-body);
+  line-height: var(--ds-line-body);
+  letter-spacing: 0;
+}
+.page {
+  max-width: var(--ds-content-max);
+  padding-inline: var(--ds-page-gutter);
+}
+.page-heading h1,
+.mock-hero h1 {
+  font-size: var(--ds-font-page-title);
+  line-height: var(--ds-line-heading);
+  letter-spacing: -.025em;
+}
+.panel-header h2,
 .panel-header h3,
-.panel-header > div > h3 {
+.objective-progress-header h2,
+.foundation-intro-header h2,
+.recall-queue-heading h2,
+.mock-mode-heading h2 {
+  font-size: var(--ds-font-section-title);
+  line-height: var(--ds-line-heading);
+  letter-spacing: -.015em;
+}
+.learning-card h3,
+.foundation-card h3,
+.recall-queue-item h3,
+.mock-mode-card h3,
+.practice-mode-tile strong {
   font-size: var(--ds-font-card-title);
+  line-height: 1.38;
+  letter-spacing: -.01em;
+}
+
+/* Shared copy roles: no essential instruction, option or card description is microtext. */
+body :where(.welcome-panel p, .panel > p, .panel-header .muted,
+  .page-heading .muted, .learning-card > p, .learning-card-description,
+  .foundation-card > p, .foundation-path-note p, .recall-queue-item > p,
+  .practice-mode-tile small, .practice-home-panel p,
+  .mock-hero-copy > p:not(.eyebrow), .mock-mode-heading p:not(.eyebrow),
+  .mock-mode-card > p, .mock-resume-panel p, .mock-result-hero p,
+  .mock-recommendation p, .mock-integrity-note, .mock-result-note,
+  .detail-section > p, .lesson-explanation, .reading-passage,
+  .reading-passage-text, .transcript-line, .foundation-question > p,
+  .foundation-listening-transcript p, .objective-progress-meta,
+  .objective-progress-extra, .phase-note p, .data-warning p) {
+  font-size: var(--ds-font-support) !important;
+  line-height: 1.62;
+}
+body :where(.metric-card span, .metric-card small, .learning-card-footer small,
+  .learning-category, .learning-level, .foundation-card-evidence span,
+  .foundation-card-footer small, .recall-queue-item-meta,
+  .recall-queue-item small, .mock-hero-meta span, .mock-mode-count,
+  .mock-mode-tag, .mock-pool-chip span, .mock-history-row span,
+  .mock-history-row small, .mock-score-head span, .mock-score-head small,
+  .mock-score-target, .mock-part-result span, .mock-result-total span,
+  .mock-review-details > summary, .mock-review-answer,
+  .mock-question-number, .mock-group-part, .mock-map-legend span,
+  .mock-section-progress > span, .mock-exam-bottom,
+  .toeic-part-meta, .toeic-part-name, .toeic-progress-heading small,
+  .word-ipa, .reading-card-meta, .reading-passage-label,
+  .transcript-line small, .app-footer) {
+  font-size: var(--ds-font-caption) !important;
+  line-height: var(--ds-line-caption);
+}
+body :where(.eyebrow, .panel-kicker, .field-label, .mock-mode-label,
+  .mock-result-section-heading .eyebrow, .source-badge, .detail-pill) {
+  font-size: var(--ds-font-label) !important;
+  line-height: 1.4;
+  letter-spacing: .055em;
+}
+body :where(button, input, select, textarea) {
+  font-family: inherit;
+  font-size: max(var(--ds-font-control), 1em) !important;
+}
+body :where(.primary-button, .secondary-button, .text-button,
+  .toolbar-actions button, .quiz-actions button,
+  .learning-card-footer .secondary-button, .mock-mode-card .primary-button,
+  .mock-submit-button, .foundation-listening-actions button,
+  .pronunciation-toolbar .secondary-button) {
+  font-size: var(--ds-font-button) !important;
   line-height: 1.35;
 }
-.panel-header .muted,
-.panel-header > div > .muted {
-  font-size: clamp(13px, .86rem + .08vw, 14px);
-  line-height: 1.55;
+
+/* Content floor: important text never inherits a legacy micro-size from a feature. */
+body :where(p, li, dd, dt, td, th, figcaption, summary, blockquote) {
+  font-size: max(var(--ds-font-support), 1em) !important;
+  line-height: 1.58;
 }
-.learning-card h3 {
-  font-size: var(--ds-font-card-title);
-  line-height: 1.4;
-}
-.learning-card > p {
-  font-size: clamp(13.5px, .88rem + .08vw, 14.5px);
-  line-height: 1.62;
-}
-.learning-card-footer small,
-.learning-category,
-.learning-level {
-  font-size: 12px;
-  line-height: 1.45;
+body :where(small, .muted, .eyebrow, .panel-kicker, .field-label,
+  .source-badge, .topic-tag, .pos-tag, .priority-pill,
+  .reading-passage-label, .question-type, .quiz-kicker,
+  .exercise-kicker, .toeic-part-meta, .sidebar-caption) {
+  font-size: max(var(--ds-font-caption), 1em) !important;
+  line-height: var(--ds-line-caption);
 }
 
-/* Learning outcome tracker — readable content, compact but balanced cards. */
+/* Audited legacy labels: raise old feature metadata to the shared caption floor. */
+body :where(
+  .advance-count-label,
+  .advance-indicator>span b,
+  .advance-indicator>span small,
+  .advance-prep-copy>small,
+  .advance-prep-kicker,
+  .advance-stage em,
+  .ai-oneway-context summary,
+  .ai-oneway-context>small,
+  .ai-oneway-intro p,
+  .ai-prompt-intro p,
+  .ai-prompt-note,
+  .alphabet-chip,
+  .answer-reference small,
+  .answer-reference>p,
+  .answer-reference>span,
+  .app-footer,
+  .auto-next-wait-kicker,
+  .auto-next-wait-ring small,
+  .brand small,
+  .brand-copy small,
+  .breadcrumb strong,
+  .cefr-badge,
+  .char-cell small,
+  .choice-option>span,
+  .choice-review-head em,
+  .choice-review-item p,
+  .choice-review-letter,
+  .choice-review-title span,
+  .data-footer-actions .muted,
+  .data-warning p,
+  .detail-cefr,
+  .detail-pill,
+  .detail-section h4,
+  .device-greeting-copy em,
+  .device-greeting-copy small,
+  .device-greeting-copy strong,
+  .editor-help,
+  .empty-state p,
+  .example-card span,
+  .exercise-choice,
+  .exercise-choice>span,
+  .exercise-feedback,
+  .exercise-kicker,
+  .eyebrow,
+  .field-label,
+  .flash-collocations span,
+  .flash-example small,
+  .flash-kicker,
+  .flash-related-grid small,
+  .flash-topic-copy small,
+  .flash-verb-forms span,
+  .github-local-note p,
+  .github-local-note strong,
+  .global-search kbd,
+  .google-context-details summary,
+  .google-search-note,
+  .install-invite-footnote,
+  .learning-card-footer small,
+  .learning-category,
+  .learning-formula,
+  .learning-level,
+  .lesson-example>span,
+  .letter-tile small,
+  .listening-hint,
+  .listening-intro p,
+  .listening-player-head small,
+  .listening-player-status,
+  .listening-speed-control label,
+  .listening-speed-row,
+  .local-state small,
+  .meaning-line .meaning-pos,
+  .meaning-line small,
+  .metric-card small,
+  .metric-card span,
+  .mobile-bottom-nav button small,
+  .nav-group-label,
+  .notification-platform-help,
+  .panel-header .muted,
+  .panel-kicker,
+  .part1-illustration-frame figcaption,
+  .personal-editor-note,
+  .phase-note p,
+  .pos-tag,
+  .practice-home-copy p:last-child,
+  .practice-home-metrics span,
+  .practice-review-answer-grid small,
+  .practice-stat small,
+  .practice-stat span,
+  .priority-pill,
+  .pronunciation-note,
+  .question-type,
+  .quick-link small,
+  .quick-symbol,
+  .quiz-controls .field-label,
+  .quiz-counter,
+  .quiz-kicker,
+  .read-only-label,
+  .reading-card-meta,
+  .reading-passage-label,
+  .reading-vocab-chip small,
+  .reading-vocab-chip span,
+  .reference-example,
+  .reference-sense p,
+  .reference-sense small,
+  .reference-title-row span,
+  .reminder-info,
+  .reminder-limit,
+  .reminder-popup-actions>span,
+  .reminder-toggle small,
+  .results-bar,
+  .sentence-breakdown b,
+  .sentence-breakdown small,
+  .sentence-breakdown span,
+  .settings-help,
+  .settings-shortcut-panel p,
+  .sidebar-caption,
+  .sidebar-version,
+  .source-badge,
+  .toeic-part-card>strong small,
+  .toeic-part-meta,
+  .toeic-part-name,
+  .toeic-progress-heading small,
+  .topic-disc small,
+  .topic-tag,
+  .transcript-line small,
+  .transcript-translation,
+  .weak-word-item em,
+  .weak-word-item small,
+  .welcome-book-art span,
+  .word-ipa,
+  .word-origin-note,
+  .word-table td,
+  .word-table th
+) {
+  font-size: max(var(--ds-font-caption), 1em) !important;
+  line-height: var(--ds-line-caption);
+}
+
+/* DESIGN_LEGACY_FONT_FLOOR:BEGIN */
+/* Generated from fixed sub-caption font rules in app.css. Do not hand-edit. */
+body :where(
+  .advance-count-label,
+  .advance-countdown,.advance-count-label,
+  .advance-indicator>span b,
+  .advance-indicator>span small,
+  .advance-prep-copy>small,
+  .advance-prep-copy>strong,
+  .advance-prep-kicker,
+  .advance-stage em,
+  .ai-oneway-context summary,
+  .ai-oneway-context>small,
+  .ai-oneway-context>strong,
+  .ai-oneway-intro p,
+  .ai-oneway-intro strong,
+  .ai-prompt-intro p,
+  .ai-prompt-intro strong,
+  .ai-prompt-note,
+  .alphabet-chip,
+  .answer-feedback>p,
+  .answer-reference,
+  .answer-reference small,
+  .answer-reference>span,
+  .app-footer,
+  .auto-advance-row .text-button,
+  .auto-next-wait-kicker,
+  .auto-next-wait-ring small,
+  .auto-next-wait-stage,
+  .brand small,
+  .brand-copy small,
+  .breadcrumb,
+  .breadcrumb strong,
+  .cefr-badge,
+  .char-cell small,
+  .choice-option,
+  .choice-option>span,
+  .choice-review-head em,
+  .choice-review-head strong,
+  .choice-review-item p,
+  .choice-review-letter,
+  .choice-review-title,
+  .choice-review-title span,
+  .data-footer-actions .muted,
+  .detail-cefr,
+  .detail-ipa,
+  .detail-pill,
+  .detail-section h4,
+  .detail-section p,
+  .device-greeting-copy em,
+  .device-greeting-copy small,
+  .device-greeting-copy strong,
+  .editor-grid textarea,
+  .editor-help,
+  .empty-state p,
+  .empty-state strong,
+  .example-card span,
+  .example-card strong,
+  .exercise-choice,
+  .exercise-choice>span,
+  .exercise-feedback,
+  .exercise-kicker,
+  .exercise-retry-row>span,.practice-retry-hint,
+  .explanation-rubric-item label,
+  .explanation-rubric-status,
+  .explanation-rubric>p,
+  .eyebrow,
+  .eyebrow,
+.panel-kicker,
+.flash-kicker,
+.sidebar-caption,
+.nav-group-label,
+.field-label,
+.reading-passage-label,
+.source-badge,
+.cefr-badge,
+  .eyebrow, .panel-kicker, .flash-kicker,
+  .feedback-ai-row .secondary-button,
+  .field input,.field select,
+  .field-label,
+  .flash-batch-select,
+  .flash-collocations span,
+  .flash-detail-section>small,
+  .flash-detail-status,
+  .flash-example small,
+  .flash-example span,
+  .flash-kicker,
+  .flash-progress-wrap,
+  .flash-quiz-feedback .text-button,
+  .flash-quiz-feedback small,
+  .flash-related-grid p,
+  .flash-related-grid small,
+  .flash-session-actions .muted,
+  .flash-topic-copy small,
+  .flash-topic-copy strong,
+  .flash-topic-image.image-missing::after,.flashcard-art.image-missing::after,
+  .flash-topic-pill,.flash-card-count,
+  .flash-verb-forms span,
+  .flash-welcome-stats small,
+  .flashcard-front-copy .flash-tap-hint,
+  .foundation-card-bottom small,
+  .foundation-card-footer small,
+  .foundation-card>p,
+  .foundation-choice,
+  .foundation-feedback,
+  .foundation-focus,
+  .foundation-intro p,
+  .foundation-kicker,
+  .foundation-level,
+  .foundation-level-picker,
+  .foundation-number,
+  .foundation-path-note,
+  .foundation-progress small,
+  .foundation-question>p,
+  .foundation-reading-text,
+  .github-local-note p,
+  .github-local-note strong,
+  .global-search input,
+  .global-search kbd,
+  .google-context-details summary,
+  .google-search-actions .secondary-button,
+  .google-search-description,
+  .google-search-form input,
+  .google-search-note,
+  .heading-date,
+  .historical-choice-note,
+  .install-benefits span,
+  .install-invite-actions .primary-button,.install-invite-actions .secondary-button,
+  .install-invite-card #installInviteDescription,
+  .install-invite-footnote,
+  .install-steps,
+  .learning-attempt-toolbar small,
+  .learning-attempt-toolbar strong,
+  .learning-card-footer .secondary-button,
+  .learning-card-footer small,
+  .learning-card>p,
+  .learning-category,.learning-level,
+  .learning-focus-content .flashcard-tap-hint,
+  .learning-formula,
+  .lesson-example>span,
+  .lesson-example>strong,
+  .lesson-exercise h4,
+  .lesson-explanation,
+  .lesson-intro>p,
+  .lesson-tips,
+  .letter-tile small,
+  .level-meter-scale,
+  .level-meter-value span,
+  .library-count,
+  .listening-hint,
+  .listening-intro p,
+  .listening-intro strong,
+  .listening-player-head small,
+  .listening-player-head strong,
+  .listening-player-status,
+  .listening-reserve-note,
+  .listening-speed-control label,
+  .listening-speed-row,
+  .local-state small,
+  .local-state strong,
+  .meaning-definition,
+  .meaning-line .meaning-pos,
+  .meaning-line small,
+  .metric-card small,
+  .metric-card small,
+.quick-link small,
+.phase-note p,
+.data-warning p,
+.toeic-part-meta,
+.reading-part-intro p,
+  .metric-card span,
+  .metric-card span,.metric-card small,
+  .metric-icon,
+  .mobile-bottom-nav button small,
+  .mobile-group-option small,
+  .mock-audio-button,
+  .mock-choice-button,
+  .mock-choice-button>strong,
+  .mock-exam-bottom,
+  .mock-exam-bottom button,
+  .mock-exam-brand small,
+  .mock-exam-brand strong,
+  .mock-exam-sectionbar p,
+  .mock-exam-sectionbar>div:first-child span,
+  .mock-exam-timer span,.mock-exam-timer small,
+  .mock-flag-button,
+  .mock-group-audio small,
+  .mock-group-header p,
+  .mock-group-part,
+  .mock-hero-copy>p:not(.eyebrow),
+  .mock-hero-meta span,
+  .mock-hero-score>i,
+  .mock-hero-score>small,
+  .mock-hero-score>span,
+  .mock-history-row b,
+  .mock-history-row span,.mock-history-row small,
+  .mock-history-row strong,
+  .mock-integrity-note,
+  .mock-map-actions button,
+  .mock-map-button,
+  .mock-map-head small,
+  .mock-map-head strong,
+  .mock-map-legend span,
+  .mock-mode-card .primary-button,
+  .mock-mode-card>p,
+  .mock-mode-count,
+  .mock-mode-heading p:not(.eyebrow),
+  .mock-mode-label,
+  .mock-mode-tag,
+  .mock-mode-time small,
+  .mock-part-result b,
+  .mock-part-result span,
+  .mock-part-result strong,
+  .mock-part1-frame figcaption,
+  .mock-part1-frame.image-missing:after,
+  .mock-pool-chip span,
+  .mock-pool-readiness>p,
+  .mock-question-line h4,
+  .mock-question-number,
+  .mock-readiness-head small,
+  .mock-readiness-head>span,
+  .mock-readiness-row,
+  .mock-readiness-row strong,
+  .mock-reading-passage .reading-passage-label,
+  .mock-reading-passage pre,
+  .mock-recommendation p,
+  .mock-recommendation strong,
+  .mock-result-hero p,
+  .mock-result-note,
+  .mock-result-section-heading .eyebrow,
+  .mock-result-section-heading p:not(.eyebrow),
+  .mock-result-target-chip,
+  .mock-result-total span,
+  .mock-resume-panel p,
+  .mock-review-answer,
+  .mock-review-details>summary,
+  .mock-review-part>h3,
+  .mock-review-question h4,
+  .mock-review-question p,
+  .mock-review-transcript pre,
+  .mock-review-transcript>div,
+  .mock-review-transcript>summary,
+  .mock-score-details>p,
+  .mock-score-dial small,
+  .mock-score-fraction,
+  .mock-score-head small,
+  .mock-score-head span,
+  .mock-score-head strong,
+  .mock-score-head>span,
+  .mock-score-next,
+  .mock-score-raw span,
+  .mock-score-target,
+  .mock-score-target span,
+  .mock-score-target strong,
+  .mock-section-progress strong,
+  .mock-section-progress>span,
+  .mock-submit-button,
+  .mock-test-rules,
+  .muted,
+  .nav-group-label,
+  .notification-actions button,
+  .notification-platform-help,
+  .objective-progress-extra,
+  .objective-progress-header .muted,
+  .objective-progress-meta,
+  .objective-progress-meta small,
+  .objective-progress-top strong,
+  .page-heading>.primary-button,
+  .panel-header .muted,
+  .panel-kicker,
+  .part1-illustration-frame figcaption,
+  .phase-note p,.data-warning p,
+  .placement-disclaimer,
+  .placement-progress small,
+  .placement-result-row,
+  .pos-detail-card .example-card span,
+  .pos-detail-header>span,
+  .pos-tag,
+  .practice-attempt-history li,
+  .practice-attempt-history li p,
+  .practice-attempt-history li small,
+  .practice-attempt-history summary,
+  .practice-home-copy p:last-child,
+  .practice-home-metrics span,
+  .practice-home-panel>.primary-button,
+  .practice-mode-tile small,
+  .practice-mode-tile strong,
+  .practice-retry-button,
+  .practice-review-answer-grid small,
+  .practice-review-status,
+  .practice-stat small,
+  .practice-stat span,.practice-stat small,
+  .primary-button,.secondary-button,
+  .priority-pill,
+  .pronunciation-note,
+  .pronunciation-toolbar .secondary-button,
+  .question-hint,
+  .question-type,
+  .quick-link small,
+  .quick-link strong,
+  .quick-symbol,
+  .quiz-actions button,
+  .quiz-controls .field-label,.field-label,
+  .quiz-counter,
+  .quiz-kicker,
+  .read-only-label,
+  .reading-card-meta,
+  .reading-part-intro p,
+  .reading-passage,
+  .reading-passage-label,
+  .reading-vocab-chip small,
+  .reading-vocab-chip span,
+  .reading-vocab-chip strong,
+  .recall-queue-count,
+  .recall-queue-item .learning-card-footer small,
+  .reference-example,
+  .reference-sense p,.answer-reference>p,
+  .reference-sense small,
+  .reference-sense>strong,
+  .reference-title-row span,
+  .reminder-info,
+  .reminder-limit,
+  .reminder-popup p,
+  .reminder-popup-actions>span,
+  .reminder-popup-head strong,
+  .reminder-popup-open,
+  .reminder-toggle small,
+  .reminder-toggle strong,
+  .results-bar,
+  .review-detail-section .reference-sense small,.review-detail-section .reference-sense p,.review-detail-section .reference-example,
+  .row-action,
+  .sense-example-label,
+  .sense-relation-label,
+  .sentence-breakdown b,
+  .sentence-breakdown small,
+  .sentence-breakdown span,
+  .sentence-category-label,
+  .sentence-context-label,
+  .settings-bullet-list,
+  .settings-help,
+  .settings-shortcut-panel button,
+  .settings-shortcut-panel p,
+  .sidebar-caption,
+  .sidebar-version,
+  .source-badge,
+  .text-button,
+  .toast,
+  .toeic-part-card>strong small,
+  .toeic-part-meta,
+  .toeic-part-name,
+  .toeic-priority-row,
+  .toeic-progress-description,
+  .toeic-progress-heading,
+  .toeic-progress-heading small,
+  .toolbar-actions button,
+  .topic-disc small,
+  .topic-tag,
+  .topic-tag,.pos-tag,
+  .transcript-details summary,
+  .transcript-line p,
+  .transcript-line small,
+  .transcript-translation,
+  .translation-details summary,
+  .translation-details>p,
+  .tts-inline-note,
+  .tts-settings-note,
+  .tts-voice-status,
+  .weak-word-item em,
+  .weak-word-item small,
+  .weak-word-item strong,
+  .welcome-book-art span,
+  .welcome-panel p,
+  .word-card .word-meaning,
+  .word-ipa,
+  .word-name,
+  .word-origin-note,.personal-editor-note,
+  .word-table td,
+  .word-table th
+) {
+  font-size: var(--ds-font-caption) !important;
+  line-height: var(--ds-line-caption);
+}
+/* DESIGN_LEGACY_FONT_FLOOR:END */
+
+/* Foundation Listening shares the same learning-detail and control recipes. */
+.foundation-listening-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  flex-wrap: wrap;
+  margin: var(--ds-space-3) 0;
+}
+.foundation-listening-actions .secondary-button,
+.foundation-listening-actions .text-button { min-height: var(--ds-touch-target); }
+.foundation-listening-transcript {
+  margin: var(--ds-space-3) 0 var(--ds-space-4);
+  padding: var(--ds-space-4);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-card);
+  background: var(--ds-color-surface-subtle);
+}
+.foundation-listening-transcript strong { display: block; margin-bottom: var(--ds-space-2); font-size: 14px; }
+.foundation-listening-transcript p { margin: 0; font-size: var(--ds-font-body); line-height: 1.7; }
+.foundation-listening .foundation-question { margin-top: var(--ds-space-4); }
+.foundation-listening .foundation-question > p { font-size: var(--ds-font-body); line-height: 1.62; }
+.foundation-listening .foundation-choice { min-height: 46px; font-size: var(--ds-font-control); line-height: 1.5; }
+.foundation-listening [data-foundation-listening-summary] { margin-top: var(--ds-space-3); }
+
+/* Feature labels with non-semantic legacy span/em selectors are mapped to shared roles. */
+body :where(.mock-mode-label, .mock-mode-tag, .mock-map-head strong,
+  .mock-map-head small, .mock-map-legend span, .mock-section-progress > span,
+  .mock-part-result span, .mock-score-target, .mock-score-target span,
+  .mock-result-total span, .mock-result-note, .mock-readiness-head small,
+  .mock-readiness-head > span, .mock-readiness-row, .mock-pool-readiness > p,
+  .sentence-context-label, .sentence-category-label, .foundation-kicker,
+  .foundation-number, .foundation-level, .placement-domain-label,
+  .placement-disclaimer, .pos-detail-header > span,
+  .sense-relation-label, .sense-example-label, .reminder-popup-actions > span,
+  .reminder-popup-head strong, .reminder-popup p, .reminder-info,
+  .reminder-limit, .google-search-note, .notification-platform-help) {
+  font-size: max(var(--ds-font-caption), 1em) !important;
+  line-height: var(--ds-line-caption);
+}
+body :where(.row-action, .reminder-popup-open, .mock-map-button,
+  .mock-map-actions button, .mock-audio-button, .mock-flag-button,
+  .mock-exam-bottom button, .mock-submit-button, .global-search input) {
+  font-size: var(--ds-font-button) !important;
+}
+body :where(.mock-test-rules, .mock-exam-sectionbar p, .mock-group-header p,
+  .mock-review-transcript > div, .mock-review-transcript pre,
+  .mock-review-question p, .mock-review-answer, .mock-result-section-heading p,
+  .mock-score-details > p, .meaning-definition,
+  .pos-detail-card .example-card span) {
+  font-size: var(--ds-font-support) !important;
+  line-height: 1.58;
+}
+
+/* Shared surfaces: one border, radius and shadow language across modules. */
+.panel,
+.metric-card,
+.learning-card,
+.flash-topic-card,
+.reading-document-card,
+.listening-card,
+.toeic-part-card,
+.objective-progress-card,
+.foundation-progress,
+.recall-queue-item,
+.practice-mode-tile,
+.mock-mode-card,
+.mock-history-panel {
+  border-color: var(--ds-color-border);
+  border-radius: var(--ds-radius-card);
+  box-shadow: var(--ds-shadow-card);
+}
+.panel { border-radius: var(--ds-radius-panel); box-shadow: var(--ds-shadow-panel); }
+.metric-card,
+.learning-card,
+.flash-topic-card,
+.reading-document-card,
+.listening-card,
+.toeic-part-card,
+.objective-progress-card,
+.foundation-progress,
+.recall-queue-item,
+.practice-mode-tile,
+.mock-mode-card { background-color: var(--ds-color-surface); }
+.panel-header { gap: var(--ds-space-3); }
+.panel-header .muted { color: var(--ds-color-muted); }
+
+/* Controls use shared dimensions and the same primary/secondary hierarchy. */
+.primary-button,
+.secondary-button,
+.field input,
+.field select,
+.field textarea,
+.global-search,
+.search-field,
+.flash-topic-search {
+  min-height: var(--ds-touch-target);
+  border-radius: var(--ds-radius-control);
+}
+.primary-button { background: var(--ds-color-brand); }
+.primary-button:hover { background: var(--ds-color-brand-deep); }
+.secondary-button {
+  border: 1px solid var(--ds-color-border-strong);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-brand-deep);
+}
+input, select, textarea { border-color: var(--ds-color-border-strong); }
+
+/* Learning outcomes, recall, Foundation and practice share component geometry. */
+.objective-progress-card,
+.foundation-card,
+.recall-queue-item,
+.practice-mode-tile,
+.mock-mode-card {
+  min-width: 0;
+  padding: clamp(15px, 1.3vw, 19px);
+  border-radius: var(--ds-radius-card);
+}
+.objective-progress-top strong { font-size: 15px !important; line-height: 1.48; }
+.objective-progress-meta,
+.objective-progress-extra { font-size: 13px !important; line-height: 1.55; }
+.foundation-card > p,
+.recall-queue-item > p,
+.practice-mode-tile small { font-size: var(--ds-font-support) !important; }
+.foundation-card-evidence span { font-size: 13px !important; }
+.practice-mode-tile { min-height: 82px; gap: 12px; }
+.practice-mode-tile small { font-size: var(--ds-font-support) !important; line-height: 1.5; }
+.practice-mode-tile > b { flex: 0 0 42px; width: 42px; height: 42px; }
+
+/* Structured page layouts — geometry follows content width, not a feature-specific fixed grid. */
 .objective-progress-panel { padding: clamp(16px, 1.8vw, 24px); }
-.objective-progress-header h2 {
-  font-size: var(--ds-font-section-title);
-  line-height: 1.32;
-}
-.objective-progress-header .muted {
-  max-width: 900px;
-  font-size: clamp(13px, .88rem + .06vw, 14.5px);
-  line-height: 1.62;
-}
 .objective-progress-grid {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
   gap: clamp(10px, 1vw, 14px);
 }
-.objective-progress-card {
-  display: grid;
-  gap: 8px;
-  padding: clamp(14px, 1.2vw, 17px);
-  border-radius: var(--ds-radius-md);
-}
-.objective-progress-top { align-items: flex-start; gap: 12px; }
-.objective-progress-top strong {
-  font-size: clamp(14px, .94rem + .06vw, 15.5px);
-  line-height: 1.45;
-}
-.objective-progress-top > span {
-  font-size: clamp(16px, 1.05rem + .1vw, 18px);
-  line-height: 1.2;
-}
-.objective-progress-meta {
-  gap: 6px 12px;
-  flex-wrap: wrap;
-  font-size: 12.5px;
-  line-height: 1.5;
-}
-.objective-progress-meta small { font-size: 12px; }
+.objective-progress-card { display: grid; gap: 9px; }
 .objective-progress-extra {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
-  gap: 5px 12px;
-  margin-top: 2px;
-  font-size: 12.5px;
-  line-height: 1.5;
+  gap: var(--ds-space-2) var(--ds-space-3);
 }
 
-/* Foundation intro: explicitly one column. This removes a legacy two-column leak. */
+/* Foundation introduction was historically two-column at panel level; keep one clear flow. */
 .foundation-intro.panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -652,340 +1261,150 @@ img, svg, video, canvas { max-width: 100%; }
   padding: clamp(18px, 2vw, 26px);
 }
 .foundation-intro-header { width: 100%; }
-.foundation-intro-header h2 {
-  font-size: clamp(21px, 1.55vw, 25px);
-  line-height: 1.3;
-}
-.foundation-intro-header .muted {
-  max-width: 900px;
-  font-size: clamp(14px, .9rem + .06vw, 15px);
-  line-height: 1.65;
-}
+.foundation-intro-header h2 { font-size: var(--ds-font-section-title); }
 .foundation-intro-body {
+  display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(260px, .75fr);
   align-items: end;
   gap: clamp(16px, 2vw, 24px);
 }
-.foundation-intro-actions { gap: 12px; }
-.foundation-intro-actions > .primary-button {
-  min-height: 48px;
-  font-size: 14.5px;
-}
-.foundation-level-picker {
-  gap: 7px;
-  font-size: 14px;
-  line-height: 1.45;
-}
-.foundation-level-picker select { font-size: 15px; }
+.foundation-intro-actions { display: grid; gap: var(--ds-space-3); }
+.foundation-intro-actions > .primary-button { min-height: 48px; }
+.foundation-level-picker { display: grid; gap: var(--ds-space-2); font-size: var(--ds-font-label); }
+.foundation-level-picker select { min-height: 44px; font-size: var(--ds-font-control); }
 .foundation-progress { padding: clamp(14px, 1.4vw, 18px); }
-.foundation-progress-top span { font-size: 13px; }
-.foundation-progress small { font-size: 12.5px; }
-.foundation-path-note p {
-  font-size: clamp(13.5px, .9rem + .05vw, 14.5px);
-}
-.foundation-card-evidence span {
-  font-size: clamp(12.5px, .84rem + .06vw, 13.5px);
-  line-height: 1.55;
+.foundation-progress-top span,
+.foundation-progress small { font-size: var(--ds-font-caption); }
+.foundation-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  gap: var(--ds-space-4);
 }
 
-/* Practice mode chooser — labels and descriptions share the same card scale. */
+/* Practice selection and mock setup align to the same grid and card geometry. */
 .practice-mode-panel { padding: clamp(16px, 1.5vw, 21px); }
-.practice-mode-panel .panel-header h3 { font-size: var(--ds-font-card-title); }
 .practice-mode-grid {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 225px), 1fr));
   gap: clamp(9px, 1vw, 13px);
 }
-.practice-mode-tile {
-  min-height: 76px;
-  padding: 12px;
-  gap: 11px;
-  border-radius: 13px;
-}
-.practice-mode-tile > b {
-  flex-basis: 40px;
-  width: 40px;
-  height: 40px;
-  font-size: 19px;
-}
-.practice-mode-tile > span { gap: 4px; }
-.practice-mode-tile strong {
-  font-size: clamp(14px, .9rem + .04vw, 15px);
-  line-height: 1.35;
-}
-.practice-mode-tile small {
-  font-size: clamp(12.5px, .82rem + .04vw, 13.5px);
-  line-height: 1.45;
-}
-
-/* Mock exam landing — avoid squeezed copy and low-contrast micro labels. */
 .mock-hero { gap: clamp(18px, 2.2vw, 30px); }
-.mock-hero-copy > p:not(.eyebrow) {
-  font-size: clamp(14px, .92rem + .05vw, 15px);
-  line-height: 1.65;
+.mock-pool-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--ds-space-3);
 }
-.mock-hero-meta span { font-size: 12px; line-height: 1.35; }
-.mock-hero-score > small { font-size: 11px; }
-.mock-hero-score > i { font-size: 10px; }
-.mock-pool-strip { gap: 10px; }
 .mock-pool-chip { min-height: 54px; padding: 11px 14px; }
-.mock-pool-chip span { font-size: 12.5px; line-height: 1.4; }
-.mock-pool-chip strong { font-size: 18px; }
-.mock-mode-heading h2 { font-size: var(--ds-font-section-title); }
-.mock-mode-heading p:not(.eyebrow) {
-  max-width: 780px;
-  font-size: 14px;
-  line-height: 1.6;
-}
-.mock-mode-tag { font-size: 12px; }
 .mock-mode-grid {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(12px, 1.2vw, 17px);
   align-items: stretch;
 }
-.mock-mode-card {
-  min-height: 0;
-  padding: clamp(16px, 1.5vw, 21px);
-  border-radius: var(--ds-radius-md);
-}
-.mock-mode-label { font-size: 11px; line-height: 1.4; letter-spacing: .09em; }
-.mock-mode-card h3 {
-  margin: 15px 0 4px;
-  font-size: clamp(17px, 1.05rem + .08vw, 19px);
-  line-height: 1.35;
-}
-.mock-mode-time { font-size: clamp(34px, 2.6vw, 40px); }
-.mock-mode-count { font-size: 13px; line-height: 1.5; }
-.mock-mode-card > p {
-  margin: 10px 0 18px;
-  font-size: 14px;
-  line-height: 1.6;
-}
-.mock-mode-card .primary-button { min-height: 46px; font-size: 14px; }
-.mock-resume-panel h3 { font-size: 16px; }
-.mock-resume-panel p { font-size: 13px; line-height: 1.55; }
-.mock-history-panel .panel-header h3 { font-size: var(--ds-font-card-title); }
-.mock-history-row strong { font-size: 13px; }
-.mock-history-row span,
-.mock-history-row small { font-size: 12px; line-height: 1.45; }
-.mock-history-row b { font-size: 14px; }
-.mock-integrity-note { font-size: 13px; line-height: 1.6; }
+.mock-history-panel { padding: 17px 19px; margin-top: 17px; }
 
+/* TOEIC mock exam: preserve score hierarchy while making instructions/options readable. */
+.mock-hero { border-radius: var(--ds-radius-panel); }
+.mock-mode-card { min-height: 0; padding: clamp(17px, 1.5vw, 22px); }
+.mock-mode-card h3 { margin-top: 14px; }
+.mock-mode-card > p { min-height: 66px; font-size: var(--ds-font-support) !important; line-height: 1.62; }
+.mock-exam-brand strong { font-size: 15px !important; }
+.mock-exam-brand small { font-size: 12.5px !important; }
+.mock-exam-timer span { font-size: 15px !important; }
+.mock-exam-timer small { font-size: 12.5px !important; }
+.mock-submit-button { min-height: 44px; }
+.mock-question-line h4,
+.mock-review-question h4 { font-size: 16px !important; line-height: 1.58; }
+.mock-reading-passage pre { font-size: 15px !important; line-height: 1.72; }
+.mock-choice-button { min-height: 48px; font-size: 14.5px !important; line-height: 1.5; }
+.mock-choice-button > strong { font-size: 13px !important; }
+.mock-exam-sectionbar p,
+.mock-map-head strong,
+.mock-map-head small,
+.mock-test-rules,
+.mock-group-header p,
+.mock-review-transcript > div,
+.mock-review-transcript pre,
+.mock-review-question p,
+.mock-review-answer,
+.mock-result-section-heading p:not(.eyebrow),
+.mock-score-details > p,
+.mock-recommendation p { font-size: 13px !important; line-height: 1.55; }
+.mock-exam-sectionbar h2 { font-size: 20px; }
+.mock-result-total strong { font-size: clamp(34px, 3vw, 42px); }
+
+/* Navigation is secondary to learning content but remains comfortably legible. */
+.nav-item { font-size: 14px; }
+.breadcrumb { font-size: 13px; }
+.mobile-bottom-nav button small { font-size: 12px !important; }
+.mobile-bottom-nav button { min-height: 54px; }
+
+/* Consistent responsive reflow; no physical-device-specific breakpoints. */
 @media (max-width: 1100px) {
   .mock-mode-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
+  .page { padding-inline: clamp(14px, 4vw, 22px); }
+  .panel { padding-inline: clamp(14px, 3.8vw, 20px); }
+  .panel-header { align-items: flex-start; }
   .foundation-intro-body { grid-template-columns: minmax(0, 1fr); }
   .foundation-intro-actions { grid-template-columns: minmax(0, 1fr); }
   .foundation-intro-actions > .primary-button { width: 100%; }
+  .foundation-level-picker { width: 100%; }
+  .foundation-card-grid { grid-template-columns: minmax(0, 1fr); }
   .mock-hero { align-items: flex-start; }
-  .mock-hero-score { flex-basis: 126px; height: 126px; }
   .mock-pool-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mock-mode-grid { grid-template-columns: minmax(0, 1fr); }
   .objective-progress-grid { grid-template-columns: minmax(0, 1fr); }
+  .mock-mode-card > p { min-height: 0; font-size: var(--ds-font-support) !important; }
+  .mock-question-line h4,
+  .mock-review-question h4 { font-size: 15.5px !important; }
 }
 @media (max-width: 420px) {
+  .page-heading { align-items: flex-start; flex-wrap: wrap; }
   .mock-hero { flex-direction: column; }
   .mock-hero-score { align-self: center; }
-  .mock-pool-chip { align-items: flex-start; flex-direction: column; }
+  .mock-exam-header { gap: 8px; }
+  .mock-exam-brand { min-width: 0; }
+  .mock-choice-button { padding-inline: 11px; }
+  .foundation-intro.panel { padding: 14px; }
   .objective-progress-extra { grid-template-columns: minmax(0, 1fr); }
 }
-
-
-/* Foundation listening: transcript is opt-in and uses the standard learning-detail surface. */
-.foundation-listening-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 10px 0 12px;
+@media (prefers-reduced-motion: reduce) {
+  .panel, .metric-card, .learning-card, .mock-mode-card,
+  .practice-mode-tile, .recall-queue-item { transition: none !important; }
 }
-.foundation-listening-actions .secondary-button { min-height: 44px; font-size: 14px; }
-.foundation-listening-actions .text-button { font-size: 14px; }
-.foundation-listening-transcript {
-  margin: 10px 0 14px;
-  padding: 14px 16px;
-  border: 1px solid var(--ds-border);
-  border-radius: var(--ds-radius-md);
-  background: #f7fafe;
-}
-.foundation-listening-transcript strong { display: block; margin-bottom: 5px; font-size: 13px; }
-.foundation-listening-transcript p { margin: 0; font-size: 14px; line-height: 1.7; }
-.foundation-listening .foundation-question { margin-top: 14px; }
-.foundation-listening .foundation-question > p { font-size: 14px; line-height: 1.6; }
-.foundation-listening .foundation-choice { min-height: 46px; font-size: 14px; line-height: 1.45; }
-.foundation-listening [data-foundation-listening-summary] { margin-top: 12px; }
 
-/* v2.62.0 — application-wide typography audit: no microtype for essential UI. */
-:root {
-  --ds-font-caption: 12.5px;
-  --ds-font-control: 14px;
+/* Semantic role reassertion: keep controls and essential copy above metadata floor. */
+body :where(p, li, dd, dt, td, th, figcaption, summary, blockquote) {
+  font-size: max(var(--ds-font-support), 1em) !important;
+  line-height: 1.58;
 }
-body { font-size: 15px; line-height: 1.55; }
-button, input, select, textarea { font-size: 14px; }
-.primary-button, .secondary-button { min-height: 42px; font-size: 14px; line-height: 1.35; }
-.text-button { font-size: 13.5px; line-height: 1.4; }
-
-/* Navigation, page headings and global controls. */
-.brand small, .local-state strong, .local-state small,
-.sidebar-caption, .sidebar-version, .nav-group-label,
-.breadcrumb, .heading-date, .eyebrow, .panel-kicker,
-.field-label, .global-search kbd, .source-badge, .detail-pill {
-  font-size: 12.5px;
+body :where(.page-heading .muted, .panel-header .muted, .learning-card > p,
+  .foundation-card > p, .mock-mode-card > p, .mock-test-rules,
+  .mock-review-question p, .mock-review-answer, .mock-result-section-heading p:not(.eyebrow),
+  .mock-score-details > p, .mock-recommendation p, .reading-passage pre,
+  .foundation-question > p, .foundation-listening-transcript p) {
+  font-size: var(--ds-font-support) !important;
+  line-height: 1.62;
+}
+body :where(.eyebrow, .panel-kicker, .field-label, .nav-group-label,
+  .source-badge, .cefr-badge, .detail-pill) {
+  font-size: var(--ds-font-label) !important;
+}
+body :where(button, input, select, textarea) {
+  font-size: max(var(--ds-font-control), 1em) !important;
+  font-family: inherit;
+}
+body :where(.primary-button, .secondary-button, .text-button,
+  .mock-choice-button, .mock-audio-button, .mock-map-button,
+  .mock-flag-button, .mock-exam-bottom button, .mock-submit-button,
+  .foundation-choice, .foundation-listening-actions button) {
+  font-size: var(--ds-font-button) !important;
   line-height: 1.4;
 }
-.nav-item { font-size: 14px; }
-.global-search input, .field input, .field select,
-.filter-row input, .filter-row select { font-size: 14px; }
-.muted, .panel-header .muted, .phase-note p, .data-warning p,
-.quick-link small, .metric-card span, .metric-card small {
-  font-size: 13.5px;
-  line-height: 1.55;
+body button :where(span, small, strong) { font-size: inherit !important; }
+body :where(.mock-exam-brand strong, .mock-exam-timer span,
+  .mock-score-head strong, .mock-question-line h4, .mock-review-question h4) {
+  font-size: var(--ds-font-support) !important;
 }
-.quick-link strong { font-size: 14px; line-height: 1.4; }
-.primary-button, .secondary-button, .toolbar-actions button,
-.page-heading > .primary-button, .page-heading > .secondary-button {
-  font-size: 14px;
-}
-
-/* Dashboard cards and shared content cards. */
-.welcome-panel p, .quick-panel p, .panel > p,
-.dashboard-grid .muted, .phase-note p, .data-warning p {
-  font-size: 14px;
-  line-height: 1.65;
-}
-.metric-card span, .metric-card small { font-size: 13px; }
-.learning-card h3 { font-size: var(--ds-font-card-title); }
-.learning-card > p, .learning-card .learning-card-description {
-  font-size: 14px;
-  line-height: 1.62;
-}
-.learning-card-footer small, .learning-category, .learning-level,
-.foundation-card-bottom small, .foundation-kicker,
-.foundation-level, .foundation-progress small,
-.foundation-progress-top span, .foundation-card-evidence span,
-.recall-queue-item-meta, .recall-queue-item small {
-  font-size: 12.5px;
-  line-height: 1.5;
-}
-
-/* Learning objectives: both the main outcome and the supporting evidence. */
-.objective-progress-top strong { font-size: 15px; line-height: 1.45; }
-.objective-progress-meta, .objective-progress-extra,
-.objective-progress-meta small { font-size: 13px; line-height: 1.55; }
-.objective-progress-extra > *, .objective-progress-meta > * { min-width: 0; }
-
-/* Practice selection, lesson cards and answer controls. */
-.practice-mode-tile strong { font-size: 15px; line-height: 1.4; }
-.practice-mode-tile small { font-size: 13.5px; line-height: 1.5; }
-.practice-stat small, .practice-home-metrics span,
-.practice-home-panel p, .practice-mode-panel .muted {
-  font-size: 13px;
-  line-height: 1.55;
-}
-.exercise-kicker, .quiz-kicker, .question-type,
-.exercise-retry-row > span, .practice-retry-hint,
-.practice-attempt-history li small, .practice-attempt-history summary {
-  font-size: 12.5px;
-  line-height: 1.45;
-}
-.exercise-choice, .choice-option, .foundation-choice,
-.mock-choice-button { font-size: 14px; line-height: 1.5; }
-.detail-section h4, .detail-section > p, .lesson-explanation,
-.example-card span, .lesson-tips, .foundation-question > p {
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-/* TOEIC mock-test setup, live test, result, review and history. */
-.mock-hero-copy > p:not(.eyebrow), .mock-mode-heading p:not(.eyebrow),
-.mock-mode-card > p, .mock-result-hero p, .mock-recommendation p,
-.mock-review-question p, .mock-score-details > p,
-.mock-integrity-note, .mock-result-note {
-  font-size: 13.5px;
-  line-height: 1.62;
-}
-.mock-hero-meta span, .mock-hero-score > small, .mock-hero-score > i,
-.mock-mode-label, .mock-mode-tag, .mock-mode-count,
-.mock-pool-chip span, .mock-history-row span, .mock-history-row small,
-.mock-score-head span, .mock-score-head small,
-.mock-score-dial small, .mock-score-target, .mock-part-result span,
-.mock-result-total span, .mock-result-section-heading .eyebrow,
-.mock-review-details > summary, .mock-review-answer,
-.mock-review-question h4, .mock-question-number,
-.mock-group-part, .mock-map-legend span, .mock-section-progress > span,
-.mock-submit-button, .mock-exam-brand small, .mock-exam-timer span,
-.mock-exam-timer small, .mock-exam-bottom, .mock-part1-frame figcaption {
-  font-size: 12.5px;
-  line-height: 1.45;
-  letter-spacing: normal;
-}
-.mock-mode-card h3 { font-size: 18px; line-height: 1.38; }
-.mock-mode-card .primary-button, .mock-submit-button { min-height: 42px; font-size: 13.5px; }
-.mock-exam-brand strong { font-size: 13px; }
-.mock-choice-button { min-height: 46px; }
-.mock-review-question p { font-size: 13.5px; }
-
-/* Tables, reading/listening captions and supporting details. */
-.word-table th, .reading-passage-label, .reading-card-meta,
-.reading-vocab-chip small, .transcript-line small,
-.sentence-breakdown small, .sentence-breakdown span,
-.reference-sense small, .sense-example-label,
-.toeic-part-meta, .toeic-part-name, .toeic-progress-heading small,
-.listening-player-head small, .pronunciation-note,
-.flash-detail-section > small, .flash-example small {
-  font-size: 12.5px;
-  line-height: 1.5;
-}
-.word-table td, .word-name, .reading-passage-text,
-.flash-detail-section p, .reference-sense p,
-.answer-reference > p, .transcript-line, .flash-example span {
-  font-size: 13.5px;
-  line-height: 1.58;
-}
-
-/* Bottom navigation: keep every destination readable on narrow phones. */
-.mobile-bottom-nav button small {
-  font-size: 12px !important;
-  line-height: 1.25;
-  letter-spacing: 0;
-  overflow-wrap: normal;
-}
-.mobile-bottom-nav button { min-height: 56px; }
-.app-footer { font-size: 12px; line-height: 1.5; }
-
-@media (max-width: 760px) {
-  .page { padding-inline: clamp(14px, 4vw, 22px); }
-  .panel-header { align-items: flex-start; }
-  .objective-progress-card { padding: 14px; }
-  .mock-exam-header { flex-wrap: wrap; }
-  .mock-exam-brand { flex: 1 1 130px; }
-  .mock-exam-brand strong { font-size: 12.5px; }
-  .mock-exam-brand small { font-size: 11.5px; }
-  .mock-exam-timer { min-width: 96px; }
-  .mock-exam-timer span, .mock-exam-timer small { font-size: 11.5px; }
-  .mock-submit-button { font-size: 12.5px; }
-  .mock-choice-button { font-size: 14px; }
-  .mobile-bottom-nav button small { font-size: 12px !important; }
-}
-@media (max-width: 380px) {
-  .mobile-bottom-nav { gap: 0; }
-  .mobile-bottom-nav button { min-width: 0; padding-inline: 2px; }
-  .mobile-bottom-nav button small { font-size: 12px !important; }
-  .mock-exam-header { padding-inline: 9px; }
-  .mock-exam-brand { flex-basis: 118px; }
-  .mock-submit-button { padding-inline: 8px; }
-}
-
-/* Final floor for legacy feature CSS: all ordinary reading copy remains legible. */
-body :where(p, li, dd, dt, td, th, figcaption, summary, blockquote) {
-  font-size: max(13.5px, 1em) !important;
-  line-height: 1.58;
-}
-body :where(small, .muted, .eyebrow, .panel-kicker, .field-label,
-  .source-badge, .topic-tag, .pos-tag, .priority-pill,
-  .reading-passage-label, .question-type, .quiz-kicker,
-  .exercise-kicker, .toeic-part-meta, .sidebar-caption) {
-  font-size: max(12px, 1em) !important;
-  line-height: 1.45;
-}
-body :where(input, select, textarea, button) { font-size: max(14px, 1em); }

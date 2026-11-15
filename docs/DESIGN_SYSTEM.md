@@ -1,91 +1,148 @@
-# TOEIC Dictionary — Design System
+# TOEIC Dictionary — Design System & UI Governance
 
-**Current implementation baseline:** v2.40.0; governance target v2.41.0  
-**Scope:** every learning page, shared controls, responsive shell and PWA navigation. See `MASTER_CURRICULUM.md` for product/content scope.
+**Effective candidate:** v2.63.0  
+**Profile:** `Calm Study Blue` (`design/design-profile.json`)  
+**Status:** implemented as the shared default; visual preferences awaiting owner selection  
+**Runtime stylesheet:** `assets/css/design-system.css` (loaded after `assets/css/app.css`)
 
-## 1. Design principles
+## 1. Product design direction
 
-1. **One system, not per-page styling islands.** Shared typography, spacing, radii, buttons, icons, focus states and breakpoints live in `assets/css/design-system.css`. Feature-specific layout and behavior stay in `assets/css/app.css`.
-2. **Readable before compact.** Body text targets 15–16 px; normal helper text should generally stay at 12–14 px; meaningful instructions, options and passage text must not be compressed into microtext. Uppercase eyebrow labels are 11 px; navigation labels may be 10–11 px only where width is constrained.
-3. **Fluid sizing.** Prefer `clamp()`, `minmax(0, 1fr)`, `min-width: 0`, `max-width: 100%` and flexible wrapping rather than fixed widths. Prevent page-level horizontal scrolling; allow horizontal scrolling only inside intentionally scrollable components such as tables and topic rails.
-4. **Touch and keyboard parity.** Primary actions and form controls should be at least 44 px high where practical. Preserve visible `:focus-visible` rings and clear disabled states.
-5. **Platform-native readability.** Use the local system font stack rather than downloading fonts. This allows iOS/iPadOS, Android, Windows and macOS to use their familiar glyph rendering and Vietnamese diacritics.
-6. **Quiet visual hierarchy.** Use whitespace and typography first. Cards are reserved for distinct content or actions; avoid wrapping an entire section in a card when its content already contains sub-cards.
+The application uses one calm, professional learning workspace. The visual language is based on navy/blue for navigation and primary actions, neutral white surfaces for study content, and green only for positive learning feedback. Feature modules may differ in information architecture, but must not invent a separate font, color palette, card shape, button style, shadow system or spacing scale.
 
-## 2. Responsive behavior
+The design priorities are:
 
-| CSS viewport | Target form factor | Navigation/layout rule |
-|---|---|---|
-| 320–640 px | Android/iPhone phones | Hide sidebar, use five-item bottom navigation, one-column page layouts where content requires it, safe-area padding at the bottom |
-| 641–850 px | Small tablet / iPad portrait / compact window | Keep the 76 px icon rail; hide phone bottom navigation; use fluid page gutters and compact two-column dashboard where space permits |
-| 851–1199 px | Tablet landscape / small laptop | Retain a compact full sidebar; no phone bottom navigation; collapse dense multi-column learning layouts when needed |
-| 1200 px and above | Laptop / desktop / wide monitor | Full navigation and comfortable page width; content remains capped rather than stretching indefinitely |
+1. **Reading clarity:** instructions, question stems, answer options and learning explanations must be comfortably readable before any density optimization.
+2. **One hierarchy:** page title → section title → card title → body copy → supporting metadata. A component's role, not its feature name, determines its typography.
+3. **Consistent surfaces:** panels, cards, controls and dialogs use the shared border, radius, spacing and shadow tokens.
+4. **Content-first responsive layout:** cards reflow when space is insufficient. Do not shrink type to preserve a fixed number of columns.
+5. **Native accessibility:** local system font stack, keyboard focus ring, 44 px touch targets, readable contrast and reduced-motion support.
 
-These are CSS viewport widths, not physical pixels. Device pixel ratio, browser zoom, split-screen and accessibility text scaling can change the effective layout width. Do not hard-code a layout for a named model of phone/tablet.
+## 2. Canonical design profile — source of truth
 
-### Mobile platform requirements
+`design/design-profile.json` is the canonical parameter file. Do not edit the generated token block in `assets/css/design-system.css` by hand.
 
-- Respect `env(safe-area-inset-top)` and `env(safe-area-inset-bottom)` for fixed UI.
-- Keep input text at 16 px on phone to avoid automatic focus zoom in iOS Safari.
-- Use `100svh`/`100dvh` fallbacks for dynamic browser chrome.
-- Keep scrollable passage/document content readable and avoid fixed-height text containers.
-- Bottom navigation is phone-only; iPad/tablet keeps the sidebar rail.
+```bash
+python tools/sync-design-profile.py --apply   # regenerate JSON tokens and legacy font floor
+python tools/sync-design-profile.py --check   # CI / local drift check
+```
 
-## 3. Shared type, controls and icons
+The synchronizer updates two generated regions in `design-system.css`: the `DESIGN_PROFILE_TOKENS` block and the `DESIGN_LEGACY_FONT_FLOOR` block. The latter is built by auditing every fixed `px`/`rem` text size below the caption floor in feature CSS and the legacy prefix of `design-system.css`; the corresponding selectors are lifted to the shared caption token. This prevents old module-level microtype from silently remaining visible. CI runs `--check`, so adding a new sub-caption rule causes a clear failure until it is removed, assigned a semantic token, or intentionally reviewed. Shared component rules remain in `design-system.css`; feature CSS in `app.css` is responsible for layout/behavior, not for creating new visual scales.
 
-| Element | Shared target |
+### Default visual palette
+
+| Role | Token | Default | Use |
+|---|---|---|---|
+| Canvas | `--ds-color-canvas` | `#F4F7FB` | Main application background |
+| Surface | `--ds-color-surface` | `#FFFFFF` | Cards, panels and dialogs |
+| Subtle surface | `--ds-color-surface-subtle` | `#F8FAFD` | Secondary containers |
+| Soft brand surface | `--ds-color-brand-soft` | `#EAF2FC` | Selected/active states |
+| Primary text | `--ds-color-ink` | `#1B2F49` | Headings and important content |
+| Secondary text | `--ds-color-muted` | `#63758C` | Supporting copy |
+| Border | `--ds-color-border` | `#E0E7F0` | Card and control boundaries |
+| Primary brand | `--ds-color-brand` | `#1D568F` | Primary actions and highlights |
+| Deep brand | `--ds-color-brand-deep` | `#153C70` | Navigation and strong emphasis |
+| Accent | `--ds-color-accent` | `#16876C` | Positive progress and confirmation |
+| Warning / danger | `--ds-color-warning` / `--ds-color-danger` | `#A96A19` / `#C64D4D` | Semantic status only |
+
+Do not introduce a new feature color for decoration. A new semantic color must be added to the profile with usage guidance and contrast verification.
+
+## 3. Typography contract
+
+Use the native system font stack from `--ds-font-family`. It avoids an external font dependency and follows the platform's Vietnamese glyph rendering. No module may load a separate font family.
+
+| Semantic role | Token | Baseline |
+|---|---|---:|
+| Page title | `--ds-font-page-title` | Fluid 25–34 px |
+| Section title | `--ds-font-section-title` | Fluid 20–23 px |
+| Card title | `--ds-font-card-title` | Fluid 17–19 px |
+| Main reading copy | `--ds-font-body` | Fluid 15–16 px |
+| Supporting copy / card description | `--ds-font-support` | 14 px |
+| Form label | `--ds-font-label` | 13 px |
+| Caption / metadata | `--ds-font-caption` | 12.5 px |
+| Input / button | `--ds-font-control` / `--ds-font-button` | 14.5 px |
+| Long reading passage | `--ds-font-passage` | 15 px |
+
+**Rules:**
+
+- Essential instructions, answer options, passage text, explanation and card descriptions must never be reduced to microtext to fit a layout.
+- 12.5 px is the enforced lower limit for visible text in the current baseline. The generated legacy floor audits all fixed `px`/`rem` declarations in `app.css` and the legacy prefix of `design-system.css` below that size and raises them to the shared caption token. New features must use the semantic tokens; do not introduce sub-12.5 px exceptions. Larger page, section, card and body roles are reasserted after the legacy floor so the floor does not flatten the hierarchy.
+- Numeric score, word headword and test timer may use a dedicated larger display size, but must keep the same font family and weight logic.
+- Never use arbitrary `font-size` values in a new feature. Choose a semantic role token. If no role fits, propose a token in `design-profile.json` and document its use.
+- Prefer line-height 1.55–1.7 for reading and 1.3–1.45 for headings.
+
+## 4. Spacing, geometry and elevation
+
+| Element | Token | Value |
+|---|---|---:|
+| Spacing scale | `--ds-space-1` to `--ds-space-10` | 4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 px |
+| Control radius | `--ds-radius-control` | 10 px |
+| Card radius | `--ds-radius-card` | 16 px |
+| Panel radius | `--ds-radius-panel` | 18 px |
+| Pill radius | `--ds-radius-pill` | 999 px |
+| Touch target | `--ds-touch-target` | 44 px minimum |
+| Content maximum | `--ds-content-max` | 1600 px |
+
+Panels use the panel radius and low elevation. Cards use the card radius and subtle elevation. Inputs and buttons use the control radius. Avoid combining several shadow styles in one section. Use the spacing scale; do not introduce arbitrary 7 px / 13 px / 19 px spacing without a documented reason.
+
+## 5. Component recipes
+
+| Component role | Required shared pattern |
 |---|---|
-| Body text | 15–16 px, line-height about 1.58 |
-| Page heading | Fluid 23–34 px depending on width |
-| Section heading | Usually 18–24 px |
-| Supporting/helper text | 12–14 px; legacy labels raised to at least 11 px |
-| Uppercase eyebrow | 11 px, letter-spaced, metadata only |
-| Main/secondary button | 44 px minimum across form factors |
-| Text button / icon action | 44 px on touch devices; compact desktop row action may be 36 px |
-| Input/select/textarea | 44 px minimum; 46 px on phone, 16 px phone input text |
-| Icon | Usually 18–22 px; inherit current text color |
-| Touch targets | Aim for 44 × 44 px; alphabet chips and compact row actions also use 44 × 44 px on coarse pointers |
+| Page heading | Eyebrow (optional) + page title + one supporting sentence; actions align to the heading only when width allows |
+| Section panel | White surface, shared panel border/radius, panel header, body spacing from tokens |
+| Content card | Shared card border/radius/shadow, card title, body copy and optional metadata footer |
+| Selection card | Entire card is one clear action; title 17–19 px, description 14 px, visible selected/focus state |
+| Primary button | Brand fill, white text, 44 px minimum, 14.5 px label |
+| Secondary button | White surface, border, brand text, 44 px minimum |
+| Form control | 44 px minimum; 16 px input text on iPhone where needed to avoid automatic Safari zoom |
+| Question / answer | Question 15–16 px; options 14.5–15 px; adequate line spacing and 44–48 px target |
+| Result / score | Score is prominent; explanation and recommendation remain 14 px or larger |
+| Mobile navigation | Five destinations, safe-area aware, caption about 12–12.5 px; must not steal vertical room from content |
 
-Avoid mixing emoji and SVG icons for the same functional control where a matching SVG symbol exists. Icons must remain decorative when adjacent text already provides the accessible name; icon-only actions require an `aria-label` or title.
+A feature can add a layout class, not a private theme. It should reuse `.panel`, `.panel-header`, `.learning-card`, `.primary-button`, `.secondary-button` and the semantic type tokens wherever possible.
 
-## 4. Motion and visual effects
+## 6. Responsive layout contract
 
-Allowed effects are short and informative: page fade/raise on navigation, modal fade/raise on open, button press feedback, hover lift on pointer devices, card border/shadow feedback and progress-fill transitions tied to real progress changes. Existing toast feedback remains brief. Progress animation must reflect an actual value change.
+Breakpoints are CSS viewport widths, not physical device sizes or diagonal inches.
 
-Do not add autoplaying backgrounds, parallax, persistent pulsing, confetti on every answer, or movement that delays a learning action. Every new animation must have a `prefers-reduced-motion: reduce` fallback. On touch devices, do not rely on hover for meaning or navigation.
+| Viewport width | Behavior |
+|---|---|
+| 320–640 px | Phone layout, one-column learning cards when required, safe-area-aware bottom navigation |
+| 641–850 px | Compact tablet icon rail, no phone bottom bar, content can use two columns only when cards remain readable |
+| 851–1199 px | Tablet landscape / small laptop, compact sidebar, content-first grids |
+| 1200 px and above | Full sidebar, wider content capped at 1600 px; do not stretch paragraphs across the whole display |
 
-## 5. Required validation matrix
+Responsive validation widths: **320, 360, 390, 430, 641, 768, 820, 1024, 1280, 1440 and 1920 px**.
 
-Before a release that changes shared layout, test CSS viewport widths at **320, 360, 390, 430, 641, 768, 820, 1024, 1280, 1440 and 1920 px**. Check:
+Required checks: no document horizontal overflow; no clipped title/control/dialog; grid reflow instead of font shrink; passage/answer readability; visible focus; touch target; phone safe-area clearance; tablet never shows phone bottom navigation; reduced-motion respected.
 
-- no document-level horizontal overflow;
-- heading, button and label wrapping;
-- no clipped dialogs, passage text or question options;
-- phone safe-area spacing and bottom-nav clearance;
-- tablet does not show the phone bottom bar;
-- focus visibility, disabled/loading states and tap targets;
-- `prefers-reduced-motion` disables non-essential movement;
-- navigation, quiz choices, Part filters and personal progress still work.
+## 7. Visual governance — do not create design islands
 
-Automated Chromium screenshots are a regression aid, not a substitute for physical iPhone Safari, Android Chrome, iPadOS Safari and desktop testing. Record untested devices as pending; never claim actual-device QA from viewport emulation.
+Before implementing a new module:
 
-## 6. Change governance
+1. Identify its semantic component roles (page title, section panel, card, body, metadata, control, status).
+2. Reuse tokens and existing shared components. Do not create a private font scale or palette.
+3. Set layout with grid/flex/minmax/auto-fit and fluid `clamp()` only where needed. Do not use fixed physical-device assumptions.
+4. If a visual exception is unavoidable, record the selector, reason, viewport range and test in the feature's change note.
+5. Add a regression test for typography roles, component reuse and responsive reflow.
+6. Run the profile synchronizer and design-system test before packaging.
 
-- Shared sizing or breakpoint changes must be made in `assets/css/design-system.css`, not duplicated across feature styles.
-- A feature-specific exception must be documented in the relevant CSS block and have a regression test if it can cause clipping/overflow. Do not reduce type or tap targets ad hoc to make a card fit; reflow the layout first.
-- New shared controls should use the shared button/input/icon scale.
-- Update this guide and `docs/MASTER_STATUS.md` whenever the global design rules change.
+**Forbidden:** one-off font families; feature-specific brand colors; 8–11 px text for meaningful content; using a smaller font as the first solution to overflow; duplicate page-specific panel/button styles; decorative gradients on every card; unreviewed per-feature shadow/radius scales.
 
+**Allowed exceptions:** large numeric scores, timers, vocabulary headwords, phonetic symbols, compact decorative eyebrow text and dense table controls. These exceptions may change display scale, not the underlying font family/color system.
 
-## 7. Shared learning workspace (baseline v2.29.0; retry/history extension v2.30.0)
+## 8. Design brief — owner preferences to confirm
 
-Flashcard, Vocabulary Review, Grammar, Reading and Listening detail views use the same `#learningFocusBackdrop` / `#learningFocusDialog` shell and shared header/content regions. New learning detail views must enter through `openLearningDetail()`; do not create one modal/backdrop implementation per feature.
+The current `Calm Study Blue` profile is a safe and readable default, not a claim that all aesthetic preferences have been finalized. Complete the design brief in the conversation (or edit `docs/DESIGN_BRIEF_TEMPLATE.md`). Once approved, update `design/design-profile.json`, regenerate CSS tokens and record the approved profile here.
 
-- The focus dialog header is fixed; `.learning-focus-content` is the only vertical scroll owner for learning detail content.
-- Nested content such as `#modalContent`, Flashcard cards, passages, transcript and question lists must remain `overflow: visible` unless a separate horizontal-only scroller is required for a specific control.
-- Flashcard uses a word panel on top and reveals a meaning/example panel beneath it. The expanded panel participates in the same outer scroll; it must not impose a fixed height or its own vertical scrollbar.
-- Short learning sessions remain naturally sized and do not create a scrollbar. Long passages, explanation sets or review lists scroll once in the shared workspace.
-- On phones and tablets, the same hierarchy stacks to one column and respects safe areas. Do not reintroduce sticky inner action bars that create nested scroll traps.
-- The generic vocabulary editor/detail modal and focused Smart Review answer explanation remain separate utilities because their interaction purpose is not a learning-unit detail view; their overlays must preserve correct stacking above the focus shell when invoked.
+## 9. Release gate
 
-Regression gate: `node tools/tests/learning-focus-workspace.mjs`, `node tools/tests/flashcard-image-policy.mjs`, `node tools/tests/runtime-render-smoke.mjs`; manually inspect 320–430px phone, tablet portrait/landscape and 1280–1920px desktop. Record actual device/browser separately from viewport simulation.
+A release that changes shared design must pass:
+
+```bash
+python tools/sync-design-profile.py --check
+python -m unittest discover -s tools/tests -p 'test_design_system.py' -v
+python -m unittest discover -s tools/tests -p 'test_design_profile.py' -v
+```
+
+Also run `tools/tests/test_learning_surface_consistency.py` and the responsive test group. Browser viewport simulation must be described as simulation; it is not proof of physical-device QA. Remote GitHub Actions, GitHub Pages and iOS/Android PWA QA must be reported separately.

@@ -65,14 +65,15 @@ class DesignSystemTests(unittest.TestCase):
         self.assertIn(":focus-visible", CSS)
         self.assertIn("--ds-focus", CSS)
 
-    def test_legacy_micro_labels_have_a_readability_floor(self):
-        self.assertIn("Readability floor", CSS)
-        self.assertIn("font-size: max(11px, .86em) !important", CSS)
-        self.assertRegex(CSS, r"\.mobile-bottom-nav button small\s*\{\s*font-size: 11px")
+    def test_legacy_metadata_uses_the_shared_caption_role(self):
+        self.assertIn("Content floor: important text never inherits a legacy micro-size", CSS)
+        self.assertIn("font-size: max(var(--ds-font-caption), 1em) !important", CSS)
+        self.assertRegex(CSS, r"\.mobile-bottom-nav button small\s*\{\s*font-size: 12px !important")
 
-    def test_compact_buttons_are_not_shrunk_to_microtext(self):
-        self.assertRegex(CSS, r"\.pronunciation-toolbar \.secondary-button\s*\{\s*font-size: 14px !important")
-        self.assertIn("min-height: var(--ds-touch)", CSS)
+    def test_compact_buttons_use_the_canonical_button_role(self):
+        self.assertIn(".pronunciation-toolbar .secondary-button", CSS)
+        self.assertIn("font-size: var(--ds-font-button) !important", CSS)
+        self.assertIn("min-height: var(--ds-touch-target)", CSS)
 
     def test_touch_icon_actions_use_full_target_size(self):
         self.assertRegex(CSS, r"@media \(pointer: coarse\)[\s\S]*?\.icon-action,[\s\S]*?min-width: 44px; min-height: 44px")
@@ -86,9 +87,9 @@ class DesignSystemTests(unittest.TestCase):
             self.assertIn(selector, CSS, selector)
 
     def test_application_wide_typography_floor_covers_legacy_feature_copy(self):
-        self.assertIn("Final floor for legacy feature CSS", CSS)
-        self.assertIn("font-size: max(13.5px, 1em) !important", CSS)
-        self.assertIn("font-size: max(12px, 1em) !important", CSS)
+        self.assertIn("Content floor: important text never inherits a legacy micro-size", CSS)
+        self.assertIn("font-size: max(var(--ds-font-support), 1em) !important", CSS)
+        self.assertIn("font-size: max(var(--ds-font-caption), 1em) !important", CSS)
         for selector in (".objective-progress-meta", ".practice-mode-tile small", ".mock-mode-label", ".mock-exam-timer span", ".mock-result-note", ".mobile-bottom-nav button small"):
             self.assertIn(selector, CSS, selector)
 
@@ -98,7 +99,7 @@ class DesignSystemTests(unittest.TestCase):
     def test_practice_and_mock_cards_reflow_without_microcopy(self):
         self.assertIn("grid-template-columns: repeat(auto-fit, minmax(min(100%, 225px), 1fr))", CSS)
         self.assertRegex(CSS, r"@media \(max-width: 1100px\)[\s\S]*?\.mock-mode-grid \{ grid-template-columns: repeat\(2, minmax\(0, 1fr\)\); ")
-        self.assertRegex(CSS, r"\.practice-mode-tile small \{\s*font-size: clamp\(12\.5px")
+        self.assertRegex(CSS, r"\.practice-mode-tile small \{ font-size: var\(--ds-font-support\) !important")
 
 if __name__ == "__main__":
     unittest.main()
