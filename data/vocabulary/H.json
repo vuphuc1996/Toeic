@@ -247,6 +247,42 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "heating-n",
+      "word": "heating",
+      "phonetic": {
+        "us": "/ˈhi.tɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống sưởi; việc làm nóng",
+          "definition_en": "the equipment or process used to make a building or room warm",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The heating system will be checked before the office opens during the colder months.",
+          "vi": "Hệ thống sưởi sẽ được kiểm tra trước khi văn phòng mở cửa trong những tháng lạnh hơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "heating system",
+        "central heating",
+        "heating costs"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "hire-v",
       "word": "hire",
       "phonetic": {

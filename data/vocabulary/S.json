@@ -580,6 +580,44 @@
       ]
     },
     {
+      "id": "security-n",
+      "word": "security",
+      "phonetic": {
+        "us": "/sɪk.ˈjʊ.rə.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "an ninh; biện pháp bảo vệ",
+          "definition_en": "measures taken to protect people, property, or a building from danger or unauthorized access",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new security system records visitor entries and alerts staff when a restricted door opens.",
+          "vi": "Hệ thống an ninh mới ghi lại lượt khách ra vào và cảnh báo nhân viên khi cửa khu vực hạn chế mở.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "building security",
+        "security system",
+        "security access card"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "select-v",
       "word": "select",
       "cefr_level": "A2",
@@ -1182,6 +1220,80 @@
         "shuttle service"
       ],
       "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "signatory-n",
+      "word": "signatory",
+      "phonetic": {
+        "us": "/ˈsɪɡ.nə.ˌtɔ.ri/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bên ký kết; người ký",
+          "definition_en": "a person or organization that has signed a formal agreement or document",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each signatory must receive a complete copy of the revised service agreement.",
+          "vi": "Mỗi bên ký kết phải nhận được một bản đầy đủ của thỏa thuận dịch vụ đã sửa đổi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "authorized signatory",
+        "signatory party",
+        "list of signatories"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "signature-n",
+      "word": "signature",
+      "phonetic": {
+        "us": "/ˈsɪɡ.nə.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chữ ký",
+          "definition_en": "a person’s name written or electronically applied to confirm or authorize a document",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please provide an electronic signature on the final page to confirm your acceptance.",
+          "vi": "Vui lòng ký điện tử tại trang cuối để xác nhận việc chấp thuận của bạn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "electronic signature",
+        "authorized signature",
+        "signature required"
+      ],
+      "cefr_level": "A2",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {

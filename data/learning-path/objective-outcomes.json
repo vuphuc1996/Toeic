@@ -6,7 +6,7 @@
     "minimumUniqueItems": 10,
     "defaultThreshold": 0.8,
     "retestPolicy": "A later attempt may update mastery; retain attempt history.",
-    "scopeWarning": "Criteria are defined, not yet connected to every learning activity or learner-progress record. Do not report learner mastery until evidence is instrumented and validated.",
+    "scopeWarning": "Criteria are defined; Foundation recognition, learner self-report production/explanation and delayed recall now have local evidence instrumentation. TOEIC objective evidence remains subject to its separate review gates. Instrumentation does not imply learner completion, independent assessment, CEFR/ETS certification or mastery.",
     "scoreTypes": [
       "correct_rate",
       "delayed_correct_rate",
@@ -25,7 +25,7 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented"
+          "status": "instrumented_practice_evidence"
         },
         {
           "id": "foundation-pre-a1-a1-production",
@@ -33,7 +33,7 @@
           "evidenceMetric": "rubric_score",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented"
+          "status": "instrumented_learner_self_report"
         },
         {
           "id": "foundation-pre-a1-a1-retention",
@@ -41,7 +41,36 @@
           "evidenceMetric": "delayed_correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented"
+          "status": "instrumented_delayed_recall"
+        }
+      ]
+    },
+    {
+      "objectiveId": "foundation-a2",
+      "outcomes": [
+        {
+          "id": "foundation-a2-recognition",
+          "title": "Nhận biết và hiểu cấu trúc A2 trong ngữ cảnh công việc quen thuộc",
+          "evidenceMetric": "correct_rate",
+          "masteryThreshold": 0.8,
+          "minimumUniqueItems": 10,
+          "status": "instrumented_practice_evidence"
+        },
+        {
+          "id": "foundation-a2-application",
+          "title": "Vận dụng cấu trúc A2 vào tình huống giao tiếp ngắn",
+          "evidenceMetric": "rubric_score",
+          "masteryThreshold": 0.8,
+          "minimumUniqueItems": 10,
+          "status": "instrumented_learner_self_report"
+        },
+        {
+          "id": "foundation-a2-retention",
+          "title": "Nhớ lại nội dung A2 qua ôn tập cách quãng",
+          "evidenceMetric": "delayed_correct_rate",
+          "masteryThreshold": 0.8,
+          "minimumUniqueItems": 10,
+          "status": "instrumented_delayed_recall"
         }
       ]
     },

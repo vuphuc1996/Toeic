@@ -1,17 +1,21 @@
-# TOEIC Dictionary v2.70.0 — Documentation
+# TOEIC Dictionary v2.78.0 — Documentation
 
-- Current candidate: `v2.70.0` — `versions/CURRENT_VERSION.md`.
-- Previous release: `v2.69.0` — `versions/PREVIOUS_VERSION.md`.
-- Master status: `MASTER_STATUS.md`.
-- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.70.0.md`.
-- Progress baseline: `reports/PROJECT_PROGRESS_BASELINE_v2.70.0.md`.
-- Generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.70.0.md`.
-- TOEIC curriculum remains the primary track; Writing/Speaking and IELTS are kept separate from the current L&R completion denominator.
-- Assessment flow: selection drafts stay ungraded until a full set is completed and explicitly confirmed.
-- Mock Exam: timed schedule, visible current location, automatic focus transitions, spoken lead-ins, and no repeated audio within the same Listening group.
-- Listening Part 1: fixed TTS preparation and spoken A–D sequence; media remains JPG-only with no SVG fallback.
-- Dashboard and design governance: adaptive responsive layout with `design/design-profile.json` as the canonical token source.
-- Vocabulary: **1,100 stable headwords**; v2.70.0 adds Batch 011 (+37) for Customer Service and Travel. Quantity progress is 36.7% of the 3,000 minimum and 22.0% of the 5,000 planning ceiling.
-- US IPA: 1,009/1,100 (91.7%) with 298 cumulative source-linked CMUdict entries; the 91 unresolved entries remain blank rather than guessed. Word-family coverage: 267/1,100 (24.3%), 365 directed links.
-- Existing IndexedDB schema, question IDs, answer keys, learner progress, personal vocabulary and study settings are preserved. No learning-content inventory is reclassified as editorially approved merely because automated checks pass.
-- Release hold: strict Part 1 photo validation still fails because eight original repository-owned JPG binaries are missing from this source snapshot. Remote GitHub Actions, Pages deployment and physical-device QA have not been verified.
+- Current candidate: `v2.78.0` — `versions/CURRENT_VERSION.md`.
+- Previous release: `v2.77.0` — `versions/PREVIOUS_VERSION.md`.
+- Master status: `MASTER_STATUS.md` (single current roadmap/status source).
+- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.78.0.md`.
+- Progress baseline: `reports/PROJECT_PROGRESS_BASELINE_v2.78.0.md`.
+- Generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.78.0.md`.
+- A2 contextual production report: `reports/FOUNDATION_A2_PRODUCTION_TASKS_v2.78.0.md`.
+- Previous A2 assessment-quality review: `reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.77.0.md`.
+- TOEIC L&R coverage: `reports/TOEIC_CONTENT_COVERAGE_v2.78.0.md`.
+- Current Listening readiness: `reports/TOEIC_LISTENING_READINESS_v2.78.0.md`.
+- Current distractor structure audit: `reports/TOEIC_DISTRACTOR_AUDIT_v2.78.0.md`.
+- Detailed records from releases older than v2.77.0 are summarized in `archive/PROJECT_HISTORY.md`.
+- TOEIC remains the primary track; IELTS remains deferred until TOEIC development/acceptance gates are met and the owner approves a phase change.
+- Foundation pathway now includes 10 Pre-A1/A1 lessons and 13 A2 lessons. A2 has 13 Reading passages / 39 questions and 13 four-turn device-TTS dialogues / 39 questions. v2.77.0 adds a focused non-duplication/source-evidence pass. v2.78.0 adds 13 contextual writing tasks with eight-word minimums and learner-only self-assessment; independent review remains open.
+- Foundation outcome evidence covers recognition, contextual learner-written production/self-report and 1/3-day delayed recall; it does not certify learner mastery. Old A2 `::apply1` production records are retained and are not reused as completion of the new `::produce1` writing tasks.
+- Foundation Listening uses browser SpeechSynthesis; it is synthesized learning material, not ETS or recorded native-speaker audio.
+- Listening Part 1: JPG-only photo contract; all nine optimized images are embedded, 4:3 landscape, <=400,000 bytes and retain source attribution.
+- Vocabulary: 1,137 stable headwords; quantity coverage is 37.9% of the 3,000 minimum and 22.7% of the 5,000 planning ceiling; quality review remains separate.
+- Profile repair and progress storage remain additive; IndexedDB remains v1 with no reset/migration in this release.

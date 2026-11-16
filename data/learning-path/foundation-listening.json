@@ -1,17 +1,22 @@
 {
   "schemaVersion": 1,
-  "title": "Foundation Short Listening",
-  "description": "Original beginner scripts read aloud with the device's English speech voice. This is synthesized listening practice, not licensed or ETS-recorded audio.",
+  "title": "Foundation Pre-A1–A2 Short Listening",
+  "description": "Original beginner-to-A2 starter scripts read aloud with the device English speech voice. This is synthesized listening practice, not licensed or ETS-recorded audio.",
   "evidencePolicy": {
     "minimumUniqueQuestions": 2,
     "practiceAccuracyThreshold": 0.8,
-    "scope": "device-tts-short-listening-mcq-only; not authentic recorded audio, CEFR certification or independent listening mastery"
+    "scope": "device-tts-short-listening-mcq-only; not authentic recorded audio, CEFR certification or independent listening mastery",
+    "a2MinimumUniqueQuestions": 3,
+    "a2PracticeAccuracyThreshold": 0.67
   },
   "playback": {
     "engine": "browser-speech-synthesis",
     "scriptHiddenByDefault": true,
     "transcriptAvailableOnRequest": true,
-    "usesCurrentAppVoiceSettings": true
+    "usesCurrentAppVoiceSettings": true,
+    "supportsSpeakerTurns": true,
+    "interSpeakerPauseSetting": "sentencePauseMs",
+    "usesSavedMaleFemaleVoiceSelections": true
   },
   "clips": [
     {
@@ -363,6 +368,944 @@
           "rationale": "She will email it before three o'clock."
         }
       ]
+    },
+    {
+      "id": "a2-polite-requests::listening1",
+      "lessonId": "a2-polite-requests",
+      "level": "A2",
+      "title": "Booking a Meeting Room",
+      "script": "Linh: Good morning. Could you reserve Room 3 for our customer call at two o’clock?\nAssistant: Room 3 is available. Do you need the screen and speakerphone for the online meeting?\nLinh: Yes, please. The customer will join from another office, so both are important.\nAssistant: No problem. I will book the room and email the confirmation to your team now.",
+      "questions": [
+        {
+          "id": "a2-polite-requests::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What is Linh asking for?",
+          "choices": [
+            "A meeting room reservation",
+            "A customer payment",
+            "A printed report",
+            "A taxi booking"
+          ],
+          "answerIndex": 0,
+          "rationale": "Linh asks the listener to reserve the small meeting room."
+        },
+        {
+          "id": "a2-polite-requests::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why does the team need the room?",
+          "choices": [
+            "For a training video",
+            "For lunch",
+            "For a customer call",
+            "For an interview"
+          ],
+          "answerIndex": 2,
+          "rationale": "She says the room is needed for a call with a new customer."
+        },
+        {
+          "id": "a2-polite-requests::listening1::q3",
+          "skill": "understand-next-action",
+          "prompt": "What will the assistant do next?",
+          "choices": [
+            "Email the room confirmation.",
+            "Call the customer to cancel.",
+            "Move the meeting to Friday.",
+            "Ask the team to find another room."
+          ],
+          "answerIndex": 0,
+          "rationale": "The assistant says, “I will book the room and email the confirmation to your team now.”"
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "Good morning. Could you reserve Room 3 for our customer call at two o’clock?"
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "male",
+          "text": "Room 3 is available. Do you need the screen and speakerphone for the online meeting?"
+        },
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "Yes, please. The customer will join from another office, so both are important."
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "male",
+          "text": "No problem. I will book the room and email the confirmation to your team now."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-quantities::listening1",
+      "lessonId": "a2-quantities",
+      "level": "A2",
+      "title": "Ordering Office Supplies",
+      "script": "Mai: Do we have enough supplies for Thursday’s training session?\nHuy: We have many folders and a few pens, but only a little printer paper.\nMai: Please order two boxes of paper and a few black pens. The cabinet is already full of folders.\nHuy: I will place the order today so the supplies arrive before Thursday morning.",
+      "questions": [
+        {
+          "id": "a2-quantities::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What is running low?",
+          "choices": [
+            "Folders",
+            "Printer paper",
+            "Black pens",
+            "Storage boxes"
+          ],
+          "answerIndex": 1,
+          "rationale": "The speaker says there is not much printer paper left."
+        },
+        {
+          "id": "a2-quantities::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "When are the supplies needed?",
+          "choices": [
+            "After the training",
+            "Next Monday",
+            "At the end of the month",
+            "Before Thursday morning"
+          ],
+          "answerIndex": 3,
+          "rationale": "The speaker requests the supplies before Thursday morning."
+        },
+        {
+          "id": "a2-quantities::listening1::q3",
+          "skill": "infer-from-details",
+          "prompt": "Why will Huy not order more folders?",
+          "choices": [
+            "The supplier has stopped selling them.",
+            "The storage cabinet is already full.",
+            "The training session has been cancelled.",
+            "The team needs fewer pens."
+          ],
+          "answerIndex": 1,
+          "rationale": "Mai explains that the cabinet is already full of folders."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Mai",
+          "voice": "female",
+          "text": "Do we have enough supplies for Thursday’s training session?"
+        },
+        {
+          "speaker": "Huy",
+          "voice": "male",
+          "text": "We have many folders and a few pens, but only a little printer paper."
+        },
+        {
+          "speaker": "Mai",
+          "voice": "female",
+          "text": "Please order two boxes of paper and a few black pens. The cabinet is already full of folders."
+        },
+        {
+          "speaker": "Huy",
+          "voice": "male",
+          "text": "I will place the order today so the supplies arrive before Thursday morning."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-comparisons::listening1",
+      "lessonId": "a2-comparisons",
+      "level": "A2",
+      "title": "Comparing Two Services",
+      "script": "Nina: Which courier service should we use for the document delivery?\nTom: The first service is cheaper, but it is often slower in the afternoon.\nNina: The second service is more reliable and usually arrives on time.\nTom: Then let’s use the second service. The documents are urgent, and the customer needs them today.",
+      "questions": [
+        {
+          "id": "a2-comparisons::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Which service is faster?",
+          "choices": [
+            "The first service",
+            "Both are the same",
+            "The second service",
+            "Neither service"
+          ],
+          "answerIndex": 2,
+          "rationale": "The speaker says the second service is faster."
+        },
+        {
+          "id": "a2-comparisons::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why is the second service recommended?",
+          "choices": [
+            "The documents are urgent",
+            "It has a larger office",
+            "It is cheaper",
+            "It works only on Fridays"
+          ],
+          "answerIndex": 0,
+          "rationale": "The documents are urgent, so speed and reliability matter."
+        },
+        {
+          "id": "a2-comparisons::listening1::q3",
+          "skill": "listen-for-detail",
+          "prompt": "What advantage of the second service does Nina mention?",
+          "choices": [
+            "It is cheaper for short routes.",
+            "It operates only in the afternoon.",
+            "It is more reliable and usually arrives on time.",
+            "It has an office in every city."
+          ],
+          "answerIndex": 2,
+          "rationale": "Nina nêu dịch vụ thứ hai đáng tin cậy hơn và thường đến đúng giờ.",
+          "evidenceText": "The second service is more reliable and usually arrives on time."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Nina",
+          "voice": "female",
+          "text": "Which courier service should we use for the document delivery?"
+        },
+        {
+          "speaker": "Tom",
+          "voice": "male",
+          "text": "The first service is cheaper, but it is often slower in the afternoon."
+        },
+        {
+          "speaker": "Nina",
+          "voice": "female",
+          "text": "The second service is more reliable and usually arrives on time."
+        },
+        {
+          "speaker": "Tom",
+          "voice": "male",
+          "text": "Then let’s use the second service. The documents are urgent, and the customer needs them today."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-past-work-events::listening1",
+      "lessonId": "a2-past-work-events",
+      "level": "A2",
+      "title": "Reporting Yesterday’s Visit",
+      "script": "Manager: How was your visit to the northern branch yesterday?\nTechnician: I met the site manager, checked the network room, and replaced a damaged cable. I also spoke with two support staff about their daily checks.\nManager: Did you send the service report after the visit?\nTechnician: Yes. I sent it this morning, and the branch is working normally now.",
+      "questions": [
+        {
+          "id": "a2-past-work-events::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Where did the technician go?",
+          "choices": [
+            "The airport office",
+            "The main warehouse",
+            "The training centre",
+            "The northern branch"
+          ],
+          "answerIndex": 3,
+          "rationale": "The technician visited the northern branch."
+        },
+        {
+          "id": "a2-past-work-events::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What did he replace?",
+          "choices": [
+            "A printer",
+            "A damaged cable",
+            "A meeting table",
+            "A light bulb"
+          ],
+          "answerIndex": 1,
+          "rationale": "He replaced a damaged cable."
+        },
+        {
+          "id": "a2-past-work-events::listening1::q3",
+          "skill": "understand-current-result",
+          "prompt": "How is the northern branch working now?",
+          "choices": [
+            "It is closed for repairs.",
+            "It is waiting for a new technician.",
+            "It has moved to another building.",
+            "It is working normally."
+          ],
+          "answerIndex": 3,
+          "rationale": "The technician reports that the branch is working normally now."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "How was your visit to the northern branch yesterday?"
+        },
+        {
+          "speaker": "Technician",
+          "voice": "male",
+          "text": "I met the site manager, checked the network room, and replaced a damaged cable. I also spoke with two support staff about their daily checks."
+        },
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "Did you send the service report after the visit?"
+        },
+        {
+          "speaker": "Technician",
+          "voice": "male",
+          "text": "Yes. I sent it this morning, and the branch is working normally now."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-present-continuous::listening1",
+      "lessonId": "a2-present-continuous",
+      "level": "A2",
+      "title": "Temporary Desk Cover",
+      "script": "Manager: Why are you working at reception this week, Nora?\nNora: The usual receptionist is on leave, so I am covering the desk.\nManager: Are you answering calls and directing visitors to the correct rooms?\nNora: Yes. I am doing both, and you are checking the visitor log at the moment.",
+      "questions": [
+        {
+          "id": "a2-present-continuous::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Why is Nora working at reception?",
+          "choices": [
+            "The receptionist is on leave",
+            "She is starting a new job",
+            "The office is moving",
+            "She is visiting a customer"
+          ],
+          "answerIndex": 0,
+          "rationale": "She is covering reception while the usual receptionist is on leave."
+        },
+        {
+          "id": "a2-present-continuous::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What is the office manager doing now?",
+          "choices": [
+            "Preparing a delivery",
+            "Answering all calls",
+            "Checking the visitor log",
+            "Cleaning the lobby"
+          ],
+          "answerIndex": 2,
+          "rationale": "The speaker says the manager is checking the visitor log."
+        },
+        {
+          "id": "a2-present-continuous::listening1::q3",
+          "skill": "understand-time-reference",
+          "prompt": "How long is Nora covering the reception desk?",
+          "choices": [
+            "This week.",
+            "Every weekend.",
+            "Until the end of the year.",
+            "Only this morning."
+          ],
+          "answerIndex": 0,
+          "rationale": "The manager asks why Nora is working at reception this week, and Nora says she is covering the desk while the usual receptionist is on leave."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Manager",
+          "voice": "male",
+          "text": "Why are you working at reception this week, Nora?"
+        },
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "The usual receptionist is on leave, so I am covering the desk."
+        },
+        {
+          "speaker": "Manager",
+          "voice": "male",
+          "text": "Are you answering calls and directing visitors to the correct rooms?"
+        },
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "Yes. I am doing both, and you are checking the visitor log at the moment."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-obligation-permission::listening1",
+      "lessonId": "a2-obligation-permission",
+      "level": "A2",
+      "title": "Safety Instructions",
+      "script": "Contractor: I am here to repair the air conditioner. What should I do before entering?\nSecurity Officer: You have to sign in at reception and wear your visitor badge in public areas.\nContractor: Do I need to bring my own hard hat for the service area?\nSecurity Officer: No. The facilities team provides one at the service entrance. Please keep your badge visible.",
+      "questions": [
+        {
+          "id": "a2-obligation-permission::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What must contractors do before entering?",
+          "choices": [
+            "Pay for a badge",
+            "Sign in",
+            "Call the manager",
+            "Take a training test"
+          ],
+          "answerIndex": 1,
+          "rationale": "They have to sign in before entering the building."
+        },
+        {
+          "id": "a2-obligation-permission::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Who provides the hard hat?",
+          "choices": [
+            "The contractor",
+            "The security guard",
+            "The building owner",
+            "The facilities team"
+          ],
+          "answerIndex": 3,
+          "rationale": "The facilities team provides the hard hat."
+        },
+        {
+          "id": "a2-obligation-permission::listening1::q3",
+          "skill": "find-detail",
+          "prompt": "What must contractors wear in public areas?",
+          "choices": [
+            "A safety vest from the warehouse.",
+            "A visitor badge.",
+            "Their own hard hat.",
+            "A company uniform."
+          ],
+          "answerIndex": 1,
+          "rationale": "The security officer says contractors must wear their visitor badge in public areas."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Contractor",
+          "voice": "male",
+          "text": "I am here to repair the air conditioner. What should I do before entering?"
+        },
+        {
+          "speaker": "Security Officer",
+          "voice": "female",
+          "text": "You have to sign in at reception and wear your visitor badge in public areas."
+        },
+        {
+          "speaker": "Contractor",
+          "voice": "male",
+          "text": "Do I need to bring my own hard hat for the service area?"
+        },
+        {
+          "speaker": "Security Officer",
+          "voice": "female",
+          "text": "No. The facilities team provides one at the service entrance. Please keep your badge visible."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-directions::listening1",
+      "lessonId": "a2-directions",
+      "level": "A2",
+      "title": "Finding the Training Room",
+      "script": "Visitor: Excuse me. How can I find the training room?\nAssistant: It is on the third floor, across from the finance office. Take the elevator and turn right.\nVisitor: Should I walk past the copy area after I leave the elevator?\nAssistant: Yes. Walk past it. The training room is the second door on your left.",
+      "questions": [
+        {
+          "id": "a2-directions::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Which floor is the room on?",
+          "choices": [
+            "The first floor",
+            "The second floor",
+            "The third floor",
+            "The fourth floor"
+          ],
+          "answerIndex": 2,
+          "rationale": "The speaker says the training room is on the third floor."
+        },
+        {
+          "id": "a2-directions::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What should the visitor do after leaving the elevator?",
+          "choices": [
+            "Turn right",
+            "Turn left",
+            "Go downstairs",
+            "Return to reception"
+          ],
+          "answerIndex": 0,
+          "rationale": "The directions say to turn right."
+        },
+        {
+          "id": "a2-directions::listening1::q3",
+          "skill": "find-detail",
+          "prompt": "Which door is the training room?",
+          "choices": [
+            "The first door on the right.",
+            "The last door near the elevator.",
+            "The second door on the left.",
+            "The door beside reception."
+          ],
+          "answerIndex": 2,
+          "rationale": "The assistant says the training room is the second door on the visitor’s left."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Visitor",
+          "voice": "female",
+          "text": "Excuse me. How can I find the training room?"
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "male",
+          "text": "It is on the third floor, across from the finance office. Take the elevator and turn right."
+        },
+        {
+          "speaker": "Visitor",
+          "voice": "female",
+          "text": "Should I walk past the copy area after I leave the elevator?"
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "male",
+          "text": "Yes. Walk past it. The training room is the second door on your left."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-invitations-offers::listening1",
+      "lessonId": "a2-invitations-offers",
+      "level": "A2",
+      "title": "Offering Help",
+      "script": "New Employee: The name cards are not ready for Friday’s workshop. Could you help me prepare them?\nTeam Leader: Of course. I can print them this afternoon and put them on the tables before the participants arrive.\nNew Employee: Would you like to join our project team for lunch at the café on Friday?\nTeam Leader: I have a customer call at noon, so I cannot come. Could we arrange another lunch next week?",
+      "questions": [
+        {
+          "id": "a2-invitations-offers::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What is the speaker offering to prepare?",
+          "choices": [
+            "The workshop budget",
+            "The travel plan",
+            "The lunch menu",
+            "The name cards"
+          ],
+          "answerIndex": 3,
+          "rationale": "The speaker offers to prepare name cards."
+        },
+        {
+          "id": "a2-invitations-offers::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "When can the speaker print them?",
+          "choices": [
+            "Friday evening",
+            "This afternoon",
+            "Next week",
+            "Tomorrow morning"
+          ],
+          "answerIndex": 1,
+          "rationale": "The speaker says the cards can be printed this afternoon."
+        },
+        {
+          "id": "a2-invitations-offers::listening1::q3",
+          "skill": "infer-next-action",
+          "prompt": "What do the speakers suggest for the colleague who cannot attend Friday lunch?",
+          "choices": [
+            "Arrange another lunch next week.",
+            "Cancel the lunch for everyone.",
+            "Invite the customer instead.",
+            "Meet at the office on Thursday."
+          ],
+          "answerIndex": 0,
+          "rationale": "They suggest arranging another lunch next week so the whole team can join."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "New Employee",
+          "voice": "female",
+          "text": "The name cards are not ready for Friday’s workshop. Could you help me prepare them?"
+        },
+        {
+          "speaker": "Team Leader",
+          "voice": "male",
+          "text": "Of course. I can print them this afternoon and put them on the tables before the participants arrive."
+        },
+        {
+          "speaker": "New Employee",
+          "voice": "female",
+          "text": "Would you like to join our project team for lunch at the café on Friday?"
+        },
+        {
+          "speaker": "Team Leader",
+          "voice": "male",
+          "text": "I have a customer call at noon, so I cannot come. Could we arrange another lunch next week?"
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-sequencing-instructions::listening1",
+      "lessonId": "a2-sequencing-instructions",
+      "level": "A2",
+      "title": "Explaining a Process",
+      "script": "Customer Assistant: I need to process a returned item. What should I do first?\nSupervisor: First, check the order number. Next, inspect the product and record its condition.\nCustomer Assistant: After that, I prepare the return label and give it to the customer, correct?\nSupervisor: That’s right. Finally, update the inventory record before you close the request.",
+      "questions": [
+        {
+          "id": "a2-sequencing-instructions::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What should staff enter first?",
+          "choices": [
+            "The order number",
+            "The customer’s address",
+            "The item price",
+            "The delivery date"
+          ],
+          "answerIndex": 0,
+          "rationale": "The first data entry is the order number."
+        },
+        {
+          "id": "a2-sequencing-instructions::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What should staff do before closing the request?",
+          "choices": [
+            "Call the supplier",
+            "Print a second invoice",
+            "Update the inventory record",
+            "Move the product to sales"
+          ],
+          "answerIndex": 2,
+          "rationale": "The final step before closing is updating the inventory record."
+        },
+        {
+          "id": "a2-sequencing-instructions::listening1::q3",
+          "skill": "understand-sequence",
+          "prompt": "Which action should staff complete immediately before preparing the return label?",
+          "choices": [
+            "Update the inventory record.",
+            "Inspect the product and record its condition.",
+            "Close the customer request.",
+            "Contact the supplier about a replacement."
+          ],
+          "answerIndex": 1,
+          "rationale": "Theo trình tự, nhân viên kiểm tra sản phẩm và ghi nhận tình trạng trước khi chuẩn bị nhãn trả hàng.",
+          "evidenceText": "Next, inspect the product and record its condition."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Customer Assistant",
+          "voice": "female",
+          "text": "I need to process a returned item. What should I do first?"
+        },
+        {
+          "speaker": "Supervisor",
+          "voice": "male",
+          "text": "First, check the order number. Next, inspect the product and record its condition."
+        },
+        {
+          "speaker": "Customer Assistant",
+          "voice": "female",
+          "text": "After that, I prepare the return label and give it to the customer, correct?"
+        },
+        {
+          "speaker": "Supervisor",
+          "voice": "male",
+          "text": "That’s right. Finally, update the inventory record before you close the request."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-plans-and-intentions::listening1",
+      "lessonId": "a2-plans-and-intentions",
+      "level": "A2",
+      "title": "Next Week’s Branch Visit",
+      "script": "Manager: I am going to visit the western branch next week.\nColleague: What are you going to do while you are there?\nManager: I am going to meet the service team and review its customer feedback. The branch manager is preparing the monthly figures.\nColleague: Great. I will share the travel schedule with everyone tomorrow so they can prepare.",
+      "questions": [
+        {
+          "id": "a2-plans-and-intentions::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Which branch will the speaker visit?",
+          "choices": [
+            "The northern branch",
+            "The western branch",
+            "The eastern branch",
+            "The central warehouse"
+          ],
+          "answerIndex": 1,
+          "rationale": "The speaker says the visit is to the western branch."
+        },
+        {
+          "id": "a2-plans-and-intentions::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What is the branch manager preparing?",
+          "choices": [
+            "A travel schedule",
+            "Customer name cards",
+            "A new service room",
+            "Monthly figures"
+          ],
+          "answerIndex": 3,
+          "rationale": "The branch manager is preparing monthly figures."
+        },
+        {
+          "id": "a2-plans-and-intentions::listening1::q3",
+          "skill": "understand-purpose",
+          "prompt": "Why is the manager going to the western branch?",
+          "choices": [
+            "To meet the service team and review customer feedback.",
+            "To deliver office supplies.",
+            "To interview a new receptionist.",
+            "To repair the network room."
+          ],
+          "answerIndex": 0,
+          "rationale": "The manager says she is going to meet the service team and review its customer feedback."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "I am going to visit the western branch next week."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "male",
+          "text": "What are you going to do while you are there?"
+        },
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "I am going to meet the service team and review its customer feedback. The branch manager is preparing the monthly figures."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "male",
+          "text": "Great. I will share the travel schedule with everyone tomorrow so they can prepare."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-present-perfect-experience::listening1",
+      "lessonId": "a2-present-perfect-experience",
+      "level": "A2",
+      "title": "Delivery List Update",
+      "script": "Linh: I have updated the delivery list and sent the revised copy to the warehouse team.\nNam: Have you checked the new arrival times yet? We need to confirm the schedule today.\nLinh: Yes. I have checked them, but I have not received the supplier confirmation yet.\nNam: Please call the supplier after lunch if the confirmation has not arrived by three o’clock.",
+      "questions": [
+        {
+          "id": "a2-present-perfect-experience::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What has Linh done?",
+          "choices": [
+            "Updated the delivery list",
+            "Booked a meeting room",
+            "Called a new customer",
+            "Printed a visitor badge"
+          ],
+          "answerIndex": 0,
+          "rationale": "Người nói cho biết Linh đã cập nhật danh sách giao hàng và gửi bản chỉnh sửa cho kho."
+        },
+        {
+          "id": "a2-present-perfect-experience::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What has the speaker not received yet?",
+          "choices": [
+            "The meeting invitation",
+            "The supplier confirmation",
+            "The new delivery list",
+            "The warehouse address"
+          ],
+          "answerIndex": 1,
+          "rationale": "Người nói nói rõ vẫn chưa nhận được xác nhận từ nhà cung cấp."
+        },
+        {
+          "id": "a2-present-perfect-experience::listening1::q3",
+          "skill": "infer-next-action",
+          "prompt": "What should Linh do if the supplier confirmation has not arrived by three o’clock?",
+          "choices": [
+            "Send the old delivery list again.",
+            "Call the supplier.",
+            "Cancel the warehouse booking.",
+            "Ask the customer to visit the office."
+          ],
+          "answerIndex": 1,
+          "rationale": "Nam asks Linh to call the supplier after lunch if the confirmation has not arrived by three o’clock."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "I have updated the delivery list and sent the revised copy to the warehouse team."
+        },
+        {
+          "speaker": "Nam",
+          "voice": "male",
+          "text": "Have you checked the new arrival times yet? We need to confirm the schedule today."
+        },
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "Yes. I have checked them, but I have not received the supplier confirmation yet."
+        },
+        {
+          "speaker": "Nam",
+          "voice": "male",
+          "text": "Please call the supplier after lunch if the confirmation has not arrived by three o’clock."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-basic-passive-voice::listening1",
+      "lessonId": "a2-basic-passive-voice",
+      "level": "A2",
+      "title": "Preparing the Training Room",
+      "script": "Office Assistant: The meeting room is cleaned every evening, so it is ready for the morning team.\nIT Technician: Yesterday, the projector was tested by our team, and two cables were replaced.\nOffice Assistant: Thank you. Is the updated equipment list kept at reception?\nIT Technician: Yes. It is kept at the reception desk beside the room booking folder.",
+      "questions": [
+        {
+          "id": "a2-basic-passive-voice::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "When is the meeting room cleaned?",
+          "choices": [
+            "Every morning",
+            "Every Friday",
+            "Every evening",
+            "Every weekend"
+          ],
+          "answerIndex": 2,
+          "rationale": "Thông báo cho biết phòng họp được dọn dẹp vào mỗi buổi tối."
+        },
+        {
+          "id": "a2-basic-passive-voice::listening1::q2",
+          "skill": "listen-for-detail",
+          "prompt": "When was the projector tested?",
+          "choices": [
+            "Tomorrow morning",
+            "Last Friday",
+            "At lunchtime",
+            "Yesterday"
+          ],
+          "answerIndex": 3,
+          "rationale": "Máy chiếu đã được đội IT kiểm tra vào ngày hôm qua."
+        },
+        {
+          "id": "a2-basic-passive-voice::listening1::q3",
+          "skill": "find-detail",
+          "prompt": "What was replaced yesterday?",
+          "choices": [
+            "The projector.",
+            "The meeting table.",
+            "Two cables.",
+            "The room booking folder."
+          ],
+          "answerIndex": 2,
+          "rationale": "The IT technician says that two cables were replaced yesterday."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Office Assistant",
+          "voice": "female",
+          "text": "The meeting room is cleaned every evening, so it is ready for the morning team."
+        },
+        {
+          "speaker": "IT Technician",
+          "voice": "male",
+          "text": "Yesterday, the projector was tested by our team, and two cables were replaced."
+        },
+        {
+          "speaker": "Office Assistant",
+          "voice": "female",
+          "text": "Thank you. Is the updated equipment list kept at reception?"
+        },
+        {
+          "speaker": "IT Technician",
+          "voice": "male",
+          "text": "Yes. It is kept at the reception desk beside the room booking folder."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-defining-relative-clauses::listening1",
+      "lessonId": "a2-defining-relative-clauses",
+      "level": "A2",
+      "title": "Finding the Correct Office Form",
+      "script": "Employee: Is the staff member who manages room bookings in the office today?\nAssistant: No. The staff member who manages room bookings is working from home today.\nEmployee: Who should receive urgent requests, and where is the form that I need?\nAssistant: Send urgent requests to the office assistant near reception. The form is on the shared drive.",
+      "questions": [
+        {
+          "id": "a2-defining-relative-clauses::listening1::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Who should receive urgent room requests?",
+          "choices": [
+            "The building manager",
+            "The IT technician",
+            "The office assistant",
+            "The delivery driver"
+          ],
+          "answerIndex": 2,
+          "rationale": "Người nói hướng dẫn gửi các yêu cầu khẩn cấp cho trợ lý văn phòng."
+        },
+        {
+          "id": "a2-defining-relative-clauses::listening1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Where can the listener find the form?",
+          "choices": [
+            "At reception",
+            "In the meeting room",
+            "On the company website",
+            "On the shared drive"
+          ],
+          "answerIndex": 3,
+          "rationale": "Người nói cho biết biểu mẫu cần dùng nằm trên ổ đĩa dùng chung."
+        },
+        {
+          "id": "a2-defining-relative-clauses::listening1::q3",
+          "skill": "find-detail",
+          "prompt": "Who is working from home today?",
+          "choices": [
+            "The office assistant near reception.",
+            "The employee who needs the form.",
+            "The security team.",
+            "The staff member who manages room bookings."
+          ],
+          "answerIndex": 3,
+          "rationale": "The assistant identifies the staff member who manages room bookings as the person working from home."
+        }
+      ],
+      "segments": [
+        {
+          "speaker": "Employee",
+          "voice": "female",
+          "text": "Is the staff member who manages room bookings in the office today?"
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "male",
+          "text": "No. The staff member who manages room bookings is working from home today."
+        },
+        {
+          "speaker": "Employee",
+          "voice": "female",
+          "text": "Who should receive urgent requests, and where is the form that I need?"
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "male",
+          "text": "Send urgent requests to the office assistant near reception. The form is on the shared drive."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
     }
   ]
 }

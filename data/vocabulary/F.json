@@ -592,6 +592,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "fireproof-adj",
+      "word": "fireproof",
+      "phonetic": {
+        "us": "/ˈfaɪ.ɚ.ˌpruf/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "chịu lửa; có khả năng chống cháy",
+          "definition_en": "designed to resist fire or reduce the spread of flames for a stated period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The archive stores important paper records in a fireproof cabinet near the emergency exit.",
+          "vi": "Kho lưu trữ cất giữ hồ sơ giấy quan trọng trong tủ chống cháy gần lối thoát hiểm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "fireproof material",
+        "fireproof cabinet",
+        "fireproof coating"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "first-aid-n",
       "word": "first aid",
       "cefr_level": "B1",
@@ -721,6 +758,44 @@
       "collocations": [
         "current fiscal year",
         "end of fiscal year"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "fixture-n",
+      "word": "fixture",
+      "phonetic": {
+        "us": "/ˈfɪks.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thiết bị lắp cố định; đồ gắn liền với công trình",
+          "definition_en": "a piece of equipment or furniture fixed in position in a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The facilities team replaced the damaged lighting fixture in the main reception area.",
+          "vi": "Đội cơ sở vật chất đã thay thiết bị chiếu sáng bị hỏng tại khu vực lễ tân chính.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "lighting fixture",
+        "bathroom fixture",
+        "ceiling fixture"
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
@@ -912,6 +987,43 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "flooring-n",
+      "word": "flooring",
+      "phonetic": {
+        "us": "/ˈflɔ.rɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vật liệu lát sàn; lớp sàn",
+          "definition_en": "the material used to cover the floor of a room or building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The renovation schedule includes new flooring for the training rooms and main corridor.",
+          "vi": "Lịch cải tạo bao gồm việc lát sàn mới cho các phòng đào tạo và hành lang chính.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "flooring material",
+        "vinyl flooring",
+        "flooring installation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "fluctuate-v",

@@ -10,7 +10,11 @@ class LearningOutcomeTests(unittest.TestCase):
   registry=json.loads((ROOT/'data/learning-path/objective-outcomes.json').read_text())
   self.assertEqual({x['objectiveId'] for x in registry['objectives']},{x['id'] for x in mapping})
   self.assertTrue(all(len(x['outcomes'])==3 for x in registry['objectives']))
-  self.assertTrue(all(o['status']=='criteria_defined_not_yet_instrumented' for x in registry['objectives'] for o in x['outcomes']))
+  allowed={'criteria_defined_not_yet_instrumented','instrumented_practice_evidence','instrumented_learner_self_report','instrumented_delayed_recall'}
+  self.assertTrue(all(o['status'] in allowed for x in registry['objectives'] for o in x['outcomes']))
+  foundation=[o for x in registry['objectives'] if x['objectiveId'].startswith('foundation-') for o in x['outcomes']]
+  self.assertEqual(len(foundation),6)
+  self.assertTrue(all(o['status'].startswith('instrumented_') for o in foundation))
  def test_outcome_registry_is_precached(self):
   sw=(ROOT/'sw.js').read_text()
   self.assertEqual(sw.count('./data/learning-path/objective-outcomes.json'),2)

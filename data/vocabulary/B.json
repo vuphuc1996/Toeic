@@ -1159,6 +1159,49 @@
       ]
     },
     {
+      "id": "breach-nv",
+      "word": "breach",
+      "phonetic": {
+        "us": "/britʃ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "sự vi phạm; vi phạm",
+          "definition_en": "an act of breaking a law, agreement, or duty; to fail to observe one",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "breach",
+        "vs_es": "breaches",
+        "v2": "breached",
+        "v3": "breached",
+        "ving": "breaching"
+      },
+      "examples": [
+        {
+          "en": "The legal team notified the supplier that the late delivery could constitute a breach of contract.",
+          "vi": "Nhóm pháp lý thông báo cho nhà cung cấp rằng việc giao hàng trễ có thể cấu thành hành vi vi phạm hợp đồng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contract breach",
+        "breach of agreement",
+        "breach a contract"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "break-even-adj",
       "word": "break-even",
       "phonetic": {

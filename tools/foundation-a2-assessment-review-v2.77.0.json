@@ -1,0 +1,52 @@
+{
+  "version": "2.77.0",
+  "scope": {
+    "level": "A2",
+    "readingResources": 13,
+    "listeningResources": 13,
+    "questionsPerResource": 3,
+    "reviewType": "focused internal single-author quality pass",
+    "independentReview": "pending"
+  },
+  "reviewedQuestions": [
+    {
+      "id": "a2-quantities::reading1::q3",
+      "issue": "The previous q3 repeated the cabinet-full reason already tested by q2.",
+      "change": "Replaced q3 with a consequence/inference question about the delivery timing and preparation of training materials.",
+      "evidenceText": "The supplier confirms that the paper and pens will arrive before Thursday morning, so the training team can prepare the materials on time."
+    },
+    {
+      "id": "a2-comparisons::reading1::q3",
+      "issue": "The previous q3 repeated why Route B was selected, which q2 already tested.",
+      "change": "Replaced q3 with an inference about the customer's priority: dependable, on-time delivery versus lowest price.",
+      "evidenceText": "The team selects Route B because the customer needs the documents on time."
+    },
+    {
+      "id": "a2-obligation-permission::reading1::q3",
+      "issue": "The previous q3 asked where the safety vest was available, duplicating q2's vest-provision fact.",
+      "change": "Replaced q3 with the separate departure requirement to return the visitor badge.",
+      "evidenceText": "Before leaving, visitors should return the badge to the security staff."
+    },
+    {
+      "id": "a2-comparisons::listening1::q3",
+      "issue": "The existing q2 tests the reason for the recommendation; q3 is retained as a separate comparative-detail question and receives an explicit source pointer.",
+      "change": "Reworded q3 to test the stated reliability/on-time advantage; q2 remains byte-identical to the v2.75.0 baseline.",
+      "evidenceText": "The second service is more reliable and usually arrives on time."
+    },
+    {
+      "id": "a2-sequencing-instructions::listening1::q3",
+      "issue": "The previous q3 asked when the inventory is updated, which repeated q2's before-closing step.",
+      "change": "Replaced q3 with the immediately preceding action before preparing the return label.",
+      "evidenceText": "Next, inspect the product and record its condition."
+    }
+  ],
+  "preservation": {
+    "legacyA2QuestionPairs": "tools/foundation-a2-question-baseline-v2.75.0.json",
+    "policy": "All A2 q1/q2 question objects remain byte-equivalent under canonical JSON hashing to the v2.75.0 baseline; stable IDs remain unchanged."
+  },
+  "limitations": [
+    "This focused pass addresses five identified cases of repeated information and records five exact source pointers. It does not certify every distractor for semantic plausibility.",
+    "No second independent reviewer or psychometric validation has been performed.",
+    "The local three-question/67% threshold is a practice rule, not CEFR certification or a mastery claim."
+  ]
+}

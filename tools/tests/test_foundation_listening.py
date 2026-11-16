@@ -1,4 +1,4 @@
-"""Quality and integration checks for the Pre-A1/A1 synthesized listening practice."""
+"""Quality and integration checks for the Pre-A1–A2 synthesized listening practice."""
 import json
 import re
 import unittest
@@ -16,26 +16,76 @@ class FoundationListeningTests(unittest.TestCase):
         cls.sw = (ROOT / "sw.js").read_text(encoding="utf-8")
         cls.css = (ROOT / "assets/css/design-system.css").read_text(encoding="utf-8")
 
-    def test_ten_clips_map_one_to_each_stable_lesson(self):
-        self.assertEqual(len(self.data["clips"]), 10)
+    def test_all_clips_map_one_to_each_stable_lesson(self):
+        self.assertEqual(len(self.data["clips"]), 23)
         self.assertEqual({x["lessonId"] for x in self.data["clips"]}, {x["id"] for x in self.lessons})
-        self.assertEqual(len({x["id"] for x in self.data["clips"]}), 10)
+        self.assertEqual(len({x["id"] for x in self.data["clips"]}), 23)
+
+    def test_a2_clips_map_one_to_each_a2_lesson(self):
+        a2_ids={x['id'] for x in self.lessons if x['level']=='A2'}
+        a2_clips={x['lessonId'] for x in self.data['clips'] if x.get('level')=='A2'}
+        self.assertEqual(len(a2_clips),13)
+        self.assertEqual(a2_clips,a2_ids)
 
     def test_scripts_and_question_banks_are_complete_and_unique(self):
         question_ids = []
         for clip in self.data["clips"]:
             with self.subTest(clip=clip["id"]):
-                self.assertGreaterEqual(len(clip["script"].split()), 25)
-                self.assertLessEqual(len(clip["script"].split()), 45)
-                self.assertEqual(len(clip["questions"]), 2)
+                expected_questions = 3 if clip.get('level') == 'A2' else 2
+                self.assertGreaterEqual(len(clip["script"].split()), 50 if clip.get('level') == 'A2' else 25)
+                self.assertLessEqual(len(clip["script"].split()), 90)
+                self.assertEqual(len(clip["questions"]), expected_questions)
+                if clip.get('level') == 'A2':
+                    self.assertEqual(len(clip.get('segments', [])), 4)
+                    self.assertEqual(clip.get('minimumUniqueQuestions'), 3)
+                    self.assertEqual(clip.get('practiceAccuracyThreshold'), 0.67)
+                    self.assertEqual('\n'.join(f"{x['speaker']}: {x['text']}" for x in clip['segments']), clip['script'])
                 for question in clip["questions"]:
                     self.assertEqual(len(question["choices"]), 4)
                     self.assertEqual(len(set(question["choices"])), 4)
                     self.assertIn(question["answerIndex"], range(4))
                     self.assertTrue(question["prompt"] and question["rationale"])
                     question_ids.append(question["id"])
-        self.assertEqual(len(question_ids), 20)
+        self.assertEqual(len(question_ids), 59)
         self.assertEqual(len(question_ids), len(set(question_ids)))
+
+    def test_new_a2_listening_answers_match_spoken_details(self):
+        expected={
+            "a2-present-perfect-experience::listening1": [
+                "Updated the delivery list","The supplier confirmation"],
+            "a2-basic-passive-voice::listening1": [
+                "Every evening","Yesterday"],
+            "a2-defining-relative-clauses::listening1": [
+                "The office assistant","On the shared drive"],
+        }
+        for clip_id,answers in expected.items():
+            clip=next(x for x in self.data["clips"] if x["id"]==clip_id)
+            for question,answer in zip(clip["questions"],answers):
+                self.assertEqual(question["choices"][question["answerIndex"]],answer,clip_id)
+                self.assertTrue(question["rationale"])
+        invitation = next(x for x in self.data["clips"] if x["lessonId"] == "a2-invitations-offers")
+        self.assertIn("name cards", invitation['script'].lower())
+        self.assertIn("this afternoon", invitation['script'].lower())
+        self.assertIn("another lunch next week", invitation['script'].lower())
+
+    def test_a2_original_question_pairs_match_v275_baseline(self):
+        import hashlib
+        baseline = json.loads((ROOT / 'tools/foundation-a2-question-baseline-v2.75.0.json').read_text(encoding='utf-8'))
+        for clip in self.data['clips']:
+            if clip.get('level') != 'A2':
+                continue
+            payload = json.dumps(clip['questions'][:2], ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+            self.assertEqual(hashlib.sha256(payload).hexdigest(), baseline['resources']['listening'][clip['lessonId']])
+
+    def test_a2_dialogues_have_two_configurable_voice_genders_and_three_questions(self):
+        a2 = [x for x in self.data['clips'] if x.get('level') == 'A2']
+        self.assertEqual(len(a2), 13)
+        for clip in a2:
+            with self.subTest(clip=clip['id']):
+                self.assertEqual(sorted(x['voice'] for x in clip['segments']), ['female','female','male','male'])
+                self.assertEqual([q['id'].rsplit('::', 1)[-1] for q in clip['questions']], ['q1','q2','q3'])
+                self.assertTrue(all(len(segment['text'].split()) >= 5 for segment in clip['segments']))
+                self.assertTrue(clip['questions'][2]['rationale'].strip())
 
     def test_selected_answer_matches_the_listening_detail(self):
         clip = next(x for x in self.data["clips"] if x["lessonId"] == "a1-plurals")
@@ -44,13 +94,28 @@ class FoundationListeningTests(unittest.TestCase):
 
     def test_answer_key_positions_are_balanced(self):
         counts = [sum(q["answerIndex"] == i for clip in self.data["clips"] for q in clip["questions"]) for i in range(4)]
-        self.assertEqual(counts, [5, 5, 5, 5])
+        self.assertEqual(counts, [15, 15, 15, 14])
+
+    def test_a2_practice_policy_is_stricter_without_changing_older_levels(self):
+        policy = self.data["evidencePolicy"]
+        self.assertEqual(policy["minimumUniqueQuestions"], 2)
+        self.assertEqual(policy["practiceAccuracyThreshold"], 0.8)
+        self.assertEqual(policy["a2MinimumUniqueQuestions"], 3)
+        self.assertEqual(policy["a2PracticeAccuracyThreshold"], 0.67)
+        self.assertIn("CEFR certification", policy["scope"])
 
     def test_scope_discloses_synthesized_audio_not_ets_recording(self):
         self.assertIn("browser-speech-synthesis", self.data["playback"]["engine"])
         self.assertIn("not authentic recorded audio", self.data["evidencePolicy"]["scope"])
         self.assertTrue(self.data["playback"]["scriptHiddenByDefault"])
         self.assertTrue(self.data["playback"]["usesCurrentAppVoiceSettings"])
+
+    def test_path_cards_use_per_resource_question_count_and_practice_threshold(self):
+        self.assertIn("const listeningResource=(state.foundationListeningClips||[]).find(item=>item.lessonId===lesson.id);", self.app)
+        self.assertIn("listeningResource?.questions?.length||2", self.app)
+        self.assertIn("listeningResource?.minimumUniqueQuestions||2", self.app)
+        self.assertIn("listeningResource?.practiceAccuracyThreshold||0.8", self.app)
+        self.assertIn("${listening.uniqueQuestions}/${listeningTarget} câu", self.app)
 
     def test_runtime_keeps_listening_evidence_separate_and_integrated(self):
         self.assertIn("./data/learning-path/foundation-listening.json", self.app)

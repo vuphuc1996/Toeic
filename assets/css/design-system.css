@@ -840,6 +840,8 @@ body :where(
   .foundation-level,
   .foundation-level-picker,
   .foundation-number,
+  .foundation-outcome-due,
+  .foundation-outcome-metric small,
   .foundation-path-note,
   .foundation-progress small,
   .foundation-question>p,
@@ -1131,6 +1133,11 @@ body :where(
 }
 .foundation-listening-transcript strong { display: block; margin-bottom: var(--ds-space-2); font-size: 14px; }
 .foundation-listening-transcript p { margin: 0; font-size: var(--ds-font-body); line-height: 1.7; }
+.foundation-listening-transcript-turns { display: grid; gap: var(--ds-space-3); }
+.foundation-listening-transcript-turns > div { min-width: 0; padding: var(--ds-space-3); border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-control); background: var(--ds-color-surface); }
+.foundation-listening-transcript-turns > div > strong { margin-bottom: 4px; color: var(--ds-color-text-secondary); font-size: var(--ds-font-caption); }
+.foundation-listening-transcript-turns p { overflow-wrap: anywhere; }
+#foundationListeningStatus { min-height: 1.5em; }
 .foundation-listening .foundation-question { margin-top: var(--ds-space-4); }
 .foundation-listening .foundation-question > p { font-size: var(--ds-font-body); line-height: 1.62; }
 .foundation-listening .foundation-choice { min-height: 46px; font-size: var(--ds-font-control); line-height: 1.5; }
@@ -1433,10 +1440,6 @@ body :where(.mock-exam-brand strong, .mock-exam-timer span,
   margin: 0;
   border-radius: calc(var(--ds-radius-control) - 2px);
   background: #edf2f7;
-}
-.part1-photo-frame img[data-photo-id="part1-photocopier"],
-.mock-part1-frame img[data-photo-id="part1-photocopier"] {
-  object-position: 50% 42%;
 }
 .mock-part1-frame {
   width: min(100%, 620px);

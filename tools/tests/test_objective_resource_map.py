@@ -6,10 +6,10 @@ mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
 class ObjectiveResourceMapTests(unittest.TestCase):
     def test_all_links_resolve_to_canonical_ids(self):
         objectives,rows,total,mapped=mod.audit()
-        self.assertEqual(len(objectives),10)
-        self.assertEqual(len(rows),10)
-        self.assertEqual(mapped,281)
-        self.assertEqual(total,281)
+        self.assertEqual(len(objectives),11)
+        self.assertEqual(len(rows),11)
+        self.assertEqual(mapped,294)
+        self.assertEqual(total,294)
         self.assertGreater(total,0)
     def test_review_status_is_not_confused_with_availability(self):
         objectives,_,_,_=mod.audit()

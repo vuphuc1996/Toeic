@@ -55,6 +55,15 @@ class Part1PhotoAssetTests(unittest.TestCase):
             path.write_bytes(bytes.fromhex('FFD8 FFC0 0011 08 03C0 0500 03 01 11 00 02 11 00 03 11 00 FFD9'))
             self.assertEqual(validator.jpeg_dimensions(path), (1280, 960))
 
+    def test_all_part1_photos_are_landscape_4_by_3_and_under_400kb(self):
+        data = json.loads((ROOT / 'data/listening/listening-library.json').read_text(encoding='utf-8'))
+        p1 = [item for item in data['listening'] if item.get('part') == 'Part 1']
+        for item in p1:
+            path = ROOT / item['photo'][2:]
+            width, height = validator.jpeg_dimensions(path)
+            self.assertEqual((width, height), (1448, 1086), item['id'])
+            self.assertLess(path.stat().st_size, 400_000, item['id'])
+
     def test_non_jpeg_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / 'not-a-photo.jpg'

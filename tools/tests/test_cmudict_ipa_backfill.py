@@ -1,4 +1,4 @@
-"""Regression coverage for the source-linked CMUdict IPA cumulative backfill in v2.70.0."""
+"""Regression coverage for the source-linked CMUdict IPA cumulative backfill in v2.71.0."""
 import json
 import unittest
 from pathlib import Path
@@ -13,8 +13,8 @@ class CmudictIpaBackfillTests(unittest.TestCase):
         cls.records, _ = load_records()
 
     def test_backfill_has_the_audited_record_count(self):
-        self.assertEqual(self.ledger["recordCount"], 298)
-        self.assertEqual(len(self.ledger["records"]), 298)
+        self.assertEqual(self.ledger["recordCount"], 333)
+        self.assertEqual(len(self.ledger["records"]), 333)
 
     def test_every_ledger_entry_matches_canonical_record_and_conversion(self):
         seen = set()
@@ -37,9 +37,12 @@ class CmudictIpaBackfillTests(unittest.TestCase):
 
     def test_ambiguous_or_unmatched_entries_are_not_auto_filled(self):
         excluded = self.ledger["excluded"]
-        self.assertEqual(excluded["multiple_pronunciations"], 60)
+        self.assertEqual(excluded["multiple_pronunciations"], 61)
         self.assertEqual(excluded["no_exact_CMUdict_entry"], 25)
         self.assertEqual(excluded["multiple_primary_stress"], 6)
+        self.assertEqual(excluded["editorial_review_pending"], 1)
+        self.assertEqual(self.records["dispute-nv"]["phonetic"]["us"], "")
+        self.assertEqual(self.records["ventilation-n"]["phonetic"]["us"], "")
         self.assertIn("Leave phonetic.us blank", excluded["policy"])
 
     def test_ipa_format_uses_supported_project_symbols(self):

@@ -25,6 +25,30 @@
       "reviewState": "content_exists_review_depth_required"
     },
     {
+      "id": "foundation-a2",
+      "title": "Chặng nền tảng A2",
+      "kind": "learning_path",
+      "resourceFile": "data/learning-path/pre-a1-a1.json",
+      "resourceCollection": "lessons",
+      "resourceIds": [
+        "a2-polite-requests",
+        "a2-quantities",
+        "a2-comparisons",
+        "a2-past-work-events",
+        "a2-present-continuous",
+        "a2-obligation-permission",
+        "a2-directions",
+        "a2-invitations-offers",
+        "a2-sequencing-instructions",
+        "a2-plans-and-intentions",
+        "a2-present-perfect-experience",
+        "a2-basic-passive-voice",
+        "a2-defining-relative-clauses"
+      ],
+      "availability": "available",
+      "reviewState": "content_exists_review_depth_required"
+    },
+    {
       "id": "grammar-core",
       "title": "Ngữ pháp TOEIC",
       "kind": "grammar",

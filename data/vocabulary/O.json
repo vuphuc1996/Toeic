@@ -198,6 +198,49 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "occupant-n",
+      "word": "occupant",
+      "phonetic": {
+        "us": "/ˈɑk.jə.pənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người sử dụng hoặc cư trú trong một không gian",
+          "definition_en": "a person who lives in, works in, or uses a building, room, or vehicle",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "occupy",
+          "pos": "v",
+          "meaning_vi": "chiếm dụng; sử dụng hoặc cư trú tại một không gian"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The building manager posted the evacuation instructions where every occupant could see them.",
+          "vi": "Quản lý tòa nhà đã dán hướng dẫn sơ tán ở nơi mọi người sử dụng tòa nhà đều có thể nhìn thấy.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "building occupant",
+        "maximum occupants",
+        "occupant safety"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "occupational-adj",
       "word": "occupational",
       "phonetic": {
@@ -265,6 +308,55 @@
         "occupational safety training"
       ],
       "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "occupy-v",
+      "word": "occupy",
+      "phonetic": {
+        "us": "/ˈɑk.jə.ˌpaɪ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chiếm dụng; sử dụng hoặc cư trú tại một không gian",
+          "definition_en": "to live in, use, or take up a particular space or position",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "occupant",
+          "pos": "n",
+          "meaning_vi": "người sử dụng hoặc cư trú trong một không gian"
+        }
+      ],
+      "verb_forms": {
+        "v1": "occupy",
+        "vs_es": "occupies",
+        "v2": "occupied",
+        "v3": "occupied",
+        "ving": "occupying"
+      },
+      "examples": [
+        {
+          "en": "The new department will occupy the eastern section of the renovated office.",
+          "vi": "Phòng ban mới sẽ sử dụng khu vực phía đông của văn phòng đã cải tạo.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "occupy an office",
+        "fully occupied",
+        "occupy the premises"
+      ],
+      "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {

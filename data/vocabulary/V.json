@@ -399,6 +399,43 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "ventilation-n",
+      "word": "ventilation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thông gió; hệ thống thông gió",
+          "definition_en": "the process or system of bringing fresh air into a room or building and removing stale air",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor will test the ventilation system before employees return to the renovated office.",
+          "vi": "Nhà thầu sẽ kiểm tra hệ thống thông gió trước khi nhân viên quay lại văn phòng đã cải tạo.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "ventilation system",
+        "proper ventilation",
+        "ventilation equipment"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "venue-n",
       "word": "venue",
       "cefr_level": "B2",

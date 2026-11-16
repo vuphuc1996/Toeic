@@ -93,6 +93,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "generator-n",
+      "word": "generator",
+      "phonetic": {
+        "us": "/ˈdʒe.nɚ.ˌeɪ.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "máy phát điện",
+          "definition_en": "a machine that produces electricity, especially when the regular supply is unavailable",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A backup generator will supply power to the server room during the scheduled outage.",
+          "vi": "Máy phát điện dự phòng sẽ cấp điện cho phòng máy chủ trong thời gian ngừng điện theo lịch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "backup generator",
+        "generator maintenance",
+        "portable generator"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "goal-n",
       "word": "goal",
       "cefr_level": "A1",

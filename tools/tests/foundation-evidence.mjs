@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { recordFoundationAttempt, summarizeFoundationLesson } from '../../assets/js/foundation-evidence.js';
 
 const lessons = JSON.parse(await readFile(new URL('../../data/learning-path/pre-a1-a1.json', import.meta.url), 'utf8'));
-assert.equal(lessons.lessons.length, 10);
+assert.equal(lessons.lessons.length, 23);
 for (const lesson of lessons.lessons) {
   assert.equal(lesson.questionBank.length, 3, `${lesson.id} must have three independent checks`);
   assert.equal(new Set(lesson.questionBank.map(q => q.id)).size, 3);

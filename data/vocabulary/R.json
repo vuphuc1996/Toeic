@@ -977,6 +977,50 @@
       ]
     },
     {
+      "id": "refurbish-v",
+      "word": "refurbish",
+      "phonetic": {
+        "us": "/ri.ˈfɝ.bɪʃ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tân trang; cải tạo để sử dụng tốt trở lại",
+          "definition_en": "to clean, decorate, or repair a building or item so that it looks or works better",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "refurbish",
+        "vs_es": "refurbishes",
+        "v2": "refurbished",
+        "v3": "refurbished",
+        "ving": "refurbishing"
+      },
+      "examples": [
+        {
+          "en": "The company plans to refurbish the reception area without interrupting daily customer service.",
+          "vi": "Công ty dự định tân trang khu vực lễ tân mà không làm gián đoạn dịch vụ khách hàng hằng ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "refurbish an office",
+        "fully refurbished",
+        "refurbish the premises"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "register-v",
       "word": "register",
       "cefr_level": "A2",
@@ -1408,6 +1452,50 @@
         }
       ],
       "collocations": [],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "relocate-v",
+      "word": "relocate",
+      "phonetic": {
+        "us": "/ˌri.ˈloʊ.keɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "di dời; chuyển đến địa điểm khác",
+          "definition_en": "to move a person, office, or business to a different place",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "OFFICE",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "relocate",
+        "vs_es": "relocates",
+        "v2": "relocated",
+        "v3": "relocated",
+        "ving": "relocating"
+      },
+      "examples": [
+        {
+          "en": "The company will relocate its customer service team to the renovated floor next month.",
+          "vi": "Công ty sẽ chuyển đội chăm sóc khách hàng sang tầng đã cải tạo vào tháng tới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "relocate an office",
+        "relocate employees",
+        "relocate to a new site"
+      ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
     },
@@ -1939,6 +2027,49 @@
         "pay monthly rent",
         "rent office space"
       ]
+    },
+    {
+      "id": "repair-nv",
+      "word": "repair",
+      "phonetic": {
+        "us": "/rɪ.ˈper/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "sự sửa chữa; sửa chữa",
+          "definition_en": "work done to restore something damaged; to fix something that is broken or not working properly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "repair",
+        "vs_es": "repairs",
+        "v2": "repaired",
+        "v3": "repaired",
+        "ving": "repairing"
+      },
+      "examples": [
+        {
+          "en": "The maintenance team will repair the elevator controls after the replacement parts arrive.",
+          "vi": "Đội bảo trì sẽ sửa bộ điều khiển thang máy sau khi linh kiện thay thế được chuyển đến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "repair work",
+        "repair a machine",
+        "cost of repairs"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "repayment-n",
@@ -3371,6 +3502,50 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "retrofit-nv",
+      "word": "retrofit",
+      "phonetic": {
+        "us": "/ˈre.troʊ.ˌfɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "việc nâng cấp bổ sung; nâng cấp thiết bị hoặc công trình hiện có",
+          "definition_en": "a modification that adds new features to existing equipment or a building; to make such a change",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "retrofit",
+        "vs_es": "retrofits",
+        "v2": "retrofitted",
+        "v3": "retrofitted",
+        "ving": "retrofitting"
+      },
+      "examples": [
+        {
+          "en": "The landlord approved a retrofit project to improve lighting efficiency throughout the building.",
+          "vi": "Chủ nhà đã phê duyệt dự án nâng cấp nhằm cải thiện hiệu suất chiếu sáng trên toàn tòa nhà.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "energy retrofit",
+        "retrofit a building",
+        "retrofit project"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "revenue-n",
       "word": "revenue",
       "phonetic": {
@@ -3728,6 +3903,43 @@
         "key role",
         "play a role"
       ]
+    },
+    {
+      "id": "roofing-n",
+      "word": "roofing",
+      "phonetic": {
+        "us": "/ˈru.fɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vật liệu lợp mái; công việc lợp mái",
+          "definition_en": "the materials or work involved in covering and repairing a roof",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The roofing contractor will inspect the damaged section after the heavy rain has stopped.",
+          "vi": "Nhà thầu lợp mái sẽ kiểm tra khu vực bị hư hại sau khi mưa lớn ngừng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "roofing materials",
+        "roofing contractor",
+        "roofing repair"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "room-service-n",

@@ -1,11 +1,13 @@
 {
   "schemaVersion": 1,
-  "title": "Foundation Short Reading",
-  "description": "Short, level-appropriate texts for locating information and understanding simple purpose. Reading evidence is separate from recognition and contextual application.",
+  "title": "Foundation Pre-A1–A2 Short Reading",
+  "description": "Short, level-appropriate texts from Pre-A1 through the A2 starter stage. Reading evidence is separate from recognition and contextual application.",
   "evidencePolicy": {
     "minimumUniqueQuestions": 2,
     "practiceAccuracyThreshold": 0.8,
-    "scope": "short-reading-mcq-only; not CEFR certification or independent reading mastery"
+    "scope": "short-reading-mcq-only; not CEFR certification or independent reading mastery",
+    "a2MinimumUniqueQuestions": 3,
+    "a2PracticeAccuracyThreshold": 0.67
   },
   "passages": [
     {
@@ -357,6 +359,659 @@
           "rationale": "The passage tells when the previous training finished and what employees will learn in the next session."
         }
       ]
+    },
+    {
+      "id": "a2-polite-requests::reading1",
+      "lessonId": "a2-polite-requests",
+      "title": "A Request for a Meeting Room",
+      "level": "A2",
+      "text": "The sales team needs a quiet place for a short call with a new customer. Mai asks the office assistant, “Could you reserve Room 3 for 2 p.m.?” The assistant checks the calendar and confirms that the room is available. The customer will join the call online, so the team also needs a screen and a speakerphone. Room 3 has both, and no other group has booked it. Mai receives the confirmation and shares the room number with her colleagues.",
+      "questions": [
+        {
+          "id": "a2-polite-requests::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "What does Mai ask the assistant to do?",
+          "choices": [
+            "Reserve Room 3",
+            "Call the customer",
+            "Print a sales report",
+            "Move the meeting to Friday"
+          ],
+          "answerIndex": 0,
+          "rationale": "Mai asks the assistant to reserve Room 3."
+        },
+        {
+          "id": "a2-polite-requests::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "When is the room needed?",
+          "choices": [
+            "At noon",
+            "At 3 p.m.",
+            "At 2 p.m.",
+            "The next morning"
+          ],
+          "answerIndex": 2,
+          "rationale": "The request specifies 2 p.m."
+        },
+        {
+          "id": "a2-polite-requests::reading1::q3",
+          "skill": "infer-from-details",
+          "prompt": "Why is Room 3 suitable for the sales team?",
+          "choices": [
+            "It has a screen and a speakerphone.",
+            "It is next to the reception desk.",
+            "The customer asked to change the time.",
+            "Another group has already booked it."
+          ],
+          "answerIndex": 0,
+          "rationale": "Đoạn văn cho biết khách hàng tham gia trực tuyến và Phòng 3 có cả màn hình lẫn loa ngoài; đây là lý do phòng phù hợp."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-quantities::reading1",
+      "lessonId": "a2-quantities",
+      "title": "Supplies for the Training",
+      "level": "A2",
+      "text": "The training office has many folders but only a little printer paper. The coordinator checks the supply cabinet before placing an order. She orders two boxes of paper and a few black pens because the next training session needs printed handouts. She does not order more folders because the storage cabinet is already full. The supplier confirms that the paper and pens will arrive before Thursday morning, so the training team can prepare the materials on time.",
+      "questions": [
+        {
+          "id": "a2-quantities::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "What does the office need more of?",
+          "choices": [
+            "Folders",
+            "Printer paper",
+            "Storage cabinets",
+            "Training rooms"
+          ],
+          "answerIndex": 1,
+          "rationale": "The passage says there is only a little printer paper."
+        },
+        {
+          "id": "a2-quantities::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why are no more folders ordered?",
+          "choices": [
+            "The supplier is closed",
+            "They are too expensive",
+            "The training is cancelled",
+            "The cabinet is full"
+          ],
+          "answerIndex": 3,
+          "rationale": "The cabinet is already full."
+        },
+        {
+          "id": "a2-quantities::reading1::q3",
+          "skill": "infer-from-details",
+          "prompt": "What does the delivery information allow the training team to do?",
+          "choices": [
+            "Cancel the training session.",
+            "Prepare the materials on time.",
+            "Return the folders to the supplier.",
+            "Move the session to next week."
+          ],
+          "answerIndex": 1,
+          "rationale": "Vì giấy và bút sẽ đến trước sáng thứ Năm, nhóm có thể chuẩn bị tài liệu kịp buổi đào tạo.",
+          "evidenceText": "The supplier confirms that the paper and pens will arrive before Thursday morning, so the training team can prepare the materials on time."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-comparisons::reading1",
+      "lessonId": "a2-comparisons",
+      "title": "Choosing a Delivery Route",
+      "level": "A2",
+      "text": "The logistics team compared three routes to the northern branch. Route A is shorter, but it has heavy traffic in the afternoon. Route B is more reliable and has fewer road works, although it is slightly longer. Route C is the cheapest option, but delivery times change often. The team selects Route B because the customer needs the documents on time. The supervisor updates the delivery plan and asks the driver to check traffic before leaving.",
+      "questions": [
+        {
+          "id": "a2-comparisons::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Which route is more reliable?",
+          "choices": [
+            "Route A",
+            "Route C",
+            "Route B",
+            "All routes are equal"
+          ],
+          "answerIndex": 2,
+          "rationale": "The passage directly describes Route B as more reliable."
+        },
+        {
+          "id": "a2-comparisons::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why does the team choose Route B?",
+          "choices": [
+            "It has fewer road works and is more reliable",
+            "It has no traffic at any time",
+            "It costs more",
+            "It is the shortest"
+          ],
+          "answerIndex": 0,
+          "rationale": "Those are the reasons given for choosing Route B."
+        },
+        {
+          "id": "a2-comparisons::reading1::q3",
+          "skill": "infer-from-details",
+          "prompt": "What does the team’s choice suggest about the customer’s priority?",
+          "choices": [
+            "The customer prefers the lowest price, even if delivery is late.",
+            "The customer wants the shortest route, regardless of traffic.",
+            "The customer values dependable, on-time delivery more than the cheapest option.",
+            "The customer has asked the supervisor to postpone the delivery."
+          ],
+          "answerIndex": 2,
+          "rationale": "Đội chọn tuyến đáng tin cậy hơn dù không ngắn nhất hoặc rẻ nhất vì khách cần nhận tài liệu đúng hạn.",
+          "evidenceText": "The team selects Route B because the customer needs the documents on time."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-past-work-events::reading1",
+      "lessonId": "a2-past-work-events",
+      "title": "A Changed Appointment",
+      "level": "A2",
+      "text": "The purchasing manager met a supplier on Tuesday. They discussed a delayed order and agreed on a new delivery date. After the meeting, the manager sent a summary to the warehouse team so that staff could update the receiving plan. The supplier confirmed the new date by email that afternoon. On Wednesday, the warehouse supervisor changed the delivery calendar and informed the receiving staff. No further delay was reported.",
+      "questions": [
+        {
+          "id": "a2-past-work-events::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "When did the manager meet the supplier?",
+          "choices": [
+            "Yesterday evening",
+            "On Wednesday",
+            "On Friday",
+            "On Tuesday"
+          ],
+          "answerIndex": 3,
+          "rationale": "The first sentence says the meeting took place on Tuesday."
+        },
+        {
+          "id": "a2-past-work-events::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What did the manager send after the meeting?",
+          "choices": [
+            "A price list",
+            "A summary",
+            "A new contract",
+            "A payment receipt"
+          ],
+          "answerIndex": 1,
+          "rationale": "The manager sent a summary to the warehouse team."
+        },
+        {
+          "id": "a2-past-work-events::reading1::q3",
+          "skill": "understand-sequence",
+          "prompt": "What did the supplier do after the meeting?",
+          "choices": [
+            "The supplier cancelled the order.",
+            "The supplier visited the warehouse.",
+            "The supplier changed the product.",
+            "The supplier confirmed the new date by email."
+          ],
+          "answerIndex": 3,
+          "rationale": "Đoạn văn cho biết nhà cung cấp đã xác nhận ngày giao hàng mới qua email vào chiều thứ Ba."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-present-continuous::reading1",
+      "lessonId": "a2-present-continuous",
+      "title": "Work at the Service Desk",
+      "level": "A2",
+      "text": "A new employee is working at the service desk this week while her colleague is on leave. She is answering phone calls, welcoming visitors and updating customer records. The supervisor is checking her work and helping with difficult requests. The employee is also learning how to use the booking system. Next week, when her colleague returns, she will go back to the sales office and continue her usual duties there.",
+      "questions": [
+        {
+          "id": "a2-present-continuous::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Why is the employee at the service desk this week?",
+          "choices": [
+            "Her colleague is on leave",
+            "She is on holiday",
+            "The sales office is closed",
+            "She is attending a course"
+          ],
+          "answerIndex": 0,
+          "rationale": "She is covering the desk while her colleague is on leave."
+        },
+        {
+          "id": "a2-present-continuous::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What is the supervisor doing?",
+          "choices": [
+            "Updating the website",
+            "Preparing invoices",
+            "Checking her work",
+            "Closing the office"
+          ],
+          "answerIndex": 2,
+          "rationale": "The supervisor is checking her work and helping with requests."
+        },
+        {
+          "id": "a2-present-continuous::reading1::q3",
+          "skill": "understand-time-reference",
+          "prompt": "What will the new employee do next week?",
+          "choices": [
+            "She will take another week of leave.",
+            "She will manage the warehouse.",
+            "She will return to the sales office.",
+            "She will replace the supervisor."
+          ],
+          "answerIndex": 2,
+          "rationale": "Câu cuối nêu rõ tuần tới cô ấy sẽ trở lại văn phòng kinh doanh khi đồng nghiệp quay lại."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-obligation-permission::reading1",
+      "lessonId": "a2-obligation-permission",
+      "title": "Safety Rules for Visitors",
+      "level": "A2",
+      "text": "All visitors have to sign in at reception and wear a visitor badge. They must not enter the equipment room without an employee. Visitors do not have to bring their own safety vest because the reception desk keeps clean vests for them. Before leaving, visitors should return the badge to the security staff. These rules help the company know who is in the building and keep restricted areas safe.",
+      "questions": [
+        {
+          "id": "a2-obligation-permission::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "What must visitors do at reception?",
+          "choices": [
+            "Pay a fee",
+            "Sign in and wear a badge",
+            "Call the warehouse",
+            "Bring their own vest"
+          ],
+          "answerIndex": 1,
+          "rationale": "Visitors have to sign in and wear a visitor badge."
+        },
+        {
+          "id": "a2-obligation-permission::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Which statement is true about safety vests?",
+          "choices": [
+            "Visitors must buy one",
+            "Visitors are not allowed to wear one",
+            "They are only for managers",
+            "Reception provides them"
+          ],
+          "answerIndex": 3,
+          "rationale": "Reception keeps clean vests for visitors."
+        },
+        {
+          "id": "a2-obligation-permission::reading1::q3",
+          "skill": "find-detail",
+          "prompt": "What should visitors do before they leave the building?",
+          "choices": [
+            "Return the visitor badge to security staff.",
+            "Sign out at the reception desk.",
+            "Leave the badge in the equipment room.",
+            "Give the badge to the maintenance team."
+          ],
+          "answerIndex": 0,
+          "rationale": "Quy định nêu khách phải trả thẻ cho nhân viên an ninh trước khi rời đi.",
+          "evidenceText": "Before leaving, visitors should return the badge to the security staff."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-directions::reading1",
+      "lessonId": "a2-directions",
+      "title": "Directions to the Workshop",
+      "level": "A2",
+      "text": "The maintenance workshop is on the second floor, across from the storage office. Visitors should take the elevator, turn left, and walk past the staff kitchen. A sign for the workshop is beside the double doors. The workshop is not open to visitors without an appointment, so guests should contact the maintenance team before coming. The reception staff can help visitors find the correct office if they are unsure where to go.",
+      "questions": [
+        {
+          "id": "a2-directions::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Where is the workshop?",
+          "choices": [
+            "Next to the main entrance",
+            "Behind the cafeteria",
+            "Across from the storage office",
+            "On the first floor"
+          ],
+          "answerIndex": 2,
+          "rationale": "It is on the second floor, across from the storage office."
+        },
+        {
+          "id": "a2-directions::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What should visitors do after taking the elevator?",
+          "choices": [
+            "Turn left",
+            "Turn right",
+            "Go outside",
+            "Take the stairs down"
+          ],
+          "answerIndex": 0,
+          "rationale": "The directions say to turn left after taking the elevator."
+        },
+        {
+          "id": "a2-directions::reading1::q3",
+          "skill": "understand-condition",
+          "prompt": "When may a visitor enter the maintenance workshop?",
+          "choices": [
+            "At any time during the day.",
+            "When the visitor has an appointment.",
+            "Only after visiting the staff kitchen.",
+            "Only when the storage office is open."
+          ],
+          "answerIndex": 1,
+          "rationale": "Đoạn cuối về quy định cho biết xưởng không mở cho khách nếu không có lịch hẹn."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-invitations-offers::reading1",
+      "lessonId": "a2-invitations-offers",
+      "title": "An Invitation to Lunch",
+      "level": "A2",
+      "text": "The project leader invites the new members to lunch on Friday. The message says, “Would you like to join us at the café near the station?” Two employees accept the invitation. One employee cannot attend because she has a customer call at noon, so the leader offers to arrange another lunch next week. The leader asks everyone to reply by Wednesday so the café can prepare enough seats. The invitation is friendly and gives the team time to plan.",
+      "questions": [
+        {
+          "id": "a2-invitations-offers::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "What does the project leader invite the team to do?",
+          "choices": [
+            "Attend a safety course",
+            "Review a budget",
+            "Visit a supplier",
+            "Join a lunch"
+          ],
+          "answerIndex": 3,
+          "rationale": "The message invites the members to lunch on Friday."
+        },
+        {
+          "id": "a2-invitations-offers::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why can one employee not attend?",
+          "choices": [
+            "She is travelling",
+            "She has a customer call",
+            "She is sick",
+            "She has another meeting next week"
+          ],
+          "answerIndex": 1,
+          "rationale": "She has a customer call at noon."
+        },
+        {
+          "id": "a2-invitations-offers::reading1::q3",
+          "skill": "understand-purpose-context",
+          "prompt": "Why does the leader ask everyone to reply by Wednesday?",
+          "choices": [
+            "To cancel the customer call.",
+            "To change the café location.",
+            "To let the café prepare enough seats.",
+            "To prepare a new project report."
+          ],
+          "answerIndex": 2,
+          "rationale": "Đoạn văn nêu mục đích phản hồi trước thứ Tư là để quán chuẩn bị đủ chỗ ngồi."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-sequencing-instructions::reading1",
+      "lessonId": "a2-sequencing-instructions",
+      "title": "Steps for a Return",
+      "level": "A2",
+      "text": "To process a returned item, first check the order number on the receipt. Then inspect the product and record its condition. After that, prepare a return label and give it to the customer. Finally, update the inventory system so the warehouse knows the item is coming back. The staff member should complete every step before closing the request. If the receipt is missing, ask the customer for the order email before continuing.",
+      "questions": [
+        {
+          "id": "a2-sequencing-instructions::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "What should staff check first?",
+          "choices": [
+            "The order number",
+            "The product colour",
+            "The inventory total",
+            "The return label"
+          ],
+          "answerIndex": 0,
+          "rationale": "The first step is to check the order number."
+        },
+        {
+          "id": "a2-sequencing-instructions::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What is the final step?",
+          "choices": [
+            "Inspect the product",
+            "Prepare a label",
+            "Update the inventory system",
+            "Contact the supplier"
+          ],
+          "answerIndex": 2,
+          "rationale": "Finally, staff update the inventory system."
+        },
+        {
+          "id": "a2-sequencing-instructions::reading1::q3",
+          "skill": "understand-purpose-context",
+          "prompt": "Why must the inventory system be updated?",
+          "choices": [
+            "So the customer can pay again.",
+            "So the supplier can change the price.",
+            "So the order number can be deleted.",
+            "So the warehouse knows the item is returning."
+          ],
+          "answerIndex": 3,
+          "rationale": "Đoạn văn nói rõ cập nhật hệ thống để kho biết mặt hàng đang được gửi trả."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-plans-and-intentions::reading1",
+      "lessonId": "a2-plans-and-intentions",
+      "title": "Plans for the Branch Visit",
+      "level": "A2",
+      "text": "The regional manager is going to visit the eastern branch next Wednesday. She is going to meet the local team and review the new service desk. The branch supervisor is preparing a short report about customer requests and common problems. The manager will send the travel details to the staff tomorrow. She also plans to visit the customer service area if there is enough time. The team is preparing the meeting room for her visit.",
+      "questions": [
+        {
+          "id": "a2-plans-and-intentions::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "When will the manager visit the branch?",
+          "choices": [
+            "This afternoon",
+            "Next Wednesday",
+            "Last Friday",
+            "Tomorrow morning"
+          ],
+          "answerIndex": 1,
+          "rationale": "The visit is planned for next Wednesday."
+        },
+        {
+          "id": "a2-plans-and-intentions::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What is the supervisor preparing?",
+          "choices": [
+            "A travel invoice",
+            "A new office",
+            "A customer survey",
+            "A short report"
+          ],
+          "answerIndex": 3,
+          "rationale": "The supervisor is preparing a short report about customer requests."
+        },
+        {
+          "id": "a2-plans-and-intentions::reading1::q3",
+          "skill": "find-detail",
+          "prompt": "Who is preparing the report about customer requests?",
+          "choices": [
+            "The branch supervisor.",
+            "The regional manager.",
+            "The warehouse driver.",
+            "The office assistant."
+          ],
+          "answerIndex": 0,
+          "rationale": "Đoạn văn cho biết người giám sát chi nhánh đang chuẩn bị báo cáo ngắn về yêu cầu của khách hàng."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-present-perfect-experience::reading1",
+      "lessonId": "a2-present-perfect-experience",
+      "title": "Safety Inspection Update",
+      "level": "A2",
+      "text": "The facilities team has completed the safety inspection on the third floor. Two emergency lights have been replaced, and the exit signs have been checked. The supervisor has already sent the report to the building manager. The maintenance team has also recorded the work in its system. Staff have not received the final notice yet, so they are waiting before using the storage area again. The building manager will send the notice when the review is complete.",
+      "questions": [
+        {
+          "id": "a2-present-perfect-experience::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "What has the facilities team completed?",
+          "choices": [
+            "A safety inspection",
+            "A staff interview",
+            "A customer survey",
+            "A delivery schedule"
+          ],
+          "answerIndex": 0,
+          "rationale": "Đoạn văn nêu rõ đội cơ sở vật chất đã hoàn thành đợt kiểm tra an toàn ở tầng ba."
+        },
+        {
+          "id": "a2-present-perfect-experience::reading1::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What has the supervisor already done?",
+          "choices": [
+            "Replaced the emergency lights",
+            "Sent the report to the building manager",
+            "Closed the third floor",
+            "Received the final notice"
+          ],
+          "answerIndex": 1,
+          "rationale": "Câu thứ ba cho biết người giám sát đã gửi báo cáo cho quản lý tòa nhà."
+        },
+        {
+          "id": "a2-present-perfect-experience::reading1::q3",
+          "skill": "infer-from-details",
+          "prompt": "What are staff still waiting for?",
+          "choices": [
+            "A new inspection team.",
+            "The final notice.",
+            "A delivery of emergency lights.",
+            "A meeting invitation."
+          ],
+          "answerIndex": 1,
+          "rationale": "Đoạn văn nêu rõ nhân viên chưa nhận được thông báo cuối cùng và đang chờ thông báo đó."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-basic-passive-voice::reading1",
+      "lessonId": "a2-basic-passive-voice",
+      "title": "A New Order Procedure",
+      "level": "A2",
+      "text": "The new order procedure is now in place. Every purchase request is checked by a supervisor before it is approved. Last Friday, two urgent orders were delayed because a supplier form was incomplete. The forms were corrected, and both orders were shipped the next morning. The purchasing team has updated the checklist to prevent the same problem. Staff are asked to use the new form for every urgent order.",
+      "questions": [
+        {
+          "id": "a2-basic-passive-voice::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Who checks each purchase request?",
+          "choices": [
+            "A supplier",
+            "A customer",
+            "A supervisor",
+            "A delivery driver"
+          ],
+          "answerIndex": 2,
+          "rationale": "Đoạn văn nêu rõ mỗi yêu cầu mua hàng được người giám sát kiểm tra trước khi phê duyệt."
+        },
+        {
+          "id": "a2-basic-passive-voice::reading1::q2",
+          "skill": "understand-sequence",
+          "prompt": "What happened to the incomplete forms?",
+          "choices": [
+            "They were sent to customers.",
+            "They were deleted.",
+            "They were returned next month.",
+            "They were corrected."
+          ],
+          "answerIndex": 3,
+          "rationale": "Sau khi phát hiện biểu mẫu chưa đầy đủ, các biểu mẫu đã được chỉnh sửa."
+        },
+        {
+          "id": "a2-basic-passive-voice::reading1::q3",
+          "skill": "understand-sequence",
+          "prompt": "When were the two delayed orders shipped?",
+          "choices": [
+            "On Friday morning.",
+            "At the end of the month.",
+            "The next morning.",
+            "Before the forms were corrected."
+          ],
+          "answerIndex": 2,
+          "rationale": "Câu thứ tư cho biết sau khi biểu mẫu được chỉnh sửa, cả hai đơn hàng được gửi đi vào sáng hôm sau."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-defining-relative-clauses::reading1",
+      "lessonId": "a2-defining-relative-clauses",
+      "title": "Parking Permit Instructions",
+      "level": "A2",
+      "text": "Employees who need a parking permit should complete the online form. The security team will review each request and email a permit to the employee who submitted it. Vehicles that do not display a valid permit must use the visitor parking area. Employees should check the permit details before printing it and place it where security staff can see it. The updated policy is available on the company website, together with a short guide for new staff.",
+      "questions": [
+        {
+          "id": "a2-defining-relative-clauses::reading1::q1",
+          "skill": "find-detail",
+          "prompt": "Which employees should complete the online form?",
+          "choices": [
+            "Employees who need a parking permit",
+            "Employees who work at reception",
+            "Employees who visit customers",
+            "Employees who drive company buses"
+          ],
+          "answerIndex": 0,
+          "rationale": "Câu đầu tiên xác định nhóm cần điền biểu mẫu là nhân viên cần thẻ đỗ xe."
+        },
+        {
+          "id": "a2-defining-relative-clauses::reading1::q2",
+          "skill": "find-detail",
+          "prompt": "Where must vehicles without a valid permit park?",
+          "choices": [
+            "Behind the security office",
+            "In the visitor parking area",
+            "On the third floor",
+            "Beside the loading entrance"
+          ],
+          "answerIndex": 1,
+          "rationale": "Đoạn văn yêu cầu xe không có thẻ hợp lệ sử dụng khu vực đỗ xe dành cho khách."
+        },
+        {
+          "id": "a2-defining-relative-clauses::reading1::q3",
+          "skill": "find-detail",
+          "prompt": "Where can employees read the updated parking policy?",
+          "choices": [
+            "At the loading entrance.",
+            "In the finance office.",
+            "On the visitor badge.",
+            "On the company website."
+          ],
+          "answerIndex": 3,
+          "rationale": "Câu cuối xác nhận chính sách đã cập nhật có trên website công ty."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67
     }
   ]
 }

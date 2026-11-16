@@ -1,0 +1,72 @@
+{
+  "version": "2.78.0",
+  "resource": "data/learning-path/pre-a1-a1.json",
+  "algorithm": "sha256(canonical-json-sorted-keys)",
+  "tasks": [
+    {
+      "lessonId": "a2-polite-requests",
+      "id": "a2-polite-requests::produce1",
+      "sha256": "9e367cbf78770657391e596b26b4899f6c92ba3605e6037c36686bf877a9b6cf"
+    },
+    {
+      "lessonId": "a2-quantities",
+      "id": "a2-quantities::produce1",
+      "sha256": "8f8ee1fa8d9270cf5d4d453e4ab32c5635e2d0a287d37fb5f6543b2cfa0e9870"
+    },
+    {
+      "lessonId": "a2-comparisons",
+      "id": "a2-comparisons::produce1",
+      "sha256": "75febede656bae4e7da4bb8810091a5a851559ce9b43114a2996ee5624a15460"
+    },
+    {
+      "lessonId": "a2-past-work-events",
+      "id": "a2-past-work-events::produce1",
+      "sha256": "56486f7d1ff5cd69ec1f1a78e08d29dae142c24b040066a1dbca1203ce0079a6"
+    },
+    {
+      "lessonId": "a2-present-continuous",
+      "id": "a2-present-continuous::produce1",
+      "sha256": "4af9ae2994fffc543275ffdfef2f2a0bb5326dbe2da1f66a96570468935cf155"
+    },
+    {
+      "lessonId": "a2-obligation-permission",
+      "id": "a2-obligation-permission::produce1",
+      "sha256": "b629189a1e93c787e7171e4cbf14737755fe4ee47680bb7cb49632e2824e967b"
+    },
+    {
+      "lessonId": "a2-directions",
+      "id": "a2-directions::produce1",
+      "sha256": "d8e2dc8a337ec287f8727c47758232a13fbd83a4a5108308ba285b450eb5489e"
+    },
+    {
+      "lessonId": "a2-invitations-offers",
+      "id": "a2-invitations-offers::produce1",
+      "sha256": "176bd19be87ba1fc81aeacf514d2746d115856b27beb59e8329995f5c63a280f"
+    },
+    {
+      "lessonId": "a2-sequencing-instructions",
+      "id": "a2-sequencing-instructions::produce1",
+      "sha256": "533a6532fe02c7aca5fe098a5e83c59da0c1db521307b14afc862608fb4f57e9"
+    },
+    {
+      "lessonId": "a2-plans-and-intentions",
+      "id": "a2-plans-and-intentions::produce1",
+      "sha256": "dccf95840e2f6759bd1b02a773debd4356e3f37a666ad4391bf81d4e161a4bba"
+    },
+    {
+      "lessonId": "a2-present-perfect-experience",
+      "id": "a2-present-perfect-experience::produce1",
+      "sha256": "1b824946c83cce1341d9d96517abf29a4f635da4c64b346d22a603a3355d8e74"
+    },
+    {
+      "lessonId": "a2-basic-passive-voice",
+      "id": "a2-basic-passive-voice::produce1",
+      "sha256": "fb26a16ebc9aaa8042231fb684ebe2186b44b795548434a1dace241cdec34a1b"
+    },
+    {
+      "lessonId": "a2-defining-relative-clauses",
+      "id": "a2-defining-relative-clauses::produce1",
+      "sha256": "d13359e12e077daebae706fb24deca92b593799397f8dcebc249f2a1e46ec101"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "track": "Pre-A1 → A1",
-  "title": "Nền tảng tiếng Anh từ con số 0",
-  "description": "Lộ trình nhập môn có hướng dẫn; đây là chặng đầu, chưa phải toàn bộ chương trình TOEIC.",
+  "track": "Pre-A1 → A1 → A2",
+  "title": "Lộ trình nền tảng tiếng Anh từ Pre-A1 đến A2",
+  "description": "Lộ trình nhập môn có hướng dẫn gồm Pre-A1, A1 và chặng A2 đầu tiên; đây chưa phải toàn bộ chương trình TOEIC.",
   "lessons": [
     {
       "id": "pa1-alphabet",
@@ -812,6 +812,1383 @@
         "rationale": "“Will meet” expresses a future plan or prediction.",
         "focus": "Use will + base verb to refer to the future.",
         "evidenceType": "contextual-application-mcq"
+      }
+    },
+    {
+      "id": "a2-polite-requests",
+      "order": 1,
+      "title": "Yêu cầu và xin phép lịch sự",
+      "level": "A2",
+      "objective": "Đưa ra yêu cầu và xin phép trong môi trường làm việc bằng can, could và please.",
+      "explanation": "Can thường dùng cho yêu cầu hoặc xin phép thân mật. Could you…? lịch sự hơn khi nhờ người khác. Please có thể đặt ở cuối hoặc đầu câu để làm lời nói nhã nhặn hơn.",
+      "focus": "Could you send me the updated schedule, please? · Can I use the meeting room?",
+      "examples": [
+        {
+          "en": "Could you check this invoice, please?",
+          "vi": "Bạn có thể kiểm tra hóa đơn này giúp tôi được không?"
+        },
+        {
+          "en": "Can I borrow your calculator?",
+          "vi": "Tôi có thể mượn máy tính của bạn không?"
+        }
+      ],
+      "tip": "Khi nhờ đồng nghiệp hoặc khách hàng hỗ trợ, Could you…? thường tạo cảm giác lịch sự hơn Can you…?",
+      "question": "Which sentence makes a polite request?",
+      "choices": [
+        "You send the file.",
+        "Could you send the file, please?",
+        "Sending the file.",
+        "You can sent the file."
+      ],
+      "answerIndex": 1,
+      "rationale": "Could you + động từ nguyên mẫu + please? là cấu trúc yêu cầu lịch sự.",
+      "questionBank": [
+        {
+          "id": "a2-polite-requests::q1",
+          "question": "Which sentence makes a polite request?",
+          "choices": [
+            "Could you send the file, please?",
+            "You send the file.",
+            "Sending the file.",
+            "You can sent the file."
+          ],
+          "answerIndex": 0,
+          "rationale": "Could you + động từ nguyên mẫu + please? là cấu trúc yêu cầu lịch sự."
+        },
+        {
+          "id": "a2-polite-requests::q2",
+          "question": "Choose the correct question to ask permission.",
+          "choices": [
+            "Do I can use this desk?",
+            "Can I use this desk?",
+            "Can I to use this desk?",
+            "I can using this desk?"
+          ],
+          "answerIndex": 1,
+          "rationale": "Can I + động từ nguyên mẫu? dùng để xin phép."
+        },
+        {
+          "id": "a2-polite-requests::q3",
+          "question": "A colleague says, “Could you print this form?” What is a suitable reply?",
+          "choices": [
+            "At the printer.",
+            "It is a form.",
+            "Certainly. I will print it now.",
+            "Yesterday morning."
+          ],
+          "answerIndex": 2,
+          "rationale": "Certainly. I will print it now. là lời đồng ý phù hợp với yêu cầu."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-polite-requests::apply1",
+        "prompt": "You need a coworker to send the meeting notes. Choose the most polite request.",
+        "choices": [
+          "Could you send me the meeting notes, please?",
+          "Send me the notes.",
+          "You sending notes now.",
+          "Could you to send notes?"
+        ],
+        "answerIndex": 0,
+        "rationale": "Could you + động từ nguyên mẫu + please? là mẫu yêu cầu lịch sự.",
+        "focus": "Ask a coworker for help politely.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-polite-requests::produce1",
+        "minimumWords": 8,
+        "scenario": "Đồng nghiệp cần bạn gửi biên bản cuộc họp trước 3 giờ chiều để hoàn tất báo cáo.",
+        "instruction": "Viết một tin nhắn lịch sự nhờ đồng nghiệp gửi bản cập nhật. Dùng một lời yêu cầu với could và thêm lời cảm ơn.",
+        "requirements": [
+          "Nêu rõ tài liệu cần gửi là meeting notes.",
+          "Dùng “Could you please …?” để yêu cầu lịch sự.",
+          "Thêm thời hạn “before 3 p.m.” và lời cảm ơn."
+        ],
+        "sentenceFrame": "Could you please send me … before …? Thank you for … .",
+        "requiredFeatures": [
+          "could you please",
+          "meeting notes",
+          "thank you"
+        ],
+        "modelAnswer": "Could you please send me the meeting notes before 3 p.m.? Thank you for your help.",
+        "rubric": [
+          "Tôi dùng could để đưa ra yêu cầu lịch sự.",
+          "Tôi nêu rõ tài liệu và thời hạn cần thiết.",
+          "Tin nhắn có lời cảm ơn và phù hợp với đồng nghiệp."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-quantities",
+      "order": 2,
+      "title": "Số lượng và vật liệu làm việc",
+      "level": "A2",
+      "objective": "Dùng some, any, much, many, a few và a little để mô tả số lượng cơ bản.",
+      "explanation": "Many đi với danh từ đếm được số nhiều; much đi với danh từ không đếm được. Some thường xuất hiện trong câu khẳng định; any thường dùng trong câu hỏi và câu phủ định. A few và a little diễn tả một lượng nhỏ.",
+      "focus": "many folders · much equipment · a few forms · a little time",
+      "examples": [
+        {
+          "en": "We need a few extra chairs for the meeting.",
+          "vi": "Chúng tôi cần thêm một vài chiếc ghế cho cuộc họp."
+        },
+        {
+          "en": "There is not much paper in the printer.",
+          "vi": "Không còn nhiều giấy trong máy in."
+        }
+      ],
+      "tip": "Xác định danh từ là đếm được hay không đếm được trước khi chọn much hoặc many.",
+      "question": "Choose the correct phrase.",
+      "choices": [
+        "much documents",
+        "many documents",
+        "a little documents",
+        "any documentss"
+      ],
+      "answerIndex": 1,
+      "rationale": "Documents là danh từ đếm được số nhiều nên dùng many.",
+      "questionBank": [
+        {
+          "id": "a2-quantities::q1",
+          "question": "Choose the correct phrase.",
+          "choices": [
+            "much documents",
+            "any documentss",
+            "a little documents",
+            "many documents"
+          ],
+          "answerIndex": 3,
+          "rationale": "Documents là danh từ đếm được số nhiều nên dùng many."
+        },
+        {
+          "id": "a2-quantities::q2",
+          "question": "How ___ time do we have before the meeting?",
+          "choices": [
+            "much",
+            "a few",
+            "many",
+            "several"
+          ],
+          "answerIndex": 0,
+          "rationale": "Time là danh từ không đếm được nên dùng much trong câu hỏi."
+        },
+        {
+          "id": "a2-quantities::q3",
+          "question": "Choose the sentence with a correct quantity expression.",
+          "choices": [
+            "We need a few information.",
+            "We need a little information.",
+            "We need many information.",
+            "We need an information."
+          ],
+          "answerIndex": 1,
+          "rationale": "Information là danh từ không đếm được; a little là cách dùng phù hợp."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-quantities::apply1",
+        "prompt": "The office has only three spare chairs. Complete the notice: “We have ___ spare chairs available.”",
+        "choices": [
+          "a little",
+          "a few",
+          "much",
+          "any of"
+        ],
+        "answerIndex": 1,
+        "rationale": "Chairs là danh từ đếm được số nhiều; a few diễn tả một số lượng nhỏ.",
+        "focus": "Describe a small number of available items.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-quantities::produce1",
+        "minimumWords": 8,
+        "scenario": "Phòng hành chính đang kiểm kê vật tư: còn một vài tập hồ sơ nhưng chỉ còn một ít mực in.",
+        "instruction": "Viết một ghi chú ngắn cho bộ phận mua hàng, mô tả cả hai loại vật tư bằng a few và a little.",
+        "requirements": [
+          "Dùng “a few” với danh từ đếm được số nhiều (folders).",
+          "Dùng “a little” với danh từ không đếm được (printer ink).",
+          "Nêu rõ cần bổ sung vật tư."
+        ],
+        "sentenceFrame": "There are a few … left, but there is only a little … . We need to order … .",
+        "requiredFeatures": [
+          "a few",
+          "a little",
+          "printer ink"
+        ],
+        "modelAnswer": "There are a few folders left, but there is only a little printer ink. We need to order more ink.",
+        "rubric": [
+          "Tôi dùng a few cho danh từ đếm được và a little cho danh từ không đếm được.",
+          "Tôi diễn đạt đúng số lượng còn lại.",
+          "Ghi chú nêu được hành động cần thực hiện."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-comparisons",
+      "order": 3,
+      "title": "So sánh trong công việc",
+      "level": "A2",
+      "objective": "So sánh người, thiết bị và lựa chọn bằng dạng comparative và superlative thông dụng.",
+      "explanation": "Tính từ ngắn thường thêm -er khi so sánh hơn và -est khi so sánh nhất. Tính từ dài thường dùng more và the most. Một số dạng bất quy tắc gồm good–better–the best.",
+      "focus": "faster than · more reliable than · the most convenient",
+      "examples": [
+        {
+          "en": "The new printer is faster than the old one.",
+          "vi": "Máy in mới nhanh hơn máy cũ."
+        },
+        {
+          "en": "This is the most convenient time for the team.",
+          "vi": "Đây là thời điểm thuận tiện nhất cho nhóm."
+        }
+      ],
+      "tip": "So sánh hơn thường đi với than; so sánh nhất thường đi với the.",
+      "question": "Choose the correct comparative form: “This route is ___ than the old route.”",
+      "choices": [
+        "short",
+        "shorter",
+        "shortest",
+        "the short"
+      ],
+      "answerIndex": 1,
+      "rationale": "Short là tính từ ngắn; dạng so sánh hơn là shorter.",
+      "questionBank": [
+        {
+          "id": "a2-comparisons::q1",
+          "question": "Choose the correct comparative form: “This route is ___ than the old route.”",
+          "choices": [
+            "short",
+            "shortest",
+            "shorter",
+            "the short"
+          ],
+          "answerIndex": 2,
+          "rationale": "Short là tính từ ngắn; dạng so sánh hơn là shorter."
+        },
+        {
+          "id": "a2-comparisons::q2",
+          "question": "Which sentence is correct?",
+          "choices": [
+            "This device is the more reliable of all.",
+            "This device is reliabler than that one.",
+            "This device is most reliable than that one.",
+            "This device is more reliable than that one."
+          ],
+          "answerIndex": 3,
+          "rationale": "Reliable là tính từ dài; dùng more reliable trong so sánh hơn."
+        },
+        {
+          "id": "a2-comparisons::q3",
+          "question": "Complete: “Of the three meeting rooms, Room B is ___.”",
+          "choices": [
+            "the quietest",
+            "quieter",
+            "quiet",
+            "more quiet than"
+          ],
+          "answerIndex": 0,
+          "rationale": "Khi so sánh ba phòng, dùng dạng so sánh nhất the quietest."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-comparisons::apply1",
+        "prompt": "The team tested three delivery options. Option C is the fastest. Choose the correct report sentence.",
+        "choices": [
+          "Option C is faster of all.",
+          "Option C is more fast.",
+          "Option C is the fastest option.",
+          "Option C is fast than A."
+        ],
+        "answerIndex": 2,
+        "rationale": "Dùng the fastest khi xác định lựa chọn nhanh nhất trong nhóm ba phương án.",
+        "focus": "Report the best option after comparing several choices.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-comparisons::produce1",
+        "minimumWords": 8,
+        "scenario": "Nhóm đang chọn dịch vụ giao hàng. Tuyến A mất 3 ngày, tuyến B mất 2 ngày và tuyến C mất 5 ngày.",
+        "instruction": "Viết 2 câu đề xuất tuyến B. Dùng một câu so sánh hơn với than và một câu so sánh nhất với the fastest.",
+        "requirements": [
+          "So sánh thời gian của tuyến B với tuyến A.",
+          "Dùng cấu trúc comparative có “than”.",
+          "Khẳng định tuyến B là lựa chọn nhanh nhất trong ba tuyến."
+        ],
+        "sentenceFrame": "Route B is … than Route A. It is the … option.",
+        "requiredFeatures": [
+          "faster than",
+          "the fastest",
+          "route b"
+        ],
+        "modelAnswer": "Route B is faster than Route A. It is the fastest option because it takes only two days.",
+        "rubric": [
+          "Tôi dùng đúng dạng so sánh hơn với than.",
+          "Tôi dùng đúng dạng so sánh nhất trong nhóm ba tuyến.",
+          "Kết luận phù hợp với dữ kiện thời gian đã cho."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-past-work-events",
+      "order": 4,
+      "title": "Kể lại công việc đã hoàn thành",
+      "level": "A2",
+      "objective": "Mô tả sự kiện đã xảy ra bằng quá khứ đơn, gồm một số động từ bất quy tắc thông dụng.",
+      "explanation": "Quá khứ đơn dùng cho hành động đã kết thúc tại một thời điểm trong quá khứ. Động từ có quy tắc thường thêm -ed; một số động từ thường gặp đổi dạng như send–sent, buy–bought, meet–met và take–took.",
+      "focus": "sent the email · bought new supplies · met the supplier",
+      "examples": [
+        {
+          "en": "We sent the revised contract yesterday.",
+          "vi": "Chúng tôi đã gửi hợp đồng điều chỉnh hôm qua."
+        },
+        {
+          "en": "The manager met the supplier on Monday.",
+          "vi": "Quản lý đã gặp nhà cung cấp vào thứ Hai."
+        }
+      ],
+      "tip": "Các từ yesterday, last week và two days ago thường cho biết câu cần dùng quá khứ đơn.",
+      "question": "Choose the correct past form: “The assistant ___ the email yesterday.”",
+      "choices": [
+        "sends",
+        "send",
+        "sent",
+        "sending"
+      ],
+      "answerIndex": 2,
+      "rationale": "Sent là dạng quá khứ của send.",
+      "questionBank": [
+        {
+          "id": "a2-past-work-events::q1",
+          "question": "Choose the correct past form: “The assistant ___ the email yesterday.”",
+          "choices": [
+            "sends",
+            "sent",
+            "send",
+            "sending"
+          ],
+          "answerIndex": 1,
+          "rationale": "Sent là dạng quá khứ của send."
+        },
+        {
+          "id": "a2-past-work-events::q2",
+          "question": "Complete: “They ___ new office chairs last month.”",
+          "choices": [
+            "buy",
+            "buying",
+            "bought",
+            "buys"
+          ],
+          "answerIndex": 2,
+          "rationale": "Bought là dạng quá khứ bất quy tắc của buy."
+        },
+        {
+          "id": "a2-past-work-events::q3",
+          "question": "Which sentence describes a finished past event?",
+          "choices": [
+            "The team meets now.",
+            "The team is meeting now.",
+            "The team will meet tomorrow.",
+            "The team met the client yesterday."
+          ],
+          "answerIndex": 3,
+          "rationale": "Met và yesterday cho biết sự kiện đã kết thúc trong quá khứ."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-past-work-events::apply1",
+        "prompt": "Write a short update about yesterday. Choose the correct sentence.",
+        "choices": [
+          "We receive the package yesterday.",
+          "We receives the package yesterday.",
+          "We receiving the package yesterday.",
+          "We received the package yesterday."
+        ],
+        "answerIndex": 3,
+        "rationale": "Received là dạng quá khứ của receive và phù hợp với yesterday.",
+        "focus": "Give a brief update about a completed task.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-past-work-events::produce1",
+        "minimumWords": 8,
+        "scenario": "Hôm qua bạn hoàn tất báo cáo doanh thu và gửi báo cáo đó cho quản lý.",
+        "instruction": "Viết một cập nhật công việc gồm 2 câu về việc đã làm hôm qua. Dùng ít nhất hai động từ quá khứ, trong đó có một động từ bất quy tắc.",
+        "requirements": [
+          "Có mốc thời gian “yesterday”.",
+          "Dùng động từ quá khứ bất quy tắc “wrote”.",
+          "Dùng thêm một hành động đã hoàn thành như “sent”."
+        ],
+        "sentenceFrame": "Yesterday, I … the report. Then, I … it to … .",
+        "requiredFeatures": [
+          "yesterday",
+          "wrote",
+          "sent"
+        ],
+        "modelAnswer": "Yesterday, I wrote the sales report. Then, I sent it to my manager.",
+        "rubric": [
+          "Tôi dùng đúng động từ quá khứ cho hành động đã hoàn thành.",
+          "Tôi thể hiện rõ trình tự các việc đã làm.",
+          "Cập nhật có mốc thời gian và người nhận phù hợp."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-present-continuous",
+      "order": 5,
+      "title": "Công việc đang diễn ra",
+      "level": "A2",
+      "objective": "Mô tả hành động đang xảy ra hoặc tình huống tạm thời bằng hiện tại tiếp diễn.",
+      "explanation": "Hiện tại tiếp diễn có dạng am/is/are + V-ing. Dùng thì này cho hành động đang diễn ra quanh thời điểm nói hoặc tình huống tạm thời.",
+      "focus": "The staff are preparing the room. · I am checking the figures.",
+      "examples": [
+        {
+          "en": "The technicians are repairing the elevator.",
+          "vi": "Các kỹ thuật viên đang sửa thang máy."
+        },
+        {
+          "en": "I am working at the front desk this week.",
+          "vi": "Tuần này tôi đang làm việc tại quầy lễ tân."
+        }
+      ],
+      "tip": "Tìm chủ ngữ để chọn am/is/are, sau đó dùng động từ thêm -ing.",
+      "question": "Complete: “The staff ___ preparing the conference room.”",
+      "choices": [
+        "is",
+        "are",
+        "be",
+        "am"
+      ],
+      "answerIndex": 1,
+      "rationale": "The staff được xem là nhóm người; dùng are trong câu này.",
+      "questionBank": [
+        {
+          "id": "a2-present-continuous::q1",
+          "question": "Complete: “The staff ___ preparing the conference room.”",
+          "choices": [
+            "are",
+            "is",
+            "be",
+            "am"
+          ],
+          "answerIndex": 0,
+          "rationale": "The staff được xem là nhóm người; dùng are trong câu này."
+        },
+        {
+          "id": "a2-present-continuous::q2",
+          "question": "Choose the correct sentence.",
+          "choices": [
+            "I checking the latest figures.",
+            "I am checking the latest figures.",
+            "I is checking the latest figures.",
+            "I am check the latest figures."
+          ],
+          "answerIndex": 1,
+          "rationale": "I am + V-ing là cấu trúc hiện tại tiếp diễn đúng."
+        },
+        {
+          "id": "a2-present-continuous::q3",
+          "question": "Which phrase describes a temporary situation this week?",
+          "choices": [
+            "She works here every year.",
+            "She worked here last year.",
+            "She is working at the branch this week.",
+            "She will work here next year."
+          ],
+          "answerIndex": 2,
+          "rationale": "Is working this week diễn tả tình huống tạm thời trong tuần này."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-present-continuous::apply1",
+        "prompt": "A coworker asks what the technicians are doing now. Choose the correct reply.",
+        "choices": [
+          "They are repairing the elevator.",
+          "They repair the elevator yesterday.",
+          "They repairs the elevator.",
+          "They are repair the elevator."
+        ],
+        "answerIndex": 0,
+        "rationale": "Are repairing diễn tả hành động đang diễn ra.",
+        "focus": "Describe an activity happening now.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-present-continuous::produce1",
+        "minimumWords": 8,
+        "scenario": "Bạn đang gọi cho bộ phận kỹ thuật. Lúc này Mai đang kiểm tra máy in và Long đang cài bản cập nhật.",
+        "instruction": "Viết một câu cập nhật về hai hoạt động đang diễn ra ngay lúc nói. Dùng hiện tại tiếp diễn cho cả hai người.",
+        "requirements": [
+          "Dùng “is checking” với Mai.",
+          "Dùng “is installing” với Long.",
+          "Nêu rõ các việc đang diễn ra “right now”."
+        ],
+        "sentenceFrame": "Mai is …, and Long is … right now.",
+        "requiredFeatures": [
+          "is checking",
+          "is installing",
+          "right now"
+        ],
+        "modelAnswer": "Mai is checking the printer, and Long is installing an update right now.",
+        "rubric": [
+          "Tôi dùng đúng am/is/are + V-ing.",
+          "Tôi ghép chủ ngữ với động từ phù hợp.",
+          "Câu mô tả hoạt động đang diễn ra, không phải thói quen."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-obligation-permission",
+      "order": 6,
+      "title": "Nghĩa vụ, quy định và sự cho phép",
+      "level": "A2",
+      "objective": "Diễn đạt quy định và sự cần thiết bằng have to, must, do not have to và can.",
+      "explanation": "Must và have to diễn tả sự cần thiết hoặc nghĩa vụ. Do not have to có nghĩa là không bắt buộc, khác với must not là bị cấm. Can diễn tả sự cho phép hoặc khả năng.",
+      "focus": "You must wear a badge. · You do not have to print the form.",
+      "examples": [
+        {
+          "en": "Visitors have to sign in at reception.",
+          "vi": "Khách phải đăng ký tại quầy lễ tân."
+        },
+        {
+          "en": "You must not use this entrance.",
+          "vi": "Bạn không được sử dụng lối vào này."
+        }
+      ],
+      "tip": "Phân biệt do not have to (không bắt buộc) với must not (không được phép).",
+      "question": "A safety sign says helmets are required. Choose the correct sentence.",
+      "choices": [
+        "Workers must wear helmets.",
+        "Workers must not wear helmets.",
+        "Workers do not have to wear helmets.",
+        "Workers can wearing helmets."
+      ],
+      "answerIndex": 0,
+      "rationale": "Must wear diễn tả quy định bắt buộc đội mũ bảo hộ.",
+      "questionBank": [
+        {
+          "id": "a2-obligation-permission::q1",
+          "question": "A safety sign says helmets are required. Choose the correct sentence.",
+          "choices": [
+            "Workers can wearing helmets.",
+            "Workers must not wear helmets.",
+            "Workers do not have to wear helmets.",
+            "Workers must wear helmets."
+          ],
+          "answerIndex": 3,
+          "rationale": "Must wear diễn tả quy định bắt buộc đội mũ bảo hộ."
+        },
+        {
+          "id": "a2-obligation-permission::q2",
+          "question": "Which sentence means printing is optional?",
+          "choices": [
+            "You do not have to print the form.",
+            "You must not print the form.",
+            "You have to print the form.",
+            "You cannot print the form."
+          ],
+          "answerIndex": 0,
+          "rationale": "Do not have to nghĩa là không cần/không bắt buộc."
+        },
+        {
+          "id": "a2-obligation-permission::q3",
+          "question": "Choose the correct prohibition.",
+          "choices": [
+            "Staff must using this door.",
+            "Staff must not use this door.",
+            "Staff do not have to use this door.",
+            "Staff can not to use this door."
+          ],
+          "answerIndex": 1,
+          "rationale": "Must not diễn tả điều bị cấm."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-obligation-permission::apply1",
+        "prompt": "A visitor needs permission to enter the meeting area. Choose the correct notice.",
+        "choices": [
+          "Visitors must to ask first.",
+          "Visitors can enter after checking in.",
+          "Visitors do not have to check in ever.",
+          "Visitors must entering now."
+        ],
+        "answerIndex": 1,
+        "rationale": "Can enter diễn tả sự cho phép, kèm điều kiện check in.",
+        "focus": "Understand a simple workplace rule and permission.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-obligation-permission::produce1",
+        "minimumWords": 8,
+        "scenario": "Khách đến thăm văn phòng phải đăng ký tại quầy lễ tân và có thể vào khu họp khi có nhân viên phụ trách đi cùng.",
+        "instruction": "Viết một thông báo gồm 2 câu, nêu một quy định bắt buộc và một điều được phép.",
+        "requirements": [
+          "Dùng “must” hoặc “have to” cho việc đăng ký.",
+          "Dùng “can” để diễn đạt quyền được vào khu họp khi có người đi cùng.",
+          "Nêu rõ điều kiện đi kèm."
+        ],
+        "sentenceFrame": "Visitors must … . They can … when … .",
+        "requiredFeatures": [
+          "must",
+          "can",
+          "reception"
+        ],
+        "modelAnswer": "Visitors must register at reception. They can enter the meeting area when a staff member accompanies them.",
+        "rubric": [
+          "Tôi phân biệt được nghĩa vụ với sự cho phép.",
+          "Tôi dùng đúng dạng động từ sau must/can.",
+          "Thông báo nêu rõ điều kiện và dễ hiểu."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-directions",
+      "order": 7,
+      "title": "Chỉ đường trong tòa nhà",
+      "level": "A2",
+      "objective": "Hỏi và chỉ đường ngắn trong tòa nhà bằng imperative và giới từ chỉ hướng.",
+      "explanation": "Dùng động từ nguyên mẫu để đưa chỉ dẫn: go straight, turn left, take the elevator. Các cụm next to, across from và at the end of xác định vị trí.",
+      "focus": "Go straight ahead. · Turn left at the reception desk.",
+      "examples": [
+        {
+          "en": "The training room is across from the cafeteria.",
+          "vi": "Phòng đào tạo đối diện căng-tin."
+        },
+        {
+          "en": "Take the elevator to the third floor.",
+          "vi": "Đi thang máy lên tầng ba."
+        }
+      ],
+      "tip": "Nói hướng đi theo thứ tự: đi thẳng, rẽ, rồi nêu điểm đến.",
+      "question": "Choose the correct instruction.",
+      "choices": [
+        "Goes straight ahead.",
+        "Going straight ahead.",
+        "Go straight ahead.",
+        "To go straight ahead."
+      ],
+      "answerIndex": 2,
+      "rationale": "Câu mệnh lệnh dùng động từ nguyên mẫu Go.",
+      "questionBank": [
+        {
+          "id": "a2-directions::q1",
+          "question": "Choose the correct instruction.",
+          "choices": [
+            "Goes straight ahead.",
+            "Going straight ahead.",
+            "Go straight ahead.",
+            "To go straight ahead."
+          ],
+          "answerIndex": 2,
+          "rationale": "Câu mệnh lệnh dùng động từ nguyên mẫu Go."
+        },
+        {
+          "id": "a2-directions::q2",
+          "question": "The reception desk is opposite the elevator. Which phrase describes its location?",
+          "choices": [
+            "next to",
+            "behind of",
+            "inside",
+            "across from"
+          ],
+          "answerIndex": 3,
+          "rationale": "Across from có nghĩa là đối diện."
+        },
+        {
+          "id": "a2-directions::q3",
+          "question": "Complete: “Turn right ___ the main entrance.”",
+          "choices": [
+            "at",
+            "between",
+            "during",
+            "under of"
+          ],
+          "answerIndex": 0,
+          "rationale": "At the main entrance chỉ điểm nơi cần rẽ."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-directions::apply1",
+        "prompt": "A visitor is at reception and needs the training room opposite the cafeteria. Choose the clearest direction.",
+        "choices": [
+          "It is yesterday.",
+          "You are room.",
+          "Go straight and turn left at the elevator. The room is across from the cafeteria.",
+          "Go across from quickly."
+        ],
+        "answerIndex": 2,
+        "rationale": "Chỉ dẫn có thứ tự và dùng across from để xác định vị trí.",
+        "focus": "Give a short, ordered direction to a visitor.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-directions::produce1",
+        "minimumWords": 8,
+        "scenario": "Một khách đang đứng ở quầy lễ tân và cần tìm phòng đào tạo nằm đối diện căn-tin.",
+        "instruction": "Viết chỉ dẫn gồm 3 bước theo đúng thứ tự từ quầy lễ tân đến phòng đào tạo.",
+        "requirements": [
+          "Dùng câu mệnh lệnh để chỉ dẫn.",
+          "Có “go straight” và “turn left”.",
+          "Dùng “opposite the cafeteria” để xác định vị trí cuối."
+        ],
+        "sentenceFrame": "Go straight … . Then, turn … . The training room is … .",
+        "requiredFeatures": [
+          "go straight",
+          "turn left",
+          "opposite the cafeteria"
+        ],
+        "modelAnswer": "Go straight past the lifts. Then, turn left. The training room is opposite the cafeteria.",
+        "rubric": [
+          "Tôi dùng câu mệnh lệnh rõ ràng.",
+          "Các bước chỉ đường đúng trình tự.",
+          "Tôi dùng giới từ chỉ vị trí chính xác."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-invitations-offers",
+      "order": 8,
+      "title": "Lời mời và đề nghị giúp đỡ",
+      "level": "A2",
+      "objective": "Đưa ra lời mời và đề nghị giúp đỡ bằng would you like, shall I và why do not we.",
+      "explanation": "Would you like…? là cách mời lịch sự. Shall I…? dùng để đề nghị người nói làm việc gì. Why don’t we…? gợi ý một hoạt động chung.",
+      "focus": "Would you like some coffee? · Shall I call the supplier?",
+      "examples": [
+        {
+          "en": "Would you like to join the project meeting?",
+          "vi": "Bạn có muốn tham gia cuộc họp dự án không?"
+        },
+        {
+          "en": "Shall I send the revised schedule?",
+          "vi": "Để tôi gửi lịch đã điều chỉnh nhé?"
+        }
+      ],
+      "tip": "Chọn đúng chủ thể: Would you like hỏi người nghe; Shall I đề nghị người nói hành động.",
+      "question": "Choose a polite invitation.",
+      "choices": [
+        "Would you like to join us for lunch?",
+        "You like join lunch?",
+        "Would you like joining us?",
+        "Do you would like lunch?"
+      ],
+      "answerIndex": 0,
+      "rationale": "Would you like to + động từ nguyên mẫu là lời mời lịch sự.",
+      "questionBank": [
+        {
+          "id": "a2-invitations-offers::q1",
+          "question": "Choose a polite invitation.",
+          "choices": [
+            "You like join lunch?",
+            "Would you like to join us for lunch?",
+            "Would you like joining us?",
+            "Do you would like lunch?"
+          ],
+          "answerIndex": 1,
+          "rationale": "Would you like to + động từ nguyên mẫu là lời mời lịch sự."
+        },
+        {
+          "id": "a2-invitations-offers::q2",
+          "question": "You offer to call a customer. Choose the correct sentence.",
+          "choices": [
+            "Shall I calling the customer?",
+            "Shall I to call the customer?",
+            "Shall I call the customer?",
+            "Shall I called the customer?"
+          ],
+          "answerIndex": 2,
+          "rationale": "Shall I + động từ nguyên mẫu dùng để đề nghị mình thực hiện."
+        },
+        {
+          "id": "a2-invitations-offers::q3",
+          "question": "Choose a suggestion for the team.",
+          "choices": [
+            "Why we do not meeting?",
+            "Why do not we to meet?",
+            "Why does not we meet?",
+            "Why don't we meet after lunch?"
+          ],
+          "answerIndex": 3,
+          "rationale": "Why don't we + động từ nguyên mẫu...? là cấu trúc tự nhiên để đưa ra lời gợi ý."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-invitations-offers::apply1",
+        "prompt": "You want to offer to prepare extra copies for a colleague. Choose your offer.",
+        "choices": [
+          "Do I shall prepare copies?",
+          "Would I preparing copies?",
+          "Shall I to prepared copies?",
+          "Shall I prepare some extra copies?"
+        ],
+        "answerIndex": 3,
+        "rationale": "Shall I prepare…? là lời đề nghị tự nhiên.",
+        "focus": "Offer help in a polite workplace conversation.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-invitations-offers::produce1",
+        "minimumWords": 8,
+        "scenario": "Đồng nghiệp đang chuẩn bị tài liệu cho buổi đào tạo và có vẻ cần hỗ trợ.",
+        "instruction": "Viết 2 câu: đề nghị giúp chuẩn bị bản sao và mời đồng nghiệp cùng kiểm tra tài liệu.",
+        "requirements": [
+          "Dùng “Shall I …?” để đề nghị giúp đỡ.",
+          "Dùng “Would you like …?” để đưa ra lời mời.",
+          "Giữ giọng điệu thân thiện, lịch sự."
+        ],
+        "sentenceFrame": "Shall I …? Would you like to … together?",
+        "requiredFeatures": [
+          "shall i",
+          "would you like",
+          "copies"
+        ],
+        "modelAnswer": "Shall I prepare some extra copies? Would you like to check the training materials together?",
+        "rubric": [
+          "Tôi dùng đúng mẫu câu đề nghị và lời mời.",
+          "Hai câu thể hiện hai mục đích khác nhau.",
+          "Ngôn ngữ phù hợp với cuộc trao đổi nơi làm việc."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-sequencing-instructions",
+      "order": 9,
+      "title": "Trình bày các bước theo thứ tự",
+      "level": "A2",
+      "objective": "Sắp xếp hướng dẫn bằng first, next, then, after that và finally.",
+      "explanation": "Các từ nối trình tự giúp người nghe theo dõi quy trình. First giới thiệu bước đầu; next/then cho bước tiếp theo; after that nối bước sau; finally chỉ bước cuối.",
+      "focus": "First, check the order. Then, print the label. Finally, attach it to the box.",
+      "examples": [
+        {
+          "en": "First, open the form. Then, enter the order number.",
+          "vi": "Đầu tiên, mở biểu mẫu. Sau đó, nhập mã đơn hàng."
+        },
+        {
+          "en": "Finally, send the confirmation to the customer.",
+          "vi": "Cuối cùng, gửi xác nhận cho khách hàng."
+        }
+      ],
+      "tip": "Dùng finally cho bước cuối, không dùng first cho một hành động xảy ra sau cùng.",
+      "question": "Which word usually introduces the first step?",
+      "choices": [
+        "Finally",
+        "First",
+        "After that",
+        "Last"
+      ],
+      "answerIndex": 1,
+      "rationale": "First giới thiệu bước đầu tiên.",
+      "questionBank": [
+        {
+          "id": "a2-sequencing-instructions::q1",
+          "question": "Which word usually introduces the first step?",
+          "choices": [
+            "First",
+            "Finally",
+            "After that",
+            "Last"
+          ],
+          "answerIndex": 0,
+          "rationale": "First giới thiệu bước đầu tiên."
+        },
+        {
+          "id": "a2-sequencing-instructions::q2",
+          "question": "Complete: “Check the address. ___, print the shipping label.”",
+          "choices": [
+            "Yesterday",
+            "Then",
+            "Because",
+            "Although"
+          ],
+          "answerIndex": 1,
+          "rationale": "Then nối hành động kế tiếp trong quy trình."
+        },
+        {
+          "id": "a2-sequencing-instructions::q3",
+          "question": "Choose the best final instruction.",
+          "choices": [
+            "First, close the file.",
+            "Next, open the folder.",
+            "Finally, save and close the document.",
+            "Before, the document."
+          ],
+          "answerIndex": 2,
+          "rationale": "Finally đánh dấu bước cuối cùng của quy trình."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-sequencing-instructions::apply1",
+        "prompt": "You explain a simple document process. Choose the sentence that correctly gives the final step.",
+        "choices": [
+          "Finally, submit the completed form.",
+          "Then, enter the details.",
+          "First, send the form.",
+          "Because, open the file."
+        ],
+        "answerIndex": 0,
+        "rationale": "Finally phù hợp với bước cuối của quy trình.",
+        "focus": "Explain a short process in a clear order.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-sequencing-instructions::produce1",
+        "minimumWords": 8,
+        "scenario": "Quy trình phê duyệt tài liệu gồm ba bước: điền biểu mẫu, gửi quản lý duyệt và lưu bản đã duyệt vào thư mục chung.",
+        "instruction": "Viết hướng dẫn 3 bước. Dùng first, next và finally để người đọc biết thứ tự.",
+        "requirements": [
+          "Bước đầu là hoàn thành biểu mẫu yêu cầu.",
+          "Bước tiếp theo là gửi cho quản lý.",
+          "Bước cuối là lưu bản đã duyệt vào shared folder."
+        ],
+        "sentenceFrame": "First, … . Next, … . Finally, … .",
+        "requiredFeatures": [
+          "first",
+          "next",
+          "finally"
+        ],
+        "modelAnswer": "First, complete the request form. Next, send it to your manager. Finally, save the approved copy in the shared folder.",
+        "rubric": [
+          "Tôi sử dụng từ nối theo đúng trình tự.",
+          "Mỗi bước là một hành động rõ ràng.",
+          "Bước cuối phản ánh đúng kết quả của quy trình."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-plans-and-intentions",
+      "order": 10,
+      "title": "Kế hoạch và dự định gần",
+      "level": "A2",
+      "objective": "Nói về dự định và kế hoạch đã có bằng be going to.",
+      "explanation": "Be going to + động từ nguyên mẫu dùng để nói về dự định hoặc kế hoạch. Chọn am/is/are theo chủ ngữ; không thêm to lần thứ hai trước động từ chính.",
+      "focus": "I am going to call the client. · They are going to visit the branch.",
+      "examples": [
+        {
+          "en": "We are going to review the contract tomorrow.",
+          "vi": "Ngày mai chúng tôi sẽ xem xét hợp đồng."
+        },
+        {
+          "en": "She is going to attend the safety workshop.",
+          "vi": "Cô ấy dự định tham dự buổi tập huấn an toàn."
+        }
+      ],
+      "tip": "Sau am/is/are going to, dùng động từ nguyên mẫu: going to meet, không phải going to meeting.",
+      "question": "Complete: “I ___ going to visit the warehouse tomorrow.”",
+      "choices": [
+        "is",
+        "are",
+        "am",
+        "be"
+      ],
+      "answerIndex": 2,
+      "rationale": "I đi với am.",
+      "questionBank": [
+        {
+          "id": "a2-plans-and-intentions::q1",
+          "question": "Complete: “I ___ going to visit the warehouse tomorrow.”",
+          "choices": [
+            "is",
+            "are",
+            "be",
+            "am"
+          ],
+          "answerIndex": 3,
+          "rationale": "I đi với am."
+        },
+        {
+          "id": "a2-plans-and-intentions::q2",
+          "question": "Choose the correct future plan.",
+          "choices": [
+            "They are going to inspect the equipment.",
+            "They going to inspect the equipment.",
+            "They are going inspect the equipment.",
+            "They is going to inspect the equipment."
+          ],
+          "answerIndex": 0,
+          "rationale": "They are going to + động từ nguyên mẫu."
+        },
+        {
+          "id": "a2-plans-and-intentions::q3",
+          "question": "Which sentence describes an intention?",
+          "choices": [
+            "He inspected the site yesterday.",
+            "He is going to inspect the site next week.",
+            "He inspects the site every day.",
+            "He is inspecting the site now."
+          ],
+          "answerIndex": 1,
+          "rationale": "Is going to inspect next week diễn tả dự định trong tương lai."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-plans-and-intentions::apply1",
+        "prompt": "Your team has a plan for Friday. Choose the correct update.",
+        "choices": [
+          "We is going to meet the supplier on Friday.",
+          "We are going to meet the supplier on Friday.",
+          "We going to met the supplier.",
+          "We are going meet the supplier."
+        ],
+        "answerIndex": 1,
+        "rationale": "We are going to + động từ nguyên mẫu diễn tả kế hoạch.",
+        "focus": "Share a planned action with your team.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-plans-and-intentions::produce1",
+        "minimumWords": 8,
+        "scenario": "Nhóm của bạn đã thống nhất cập nhật hệ thống vào chiều thứ Sáu tuần này.",
+        "instruction": "Viết một thông báo ngắn cho nhóm về kế hoạch. Dùng be going to và nêu thời gian thực hiện.",
+        "requirements": [
+          "Dùng đúng dạng “am/is/are going to + verb”.",
+          "Nêu “on Friday afternoon”.",
+          "Thêm một thông tin chuẩn bị hoặc phối hợp với đồng nghiệp."
+        ],
+        "sentenceFrame": "We are going to … on … . Please … before then.",
+        "requiredFeatures": [
+          "are going to",
+          "on friday afternoon"
+        ],
+        "modelAnswer": "We are going to update the system on Friday afternoon. Please save your work before then.",
+        "rubric": [
+          "Tôi dùng đúng be going to + động từ nguyên mẫu.",
+          "Tôi nói rõ đây là kế hoạch trong tương lai.",
+          "Thông báo có thời gian và hướng dẫn liên quan."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-present-perfect-experience",
+      "order": 11,
+      "title": "Present Perfect: kết quả và trải nghiệm",
+      "level": "A2",
+      "objective": "Mô tả kết quả có liên quan đến hiện tại và hỏi về trải nghiệm bằng have/has + quá khứ phân từ.",
+      "explanation": "Present Perfect có dạng S + have/has + past participle (V3). Dùng thì này để nói về kết quả đến hiện tại hoặc trải nghiệm mà không nêu thời điểm quá khứ đã kết thúc. Already thường đứng sau have/has để nói việc đã hoàn tất; yet thường xuất hiện trong câu hỏi và câu phủ định; ever thường dùng khi hỏi về trải nghiệm. Với mốc thời gian đã kết thúc như yesterday hoặc last Friday, thường dùng Past Simple.",
+      "focus": "The team has updated the schedule. · Have you ever visited the new branch?",
+      "examples": [
+        {
+          "en": "The facilities team has already completed the inspection.",
+          "vi": "Đội cơ sở vật chất đã hoàn thành đợt kiểm tra."
+        },
+        {
+          "en": "Have you sent the revised report yet?",
+          "vi": "Bạn đã gửi báo cáo chỉnh sửa chưa?"
+        }
+      ],
+      "tip": "Nhìn dấu hiệu thời gian trước khi chọn thì: already/yet/ever thường gợi ý Present Perfect; yesterday/last week chỉ một thời điểm đã kết thúc và thường đi với Past Simple.",
+      "question": "Choose the sentence that correctly uses the Present Perfect.",
+      "choices": [
+        "The assistant has sent the revised file.",
+        "The assistant have sent the revised file.",
+        "The assistant has send the revised file.",
+        "The assistant sent the revised file tomorrow."
+      ],
+      "answerIndex": 0,
+      "rationale": "The assistant là chủ ngữ số ít nên dùng has; sau has cần quá khứ phân từ sent.",
+      "questionBank": [
+        {
+          "id": "a2-present-perfect-experience::q1",
+          "question": "Complete the sentence: “The maintenance team ___ the inspection.”",
+          "choices": [
+            "has completed",
+            "have completing",
+            "has complete",
+            "is completed yesterday"
+          ],
+          "answerIndex": 0,
+          "rationale": "The maintenance team được xem là chủ ngữ số ít; cấu trúc đúng là has + V3: has completed."
+        },
+        {
+          "id": "a2-present-perfect-experience::q2",
+          "question": "Choose the sentence with the correct position of “already”.",
+          "choices": [
+            "The manager already has approved the request yesterday.",
+            "The manager has already approved the request.",
+            "The manager has approve already the request.",
+            "The manager is already approve the request."
+          ],
+          "answerIndex": 1,
+          "rationale": "Already thường đứng sau have/has và trước quá khứ phân từ: has already approved."
+        },
+        {
+          "id": "a2-present-perfect-experience::q3",
+          "question": "Which question asks about someone’s experience without naming a finished time?",
+          "choices": [
+            "Did you visit the branch yesterday?",
+            "Do you ever visited the branch?",
+            "Have you ever visited the new branch?",
+            "Have you visited the new branch last Monday?"
+          ],
+          "answerIndex": 2,
+          "rationale": "Have you ever + V3? hỏi về trải nghiệm đến hiện tại; không gắn với một mốc quá khứ đã kết thúc."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-present-perfect-experience::apply1",
+        "prompt": "A colleague asks whether the updated report is ready. You have just finished it. Choose a suitable reply.",
+        "choices": [
+          "I have already finished it.",
+          "I finish it yesterday.",
+          "I has finished it.",
+          "I am already finish it."
+        ],
+        "answerIndex": 0,
+        "rationale": "I have already finished it dùng Present Perfect để báo kết quả đã hoàn tất có liên quan đến hiện tại.",
+        "focus": "Report a completed result without naming a finished past time.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-present-perfect-experience::produce1",
+        "minimumWords": 8,
+        "scenario": "Đồng nghiệp hỏi báo cáo cập nhật đã sẵn sàng chưa. Bạn vừa tải bản mới lên thư mục chung.",
+        "instruction": "Viết 2 câu trả lời: báo cáo kết quả vừa hoàn thành và hỏi đồng nghiệp đã kiểm tra số liệu mới chưa. Không dùng mốc thời gian quá khứ đã kết thúc.",
+        "requirements": [
+          "Dùng “have uploaded” để nêu kết quả hiện tại.",
+          "Dùng câu hỏi “Have you checked …?”",
+          "Không dùng yesterday/last week với Present Perfect."
+        ],
+        "sentenceFrame": "I have … the revised report. Have you … the new figures?",
+        "requiredFeatures": [
+          "have uploaded",
+          "have you checked",
+          "revised report"
+        ],
+        "modelAnswer": "I have uploaded the revised report. Have you checked the new figures?",
+        "rubric": [
+          "Tôi dùng have/has + past participle.",
+          "Tôi liên hệ kết quả với tình trạng hiện tại.",
+          "Tôi tránh kết hợp Present Perfect với mốc thời gian quá khứ đã kết thúc."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-basic-passive-voice",
+      "order": 12,
+      "title": "Câu bị động cơ bản: quy trình và công việc",
+      "level": "A2",
+      "objective": "Mô tả quy trình quen thuộc hoặc công việc đã hoàn tất bằng câu bị động ở hiện tại đơn và quá khứ đơn.",
+      "explanation": "Dùng câu bị động khi muốn nhấn mạnh người/vật nhận tác động hoặc công việc được thực hiện. Cấu trúc cơ bản là be + past participle (V3). Với quy trình thường xuyên, dùng am/is/are + V3; với hành động đã hoàn tất trong quá khứ, dùng was/were + V3. Có thể thêm by + người thực hiện nếu thông tin đó quan trọng.",
+      "focus": "Invoices are reviewed every Friday. · The package was delivered yesterday.",
+      "examples": [
+        {
+          "en": "All visitor badges are checked at reception.",
+          "vi": "Tất cả thẻ khách được kiểm tra tại quầy lễ tân."
+        },
+        {
+          "en": "The replacement printers were delivered this morning.",
+          "vi": "Các máy in thay thế đã được giao vào sáng nay."
+        }
+      ],
+      "tip": "Chọn đúng dạng của be theo thì và chủ ngữ, sau đó dùng V3. Không dùng dạng nguyên mẫu sau am/is/are/was/were trong câu bị động này.",
+      "question": "Choose the correct passive sentence.",
+      "choices": [
+        "The order is checked by a supervisor.",
+        "The order checks by a supervisor.",
+        "The order is check by a supervisor.",
+        "The order checking by a supervisor."
+      ],
+      "answerIndex": 0,
+      "rationale": "Câu bị động hiện tại đơn có dạng is + V3: is checked.",
+      "questionBank": [
+        {
+          "id": "a2-basic-passive-voice::q1",
+          "question": "Complete the sentence: “Invoices ___ by the finance team every Friday.”",
+          "choices": [
+            "are reviewed",
+            "review",
+            "is reviewing",
+            "are review"
+          ],
+          "answerIndex": 0,
+          "rationale": "Invoices là chủ ngữ số nhiều; quy trình thường xuyên dùng are + V3: are reviewed."
+        },
+        {
+          "id": "a2-basic-passive-voice::q2",
+          "question": "Complete the sentence: “The packages ___ yesterday afternoon.”",
+          "choices": [
+            "deliver",
+            "were delivered",
+            "are delivering",
+            "was deliver"
+          ],
+          "answerIndex": 1,
+          "rationale": "Yesterday afternoon là mốc quá khứ đã kết thúc; packages số nhiều nên dùng were + V3."
+        },
+        {
+          "id": "a2-basic-passive-voice::q3",
+          "question": "Which sentence correctly describes a regular office procedure?",
+          "choices": [
+            "Each request checks before approval.",
+            "Each request is check before approval.",
+            "Each request checking before approval.",
+            "Each request is checked before approval."
+          ],
+          "answerIndex": 3,
+          "rationale": "Mô tả quy trình thường xuyên ở hiện tại đơn: is + V3, do đó is checked."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-basic-passive-voice::apply1",
+        "prompt": "Your office procedure says that staff check every visitor badge at reception. Choose the sentence that focuses on the badges.",
+        "choices": [
+          "Staff checking every visitor badge at reception.",
+          "Every visitor badge checks at reception.",
+          "Every visitor badge is checked at reception.",
+          "Every visitor badge is checking by reception."
+        ],
+        "answerIndex": 2,
+        "rationale": "Every visitor badge là đối tượng nhận hành động; câu bị động hiện tại đơn đúng là is checked.",
+        "focus": "Describe a routine check by focusing on the item receiving the action.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-basic-passive-voice::produce1",
+        "minimumWords": 8,
+        "scenario": "Tại quầy lễ tân, thẻ khách được kiểm tra mỗi ngày. Hôm qua, hai thẻ bị hỏng đã được thay thế.",
+        "instruction": "Viết 2 câu mô tả quy trình và sự việc đã xảy ra, tập trung vào visitor badges thay vì người thực hiện.",
+        "requirements": [
+          "Dùng bị động hiện tại “are checked”.",
+          "Dùng bị động quá khứ “were replaced”.",
+          "Giữ visitor badges làm chủ ngữ."
+        ],
+        "sentenceFrame": "Visitor badges are … every day. Yesterday, two damaged badges were … .",
+        "requiredFeatures": [
+          "are checked",
+          "were replaced",
+          "visitor badges"
+        ],
+        "modelAnswer": "Visitor badges are checked at reception every day. Yesterday, two damaged badges were replaced.",
+        "rubric": [
+          "Tôi dùng đúng be + past participle.",
+          "Tôi chia be phù hợp với hiện tại/quá khứ và số nhiều.",
+          "Câu tập trung vào đối tượng nhận hành động."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+      }
+    },
+    {
+      "id": "a2-defining-relative-clauses",
+      "order": 13,
+      "title": "Mệnh đề quan hệ xác định với who, which và that",
+      "level": "A2",
+      "objective": "Nối thông tin đơn giản về người và vật bằng mệnh đề quan hệ xác định với who, which hoặc that.",
+      "explanation": "Mệnh đề quan hệ xác định giúp nhận diện rõ người hoặc vật đang được nói đến. Dùng who cho người; which cho vật; that có thể dùng cho người hoặc vật trong mệnh đề xác định. Ở mức cơ bản, mệnh đề này đứng ngay sau danh từ và không đặt dấu phẩy để tách khỏi danh từ.",
+      "focus": "The technician who repaired the printer is on leave. · Use the form that is on the shared drive.",
+      "examples": [
+        {
+          "en": "The colleague who handles travel bookings is away today.",
+          "vi": "Đồng nghiệp phụ trách đặt chuyến công tác hôm nay vắng mặt."
+        },
+        {
+          "en": "Please use the form that is on the shared drive.",
+          "vi": "Vui lòng sử dụng biểu mẫu nằm trên ổ đĩa dùng chung."
+        }
+      ],
+      "tip": "Hãy xác định danh từ đứng trước: người thường dùng who; vật thường dùng which hoặc that. Không dùng what ngay sau một danh từ trong cấu trúc này.",
+      "question": "Choose the sentence with a correct defining relative clause.",
+      "choices": [
+        "The employee which manages payroll is on leave.",
+        "The employee what manages payroll is on leave.",
+        "The employee who manages payroll is on leave.",
+        "The employee who manage payroll is on leave."
+      ],
+      "answerIndex": 2,
+      "rationale": "Employee chỉ người nên dùng who; động từ manages chia theo chủ ngữ số ít employee.",
+      "questionBank": [
+        {
+          "id": "a2-defining-relative-clauses::q1",
+          "question": "Choose the correct relative pronoun: “The technician ___ repaired the printer is on leave.”",
+          "choices": [
+            "which",
+            "what",
+            "who",
+            "where"
+          ],
+          "answerIndex": 2,
+          "rationale": "Technician là người; who được dùng làm chủ ngữ của mệnh đề quan hệ chỉ người."
+        },
+        {
+          "id": "a2-defining-relative-clauses::q2",
+          "question": "Complete the sentence: “Please use the form ___ is on the shared drive.”",
+          "choices": [
+            "who",
+            "where",
+            "when",
+            "that"
+          ],
+          "answerIndex": 3,
+          "rationale": "Form là vật; that có thể dùng trong mệnh đề quan hệ xác định để chỉ vật."
+        },
+        {
+          "id": "a2-defining-relative-clauses::q3",
+          "question": "Which sentence correctly identifies the person responsible for travel bookings?",
+          "choices": [
+            "The colleague which books travel is away.",
+            "The colleague what books travel is away.",
+            "The colleague who book travel is away.",
+            "The colleague who books travel is away."
+          ],
+          "answerIndex": 3,
+          "rationale": "Who chỉ người; books phải chia số ít theo the colleague."
+        }
+      ],
+      "applicationTask": {
+        "id": "a2-defining-relative-clauses::apply1",
+        "prompt": "You want to identify the coworker responsible for customer records. Choose the correct sentence.",
+        "choices": [
+          "The coworker which manages customer records is here.",
+          "The coworker what manages customer records is here.",
+          "The coworker who manage customer records is here.",
+          "The coworker who manages customer records is here."
+        ],
+        "answerIndex": 3,
+        "rationale": "Coworker chỉ người nên dùng who; động từ manages chia số ít theo the coworker.",
+        "focus": "Identify a person by adding a short defining relative clause.",
+        "evidenceType": "contextual-application-mcq"
+      },
+      "productionTask": {
+        "id": "a2-defining-relative-clauses::produce1",
+        "minimumWords": 8,
+        "scenario": "Bạn cần giới thiệu đồng nghiệp phụ trách hồ sơ khách hàng và chỉ cho nhân viên mới biểu mẫu nằm trên ổ đĩa chung.",
+        "instruction": "Viết 2 câu. Dùng who để bổ nghĩa cho người và that để bổ nghĩa cho biểu mẫu.",
+        "requirements": [
+          "Dùng mệnh đề quan hệ bắt đầu bằng “who” để xác định đồng nghiệp.",
+          "Dùng “that” để xác định biểu mẫu.",
+          "Chia động từ phù hợp với chủ ngữ số ít."
+        ],
+        "sentenceFrame": "The colleague who … is … . Please use the form that … .",
+        "requiredFeatures": [
+          "who manages",
+          "form that",
+          "shared drive"
+        ],
+        "modelAnswer": "The colleague who manages customer records is in Room 4. Please use the form that is on the shared drive.",
+        "rubric": [
+          "Tôi dùng who cho người và that cho vật.",
+          "Mệnh đề quan hệ cung cấp thông tin xác định cần thiết.",
+          "Tôi chia động từ đúng với chủ ngữ."
+        ],
+        "evidenceType": "learner-authored-contextual-production",
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
       }
     }
   ],

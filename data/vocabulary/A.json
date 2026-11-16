@@ -280,6 +280,92 @@
       "level_basis": "editorial-estimate"
     },
     {
+      "id": "accessibility-n",
+      "word": "accessibility",
+      "phonetic": {
+        "us": "/ˌæk.se.sə.ˈbɪ.lɪ.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khả năng tiếp cận; mức độ dễ sử dụng",
+          "definition_en": "the quality of being easy to reach, enter, or use, including by people with different needs",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "accessible",
+          "pos": "adj",
+          "meaning_vi": "có thể tiếp cận; dễ sử dụng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The renovation plan includes wider doorways to improve accessibility for all visitors.",
+          "vi": "Kế hoạch cải tạo bao gồm cửa ra vào rộng hơn để cải thiện khả năng tiếp cận cho mọi khách.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "building accessibility",
+        "improve accessibility",
+        "accessibility requirements"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accessible-adj",
+      "word": "accessible",
+      "phonetic": {
+        "us": "/æk.ˈse.sə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể tiếp cận; dễ sử dụng",
+          "definition_en": "easy to reach, enter, obtain, or use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "accessibility",
+          "pos": "n",
+          "meaning_vi": "khả năng tiếp cận; mức độ dễ sử dụng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The conference room is accessible from the main lobby without using the stairs.",
+          "vi": "Phòng hội nghị có thể đi đến từ sảnh chính mà không cần sử dụng cầu thang.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "wheelchair accessible",
+        "easily accessible",
+        "accessible entrance"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "accident-n",
       "word": "accident",
       "cefr_level": "A2",
@@ -1819,6 +1905,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "agreement-n",
+      "word": "agreement",
+      "phonetic": {
+        "us": "/əɡ.ˈri.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thỏa thuận; hợp đồng",
+          "definition_en": "a formal or informal arrangement that two or more parties accept",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The parties reached an agreement on the maintenance schedule and annual service fee.",
+          "vi": "Các bên đã đạt được thỏa thuận về lịch bảo trì và phí dịch vụ hằng năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "service agreement",
+        "written agreement",
+        "reach an agreement"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "airfare-n",
       "word": "airfare",
       "phonetic": {
@@ -2183,7 +2306,7 @@
         {
           "word": "alteration",
           "pos": "n",
-          "meaning_vi": "sự thay đổi; chỉnh sửa"
+          "meaning_vi": "sự thay đổi; việc sửa đổi"
         }
       ],
       "verb_forms": {
@@ -2203,6 +2326,50 @@
       "collocations": [
         "alter a document",
         "alter the schedule"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "alteration-n",
+      "word": "alteration",
+      "phonetic": {
+        "us": "/ˌɔl.tɚ.ˈeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thay đổi; việc sửa đổi",
+          "definition_en": "a change made to a building, document, or other existing item",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [
+        {
+          "word": "alter",
+          "pos": "v",
+          "meaning_vi": "thay đổi; sửa đổi"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The tenant must obtain written approval before making any structural alteration to the premises.",
+          "vi": "Khách thuê phải có chấp thuận bằng văn bản trước khi thực hiện bất kỳ thay đổi kết cấu nào đối với mặt bằng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "structural alteration",
+        "building alteration",
+        "proposed alteration"
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"

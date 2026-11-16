@@ -616,6 +616,43 @@
       "collocations": []
     },
     {
+      "id": "wiring-n",
+      "word": "wiring",
+      "phonetic": {
+        "us": "/ˈwaɪ.rɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống dây điện; việc đi dây",
+          "definition_en": "the wires and connections used to carry electricity through a building or device",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspection found that the office wiring needs replacement before additional computers are installed.",
+          "vi": "Đợt kiểm tra phát hiện hệ thống dây điện văn phòng cần được thay thế trước khi lắp thêm máy tính.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "electrical wiring",
+        "wiring diagram",
+        "replace the wiring"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "withdraw-v",
       "word": "withdraw",
       "phonetic": {
@@ -1088,6 +1125,43 @@
         "training workshop",
         "workshop session"
       ]
+    },
+    {
+      "id": "workspace-n",
+      "word": "workspace",
+      "phonetic": {
+        "us": "/ˈwɝk.ˌspeɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "không gian làm việc",
+          "definition_en": "an area or environment where people carry out their work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The facilities coordinator is redesigning the workspace to provide more quiet areas for employees.",
+          "vi": "Điều phối viên cơ sở vật chất đang thiết kế lại không gian làm việc để bố trí thêm khu vực yên tĩnh cho nhân viên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "shared workspace",
+        "workspace design",
+        "workspace allocation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "worldwide-adj",

@@ -1,0 +1,4947 @@
+{
+  "schemaVersion": 1,
+  "release": "2.71.0",
+  "title": "Cumulative US IPA backfill from CMUdict single-pronunciation entries",
+  "source": {
+    "name": "CMU Pronouncing Dictionary (CMUdict)",
+    "upstream": "https://github.com/cmusphinx/cmudict",
+    "dataPackage": "python-cmudict 1.1.3 (CMUdict data payload)",
+    "notation": "ARPABET with vowel stress 0/1/2",
+    "license": "Carnegie Mellon University CMUdict data license; see docs/licenses/CMUdict-DATA-LICENSE.txt",
+    "caveat": "CMU states the dictionary may contain errors, omissions and inconsistencies. Only exact headword matches with one pronunciation and one primary stress were converted. The project conversion is broad GA IPA normalization, not an independent dictionary certification."
+  },
+  "conversion": {
+    "version": "1.0.0",
+    "stress": "1=primary ˈ; 2=secondary ˌ; 0=unstressed; markers placed before syllable onset",
+    "syllabification": "Conservative maximal-onset approximation using the project onset list; dots are display separators, not an independent syllable judgment.",
+    "exceptions": "AH0→ə; ER0→ɚ; AH1/2→ʌ; ER1/2→ɝ; EH→e; AA→ɑ; AO→ɔ; standard consonant mappings."
+  },
+  "excluded": {
+    "multiple_pronunciations": 61,
+    "no_exact_CMUdict_entry": 25,
+    "multiple_primary_stress": 6,
+    "editorial_review_pending": 1,
+    "policy": "Leave phonetic.us blank until a lexical/editorial decision selects the correct US reading. The 91 unresolved records from the 1,063-headword base are inherited; Batch 012 exclusions are counted cumulatively."
+  },
+  "recordCount": 333,
+  "records": [
+    {
+      "id": "absenteeism-n",
+      "word": "absenteeism",
+      "arpabet": [
+        "AE2",
+        "B",
+        "S",
+        "AH0",
+        "N",
+        "T",
+        "IY1",
+        "IH0",
+        "Z",
+        "AH0",
+        "M"
+      ],
+      "phoneticUs": "/ˌæb.sən.ˈti.ɪ.zəm/"
+    },
+    {
+      "id": "accomplish-v",
+      "word": "accomplish",
+      "arpabet": [
+        "AH0",
+        "K",
+        "AA1",
+        "M",
+        "P",
+        "L",
+        "IH0",
+        "SH"
+      ],
+      "phoneticUs": "/ə.ˈkɑm.plɪʃ/"
+    },
+    {
+      "id": "accordance-n",
+      "word": "accordance",
+      "arpabet": [
+        "AH0",
+        "K",
+        "AO1",
+        "R",
+        "D",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/ə.ˈkɔr.dəns/"
+    },
+    {
+      "id": "accrue-v",
+      "word": "accrue",
+      "arpabet": [
+        "AH0",
+        "K",
+        "R",
+        "UW1"
+      ],
+      "phoneticUs": "/ə.ˈkru/"
+    },
+    {
+      "id": "adherence-n",
+      "word": "adherence",
+      "arpabet": [
+        "AH0",
+        "D",
+        "HH",
+        "IH1",
+        "R",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/əd.ˈhɪ.rəns/"
+    },
+    {
+      "id": "adjourn-v",
+      "word": "adjourn",
+      "arpabet": [
+        "AH0",
+        "JH",
+        "ER1",
+        "N"
+      ],
+      "phoneticUs": "/ə.ˈdʒɝn/"
+    },
+    {
+      "id": "adjustment-n",
+      "word": "adjustment",
+      "arpabet": [
+        "AH0",
+        "JH",
+        "AH1",
+        "S",
+        "T",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ə.ˈdʒʌst.mənt/"
+    },
+    {
+      "id": "administrative-adj",
+      "word": "administrative",
+      "arpabet": [
+        "AH0",
+        "D",
+        "M",
+        "IH1",
+        "N",
+        "AH0",
+        "S",
+        "T",
+        "R",
+        "EY2",
+        "T",
+        "IH0",
+        "V"
+      ],
+      "phoneticUs": "/əd.ˈmɪ.nə.ˌstreɪ.tɪv/"
+    },
+    {
+      "id": "administrator-n",
+      "word": "administrator",
+      "arpabet": [
+        "AH0",
+        "D",
+        "M",
+        "IH1",
+        "N",
+        "AH0",
+        "S",
+        "T",
+        "R",
+        "EY2",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/əd.ˈmɪ.nə.ˌstreɪ.tɚ/"
+    },
+    {
+      "id": "adopt-v",
+      "word": "adopt",
+      "arpabet": [
+        "AH0",
+        "D",
+        "AA1",
+        "P",
+        "T"
+      ],
+      "phoneticUs": "/ə.ˈdɑpt/"
+    },
+    {
+      "id": "advisory-adj",
+      "word": "advisory",
+      "arpabet": [
+        "AE0",
+        "D",
+        "V",
+        "AY1",
+        "Z",
+        "ER0",
+        "IY0"
+      ],
+      "phoneticUs": "/æd.ˈvaɪ.zɚ.i/"
+    },
+    {
+      "id": "albeit-conj",
+      "word": "albeit",
+      "arpabet": [
+        "AO0",
+        "L",
+        "B",
+        "IY1",
+        "IH0",
+        "T"
+      ],
+      "phoneticUs": "/ɔl.ˈbi.ɪt/"
+    },
+    {
+      "id": "allocation-n",
+      "word": "allocation",
+      "arpabet": [
+        "AE2",
+        "L",
+        "AH0",
+        "K",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌæ.lə.ˈkeɪ.ʃən/"
+    },
+    {
+      "id": "amend-v",
+      "word": "amend",
+      "arpabet": [
+        "AH0",
+        "M",
+        "EH1",
+        "N",
+        "D"
+      ],
+      "phoneticUs": "/ə.ˈmend/"
+    },
+    {
+      "id": "amendment-n",
+      "word": "amendment",
+      "arpabet": [
+        "AH0",
+        "M",
+        "EH1",
+        "N",
+        "D",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ə.ˈmend.mənt/"
+    },
+    {
+      "id": "analyze-v",
+      "word": "analyze",
+      "arpabet": [
+        "AE1",
+        "N",
+        "AH0",
+        "L",
+        "AY2",
+        "Z"
+      ],
+      "phoneticUs": "/ˈæ.nə.ˌlaɪz/"
+    },
+    {
+      "id": "anticipate-v",
+      "word": "anticipate",
+      "arpabet": [
+        "AE0",
+        "N",
+        "T",
+        "IH1",
+        "S",
+        "AH0",
+        "P",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/æn.ˈtɪ.sə.ˌpeɪt/"
+    },
+    {
+      "id": "apologize-v",
+      "word": "apologize",
+      "arpabet": [
+        "AH0",
+        "P",
+        "AA1",
+        "L",
+        "AH0",
+        "JH",
+        "AY2",
+        "Z"
+      ],
+      "phoneticUs": "/ə.ˈpɑ.lə.ˌdʒaɪz/"
+    },
+    {
+      "id": "apparent-adj",
+      "word": "apparent",
+      "arpabet": [
+        "AH0",
+        "P",
+        "EH1",
+        "R",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ə.ˈpe.rənt/"
+    },
+    {
+      "id": "appraise-v",
+      "word": "appraise",
+      "arpabet": [
+        "AH0",
+        "P",
+        "R",
+        "EY1",
+        "Z"
+      ],
+      "phoneticUs": "/ə.ˈpreɪz/"
+    },
+    {
+      "id": "apprenticeship-n",
+      "word": "apprenticeship",
+      "arpabet": [
+        "AH0",
+        "P",
+        "R",
+        "EH1",
+        "N",
+        "T",
+        "AH0",
+        "S",
+        "SH",
+        "IH2",
+        "P"
+      ],
+      "phoneticUs": "/ə.ˈpren.təs.ˌʃɪp/"
+    },
+    {
+      "id": "approximately-adv",
+      "word": "approximately",
+      "arpabet": [
+        "AH0",
+        "P",
+        "R",
+        "AA1",
+        "K",
+        "S",
+        "AH0",
+        "M",
+        "AH0",
+        "T",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/ə.ˈprɑk.sə.mət.li/"
+    },
+    {
+      "id": "arrears-n",
+      "word": "arrears",
+      "arpabet": [
+        "ER0",
+        "IH1",
+        "R",
+        "Z"
+      ],
+      "phoneticUs": "/ɚ.ˈɪrz/"
+    },
+    {
+      "id": "assembly-n",
+      "word": "assembly",
+      "arpabet": [
+        "AH0",
+        "S",
+        "EH1",
+        "M",
+        "B",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/ə.ˈsem.bli/"
+    },
+    {
+      "id": "assess-v",
+      "word": "assess",
+      "arpabet": [
+        "AH0",
+        "S",
+        "EH1",
+        "S"
+      ],
+      "phoneticUs": "/ə.ˈses/"
+    },
+    {
+      "id": "assessment-n",
+      "word": "assessment",
+      "arpabet": [
+        "AH0",
+        "S",
+        "EH1",
+        "S",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ə.ˈse.smənt/"
+    },
+    {
+      "id": "assistance-n",
+      "word": "assistance",
+      "arpabet": [
+        "AH0",
+        "S",
+        "IH1",
+        "S",
+        "T",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/ə.ˈsɪ.stəns/"
+    },
+    {
+      "id": "assumption-n",
+      "word": "assumption",
+      "arpabet": [
+        "AH0",
+        "S",
+        "AH1",
+        "M",
+        "P",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ə.ˈsʌmp.ʃən/"
+    },
+    {
+      "id": "attain-v",
+      "word": "attain",
+      "arpabet": [
+        "AH0",
+        "T",
+        "EY1",
+        "N"
+      ],
+      "phoneticUs": "/ə.ˈteɪn/"
+    },
+    {
+      "id": "audit-n",
+      "word": "audit",
+      "arpabet": [
+        "AO1",
+        "D",
+        "IH0",
+        "T"
+      ],
+      "phoneticUs": "/ˈɔ.dɪt/"
+    },
+    {
+      "id": "auditor-n",
+      "word": "auditor",
+      "arpabet": [
+        "AO1",
+        "D",
+        "IH0",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈɔ.dɪ.tɚ/"
+    },
+    {
+      "id": "authorize-v",
+      "word": "authorize",
+      "arpabet": [
+        "AO1",
+        "TH",
+        "ER0",
+        "AY2",
+        "Z"
+      ],
+      "phoneticUs": "/ˈɔ.θɚ.ˌaɪz/"
+    },
+    {
+      "id": "automated-adj",
+      "word": "automated",
+      "arpabet": [
+        "AO1",
+        "T",
+        "AH0",
+        "M",
+        "EY2",
+        "T",
+        "IH0",
+        "D"
+      ],
+      "phoneticUs": "/ˈɔ.tə.ˌmeɪ.tɪd/"
+    },
+    {
+      "id": "backup-n",
+      "word": "backup",
+      "arpabet": [
+        "B",
+        "AE1",
+        "K",
+        "AH2",
+        "P"
+      ],
+      "phoneticUs": "/ˈbæ.ˌkʌp/"
+    },
+    {
+      "id": "benchmark-n",
+      "word": "benchmark",
+      "arpabet": [
+        "B",
+        "EH1",
+        "N",
+        "CH",
+        "M",
+        "AA2",
+        "R",
+        "K"
+      ],
+      "phoneticUs": "/ˈbentʃ.ˌmɑrk/"
+    },
+    {
+      "id": "beneficial-adj",
+      "word": "beneficial",
+      "arpabet": [
+        "B",
+        "EH2",
+        "N",
+        "AH0",
+        "F",
+        "IH1",
+        "SH",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˌbe.nə.ˈfɪ.ʃəl/"
+    },
+    {
+      "id": "beneficiary-n",
+      "word": "beneficiary",
+      "arpabet": [
+        "B",
+        "EH2",
+        "N",
+        "AH0",
+        "F",
+        "IH1",
+        "SH",
+        "IY0",
+        "EH2",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌbe.nə.ˈfɪ.ʃi.ˌe.ri/"
+    },
+    {
+      "id": "bid-n",
+      "word": "bid",
+      "arpabet": [
+        "B",
+        "IH1",
+        "D"
+      ],
+      "phoneticUs": "/bɪd/"
+    },
+    {
+      "id": "biennial-adj",
+      "word": "biennial",
+      "arpabet": [
+        "B",
+        "AY0",
+        "EH1",
+        "N",
+        "IY0",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/baɪ.ˈe.ni.əl/"
+    },
+    {
+      "id": "billable-adj",
+      "word": "billable",
+      "arpabet": [
+        "B",
+        "IH1",
+        "L",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈbɪ.lə.bəl/"
+    },
+    {
+      "id": "billing-n",
+      "word": "billing",
+      "arpabet": [
+        "B",
+        "IH1",
+        "L",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈbɪ.lɪŋ/"
+    },
+    {
+      "id": "booking-n",
+      "word": "booking",
+      "arpabet": [
+        "B",
+        "UH1",
+        "K",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈbʊ.kɪŋ/"
+    },
+    {
+      "id": "breakdown-n",
+      "word": "breakdown",
+      "arpabet": [
+        "B",
+        "R",
+        "EY1",
+        "K",
+        "D",
+        "AW2",
+        "N"
+      ],
+      "phoneticUs": "/ˈbreɪk.ˌdaʊn/"
+    },
+    {
+      "id": "briefing-n",
+      "word": "briefing",
+      "arpabet": [
+        "B",
+        "R",
+        "IY1",
+        "F",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈbri.fɪŋ/"
+    },
+    {
+      "id": "bulk-n",
+      "word": "bulk",
+      "arpabet": [
+        "B",
+        "AH1",
+        "L",
+        "K"
+      ],
+      "phoneticUs": "/bʌlk/"
+    },
+    {
+      "id": "cargo-n",
+      "word": "cargo",
+      "arpabet": [
+        "K",
+        "AA1",
+        "R",
+        "G",
+        "OW2"
+      ],
+      "phoneticUs": "/ˈkɑr.ˌɡoʊ/"
+    },
+    {
+      "id": "cease-v",
+      "word": "cease",
+      "arpabet": [
+        "S",
+        "IY1",
+        "S"
+      ],
+      "phoneticUs": "/sis/"
+    },
+    {
+      "id": "circulation-n",
+      "word": "circulation",
+      "arpabet": [
+        "S",
+        "ER1",
+        "K",
+        "Y",
+        "AH0",
+        "L",
+        "EY2",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˈsɝk.jə.ˌleɪ.ʃən/"
+    },
+    {
+      "id": "circumstance-n",
+      "word": "circumstance",
+      "arpabet": [
+        "S",
+        "ER1",
+        "K",
+        "AH0",
+        "M",
+        "S",
+        "T",
+        "AE2",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/ˈsɝ.kəm.ˌstæns/"
+    },
+    {
+      "id": "clearance-n",
+      "word": "clearance",
+      "arpabet": [
+        "K",
+        "L",
+        "IH1",
+        "R",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/ˈklɪ.rəns/"
+    },
+    {
+      "id": "clientele-n",
+      "word": "clientele",
+      "arpabet": [
+        "K",
+        "L",
+        "AY2",
+        "AH0",
+        "N",
+        "T",
+        "EH1",
+        "L"
+      ],
+      "phoneticUs": "/ˌklaɪ.ən.ˈtel/"
+    },
+    {
+      "id": "coherent-adj",
+      "word": "coherent",
+      "arpabet": [
+        "K",
+        "OW0",
+        "HH",
+        "IH1",
+        "R",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/koʊ.ˈhɪ.rənt/"
+    },
+    {
+      "id": "competency-n",
+      "word": "competency",
+      "arpabet": [
+        "K",
+        "AA1",
+        "M",
+        "P",
+        "AH0",
+        "T",
+        "IH0",
+        "N",
+        "S",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈkɑm.pə.tɪn.si/"
+    },
+    {
+      "id": "compile-v",
+      "word": "compile",
+      "arpabet": [
+        "K",
+        "AH0",
+        "M",
+        "P",
+        "AY1",
+        "L"
+      ],
+      "phoneticUs": "/kəm.ˈpaɪl/"
+    },
+    {
+      "id": "completion-n",
+      "word": "completion",
+      "arpabet": [
+        "K",
+        "AH0",
+        "M",
+        "P",
+        "L",
+        "IY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/kəm.ˈpli.ʃən/"
+    },
+    {
+      "id": "complimentary-adj",
+      "word": "complimentary",
+      "arpabet": [
+        "K",
+        "AA2",
+        "M",
+        "P",
+        "L",
+        "AH0",
+        "M",
+        "EH1",
+        "N",
+        "T",
+        "ER0",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌkɑm.plə.ˈmen.tɚ.i/"
+    },
+    {
+      "id": "comprehensive-adj",
+      "word": "comprehensive",
+      "arpabet": [
+        "K",
+        "AA2",
+        "M",
+        "P",
+        "R",
+        "IY0",
+        "HH",
+        "EH1",
+        "N",
+        "S",
+        "IH0",
+        "V"
+      ],
+      "phoneticUs": "/ˌkɑm.pri.ˈhen.sɪv/"
+    },
+    {
+      "id": "confidential-adj",
+      "word": "confidential",
+      "arpabet": [
+        "K",
+        "AA2",
+        "N",
+        "F",
+        "AH0",
+        "D",
+        "EH1",
+        "N",
+        "SH",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˌkɑn.fə.ˈden.ʃəl/"
+    },
+    {
+      "id": "confirmation-n",
+      "word": "confirmation",
+      "arpabet": [
+        "K",
+        "AA2",
+        "N",
+        "F",
+        "ER0",
+        "M",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌkɑn.fɚ.ˈmeɪ.ʃən/"
+    },
+    {
+      "id": "consecutive-adj",
+      "word": "consecutive",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "EH1",
+        "K",
+        "Y",
+        "AH0",
+        "T",
+        "IH0",
+        "V"
+      ],
+      "phoneticUs": "/kən.ˈsek.jə.tɪv/"
+    },
+    {
+      "id": "consent-n",
+      "word": "consent",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "EH1",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/kən.ˈsent/"
+    },
+    {
+      "id": "consignment-n",
+      "word": "consignment",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "AY1",
+        "N",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/kən.ˈsaɪn.mənt/"
+    },
+    {
+      "id": "consistently-adv",
+      "word": "consistently",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "IH1",
+        "S",
+        "T",
+        "AH0",
+        "N",
+        "T",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/kən.ˈsɪ.stənt.li/"
+    },
+    {
+      "id": "consolidate-v",
+      "word": "consolidate",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "AA1",
+        "L",
+        "IH0",
+        "D",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/kən.ˈsɑ.lɪ.ˌdeɪt/"
+    },
+    {
+      "id": "consultancy-n",
+      "word": "consultancy",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "AH1",
+        "L",
+        "T",
+        "AH0",
+        "N",
+        "S",
+        "IY0"
+      ],
+      "phoneticUs": "/kən.ˈsʌl.tən.si/"
+    },
+    {
+      "id": "consumable-n",
+      "word": "consumable",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "UW1",
+        "M",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/kən.ˈsu.mə.bəl/"
+    },
+    {
+      "id": "contractual-adj",
+      "word": "contractual",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "T",
+        "R",
+        "AE1",
+        "K",
+        "CH",
+        "UW0",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/kən.ˈtræk.tʃu.əl/"
+    },
+    {
+      "id": "contribute-v",
+      "word": "contribute",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "T",
+        "R",
+        "IH1",
+        "B",
+        "Y",
+        "UW0",
+        "T"
+      ],
+      "phoneticUs": "/kən.ˈtrɪb.jut/"
+    },
+    {
+      "id": "convenience-n",
+      "word": "convenience",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "V",
+        "IY1",
+        "N",
+        "Y",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/kən.ˈvin.jəns/"
+    },
+    {
+      "id": "convey-v",
+      "word": "convey",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "V",
+        "EY1"
+      ],
+      "phoneticUs": "/kən.ˈveɪ/"
+    },
+    {
+      "id": "coordinator-n",
+      "word": "coordinator",
+      "arpabet": [
+        "K",
+        "OW0",
+        "AO1",
+        "R",
+        "D",
+        "AH0",
+        "N",
+        "EY2",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/koʊ.ˈɔr.də.ˌneɪ.tɚ/"
+    },
+    {
+      "id": "courier-n",
+      "word": "courier",
+      "arpabet": [
+        "K",
+        "ER1",
+        "IY0",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈkɝ.i.ɚ/"
+    },
+    {
+      "id": "courtesy-n",
+      "word": "courtesy",
+      "arpabet": [
+        "K",
+        "ER1",
+        "T",
+        "AH0",
+        "S",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈkɝ.tə.si/"
+    },
+    {
+      "id": "criteria-n",
+      "word": "criteria",
+      "arpabet": [
+        "K",
+        "R",
+        "AY0",
+        "T",
+        "IH1",
+        "R",
+        "IY0",
+        "AH0"
+      ],
+      "phoneticUs": "/kraɪ.ˈtɪ.ri.ə/"
+    },
+    {
+      "id": "decline-vn",
+      "word": "decline",
+      "arpabet": [
+        "D",
+        "IH0",
+        "K",
+        "L",
+        "AY1",
+        "N"
+      ],
+      "phoneticUs": "/dɪ.ˈklaɪn/"
+    },
+    {
+      "id": "deduct-v",
+      "word": "deduct",
+      "arpabet": [
+        "D",
+        "IH0",
+        "D",
+        "AH1",
+        "K",
+        "T"
+      ],
+      "phoneticUs": "/dɪ.ˈdʌkt/"
+    },
+    {
+      "id": "deduction-n",
+      "word": "deduction",
+      "arpabet": [
+        "D",
+        "IH0",
+        "D",
+        "AH1",
+        "K",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/dɪ.ˈdʌk.ʃən/"
+    },
+    {
+      "id": "defective-adj",
+      "word": "defective",
+      "arpabet": [
+        "D",
+        "IH0",
+        "F",
+        "EH1",
+        "K",
+        "T",
+        "IH0",
+        "V"
+      ],
+      "phoneticUs": "/dɪ.ˈfek.tɪv/"
+    },
+    {
+      "id": "deficit-n",
+      "word": "deficit",
+      "arpabet": [
+        "D",
+        "EH1",
+        "F",
+        "AH0",
+        "S",
+        "AH0",
+        "T"
+      ],
+      "phoneticUs": "/ˈde.fə.sət/"
+    },
+    {
+      "id": "delegation-n",
+      "word": "delegation",
+      "arpabet": [
+        "D",
+        "EH2",
+        "L",
+        "AH0",
+        "G",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌde.lə.ˈɡeɪ.ʃən/"
+    },
+    {
+      "id": "departure-n",
+      "word": "departure",
+      "arpabet": [
+        "D",
+        "IH0",
+        "P",
+        "AA1",
+        "R",
+        "CH",
+        "ER0"
+      ],
+      "phoneticUs": "/dɪ.ˈpɑr.tʃɚ/"
+    },
+    {
+      "id": "depreciation-n",
+      "word": "depreciation",
+      "arpabet": [
+        "D",
+        "IH0",
+        "P",
+        "R",
+        "IY2",
+        "SH",
+        "IY0",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/dɪ.ˌpri.ʃi.ˈeɪ.ʃən/"
+    },
+    {
+      "id": "derive-v",
+      "word": "derive",
+      "arpabet": [
+        "D",
+        "ER0",
+        "AY1",
+        "V"
+      ],
+      "phoneticUs": "/dɚ.ˈaɪv/"
+    },
+    {
+      "id": "detect-v",
+      "word": "detect",
+      "arpabet": [
+        "D",
+        "IH0",
+        "T",
+        "EH1",
+        "K",
+        "T"
+      ],
+      "phoneticUs": "/dɪ.ˈtekt/"
+    },
+    {
+      "id": "disburse-v",
+      "word": "disburse",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "B",
+        "ER1",
+        "S"
+      ],
+      "phoneticUs": "/dɪs.ˈbɝs/"
+    },
+    {
+      "id": "disbursement-n",
+      "word": "disbursement",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "B",
+        "ER1",
+        "S",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/dɪs.ˈbɝ.smənt/"
+    },
+    {
+      "id": "disclose-v",
+      "word": "disclose",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "K",
+        "L",
+        "OW1",
+        "Z"
+      ],
+      "phoneticUs": "/dɪs.ˈkloʊz/"
+    },
+    {
+      "id": "discrepancy-n",
+      "word": "discrepancy",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "K",
+        "R",
+        "EH1",
+        "P",
+        "AH0",
+        "N",
+        "S",
+        "IY0"
+      ],
+      "phoneticUs": "/dɪ.ˈskre.pən.si/"
+    },
+    {
+      "id": "discretion-n",
+      "word": "discretion",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "K",
+        "R",
+        "EH1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/dɪ.ˈskre.ʃən/"
+    },
+    {
+      "id": "discretionary-adj",
+      "word": "discretionary",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "K",
+        "R",
+        "EH1",
+        "SH",
+        "AH0",
+        "N",
+        "EH2",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/dɪ.ˈskre.ʃə.ˌne.ri/"
+    },
+    {
+      "id": "dispatch-n",
+      "word": "dispatch",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "P",
+        "AE1",
+        "CH"
+      ],
+      "phoneticUs": "/dɪ.ˈspætʃ/"
+    },
+    {
+      "id": "dispatching-n",
+      "word": "dispatching",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "P",
+        "AE1",
+        "CH",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/dɪ.ˈspæ.tʃɪŋ/"
+    },
+    {
+      "id": "distribute-v",
+      "word": "distribute",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "T",
+        "R",
+        "IH1",
+        "B",
+        "Y",
+        "UW0",
+        "T"
+      ],
+      "phoneticUs": "/dɪ.ˈstrɪb.jut/"
+    },
+    {
+      "id": "distributor-n",
+      "word": "distributor",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "T",
+        "R",
+        "IH1",
+        "B",
+        "Y",
+        "AH0",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/dɪ.ˈstrɪb.jə.tɚ/"
+    },
+    {
+      "id": "downtime-n",
+      "word": "downtime",
+      "arpabet": [
+        "D",
+        "AW1",
+        "N",
+        "T",
+        "AY2",
+        "M"
+      ],
+      "phoneticUs": "/ˈdaʊn.ˌtaɪm/"
+    },
+    {
+      "id": "durable-adj",
+      "word": "durable",
+      "arpabet": [
+        "D",
+        "UH1",
+        "R",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈdʊ.rə.bəl/"
+    },
+    {
+      "id": "efficiently-adv",
+      "word": "efficiently",
+      "arpabet": [
+        "IH0",
+        "F",
+        "IH1",
+        "SH",
+        "AH0",
+        "N",
+        "T",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/ɪ.ˈfɪ.ʃənt.li/"
+    },
+    {
+      "id": "electronic-adj",
+      "word": "electronic",
+      "arpabet": [
+        "IH2",
+        "L",
+        "EH2",
+        "K",
+        "T",
+        "R",
+        "AA1",
+        "N",
+        "IH0",
+        "K"
+      ],
+      "phoneticUs": "/ˌɪ.ˌlek.ˈtrɑ.nɪk/"
+    },
+    {
+      "id": "eligibility-n",
+      "word": "eligibility",
+      "arpabet": [
+        "EH2",
+        "L",
+        "IH0",
+        "JH",
+        "AH0",
+        "B",
+        "IH1",
+        "L",
+        "IH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌe.lɪ.dʒə.ˈbɪ.lɪ.ti/"
+    },
+    {
+      "id": "emission-n",
+      "word": "emission",
+      "arpabet": [
+        "IH0",
+        "M",
+        "IH1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ɪ.ˈmɪ.ʃən/"
+    },
+    {
+      "id": "enclose-v",
+      "word": "enclose",
+      "arpabet": [
+        "IH0",
+        "N",
+        "K",
+        "L",
+        "OW1",
+        "Z"
+      ],
+      "phoneticUs": "/ɪn.ˈkloʊz/"
+    },
+    {
+      "id": "endorse-v",
+      "word": "endorse",
+      "arpabet": [
+        "EH0",
+        "N",
+        "D",
+        "AO1",
+        "R",
+        "S"
+      ],
+      "phoneticUs": "/en.ˈdɔrs/"
+    },
+    {
+      "id": "endorsement-n",
+      "word": "endorsement",
+      "arpabet": [
+        "EH0",
+        "N",
+        "D",
+        "AO1",
+        "R",
+        "S",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/en.ˈdɔr.smənt/"
+    },
+    {
+      "id": "enhance-v",
+      "word": "enhance",
+      "arpabet": [
+        "EH0",
+        "N",
+        "HH",
+        "AE1",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/en.ˈhæns/"
+    },
+    {
+      "id": "enquiry-n",
+      "word": "enquiry",
+      "arpabet": [
+        "IH0",
+        "N",
+        "K",
+        "W",
+        "AY1",
+        "R",
+        "IY2"
+      ],
+      "phoneticUs": "/ɪn.ˈkwaɪ.ˌri/"
+    },
+    {
+      "id": "enrollment-n",
+      "word": "enrollment",
+      "arpabet": [
+        "EH0",
+        "N",
+        "R",
+        "OW1",
+        "L",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/en.ˈroʊl.mənt/"
+    },
+    {
+      "id": "entitlement-n",
+      "word": "entitlement",
+      "arpabet": [
+        "EH0",
+        "N",
+        "T",
+        "AY1",
+        "T",
+        "AH0",
+        "L",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/en.ˈtaɪ.təl.mənt/"
+    },
+    {
+      "id": "equivalent-adj",
+      "word": "equivalent",
+      "arpabet": [
+        "IH0",
+        "K",
+        "W",
+        "IH1",
+        "V",
+        "AH0",
+        "L",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ɪ.ˈkwɪ.və.lənt/"
+    },
+    {
+      "id": "establish-v",
+      "word": "establish",
+      "arpabet": [
+        "IH0",
+        "S",
+        "T",
+        "AE1",
+        "B",
+        "L",
+        "IH0",
+        "SH"
+      ],
+      "phoneticUs": "/ɪ.ˈstæ.blɪʃ/"
+    },
+    {
+      "id": "evidence-n",
+      "word": "evidence",
+      "arpabet": [
+        "EH1",
+        "V",
+        "AH0",
+        "D",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/ˈe.və.dəns/"
+    },
+    {
+      "id": "exceed-v",
+      "word": "exceed",
+      "arpabet": [
+        "IH0",
+        "K",
+        "S",
+        "IY1",
+        "D"
+      ],
+      "phoneticUs": "/ɪk.ˈsid/"
+    },
+    {
+      "id": "executive-n",
+      "word": "executive",
+      "arpabet": [
+        "IH0",
+        "G",
+        "Z",
+        "EH1",
+        "K",
+        "Y",
+        "AH0",
+        "T",
+        "IH0",
+        "V"
+      ],
+      "phoneticUs": "/ɪɡ.ˈzek.jə.tɪv/"
+    },
+    {
+      "id": "exempt-adj",
+      "word": "exempt",
+      "arpabet": [
+        "IH0",
+        "G",
+        "Z",
+        "EH1",
+        "M",
+        "P",
+        "T"
+      ],
+      "phoneticUs": "/ɪɡ.ˈzempt/"
+    },
+    {
+      "id": "expiration-n",
+      "word": "expiration",
+      "arpabet": [
+        "EH2",
+        "K",
+        "S",
+        "P",
+        "ER0",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌek.spɚ.ˈeɪ.ʃən/"
+    },
+    {
+      "id": "extension-n",
+      "word": "extension",
+      "arpabet": [
+        "IH0",
+        "K",
+        "S",
+        "T",
+        "EH1",
+        "N",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ɪk.ˈsten.ʃən/"
+    },
+    {
+      "id": "facilitate-v",
+      "word": "facilitate",
+      "arpabet": [
+        "F",
+        "AH0",
+        "S",
+        "IH1",
+        "L",
+        "AH0",
+        "T",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/fə.ˈsɪ.lə.ˌteɪt/"
+    },
+    {
+      "id": "facilitator-n",
+      "word": "facilitator",
+      "arpabet": [
+        "F",
+        "AH0",
+        "S",
+        "IH1",
+        "L",
+        "AH0",
+        "T",
+        "EY2",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/fə.ˈsɪ.lə.ˌteɪ.tɚ/"
+    },
+    {
+      "id": "fare-n",
+      "word": "fare",
+      "arpabet": [
+        "F",
+        "EH1",
+        "R"
+      ],
+      "phoneticUs": "/fer/"
+    },
+    {
+      "id": "feasibility-n",
+      "word": "feasibility",
+      "arpabet": [
+        "F",
+        "IY2",
+        "Z",
+        "AH0",
+        "B",
+        "IH1",
+        "L",
+        "AH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌfi.zə.ˈbɪ.lə.ti/"
+    },
+    {
+      "id": "feasible-adj",
+      "word": "feasible",
+      "arpabet": [
+        "F",
+        "IY1",
+        "Z",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈfi.zə.bəl/"
+    },
+    {
+      "id": "fiscal-adj",
+      "word": "fiscal",
+      "arpabet": [
+        "F",
+        "IH1",
+        "S",
+        "K",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈfɪ.skəl/"
+    },
+    {
+      "id": "fleet-n",
+      "word": "fleet",
+      "arpabet": [
+        "F",
+        "L",
+        "IY1",
+        "T"
+      ],
+      "phoneticUs": "/flit/"
+    },
+    {
+      "id": "flexibility-n",
+      "word": "flexibility",
+      "arpabet": [
+        "F",
+        "L",
+        "EH2",
+        "K",
+        "S",
+        "AH0",
+        "B",
+        "IH1",
+        "L",
+        "AH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌflek.sə.ˈbɪ.lə.ti/"
+    },
+    {
+      "id": "foresee-v",
+      "word": "foresee",
+      "arpabet": [
+        "F",
+        "AO0",
+        "R",
+        "S",
+        "IY1"
+      ],
+      "phoneticUs": "/fɔr.ˈsi/"
+    },
+    {
+      "id": "foreseeable-adj",
+      "word": "foreseeable",
+      "arpabet": [
+        "F",
+        "AO0",
+        "R",
+        "S",
+        "IY1",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/fɔr.ˈsi.ə.bəl/"
+    },
+    {
+      "id": "franchise-n",
+      "word": "franchise",
+      "arpabet": [
+        "F",
+        "R",
+        "AE1",
+        "N",
+        "CH",
+        "AY2",
+        "Z"
+      ],
+      "phoneticUs": "/ˈfræn.ˌtʃaɪz/"
+    },
+    {
+      "id": "fulfill-v",
+      "word": "fulfill",
+      "arpabet": [
+        "F",
+        "UH0",
+        "L",
+        "F",
+        "IH1",
+        "L"
+      ],
+      "phoneticUs": "/fʊl.ˈfɪl/"
+    },
+    {
+      "id": "fulfillment-n",
+      "word": "fulfillment",
+      "arpabet": [
+        "F",
+        "UH0",
+        "L",
+        "F",
+        "IH1",
+        "L",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/fʊl.ˈfɪl.mənt/"
+    },
+    {
+      "id": "generate-v",
+      "word": "generate",
+      "arpabet": [
+        "JH",
+        "EH1",
+        "N",
+        "ER0",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/ˈdʒe.nɚ.ˌeɪt/"
+    },
+    {
+      "id": "grievance-n",
+      "word": "grievance",
+      "arpabet": [
+        "G",
+        "R",
+        "IY1",
+        "V",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/ˈɡri.vəns/"
+    },
+    {
+      "id": "guideline-n",
+      "word": "guideline",
+      "arpabet": [
+        "G",
+        "AY1",
+        "D",
+        "L",
+        "AY2",
+        "N"
+      ],
+      "phoneticUs": "/ˈɡaɪd.ˌlaɪn/"
+    },
+    {
+      "id": "headcount-n",
+      "word": "headcount",
+      "arpabet": [
+        "HH",
+        "EH1",
+        "D",
+        "K",
+        "AW2",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˈhed.ˌkaʊnt/"
+    },
+    {
+      "id": "implement-v",
+      "word": "implement",
+      "arpabet": [
+        "IH1",
+        "M",
+        "P",
+        "L",
+        "AH0",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˈɪm.plə.mənt/"
+    },
+    {
+      "id": "in-house-adj",
+      "word": "in-house",
+      "arpabet": [
+        "IH0",
+        "N",
+        "HH",
+        "AW1",
+        "S"
+      ],
+      "phoneticUs": "/ɪn.ˈhaʊs/"
+    },
+    {
+      "id": "incorporate-v",
+      "word": "incorporate",
+      "arpabet": [
+        "IH2",
+        "N",
+        "K",
+        "AO1",
+        "R",
+        "P",
+        "ER0",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/ˌɪn.ˈkɔr.pɚ.ˌeɪt/"
+    },
+    {
+      "id": "incorporation-n",
+      "word": "incorporation",
+      "arpabet": [
+        "IH2",
+        "N",
+        "K",
+        "AO2",
+        "R",
+        "P",
+        "ER0",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌɪn.ˌkɔr.pɚ.ˈeɪ.ʃən/"
+    },
+    {
+      "id": "incur-v",
+      "word": "incur",
+      "arpabet": [
+        "IH2",
+        "N",
+        "K",
+        "ER1"
+      ],
+      "phoneticUs": "/ˌɪn.ˈkɝ/"
+    },
+    {
+      "id": "indemnify-v",
+      "word": "indemnify",
+      "arpabet": [
+        "IH2",
+        "N",
+        "D",
+        "EH1",
+        "M",
+        "N",
+        "AH0",
+        "F",
+        "AY2"
+      ],
+      "phoneticUs": "/ˌɪn.ˈdem.nə.ˌfaɪ/"
+    },
+    {
+      "id": "induct-v",
+      "word": "induct",
+      "arpabet": [
+        "IH2",
+        "N",
+        "D",
+        "AH1",
+        "K",
+        "T"
+      ],
+      "phoneticUs": "/ˌɪn.ˈdʌkt/"
+    },
+    {
+      "id": "induction-n",
+      "word": "induction",
+      "arpabet": [
+        "IH2",
+        "N",
+        "D",
+        "AH1",
+        "K",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌɪn.ˈdʌk.ʃən/"
+    },
+    {
+      "id": "inevitable-adj",
+      "word": "inevitable",
+      "arpabet": [
+        "IH2",
+        "N",
+        "EH1",
+        "V",
+        "AH0",
+        "T",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˌɪ.ˈne.və.tə.bəl/"
+    },
+    {
+      "id": "inquire-v",
+      "word": "inquire",
+      "arpabet": [
+        "IH2",
+        "N",
+        "K",
+        "W",
+        "AY1",
+        "R"
+      ],
+      "phoneticUs": "/ˌɪn.ˈkwaɪr/"
+    },
+    {
+      "id": "insolvency-n",
+      "word": "insolvency",
+      "arpabet": [
+        "IH2",
+        "N",
+        "S",
+        "AA1",
+        "L",
+        "V",
+        "AH0",
+        "N",
+        "S",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌɪn.ˈsɑl.vən.si/"
+    },
+    {
+      "id": "insolvent-adj",
+      "word": "insolvent",
+      "arpabet": [
+        "IH2",
+        "N",
+        "S",
+        "AA1",
+        "L",
+        "V",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˌɪn.ˈsɑl.vənt/"
+    },
+    {
+      "id": "inspection-n",
+      "word": "inspection",
+      "arpabet": [
+        "IH2",
+        "N",
+        "S",
+        "P",
+        "EH1",
+        "K",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌɪn.ˈspek.ʃən/"
+    },
+    {
+      "id": "inspector-n",
+      "word": "inspector",
+      "arpabet": [
+        "IH2",
+        "N",
+        "S",
+        "P",
+        "EH1",
+        "K",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/ˌɪn.ˈspek.tɚ/"
+    },
+    {
+      "id": "installment-n",
+      "word": "installment",
+      "arpabet": [
+        "IH2",
+        "N",
+        "S",
+        "T",
+        "AO1",
+        "L",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˌɪn.ˈstɔl.mənt/"
+    },
+    {
+      "id": "interpret-v",
+      "word": "interpret",
+      "arpabet": [
+        "IH2",
+        "N",
+        "T",
+        "ER1",
+        "P",
+        "R",
+        "AH0",
+        "T"
+      ],
+      "phoneticUs": "/ˌɪn.ˈtɝ.prət/"
+    },
+    {
+      "id": "invoicing-n",
+      "word": "invoicing",
+      "arpabet": [
+        "IH1",
+        "N",
+        "V",
+        "OY2",
+        "S",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈɪn.ˌvɔɪ.sɪŋ/"
+    },
+    {
+      "id": "justify-v",
+      "word": "justify",
+      "arpabet": [
+        "JH",
+        "AH1",
+        "S",
+        "T",
+        "AH0",
+        "F",
+        "AY2"
+      ],
+      "phoneticUs": "/ˈdʒʌ.stə.ˌfaɪ/"
+    },
+    {
+      "id": "laboratory-n",
+      "word": "laboratory",
+      "arpabet": [
+        "L",
+        "AE1",
+        "B",
+        "R",
+        "AH0",
+        "T",
+        "AO2",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈlæ.brə.ˌtɔ.ri/"
+    },
+    {
+      "id": "ledger-n",
+      "word": "ledger",
+      "arpabet": [
+        "L",
+        "EH1",
+        "JH",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈle.dʒɚ/"
+    },
+    {
+      "id": "lessee-n",
+      "word": "lessee",
+      "arpabet": [
+        "L",
+        "EH0",
+        "S",
+        "IY1"
+      ],
+      "phoneticUs": "/le.ˈsi/"
+    },
+    {
+      "id": "lessor-n",
+      "word": "lessor",
+      "arpabet": [
+        "L",
+        "EH1",
+        "S",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈle.sɚ/"
+    },
+    {
+      "id": "liability-n",
+      "word": "liability",
+      "arpabet": [
+        "L",
+        "AY2",
+        "AH0",
+        "B",
+        "IH1",
+        "L",
+        "IH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌlaɪ.ə.ˈbɪ.lɪ.ti/"
+    },
+    {
+      "id": "liquidate-v",
+      "word": "liquidate",
+      "arpabet": [
+        "L",
+        "IH1",
+        "K",
+        "W",
+        "IH0",
+        "D",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/ˈlɪ.kwɪ.ˌdeɪt/"
+    },
+    {
+      "id": "liquidation-n",
+      "word": "liquidation",
+      "arpabet": [
+        "L",
+        "IH2",
+        "K",
+        "W",
+        "IH0",
+        "D",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌlɪ.kwɪ.ˈdeɪ.ʃən/"
+    },
+    {
+      "id": "logistical-adj",
+      "word": "logistical",
+      "arpabet": [
+        "L",
+        "AH0",
+        "JH",
+        "IH1",
+        "S",
+        "T",
+        "IH0",
+        "K",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/lə.ˈdʒɪ.stɪ.kəl/"
+    },
+    {
+      "id": "mandate-n",
+      "word": "mandate",
+      "arpabet": [
+        "M",
+        "AE1",
+        "N",
+        "D",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/ˈmæn.ˌdeɪt/"
+    },
+    {
+      "id": "mandatory-adj",
+      "word": "mandatory",
+      "arpabet": [
+        "M",
+        "AE1",
+        "N",
+        "D",
+        "AH0",
+        "T",
+        "AO2",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈmæn.də.ˌtɔ.ri/"
+    },
+    {
+      "id": "manpower-n",
+      "word": "manpower",
+      "arpabet": [
+        "M",
+        "AE1",
+        "N",
+        "P",
+        "AW2",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈmæn.ˌpaʊ.ɚ/"
+    },
+    {
+      "id": "merge-v",
+      "word": "merge",
+      "arpabet": [
+        "M",
+        "ER1",
+        "JH"
+      ],
+      "phoneticUs": "/mɝdʒ/"
+    },
+    {
+      "id": "milestone-n",
+      "word": "milestone",
+      "arpabet": [
+        "M",
+        "AY1",
+        "L",
+        "S",
+        "T",
+        "OW2",
+        "N"
+      ],
+      "phoneticUs": "/ˈmaɪl.ˌstoʊn/"
+    },
+    {
+      "id": "mitigate-v",
+      "word": "mitigate",
+      "arpabet": [
+        "M",
+        "IH1",
+        "T",
+        "AH0",
+        "G",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/ˈmɪ.tə.ˌɡeɪt/"
+    },
+    {
+      "id": "mobilize-v",
+      "word": "mobilize",
+      "arpabet": [
+        "M",
+        "OW1",
+        "B",
+        "AH0",
+        "L",
+        "AY2",
+        "Z"
+      ],
+      "phoneticUs": "/ˈmoʊ.bə.ˌlaɪz/"
+    },
+    {
+      "id": "moratorium-n",
+      "word": "moratorium",
+      "arpabet": [
+        "M",
+        "AO2",
+        "R",
+        "AH0",
+        "T",
+        "AO1",
+        "R",
+        "IY0",
+        "AH0",
+        "M"
+      ],
+      "phoneticUs": "/ˌmɔ.rə.ˈtɔ.ri.əm/"
+    },
+    {
+      "id": "nevertheless-adj",
+      "word": "nevertheless",
+      "arpabet": [
+        "N",
+        "EH2",
+        "V",
+        "ER0",
+        "DH",
+        "AH0",
+        "L",
+        "EH1",
+        "S"
+      ],
+      "phoneticUs": "/ˌne.vɚ.ðə.ˈles/"
+    },
+    {
+      "id": "noncompliance-n",
+      "word": "noncompliance",
+      "arpabet": [
+        "N",
+        "AA2",
+        "N",
+        "K",
+        "AH0",
+        "M",
+        "P",
+        "L",
+        "AY1",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/ˌnɑn.kəm.ˈplaɪ.əns/"
+    },
+    {
+      "id": "obligatory-adj",
+      "word": "obligatory",
+      "arpabet": [
+        "AH0",
+        "B",
+        "L",
+        "IH1",
+        "G",
+        "AH0",
+        "T",
+        "AO2",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/ə.ˈblɪ.ɡə.ˌtɔ.ri/"
+    },
+    {
+      "id": "occupancy-n",
+      "word": "occupancy",
+      "arpabet": [
+        "AA1",
+        "K",
+        "Y",
+        "AH0",
+        "P",
+        "AH0",
+        "N",
+        "S",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈɑk.jə.pən.si/"
+    },
+    {
+      "id": "occupational-adj",
+      "word": "occupational",
+      "arpabet": [
+        "AA0",
+        "K",
+        "Y",
+        "AH0",
+        "P",
+        "EY1",
+        "SH",
+        "AH0",
+        "N",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ɑk.jə.ˈpeɪ.ʃə.nəl/"
+    },
+    {
+      "id": "officeholder-n",
+      "word": "officeholder",
+      "arpabet": [
+        "AO1",
+        "F",
+        "AH0",
+        "S",
+        "HH",
+        "OW2",
+        "L",
+        "D",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈɔ.fəs.ˌhoʊl.dɚ/"
+    },
+    {
+      "id": "outsource-v",
+      "word": "outsource",
+      "arpabet": [
+        "AW2",
+        "T",
+        "S",
+        "AO1",
+        "R",
+        "S"
+      ],
+      "phoneticUs": "/ˌaʊt.ˈsɔrs/"
+    },
+    {
+      "id": "outsourcing-n",
+      "word": "outsourcing",
+      "arpabet": [
+        "AW2",
+        "T",
+        "S",
+        "AO1",
+        "R",
+        "S",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˌaʊt.ˈsɔr.sɪŋ/"
+    },
+    {
+      "id": "outstanding-adj",
+      "word": "outstanding",
+      "arpabet": [
+        "AW2",
+        "T",
+        "S",
+        "T",
+        "AE1",
+        "N",
+        "D",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˌaʊt.ˈstæn.dɪŋ/"
+    },
+    {
+      "id": "overhaul-n",
+      "word": "overhaul",
+      "arpabet": [
+        "OW1",
+        "V",
+        "ER0",
+        "HH",
+        "AO2",
+        "L"
+      ],
+      "phoneticUs": "/ˈoʊ.vɚ.ˌhɔl/"
+    },
+    {
+      "id": "overtime-n",
+      "word": "overtime",
+      "arpabet": [
+        "OW1",
+        "V",
+        "ER0",
+        "T",
+        "AY2",
+        "M"
+      ],
+      "phoneticUs": "/ˈoʊ.vɚ.ˌtaɪm/"
+    },
+    {
+      "id": "parcel-n",
+      "word": "parcel",
+      "arpabet": [
+        "P",
+        "AA1",
+        "R",
+        "S",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈpɑr.səl/"
+    },
+    {
+      "id": "participant-n",
+      "word": "participant",
+      "arpabet": [
+        "P",
+        "AA0",
+        "R",
+        "T",
+        "IH1",
+        "S",
+        "AH0",
+        "P",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/pɑr.ˈtɪ.sə.pənt/"
+    },
+    {
+      "id": "payable-adj",
+      "word": "payable",
+      "arpabet": [
+        "P",
+        "EY1",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈpeɪ.ə.bəl/"
+    },
+    {
+      "id": "payee-n",
+      "word": "payee",
+      "arpabet": [
+        "P",
+        "EY2",
+        "IY1"
+      ],
+      "phoneticUs": "/ˌpeɪ.ˈi/"
+    },
+    {
+      "id": "payer-n",
+      "word": "payer",
+      "arpabet": [
+        "P",
+        "EY1",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈpeɪ.ɚ/"
+    },
+    {
+      "id": "payroll-n",
+      "word": "payroll",
+      "arpabet": [
+        "P",
+        "EY1",
+        "R",
+        "OW2",
+        "L"
+      ],
+      "phoneticUs": "/ˈpeɪ.ˌroʊl/"
+    },
+    {
+      "id": "penalty-n",
+      "word": "penalty",
+      "arpabet": [
+        "P",
+        "EH1",
+        "N",
+        "AH0",
+        "L",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈpe.nəl.ti/"
+    },
+    {
+      "id": "performance-n",
+      "word": "performance",
+      "arpabet": [
+        "P",
+        "ER0",
+        "F",
+        "AO1",
+        "R",
+        "M",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/pɚ.ˈfɔr.məns/"
+    },
+    {
+      "id": "perishable-adj",
+      "word": "perishable",
+      "arpabet": [
+        "P",
+        "EH1",
+        "R",
+        "IH0",
+        "SH",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈpe.rɪ.ʃə.bəl/"
+    },
+    {
+      "id": "placement-n",
+      "word": "placement",
+      "arpabet": [
+        "P",
+        "L",
+        "EY1",
+        "S",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˈpleɪ.smənt/"
+    },
+    {
+      "id": "portfolio-n",
+      "word": "portfolio",
+      "arpabet": [
+        "P",
+        "AO0",
+        "R",
+        "T",
+        "F",
+        "OW1",
+        "L",
+        "IY0",
+        "OW2"
+      ],
+      "phoneticUs": "/pɔrt.ˈfoʊ.li.ˌoʊ/"
+    },
+    {
+      "id": "precaution-n",
+      "word": "precaution",
+      "arpabet": [
+        "P",
+        "R",
+        "IY0",
+        "K",
+        "AO1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/pri.ˈkɔ.ʃən/"
+    },
+    {
+      "id": "premium-n",
+      "word": "premium",
+      "arpabet": [
+        "P",
+        "R",
+        "IY1",
+        "M",
+        "IY0",
+        "AH0",
+        "M"
+      ],
+      "phoneticUs": "/ˈpri.mi.əm/"
+    },
+    {
+      "id": "priority-n",
+      "word": "priority",
+      "arpabet": [
+        "P",
+        "R",
+        "AY0",
+        "AO1",
+        "R",
+        "AH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/praɪ.ˈɔ.rə.ti/"
+    },
+    {
+      "id": "probation-n",
+      "word": "probation",
+      "arpabet": [
+        "P",
+        "R",
+        "OW0",
+        "B",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/proʊ.ˈbeɪ.ʃən/"
+    },
+    {
+      "id": "probationary-adj",
+      "word": "probationary",
+      "arpabet": [
+        "P",
+        "R",
+        "OW0",
+        "B",
+        "EY1",
+        "SH",
+        "AH0",
+        "N",
+        "EH2",
+        "R",
+        "IY2"
+      ],
+      "phoneticUs": "/proʊ.ˈbeɪ.ʃə.ˌne.ˌri/"
+    },
+    {
+      "id": "proficiency-n",
+      "word": "proficiency",
+      "arpabet": [
+        "P",
+        "R",
+        "AH0",
+        "F",
+        "IH1",
+        "SH",
+        "AH0",
+        "N",
+        "S",
+        "IY0"
+      ],
+      "phoneticUs": "/prə.ˈfɪ.ʃən.si/"
+    },
+    {
+      "id": "proficient-adj",
+      "word": "proficient",
+      "arpabet": [
+        "P",
+        "R",
+        "AA0",
+        "F",
+        "IH1",
+        "SH",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/prɑ.ˈfɪ.ʃənt/"
+    },
+    {
+      "id": "prolong-v",
+      "word": "prolong",
+      "arpabet": [
+        "P",
+        "R",
+        "AH0",
+        "L",
+        "AO1",
+        "NG"
+      ],
+      "phoneticUs": "/prə.ˈlɔŋ/"
+    },
+    {
+      "id": "prolonged-adj",
+      "word": "prolonged",
+      "arpabet": [
+        "P",
+        "R",
+        "AH0",
+        "L",
+        "AO1",
+        "NG",
+        "D"
+      ],
+      "phoneticUs": "/prə.ˈlɔŋd/"
+    },
+    {
+      "id": "proportion-n",
+      "word": "proportion",
+      "arpabet": [
+        "P",
+        "R",
+        "AH0",
+        "P",
+        "AO1",
+        "R",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/prə.ˈpɔr.ʃən/"
+    },
+    {
+      "id": "proprietor-n",
+      "word": "proprietor",
+      "arpabet": [
+        "P",
+        "R",
+        "AH0",
+        "P",
+        "R",
+        "AY1",
+        "AH0",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/prə.ˈpraɪ.ə.tɚ/"
+    },
+    {
+      "id": "provision-n",
+      "word": "provision",
+      "arpabet": [
+        "P",
+        "R",
+        "AH0",
+        "V",
+        "IH1",
+        "ZH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/prə.ˈvɪ.ʒən/"
+    },
+    {
+      "id": "provisional-adj",
+      "word": "provisional",
+      "arpabet": [
+        "P",
+        "R",
+        "AH0",
+        "V",
+        "IH1",
+        "ZH",
+        "AH0",
+        "N",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/prə.ˈvɪ.ʒə.nəl/"
+    },
+    {
+      "id": "qualification-n",
+      "word": "qualification",
+      "arpabet": [
+        "K",
+        "W",
+        "AA2",
+        "L",
+        "AH0",
+        "F",
+        "AH0",
+        "K",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌkwɑ.lə.fə.ˈkeɪ.ʃən/"
+    },
+    {
+      "id": "quota-n",
+      "word": "quota",
+      "arpabet": [
+        "K",
+        "W",
+        "OW1",
+        "T",
+        "AH0"
+      ],
+      "phoneticUs": "/ˈkwoʊ.tə/"
+    },
+    {
+      "id": "receivable-adj",
+      "word": "receivable",
+      "arpabet": [
+        "R",
+        "IH0",
+        "S",
+        "IY1",
+        "V",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/rɪ.ˈsi.və.bəl/"
+    },
+    {
+      "id": "reconciliation-n",
+      "word": "reconciliation",
+      "arpabet": [
+        "R",
+        "EH2",
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "IH2",
+        "L",
+        "IY0",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌre.kən.ˌsɪ.li.ˈeɪ.ʃən/"
+    },
+    {
+      "id": "redundancy-n",
+      "word": "redundancy",
+      "arpabet": [
+        "R",
+        "IH0",
+        "D",
+        "AH1",
+        "N",
+        "D",
+        "AH0",
+        "N",
+        "S",
+        "IY0"
+      ],
+      "phoneticUs": "/rɪ.ˈdʌn.dən.si/"
+    },
+    {
+      "id": "redundant-adj",
+      "word": "redundant",
+      "arpabet": [
+        "R",
+        "IH0",
+        "D",
+        "AH1",
+        "N",
+        "D",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/rɪ.ˈdʌn.dənt/"
+    },
+    {
+      "id": "reimburse-v",
+      "word": "reimburse",
+      "arpabet": [
+        "R",
+        "IY2",
+        "IH0",
+        "M",
+        "B",
+        "ER1",
+        "S"
+      ],
+      "phoneticUs": "/ˌri.ɪm.ˈbɝs/"
+    },
+    {
+      "id": "reimbursement-n",
+      "word": "reimbursement",
+      "arpabet": [
+        "R",
+        "IY2",
+        "IH0",
+        "M",
+        "B",
+        "ER1",
+        "S",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˌri.ɪm.ˈbɝ.smənt/"
+    },
+    {
+      "id": "remunerate-v",
+      "word": "remunerate",
+      "arpabet": [
+        "R",
+        "IH0",
+        "M",
+        "Y",
+        "UW2",
+        "N",
+        "ER0",
+        "EY1",
+        "T"
+      ],
+      "phoneticUs": "/rɪm.ˌju.nɚ.ˈeɪt/"
+    },
+    {
+      "id": "remuneration-n",
+      "word": "remuneration",
+      "arpabet": [
+        "R",
+        "IH0",
+        "M",
+        "Y",
+        "UW2",
+        "N",
+        "ER0",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/rɪm.ˌju.nɚ.ˈeɪ.ʃən/"
+    },
+    {
+      "id": "renew-v",
+      "word": "renew",
+      "arpabet": [
+        "R",
+        "IH0",
+        "N",
+        "UW1"
+      ],
+      "phoneticUs": "/rɪ.ˈnu/"
+    },
+    {
+      "id": "renewal-n",
+      "word": "renewal",
+      "arpabet": [
+        "R",
+        "IH0",
+        "N",
+        "UW1",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/rɪ.ˈnu.əl/"
+    },
+    {
+      "id": "replacement-n",
+      "word": "replacement",
+      "arpabet": [
+        "R",
+        "IH0",
+        "P",
+        "L",
+        "EY1",
+        "S",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/rɪ.ˈpleɪ.smənt/"
+    },
+    {
+      "id": "requirement-n",
+      "word": "requirement",
+      "arpabet": [
+        "R",
+        "IH0",
+        "K",
+        "W",
+        "AY1",
+        "R",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/rɪ.ˈkwaɪr.mənt/"
+    },
+    {
+      "id": "requisition-n",
+      "word": "requisition",
+      "arpabet": [
+        "R",
+        "EH2",
+        "K",
+        "W",
+        "AH0",
+        "Z",
+        "IH1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌre.kwə.ˈzɪ.ʃən/"
+    },
+    {
+      "id": "reschedule-v",
+      "word": "reschedule",
+      "arpabet": [
+        "R",
+        "IY0",
+        "S",
+        "K",
+        "EH1",
+        "JH",
+        "UW0",
+        "L"
+      ],
+      "phoneticUs": "/ri.ˈske.dʒul/"
+    },
+    {
+      "id": "revision-n",
+      "word": "revision",
+      "arpabet": [
+        "R",
+        "IY0",
+        "V",
+        "IH1",
+        "ZH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ri.ˈvɪ.ʒən/"
+    },
+    {
+      "id": "solvent-adj",
+      "word": "solvent",
+      "arpabet": [
+        "S",
+        "AA1",
+        "L",
+        "V",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˈsɑl.vənt/"
+    },
+    {
+      "id": "specify-v",
+      "word": "specify",
+      "arpabet": [
+        "S",
+        "P",
+        "EH1",
+        "S",
+        "AH0",
+        "F",
+        "AY2"
+      ],
+      "phoneticUs": "/ˈspe.sə.ˌfaɪ/"
+    },
+    {
+      "id": "stakeholder-n",
+      "word": "stakeholder",
+      "arpabet": [
+        "S",
+        "T",
+        "EY1",
+        "K",
+        "HH",
+        "OW2",
+        "L",
+        "D",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈsteɪk.ˌhoʊl.dɚ/"
+    },
+    {
+      "id": "subcontract-v",
+      "word": "subcontract",
+      "arpabet": [
+        "S",
+        "AH0",
+        "B",
+        "K",
+        "AA1",
+        "N",
+        "T",
+        "R",
+        "AE2",
+        "K",
+        "T"
+      ],
+      "phoneticUs": "/səb.ˈkɑn.ˌtrækt/"
+    },
+    {
+      "id": "subcontractor-n",
+      "word": "subcontractor",
+      "arpabet": [
+        "S",
+        "AH0",
+        "B",
+        "K",
+        "AA1",
+        "N",
+        "T",
+        "R",
+        "AE2",
+        "K",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/səb.ˈkɑn.ˌtræk.tɚ/"
+    },
+    {
+      "id": "subscribe-v",
+      "word": "subscribe",
+      "arpabet": [
+        "S",
+        "AH0",
+        "B",
+        "S",
+        "K",
+        "R",
+        "AY1",
+        "B"
+      ],
+      "phoneticUs": "/səb.ˈskraɪb/"
+    },
+    {
+      "id": "subscription-n",
+      "word": "subscription",
+      "arpabet": [
+        "S",
+        "AH0",
+        "B",
+        "S",
+        "K",
+        "R",
+        "IH1",
+        "P",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/səb.ˈskrɪp.ʃən/"
+    },
+    {
+      "id": "subsidiary-n",
+      "word": "subsidiary",
+      "arpabet": [
+        "S",
+        "AH0",
+        "B",
+        "S",
+        "IH1",
+        "D",
+        "IY0",
+        "EH2",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/səb.ˈsɪ.di.ˌe.ri/"
+    },
+    {
+      "id": "sufficient-adj",
+      "word": "sufficient",
+      "arpabet": [
+        "S",
+        "AH0",
+        "F",
+        "IH1",
+        "SH",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/sə.ˈfɪ.ʃənt/"
+    },
+    {
+      "id": "sufficiently-adv",
+      "word": "sufficiently",
+      "arpabet": [
+        "S",
+        "AH0",
+        "F",
+        "IH1",
+        "SH",
+        "AH0",
+        "N",
+        "T",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/sə.ˈfɪ.ʃənt.li/"
+    },
+    {
+      "id": "supervise-v",
+      "word": "supervise",
+      "arpabet": [
+        "S",
+        "UW1",
+        "P",
+        "ER0",
+        "V",
+        "AY2",
+        "Z"
+      ],
+      "phoneticUs": "/ˈsu.pɚ.ˌvaɪz/"
+    },
+    {
+      "id": "supervision-n",
+      "word": "supervision",
+      "arpabet": [
+        "S",
+        "UW2",
+        "P",
+        "ER0",
+        "V",
+        "IH1",
+        "ZH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌsu.pɚ.ˈvɪ.ʒən/"
+    },
+    {
+      "id": "supervisor-n",
+      "word": "supervisor",
+      "arpabet": [
+        "S",
+        "UW1",
+        "P",
+        "ER0",
+        "V",
+        "AY2",
+        "Z",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈsu.pɚ.ˌvaɪ.zɚ/"
+    },
+    {
+      "id": "surplus-n",
+      "word": "surplus",
+      "arpabet": [
+        "S",
+        "ER1",
+        "P",
+        "L",
+        "AH0",
+        "S"
+      ],
+      "phoneticUs": "/ˈsɝ.pləs/"
+    },
+    {
+      "id": "suspend-v",
+      "word": "suspend",
+      "arpabet": [
+        "S",
+        "AH0",
+        "S",
+        "P",
+        "EH1",
+        "N",
+        "D"
+      ],
+      "phoneticUs": "/sə.ˈspend/"
+    },
+    {
+      "id": "suspension-n",
+      "word": "suspension",
+      "arpabet": [
+        "S",
+        "AH0",
+        "S",
+        "P",
+        "EH1",
+        "N",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/sə.ˈspen.ʃən/"
+    },
+    {
+      "id": "sustain-v",
+      "word": "sustain",
+      "arpabet": [
+        "S",
+        "AH0",
+        "S",
+        "T",
+        "EY1",
+        "N"
+      ],
+      "phoneticUs": "/sə.ˈsteɪn/"
+    },
+    {
+      "id": "sustainability-n",
+      "word": "sustainability",
+      "arpabet": [
+        "S",
+        "AH0",
+        "S",
+        "T",
+        "EY2",
+        "N",
+        "AH0",
+        "B",
+        "IH1",
+        "L",
+        "IH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/sə.ˌsteɪ.nə.ˈbɪ.lɪ.ti/"
+    },
+    {
+      "id": "tender-n",
+      "word": "tender",
+      "arpabet": [
+        "T",
+        "EH1",
+        "N",
+        "D",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈten.dɚ/"
+    },
+    {
+      "id": "terminate-v",
+      "word": "terminate",
+      "arpabet": [
+        "T",
+        "ER1",
+        "M",
+        "AH0",
+        "N",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/ˈtɝ.mə.ˌneɪt/"
+    },
+    {
+      "id": "termination-n",
+      "word": "termination",
+      "arpabet": [
+        "T",
+        "ER0",
+        "M",
+        "AH0",
+        "N",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/tɚ.mə.ˈneɪ.ʃən/"
+    },
+    {
+      "id": "thereafter-adv",
+      "word": "thereafter",
+      "arpabet": [
+        "DH",
+        "EH0",
+        "R",
+        "AE1",
+        "F",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/ðe.ˈræf.tɚ/"
+    },
+    {
+      "id": "threshold-n",
+      "word": "threshold",
+      "arpabet": [
+        "TH",
+        "R",
+        "EH1",
+        "SH",
+        "OW2",
+        "L",
+        "D"
+      ],
+      "phoneticUs": "/ˈθre.ˌʃoʊld/"
+    },
+    {
+      "id": "transact-v",
+      "word": "transact",
+      "arpabet": [
+        "T",
+        "R",
+        "AE0",
+        "N",
+        "Z",
+        "AE1",
+        "K",
+        "T"
+      ],
+      "phoneticUs": "/træn.ˈzækt/"
+    },
+    {
+      "id": "transit-n",
+      "word": "transit",
+      "arpabet": [
+        "T",
+        "R",
+        "AE1",
+        "N",
+        "Z",
+        "IH0",
+        "T"
+      ],
+      "phoneticUs": "/ˈtræn.zɪt/"
+    },
+    {
+      "id": "turnover-n",
+      "word": "turnover",
+      "arpabet": [
+        "T",
+        "ER1",
+        "N",
+        "OW2",
+        "V",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈtɝ.ˌnoʊ.vɚ/"
+    },
+    {
+      "id": "undergo-v",
+      "word": "undergo",
+      "arpabet": [
+        "AH2",
+        "N",
+        "D",
+        "ER0",
+        "G",
+        "OW1"
+      ],
+      "phoneticUs": "/ˌʌn.dɚ.ˈɡoʊ/"
+    },
+    {
+      "id": "understaffed-adj",
+      "word": "understaffed",
+      "arpabet": [
+        "AH1",
+        "N",
+        "D",
+        "ER0",
+        "S",
+        "T",
+        "AE2",
+        "F",
+        "T"
+      ],
+      "phoneticUs": "/ˈʌn.dɚ.ˌstæft/"
+    },
+    {
+      "id": "undertaking-n",
+      "word": "undertaking",
+      "arpabet": [
+        "AH1",
+        "N",
+        "D",
+        "ER0",
+        "T",
+        "EY2",
+        "K",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈʌn.dɚ.ˌteɪ.kɪŋ/"
+    },
+    {
+      "id": "underwrite-v",
+      "word": "underwrite",
+      "arpabet": [
+        "AH1",
+        "N",
+        "D",
+        "ER0",
+        "R",
+        "AY2",
+        "T"
+      ],
+      "phoneticUs": "/ˈʌn.dɚ.ˌraɪt/"
+    },
+    {
+      "id": "utilization-n",
+      "word": "utilization",
+      "arpabet": [
+        "Y",
+        "UW2",
+        "T",
+        "AH0",
+        "L",
+        "AH0",
+        "Z",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌju.tə.lə.ˈzeɪ.ʃən/"
+    },
+    {
+      "id": "utilize-v",
+      "word": "utilize",
+      "arpabet": [
+        "Y",
+        "UW1",
+        "T",
+        "AH0",
+        "L",
+        "AY2",
+        "Z"
+      ],
+      "phoneticUs": "/ˈju.tə.ˌlaɪz/"
+    },
+    {
+      "id": "verification-n",
+      "word": "verification",
+      "arpabet": [
+        "V",
+        "EH2",
+        "R",
+        "AH0",
+        "F",
+        "AH0",
+        "K",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌve.rə.fə.ˈkeɪ.ʃən/"
+    },
+    {
+      "id": "vest-v",
+      "word": "vest",
+      "arpabet": [
+        "V",
+        "EH1",
+        "S",
+        "T"
+      ],
+      "phoneticUs": "/vest/"
+    },
+    {
+      "id": "vested-adj",
+      "word": "vested",
+      "arpabet": [
+        "V",
+        "EH1",
+        "S",
+        "T",
+        "IH0",
+        "D"
+      ],
+      "phoneticUs": "/ˈve.stɪd/"
+    },
+    {
+      "id": "viability-n",
+      "word": "viability",
+      "arpabet": [
+        "V",
+        "AY0",
+        "AH0",
+        "B",
+        "IH1",
+        "L",
+        "AH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/vaɪ.ə.ˈbɪ.lə.ti/"
+    },
+    {
+      "id": "waiver-n",
+      "word": "waiver",
+      "arpabet": [
+        "W",
+        "EY1",
+        "V",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈweɪ.vɚ/"
+    },
+    {
+      "id": "wholesale-n",
+      "word": "wholesale",
+      "arpabet": [
+        "HH",
+        "OW1",
+        "L",
+        "S",
+        "EY2",
+        "L"
+      ],
+      "phoneticUs": "/ˈhoʊl.ˌseɪl/"
+    },
+    {
+      "id": "withhold-v",
+      "word": "withhold",
+      "arpabet": [
+        "W",
+        "IH0",
+        "TH",
+        "HH",
+        "OW1",
+        "L",
+        "D"
+      ],
+      "phoneticUs": "/wɪθ.ˈhoʊld/"
+    },
+    {
+      "id": "withholding-n",
+      "word": "withholding",
+      "arpabet": [
+        "W",
+        "IH0",
+        "TH",
+        "HH",
+        "OW1",
+        "L",
+        "D",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/wɪθ.ˈhoʊl.dɪŋ/"
+    },
+    {
+      "id": "workforce-n",
+      "word": "workforce",
+      "arpabet": [
+        "W",
+        "ER1",
+        "K",
+        "F",
+        "AO2",
+        "R",
+        "S"
+      ],
+      "phoneticUs": "/ˈwɝk.ˌfɔrs/"
+    },
+    {
+      "id": "workplace-n",
+      "word": "workplace",
+      "arpabet": [
+        "W",
+        "ER1",
+        "K",
+        "P",
+        "L",
+        "EY2",
+        "S"
+      ],
+      "phoneticUs": "/ˈwɝk.ˌpleɪs/"
+    },
+    {
+      "id": "yielding-adj",
+      "word": "yielding",
+      "arpabet": [
+        "Y",
+        "IY1",
+        "L",
+        "D",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈjil.dɪŋ/"
+    },
+    {
+      "id": "airfare-n",
+      "word": "airfare",
+      "arpabet": [
+        "EH1",
+        "R",
+        "F",
+        "EH2",
+        "R"
+      ],
+      "phoneticUs": "/ˈer.ˌfer/"
+    },
+    {
+      "id": "overbooking-n",
+      "word": "overbooking",
+      "arpabet": [
+        "OW1",
+        "V",
+        "ER0",
+        "B",
+        "UH2",
+        "K",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈoʊ.vɚ.ˌbʊ.kɪŋ/"
+    },
+    {
+      "id": "voucher-n",
+      "word": "voucher",
+      "arpabet": [
+        "V",
+        "AW1",
+        "CH",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈvaʊ.tʃɚ/"
+    },
+    {
+      "id": "excursion-n",
+      "word": "excursion",
+      "arpabet": [
+        "IH0",
+        "K",
+        "S",
+        "K",
+        "ER1",
+        "ZH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ɪk.ˈskɝ.ʒən/"
+    },
+    {
+      "id": "arrival-n",
+      "word": "arrival",
+      "arpabet": [
+        "ER0",
+        "AY1",
+        "V",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ɚ.ˈaɪ.vəl/"
+    },
+    {
+      "id": "passport-n",
+      "word": "passport",
+      "arpabet": [
+        "P",
+        "AE1",
+        "S",
+        "P",
+        "AO2",
+        "R",
+        "T"
+      ],
+      "phoneticUs": "/ˈpæ.ˌspɔrt/"
+    },
+    {
+      "id": "immigration-n",
+      "word": "immigration",
+      "arpabet": [
+        "IH2",
+        "M",
+        "AH0",
+        "G",
+        "R",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌɪ.məɡ.ˈreɪ.ʃən/"
+    },
+    {
+      "id": "shuttle-n",
+      "word": "shuttle",
+      "arpabet": [
+        "SH",
+        "AH1",
+        "T",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈʃʌ.təl/"
+    },
+    {
+      "id": "charter-n",
+      "word": "charter",
+      "arpabet": [
+        "CH",
+        "AA1",
+        "R",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈtʃɑr.tɚ/"
+    },
+    {
+      "id": "disembark-v",
+      "word": "disembark",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "EH0",
+        "M",
+        "B",
+        "AA1",
+        "R",
+        "K"
+      ],
+      "phoneticUs": "/dɪ.sem.ˈbɑrk/"
+    },
+    {
+      "id": "cruise-n",
+      "word": "cruise",
+      "arpabet": [
+        "K",
+        "R",
+        "UW1",
+        "Z"
+      ],
+      "phoneticUs": "/kruz/"
+    },
+    {
+      "id": "ferry-n",
+      "word": "ferry",
+      "arpabet": [
+        "F",
+        "EH1",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈfe.ri/"
+    },
+    {
+      "id": "porter-n",
+      "word": "porter",
+      "arpabet": [
+        "P",
+        "AO1",
+        "R",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈpɔr.tɚ/"
+    },
+    {
+      "id": "steward-n",
+      "word": "steward",
+      "arpabet": [
+        "S",
+        "T",
+        "UW1",
+        "ER0",
+        "D"
+      ],
+      "phoneticUs": "/ˈstu.ɚd/"
+    },
+    {
+      "id": "rebook-v",
+      "word": "rebook",
+      "arpabet": [
+        "R",
+        "IY0",
+        "B",
+        "UH1",
+        "K"
+      ],
+      "phoneticUs": "/ri.ˈbʊk/"
+    },
+    {
+      "id": "ticketing-n",
+      "word": "ticketing",
+      "arpabet": [
+        "T",
+        "IH1",
+        "K",
+        "AH0",
+        "T",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈtɪ.kə.tɪŋ/"
+    },
+    {
+      "id": "visa-n",
+      "word": "visa",
+      "arpabet": [
+        "V",
+        "IY1",
+        "Z",
+        "AH0"
+      ],
+      "phoneticUs": "/ˈvi.zə/"
+    },
+    {
+      "id": "transportation-n",
+      "word": "transportation",
+      "arpabet": [
+        "T",
+        "R",
+        "AE2",
+        "N",
+        "S",
+        "P",
+        "ER0",
+        "T",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌtræn.spɚ.ˈteɪ.ʃən/"
+    },
+    {
+      "id": "escalation-n",
+      "word": "escalation",
+      "arpabet": [
+        "EH2",
+        "S",
+        "K",
+        "AH0",
+        "L",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌe.skə.ˈleɪ.ʃən/"
+    },
+    {
+      "id": "responsiveness-n",
+      "word": "responsiveness",
+      "arpabet": [
+        "R",
+        "IH0",
+        "S",
+        "P",
+        "AA1",
+        "N",
+        "S",
+        "IH0",
+        "V",
+        "N",
+        "AH0",
+        "S"
+      ],
+      "phoneticUs": "/rɪ.ˈspɑn.sɪv.nəs/"
+    },
+    {
+      "id": "dissatisfied-adj",
+      "word": "dissatisfied",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "AE1",
+        "T",
+        "AH0",
+        "S",
+        "F",
+        "AY2",
+        "D"
+      ],
+      "phoneticUs": "/dɪ.ˈsæ.təs.ˌfaɪd/"
+    },
+    {
+      "id": "loyalty-n",
+      "word": "loyalty",
+      "arpabet": [
+        "L",
+        "OY1",
+        "AH0",
+        "L",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈlɔɪ.əl.ti/"
+    },
+    {
+      "id": "courteous-adj",
+      "word": "courteous",
+      "arpabet": [
+        "K",
+        "ER1",
+        "T",
+        "IY0",
+        "AH0",
+        "S"
+      ],
+      "phoneticUs": "/ˈkɝ.ti.əs/"
+    },
+    {
+      "id": "cancellation-n",
+      "word": "cancellation",
+      "arpabet": [
+        "K",
+        "AE2",
+        "N",
+        "S",
+        "AH0",
+        "L",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌkæn.sə.ˈleɪ.ʃən/"
+    },
+    {
+      "id": "agent-n",
+      "word": "agent",
+      "arpabet": [
+        "EY1",
+        "JH",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˈeɪ.dʒənt/"
+    },
+    {
+      "id": "resolution-n",
+      "word": "resolution",
+      "arpabet": [
+        "R",
+        "EH2",
+        "Z",
+        "AH0",
+        "L",
+        "UW1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌre.zə.ˈlu.ʃən/"
+    },
+    {
+      "id": "resolve-v",
+      "word": "resolve",
+      "arpabet": [
+        "R",
+        "IY0",
+        "Z",
+        "AA1",
+        "L",
+        "V"
+      ],
+      "phoneticUs": "/ri.ˈzɑlv/"
+    },
+    {
+      "id": "troubleshoot-v",
+      "word": "troubleshoot",
+      "arpabet": [
+        "T",
+        "R",
+        "AH1",
+        "B",
+        "AH0",
+        "L",
+        "SH",
+        "UW2",
+        "T"
+      ],
+      "phoneticUs": "/ˈtrʌ.bəl.ˌʃut/"
+    },
+    {
+      "id": "troubleshooting-n",
+      "word": "troubleshooting",
+      "arpabet": [
+        "T",
+        "R",
+        "AH1",
+        "B",
+        "AH0",
+        "L",
+        "SH",
+        "UW2",
+        "T",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈtrʌ.bəl.ˌʃu.tɪŋ/"
+    },
+    {
+      "id": "hotline-n",
+      "word": "hotline",
+      "arpabet": [
+        "HH",
+        "AA1",
+        "T",
+        "L",
+        "AY2",
+        "N"
+      ],
+      "phoneticUs": "/ˈhɑt.ˌlaɪn/"
+    },
+    {
+      "id": "consumer-n",
+      "word": "consumer",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "UW1",
+        "M",
+        "ER0"
+      ],
+      "phoneticUs": "/kən.ˈsu.mɚ/"
+    },
+    {
+      "id": "apology-n",
+      "word": "apology",
+      "arpabet": [
+        "AH0",
+        "P",
+        "AA1",
+        "L",
+        "AH0",
+        "JH",
+        "IY2"
+      ],
+      "phoneticUs": "/ə.ˈpɑ.lə.ˌdʒi/"
+    },
+    {
+      "id": "faulty-adj",
+      "word": "faulty",
+      "arpabet": [
+        "F",
+        "AO1",
+        "L",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈfɔl.ti/"
+    },
+    {
+      "id": "complain-v",
+      "word": "complain",
+      "arpabet": [
+        "K",
+        "AH0",
+        "M",
+        "P",
+        "L",
+        "EY1",
+        "N"
+      ],
+      "phoneticUs": "/kəm.ˈpleɪn/"
+    },
+    {
+      "id": "responsive-adj",
+      "word": "responsive",
+      "arpabet": [
+        "R",
+        "IH0",
+        "S",
+        "P",
+        "AA1",
+        "N",
+        "S",
+        "IH0",
+        "V"
+      ],
+      "phoneticUs": "/rɪ.ˈspɑn.sɪv/"
+    },
+    {
+      "id": "punctuality-n",
+      "word": "punctuality",
+      "arpabet": [
+        "P",
+        "AH2",
+        "NG",
+        "K",
+        "CH",
+        "UW0",
+        "AE1",
+        "L",
+        "IH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌpʌŋk.tʃu.ˈæ.lɪ.ti/"
+    },
+    {
+      "id": "inconvenience-n",
+      "word": "inconvenience",
+      "arpabet": [
+        "IH2",
+        "N",
+        "K",
+        "AH0",
+        "N",
+        "V",
+        "IY1",
+        "N",
+        "Y",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/ˌɪn.kən.ˈvin.jəns/"
+    },
+    {
+      "id": "clause-n",
+      "word": "clause",
+      "arpabet": [
+        "K",
+        "L",
+        "AO1",
+        "Z"
+      ],
+      "phoneticUs": "/klɔz/"
+    },
+    {
+      "id": "breach-nv",
+      "word": "breach",
+      "arpabet": [
+        "B",
+        "R",
+        "IY1",
+        "CH"
+      ],
+      "phoneticUs": "/britʃ/"
+    },
+    {
+      "id": "signatory-n",
+      "word": "signatory",
+      "arpabet": [
+        "S",
+        "IH1",
+        "G",
+        "N",
+        "AH0",
+        "T",
+        "AO2",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈsɪɡ.nə.ˌtɔ.ri/"
+    },
+    {
+      "id": "agreement-n",
+      "word": "agreement",
+      "arpabet": [
+        "AH0",
+        "G",
+        "R",
+        "IY1",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/əɡ.ˈri.mənt/"
+    },
+    {
+      "id": "fixture-n",
+      "word": "fixture",
+      "arpabet": [
+        "F",
+        "IH1",
+        "K",
+        "S",
+        "CH",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈfɪks.tʃɚ/"
+    },
+    {
+      "id": "elevator-n",
+      "word": "elevator",
+      "arpabet": [
+        "EH1",
+        "L",
+        "AH0",
+        "V",
+        "EY2",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈe.lə.ˌveɪ.tɚ/"
+    },
+    {
+      "id": "janitorial-adj",
+      "word": "janitorial",
+      "arpabet": [
+        "JH",
+        "AE2",
+        "N",
+        "IH0",
+        "T",
+        "AO1",
+        "R",
+        "IY0",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˌdʒæ.nɪ.ˈtɔ.ri.əl/"
+    },
+    {
+      "id": "security-n",
+      "word": "security",
+      "arpabet": [
+        "S",
+        "IH0",
+        "K",
+        "Y",
+        "UH1",
+        "R",
+        "AH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/sɪk.ˈjʊ.rə.ti/"
+    },
+    {
+      "id": "repair-nv",
+      "word": "repair",
+      "arpabet": [
+        "R",
+        "IH0",
+        "P",
+        "EH1",
+        "R"
+      ],
+      "phoneticUs": "/rɪ.ˈper/"
+    },
+    {
+      "id": "refurbish-v",
+      "word": "refurbish",
+      "arpabet": [
+        "R",
+        "IY0",
+        "F",
+        "ER1",
+        "B",
+        "IH0",
+        "SH"
+      ],
+      "phoneticUs": "/ri.ˈfɝ.bɪʃ/"
+    },
+    {
+      "id": "enforce-v",
+      "word": "enforce",
+      "arpabet": [
+        "EH0",
+        "N",
+        "F",
+        "AO1",
+        "R",
+        "S"
+      ],
+      "phoneticUs": "/en.ˈfɔrs/"
+    },
+    {
+      "id": "enforcement-n",
+      "word": "enforcement",
+      "arpabet": [
+        "EH0",
+        "N",
+        "F",
+        "AO1",
+        "R",
+        "S",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/en.ˈfɔr.smənt/"
+    },
+    {
+      "id": "litigation-n",
+      "word": "litigation",
+      "arpabet": [
+        "L",
+        "IH2",
+        "T",
+        "AH0",
+        "G",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌlɪ.tə.ˈɡeɪ.ʃən/"
+    },
+    {
+      "id": "mediation-n",
+      "word": "mediation",
+      "arpabet": [
+        "M",
+        "IY2",
+        "D",
+        "IY0",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌmi.di.ˈeɪ.ʃən/"
+    },
+    {
+      "id": "signature-n",
+      "word": "signature",
+      "arpabet": [
+        "S",
+        "IH1",
+        "G",
+        "N",
+        "AH0",
+        "CH",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈsɪɡ.nə.tʃɚ/"
+    },
+    {
+      "id": "fireproof-adj",
+      "word": "fireproof",
+      "arpabet": [
+        "F",
+        "AY1",
+        "ER0",
+        "P",
+        "R",
+        "UW2",
+        "F"
+      ],
+      "phoneticUs": "/ˈfaɪ.ɚ.ˌpruf/"
+    },
+    {
+      "id": "generator-n",
+      "word": "generator",
+      "arpabet": [
+        "JH",
+        "EH1",
+        "N",
+        "ER0",
+        "EY2",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈdʒe.nɚ.ˌeɪ.tɚ/"
+    },
+    {
+      "id": "workspace-n",
+      "word": "workspace",
+      "arpabet": [
+        "W",
+        "ER1",
+        "K",
+        "S",
+        "P",
+        "EY2",
+        "S"
+      ],
+      "phoneticUs": "/ˈwɝk.ˌspeɪs/"
+    },
+    {
+      "id": "flooring-n",
+      "word": "flooring",
+      "arpabet": [
+        "F",
+        "L",
+        "AO1",
+        "R",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈflɔ.rɪŋ/"
+    },
+    {
+      "id": "carpentry-n",
+      "word": "carpentry",
+      "arpabet": [
+        "K",
+        "AA1",
+        "R",
+        "P",
+        "AH0",
+        "N",
+        "T",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈkɑr.pən.tri/"
+    },
+    {
+      "id": "electrician-n",
+      "word": "electrician",
+      "arpabet": [
+        "IH0",
+        "L",
+        "EH0",
+        "K",
+        "T",
+        "R",
+        "IH1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ɪ.lek.ˈtrɪ.ʃən/"
+    },
+    {
+      "id": "electrical-adj",
+      "word": "electrical",
+      "arpabet": [
+        "IH0",
+        "L",
+        "EH1",
+        "K",
+        "T",
+        "R",
+        "IH0",
+        "K",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ɪ.ˈlek.trɪ.kəl/"
+    },
+    {
+      "id": "wiring-n",
+      "word": "wiring",
+      "arpabet": [
+        "W",
+        "AY1",
+        "R",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈwaɪ.rɪŋ/"
+    },
+    {
+      "id": "heating-n",
+      "word": "heating",
+      "arpabet": [
+        "HH",
+        "IY1",
+        "T",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈhi.tɪŋ/"
+    },
+    {
+      "id": "cooling-n",
+      "word": "cooling",
+      "arpabet": [
+        "K",
+        "UW1",
+        "L",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈku.lɪŋ/"
+    },
+    {
+      "id": "roofing-n",
+      "word": "roofing",
+      "arpabet": [
+        "R",
+        "UW1",
+        "F",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈru.fɪŋ/"
+    },
+    {
+      "id": "janitor-n",
+      "word": "janitor",
+      "arpabet": [
+        "JH",
+        "AE1",
+        "N",
+        "AH0",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈdʒæ.nə.tɚ/"
+    },
+    {
+      "id": "custodial-adj",
+      "word": "custodial",
+      "arpabet": [
+        "K",
+        "AH0",
+        "S",
+        "T",
+        "OW1",
+        "D",
+        "IY0",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/kə.ˈstoʊ.di.əl/"
+    },
+    {
+      "id": "relocate-v",
+      "word": "relocate",
+      "arpabet": [
+        "R",
+        "IY2",
+        "L",
+        "OW1",
+        "K",
+        "EY0",
+        "T"
+      ],
+      "phoneticUs": "/ˌri.ˈloʊ.keɪt/"
+    },
+    {
+      "id": "retrofit-nv",
+      "word": "retrofit",
+      "arpabet": [
+        "R",
+        "EH1",
+        "T",
+        "R",
+        "OW0",
+        "F",
+        "IH2",
+        "T"
+      ],
+      "phoneticUs": "/ˈre.troʊ.ˌfɪt/"
+    },
+    {
+      "id": "alteration-n",
+      "word": "alteration",
+      "arpabet": [
+        "AO2",
+        "L",
+        "T",
+        "ER0",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌɔl.tɚ.ˈeɪ.ʃən/"
+    },
+    {
+      "id": "accessibility-n",
+      "word": "accessibility",
+      "arpabet": [
+        "AE2",
+        "K",
+        "S",
+        "EH0",
+        "S",
+        "AH0",
+        "B",
+        "IH1",
+        "L",
+        "IH0",
+        "T",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌæk.se.sə.ˈbɪ.lɪ.ti/"
+    },
+    {
+      "id": "accessible-adj",
+      "word": "accessible",
+      "arpabet": [
+        "AE0",
+        "K",
+        "S",
+        "EH1",
+        "S",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/æk.ˈse.sə.bəl/"
+    },
+    {
+      "id": "occupant-n",
+      "word": "occupant",
+      "arpabet": [
+        "AA1",
+        "K",
+        "Y",
+        "AH0",
+        "P",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˈɑk.jə.pənt/"
+    },
+    {
+      "id": "occupy-v",
+      "word": "occupy",
+      "arpabet": [
+        "AA1",
+        "K",
+        "Y",
+        "AH0",
+        "P",
+        "AY2"
+      ],
+      "phoneticUs": "/ˈɑk.jə.ˌpaɪ/"
+    }
+  ],
+  "notes": [
+    "This is a cumulative ledger: v2.70.0 entries plus exact single-pronunciation Batch 012 entries.",
+    "Batch 012 additions with multiple CMUdict pronunciations, no exact entry, or failed conversion are left blank pending editorial review."
+  ]
+}

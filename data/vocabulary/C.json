@@ -497,6 +497,43 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "carpentry-n",
+      "word": "carpentry",
+      "phonetic": {
+        "us": "/ˈkɑr.pən.tri/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nghề mộc; công việc chế tác và sửa chữa đồ gỗ",
+          "definition_en": "the work of making or repairing things from wood, especially in buildings",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The renovation budget covers carpentry work for the reception desk and storage cabinets.",
+          "vi": "Ngân sách cải tạo bao gồm công việc mộc cho quầy lễ tân và các tủ lưu trữ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "carpentry work",
+        "carpentry tools",
+        "carpentry contractor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "carrier-n",
       "word": "carrier",
       "phonetic": {
@@ -1526,6 +1563,43 @@
         "clarify the deadline"
       ],
       "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "clause-n",
+      "word": "clause",
+      "phonetic": {
+        "us": "/klɔz/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điều khoản; mệnh đề trong văn bản pháp lý",
+          "definition_en": "a separate section of a legal document that states a particular condition or requirement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier asked both parties to review the payment clause before signing the agreement.",
+          "vi": "Nhà cung cấp yêu cầu hai bên xem xét điều khoản thanh toán trước khi ký thỏa thuận.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contract clause",
+        "confidentiality clause",
+        "termination clause"
+      ],
+      "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
@@ -4901,6 +4975,42 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "cooling-n",
+      "word": "cooling",
+      "phonetic": {
+        "us": "/ˈku.lɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống làm mát; việc làm mát",
+          "definition_en": "the equipment or process used to reduce the temperature of a room or building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The cooling system needs a filter replacement to maintain comfortable temperatures in the meeting rooms.",
+          "vi": "Hệ thống làm mát cần được thay bộ lọc để duy trì nhiệt độ dễ chịu trong các phòng họp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cooling system",
+        "cooling capacity",
+        "cooling equipment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "cooperate-v",
       "word": "cooperate",
       "cefr_level": "B1",
@@ -5845,6 +5955,43 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "custodial-adj",
+      "word": "custodial",
+      "phonetic": {
+        "us": "/kə.ˈstoʊ.di.əl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc công việc vệ sinh và chăm sóc cơ sở",
+          "definition_en": "relating to cleaning and routine care of a building or its facilities",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The school renewed its custodial services agreement after reviewing the contractor’s performance.",
+          "vi": "Trường học đã gia hạn thỏa thuận dịch vụ vệ sinh sau khi đánh giá hiệu suất của nhà thầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "custodial services",
+        "custodial staff",
+        "custodial duties"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     },
     {
       "id": "custody-n",

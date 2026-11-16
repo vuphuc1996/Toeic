@@ -1,0 +1,36 @@
+{
+  "basedOn": "TOEIC Dictionary v2.75.0 Full Source",
+  "policy": "SHA-256 of canonical JSON serialization of the existing A2 q1/q2 pairs; additions must not alter them.",
+  "resources": {
+    "reading": {
+      "a2-polite-requests": "b89f0fc9b6796cc88b75e99efb87d6e20cf1a334297931e9c789fff73e5a9fac",
+      "a2-quantities": "776ab904f4ddb718cb99a8e8fd978299ff8a53b5b97a0c27fbc2f5970602a3b7",
+      "a2-comparisons": "3d504fec809a1dff262ababab95dbe3439ac406c98f5e99117a229a497e1c762",
+      "a2-past-work-events": "24a563822ebf8c2427927bd5a944151734bad9b0afde5f2ed3dda739b0fb54e2",
+      "a2-present-continuous": "90f9f94b64430a8d6159b49908fc27b90f5deaabdb254cf2a023b737a646fd4a",
+      "a2-obligation-permission": "01dfdb6e8045ceb6c9772460604059e7707084ab94cc9f450b9812e5726f99b9",
+      "a2-directions": "cc0fbacf24e8ec7a49fbb7c474c3259a295afe0be2c1adde96b408023cbb913c",
+      "a2-invitations-offers": "f14ba8a5a8ac74b6e95f305630666ff4b368ce52d8dcd281899e789650b50aab",
+      "a2-sequencing-instructions": "82b4153df6d25712453ee373b73c23915efbcfe0f00143c50623875502cc75e6",
+      "a2-plans-and-intentions": "fa63a60d5d7662062313212a25cc4387f2471ffb255b54b440900ca2ac23056d",
+      "a2-present-perfect-experience": "9d159304a761fde4b86e41ec2fd3610b30a580368a41f84d962b0cf7383b0f0d",
+      "a2-basic-passive-voice": "68238e32270e3a241b7f972d0bd35a0a4b241cae44b0f5fe4526765ec9282bb0",
+      "a2-defining-relative-clauses": "5d5eaa92b28b0743a6886a1b9b83cf239d92a733ef62779175bae9ebfec97efd"
+    },
+    "listening": {
+      "a2-polite-requests": "7149901fc2364be99b47a5ad6990ef2b7600e0f7667e1c618bfa46e432275bba",
+      "a2-quantities": "e19669c6d5d926159d6fa44101dc191c0e28cb36b9c820890399330bafac8d6b",
+      "a2-comparisons": "9fa1baf3b3fa7264d5d5f5f8ffb65d4e975a7bf7d1d4ac37df89be4a53b6ebcb",
+      "a2-past-work-events": "2bf4b7bc913df0fbe94c2ba25189e008a7e813a594ed7e08821c51094ff8741a",
+      "a2-present-continuous": "7dddf08198f991b7db20f07b23673995da511effcc3d974a36f01cdc0c16abea",
+      "a2-obligation-permission": "8b32643c05c01d82b7044941c5e93ad4d0ddc941482c85c01d7417e004294bd1",
+      "a2-directions": "6132244b50cf3ba2a0ae8ddb3e224114fd53b27415ee98cd6080e40b2594898a",
+      "a2-invitations-offers": "ab97f61017d9fed059c15d52c7da9640c835a5f28d59f91b2391f3cd1628d717",
+      "a2-sequencing-instructions": "1959fae2dcfc2261d638158068320b08e090fa33be89fcf8d15c3e928f90939f",
+      "a2-plans-and-intentions": "0839a5e3283a922e12aa96d5335928b091b5425c2769969c11f9dd080f9ecb97",
+      "a2-present-perfect-experience": "238a476f0e8f5bff7bf4c52ac1944d7ee75644d16ac0a92bce7030822f9423c8",
+      "a2-basic-passive-voice": "d59cb58c44f5948cd646406736b92cf8cf0d9a9e1e66d1100dc562654021f74b",
+      "a2-defining-relative-clauses": "78732119d12cc9fc80712cc761658a75c59e1b6e8e5e5f0100bb5ccb994bacae"
+    }
+  }
+}

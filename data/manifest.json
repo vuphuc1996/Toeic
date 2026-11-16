@@ -1,46 +1,46 @@
 {
   "schemaVersion": 1,
-  "version": "2.70.0",
+  "version": "2.78.0",
   "letters": [
     {
       "letter": "A",
       "file": "./data/vocabulary/A.json",
-      "count": 119
+      "count": 123
     },
     {
       "letter": "B",
       "file": "./data/vocabulary/B.json",
-      "count": 39
+      "count": 40
     },
     {
       "letter": "C",
       "file": "./data/vocabulary/C.json",
-      "count": 147
+      "count": 151
     },
     {
       "letter": "D",
       "file": "./data/vocabulary/D.json",
-      "count": 75
+      "count": 76
     },
     {
       "letter": "E",
       "file": "./data/vocabulary/E.json",
-      "count": 62
+      "count": 67
     },
     {
       "letter": "F",
       "file": "./data/vocabulary/F.json",
-      "count": 39
+      "count": 42
     },
     {
       "letter": "G",
       "file": "./data/vocabulary/G.json",
-      "count": 11
+      "count": 12
     },
     {
       "letter": "H",
       "file": "./data/vocabulary/H.json",
-      "count": 13
+      "count": 14
     },
     {
       "letter": "I",
@@ -50,7 +50,7 @@
     {
       "letter": "J",
       "file": "./data/vocabulary/J.json",
-      "count": 6
+      "count": 8
     },
     {
       "letter": "K",
@@ -60,12 +60,12 @@
     {
       "letter": "L",
       "file": "./data/vocabulary/L.json",
-      "count": 34
+      "count": 35
     },
     {
       "letter": "M",
       "file": "./data/vocabulary/M.json",
-      "count": 33
+      "count": 34
     },
     {
       "letter": "N",
@@ -75,7 +75,7 @@
     {
       "letter": "O",
       "file": "./data/vocabulary/O.json",
-      "count": 36
+      "count": 38
     },
     {
       "letter": "P",
@@ -90,12 +90,12 @@
     {
       "letter": "R",
       "file": "./data/vocabulary/R.json",
-      "count": 92
+      "count": 97
     },
     {
       "letter": "S",
       "file": "./data/vocabulary/S.json",
-      "count": 88
+      "count": 91
     },
     {
       "letter": "T",
@@ -110,12 +110,12 @@
     {
       "letter": "V",
       "file": "./data/vocabulary/V.json",
-      "count": 23
+      "count": 24
     },
     {
       "letter": "W",
       "file": "./data/vocabulary/W.json",
-      "count": 29
+      "count": 31
     },
     {
       "letter": "X",
@@ -134,55 +134,55 @@
     }
   ],
   "categories": "./data/categories.json",
-  "totalWords": 1100,
+  "totalWords": 1137,
   "cefrLevels": {
     "A1": 64,
-    "A2": 233,
-    "B1": 305,
-    "B2": 384,
-    "C1": 114
+    "A2": 238,
+    "B1": 315,
+    "B2": 398,
+    "C1": 122
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
   "totalTopics": 32,
-  "previousReleaseTotalWords": 1063,
+  "previousReleaseTotalWords": 1100,
   "releaseAdditionIds": [
-    "airfare-n",
-    "overbooking-n",
-    "voucher-n",
-    "excursion-n",
-    "arrival-n",
-    "passport-n",
-    "immigration-n",
-    "shuttle-n",
-    "charter-n",
-    "disembark-v",
-    "cruise-n",
-    "ferry-n",
-    "porter-n",
-    "steward-n",
-    "rebook-v",
-    "ticketing-n",
-    "visa-n",
-    "transportation-n",
-    "escalation-n",
-    "responsiveness-n",
-    "dissatisfied-adj",
-    "loyalty-n",
-    "courteous-adj",
-    "cancellation-n",
-    "agent-n",
-    "resolution-n",
-    "resolve-v",
-    "troubleshoot-v",
-    "troubleshooting-n",
-    "hotline-n",
-    "consumer-n",
-    "apology-n",
-    "faulty-adj",
-    "complain-v",
-    "responsive-adj",
-    "punctuality-n",
-    "inconvenience-n"
+    "clause-n",
+    "breach-nv",
+    "signatory-n",
+    "agreement-n",
+    "fixture-n",
+    "elevator-n",
+    "janitorial-adj",
+    "security-n",
+    "ventilation-n",
+    "repair-nv",
+    "refurbish-v",
+    "enforce-v",
+    "enforcement-n",
+    "litigation-n",
+    "dispute-nv",
+    "mediation-n",
+    "signature-n",
+    "fireproof-adj",
+    "generator-n",
+    "workspace-n",
+    "flooring-n",
+    "carpentry-n",
+    "electrician-n",
+    "electrical-adj",
+    "wiring-n",
+    "heating-n",
+    "cooling-n",
+    "roofing-n",
+    "janitor-n",
+    "custodial-adj",
+    "relocate-v",
+    "retrofit-nv",
+    "alteration-n",
+    "accessibility-n",
+    "accessible-adj",
+    "occupant-n",
+    "occupy-v"
   ],
   "releaseRepairProfiles": [
     {
@@ -308,7 +308,44 @@
         "complain-v",
         "responsive-adj",
         "punctuality-n",
-        "inconvenience-n"
+        "inconvenience-n",
+        "clause-n",
+        "breach-nv",
+        "signatory-n",
+        "agreement-n",
+        "fixture-n",
+        "elevator-n",
+        "janitorial-adj",
+        "security-n",
+        "ventilation-n",
+        "repair-nv",
+        "refurbish-v",
+        "enforce-v",
+        "enforcement-n",
+        "litigation-n",
+        "dispute-nv",
+        "mediation-n",
+        "signature-n",
+        "fireproof-adj",
+        "generator-n",
+        "workspace-n",
+        "flooring-n",
+        "carpentry-n",
+        "electrician-n",
+        "electrical-adj",
+        "wiring-n",
+        "heating-n",
+        "cooling-n",
+        "roofing-n",
+        "janitor-n",
+        "custodial-adj",
+        "relocate-v",
+        "retrofit-nv",
+        "alteration-n",
+        "accessibility-n",
+        "accessible-adj",
+        "occupant-n",
+        "occupy-v"
       ]
     },
     {
@@ -421,7 +458,44 @@
         "complain-v",
         "responsive-adj",
         "punctuality-n",
-        "inconvenience-n"
+        "inconvenience-n",
+        "clause-n",
+        "breach-nv",
+        "signatory-n",
+        "agreement-n",
+        "fixture-n",
+        "elevator-n",
+        "janitorial-adj",
+        "security-n",
+        "ventilation-n",
+        "repair-nv",
+        "refurbish-v",
+        "enforce-v",
+        "enforcement-n",
+        "litigation-n",
+        "dispute-nv",
+        "mediation-n",
+        "signature-n",
+        "fireproof-adj",
+        "generator-n",
+        "workspace-n",
+        "flooring-n",
+        "carpentry-n",
+        "electrician-n",
+        "electrical-adj",
+        "wiring-n",
+        "heating-n",
+        "cooling-n",
+        "roofing-n",
+        "janitor-n",
+        "custodial-adj",
+        "relocate-v",
+        "retrofit-nv",
+        "alteration-n",
+        "accessibility-n",
+        "accessible-adj",
+        "occupant-n",
+        "occupy-v"
       ]
     },
     {
@@ -500,7 +574,44 @@
         "complain-v",
         "responsive-adj",
         "punctuality-n",
-        "inconvenience-n"
+        "inconvenience-n",
+        "clause-n",
+        "breach-nv",
+        "signatory-n",
+        "agreement-n",
+        "fixture-n",
+        "elevator-n",
+        "janitorial-adj",
+        "security-n",
+        "ventilation-n",
+        "repair-nv",
+        "refurbish-v",
+        "enforce-v",
+        "enforcement-n",
+        "litigation-n",
+        "dispute-nv",
+        "mediation-n",
+        "signature-n",
+        "fireproof-adj",
+        "generator-n",
+        "workspace-n",
+        "flooring-n",
+        "carpentry-n",
+        "electrician-n",
+        "electrical-adj",
+        "wiring-n",
+        "heating-n",
+        "cooling-n",
+        "roofing-n",
+        "janitor-n",
+        "custodial-adj",
+        "relocate-v",
+        "retrofit-nv",
+        "alteration-n",
+        "accessibility-n",
+        "accessible-adj",
+        "occupant-n",
+        "occupy-v"
       ]
     },
     {
@@ -542,7 +653,86 @@
         "complain-v",
         "responsive-adj",
         "punctuality-n",
-        "inconvenience-n"
+        "inconvenience-n",
+        "clause-n",
+        "breach-nv",
+        "signatory-n",
+        "agreement-n",
+        "fixture-n",
+        "elevator-n",
+        "janitorial-adj",
+        "security-n",
+        "ventilation-n",
+        "repair-nv",
+        "refurbish-v",
+        "enforce-v",
+        "enforcement-n",
+        "litigation-n",
+        "dispute-nv",
+        "mediation-n",
+        "signature-n",
+        "fireproof-adj",
+        "generator-n",
+        "workspace-n",
+        "flooring-n",
+        "carpentry-n",
+        "electrician-n",
+        "electrical-adj",
+        "wiring-n",
+        "heating-n",
+        "cooling-n",
+        "roofing-n",
+        "janitor-n",
+        "custodial-adj",
+        "relocate-v",
+        "retrofit-nv",
+        "alteration-n",
+        "accessibility-n",
+        "accessible-adj",
+        "occupant-n",
+        "occupy-v"
+      ]
+    },
+    {
+      "previousTotalWords": 1100,
+      "releaseAdditionIds": [
+        "clause-n",
+        "breach-nv",
+        "signatory-n",
+        "agreement-n",
+        "fixture-n",
+        "elevator-n",
+        "janitorial-adj",
+        "security-n",
+        "ventilation-n",
+        "repair-nv",
+        "refurbish-v",
+        "enforce-v",
+        "enforcement-n",
+        "litigation-n",
+        "dispute-nv",
+        "mediation-n",
+        "signature-n",
+        "fireproof-adj",
+        "generator-n",
+        "workspace-n",
+        "flooring-n",
+        "carpentry-n",
+        "electrician-n",
+        "electrical-adj",
+        "wiring-n",
+        "heating-n",
+        "cooling-n",
+        "roofing-n",
+        "janitor-n",
+        "custodial-adj",
+        "relocate-v",
+        "retrofit-nv",
+        "alteration-n",
+        "accessibility-n",
+        "accessible-adj",
+        "occupant-n",
+        "occupy-v"
       ]
     }
   ]

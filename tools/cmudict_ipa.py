@@ -9,7 +9,7 @@ import argparse, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LEDGER = ROOT / "docs/reports/CMUDICT_IPA_BACKFILL_v2.70.0.json"
+LEDGER = ROOT / "docs/reports/CMUDICT_IPA_BACKFILL_v2.71.0.json"
 VOWELS = {"AA":"ɑ","AE":"æ","AH":"ʌ","AO":"ɔ","AW":"aʊ","AY":"aɪ","EH":"e","ER":"ɝ","EY":"eɪ","IH":"ɪ","IY":"i","OW":"oʊ","OY":"ɔɪ","UH":"ʊ","UW":"u"}
 CONSONANTS = {"B":"b","CH":"tʃ","D":"d","DH":"ð","F":"f","G":"ɡ","HH":"h","JH":"dʒ","K":"k","L":"l","M":"m","N":"n","NG":"ŋ","P":"p","R":"r","S":"s","SH":"ʃ","T":"t","TH":"θ","V":"v","W":"w","Y":"j","Z":"z","ZH":"ʒ"}
 PHONE_MAP = {**VOWELS, **CONSONANTS}

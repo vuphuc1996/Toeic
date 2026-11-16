@@ -3,6 +3,92 @@
   "letter": "J",
   "words": [
     {
+      "id": "janitor-n",
+      "word": "janitor",
+      "phonetic": {
+        "us": "/ˈdʒæ.nə.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên vệ sinh và bảo trì tòa nhà",
+          "definition_en": "a person employed to clean and perform basic maintenance in a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "janitorial",
+          "pos": "adj",
+          "meaning_vi": "thuộc công việc vệ sinh và duy trì vệ sinh tòa nhà"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The janitor reported a leaking pipe to the facilities supervisor before the building opened.",
+          "vi": "Nhân viên vệ sinh đã báo cáo đường ống bị rò rỉ cho giám sát cơ sở vật chất trước khi tòa nhà mở cửa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "building janitor",
+        "janitor’s closet",
+        "janitorial staff"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "janitorial-adj",
+      "word": "janitorial",
+      "phonetic": {
+        "us": "/ˌdʒæ.nɪ.ˈtɔ.ri.əl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc công việc vệ sinh và duy trì vệ sinh tòa nhà",
+          "definition_en": "relating to cleaning and basic upkeep of a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "janitor",
+          "pos": "n",
+          "meaning_vi": "nhân viên vệ sinh và bảo trì tòa nhà"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The building manager renewed the janitorial services contract for another twelve months.",
+          "vi": "Quản lý tòa nhà đã gia hạn hợp đồng dịch vụ vệ sinh thêm mười hai tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "janitorial services",
+        "janitorial staff",
+        "janitorial supplies"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "join-v",
       "word": "join",
       "phonetic": {

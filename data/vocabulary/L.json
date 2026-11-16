@@ -1037,6 +1037,42 @@
       "collocations": []
     },
     {
+      "id": "litigation-n",
+      "word": "litigation",
+      "phonetic": {
+        "us": "/ˌlɪ.tə.ˈɡeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc kiện tụng; quá trình giải quyết tranh chấp tại tòa",
+          "definition_en": "the process of taking a legal dispute to a court for a decision",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company sought mediation first because lengthy litigation could increase operating costs.",
+          "vi": "Công ty ưu tiên hòa giải trước vì việc kiện tụng kéo dài có thể làm tăng chi phí hoạt động.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "commercial litigation",
+        "avoid litigation",
+        "litigation costs"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "loading-dock-n",
       "word": "loading dock",
       "phonetic": {

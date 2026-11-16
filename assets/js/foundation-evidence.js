@@ -1,3 +1,5 @@
+const DAY_MS = 24 * 60 * 60 * 1000;
+
 /**
  * Foundation lesson evidence. Keeps the legacy foundation progress fields intact
  * while recording results by stable question ID. A practice threshold is not a
@@ -11,6 +13,7 @@ export function recordFoundationAttempt(progress = {}, lessonId, questionId, cor
   const item = evidence[questionId] && typeof evidence[questionId] === 'object' ? evidence[questionId] : {};
   const attempts = Array.isArray(item.attempts) ? item.attempts.slice() : [];
   attempts.push({ correct: Boolean(correct), answeredAt: Number(answeredAt) });
+  const recallDueAt = Number(item.recallDueAt) || (Number(answeredAt) + DAY_MS);
   return {
     ...ledger,
     [lessonId]: {
@@ -20,7 +23,7 @@ export function recordFoundationAttempt(progress = {}, lessonId, questionId, cor
       lastAnsweredAt: Number(answeredAt),
       evidence: {
         ...evidence,
-        [questionId]: { latestCorrect: Boolean(correct), latestAnsweredAt: Number(answeredAt), attempts }
+        [questionId]: { ...item, latestCorrect: Boolean(correct), latestAnsweredAt: Number(answeredAt), attempts, recallDueAt }
       }
     }
   };
@@ -62,4 +65,190 @@ export function summarizeFoundationApplication(progress = {}, lessonId) {
   const evidence = lesson.applicationEvidence && typeof lesson.applicationEvidence === 'object' ? Object.values(lesson.applicationEvidence) : [];
   const correct = evidence.filter(item => item.latestCorrect === true).length;
   return { uniqueTasks: evidence.length, correct, accuracyPercent: evidence.length ? Math.round(correct / evidence.length * 100) : null, totalAttempts: evidence.reduce((sum, item) => sum + (Array.isArray(item.attempts) ? item.attempts.length : 0), 0), status: !evidence.length ? 'not_attempted' : correct === evidence.length ? 'application_check_passed' : 'needs_practice' };
+}
+
+
+/**
+ * Record a delayed-recall check only after its scheduled due time. The original
+ * recognition evidence and denominator remain unchanged. A correct recall is
+ * scheduled again in three days; an incorrect recall is rescheduled in one day.
+ */
+export function recordFoundationRecallAttempt(progress = {}, lessonId, questionId, correct, checkedAt = Date.now()) {
+  const ledger = progress && typeof progress === 'object' && !Array.isArray(progress) ? progress : {};
+  if (!lessonId || !questionId || !Number.isFinite(Number(checkedAt))) return ledger;
+  const prior = ledger[lessonId] && typeof ledger[lessonId] === 'object' ? ledger[lessonId] : {};
+  const evidence = prior.evidence && typeof prior.evidence === 'object' && !Array.isArray(prior.evidence) ? prior.evidence : {};
+  const item = evidence[questionId];
+  if (!item || typeof item !== 'object') return ledger;
+  const dueAt = Number(item.recallDueAt) || 0;
+  if (!dueAt || Number(checkedAt) < dueAt) return ledger;
+  const recallChecks = Array.isArray(item.recallChecks) ? item.recallChecks.slice() : [];
+  recallChecks.push({ correct: Boolean(correct), answeredAt: Number(checkedAt), dueAt });
+  const nextDueAt = Number(checkedAt) + (correct ? 3 : 1) * DAY_MS;
+  return {
+    ...ledger,
+    [lessonId]: {
+      ...prior,
+      evidence: {
+        ...evidence,
+        [questionId]: {
+          ...item,
+          recallChecks,
+          latestRecallCorrect: Boolean(correct),
+          latestRecallAnsweredAt: Number(checkedAt),
+          recallDueAt: nextDueAt
+        }
+      }
+    }
+  };
+}
+
+export function listDueFoundationRecallItems(progress = {}, lessons = [], now = Date.now()) {
+  const due = [];
+  for (const lesson of Array.isArray(lessons) ? lessons : []) {
+    const evidence = progress?.[lesson.id]?.evidence || {};
+    for (const question of lesson.questionBank || []) {
+      const item = evidence[question.id];
+      const dueAt = Number(item?.recallDueAt) || 0;
+      if (!dueAt || dueAt > Number(now)) continue;
+      due.push({
+        lessonId: lesson.id, lessonTitle: lesson.title || lesson.id, level: lesson.level || '',
+        questionId: question.id, question: question.question, choices: question.choices || [],
+        answerIndex: question.answerIndex, rationale: question.rationale || '', dueAt,
+        recallChecks: Array.isArray(item.recallChecks) ? item.recallChecks.length : 0
+      });
+    }
+  }
+  return due.sort((a, b) => a.dueAt - b.dueAt || a.lessonId.localeCompare(b.lessonId) || a.questionId.localeCompare(b.questionId));
+}
+
+export function summarizeFoundationRetention(progress = {}, lessons = [], policy = {}) {
+  const minimumUniqueItems = Number(policy.minimumUniqueItems) > 0 ? Number(policy.minimumUniqueItems) : 10;
+  const threshold = Number(policy.threshold) > 0 ? Number(policy.threshold) : 0.8;
+  const retained = [];
+  let dueItems = 0;
+  for (const lesson of Array.isArray(lessons) ? lessons : []) {
+    const evidence = progress?.[lesson.id]?.evidence || {};
+    for (const question of lesson.questionBank || []) {
+      const item = evidence[question.id];
+      const checks = Array.isArray(item?.recallChecks) ? item.recallChecks : [];
+      if (checks.length) retained.push(checks[checks.length - 1].correct === true);
+      if (Number(item?.recallDueAt) > 0 && Number(item.recallDueAt) <= Number(policy.now ?? Date.now())) dueItems++;
+    }
+  }
+  const uniqueItems = retained.length;
+  const correct = retained.filter(Boolean).length;
+  const accuracy = uniqueItems ? correct / uniqueItems : null;
+  const eligible = uniqueItems >= minimumUniqueItems;
+  return {
+    uniqueItems, correct, accuracy, accuracyPercent: accuracy === null ? null : Math.round(accuracy * 100),
+    minimumUniqueItems, threshold, dueItems,
+    evidenceCoveragePercent: Math.min(100, Math.round(uniqueItems / minimumUniqueItems * 100)),
+    status: !eligible ? 'insufficient_evidence' : accuracy >= threshold ? 'delayed_recall_threshold_met' : 'in_progress'
+  };
+}
+
+/**
+ * Store a learner-authored sentence with a three-point self-assessment. The
+ * sentence remains in the device-local Foundation ledger; no server sync or
+ * automatic grammar verdict is implied by this self-report.
+ */
+export function recordFoundationProductionAttempt(progress = {}, lessonId, taskId, responseText, rubricRatings, assessedAt = Date.now(), minimumWords = 3) {
+  const ledger = progress && typeof progress === 'object' && !Array.isArray(progress) ? progress : {};
+  const response = String(responseText || '').trim().slice(0, 500);
+  const requiredWords = Math.max(3, Math.min(60, Number(minimumWords) || 3));
+  const responseWords = response.split(/\s+/).filter(Boolean);
+  if (!lessonId || !taskId || responseWords.length < requiredWords || !Array.isArray(rubricRatings) || rubricRatings.length !== 3 || rubricRatings.some(value => typeof value !== 'boolean') || !Number.isFinite(Number(assessedAt))) return ledger;
+  const prior = ledger[lessonId] && typeof ledger[lessonId] === 'object' ? ledger[lessonId] : {};
+  const productionEvidence = prior.productionEvidence && typeof prior.productionEvidence === 'object' && !Array.isArray(prior.productionEvidence) ? prior.productionEvidence : {};
+  const item = productionEvidence[taskId] && typeof productionEvidence[taskId] === 'object' ? productionEvidence[taskId] : {};
+  const attempts = Array.isArray(item.attempts) ? item.attempts.slice() : [];
+  const score = rubricRatings.filter(Boolean).length;
+  const wordCount = responseWords.length;
+  attempts.push({ ratings: rubricRatings.slice(), score, maxScore: 3, wordCount, minimumWords: requiredWords, assessedAt: Number(assessedAt), assessmentType: 'learner_self_report' });
+  return {
+    ...ledger,
+    [lessonId]: {
+      ...prior,
+      productionEvidence: {
+        ...productionEvidence,
+        [taskId]: { latestScore: score, latestRatings: rubricRatings.slice(), latestWordCount: wordCount, minimumWords: requiredWords, latestAssessedAt: Number(assessedAt), latestResponse: response, attempts }
+      }
+    }
+  };
+}
+
+export function summarizeFoundationProduction(progress = {}, lessons = [], policy = {}) {
+  const minimumUniqueItems = Number(policy.minimumUniqueItems) > 0 ? Number(policy.minimumUniqueItems) : 10;
+  const threshold = Number(policy.threshold) > 0 ? Number(policy.threshold) : 0.8;
+  const evidence = [];
+  for (const lesson of Array.isArray(lessons) ? lessons : []) {
+    const taskId = lesson.productionTask?.id || lesson.applicationTask?.id;
+    const saved = taskId ? progress?.[lesson.id]?.productionEvidence?.[taskId] : null;
+    if (saved && Number.isFinite(Number(saved.latestScore))) evidence.push(saved);
+  }
+  const uniqueItems = evidence.length;
+  const scorePercent = uniqueItems ? Math.round(evidence.reduce((sum, item) => sum + Number(item.latestScore || 0), 0) / (uniqueItems * 3) * 100) : null;
+  const totalAttempts = evidence.reduce((sum, item) => sum + (Array.isArray(item.attempts) ? item.attempts.length : 0), 0);
+  const eligible = uniqueItems >= minimumUniqueItems;
+  return {
+    uniqueItems, minimumUniqueItems, scorePercent, threshold, totalAttempts, selfReportOnly: true,
+    evidenceCoveragePercent: Math.min(100, Math.round(uniqueItems / minimumUniqueItems * 100)),
+    status: !eligible ? 'insufficient_evidence' : scorePercent / 100 >= threshold ? 'self_report_threshold_met' : 'in_progress'
+  };
+}
+
+/** Build objective-level Foundation evidence without mixing Recognition, Production or Retention. */
+export function summarizeFoundationOutcomeProgress(progress = {}, lessons = [], outcomeRegistry = {}, now = Date.now()) {
+  const result = [];
+  for (const objective of outcomeRegistry.objectives || []) {
+    if (!String(objective.objectiveId || '').startsWith('foundation-')) continue;
+    const isA2 = objective.objectiveId === 'foundation-a2';
+    const scopeLessons = (lessons || []).filter(lesson => isA2 ? lesson.level === 'A2' : ['PRE-A1', 'A1'].includes(lesson.level));
+    for (const outcome of objective.outcomes || []) {
+      const id = String(outcome.id || '');
+      const kind = id.endsWith('-recognition') ? 'recognition' : id.endsWith('-production') || id.endsWith('-application') ? 'production' : id.endsWith('-retention') ? 'retention' : 'unsupported';
+      const minimumUniqueItems = Number(outcome.minimumUniqueItems) > 0 ? Number(outcome.minimumUniqueItems) : 10;
+      const threshold = Number(outcome.masteryThreshold) > 0 ? Number(outcome.masteryThreshold) : 0.8;
+      let correct = 0, uniqueItems = 0, accuracyPercent = null, dueItems = 0;
+      if (kind === 'recognition') {
+        const evidence = [];
+        for (const lesson of scopeLessons) for (const question of lesson.questionBank || []) {
+          const saved = progress?.[lesson.id]?.evidence?.[question.id];
+          if (saved && Array.isArray(saved.attempts) && saved.attempts.length) evidence.push(saved.latestCorrect === true);
+        }
+        uniqueItems = evidence.length; correct = evidence.filter(Boolean).length;
+        accuracyPercent = uniqueItems ? Math.round(correct / uniqueItems * 100) : null;
+      } else if (kind === 'production') {
+        const evidence = [];
+        for (const lesson of scopeLessons) {
+          const taskId = lesson.productionTask?.id || lesson.applicationTask?.id;
+          const saved = taskId ? progress?.[lesson.id]?.productionEvidence?.[taskId] : null;
+          if (saved && Number.isFinite(Number(saved.latestScore))) evidence.push(Number(saved.latestScore));
+        }
+        uniqueItems = evidence.length;
+        accuracyPercent = uniqueItems ? Math.round(evidence.reduce((sum, score) => sum + score, 0) / (uniqueItems * 3) * 100) : null;
+        correct = evidence.filter(score => score === 3).length;
+      } else if (kind === 'retention') {
+        const evidence = [];
+        for (const lesson of scopeLessons) for (const question of lesson.questionBank || []) {
+          const saved = progress?.[lesson.id]?.evidence?.[question.id];
+          const checks = Array.isArray(saved?.recallChecks) ? saved.recallChecks : [];
+          if (checks.length) evidence.push(checks[checks.length - 1].correct === true);
+          if (Number(saved?.recallDueAt) > 0 && Number(saved.recallDueAt) <= now) dueItems++;
+        }
+        uniqueItems = evidence.length; correct = evidence.filter(Boolean).length;
+        accuracyPercent = uniqueItems ? Math.round(correct / uniqueItems * 100) : null;
+      }
+      const eligible = uniqueItems >= minimumUniqueItems;
+      const met = eligible && accuracyPercent !== null && accuracyPercent / 100 >= threshold;
+      result.push({
+        objectiveId: objective.objectiveId, outcomeId: outcome.id, title: outcome.title, kind, metric: outcome.evidenceMetric,
+        uniqueItems, minimumUniqueItems, correct, accuracyPercent, threshold, dueItems, selfReportOnly: kind === 'production',
+        evidenceCoveragePercent: Math.min(100, Math.round(uniqueItems / minimumUniqueItems * 100)),
+        status: !eligible ? 'insufficient_evidence' : !met ? 'in_progress' : kind === 'production' ? 'self_report_threshold_met' : kind === 'retention' ? 'delayed_recall_threshold_met' : 'practice_threshold_met'
+      });
+    }
+  }
+  return result;
 }

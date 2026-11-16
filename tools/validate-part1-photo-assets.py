@@ -17,6 +17,9 @@ ATTRIBUTION = ROOT / "assets/listening/ATTRIBUTION.csv"
 LIBRARY = ROOT / "data/listening/listening-library.json"
 MIN_WIDTH = 1280
 MIN_HEIGHT = 960
+MAX_FILE_BYTES = 400_000
+EXPECTED_RATIO = 4 / 3
+RATIO_TOLERANCE = 0.01
 SOF_MARKERS = {0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF}
 
 
@@ -131,8 +134,17 @@ def validate(allow_missing: bool = False) -> tuple[list[str], list[str], int]:
             continue
         try:
             width, height = jpeg_dimensions(file_path)
+            file_size = file_path.stat().st_size
+            photo_errors = []
             if width < MIN_WIDTH or height < MIN_HEIGHT:
-                errors.append(f"{ident}: photo is too small ({width}x{height}); minimum is {MIN_WIDTH}x{MIN_HEIGHT}")
+                photo_errors.append(f"photo is too small ({width}x{height}); minimum is {MIN_WIDTH}x{MIN_HEIGHT}")
+            ratio = width / height
+            if abs(ratio - EXPECTED_RATIO) > RATIO_TOLERANCE:
+                photo_errors.append(f"photo ratio is {ratio:.4f}; expected 4:3 landscape")
+            if file_size > MAX_FILE_BYTES:
+                photo_errors.append(f"photo is too large ({file_size:,} bytes); maximum is {MAX_FILE_BYTES:,} bytes")
+            if photo_errors:
+                errors.extend(f"{ident}: {message}" for message in photo_errors)
             else:
                 valid_files += 1
         except Exception as exc:  # noqa: BLE001

@@ -2342,6 +2342,49 @@
       "level_basis": "editorial-estimate; verify by sense"
     },
     {
+      "id": "dispute-nv",
+      "word": "dispute",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "tranh chấp; tranh cãi; phản đối tính đúng đắn",
+          "definition_en": "a serious disagreement; to question or challenge something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "dispute",
+        "vs_es": "disputes",
+        "v2": "disputed",
+        "v3": "disputed",
+        "ving": "disputing"
+      },
+      "examples": [
+        {
+          "en": "The two companies agreed to discuss the delivery dispute before taking further legal action.",
+          "vi": "Hai công ty đồng ý thảo luận tranh chấp giao hàng trước khi tiến hành các biện pháp pháp lý tiếp theo.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contract dispute",
+        "resolve a dispute",
+        "dispute an invoice"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "disqualification-n",
       "word": "disqualification",
       "phonetic": {

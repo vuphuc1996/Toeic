@@ -1,4 +1,4 @@
-"""Regression tests for sense-matched derivational vocabulary links in v2.37.0."""
+"""Regression tests for sense-matched derivational vocabulary links in v2.71.0."""
 import json
 import unittest
 from pathlib import Path
@@ -86,6 +86,11 @@ PAIRS = [
     ('resolve', 'resolution', 'v', 'n'),
     ('responsive', 'responsiveness', 'adj', 'n'),
     ('troubleshoot', 'troubleshooting', 'v', 'n'),
+    ('enforce', 'enforcement', 'v', 'n'),
+    ('janitor', 'janitorial', 'n', 'adj'),
+    ('accessible', 'accessibility', 'adj', 'n'),
+    ('occupy', 'occupant', 'v', 'n'),
+    ('alter', 'alteration', 'v', 'n'),
 ]
 
 
@@ -121,7 +126,7 @@ class VocabularyFamilyLinkTests(unittest.TestCase):
         return matches[0]
 
     def test_all_curated_pairs_exist_in_both_directions(self):
-        self.assertEqual(len(PAIRS), 78)
+        self.assertEqual(len(PAIRS), 83)
         for base, derivative, base_pos, derivative_pos in PAIRS:
             self.assertIn(base, self.records)
             self.assertIn(derivative, self.records)

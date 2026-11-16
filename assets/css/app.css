@@ -1219,3 +1219,48 @@ input,select,textarea{min-width:0}
  .foundation-card-footer .secondary-button,.recall-queue-item .learning-card-footer .secondary-button{width:100%}
 }
 @media(prefers-reduced-motion:reduce){.foundation-card.learning-card,.recall-queue-item.learning-card{transition:none}}
+
+
+/* Foundation outcome evidence: responsive, compact and clearly separated by evidence type. */
+.foundation-outcome-dashboard{margin:18px 0 22px;}
+.foundation-outcome-dashboard-inner{display:grid;gap:14px;padding:16px;border:1px solid var(--border,#d9dee8);border-radius:16px;background:var(--surface,#fff);}
+.foundation-outcome-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+.foundation-outcome-heading h3{margin:0 0 4px;font-size:1rem;}
+.foundation-outcome-heading p{margin:0;color:var(--muted,#667085);font-size:.88rem;}
+.foundation-outcome-due{flex:0 0 auto;padding:6px 9px;border-radius:999px;background:var(--surface-soft,#f2f4f7);font-size:.78rem;}
+.foundation-outcome-group h4{margin:0 0 9px;font-size:.9rem;}
+.foundation-outcome-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;}
+.foundation-outcome-metric{display:grid;gap:5px;min-width:0;padding:11px;border:1px solid var(--border,#d9dee8);border-radius:12px;}
+.foundation-outcome-metric strong{font-size:.82rem;line-height:1.35;}
+.foundation-outcome-metric span{font-size:.85rem;font-weight:650;}
+.foundation-outcome-metric small{color:var(--muted,#667085);font-size:.72rem;line-height:1.4;}
+.foundation-production{display:grid;gap:10px;}
+.foundation-production-context{display:grid;gap:10px;padding:12px;border:1px solid var(--border,#d9dee8);border-radius:12px;background:var(--surface-soft,#f7f8fb);}
+.foundation-production-context>div{display:grid;gap:4px;}
+.foundation-production-context strong{font-size:.84rem;font-weight:700;}
+.foundation-production-context p{margin:0;line-height:1.55;}
+.foundation-production-context ul{margin:2px 0 0;padding-left:20px;display:grid;gap:5px;}
+.foundation-production-frame{padding:9px 10px;border-left:3px solid var(--accent,#64748b);background:var(--surface,#fff);border-radius:6px;}
+.foundation-production-frame p{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem;}
+.foundation-production-model{border-top:1px solid var(--border,#d9dee8);padding-top:9px;}
+.foundation-production-model summary{cursor:pointer;font-weight:650;font-size:.86rem;}
+.foundation-production-model p{margin:8px 0 4px;font-weight:600;}
+.foundation-production-model small{color:var(--muted,#667085);line-height:1.45;}
+.foundation-production-word-count{justify-self:end;margin:0;color:var(--muted,#667085);font-size:.8rem;font-variant-numeric:tabular-nums;}
+.foundation-production-word-count.is-ready{color:var(--success,#16834a);font-weight:650;}
+.foundation-production-rubric-title{font-size:.88rem;}
+.foundation-production-label{font-weight:650;font-size:.88rem;}
+.foundation-production-textarea{width:100%;min-height:90px;resize:vertical;padding:11px 12px;border:1px solid var(--border,#d9dee8);border-radius:10px;background:var(--surface,#fff);color:var(--text,#1f2937);font:inherit;line-height:1.5;}
+.foundation-production-rubric{display:grid;gap:8px;}
+.foundation-production-rubric-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:12px;padding:9px 10px;border:1px solid var(--border,#d9dee8);border-radius:10px;}
+.foundation-production-rubric-row strong{font-size:.84rem;font-weight:550;}
+.foundation-production-rubric-row label{display:flex;align-items:center;gap:5px;white-space:nowrap;font-size:.8rem;}
+.foundation-recall-card{display:grid;gap:10px;margin:12px 0;padding:13px;border:1px solid var(--border,#d9dee8);border-radius:12px;}
+.foundation-recall-card h3{margin:0;font-size:.95rem;}
+.foundation-recall-card small{color:var(--muted,#667085);}
+@media(max-width:700px){
+ .foundation-outcome-heading{display:grid;}
+ .foundation-outcome-metrics{grid-template-columns:1fr;}
+ .foundation-production-rubric-row{grid-template-columns:minmax(0,1fr) auto auto;gap:7px;}
+ .foundation-production-rubric-row strong{grid-column:1/-1;}
+}

@@ -64,7 +64,7 @@ const context = {
   PART1_LEAD_IN_PAUSE_MS: 1000,
   PART1_OPTION_LABEL_PAUSE_MS: 1500,
   PART1_OPTION_GAP_MS: 1300,
-  state: { settings: { tts: { ...DEFAULT_TTS_SETTINGS } }, listening: [], listeningProgress: {}, readings: [] },
+  state: { settings: { tts: { ...DEFAULT_TTS_SETTINGS } }, listening: [], listeningProgress: {}, readings: [], foundationListeningClips: [] },
   window: { speechSynthesis },
   SpeechSynthesisUtterance: MockUtterance,
   $: selector => selector === '#listeningSpeed' ? speedNode : selector === '#ttsMaleVoice' ? maleVoiceSelect : selector === '#ttsFemaleVoice' ? femaleVoiceSelect : selector === '#ttsVoiceStatus' ? voiceStatusNode : selector.includes('data-reading-audio-status') ? readingAudioStatus : statusNode,
@@ -92,6 +92,12 @@ const readingEnd = appSource.indexOf('async function answerReadingQuestion(', re
 assert.notEqual(readingStart, -1, 'Reading aloud action must exist');
 assert.notEqual(readingEnd, -1, 'Reading aloud action boundary must exist');
 vm.runInContext(`${appSource.slice(readingStart, readingEnd)}\nglobalThis.__playReadingText = playReadingText;`, context, { timeout: 1000 });
+
+const foundationStart = appSource.indexOf('async function playFoundationListening(clipId){');
+const foundationEnd = appSource.indexOf('function answerFoundationListening(', foundationStart);
+assert.notEqual(foundationStart, -1, 'Foundation dialogue playback must exist');
+assert.notEqual(foundationEnd, -1, 'Foundation playback function boundary must exist');
+vm.runInContext(`${appSource.slice(foundationStart, foundationEnd)}\nglobalThis.__playFoundationListening = playFoundationListening;`, context, { timeout: 1000 });
 
 // The settings UI helper must exist and safely handle an empty, delayed or populated device voice list.
 context.__refreshSpeechVoiceSelectors();
@@ -270,6 +276,73 @@ assert.equal(cancelCalls, cancelCountBefore + 1);
 assert.equal(spoken.length, cancelStart + 1, 'playback must not advance after stop');
 assert.equal(statusNode.textContent, 'Đã dừng audio.');
 
+// Foundation A2 dialogues use the saved male/female voice selections and pause between speaker turns.
+context.state.settings.tts.maleVoiceURI = 'ryan-us';
+context.state.settings.tts.femaleVoiceURI = '';
+context.state.settings.tts.sentencePauseMs = 950;
+context.state.foundationListeningClips = [{ id: 'a2-foundation-dialogue-test', segments: [
+  { speaker: 'Linh', voice: 'female', text: 'Hello. Are you ready?' },
+  { speaker: 'Nam', voice: 'male', text: 'Yes. I have the report.' },
+  { speaker: 'Linh', voice: 'female', text: 'Please send it now.' },
+] }];
+const foundationStartIndex = spoken.length;
+const foundationGapStart = gapDurations.length;
+const foundationPromise = context.__playFoundationListening('a2-foundation-dialogue-test');
+for (let index = 0; index < 3; index++) {
+  await waitFor(() => spoken.length > foundationStartIndex + index, `Foundation dialogue turn ${index + 1} must be queued`);
+  const utterance = spoken[foundationStartIndex + index];
+  if (index === 0) assert.equal(utterance.voice?.voiceURI, 'ava-us', 'female turn uses the device female voice');
+  if (index === 1) assert.equal(utterance.voice?.voiceURI, 'ryan-us', 'male turn honors the saved male voice');
+  utterance.onend();
+}
+await foundationPromise;
+assert.deepEqual(spoken.slice(foundationStartIndex, foundationStartIndex + 3).map(item => item.text), [
+  'Hello. Are you ready?', 'Yes. I have the report.', 'Please send it now.',
+]);
+assert.deepEqual(gapDurations.slice(foundationGapStart).filter(value => value === 950), [950, 950]);
+assert.match(statusNode.textContent, /Đã phát xong/);
+
+// Stop during a Foundation turn pause must prevent the next speaker from being queued.
+context.state.foundationListeningClips = [{ id: 'a2-foundation-stop-test', segments: [
+  { speaker: 'Woman', voice: 'female', text: 'This is the first turn.' },
+  { speaker: 'Man', voice: 'male', text: 'This second turn must not play.' },
+] }];
+holdGapTimers = false;
+const foundationStopStart = spoken.length;
+const foundationStopPromise = context.__playFoundationListening('a2-foundation-stop-test');
+await waitFor(() => spoken.length === foundationStopStart + 1, 'Foundation first turn before stop');
+holdGapTimers = true;
+spoken.at(-1).onend();
+await waitFor(() => pendingGapTimers.size > 0, 'Foundation inter-speaker gap must be cancellable');
+context.__stopSpeech();
+holdGapTimers = false;
+await foundationStopPromise;
+assert.equal(spoken.length, foundationStopStart + 1, 'Foundation Stop prevents the next turn');
+assert.equal(statusNode.textContent, 'Đã dừng audio.');
+
+// Legacy Pre-A1/A1 clips without explicit speaker segments remain compatible:
+// the transcript is split into sentence turns and keeps the configured default voice.
+context.state.settings.tts.defaultGender = 'female';
+context.state.foundationListeningClips = [{
+  id: 'a1-legacy-script-fallback',
+  script: 'The office opens at eight. Please speak to the receptionist.',
+}];
+const legacyFoundationStart = spoken.length;
+const legacyFoundationGaps = gapDurations.length;
+const legacyFoundationPromise = context.__playFoundationListening('a1-legacy-script-fallback');
+for (let index = 0; index < 2; index++) {
+  await waitFor(() => spoken.length > legacyFoundationStart + index, `legacy Foundation sentence ${index + 1} must play`);
+  const utterance = spoken[legacyFoundationStart + index];
+  assert.equal(utterance.voice?.voiceURI, 'ava-us', 'legacy fallback uses configured default female voice');
+  utterance.onend();
+}
+await legacyFoundationPromise;
+assert.deepEqual(spoken.slice(legacyFoundationStart, legacyFoundationStart + 2).map(item => item.text), [
+  'The office opens at eight.', 'Please speak to the receptionist.',
+]);
+assert.deepEqual(gapDurations.slice(legacyFoundationGaps).filter(value => value === 950), [950]);
+assert.match(statusNode.textContent, /Đã phát xong/);
+
 // A cancellation error from the browser is not a user-facing voice failure.
 context.toasts.length = 0;
 const previewPromise = context.__speakText('A preview sentence.');
@@ -303,7 +376,7 @@ assert.match(appSource, /speakUtterance\(`\$\{letter\}\.`,/);
 assert.match(appSource, /speakUtterance\(isPart1\?optionText:segment\.text,/);
 assert.match(appSource, /Part 1: \$\{String\(item\.topic/);
 
-console.log('Listening/TTS regression PASS: voice readiness, Part 1 lead-in, spoken A-D labels, lead-in/options pauses, shared practice/mock playback, stable speaker voices, safe cancellation, vocabulary pacing and Reading read-aloud.');
+console.log('Listening/TTS regression PASS: voice readiness, Part 1 lead-in, spoken A-D labels, lead-in/options pauses, shared practice/mock playback, stable speaker voices, legacy Foundation fallback, safe cancellation, vocabulary pacing and Reading read-aloud.');
 
 async function waitFor(predicate, message) {
   for (let attempt = 0; attempt < 100; attempt++) {

@@ -1,3 +1,82 @@
+## v2.78.0 — A2 contextual writing tasks and separate production evidence
+
+- Added 13 original, lesson-specific learner-authored writing tasks across the 13 guided A2 lessons. Every task includes a workplace scenario, instruction, three content requirements, a sentence frame, three tailored self-check criteria and one collapsed model-answer example.
+- Set an eight-word minimum for A2 contextual production responses and added a live word counter. Pre-A1/A1 production retains its existing three-word minimum and generic self-report rubric.
+- Added the `productionTask` resource contract and new stable task IDs (`<lesson-id>::produce1`). These use the existing `productionEvidence` map inside `toeic:foundation-progress:v1`; no new localStorage key or server endpoint is introduced.
+- Preserved the earlier A2 production records under their old `applicationTask` IDs (`::apply1`). They are not deleted or overwritten, but are no longer counted as completion of the new contextual writing task; the UI explains this distinction. The current A2 production outcome now reads only the dedicated `::produce1` records.
+- Added an immutable SHA-256 content baseline for all 13 A2 production tasks and regression coverage for task structure, min-word validation, customized rubrics, collapsed model answers, evidence isolation and preservation of legacy records.
+- No IndexedDB database/store/version migration, no Foundation localStorage key change, no vocabulary or Reading/Listening question change, no learner profile reset, and no TOEIC Mock-pool change.
+- Local regression and validator counts are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.78.0.md`. Remote GitHub Actions, Pages deployment, real-device QA and independent second-person linguistic review remain unverified.
+- Production evidence remains learner self-report. The application does not automatically grade grammar or writing quality and does not certify CEFR level or mastery.
+
+## v2.77.0 — A2 assessment quality and source-evidence pass
+
+- Reviewed the 13 A2 Reading passages and 13 A2 Listening dialogues for repeated q2/q3 information. Reworked five question prompts/answer tasks across quantities, comparisons, visitor obligations and process sequencing so each resource tests distinct information.
+- Added exact `evidenceText` source pointers to five reviewed questions. The new audit checks these strings against the actual passage or spoken segment, and verifies four unique choices, valid answer indices, non-empty prompts/rationales, distinct q2/q3 answer keys, stable IDs and full-bank answer-position balance.
+- Kept all existing A2 q1/q2 question objects unchanged against the canonical v2.75.0 hash baseline; preserved existing lesson/resource/question IDs, progress stores, answer positions (A/B/C/D = 15/15/15/14), TTS behavior and 67% A2 practice threshold.
+- Added `tools/audit-foundation-a2-assessment.py`, its focused review registry and eight Python regression tests; CI now runs both the tests and standalone audit.
+- This is a focused internal single-author quality pass, not full semantic approval of all distractors, second-person language review, psychometric validation, CEFR certification or ETS equivalence. Remote CI, Pages deployment and physical-device QA remain unverified.
+
+## v2.76.0 — A2 Reading & Listening depth expansion
+
+- Expanded all 13 A2 Reading passages to 69–80 words and added one distinct third comprehension question per passage. The previous q1/q2 IDs, choices, answer keys and rationales are preserved byte-for-byte at the canonical question-object level; all 10 Pre-A1/A1 passages remain unchanged.
+- Expanded all 13 A2 Listening scripts into four-turn dialogues (two female and two male speaker turns) and added a third comprehension question per dialogue. Playback uses the learner's saved/configured male and female device voices, retains the configured inter-speaker pause, exposes a Stop action and reports playback status. Legacy Pre-A1/A1 scripts without explicit speaker segments continue to play through sentence-splitting fallback.
+- Foundation Reading and Listening now each contain 23 resources / 59 questions: 20 questions for the 10 Pre-A1/A1 resources and 39 questions for the 13 A2 resources. A2 requires 3 unique questions and uses a 67% local practice threshold; Pre-A1/A1 remains at 2 questions and 80%. These thresholds are not CEFR certification or mastery.
+- Added an exact v2.75.0 question-pair baseline and regression checks proving all pre-existing A2 q1/q2 content and all Pre-A1/A1 records remain intact. Answer positions across each Foundation Reading/Listening bank are balanced A/B/C/D = 15/15/15/14.
+- No vocabulary records, Foundation lesson/application IDs, learner progress key, IndexedDB v1 schema/store, personal vocabulary, settings or TOEIC L&R Mock pools were reset or migrated. No new dependency or audio asset was added; Listening audio remains device SpeechSynthesis, not ETS or recorded native-speaker audio.
+- Local validation and exact test counts are recorded in `archive/PROJECT_HISTORY.md` (tài liệu release cũ đã được gom vào lịch sử). Remote GitHub Actions, Pages deployment, independent language review and physical-device audio/visual QA remain unverified.
+
+## v2.75.0 — A2 core grammar expansion
+
+- Added Present Perfect, basic Passive Voice and defining Relative Clauses as three A2 guided lessons; each includes teaching notes, bilingual examples, three recognition checks and a contextual-application task.
+- Added three matching short Reading passages (6 questions) and three matching device-TTS Listening scripts (6 questions). Foundation totals: 23 lessons, 23 Reading passages/46 questions and 23 Listening scripts/46 questions.
+- Expanded `foundation-a2` mapping to 13/13; objective-resource map now 294/294 across 11 objectives.
+- Preserved all previous content IDs, answer keys, vocabulary, Foundation progress keys, IndexedDB v1 and existing learner data. Only new A2 records were added; comparison against v2.74.0 passed 52/52 prior-data preservation checks.
+- Local validation: **131 selected Python tests across 19 modules and 22/22 JavaScript regression suites PASS**; vocabulary data 1,137 records / 0 errors / 0 warnings; learning-content 0 errors / 0 warnings; Part 1 photos 9/9; objective-resource links 294/294; outcome audit 11/11 objectives / 33 criteria; design-profile and version sync PASS.
+- Local candidate only; independent A2 language review, remote CI, Pages deployment and physical-device QA remain pending. See `archive/PROJECT_HISTORY.md` (tài liệu release cũ đã được gom vào lịch sử).
+
+## v2.74.0 — Foundation Outcome Instrumentation
+
+- Instrumented Foundation recognition on stable per-question evidence without changing the unique-question denominator.
+- Added 24-hour first recall scheduling and 1-day / 3-day retry intervals. Due recall is separate from recognition and cannot be recorded early.
+- Added learner-authored sentence production with three explicit self-report checks; responses are stored locally and are not automatically graded.
+- Added separate Pre-A1/A1 and A2 outcome dashboards. Foundation instrumentation coverage is 6/6; the complete outcome registry has 6/33 criteria with evidence paths (18.2%). No mastery or CEFR/ETS claim is made.
+- Preserved the existing Foundation localStorage key and IndexedDB v1. No learner progress reset, schema migration, stable question ID change or vocabulary content change.
+- Re-synchronized the canonical design profile and release markers.
+- Validation: 22/22 JavaScript suites; 129 selected Python tests across 19 executed modules; all current structural, learning-content, strict Part 1 media, resource-map, outcome, design-profile and version checks pass. Remote CI/Pages/device QA remain unverified.
+
+## v2.73.0 — A2 guided pathway starter expansion
+
+- Extended the guided Foundation pathway from Pre-A1/A1 to a first A2 starter stage: 10 new A2 lessons with stable IDs, concise explanations, bilingual examples, three recognition checks and one separate contextual-application task per lesson.
+- Added 10 A2 short-reading passages with two questions each and 10 A2 short-listening scripts with two questions each. Listening uses device SpeechSynthesis; it is not ETS audio or recorded native-speaker material. Reading/listening banks remain separate from TOEIC L&R Mock pools.
+- Expanded the canonical objective-resource map to **11 objectives and 291/291 linked resource records**; the outcome registry now defines 33 criteria across 11 objectives. Foundation recognition/application progress remains separate from TOEIC objective evidence; production/retention outcomes are not yet instrumented.
+- Added profile-safe, additive A2 IDs and preserved the prior Pre-A1/A1 lesson IDs, Reading/Listening IDs, answer keys, personal vocabulary, IndexedDB database/store/version and existing learner progress keys. No IndexedDB schema migration or data reset was introduced.
+- Corrected an A2 suggestion example to the natural form “Why don't we meet after lunch?” and added a regression assertion for the accepted sentence and rationale. Balanced the A2 answer-key positions: recognition 8/8/7/7, contextual application 3/3/2/2, and Reading/Listening 5/5/5/5.
+- Updated project progress reporting: 3/6 guided stages represented (**50.0%**), 291/291 objective-resource links and 33/33 outcome criteria defined. These are structural coverage measures, not full A2 completion, independent editorial approval or learner mastery.
+- The 1,137-word vocabulary inventory and optimized 9/9 Part 1 4:3 JPEG assets remain unchanged. Part 1 strict validation continues to pass.
+- Local verification: **306 Python tests passed across 42 fully executed modules**, **21/21 JavaScript regression suites**; vocabulary, learning-content, objective-resource and learning-outcome audits passed. The slow generic `test_validator.py` module was not counted because its full run did not finish within the execution window. Remote GitHub Actions, Pages deployment and physical-device QA remain unverified.
+- The A2 content still requires independent linguistic/editorial review. The current A2 block is a starter stage, not the full A2 curriculum: present-perfect introduction, passive/relative clauses and wider four-skill assessment remain future work.
+
+## v2.72.0 — embedded and optimized complete Listening Part 1 photo set
+
+- Added all nine Part 1 JPG files directly to `assets/listening/` from the user-provided `Picture.zip`; no AI-generated or substitute images were created.
+- Standardized every photo to **1448×1086 px (4:3 landscape)**, matching the shared design-system frame. `part1-photocopier.jpg` is now a landscape crop that keeps the employee's operating hand and the photocopier control panel in frame; no distortion is applied.
+- Kept every image under **400,000 bytes**. The existing `part1-office-cleaning.jpg` remains byte-for-byte unchanged at 398,363 bytes. The other eight photos are optimized progressive JPEGs. Combined image payload is 2,063,272 bytes, down from 25,265,159 bytes (**91.8% smaller**).
+- Extended strict Part 1 validation to enforce minimum 1280×960, 4:3 landscape ratio and the 400,000-byte ceiling. Strict validation now passes **9/9 photos**; Learning Content validation reports **0 errors / 0 warnings**.
+- Removed the old `restore-part1-photos.bat` downloader shortcut and its helper/test from the current release. That utility previously downloaded full-resolution Pexels originals; it did not compress or attach photos. It is no longer needed because optimized images are embedded in this full-source archive.
+- Question IDs, transcripts, answer choices, answer keys, explanations, image filenames and attribution/license records remain unchanged. Removed the per-image photocopier CSS focal override because the source asset is now prepared to the shared 4:3 frame.
+- Local verification is recorded in `archive/PROJECT_HISTORY.md`. Remote GitHub Actions, Pages deployment and physical-device QA are not claimed unless separately confirmed.
+
+## v2.71.0 — Contracts and Facilities vocabulary expansion; one-command original photo recovery
+
+- Added Vocabulary Batch 012 with 37 original TOEIC headwords covering Contracts, Legal Procedures and Facilities Management. The canonical A–Z inventory increases from 1,100 to 1,137 stable headwords. Every new entry has an English definition, Vietnamese gloss, one bilingual context example, at least three collocations and a sense-level editorial CEFR estimate. Independent lexical/CEFR review remains pending; none is official ETS material.
+- Added 35 conservative US IPA entries from exact single-pronunciation CMUdict matches. `ventilation` remains blank because CMUdict has multiple pronunciations. `dispute` is also withheld pending syllabification review instead of using a mechanically generated transcription with uncertain syllable division. Cumulative IPA ledger: 333 source-linked records; 93 vocabulary records remain without populated IPA (91 inherited unresolved records plus these two Batch 012 exceptions).
+- Added five reciprocal word-family pairs: enforce/enforcement, janitor/janitorial, accessible/accessibility, occupy/occupant, and alter/alteration. Cumulative word-family records: 276; directed links: 374. No speculative synonyms or antonyms were added.
+- Extended release-repair profiles so workspaces at 979, 992, 1,026, 1,063 and 1,100 base headwords can restore only the known cumulative release additions through Batch 012. Learner progress, personal vocabulary, study settings, question IDs, answer keys and IndexedDB stores remain untouched.
+- Added `tools/restore_part1_photos.py` and `restore-part1-photos.bat`. They fetch all eight original licensed Pexels photos in one operation using the filenames and direct URLs already recorded in `assets/listening/ATTRIBUTION.csv`, validate JPEG signature/dimensions, and never generate substitute images or overwrite existing files. The current build environment still cannot access the Pexels CDN and the saved Library does not contain the eight original image bytes; therefore the eight JPGs are **not yet embedded** in this release archive. Strict photo validation remains blocked until the originals are available and restored.
+- Vocabulary target coverage: 1,137/3,000 minimum = 37.9%; 1,137/5,000 planning ceiling = 22.7%. US IPA field coverage: 1,044/1,137 = 91.8%; word-family coverage: 276/1,137 = 24.3%. These are target/field coverage ratios, not a single overall product-completion percentage.
+- Local verification is reported in `archive/PROJECT_HISTORY.md`. Remote GitHub Actions, Pages deployment and physical-device QA are not claimed unless separately confirmed.
+
 ## v2.70.0 — Customer Service and Travel vocabulary expansion; IPA coverage counter correction
 
 - Added Vocabulary Batch 011 with 37 original TOEIC headwords across Customer Service and Travel, increasing the canonical dictionary from 1,063 to 1,100 entries. Each new record includes an English definition, Vietnamese gloss, a contextual bilingual example, at least three collocations, a sense-level editorial CEFR estimate, and one US IPA candidate sourced from a single exact-match CMUdict pronunciation.
@@ -11,13 +90,13 @@
 
 ## v2.69.0 — US IPA coverage backfill and word-family quality pass
 
-- Added **261 US IPA entries** for exact headword matches with a single CMUdict General American ARPABET pronunciation and a single primary stress. CMUdict provides ARPABET, not IPA; the project uses a documented, deterministic broad-GA conversion. The source warns that its entries may contain errors or inconsistencies, so these remain source-linked editorial candidates rather than independent pronunciation certification. Provenance, raw ARPABET, conversion rules and exclusions are recorded in `docs/reports/CMUDICT_IPA_BACKFILL_v2.69.0.json`; the CMUdict data license is retained in `docs/licenses/CMUdict-DATA-LICENSE.txt`.
+- Added **261 US IPA entries** for exact headword matches with a single CMUdict General American ARPABET pronunciation and a single primary stress. CMUdict provides ARPABET, not IPA; the project uses a documented, deterministic broad-GA conversion. The source warns that its entries may contain errors or inconsistencies, so these remain source-linked editorial candidates rather than independent pronunciation certification. Provenance, raw ARPABET, conversion rules and exclusions are recorded in `reports/CMUDICT_IPA_BACKFILL_v2.69.0.json`; the CMUdict data license is retained in `docs/licenses/CMUdict-DATA-LICENSE.txt`.
 - Increased US IPA field coverage from 711/1,063 (66.9%) to **972/1,063 (91.4%)**, a gain of 261 records / 24.5 percentage points. The remaining 91 entries stay blank by design: 60 have multiple CMUdict pronunciations, 25 have no exact entry, and 6 have multiple primary-stress patterns. No IPA was guessed for excluded items.
 - Expanded word-family metadata from 240 to **259 headwords** and from 338 to **357 directed links** (+19). Added reciprocal, POS/sense-aligned relationships; corrected the Vietnamese gloss for the `transaction → transact` link without changing IDs.
 - Added deterministic `tools/cmudict_ipa.py`, an embedded source/provenance ledger, a license notice and five focused tests. CI now runs the IPA ledger check and test module. Progress reporting now includes word-family directed-link counts.
 - Vocabulary remains **1,063/3,000 = 35.4%** of the minimum planning target and **1,063/5,000 = 21.3%** of the planning ceiling. This release improves metadata quality and does not add new headwords. Next planned content batch remains Customer Service, Travel, Contracts and Facilities after review of the 91 IPA exceptions.
 - No vocabulary stable IDs, question IDs, answer keys, IndexedDB schema/stores, personal vocabulary, hidden-word state or learning progress were reset.
-- **Local verification:** vocabulary validator 1,063 records / 0 errors / 0 warnings; CMUdict IPA ledger check PASS (261 source-linked records); focused CMUdict IPA tests 5/5; word-family-link tests 5/5; project-progress tests 4/4. Full test and asset status are recorded in `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.69.0.md`.
+- **Local verification:** vocabulary validator 1,063 records / 0 errors / 0 warnings; CMUdict IPA ledger check PASS (261 source-linked records); focused CMUdict IPA tests 5/5; word-family-link tests 5/5; project-progress tests 4/4. Full test and asset status are recorded in `archive/PROJECT_HISTORY.md`.
 - CMUdict is a source dictionary and may contain errors, omissions or inconsistencies; the conversion and single-pronunciation filter reduce ambiguity but do not constitute human independent lexical review. CEFR labels remain editorial estimates. Remote GitHub Actions, GitHub Pages and physical-device QA are not claimed. Strict Part 1 photo validation remains blocked by eight original JPG binaries absent from this source workspace.
 
 ## v2.68.0 — verified Part 1 fingerprint refresh and TOEIC Vocabulary Batch 010
@@ -79,7 +158,7 @@
 - Restored the shared voice-selector refresh helper. It repopulates English voice choices when the device exposes its voice catalog, keeps the learner's manually saved male/female voice URI, preserves a saved URI that is unavailable on the current device with a clear option label, and disables selectors while no English voice is available.
 - The `voiceschanged` listener and manual refresh button continue to use the same helper. TTS playback readiness, startup delay, Part 1 A–D pause, saved settings and learner progress are otherwise unchanged.
 - Added a source-level regression assertion and expanded the JavaScript TTS regression to execute the helper with an empty catalog, a populated catalog, a saved voice, and an unavailable saved voice.
-- Local hotfix verification: 10/10 TTS Python checks and the Listening/TTS JavaScript regression pass after the fix. Full syntax/runtime and data checks are recorded in `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.65.1.md`.
+- Local hotfix verification: 10/10 TTS Python checks and the Listening/TTS JavaScript regression pass after the fix. Full syntax/runtime and data checks are recorded in `archive/PROJECT_HISTORY.md`.
 - No vocabulary content, stable IDs, IndexedDB schema/stores, local progress keys, or TTS preferences were reset or migrated. Existing saved voice URIs remain preserved.
 - Deployment remains on hold until the eight inherited original Part 1 JPG binaries are restored and the strict photo validator passes. Real-device audio QA and remote GitHub Actions/Pages remain unverified.
 
@@ -133,7 +212,7 @@
 - Added viewport-first responsive rules for the intro, cards and recall queue; no device-inch breakpoints or fixed-width-only layouts were introduced.
 - Added CI coverage for the new learning-surface consistency test and the fingerprint refresh guard; expanded version synchronization checks to include `APP_RELEASE_VERSION`.
 - No canonical learning content, question answer, ordering, stable IDs, personal data, IndexedDB schema or learner progress was changed/reset.
-- Local verification only. The source ZIP inherited from v2.60.0 is missing 8 of the 9 licensed Part 1 JPG binaries; the strict asset validator run by CI therefore fails until those original Pexels files are restored. Exact recovery links are in `reports/PART1_PHOTO_ASSET_RECOVERY_v2.61.0.md`. Do not deploy this candidate before the strict validator reports 9/9. GitHub Pages deployment and physical iOS/Android PWA presentation are not verified in this workspace.
+- Local verification only. The source ZIP inherited from v2.60.0 is missing 8 of the 9 licensed Part 1 JPG binaries; the strict asset validator run by CI therefore fails until those original Pexels files are restored. Exact recovery links are in `archive/PROJECT_HISTORY.md`. Do not deploy this candidate before the strict validator reports 9/9. GitHub Pages deployment and physical iOS/Android PWA presentation are not verified in this workspace.
 
 ## v2.60.0 — Vocabulary release integrity and PWA cache synchronization
 

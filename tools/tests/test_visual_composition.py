@@ -16,12 +16,12 @@ class VisualCompositionTests(unittest.TestCase):
         self.assertIn(".part1-illustration-frame img {", CSS)
         self.assertIn("aspect-ratio: var(--ds-image-ratio);", CSS)
         self.assertIn("object-fit: cover;", CSS)
-        self.assertIn('img[data-photo-id="part1-photocopier"]', CSS)
+        self.assertNotIn('img[data-photo-id="part1-photocopier"]', CSS)
 
-    def test_photocopier_image_is_identified_without_mutating_licensed_binary(self):
+    def test_photocopier_image_is_identified_and_attribution_is_preserved(self):
         self.assertIn('data-photo-id="${escapeHtml(item.id)}"', APP)
         self.assertIn('data-photo-id="${escapeHtml(group.unitId)}"', APP)
-        self.assertIn('data-photo-id="part1-photocopier"', CSS)
+        self.assertNotIn('data-photo-id="part1-photocopier"', CSS)
         self.assertIn(".mock-part1-frame img {", CSS)
         self.assertIn("part1-photocopier.jpg", (ROOT / "assets/listening/ATTRIBUTION.csv").read_text(encoding="utf-8"))
 
@@ -30,7 +30,7 @@ class VisualCompositionTests(unittest.TestCase):
         self.assertIn(".mock-part1-frame img {", CSS)
         self.assertIn("aspect-ratio: var(--ds-image-ratio);", CSS)
         self.assertIn("object-fit: cover;", CSS)
-        self.assertIn('.mock-part1-frame img[data-photo-id="part1-photocopier"]', CSS)
+        self.assertNotIn('.mock-part1-frame img[data-photo-id="part1-photocopier"]', CSS)
         self.assertIn(".part1-illustration-frame figcaption,\n.mock-part1-frame figcaption {", CSS)
 
     def test_learning_cards_share_equal_row_height_and_footer_baseline(self):

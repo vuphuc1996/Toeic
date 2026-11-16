@@ -1,0 +1,1506 @@
+{
+  "schemaVersion": 1,
+  "batch": "012",
+  "version": "2.71.0",
+  "focus": "TOEIC vocabulary expansion: Contracts, Legal Procedures and Facilities Management",
+  "count": 37,
+  "editorialStatus": "original editorial draft; structural validation pending; independent lexical review pending; CEFR levels are editorial estimates by sense",
+  "sourcePolicy": "Definitions, Vietnamese glosses, examples and collocations are project-authored. US IPA is populated only for exact headword matches with a single CMUdict pronunciation that passes the project converter; ambiguous or unmatched entries remain blank. No speculative synonym or antonym entries were added. The content is not ETS material.",
+  "sources": [
+    {
+      "name": "CMU Pronouncing Dictionary (CMUdict)",
+      "url": "https://github.com/cmusphinx/cmudict",
+      "use": "Exact single-pronunciation ARPABET candidates for the populated IPA records; conversion and caveats are recorded in the cumulative v2.71.0 ledger."
+    },
+    {
+      "name": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/",
+      "use": "Recommended independent lexical review source; this batch is not claimed to have independent review."
+    }
+  ],
+  "ipaSummary": {
+    "populated": 35,
+    "leftBlank": 2,
+    "exclusions": {
+      "multiple_pronunciations": 1,
+      "editorial_review_pending": 1
+    }
+  },
+  "words": [
+    {
+      "id": "clause-n",
+      "word": "clause",
+      "phonetic": {
+        "us": "/klɔz/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điều khoản; mệnh đề trong văn bản pháp lý",
+          "definition_en": "a separate section of a legal document that states a particular condition or requirement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier asked both parties to review the payment clause before signing the agreement.",
+          "vi": "Nhà cung cấp yêu cầu hai bên xem xét điều khoản thanh toán trước khi ký thỏa thuận.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contract clause",
+        "confidentiality clause",
+        "termination clause"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "breach-nv",
+      "word": "breach",
+      "phonetic": {
+        "us": "/britʃ/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "sự vi phạm; vi phạm",
+          "definition_en": "an act of breaking a law, agreement, or duty; to fail to observe one",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "breach",
+        "vs_es": "breaches",
+        "v2": "breached",
+        "v3": "breached",
+        "ving": "breaching"
+      },
+      "examples": [
+        {
+          "en": "The legal team notified the supplier that the late delivery could constitute a breach of contract.",
+          "vi": "Nhóm pháp lý thông báo cho nhà cung cấp rằng việc giao hàng trễ có thể cấu thành hành vi vi phạm hợp đồng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contract breach",
+        "breach of agreement",
+        "breach a contract"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "signatory-n",
+      "word": "signatory",
+      "phonetic": {
+        "us": "/ˈsɪɡ.nə.ˌtɔ.ri/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bên ký kết; người ký",
+          "definition_en": "a person or organization that has signed a formal agreement or document",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each signatory must receive a complete copy of the revised service agreement.",
+          "vi": "Mỗi bên ký kết phải nhận được một bản đầy đủ của thỏa thuận dịch vụ đã sửa đổi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "authorized signatory",
+        "signatory party",
+        "list of signatories"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "agreement-n",
+      "word": "agreement",
+      "phonetic": {
+        "us": "/əɡ.ˈri.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thỏa thuận; hợp đồng",
+          "definition_en": "a formal or informal arrangement that two or more parties accept",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The parties reached an agreement on the maintenance schedule and annual service fee.",
+          "vi": "Các bên đã đạt được thỏa thuận về lịch bảo trì và phí dịch vụ hằng năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "service agreement",
+        "written agreement",
+        "reach an agreement"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "fixture-n",
+      "word": "fixture",
+      "phonetic": {
+        "us": "/ˈfɪks.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thiết bị lắp cố định; đồ gắn liền với công trình",
+          "definition_en": "a piece of equipment or furniture fixed in position in a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The facilities team replaced the damaged lighting fixture in the main reception area.",
+          "vi": "Đội cơ sở vật chất đã thay thiết bị chiếu sáng bị hỏng tại khu vực lễ tân chính.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "lighting fixture",
+        "bathroom fixture",
+        "ceiling fixture"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "elevator-n",
+      "word": "elevator",
+      "phonetic": {
+        "us": "/ˈe.lə.ˌveɪ.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thang máy",
+          "definition_en": "a platform or enclosed compartment that carries people or goods between floors of a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The freight elevator will remain unavailable while technicians complete the scheduled inspection.",
+          "vi": "Thang máy chở hàng sẽ tạm ngừng hoạt động trong khi kỹ thuật viên hoàn tất đợt kiểm tra theo lịch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "elevator maintenance",
+        "freight elevator",
+        "elevator inspection"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "janitorial-adj",
+      "word": "janitorial",
+      "phonetic": {
+        "us": "/ˌdʒæ.nɪ.ˈtɔ.ri.əl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc công việc vệ sinh và duy trì vệ sinh tòa nhà",
+          "definition_en": "relating to cleaning and basic upkeep of a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "janitor",
+          "pos": "n",
+          "meaning_vi": "nhân viên vệ sinh và bảo trì tòa nhà"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The building manager renewed the janitorial services contract for another twelve months.",
+          "vi": "Quản lý tòa nhà đã gia hạn hợp đồng dịch vụ vệ sinh thêm mười hai tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "janitorial services",
+        "janitorial staff",
+        "janitorial supplies"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "security-n",
+      "word": "security",
+      "phonetic": {
+        "us": "/sɪk.ˈjʊ.rə.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "an ninh; biện pháp bảo vệ",
+          "definition_en": "measures taken to protect people, property, or a building from danger or unauthorized access",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new security system records visitor entries and alerts staff when a restricted door opens.",
+          "vi": "Hệ thống an ninh mới ghi lại lượt khách ra vào và cảnh báo nhân viên khi cửa khu vực hạn chế mở.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "building security",
+        "security system",
+        "security access card"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "ventilation-n",
+      "word": "ventilation",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thông gió; hệ thống thông gió",
+          "definition_en": "the process or system of bringing fresh air into a room or building and removing stale air",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor will test the ventilation system before employees return to the renovated office.",
+          "vi": "Nhà thầu sẽ kiểm tra hệ thống thông gió trước khi nhân viên quay lại văn phòng đã cải tạo.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "ventilation system",
+        "proper ventilation",
+        "ventilation equipment"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "repair-nv",
+      "word": "repair",
+      "phonetic": {
+        "us": "/rɪ.ˈper/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "sự sửa chữa; sửa chữa",
+          "definition_en": "work done to restore something damaged; to fix something that is broken or not working properly",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "repair",
+        "vs_es": "repairs",
+        "v2": "repaired",
+        "v3": "repaired",
+        "ving": "repairing"
+      },
+      "examples": [
+        {
+          "en": "The maintenance team will repair the elevator controls after the replacement parts arrive.",
+          "vi": "Đội bảo trì sẽ sửa bộ điều khiển thang máy sau khi linh kiện thay thế được chuyển đến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "repair work",
+        "repair a machine",
+        "cost of repairs"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "refurbish-v",
+      "word": "refurbish",
+      "phonetic": {
+        "us": "/ri.ˈfɝ.bɪʃ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "tân trang; cải tạo để sử dụng tốt trở lại",
+          "definition_en": "to clean, decorate, or repair a building or item so that it looks or works better",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "refurbish",
+        "vs_es": "refurbishes",
+        "v2": "refurbished",
+        "v3": "refurbished",
+        "ving": "refurbishing"
+      },
+      "examples": [
+        {
+          "en": "The company plans to refurbish the reception area without interrupting daily customer service.",
+          "vi": "Công ty dự định tân trang khu vực lễ tân mà không làm gián đoạn dịch vụ khách hàng hằng ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "refurbish an office",
+        "fully refurbished",
+        "refurbish the premises"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "enforce-v",
+      "word": "enforce",
+      "phonetic": {
+        "us": "/en.ˈfɔrs/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thực thi; buộc tuân thủ",
+          "definition_en": "to make sure that a law, rule, or agreement is obeyed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "enforcement",
+          "pos": "n",
+          "meaning_vi": "việc thực thi; sự cưỡng chế thi hành"
+        }
+      ],
+      "verb_forms": {
+        "v1": "enforce",
+        "vs_es": "enforces",
+        "v2": "enforced",
+        "v3": "enforced",
+        "ving": "enforcing"
+      },
+      "examples": [
+        {
+          "en": "The property manager must enforce the building access policy consistently for every tenant.",
+          "vi": "Quản lý bất động sản phải thực thi nhất quán chính sách ra vào tòa nhà đối với mọi khách thuê.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "enforce a contract",
+        "enforce safety rules",
+        "strictly enforce"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "enforcement-n",
+      "word": "enforcement",
+      "phonetic": {
+        "us": "/en.ˈfɔr.smənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc thực thi; sự cưỡng chế thi hành",
+          "definition_en": "the act of making sure that a law, rule, or agreement is obeyed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "enforce",
+          "pos": "v",
+          "meaning_vi": "thực thi; buộc tuân thủ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract includes a clear enforcement process for resolving repeated service failures.",
+          "vi": "Hợp đồng bao gồm quy trình thực thi rõ ràng để xử lý các lần dịch vụ liên tục không đạt yêu cầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contract enforcement",
+        "law enforcement",
+        "enforcement measures"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "litigation-n",
+      "word": "litigation",
+      "phonetic": {
+        "us": "/ˌlɪ.tə.ˈɡeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc kiện tụng; quá trình giải quyết tranh chấp tại tòa",
+          "definition_en": "the process of taking a legal dispute to a court for a decision",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The company sought mediation first because lengthy litigation could increase operating costs.",
+          "vi": "Công ty ưu tiên hòa giải trước vì việc kiện tụng kéo dài có thể làm tăng chi phí hoạt động.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "commercial litigation",
+        "avoid litigation",
+        "litigation costs"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "dispute-nv",
+      "word": "dispute",
+      "phonetic": {
+        "us": ""
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "tranh chấp; tranh cãi; phản đối tính đúng đắn",
+          "definition_en": "a serious disagreement; to question or challenge something",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "dispute",
+        "vs_es": "disputes",
+        "v2": "disputed",
+        "v3": "disputed",
+        "ving": "disputing"
+      },
+      "examples": [
+        {
+          "en": "The two companies agreed to discuss the delivery dispute before taking further legal action.",
+          "vi": "Hai công ty đồng ý thảo luận tranh chấp giao hàng trước khi tiến hành các biện pháp pháp lý tiếp theo.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contract dispute",
+        "resolve a dispute",
+        "dispute an invoice"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "mediation-n",
+      "word": "mediation",
+      "phonetic": {
+        "us": "/ˌmi.di.ˈeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hòa giải; quá trình trung gian giải quyết tranh chấp",
+          "definition_en": "a process in which an independent person helps parties reach an agreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Both suppliers accepted mediation as a practical way to settle the payment disagreement.",
+          "vi": "Cả hai nhà cung cấp chấp nhận hòa giải như một cách thiết thực để giải quyết bất đồng về thanh toán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "mediation process",
+        "mediation session",
+        "independent mediation"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "signature-n",
+      "word": "signature",
+      "phonetic": {
+        "us": "/ˈsɪɡ.nə.tʃɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chữ ký",
+          "definition_en": "a person’s name written or electronically applied to confirm or authorize a document",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please provide an electronic signature on the final page to confirm your acceptance.",
+          "vi": "Vui lòng ký điện tử tại trang cuối để xác nhận việc chấp thuận của bạn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "electronic signature",
+        "authorized signature",
+        "signature required"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "fireproof-adj",
+      "word": "fireproof",
+      "phonetic": {
+        "us": "/ˈfaɪ.ɚ.ˌpruf/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "chịu lửa; có khả năng chống cháy",
+          "definition_en": "designed to resist fire or reduce the spread of flames for a stated period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The archive stores important paper records in a fireproof cabinet near the emergency exit.",
+          "vi": "Kho lưu trữ cất giữ hồ sơ giấy quan trọng trong tủ chống cháy gần lối thoát hiểm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "fireproof material",
+        "fireproof cabinet",
+        "fireproof coating"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "generator-n",
+      "word": "generator",
+      "phonetic": {
+        "us": "/ˈdʒe.nɚ.ˌeɪ.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "máy phát điện",
+          "definition_en": "a machine that produces electricity, especially when the regular supply is unavailable",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A backup generator will supply power to the server room during the scheduled outage.",
+          "vi": "Máy phát điện dự phòng sẽ cấp điện cho phòng máy chủ trong thời gian ngừng điện theo lịch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "backup generator",
+        "generator maintenance",
+        "portable generator"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "workspace-n",
+      "word": "workspace",
+      "phonetic": {
+        "us": "/ˈwɝk.ˌspeɪs/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "không gian làm việc",
+          "definition_en": "an area or environment where people carry out their work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The facilities coordinator is redesigning the workspace to provide more quiet areas for employees.",
+          "vi": "Điều phối viên cơ sở vật chất đang thiết kế lại không gian làm việc để bố trí thêm khu vực yên tĩnh cho nhân viên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "shared workspace",
+        "workspace design",
+        "workspace allocation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "flooring-n",
+      "word": "flooring",
+      "phonetic": {
+        "us": "/ˈflɔ.rɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vật liệu lát sàn; lớp sàn",
+          "definition_en": "the material used to cover the floor of a room or building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The renovation schedule includes new flooring for the training rooms and main corridor.",
+          "vi": "Lịch cải tạo bao gồm việc lát sàn mới cho các phòng đào tạo và hành lang chính.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "flooring material",
+        "vinyl flooring",
+        "flooring installation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "carpentry-n",
+      "word": "carpentry",
+      "phonetic": {
+        "us": "/ˈkɑr.pən.tri/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nghề mộc; công việc chế tác và sửa chữa đồ gỗ",
+          "definition_en": "the work of making or repairing things from wood, especially in buildings",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The renovation budget covers carpentry work for the reception desk and storage cabinets.",
+          "vi": "Ngân sách cải tạo bao gồm công việc mộc cho quầy lễ tân và các tủ lưu trữ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "carpentry work",
+        "carpentry tools",
+        "carpentry contractor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "electrician-n",
+      "word": "electrician",
+      "phonetic": {
+        "us": "/ɪ.lek.ˈtrɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thợ điện",
+          "definition_en": "a skilled person who installs, maintains, or repairs electrical systems and equipment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A licensed electrician will inspect the wiring before the new equipment is connected.",
+          "vi": "Một thợ điện có giấy phép sẽ kiểm tra hệ thống dây dẫn trước khi thiết bị mới được kết nối.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "licensed electrician",
+        "call an electrician",
+        "electrician on site"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "electrical-adj",
+      "word": "electrical",
+      "phonetic": {
+        "us": "/ɪ.ˈlek.trɪ.kəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc về điện; liên quan đến hệ thống điện",
+          "definition_en": "relating to electricity or the equipment and systems that use it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All electrical equipment must be switched off before the maintenance work begins.",
+          "vi": "Tất cả thiết bị điện phải được tắt trước khi công việc bảo trì bắt đầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "electrical equipment",
+        "electrical wiring",
+        "electrical inspection"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "wiring-n",
+      "word": "wiring",
+      "phonetic": {
+        "us": "/ˈwaɪ.rɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống dây điện; việc đi dây",
+          "definition_en": "the wires and connections used to carry electricity through a building or device",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspection found that the office wiring needs replacement before additional computers are installed.",
+          "vi": "Đợt kiểm tra phát hiện hệ thống dây điện văn phòng cần được thay thế trước khi lắp thêm máy tính.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "electrical wiring",
+        "wiring diagram",
+        "replace the wiring"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "heating-n",
+      "word": "heating",
+      "phonetic": {
+        "us": "/ˈhi.tɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống sưởi; việc làm nóng",
+          "definition_en": "the equipment or process used to make a building or room warm",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The heating system will be checked before the office opens during the colder months.",
+          "vi": "Hệ thống sưởi sẽ được kiểm tra trước khi văn phòng mở cửa trong những tháng lạnh hơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "heating system",
+        "central heating",
+        "heating costs"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cooling-n",
+      "word": "cooling",
+      "phonetic": {
+        "us": "/ˈku.lɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống làm mát; việc làm mát",
+          "definition_en": "the equipment or process used to reduce the temperature of a room or building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The cooling system needs a filter replacement to maintain comfortable temperatures in the meeting rooms.",
+          "vi": "Hệ thống làm mát cần được thay bộ lọc để duy trì nhiệt độ dễ chịu trong các phòng họp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cooling system",
+        "cooling capacity",
+        "cooling equipment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "roofing-n",
+      "word": "roofing",
+      "phonetic": {
+        "us": "/ˈru.fɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vật liệu lợp mái; công việc lợp mái",
+          "definition_en": "the materials or work involved in covering and repairing a roof",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The roofing contractor will inspect the damaged section after the heavy rain has stopped.",
+          "vi": "Nhà thầu lợp mái sẽ kiểm tra khu vực bị hư hại sau khi mưa lớn ngừng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "roofing materials",
+        "roofing contractor",
+        "roofing repair"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "janitor-n",
+      "word": "janitor",
+      "phonetic": {
+        "us": "/ˈdʒæ.nə.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhân viên vệ sinh và bảo trì tòa nhà",
+          "definition_en": "a person employed to clean and perform basic maintenance in a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "janitorial",
+          "pos": "adj",
+          "meaning_vi": "thuộc công việc vệ sinh và duy trì vệ sinh tòa nhà"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The janitor reported a leaking pipe to the facilities supervisor before the building opened.",
+          "vi": "Nhân viên vệ sinh đã báo cáo đường ống bị rò rỉ cho giám sát cơ sở vật chất trước khi tòa nhà mở cửa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "building janitor",
+        "janitor’s closet",
+        "janitorial staff"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "custodial-adj",
+      "word": "custodial",
+      "phonetic": {
+        "us": "/kə.ˈstoʊ.di.əl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc công việc vệ sinh và chăm sóc cơ sở",
+          "definition_en": "relating to cleaning and routine care of a building or its facilities",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The school renewed its custodial services agreement after reviewing the contractor’s performance.",
+          "vi": "Trường học đã gia hạn thỏa thuận dịch vụ vệ sinh sau khi đánh giá hiệu suất của nhà thầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "custodial services",
+        "custodial staff",
+        "custodial duties"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "relocate-v",
+      "word": "relocate",
+      "phonetic": {
+        "us": "/ˌri.ˈloʊ.keɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "di dời; chuyển đến địa điểm khác",
+          "definition_en": "to move a person, office, or business to a different place",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "OFFICE",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "relocate",
+        "vs_es": "relocates",
+        "v2": "relocated",
+        "v3": "relocated",
+        "ving": "relocating"
+      },
+      "examples": [
+        {
+          "en": "The company will relocate its customer service team to the renovated floor next month.",
+          "vi": "Công ty sẽ chuyển đội chăm sóc khách hàng sang tầng đã cải tạo vào tháng tới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "relocate an office",
+        "relocate employees",
+        "relocate to a new site"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "retrofit-nv",
+      "word": "retrofit",
+      "phonetic": {
+        "us": "/ˈre.troʊ.ˌfɪt/"
+      },
+      "senses": [
+        {
+          "pos": "n/v",
+          "meaning_vi": "việc nâng cấp bổ sung; nâng cấp thiết bị hoặc công trình hiện có",
+          "definition_en": "a modification that adds new features to existing equipment or a building; to make such a change",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": {
+        "v1": "retrofit",
+        "vs_es": "retrofits",
+        "v2": "retrofitted",
+        "v3": "retrofitted",
+        "ving": "retrofitting"
+      },
+      "examples": [
+        {
+          "en": "The landlord approved a retrofit project to improve lighting efficiency throughout the building.",
+          "vi": "Chủ nhà đã phê duyệt dự án nâng cấp nhằm cải thiện hiệu suất chiếu sáng trên toàn tòa nhà.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "energy retrofit",
+        "retrofit a building",
+        "retrofit project"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "alteration-n",
+      "word": "alteration",
+      "phonetic": {
+        "us": "/ˌɔl.tɚ.ˈeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thay đổi; việc sửa đổi",
+          "definition_en": "a change made to a building, document, or other existing item",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [
+        {
+          "word": "alter",
+          "pos": "v",
+          "meaning_vi": "thay đổi; sửa đổi"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The tenant must obtain written approval before making any structural alteration to the premises.",
+          "vi": "Khách thuê phải có chấp thuận bằng văn bản trước khi thực hiện bất kỳ thay đổi kết cấu nào đối với mặt bằng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "structural alteration",
+        "building alteration",
+        "proposed alteration"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accessibility-n",
+      "word": "accessibility",
+      "phonetic": {
+        "us": "/ˌæk.se.sə.ˈbɪ.lɪ.ti/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "khả năng tiếp cận; mức độ dễ sử dụng",
+          "definition_en": "the quality of being easy to reach, enter, or use, including by people with different needs",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "accessible",
+          "pos": "adj",
+          "meaning_vi": "có thể tiếp cận; dễ sử dụng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The renovation plan includes wider doorways to improve accessibility for all visitors.",
+          "vi": "Kế hoạch cải tạo bao gồm cửa ra vào rộng hơn để cải thiện khả năng tiếp cận cho mọi khách.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "building accessibility",
+        "improve accessibility",
+        "accessibility requirements"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accessible-adj",
+      "word": "accessible",
+      "phonetic": {
+        "us": "/æk.ˈse.sə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "có thể tiếp cận; dễ sử dụng",
+          "definition_en": "easy to reach, enter, obtain, or use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "accessibility",
+          "pos": "n",
+          "meaning_vi": "khả năng tiếp cận; mức độ dễ sử dụng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The conference room is accessible from the main lobby without using the stairs.",
+          "vi": "Phòng hội nghị có thể đi đến từ sảnh chính mà không cần sử dụng cầu thang.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "wheelchair accessible",
+        "easily accessible",
+        "accessible entrance"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "occupant-n",
+      "word": "occupant",
+      "phonetic": {
+        "us": "/ˈɑk.jə.pənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "người sử dụng hoặc cư trú trong một không gian",
+          "definition_en": "a person who lives in, works in, or uses a building, room, or vehicle",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "occupy",
+          "pos": "v",
+          "meaning_vi": "chiếm dụng; sử dụng hoặc cư trú tại một không gian"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The building manager posted the evacuation instructions where every occupant could see them.",
+          "vi": "Quản lý tòa nhà đã dán hướng dẫn sơ tán ở nơi mọi người sử dụng tòa nhà đều có thể nhìn thấy.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "building occupant",
+        "maximum occupants",
+        "occupant safety"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "occupy-v",
+      "word": "occupy",
+      "phonetic": {
+        "us": "/ˈɑk.jə.ˌpaɪ/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "chiếm dụng; sử dụng hoặc cư trú tại một không gian",
+          "definition_en": "to live in, use, or take up a particular space or position",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "occupant",
+          "pos": "n",
+          "meaning_vi": "người sử dụng hoặc cư trú trong một không gian"
+        }
+      ],
+      "verb_forms": {
+        "v1": "occupy",
+        "vs_es": "occupies",
+        "v2": "occupied",
+        "v3": "occupied",
+        "ving": "occupying"
+      },
+      "examples": [
+        {
+          "en": "The new department will occupy the eastern section of the renovated office.",
+          "vi": "Phòng ban mới sẽ sử dụng khu vực phía đông của văn phòng đã cải tạo.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "occupy an office",
+        "fully occupied",
+        "occupy the premises"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    }
+  ]
+}

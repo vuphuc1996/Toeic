@@ -578,6 +578,43 @@
       ]
     },
     {
+      "id": "mediation-n",
+      "word": "mediation",
+      "phonetic": {
+        "us": "/ˌmi.di.ˈeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự hòa giải; quá trình trung gian giải quyết tranh chấp",
+          "definition_en": "a process in which an independent person helps parties reach an agreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Both suppliers accepted mediation as a practical way to settle the payment disagreement.",
+          "vi": "Cả hai nhà cung cấp chấp nhận hòa giải như một cách thiết thực để giải quyết bất đồng về thanh toán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "mediation process",
+        "mediation session",
+        "independent mediation"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "mentor-n",
       "word": "mentor",
       "cefr_level": "B2",

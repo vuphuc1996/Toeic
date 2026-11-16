@@ -19,10 +19,13 @@ def main():
     p5=load('data/practice/part5-sentence-completion.json')
     objective_map=load('data/learning-path/objective-resource-map.json')['objectives']
     wired_toeic=[x for x in objective_map if x.get('kind') in {'grammar','listening','reading','practice'}]
+    foundation_objectives=[x for x in objective_map if x.get('kind')=='learning_path']
     outcome_registry=load('data/learning-path/objective-outcomes.json')
     outcome_objectives=outcome_registry['objectives']
     outcome_total=sum(len(x.get('outcomes',[])) for x in outcome_objectives)
-    outcome_defined=sum(1 for x in outcome_objectives for o in x.get('outcomes',[]) if o.get('status')=='criteria_defined_not_yet_instrumented')
+    outcome_instrumented=sum(1 for x in outcome_objectives for o in x.get('outcomes',[]) if str(o.get('status','')).startswith('instrumented_'))
+    foundation_outcome_total=sum(len(x.get('outcomes',[])) for x in outcome_objectives if str(x.get('objectiveId','')).startswith('foundation-'))
+    foundation_outcome_instrumented=sum(1 for x in outcome_objectives if str(x.get('objectiveId','')).startswith('foundation-') for o in x.get('outcomes',[]) if str(o.get('status','')).startswith('instrumented_'))
     objective_collections={(x['resourceFile'],x['resourceCollection']) for x in objective_map}
     objective_total=sum(len(load(path)[collection]) for path,collection in objective_collections)
     objective_mapped=len({(x['resourceFile'],x['resourceCollection'],rid) for x in objective_map for rid in x.get('resourceIds',[])})
@@ -59,11 +62,13 @@ def main():
       f'| Placement question mapping | {len(load("data/learning-path/placement-objective-map.json")["questionMappings"])}/{len(diag)} | All diagnostic questions | **{pct(len(load("data/learning-path/placement-objective-map.json")["questionMappings"]),len(diag))}** | Structural mapping coverage only |',
       f'| Canonical objective-resource links | {objective_mapped}/{objective_total} | {pct(objective_mapped,objective_total)} | ID links only; not learning-outcome completion |',
       f'| Learning objectives with linked resources | {sum(bool(x.get("resourceIds")) for x in objective_map)}/{len(objective_map)} | {pct(sum(bool(x.get("resourceIds")) for x in objective_map),len(objective_map))} | Availability only; review and mastery separate |',
-      f'| Foundation Listening scripts mapped | {len(foundation_listening)}/{len(foundation)} | **{pct(len(foundation_listening),len(foundation))}** | One device-synthesized script per existing Pre-A1/A1 lesson |',
-      f'| Foundation Listening questions | {foundation_listening_questions}/{len(foundation)*2} | **{pct(foundation_listening_questions,len(foundation)*2)}** | Two questions per existing lesson; TTS practice, not ETS audio |',
+      f'| Foundation Listening scripts mapped | {len(foundation_listening)}/{len(foundation)} | **{pct(len(foundation_listening),len(foundation))}** | One device-synthesized script per existing Pre-A1/A1/A2 lesson |',
+      f'| Foundation Listening questions | {foundation_listening_questions} | Chưa đo được — current inventory is 3 questions per A2 lesson and 2 per Pre-A1/A1 lesson; TTS practice, not ETS audio |',
       f'| Foundation A–Z letter records | {len(alphabet_sounds)}/26 | **{pct(len(alphabet_sounds),26)}** | Complete letter-data coverage only; not pronunciation accuracy or learner mastery |',
-      f'| Outcome criteria defined | {outcome_defined}/{outcome_total} | {pct(outcome_defined,outcome_total)} | Framework coverage only; criterion-level mastery remains separate |',
-      f'| TOEIC objective practice evidence wired | {len(wired_toeic)}/{len(objective_map)} | {pct(len(wired_toeic),len(objective_map))} | Latest result per unique question; practice threshold only, foundation rubric outcomes not yet instrumented |',
+      f'| Outcome criteria defined | {outcome_total}/{outcome_total} | {pct(outcome_total,outcome_total)} | Framework definition coverage; not learner mastery |',
+      f'| Outcomes with evidence instrumentation | {outcome_instrumented}/{outcome_total} | {pct(outcome_instrumented,outcome_total)} | Collection path only; no learner completion inferred |',
+      f'| TOEIC objective practice evidence wired | {len(wired_toeic)}/{len(wired_toeic)} | {pct(len(wired_toeic),len(wired_toeic))} | Latest result per unique question; practice threshold only, not learner mastery |',
+      f'| Foundation outcome evidence wired | {foundation_outcome_instrumented}/{foundation_outcome_total} | {pct(foundation_outcome_instrumented,foundation_outcome_total)} | Recognition, learner self-report for explanation/production, and 1/3-day delayed recall; wiring is not mastery |',
       f'| Delayed-recall scheduling across wired TOEIC groups | {len(wired_toeic)}/{len(wired_toeic)} | {pct(len(wired_toeic),len(wired_toeic))} | 1/3-day scheduling rule; not a retention guarantee |',
       f'| Response-time capture across wired TOEIC groups | {len(wired_toeic)}/{len(wired_toeic)} | {pct(len(wired_toeic),len(wired_toeic))} | Structured Grammar/Reading/Listening plus separate Part 5; duration is not a speed score |',
       '', '## Inventory (no approved numeric target)',
@@ -72,8 +77,8 @@ def main():
       f'| Listening | {len(listening)} units / {listening_q} questions | Chưa đo được — no agreed unit/question target |',
       f'| Reading | {len(readings)} resources / {reading_q} questions | Chưa đo được — no agreed resource/question target |',
       f'| Separate Part 5 practice | {p5n} questions | Chưa đo được — no agreed size target; independent review remains separate |',
-      f'| Foundation Reading | {len(foundation_reading)}/{len(foundation)} passages / {foundation_reading_questions} questions | {pct(len(foundation_reading),len(foundation))} within current Pre-A1/A1 scope | Separate reading bank; not Foundation mastery |',
-      f'| Foundation Listening | {len(foundation_listening)}/{len(foundation)} scripts / {foundation_listening_questions} questions | {pct(len(foundation_listening),len(foundation))} within current Pre-A1/A1 scope | Device Speech Synthesis; not authentic ETS recordings |',
+      f'| Foundation Reading | {len(foundation_reading)}/{len(foundation)} passages / {foundation_reading_questions} questions | {pct(len(foundation_reading),len(foundation))} within current Pre-A1/A1/A2 scope | Separate reading bank; not Foundation mastery |',
+      f'| Foundation Listening | {len(foundation_listening)}/{len(foundation)} scripts / {foundation_listening_questions} questions | {pct(len(foundation_listening),len(foundation))} within current Pre-A1/A1/A2 scope | Device Speech Synthesis; not authentic ETS recordings |',
       f'| Foundation A–Z sound lab | {len(alphabet_sounds)}/26 letters | {pct(len(alphabet_sounds),26)} | Two TTS actions per letter; action count is not pronunciation mastery |',
       '', f'## Vocabulary field coverage (against current {vocab:,}-headword base; not editorial approval)',
       '', '| Field | Records | Coverage |', '|---|---:|---:|',
@@ -82,11 +87,11 @@ def main():
       '', 'These ratios show whether a field is populated, not whether its content is accurate, natural or complete. Relationship counts are reported separately from headword counts.',
       '', '## Quality / verification status',
       '', '- Content counts do not equal completed learning outcomes.',
-      f'- Outcome framework: {outcome_defined}/{outcome_total} criteria defined; this is not criterion-level mastery or completed instruction.',
+      f'- Outcome framework: {outcome_total}/{outcome_total} criteria defined; {outcome_instrumented}/{outcome_total} have an evidence-collection path. Neither count measures learner mastery.',
       '- TOEIC objective tracker: aggregates latest answer per stable unique question; minimum 10 unique items and 80% accuracy. A passing label is a practice threshold only, not CEFR/ETS certification or proof of every outcome.',
       '- Objective evidence is connected for Grammar, Listening Parts 1–4, Reading Parts 5–7 and separate Part 5 practice. Reserve Listening items are excluded until editorial review; Reading Part 7 remains second-review-gated; the separate 80-item Part 5 practice pool is review-pending and cannot earn a threshold status.',
       '- Listening Part 1 currently has 8 eligible unique questions (one additional mapped item is reserve-pending), below the 10-item minimum; at least 2 more unique, reviewed questions are needed before it can reach the practice threshold.',
-      '- Foundation production/retention rubrics and explanation scoring remain uninstrumented; delayed recall and response-time capture are instrumented for the 9 wired TOEIC objective groups.',
+      '- Foundation outcome evidence now records recognition, a learner-authored sentence with three self-report explanation/production ratings, and delayed recall. Self-report is not auto-graded; delayed recall is scheduled 1/3 days and is not a retention guarantee.',
       '- Foundation Listening stores attempts under a separate localStorage key; its bank coverage does not imply the learner has completed the questions or met the local practice threshold.',
       '- Foundation A–Z records TTS play-button actions in `toeic:alphabet-sound-progress:v1`; no pronunciation analysis or mastery inference is performed.',
       '- Part 5 practice: pending independent review; do not count as Mock-eligible.',

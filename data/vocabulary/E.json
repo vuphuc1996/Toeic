@@ -306,6 +306,80 @@
       ]
     },
     {
+      "id": "electrical-adj",
+      "word": "electrical",
+      "phonetic": {
+        "us": "/ɪ.ˈlek.trɪ.kəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "thuộc về điện; liên quan đến hệ thống điện",
+          "definition_en": "relating to electricity or the equipment and systems that use it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All electrical equipment must be switched off before the maintenance work begins.",
+          "vi": "Tất cả thiết bị điện phải được tắt trước khi công việc bảo trì bắt đầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "electrical equipment",
+        "electrical wiring",
+        "electrical inspection"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "electrician-n",
+      "word": "electrician",
+      "phonetic": {
+        "us": "/ɪ.lek.ˈtrɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thợ điện",
+          "definition_en": "a skilled person who installs, maintains, or repairs electrical systems and equipment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A licensed electrician will inspect the wiring before the new equipment is connected.",
+          "vi": "Một thợ điện có giấy phép sẽ kiểm tra hệ thống dây dẫn trước khi thiết bị mới được kết nối.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "licensed electrician",
+        "call an electrician",
+        "electrician on site"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
       "id": "electronic-adj",
       "word": "electronic",
       "phonetic": {
@@ -336,6 +410,44 @@
       "collocations": [
         "electronic payment",
         "electronic signature"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "elevator-n",
+      "word": "elevator",
+      "phonetic": {
+        "us": "/ˈe.lə.ˌveɪ.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thang máy",
+          "definition_en": "a platform or enclosed compartment that carries people or goods between floors of a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The freight elevator will remain unavailable while technicians complete the scheduled inspection.",
+          "vi": "Thang máy chở hàng sẽ tạm ngừng hoạt động trong khi kỹ thuật viên hoàn tất đợt kiểm tra theo lịch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "elevator maintenance",
+        "freight elevator",
+        "elevator inspection"
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate; verify by sense"
@@ -1035,6 +1147,98 @@
         "written endorsement"
       ],
       "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "enforce-v",
+      "word": "enforce",
+      "phonetic": {
+        "us": "/en.ˈfɔrs/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "meaning_vi": "thực thi; buộc tuân thủ",
+          "definition_en": "to make sure that a law, rule, or agreement is obeyed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "enforcement",
+          "pos": "n",
+          "meaning_vi": "việc thực thi; sự cưỡng chế thi hành"
+        }
+      ],
+      "verb_forms": {
+        "v1": "enforce",
+        "vs_es": "enforces",
+        "v2": "enforced",
+        "v3": "enforced",
+        "ving": "enforcing"
+      },
+      "examples": [
+        {
+          "en": "The property manager must enforce the building access policy consistently for every tenant.",
+          "vi": "Quản lý bất động sản phải thực thi nhất quán chính sách ra vào tòa nhà đối với mọi khách thuê.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "enforce a contract",
+        "enforce safety rules",
+        "strictly enforce"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "enforcement-n",
+      "word": "enforcement",
+      "phonetic": {
+        "us": "/en.ˈfɔr.smənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc thực thi; sự cưỡng chế thi hành",
+          "definition_en": "the act of making sure that a law, rule, or agreement is obeyed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "enforce",
+          "pos": "v",
+          "meaning_vi": "thực thi; buộc tuân thủ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contract includes a clear enforcement process for resolving repeated service failures.",
+          "vi": "Hợp đồng bao gồm quy trình thực thi rõ ràng để xử lý các lần dịch vụ liên tục không đạt yêu cầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contract enforcement",
+        "law enforcement",
+        "enforcement measures"
+      ],
+      "cefr_level": "C1",
       "level_basis": "editorial-estimate; verify by sense"
     },
     {

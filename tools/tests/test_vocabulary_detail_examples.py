@@ -79,7 +79,7 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
             self.assertTrue(entry.get('phonetic', {}).get('us'), entry['id'])
         self.assertEqual(sum(bool(x.get('phonetic', {}).get('us')) for x in batch['words']), 37)
 
-    def test_base_vocabulary_id_set_is_preserved_with_batches_017_to_020(self):
+    def test_base_vocabulary_id_set_is_preserved_through_batch_012(self):
         ids = [record["id"] for record in self.records]
         baseline = set(load_json("tools/baseline-ids.json")["ids"])
         batch = load_json("data/vocabulary/batch-006.json")
@@ -91,7 +91,8 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         batch_020 = load_json("data/vocabulary/batch-008.json")
         self.assertEqual(len(batch_020["words"]), 13)
         self.assertTrue({w["id"] for w in batch_020["words"]}.issubset(set(ids)))
-        self.assertEqual(len(ids), 1100)
+        self.assertEqual(len(ids), self.manifest["totalWords"])
+        self.assertEqual(len(ids), 1137)
         self.assertEqual(len(ids), len(set(ids)))
         batch_009 = load_json('data/vocabulary/batch-009.json')
         self.assertEqual(len(batch_009['words']), 34)
@@ -99,6 +100,12 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         batch_010 = load_json('data/vocabulary/batch-010.json')
         self.assertEqual(len(batch_010['words']), 37)
         self.assertTrue({w['id'] for w in batch_010['words']}.issubset(set(ids)))
+        batch_011 = load_json('data/vocabulary/batch-011.json')
+        self.assertEqual(len(batch_011['words']), 37)
+        self.assertTrue({w['id'] for w in batch_011['words']}.issubset(set(ids)))
+        batch_012 = load_json('data/vocabulary/batch-012.json')
+        self.assertEqual(len(batch_012['words']), 37)
+        self.assertTrue({w['id'] for w in batch_012['words']}.issubset(set(ids)))
 
     def test_each_example_points_to_an_existing_sense(self):
         for record in self.records:
