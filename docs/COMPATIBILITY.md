@@ -6,16 +6,18 @@
 
 | Role | Version | Policy |
 |---|---|---|
-| Previous release | v2.81.0 | A2 writing portfolio and local Quick Help; the AI retirement in this release was over-broad and is corrected in v2.82.0. |
-| Current product source | v2.82.0 | Restores pre-v2.80 feature-level Google AI actions; keeps the newer v2.80 floating-assistant AI handoff removed; retains local Quick Help and A2 writing portfolio. |
+| Previous release | v2.82.0 | Restored v2.79 feature-level Google AI and retained the Quick Help prefix-completion feature, which is removed in v2.82.1. |
+| Current product source | v2.82.1 | Retains every v2.79 feature-level Google AI action; removes v2.80 floating assistant and Quick Help prefix search; retains navigation help, Placement Diagnostic, mock icons and A2 portfolio. |
 | Older releases | ≤ v2.80.0 | Historical; release details are consolidated in `archive/PROJECT_HISTORY.md` except the immediately previous release report. |
+
+- **CI coverage fix:** `tools/tests/learning-assistant.mjs` is a retirement guard for the v2.80 floating AI assistant (not the old AI feature); it is explicitly invoked by `.github/workflows/validate-data.yml`. The offline Quick Help and refreshed mock-exam icons remain part of the product.
 
 
 ## Runtime/data contracts
 
-- **Legacy Google AI restored in v2.82.0:** keeps the feature-level actions that existed in v2.79.0: dictionary word detail and unknown-term lookup, practice answer/review analysis, Grammar, Reading and Listening prompts. The shared one-way preview panel is opened only by an explicit user action and transfers the prompt through an external Google Search AI Mode URL (`udm=50`, `hl=vi`). This parameter is not a documented stable API; Google controls the external experience. No embedded model, API key, server-side AI, hidden transfer or background call is introduced.
+- **Legacy Google AI restored in v2.82.1:** keeps the feature-level actions that existed in v2.79.0: dictionary word detail and unknown-term lookup, practice answer/review analysis, Grammar, Reading and Listening prompts. The shared one-way preview panel is opened only by an explicit user action and transfers the prompt through an external Google Search AI Mode URL (`udm=50`, `hl=vi`). This parameter is not a documented stable API; Google controls the external experience. No embedded model, API key, server-side AI, hidden transfer or background call is introduced.
 - **New v2.80 assistant AI remains removed:** no assistant-specific contextual prompt builder, follow-up question handoff, copy/transfer action or Google action within Quick Help. Do not conflate this with the older feature-level buttons, which are intentionally restored.
-- **Local Quick Help:** navigation guide, existing Placement Diagnostic entry and prefix-based masked completion against real canonical `state.words` records. It does not call external services and remains in the Service Worker app shell for offline use. It has no Google AI button or prompt transfer.
+- **Local Quick Help:** greeting, in-app navigation guide and existing Placement Diagnostic entry only. Prefix search, vocabulary suggestions, masked completion and per-letter validation were removed in v2.82.1. The panel does not call external services.
 - **v2.81/v2.82 A2 writing portfolio:** reads existing `productionEvidence` in `toeic:foundation-progress:v1`, displays per-task first/latest self-ratings and task-specific rubrics. It does not edit learner records, combine unlike rubrics, grade language automatically or certify mastery. `::produce1` and legacy `::apply1` remain isolated.
 - **Source attribution exception:** `ai-generated` strings in the Part 1 image attribution/audit files are source-provenance metadata for an already embedded image. They do not load code, prompts or models; they are retained to preserve attribution and pass the asset-source validators.
 - **Responsive/product shell:** Quick Help can be closed/reopened, collapses to an icon on compact layouts, stays above the mobile bottom navigation and is hidden during an active timed mock exam. It reuses existing typography/button/color patterns. Mock quick/half/full modes use coherent SVG icons instead of the old clock glyph.

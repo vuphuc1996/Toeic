@@ -1,17 +1,17 @@
-# TOEIC Dictionary v2.82.0 — Documentation
+# TOEIC Dictionary v2.82.1 — Documentation
 
-- Current product source: `v2.82.0` — `versions/CURRENT_VERSION.md`.
-- Previous release: `v2.81.0` — `versions/PREVIOUS_VERSION.md`.
+- Current product source: `v2.82.1` — `versions/CURRENT_VERSION.md`.
+- Previous release: `v2.82.0` — `versions/PREVIOUS_VERSION.md`.
 - Master status: `MASTER_STATUS.md` (single current roadmap/status source).
-- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.82.0.md`.
-- Restored legacy Google AI scope: `reports/RESTORE_LEGACY_GOOGLE_AI_v2.82.0.md`.
-- A2 writing portfolio report: `reports/A2_WRITING_PORTFOLIO_v2.81.0.md`.
-- Progress baseline: `reports/PROJECT_PROGRESS_BASELINE_v2.82.0.md`.
-- Generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.82.0.md`.
-- Previous release test/feature records: `reports/` entries tagged v2.81.0.
+- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.82.1.md`.
+- Scope correction (preserve v2.79 Google AI; remove v2.80 Quick Help word search): `reports/REMOVE_QUICK_HELP_WORD_SEARCH_v2.82.1.md`.
+- A2 writing portfolio history: `archive/PROJECT_HISTORY.md` (v2.81.0 entry).
+- Progress baseline: `reports/PROJECT_PROGRESS_BASELINE_v2.82.1.md`.
+- Generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.82.1.md`.
+- Previous release test/feature records: `reports/` entries tagged v2.82.0.
 - Older detailed records are consolidated in `archive/PROJECT_HISTORY.md`.
 - TOEIC remains the primary track; IELTS remains deferred until TOEIC development/acceptance gates are met and the owner approves a phase change.
-- Foundation pathway has 10 Pre-A1/A1 lessons and 13 A2 lessons. A2 has 13 Reading passages / 39 questions, 13 four-turn device-TTS Listening dialogues / 39 questions and 13 contextual writing tasks with guided revisions. v2.81.0 added a local-only writing portfolio. v2.82.0 restores pre-v2.80 feature-level Google AI actions (word lookup, practice, Grammar, Reading and Listening) as explicit external handoffs, while the newer floating-assistant Google AI flow from v2.80 stays removed. Local Quick Help remains offline-only.
+- Foundation pathway has 10 Pre-A1/A1 lessons and 13 A2 lessons. A2 has 13 Reading passages / 39 questions, 13 four-turn device-TTS Listening dialogues / 39 questions and 13 contextual writing tasks with guided revisions. v2.81.0 added a local-only writing portfolio. v2.82.1 retains every pre-v2.80 Google AI action from v2.79 as explicit external handoffs, while removing the v2.80 floating assistant and prefix/masked-letter search in Quick Help. Local Quick Help remains an offline navigation/Placement guide only.
 - Foundation production history remains device-local under `toeic:foundation-progress:v1`. Previous response versions are stored for newly captured attempts; old records are not backfilled. Self-review is not automated grading or learner mastery.
 - Foundation outcome evidence covers recognition, contextual learner-written production/self-report and 1/3-day delayed recall; it does not certify learner mastery.
 - Foundation Listening uses browser SpeechSynthesis; it is synthesized learning material, not ETS or recorded native-speaker audio.

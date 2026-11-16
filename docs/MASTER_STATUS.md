@@ -4,35 +4,44 @@
 
 - **Ngày kiểm kê:** 2026-11-16.
 - **Quy ước báo cáo tiến độ:** luôn có % khi tồn tại target/denominator rõ; tách độ phủ số lượng, chất lượng nội dung, kiểm thử phiên bản và xác minh triển khai. Không có target thì ghi “Chưa đo được”.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.82.0 — khôi phục tích hợp Google AI Mode cũ từ v2.79.0; chỉ giữ phần hỗ trợ AI cũ theo từng tính năng và loại luồng Google AI mới của trợ lý nổi v2.80.0. Đồng thời giữ Quick Help chạy cục bộ và A2 writing portfolio.
-- **Current product source:** v2.82.0 là GitHub Pages product source. Google AI cũ chỉ mở sau thao tác có chủ đích ở chi tiết từ vựng/tra từ, phân tích đáp án ôn tập, Grammar, Reading hoặc Listening. Nội dung được chuyển ra ngoài qua Google Search AI Mode URL; không có model/API key/backend AI nhúng, không gửi dữ liệu ngầm. Trợ giúp nhanh (hướng dẫn, Placement hiện có, điền chữ từ kho từ vựng) không gọi AI và không có nút Google bên trong.
-- **Phần AI mới của v2.80 được loại:** không có floating assistant contextual prompt, hỏi tiếp Google AI, nút copy/chuyển prompt theo trang đang mở hay action Google mới trong Quick Help. Phần điều hướng và tra từ cục bộ được giữ lại vì không phải AI.
-- **Current progress snapshot:** `reports/PROJECT_PROGRESS_SNAPSHOT_v2.82.0.md`; vocabulary 1,137/3,000 minimum (37.9%), 1,137/5,000 planning ceiling (22.7%); guided stage presence 3/6 (50.0%); objective-resource links 294/294; 11/11 objectives linked; 33/33 outcome criteria defined; 6/33 have an evidence-collection path (18.2%). These are inventory/instrumentation measures, not editorial approval or learner mastery.
-- **Previous release:** v2.81.0 — local Quick Help and A2 writing portfolio, nhưng đã gỡ quá phạm vi cả Google AI cũ. v2.82.0 khôi phục các tích hợp Google AI trước v2.80 mà không khôi phục trợ lý AI mới.
-- **Immediate base:** v2.81.0; static GitHub Pages PWA.
-- **Product / deployment status:** v2.82.0 là product source dành cho repository GitHub Pages, không phải bản demo riêng. Phiên làm việc này xác minh mã nguồn và gói cục bộ; GitHub Actions từ xa, public deployment/cache và thiết bị thật chưa được xác minh.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.82.1 — khôi phục tích hợp Google AI Mode cũ từ v2.79.0; chỉ giữ phần hỗ trợ AI cũ theo từng tính năng và loại luồng Google AI mới của trợ lý nổi v2.80.0. Đồng thời giữ Quick Help chạy cục bộ và A2 writing portfolio.
+- **Current product source:** v2.82.1 là GitHub Pages product source. Google AI cũ chỉ mở sau thao tác có chủ đích ở chi tiết từ vựng/tra từ, phân tích đáp án ôn tập, Grammar, Reading hoặc Listening. Nội dung được chuyển ra ngoài qua Google Search AI Mode URL; không có model/API key/backend AI nhúng, không gửi dữ liệu ngầm. Quick Help chỉ còn lời chào, hướng dẫn điều hướng và nút mở Placement Diagnostic; không còn tìm kiếm tiền tố, gợi ý từ, che chữ hay điền chữ trong trợ giúp.
+- **Phần phát sinh ở v2.80 được loại sạch:** floating assistant, contextual prompt, hỏi tiếp Google AI, copy/chuyển prompt theo trang đang mở và toàn bộ tra cứu từ trong Quick Help (prefix, suggestion, masked completion, letter validation). Chỉ giữ hướng dẫn điều hướng và Placement Diagnostic của Quick Help. Các tích hợp Google AI gốc từ v2.79 không bị thay đổi.
+- **Current progress snapshot:** `reports/PROJECT_PROGRESS_SNAPSHOT_v2.82.1.md`; vocabulary 1,137/3,000 minimum (37.9%), 1,137/5,000 planning ceiling (22.7%); guided stage presence 3/6 (50.0%); objective-resource links 294/294; 11/11 objectives linked; 33/33 outcome criteria defined; 6/33 have an evidence-collection path (18.2%). These are inventory/instrumentation measures, not editorial approval or learner mastery.
+- **Previous release:** v2.82.0 — khôi phục Google AI v2.79 và giữ Quick Help có tìm kiếm tiền tố. v2.82.1 loại bỏ phần tìm kiếm/điền chữ mới trong Quick Help, đồng thời tiếp tục giữ nguyên Google AI cũ.
+- **Immediate base:** v2.82.0; static GitHub Pages PWA.
+- **Product / deployment status:** v2.82.1 là product source dành cho repository GitHub Pages, không phải bản demo riêng. Phiên làm việc này xác minh mã nguồn và gói cục bộ; GitHub Actions từ xa, public deployment/cache và thiết bị thật chưa được xác minh.
 - **Compatibility:** giữ nguyên dữ liệu từ vựng, ID câu hỏi, Foundation, `toeic:foundation-progress:v1`, IndexedDB v1 và dữ liệu người học. Không thay đổi storage key/schema hay thêm backend. Google AI cũ chỉ tạo truy vấn sau khi người dùng chọn nút phân tích; dữ liệu khi đó được chuyển ra dịch vụ Google bên ngoài. Không có yêu cầu gửi dữ liệu ngầm. `ai-generated` trong attribution ảnh chỉ là metadata xuất xứ tài sản, không phải chức năng runtime.
-- **Local validation:** xem `reports/TEST_REPORT_TOEIC_Dictionary_v2.82.0.md` cho số liệu từng bộ test, validator và xác minh ZIP/TAR.GZ. Local tests không thay thế remote GitHub Actions, Pages deployment hoặc device QA.
+- **Local validation:** xem `reports/TEST_REPORT_TOEIC_Dictionary_v2.82.1.md` cho số liệu từng bộ test, validator và xác minh ZIP/TAR.GZ. Local tests không thay thế remote GitHub Actions, Pages deployment hoặc device QA.
 - **Development rule:** tích hợp thành phần tái sử dụng vào app shell/design system hiện có; tránh dịch vụ, tracker hoặc màn hình song song. Phân biệt legacy feature-level integrations với tính năng mới; khi yêu cầu gỡ một phần, phải kiểm tra baseline trước khi retire để không xóa vượt phạm vi.
 
-## v2.82.0 changes — restore legacy Google AI and retain local helper + A2 portfolio
+## v2.82.1 changes — remove Quick Help word search; preserve v2.79 Google AI
 
-- Restored the pre-v2.80 Google AI features from the exact v2.79 source: vocabulary detail/unknown-term lookup, answer/review analysis, Grammar, Reading and Listening. Their prompt builders, user-facing controls, one-way prompt preview panel and event handlers are present again.
-- The retained Google AI Mode handoff is external and explicit. It opens a Google Search URL with the observed `udm=50` selector and Vietnamese locale; this is not a stable documented API or embedded model. No API key, server-side service or hidden transfer is introduced.
-- Kept the v2.80 shared assistant's newer Google AI handoff removed. The local Quick Help panel contains no Google AI action, prompt builder or transfer control; it only uses in-app navigation, the existing Placement Diagnostic and canonical vocabulary matching/masked completion.
-- Preserved the A2 writing portfolio/revision chain and all prior learning data. No progress reset, new storage key, IndexedDB migration or vocabulary/question content change.
-- Fixed malformed `quick-helpRoot` identifiers inherited from v2.81.0 and added a dedicated `legacy-google-ai.mjs` regression test. Quick Help test coverage now distinguishes local assistance from legacy external Google AI.
-- Detailed verification: `reports/TEST_REPORT_TOEIC_Dictionary_v2.82.0.md`; restored scope: `reports/RESTORE_LEGACY_GOOGLE_AI_v2.82.0.md`.
+- Kept all feature-level Google AI actions present in v2.79.0: vocabulary detail/unknown-term lookup, answer/review analysis, Grammar, Reading and Listening. These remain user-triggered external Google Search AI Mode handoffs with the existing preview and privacy disclosure.
+- Removed the v2.80 floating assistant and contextual Google AI follow-up/copy/transfer flow (already absent in v2.82.0); also removed the Quick Help word-prefix search and masked-letter completion at the user's explicit request.
+- Deleted `assets/js/quick-help.js` and removed its imports, state, event listeners, suggestion/challenge/validation handlers, UI markup, CSS, generated typography-floor selectors and Service Worker precache entries. Bumped the release/cache version to v2.82.1 so clients retire the old cached asset.
+- Retained only non-AI Quick Help: greeting, navigation guide and the existing Placement Diagnostic entry. The helper no longer queries or opens vocabulary records.
+- Retained mock-exam SVG icon refresh (clipboard-check for the area; bolt, stopwatch and trophy for test modes) and v2.81 A2 writing portfolio/history.
+- No vocabulary records, question IDs, Foundation lessons, writing response history, localStorage keys, IndexedDB schema/store or user progress were changed.
+- Regression coverage: `quick-help.mjs` and `learning-assistant.mjs` verify the removed search/assistant artifacts stay absent; `legacy-google-ai.mjs` protects v2.79 feature-level Google AI. See `reports/TEST_REPORT_TOEIC_Dictionary_v2.82.1.md`.
+
+## v2.82.0 historical changes — restore legacy Google AI; Quick Help word search superseded by v2.82.1
+
+- Restored pre-v2.80 Google AI actions after v2.81 had removed them too broadly. v2.82.1 keeps those actions unchanged.
+- v2.82.0 retained a local Quick Help word-prefix/masked-completion feature. That feature is removed in v2.82.1; only the navigation guide and existing Placement Diagnostic entry remain.
+- Retained the v2.81 A2 writing portfolio, guided revision history, and refreshed mock-exam SVG icons.
+- The Google AI actions remain external, user-triggered Google Search AI Mode links. No embedded model/API/backend or hidden transfer is introduced.
+- Detailed v2.82.0 report and historical behavior are preserved in the previous-release docs/report and Changelog.
 
 ## v2.81.0 historical changes — A2 writing portfolio; AI retirement superseded by v2.82.0
 
 - v2.81.0 removed all legacy Google AI integration at the time; this scope was broader than the user intended and is corrected in v2.82.0 by restoring the exact pre-v2.80 feature-level actions. Do not treat the removal as the current product contract.
-- Retained deterministic local Quick Help: navigation guide, current Placement Diagnostic entry and masked completion against existing vocabulary records. The helper uses `assets/js/quick-help.js`, is cached for offline use and does not create or alter learning-progress records; this remains true in v2.82.0.
+- Retained deterministic local Quick Help: navigation guide, current Placement Diagnostic entry and masked completion against existing vocabulary records. The masked-completion helper was present in v2.81.0 and v2.82.0; v2.82.1 removes it. The historical implementation is documented in the archived v2.80/v2.81 release summaries.
 - Added an A2 writing portfolio to the existing Foundation outcome dashboard. It reads `toeic:foundation-progress:v1` production evidence and summarizes started tasks, revised tasks, assessment attempts and each task's own first-to-latest self-rating trend.
 - The portfolio expands task-specific rubric labels individually; it does not aggregate different lesson rubrics as though they were identical. The trend is learner self-report, not automated correction, objective writing quality, CEFR certification or mastery.
 - No new localStorage key, IndexedDB store/version, network dependency, vocabulary record, lesson/question ID or learner-progress reset. Legacy `::apply1` evidence remains isolated from `::produce1` A2 writing evidence.
 - Retained `ai-generated` attribution values only as provenance metadata for an existing image asset; they do not load or execute an AI model/service. These fields remain necessary for image-source audits.
-- Verification report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.81.0.md`; portfolio report: `reports/A2_WRITING_PORTFOLIO_v2.81.0.md`.
+- Historical verification and A2 writing-portfolio details: `archive/PROJECT_HISTORY.md` (v2.81.0 entries).
 
 ## v2.80.0 changes — shared learning assistant and product UX refinement
 
@@ -41,7 +50,7 @@
 - Added a single reusable assistant panel/launcher, using existing app navigation, the existing placement diagnostic, existing dictionary `showDetail`, and existing Google AI prompt-preview flow. It does not add another learning database or progress tracker.
 - The assistant search is data-backed and bounded. Two or more starting letters reveal only candidate masks from the actual word list; one blank field per missing character validates the exact suffix before showing existing word data. Full exact matches open the existing vocabulary detail. Prefix results never introduce synthetic word/meaning records.
 - Current example `ho` results from the 1,137-headword base are hospitality, host, hotline, hour and housekeeping. House, horse, home and hold are absent from the current base and are not presented as available entries.
-- The v2.80-only current-page/detail contextual prompt and copy/manual-paste path is removed in v2.82.0. Do not confuse it with the earlier v2.79 per-feature prompt actions, which are restored and documented in `reports/RESTORE_LEGACY_GOOGLE_AI_v2.82.0.md`.
+- The v2.80-only current-page/detail contextual prompt and copy/manual-paste path is removed in v2.82.0. Its prefix-based masked word-completion feature was removed in v2.82.1. Do not confuse it with the earlier v2.79 per-feature prompt actions, which are restored and documented in `reports/RESTORE_LEGACY_GOOGLE_AI_v2.82.0.md`.
 - The assistant can be closed and reopened from a compact floating launcher, uses a narrow-screen layout and is hidden while a timed TOEIC mock exam is active. Existing progress keys/schema and offline shell are retained; the new helper is cached by Service Worker.
 - Replaced mock exam navigation/card glyphs with a consistent SVG icon set; quick test, one-half test and full test have distinguishable visual metaphors.
 - Removed obsolete release-candidate/demo framing from the active product documentation. No actual demo mode/temporary mock data surface was found in the shipped app; authentic TOEIC “product demonstration” educational records are retained.

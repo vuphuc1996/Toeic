@@ -1,6 +1,6 @@
 # Previous version
 
-- Version: **v2.81.0**
-- Change: added the A2 writing portfolio and retained local Quick Help. It also removed all Google AI integrations, including older v2.79 feature-level actions; that removal was broader than intended and is corrected in v2.82.0.
-- v2.82.0 restores the legacy word/practice/Grammar/Reading/Listening Google AI actions from v2.79.0, while keeping only the new v2.80 floating-assistant contextual AI handoff removed.
-- Existing A2 writing IDs, Foundation question IDs and learning progress remain unchanged.
+- Version: **v2.82.0**
+- Change: restored the pre-v2.80 Google AI actions that existed in v2.79.0, with local Quick Help navigation/Placement and a prefix-based masked vocabulary search.
+- v2.82.1 keeps the legacy Google AI integrations and mock-exam icons, but removes the Quick Help prefix search/masked-letter completion.
+- The A2 writing portfolio, guided revision chain, stable question IDs and existing progress storage remain unchanged.

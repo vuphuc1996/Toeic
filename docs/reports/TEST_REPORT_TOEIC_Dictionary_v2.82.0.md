@@ -34,10 +34,11 @@
 
 ## 2. JavaScript regression suites
 
-**26/26 PASS.** Every `tools/tests/*.mjs` suite was executed, including:
+**27/27 PASS.** Every `tools/tests/*.mjs` suite was executed, including:
 
 - `legacy-google-ai.mjs`: verifies v2.79 feature-level Google AI actions are restored for vocabulary, unknown-term lookup, practice answer/review, Grammar, Reading and Listening; checks modal controls, explicit URL construction, user-triggered outbound action, and style presence.
 - `quick-help.mjs`: verifies local navigation, Placement Diagnostic entry, canonical vocabulary prefix search, masked completion, exact answer validation, offline Service Worker wiring and responsive behavior. It also ensures Quick Help contains no Google AI action.
+- `learning-assistant.mjs`: retained the historical filename found in repositories updated by overlay; rewritten as a removal-guard test for the v2.80 floating AI assistant. It confirms local Quick Help and the v2.80 mock-exam icon refresh remain, while the floating AI/prompt/copy path stays absent. The workflow invokes it explicitly.
 - The two suites separately assert that v2.80 assistant-specific contextual AI, copy/transfer and Google follow-up actions remain absent.
 - Runtime render/migration, TTS, Mock exam engine/UI, A2 writing production/revision, Foundation evidence, practice progression and other existing regression suites all PASS.
 
@@ -51,7 +52,7 @@
 | CSS parser | `assets/css/app.css` and `design-system.css`: 0 parse errors |
 | Design profile | 54 tokens and 393 legacy font-floor selector groups PASS |
 | Version sync | All registered release markers v2.82.0 PASS |
-| CI coverage | Every `.mjs` suite is declared in `.github/workflows/validate-data.yml`; 2/2 Python coverage checks PASS |
+| CI coverage | Every `.mjs` suite is declared in `.github/workflows/validate-data.yml`; 2/2 Python coverage checks PASS, including the restored historical `learning-assistant.mjs` filename |
 
 Two malformed `quick-helpRoot` identifiers inherited from v2.81.0 were corrected to the valid `quickHelpRoot` identifier; the current app source now passes JavaScript syntax checking.
 
@@ -89,12 +90,12 @@ See `RESTORE_LEGACY_GOOGLE_AI_v2.82.0.md` for the exact restored/removed boundar
 
 ## 7. Release package verification
 
-- Full Source ZIP and TAR.GZ each contain **253 files**.
+- Full Source ZIP and TAR.GZ each contain **254 files**.
 - Both archives were extracted independently into separate verification directories.
-- Relative file paths and SHA-256 digests were compared against the canonical release source: **253/253 files match** for ZIP and **253/253 files match** for TAR.GZ.
+- Relative file paths and SHA-256 digests were compared against the canonical release source: **254/254 files match** for ZIP and **254/254 files match** for TAR.GZ.
 - Archive-level SHA-256 sidecars were generated and verified against the final ZIP/TAR.GZ bytes. The sidecars are distributed beside the archives, not embedded inside them.
 - The final archives exclude Python bytecode/cache artifacts (`__pycache__`, `*.pyc`).
-- The extracted ZIP was used for the full selected regression run: **26/26 JavaScript suites and 151/151 Python tests across 21 modules**. The extracted TAR.GZ passed the Quick Help, legacy Google AI and runtime smoke tests, plus the data, learning-content, Part 1 image, objective-resource, learning-outcome, CMUdict, version-sync and design-profile validators.
+- The extracted ZIP was used for the full selected regression run: **27/27 JavaScript suites and 151/151 Python tests across 21 modules**. The extracted TAR.GZ passed CI coverage (2/2), the `learning-assistant.mjs` retirement guard, Quick Help, legacy Google AI and runtime smoke tests, plus the data, learning-content, Part 1 image, objective-resource, learning-outcome, CMUdict, version-sync and design-profile validators.
 
 The externally distributed SHA-256 sidecars are the authoritative whole-archive checksums. Individual file hashes were compared separately during the independent extraction check.
 

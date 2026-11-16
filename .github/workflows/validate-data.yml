@@ -200,4 +200,5 @@ jobs:
           node tools/tests/alphabet-sound-progress.mjs
           node tools/tests/vocabulary-release-integrity.mjs
           node tools/tests/quick-help.mjs
+          node tools/tests/learning-assistant.mjs
           node tools/tests/legacy-google-ai.mjs

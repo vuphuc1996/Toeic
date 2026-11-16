@@ -1,3 +1,13 @@
+## v2.82.1 — Remove Quick Help word-prefix / masked-letter search; preserve v2.79 Google AI
+
+- Removed the v2.80 Quick Help vocabulary search and masked-letter completion feature at the user's explicit request: prefix input, suggestion list, masked headword display, missing-letter fields, answer validation, exact-match shortcuts and reveal/detail actions.
+- Deleted `assets/js/quick-help.js`; removed its `app.js` import, runtime state, input/click handlers, render/validation functions, CSS rules, design-system font-floor selectors and Service Worker REQUIRED/APP_SHELL entries. The next cache version is v2.82.1 so previously cached v2.82.0 helper assets are retired on upgrade.
+- Retained the non-AI Quick Help welcome, in-app navigation guide and existing Placement Diagnostic entry point. These do not search vocabulary, create guessed headwords or call external services.
+- Preserved all feature-level Google AI integrations that existed in v2.79.0: vocabulary detail/unknown-term lookup, practice answer and review analysis, Grammar, Reading and Listening. Their prompt builders, previews, user-initiated Google AI Mode handoff and original controls are tested by `legacy-google-ai.mjs`.
+- The v2.80 floating assistant, contextual prompt/copy/transfer flow and prefix-based word-completion feature are not part of the current product. Mock-exam SVG icons (`icon-clipboard-check`, `icon-bolt`, `icon-stopwatch`, `icon-trophy`) remain.
+- No vocabulary, question, Foundation lesson, A2 writing portfolio, progress ID, localStorage key, IndexedDB store/schema or learner history is changed. This is a UI/runtime cleanup only.
+- Local verification: Quick Help removal, v2.79 legacy Google AI preservation, mock-icon retention, CI coverage and regression suite results are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.82.1.md` and `reports/REMOVE_QUICK_HELP_WORD_SEARCH_v2.82.1.md`. Remote Actions/Pages/device QA are not implied.
+
 ## v2.82.0 — Restore legacy Google AI and preserve local Quick Help + A2 portfolio
 
 - Corrected the v2.81.0 over-removal: restored only the pre-v2.80, user-initiated Google AI Mode actions from the v2.79.0 product source. Restored word-detail lookup, unknown-term fallback, practice-answer/review analysis, Grammar, Reading and Listening prompts, the one-way prompt preview panel and the explicit external Google Search handoff (`udm=50`, `hl=vi`).
@@ -5,6 +15,8 @@
 - Legacy Google AI actions are external, user-triggered links; the app does not embed a model, use an API key or send content until a learner deliberately selects an action. Google controls its own external interface and URL behavior.
 - Preserved the v2.81 A2 writing portfolio and guided revision data. Existing `::apply1` and `::produce1` progress evidence, `toeic:foundation-progress:v1`, IndexedDB v1, canonical vocabulary, Reading/Listening question IDs and TOEIC Mock pools are unchanged.
 - Fixed two malformed `quick-helpRoot` JavaScript identifiers inherited in v2.81.0 to `quickHelpRoot` and registered a new legacy-Google-AI regression test. The suite verifies that old feature-level integrations remain and the v2.80 assistant-specific handoff stays absent.
+- Fixed the GitHub Actions coverage failure for the historical `tools/tests/learning-assistant.mjs` file. Its old v2.80 AI-assistant assertions are replaced with a removal guard that verifies the floating AI assistant remains absent, local Quick Help remains offline, and the refreshed mock-exam icons are retained; the workflow now invokes the suite.
+- Validation after the CI repair: 151/151 selected Python tests across 21 modules, 27/27 JavaScript regression suites, `test_ci_coverage.py` 2/2 and release-rotation 3/3 PASS. This does not change app runtime, vocabulary, question content, progress storage or the v2.82.0 version markers.
 - Re-synchronized the design profile. Exact selector count and validation results are recorded in `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.82.0.md`.
 - Remote GitHub Actions, Pages deployment and physical-device QA are not claimed.
 
@@ -15,7 +27,7 @@
 - Added an A2 writing portfolio to the existing Foundation outcomes view. It shows tasks started/revised, self-assessment attempt counts, per-task first/latest self-ratings, and the lesson-specific rubric checks without combining unlike rubrics.
 - All portfolio data is read from the existing `toeic:foundation-progress:v1` store. No new storage key, IndexedDB migration, network service, or progress reset.
 - Kept `ai-generated` source labels only in photo attribution/asset audit metadata; no AI runtime feature or connection remains.
-- Local tests/validators and package verification: see `reports/TEST_REPORT_TOEIC_Dictionary_v2.81.0.md`. Remote GitHub Actions, Pages deployment and physical-device behavior remain unverified.
+- Historical test/verification summary: see `archive/PROJECT_HISTORY.md` (v2.81.0 entry). Remote GitHub Actions, Pages deployment and physical-device behavior remain unverified.
 
 ## v2.80.0 — Product-wide learning assistant and mock-exam icon refresh
 
@@ -25,7 +37,7 @@
 - Added a contextual follow-up prompt for the current open page/detail. The complete prompt is previewed and can be copied. It is sent in the Google AI Mode search URL only after an explicit click; when a prompt exceeds the URL limit, the app copies the entire prompt and opens Google AI for manual paste rather than truncating it. No in-app model, external API key, iframe, backend or automatic transfer is introduced.
 - Registered `assets/js/learning-assistant.js` in the Service Worker app shell for offline use. No new user-progress storage key, IndexedDB migration or server-side store is added.
 - Product UI/docs now identify GitHub Pages as the product release target; there is no separate demo mode or placeholder branch in the shipped UI. Legitimate TOEIC learning examples containing the word “demonstration”/“demo” are preserved as educational content.
-- Tests, local validators and package verification: see `reports/TEST_REPORT_TOEIC_Dictionary_v2.80.0.md`. Remote GitHub Actions, the public Pages deployment and physical-device QA are not claimed unless separately verified.
+- Historical tests/validators and package verification: see `archive/PROJECT_HISTORY.md` (v2.80.0 entry). Remote GitHub Actions, the public Pages deployment and physical-device QA are not claimed unless separately verified.
 
 ## v2.79.0 — A2 guided writing revision and response history
 

@@ -9,10 +9,9 @@ import { recordFoundationListeningAttempt, summarizeFoundationListening } from '
 import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js';
 import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js';
 import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js';
-import { findVocabularyPrefixMatches, maskVocabularyHeadword, validateVocabularyCompletion } from './quick-help.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.82.0';
+const APP_RELEASE_VERSION = '2.82.1';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -99,7 +98,7 @@ const PART1_LEAD_IN_PAUSE_MS = 1000;
 const PART1_OPTION_LABEL_PAUSE_MS = 1500;
 const PART1_OPTION_GAP_MS = 1300;
 const PART1_LEAD_IN_TEXT = 'Now, listen to the four statements.';
-const state = { words: [], baseWords: [], dataManifest: null, vocabularyMigrationRestoredCount: 0, categories: [], sentenceCompletionItems: [], sentenceCompletionSeenIds: [], relatedTerms: new Map(), personalVocabulary: { schemaVersion: 3, additions: [], overrides: {}, overrideBaseSigs: {}, deletedBaseIds: [] }, staleOverrideIds: [], wordSources: new Map(), grammarLessons: [], foundationLessons: [], foundationReadingPassages: [], foundationReadingProgress: {}, foundationListeningClips: [], foundationListeningProgress: {}, foundationOutcomeRegistry: null, alphabetSoundItems: [], alphabetSoundProgress: {}, placementQuestions: [], placementObjectiveMap: null, objectiveResourceMap: null, objectiveResourceIndex: {}, objectiveProgress: {}, placementState: null, foundationProgress: {}, foundationStartLevel: 'ALL', readings: [], listening: [], grammarProgress: {}, readingProgress: {}, listeningProgress: {}, activeListening: null, speechRate: 1, activeGrammarLesson: null, activeReading: null, activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3, tts: { ...DEFAULT_TTS_SETTINGS } }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionStartedAt: null, questionAnswered: false, practiceReviewPending: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceTransitionTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceDuration: 3000, autoAdvanceCancelled: false, autoAdvanceWaiting: false, quickHelpSelectedWordId: null, quickHelpWordPrefix: '', quickHelpCompletedWordId: null, lastAIPrompt: '', lastGoogleQuery: '', flashProgress: {}, flashSession: null, flashQuizIndex: 0, flashQuizAnswers: [], pendingPracticeBatch: null, pendingFoundationAssessment: null, pendingSinglePractice: null, pendingFlashQuizResult: null, pendingPlacementResult: false, pendingMockResult: null, foundationAssessmentDrafts: {}, mockExam: null, mockHistory: [], mockUsageCounts: {}, mockTickTimer: null, lastMockResult: null };
+const state = { words: [], baseWords: [], dataManifest: null, vocabularyMigrationRestoredCount: 0, categories: [], sentenceCompletionItems: [], sentenceCompletionSeenIds: [], relatedTerms: new Map(), personalVocabulary: { schemaVersion: 3, additions: [], overrides: {}, overrideBaseSigs: {}, deletedBaseIds: [] }, staleOverrideIds: [], wordSources: new Map(), grammarLessons: [], foundationLessons: [], foundationReadingPassages: [], foundationReadingProgress: {}, foundationListeningClips: [], foundationListeningProgress: {}, foundationOutcomeRegistry: null, alphabetSoundItems: [], alphabetSoundProgress: {}, placementQuestions: [], placementObjectiveMap: null, objectiveResourceMap: null, objectiveResourceIndex: {}, objectiveProgress: {}, placementState: null, foundationProgress: {}, foundationStartLevel: 'ALL', readings: [], listening: [], grammarProgress: {}, readingProgress: {}, listeningProgress: {}, activeListening: null, speechRate: 1, activeGrammarLesson: null, activeReading: null, activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3, tts: { ...DEFAULT_TTS_SETTINGS } }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionStartedAt: null, questionAnswered: false, practiceReviewPending: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceTransitionTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceDuration: 3000, autoAdvanceCancelled: false, autoAdvanceWaiting: false, lastAIPrompt: '', lastGoogleQuery: '', flashProgress: {}, flashSession: null, flashQuizIndex: 0, flashQuizAnswers: [], pendingPracticeBatch: null, pendingFoundationAssessment: null, pendingSinglePractice: null, pendingFlashQuizResult: null, pendingPlacementResult: false, pendingMockResult: null, foundationAssessmentDrafts: {}, mockExam: null, mockHistory: [], mockUsageCounts: {}, mockTickTimer: null, lastMockResult: null };
 
 function openDB() {
   return new Promise((resolve, reject) => {
@@ -525,7 +524,7 @@ function populateFilters(){
   $('#listeningLevelFilter').innerHTML='<option value="">Tất cả cấp độ</option>'+listeningLevels.map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('');
 }
 function navigate(page){
-  if(page!==state.activePage){state.quickHelpSelectedWordId=null;state.quickHelpCompletedWordId=null;setQuickHelpOpen(false);}
+  if(page!==state.activePage)setQuickHelpOpen(false);
   if(learningFocusState.active&&page!==state.activePage)closeLearningFocus();
   if(state.activePage==='listening'&&page!=='listening') stopSpeech();
   if(state.activePage==='mock'&&page!=='mock'&&state.mockExam?.status==='active') stopSpeech();
@@ -1836,21 +1835,10 @@ function bindEvents(){
   bindPracticeEvents();
   $('#quickHelpLauncher')?.addEventListener('click',toggleQuickHelp);
   $('#quickHelpClose')?.addEventListener('click',()=>setQuickHelpOpen(false));
-  $('#quickHelpWordSearch')?.addEventListener('input',event=>renderQuickHelpSuggestions(event.target.value));
-  $('#quickHelpWordSearch')?.addEventListener('keydown',event=>{if(event.key==='Enter'){const first=$('[data-quick-help-select-word]',$('#quickHelpWordSuggestions'));if(first){event.preventDefault();renderQuickHelpChallenge(first.dataset.quick-helpSelectWord);}}});
   $('#quickHelp')?.addEventListener('click',event=>{
     const guide=event.target.closest('[data-quick-help-guide]');if(guide){renderQuickHelpGuide();return;}
     const placement=event.target.closest('[data-quick-help-placement]');if(placement){setQuickHelpOpen(false);startPlacementDiagnostic();return;}
     const nav=event.target.closest('[data-quick-help-navigate]');if(nav){setQuickHelpOpen(false);navigate(nav.dataset.quick-helpNavigate);return;}
-    const choose=event.target.closest('[data-quick-help-select-word]');if(choose){renderQuickHelpChallenge(choose.dataset.quick-helpSelectWord);return;}
-    const cancel=event.target.closest('[data-quick-help-cancel-challenge]');if(cancel){state.quickHelpSelectedWordId=null;$('#quickHelpWordChallenge').hidden=true;$('#quickHelpWordChallenge').innerHTML='';return;}
-    const verify=event.target.closest('[data-quick-help-check-word]');if(verify){verifyQuickHelpChallenge(verify.dataset.quick-helpCheckWord);return;}
-    const openWord=event.target.closest('[data-quick-help-open-word]');if(openWord){const id=openWord.dataset.quick-helpOpenWord;setQuickHelpOpen(false);showDetail(id);return;}
-  });
-  $('#quickHelp')?.addEventListener('input',event=>{
-    const input=event.target.closest('[data-quick-help-letter]');if(!input)return;
-    input.value=String(input.value||'').toLowerCase().replace(/[^a-z]/g,'').slice(-1);
-    if(input.value){const next=$(`[data-quick-help-letter="${Number(input.dataset.quick-helpLetter)+1}"]`,$('#quickHelpWordChallenge'));next?.focus();}
   });
 
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)renderRecallQueue();});
@@ -2921,36 +2909,8 @@ function setQuickHelpOpen(open){
   const panel=$('#quickHelpPanel'),launcher=$('#quickHelpLauncher');if(!panel||!launcher)return;
   panel.hidden=!open;launcher.setAttribute('aria-expanded',String(Boolean(open)));launcher.classList.toggle('is-open',Boolean(open));
   launcher.title=open?'Ẩn trợ giúp nhanh':'Mở trợ giúp nhanh';
-  if(open)$('#quickHelpWordSearch')?.focus({preventScroll:true});
 }
 function toggleQuickHelp(){setQuickHelpOpen($('#quickHelpPanel')?.hidden!==false);}
-function renderQuickHelpSuggestions(prefix){
-  const host=$('#quickHelpWordSuggestions'),challenge=$('#quickHelpWordChallenge');if(!host)return;
-  const clean=String(prefix||'').trim();state.quickHelpWordPrefix=clean.toLowerCase();state.quickHelpSelectedWordId=null;state.quickHelpCompletedWordId=null;if(challenge){challenge.hidden=true;challenge.innerHTML='';}
-  if(clean.replace(/[^a-z]/gi,'').length<2){host.innerHTML='<p class="quick-help-hint">Nhập ít nhất 2 chữ cái tiếng Anh để xem các từ phù hợp.</p>';return;}
-  const matches=findVocabularyPrefixMatches(state.words,clean,6);
-  if(!matches.length){host.innerHTML=`<p class="quick-help-hint">Không tìm thấy mục từ bắt đầu bằng “${escapeHtml(clean)}” trong kho hiện tại. Bạn có thể thử chữ cái khác hoặc mở Từ vựng để tìm rộng hơn.</p><button type="button" class="text-button quick-help-open-dictionary" data-quick-help-navigate="dictionary">Mở kho từ vựng →</button>`;return;}
-  host.innerHTML=`<p class="quick-help-hint">Chọn một từ bị ẩn phần cuối để điền, hoặc mở chi tiết nếu bạn đã nhập đủ từ.</p><div class="quick-help-suggestion-list">${matches.map(word=>{const exact=word.word.toLowerCase()===normalizeVocabularyPrefix(clean);return exact?`<button type="button" class="quick-help-word-suggestion is-exact" data-quick-help-open-word="${escapeHtml(word.id)}"><strong>${escapeHtml(displayWord(word.word))}</strong><span>${word.word.length} chữ cái</span><b>Xem chi tiết</b></button>`:`<button type="button" class="quick-help-word-suggestion" data-quick-help-select-word="${escapeHtml(word.id)}"><strong>${escapeHtml(maskVocabularyHeadword(word.word,clean))}</strong><span>${word.word.length} chữ cái</span><b>Điền từ</b></button>`;}).join('')}</div>`;
-}
-function renderQuickHelpChallenge(wordId){
-  const word=state.words.find(item=>item.id===wordId),host=$('#quickHelpWordChallenge');if(!word||!host)return;
-  const prefix=state.quickHelpWordPrefix,normalized=prefix.replace(/[^a-z]/gi,'').toLowerCase();if(!normalized||!word.word.toLowerCase().startsWith(normalized))return;
-  state.quickHelpSelectedWordId=wordId;state.quickHelpCompletedWordId=null;
-  const missing=word.word.length-normalized.length;
-  const slots=Array.from({length:missing},(_,i)=>`<input class="quick-help-letter-slot" type="text" maxlength="1" inputmode="text" autocapitalize="none" autocomplete="off" spellcheck="false" data-quick-help-letter="${i}" aria-label="Chữ cái còn thiếu ${i+1}">`).join('');
-  host.innerHTML=`<div class="quick-help-challenge-head"><strong>Hoàn thành từ ${escapeHtml(maskVocabularyHeadword(word.word,normalized))}</strong><button type="button" class="text-button" data-quick-help-cancel-challenge>Đổi từ</button></div><div class="quick-help-letter-row"><span class="quick-help-known-prefix">${escapeHtml(normalized)}</span>${slots||`<span class="quick-help-known-prefix">${escapeHtml(word.word)}</span>`}</div><p class="quick-help-hint">${missing?`Điền ${missing} chữ cái còn thiếu theo đúng thứ tự.`:'Từ đã đủ chữ cái.'}</p><button type="button" class="primary-button quick-help-check-word" data-quick-help-check-word="${escapeHtml(wordId)}">Kiểm tra từ</button><p class="quick-help-challenge-feedback" id="quickHelpChallengeFeedback" aria-live="polite"></p>`;
-  host.hidden=false;host.querySelector('[data-quick-help-letter]')?.focus({preventScroll:true});
-}
-function verifyQuickHelpChallenge(wordId){
-  const word=state.words.find(item=>item.id===wordId),host=$('#quickHelpWordChallenge');if(!word||!host)return;
-  const prefix=state.quickHelpWordPrefix.replace(/[^a-z]/gi,'').toLowerCase();
-  const suffix=$$('[data-quick-help-letter]',host).map(input=>input.value).join('');
-  const feedback=$('#quickHelpChallengeFeedback');
-  if(!validateVocabularyCompletion(word.word,prefix,suffix)){if(feedback)feedback.textContent='Chưa đúng. Hãy kiểm tra lại thứ tự các chữ cái còn thiếu.';host.classList.remove('is-complete');return;}
-  state.quickHelpCompletedWordId=wordId;host.classList.add('is-complete');
-  const meanings=(word.senses||[]).slice(0,3).map(s=>`${escapeHtml(s.pos||'')} · ${escapeHtml(s.meaning_vi||s.definition_en||'')}`).join('<br>');
-  host.innerHTML=`<div class="quick-help-word-success"><span>✓</span><div><strong>${escapeHtml(displayWord(word.word))}</strong><small>${escapeHtml(word.phonetic?.us||'Chưa có IPA')} · ${escapeHtml(word.cefr_level||'Chưa gắn CEFR')}</small></div></div><div class="quick-help-word-meanings">${meanings||'Chưa có nghĩa trong dữ liệu hiện hành.'}</div><button type="button" class="primary-button quick-help-open-word" data-quick-help-open-word="${escapeHtml(word.id)}">Xem chi tiết từ vựng</button><p class="quick-help-hint">Đã khớp với mục từ trong kho dữ liệu hiện có.</p>`;
-}
 function renderQuickHelpGuide(){const guide=$('#quickHelpGuide');if(!guide)return;guide.hidden=!guide.hidden;}
 
 function detectDeviceProfile(){
