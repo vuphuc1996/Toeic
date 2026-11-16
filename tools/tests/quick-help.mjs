@@ -12,39 +12,31 @@ const css = read('assets/css/app.css');
 const designCss = read('assets/css/design-system.css');
 const runtime = [index, app, sw, css, designCss].join('\n');
 
-// Keep the non-AI help guide and existing placement diagnostic.
-for (const id of ['quickHelpLauncher', 'quickHelpPanel', 'quickHelpGuide', 'quickHelpClose']) {
-  assert.ok(index.includes(`id="${id}"`), `Missing local help UI: ${id}`);
+for (const id of ['quickHelpLauncher', 'quickHelpPanel', 'quickHelpClose', 'robotCompanionGreeting', 'robotCompanionMessage', 'robotCompanionSnapshot', 'robotCompanionActions']) {
+  assert.ok(index.includes(`id="${id}"`), `Missing Robot Buddy UI: ${id}`);
 }
-for (const handler of ['toggleQuickHelp', 'renderQuickHelpGuide', 'startPlacementDiagnostic']) {
-  assert.ok(app.includes(handler), `Missing local help behavior: ${handler}`);
-}
-for (const page of ['dashboard','dictionary','flashcards','foundation','practice','grammar','mock','reading','listening','data','settings']) {
-  assert.ok(index.includes(`data-quick-help-navigate="${page}"`), `The guide is missing ${page}`);
-}
-assert.ok(sw.includes('./assets/js/app.js'), 'The app shell must remain available offline.');
-assert.ok(!sw.includes('./assets/js/quick-help.js'), 'The removed word-search module must not remain in the Service Worker cache lists.');
-assert.ok(/@media\(max-width:820px\)[\s\S]*?\.quick-help-panel/.test(css), 'Quick Help must retain a compact mobile layout.');
-assert.ok(app.includes("page==='mock'&&state.mockExam?.status==='active'"), 'Quick Help must not obstruct a timed mock exam.');
-assert.ok(app.includes("$('#quickHelp')?.addEventListener('click'"), 'Guide and placement actions must remain delegated.');
+assert.ok(index.includes('id="icon-robot"'), 'The help launcher must use the robot icon.');
+assert.ok(index.includes('<use href="#icon-robot"></use>'), 'Robot icon must render in the launcher/header.');
+assert.ok(!index.includes('quickHelpGuide') && !index.includes('data-quick-help-guide'), 'The usage guide must be removed.');
+assert.ok(!/Hướng dẫn sử dụng/.test(index), 'The removed usage guide must not be advertised.');
+assert.ok(app.includes('data-robot-onboarding=\"start\"') && app.includes('data-robot-onboarding=\"skip\"'), 'New users must be offered Placement Diagnostic or skip.');
+assert.ok(app.includes("const ROBOT_ONBOARDING_KEY='toeic:robot-companion-onboarding:v1'"), 'First-run choice must be remembered on this device.');
+assert.ok(app.includes('initializeRobotCompanion();'), 'Robot onboarding must initialize after progress loads.');
+assert.ok(app.includes('hasReturningLearnerFootprint()'), 'Returning users must not be mistaken for a first-time visitor.');
+assert.ok(app.includes('data-robot-action') && app.includes('handleRobotAction'), 'Robot recommendations must be interactive.');
+assert.ok(app.includes('publishRobotEvent('), 'Learning milestones must be able to notify the Robot.');
+assert.ok(app.includes("case 'weakest-grammar'"), 'Robot must link to a grammar lesson with enough evidence to identify a review need.');
+assert.ok(app.includes('snapshot.weakestGrammarLesson'), 'The Robot must only summarize grammar weak areas backed by existing progress.');
+assert.ok(app.includes("page==='mock'&&state.mockExam?.status==='active'"), 'Robot must not obstruct a timed mock exam.');
+assert.ok(/@media\(max-width:820px\)[\s\S]*?\.quick-help-panel/.test(css), 'Robot panel must have a compact mobile layout.');
+assert.ok(css.includes('@media(prefers-reduced-motion:reduce)'), 'Animations must respect reduced-motion preferences.');
+assert.ok(css.includes('@keyframes robot-launcher-float') && css.includes('@keyframes robot-panel-in'), 'Robot motion states must be defined.');
+assert.ok(sw.includes('./assets/js/learning-assistant.js') && sw.includes('./assets/js/quick-help.js'), 'Both compatibility JS files must be registered in the offline cache.');
+assert.ok(fs.existsSync(path.join(root, 'assets/js/quick-help.js')), 'Quick Help compatibility tombstone must exist to overwrite stale repository files.');
+assert.ok(!/quickHelpWordSearch|findVocabularyPrefixMatches|maskVocabularyHeadword|quick-help-word-search/.test(runtime), 'The old character-search feature must not return.');
+assert.ok(!/Google AI|google\.com|data-ai-/.test(index.slice(index.indexOf('<aside class="quick-help"'), index.indexOf('</aside>', index.indexOf('<aside class="quick-help"')))), 'Robot UI must not contain new contextual Google AI actions.');
 
-// Explicitly remove the entire v2.80 word-prefix / masked-letter feature.
-for (const id of ['quickHelpWordSearch','quickHelpWordSuggestions','quickHelpWordChallenge']) {
-  assert.ok(!index.includes(`id="${id}"`), `Removed word-search UI must not return: ${id}`);
-}
-for (const symbol of [
-  'findVocabularyPrefixMatches', 'maskVocabularyHeadword', 'validateVocabularyCompletion',
-  'renderQuickHelpSuggestions', 'renderQuickHelpChallenge', 'verifyQuickHelpChallenge',
-  'data-quick-help-letter', 'data-quick-help-select-word', 'data-quick-help-check-word',
-  'quick-help-word-search', 'quick-help-letter-slot', 'quick-help-word-challenge'
-]) {
-  assert.ok(!runtime.includes(symbol), `Removed character-search implementation must not return: ${symbol}`);
-}
-assert.ok(!fs.existsSync(path.join(root, 'assets/js/quick-help.js')), 'The dedicated word-search module must be deleted.');
-assert.ok(!/nhập vài chữ cái đầu|điền chữ để tìm từ|chữ cái còn thiếu/i.test(index), 'Help copy must not advertise the removed word completion feature.');
+for (const iconId of ['icon-robot', 'icon-target', 'icon-book-open', 'icon-brain', 'icon-layers', 'icon-clipboard-check', 'icon-bolt', 'icon-stopwatch', 'icon-trophy']) assert.ok(index.includes(`id="${iconId}"`), `Missing retained mock icon: ${iconId}`);
+assert.ok(!/◷/.test(index), 'The obsolete mock-exam clock glyph must stay removed.');
 
-// The exam icon refresh from v2.80 remains part of the product.
-for (const iconId of ['icon-clipboard-check', 'icon-bolt', 'icon-stopwatch', 'icon-trophy']) assert.ok(index.includes(`id="${iconId}"`), `Missing retained mock icon: ${iconId}`);
-assert.ok(!/◷/.test(index), 'The obsolete mock-exam clock glyph must remain removed.');
-
-console.log('PASS: local Quick Help guide and Placement remain; all v2.80 prefix search/masked-letter completion code, UI, CSS, module and cache references are removed; mock icons remain.');
+console.log('PASS: Robot Buddy first-run, local progress and milestone UI, icon/animation/accessibility and SW cache; no usage guide, no prefix search, no v2.80 contextual AI; mock icons retained.');

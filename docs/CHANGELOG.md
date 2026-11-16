@@ -1,43 +1,34 @@
-## v2.82.1 — Remove Quick Help word-prefix / masked-letter search; preserve v2.79 Google AI
+## v2.83.0 — Robot Buddy, progress-aware support and Service Worker validation repair
 
-- Removed the v2.80 Quick Help vocabulary search and masked-letter completion feature at the user's explicit request: prefix input, suggestion list, masked headword display, missing-letter fields, answer validation, exact-match shortcuts and reveal/detail actions.
-- Deleted `assets/js/quick-help.js`; removed its `app.js` import, runtime state, input/click handlers, render/validation functions, CSS rules, design-system font-floor selectors and Service Worker REQUIRED/APP_SHELL entries. The next cache version is v2.82.1 so previously cached v2.82.0 helper assets are retired on upgrade.
-- Retained the non-AI Quick Help welcome, in-app navigation guide and existing Placement Diagnostic entry point. These do not search vocabulary, create guessed headwords or call external services.
-- Preserved all feature-level Google AI integrations that existed in v2.79.0: vocabulary detail/unknown-term lookup, practice answer and review analysis, Grammar, Reading and Listening. Their prompt builders, previews, user-initiated Google AI Mode handoff and original controls are tested by `legacy-google-ai.mjs`.
-- The v2.80 floating assistant, contextual prompt/copy/transfer flow and prefix-based word-completion feature are not part of the current product. Mock-exam SVG icons (`icon-clipboard-check`, `icon-bolt`, `icon-stopwatch`, `icon-trophy`) remain.
-- No vocabulary, question, Foundation lesson, A2 writing portfolio, progress ID, localStorage key, IndexedDB store/schema or learner history is changed. This is a UI/runtime cleanup only.
-- Local verification: Quick Help removal, v2.79 legacy Google AI preservation, mock-icon retention, CI coverage and regression suite results are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.82.1.md` and `reports/REMOVE_QUICK_HELP_WORD_SEARCH_v2.82.1.md`. Remote Actions/Pages/device QA are not implied.
+- Replaced the helper launcher with an animated robot icon and a responsive Robot Buddy panel. The usage guide and Quick Help vocabulary prefix/masked-letter search are removed.
+- A first-time visitor is asked whether to complete the existing Placement Diagnostic or skip. The local onboarding choice is remembered; returning learners are identified from existing local learning evidence.
+- Robot Buddy uses the device's existing study records to congratulate, summarize vocabulary/review activity, identify Reading/Listening areas for additional practice only after at least three unique answered questions, surface Foundation recall due, summarize A2 writing history and open existing practice destinations.
+- Milestone notifications are tied to completed learner actions (practice streak, Flashcard quiz, Placement, Mock Exam, A2 writing revision). No generic AI-generated claims or invented mastery percentages are used.
+- `assets/js/learning-assistant.js` is a deterministic local read-only summary module; it does not call Google, an API, a model or a backend. Legacy v2.79 feature-level Google AI actions and their preview/explicit external handoff remain unchanged and separate.
+- `assets/js/quick-help.js` is a no-op compatibility tombstone. Both it and `learning-assistant.js` are listed in Service Worker `REQUIRED` and `APP_SHELL`, resolving SW002 for the two asset paths while safely overwriting stale files in older GitHub checkouts.
+- Added only `toeic:robot-companion-onboarding:v1`; no IndexedDB migration, vocabulary/question changes, old progress reset or A2 portfolio schema changes.
+- Preserved the accepted v2.80 Mock Exam icons (clipboard/check, bolt, stopwatch, trophy). Updated Master and archive documentation to keep one authoritative AI product contract and remove inaccurate feature claims.
 
-## v2.82.0 — Restore legacy Google AI and preserve local Quick Help + A2 portfolio
+## v2.82.1 — Quick Help cleanup
 
-- Corrected the v2.81.0 over-removal: restored only the pre-v2.80, user-initiated Google AI Mode actions from the v2.79.0 product source. Restored word-detail lookup, unknown-term fallback, practice-answer/review analysis, Grammar, Reading and Listening prompts, the one-way prompt preview panel and the explicit external Google Search handoff (`udm=50`, `hl=vi`).
-- Kept the v2.80 floating-assistant Google AI additions removed: no shared contextual assistant prompt, copy/transfer action, assistant-to-Google event path or Google action inside the local Quick Help panel. The Quick Help guide, placement-diagnostic entry point and data-backed masked vocabulary completion remain local-only.
-- Legacy Google AI actions are external, user-triggered links; the app does not embed a model, use an API key or send content until a learner deliberately selects an action. Google controls its own external interface and URL behavior.
-- Preserved the v2.81 A2 writing portfolio and guided revision data. Existing `::apply1` and `::produce1` progress evidence, `toeic:foundation-progress:v1`, IndexedDB v1, canonical vocabulary, Reading/Listening question IDs and TOEIC Mock pools are unchanged.
-- Fixed two malformed `quick-helpRoot` JavaScript identifiers inherited in v2.81.0 to `quickHelpRoot` and registered a new legacy-Google-AI regression test. The suite verifies that old feature-level integrations remain and the v2.80 assistant-specific handoff stays absent.
-- Fixed the GitHub Actions coverage failure for the historical `tools/tests/learning-assistant.mjs` file. Its old v2.80 AI-assistant assertions are replaced with a removal guard that verifies the floating AI assistant remains absent, local Quick Help remains offline, and the refreshed mock-exam icons are retained; the workflow now invokes the suite.
-- Validation after the CI repair: 151/151 selected Python tests across 21 modules, 27/27 JavaScript regression suites, `test_ci_coverage.py` 2/2 and release-rotation 3/3 PASS. This does not change app runtime, vocabulary, question content, progress storage or the v2.82.0 version markers.
-- Re-synchronized the design profile. Exact selector count and validation results are recorded in `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.82.0.md`.
-- Remote GitHub Actions, Pages deployment and physical-device QA are not claimed.
+- Removed Quick Help prefix search, suggestions and masked-letter completion.
+- Preserved the original v2.79 feature-level Google AI controls, A2 writing portfolio and Mock Exam SVG icons.
 
-## v2.81.0 — Remove runtime AI and A2 writing portfolio (AI removal scope corrected in v2.82.0)
+## v2.82.0 — restore existing feature-level actions
 
-- This release temporarily removed Google AI integration end-to-end. That exceeded the requested removal scope; v2.82.0 restores the feature-level Google AI actions that existed in v2.79.0 while keeping the new v2.80 floating-assistant AI flow removed.
-- Kept a strictly local Quick Help panel for existing in-app navigation, the existing Placement Diagnostic, and masked word completion using canonical vocabulary records. It continues to work offline through the Service Worker app shell.
-- Added an A2 writing portfolio to the existing Foundation outcomes view. It shows tasks started/revised, self-assessment attempt counts, per-task first/latest self-ratings, and the lesson-specific rubric checks without combining unlike rubrics.
-- All portfolio data is read from the existing `toeic:foundation-progress:v1` store. No new storage key, IndexedDB migration, network service, or progress reset.
-- Kept `ai-generated` source labels only in photo attribution/asset audit metadata; no AI runtime feature or connection remains.
-- Historical test/verification summary: see `archive/PROJECT_HISTORY.md` (v2.81.0 entry). Remote GitHub Actions, Pages deployment and physical-device behavior remain unverified.
+- Restored the original v2.79 feature-level Google AI controls after a temporary implementation regression in v2.81.0.
+- No new shared assistant, contextual AI prompt or copy/transfer integration was introduced.
+- Preserved the A2 writing portfolio, response revision history and Mock Exam SVG icons.
 
-## v2.80.0 — Product-wide learning assistant and mock-exam icon refresh
+## v2.81.0 — A2 writing portfolio
 
-- Replaced the old clock glyph in the TOEIC mock-exam navigation/entry point and duration-mode cards with a coherent SVG icon family: clipboard/check for the mock-exam area, bolt for quick tests, stopwatch for the shortened test and trophy for the full 200-question test.
-- Added one shared, collapsible Learning Assistant in the existing application shell. It welcomes learners and offers the in-app guide, the existing placement diagnostic and prefix-based vocabulary completion. The launcher remains compact on small screens, can be hidden/reopened, and is hidden during an active timed mock exam.
-- Prefix lookup uses only current local vocabulary records. A typed prefix such as `ho` produces the real headwords `hospitality`, `host`, `hotline`, `hour` and `housekeeping`; the user completes masked letters before the app reveals the word's existing IPA, CEFR label and senses. An exact full-word match opens the existing vocabulary detail directly. Missing headwords are not fabricated.
-- Added a contextual follow-up prompt for the current open page/detail. The complete prompt is previewed and can be copied. It is sent in the Google AI Mode search URL only after an explicit click; when a prompt exceeds the URL limit, the app copies the entire prompt and opens Google AI for manual paste rather than truncating it. No in-app model, external API key, iframe, backend or automatic transfer is introduced.
-- Registered `assets/js/learning-assistant.js` in the Service Worker app shell for offline use. No new user-progress storage key, IndexedDB migration or server-side store is added.
-- Product UI/docs now identify GitHub Pages as the product release target; there is no separate demo mode or placeholder branch in the shipped UI. Legitimate TOEIC learning examples containing the word “demonstration”/“demo” are preserved as educational content.
-- Historical tests/validators and package verification: see `archive/PROJECT_HISTORY.md` (v2.80.0 entry). Remote GitHub Actions, the public Pages deployment and physical-device QA are not claimed unless separately verified.
+- Added the local A2 writing portfolio and first-to-latest self-rating view using the existing Foundation progress store.
+- A temporary regression hid some existing Google AI controls; the original v2.79 behavior was restored in v2.82.0.
+
+## v2.80.0 — Mock Exam icon refresh
+
+- Replaced the old clock glyph with the accepted Mock Exam SVG icon family: clipboard/check, bolt, stopwatch and trophy.
+- The only Google AI functionality in the product remains the original feature-level controls from v2.79; no shared assistant/contextual AI handoff is part of the accepted product scope.
 
 ## v2.79.0 — A2 guided writing revision and response history
 

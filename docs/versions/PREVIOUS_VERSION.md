@@ -1,6 +1,6 @@
 # Previous version
 
-- Version: **v2.82.0**
-- Change: restored the pre-v2.80 Google AI actions that existed in v2.79.0, with local Quick Help navigation/Placement and a prefix-based masked vocabulary search.
-- v2.82.1 keeps the legacy Google AI integrations and mock-exam icons, but removes the Quick Help prefix search/masked-letter completion.
-- The A2 writing portfolio, guided revision chain, stable question IDs and existing progress storage remain unchanged.
+- Version: **v2.82.1**
+- Change: removed Quick Help vocabulary prefix/masked-letter search while preserving the v2.79 feature-level Google AI actions, A2 writing portfolio and Mock Exam SVG icons.
+- v2.83.0 replaces the remaining usage guide with a local progress-aware Robot Buddy and first-run Placement choice.
+- Existing vocabulary, question IDs, Foundation evidence, A2 writing revision history and IndexedDB v1 remain compatible.

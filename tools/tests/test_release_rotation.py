@@ -76,6 +76,24 @@ class ReleaseRotationTests(unittest.TestCase):
         self.assertEqual((self.root / "assets/user-photo.jpg").read_bytes(), b"keep-me")
 
 
+
+    def test_rotation_uses_explicit_previous_release_ledger(self):
+        versions = self.root / "docs/versions"
+        versions.mkdir(parents=True)
+        (versions / "PREVIOUS_VERSION.md").write_text(
+            "# Previous version\n\n- Version: **v2.29.2**\n", encoding="utf-8"
+        )
+        exact_previous = self.root / "docs/reports/REPORT_v2.29.2.md"
+        exact_previous.write_text("# Exact previous release report\n", encoding="utf-8")
+        patch_neighbor = self.root / "docs/reports/REPORT_v2.29.0.md"
+        patch_neighbor.write_text("# Older patch report\n", encoding="utf-8")
+        result = self.run_rotation()
+        self.assertIn("keep=['2.29.2', '2.30.0']", result.stdout)
+        self.assertIn("REPORT_v2.29.0.md", result.stdout)
+        self.assertNotIn("ARCHIVE + RETIRE docs/reports/REPORT_v2.29.2.md", result.stdout)
+        self.assertTrue(exact_previous.exists())
+        self.assertTrue(patch_neighbor.exists())
+
     def test_apply_consolidates_repeated_history_headings(self):
         history_path = self.root / "docs/archive/PROJECT_HISTORY.md"
         history_path.write_text(

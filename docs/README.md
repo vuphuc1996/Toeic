@@ -1,20 +1,20 @@
-# TOEIC Dictionary v2.82.1 — Documentation
+# TOEIC Dictionary v2.83.0 — Documentation
 
-- Current product source: `v2.82.1` — `versions/CURRENT_VERSION.md`.
-- Previous release: `v2.82.0` — `versions/PREVIOUS_VERSION.md`.
+- Current product source: `v2.83.0` — `versions/CURRENT_VERSION.md`.
+- Previous release: `v2.82.1` — `versions/PREVIOUS_VERSION.md`.
 - Master status: `MASTER_STATUS.md` (single current roadmap/status source).
-- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.82.1.md`.
-- Scope correction (preserve v2.79 Google AI; remove v2.80 Quick Help word search): `reports/REMOVE_QUICK_HELP_WORD_SEARCH_v2.82.1.md`.
-- A2 writing portfolio history: `archive/PROJECT_HISTORY.md` (v2.81.0 entry).
-- Progress baseline: `reports/PROJECT_PROGRESS_BASELINE_v2.82.1.md`.
-- Generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.82.1.md`.
-- Previous release test/feature records: `reports/` entries tagged v2.82.0.
-- Older detailed records are consolidated in `archive/PROJECT_HISTORY.md`.
+- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.83.0.md`.
+- Robot Buddy specification: `reports/LEARNING_COMPANION_ROBOT_v2.83.0.md`.
+- Progress baseline/snapshot: `reports/PROJECT_PROGRESS_BASELINE_v2.83.0.md` and `reports/PROJECT_PROGRESS_SNAPSHOT_v2.83.0.md`.
+- Older detailed records are consolidated in `archive/PROJECT_HISTORY.md`; release-level history remains in `CHANGELOG.md`.
 - TOEIC remains the primary track; IELTS remains deferred until TOEIC development/acceptance gates are met and the owner approves a phase change.
-- Foundation pathway has 10 Pre-A1/A1 lessons and 13 A2 lessons. A2 has 13 Reading passages / 39 questions, 13 four-turn device-TTS Listening dialogues / 39 questions and 13 contextual writing tasks with guided revisions. v2.81.0 added a local-only writing portfolio. v2.82.1 retains every pre-v2.80 Google AI action from v2.79 as explicit external handoffs, while removing the v2.80 floating assistant and prefix/masked-letter search in Quick Help. Local Quick Help remains an offline navigation/Placement guide only.
-- Foundation production history remains device-local under `toeic:foundation-progress:v1`. Previous response versions are stored for newly captured attempts; old records are not backfilled. Self-review is not automated grading or learner mastery.
-- Foundation outcome evidence covers recognition, contextual learner-written production/self-report and 1/3-day delayed recall; it does not certify learner mastery.
-- Foundation Listening uses browser SpeechSynthesis; it is synthesized learning material, not ETS or recorded native-speaker audio.
-- Listening Part 1: JPG-only photo contract; all nine optimized images are embedded, 4:3 landscape, <=400,000 bytes and retain source attribution. `ai-generated` source strings, where present, identify asset provenance only and do not activate an AI feature.
+- Foundation pathway: 10 Pre-A1/A1 lessons and 13 A2 lessons; 23 Reading resources / 59 questions; 23 Listening resources / 59 questions; 13 contextual A2 writing tasks with guided revision and a local portfolio.
+- Google AI: only the original v2.79 feature-level user-triggered actions are retained for vocabulary lookup, practice answer/review, Grammar, Reading and Listening; there is no shared contextual AI assistant or copy/transfer workflow.
+- Robot Buddy v2.83: local progress-aware companion, first-run Placement choice, milestone congratulations and direct review suggestions. It uses deterministic local summaries only; no generative AI model, network API or external transfer is involved. It replaces the usage guide and does not contain vocabulary search/letter-completion.
+- Mock Exam icons: clipboard/check, bolt, stopwatch and trophy; the old clock glyph is retired.
+- Foundation production history remains device-local under `toeic:foundation-progress:v1`. Revision/self-review is not automated grading or learner mastery.
+- Listening Part 1: JPG-only photo contract; all nine optimized images are embedded, 4:3 landscape, <=400,000 bytes and retain source attribution. `ai-generated` source strings, where present, identify asset provenance only.
 - Vocabulary: 1,137 stable headwords; quantity coverage is 37.9% of the 3,000 minimum and 22.7% of the 5,000 planning ceiling; quality review remains separate.
-- Profile repair and progress storage remain additive; IndexedDB remains v1 with no reset/migration in this release.
+- The only new localStorage key in v2.83 is `toeic:robot-companion-onboarding:v1`. Existing learner progress keys and IndexedDB v1 remain unchanged.
+
+- SW002 validation: `assets/js/learning-assistant.js` and the no-op `assets/js/quick-help.js` are both included in Service Worker `REQUIRED` and `APP_SHELL`; `python tools/validate-data.py` passes with zero errors/warnings.

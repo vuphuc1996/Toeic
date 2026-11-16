@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.82.1 – Personalized Learning Path</title>
+  <title>TOEIC Dictionary v2.83.0 – Personalized Learning Path</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -40,7 +40,7 @@
     <symbol id="icon-stopwatch" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8.2"/><path d="M12 8.5v4.8l3.2 1.8M9.5 2.8h5M12 2.8v2M18.1 6.9l1.4-1.4"/></symbol>
     <symbol id="icon-trophy" viewBox="0 0 24 24"><path d="M8 4h8v4.5a4 4 0 0 1-8 0zM8 6H4v2a4 4 0 0 0 4 4M16 6h4v2a4 4 0 0 1-4 4M12 12.5V18m-4 3h8m-7-3h6"/></symbol>
     <symbol id="icon-clipboard-check" viewBox="0 0 24 24"><rect x="5" y="4.5" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M8.5 11.5h2.2l1.2 1.4 3.7-3.8M8.5 17h7"/></symbol>
-    <symbol id="icon-quick-help" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-8.5 8.5v4a2 2 0 0 0 2 2H7v-6H5a7 7 0 0 1 14 0h-2v6h1.5a2 2 0 0 0 2-2v-4A8.5 8.5 0 0 0 12 3.5zM9 20h4"/><path d="M9 12h.01M15 12h.01"/></symbol>
+    <symbol id="icon-robot" viewBox="0 0 24 24"><path d="M12 3V5M9.5 3a2.5 2.5 0 1 1 5 0"/><rect x="4" y="6" width="16" height="14" rx="4"/><path d="M4 11H2.5v4H4M20 11h1.5v4H20M8 20v1M16 20v1"/><circle cx="9" cy="12" r="1.25"/><circle cx="15" cy="12" r="1.25"/><path d="M9 16h6"/></symbol>
     <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
     <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></symbol>
     <symbol id="icon-refresh-cw" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.6 9A7 7 0 0 1 18 6l2 6M4 12l2 6a7 7 0 0 0 12.4-3"/></symbol>
@@ -76,7 +76,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.82.1 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.83.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -172,7 +172,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.82.1:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Trợ giúp nhanh hoạt động trực tiếp bằng dữ liệu có sẵn trên thiết bị. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.83.0:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Trợ giúp nhanh hoạt động trực tiếp bằng dữ liệu có sẵn trên thiết bị. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
@@ -440,7 +440,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.82.1</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.83.0</span></footer>
     </main>
   </div>
 
@@ -471,16 +471,25 @@
       <div class="modal-content" id="modalContent"></div>
     </section>
   </div>
-  <aside class="quick-help" id="quickHelp" aria-label="Trợ giúp nhanh TOEIC">
-    <button type="button" class="quick-help-launcher" id="quickHelpLauncher" aria-expanded="false" aria-controls="quickHelpPanel" title="Mở trợ giúp nhanh">
-      <svg class="ui-icon"><use href="#icon-quick-help"></use></svg><span>Trợ giúp</span>
+  <aside class="quick-help robot-buddy" id="quickHelp" aria-label="Robot đồng hành TOEIC">
+    <button type="button" class="quick-help-launcher" id="quickHelpLauncher" aria-expanded="false" aria-controls="quickHelpPanel" title="Mở Robot đồng hành" aria-label="Mở Robot đồng hành">
+      <svg class="ui-icon robot-launcher-icon"><use href="#icon-robot"></use></svg><span>Đồng hành</span><i class="robot-update-dot" aria-hidden="true"></i>
     </button>
-    <section class="quick-help-panel" id="quickHelpPanel" role="dialog" aria-modal="false" aria-labelledby="quickHelpTitle" hidden>
-      <header class="quick-help-header"><div class="quick-help-header-mark"><svg class="ui-icon"><use href="#icon-info"></use></svg></div><div><strong id="quickHelpTitle">Trợ giúp nhanh</strong><small>TOEIC Dictionary · hỗ trợ theo dữ liệu hiện có</small></div><button type="button" class="quick-help-close" id="quickHelpClose" aria-label="Ẩn trợ giúp">×</button></header>
-      <div class="quick-help-body" id="quickHelpBody">
-        <section class="quick-help-welcome"><strong>Xin chào! Rất vui được đồng hành cùng bạn.</strong><p>Bạn có thể mở hướng dẫn sử dụng hoặc làm bài đánh giá đầu vào. Các chức năng này hoạt động ngay trong ứng dụng.</p></section>
-        <div class="quick-help-main-actions"><button type="button" class="quick-help-action-card" data-quick-help-guide><span><svg class="ui-icon"><use href="#icon-book-open"></use></svg></span><strong>Hướng dẫn sử dụng</strong><small>Chọn khu vực và xem cách bắt đầu</small></button><button type="button" class="quick-help-action-card" data-quick-help-placement><span><svg class="ui-icon"><use href="#icon-target"></use></svg></span><strong>Đánh giá đầu vào</strong><small>Làm bài ngắn để gợi ý điểm bắt đầu</small></button></div>
-        <section class="quick-help-guide" id="quickHelpGuide" hidden><div class="quick-help-section-heading"><strong>Chọn nội dung bạn cần</strong><small>Đi đến đúng khu vực trong ứng dụng</small></div><div class="quick-help-guide-list"><button type="button" data-quick-help-navigate="dashboard"><svg class="ui-icon"><use href="#icon-home"></use></svg><span><strong>Trang chủ</strong><small>Xem tổng quan và tiến độ học tập</small></span><b>→</b></button><button type="button" data-quick-help-navigate="dictionary"><svg class="ui-icon"><use href="#icon-book-open"></use></svg><span><strong>Từ vựng</strong><small>Tra nghĩa, IPA, ví dụ và word family</small></span><b>→</b></button><button type="button" data-quick-help-navigate="flashcards"><svg class="ui-icon"><use href="#icon-layers"></use></svg><span><strong>Flashcard</strong><small>Học theo chủ đề và ôn từ sai</small></span><b>→</b></button><button type="button" data-quick-help-navigate="foundation"><svg class="ui-icon"><use href="#icon-target"></use></svg><span><strong>Lộ trình học</strong><small>Học theo Pre-A1, A1 và A2</small></span><b>→</b></button><button type="button" data-quick-help-navigate="practice"><svg class="ui-icon"><use href="#icon-brain"></use></svg><span><strong>Ôn tập</strong><small>Luyện câu hỏi và củng cố từ yếu</small></span><b>→</b></button><button type="button" data-quick-help-navigate="grammar"><svg class="ui-icon"><use href="#icon-book-open"></use></svg><span><strong>Ngữ pháp</strong><small>Học cấu trúc và ví dụ TOEIC</small></span><b>→</b></button><button type="button" data-quick-help-navigate="mock"><svg class="ui-icon"><use href="#icon-clipboard-check"></use></svg><span><strong>Thi thử TOEIC</strong><small>Test nhanh, thi rút gọn hoặc 200 câu</small></span><b>→</b></button><button type="button" data-quick-help-navigate="reading"><svg class="ui-icon"><use href="#icon-grid"></use></svg><span><strong>Đọc hiểu</strong><small>Luyện Reading theo từng Part</small></span><b>→</b></button><button type="button" data-quick-help-navigate="listening"><svg class="ui-icon"><use href="#icon-volume-2"></use></svg><span><strong>Nghe hiểu</strong><small>Luyện Listening và transcript</small></span><b>→</b></button><button type="button" data-quick-help-navigate="data"><svg class="ui-icon"><use href="#icon-database"></use></svg><span><strong>Từ vựng cá nhân</strong><small>Quản lý từ riêng trên thiết bị</small></span><b>→</b></button><button type="button" data-quick-help-navigate="settings"><svg class="ui-icon"><use href="#icon-settings"></use></svg><span><strong>Cấu hình</strong><small>Chọn voice, tốc độ và nhịp đọc</small></span><b>→</b></button></div></section>
+    <section class="quick-help-panel robot-buddy-panel" id="quickHelpPanel" role="dialog" aria-modal="false" aria-labelledby="quickHelpTitle" hidden>
+      <header class="quick-help-header robot-buddy-header">
+        <div class="quick-help-header-mark robot-avatar"><svg class="ui-icon"><use href="#icon-robot"></use></svg><i aria-hidden="true"></i></div>
+        <div><strong id="quickHelpTitle">TOEIC Buddy</strong><small id="robotCompanionStatus">Robot đồng hành học tập</small></div>
+        <button type="button" class="quick-help-close" id="quickHelpClose" aria-label="Ẩn Robot đồng hành">×</button>
+      </header>
+      <div class="quick-help-body robot-buddy-body" id="quickHelpBody">
+        <section class="robot-speech-card" aria-live="polite" aria-atomic="true">
+          <div class="robot-speech-top"><span class="robot-online-dot"></span><small>TOEIC BUDDY · ĐỒNG HÀNH CÙNG BẠN</small></div>
+          <strong id="robotCompanionGreeting">Xin chào! Mình là TOEIC Buddy.</strong>
+          <p id="robotCompanionMessage">Mình sẽ dựa trên tiến độ học hiện có để chúc mừng, tổng hợp và gợi ý phần cần ôn tập.</p>
+        </section>
+        <section class="robot-snapshot" id="robotCompanionSnapshot" hidden aria-label="Tổng hợp tiến độ"></section>
+        <div class="robot-companion-actions" id="robotCompanionActions"></div>
+        <p class="robot-local-note">Gợi ý được tổng hợp ngay trên thiết bị từ kết quả học hiện có. Không có mô hình AI sinh câu trả lời hoặc gửi tiến độ ra ngoài.</p>
       </div>
     </section>
   </aside>

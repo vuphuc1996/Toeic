@@ -6,21 +6,23 @@
 
 | Role | Version | Policy |
 |---|---|---|
-| Previous release | v2.82.0 | Restored v2.79 feature-level Google AI and retained the Quick Help prefix-completion feature, which is removed in v2.82.1. |
-| Current product source | v2.82.1 | Retains every v2.79 feature-level Google AI action; removes v2.80 floating assistant and Quick Help prefix search; retains navigation help, Placement Diagnostic, mock icons and A2 portfolio. |
-| Older releases | ≤ v2.80.0 | Historical; release details are consolidated in `archive/PROJECT_HISTORY.md` except the immediately previous release report. |
+| Previous release | v2.82.1 | Preserves v2.79 feature-level Google AI and Mock Exam icons; removes Quick Help prefix/masked-letter search. |
+| Current product source | v2.83.0 | Adds local Robot Buddy onboarding/progress feedback, removes the usage guide and all Quick Help word search, retains the entire v2.79 Google AI scope and Mock Exam icons. |
+| Older releases | ≤ v2.82.0 | Historical; prototype behavior and scope corrections are consolidated in `archive/PROJECT_HISTORY.md` and `CHANGELOG.md`. |
 
-- **CI coverage fix:** `tools/tests/learning-assistant.mjs` is a retirement guard for the v2.80 floating AI assistant (not the old AI feature); it is explicitly invoked by `.github/workflows/validate-data.yml`. The offline Quick Help and refreshed mock-exam icons remain part of the product.
-
+- **SW002 repair:** `assets/js/learning-assistant.js` (active local Robot Buddy summary) and `assets/js/quick-help.js` (no-op compatibility tombstone) are present in both Service Worker `REQUIRED` and `APP_SHELL`. This directly addresses SW002 for these asset paths in an overlay update. Cache version is synced to `data/manifest.json`.
+- **CI contract:** `tools/tests/learning-assistant.mjs`, `tools/tests/quick-help.mjs` and `tools/tests/legacy-google-ai.mjs` are all invoked in `.github/workflows/validate-data.yml`; the CI coverage test enforces every JavaScript regression file is called.
 
 ## Runtime/data contracts
 
-- **Legacy Google AI restored in v2.82.1:** keeps the feature-level actions that existed in v2.79.0: dictionary word detail and unknown-term lookup, practice answer/review analysis, Grammar, Reading and Listening prompts. The shared one-way preview panel is opened only by an explicit user action and transfers the prompt through an external Google Search AI Mode URL (`udm=50`, `hl=vi`). This parameter is not a documented stable API; Google controls the external experience. No embedded model, API key, server-side AI, hidden transfer or background call is introduced.
-- **New v2.80 assistant AI remains removed:** no assistant-specific contextual prompt builder, follow-up question handoff, copy/transfer action or Google action within Quick Help. Do not conflate this with the older feature-level buttons, which are intentionally restored.
-- **Local Quick Help:** greeting, in-app navigation guide and existing Placement Diagnostic entry only. Prefix search, vocabulary suggestions, masked completion and per-letter validation were removed in v2.82.1. The panel does not call external services.
-- **v2.81/v2.82 A2 writing portfolio:** reads existing `productionEvidence` in `toeic:foundation-progress:v1`, displays per-task first/latest self-ratings and task-specific rubrics. It does not edit learner records, combine unlike rubrics, grade language automatically or certify mastery. `::produce1` and legacy `::apply1` remain isolated.
-- **Source attribution exception:** `ai-generated` strings in the Part 1 image attribution/audit files are source-provenance metadata for an already embedded image. They do not load code, prompts or models; they are retained to preserve attribution and pass the asset-source validators.
-- **Responsive/product shell:** Quick Help can be closed/reopened, collapses to an icon on compact layouts, stays above the mobile bottom navigation and is hidden during an active timed mock exam. It reuses existing typography/button/color patterns. Mock quick/half/full modes use coherent SVG icons instead of the old clock glyph.
+- **Legacy Google AI from v2.79:** preserve the original user-triggered Google AI feature actions for vocabulary detail/unknown-term lookup, practice answer and review analysis, Grammar, Reading and Listening. The existing shared preview is opened by each feature's own control; the user explicitly confirms before the external Google Search AI Mode handoff (`udm=50`, `hl=vi`). This is not a documented stable API. Google controls the external experience. No embedded model, API key or server-side AI exists.
+- **AI boundary:** only the original v2.79 feature-level Google AI actions are supported. There is no shared contextual AI assistant, assistant follow-up, copy/transfer flow or Google AI action inside Quick Help.
+- **Robot Buddy v2.83:** `assets/js/learning-assistant.js` reads the existing local progress state and derives restrained summaries/milestone messages. It is deterministic local code, not a generative model, not an external AI API and not a free-form answer engine. It does not send learning history outside the device. The first-run question reuses the existing Placement Diagnostic; the choice is stored under `toeic:robot-companion-onboarding:v1`.
+- **Quick Help retirement:** no usage guide, prefix lookup, suggestion list, masked vocabulary headword, missing-letter input or exact-match vocabulary shortcut remains. The Robot launcher/panel replaces the previous Quick Help UI. `assets/js/quick-help.js` is intentionally a no-op tombstone to overwrite stale copies from older GitHub checkouts; it has no runtime behavior.
+- **Robot progress thresholds:** the weakest Reading/Listening Part is suggested only after at least three unique answered questions in that Part. The snapshot reads latest answer per question, not retry counts as separate questions. A2 writing is reported from learner self-assessment within each task; different rubrics are not combined into a fake overall score. These summaries are guidance, not mastery or CEFR/ETS certification.
+- **Local milestone behavior:** Robot feedback is published after existing completed actions (e.g. three correct vocabulary answers in a row, Flashcard completion, Placement completion, Mock completion and A2 writing revision). It does not make unsupported AI claims.
+- **Mock Exam icons:** retain `icon-clipboard-check`, `icon-bolt`, `icon-stopwatch`, `icon-trophy`; do not revert to the old `◷` glyph.
+- **Source attribution exception:** `ai-generated` strings in Part 1 image attribution/audit files are provenance metadata only; they do not execute or activate AI features.
 
 - Deployment remains GitHub Pages + static PWA; no backend/GAS/iframe/Cloudflare dependency.
 - Canonical vocabulary is `data/vocabulary/A.json`–`Z.json`; batch JSON is editorial provenance only. Stable IDs remain immutable.

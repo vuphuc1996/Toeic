@@ -10,7 +10,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW = ROOT / 'tools/foundation-a2-assessment-review-v2.77.0.json'
-OUT = ROOT / 'docs/reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.77.0.md'
+CURRENT_VERSION = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf-8'))['version']
+OUT = ROOT / f'docs/reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v{CURRENT_VERSION}.md'
 
 
 def read(rel: str):

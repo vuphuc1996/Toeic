@@ -55,10 +55,16 @@ def main():
     ap.add_argument('--apply',action='store_true',help='perform the planned retirement; default is dry-run')
     args=ap.parse_args()
     current=json.loads((ROOT/'data/manifest.json').read_text(encoding='utf-8'))['version']
-    major,minor,patch=version_tuple(current)
-    prev=f'{major}.{minor}.{max(0,patch-1)}'
-    # If current patch is .0, keep the immediately prior minor's latest patch as fallback.
-    if patch==0: prev=f'{major}.{max(0,minor-1)}.0'
+    previous_file=ROOT/'docs/versions/PREVIOUS_VERSION.md'
+    previous_text=previous_file.read_text(encoding='utf-8') if previous_file.exists() else ''
+    previous_match=re.search(r'Version:\s*\*?\*?v?(\d+\.\d+\.\d+)', previous_text, re.I)
+    if previous_match:
+        prev=previous_match.group(1)
+    else:
+        # Fallback for test fixtures or older repositories without a version ledger.
+        major,minor,patch=version_tuple(current)
+        prev=f'{major}.{minor}.{max(0,patch-1)}'
+        if patch==0: prev=f'{major}.{max(0,minor-1)}.0'
     keep={current,prev}
     root_release_files=[]
     for pattern, rx in [
