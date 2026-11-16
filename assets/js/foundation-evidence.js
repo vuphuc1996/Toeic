@@ -227,6 +227,81 @@ export function recordFoundationProductionRevision(progress = {}, lessonId, task
   };
 }
 
+/**
+ * Summarize A2 writing history from the learner's own rubric ratings.
+ * The trend is explicitly self-reported and must never be presented as
+ * objective writing quality, automated correction or CEFR mastery.
+ */
+export function summarizeFoundationProductionPortfolio(progress = {}, lessons = [], policy = {}) {
+  const level = String(policy.level || 'A2').toUpperCase();
+  const scopedLessons = (Array.isArray(lessons) ? lessons : []).filter(lesson => String(lesson?.level || '').toUpperCase() === level);
+  const records = [];
+  let totalAttempts = 0;
+
+  for (const lesson of scopedLessons) {
+    const taskId = lesson?.productionTask?.id || lesson?.applicationTask?.id;
+    const saved = taskId ? progress?.[lesson.id]?.productionEvidence?.[taskId] : null;
+    if (!saved || typeof saved !== 'object') continue;
+
+    const attempts = Array.isArray(saved.attempts) ? saved.attempts.filter(item => item && typeof item === 'object') : [];
+    const attemptScores = attempts.map(item => {
+      const score = Number(item.score);
+      return Number.isFinite(score) && score >= 0 && score <= 3 ? score : null;
+    });
+    const latestAttempt = attempts.at(-1) || null;
+    const firstAttemptIndex = attemptScores.findIndex(score => score !== null);
+    const firstScoreFromHistory = firstAttemptIndex >= 0 ? attemptScores[firstAttemptIndex] : null;
+    const storedLatest = Number(saved.latestScore);
+    const latestScore = Number.isFinite(storedLatest) && storedLatest >= 0 && storedLatest <= 3
+      ? storedLatest
+      : latestAttempt && Number.isFinite(Number(latestAttempt.score)) ? Number(latestAttempt.score) : null;
+    if (latestScore === null) continue;
+
+    const initialStored = Number(saved.initialScore);
+    const initialScore = firstScoreFromHistory !== null
+      ? firstScoreFromHistory
+      : Number.isFinite(initialStored) && initialStored >= 0 && initialStored <= 3 ? initialStored : latestScore;
+    const guidedRevisionAttempts = attempts.filter(item => item.assessmentType === 'guided_revision').length;
+    const revisionCount = Math.max(guidedRevisionAttempts, Math.max(0, Number(saved.revisionCount) || 0));
+    const latestRatings = Array.isArray(saved.latestRatings) && saved.latestRatings.length === 3
+      ? saved.latestRatings
+      : Array.isArray(latestAttempt?.ratings) && latestAttempt.ratings.length === 3 ? latestAttempt.ratings : [];
+    const rubric = Array.isArray(lesson?.productionTask?.rubric) && lesson.productionTask.rubric.length === 3
+      ? lesson.productionTask.rubric
+      : Array.isArray(lesson?.applicationTask?.rubric) ? lesson.applicationTask.rubric : [];
+    const latestAssessedAt = Number(saved.latestAssessedAt || latestAttempt?.assessedAt);
+    records.push({
+      lessonId: lesson.id,
+      title: String(lesson.title || lesson.id || 'Bài viết A2'),
+      attemptCount: Math.max(attempts.length, 1),
+      revisionCount,
+      initialScore,
+      latestScore,
+      trend: revisionCount === 0 ? 'not_revised' : latestScore > initialScore ? 'self_report_up' : latestScore < initialScore ? 'self_report_down' : 'self_report_same',
+      latestRatings: latestRatings.slice(0, 3),
+      rubric: rubric.map(String),
+      latestAssessedAt: Number.isFinite(latestAssessedAt) ? latestAssessedAt : null
+    });
+    totalAttempts += Math.max(attempts.length, 1);
+  }
+
+  const revised = records.filter(item => item.revisionCount > 0);
+  const compareRows = revised.filter(item => Number.isFinite(item.initialScore) && Number.isFinite(item.latestScore));
+  return {
+    level,
+    totalTasks: scopedLessons.filter(lesson => lesson?.productionTask?.id || lesson?.applicationTask?.id).length,
+    startedTasks: records.length,
+    revisedTasks: revised.length,
+    totalAttempts,
+    selfReportedImproved: compareRows.filter(item => item.latestScore > item.initialScore).length,
+    selfReportedUnchanged: compareRows.filter(item => item.latestScore === item.initialScore).length,
+    selfReportedReduced: compareRows.filter(item => item.latestScore < item.initialScore).length,
+    records: records.sort((a, b) => a.title.localeCompare(b.title, 'vi')),
+    selfReportOnly: true,
+    objectiveGrading: false
+  };
+}
+
 export function summarizeFoundationProduction(progress = {}, lessons = [], policy = {}) {
   const minimumUniqueItems = Number(policy.minimumUniqueItems) > 0 ? Number(policy.minimumUniqueItems) : 10;
   const threshold = Number(policy.threshold) > 0 ? Number(policy.threshold) : 0.8;

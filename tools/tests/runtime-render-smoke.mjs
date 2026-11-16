@@ -78,7 +78,7 @@ context.openGrammarLesson = openGrammarLesson;
 const answerGrammarExercise = exposeFunction('answerGrammarExercise', 'function renderReadingLibrary(');
 const openListeningDetail = exposeFunction('openListeningDetail', 'let listeningPlaybackToken');
 context.openListeningDetail = openListeningDetail;
-const answerListeningQuestion = exposeFunction('answerListeningQuestion', 'function buildListeningAIPrompt(');
+const answerListeningQuestion = exposeFunction('answerListeningQuestion', 'function openLookupTerm(');
 context.stagePracticeBatchAnswer = async (kind, id, index, choiceIndex) => {
   const config = { reading: ['readingProgress', 'openReadingDetail'], grammar: ['grammarProgress', 'openGrammarLesson'], listening: ['listeningProgress', 'openListeningDetail'] }[kind];
   assert.ok(config, `unknown staged practice kind ${kind}`);

@@ -6,16 +6,19 @@
 
 | Role | Version | Policy |
 |---|---|---|
-| Previous release | v2.79.0 | Adds guided A2 writing review/revision history under the existing local production-evidence contract. |
-| Current product source | v2.80.0 | Adds a shared optional assistant, data-backed masked vocabulary completion and user-initiated Google AI context transfer; no new progress store. |
-| Older releases | ≤ v2.78.0 | Historical; details consolidated in `archive/PROJECT_HISTORY.md`. |
+| Previous release | v2.81.0 | A2 writing portfolio and local Quick Help; the AI retirement in this release was over-broad and is corrected in v2.82.0. |
+| Current product source | v2.82.0 | Restores pre-v2.80 feature-level Google AI actions; keeps the newer v2.80 floating-assistant AI handoff removed; retains local Quick Help and A2 writing portfolio. |
+| Older releases | ≤ v2.80.0 | Historical; release details are consolidated in `archive/PROJECT_HISTORY.md` except the immediately previous release report. |
 
 
 ## Runtime/data contracts
 
-- **v2.80.0 Learning Assistant:** shared shell component; no separate module navigation tree or learning-progress tracker. It searches existing dictionary word records and reuses `showDetail`, the existing placement diagnostic and the existing Google AI preview. The helper `assets/js/learning-assistant.js` is part of `REQUIRED` and `APP_SHELL` so it works with the offline cache. Search requires at least two prefix letters, is capped at six displayed candidates, and must validate each missing letter before disclosing the headword. Personal dictionary entries may participate only if they already exist in the normal in-memory `state.words` collection; no missing canonical headword is fabricated.
-- **External AI boundary:** the app has no embedded Google model/API. The full contextual prompt is shown in a preview and copied on request. A short prompt is transferred through the external Google AI Mode search URL only after a button click. A prompt that would exceed the URL limit is copied in full and Google AI is opened for manual paste. No auto-transfer on page load, no API key, no backend, no local progress upload and no new storage key/schema.
-- **Responsive/product shell:** assistant launcher can be hidden/reopened; it collapses to an icon on compact layouts, stays above the mobile bottom navigation and is hidden during an active timed mock exam. It reuses the existing typography, button patterns, color tokens and modal/prompt flow. Mock quick/half/full modes use coherent SVG icons instead of the old clock glyph.
+- **Legacy Google AI restored in v2.82.0:** keeps the feature-level actions that existed in v2.79.0: dictionary word detail and unknown-term lookup, practice answer/review analysis, Grammar, Reading and Listening prompts. The shared one-way preview panel is opened only by an explicit user action and transfers the prompt through an external Google Search AI Mode URL (`udm=50`, `hl=vi`). This parameter is not a documented stable API; Google controls the external experience. No embedded model, API key, server-side AI, hidden transfer or background call is introduced.
+- **New v2.80 assistant AI remains removed:** no assistant-specific contextual prompt builder, follow-up question handoff, copy/transfer action or Google action within Quick Help. Do not conflate this with the older feature-level buttons, which are intentionally restored.
+- **Local Quick Help:** navigation guide, existing Placement Diagnostic entry and prefix-based masked completion against real canonical `state.words` records. It does not call external services and remains in the Service Worker app shell for offline use. It has no Google AI button or prompt transfer.
+- **v2.81/v2.82 A2 writing portfolio:** reads existing `productionEvidence` in `toeic:foundation-progress:v1`, displays per-task first/latest self-ratings and task-specific rubrics. It does not edit learner records, combine unlike rubrics, grade language automatically or certify mastery. `::produce1` and legacy `::apply1` remain isolated.
+- **Source attribution exception:** `ai-generated` strings in the Part 1 image attribution/audit files are source-provenance metadata for an already embedded image. They do not load code, prompts or models; they are retained to preserve attribution and pass the asset-source validators.
+- **Responsive/product shell:** Quick Help can be closed/reopened, collapses to an icon on compact layouts, stays above the mobile bottom navigation and is hidden during an active timed mock exam. It reuses existing typography/button/color patterns. Mock quick/half/full modes use coherent SVG icons instead of the old clock glyph.
 
 - Deployment remains GitHub Pages + static PWA; no backend/GAS/iframe/Cloudflare dependency.
 - Canonical vocabulary is `data/vocabulary/A.json`–`Z.json`; batch JSON is editorial provenance only. Stable IDs remain immutable.
