@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.83.0 – Personalized Learning Path</title>
+  <title>TOEIC Dictionary v2.84.0 – Robot Buddy Companion</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -76,7 +76,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.83.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.84.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -172,7 +172,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.83.0:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Trợ giúp nhanh hoạt động trực tiếp bằng dữ liệu có sẵn trên thiết bị. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.84.0:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy hoạt động bằng thư viện hội thoại tĩnh, độc lập với tiến độ học cá nhân. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
@@ -440,7 +440,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.83.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.84.0</span></footer>
     </main>
   </div>
 
@@ -471,25 +471,66 @@
       <div class="modal-content" id="modalContent"></div>
     </section>
   </div>
-  <aside class="quick-help robot-buddy" id="quickHelp" aria-label="Robot đồng hành TOEIC">
-    <button type="button" class="quick-help-launcher" id="quickHelpLauncher" aria-expanded="false" aria-controls="quickHelpPanel" title="Mở Robot đồng hành" aria-label="Mở Robot đồng hành">
-      <svg class="ui-icon robot-launcher-icon"><use href="#icon-robot"></use></svg><span>Đồng hành</span><i class="robot-update-dot" aria-hidden="true"></i>
+  <aside class="quick-help robot-buddy" id="quickHelp" aria-label="Robot Buddy đồng hành">
+    <div class="robot-idle-nudge" id="robotIdleNudge" role="status" aria-live="polite" hidden>
+      <span class="robot-nudge-avatar"><svg class="robot-head-svg" viewBox="0 0 100 100" role="img" aria-label="Robot Buddy" focusable="false">
+        <path class="robot-antenna-stem" d="M50 12V6"/><circle class="robot-antenna-light" cx="50" cy="5" r="4"/>
+        <path class="robot-shell" d="M17 47C17 26 31 16 50 16s33 10 33 31v18c0 15-13 25-33 25S17 80 17 65V47Z"/>
+        <path class="robot-ear" d="M17 48h-5v17h5M83 48h5v17h-5"/>
+        <path class="robot-face-panel" d="M25 48c0-13 10-22 25-22s25 9 25 22v16c0 12-10 19-25 19S25 76 25 64V48Z"/>
+        <ellipse class="robot-eye" cx="39" cy="52" rx="7" ry="9"/><ellipse class="robot-eye" cx="61" cy="52" rx="7" ry="9"/>
+        <circle class="robot-pupil" cx="40" cy="53" r="3.2"/><circle class="robot-pupil" cx="62" cy="53" r="3.2"/>
+        <path class="robot-brow robot-brow-left" d="M32 40q7-5 14 0"/><path class="robot-brow robot-brow-right" d="M54 40q7-5 14 0"/>
+        <path class="robot-mouth robot-mouth-smile" d="M39 68q11 12 22 0"/><path class="robot-mouth robot-mouth-flat" d="M41 70h18"/>
+        <path class="robot-mouth robot-mouth-o" d="M44 68q6-7 12 0q0 9-6 9t-6-9Z"/><path class="robot-mouth robot-mouth-worried" d="M40 74q10-10 20 0"/>
+        <path class="robot-cheek robot-cheek-left" d="M27 64q5 4 10 0"/><path class="robot-cheek robot-cheek-right" d="M63 64q5 4 10 0"/><path class="robot-shine" d="M31 30q5-7 12-8"/>
+      </svg></span>
+      <div class="robot-nudge-copy"><strong>Robot Buddy</strong><p id="robotIdleMessage">Bạn có cần mình hỗ trợ gì không?</p>
+        <div class="robot-nudge-actions"><button type="button" class="robot-nudge-primary" id="robotIdleNeedHelp">Có, hỗ trợ mình</button><button type="button" class="robot-nudge-dismiss" id="robotIdleDismiss">Không cần</button></div>
+      </div>
+    </div>
+    <button type="button" class="quick-help-launcher" id="quickHelpLauncher" data-emotion="happy" aria-expanded="false" aria-controls="quickHelpPanel" title="Mở Robot Buddy" aria-label="Mở Robot Buddy">
+      <svg class="robot-head-svg" viewBox="0 0 100 100" role="img" aria-label="Robot Buddy" focusable="false">
+        <path class="robot-antenna-stem" d="M50 12V6"/><circle class="robot-antenna-light" cx="50" cy="5" r="4"/>
+        <path class="robot-shell" d="M17 47C17 26 31 16 50 16s33 10 33 31v18c0 15-13 25-33 25S17 80 17 65V47Z"/>
+        <path class="robot-ear" d="M17 48h-5v17h5M83 48h5v17h-5"/>
+        <path class="robot-face-panel" d="M25 48c0-13 10-22 25-22s25 9 25 22v16c0 12-10 19-25 19S25 76 25 64V48Z"/>
+        <ellipse class="robot-eye" cx="39" cy="52" rx="7" ry="9"/><ellipse class="robot-eye" cx="61" cy="52" rx="7" ry="9"/>
+        <circle class="robot-pupil" cx="40" cy="53" r="3.2"/><circle class="robot-pupil" cx="62" cy="53" r="3.2"/>
+        <path class="robot-brow robot-brow-left" d="M32 40q7-5 14 0"/><path class="robot-brow robot-brow-right" d="M54 40q7-5 14 0"/>
+        <path class="robot-mouth robot-mouth-smile" d="M39 68q11 12 22 0"/><path class="robot-mouth robot-mouth-flat" d="M41 70h18"/>
+        <path class="robot-mouth robot-mouth-o" d="M44 68q6-7 12 0q0 9-6 9t-6-9Z"/><path class="robot-mouth robot-mouth-worried" d="M40 74q10-10 20 0"/>
+        <path class="robot-cheek robot-cheek-left" d="M27 64q5 4 10 0"/><path class="robot-cheek robot-cheek-right" d="M63 64q5 4 10 0"/><path class="robot-shine" d="M31 30q5-7 12-8"/>
+      </svg><i class="robot-update-dot" aria-hidden="true"></i>
     </button>
     <section class="quick-help-panel robot-buddy-panel" id="quickHelpPanel" role="dialog" aria-modal="false" aria-labelledby="quickHelpTitle" hidden>
       <header class="quick-help-header robot-buddy-header">
-        <div class="quick-help-header-mark robot-avatar"><svg class="ui-icon"><use href="#icon-robot"></use></svg><i aria-hidden="true"></i></div>
-        <div><strong id="quickHelpTitle">TOEIC Buddy</strong><small id="robotCompanionStatus">Robot đồng hành học tập</small></div>
-        <button type="button" class="quick-help-close" id="quickHelpClose" aria-label="Ẩn Robot đồng hành">×</button>
+        <div class="quick-help-header-mark robot-avatar"><svg class="robot-head-svg" viewBox="0 0 100 100" role="img" aria-label="Robot Buddy" focusable="false">
+        <path class="robot-antenna-stem" d="M50 12V6"/><circle class="robot-antenna-light" cx="50" cy="5" r="4"/>
+        <path class="robot-shell" d="M17 47C17 26 31 16 50 16s33 10 33 31v18c0 15-13 25-33 25S17 80 17 65V47Z"/>
+        <path class="robot-ear" d="M17 48h-5v17h5M83 48h5v17h-5"/>
+        <path class="robot-face-panel" d="M25 48c0-13 10-22 25-22s25 9 25 22v16c0 12-10 19-25 19S25 76 25 64V48Z"/>
+        <ellipse class="robot-eye" cx="39" cy="52" rx="7" ry="9"/><ellipse class="robot-eye" cx="61" cy="52" rx="7" ry="9"/>
+        <circle class="robot-pupil" cx="40" cy="53" r="3.2"/><circle class="robot-pupil" cx="62" cy="53" r="3.2"/>
+        <path class="robot-brow robot-brow-left" d="M32 40q7-5 14 0"/><path class="robot-brow robot-brow-right" d="M54 40q7-5 14 0"/>
+        <path class="robot-mouth robot-mouth-smile" d="M39 68q11 12 22 0"/><path class="robot-mouth robot-mouth-flat" d="M41 70h18"/>
+        <path class="robot-mouth robot-mouth-o" d="M44 68q6-7 12 0q0 9-6 9t-6-9Z"/><path class="robot-mouth robot-mouth-worried" d="M40 74q10-10 20 0"/>
+        <path class="robot-cheek robot-cheek-left" d="M27 64q5 4 10 0"/><path class="robot-cheek robot-cheek-right" d="M63 64q5 4 10 0"/><path class="robot-shine" d="M31 30q5-7 12-8"/>
+      </svg></div>
+        <div><strong id="quickHelpTitle">Robot Buddy</strong><small id="robotCompanionStatus">Bạn đồng hành TOEIC · Offline</small></div>
+        <button type="button" class="robot-mute-toggle" id="robotMuteToggle" aria-pressed="false" title="Tắt lời nhắc tự động">Tắt lời nhắc</button>
+        <button type="button" class="quick-help-close" id="quickHelpClose" aria-label="Ẩn Robot Buddy">×</button>
       </header>
-      <div class="quick-help-body robot-buddy-body" id="quickHelpBody">
-        <section class="robot-speech-card" aria-live="polite" aria-atomic="true">
-          <div class="robot-speech-top"><span class="robot-online-dot"></span><small>TOEIC BUDDY · ĐỒNG HÀNH CÙNG BẠN</small></div>
-          <strong id="robotCompanionGreeting">Xin chào! Mình là TOEIC Buddy.</strong>
-          <p id="robotCompanionMessage">Mình sẽ dựa trên tiến độ học hiện có để chúc mừng, tổng hợp và gợi ý phần cần ôn tập.</p>
-        </section>
-        <section class="robot-snapshot" id="robotCompanionSnapshot" hidden aria-label="Tổng hợp tiến độ"></section>
-        <div class="robot-companion-actions" id="robotCompanionActions"></div>
-        <p class="robot-local-note">Gợi ý được tổng hợp ngay trên thiết bị từ kết quả học hiện có. Không có mô hình AI sinh câu trả lời hoặc gửi tiến độ ra ngoài.</p>
+      <div class="robot-chat-shell">
+        <div class="robot-chat-log" id="robotChatLog" role="log" aria-live="polite" aria-relevant="additions" aria-label="Cuộc trò chuyện với Robot Buddy"></div>
+        <div class="robot-typing" id="robotTyping" hidden><span></span><span></span><span></span><small>Robot Buddy đang nghĩ...</small></div>
+        <div class="robot-quick-prompts" id="robotQuickPrompts" aria-label="Gợi ý trò chuyện"></div>
+        <form class="robot-chat-form" id="robotChatForm">
+          <label class="sr-only" for="robotChatInput">Nhập nội dung trò chuyện với Robot Buddy</label>
+          <input id="robotChatInput" name="message" type="text" maxlength="240" autocomplete="off" placeholder="Nhắn điều bạn muốn hỏi...">
+          <button type="submit" aria-label="Gửi tin nhắn"><span aria-hidden="true">➤</span></button>
+        </form>
+        <p class="robot-local-note">Thư viện hội thoại có sẵn trên thiết bị. Robot không đọc tiến độ học và không phải chatbot AI trực tuyến.</p>
       </div>
     </section>
   </aside>

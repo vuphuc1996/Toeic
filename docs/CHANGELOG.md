@@ -1,3 +1,16 @@
+## v2.84.0 — Head-only Robot Buddy & Offline Dialogue Library
+
+- Replaced the former progress-aware Robot with a single head-only SVG mascot. Multiple expression states drive eye, pupil, eyebrow, mouth and antenna animations; reduced-motion preferences are respected.
+- Added a bundled local content library with **500 unique messages** across greeting (60), encouragement (100), caring (60), learning (80), help (100), reaction (60) and rest (40), plus 55 feature-help messages for 11 app destinations, six FAQs and 12 quick prompts.
+- Added offline keyword-intent recognition and feature navigation. Free-text replies are intentionally limited to authored topic groups; unknown questions receive a clear fallback rather than a false claim of open-ended AI understanding.
+- Added quiet idle bubbles after 90 seconds, then 5- and 10-minute spacing, at most three notices per rolling hour, automatic dismissal, snooze and mute control. Idle prompts are suppressed during timed Mock Exams, active focus/modal dialogs, text entry, speech playback and hidden/unfocused tabs.
+- First-run onboarding offers the existing Placement Diagnostic or skip. Robot stores only this choice and idle-mute preference in `toeic:robot-buddy-settings:v1`; a one-time migration reads only the v2.83 onboarding-choice key to avoid asking existing users again. It does not read the Placement result or any learner-progress store.
+- Strict separation: no IndexedDB, vocabulary-progress, Flashcard, Grammar, Reading, Listening, Foundation, Mock score or personal vocabulary reads; no external API, Google AI or server; no persisted conversation transcript.
+- Preserved the original v2.79 feature-level Google AI entry points outside Robot Buddy. Retired the v2.83 learner-progress assistant as a no-op compatibility tombstone.
+- Added the runtime and dialogue JSON to Service Worker `REQUIRED` and `APP_SHELL`; cache version synchronized to v2.84.0.
+- No vocabulary, question-bank, learning curriculum, TTS, Placement assessment logic, Mock engine, learner progress keys or IndexedDB v1 changes.
+- Local validation and release status: see `reports/TEST_REPORT_TOEIC_Dictionary_v2.84.0.md`. Remote GitHub Actions, Pages deployment and physical-device QA remain unverified until tested after push.
+
 ## v2.83.0 — Robot Buddy, progress-aware support and Service Worker validation repair
 
 - Replaced the helper launcher with an animated robot icon and a responsive Robot Buddy panel. The usage guide and Quick Help vocabulary prefix/masked-letter search are removed.

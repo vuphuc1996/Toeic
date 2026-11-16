@@ -3,19 +3,43 @@
 > **Nguồn trạng thái và lộ trình duy nhất.** Mọi release cập nhật trực tiếp file này. `CHANGELOG.md` là log phát hành; `archive/PROJECT_HISTORY.md` lưu lịch sử đã chỉnh lý; `COMPATIBILITY.md` là sổ tương thích duy nhất.
 
 - **Ngày kiểm kê:** 2026-11-16.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.83.0 — Robot Buddy & CI/SW Validation Repair.
-- **Product source:** GitHub Pages static PWA. Source hiện tại là v2.83.0; chưa tuyên bố GitHub-hosted Actions, Pages deploy hoặc thiết bị thật đã được xác minh.
-- **AI scope được chốt:** giữ toàn bộ Google AI feature-level actions đã tồn tại ở v2.79.0 (tra cứu từ vựng/term chưa có, phân tích đáp án và ôn tập, Grammar, Reading, Listening; có preview và thao tác xác nhận trước khi mở Google). Không có API key, model nhúng hoặc nền tảng AI backend.
-- **Robot Buddy v2.83.0:** launcher dùng icon robot; hỏi người dùng lần đầu có muốn làm Placement Diagnostic hay bỏ qua; dùng dữ liệu tiến độ local hiện có để chúc mừng, tổng hợp, nhận diện phần có bằng chứng cần củng cố và mở đúng khu vực ôn tập. Module `assets/js/learning-assistant.js` là logic tổng hợp tất định chạy trên thiết bị, không gọi dịch vụ generative AI, không gửi dữ liệu ra ngoài. Robot không thay thế các nút Google AI cũ theo từng chức năng.
-- **Trợ giúp:** bỏ hẳn hướng dẫn sử dụng và chức năng tìm kiếm chữ/điền chữ trong trợ giúp. Robot Buddy thay thế launcher/panel cũ; first-run chỉ hỏi Placement Diagnostic hoặc bỏ qua. Người học quay lại không bị hỏi lại nếu đã có dấu vết học tập hoặc lựa chọn onboarding được lưu.
-- **Mock Exam icons:** giữ bộ SVG `icon-clipboard-check`, `icon-bolt`, `icon-stopwatch`, `icon-trophy`; không dùng glyph đồng hồ `◷`.
-- **SW002 repair:** `assets/js/learning-assistant.js` và `assets/js/quick-help.js` đều có mặt trong `sw.js` `REQUIRED` và `APP_SHELL`. `quick-help.js` là compatibility tombstone không chạy mã; nó ghi đè checkout cũ còn file cùng đường dẫn. Cả hai được cache để chặn lỗi SW002 khi người dùng cập nhật chồng trên repository cũ.
-- **Storage contract:** chỉ thêm key `toeic:robot-companion-onboarding:v1` để nhớ lựa chọn lần đầu. Không đổi IndexedDB v1, `toeic:foundation-progress:v1`, dữ liệu từ vựng, ID câu hỏi, lịch sử viết A2 hoặc các key tiến độ hiện có.
-- **Progress snapshot:** `reports/PROJECT_PROGRESS_SNAPSHOT_v2.83.0.md`. Vocabulary 1,137/3,000 minimum (37.9%) và 1,137/5,000 planning ceiling (22.7%); pathway stages represented 3/6 (50.0%); resource links 294/294; 11/11 objectives linked; outcome criteria 33/33; 6/33 (18.2%) có evidence path. Đây là inventory/instrumentation, không phải editorial approval hoặc learner mastery.
-- **Previous release:** v2.82.1.
-- **Development rule:** không xóa chức năng có trước nếu không có yêu cầu rõ; tuân thủ AI product contract đã chốt; Robot local không được mô tả là generative AI; ưu tiên tái sử dụng app shell, design tokens, tiến độ và module hiện hành.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.84.0 — Head-only Robot Buddy, Offline Dialogue Library & Idle Companion.
+- **Product source:** GitHub Pages static PWA. v2.84.0 là local release candidate; GitHub Actions/Pages sau push và thiết bị thật chưa được xác minh.
+- **Google AI scope:** giữ nguyên các thao tác Google AI theo từng chức năng có từ v2.79.0 (Vocabulary/term, Practice answer/review, Grammar, Reading, Listening); người dùng chủ động mở. Robot Buddy không thay thế hoặc gọi các chức năng Google AI này.
+- **Robot Buddy v2.84.0:** chỉ dùng một đầu Robot SVG (không thân), 10+ trạng thái cảm xúc, hoạt ảnh mắt/miệng/antenna, hộp thoại idle, cửa sổ hội thoại và các hành động điều hướng. Thư viện cục bộ có đúng 500 câu trong 7 nhóm chính, thêm nội dung trợ giúp từng tính năng, FAQ và quick prompts.
+- **Robot data boundary:** Robot chỉ đọc `data/robot/robot-library.json` (nội dung tĩnh) và trạng thái giao diện hiện tại để bảo vệ thời điểm hiển thị idle. Không đọc tiến độ học, IndexedDB, localStorage tiến độ, kết quả Placement/Mock, từ vựng cá nhân hoặc bất kỳ learner store nào. Không tự học, không generative AI, không API/máy chủ và không gửi dữ liệu ra ngoài.
+- **Conversation boundary:** nhận diện nhóm ý định bằng từ khóa cục bộ; câu trả lời lấy từ thư viện tĩnh. Chat chỉ tồn tại trong bộ nhớ phiên; không lưu hội thoại. Câu không nhận diện được nhận phản hồi dự phòng minh bạch.
+- **First-run:** người dùng mới được hỏi có muốn mở Placement hiện có hay bỏ qua. Chỉ lưu lựa chọn onboarding và tùy chọn tắt lời nhắc trong `toeic:robot-buddy-settings:v1`; khi nâng cấp từ v2.83, chỉ migrate trạng thái `accepted/skipped/returning` từ key onboarding cũ `toeic:robot-companion-onboarding:v1` để tránh hỏi lại. Không đọc hay diễn giải kết quả Placement hoặc learner data.
+- **Idle policy:** nhắc sau 90 giây không thao tác; các lần sau cách nhau 5–10 phút; tối đa 3 lời nhắc/giờ; bong bóng tự đóng; có nút tắt lời nhắc và nút snooze. Không nhắc khi thi Mock đang chạy, trong learning-focus/modal, nhập liệu, phát âm thanh hoặc tab không hoạt động.
+- **SW / offline shell:** `assets/js/robot-buddy.js` và `data/robot/robot-library.json` được khai báo trong cả `REQUIRED` và `APP_SHELL`; cache version v2.84.0. `learning-assistant.js` và `quick-help.js` được giữ dưới dạng compatibility tombstones.
+- **Preservation:** không thay đổi dữ liệu từ vựng, câu hỏi, nội dung học, IndexedDB v1, các progress stores, TTS, Placement engine hoặc Google AI feature-level actions. Robot không nhận sự kiện điểm số/thành tích học tập.
+- **Progress snapshot:** giữ nguyên baseline v2.83.0 trong `reports/PROJECT_PROGRESS_SNAPSHOT_v2.83.0.md`; v2.84.0 không thay đổi số liệu curriculum/vocabulary.
+- **Local release gates:** PASS — 28/28 JavaScript suites; 62/62 selected Python tests across 9 modules; vocabulary/content/Part 1 photo validators; objective/outcome/question/distractor audits; 291 HTML IDs without duplicates; CSS parse; version/design-profile sync. Full Python discovery was not counted as a single completed PASS. See `reports/TEST_REPORT_TOEIC_Dictionary_v2.84.0.md`.
+- **Release QA still pending:** actual GitHub Actions after push, GitHub Pages production, browser visual QA and real-device testing.
+- **Previous release:** v2.83.0.
+- **Development rule:** Robot là scripted offline companion, không được mô tả như chatbot AI trực tuyến hoặc hệ thống đánh giá người học. Giữ tất cả tính năng ngoài phạm vi Robot và bảo toàn dữ liệu hiện có.
 
-## v2.83.0 changes — Robot Buddy, first-run Placement choice, progress-aware support and SW002 fix
+## v2.84.0 changes — Head-only Robot Buddy & Offline Interaction Library
+
+- Replaced the progress-aware companion with one head-only SVG mascot. Added emotion states `happy`, `thinking`, `celebrate`, `caring`, `sleepy`, `greeting`, `surprised`, `motivation`, `concerned`, `playful`, `listening` and `speaking`; eye, pupil, mouth, antenna and floating/micro-animation states respect `prefers-reduced-motion`.
+- Added `data/robot/robot-library.json`: 500 unique local dialogue lines across seven core groups (greeting 60, encouragement 100, caring 60, learning 80, help 100, reaction 60, rest 40), plus feature help for 11 destinations, FAQs and 12 quick prompts.
+- Added keyword-only local intent matching and feature routing. Free text is handled only by the pre-authored intent groups; unknown messages receive an explicit limitation response. No hosted LLM, Google AI, API, server, learner progress, IndexedDB or learning localStorage is used by Robot Buddy.
+- Added idle prompts after 90 seconds, then a 5-minute / 10-minute cadence, maximum 3 notices per rolling hour; notice auto-dismiss, 10-minute snooze and mute control. No prompts during timed Mock Exam, active learning-focus/modal, typing, speech playback, hidden tab or unfocused window.
+- First-run onboarding asks whether to open the existing Placement Diagnostic or skip. The Robot records only that choice and the mute preference in `toeic:robot-buddy-settings:v1`. Placement is opened by explicit user action; Robot does not read the Placement result.
+- Chat messages are rendered as text nodes and kept only in current memory session. No chat transcript persistence. Existing Google AI feature-level actions remain unchanged and independent.
+- Retired the v2.83 progress-reader implementation; `assets/js/learning-assistant.js` is a compatibility tombstone. `assets/js/quick-help.js` remains a compatibility tombstone. Both stay in the cache shell along with the new Robot runtime and static JSON library.
+- No vocabulary, question-bank, learning content, IndexedDB schema, progress key, Foundation evidence, A2 portfolio or Mock Exam engine changes.
+
+## AI and Robot product contract — current
+
+- **Google AI:** preserve the existing v2.79 user-initiated feature-level Google AI actions for Vocabulary/term, Practice answer/review, Grammar, Reading and Listening. These remain separate from Robot Buddy.
+- **Robot Buddy:** a static, scripted, offline companion. It can greet, encourage, answer supported feature-navigation questions, show FAQs, and proactively ask whether the user needs help. It does not understand unrestricted natural language, learn from activity, analyze ability, monitor scores or summarize learner progress.
+- **No learner-data connection:** Robot Buddy must not import progress readers, subscribe to score/result events, access IndexedDB, inspect learner localStorage keys, or use personal vocabulary/Placement/Mock data. Only the Robot's own onboarding/mute preferences may be persisted.
+- **No external AI:** no API, remote model, server, external transfer, analytics or hidden data upload. Do not describe the local keyword/dialogue engine as realtime generative AI. Its responses are selected locally from the bundled content library.
+- **Idle safeguards:** respect the published timers, rate limits, mute/snooze, reduced motion and suppression conditions. Never cover or interrupt practice, audio, modals or timed Mock Exam.
+- **Historical correction:** v2.83.0 had a progress-aware Robot implementation. That behavior is superseded by v2.84.0 and must not be restored. The old v2.83 behavior remains only as release history, not current product scope.
+
+## v2.83.0 historical — progress-aware Robot Buddy (superseded in v2.84.0)
 
 - Replaced the Quick Help headset launcher with the SVG robot icon. The panel no longer contains an in-app usage guide or vocabulary prefix/letter-completion search.
 - On a device with no recorded learning footprint and no onboarding decision, Robot Buddy opens once and asks whether the learner wants the existing Placement Diagnostic. Choosing to start opens the existing diagnostic; choosing to skip records that choice and lets the learner begin normally. A returning learner is detected from existing local learning evidence and is not shown the first-run prompt again.

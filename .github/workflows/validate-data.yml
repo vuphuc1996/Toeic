@@ -201,4 +201,5 @@ jobs:
           node tools/tests/vocabulary-release-integrity.mjs
           node tools/tests/quick-help.mjs
           node tools/tests/learning-assistant.mjs
+          node tools/tests/robot-buddy.mjs
           node tools/tests/legacy-google-ai.mjs

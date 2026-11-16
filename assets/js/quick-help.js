@@ -1,3 +1,4 @@
 // Compatibility tombstone for older GitHub Pages checkouts.
-// Quick Help no longer contains a standalone word-search module; Robot Buddy is
-// implemented by learning-assistant.js. This file intentionally executes nothing.
+// The standalone Quick Help guide/search module has been retired.
+// The current head-only Robot Buddy is implemented by robot-buddy.js.
+// This file intentionally executes nothing.

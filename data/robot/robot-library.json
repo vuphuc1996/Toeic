@@ -1,0 +1,2311 @@
+{
+  "schemaVersion": 1,
+  "description": "Thư viện hội thoại tĩnh, chạy offline trên GitHub Pages; Robot Buddy không đọc hoặc phân tích dữ liệu học tập cá nhân.",
+  "privacy": {
+    "readsLearnerProgress": false,
+    "usesExternalApi": false,
+    "usesGenerativeModel": false,
+    "storesConversationHistory": false
+  },
+  "categories": {
+    "greeting": {
+      "emotion": "greeting",
+      "triggers": [
+        "first_open",
+        "panel_open"
+      ],
+      "messages": [
+        {
+          "id": "greeting-001",
+          "text": "Xin chào! Mình là Robot Buddy. Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-002",
+          "text": "Xin chào! Mình là Robot Buddy. Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-003",
+          "text": "Xin chào! Mình là Robot Buddy. Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-004",
+          "text": "Xin chào! Mình là Robot Buddy. Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-005",
+          "text": "Xin chào! Mình là Robot Buddy. Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-006",
+          "text": "Chào bạn, rất vui được gặp bạn. Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-007",
+          "text": "Chào bạn, rất vui được gặp bạn. Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-008",
+          "text": "Chào bạn, rất vui được gặp bạn. Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-009",
+          "text": "Chào bạn, rất vui được gặp bạn. Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-010",
+          "text": "Chào bạn, rất vui được gặp bạn. Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-011",
+          "text": "Bạn ghé thăm rồi, vui quá! Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-012",
+          "text": "Bạn ghé thăm rồi, vui quá! Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-013",
+          "text": "Bạn ghé thăm rồi, vui quá! Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-014",
+          "text": "Bạn ghé thăm rồi, vui quá! Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-015",
+          "text": "Bạn ghé thăm rồi, vui quá! Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-016",
+          "text": "Hello! Mình đã sẵn sàng đồng hành. Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-017",
+          "text": "Hello! Mình đã sẵn sàng đồng hành. Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-018",
+          "text": "Hello! Mình đã sẵn sàng đồng hành. Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-019",
+          "text": "Hello! Mình đã sẵn sàng đồng hành. Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-020",
+          "text": "Hello! Mình đã sẵn sàng đồng hành. Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-021",
+          "text": "Rất vui khi được gặp bạn hôm nay. Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-022",
+          "text": "Rất vui khi được gặp bạn hôm nay. Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-023",
+          "text": "Rất vui khi được gặp bạn hôm nay. Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-024",
+          "text": "Rất vui khi được gặp bạn hôm nay. Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-025",
+          "text": "Rất vui khi được gặp bạn hôm nay. Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-026",
+          "text": "Chúng ta lại gặp nhau rồi! Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-027",
+          "text": "Chúng ta lại gặp nhau rồi! Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-028",
+          "text": "Chúng ta lại gặp nhau rồi! Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-029",
+          "text": "Chúng ta lại gặp nhau rồi! Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-030",
+          "text": "Chúng ta lại gặp nhau rồi! Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-031",
+          "text": "Mình là người bạn nhỏ trong TOEIC Dictionary. Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-032",
+          "text": "Mình là người bạn nhỏ trong TOEIC Dictionary. Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-033",
+          "text": "Mình là người bạn nhỏ trong TOEIC Dictionary. Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-034",
+          "text": "Mình là người bạn nhỏ trong TOEIC Dictionary. Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-035",
+          "text": "Mình là người bạn nhỏ trong TOEIC Dictionary. Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-036",
+          "text": "Chào mừng bạn đến với góc học tập. Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-037",
+          "text": "Chào mừng bạn đến với góc học tập. Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-038",
+          "text": "Chào mừng bạn đến với góc học tập. Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-039",
+          "text": "Chào mừng bạn đến với góc học tập. Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-040",
+          "text": "Chào mừng bạn đến với góc học tập. Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-041",
+          "text": "Bạn muốn bắt đầu khám phá chứ? Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-042",
+          "text": "Bạn muốn bắt đầu khám phá chứ? Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-043",
+          "text": "Bạn muốn bắt đầu khám phá chứ? Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-044",
+          "text": "Bạn muốn bắt đầu khám phá chứ? Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-045",
+          "text": "Bạn muốn bắt đầu khám phá chứ? Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-046",
+          "text": "Mình luôn ở đây khi bạn cần một gợi ý. Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-047",
+          "text": "Mình luôn ở đây khi bạn cần một gợi ý. Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-048",
+          "text": "Mình luôn ở đây khi bạn cần một gợi ý. Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-049",
+          "text": "Mình luôn ở đây khi bạn cần một gợi ý. Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-050",
+          "text": "Mình luôn ở đây khi bạn cần một gợi ý. Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-051",
+          "text": "Một ngày mới, một cơ hội học hỏi mới! Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-052",
+          "text": "Một ngày mới, một cơ hội học hỏi mới! Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-053",
+          "text": "Một ngày mới, một cơ hội học hỏi mới! Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-054",
+          "text": "Một ngày mới, một cơ hội học hỏi mới! Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-055",
+          "text": "Một ngày mới, một cơ hội học hỏi mới! Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        },
+        {
+          "id": "greeting-056",
+          "text": "Chào bạn! Hôm nay mình đồng hành cùng bạn nhé. Bạn có thể hỏi mình về các chức năng trong ứng dụng."
+        },
+        {
+          "id": "greeting-057",
+          "text": "Chào bạn! Hôm nay mình đồng hành cùng bạn nhé. Mình có thể chỉ bạn nơi tìm những công cụ học tập."
+        },
+        {
+          "id": "greeting-058",
+          "text": "Chào bạn! Hôm nay mình đồng hành cùng bạn nhé. Chúng ta có thể khám phá từ vựng, ngữ pháp và kỹ năng TOEIC."
+        },
+        {
+          "id": "greeting-059",
+          "text": "Chào bạn! Hôm nay mình đồng hành cùng bạn nhé. Bạn cứ chọn một chủ đề, mình sẽ giúp bạn tìm đúng khu vực."
+        },
+        {
+          "id": "greeting-060",
+          "text": "Chào bạn! Hôm nay mình đồng hành cùng bạn nhé. Hãy chọn một gợi ý bên dưới để bắt đầu trò chuyện."
+        }
+      ]
+    },
+    "encouragement": {
+      "emotion": "motivation",
+      "triggers": [
+        "manual",
+        "idle",
+        "after_interaction"
+      ],
+      "messages": [
+        {
+          "id": "encouragement-001",
+          "text": "Cứ tiến từng bước nhỏ nhé! Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-002",
+          "text": "Cứ tiến từng bước nhỏ nhé! Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-003",
+          "text": "Cứ tiến từng bước nhỏ nhé! Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-004",
+          "text": "Cứ tiến từng bước nhỏ nhé! Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-005",
+          "text": "Cứ tiến từng bước nhỏ nhé! Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-006",
+          "text": "Cứ tiến từng bước nhỏ nhé! Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-007",
+          "text": "Cứ tiến từng bước nhỏ nhé! Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-008",
+          "text": "Cứ tiến từng bước nhỏ nhé! Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-009",
+          "text": "Cứ tiến từng bước nhỏ nhé! Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-010",
+          "text": "Cứ tiến từng bước nhỏ nhé! Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        },
+        {
+          "id": "encouragement-011",
+          "text": "Bạn không cần phải vội vàng đâu. Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-012",
+          "text": "Bạn không cần phải vội vàng đâu. Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-013",
+          "text": "Bạn không cần phải vội vàng đâu. Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-014",
+          "text": "Bạn không cần phải vội vàng đâu. Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-015",
+          "text": "Bạn không cần phải vội vàng đâu. Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-016",
+          "text": "Bạn không cần phải vội vàng đâu. Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-017",
+          "text": "Bạn không cần phải vội vàng đâu. Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-018",
+          "text": "Bạn không cần phải vội vàng đâu. Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-019",
+          "text": "Bạn không cần phải vội vàng đâu. Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-020",
+          "text": "Bạn không cần phải vội vàng đâu. Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        },
+        {
+          "id": "encouragement-021",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-022",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-023",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-024",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-025",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-026",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-027",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-028",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-029",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-030",
+          "text": "Mỗi lần thử là một cơ hội để hiểu thêm. Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        },
+        {
+          "id": "encouragement-031",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-032",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-033",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-034",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-035",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-036",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-037",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-038",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-039",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-040",
+          "text": "Đừng để một câu khó làm bạn nản lòng. Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        },
+        {
+          "id": "encouragement-041",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-042",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-043",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-044",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-045",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-046",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-047",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-048",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-049",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-050",
+          "text": "Kiên trì một chút mỗi ngày sẽ tạo khác biệt. Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        },
+        {
+          "id": "encouragement-051",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-052",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-053",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-054",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-055",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-056",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-057",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-058",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-059",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-060",
+          "text": "Bạn có thể nghỉ ngắn rồi quay lại. Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        },
+        {
+          "id": "encouragement-061",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-062",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-063",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-064",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-065",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-066",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-067",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-068",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-069",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-070",
+          "text": "Không cần hoàn hảo ngay từ lần đầu. Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        },
+        {
+          "id": "encouragement-071",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-072",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-073",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-074",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-075",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-076",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-077",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-078",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-079",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-080",
+          "text": "Cứ bình tĩnh và làm theo nhịp của mình. Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        },
+        {
+          "id": "encouragement-081",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-082",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-083",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-084",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-085",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-086",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-087",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-088",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-089",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-090",
+          "text": "Một bước nhỏ hôm nay vẫn là tiến về phía trước. Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        },
+        {
+          "id": "encouragement-091",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Hãy chọn một việc nhỏ và hoàn thành nó trước nhé."
+        },
+        {
+          "id": "encouragement-092",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Mình sẽ ở đây nếu bạn cần một lời động viên."
+        },
+        {
+          "id": "encouragement-093",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Chậm mà chắc vẫn tốt hơn bỏ cuộc giữa chừng."
+        },
+        {
+          "id": "encouragement-094",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Mỗi lần luyện tập đều giúp bạn quen hơn với dạng bài."
+        },
+        {
+          "id": "encouragement-095",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Hãy tập trung vào điều bạn có thể làm ngay lúc này."
+        },
+        {
+          "id": "encouragement-096",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Bạn có thể quay lại bất cứ khi nào sẵn sàng."
+        },
+        {
+          "id": "encouragement-097",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Cứ giữ tinh thần thoải mái và tiếp tục nhé!"
+        },
+        {
+          "id": "encouragement-098",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Đôi khi nghỉ ngơi cũng là một phần của tiến bộ."
+        },
+        {
+          "id": "encouragement-099",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Hãy cho bản thân thêm thời gian để làm quen."
+        },
+        {
+          "id": "encouragement-100",
+          "text": "Bạn xứng đáng được ghi nhận vì đã dành thời gian học. Mình tin bạn có thể hoàn thành mục tiêu nhỏ tiếp theo."
+        }
+      ]
+    },
+    "caring": {
+      "emotion": "caring",
+      "triggers": [
+        "idle",
+        "manual",
+        "session_pause"
+      ],
+      "messages": [
+        {
+          "id": "caring-001",
+          "text": "Bạn vẫn ổn chứ? Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-002",
+          "text": "Bạn vẫn ổn chứ? Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-003",
+          "text": "Bạn vẫn ổn chứ? Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-004",
+          "text": "Bạn vẫn ổn chứ? Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-005",
+          "text": "Bạn vẫn ổn chứ? Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-006",
+          "text": "Bạn vẫn ổn chứ? Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        },
+        {
+          "id": "caring-007",
+          "text": "Mình ghé qua hỏi thăm một chút nhé. Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-008",
+          "text": "Mình ghé qua hỏi thăm một chút nhé. Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-009",
+          "text": "Mình ghé qua hỏi thăm một chút nhé. Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-010",
+          "text": "Mình ghé qua hỏi thăm một chút nhé. Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-011",
+          "text": "Mình ghé qua hỏi thăm một chút nhé. Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-012",
+          "text": "Mình ghé qua hỏi thăm một chút nhé. Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        },
+        {
+          "id": "caring-013",
+          "text": "Có vẻ bạn đang tạm dừng. Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-014",
+          "text": "Có vẻ bạn đang tạm dừng. Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-015",
+          "text": "Có vẻ bạn đang tạm dừng. Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-016",
+          "text": "Có vẻ bạn đang tạm dừng. Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-017",
+          "text": "Có vẻ bạn đang tạm dừng. Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-018",
+          "text": "Có vẻ bạn đang tạm dừng. Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        },
+        {
+          "id": "caring-019",
+          "text": "Bạn có muốn mình hỗ trợ điều gì không? Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-020",
+          "text": "Bạn có muốn mình hỗ trợ điều gì không? Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-021",
+          "text": "Bạn có muốn mình hỗ trợ điều gì không? Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-022",
+          "text": "Bạn có muốn mình hỗ trợ điều gì không? Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-023",
+          "text": "Bạn có muốn mình hỗ trợ điều gì không? Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-024",
+          "text": "Bạn có muốn mình hỗ trợ điều gì không? Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        },
+        {
+          "id": "caring-025",
+          "text": "Không sao nếu bạn cần thêm thời gian. Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-026",
+          "text": "Không sao nếu bạn cần thêm thời gian. Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-027",
+          "text": "Không sao nếu bạn cần thêm thời gian. Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-028",
+          "text": "Không sao nếu bạn cần thêm thời gian. Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-029",
+          "text": "Không sao nếu bạn cần thêm thời gian. Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-030",
+          "text": "Không sao nếu bạn cần thêm thời gian. Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        },
+        {
+          "id": "caring-031",
+          "text": "Mình ở đây, bạn không cần phải vội. Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-032",
+          "text": "Mình ở đây, bạn không cần phải vội. Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-033",
+          "text": "Mình ở đây, bạn không cần phải vội. Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-034",
+          "text": "Mình ở đây, bạn không cần phải vội. Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-035",
+          "text": "Mình ở đây, bạn không cần phải vội. Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-036",
+          "text": "Mình ở đây, bạn không cần phải vội. Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        },
+        {
+          "id": "caring-037",
+          "text": "Bạn muốn tiếp tục hay nghỉ một lát? Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-038",
+          "text": "Bạn muốn tiếp tục hay nghỉ một lát? Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-039",
+          "text": "Bạn muốn tiếp tục hay nghỉ một lát? Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-040",
+          "text": "Bạn muốn tiếp tục hay nghỉ một lát? Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-041",
+          "text": "Bạn muốn tiếp tục hay nghỉ một lát? Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-042",
+          "text": "Bạn muốn tiếp tục hay nghỉ một lát? Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        },
+        {
+          "id": "caring-043",
+          "text": "Hôm nay bạn muốn học nhẹ nhàng thôi chứ? Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-044",
+          "text": "Hôm nay bạn muốn học nhẹ nhàng thôi chứ? Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-045",
+          "text": "Hôm nay bạn muốn học nhẹ nhàng thôi chứ? Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-046",
+          "text": "Hôm nay bạn muốn học nhẹ nhàng thôi chứ? Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-047",
+          "text": "Hôm nay bạn muốn học nhẹ nhàng thôi chứ? Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-048",
+          "text": "Hôm nay bạn muốn học nhẹ nhàng thôi chứ? Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        },
+        {
+          "id": "caring-049",
+          "text": "Nếu có điều gì chưa rõ, cứ hỏi mình nhé. Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-050",
+          "text": "Nếu có điều gì chưa rõ, cứ hỏi mình nhé. Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-051",
+          "text": "Nếu có điều gì chưa rõ, cứ hỏi mình nhé. Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-052",
+          "text": "Nếu có điều gì chưa rõ, cứ hỏi mình nhé. Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-053",
+          "text": "Nếu có điều gì chưa rõ, cứ hỏi mình nhé. Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-054",
+          "text": "Nếu có điều gì chưa rõ, cứ hỏi mình nhé. Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        },
+        {
+          "id": "caring-055",
+          "text": "Bạn có muốn đổi sang một hoạt động khác không? Bạn có thể chọn một gợi ý hoặc đóng lời nhắc này lại."
+        },
+        {
+          "id": "caring-056",
+          "text": "Bạn có muốn đổi sang một hoạt động khác không? Mình sẽ không làm phiền khi bạn đang tập trung."
+        },
+        {
+          "id": "caring-057",
+          "text": "Bạn có muốn đổi sang một hoạt động khác không? Hãy chọn điều khiến bạn cảm thấy thoải mái nhất."
+        },
+        {
+          "id": "caring-058",
+          "text": "Bạn có muốn đổi sang một hoạt động khác không? Bạn có thể nhấn vào đầu mình để mở phần trò chuyện."
+        },
+        {
+          "id": "caring-059",
+          "text": "Bạn có muốn đổi sang một hoạt động khác không? Không cần trả lời ngay đâu, mình vẫn ở đây."
+        },
+        {
+          "id": "caring-060",
+          "text": "Bạn có muốn đổi sang một hoạt động khác không? Mình có thể giới thiệu các khu vực của ứng dụng khi bạn cần."
+        }
+      ]
+    },
+    "learning": {
+      "emotion": "thinking",
+      "triggers": [
+        "manual",
+        "quick_prompt"
+      ],
+      "messages": [
+        {
+          "id": "learning-001",
+          "text": "Một cách học dễ bắt đầu là chọn một mục tiêu nhỏ. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-002",
+          "text": "Một cách học dễ bắt đầu là chọn một mục tiêu nhỏ. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-003",
+          "text": "Một cách học dễ bắt đầu là chọn một mục tiêu nhỏ. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-004",
+          "text": "Một cách học dễ bắt đầu là chọn một mục tiêu nhỏ. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-005",
+          "text": "Một cách học dễ bắt đầu là chọn một mục tiêu nhỏ. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-006",
+          "text": "Một cách học dễ bắt đầu là chọn một mục tiêu nhỏ. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-007",
+          "text": "Một cách học dễ bắt đầu là chọn một mục tiêu nhỏ. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-008",
+          "text": "Một cách học dễ bắt đầu là chọn một mục tiêu nhỏ. Bạn có thể mở menu để xem những lựa chọn đang có."
+        },
+        {
+          "id": "learning-009",
+          "text": "Bạn có thể chia thời gian học thành những phiên ngắn. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-010",
+          "text": "Bạn có thể chia thời gian học thành những phiên ngắn. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-011",
+          "text": "Bạn có thể chia thời gian học thành những phiên ngắn. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-012",
+          "text": "Bạn có thể chia thời gian học thành những phiên ngắn. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-013",
+          "text": "Bạn có thể chia thời gian học thành những phiên ngắn. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-014",
+          "text": "Bạn có thể chia thời gian học thành những phiên ngắn. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-015",
+          "text": "Bạn có thể chia thời gian học thành những phiên ngắn. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-016",
+          "text": "Bạn có thể chia thời gian học thành những phiên ngắn. Bạn có thể mở menu để xem những lựa chọn đang có."
+        },
+        {
+          "id": "learning-017",
+          "text": "Khi gặp từ mới, hãy thử đọc nghĩa và ví dụ cùng nhau. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-018",
+          "text": "Khi gặp từ mới, hãy thử đọc nghĩa và ví dụ cùng nhau. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-019",
+          "text": "Khi gặp từ mới, hãy thử đọc nghĩa và ví dụ cùng nhau. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-020",
+          "text": "Khi gặp từ mới, hãy thử đọc nghĩa và ví dụ cùng nhau. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-021",
+          "text": "Khi gặp từ mới, hãy thử đọc nghĩa và ví dụ cùng nhau. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-022",
+          "text": "Khi gặp từ mới, hãy thử đọc nghĩa và ví dụ cùng nhau. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-023",
+          "text": "Khi gặp từ mới, hãy thử đọc nghĩa và ví dụ cùng nhau. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-024",
+          "text": "Khi gặp từ mới, hãy thử đọc nghĩa và ví dụ cùng nhau. Bạn có thể mở menu để xem những lựa chọn đang có."
+        },
+        {
+          "id": "learning-025",
+          "text": "Với Grammar, học một cấu trúc rồi xem ví dụ sẽ dễ theo dõi hơn. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-026",
+          "text": "Với Grammar, học một cấu trúc rồi xem ví dụ sẽ dễ theo dõi hơn. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-027",
+          "text": "Với Grammar, học một cấu trúc rồi xem ví dụ sẽ dễ theo dõi hơn. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-028",
+          "text": "Với Grammar, học một cấu trúc rồi xem ví dụ sẽ dễ theo dõi hơn. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-029",
+          "text": "Với Grammar, học một cấu trúc rồi xem ví dụ sẽ dễ theo dõi hơn. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-030",
+          "text": "Với Grammar, học một cấu trúc rồi xem ví dụ sẽ dễ theo dõi hơn. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-031",
+          "text": "Với Grammar, học một cấu trúc rồi xem ví dụ sẽ dễ theo dõi hơn. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-032",
+          "text": "Với Grammar, học một cấu trúc rồi xem ví dụ sẽ dễ theo dõi hơn. Bạn có thể mở menu để xem những lựa chọn đang có."
+        },
+        {
+          "id": "learning-033",
+          "text": "Reading sẽ nhẹ nhàng hơn nếu bạn đọc câu hỏi trước. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-034",
+          "text": "Reading sẽ nhẹ nhàng hơn nếu bạn đọc câu hỏi trước. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-035",
+          "text": "Reading sẽ nhẹ nhàng hơn nếu bạn đọc câu hỏi trước. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-036",
+          "text": "Reading sẽ nhẹ nhàng hơn nếu bạn đọc câu hỏi trước. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-037",
+          "text": "Reading sẽ nhẹ nhàng hơn nếu bạn đọc câu hỏi trước. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-038",
+          "text": "Reading sẽ nhẹ nhàng hơn nếu bạn đọc câu hỏi trước. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-039",
+          "text": "Reading sẽ nhẹ nhàng hơn nếu bạn đọc câu hỏi trước. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-040",
+          "text": "Reading sẽ nhẹ nhàng hơn nếu bạn đọc câu hỏi trước. Bạn có thể mở menu để xem những lựa chọn đang có."
+        },
+        {
+          "id": "learning-041",
+          "text": "Khi luyện Listening, hãy nghe hết lượt trước khi xem giải thích. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-042",
+          "text": "Khi luyện Listening, hãy nghe hết lượt trước khi xem giải thích. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-043",
+          "text": "Khi luyện Listening, hãy nghe hết lượt trước khi xem giải thích. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-044",
+          "text": "Khi luyện Listening, hãy nghe hết lượt trước khi xem giải thích. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-045",
+          "text": "Khi luyện Listening, hãy nghe hết lượt trước khi xem giải thích. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-046",
+          "text": "Khi luyện Listening, hãy nghe hết lượt trước khi xem giải thích. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-047",
+          "text": "Khi luyện Listening, hãy nghe hết lượt trước khi xem giải thích. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-048",
+          "text": "Khi luyện Listening, hãy nghe hết lượt trước khi xem giải thích. Bạn có thể mở menu để xem những lựa chọn đang có."
+        },
+        {
+          "id": "learning-049",
+          "text": "Flashcard phù hợp cho những lần ôn ngắn trong ngày. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-050",
+          "text": "Flashcard phù hợp cho những lần ôn ngắn trong ngày. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-051",
+          "text": "Flashcard phù hợp cho những lần ôn ngắn trong ngày. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-052",
+          "text": "Flashcard phù hợp cho những lần ôn ngắn trong ngày. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-053",
+          "text": "Flashcard phù hợp cho những lần ôn ngắn trong ngày. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-054",
+          "text": "Flashcard phù hợp cho những lần ôn ngắn trong ngày. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-055",
+          "text": "Flashcard phù hợp cho những lần ôn ngắn trong ngày. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-056",
+          "text": "Flashcard phù hợp cho những lần ôn ngắn trong ngày. Bạn có thể mở menu để xem những lựa chọn đang có."
+        },
+        {
+          "id": "learning-057",
+          "text": "Bạn có thể đổi hoạt động khi muốn làm mới nhịp học. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-058",
+          "text": "Bạn có thể đổi hoạt động khi muốn làm mới nhịp học. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-059",
+          "text": "Bạn có thể đổi hoạt động khi muốn làm mới nhịp học. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-060",
+          "text": "Bạn có thể đổi hoạt động khi muốn làm mới nhịp học. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-061",
+          "text": "Bạn có thể đổi hoạt động khi muốn làm mới nhịp học. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-062",
+          "text": "Bạn có thể đổi hoạt động khi muốn làm mới nhịp học. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-063",
+          "text": "Bạn có thể đổi hoạt động khi muốn làm mới nhịp học. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-064",
+          "text": "Bạn có thể đổi hoạt động khi muốn làm mới nhịp học. Bạn có thể mở menu để xem những lựa chọn đang có."
+        },
+        {
+          "id": "learning-065",
+          "text": "Một phiên học tập trung không nhất thiết phải kéo dài. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-066",
+          "text": "Một phiên học tập trung không nhất thiết phải kéo dài. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-067",
+          "text": "Một phiên học tập trung không nhất thiết phải kéo dài. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-068",
+          "text": "Một phiên học tập trung không nhất thiết phải kéo dài. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-069",
+          "text": "Một phiên học tập trung không nhất thiết phải kéo dài. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-070",
+          "text": "Một phiên học tập trung không nhất thiết phải kéo dài. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-071",
+          "text": "Một phiên học tập trung không nhất thiết phải kéo dài. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-072",
+          "text": "Một phiên học tập trung không nhất thiết phải kéo dài. Bạn có thể mở menu để xem những lựa chọn đang có."
+        },
+        {
+          "id": "learning-073",
+          "text": "Hãy chọn bài phù hợp với quỹ thời gian hiện tại. Bạn muốn mình mở khu vực phù hợp để bạn bắt đầu không?"
+        },
+        {
+          "id": "learning-074",
+          "text": "Hãy chọn bài phù hợp với quỹ thời gian hiện tại. Hãy chọn nội dung khiến bạn muốn khám phá nhất."
+        },
+        {
+          "id": "learning-075",
+          "text": "Hãy chọn bài phù hợp với quỹ thời gian hiện tại. Mình có thể chỉ đường đến chức năng đó."
+        },
+        {
+          "id": "learning-076",
+          "text": "Hãy chọn bài phù hợp với quỹ thời gian hiện tại. Bạn có thể thử một bài ngắn trước rồi quyết định tiếp."
+        },
+        {
+          "id": "learning-077",
+          "text": "Hãy chọn bài phù hợp với quỹ thời gian hiện tại. Chọn cách học thoải mái sẽ giúp bạn duy trì thói quen."
+        },
+        {
+          "id": "learning-078",
+          "text": "Hãy chọn bài phù hợp với quỹ thời gian hiện tại. Không cần làm tất cả trong một lần đâu nhé."
+        },
+        {
+          "id": "learning-079",
+          "text": "Hãy chọn bài phù hợp với quỹ thời gian hiện tại. Ứng dụng có các khu vực riêng để bạn dễ tìm nội dung."
+        },
+        {
+          "id": "learning-080",
+          "text": "Hãy chọn bài phù hợp với quỹ thời gian hiện tại. Bạn có thể mở menu để xem những lựa chọn đang có."
+        }
+      ]
+    },
+    "help": {
+      "emotion": "listening",
+      "triggers": [
+        "manual",
+        "quick_prompt",
+        "fallback"
+      ],
+      "messages": [
+        {
+          "id": "help-001",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-002",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-003",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-004",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-005",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-006",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-007",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-008",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-009",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-010",
+          "text": "Mình có thể chỉ bạn cách tìm chức năng trong ứng dụng. Cùng tìm đúng công cụ nhé!"
+        },
+        {
+          "id": "help-011",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-012",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-013",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-014",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-015",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-016",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-017",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-018",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-019",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-020",
+          "text": "Bạn hãy nói tên mục đang muốn mở nhé. Cùng tìm đúng công cụ nhé!"
+        },
+        {
+          "id": "help-021",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-022",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-023",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-024",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-025",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-026",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-027",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-028",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-029",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-030",
+          "text": "Mình có thể hướng dẫn bạn đến khu vực phù hợp. Cùng tìm đúng công cụ nhé!"
+        },
+        {
+          "id": "help-031",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-032",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-033",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-034",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-035",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-036",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-037",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-038",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-039",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-040",
+          "text": "Bạn muốn tìm từ, luyện tập hay xem cấu hình? Cùng tìm đúng công cụ nhé!"
+        },
+        {
+          "id": "help-041",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-042",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-043",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-044",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-045",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-046",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-047",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-048",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-049",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-050",
+          "text": "Hãy mô tả ngắn điều bạn đang cần, mình sẽ thử nhận diện. Cùng tìm đúng công cụ nhé!"
+        },
+        {
+          "id": "help-051",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-052",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-053",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-054",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-055",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-056",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-057",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-058",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-059",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-060",
+          "text": "Mình có một số hướng dẫn nhanh ngay trong cuộc trò chuyện này. Cùng tìm đúng công cụ nhé!"
+        },
+        {
+          "id": "help-061",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-062",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-063",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-064",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-065",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-066",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-067",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-068",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-069",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-070",
+          "text": "Bạn có thể dùng các nút gợi ý để đi nhanh hơn. Cùng tìm đúng công cụ nhé!"
+        },
+        {
+          "id": "help-071",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-072",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-073",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-074",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-075",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-076",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-077",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-078",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-079",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-080",
+          "text": "Nếu mình chưa hiểu đúng, bạn hãy chọn một chủ đề cụ thể nhé. Cùng tìm đúng công cụ nhé!"
+        },
+        {
+          "id": "help-081",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-082",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-083",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-084",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-085",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-086",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-087",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-088",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-089",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-090",
+          "text": "Mình sẽ hỗ trợ trong phạm vi các chức năng hiện có. Cùng tìm đúng công cụ nhé!"
+        },
+        {
+          "id": "help-091",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Bạn muốn mình mở phần đó ngay bây giờ không?"
+        },
+        {
+          "id": "help-092",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Chọn một gợi ý bên dưới để đi tiếp nhé."
+        },
+        {
+          "id": "help-093",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Mình có thể đưa bạn đến đúng trang chỉ với một lần chạm."
+        },
+        {
+          "id": "help-094",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Bạn cũng có thể đóng bảng này để quay lại nội dung đang xem."
+        },
+        {
+          "id": "help-095",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Mình sẽ cố gắng chỉ dẫn rõ ràng và dễ làm theo."
+        },
+        {
+          "id": "help-096",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Bạn cứ hỏi bằng một câu ngắn hoặc chọn nút chức năng."
+        },
+        {
+          "id": "help-097",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Mình không cần truy cập tiến độ học để hướng dẫn các mục này."
+        },
+        {
+          "id": "help-098",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Các hướng dẫn của mình được lưu sẵn trong ứng dụng."
+        },
+        {
+          "id": "help-099",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Bạn có thể hỏi lại theo cách khác nếu cần."
+        },
+        {
+          "id": "help-100",
+          "text": "Bạn có thể mở một khu vực ngay từ câu trả lời của mình. Cùng tìm đúng công cụ nhé!"
+        }
+      ]
+    },
+    "reaction": {
+      "emotion": "surprised",
+      "triggers": [
+        "manual",
+        "after_interaction"
+      ],
+      "messages": [
+        {
+          "id": "reaction-001",
+          "text": "Ồ, mình thấy bạn đang khám phá một mục mới! Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-002",
+          "text": "Ồ, mình thấy bạn đang khám phá một mục mới! Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-003",
+          "text": "Ồ, mình thấy bạn đang khám phá một mục mới! Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-004",
+          "text": "Ồ, mình thấy bạn đang khám phá một mục mới! Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-005",
+          "text": "Ồ, mình thấy bạn đang khám phá một mục mới! Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-006",
+          "text": "Ồ, mình thấy bạn đang khám phá một mục mới! Mình luôn sẵn sàng khi bạn cần."
+        },
+        {
+          "id": "reaction-007",
+          "text": "Tuyệt, chúng ta thử một lựa chọn khác nhé! Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-008",
+          "text": "Tuyệt, chúng ta thử một lựa chọn khác nhé! Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-009",
+          "text": "Tuyệt, chúng ta thử một lựa chọn khác nhé! Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-010",
+          "text": "Tuyệt, chúng ta thử một lựa chọn khác nhé! Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-011",
+          "text": "Tuyệt, chúng ta thử một lựa chọn khác nhé! Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-012",
+          "text": "Tuyệt, chúng ta thử một lựa chọn khác nhé! Mình luôn sẵn sàng khi bạn cần."
+        },
+        {
+          "id": "reaction-013",
+          "text": "Hay đấy! Mình thích tinh thần khám phá này. Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-014",
+          "text": "Hay đấy! Mình thích tinh thần khám phá này. Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-015",
+          "text": "Hay đấy! Mình thích tinh thần khám phá này. Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-016",
+          "text": "Hay đấy! Mình thích tinh thần khám phá này. Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-017",
+          "text": "Hay đấy! Mình thích tinh thần khám phá này. Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-018",
+          "text": "Hay đấy! Mình thích tinh thần khám phá này. Mình luôn sẵn sàng khi bạn cần."
+        },
+        {
+          "id": "reaction-019",
+          "text": "Một lựa chọn thú vị vừa được mở ra. Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-020",
+          "text": "Một lựa chọn thú vị vừa được mở ra. Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-021",
+          "text": "Một lựa chọn thú vị vừa được mở ra. Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-022",
+          "text": "Một lựa chọn thú vị vừa được mở ra. Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-023",
+          "text": "Một lựa chọn thú vị vừa được mở ra. Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-024",
+          "text": "Một lựa chọn thú vị vừa được mở ra. Mình luôn sẵn sàng khi bạn cần."
+        },
+        {
+          "id": "reaction-025",
+          "text": "Mình đã sẵn sàng cho bước tiếp theo. Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-026",
+          "text": "Mình đã sẵn sàng cho bước tiếp theo. Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-027",
+          "text": "Mình đã sẵn sàng cho bước tiếp theo. Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-028",
+          "text": "Mình đã sẵn sàng cho bước tiếp theo. Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-029",
+          "text": "Mình đã sẵn sàng cho bước tiếp theo. Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-030",
+          "text": "Mình đã sẵn sàng cho bước tiếp theo. Mình luôn sẵn sàng khi bạn cần."
+        },
+        {
+          "id": "reaction-031",
+          "text": "Ồ, bạn vừa chọn một hướng đi mới! Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-032",
+          "text": "Ồ, bạn vừa chọn một hướng đi mới! Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-033",
+          "text": "Ồ, bạn vừa chọn một hướng đi mới! Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-034",
+          "text": "Ồ, bạn vừa chọn một hướng đi mới! Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-035",
+          "text": "Ồ, bạn vừa chọn một hướng đi mới! Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-036",
+          "text": "Ồ, bạn vừa chọn một hướng đi mới! Mình luôn sẵn sàng khi bạn cần."
+        },
+        {
+          "id": "reaction-037",
+          "text": "Ting ting! Có thêm một điều để khám phá. Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-038",
+          "text": "Ting ting! Có thêm một điều để khám phá. Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-039",
+          "text": "Ting ting! Có thêm một điều để khám phá. Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-040",
+          "text": "Ting ting! Có thêm một điều để khám phá. Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-041",
+          "text": "Ting ting! Có thêm một điều để khám phá. Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-042",
+          "text": "Ting ting! Có thêm một điều để khám phá. Mình luôn sẵn sàng khi bạn cần."
+        },
+        {
+          "id": "reaction-043",
+          "text": "Mình đang chú ý đây, bạn muốn làm gì tiếp? Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-044",
+          "text": "Mình đang chú ý đây, bạn muốn làm gì tiếp? Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-045",
+          "text": "Mình đang chú ý đây, bạn muốn làm gì tiếp? Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-046",
+          "text": "Mình đang chú ý đây, bạn muốn làm gì tiếp? Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-047",
+          "text": "Mình đang chú ý đây, bạn muốn làm gì tiếp? Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-048",
+          "text": "Mình đang chú ý đây, bạn muốn làm gì tiếp? Mình luôn sẵn sàng khi bạn cần."
+        },
+        {
+          "id": "reaction-049",
+          "text": "Một khởi đầu mới thật đáng mong đợi! Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-050",
+          "text": "Một khởi đầu mới thật đáng mong đợi! Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-051",
+          "text": "Một khởi đầu mới thật đáng mong đợi! Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-052",
+          "text": "Một khởi đầu mới thật đáng mong đợi! Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-053",
+          "text": "Một khởi đầu mới thật đáng mong đợi! Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-054",
+          "text": "Một khởi đầu mới thật đáng mong đợi! Mình luôn sẵn sàng khi bạn cần."
+        },
+        {
+          "id": "reaction-055",
+          "text": "Được rồi, mình sẽ đi cùng bạn. Bạn có thể thay đổi lựa chọn bất cứ lúc nào."
+        },
+        {
+          "id": "reaction-056",
+          "text": "Được rồi, mình sẽ đi cùng bạn. Cứ khám phá theo cách của riêng bạn nhé."
+        },
+        {
+          "id": "reaction-057",
+          "text": "Được rồi, mình sẽ đi cùng bạn. Mình sẽ giữ mọi thứ đơn giản và dễ tìm."
+        },
+        {
+          "id": "reaction-058",
+          "text": "Được rồi, mình sẽ đi cùng bạn. Hãy thử một bước nhỏ tiếp theo nào."
+        },
+        {
+          "id": "reaction-059",
+          "text": "Được rồi, mình sẽ đi cùng bạn. Cảm ơn bạn đã tương tác cùng mình!"
+        },
+        {
+          "id": "reaction-060",
+          "text": "Được rồi, mình sẽ đi cùng bạn. Mình luôn sẵn sàng khi bạn cần."
+        }
+      ]
+    },
+    "rest": {
+      "emotion": "sleepy",
+      "triggers": [
+        "idle",
+        "manual",
+        "session_pause"
+      ],
+      "messages": [
+        {
+          "id": "rest-001",
+          "text": "Một khoảng nghỉ ngắn cũng rất đáng giá. Quay lại khi bạn thấy thoải mái nhé."
+        },
+        {
+          "id": "rest-002",
+          "text": "Một khoảng nghỉ ngắn cũng rất đáng giá. Mình sẽ chờ ở đây, không làm phiền bạn đâu."
+        },
+        {
+          "id": "rest-003",
+          "text": "Một khoảng nghỉ ngắn cũng rất đáng giá. Một chút nghỉ ngơi giúp bạn nạp lại năng lượng."
+        },
+        {
+          "id": "rest-004",
+          "text": "Một khoảng nghỉ ngắn cũng rất đáng giá. Bạn có thể đóng cửa sổ này và tiếp tục sau."
+        },
+        {
+          "id": "rest-005",
+          "text": "Một khoảng nghỉ ngắn cũng rất đáng giá. Chúc bạn có một khoảng nghỉ thật dễ chịu."
+        },
+        {
+          "id": "rest-006",
+          "text": "Bạn nhớ thư giãn mắt một chút nhé. Quay lại khi bạn thấy thoải mái nhé."
+        },
+        {
+          "id": "rest-007",
+          "text": "Bạn nhớ thư giãn mắt một chút nhé. Mình sẽ chờ ở đây, không làm phiền bạn đâu."
+        },
+        {
+          "id": "rest-008",
+          "text": "Bạn nhớ thư giãn mắt một chút nhé. Một chút nghỉ ngơi giúp bạn nạp lại năng lượng."
+        },
+        {
+          "id": "rest-009",
+          "text": "Bạn nhớ thư giãn mắt một chút nhé. Bạn có thể đóng cửa sổ này và tiếp tục sau."
+        },
+        {
+          "id": "rest-010",
+          "text": "Bạn nhớ thư giãn mắt một chút nhé. Chúc bạn có một khoảng nghỉ thật dễ chịu."
+        },
+        {
+          "id": "rest-011",
+          "text": "Học lâu rồi thì nghỉ vài phút cũng tốt. Quay lại khi bạn thấy thoải mái nhé."
+        },
+        {
+          "id": "rest-012",
+          "text": "Học lâu rồi thì nghỉ vài phút cũng tốt. Mình sẽ chờ ở đây, không làm phiền bạn đâu."
+        },
+        {
+          "id": "rest-013",
+          "text": "Học lâu rồi thì nghỉ vài phút cũng tốt. Một chút nghỉ ngơi giúp bạn nạp lại năng lượng."
+        },
+        {
+          "id": "rest-014",
+          "text": "Học lâu rồi thì nghỉ vài phút cũng tốt. Bạn có thể đóng cửa sổ này và tiếp tục sau."
+        },
+        {
+          "id": "rest-015",
+          "text": "Học lâu rồi thì nghỉ vài phút cũng tốt. Chúc bạn có một khoảng nghỉ thật dễ chịu."
+        },
+        {
+          "id": "rest-016",
+          "text": "Mình sẽ ở chế độ yên lặng trong lúc bạn nghỉ. Quay lại khi bạn thấy thoải mái nhé."
+        },
+        {
+          "id": "rest-017",
+          "text": "Mình sẽ ở chế độ yên lặng trong lúc bạn nghỉ. Mình sẽ chờ ở đây, không làm phiền bạn đâu."
+        },
+        {
+          "id": "rest-018",
+          "text": "Mình sẽ ở chế độ yên lặng trong lúc bạn nghỉ. Một chút nghỉ ngơi giúp bạn nạp lại năng lượng."
+        },
+        {
+          "id": "rest-019",
+          "text": "Mình sẽ ở chế độ yên lặng trong lúc bạn nghỉ. Bạn có thể đóng cửa sổ này và tiếp tục sau."
+        },
+        {
+          "id": "rest-020",
+          "text": "Mình sẽ ở chế độ yên lặng trong lúc bạn nghỉ. Chúc bạn có một khoảng nghỉ thật dễ chịu."
+        },
+        {
+          "id": "rest-021",
+          "text": "Khi sẵn sàng, chúng ta lại tiếp tục. Quay lại khi bạn thấy thoải mái nhé."
+        },
+        {
+          "id": "rest-022",
+          "text": "Khi sẵn sàng, chúng ta lại tiếp tục. Mình sẽ chờ ở đây, không làm phiền bạn đâu."
+        },
+        {
+          "id": "rest-023",
+          "text": "Khi sẵn sàng, chúng ta lại tiếp tục. Một chút nghỉ ngơi giúp bạn nạp lại năng lượng."
+        },
+        {
+          "id": "rest-024",
+          "text": "Khi sẵn sàng, chúng ta lại tiếp tục. Bạn có thể đóng cửa sổ này và tiếp tục sau."
+        },
+        {
+          "id": "rest-025",
+          "text": "Khi sẵn sàng, chúng ta lại tiếp tục. Chúc bạn có một khoảng nghỉ thật dễ chịu."
+        },
+        {
+          "id": "rest-026",
+          "text": "Bạn có thể tạm rời màn hình và uống chút nước. Quay lại khi bạn thấy thoải mái nhé."
+        },
+        {
+          "id": "rest-027",
+          "text": "Bạn có thể tạm rời màn hình và uống chút nước. Mình sẽ chờ ở đây, không làm phiền bạn đâu."
+        },
+        {
+          "id": "rest-028",
+          "text": "Bạn có thể tạm rời màn hình và uống chút nước. Một chút nghỉ ngơi giúp bạn nạp lại năng lượng."
+        },
+        {
+          "id": "rest-029",
+          "text": "Bạn có thể tạm rời màn hình và uống chút nước. Bạn có thể đóng cửa sổ này và tiếp tục sau."
+        },
+        {
+          "id": "rest-030",
+          "text": "Bạn có thể tạm rời màn hình và uống chút nước. Chúc bạn có một khoảng nghỉ thật dễ chịu."
+        },
+        {
+          "id": "rest-031",
+          "text": "Đừng quên giữ nhịp học cân bằng nhé. Quay lại khi bạn thấy thoải mái nhé."
+        },
+        {
+          "id": "rest-032",
+          "text": "Đừng quên giữ nhịp học cân bằng nhé. Mình sẽ chờ ở đây, không làm phiền bạn đâu."
+        },
+        {
+          "id": "rest-033",
+          "text": "Đừng quên giữ nhịp học cân bằng nhé. Một chút nghỉ ngơi giúp bạn nạp lại năng lượng."
+        },
+        {
+          "id": "rest-034",
+          "text": "Đừng quên giữ nhịp học cân bằng nhé. Bạn có thể đóng cửa sổ này và tiếp tục sau."
+        },
+        {
+          "id": "rest-035",
+          "text": "Đừng quên giữ nhịp học cân bằng nhé. Chúc bạn có một khoảng nghỉ thật dễ chịu."
+        },
+        {
+          "id": "rest-036",
+          "text": "Tạm nghỉ một chút thôi, không cần vội. Quay lại khi bạn thấy thoải mái nhé."
+        },
+        {
+          "id": "rest-037",
+          "text": "Tạm nghỉ một chút thôi, không cần vội. Mình sẽ chờ ở đây, không làm phiền bạn đâu."
+        },
+        {
+          "id": "rest-038",
+          "text": "Tạm nghỉ một chút thôi, không cần vội. Một chút nghỉ ngơi giúp bạn nạp lại năng lượng."
+        },
+        {
+          "id": "rest-039",
+          "text": "Tạm nghỉ một chút thôi, không cần vội. Bạn có thể đóng cửa sổ này và tiếp tục sau."
+        },
+        {
+          "id": "rest-040",
+          "text": "Tạm nghỉ một chút thôi, không cần vội. Chúc bạn có một khoảng nghỉ thật dễ chịu."
+        }
+      ]
+    }
+  },
+  "features": {
+    "dictionary": {
+      "label": "Từ vựng",
+      "action": "dictionary",
+      "messages": [
+        "Mục Từ vựng giúp bạn tra cứu danh sách từ theo A–Z, chủ đề và bộ lọc. Mình mở trang Từ vựng nhé?",
+        "Bạn có thể tìm từ bằng ô tìm kiếm, lọc theo chủ đề hoặc chữ cái. Hãy mở Từ vựng để khám phá.",
+        "Trong Từ vựng, bạn có thể xem nghĩa, phiên âm, loại từ và ví dụ của từng mục.",
+        "Muốn tra cứu một từ, hãy vào Từ vựng rồi nhập từ cần tìm vào thanh tìm kiếm.",
+        "Khu vực Từ vựng có danh sách A–Z và bộ lọc để bạn tìm nội dung thuận tiện hơn."
+      ]
+    },
+    "flashcards": {
+      "label": "Flashcard",
+      "action": "flashcards",
+      "messages": [
+        "Flashcard trình bày từ và nghĩa theo từng thẻ để bạn ôn theo chủ đề. Mình mở Flashcard nhé?",
+        "Bạn có thể chọn chủ đề, xem mặt trước rồi lật thẻ để kiểm tra nghĩa.",
+        "Flashcard phù hợp với những phiên ôn ngắn. Hãy chọn một bộ thẻ để bắt đầu.",
+        "Trong Flashcard, bạn có thể luyện nhận diện từ theo từng lượt thẻ.",
+        "Mình sẽ đưa bạn đến khu vực Flashcard để chọn bộ từ muốn học."
+      ]
+    },
+    "practice": {
+      "label": "Ôn tập",
+      "action": "practice",
+      "messages": [
+        "Mục Ôn tập có các lượt luyện từ vựng và dạng bài thực hành. Mình mở khu vực này nhé?",
+        "Bạn có thể vào Ôn tập để bắt đầu một lượt câu hỏi ngắn.",
+        "Khu vực Ôn tập giúp bạn luyện lại theo các lựa chọn có sẵn trong ứng dụng.",
+        "Hãy mở Ôn tập khi bạn muốn thực hành thay vì chỉ đọc nội dung.",
+        "Mình có thể đưa bạn đến trang Ôn tập ngay bây giờ."
+      ]
+    },
+    "grammar": {
+      "label": "Ngữ pháp",
+      "action": "grammar",
+      "messages": [
+        "Mục Ngữ pháp tập hợp bài học và bài tập theo chủ đề. Mình mở trang nhé?",
+        "Bạn có thể tìm bài Grammar theo nhóm nội dung và cấp độ.",
+        "Trong Ngữ pháp, hãy chọn một bài để xem giải thích, ví dụ và bài tập.",
+        "Mình sẽ đưa bạn đến danh sách bài học Ngữ pháp.",
+        "Bạn có thể khám phá các chủ điểm ngữ pháp trong khu vực này."
+      ]
+    },
+    "reading": {
+      "label": "Đọc hiểu",
+      "action": "reading",
+      "messages": [
+        "Mục Đọc hiểu chứa tài liệu Reading và câu hỏi luyện tập. Mình mở trang nhé?",
+        "Bạn có thể chọn bài đọc theo Part, chủ đề hoặc cấp độ.",
+        "Trong Reading, hãy mở một tài liệu để đọc và thực hiện câu hỏi đi kèm.",
+        "Mình sẽ dẫn bạn đến thư viện Đọc hiểu.",
+        "Bạn có thể luyện đọc theo từng tài liệu trong khu vực Reading."
+      ]
+    },
+    "listening": {
+      "label": "Nghe hiểu",
+      "action": "listening",
+      "messages": [
+        "Mục Nghe hiểu chứa các bài Listening và phần phát âm bằng giọng thiết bị. Mình mở trang nhé?",
+        "Bạn có thể chọn bài nghe theo Part, chủ đề và cấp độ.",
+        "Trong Listening, hãy dùng nút phát và điều chỉnh tốc độ nếu cần.",
+        "Mình sẽ đưa bạn đến thư viện Nghe hiểu.",
+        "Bạn có thể khám phá các bài nghe trong khu vực Listening."
+      ]
+    },
+    "mock": {
+      "label": "Thi thử",
+      "action": "mock",
+      "messages": [
+        "Khu vực Thi thử có các chế độ luyện đề đang được hỗ trợ. Mình mở trang nhé?",
+        "Bạn có thể xem các chế độ thi thử và chọn phiên phù hợp.",
+        "Trước khi bắt đầu Mock Exam, hãy chuẩn bị thời gian tập trung nhé.",
+        "Mình sẽ dẫn bạn đến khu vực Thi thử TOEIC.",
+        "Trong Thi thử, bạn có thể xem lịch sử các lượt đã lưu trên thiết bị."
+      ]
+    },
+    "foundation": {
+      "label": "Lộ trình Foundation",
+      "action": "foundation",
+      "messages": [
+        "Lộ trình Foundation có các bài học nền tảng, Reading và Listening. Mình mở trang nhé?",
+        "Bạn có thể khám phá các chặng học nền tảng trong ứng dụng.",
+        "Khu vực Foundation phù hợp khi bạn muốn học theo bài có hướng dẫn.",
+        "Mình sẽ đưa bạn đến lộ trình Foundation.",
+        "Bạn có thể chọn bài học theo chặng phù hợp với mình."
+      ]
+    },
+    "placement": {
+      "label": "Đánh giá đầu vào",
+      "action": "placement",
+      "messages": [
+        "Placement là bài đánh giá ngắn để gợi ý điểm bắt đầu. Bạn muốn mở bài đánh giá hiện có không?",
+        "Bạn có thể làm bài đánh giá điểm bắt đầu trước khi chọn lộ trình.",
+        "Bài Placement chỉ mang tính tham khảo, không phải chứng chỉ CEFR hay điểm TOEIC chính thức.",
+        "Mình có thể mở bài đánh giá đầu vào đang có trong ứng dụng.",
+        "Hãy chọn Placement nếu bạn muốn có gợi ý điểm bắt đầu."
+      ]
+    },
+    "settings": {
+      "label": "Cấu hình",
+      "action": "settings",
+      "messages": [
+        "Mục Cấu hình có các thiết lập ứng dụng và nhắc nhở. Mình mở trang nhé?",
+        "Bạn có thể vào Cấu hình để điều chỉnh tùy chọn sử dụng.",
+        "Mình sẽ đưa bạn đến trang Cấu hình.",
+        "Các tùy chọn cá nhân của ứng dụng nằm trong khu vực Cấu hình.",
+        "Bạn có thể kiểm tra nhắc nhở và lựa chọn ứng dụng tại đây."
+      ]
+    },
+    "data": {
+      "label": "Quản lý dữ liệu",
+      "action": "data",
+      "messages": [
+        "Quản lý dữ liệu là nơi xem và thao tác với dữ liệu từ vựng cá nhân trên thiết bị.",
+        "Bạn có thể mở Quản lý dữ liệu để xem công cụ nhập xuất và từ vựng cá nhân.",
+        "Mình sẽ dẫn bạn đến khu vực Quản lý dữ liệu.",
+        "Các công cụ dữ liệu nằm trong khu vực riêng để bạn dễ kiểm soát.",
+        "Bạn hãy mở Quản lý dữ liệu nếu muốn tìm chức năng sao lưu hoặc nhập xuất."
+      ]
+    }
+  },
+  "faq": [
+    {
+      "id": "faq-offline",
+      "keywords": [
+        "offline",
+        "mất mạng",
+        "không có mạng"
+      ],
+      "answer": "Ứng dụng được thiết kế theo hướng GitHub Pages PWA. Một số nội dung đã được lưu trong bộ nhớ đệm có thể dùng khi ngoại tuyến; lần tải đầu và tài nguyên chưa cache vẫn cần mạng."
+    },
+    {
+      "id": "faq-install",
+      "keywords": [
+        "cài ứng dụng",
+        "màn hình chính",
+        "pwa",
+        "install"
+      ],
+      "answer": "Trên trình duyệt di động, bạn có thể dùng chức năng Thêm vào Màn hình chính hoặc Cài đặt ứng dụng nếu trình duyệt hỗ trợ."
+    },
+    {
+      "id": "faq-language",
+      "keywords": [
+        "tiếng anh",
+        "tiếng việt",
+        "ngôn ngữ"
+      ],
+      "answer": "Bạn có thể kiểm tra tùy chọn ngôn ngữ trong phần Cấu hình nếu phiên bản hiện tại có cung cấp lựa chọn đó."
+    },
+    {
+      "id": "faq-audio",
+      "keywords": [
+        "giọng đọc",
+        "âm thanh",
+        "phát âm",
+        "voice"
+      ],
+      "answer": "Phần nghe và phát âm sử dụng khả năng SpeechSynthesis của thiết bị. Giọng và chất lượng phụ thuộc hệ điều hành, trình duyệt và các voice đã cài."
+    },
+    {
+      "id": "faq-profile",
+      "keywords": [
+        "dữ liệu cá nhân",
+        "đổi máy",
+        "sao lưu",
+        "backup"
+      ],
+      "answer": "Dữ liệu cá nhân và tiến độ được lưu cục bộ trên thiết bị. Trước khi đổi máy hoặc xóa dữ liệu trình duyệt, hãy dùng chức năng xuất dữ liệu hiện có để sao lưu."
+    },
+    {
+      "id": "faq-ai",
+      "keywords": [
+        "google ai",
+        "ai",
+        "trí tuệ nhân tạo"
+      ],
+      "answer": "Các nút Google AI theo từng chức năng là luồng riêng do người dùng chủ động mở. Robot Buddy này chỉ dùng thư viện hội thoại tĩnh trên thiết bị, không phải chatbot AI sinh nội dung."
+    }
+  ],
+  "quickPrompts": [
+    {
+      "label": "Bạn là ai?",
+      "text": "Bạn là ai?"
+    },
+    {
+      "label": "Tôi cần trợ giúp",
+      "text": "Tôi cần trợ giúp"
+    },
+    {
+      "label": "Tìm từ vựng",
+      "text": "Tôi muốn tìm từ vựng"
+    },
+    {
+      "label": "Luyện Flashcard",
+      "text": "Tôi muốn học Flashcard"
+    },
+    {
+      "label": "Học ngữ pháp",
+      "text": "Tôi muốn học ngữ pháp"
+    },
+    {
+      "label": "Luyện nghe",
+      "text": "Tôi muốn luyện Listening"
+    },
+    {
+      "label": "Luyện đọc",
+      "text": "Tôi muốn luyện Reading"
+    },
+    {
+      "label": "Thi thử TOEIC",
+      "text": "Tôi muốn thi thử TOEIC"
+    },
+    {
+      "label": "Đánh giá đầu vào",
+      "text": "Mở đánh giá đầu vào"
+    },
+    {
+      "label": "Động viên tôi nhé",
+      "text": "Hãy động viên tôi nhé"
+    },
+    {
+      "label": "Tôi muốn nghỉ một chút",
+      "text": "Tôi muốn nghỉ một chút"
+    },
+    {
+      "label": "Ứng dụng dùng offline?",
+      "text": "Ứng dụng có dùng offline không?"
+    }
+  ]
+}

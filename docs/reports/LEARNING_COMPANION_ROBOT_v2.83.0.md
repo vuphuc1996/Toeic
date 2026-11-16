@@ -1,3 +1,5 @@
+> HISTORICAL SPECIFICATION — Superseded by v2.84.0. The former progress-aware Robot behavior described here is not part of the current Robot Buddy; the current contract is `ROBOT_BUDDY_v2.84.0.md`.
+
 # TOEIC Dictionary v2.83.0 — Robot Buddy specification
 
 **Base:** v2.82.1 Full Source  
