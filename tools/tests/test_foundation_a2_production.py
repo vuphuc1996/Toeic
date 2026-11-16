@@ -56,7 +56,9 @@ class FoundationA2ProductionTests(unittest.TestCase):
         rows = {row['lessonId']: row for row in self.baseline['tasks']}
         self.assertEqual(len(rows), 13)
         for lesson in self.a2:
-            task = lesson['productionTask']
+            task = dict(lesson['productionTask'])
+            task.pop('revisionChecklist', None)
+            task.pop('revisionHint', None)
             canonical = json.dumps(task, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
             with self.subTest(lesson=lesson['id']):
                 self.assertEqual(rows[lesson['id']]['id'], task['id'])

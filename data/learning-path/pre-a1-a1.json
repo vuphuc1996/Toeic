@@ -917,7 +917,13 @@
           "Tin nhắn có lời cảm ơn và phù hợp với đồng nghiệp."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Yêu cầu có dùng “Could you please + động từ nguyên mẫu” không?",
+          "Đã nêu rõ meeting notes và thời hạn before 3 p.m. chưa?",
+          "Đã thêm lời cảm ơn phù hợp với đồng nghiệp chưa?"
+        ],
+        "revisionHint": "Sau “Could you please” dùng động từ nguyên mẫu, không thêm “to”. Đặt tài liệu và thời hạn vào câu yêu cầu; kết thúc bằng lời cảm ơn ngắn."
       }
     },
     {
@@ -1023,7 +1029,13 @@
           "Ghi chú nêu được hành động cần thực hiện."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "“A few” có đi với “folders” ở dạng số nhiều không?",
+          "“A little” có đi với “printer ink” không đếm được không?",
+          "Ghi chú có nêu rõ cần bổ sung vật tư không?"
+        ],
+        "revisionHint": "Kiểm tra từng danh từ trước khi chọn lượng từ: folders đếm được số nhiều, còn printer ink là danh từ không đếm được. Sau đó nói rõ bộ phận mua hàng cần bổ sung gì."
       }
     },
     {
@@ -1129,7 +1141,13 @@
           "Kết luận phù hợp với dữ kiện thời gian đã cho."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Route B có được so sánh nhanh hơn Route A không?",
+          "Câu so sánh nhất có gọi Route B là “the fastest” trong ba tuyến không?",
+          "Các số liệu 2 ngày, 3 ngày và 5 ngày có được dùng đúng không?"
+        ],
+        "revisionHint": "So sánh thời gian nhỏ hơn nghĩa là nhanh hơn. Dùng “faster than” khi so hai tuyến và “the fastest” khi chọn trong cả ba tuyến."
       }
     },
     {
@@ -1235,7 +1253,13 @@
           "Cập nhật có mốc thời gian và người nhận phù hợp."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Bản viết có mốc “yesterday” không?",
+          "“Wrote” đã ở dạng quá khứ bất quy tắc chưa?",
+          "Hành động “sent” và người nhận báo cáo có rõ không?"
+        ],
+        "revisionHint": "Dùng Past Simple cho hành động đã hoàn tất hôm qua. Kiểm tra dạng quá khứ của từng động từ, đặc biệt “write → wrote”, và giữ thứ tự hoàn thành rồi gửi báo cáo."
       }
     },
     {
@@ -1341,7 +1365,13 @@
           "Câu mô tả hoạt động đang diễn ra, không phải thói quen."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Mai có đi với “is checking” không?",
+          "Long có đi với “is installing” không?",
+          "Có từ “right now” để thể hiện hành động đang diễn ra không?"
+        ],
+        "revisionHint": "Với chủ ngữ số ít Mai/Long, dùng “is + V-ing”. Giữ đúng hai hành động đang diễn ra và thêm “right now” để làm rõ thời điểm."
       }
     },
     {
@@ -1447,7 +1477,13 @@
           "Thông báo nêu rõ điều kiện và dễ hiểu."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Quy định đăng ký có dùng “must” hoặc “have to” không?",
+          "Quyền vào khu họp có dùng “can” không?",
+          "Điều kiện có nhân viên phụ trách đi cùng đã được nêu chưa?"
+        ],
+        "revisionHint": "Tách nghĩa vụ và sự cho phép thành hai ý rõ ràng. Sau must/can dùng động từ nguyên mẫu; không bỏ điều kiện cần người phụ trách đi cùng."
       }
     },
     {
@@ -1553,7 +1589,13 @@
           "Tôi dùng giới từ chỉ vị trí chính xác."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Các chỉ dẫn có bắt đầu từ quầy lễ tân không?",
+          "Có dùng câu mệnh lệnh “go straight” và “turn left” đúng thứ tự không?",
+          "Điểm đến có được xác định là “opposite the cafeteria” không?"
+        ],
+        "revisionHint": "Viết từng bước bằng động từ nguyên mẫu ở đầu câu. Giữ thứ tự di chuyển từ quầy lễ tân và chỉ dùng “opposite” để mô tả vị trí cuối cùng."
       }
     },
     {
@@ -1659,7 +1701,13 @@
           "Ngôn ngữ phù hợp với cuộc trao đổi nơi làm việc."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "“Shall I …?” có được dùng để đề nghị giúp chuẩn bị bản sao không?",
+          "“Would you like …?” có được dùng như một lời mời không?",
+          "Hai câu có thể hiện hai mục đích khác nhau và giọng điệu lịch sự không?"
+        ],
+        "revisionHint": "Không dùng hai mẫu câu như thể chúng cùng một mục đích: “Shall I …?” là đề nghị làm giúp, còn “Would you like …?” là lời mời/đề xuất người kia tham gia."
       }
     },
     {
@@ -1765,7 +1813,13 @@
           "Bước cuối phản ánh đúng kết quả của quy trình."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "“First” có giới thiệu việc hoàn thành biểu mẫu không?",
+          "“Next” có giới thiệu việc gửi quản lý duyệt không?",
+          "“Finally” có kết thúc bằng việc lưu bản đã duyệt vào shared folder không?"
+        ],
+        "revisionHint": "Đối chiếu ba từ nối với đúng ba bước của quy trình. Bước cuối chỉ lưu bản đã được duyệt, không lưu bản chưa phê duyệt."
       }
     },
     {
@@ -1870,7 +1924,13 @@
           "Thông báo có thời gian và hướng dẫn liên quan."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Cấu trúc có đúng “are going to + động từ nguyên mẫu” không?",
+          "Thời gian “on Friday afternoon” đã rõ chưa?",
+          "Có thông tin chuẩn bị hoặc phối hợp với đồng nghiệp không?"
+        ],
+        "revisionHint": "Sau “are going to” dùng động từ nguyên mẫu. Nêu thời gian thực hiện và thêm việc chuẩn bị/phối hợp để thông báo có ích cho nhóm."
       }
     },
     {
@@ -1976,7 +2036,13 @@
           "Tôi tránh kết hợp Present Perfect với mốc thời gian quá khứ đã kết thúc."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Câu thông báo có dùng “have uploaded” không?",
+          "Câu hỏi có đúng mẫu “Have you checked …?” không?",
+          "Có tránh mốc quá khứ đã kết thúc như yesterday/last week không?"
+        ],
+        "revisionHint": "Present Perfect dùng have/has + past participle và liên hệ kết quả với hiện tại. Không ghép cấu trúc này với thời điểm quá khứ đã kết thúc; hãy dùng mốc phù hợp hoặc bỏ mốc."
       }
     },
     {
@@ -2082,7 +2148,13 @@
           "Câu tập trung vào đối tượng nhận hành động."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Visitor badges có làm chủ ngữ của câu bị động không?",
+          "Quy trình hiện tại có dùng “are checked” không?",
+          "Sự việc hôm qua có dùng “were replaced” không?"
+        ],
+        "revisionHint": "Trong câu bị động, dùng be + past participle. Chọn “are” cho hiện tại số nhiều và “were” cho sự việc quá khứ số nhiều; giữ visitor badges làm trọng tâm."
       }
     },
     {
@@ -2188,7 +2260,13 @@
           "Tôi chia động từ đúng với chủ ngữ."
         ],
         "evidenceType": "learner-authored-contextual-production",
-        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động."
+        "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu của người học không được ứng dụng chấm tự động.",
+        "revisionChecklist": [
+          "Mệnh đề với “who” có bổ nghĩa cho đồng nghiệp/người không?",
+          "Mệnh đề với “that” có xác định biểu mẫu không?",
+          "Động từ trong mệnh đề quan hệ có hòa hợp với chủ ngữ số ít không?"
+        ],
+        "revisionHint": "Dùng who cho người và that cho vật trong hai câu này. Kiểm tra chủ ngữ số ít ở mệnh đề quan hệ, chẳng hạn “the colleague who manages” và “the form that …”."
       }
     }
   ],

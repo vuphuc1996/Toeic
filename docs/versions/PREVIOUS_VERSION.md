@@ -1,6 +1,5 @@
 # Previous version
 
-- Version: **v2.77.0**
-- Change: focused A2 Reading/Listening question non-duplication and source-evidence pass across 13 passages and 13 four-turn dialogues.
-- Preserved existing A2 q1/q2 pairs; five question tasks were revised with explicit source pointers.
-- v2.78.0 inherits all v2.77.0 A2 assessment content and adds contextual written-production tasks without changing Reading/Listening question banks or their stable IDs.
+- Version: **v2.79.0**
+- Change: introduced guided A2 writing revision, task-specific self-review and response-to-response history for all 13 A2 contextual production tasks.
+- v2.80.0 adds a shared contextual Learning Assistant, existing-data masked vocabulary completion and opt-in Google AI prompt transfer. A2 writing IDs, Foundation question IDs and prior learning progress remain unchanged.

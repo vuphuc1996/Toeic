@@ -165,14 +165,63 @@ export function recordFoundationProductionAttempt(progress = {}, lessonId, taskI
   const attempts = Array.isArray(item.attempts) ? item.attempts.slice() : [];
   const score = rubricRatings.filter(Boolean).length;
   const wordCount = responseWords.length;
-  attempts.push({ ratings: rubricRatings.slice(), score, maxScore: 3, wordCount, minimumWords: requiredWords, assessedAt: Number(assessedAt), assessmentType: 'learner_self_report' });
+  attempts.push({ response, ratings: rubricRatings.slice(), score, maxScore: 3, wordCount, minimumWords: requiredWords, assessedAt: Number(assessedAt), assessmentType: 'learner_self_report' });
   return {
     ...ledger,
     [lessonId]: {
       ...prior,
       productionEvidence: {
         ...productionEvidence,
-        [taskId]: { latestScore: score, latestRatings: rubricRatings.slice(), latestWordCount: wordCount, minimumWords: requiredWords, latestAssessedAt: Number(assessedAt), latestResponse: response, attempts }
+        [taskId]: {
+          ...item,
+          initialResponse: item.initialResponse || item.latestResponse || response,
+          latestScore: score, latestRatings: rubricRatings.slice(), latestWordCount: wordCount,
+          minimumWords: requiredWords, latestAssessedAt: Number(assessedAt), latestResponse: response,
+          latestAssessmentType: 'learner_self_report', attempts
+        }
+      }
+    }
+  };
+}
+
+/**
+ * Record a learner-led revision after a first production attempt. It links the
+ * new response to the version the learner reviewed and stores checklist and
+ * rubric values as self-reports only; it does not evaluate linguistic quality.
+ */
+export function recordFoundationProductionRevision(progress = {}, lessonId, taskId, responseText, rubricRatings, reviewChecks, assessedAt = Date.now(), minimumWords = 8) {
+  const ledger = progress && typeof progress === 'object' && !Array.isArray(progress) ? progress : {};
+  const response = String(responseText || '').trim().slice(0, 500);
+  const requiredWords = Math.max(3, Math.min(60, Number(minimumWords) || 8));
+  const responseWords = response.split(/\s+/).filter(Boolean);
+  if (!lessonId || !taskId || responseWords.length < requiredWords || !Array.isArray(rubricRatings) || rubricRatings.length !== 3 || rubricRatings.some(value => typeof value !== 'boolean') || !Array.isArray(reviewChecks) || reviewChecks.length !== 3 || reviewChecks.some(value => value !== true) || !Number.isFinite(Number(assessedAt))) return ledger;
+  const prior = ledger[lessonId] && typeof ledger[lessonId] === 'object' ? ledger[lessonId] : {};
+  const productionEvidence = prior.productionEvidence && typeof prior.productionEvidence === 'object' && !Array.isArray(prior.productionEvidence) ? prior.productionEvidence : {};
+  const item = productionEvidence[taskId] && typeof productionEvidence[taskId] === 'object' ? productionEvidence[taskId] : {};
+  const previousResponse = String(item.latestResponse || '').trim();
+  const normalize = value => value.toLowerCase().replace(/\s+/g, ' ').trim();
+  if (!previousResponse || normalize(previousResponse) === normalize(response)) return ledger;
+  const attempts = Array.isArray(item.attempts) ? item.attempts.slice() : [];
+  const score = rubricRatings.filter(Boolean).length;
+  const wordCount = responseWords.length;
+  const revisionCount = Math.max(0, Number(item.revisionCount) || 0) + 1;
+  attempts.push({ response, basedOnResponse: previousResponse, reviewChecks: reviewChecks.slice(), ratings: rubricRatings.slice(), score, maxScore: 3, wordCount, minimumWords: requiredWords, assessedAt: Number(assessedAt), assessmentType: 'guided_revision' });
+  return {
+    ...ledger,
+    [lessonId]: {
+      ...prior,
+      productionEvidence: {
+        ...productionEvidence,
+        [taskId]: {
+          ...item,
+          initialResponse: item.initialResponse || previousResponse,
+          lastRevisionSource: previousResponse,
+          latestRevisionChecks: reviewChecks.slice(),
+          revisionCount,
+          latestScore: score, latestRatings: rubricRatings.slice(), latestWordCount: wordCount,
+          minimumWords: requiredWords, latestAssessedAt: Number(assessedAt), latestResponse: response,
+          latestAssessmentType: 'guided_revision', attempts
+        }
       }
     }
   };

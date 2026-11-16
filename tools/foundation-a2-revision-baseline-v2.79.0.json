@@ -1,0 +1,70 @@
+{
+  "version": "2.79.0",
+  "tasks": [
+    {
+      "lessonId": "a2-polite-requests",
+      "id": "a2-polite-requests::produce1",
+      "sha256": "e035e9c10e2fc547ec873acfe9d868d3538f57ae0d77d4cd1792cf128c83159a"
+    },
+    {
+      "lessonId": "a2-quantities",
+      "id": "a2-quantities::produce1",
+      "sha256": "9033bfd29ca66fb6257113df2da3aa29acd4cdd5110b26e52dc63f9137812077"
+    },
+    {
+      "lessonId": "a2-comparisons",
+      "id": "a2-comparisons::produce1",
+      "sha256": "aed3359ebfd4c1c1d2e567787700f351f211a82069d11c428058632071a6c22c"
+    },
+    {
+      "lessonId": "a2-past-work-events",
+      "id": "a2-past-work-events::produce1",
+      "sha256": "8551808978cacf37fcd0d324160d5dfa4ad61fe542ccea6e53922bc0e0a568e6"
+    },
+    {
+      "lessonId": "a2-present-continuous",
+      "id": "a2-present-continuous::produce1",
+      "sha256": "ef6626969d42ef994c4a47fc7248ae526b2b28443d758e292600202e4c5bc71c"
+    },
+    {
+      "lessonId": "a2-obligation-permission",
+      "id": "a2-obligation-permission::produce1",
+      "sha256": "bd678132f152c3cfe8cf5b4d407bc5258f5cb4d58b92502b95bed70916876033"
+    },
+    {
+      "lessonId": "a2-directions",
+      "id": "a2-directions::produce1",
+      "sha256": "86b2400473cf03c88096411928c9ddc5981f22eb0aee04538cc8c527a75b4d13"
+    },
+    {
+      "lessonId": "a2-invitations-offers",
+      "id": "a2-invitations-offers::produce1",
+      "sha256": "06a30e3f520e74ee77a62e9ec774e973b76bcf8c6144774f38ed0227eb42f15f"
+    },
+    {
+      "lessonId": "a2-sequencing-instructions",
+      "id": "a2-sequencing-instructions::produce1",
+      "sha256": "1c82d1e6a47bb97101baa86adc45a8c3cf5e695848364e89b12cd91d3b193430"
+    },
+    {
+      "lessonId": "a2-plans-and-intentions",
+      "id": "a2-plans-and-intentions::produce1",
+      "sha256": "10965074842065f4edc8f4344fb93848903ae5f48cfc9cd8dcb97cdf0af2a75f"
+    },
+    {
+      "lessonId": "a2-present-perfect-experience",
+      "id": "a2-present-perfect-experience::produce1",
+      "sha256": "7bebb69ba639118f18a196aa735596a479517a2ea5295c122a4e1894908f5de3"
+    },
+    {
+      "lessonId": "a2-basic-passive-voice",
+      "id": "a2-basic-passive-voice::produce1",
+      "sha256": "a653a878c510754a3c597d9864e532ea62c6f4dfdb78b94f1261fbed10bd4336"
+    },
+    {
+      "lessonId": "a2-defining-relative-clauses",
+      "id": "a2-defining-relative-clauses::produce1",
+      "sha256": "814c68aad81c432a8ab1d14feac7bfcf93e1d33401c4b4d255faa9a88e86c00b"
+    }
+  ]
+}

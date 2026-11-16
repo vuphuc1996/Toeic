@@ -9,8 +9,8 @@ from helpers import SYNC, run_tool
 INDEX = (
     "<title>TOEIC Dictionary v{v} – Flashcard Learning</title>\n"
     '<div class="sidebar-version">Phase 5 · v{v} · GitHub-only</div>\n'
-    "<p><strong>GitHub-only v{v}:</strong> note</p>\n"
-    "<span>GitHub-only · v{v}</span>\n"
+    "<p><strong>TOEIC Dictionary · GitHub Pages product v{v}:</strong> note</p>\n"
+    "<span>GitHub Pages product · v{v}</span>\n"
 )
 
 

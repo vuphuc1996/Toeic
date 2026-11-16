@@ -1,3 +1,23 @@
+## v2.80.0 — Product-wide learning assistant and mock-exam icon refresh
+
+- Replaced the old clock glyph in the TOEIC mock-exam navigation/entry point and duration-mode cards with a coherent SVG icon family: clipboard/check for the mock-exam area, bolt for quick tests, stopwatch for the shortened test and trophy for the full 200-question test.
+- Added one shared, collapsible Learning Assistant in the existing application shell. It welcomes learners and offers the in-app guide, the existing placement diagnostic and prefix-based vocabulary completion. The launcher remains compact on small screens, can be hidden/reopened, and is hidden during an active timed mock exam.
+- Prefix lookup uses only current local vocabulary records. A typed prefix such as `ho` produces the real headwords `hospitality`, `host`, `hotline`, `hour` and `housekeeping`; the user completes masked letters before the app reveals the word's existing IPA, CEFR label and senses. An exact full-word match opens the existing vocabulary detail directly. Missing headwords are not fabricated.
+- Added a contextual follow-up prompt for the current open page/detail. The complete prompt is previewed and can be copied. It is sent in the Google AI Mode search URL only after an explicit click; when a prompt exceeds the URL limit, the app copies the entire prompt and opens Google AI for manual paste rather than truncating it. No in-app model, external API key, iframe, backend or automatic transfer is introduced.
+- Registered `assets/js/learning-assistant.js` in the Service Worker app shell for offline use. No new user-progress storage key, IndexedDB migration or server-side store is added.
+- Product UI/docs now identify GitHub Pages as the product release target; there is no separate demo mode or placeholder branch in the shipped UI. Legitimate TOEIC learning examples containing the word “demonstration”/“demo” are preserved as educational content.
+- Tests, local validators and package verification: see `reports/TEST_REPORT_TOEIC_Dictionary_v2.80.0.md`. Remote GitHub Actions, the public Pages deployment and physical-device QA are not claimed unless separately verified.
+
+## v2.79.0 — A2 guided writing revision and response history
+
+- Added a task-specific guided revision workspace to all 13 A2 contextual production tasks. Each lesson has three review checks and a tailored revision hint; learners compare the prior response, confirm each requirement was reviewed, write a distinct revision and self-rate the existing three criteria.
+- New production attempts retain their response text. Each guided revision stores `basedOnResponse`, revised `response`, three review confirmations, three learner self-ratings, word count and timestamp. A revision must meet the eight-word minimum, differ from the prior text and include all required review and self-rating fields.
+- First responses and successive versions remain in the existing `productionEvidence` map and `toeic:foundation-progress:v1` localStorage key. Existing `::produce1` and legacy `::apply1` IDs remain unchanged and isolated.
+- Historical v2.78.0 attempt rows did not store response text. They are preserved as-is; no missing historical response is fabricated. The last currently stored response is used as the starting point for the next revision.
+- Added an immutable SHA-256 baseline for all 13 revision guides and regression tests for task-specific guidance, first-response capture, multiple revisions, response-chain linkage, validation gates and legacy-data isolation.
+- No automatic AI/grammar grading, server upload, new dependency, IndexedDB migration, learner-progress reset, vocabulary change or Reading/Listening bank change. Revision ratings are learner self-reports, not a proficiency or mastery certificate.
+- Local test and validator results are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.79.0.md`. Remote GitHub Actions, GitHub Pages deployment and physical-device QA remain unverified.
+
 ## v2.78.0 — A2 contextual writing tasks and separate production evidence
 
 - Added 13 original, lesson-specific learner-authored writing tasks across the 13 guided A2 lessons. Every task includes a workplace scenario, instruction, three content requirements, a sentence frame, three tailored self-check criteria and one collapsed model-answer example.

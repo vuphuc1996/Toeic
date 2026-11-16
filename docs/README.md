@@ -1,20 +1,20 @@
-# TOEIC Dictionary v2.78.0 — Documentation
+# TOEIC Dictionary v2.80.0 — Documentation
 
-- Current candidate: `v2.78.0` — `versions/CURRENT_VERSION.md`.
-- Previous release: `v2.77.0` — `versions/PREVIOUS_VERSION.md`.
+- Current product source: `v2.80.0` — `versions/CURRENT_VERSION.md`.
+- Previous release: `v2.79.0` — `versions/PREVIOUS_VERSION.md`.
 - Master status: `MASTER_STATUS.md` (single current roadmap/status source).
-- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.78.0.md`.
-- Progress baseline: `reports/PROJECT_PROGRESS_BASELINE_v2.78.0.md`.
-- Generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.78.0.md`.
-- A2 contextual production report: `reports/FOUNDATION_A2_PRODUCTION_TASKS_v2.78.0.md`.
-- Previous A2 assessment-quality review: `reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.77.0.md`.
-- TOEIC L&R coverage: `reports/TOEIC_CONTENT_COVERAGE_v2.78.0.md`.
-- Current Listening readiness: `reports/TOEIC_LISTENING_READINESS_v2.78.0.md`.
-- Current distractor structure audit: `reports/TOEIC_DISTRACTOR_AUDIT_v2.78.0.md`.
-- Detailed records from releases older than v2.77.0 are summarized in `archive/PROJECT_HISTORY.md`.
+- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.80.0.md`.
+- Progress baseline: `reports/PROJECT_PROGRESS_BASELINE_v2.80.0.md`.
+- Generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.80.0.md`.
+- Learning assistant report: `reports/LEARNING_ASSISTANT_v2.80.0.md`.
+- Previous A2 guided revision report: `reports/FOUNDATION_A2_GUIDED_REVISION_v2.79.0.md`.
+- Previous A2 contextual production report (v2.78.0): summarized in `archive/PROJECT_HISTORY.md`.
+- TOEIC L&R coverage: `reports/TOEIC_CONTENT_COVERAGE_v2.80.0.md`.
+- Detailed records from releases older than v2.79.0 are summarized in `archive/PROJECT_HISTORY.md`.
 - TOEIC remains the primary track; IELTS remains deferred until TOEIC development/acceptance gates are met and the owner approves a phase change.
-- Foundation pathway now includes 10 Pre-A1/A1 lessons and 13 A2 lessons. A2 has 13 Reading passages / 39 questions and 13 four-turn device-TTS dialogues / 39 questions. v2.77.0 adds a focused non-duplication/source-evidence pass. v2.78.0 adds 13 contextual writing tasks with eight-word minimums and learner-only self-assessment; independent review remains open.
-- Foundation outcome evidence covers recognition, contextual learner-written production/self-report and 1/3-day delayed recall; it does not certify learner mastery. Old A2 `::apply1` production records are retained and are not reused as completion of the new `::produce1` writing tasks.
+- Foundation pathway has 10 Pre-A1/A1 lessons and 13 A2 lessons. A2 has 13 Reading passages / 39 questions, 13 four-turn device-TTS dialogues / 39 questions and 13 contextual writing tasks with guided revision. v2.80.0 adds a shared optional assistant without changing learning-progress storage; independent second-person language review remains open.
+- Foundation production history remains device-local under `toeic:foundation-progress:v1`. Previous response versions are stored for newly captured attempts; old records are not backfilled. Self-review is not automated grading or learner mastery.
+- Foundation outcome evidence covers recognition, contextual learner-written production/self-report and 1/3-day delayed recall; it does not certify learner mastery.
 - Foundation Listening uses browser SpeechSynthesis; it is synthesized learning material, not ETS or recorded native-speaker audio.
 - Listening Part 1: JPG-only photo contract; all nine optimized images are embedded, 4:3 landscape, <=400,000 bytes and retain source attribution.
 - Vocabulary: 1,137 stable headwords; quantity coverage is 37.9% of the 3,000 minimum and 22.7% of the 5,000 planning ceiling; quality review remains separate.
