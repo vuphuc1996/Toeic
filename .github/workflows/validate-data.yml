@@ -195,6 +195,7 @@ jobs:
           node tools/tests/foundation-application-evidence.mjs
           node tools/tests/foundation-a2-production.mjs
           node tools/tests/foundation-production-revision.mjs
+          node tools/tests/foundation-production-export.mjs
           node tools/tests/foundation-reading-evidence.mjs
           node tools/tests/foundation-listening-evidence.mjs
           node tools/tests/alphabet-sound-progress.mjs

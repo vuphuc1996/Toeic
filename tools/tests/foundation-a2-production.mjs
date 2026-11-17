@@ -10,6 +10,9 @@ const root = new URL('../../', import.meta.url);
 const curriculum = JSON.parse(await readFile(new URL('data/learning-path/pre-a1-a1.json', root), 'utf8'));
 const lessons = curriculum.lessons.filter(lesson => lesson.level === 'A2');
 assert.equal(lessons.length, 13, 'all A2 lessons must have their own production prompt');
+const politeRequestLesson = lessons.find(lesson => lesson.id === 'a2-polite-requests');
+assert.match(politeRequestLesson.productionTask.scenario, /Bạn cần đồng nghiệp gửi biên bản cuộc họp/,
+  'scenario direction must match the instruction asking the colleague to send the notes');
 const ids = new Set();
 for (const lesson of lessons) {
   const task = lesson.productionTask;
@@ -30,6 +33,15 @@ for (const lesson of lessons) {
   for (const feature of task.requiredFeatures) assert.ok(model.includes(feature), `${lesson.id}: model answer missing ${feature}`);
   assert.ok(task.modelAnswer.trim().split(/\s+/).length >= task.minimumWords);
   assert.equal(task.evidenceType, 'learner-authored-contextual-production');
+  assert.ok(task.minimumWords >= 8 && task.minimumWords <= 60, `${lesson.id}: word minimum must be practical and within local evidence limits`);
+  assert.equal(task.requirements?.length, 3, `${lesson.id}: three explicit task requirements are required`);
+  assert.equal(task.rubric?.length, 3, `${lesson.id}: three self-review criteria are required`);
+  assert.equal(task.revisionChecklist?.length, 3, `${lesson.id}: three guided revision checks are required`);
+  const modelAnswer = String(task.modelAnswer || '').toLowerCase();
+  for (const feature of task.requiredFeatures || []) {
+    assert.ok(modelAnswer.includes(String(feature).toLowerCase()), `${lesson.id}: model answer must demonstrate ${feature}`);
+  }
+  assert.ok(task.modelAnswer.trim().split(/\s+/).length >= task.minimumWords, `${lesson.id}: model answer must meet the word minimum`);
 }
 
 const target = lessons[0];

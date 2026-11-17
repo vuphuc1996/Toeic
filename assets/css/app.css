@@ -1269,6 +1269,12 @@ input,select,textarea{min-width:0}
 .foundation-portfolio-toggle{font-size:9px;color:var(--navy-2);font-weight:750;white-space:nowrap}
 .foundation-production-portfolio[open] .foundation-portfolio-toggle:after{content:" · Thu gọn"}
 .foundation-portfolio-content{padding:0 14px 14px;border-top:1px solid var(--line);display:grid;gap:13px}
+.foundation-portfolio-export{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 12px;border:1px solid #dce8f4;border-radius:10px;background:#f7faff}
+.foundation-portfolio-export>div{display:grid;gap:3px;min-width:0}
+.foundation-portfolio-export strong{font-size:10px;color:var(--ink)}
+.foundation-portfolio-export small{font-size:8.5px;line-height:1.45;color:var(--muted)}
+.foundation-portfolio-export .secondary-button{flex:0 0 auto;min-height:36px;padding:8px 12px;font-size:9px}
+.foundation-portfolio-export .secondary-button:disabled{opacity:.48;cursor:not-allowed}
 .foundation-portfolio-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding-top:12px}
 .foundation-portfolio-metrics article{min-width:0;padding:10px;border:1px solid #edf0f4;border-radius:9px;background:#fbfcfe}
 .foundation-portfolio-metrics small,.foundation-portfolio-metrics strong{display:block}
@@ -1294,7 +1300,7 @@ input,select,textarea{min-width:0}
 .foundation-portfolio-row-detail li{display:flex;justify-content:space-between;gap:10px;font-size:8px;color:var(--muted)}
 .foundation-portfolio-row-detail li strong{flex:0 0 auto;font-size:8px;color:#55728e}
 .foundation-portfolio-disclaimer{padding-top:8px;border-top:1px solid #eef1f5}
-@media(max-width:640px){.foundation-production-portfolio>summary{padding:11px 12px}.foundation-portfolio-content{padding:0 10px 11px}.foundation-portfolio-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.foundation-portfolio-metrics strong{font-size:14px}.foundation-portfolio-trend-counts span{font-size:8px;padding:7px 4px}.foundation-portfolio-row{gap:8px}.foundation-portfolio-row strong{font-size:8px}}
+@media(max-width:640px){.foundation-portfolio-export{align-items:stretch;flex-direction:column}.foundation-portfolio-export .secondary-button{width:100%}.foundation-production-portfolio>summary{padding:11px 12px}.foundation-portfolio-content{padding:0 10px 11px}.foundation-portfolio-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.foundation-portfolio-metrics strong{font-size:14px}.foundation-portfolio-trend-counts span{font-size:8px;padding:7px 4px}.foundation-portfolio-row{gap:8px}.foundation-portfolio-row strong{font-size:8px}}
 
 /* Restored pre-v2.80 Google AI Mode UI and responsive one-way panel. */
 .feedback-ai-row{display:flex;justify-content:flex-start;margin-top:11px}

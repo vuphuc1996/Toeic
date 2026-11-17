@@ -897,7 +897,7 @@
       "productionTask": {
         "id": "a2-polite-requests::produce1",
         "minimumWords": 8,
-        "scenario": "Đồng nghiệp cần bạn gửi biên bản cuộc họp trước 3 giờ chiều để hoàn tất báo cáo.",
+        "scenario": "Bạn cần đồng nghiệp gửi biên bản cuộc họp trước 3 giờ chiều để bạn hoàn tất báo cáo.",
         "instruction": "Viết một tin nhắn lịch sự nhờ đồng nghiệp gửi bản cập nhật. Dùng một lời yêu cầu với could và thêm lời cảm ơn.",
         "requirements": [
           "Nêu rõ tài liệu cần gửi là meeting notes.",

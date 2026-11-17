@@ -3,16 +3,26 @@
 > **Nguồn trạng thái và lộ trình duy nhất.** Mọi release cập nhật trực tiếp file này. `CHANGELOG.md` là log phát hành; `archive/PROJECT_HISTORY.md` lưu lịch sử đã chỉnh lý; `COMPATIBILITY.md` là sổ tương thích duy nhất.
 
 - **Ngày kiểm kê:** 2026-11-17.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.86.0 — Robot Buddy conversation layout isolation & persistent quick prompts.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.87.0 — Foundation A2 writing portfolio export & task-direction quality repair.
 - **Product source:** GitHub Pages static PWA; GitHub-only, không có backend riêng cho Robot.
 - **Robot Buddy:** đầu Robot SVG, biểu cảm/animation; giữ nguyên 500 câu hội thoại offline, 59 lời hướng dẫn tính năng cho 12 đích đến (11 khu vực menu và Placement), 6 FAQ và 16 quick prompts. Header dùng hai hàng riêng biệt; menu quick prompts luôn dùng lại được trong phiên chat và có vùng cuộn độc lập; nội dung hội thoại cuộn riêng, không ép menu co lại; composer/footer không bị co; footer quyền riêng tư 6.5px; trạng thái phân tích/lời nhắc hiển thị Bật/Tắt; tên Robot Buddy, TOEIC Dictionary và Vũ Nguyễn Hoàng Phúc được nhấn mạnh an toàn trong câu trả lời.
 - **Learning Insights:** Robot có thể nhận snapshot tiến độ local đã được ứng dụng nạp sẵn để phân loại Cần học / Cần luyện / Cần ôn. Cần học = bài/mục chưa có bằng chứng hoàn thành; Cần luyện = theo ngưỡng bằng chứng của từng module (Từ vựng ≥3 lượt, Flashcard ≥3 câu quiz, Grammar/Reading/Listening ≥5 câu, Foundation ≥3 mục độc lập, Mock theo kết quả bài hoàn thành); Cần ôn = lịch ôn từ vựng/Flashcard, recall Objective và Foundation đã đến hạn. Robot có thể liệt kê tối đa 5 nội dung mẫu trong mỗi nhóm và gắn tối đa 4 nút điều hướng tới khu vực tương ứng. Dữ liệu ít được báo chưa đủ bằng chứng, không kết luận kỹ năng yếu.
 - **Read-only boundary:** Robot không tự mở IndexedDB/LocalStorage. Ứng dụng chỉ truyền snapshot trong bộ nhớ từ các kho hiện hữu; aggregator thuần không sửa dữ liệu. Tắt Learning Insights không ảnh hưởng hội thoại/hướng dẫn. Không gửi tiến độ tới API, server, Google AI hoặc bên thứ ba.
 - **Preservation:** IndexedDB vẫn schema v1; giữ nguyên các key `studyProgress`, `flashProgress`, `grammarProgress`, `readingProgress`, `listeningProgress`, Foundation localStorage và Mock history. Không migration, overwrite hoặc delete progress trong release này.
-- **SW / offline shell:** `assets/js/robot-buddy.js`, `assets/js/robot-learning-insights.js`, `data/robot/robot-library.json` nằm trong `REQUIRED` và `APP_SHELL`; cache version 2.86.0.
-- **Local release gates:** PASS — 30/30 JavaScript regression suites; 45/45 selected Python tests (responsive layout, design system, version sync, project progress, PWA readiness and CI coverage); `node --check` app.js/sw.js; vocabulary validator 1,137 records / 0 ERROR / 0 WARNING; learning-content validator 0 ERROR / 0 WARNING; version sync PASS. These are targeted local checks, not full-suite or production acceptance. Details in `reports/TEST_REPORT_TOEIC_Dictionary_v2.86.0.md`.
+- **SW / offline shell:** `assets/js/robot-buddy.js`, `assets/js/robot-learning-insights.js`, `data/robot/robot-library.json` nằm trong `REQUIRED` và `APP_SHELL`; cache version 2.87.0.
+- **Local release gates:** PASS — 31/31 JavaScript regression suites; 70/70 selected Python tests across eight focused modules; `node --check` app.js, foundation-evidence.js and sw.js; CSS parse 0 errors; vocabulary validator 1,137 records / 0 ERROR / 0 WARNING; learning-content validator 0 ERROR / 0 WARNING; version sync PASS. These are targeted local checks, not full-suite or production acceptance. Details in `reports/TEST_REPORT_TOEIC_Dictionary_v2.87.0.md`.
 - **Release QA still pending:** push GitHub, GitHub Actions, Pages production, browser visual QA, desktop 15.6-inch at 100% zoom and mobile/iOS/Android.
-- **Previous release:** v2.85.0.
+- **Previous release:** v2.86.0.
+
+## v2.87.0 changes — Foundation A2 writing portfolio export & task-direction quality repair
+
+- Added a user-initiated Markdown export to the A2 writing portfolio. It exports saved A2 responses and revisions with their scenario, instructions, self-rating rubric, guided-revision checks, word count, timestamp and model-answer reference. Only tasks with saved learner responses are included.
+- Export generation is a pure read-only transformation. It does not write to progress stores, add a storage key, migrate IndexedDB, transmit data, or include Pre-A1/A1 and unrelated legacy application evidence.
+- Corrected only the scenario text for `a2-polite-requests` so the direction matches the task request and model answer. Logged the previous/current values and old/new hashes in `tools/foundation-a2-production-refresh-v2.87.0.json`; task ID, legacy application task and question bank remain unchanged. Historical v2.78.0 baseline stays immutable.
+- Added `tools/tests/foundation-production-export.mjs` and registered it in GitHub Actions. Strengthened A2 writing task checks and kept the existing explicit self-report-only / no-auto-grading contract.
+- Local verification: 31/31 JavaScript suites; 54/54 focused Python tests; CSS parse 0 errors; 1,137 vocabulary records / 0 structural errors / 0 warnings; learning content 0 errors / 0 warnings; PWA readiness, CI coverage and version synchronization pass. Details in `reports/TEST_REPORT_TOEIC_Dictionary_v2.87.0.md`.
+- Release QA still pending: GitHub push/Actions, Pages production, browser screenshots, desktop 15.6-inch 100% zoom and physical mobile/iOS/Android checks.
+- No IndexedDB schema change, local progress migration/reset, learner-answer auto-grading, vocabulary count change, question-bank change or change to the 99 Listening reserve questions' independent-review/Mock exclusion status.
 
 ## v2.86.0 changes — Robot Buddy conversation layout isolation & persistent quick prompts
 
@@ -537,7 +547,7 @@ No numeric total target has been agreed for the full Grammar, TOEIC Listening, T
 |---|---|---|
 | P0 | Foundation outcome instrumentation | COMPLETE for current Foundation scope: recognition, learner self-report production/explanation and delayed recall are wired separately; do not infer mastery or merge with TOEIC evidence |
 | P0 | Listening reserves | Continue second-person review of the 99 pending Listening questions; preserve reserve/Mock separation until recorded independent approval |
-| P1 | A2 completeness | Continue A2 writing production quality, broaden varied/extended Reading and Listening, then obtain second-person linguistic review before any A2 completion status |
+| P1 | A2 completeness | Continue beyond the 13 starter writing prompts with varied/extended production tasks; broaden varied/extended Reading and Listening, then obtain second-person linguistic review before any A2 completion status |
 | P1 | B1 pathway | Start the B1 bridge only after defining level-specific outcomes, lesson/skill coverage and review gates; add no arbitrary completion denominator |
 | P1 | Part 5 editorial review | Independent item-level review of all 80 sentence-completion questions; keep practice-only, no promotion to Mock before review |
 | P1 | Reading editorial quality | Second review of the 45 expanded Part 7 questions, focusing on semantic support, paraphrase and distractor uniqueness |

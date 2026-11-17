@@ -1,3 +1,12 @@
+## v2.87.0 — Foundation A2 writing portfolio export & task-direction quality repair
+
+- Added a learner-initiated Markdown export to the local A2 writing portfolio. The export contains only saved A2 task context, learner-authored initial responses and revisions, task-specific self-ratings/revision checks, and the authored model answer for reference. It is generated entirely on-device and is not sent to any server or third party.
+- The export preserves revision order, timestamps, word counts, self-assessment labels and the response used as the revision source. Embedded Markdown code fences in learner text are handled without breaking the exported document. The export builder is a pure function and does not mutate the progress ledger.
+- Corrected the scenario direction in `a2-polite-requests`: the learner now needs the colleague to send the meeting notes, matching the task instruction, requirements, sentence frame and model answer. The task ID, legacy application task, question bank, learner progress and answer logic are unchanged. The v2.78.0 baseline remains intact; a v2.87.0 fingerprint refresh records the exact one-field change.
+- Added a dedicated export regression suite and registered it in GitHub Actions. Strengthened A2 production-task checks for task requirements, rubric/checklist completeness, required model-answer features, minimum response length and the scenario/instruction alignment.
+- No IndexedDB/localStorage schema or key changes, no progress migration/reset, no automatic grammar scoring, no TOEIC or CEFR mastery claim, no vocabulary/question-bank change, and no change to the Listening reserve-to-Mock approval boundary.
+- Local verification: 31/31 JavaScript regression suites; 54/54 focused Python tests; CSS parse 0 errors; vocabulary validation 1,137 records / 0 errors / 0 warnings; learning-content validation 0 errors / 0 warnings; PWA readiness, CI coverage and version sync pass. Browser visual/device QA, remote GitHub Actions and Pages deployment are not claimed.
+
 ## v2.86.0 — Robot Buddy conversation layout isolation & persistent quick prompts
 
 - Fixed the flex-layout regression where a growing conversation could compress the quick-prompt selection area. The message log now owns its own scroll region and may shrink within a bounded range; the quick-prompt menu, composer, typing indicator and privacy footer are non-shrinking siblings.

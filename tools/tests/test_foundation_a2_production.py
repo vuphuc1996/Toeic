@@ -13,6 +13,7 @@ class FoundationA2ProductionTests(unittest.TestCase):
         cls.curriculum = json.loads((ROOT / 'data/learning-path/pre-a1-a1.json').read_text(encoding='utf-8'))
         cls.a2 = [lesson for lesson in cls.curriculum['lessons'] if lesson.get('level') == 'A2']
         cls.baseline = json.loads((ROOT / 'tools/foundation-a2-production-baseline-v2.78.0.json').read_text(encoding='utf-8'))
+        cls.refresh = json.loads((ROOT / 'tools/foundation-a2-production-refresh-v2.87.0.json').read_text(encoding='utf-8'))
 
     def test_all_thirteen_a2_lessons_have_individual_production_tasks(self):
         self.assertEqual(len(self.a2), 13)
@@ -54,15 +55,36 @@ class FoundationA2ProductionTests(unittest.TestCase):
 
     def test_production_task_content_matches_immutable_release_baseline(self):
         rows = {row['lessonId']: row for row in self.baseline['tasks']}
+        refresh = self.refresh
         self.assertEqual(len(rows), 13)
+        self.assertEqual(refresh['version'], '2.87.0')
+        self.assertEqual(refresh['baselineVersion'], self.baseline['version'])
+        self.assertTrue(refresh['onlyDeclaredFieldChanged'])
+        self.assertTrue(refresh['taskIdUnchanged'])
+        self.assertTrue(refresh['applicationTaskUnchanged'])
+        self.assertTrue(refresh['questionBankUnchanged'])
+        self.assertFalse(refresh['learnerProgressTouched'])
+        self.assertFalse(refresh['indexedDbSchemaChanged'])
+        self.assertFalse(refresh['automaticLanguageGradingAdded'])
         for lesson in self.a2:
             task = dict(lesson['productionTask'])
             task.pop('revisionChecklist', None)
             task.pop('revisionHint', None)
             canonical = json.dumps(task, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+            digest = hashlib.sha256(canonical).hexdigest()
             with self.subTest(lesson=lesson['id']):
                 self.assertEqual(rows[lesson['id']]['id'], task['id'])
-                self.assertEqual(rows[lesson['id']]['sha256'], hashlib.sha256(canonical).hexdigest())
+                if lesson['id'] == refresh['lessonId']:
+                    self.assertEqual(rows[lesson['id']]['sha256'], refresh['oldSha256'])
+                    self.assertEqual(task['id'], refresh['taskId'])
+                    self.assertEqual(task[refresh['fieldChanged']], refresh['newValue'])
+                    reconstructed = dict(task)
+                    reconstructed[refresh['fieldChanged']] = refresh['oldValue']
+                    reconstructed_digest = hashlib.sha256(json.dumps(reconstructed, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')).hexdigest()
+                    self.assertEqual(reconstructed_digest, refresh['oldSha256'])
+                    self.assertEqual(digest, refresh['newSha256'])
+                else:
+                    self.assertEqual(rows[lesson['id']]['sha256'], digest)
 
     def test_legacy_production_records_are_not_reused_as_new_a2_evidence(self):
         app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')

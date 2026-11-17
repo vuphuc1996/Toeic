@@ -1,0 +1,20 @@
+{
+  "version": "2.87.0",
+  "baselineVersion": "2.78.0",
+  "changeType": "scenario-direction-alignment",
+  "reason": "The original scenario said the colleague needed the learner to send the meeting notes, while the task instruction, requirement, sentence frame and model answer ask the learner to request that the colleague send the notes. The scenario was aligned with the actual task direction.",
+  "lessonId": "a2-polite-requests",
+  "taskId": "a2-polite-requests::produce1",
+  "fieldChanged": "scenario",
+  "oldValue": "Đồng nghiệp cần bạn gửi biên bản cuộc họp trước 3 giờ chiều để hoàn tất báo cáo.",
+  "newValue": "Bạn cần đồng nghiệp gửi biên bản cuộc họp trước 3 giờ chiều để bạn hoàn tất báo cáo.",
+  "oldSha256": "9e367cbf78770657391e596b26b4899f6c92ba3605e6037c36686bf877a9b6cf",
+  "newSha256": "aaab3af0805211aaf54e7f6d418cbbe0970403dcf687f556128111029f2ecb25",
+  "onlyDeclaredFieldChanged": true,
+  "taskIdUnchanged": true,
+  "applicationTaskUnchanged": true,
+  "questionBankUnchanged": true,
+  "learnerProgressTouched": false,
+  "indexedDbSchemaChanged": false,
+  "automaticLanguageGradingAdded": false
+}

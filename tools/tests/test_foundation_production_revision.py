@@ -13,6 +13,7 @@ class FoundationProductionRevisionTests(unittest.TestCase):
         cls.data = json.loads((ROOT / 'data/learning-path/pre-a1-a1.json').read_text(encoding='utf-8'))
         cls.a2 = [item for item in cls.data['lessons'] if item.get('level') == 'A2']
         cls.base = json.loads((ROOT / 'tools/foundation-a2-production-baseline-v2.78.0.json').read_text(encoding='utf-8'))
+        cls.refresh = json.loads((ROOT / 'tools/foundation-a2-production-refresh-v2.87.0.json').read_text(encoding='utf-8'))
         cls.revision_base = json.loads((ROOT / 'tools/foundation-a2-revision-baseline-v2.79.0.json').read_text(encoding='utf-8'))
 
     def test_all_a2_tasks_have_individual_revision_checklists_and_hints(self):
@@ -24,14 +25,26 @@ class FoundationProductionRevisionTests(unittest.TestCase):
                 self.assertTrue(all(len(item.strip()) >= 12 for item in task['revisionChecklist']))
                 self.assertGreaterEqual(len(task.get('revisionHint', '')), 50)
 
-    def test_v278_production_content_remains_unchanged(self):
+    def test_v278_production_content_remains_unchanged_except_logged_v287_scenario_refresh(self):
         rows = {row['lessonId']: row for row in self.base['tasks']}
+        refresh = self.refresh
+        self.assertEqual(refresh['baselineVersion'], self.base['version'])
+        self.assertTrue(refresh['onlyDeclaredFieldChanged'])
         for lesson in self.a2:
             task = dict(lesson['productionTask'])
             task.pop('revisionChecklist', None)
             task.pop('revisionHint', None)
             canonical = json.dumps(task, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
-            self.assertEqual(hashlib.sha256(canonical).hexdigest(), rows[lesson['id']]['sha256'])
+            digest = hashlib.sha256(canonical).hexdigest()
+            if lesson['id'] == refresh['lessonId']:
+                self.assertEqual(rows[lesson['id']]['sha256'], refresh['oldSha256'])
+                reconstructed = dict(task)
+                reconstructed[refresh['fieldChanged']] = refresh['oldValue']
+                old_payload = json.dumps(reconstructed, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+                self.assertEqual(hashlib.sha256(old_payload).hexdigest(), refresh['oldSha256'])
+                self.assertEqual(digest, refresh['newSha256'])
+            else:
+                self.assertEqual(digest, rows[lesson['id']]['sha256'])
 
     def test_revision_guide_matches_v279_integrity_baseline(self):
         rows = {row['lessonId']: row for row in self.revision_base['tasks']}

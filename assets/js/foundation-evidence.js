@@ -302,6 +302,124 @@ export function summarizeFoundationProductionPortfolio(progress = {}, lessons = 
   };
 }
 
+/**
+ * Build a user-requested, device-local Markdown export of Foundation A2 writing.
+ * It includes only learner responses attached to the selected A2 production tasks.
+ * This function is pure: it never edits the progress ledger or performs I/O.
+ */
+export function buildFoundationProductionPortfolioMarkdown(progress = {}, lessons = [], exportedAt = Date.now()) {
+  const scopedLessons = (Array.isArray(lessons) ? lessons : [])
+    .filter(lesson => String(lesson?.level || '').toUpperCase() === 'A2');
+  const date = new Date(Number(exportedAt));
+  const exportTimestamp = Number.isFinite(date.getTime()) ? date.toISOString() : new Date().toISOString();
+  const sections = [];
+  const codeBlock = value => {
+    const content = String(value ?? '').replace(/\r\n?/g, '\n').trimEnd();
+    const runs = [...content.matchAll(/`+/g)].map(match => match[0].length);
+    const fence = '`'.repeat(Math.max(3, ...runs.map(length => length + 1)));
+    return `${fence}text\n${content}\n${fence}`;
+  };
+  const wordCount = value => String(value || '').trim().split(/\s+/).filter(Boolean).length;
+  const formatRating = ratings => Array.isArray(ratings) && ratings.length === 3
+    ? `${ratings.filter(value => value === true).length}/3 tiêu chí tự xác nhận`
+    : 'Chưa có tự đánh giá đầy đủ';
+
+  for (const lesson of scopedLessons) {
+    const task = lesson?.productionTask || null;
+    const taskId = task?.id || lesson?.applicationTask?.id;
+    if (!taskId) continue;
+    const saved = progress?.[lesson.id]?.productionEvidence?.[taskId];
+    if (!saved || typeof saved !== 'object') continue;
+
+    const attempts = Array.isArray(saved.attempts)
+      ? saved.attempts.filter(item => item && typeof item === 'object' && String(item.response || '').trim())
+      : [];
+    if (!attempts.length && String(saved.latestResponse || '').trim()) {
+      attempts.push({
+        response: saved.latestResponse,
+        ratings: saved.latestRatings,
+        score: saved.latestScore,
+        wordCount: saved.latestWordCount,
+        assessedAt: saved.latestAssessedAt,
+        assessmentType: saved.latestAssessmentType || 'legacy_saved_response'
+      });
+    } else if (String(saved.latestResponse || '').trim() && attempts.at(-1)?.response !== saved.latestResponse) {
+      attempts.push({
+        response: saved.latestResponse,
+        ratings: saved.latestRatings,
+        score: saved.latestScore,
+        wordCount: saved.latestWordCount,
+        assessedAt: saved.latestAssessedAt,
+        assessmentType: saved.latestAssessmentType || 'latest_saved_response'
+      });
+    }
+    if (!attempts.length) continue;
+
+    const rubric = Array.isArray(task?.rubric) ? task.rubric : [];
+    const requirements = Array.isArray(task?.requirements) ? task.requirements : [];
+    const checks = Array.isArray(task?.revisionChecklist) ? task.revisionChecklist : [];
+    const taskLines = [
+      `## ${sections.length + 1}. ${String(lesson.title || lesson.id || 'Bài viết A2')}`,
+      '',
+      `- Mã bài: \`${String(lesson.id)}\``,
+      `- Mã nhiệm vụ: \`${String(taskId)}\``,
+      `- Tình huống: ${String(task?.scenario || 'Không có mô tả tình huống.')}`,
+      `- Yêu cầu: ${String(task?.instruction || 'Không có hướng dẫn.')}`,
+      `- Số từ tối thiểu: ${Number(task?.minimumWords) || Number(saved.minimumWords) || 8}`,
+      ''
+    ];
+    if (requirements.length) taskLines.push('### Nội dung cần đáp ứng', ...requirements.map((item, index) => `${index + 1}. ${String(item)}`), '');
+    if (task?.sentenceFrame) taskLines.push(`**Khung câu gợi ý:** ${String(task.sentenceFrame)}`, '');
+    if (rubric.length) taskLines.push('### Tiêu chí tự rà soát', ...rubric.map((item, index) => `${index + 1}. ${String(item)}`), '');
+
+    taskLines.push('### Lịch sử câu trả lời');
+    attempts.forEach((attempt, index) => {
+      const response = String(attempt.response || '');
+      const ratings = Array.isArray(attempt.ratings) ? attempt.ratings : [];
+      const scoreValue = Number(attempt.score);
+      const score = Number.isFinite(scoreValue) && scoreValue >= 0 && scoreValue <= 3
+        ? `${scoreValue}/3`
+        : formatRating(ratings);
+      const assessedAt = Number(attempt.assessedAt);
+      const dateText = Number.isFinite(assessedAt) && assessedAt > 0
+        ? new Date(assessedAt).toISOString()
+        : 'Không có thời điểm lưu';
+      const label = attempt.assessmentType === 'guided_revision'
+        ? `Bản viết lại ${attempt.revisionNumber || index}`
+        : index === 0 ? 'Bản đầu tiên' : `Lượt ${index + 1}`;
+      taskLines.push(
+        '',
+        `#### ${label}`,
+        `- Thời điểm: ${dateText}`,
+        `- Số từ: ${Number(attempt.wordCount) || wordCount(response)}`,
+        `- Tự đánh giá: ${score}${score.includes('tiêu chí') ? '' : ' (tự báo cáo, không phải điểm chấm tự động)'}`
+      );
+      if (ratings.length === 3 && rubric.length) {
+        taskLines.push('- Chi tiết tự đánh giá:', ...rubric.map((criterion, ratingIndex) => `  - ${ratings[ratingIndex] === true ? '[x]' : ratings[ratingIndex] === false ? '[ ]' : '[-]'} ${String(criterion)}`));
+      }
+      if (Array.isArray(attempt.reviewChecks) && checks.length) {
+        taskLines.push('- Rà soát trước khi viết lại:', ...checks.map((criterion, checkIndex) => `  - ${attempt.reviewChecks[checkIndex] === true ? '[x]' : '[ ]'} ${String(criterion)}`));
+      }
+      if (attempt.basedOnResponse) taskLines.push('- Bản dùng để đối chiếu:', '', codeBlock(attempt.basedOnResponse));
+      taskLines.push('', '**Nội dung người học:**', '', codeBlock(response));
+    });
+    if (task?.modelAnswer) taskLines.push('', '### Đáp án tham khảo', '', codeBlock(task.modelAnswer), '', String(task.modelAnswerNote || 'Đây là gợi ý tham khảo, không phải đáp án duy nhất.'));
+    if (task?.revisionHint) taskLines.push('', `**Gợi ý viết lại:** ${String(task.revisionHint)}`);
+    sections.push(taskLines.join('\n'));
+  }
+
+  const header = [
+    '# Foundation A2 — Nhật ký bài viết',
+    '',
+    `- Thời điểm xuất: ${exportTimestamp}`,
+    `- Số bài có dữ liệu câu trả lời: ${sections.length}/${scopedLessons.filter(lesson => lesson?.productionTask?.id || lesson?.applicationTask?.id).length}`,
+    '',
+    '> Tệp được tạo theo thao tác xuất chủ động của người học từ dữ liệu đã lưu trên thiết bị. Các nhận xét 0–3 là tự đánh giá, không phải chấm điểm ngữ pháp tự động, chứng nhận CEFR hay điểm TOEIC. Ứng dụng không gửi bài viết ra ngoài thiết bị.',
+    ''
+  ].join('\n');
+  return header + (sections.length ? sections.join('\n\n---\n\n') : 'Chưa có câu trả lời A2 nào được lưu.\n');
+}
+
 export function summarizeFoundationProduction(progress = {}, lessons = [], policy = {}) {
   const minimumUniqueItems = Number(policy.minimumUniqueItems) > 0 ? Number(policy.minimumUniqueItems) : 10;
   const threshold = Number(policy.threshold) > 0 ? Number(policy.threshold) : 0.8;
