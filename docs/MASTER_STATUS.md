@@ -3,16 +3,25 @@
 > **Nguồn trạng thái và lộ trình duy nhất.** Mọi release cập nhật trực tiếp file này. `CHANGELOG.md` là log phát hành; `archive/PROJECT_HISTORY.md` lưu lịch sử đã chỉnh lý; `COMPATIBILITY.md` là sổ tương thích duy nhất.
 
 - **Ngày kiểm kê:** 2026-11-17.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.85.0 — Robot Buddy polished layout & one-tap learning actions.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.86.0 — Robot Buddy conversation layout isolation & persistent quick prompts.
 - **Product source:** GitHub Pages static PWA; GitHub-only, không có backend riêng cho Robot.
-- **Robot Buddy:** đầu Robot SVG, biểu cảm/animation; giữ nguyên 500 câu hội thoại offline, 59 lời hướng dẫn tính năng cho 12 đích đến (11 khu vực menu và Placement), 6 FAQ và 16 quick prompts. Header dùng hai hàng riêng biệt; vùng quick prompts lớn hơn; trạng thái phân tích/lời nhắc hiển thị Bật/Tắt; tên Robot Buddy, TOEIC Dictionary và Vũ Nguyễn Hoàng Phúc được nhấn mạnh an toàn trong câu trả lời.
+- **Robot Buddy:** đầu Robot SVG, biểu cảm/animation; giữ nguyên 500 câu hội thoại offline, 59 lời hướng dẫn tính năng cho 12 đích đến (11 khu vực menu và Placement), 6 FAQ và 16 quick prompts. Header dùng hai hàng riêng biệt; menu quick prompts luôn dùng lại được trong phiên chat và có vùng cuộn độc lập; nội dung hội thoại cuộn riêng, không ép menu co lại; composer/footer không bị co; footer quyền riêng tư 6.5px; trạng thái phân tích/lời nhắc hiển thị Bật/Tắt; tên Robot Buddy, TOEIC Dictionary và Vũ Nguyễn Hoàng Phúc được nhấn mạnh an toàn trong câu trả lời.
 - **Learning Insights:** Robot có thể nhận snapshot tiến độ local đã được ứng dụng nạp sẵn để phân loại Cần học / Cần luyện / Cần ôn. Cần học = bài/mục chưa có bằng chứng hoàn thành; Cần luyện = theo ngưỡng bằng chứng của từng module (Từ vựng ≥3 lượt, Flashcard ≥3 câu quiz, Grammar/Reading/Listening ≥5 câu, Foundation ≥3 mục độc lập, Mock theo kết quả bài hoàn thành); Cần ôn = lịch ôn từ vựng/Flashcard, recall Objective và Foundation đã đến hạn. Robot có thể liệt kê tối đa 5 nội dung mẫu trong mỗi nhóm và gắn tối đa 4 nút điều hướng tới khu vực tương ứng. Dữ liệu ít được báo chưa đủ bằng chứng, không kết luận kỹ năng yếu.
 - **Read-only boundary:** Robot không tự mở IndexedDB/LocalStorage. Ứng dụng chỉ truyền snapshot trong bộ nhớ từ các kho hiện hữu; aggregator thuần không sửa dữ liệu. Tắt Learning Insights không ảnh hưởng hội thoại/hướng dẫn. Không gửi tiến độ tới API, server, Google AI hoặc bên thứ ba.
 - **Preservation:** IndexedDB vẫn schema v1; giữ nguyên các key `studyProgress`, `flashProgress`, `grammarProgress`, `readingProgress`, `listeningProgress`, Foundation localStorage và Mock history. Không migration, overwrite hoặc delete progress trong release này.
-- **SW / offline shell:** `assets/js/robot-buddy.js`, `assets/js/robot-learning-insights.js`, `data/robot/robot-library.json` nằm trong `REQUIRED` và `APP_SHELL`; cache version 2.85.0.
-- **Local release gates:** PASS — 4/4 focused Node regression/smoke scripts; 51/51 selected Python tests (responsive layout, design system, visual composition, version sync, project progress and PWA readiness); `node --check` app.js/sw.js; vocabulary validator 1,137 records / 0 ERROR / 0 WARNING; learning-content validator 0 ERROR / 0 WARNING; version sync PASS. These are targeted local checks, not full-suite or production acceptance. Details in `reports/TEST_REPORT_TOEIC_Dictionary_v2.85.0.md`.
+- **SW / offline shell:** `assets/js/robot-buddy.js`, `assets/js/robot-learning-insights.js`, `data/robot/robot-library.json` nằm trong `REQUIRED` và `APP_SHELL`; cache version 2.86.0.
+- **Local release gates:** PASS — 30/30 JavaScript regression suites; 45/45 selected Python tests (responsive layout, design system, version sync, project progress, PWA readiness and CI coverage); `node --check` app.js/sw.js; vocabulary validator 1,137 records / 0 ERROR / 0 WARNING; learning-content validator 0 ERROR / 0 WARNING; version sync PASS. These are targeted local checks, not full-suite or production acceptance. Details in `reports/TEST_REPORT_TOEIC_Dictionary_v2.86.0.md`.
 - **Release QA still pending:** push GitHub, GitHub Actions, Pages production, browser visual QA, desktop 15.6-inch at 100% zoom and mobile/iOS/Android.
-- **Previous release:** v2.84.1.
+- **Previous release:** v2.85.0.
+
+## v2.86.0 changes — Robot Buddy conversation layout isolation & persistent quick prompts
+
+- The conversation log now has an independent, bounded scroll region. As messages accumulate, only the conversation area absorbs the reduced space; the quick-prompt menu, message composer, typing indicator and privacy footer keep their own layout space.
+- The quick-prompt menu remains visible and reusable after a message is sent. The menu itself scrolls when its list exceeds the reserved height; it is no longer hidden after the first user turn.
+- Reduced the privacy footer to 6.5px with a tighter line height and spacing. The full offline/local-only privacy meaning is retained.
+- Added `tools/tests/robot-buddy-layout.mjs` and added it to the CI workflow. The test protects the flex isolation, prompt visibility, bounded mobile layout and footer type size. Also repaired an inherited malformed reduced-motion selector for Listening cards.
+- No changes to Robot dialogue/insight content, evidence thresholds, app data, learner progress, IndexedDB v1, localStorage keys, vocabulary, question banks, TTS or Google AI feature-level entry points.
+- Verification: local syntax, focused Node/Python suites, data/content validators and version sync are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.86.0.md`. Browser-based rendering was attempted but Chromium navigation is blocked by the execution environment; no visual-device pass is claimed.
 
 ## v2.85.0 changes — Robot Buddy polished layout & one-tap learning actions
 

@@ -114,7 +114,9 @@ assert.ok(css.includes('@media(prefers-reduced-motion:reduce)'));
 assert.match(css, /@media\(max-width:430px\)\{\.quick-help-panel\{max-height:72dvh/);
 
 // Static assets must be available offline and version markers must match.
-assert.equal(manifest.version, '2.85.0');
+assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
+assert.ok(app.includes(`const APP_RELEASE_VERSION = '${manifest.version}'`), 'Application and data manifest versions must match.');
+assert.ok(sw.includes(`const VERSION = '${manifest.version}'`), 'Service Worker cache version must match the data manifest.');
 for (const file of ['./assets/js/robot-buddy.js', './assets/js/robot-learning-insights.js', './data/robot/robot-library.json', './assets/js/learning-assistant.js', './assets/js/quick-help.js']) {
   assert.ok(sw.includes(file), `Service Worker missing required offline resource: ${file}`);
   assert.ok(fs.existsSync(path.join(root, file.slice(2))), `Static resource does not exist: ${file}`);

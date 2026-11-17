@@ -1,3 +1,12 @@
+## v2.86.0 — Robot Buddy conversation layout isolation & persistent quick prompts
+
+- Fixed the flex-layout regression where a growing conversation could compress the quick-prompt selection area. The message log now owns its own scroll region and may shrink within a bounded range; the quick-prompt menu, composer, typing indicator and privacy footer are non-shrinking siblings.
+- Kept the quick-prompt menu visible and reusable throughout the current conversation instead of hiding it after the first sent message. The prompt area has its own maximum height and internal scroll so it cannot push the input or footer out of the panel.
+- Reduced the privacy-note type from 7.5px to 6.5px and tightened its line-height/padding while preserving the offline, pre-authored-dialogue, local-only and no-external-transfer explanation.
+- Added a dedicated Robot Buddy layout regression test and registered it in GitHub Actions coverage. Corrected an inherited malformed reduced-motion CSS rule for Listening cards so the preference is applied validly.
+- Preserved the dialogue library, Learning Insights evidence thresholds, all learner content, stable IDs, IndexedDB v1, local progress keys and all existing onboarding/reminder settings. No new API, server or external transfer is introduced.
+- Local source checks are documented in `reports/TEST_REPORT_TOEIC_Dictionary_v2.86.0.md`. Automated browser screenshots and physical-device validation could not be completed in this workspace; GitHub Actions and Pages deployment remain unverified.
+
 ## v2.85.0 — Robot Buddy polished layout & one-tap learning actions
 
 - Rebuilt the Robot Buddy header as two clear rows: Robot name, TOEIC companion/offline status and close control remain together; the progress-analysis and reminder on/off controls sit below without pushing the title out of alignment.
