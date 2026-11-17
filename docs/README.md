@@ -1,16 +1,16 @@
-# TOEIC Dictionary v2.84.1 — Documentation
+# TOEIC Dictionary v2.85.0 — Documentation
 
-- Current product source: `v2.84.1` — `versions/CURRENT_VERSION.md`.
-- Previous release: `v2.84.0` — `versions/PREVIOUS_VERSION.md`.
+- Current product source: `v2.85.0` — `versions/CURRENT_VERSION.md`.
+- Previous release: `v2.84.1` — `versions/PREVIOUS_VERSION.md`.
 - Master status: `MASTER_STATUS.md` (single current roadmap/status source).
-- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.84.1.md`.
-- Robot Buddy specification: `reports/ROBOT_BUDDY_v2.84.1.md`.
+- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.85.0.md`.
+- Robot Buddy specification: `reports/ROBOT_BUDDY_v2.85.0.md`.
 - Progress baseline/snapshot: `reports/PROJECT_PROGRESS_BASELINE_v2.83.0.md` and `reports/PROJECT_PROGRESS_SNAPSHOT_v2.83.0.md`.
 - Older detailed records are consolidated in `archive/PROJECT_HISTORY.md`; release-level history remains in `CHANGELOG.md`.
 - TOEIC remains the primary track; IELTS remains deferred until TOEIC development/acceptance gates are met and the owner approves a phase change.
 - Foundation pathway: 10 Pre-A1/A1 lessons and 13 A2 lessons; 23 Reading resources / 59 questions; 23 Listening resources / 59 questions; 13 contextual A2 writing tasks with guided revision and a local portfolio.
 - Google AI: only the original v2.79 feature-level user-triggered actions are retained for vocabulary lookup, practice answer/review, Grammar, Reading and Listening; there is no shared contextual AI assistant or copy/transfer workflow.
-- Robot Buddy v2.84.1: head-only animated companion with 500 offline dialogue variants, 59 feature-help messages for 12 destinations (11 menu areas plus Placement), six FAQs and 16 quick prompts. It can analyze already-loaded local learner progress in read-only mode; no learning data is sent outside the device. The user can disable progress analysis while retaining dialogue and help.
+- Robot Buddy v2.85.0: head-only animated companion with 500 offline dialogue variants, 59 feature-help messages for 12 destinations (11 menu areas plus Placement), six FAQs and 16 quick prompts. It can analyze already-loaded local learner progress in read-only mode; no learning data is sent outside the device. The user can disable progress analysis while retaining dialogue and help. Evidence-based insight replies can show up to four direct links to the corresponding existing learning modules.
 - Mock Exam icons: clipboard/check, bolt, stopwatch and trophy; the old clock glyph is retired.
 - Foundation production history remains device-local under `toeic:foundation-progress:v1`. Revision/self-review is not automated grading or learner mastery.
 - Listening Part 1: JPG-only photo contract; all nine optimized images are embedded, 4:3 landscape, <=400,000 bytes and retain source attribution. `ai-generated` source strings, where present, identify asset provenance only.

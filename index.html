@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.84.1 – Robot Buddy Learning Insights</title>
+  <title>TOEIC Dictionary v2.85.0 – Robot Buddy Learning Insights</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -76,7 +76,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.84.1 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.85.0 · GitHub-only</div>
       </div>
     </aside>
 
@@ -172,7 +172,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.84.1:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy dùng thư viện hội thoại cục bộ và có thể phân tích tiến độ học trên thiết bị theo chế độ chỉ đọc khi người dùng bật tính năng. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.85.0:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy dùng thư viện hội thoại cục bộ và có thể phân tích tiến độ học trên thiết bị theo chế độ chỉ đọc khi người dùng bật tính năng. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
@@ -440,7 +440,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.84.1</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.85.0</span></footer>
     </main>
   </div>
 
@@ -505,22 +505,26 @@
     </button>
     <section class="quick-help-panel robot-buddy-panel" id="quickHelpPanel" role="dialog" aria-modal="false" aria-labelledby="quickHelpTitle" hidden>
       <header class="quick-help-header robot-buddy-header">
-        <div class="quick-help-header-mark robot-avatar"><svg class="robot-head-svg" viewBox="0 0 100 100" role="img" aria-label="Robot Buddy" focusable="false">
-        <path class="robot-antenna-stem" d="M50 12V6"/><circle class="robot-antenna-light" cx="50" cy="5" r="4"/>
-        <path class="robot-shell" d="M17 47C17 26 31 16 50 16s33 10 33 31v18c0 15-13 25-33 25S17 80 17 65V47Z"/>
-        <path class="robot-ear" d="M17 48h-5v17h5M83 48h5v17h-5"/>
-        <path class="robot-face-panel" d="M25 48c0-13 10-22 25-22s25 9 25 22v16c0 12-10 19-25 19S25 76 25 64V48Z"/>
-        <ellipse class="robot-eye" cx="39" cy="52" rx="7" ry="9"/><ellipse class="robot-eye" cx="61" cy="52" rx="7" ry="9"/>
-        <circle class="robot-pupil" cx="40" cy="53" r="3.2"/><circle class="robot-pupil" cx="62" cy="53" r="3.2"/>
-        <path class="robot-brow robot-brow-left" d="M32 40q7-5 14 0"/><path class="robot-brow robot-brow-right" d="M54 40q7-5 14 0"/>
-        <path class="robot-mouth robot-mouth-smile" d="M39 68q11 12 22 0"/><path class="robot-mouth robot-mouth-flat" d="M41 70h18"/>
-        <path class="robot-mouth robot-mouth-o" d="M44 68q6-7 12 0q0 9-6 9t-6-9Z"/><path class="robot-mouth robot-mouth-worried" d="M40 74q10-10 20 0"/>
-        <path class="robot-cheek robot-cheek-left" d="M27 64q5 4 10 0"/><path class="robot-cheek robot-cheek-right" d="M63 64q5 4 10 0"/><path class="robot-shine" d="M31 30q5-7 12-8"/>
-      </svg></div>
-        <div><strong id="quickHelpTitle">Robot Buddy</strong><small id="robotCompanionStatus">Bạn đồng hành TOEIC · Offline</small></div>
-        <button type="button" class="robot-mute-toggle" id="robotInsightsToggle" aria-pressed="true" title="Bật hoặc tắt phân tích tiến độ trên thiết bị">Phân tích tiến độ: Bật</button>
-        <button type="button" class="robot-mute-toggle" id="robotMuteToggle" aria-pressed="false" title="Tắt lời nhắc tự động">Tắt lời nhắc</button>
-        <button type="button" class="quick-help-close" id="quickHelpClose" aria-label="Ẩn Robot Buddy">×</button>
+        <div class="robot-header-main">
+          <div class="quick-help-header-mark robot-avatar"><svg class="robot-head-svg" viewBox="0 0 100 100" role="img" aria-label="Robot Buddy" focusable="false">
+          <path class="robot-antenna-stem" d="M50 12V6"/><circle class="robot-antenna-light" cx="50" cy="5" r="4"/>
+          <path class="robot-shell" d="M17 47C17 26 31 16 50 16s33 10 33 31v18c0 15-13 25-33 25S17 80 17 65V47Z"/>
+          <path class="robot-ear" d="M17 48h-5v17h5M83 48h5v17h-5"/>
+          <path class="robot-face-panel" d="M25 48c0-13 10-22 25-22s25 9 25 22v16c0 12-10 19-25 19S25 76 25 64V48Z"/>
+          <ellipse class="robot-eye" cx="39" cy="52" rx="7" ry="9"/><ellipse class="robot-eye" cx="61" cy="52" rx="7" ry="9"/>
+          <circle class="robot-pupil" cx="40" cy="53" r="3.2"/><circle class="robot-pupil" cx="62" cy="53" r="3.2"/>
+          <path class="robot-brow robot-brow-left" d="M32 40q7-5 14 0"/><path class="robot-brow robot-brow-right" d="M54 40q7-5 14 0"/>
+          <path class="robot-mouth robot-mouth-smile" d="M39 68q11 12 22 0"/><path class="robot-mouth robot-mouth-flat" d="M41 70h18"/>
+          <path class="robot-mouth robot-mouth-o" d="M44 68q6-7 12 0q0 9-6 9t-6-9Z"/><path class="robot-mouth robot-mouth-worried" d="M40 74q10-10 20 0"/>
+          <path class="robot-cheek robot-cheek-left" d="M27 64q5 4 10 0"/><path class="robot-cheek robot-cheek-right" d="M63 64q5 4 10 0"/><path class="robot-shine" d="M31 30q5-7 12-8"/>
+        </svg></div>
+          <div class="robot-header-title"><strong id="quickHelpTitle">Robot Buddy</strong><small id="robotCompanionStatus">Bạn đồng hành TOEIC · Offline</small></div>
+          <button type="button" class="quick-help-close" id="quickHelpClose" aria-label="Ẩn Robot Buddy">×</button>
+        </div>
+        <div class="robot-header-controls" aria-label="Tùy chọn Robot Buddy">
+          <button type="button" class="robot-mute-toggle" id="robotInsightsToggle" aria-pressed="true" title="Bật hoặc tắt phân tích tiến độ trên thiết bị">Phân tích tiến độ: Bật</button>
+          <button type="button" class="robot-mute-toggle" id="robotMuteToggle" aria-pressed="true" title="Bật hoặc tắt lời nhắc tự động">Lời nhắc: Bật</button>
+        </div>
       </header>
       <div class="robot-chat-shell">
         <div class="robot-chat-log" id="robotChatLog" role="log" aria-live="polite" aria-relevant="additions" aria-label="Cuộc trò chuyện với Robot Buddy"></div>
@@ -531,7 +535,7 @@
           <input id="robotChatInput" name="message" type="text" maxlength="240" autocomplete="off" placeholder="Nhắn điều bạn muốn hỏi...">
           <button type="submit" aria-label="Gửi tin nhắn"><span aria-hidden="true">➤</span></button>
         </form>
-        <p class="robot-local-note">Robot dùng thư viện hội thoại có sẵn và có thể đọc tiến độ học lưu cục bộ trên thiết bị khi tính năng phân tích được bật. Không gửi dữ liệu học tập ra ngoài; không phải chatbot AI trực tuyến.</p>
+        <p class="robot-local-note">Offline · Hội thoại có sẵn; chỉ đọc tiến độ cục bộ khi bật phân tích. Không gửi dữ liệu ra ngoài, không phải chatbot AI trực tuyến.</p>
       </div>
     </section>
   </aside>

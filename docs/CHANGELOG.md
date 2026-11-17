@@ -1,3 +1,13 @@
+## v2.85.0 — Robot Buddy polished layout & one-tap learning actions
+
+- Rebuilt the Robot Buddy header as two clear rows: Robot name, TOEIC companion/offline status and close control remain together; the progress-analysis and reminder on/off controls sit below without pushing the title out of alignment.
+- Enlarged the quick-prompt selection area and tap targets. Tightened the privacy footer while preserving the essential offline, local-only and non-generative-chatbot explanation.
+- Robot replies now emphasize **Robot Buddy**, **TOEIC Dictionary** and **Vũ Nguyễn Hoàng Phúc** using safe DOM text nodes and `<strong>` elements; user messages and untrusted text remain plain text.
+- Added up to four contextual navigation shortcuts after a progress analysis. Shortcuts are based only on categories and example areas actually returned by the local insight aggregator; they open existing app pages and do not alter learner records.
+- Reminder and progress-analysis controls now present explicit Bật/Tắt states with accessible pressed state. Existing reminder preference semantics and `toeic:robot-buddy-settings:v1` are preserved.
+- Preserved the offline dialogue library, all learning content, stable IDs, local storage keys, IndexedDB schema v1 and Service Worker shell. No learner progress is written, migrated, uploaded or reset.
+- Local checks: Robot Buddy unit/regression suite, runtime render/migration smoke, JavaScript syntax and focused responsive/design/version checks are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.85.0.md`. Browser visual QA, physical-device QA, GitHub Actions and Pages deployment remain pending.
+
 ## v2.84.1 — Robot Buddy Learning Insights & Knowledge Expansion
 
 - Restored Robot Buddy learning-progress analysis using snapshots already loaded by the app from IndexedDB v1 and existing local progress stores. The Robot itself does not open IndexedDB or localStorage and receives only in-memory read-only snapshots.

@@ -13,7 +13,7 @@ import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrit
 import { createRobotBuddy } from './robot-buddy.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.84.1';
+const APP_RELEASE_VERSION = '2.85.0';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -2983,6 +2983,13 @@ function updateRobotInsightsToggle(){
   button.textContent=enabled?'Phân tích tiến độ: Bật':'Phân tích tiến độ: Tắt';
   button.setAttribute('aria-pressed',String(enabled));
 }
+function updateRobotMuteToggle(){
+  const button=$('#robotMuteToggle');if(!button)return;
+  const enabled=!robotBuddyMuted;
+  button.textContent=enabled?'Lời nhắc: Bật':'Lời nhắc: Tắt';
+  button.setAttribute('aria-pressed',String(enabled));
+  button.title=enabled?'Tắt lời nhắc tự động':'Bật lời nhắc tự động';
+}
 function toggleRobotInsights(){
   const enabled=robotReadSettings().learningInsightsEnabled!==false;
   robotSaveSettings({learningInsightsEnabled:!enabled});updateRobotInsightsToggle();
@@ -2996,7 +3003,19 @@ function appendRobotMessage(role,text,actions=[]){
     item.append(avatar);
   }
   const bubble=document.createElement('div');bubble.className='robot-chat-bubble';
-  const content=document.createElement('p');content.textContent=String(text||'');bubble.append(content);
+  const content=document.createElement('p');
+  const message=String(text||'');
+  if(role==='user')content.textContent=message;
+  else{
+    const emphasis=/(Robot Buddy|TOEIC Dictionary|Vũ Nguyễn Hoàng Phúc)/giu;
+    let cursor=0,match;
+    while((match=emphasis.exec(message))){
+      if(match.index>cursor)content.append(document.createTextNode(message.slice(cursor,match.index)));
+      const strong=document.createElement('strong');strong.textContent=match[0];content.append(strong);cursor=match.index+match[0].length;
+    }
+    if(cursor<message.length)content.append(document.createTextNode(message.slice(cursor)));
+  }
+  bubble.append(content);
   if(Array.isArray(actions)&&actions.length){
     const actionRow=document.createElement('div');actionRow.className='robot-chat-actions';
     actions.forEach(action=>{
@@ -3037,6 +3056,31 @@ function getRobotLearningInsightsNow(){
   if(robotReadSettings().learningInsightsEnabled===false)return null;
   return buildRobotLearningInsights(getRobotLearningSnapshot());
 }
+function getRobotInsightActions(insights){
+  if(!insights?.hasEvidence)return [];
+  const routes=[
+    {test:/tu vung/,page:'dictionary',label:'Mở Từ vựng'},
+    {test:/flashcard/,page:'flashcards',label:'Mở Flashcard'},
+    {test:/ngu phap/,page:'grammar',label:'Mở Ngữ pháp'},
+    {test:/doc hieu|reading/,page:'reading',label:'Mở Đọc hiểu'},
+    {test:/nghe hieu|listening/,page:'listening',label:'Mở Nghe hiểu'},
+    {test:/foundation|nen tang|pre a1|a1 |a2 /,page:'foundation',label:'Mở Foundation'},
+    {test:/thi thu|mock/,page:'mock',label:'Mở Thi thử'},
+    {test:/on nho lai|recall/,page:'practice',label:'Mở Ôn tập'}
+  ];
+  const actions=[],seen=new Set();
+  for(const group of ['review','practice','learn']){
+    for(const item of insights.items?.[group]||[]){
+      const area=String(item.area||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+      const route=routes.find(entry=>entry.test.test(area));
+      if(route&&!seen.has(route.page)){
+        seen.add(route.page);actions.push({label:route.label,page:route.page});
+      }
+      if(actions.length>=4)return actions;
+    }
+  }
+  return actions;
+}
 function sendRobotMessage(rawText){
   const text=String(rawText||'').trim();if(!text||!robotBuddyEngine)return;
   appendRobotMessage('user',text);
@@ -3048,7 +3092,9 @@ function sendRobotMessage(rawText){
   const settings=robotReadSettings();
   const reply=robotBuddyEngine.reply(text);
   if(intent.intent==='insights'&&settings.learningInsightsEnabled!==false){
-    reply.text=formatRobotLearningInsights(getRobotLearningInsightsNow());
+    const insights=getRobotLearningInsightsNow();
+    reply.text=formatRobotLearningInsights(insights);
+    reply.actions=getRobotInsightActions(insights);
   }else if(intent.intent==='insights'&&settings.learningInsightsEnabled===false){
     reply.text='Tính năng phân tích tiến độ đang được tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ” ở phía trên. Mình vẫn hỗ trợ trò chuyện và hướng dẫn sử dụng như bình thường.';
   }
@@ -3163,8 +3209,7 @@ function initializeRobotCompanion(){
   return response.then(library=>{
     robotBuddyEngine=createRobotBuddy(library);
     const settings=robotReadSettings();robotBuddyMuted=settings.muted===true;
-    const muteButton=$('#robotMuteToggle');if(muteButton){muteButton.setAttribute('aria-pressed',String(robotBuddyMuted));muteButton.textContent=robotBuddyMuted?'Bật lời nhắc':'Tắt lời nhắc';}
-    updateRobotInsightsToggle();
+    updateRobotMuteToggle();updateRobotInsightsToggle();
     if(!settings.onboardingChoice)setQuickHelpOpen(true);
     else robotShowWelcome();
     initializeRobotIdleWatchers();
@@ -3172,7 +3217,7 @@ function initializeRobotCompanion(){
 }
 function toggleRobotMute(){
   robotBuddyMuted=!robotBuddyMuted;robotSaveSettings({muted:robotBuddyMuted});
-  const button=$('#robotMuteToggle');if(button){button.setAttribute('aria-pressed',String(robotBuddyMuted));button.textContent=robotBuddyMuted?'Bật lời nhắc':'Tắt lời nhắc';}
+  updateRobotMuteToggle();
   hideRobotIdleNudge();
   if(robotBuddyMuted&&robotIdleTimer){clearTimeout(robotIdleTimer);robotIdleTimer=null;}
   if(!robotBuddyMuted)scheduleRobotIdle(90000);

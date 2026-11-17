@@ -2,17 +2,26 @@
 
 > **Nguồn trạng thái và lộ trình duy nhất.** Mọi release cập nhật trực tiếp file này. `CHANGELOG.md` là log phát hành; `archive/PROJECT_HISTORY.md` lưu lịch sử đã chỉnh lý; `COMPATIBILITY.md` là sổ tương thích duy nhất.
 
-- **Ngày kiểm kê:** 2026-11-16.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.84.1 — Robot Buddy Learning Insights & Knowledge Expansion.
+- **Ngày kiểm kê:** 2026-11-17.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.85.0 — Robot Buddy polished layout & one-tap learning actions.
 - **Product source:** GitHub Pages static PWA; GitHub-only, không có backend riêng cho Robot.
-- **Robot Buddy:** đầu Robot SVG, biểu cảm/animation; giữ nguyên 500 câu hội thoại offline, 59 lời hướng dẫn tính năng cho 12 đích đến (11 khu vực menu và Placement), 6 FAQ và 16 quick prompts. “Bạn là ai?” giới thiệu Robot được tạo bởi nhà phát triển Vũ Nguyễn Hoàng Phúc.
-- **Learning Insights:** Robot có thể nhận snapshot tiến độ local đã được ứng dụng nạp sẵn để phân loại Cần học / Cần luyện / Cần ôn. Cần học = bài/mục chưa có bằng chứng hoàn thành; Cần luyện = theo ngưỡng bằng chứng của từng module (Từ vựng ≥3 lượt, Flashcard ≥3 câu quiz, Grammar/Reading/Listening ≥5 câu, Foundation ≥3 mục độc lập, Mock theo kết quả bài hoàn thành); Cần ôn = lịch ôn từ vựng/Flashcard, recall Objective và Foundation đã đến hạn. Robot có thể liệt kê tối đa 5 nội dung mẫu trong mỗi nhóm để người học mở tiếp. Dữ liệu ít được báo chưa đủ bằng chứng, không kết luận kỹ năng yếu.
+- **Robot Buddy:** đầu Robot SVG, biểu cảm/animation; giữ nguyên 500 câu hội thoại offline, 59 lời hướng dẫn tính năng cho 12 đích đến (11 khu vực menu và Placement), 6 FAQ và 16 quick prompts. Header dùng hai hàng riêng biệt; vùng quick prompts lớn hơn; trạng thái phân tích/lời nhắc hiển thị Bật/Tắt; tên Robot Buddy, TOEIC Dictionary và Vũ Nguyễn Hoàng Phúc được nhấn mạnh an toàn trong câu trả lời.
+- **Learning Insights:** Robot có thể nhận snapshot tiến độ local đã được ứng dụng nạp sẵn để phân loại Cần học / Cần luyện / Cần ôn. Cần học = bài/mục chưa có bằng chứng hoàn thành; Cần luyện = theo ngưỡng bằng chứng của từng module (Từ vựng ≥3 lượt, Flashcard ≥3 câu quiz, Grammar/Reading/Listening ≥5 câu, Foundation ≥3 mục độc lập, Mock theo kết quả bài hoàn thành); Cần ôn = lịch ôn từ vựng/Flashcard, recall Objective và Foundation đã đến hạn. Robot có thể liệt kê tối đa 5 nội dung mẫu trong mỗi nhóm và gắn tối đa 4 nút điều hướng tới khu vực tương ứng. Dữ liệu ít được báo chưa đủ bằng chứng, không kết luận kỹ năng yếu.
 - **Read-only boundary:** Robot không tự mở IndexedDB/LocalStorage. Ứng dụng chỉ truyền snapshot trong bộ nhớ từ các kho hiện hữu; aggregator thuần không sửa dữ liệu. Tắt Learning Insights không ảnh hưởng hội thoại/hướng dẫn. Không gửi tiến độ tới API, server, Google AI hoặc bên thứ ba.
 - **Preservation:** IndexedDB vẫn schema v1; giữ nguyên các key `studyProgress`, `flashProgress`, `grammarProgress`, `readingProgress`, `listeningProgress`, Foundation localStorage và Mock history. Không migration, overwrite hoặc delete progress trong release này.
-- **SW / offline shell:** `assets/js/robot-buddy.js`, `assets/js/robot-learning-insights.js`, `data/robot/robot-library.json` nằm trong `REQUIRED` và `APP_SHELL`; cache version 2.84.1.
-- **Local release gates:** PASS — 29/29 JavaScript suites; 56/56 selected Python tests across the CI/version/layout/design/project-status checks; vocabulary validator 0 ERROR/0 WARNING; learning-content validator 0 errors/0 warnings; 11/11 objective map; 294/294 resource links; question/distractor/photo audits PASS; version sync PASS. Full Python unittest discovery and the standalone `test_validator` did not finish within the 300-second execution window and are not counted as PASS. Details in `reports/TEST_REPORT_TOEIC_Dictionary_v2.84.1.md`.
+- **SW / offline shell:** `assets/js/robot-buddy.js`, `assets/js/robot-learning-insights.js`, `data/robot/robot-library.json` nằm trong `REQUIRED` và `APP_SHELL`; cache version 2.85.0.
+- **Local release gates:** PASS — 4/4 focused Node regression/smoke scripts; 51/51 selected Python tests (responsive layout, design system, visual composition, version sync, project progress and PWA readiness); `node --check` app.js/sw.js; vocabulary validator 1,137 records / 0 ERROR / 0 WARNING; learning-content validator 0 ERROR / 0 WARNING; version sync PASS. These are targeted local checks, not full-suite or production acceptance. Details in `reports/TEST_REPORT_TOEIC_Dictionary_v2.85.0.md`.
 - **Release QA still pending:** push GitHub, GitHub Actions, Pages production, browser visual QA, desktop 15.6-inch at 100% zoom and mobile/iOS/Android.
-- **Previous release:** v2.84.0.
+- **Previous release:** v2.84.1.
+
+## v2.85.0 changes — Robot Buddy polished layout & one-tap learning actions
+
+- Rebuilt the header into a title/status/close row and a separate two-control row. Analysis and reminder controls display clear Bật/Tắt states and update their accessible pressed state.
+- Enlarged the quick-prompt area and touch targets; shortened the footer while retaining the offline/scripted/local-only privacy explanation.
+- Bot replies safely bold the exact product/developer names using DOM-created text and `<strong>` nodes. User messages remain text-only; no HTML from message content is interpreted.
+- A local progress analysis can now attach up to four direct navigation actions derived from concrete insight item areas. Actions navigate to existing modules only; no specific recommendation is fabricated and no progress data is written.
+- No changes to the 500-message dialogue library, insight evidence thresholds, learner content, stable IDs, IndexedDB v1, existing local progress keys, Placement/Mock logic or Google AI feature entry points.
+- Local verification is limited to the commands recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.85.0.md`; physical-device/browser visual confirmation, GitHub Actions and Pages deployment are pending.
 
 ## v2.84.1 changes — Robot Buddy Learning Insights & Knowledge Expansion
 
@@ -36,11 +45,11 @@
 ## AI and Robot product contract — current
 
 - **Google AI:** preserve the existing v2.79 user-initiated feature-level Google AI actions for Vocabulary/term, Practice answer/review, Grammar, Reading and Listening. These remain separate from Robot Buddy.
-- **Robot Buddy:** a static, scripted, offline companion. It can greet, encourage, answer supported feature-navigation questions, show FAQs, and proactively ask whether the user needs help. It does not understand unrestricted natural language, learn from activity, analyze ability, monitor scores or summarize learner progress.
-- **No learner-data connection:** Robot Buddy must not import progress readers, subscribe to score/result events, access IndexedDB, inspect learner localStorage keys, or use personal vocabulary/Placement/Mock data. Only the Robot's own onboarding/mute preferences may be persisted.
-- **No external AI:** no API, remote model, server, external transfer, analytics or hidden data upload. Do not describe the local keyword/dialogue engine as realtime generative AI. Its responses are selected locally from the bundled content library.
+- **Robot Buddy:** a static, scripted, offline companion. It can greet, encourage, answer supported feature-navigation questions, show FAQs and summarize the learner's already-loaded local progress only when the user enables Learning Insights. It does not understand unrestricted natural language or generate responses with an online model.
+- **Read-only local learning snapshot:** the main application passes an in-memory snapshot from its existing local stores to the pure insight aggregator. Robot Buddy itself does not open IndexedDB or localStorage. The aggregator is read-only; it does not save, migrate, overwrite or delete learner records. Disabling analysis stops the progress summary but keeps dialogue and feature guidance available.
+- **No external AI or transfer:** no API, remote model, backend, external transfer, analytics or hidden data upload is used for Robot dialogue or analysis. Learner progress is never sent to Google AI or a third party by this feature.
+- **Evidence discipline:** distinguish Cần học / Cần luyện / Cần ôn. Require the documented minimum evidence for each learning area; otherwise state “chưa đủ dữ liệu” rather than labelling a skill weak. One-tap actions may open only existing modules mapped from concrete evidence areas.
 - **Idle safeguards:** respect the published timers, rate limits, mute/snooze, reduced motion and suppression conditions. Never cover or interrupt practice, audio, modals or timed Mock Exam.
-- **Historical correction (as of v2.84.0):** v2.83.0 had a progress-aware Robot implementation. v2.84.1 intentionally restores a safer opt-in, read-only local insights path. The old v2.83 behavior remains only as release history, not current product scope.
 
 ## v2.83.0 historical — progress-aware Robot Buddy (superseded in v2.84.0)
 

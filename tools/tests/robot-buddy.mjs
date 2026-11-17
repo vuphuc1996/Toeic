@@ -85,15 +85,36 @@ assert.ok(app.includes('setTimeout(()=>{hideRobotIdleNudge();scheduleRobotIdle(r
 assert.ok(index.includes('id="robotIdleNudge"') && index.includes('id="robotChatForm"') && index.includes('id="robotMuteToggle"'));
 assert.ok(index.includes('id="robotChatLog"') && index.includes('id="robotQuickPrompts"'));
 assert.ok(index.includes('id="robotInsightsToggle"'));
-assert.match(index, /có thể đọc tiến độ học lưu cục bộ/);
+assert.match(index, /chỉ đọc tiến độ cục bộ khi bật phân tích/);
+assert.ok(index.includes('class="robot-header-main"') && index.includes('class="robot-header-controls"'), 'Robot header must keep the title/close row separate from the two preference controls.');
+assert.match(index, /Lời nhắc: Bật/);
+assert.match(css, /\.robot-quick-prompts\{[^}]*max-height:118px/);
+assert.match(css, /\.robot-prompt-chip\{[^}]*font:700 10px/);
+assert.match(css, /\.robot-mute-toggle\[aria-pressed=\"true\"\]\{background:#eef7ff/);
+assert.ok(app.includes('function updateRobotMuteToggle()'), 'Reminder state must be presented as an explicit on/off toggle.');
+assert.ok(app.includes('function getRobotInsightActions(insights)'), 'Learning insights must expose grounded navigation shortcuts.');
+const insightActionSource = app.slice(app.indexOf('function getRobotInsightActions'), app.indexOf('function sendRobotMessage'));
+const getInsightActions = new Function(`${insightActionSource}; return getRobotInsightActions;`)();
+assert.deepEqual(getInsightActions({ hasEvidence: false, items: { learn: [{ area: 'Từ vựng' }] } }), []);
+assert.deepEqual(getInsightActions({ hasEvidence: true, items: {
+  review: [{ area: 'Từ vựng' }, { area: 'Nghe hiểu' }],
+  practice: [{ area: 'Thi thử' }],
+  learn: [{ area: 'Foundation' }, { area: 'Flashcard' }]
+} }), [
+  { label: 'Mở Từ vựng', page: 'dictionary' },
+  { label: 'Mở Nghe hiểu', page: 'listening' },
+  { label: 'Mở Thi thử', page: 'mock' },
+  { label: 'Mở Foundation', page: 'foundation' }
+], 'Only evidence-mapped, unique module actions are returned, capped at four.');
+assert.ok(app.includes('/(Robot Buddy|TOEIC Dictionary|Vũ Nguyễn Hoàng Phúc)/giu'), 'Robot replies must safely emphasize the product and developer names.');
 assert.ok((index.match(/class="robot-head-svg"/g) || []).length >= 3, 'The same head-only SVG is reused for launcher, panel and idle bubble.');
 assert.ok(!/robot-body|robot-torso|robot-arms|robot-legs/i.test(index), 'The mascot must be head-only.');
 assert.ok(css.includes('.robot-head-svg[data-emotion="thinking"]') && css.includes('.robot-head-svg[data-emotion="analyzing"]') && css.includes('.robot-head-svg[data-emotion="celebrate"]') && css.includes('.robot-head-svg[data-emotion="sleepy"]'));
 assert.ok(css.includes('@media(prefers-reduced-motion:reduce)'));
-assert.match(css, /@media\(max-width:430px\)\{\.quick-help-header\{flex-wrap:wrap/);
+assert.match(css, /@media\(max-width:430px\)\{\.quick-help-panel\{max-height:72dvh/);
 
 // Static assets must be available offline and version markers must match.
-assert.equal(manifest.version, '2.84.1');
+assert.equal(manifest.version, '2.85.0');
 for (const file of ['./assets/js/robot-buddy.js', './assets/js/robot-learning-insights.js', './data/robot/robot-library.json', './assets/js/learning-assistant.js', './assets/js/quick-help.js']) {
   assert.ok(sw.includes(file), `Service Worker missing required offline resource: ${file}`);
   assert.ok(fs.existsSync(path.join(root, file.slice(2))), `Static resource does not exist: ${file}`);
