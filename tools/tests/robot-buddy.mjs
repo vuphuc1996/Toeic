@@ -19,16 +19,22 @@ const allMessages = Object.values(library.categories).flatMap(group => group.mes
 assert.deepEqual(Object.fromEntries(Object.entries(library.categories).map(([key, value]) => [key, value.messages.length])), expected);
 assert.equal(allMessages.length, 500, 'The primary dialogue library must contain exactly 500 authored message variants.');
 assert.equal(new Set(allMessages).size, 500, 'Primary message variants must be unique.');
-assert.ok(Object.keys(library.features).length >= 10, 'Feature help must cover at least 10 real application destinations.');
+assert.ok(Object.keys(library.features).length >= 12, 'Feature help must cover at least 10 real application destinations.');
 assert.ok(library.faq.length >= 6, 'The local FAQ set must cover common support topics.');
 assert.ok(library.quickPrompts.length >= 10, 'Provide enough quick prompts for conversational discovery.');
-assert.deepEqual(library.privacy, { readsLearnerProgress: false, usesExternalApi: false, usesGenerativeModel: false, storesConversationHistory: false });
+assert.equal(library.privacy.readsLearnerProgress, true);
+assert.equal(library.privacy.learnerProgressAccess, 'read-only-local-snapshot');
+assert.equal(library.privacy.usesExternalApi, false);
+assert.equal(library.privacy.usesGenerativeModel, false);
+assert.equal(library.privacy.transmitsLearnerData, false);
 
 // Engine responses are deterministic with a fixed random source and never need a learner profile.
 const engine = createRobotBuddy(library, () => 0);
 assert.equal(normalizeRobotText('Đánh giá ĐẦU VÀO!'), 'danh gia dau vao');
 assert.equal(engine.reply('Bạn là ai?').intent, 'identity');
-assert.match(engine.reply('Bạn là ai?').text, /không đọc tiến độ học/);
+assert.match(engine.reply('Bạn là ai?').text, /Vũ Nguyễn Hoàng Phúc/);
+assert.match(engine.reply('Bạn là ai?').text, /đọc tiến độ học/);
+assert.equal(engine.classify('Phân tích tiến độ học của tôi').intent, 'insights');
 const dictionary = engine.reply('Tôi muốn tìm từ vựng');
 assert.equal(dictionary.intent, 'feature');
 assert.equal(dictionary.actions[0].page, 'dictionary');
@@ -36,7 +42,7 @@ assert.match(dictionary.text, /Từ vựng/);
 assert.equal(engine.reply('Tôi muốn luyện Listening').actions[0].page, 'listening');
 assert.equal(engine.reply('Mở đánh giá đầu vào').actions[0].command, 'placement');
 const routeCases = [
-  ['Mở Flashcard','flashcards'], ['Mở Ôn tập','practice'], ['Học ngữ pháp','grammar'],
+  ['Giới thiệu Trang chủ','dashboard'], ['Mở Flashcard','flashcards'], ['Mở Ôn tập','practice'], ['Học ngữ pháp','grammar'],
   ['Luyện đọc Reading','reading'], ['Luyện nghe Listening','listening'], ['Thi thử TOEIC','mock'],
   ['Học Foundation','foundation'], ['Mở Cấu hình','settings'], ['Quản lý dữ liệu','data']
 ];
@@ -46,7 +52,8 @@ for (const [utterance, destination] of routeCases) {
   assert.equal(routed.actions[0].page, destination, `Incorrect destination for: ${utterance}`);
   assert.ok(routed.text.length > 10, `Missing feature-help content for: ${utterance}`);
 }
-assert.equal(Object.keys(library.features).length, 11);
+assert.equal(Object.keys(library.features).length, 12);
+assert.equal(Object.values(library.features).reduce((sum,item)=>sum+item.messages.length,0), 59);
 for (const faq of library.faq) {
   const result = engine.reply(faq.keywords[0]);
   assert.equal(result.intent, 'faq', `FAQ keyword did not resolve: ${faq.id}`);
@@ -56,14 +63,17 @@ assert.equal(engine.reply('Ứng dụng có dùng offline không?').intent, 'faq
 assert.match(engine.reply('Bạn có thể kể về tàu vũ trụ Sao Hỏa không?').text, /chưa hiểu mọi câu hỏi tự do/);
 assert.ok(['motivation','caring','sleepy','listening','thinking'].includes(engine.reply('Hãy động viên tôi nhé').emotion));
 
-// Current Robot runtime has a strict data boundary: UI state only, own settings only.
+// Robot receives already-loaded local progress snapshots; it must not open storage itself.
 const robotBlock = app.slice(app.indexOf('function robotHeadMarkup'), app.indexOf('function detectDeviceProfile'));
 assert.ok(robotBlock.length > 5000, 'Robot runtime should be present in the application.');
-for (const forbidden of ['state.progress', 'state.flashProgress', 'state.grammarProgress', 'state.readingProgress', 'state.listeningProgress', 'state.foundationProgress', 'dbGet(', 'DB_NAME', 'toeic:placement-diagnostic:v1', 'summarizeFoundation', 'buildCompanionSnapshot', 'hasLearningFootprint']) {
-  assert.ok(!robotBlock.includes(forbidden), `Robot must not access learner data: ${forbidden}`);
+for (const forbidden of ['dbGet(', 'DB_NAME', 'indexedDB.open', 'fetch(https://', 'publishRobotEvent(']) {
+  assert.ok(!robotBlock.includes(forbidden), `Robot UI must not open storage or call remote services: ${forbidden}`);
 }
-assert.ok(!app.includes('publishRobotEvent('), 'Learning-result notifications must not be connected to Robot Buddy.');
+assert.ok(app.includes('buildRobotLearningInsights(getRobotLearningSnapshot())'), 'Robot must use the local progress insight aggregator.');
+assert.ok(app.includes('insights.totals.review>0') && app.includes('insights.totals.practice>0'), 'Idle nudges may use grounded local progress signals.');
+assert.ok(app.includes('learningInsightsEnabled!==false'), 'Progress analysis must be independently switchable.');
 assert.ok(app.includes("import { createRobotBuddy } from './robot-buddy.js'"));
+assert.ok(app.includes("import { buildRobotLearningInsights, formatRobotLearningInsights } from './robot-learning-insights.js'"));
 assert.ok(app.includes("fetch(releaseDataUrl('./data/robot/robot-library.json')"), 'Robot loads only its bundled static content library.');
 assert.ok(app.includes("const ROBOT_BUDDY_SETTINGS_KEY = 'toeic:robot-buddy-settings:v1'"));
 assert.ok(app.includes("toeic:robot-companion-onboarding:v1"), 'Migrate only the old Robot onboarding preference; do not re-prompt v2.83 users.');
@@ -74,18 +84,21 @@ assert.ok(app.includes('now-time<3600000') && app.includes('robotIdleNoticeTimes
 assert.ok(app.includes('setTimeout(()=>{hideRobotIdleNudge();scheduleRobotIdle(robotIdleStage===1?300000:600000);},14000)'));
 assert.ok(index.includes('id="robotIdleNudge"') && index.includes('id="robotChatForm"') && index.includes('id="robotMuteToggle"'));
 assert.ok(index.includes('id="robotChatLog"') && index.includes('id="robotQuickPrompts"'));
+assert.ok(index.includes('id="robotInsightsToggle"'));
+assert.match(index, /có thể đọc tiến độ học lưu cục bộ/);
 assert.ok((index.match(/class="robot-head-svg"/g) || []).length >= 3, 'The same head-only SVG is reused for launcher, panel and idle bubble.');
 assert.ok(!/robot-body|robot-torso|robot-arms|robot-legs/i.test(index), 'The mascot must be head-only.');
-assert.ok(css.includes('.robot-head-svg[data-emotion="thinking"]') && css.includes('.robot-head-svg[data-emotion="celebrate"]') && css.includes('.robot-head-svg[data-emotion="sleepy"]'));
+assert.ok(css.includes('.robot-head-svg[data-emotion="thinking"]') && css.includes('.robot-head-svg[data-emotion="analyzing"]') && css.includes('.robot-head-svg[data-emotion="celebrate"]') && css.includes('.robot-head-svg[data-emotion="sleepy"]'));
 assert.ok(css.includes('@media(prefers-reduced-motion:reduce)'));
+assert.match(css, /@media\(max-width:430px\)\{\.quick-help-header\{flex-wrap:wrap/);
 
 // Static assets must be available offline and version markers must match.
-assert.equal(manifest.version, '2.84.0');
-for (const file of ['./assets/js/robot-buddy.js', './data/robot/robot-library.json', './assets/js/learning-assistant.js', './assets/js/quick-help.js']) {
+assert.equal(manifest.version, '2.84.1');
+for (const file of ['./assets/js/robot-buddy.js', './assets/js/robot-learning-insights.js', './data/robot/robot-library.json', './assets/js/learning-assistant.js', './assets/js/quick-help.js']) {
   assert.ok(sw.includes(file), `Service Worker missing required offline resource: ${file}`);
   assert.ok(fs.existsSync(path.join(root, file.slice(2))), `Static resource does not exist: ${file}`);
 }
 assert.match(read('assets/js/learning-assistant.js'), /Intentionally executes nothing/i);
 assert.match(read('assets/js/quick-help.js'), /intentionally executes nothing/i);
 
-console.log('PASS: 500 unique offline dialogues, feature/FAQ routing, head-only emotions, idle safeguards, first-run Placement handoff and strict no-learner-data boundary.');
+console.log('PASS: offline dialogue library, feature/FAQ routing, read-only local progress integration, privacy toggle, head-only emotions and idle safeguards.');

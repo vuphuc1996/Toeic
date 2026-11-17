@@ -1,4 +1,5 @@
 import { LocalNotificationProvider } from './notification-provider.js';
+import { buildRobotLearningInsights, formatRobotLearningInsights } from './robot-learning-insights.js';
 import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js';
 import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js';
 import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js';
@@ -12,7 +13,7 @@ import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrit
 import { createRobotBuddy } from './robot-buddy.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.84.0';
+const APP_RELEASE_VERSION = '2.84.1';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -1851,6 +1852,7 @@ function bindEvents(){
   $('#quickHelpClose')?.addEventListener('click',()=>setQuickHelpOpen(false));
   $('#robotChatForm')?.addEventListener('submit',handleRobotInput);
   $('#robotMuteToggle')?.addEventListener('click',toggleRobotMute);
+  $('#robotInsightsToggle')?.addEventListener('click',toggleRobotInsights);
   $('#robotIdleNeedHelp')?.addEventListener('click',()=>{hideRobotIdleNudge();setQuickHelpOpen(true);});
   $('#robotIdleDismiss')?.addEventListener('click',()=>{hideRobotIdleNudge();robotIdleSnoozeUntil=Date.now()+600000;scheduleRobotIdle(600000);});
   $('#quickHelp')?.addEventListener('click',event=>{
@@ -2947,7 +2949,7 @@ function robotHeadMarkup(extraClass=''){
   </svg>`;
 }
 function setRobotEmotion(emotion='happy'){
-  const allowed=['happy','thinking','celebrate','caring','sleepy','greeting','surprised','motivation','concerned','playful','listening','speaking'];
+  const allowed=['happy','thinking','celebrate','caring','sleepy','greeting','surprised','motivation','concerned','playful','listening','speaking','analyzing'];
   const selected=allowed.includes(emotion)?emotion:'happy';
   $$('#quickHelp .robot-head-svg').forEach(node=>{node.dataset.emotion=selected;});
   const launcher=$('#quickHelpLauncher');if(launcher)launcher.dataset.emotion=selected;
@@ -2974,6 +2976,17 @@ function robotSaveSettings(patch){
   const current=robotReadSettings();const next={...current,...patch,updatedAt:Date.now()};
   try{localStorage.setItem(ROBOT_BUDDY_SETTINGS_KEY,JSON.stringify(next));}catch(error){console.warn('Không thể lưu tùy chọn Robot Buddy:',error);}
   return next;
+}
+function updateRobotInsightsToggle(){
+  const button=$('#robotInsightsToggle');if(!button)return;
+  const enabled=robotReadSettings().learningInsightsEnabled!==false;
+  button.textContent=enabled?'Phân tích tiến độ: Bật':'Phân tích tiến độ: Tắt';
+  button.setAttribute('aria-pressed',String(enabled));
+}
+function toggleRobotInsights(){
+  const enabled=robotReadSettings().learningInsightsEnabled!==false;
+  robotSaveSettings({learningInsightsEnabled:!enabled});updateRobotInsightsToggle();
+  appendRobotMessage('bot',!enabled?'Mình đã bật phân tích tiến độ. Khi bạn hỏi “Tiến độ học của tôi”, mình sẽ đọc các bản ghi trên thiết bị để tổng hợp.':'Mình đã tắt phân tích tiến độ. Mình sẽ không đọc dữ liệu học tập để phân tích nữa, nhưng vẫn trò chuyện và hướng dẫn chức năng bình thường.');
 }
 function appendRobotMessage(role,text,actions=[]){
   const log=$('#robotChatLog');if(!log)return;
@@ -3017,6 +3030,13 @@ function setRobotTyping(show){
   const node=$('#robotTyping');if(node)node.hidden=!show;
   if(show)setRobotEmotion('thinking');
 }
+function getRobotLearningSnapshot(){
+  return {words:state.words,vocabularyProgress:state.progress,flashProgress:state.flashProgress,grammarItems:state.grammarLessons,grammarProgress:state.grammarProgress,readingItems:state.readings,readingProgress:state.readingProgress,listeningItems:state.listening,listeningProgress:state.listeningProgress,foundationItems:state.foundationLessons,foundationProgressMap:state.foundationProgress,foundationReadingItems:state.foundationReadingPassages,foundationReadingProgress:state.foundationReadingProgress,foundationListeningItems:state.foundationListeningClips,foundationListeningProgress:state.foundationListeningProgress,objectiveProgress:state.objectiveProgress,objectiveResourceMap:state.objectiveResourceMap,mockHistory:state.mockHistory};
+}
+function getRobotLearningInsightsNow(){
+  if(robotReadSettings().learningInsightsEnabled===false)return null;
+  return buildRobotLearningInsights(getRobotLearningSnapshot());
+}
 function sendRobotMessage(rawText){
   const text=String(rawText||'').trim();if(!text||!robotBuddyEngine)return;
   appendRobotMessage('user',text);
@@ -3024,7 +3044,14 @@ function sendRobotMessage(rawText){
   const quick=$('#robotQuickPrompts');if(quick)quick.hidden=true;
   setRobotTyping(true);
   if(robotTypingTimer)clearTimeout(robotTypingTimer);
+  const intent=robotBuddyEngine.classify(text);
+  const settings=robotReadSettings();
   const reply=robotBuddyEngine.reply(text);
+  if(intent.intent==='insights'&&settings.learningInsightsEnabled!==false){
+    reply.text=formatRobotLearningInsights(getRobotLearningInsightsNow());
+  }else if(intent.intent==='insights'&&settings.learningInsightsEnabled===false){
+    reply.text='Tính năng phân tích tiến độ đang được tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ” ở phía trên. Mình vẫn hỗ trợ trò chuyện và hướng dẫn sử dụng như bình thường.';
+  }
   robotTypingTimer=setTimeout(()=>{
     setRobotTyping(false);setRobotEmotion('speaking');
     appendRobotMessage('bot',reply.text,reply.actions||[]);
@@ -3035,7 +3062,7 @@ function sendRobotMessage(rawText){
 function robotShowWelcome(){
   const log=$('#robotChatLog');if(!log||robotChatInitialized)return;
   robotChatInitialized=true;log.innerHTML='';
-  appendRobotMessage('bot','Xin chào! Mình là Robot Buddy 🤖. Mình có thể trò chuyện, giới thiệu chức năng và giúp bạn tìm đường trong TOEIC Dictionary. Mình không đọc dữ liệu học tập cá nhân.');
+  appendRobotMessage('bot','Xin chào! Mình là Robot Buddy 🤖. Mình có thể trò chuyện, giới thiệu chức năng, hướng dẫn bạn sử dụng ứng dụng và đọc tiến độ học được lưu ngay trên thiết bị để gợi ý nội dung cần học, luyện và ôn. Mình không gửi dữ liệu học tập ra ngoài và không phải chatbot AI trực tuyến.');
   const settings=robotReadSettings();
   if(!settings.onboardingChoice){
     appendRobotMessage('bot','Trước khi bắt đầu, bạn có muốn làm bài đánh giá đầu vào có sẵn để tham khảo điểm bắt đầu không?');
@@ -3085,7 +3112,12 @@ function scheduleRobotIdle(delay=90000){
 function showRobotIdleNudge(){
   const root=$('#robotIdleNudge'),message=$('#robotIdleMessage');if(!root||!message||!robotBuddyEngine)return;
   const category=robotIdleStage===0?'caring':robotIdleStage===1?'encouragement':'caring';
-  message.textContent=robotBuddyEngine.pick(category);
+  const insights=getRobotLearningInsightsNow();
+  if(insights?.hasEvidence&&insights.totals.review>0&&robotIdleStage===0){
+    message.textContent=`Bạn đang có ${insights.totals.review} mục đến hạn ôn trên thiết bị. Khi thuận tiện, hãy mở mình và hỏi “Tiến độ học của tôi” nhé!`;
+  }else if(insights?.hasEvidence&&insights.totals.practice>0&&robotIdleStage===1){
+    message.textContent=`Mình thấy có ${insights.totals.practice} mục nên luyện thêm theo kết quả đã lưu. Bạn cứ học từng phần nhỏ nhé!`;
+  }else{message.textContent=robotBuddyEngine.pick(category);}
   root.hidden=false;setRobotEmotion(robotIdleStage===1?'motivation':'caring');
   robotIdleNoticeTimes.push(Date.now());robotIdleStage=Math.min(2,robotIdleStage+1);
   if(robotNudgeTimer)clearTimeout(robotNudgeTimer);
@@ -3109,7 +3141,7 @@ function handleRobotChoice(choice){
   robotSaveSettings({onboardingChoice:choice,muted:robotBuddyMuted});
   if(choice==='start'){
     appendRobotMessage('user','Có, bắt đầu đánh giá đầu vào.');
-    appendRobotMessage('bot','Được rồi! Mình sẽ mở bài Placement hiện có. Đây là lựa chọn của bạn; Robot không đọc hay phân tích kết quả bài làm nhé.');
+    appendRobotMessage('bot','Được rồi! Mình sẽ mở bài Placement hiện có. Đây là bài đánh giá tham khảo để gợi ý điểm bắt đầu, không phải chứng chỉ CEFR hay điểm ETS.');
     setQuickHelpOpen(false);setTimeout(()=>startPlacementDiagnostic(),250);return;
   }
   appendRobotMessage('user','Không cần, bỏ qua.');
@@ -3132,6 +3164,7 @@ function initializeRobotCompanion(){
     robotBuddyEngine=createRobotBuddy(library);
     const settings=robotReadSettings();robotBuddyMuted=settings.muted===true;
     const muteButton=$('#robotMuteToggle');if(muteButton){muteButton.setAttribute('aria-pressed',String(robotBuddyMuted));muteButton.textContent=robotBuddyMuted?'Bật lời nhắc':'Tắt lời nhắc';}
+    updateRobotInsightsToggle();
     if(!settings.onboardingChoice)setQuickHelpOpen(true);
     else robotShowWelcome();
     initializeRobotIdleWatchers();

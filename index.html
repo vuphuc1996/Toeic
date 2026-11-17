@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.84.0 – Robot Buddy Companion</title>
+  <title>TOEIC Dictionary v2.84.1 – Robot Buddy Learning Insights</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -76,7 +76,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.84.0 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.84.1 · GitHub-only</div>
       </div>
     </aside>
 
@@ -172,7 +172,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.84.0:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy hoạt động bằng thư viện hội thoại tĩnh, độc lập với tiến độ học cá nhân. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.84.1:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy dùng thư viện hội thoại cục bộ và có thể phân tích tiến độ học trên thiết bị theo chế độ chỉ đọc khi người dùng bật tính năng. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
@@ -440,7 +440,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.84.0</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.84.1</span></footer>
     </main>
   </div>
 
@@ -518,6 +518,7 @@
         <path class="robot-cheek robot-cheek-left" d="M27 64q5 4 10 0"/><path class="robot-cheek robot-cheek-right" d="M63 64q5 4 10 0"/><path class="robot-shine" d="M31 30q5-7 12-8"/>
       </svg></div>
         <div><strong id="quickHelpTitle">Robot Buddy</strong><small id="robotCompanionStatus">Bạn đồng hành TOEIC · Offline</small></div>
+        <button type="button" class="robot-mute-toggle" id="robotInsightsToggle" aria-pressed="true" title="Bật hoặc tắt phân tích tiến độ trên thiết bị">Phân tích tiến độ: Bật</button>
         <button type="button" class="robot-mute-toggle" id="robotMuteToggle" aria-pressed="false" title="Tắt lời nhắc tự động">Tắt lời nhắc</button>
         <button type="button" class="quick-help-close" id="quickHelpClose" aria-label="Ẩn Robot Buddy">×</button>
       </header>
@@ -530,7 +531,7 @@
           <input id="robotChatInput" name="message" type="text" maxlength="240" autocomplete="off" placeholder="Nhắn điều bạn muốn hỏi...">
           <button type="submit" aria-label="Gửi tin nhắn"><span aria-hidden="true">➤</span></button>
         </form>
-        <p class="robot-local-note">Thư viện hội thoại có sẵn trên thiết bị. Robot không đọc tiến độ học và không phải chatbot AI trực tuyến.</p>
+        <p class="robot-local-note">Robot dùng thư viện hội thoại có sẵn và có thể đọc tiến độ học lưu cục bộ trên thiết bị khi tính năng phân tích được bật. Không gửi dữ liệu học tập ra ngoài; không phải chatbot AI trực tuyến.</p>
       </div>
     </section>
   </aside>

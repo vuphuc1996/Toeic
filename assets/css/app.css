@@ -1363,10 +1363,10 @@ body.google-search-open{overflow:hidden}
 .robot-head-svg .robot-mouth-o{fill:#fff;stroke:var(--robot-mouth);stroke-width:2.5}
 .robot-head-svg .robot-cheek{fill:none;stroke:#ee9aa7;stroke-width:3.3;stroke-linecap:round;opacity:.5}
 .robot-head-svg .robot-shine{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;opacity:.9}
-.robot-head-svg[data-emotion="thinking"] .robot-pupil{transform:translate(2.5px,-2px)}
-.robot-head-svg[data-emotion="thinking"] .robot-brow-left{transform:translateY(-2px) rotate(-9deg);transform-origin:39px 40px}
-.robot-head-svg[data-emotion="thinking"] .robot-mouth-smile,.robot-head-svg[data-emotion="thinking"] .robot-mouth-o{opacity:0}
-.robot-head-svg[data-emotion="thinking"] .robot-mouth-flat{opacity:1}
+.robot-head-svg[data-emotion="thinking"] .robot-pupil,.robot-head-svg[data-emotion="analyzing"] .robot-pupil{transform:translate(2.5px,-2px)}
+.robot-head-svg[data-emotion="thinking"] .robot-brow-left,.robot-head-svg[data-emotion="analyzing"] .robot-brow-left{transform:translateY(-2px) rotate(-9deg);transform-origin:39px 40px}
+.robot-head-svg[data-emotion="thinking"] .robot-mouth-smile,.robot-head-svg[data-emotion="thinking"] .robot-mouth-o,.robot-head-svg[data-emotion="analyzing"] .robot-mouth-smile,.robot-head-svg[data-emotion="analyzing"] .robot-mouth-o{opacity:0}
+.robot-head-svg[data-emotion="thinking"] .robot-mouth-flat,.robot-head-svg[data-emotion="analyzing"] .robot-mouth-flat{opacity:1}
 .robot-head-svg[data-emotion="celebrate"]{animation:robot-celebrate .58s ease-in-out 2}
 .robot-head-svg[data-emotion="celebrate"] .robot-cheek{opacity:1}
 .robot-head-svg[data-emotion="caring"] .robot-pupil{transform:translateY(1.5px)}
@@ -1450,3 +1450,5 @@ body.google-search-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.quick-help-launcher,.robot-head-svg .robot-antenna-light,.robot-head-svg .robot-eye,.robot-head-svg[data-emotion="celebrate"],.robot-chat-message,.robot-typing span,.robot-idle-nudge{animation:none!important;transition:none!important}}
 
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+@media(max-width:430px){.quick-help-header{flex-wrap:wrap;gap:6px}.quick-help-header>div:nth-child(2){flex:1 1 140px}#robotInsightsToggle{margin-left:auto}.robot-mute-toggle{font-size:7px;padding:5px 6px}}

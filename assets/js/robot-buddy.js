@@ -1,8 +1,8 @@
 /**
  * Robot Buddy — scripted, offline companion for the GitHub Pages PWA.
- * It uses only the bundled dialogue library and user interface intent.
- * It MUST NOT read learner progress, IndexedDB, localStorage learning keys,
- * Google AI, external APIs, network services or generative models.
+ * It uses the bundled dialogue library and receives optional, read-only local
+ * learning insights from the application. It never opens storage, calls APIs,
+ * sends learner data outside the device or uses a generative model.
  */
 
 export function normalizeRobotText(value = '') {
@@ -15,6 +15,7 @@ export function normalizeRobotText(value = '') {
 }
 
 const PAGE_COMMANDS = Object.freeze({
+  dashboard: { label: 'Mở Trang chủ', page: 'dashboard' },
   dictionary: { label: 'Mở Từ vựng', page: 'dictionary' },
   flashcards: { label: 'Mở Flashcard', page: 'flashcards' },
   practice: { label: 'Mở Ôn tập', page: 'practice' },
@@ -29,6 +30,7 @@ const PAGE_COMMANDS = Object.freeze({
 });
 
 const FEATURE_INTENTS = Object.freeze([
+  { action: 'dashboard', terms: ['trang chu', 'tong quan', 'dashboard', 'thong ke tong quan'] },
   { action: 'dictionary', terms: ['tu vung', 'dictionary', 'tra tu', 'tim tu', 'tu moi'] },
   { action: 'flashcards', terms: ['flashcard', 'flash cards', 'the tu', 'the ghi nho'] },
   { action: 'practice', terms: ['on tap', 'review', 'luyen tap', 'luyen tu', 'cau hoi'] },
@@ -97,6 +99,8 @@ export class RobotBuddyEngine {
     const text = normalizeRobotText(message);
     if (!text) return { intent: 'help', emotion: 'listening' };
     if (/(ban la ai|robot buddy|ten gi|gioi thieu ban)/.test(text)) return { intent: 'identity', emotion: 'happy' };
+    if (/(tien do|hoc den dau|ket qua hoc|phan tich hoc tap|can hoc|can luyen|can on|thong ke hoc|learning progress)/.test(text)) return { intent: 'insights', emotion: 'analyzing' };
+    if (/(tat phan tich|ngung doc tien do|khong phan tich tien do)/.test(text)) return { intent: 'insights-off', emotion: 'caring' };
     if (/(^|\s)(xin chao|chao ban|hello|hi|hey)(?=\s|$)/.test(text)) return { intent: 'greeting', emotion: 'greeting' };
     if (/(chuc mung|tuyet voi|wow|yay|that tuyet)/.test(text)) return { intent: 'celebrate', emotion: 'celebrate' };
     if (/(ke chuyen cuoi|noi dua|dua chut|joke|vui mot chut)/.test(text)) return { intent: 'playful', emotion: 'playful' };
@@ -116,8 +120,10 @@ export class RobotBuddyEngine {
     return { intent: 'unknown', emotion: 'thinking' };
   }
 
-  reply(message = '') {
+  reply(message = '', context = {}) {
     const match = this.classify(message);
+    if (match.intent === 'insights') return { intent: match.intent, emotion: 'analyzing', text: '', actions: [], source: 'local-learning-insights' };
+    if (match.intent === 'insights-off') return { intent: match.intent, emotion: 'caring', text: 'Bạn có thể tắt phân tích tiến độ bằng nút trong phần đầu khung trò chuyện. Mình vẫn có thể trò chuyện và hướng dẫn sử dụng bình thường.', actions: [], source: 'local-dialogue-library' };
     if (match.intent === 'feature') {
       const command = PAGE_COMMANDS[match.action];
       return {
@@ -137,7 +143,7 @@ export class RobotBuddyEngine {
     let text = this.pick(group);
     if (match.intent === 'celebrate') text = `${text} Cùng giữ tinh thần tích cực nhé!`;
     if (match.intent === 'playful') text = `${text} Mình cũng thích những phút vui vẻ như thế này!`;
-    if (match.intent === 'identity') text = 'Mình là Robot Buddy, nhân vật đồng hành của TOEIC Dictionary. Mình dùng thư viện hội thoại được đóng gói sẵn, không đọc tiến độ học và không phải chatbot AI trực tuyến.';
+    if (match.intent === 'identity') text = 'Chào bạn! 😊 Mình là Robot Buddy, người bạn đồng hành được tạo ra dành riêng cho TOEIC Dictionary. Mình được tạo ra bởi nhà phát triển Vũ Nguyễn Hoàng Phúc với mong muốn giúp việc học tiếng Anh của bạn thú vị và dễ dàng hơn. Mình có thể trò chuyện, hướng dẫn các chức năng, đọc tiến độ học được lưu ngay trên thiết bị để gợi ý nội dung cần học, luyện và ôn. Mình không phải chatbot AI trực tuyến: không gọi API, không kết nối máy chủ để phân tích và không gửi dữ liệu học tập của bạn ra ngoài thiết bị. 💙';
     if (match.intent === 'thanks') text = `${text} Cảm ơn bạn đã trò chuyện cùng mình!`;
     if (match.intent === 'unknown') text = `${text} Hiện tại mình phản hồi theo các chủ đề và từ khóa đã được chuẩn bị sẵn, nên có thể chưa hiểu mọi câu hỏi tự do.`;
     return { intent: match.intent, emotion: match.emotion, text, actions: [], source: 'static-dialogue-library' };

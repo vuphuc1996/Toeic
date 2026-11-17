@@ -1,11 +1,13 @@
 {
   "schemaVersion": 1,
-  "description": "Thư viện hội thoại tĩnh, chạy offline trên GitHub Pages; Robot Buddy không đọc hoặc phân tích dữ liệu học tập cá nhân.",
+  "description": "Thư viện hội thoại ngoại tuyến cho Robot Buddy. Robot nhận dữ liệu tiến độ học cục bộ ở chế độ chỉ đọc khi người dùng bật phân tích; không gửi dữ liệu ra ngoài.",
   "privacy": {
-    "readsLearnerProgress": false,
+    "readsLearnerProgress": true,
+    "learnerProgressAccess": "read-only-local-snapshot",
     "usesExternalApi": false,
     "usesGenerativeModel": false,
-    "storesConversationHistory": false
+    "storesConversationHistory": false,
+    "transmitsLearnerData": false
   },
   "categories": {
     "greeting": {
@@ -2155,10 +2157,10 @@
       ]
     },
     "foundation": {
-      "label": "Lộ trình Foundation",
+      "label": "Lộ trình học",
       "action": "foundation",
       "messages": [
-        "Lộ trình Foundation có các bài học nền tảng, Reading và Listening. Mình mở trang nhé?",
+        "Lộ trình học giúp bạn bắt đầu từ các bài Foundation, Reading và Listening nền tảng theo cấp độ. Mình mở trang nhé?",
         "Bạn có thể khám phá các chặng học nền tảng trong ứng dụng.",
         "Khu vực Foundation phù hợp khi bạn muốn học theo bài có hướng dẫn.",
         "Mình sẽ đưa bạn đến lộ trình Foundation.",
@@ -2196,6 +2198,16 @@
         "Mình sẽ dẫn bạn đến khu vực Quản lý dữ liệu.",
         "Các công cụ dữ liệu nằm trong khu vực riêng để bạn dễ kiểm soát.",
         "Bạn hãy mở Quản lý dữ liệu nếu muốn tìm chức năng sao lưu hoặc nhập xuất."
+      ]
+    },
+    "dashboard": {
+      "label": "Trang chủ",
+      "action": "dashboard",
+      "messages": [
+        "Trang chủ là nơi xem tổng quan ứng dụng, số liệu học tập chính và các lối tắt đến khu vực học. Mình mở Trang chủ nhé?",
+        "Bạn có thể quay về Trang chủ để xem tổng quan từ vựng, tiến độ và các gợi ý học tiếp.",
+        "Khu vực Trang chủ giúp bạn nắm nhanh tình hình học tập trên thiết bị và chọn bước tiếp theo.",
+        "Nếu muốn xem bức tranh chung trước khi học, hãy bắt đầu từ Trang chủ."
       ]
     }
   },
@@ -2306,6 +2318,22 @@
     {
       "label": "Ứng dụng dùng offline?",
       "text": "Ứng dụng có dùng offline không?"
+    },
+    {
+      "label": "Xem tiến độ học",
+      "text": "Phân tích tiến độ học của tôi"
+    },
+    {
+      "label": "Cần học gì?",
+      "text": "Tôi cần học những nội dung nào?"
+    },
+    {
+      "label": "Cần ôn gì?",
+      "text": "Hôm nay tôi cần ôn những gì?"
+    },
+    {
+      "label": "Trang chủ",
+      "text": "Giới thiệu Trang chủ"
     }
   ]
 }

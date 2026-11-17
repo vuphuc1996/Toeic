@@ -1,3 +1,14 @@
+## v2.84.1 — Robot Buddy Learning Insights & Knowledge Expansion
+
+- Restored Robot Buddy learning-progress analysis using snapshots already loaded by the app from IndexedDB v1 and existing local progress stores. The Robot itself does not open IndexedDB or localStorage and receives only in-memory read-only snapshots.
+- Added the three action buckets: **Cần học** (no completed evidence yet), **Cần luyện** (sufficient attempts with low/unstable accuracy), and **Cần ôn** (items whose existing review schedule is due). Sparse evidence is reported as insufficient rather than a weak-skill conclusion.
+- Added a user-controlled progress-analysis toggle. Turning it off preserves normal dialogue, feature help and navigation.
+- Updated “Bạn là ai?” with the developer introduction and a clear statement that Robot Buddy is scripted/offline, not a generative online chatbot. Learner progress is not sent to an API, server, Google AI or third party.
+- Updated Robot's local privacy metadata, quick prompts and the in-app privacy explanation. Kept the 500 unique authored dialogue variants and the head-only SVG mascot.
+- Registered `robot-learning-insights.js` in Service Worker `REQUIRED` and `APP_SHELL`; cache and release version moved to 2.84.1.
+- Preserved IndexedDB schema version 1 and every existing learner-progress key. No progress migration, rewrite or deletion is performed by this release.
+- Local test status is recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.84.1.md`. GitHub Actions, Pages deployment and physical-device checks remain pending until the user publishes and verifies the release.
+
 ## v2.84.0 — Head-only Robot Buddy & Offline Dialogue Library
 
 - Replaced the former progress-aware Robot with a single head-only SVG mascot. Multiple expression states drive eye, pupil, eyebrow, mouth and antenna animations; reduced-motion preferences are respected.
