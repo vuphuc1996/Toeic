@@ -1,17 +1,19 @@
 import { LocalNotificationProvider } from './notification-provider.js';
+import { buildRobotLearningInsights, formatRobotLearningInsights } from './robot-learning-insights.js';
 import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js';
 import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js';
 import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js';
 import { buildObjectiveResourceIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, listDueRecallItems } from './learning-outcome-progress.js';
-import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication } from './foundation-evidence.js';
+import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio } from './foundation-evidence.js';
 import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js';
 import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js';
 import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js';
 import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js';
 import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js';
+import { createRobotBuddy } from './robot-buddy.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.72.0';
+const APP_RELEASE_VERSION = '2.86.0';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -98,7 +100,19 @@ const PART1_LEAD_IN_PAUSE_MS = 1000;
 const PART1_OPTION_LABEL_PAUSE_MS = 1500;
 const PART1_OPTION_GAP_MS = 1300;
 const PART1_LEAD_IN_TEXT = 'Now, listen to the four statements.';
-const state = { words: [], baseWords: [], dataManifest: null, vocabularyMigrationRestoredCount: 0, categories: [], sentenceCompletionItems: [], sentenceCompletionSeenIds: [], relatedTerms: new Map(), personalVocabulary: { schemaVersion: 3, additions: [], overrides: {}, overrideBaseSigs: {}, deletedBaseIds: [] }, staleOverrideIds: [], wordSources: new Map(), grammarLessons: [], foundationLessons: [], foundationReadingPassages: [], foundationReadingProgress: {}, foundationListeningClips: [], foundationListeningProgress: {}, alphabetSoundItems: [], alphabetSoundProgress: {}, placementQuestions: [], placementObjectiveMap: null, objectiveResourceMap: null, objectiveResourceIndex: {}, objectiveProgress: {}, placementState: null, foundationProgress: {}, foundationStartLevel: 'ALL', readings: [], listening: [], grammarProgress: {}, readingProgress: {}, listeningProgress: {}, activeListening: null, speechRate: 1, activeGrammarLesson: null, activeReading: null, activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3, tts: { ...DEFAULT_TTS_SETTINGS } }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionStartedAt: null, questionAnswered: false, practiceReviewPending: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceTransitionTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceDuration: 3000, autoAdvanceCancelled: false, autoAdvanceWaiting: false, lastGoogleContext: '', lastGoogleQuery: '', flashProgress: {}, flashSession: null, flashQuizIndex: 0, flashQuizAnswers: [], pendingPracticeBatch: null, pendingFoundationAssessment: null, pendingSinglePractice: null, pendingFlashQuizResult: null, pendingPlacementResult: false, pendingMockResult: null, foundationAssessmentDrafts: {}, mockExam: null, mockHistory: [], mockUsageCounts: {}, mockTickTimer: null, lastMockResult: null };
+const state = { words: [], baseWords: [], dataManifest: null, vocabularyMigrationRestoredCount: 0, categories: [], sentenceCompletionItems: [], sentenceCompletionSeenIds: [], relatedTerms: new Map(), personalVocabulary: { schemaVersion: 3, additions: [], overrides: {}, overrideBaseSigs: {}, deletedBaseIds: [] }, staleOverrideIds: [], wordSources: new Map(), grammarLessons: [], foundationLessons: [], foundationReadingPassages: [], foundationReadingProgress: {}, foundationListeningClips: [], foundationListeningProgress: {}, foundationOutcomeRegistry: null, alphabetSoundItems: [], alphabetSoundProgress: {}, placementQuestions: [], placementObjectiveMap: null, objectiveResourceMap: null, objectiveResourceIndex: {}, objectiveProgress: {}, placementState: null, foundationProgress: {}, foundationStartLevel: 'ALL', readings: [], listening: [], grammarProgress: {}, readingProgress: {}, listeningProgress: {}, activeListening: null, speechRate: 1, activeGrammarLesson: null, activeReading: null, activePage: 'dashboard', activeLetter: '', deferredInstall: null, localWorkspace: false, progress: {}, reminder: null, settings: { autoNextEnabled: true, autoNextDelaySeconds: 3, tts: { ...DEFAULT_TTS_SETTINGS } }, notificationProvider: null, swRegistration: null, currentQuestion: null, questionStartedAt: null, questionAnswered: false, practiceReviewPending: false, sessionSeenIds: [], lastFeedback: null, autoAdvanceTimer: null, autoAdvanceTransitionTimer: null, autoAdvanceAt: null, autoAdvanceRemaining: null, autoAdvanceDuration: 3000, autoAdvanceCancelled: false, autoAdvanceWaiting: false, lastAIPrompt: '', lastGoogleQuery: '', flashProgress: {}, flashSession: null, flashQuizIndex: 0, flashQuizAnswers: [], pendingPracticeBatch: null, pendingFoundationAssessment: null, pendingSinglePractice: null, pendingFlashQuizResult: null, pendingPlacementResult: false, pendingMockResult: null, foundationAssessmentDrafts: {}, mockExam: null, mockHistory: [], mockUsageCounts: {}, mockTickTimer: null, lastMockResult: null };
+
+let robotBuddyEngine = null;
+let robotIdleTimer = null;
+let robotNudgeTimer = null;
+let robotIdleStage = 0;
+let robotIdleSnoozeUntil = 0;
+let robotIdleNoticeTimes = [];
+let robotChatInitialized = false;
+let robotTypingTimer = null;
+let robotSpeakingTimer = null;
+let robotBuddyMuted = false;
+const ROBOT_BUDDY_SETTINGS_KEY = 'toeic:robot-buddy-settings:v1';
 
 function openDB() {
   return new Promise((resolve, reject) => {
@@ -195,7 +209,7 @@ async function loadData() {
   const declaredTotal=manifest.letters.reduce((sum,item)=>sum+(Number.isInteger(item.count)?item.count:0),0);
   if(!Number.isInteger(manifest.totalWords)||declaredTotal!==manifest.totalWords) throw new Error(`Manifest không nhất quán: tổng count A–Z là ${declaredTotal}, totalWords là ${manifest.totalWords}.`);
   const fetchReleaseJson=(path)=>fetch(releaseDataUrl(path,manifest.version),{cache:'reload'});
-  const [categoryResponse,relatedResponse,grammarResponse,readingResponse,listeningResponse,foundationResponse,foundationReadingResponse,foundationListeningResponse,alphabetSoundResponse,placementResponse,placementMapResponse,objectiveMapResponse,...letterResponses]=await Promise.all([
+  const [categoryResponse,relatedResponse,grammarResponse,readingResponse,listeningResponse,foundationResponse,foundationReadingResponse,foundationListeningResponse,alphabetSoundResponse,placementResponse,placementMapResponse,objectiveMapResponse,objectiveOutcomesResponse,...letterResponses]=await Promise.all([
     fetchReleaseJson(manifest.categories),
     fetchReleaseJson('./data/related-terms.json').catch(()=>null),
     fetchReleaseJson('./data/grammar/lessons.json'),
@@ -208,6 +222,7 @@ async function loadData() {
     fetchReleaseJson('./data/learning-path/placement-diagnostic.json'),
     fetchReleaseJson('./data/learning-path/placement-objective-map.json'),
     fetchReleaseJson('./data/learning-path/objective-resource-map.json'),
+    fetchReleaseJson('./data/learning-path/objective-outcomes.json'),
     ...manifest.letters.map(x=>fetchReleaseJson(x.file))
   ]);
   if(!categoryResponse.ok) throw new Error('Không đọc được categories.json.');
@@ -221,7 +236,8 @@ async function loadData() {
   if(!placementResponse.ok) throw new Error('Không đọc được bộ đánh giá trình độ đầu vào.');
   if(!placementMapResponse.ok) throw new Error('Không đọc được bản đồ mục tiêu đánh giá đầu vào.');
   if(!objectiveMapResponse.ok) throw new Error('Không đọc được bản đồ mục tiêu học tập.');
-  const [categoryData,grammarData,readingData,listeningData,foundationData,foundationReadingData,foundationListeningData,alphabetSoundData,placementData,placementMapData,objectiveMapData]=await Promise.all([categoryResponse.json(),grammarResponse.json(),readingResponse.json(),listeningResponse.json(),foundationResponse.json(),foundationReadingResponse.json(),foundationListeningResponse.json(),alphabetSoundResponse.json(),placementResponse.json(),placementMapResponse.json(),objectiveMapResponse.json()]);
+  if(!objectiveOutcomesResponse.ok) throw new Error('Không đọc được khung tiêu chí kết quả học tập.');
+  const [categoryData,grammarData,readingData,listeningData,foundationData,foundationReadingData,foundationListeningData,alphabetSoundData,placementData,placementMapData,objectiveMapData,objectiveOutcomesData]=await Promise.all([categoryResponse.json(),grammarResponse.json(),readingResponse.json(),listeningResponse.json(),foundationResponse.json(),foundationReadingResponse.json(),foundationListeningResponse.json(),alphabetSoundResponse.json(),placementResponse.json(),placementMapResponse.json(),objectiveMapResponse.json(),objectiveOutcomesResponse.json()]);
   const sentenceCompletionResponse=await fetchReleaseJson('./data/practice/part5-sentence-completion.json');
   if(!sentenceCompletionResponse.ok)throw new Error('Không đọc được ngân hàng TOEIC Part 5.');
   const sentenceCompletionData=await sentenceCompletionResponse.json();
@@ -258,6 +274,7 @@ async function loadData() {
   state.placementQuestions=Array.isArray(placementData.questions)?placementData.questions:[];
   state.placementObjectiveMap=placementMapData&&Array.isArray(placementMapData.questionMappings)?placementMapData:null;
   state.objectiveResourceMap=objectiveMapData&&Array.isArray(objectiveMapData.objectives)?objectiveMapData:null;
+  state.foundationOutcomeRegistry=objectiveOutcomesData&&Array.isArray(objectiveOutcomesData.objectives)?objectiveOutcomesData:null;
   state.objectiveResourceIndex=buildObjectiveResourceIndex(state.objectiveResourceMap||{});
   try{state.placementState=JSON.parse(localStorage.getItem('toeic:placement-diagnostic:v1')||'null');}catch{state.placementState=null;}
   try{const saved=JSON.parse(localStorage.getItem('toeic:foundation-progress:v1')||'{}');state.foundationProgress=saved&&typeof saved==='object'?saved:{};}catch{state.foundationProgress={};}
@@ -521,6 +538,7 @@ function populateFilters(){
   $('#listeningLevelFilter').innerHTML='<option value="">Tất cả cấp độ</option>'+listeningLevels.map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('');
 }
 function navigate(page){
+  if(page!==state.activePage)setQuickHelpOpen(false);
   if(learningFocusState.active&&page!==state.activePage)closeLearningFocus();
   if(state.activePage==='listening'&&page!=='listening') stopSpeech();
   if(state.activePage==='mock'&&page!=='mock'&&state.mockExam?.status==='active') stopSpeech();
@@ -539,6 +557,7 @@ function navigate(page){
   if(page==='reading') renderReadingLibrary();
   if(page==='listening') renderListeningLibrary();
   if(page==='mock') openMockWorkspace();
+  const quickHelpRoot=$('#quickHelp');if(quickHelpRoot)quickHelpRoot.hidden=page==='mock'&&state.mockExam?.status==='active';
   if(page==='settings') renderReminderStatus();
   window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -931,7 +950,7 @@ function getChoiceExplanation(q, choice, isCorrect) {
       return `Phương án này được lưu là ${relation} ${displayWord(q.word)}. Nghĩa riêng của lựa chọn chưa có trong bảng tham chiếu; nghĩa từ gốc: ${meaning||'xem từ điển gốc'}.`;
     }
     if(refs.length) return `Được dùng trong nhóm từ liên hệ của ${refs.map(w=>`${displayWord(w.word)} – ${getPrimarySense(w).meaning_vi}`).join('; ')}. Chưa có nghĩa độc lập đã kiểm chứng trong bảng tham chiếu.`;
-    return 'Chưa có nghĩa riêng trong bảng tham chiếu hiện tại. Có thể dùng nút Google AI để phân tích và kiểm chứng thêm.';
+    return 'Chưa có nghĩa riêng trong bảng tham chiếu hiện tại. Hãy đối chiếu với từ điển gốc hoặc thêm nguồn tham khảo đã kiểm chứng.';
   }
   const exact=lookupWord(choice);
   if(exact) return `${getAllPos(exact).join('/')} · ${(exact.senses||[]).map(s=>s.meaning_vi).filter(Boolean).join('; ')}`;
@@ -961,7 +980,7 @@ function renderWordReference(w,q,feedback) {
 }
 function renderFeedback(feedback) {
   $('#answerFeedback').hidden=false;$('#answerFeedback').classList.remove('is-compact');
-  $('#answerReference').hidden=false;const aiRow=$('.feedback-ai-row',$('#answerFeedback'));if(aiRow)aiRow.hidden=false;
+  $('#answerReference').hidden=false;
   $('#feedbackHeading').textContent=feedback.correct?'Chính xác! Bạn làm tốt lắm.':'Chưa chính xác – hãy ghi nhớ vị trí cần sửa.';
   $('#feedbackHeading').className=`feedback-heading ${feedback.correct?'is-correct':'is-wrong'}`;
   const q=state.currentQuestion;
@@ -979,8 +998,8 @@ function renderFeedback(feedback) {
 function compactInlinePracticeFeedback(){
   const host=$('#answerFeedback');if(!host)return;
   host.classList.add('is-compact');
-  const ref=$('#answerReference'),review=$('#choiceReview'),ai=$('.feedback-ai-row',host);
-  if(ref)ref.hidden=true;if(review)review.hidden=true;if(ai)ai.hidden=true;
+  const ref=$('#answerReference'),review=$('#choiceReview');
+  if(ref)ref.hidden=true;if(review)review.hidden=true;
 }
 function openPracticeReviewModal(feedback){
   if(!state.currentQuestion||!feedback)return;
@@ -1115,6 +1134,7 @@ async function confirmSinglePracticeResult(){
   }else if(!state.sessionSeenIds.includes(q.wordId))state.sessionSeenIds.push(q.wordId);
   if(state.reminder.enabled){state.reminder.pendingAnswered=true;state.reminder.pendingWordId=null;state.reminder.nextAt=Date.now()+state.reminder.intervalMinutes*60000;await dbSet('reminderSettings',state.reminder);}
   state.pendingSinglePractice=null;await savePracticeSession();closeAssessmentResultModal();renderReminderStatus();openPracticeReviewModal(state.lastFeedback);
+const savedWordProgress=state.progress[pending.wordId];if(pending.correct&&savedWordProgress?.streak===3)
   toast(pending.correct?'Đã ghi nhận câu trả lời đúng.':'Đã lưu kết quả. Từ này sẽ được ưu tiên ôn lại.');
 }
 async function nextQuestion(modeOverride=null, forcedItemId=null) {
@@ -1543,6 +1563,7 @@ function renderMockHistory(){
   $('#mockHistoryList').innerHTML=rows.length?rows.map(item=>`<div class="mock-history-row"><strong>${escapeHtml(mockModeName(item.modeId))}</strong><span>${new Date(item.completedAt).toLocaleString('vi-VN')}</span><b>${Number(item.correct||0)}/${Number(item.questions||0)} · ${Number(item.accuracy||0)}%</b><small>Listening ${Number(item.listeningAccuracy||0)}% · Reading ${Number(item.readingAccuracy||0)}%</small></div>`).join(''):'<p class="muted">Bạn chưa hoàn thành bài thi nào.</p>';
 }
 function startMockExam(modeId){
+  const quickHelpRoot=$('#quickHelp');if(quickHelpRoot)quickHelpRoot.hidden=true;
   if(state.mockExam?.status==='active'&&!window.confirm('Bạn đang có bài thi chưa hoàn tất. Bỏ bài hiện tại để tạo đề mới?'))return;
   if(state.mockExam?.status==='active')markMockAttemptAbandoned();
   try{
@@ -1827,6 +1848,22 @@ async function confirmFlashQuizResult(){
 
 function bindEvents(){
   bindPracticeEvents();
+  $('#quickHelpLauncher')?.addEventListener('click',toggleQuickHelp);
+  $('#quickHelpClose')?.addEventListener('click',()=>setQuickHelpOpen(false));
+  $('#robotChatForm')?.addEventListener('submit',handleRobotInput);
+  $('#robotMuteToggle')?.addEventListener('click',toggleRobotMute);
+  $('#robotInsightsToggle')?.addEventListener('click',toggleRobotInsights);
+  $('#robotIdleNeedHelp')?.addEventListener('click',()=>{hideRobotIdleNudge();setQuickHelpOpen(true);});
+  $('#robotIdleDismiss')?.addEventListener('click',()=>{hideRobotIdleNudge();robotIdleSnoozeUntil=Date.now()+600000;scheduleRobotIdle(600000);});
+  $('#quickHelp')?.addEventListener('click',event=>{
+    const choice=event.target.closest('[data-robot-choice]');
+    if(choice){handleRobotChoice(choice.dataset.robotChoice);return;}
+    const prompt=event.target.closest('[data-robot-prompt]');
+    if(prompt){sendRobotMessage(prompt.dataset.robotPrompt);return;}
+    const command=event.target.closest('[data-robot-command]');
+    if(command){handleRobotCommand(command.dataset.robotCommand,command.dataset.robotPage||'');return;}
+  });
+
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)renderRecallQueue();});
   window.addEventListener('focus',renderRecallQueue);
   document.addEventListener('error',event=>{
@@ -1898,13 +1935,14 @@ function bindEvents(){
   $('#foundationStartLevel')?.addEventListener('change',e=>{const level=e.target.value;state.foundationStartLevel=['ALL','PRE-A1','A1','A2','B1','B2','C1'].includes(level)?level:'ALL';try{localStorage.setItem('toeic:learning-start-level:v1',state.foundationStartLevel);}catch{}renderFoundationPath();});
   $('#learningFocusBackdrop')?.addEventListener('click',e=>{if(e.target.id==='learningFocusBackdrop')return;});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&learningFocusState.active)closeLearningFocus();});$('#modalBackdrop').addEventListener('click',e=>{if(e.target.id==='modalBackdrop'&&(state.practiceReviewPending||state.autoAdvanceWaiting||state.pendingPracticeBatch||state.pendingFoundationAssessment||state.pendingSinglePractice||state.pendingFlashQuizResult||state.pendingPlacementResult||state.pendingMockResult))return;if(e.target.id==='modalBackdrop')closeModal();});
-  $('#modalContent').addEventListener('click',async e=>{const confirmAssessment=e.target.closest('[data-assessment-confirm]');if(confirmAssessment){if(state.pendingPracticeBatch)await confirmPracticeBatchResult();else if(state.pendingFoundationAssessment)confirmFoundationAssessmentResult();else if(state.pendingSinglePractice)await confirmSinglePracticeResult();else if(state.pendingFlashQuizResult)await confirmFlashQuizResult();else if(state.pendingPlacementResult){state.pendingPlacementResult=false;closeAssessmentResultModal();finalizePlacementDiagnostic();}else if(state.pendingMockResult)confirmMockExamResult();return;}const returnAssessment=e.target.closest('[data-assessment-return]');if(returnAssessment){if(state.pendingPracticeBatch)returnToPracticeBatch();else if(state.pendingFoundationAssessment)returnToFoundationAssessment();else if(state.pendingPlacementResult){state.pendingPlacementResult=false;closeAssessmentResultModal();renderPlacementQuestion();}return;}const practiceBatchResult=e.target.closest('[data-practice-batch-result]');if(practiceBatchResult){maybeShowPracticeBatchResult(practiceBatchResult.dataset.practiceBatchResult,practiceBatchResult.dataset.resourceId);return;}const foundationBatchResult=e.target.closest('[data-foundation-batch-result]');if(foundationBatchResult){const kind=foundationBatchResult.dataset.foundationBatchResult,lessonId=foundationBatchResult.dataset.lessonId;const questions=kind==='foundation-recognition'?(state.foundationLessons.find(x=>x.id===lessonId)?.questionBank||[]):kind==='foundation-application'?[{...state.foundationLessons.find(x=>x.id===lessonId)?.applicationTask,id:state.foundationLessons.find(x=>x.id===lessonId)?.applicationTask?.id}]:kind==='foundation-reading'?(state.foundationReadingPassages.find(x=>x.lessonId===lessonId)?.questions||[]):(state.foundationListeningClips.find(x=>x.lessonId===lessonId)?.questions||[]);showFoundationAssessmentResult(kind,lessonId,questions);return;}const alphabetPlay=e.target.closest('[data-alphabet-play]');if(alphabetPlay){playAlphabetSound(alphabetPlay);return;}const foundationListening=e.target.closest('[data-foundation-listening-answer]');if(foundationListening){answerFoundationListening(foundationListening);return;}const foundationListenPlay=e.target.closest('[data-foundation-listening-play]');if(foundationListenPlay){playFoundationListening(foundationListenPlay.dataset.foundationListeningPlay);return;}const foundationTranscriptToggle=e.target.closest('[data-foundation-listening-transcript-toggle]');if(foundationTranscriptToggle){const transcript=foundationTranscriptToggle.closest('[data-foundation-listening]')?.querySelector('[data-foundation-listening-transcript]');if(transcript){transcript.hidden=!transcript.hidden;foundationTranscriptToggle.textContent=transcript.hidden?'Hiện transcript':'Ẩn transcript';}return;}const foundationReading=e.target.closest('[data-foundation-reading-answer]');if(foundationReading){answerFoundationReading(foundationReading);return;}const foundationApplication=e.target.closest('[data-foundation-application-answer]');if(foundationApplication){answerFoundationApplication(foundationApplication);return;}const foundationAnswer=e.target.closest('[data-foundation-answer]');if(foundationAnswer){answerFoundationQuestion(foundationAnswer);return;}const edit=e.target.closest('[data-edit]');const ai=e.target.closest('[data-ai-word]');const copy=e.target.closest('[data-copy-ai-prompt]');const open=e.target.closest('[data-open-google-ai]');const grammarChoice=e.target.closest('[data-grammar-choice]');const readingChoice=e.target.closest('[data-reading-choice]');const readingSpeak=e.target.closest('[data-reading-speak]');const lookup=e.target.closest('[data-lookup-term]');const grammarAI=e.target.closest('[data-ai-lesson]');const readingAI=e.target.closest('[data-ai-reading]');const listeningChoice=e.target.closest('[data-listening-choice]');const listeningAI=e.target.closest('[data-ai-listening]');const speak=e.target.closest('[data-speak-word]');const stop=e.target.closest('[data-stop-speech]');const play=e.target.closest('[data-listening-play]');const stopListening=e.target.closest('[data-listening-stop]');const vocabPlay=e.target.closest('[data-listening-vocab-play]');const reviewOk=e.target.closest('[data-practice-review-ok]');const saveRubric=e.target.closest('[data-save-explanation-rubric]');const reviewAI=e.target.closest('[data-practice-review-ai]');const retry=e.target.closest('[data-practice-retry]');const retryAll=e.target.closest('[data-practice-retry-all]');const waitCancel=e.target.closest('[data-auto-advance-cancel]');if(retry){retryPracticeQuestion(retry);return;}if(retryAll){retryAllPracticeQuestions(retryAll);return;}if(waitCancel){cancelAutoAdvanceWait();return;}if(reviewOk){acknowledgePracticeReview();return;}if(saveRubric){const keys=['clue','fit','distractor'];const ratings=keys.map(key=>{const selected=$(`#modalContent [data-explanation-rubric="${key}"]:checked`);return selected?selected.value==='yes':null;});if(ratings.some(value=>value===null)){toast('Hãy tự đánh giá đủ cả 3 tiêu chí trước khi lưu.','error');return;}const q=state.currentQuestion;const objectiveIds=state.objectiveResourceIndex?.[q?.id]||[];state.objectiveProgress=recordExplanationRubric(state.objectiveProgress,objectiveIds,q?.id,ratings,Date.now());await saveObjectivePractice();const score=ratings.filter(Boolean).length;const status=$('#modalContent [data-explanation-rubric-status]');if(status)status.textContent=`Đã lưu tự đánh giá ${score}/3. Đây là tự báo cáo, không phải điểm mastery.`;saveRubric.disabled=true;saveRubric.textContent=`Đã lưu · ${score}/3`;return;}if(reviewAI){showAIPromptModal(buildPracticeAIPrompt(),'Phân tích câu trả lời ôn tập hiện tại');return;}if(edit)openEditor(edit.dataset.edit);if(ai){const w=state.words.find(x=>x.id===ai.dataset.aiWord);if(w)showAIPromptModal(buildWordAIPrompt(w),`Giải thích từ ${displayWord(w.word)} theo ngữ cảnh TOEIC`);}if(copy)await copyAIPrompt();if(open)openGoogleAIFromPanel();if(grammarChoice)answerGrammarExercise(grammarChoice);if(readingChoice)answerReadingQuestion(readingChoice);if(readingSpeak){playReadingText(readingSpeak.dataset.readingSpeak);return;}if(lookup)openLookupTerm(lookup.dataset.lookupTerm);if(grammarAI){const lesson=state.grammarLessons.find(x=>x.id===grammarAI.dataset.aiLesson);if(lesson)showAIPromptModal(buildGrammarAIPrompt(lesson),`Phân tích ngữ pháp ${lesson.title}`);}if(readingAI){const reading=state.readings.find(x=>x.id===readingAI.dataset.aiReading);if(reading)showAIPromptModal(buildReadingAIPrompt(reading),`Phân tích bài đọc TOEIC ${reading.title}`);}if(listeningChoice)answerListeningQuestion(listeningChoice);if(listeningAI){const item=state.listening.find(x=>x.id===listeningAI.dataset.aiListening);if(item)showAIPromptModal(buildListeningAIPrompt(item),`Phân tích bài nghe TOEIC ${item.title}`);}if(speak)speakText(speak.dataset.speakWord,speak.dataset.accent||null,'',state.settings.tts?.defaultGender||'female');if(stop)stopSpeech();if(play)playListeningAudio(play.dataset.listeningPlay);if(vocabPlay)playListeningVocabulary(vocabPlay.dataset.listeningVocabPlay);if(stopListening)stopSpeech();});
   $('#closeGoogleSearch').addEventListener('click',closeGoogleSearchPanel);
   $('#googleSearchBackdrop').addEventListener('click',e=>{if(e.target.id==='googleSearchBackdrop')closeGoogleSearchPanel();});
   $('#runGoogleAIButton').addEventListener('click',openGoogleSearch);
+  $('#modalContent').addEventListener('click',async e=>{const confirmAssessment=e.target.closest('[data-assessment-confirm]');if(confirmAssessment){if(state.pendingPracticeBatch)await confirmPracticeBatchResult();else if(state.pendingFoundationAssessment)confirmFoundationAssessmentResult();else if(state.pendingSinglePractice)await confirmSinglePracticeResult();else if(state.pendingFlashQuizResult)await confirmFlashQuizResult();else if(state.pendingPlacementResult){state.pendingPlacementResult=false;closeAssessmentResultModal();finalizePlacementDiagnostic();}else if(state.pendingMockResult)confirmMockExamResult();return;}const returnAssessment=e.target.closest('[data-assessment-return]');if(returnAssessment){if(state.pendingPracticeBatch)returnToPracticeBatch();else if(state.pendingFoundationAssessment)returnToFoundationAssessment();else if(state.pendingPlacementResult){state.pendingPlacementResult=false;closeAssessmentResultModal();renderPlacementQuestion();}return;}const practiceBatchResult=e.target.closest('[data-practice-batch-result]');if(practiceBatchResult){maybeShowPracticeBatchResult(practiceBatchResult.dataset.practiceBatchResult,practiceBatchResult.dataset.resourceId);return;}const foundationBatchResult=e.target.closest('[data-foundation-batch-result]');if(foundationBatchResult){const kind=foundationBatchResult.dataset.foundationBatchResult,lessonId=foundationBatchResult.dataset.lessonId;const questions=kind==='foundation-recognition'?(state.foundationLessons.find(x=>x.id===lessonId)?.questionBank||[]):kind==='foundation-application'?[{...state.foundationLessons.find(x=>x.id===lessonId)?.applicationTask,id:state.foundationLessons.find(x=>x.id===lessonId)?.applicationTask?.id}]:kind==='foundation-reading'?(state.foundationReadingPassages.find(x=>x.lessonId===lessonId)?.questions||[]):(state.foundationListeningClips.find(x=>x.lessonId===lessonId)?.questions||[]);showFoundationAssessmentResult(kind,lessonId,questions);return;}const alphabetPlay=e.target.closest('[data-alphabet-play]');if(alphabetPlay){playAlphabetSound(alphabetPlay);return;}const foundationListening=e.target.closest('[data-foundation-listening-answer]');if(foundationListening){answerFoundationListening(foundationListening);return;}const foundationListenPlay=e.target.closest('[data-foundation-listening-play]');if(foundationListenPlay){playFoundationListening(foundationListenPlay.dataset.foundationListeningPlay);return;}const foundationListenStop=e.target.closest('[data-foundation-listening-stop]');if(foundationListenStop){stopSpeech();return;}const foundationTranscriptToggle=e.target.closest('[data-foundation-listening-transcript-toggle]');if(foundationTranscriptToggle){const transcript=foundationTranscriptToggle.closest('[data-foundation-listening]')?.querySelector('[data-foundation-listening-transcript]');if(transcript){transcript.hidden=!transcript.hidden;foundationTranscriptToggle.textContent=transcript.hidden?'Hiện transcript':'Ẩn transcript';}return;}const foundationReading=e.target.closest('[data-foundation-reading-answer]');if(foundationReading){answerFoundationReading(foundationReading);return;}const foundationApplication=e.target.closest('[data-foundation-application-answer]');if(foundationApplication){answerFoundationApplication(foundationApplication);return;}const foundationRecall=e.target.closest('[data-foundation-recall-answer]');if(foundationRecall){answerFoundationRecall(foundationRecall);return;}const foundationProduction=e.target.closest('[data-foundation-production-save]');if(foundationProduction){saveFoundationProduction(foundationProduction);return;}const foundationProductionRevision=e.target.closest('[data-foundation-production-revision-save]');if(foundationProductionRevision){saveFoundationProductionRevision(foundationProductionRevision);return;}const foundationAnswer=e.target.closest('[data-foundation-answer]');if(foundationAnswer){answerFoundationQuestion(foundationAnswer);return;}const edit=e.target.closest('[data-edit]');const ai=e.target.closest('[data-ai-word]');const grammarAI=e.target.closest('[data-ai-lesson]');const readingAI=e.target.closest('[data-ai-reading]');const listeningAI=e.target.closest('[data-ai-listening]');const reviewAI=e.target.closest('[data-practice-review-ai]');const grammarChoice=e.target.closest('[data-grammar-choice]');const readingChoice=e.target.closest('[data-reading-choice]');const readingSpeak=e.target.closest('[data-reading-speak]');const lookup=e.target.closest('[data-lookup-term]');const listeningChoice=e.target.closest('[data-listening-choice]');const speak=e.target.closest('[data-speak-word]');const stop=e.target.closest('[data-stop-speech]');const play=e.target.closest('[data-listening-play]');const stopListening=e.target.closest('[data-listening-stop]');const vocabPlay=e.target.closest('[data-listening-vocab-play]');const reviewOk=e.target.closest('[data-practice-review-ok]');const saveRubric=e.target.closest('[data-save-explanation-rubric]');const retry=e.target.closest('[data-practice-retry]');const retryAll=e.target.closest('[data-practice-retry-all]');const waitCancel=e.target.closest('[data-auto-advance-cancel]');if(retry){retryPracticeQuestion(retry);return;}if(retryAll){retryAllPracticeQuestions(retryAll);return;}if(waitCancel){cancelAutoAdvanceWait();return;}if(reviewOk){acknowledgePracticeReview();return;}if(saveRubric){const keys=['clue','fit','distractor'];const ratings=keys.map(key=>{const selected=$(`#modalContent [data-explanation-rubric="${key}"]:checked`);return selected?selected.value==='yes':null;});if(ratings.some(value=>value===null)){toast('Hãy tự đánh giá đủ cả 3 tiêu chí trước khi lưu.','error');return;}const q=state.currentQuestion;const objectiveIds=state.objectiveResourceIndex?.[q?.id]||[];state.objectiveProgress=recordExplanationRubric(state.objectiveProgress,objectiveIds,q?.id,ratings,Date.now());await saveObjectivePractice();const score=ratings.filter(Boolean).length;const status=$('#modalContent [data-explanation-rubric-status]');if(status)status.textContent=`Đã lưu tự đánh giá ${score}/3. Đây là tự báo cáo, không phải điểm mastery.`;saveRubric.disabled=true;saveRubric.textContent=`Đã lưu · ${score}/3`;return;}if(reviewAI){showAIPromptModal(buildPracticeAIPrompt(),'Phân tích câu trả lời ôn tập hiện tại');return;}if(edit)openEditor(edit.dataset.edit);if(ai){const w=state.words.find(x=>x.id===ai.dataset.aiWord);if(w)showAIPromptModal(buildWordAIPrompt(w),`Giải thích từ ${displayWord(w.word)} theo ngữ cảnh TOEIC`);}if(grammarChoice)answerGrammarExercise(grammarChoice);if(readingChoice)answerReadingQuestion(readingChoice);if(readingSpeak){playReadingText(readingSpeak.dataset.readingSpeak);return;}if(lookup)openLookupTerm(lookup.dataset.lookupTerm);if(grammarAI){const lesson=state.grammarLessons.find(x=>x.id===grammarAI.dataset.aiLesson);if(lesson)showAIPromptModal(buildGrammarAIPrompt(lesson),`Phân tích ngữ pháp ${lesson.title}`);}if(readingAI){const reading=state.readings.find(x=>x.id===readingAI.dataset.aiReading);if(reading)showAIPromptModal(buildReadingAIPrompt(reading),`Phân tích bài đọc TOEIC ${reading.title}`);}if(listeningChoice)answerListeningQuestion(listeningChoice);if(listeningAI){const item=state.listening.find(x=>x.id===listeningAI.dataset.aiListening);if(item)showAIPromptModal(buildListeningAIPrompt(item),`Phân tích bài nghe TOEIC ${item.title}`);}if(speak)speakText(speak.dataset.speakWord,speak.dataset.accent||null,'',state.settings.tts?.defaultGender||'female');if(stop)stopSpeech();if(play)playListeningAudio(play.dataset.listeningPlay);if(vocabPlay)playListeningVocabulary(vocabPlay.dataset.listeningVocabPlay);if(stopListening)stopSpeech();});
   $('#globalSearch').addEventListener('keydown',e=>{if(e.key==='Enter'){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
+  $('#modalContent').addEventListener('input',e=>{const field=e.target.closest('[data-foundation-production-text],[data-foundation-revision-text]');if(!field)return;const panel=field.closest('[data-foundation-production]'),revision=field.hasAttribute('data-foundation-revision-text'),counter=panel?.querySelector(revision?'[data-foundation-revision-count]':'[data-foundation-production-count]');if(!counter)return;const count=field.value.trim().split(/\s+/).filter(Boolean).length,minimum=Number(panel.dataset.minimumWords)||3;counter.textContent=`${count}/${minimum} từ tối thiểu${count>=minimum?' · Đủ độ dài':''}`;counter.classList.toggle('is-ready',count>=minimum);});
   $('#globalSearch').addEventListener('input',e=>{if(e.target.value.length>=2){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
-  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#globalSearch').focus();}if(e.key==='Escape'){if(!$('#googleSearchBackdrop').hidden)closeGoogleSearchPanel();else if($('#installInviteBackdrop').hidden&&!state.practiceReviewPending&&!state.autoAdvanceWaiting&&!state.pendingPracticeBatch&&!state.pendingFoundationAssessment&&!state.pendingSinglePractice&&!state.pendingFlashQuizResult&&!state.pendingPlacementResult&&!state.pendingMockResult)closeModal();}});
+  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#globalSearch').focus();}if(e.key==='Escape'){if($('#googleSearchBackdrop')&&!$('#googleSearchBackdrop').hidden)closeGoogleSearchPanel();else if($('#quickHelpPanel')&&!$('#quickHelpPanel').hidden)setQuickHelpOpen(false);else if($('#installInviteBackdrop').hidden&&!state.practiceReviewPending&&!state.autoAdvanceWaiting&&!state.pendingPracticeBatch&&!state.pendingFoundationAssessment&&!state.pendingSinglePractice&&!state.pendingFlashQuizResult&&!state.pendingPlacementResult&&!state.pendingMockResult)closeModal();}});
   window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();state.deferredInstall=e;syncInstallButton();if(state.installGuideOpen)openInstallInvite('guide');});
   window.addEventListener('appinstalled',()=>{markInstallInviteDismissed();closeInstallInvite(false);syncInstallButton();toast('TOEIC Dictionary đã được thêm vào thiết bị.');});
   $('#installButton').addEventListener('click',()=>{if(isMobileOrTabletDevice())openInstallInvite('guide');else if(state.deferredInstall)runNativeInstall();});
@@ -2019,27 +2057,67 @@ function renderFoundationPath(){
  const rows=selected==='ALL'?all:all.filter(x=>(rank[x.level]??99)>=(rank[selected]??0));
  const done=rows.filter(lesson=>summarizeFoundationLesson(state.foundationProgress,lesson.id).status==='practice_threshold_met').length;
  const pct=rows.length?Math.round(done/rows.length*100):0;
- const label=$('#foundationProgressLabel'),percent=$('#foundationProgressPercent'),bar=$('#foundationProgressBar'),hint=$('#foundationProgressHint'),list=$('#foundationLessonList'),note=$('#foundationPathNote'),meter=$('#foundationProgressMeter');
+ const label=$('#foundationProgressLabel'),percent=$('#foundationProgressPercent'),bar=$('#foundationProgressBar'),hint=$('#foundationProgressHint'),list=$('#foundationLessonList'),note=$('#foundationPathNote'),meter=$('#foundationProgressMeter'),outcomeDashboard=$('#foundationOutcomeDashboard');
  if(!label||!percent||!bar||!hint||!list||!note)return;
  label.textContent=`${done} / ${rows.length} bài đạt ngưỡng`;
  percent.textContent=`${pct}%`;
  bar.style.width=`${pct}%`;
  meter?.setAttribute('aria-valuenow',String(pct));
- hint.textContent=rows.length?(done?`${done} bài đạt ngưỡng nhận biết/hiểu dựa trên câu hỏi độc lập; bằng chứng vận dụng, đọc hiểu và nghe hiểu được theo dõi riêng.`:'Chỉ tính bằng chứng nhận biết/hiểu từ câu hỏi độc lập; vận dụng, đọc hiểu và nghe hiểu được theo dõi riêng.'):'Chưa có bài học được phát hành ở cấp độ này.';
+ const dueRecallTotal=listDueFoundationRecallItems(state.foundationProgress,all).length;
+ hint.textContent=rows.length?(done?`${done} bài đạt ngưỡng nhận biết/hiểu dựa trên câu hỏi độc lập.`:'Chỉ tính bằng chứng nhận biết/hiểu từ câu hỏi độc lập.')+` ${dueRecallTotal} câu ôn tập cách quãng đang đến hạn; vận dụng/sản sinh được tự đánh giá riêng.`:'Chưa có bài học được phát hành ở cấp độ này.';
+ if(outcomeDashboard)outcomeDashboard.innerHTML=renderFoundationOutcomeDashboard(selected,all); 
  const levelName=selected==='ALL'?'tất cả cấp độ':selected;
  note.textContent=selected==='ALL'?'Bạn đang xem toàn bộ bài học hiện có.':`Bạn đang bắt đầu từ ${levelName}. Các cấp độ thấp hơn chỉ được ẩn khỏi lộ trình, không bị xóa và có thể mở lại bằng cách đổi lựa chọn. ${rows.length?'':'Nội dung '+levelName+' trở lên chưa được phát hành đầy đủ; bạn vẫn có thể dùng từ điển và các thư viện luyện tập hiện có.'}`;
  list.innerHTML=rows.length?rows.map((lesson,index)=>{
    const evidence=summarizeFoundationLesson(state.foundationProgress,lesson.id);
    const application=summarizeFoundationApplication(state.foundationProgress,lesson.id);
-   const reading=summarizeFoundationReading(state.foundationReadingProgress,lesson.id);
-   const listening=summarizeFoundationListening(state.foundationListeningProgress,lesson.id);
+   const readingResource=(state.foundationReadingPassages||[]).find(item=>item.lessonId===lesson.id);
+   const listeningResource=(state.foundationListeningClips||[]).find(item=>item.lessonId===lesson.id);
+   const reading=summarizeFoundationReading(state.foundationReadingProgress,lesson.id,{minimumUniqueQuestions:readingResource?.minimumUniqueQuestions||2,practiceAccuracyThreshold:readingResource?.practiceAccuracyThreshold||0.8});
+   const listening=summarizeFoundationListening(state.foundationListeningProgress,lesson.id,{minimumUniqueQuestions:listeningResource?.minimumUniqueQuestions||2,practiceAccuracyThreshold:listeningResource?.practiceAccuracyThreshold||0.8});
+   const readingTarget=readingResource?.questions?.length||2,listeningTarget=listeningResource?.questions?.length||2;
    const recognitionStatus=evidence.status==='practice_threshold_met'?`Nhận biết: đạt · ${evidence.accuracyPercent}%`:evidence.uniqueQuestions?`Nhận biết: ${evidence.uniqueQuestions}/3 câu`:'Nhận biết: chưa có bằng chứng';
    const applicationStatus=application.uniqueTasks?`Vận dụng: ${application.accuracyPercent}% đúng gần nhất`:'Vận dụng: chưa thực hiện';
-   const readingStatus=reading.uniqueQuestions?`Đọc hiểu: ${reading.uniqueQuestions}/2 câu · ${reading.accuracyPercent}%`:'Đọc hiểu: chưa thực hiện';
-   const listeningStatus=listening.uniqueQuestions?`Nghe hiểu: ${listening.uniqueQuestions}/2 câu · ${listening.accuracyPercent}%`:'Nghe hiểu: chưa thực hiện';
-   return `<article class="learning-card foundation-card"><div class="learning-card-top"><span class="learning-category">Bài ${String(index+1).padStart(2,'0')}</span><span class="learning-level">${escapeHtml(lesson.level)}</span></div><h3>${escapeHtml(lesson.title)}</h3><p>${escapeHtml(lesson.objective)}</p><div class="foundation-card-evidence"><span>${recognitionStatus}</span><span>${applicationStatus}</span><span>${readingStatus}</span><span>${listeningStatus}</span></div><div class="learning-card-footer foundation-card-footer"><small>${evidence.uniqueQuestions} câu nhận biết độc lập</small><button type="button" class="secondary-button" data-foundation-open="${escapeHtml(lesson.id)}">${evidence.uniqueQuestions?'Tiếp tục ôn':'Bắt đầu học'} →</button></div></article>`;
+   const readingStatus=reading.uniqueQuestions?`Đọc hiểu: ${reading.uniqueQuestions}/${readingTarget} câu · ${reading.accuracyPercent}% (ngưỡng ${Math.round(reading.threshold*100)}%)`:'Đọc hiểu: chưa thực hiện';
+   const listeningStatus=listening.uniqueQuestions?`Nghe hiểu: ${listening.uniqueQuestions}/${listeningTarget} câu · ${listening.accuracyPercent}% (ngưỡng ${Math.round(listening.threshold*100)}%)`:'Nghe hiểu: chưa thực hiện';
+   const productionSaved=lesson.applicationTask?state.foundationProgress[lesson.id]?.productionEvidence?.[lesson.applicationTask.id]:null;
+   const productionStatus=productionSaved?`Tự tạo câu: ${productionSaved.latestScore}/3 tự đánh giá`:'Tự tạo câu: chưa đánh giá';
+   const recallDue=listDueFoundationRecallItems(state.foundationProgress,[lesson]).length;
+   const recallStatus=recallDue?`Ôn lại: ${recallDue} câu đến hạn`:'Ôn lại: theo lịch';
+   return `<article class="learning-card foundation-card"><div class="learning-card-top"><span class="learning-category">Bài ${String(index+1).padStart(2,'0')}</span><span class="learning-level">${escapeHtml(lesson.level)}</span></div><h3>${escapeHtml(lesson.title)}</h3><p>${escapeHtml(lesson.objective)}</p><div class="foundation-card-evidence"><span>${recognitionStatus}</span><span>${applicationStatus}</span><span>${readingStatus}</span><span>${listeningStatus}</span><span>${productionStatus}</span><span>${recallStatus}</span></div><div class="learning-card-footer foundation-card-footer"><small>${evidence.uniqueQuestions} câu nhận biết độc lập</small><button type="button" class="secondary-button" data-foundation-open="${escapeHtml(lesson.id)}">${evidence.uniqueQuestions?'Tiếp tục ôn':'Bắt đầu học'} →</button></div></article>`;
  }).join(''):`<article class="learning-card foundation-card foundation-empty"><div class="learning-card-top"><span class="learning-category">${escapeHtml(selected)}</span><span class="learning-level">Đang xây dựng</span></div><h3>Chặng ${escapeHtml(selected)} chưa được phát hành</h3><p>Không tự động đưa bạn quay về Pre-A1/A1. Bạn vẫn có thể tiếp tục với từ điển, Ngữ pháp, Đọc hiểu, Nghe và Thi thử hiện có.</p><div class="learning-card-footer"><small>Nội dung sẽ được bổ sung theo lộ trình.</small><button type="button" class="secondary-button" data-go="dictionary">Mở từ điển →</button></div></article>`;
 }
+function renderFoundationOutcomeDashboard(selected, lessons) {
+ const stageOrder={'PRE-A1':0,'A1':1,'A2':2};
+ const hostLevels=selected==='ALL'?Object.keys(stageOrder):Object.keys(stageOrder).filter(level=>stageOrder[level]>=(stageOrder[selected]??0));
+ const outcomes=summarizeFoundationOutcomeProgress(state.foundationProgress,lessons,state.foundationOutcomeRegistry||{},Date.now());
+ const groups=[
+  {objectiveId:'foundation-pre-a1-a1',title:'Pre-A1 / A1',levels:['PRE-A1','A1']},
+  {objectiveId:'foundation-a2',title:'A2',levels:['A2']}
+ ].filter(group=>group.levels.some(level=>hostLevels.includes(level)));
+ const cards=groups.map(group=>{
+  const rows=outcomes.filter(row=>row.objectiveId===group.objectiveId);
+  const names={recognition:'Nhận biết',production:'Tự tạo câu · tự đánh giá',retention:'Ghi nhớ cách quãng'};
+  return `<section class="foundation-outcome-group"><h4>${group.title}</h4><div class="foundation-outcome-metrics">${rows.map(row=>`<article class="foundation-outcome-metric"><strong>${names[row.kind]||row.title}</strong><span>${row.uniqueItems}/${row.minimumUniqueItems} mục độc lập</span><span>${row.accuracyPercent===null?'Chưa có kết quả':`${row.accuracyPercent}%`}</span><small>${row.kind==='production'?'Tự báo cáo của người học':row.kind==='retention'?'Chỉ tính câu đã ôn sau thời điểm đến hạn':'Kết quả mới nhất theo ID câu hỏi'}</small></article>`).join('')}</div></section>`;
+ }).join('');
+ const due=listDueFoundationRecallItems(state.foundationProgress,lessons).length;
+ const showA2Portfolio=groups.some(group=>group.objectiveId==='foundation-a2');
+ const a2Portfolio=showA2Portfolio?renderFoundationProductionPortfolio(lessons.filter(lesson=>lesson.level==='A2')):'';
+ return `<section class="foundation-outcome-dashboard-inner"><div class="foundation-outcome-heading"><div><h3>Bằng chứng kết quả học tập</h3><p>Ba loại bằng chứng được theo dõi riêng; số lượng bài có sẵn không đồng nghĩa với mastery.</p></div><span class="foundation-outcome-due">${due} câu ôn đến hạn</span></div>${cards}${a2Portfolio}<p class="placement-disclaimer">Ngưỡng tham khảo: tối thiểu 10 mục độc lập và 80%. Tự đánh giá sản sinh không phải chấm điểm ngôn ngữ độc lập; ôn tập cách quãng không phải bảo đảm ghi nhớ lâu dài hoặc chứng nhận CEFR.</p></section>`;
+}
+
+
+function renderFoundationProductionPortfolio(lessons){
+ const summary=summarizeFoundationProductionPortfolio(state.foundationProgress,lessons,{level:'A2'});
+ const recordRows=summary.records.map(item=>{
+  const ratingRows=item.rubric.map((label,index)=>`<li><span>${escapeHtml(label)}</span><strong>${item.latestRatings[index]===true?'Đã xác nhận':item.latestRatings[index]===false?'Cần rà lại':'Chưa có dữ liệu'}</strong></li>`).join('');
+  const trendLabel=item.trend==='not_revised'?'Chưa viết lại':item.trend==='self_report_up'?'Tự đánh giá tăng':item.trend==='self_report_down'?'Tự đánh giá giảm':'Tự đánh giá không đổi';
+  return `<details class="foundation-portfolio-row"><summary><span><strong>${escapeHtml(item.title)}</strong><small>${item.attemptCount} lượt tự đánh giá · ${item.revisionCount} lần viết lại</small></span><span class="foundation-portfolio-scores"><strong>${item.initialScore}/3 <i>→</i> ${item.latestScore}/3</strong><small>${trendLabel}</small></span></summary><div class="foundation-portfolio-row-detail"><ul>${ratingRows}</ul><button type="button" class="text-button" data-foundation-open="${escapeHtml(item.lessonId)}">Mở bài học để tiếp tục →</button></div></details>`;
+ }).join('');
+ const compareCount=summary.selfReportedImproved+summary.selfReportedUnchanged+summary.selfReportedReduced;
+ return `<details class="foundation-production-portfolio"><summary><span><strong>Nhật ký viết A2</strong><small>${summary.startedTasks}/${summary.totalTasks} bài có dữ liệu · ${summary.revisedTasks} bài đã viết lại</small></span><span class="foundation-portfolio-toggle">Xem tổng kết</span></summary><div class="foundation-portfolio-content"><div class="foundation-portfolio-metrics"><article><small>Bài đã bắt đầu</small><strong>${summary.startedTasks}/${summary.totalTasks}</strong></article><article><small>Bài đã viết lại</small><strong>${summary.revisedTasks}</strong></article><article><small>Tổng lượt tự đánh giá</small><strong>${summary.totalAttempts}</strong></article></div><section class="foundation-portfolio-trend"><h4>Thay đổi tự đánh giá sau khi viết lại</h4><div class="foundation-portfolio-trend-counts"><span>${summary.selfReportedImproved} tăng</span><span>${summary.selfReportedUnchanged} không đổi</span><span>${summary.selfReportedReduced} giảm</span></div><p>${compareCount?`Đối chiếu ${compareCount} bài có ít nhất một lần viết lại. So sánh chỉ thực hiện trong từng bài theo bộ tiêu chí riêng của bài đó; đây là tự đánh giá, không phải chấm điểm ngôn ngữ độc lập.`:'Khi bạn viết lại và tự đánh giá, ứng dụng sẽ đối chiếu từng bài với bộ tiêu chí riêng của bài đó.'}</p></section><section class="foundation-portfolio-records"><h4>Chi tiết theo bài học</h4>${recordRows||'<p class="foundation-portfolio-empty">Chưa có bài viết A2 được lưu. Hãy mở một bài A2 và hoàn thành phần Tự tạo câu để bắt đầu nhật ký.</p>'}</section><p class="foundation-portfolio-disclaimer">Dữ liệu đọc từ tiến độ hiện có trên thiết bị. Điểm là tự đánh giá của người học trên thang 0–3; ứng dụng không tự chấm ngữ pháp, không suy ra năng lực CEFR và không gửi bài viết ra ngoài thiết bị.</p></div></details>`;
+}
+
 function renderAlphabetSoundLab(){
  const items=state.alphabetSoundItems||[];
  const summary=summarizeAlphabetSoundProgress(state.alphabetSoundProgress,items.length);
@@ -2067,27 +2145,88 @@ function playAlphabetSound(button){
  if(summaryNode)summaryNode.textContent=`${summary.practicedLetters}/${summary.expectedLetters} chữ đã luyện · ${summary.completedPairs}/${summary.expectedLetters} cặp đã chọn nghe đủ`;
 }
 
+function renderFoundationProductionSection(lesson, application, saved, legacySaved=null){
+ if(!application)return '';
+ const task=lesson.productionTask||null,taskId=task?.id||application.id;
+ const minimumWords=Math.max(3,Number(task?.minimumWords)||3);
+ const rubric=Array.isArray(task?.rubric)&&task.rubric.length===3?task.rubric:[
+  'Tôi giải thích được vì sao cấu trúc phù hợp với ý định',
+  'Tôi chỉ ra được vì sao cách diễn đạt khác không phù hợp',
+  'Tôi tự tạo được câu mới phù hợp tình huống'
+ ];
+ const requirements=(task?.requirements||[]).map(item=>`<li>${escapeHtml(item)}</li>`).join('');
+ const contextHtml=task?`<div class="foundation-production-context"><div><strong>Bối cảnh</strong><p>${escapeHtml(task.scenario)}</p></div><div><strong>Nhiệm vụ</strong><p>${escapeHtml(task.instruction)}</p></div>${requirements?`<div><strong>Yêu cầu cần có</strong><ul>${requirements}</ul></div>`:''}${task.sentenceFrame?`<div class="foundation-production-frame"><strong>Khung gợi ý</strong><p>${escapeHtml(task.sentenceFrame)}</p></div>`:''}${task.modelAnswer?`<details class="foundation-production-model"><summary>Gợi ý tham khảo (chỉ mở sau khi bạn tự viết)</summary><p>${escapeHtml(task.modelAnswer)}</p><small>${escapeHtml(task.modelAnswerNote||'Đây là ví dụ tham khảo, không phải đáp án duy nhất.')}</small></details>`:''}</div>`:'';
+ const count=String(saved?.latestResponse||'').trim().split(/\s+/).filter(Boolean).length;
+ const legacyNotice=task&&legacySaved&&!saved?'<p class="placement-disclaimer">Bài tự tạo từ phiên bản trước vẫn được giữ trong dữ liệu học tập trên thiết bị. Bài tập theo tình huống A2 này có mã ghi nhận riêng nên cần thực hiện lại để được tính vào bằng chứng mới.</p>':'';
+ const rubricHtml=rubric.map((label,index)=>`<div class="foundation-production-rubric-row"><strong>${index+1}. ${escapeHtml(label)}</strong><label><input type="radio" name="foundation-production-${escapeHtml(lesson.id)}-${index}" value="yes" ${saved?.latestRatings?.[index]===true?'checked':''}> Có</label><label><input type="radio" name="foundation-production-${escapeHtml(lesson.id)}-${index}" value="no" ${saved?.latestRatings?.[index]===false?'checked':''}> Chưa chắc</label></div>`).join('');
+ const revisionChecklist=Array.isArray(task?.revisionChecklist)&&task.revisionChecklist.length===3?task.revisionChecklist:[];
+ const revisionChecksHtml=revisionChecklist.map((label,index)=>`<label class="foundation-revision-check"><input type="checkbox" data-foundation-revision-check value="${index}" ${saved?.latestRevisionChecks?.[index]===true?'checked':''}><span><strong>${escapeHtml(label)}</strong><small>Đã tự đối chiếu yêu cầu này</small></span></label>`).join('');
+ const revisionRubricHtml=rubric.map((label,index)=>`<div class="foundation-production-rubric-row"><strong>${index+1}. ${escapeHtml(label)}</strong><label><input type="radio" name="foundation-revision-${escapeHtml(lesson.id)}-${index}" value="yes" ${saved?.latestRatings?.[index]===true?'checked':''}> Có</label><label><input type="radio" name="foundation-revision-${escapeHtml(lesson.id)}-${index}" value="no" ${saved?.latestRatings?.[index]===false?'checked':''}> Chưa chắc</label></div>`).join('');
+ const previousRevisionSource=saved?.lastRevisionSource||saved?.initialResponse||saved?.latestResponse||'';
+ const revisionHtml=saved&&revisionChecklist.length?`<details class="foundation-revision-workspace" open><summary>Rà soát và viết lại bản câu <span>${Number(saved.revisionCount)||0} lượt sửa</span></summary><div class="foundation-revision-body"><div class="foundation-revision-previous"><strong>Bản trước để đối chiếu</strong><p>${escapeHtml(previousRevisionSource)}</p></div><div class="foundation-revision-checklist"><strong>Tự rà soát từng yêu cầu</strong>${revisionChecksHtml}</div><div class="foundation-revision-hint"><strong>Gợi ý sửa theo chủ điểm</strong><p>${escapeHtml(task.revisionHint||'Đối chiếu từng yêu cầu với câu trả lời rồi viết lại cho rõ nghĩa.')}</p></div><label class="foundation-production-label" for="foundationRevisionResponse">Bản viết lại của bạn</label><textarea id="foundationRevisionResponse" class="foundation-production-textarea" maxlength="500" rows="4" data-foundation-revision-text placeholder="Rewrite your response here...">${escapeHtml(saved.latestResponse||'')}</textarea><p class="foundation-production-word-count" data-foundation-revision-count>${count}/${minimumWords} từ tối thiểu${count>=minimumWords?' · Đủ độ dài':''}</p><div class="foundation-production-rubric"><strong class="foundation-production-rubric-title">Tự đánh giá bản viết lại</strong>${revisionRubricHtml}</div><button type="button" class="primary-button" data-foundation-production-revision-save data-foundation-id="${escapeHtml(lesson.id)}" data-foundation-task-id="${escapeHtml(taskId)}">Lưu bản viết lại</button><p class="placement-disclaimer">Mỗi lần sửa được lưu thành một lượt riêng, gồm bản dựa trên, bản viết lại và tự đánh giá. Ứng dụng không tự chấm đúng/sai về ngôn ngữ.</p></div></details>`:'';
+ return `<section class="detail-section foundation-production" data-foundation-production="${escapeHtml(taskId)}" data-minimum-words="${minimumWords}"><h4>TỰ TẠO CÂU / SẢN SINH NGÔN NGỮ</h4>${legacyNotice}<p>Viết câu trả lời theo tình huống và tự kiểm tra ba tiêu chí. Ứng dụng không tự chấm ngữ pháp; câu trả lời và tự đánh giá chỉ được lưu trên thiết bị này.</p>${contextHtml}<label class="foundation-production-label" for="foundationProductionResponse">Câu trả lời tiếng Anh của bạn</label><textarea id="foundationProductionResponse" class="foundation-production-textarea" maxlength="500" rows="4" data-foundation-production-text placeholder="Write your own response in English...">${escapeHtml(saved?.latestResponse||'')}</textarea><p class="foundation-production-word-count" data-foundation-production-count>${count}/${minimumWords} từ tối thiểu${count>=minimumWords?' · Đủ độ dài':''}</p><div class="foundation-production-rubric"><strong class="foundation-production-rubric-title">Tự kiểm tra trước khi lưu</strong>${rubricHtml}</div><button type="button" class="secondary-button" data-foundation-production-save data-foundation-id="${escapeHtml(lesson.id)}" data-foundation-task-id="${escapeHtml(taskId)}">Lưu câu và tự đánh giá</button><p class="placement-disclaimer" data-foundation-production-summary>${saved?`Lần gần nhất: ${saved.latestScore}/3 tiêu chí · ${saved.latestWordCount} từ · ${saved.attempts?.length||1} lượt · ${Number(saved.revisionCount)||0} lần viết lại. Đây là tự đánh giá, không phải kết quả chấm tự động.`:`Tối thiểu ${minimumWords} từ. Hệ thống giữ câu mới nhất và lịch sử tự đánh giá; không gửi câu trả lời lên máy chủ.`}</p>${revisionHtml}</section>`;
+}
+
 function openFoundationLesson(id){
  const x=state.foundationLessons.find(item=>item.id===id);if(!x)return;
+ const lessonDenominator=x.level==='A2'?13:10;
  const examples=(x.examples||[]).map(e=>`<div class="example-card"><strong>${escapeHtml(e.en)}</strong><span>${escapeHtml(e.vi)}</span></div>`).join('');
  const bank=Array.isArray(x.questionBank)&&x.questionBank.length?x.questionBank:[{id:`${x.id}::q1`,question:x.question,choices:x.choices,answerIndex:x.answerIndex,rationale:x.rationale}];
  const evidence=summarizeFoundationLesson(state.foundationProgress,id);
  const application=x.applicationTask;const applicationSaved=application?state.foundationProgress[id]?.applicationEvidence?.[application.id]:null;const applicationSummary=summarizeFoundationApplication(state.foundationProgress,id);
  const applicationHtml=application?`<section class="detail-section foundation-application" data-foundation-application="${escapeHtml(application.id)}"><h4>VẬN DỤNG TRONG NGỮ CẢNH</h4><p>${escapeHtml(application.focus||'Áp dụng kiến thức vào tình huống thực tế.')}</p><h3>${escapeHtml(application.prompt)}</h3><div class="foundation-choices">${application.choices.map((choice,index)=>`<button type="button" class="foundation-choice ${state.foundationAssessmentDrafts[foundationDraftKey('foundation-application',id)]?.answers?.[application.id]===index?'is-selected':''}" data-foundation-application-answer="${index}" data-foundation-id="${escapeHtml(x.id)}" data-foundation-task-id="${escapeHtml(application.id)}">${String.fromCharCode(65+index)}. ${escapeHtml(choice)}</button>`).join('')}</div>${foundationDraftToolbar('foundation-application',id,[{id:application.id}])}<p class="foundation-feedback" data-foundation-application-feedback ${applicationSaved?'':'hidden'}>${applicationSaved?`${applicationSaved.latestCorrect?'Đạt ở lượt gần nhất.':'Cần luyện thêm.'} ${escapeHtml(application.rationale)} · ${applicationSaved.attempts?.length||1} lượt.`:''}</p><p class="placement-disclaimer" data-foundation-application-summary>${applicationSummary.uniqueTasks} tình huống đã thực hiện · ${applicationSummary.accuracyPercent===null?'Chưa có kết quả':`${applicationSummary.accuracyPercent}% đúng gần nhất`}. Bằng chứng vận dụng được theo dõi riêng, không cộng vào câu hỏi nhận biết.</p></section>`:'';
+ const productionTaskId=x.productionTask?.id||application?.id;
+ const productionSaved=productionTaskId?state.foundationProgress[id]?.productionEvidence?.[productionTaskId]:null;
+ const legacyProductionSaved=x.productionTask&&application?state.foundationProgress[id]?.productionEvidence?.[application.id]:null;
+ const productionHtml=renderFoundationProductionSection(x,application,productionSaved,legacyProductionSaved);
+ const dueRecall=listDueFoundationRecallItems(state.foundationProgress,[x]);
+ const recallScheduled=bank.filter(q=>Number(state.foundationProgress[id]?.evidence?.[q.id]?.recallDueAt)>0).length;
+ const recallHtml=dueRecall.length?`<section class="detail-section foundation-recall"><h4>ÔN TẬP CÁCH QUÃNG · ${dueRecall.length} CÂU ĐẾN HẠN</h4><p>Trả lời lại trước khi xem đáp án. Đúng sẽ lên lịch sau 3 ngày; chưa đúng sẽ được nhắc lại sau 1 ngày.</p>${dueRecall.map(item=>`<article class="foundation-recall-card"><h3>${escapeHtml(item.question)}</h3><div class="foundation-choices">${item.choices.map((choice,index)=>`<button type="button" class="foundation-choice" data-foundation-recall-answer="${index}" data-foundation-recall-lesson="${escapeHtml(id)}" data-foundation-recall-question="${escapeHtml(item.questionId)}">${String.fromCharCode(65+index)}. ${escapeHtml(choice)}</button>`).join('')}</div><small>Đến hạn từ ${new Date(item.dueAt).toLocaleString('vi-VN')}</small></article>`).join('')}</section>`:`<section class="detail-section foundation-recall"><h4>ÔN TẬP CÁCH QUÃNG</h4><p>${recallScheduled?`${recallScheduled} câu đã được lên lịch ôn. Câu đầu tiên sẽ đến hạn sau 24 giờ; sau mỗi lượt ôn, lịch tiếp theo là 1 hoặc 3 ngày tùy kết quả.`:'Sau khi bạn trả lời câu nhận biết, hệ thống sẽ tự lên lịch ôn lại sau 24 giờ.'} ${dueRecall.length?'':'Chưa có câu đến hạn.'}</p></section>`;
  const questions=bank.map((q,i)=>{const saved=state.foundationProgress[id]?.evidence?.[q.id],hasDraft=Number.isInteger(state.foundationAssessmentDrafts[foundationDraftKey('foundation-recognition',id)]?.answers?.[q.id]);return `<section class="foundation-question" data-foundation-question="${escapeHtml(x.id)}" data-foundation-question-id="${escapeHtml(q.id)}"><h3>Tự kiểm tra ${i+1}/${bank.length}</h3><p>${escapeHtml(q.question)}</p><div class="foundation-choices">${q.choices.map((c,j)=>`<button type="button" class="foundation-choice ${state.foundationAssessmentDrafts[foundationDraftKey('foundation-recognition',id)]?.answers?.[q.id]===j?'is-selected':''}" data-foundation-answer="${j}" data-foundation-id="${escapeHtml(x.id)}" data-foundation-question-id="${escapeHtml(q.id)}">${String.fromCharCode(65+j)}. ${escapeHtml(c)}</button>`).join('')}</div>${foundationDraftToolbar('foundation-recognition',id,bank)}<p class="foundation-feedback" data-foundation-feedback ${saved&&!hasDraft?'':'hidden'}>${saved&&!hasDraft?`${saved.latestCorrect?'Đã trả lời đúng gần nhất.':'Cần ôn lại.'} · ${saved.attempts?.length||1} lượt.`:''}</p></section>`}).join('');
- const readingPassage=state.foundationReadingPassages.find(item=>item.lessonId===id);const readingSummary=summarizeFoundationReading(state.foundationReadingProgress,id);const readingHtml=readingPassage?`<section class="detail-section foundation-reading" data-foundation-reading="${escapeHtml(readingPassage.id)}"><h4>ĐỌC HIỂU ĐOẠN NGẮN</h4><p class="placement-disclaimer">Đọc đoạn văn trước, sau đó trả lời câu hỏi. Bạn có thể đọc lại văn bản khi cần.</p><h3>${escapeHtml(readingPassage.title)}</h3><div class="foundation-reading-text">${escapeHtml(readingPassage.text)}</div>${readingPassage.questions.map((q,i)=>{const saved=state.foundationReadingProgress[id]?.evidence?.[q.id],hasDraft=Number.isInteger(state.foundationAssessmentDrafts[foundationDraftKey('foundation-reading',id)]?.answers?.[q.id]);return `<section class="foundation-question" data-foundation-reading-question="${escapeHtml(q.id)}"><h3>Câu đọc hiểu ${i+1}/2</h3><p>${escapeHtml(q.prompt)}</p><div class="foundation-choices">${q.choices.map((choice,j)=>`<button type="button" class="foundation-choice ${state.foundationAssessmentDrafts[foundationDraftKey('foundation-reading',id)]?.answers?.[q.id]===j?'is-selected':''}" data-foundation-reading-answer="${j}" data-foundation-reading-lesson="${escapeHtml(id)}" data-foundation-reading-question-id="${escapeHtml(q.id)}">${String.fromCharCode(65+j)}. ${escapeHtml(choice)}</button>`).join('')}</div>${foundationDraftToolbar('foundation-reading',id,readingPassage.questions)}<p class="foundation-feedback" data-foundation-reading-feedback ${saved&&!hasDraft?'':'hidden'}>${saved&&!hasDraft?`${saved.latestCorrect?'Đúng ở lượt gần nhất.':'Cần đọc lại và ôn tập.'} · ${saved.attempts?.length||1} lượt.`:''}</p></section>`}).join('')}<p class="placement-disclaimer" data-foundation-reading-summary>${readingSummary.uniqueQuestions}/2 câu độc lập · ${readingSummary.accuracyPercent===null?'Chưa có kết quả':`${readingSummary.accuracyPercent}% đúng gần nhất`}. Ngưỡng luyện tập: 2 câu độc lập và 80% đúng. Đây không phải chứng nhận CEFR.</p></section>`:'';
- const listeningClip=state.foundationListeningClips.find(item=>item.lessonId===id);const listeningSummary=summarizeFoundationListening(state.foundationListeningProgress,id);const listeningHtml=listeningClip?`<section class="detail-section foundation-listening" data-foundation-listening="${escapeHtml(listeningClip.id)}"><h4>NGHE HIỂU ĐOẠN NGẮN</h4><p class="placement-disclaimer">Nghe đoạn tiếng Anh bằng voice hiện có trên thiết bị. Hãy trả lời trước khi mở transcript. Giọng đọc là TTS của trình duyệt, không phải audio thu âm ETS.</p><h3>${escapeHtml(listeningClip.title)}</h3><div class="foundation-listening-actions"><button type="button" class="secondary-button" data-foundation-listening-play="${escapeHtml(listeningClip.id)}">▶ Phát đoạn nghe</button><button type="button" class="text-button" data-foundation-listening-transcript-toggle>Hiện transcript</button></div><div class="foundation-listening-transcript" data-foundation-listening-transcript hidden><strong>Transcript</strong><p>${escapeHtml(listeningClip.script)}</p></div>${listeningClip.questions.map((q,i)=>{const saved=state.foundationListeningProgress[id]?.evidence?.[q.id],hasDraft=Number.isInteger(state.foundationAssessmentDrafts[foundationDraftKey('foundation-listening',id)]?.answers?.[q.id]);return `<section class="foundation-question" data-foundation-listening-question="${escapeHtml(q.id)}"><h3>Câu nghe hiểu ${i+1}/2</h3><p>${escapeHtml(q.prompt)}</p><div class="foundation-choices">${q.choices.map((choice,j)=>`<button type="button" class="foundation-choice ${state.foundationAssessmentDrafts[foundationDraftKey('foundation-listening',id)]?.answers?.[q.id]===j?'is-selected':''}" data-foundation-listening-answer="${j}" data-foundation-listening-lesson="${escapeHtml(id)}" data-foundation-listening-question-id="${escapeHtml(q.id)}">${String.fromCharCode(65+j)}. ${escapeHtml(choice)}</button>`).join('')}</div>${foundationDraftToolbar('foundation-listening',id,listeningClip.questions)}<p class="foundation-feedback" data-foundation-listening-feedback ${saved&&!hasDraft?'':'hidden'}>${saved&&!hasDraft?`${saved.latestCorrect?'Đúng ở lượt gần nhất.':'Cần nghe lại và ôn tập.'} · ${saved.attempts?.length||1} lượt.`:''}</p></section>`}).join('')}<p class="placement-disclaimer" data-foundation-listening-summary>${listeningSummary.uniqueQuestions}/2 câu độc lập · ${listeningSummary.accuracyPercent===null?'Chưa có kết quả':`${listeningSummary.accuracyPercent}% đúng gần nhất`}. Ngưỡng luyện tập: 2 câu độc lập và 80% đúng; không phải chứng nhận CEFR.</p></section>`:'';
+ const readingPassage=state.foundationReadingPassages.find(item=>item.lessonId===id);const readingSummary=summarizeFoundationReading(state.foundationReadingProgress,id,{minimumUniqueQuestions:readingPassage?.minimumUniqueQuestions||2,practiceAccuracyThreshold:readingPassage?.practiceAccuracyThreshold||0.8});const readingHtml=readingPassage?`<section class="detail-section foundation-reading" data-foundation-reading="${escapeHtml(readingPassage.id)}"><h4>ĐỌC HIỂU · ${readingPassage.level==='A2'?'ĐOẠN VĂN MỞ RỘNG':'ĐOẠN NGẮN'}</h4><p class="placement-disclaimer">Đọc đoạn văn trước, sau đó trả lời câu hỏi. Bạn có thể đọc lại văn bản khi cần.</p><h3>${escapeHtml(readingPassage.title)}</h3><div class="foundation-reading-text">${escapeHtml(readingPassage.text)}</div>${readingPassage.questions.map((q,i)=>{const saved=state.foundationReadingProgress[id]?.evidence?.[q.id],hasDraft=Number.isInteger(state.foundationAssessmentDrafts[foundationDraftKey('foundation-reading',id)]?.answers?.[q.id]);return `<section class="foundation-question" data-foundation-reading-question="${escapeHtml(q.id)}"><h3>Câu đọc hiểu ${i+1}/${readingPassage.questions.length}</h3><p>${escapeHtml(q.prompt)}</p><div class="foundation-choices">${q.choices.map((choice,j)=>`<button type="button" class="foundation-choice ${state.foundationAssessmentDrafts[foundationDraftKey('foundation-reading',id)]?.answers?.[q.id]===j?'is-selected':''}" data-foundation-reading-answer="${j}" data-foundation-reading-lesson="${escapeHtml(id)}" data-foundation-reading-question-id="${escapeHtml(q.id)}">${String.fromCharCode(65+j)}. ${escapeHtml(choice)}</button>`).join('')}</div>${foundationDraftToolbar('foundation-reading',id,readingPassage.questions)}<p class="foundation-feedback" data-foundation-reading-feedback ${saved&&!hasDraft?'':'hidden'}>${saved&&!hasDraft?`${saved.latestCorrect?'Đúng ở lượt gần nhất.':'Cần đọc lại và ôn tập.'} · ${saved.attempts?.length||1} lượt.`:''}</p></section>`}).join('')}<p class="placement-disclaimer" data-foundation-reading-summary>${readingSummary.uniqueQuestions}/${readingPassage.questions.length} câu độc lập · ${readingSummary.accuracyPercent===null?'Chưa có kết quả':`${readingSummary.accuracyPercent}% đúng gần nhất`}. Ngưỡng luyện tập: ${readingSummary.minimumUniqueQuestions} câu độc lập và ${Math.round(readingSummary.threshold*100)}% đúng. Đây không phải chứng nhận CEFR.</p></section>`:'';
+ const listeningClip=state.foundationListeningClips.find(item=>item.lessonId===id);const listeningSummary=summarizeFoundationListening(state.foundationListeningProgress,id,{minimumUniqueQuestions:listeningClip?.minimumUniqueQuestions||2,practiceAccuracyThreshold:listeningClip?.practiceAccuracyThreshold||0.8});const listeningHtml=listeningClip?`<section class="detail-section foundation-listening" data-foundation-listening="${escapeHtml(listeningClip.id)}"><h4>${listeningClip.segments?.length?'NGHE HIỂU HỘI THOẠI':'NGHE HIỂU ĐOẠN NGẮN'}</h4><p class="placement-disclaimer">Nghe bằng voice tiếng Anh trên thiết bị. Hội thoại A2 dùng voice nam/nữ đã cấu hình và nghỉ giữa các lượt theo mục Cấu hình → Giọng đọc. Đây là TTS của trình duyệt, không phải audio thu âm ETS.</p><h3>${escapeHtml(listeningClip.title)}</h3><div class="foundation-listening-actions"><button type="button" class="secondary-button" data-foundation-listening-play="${escapeHtml(listeningClip.id)}">▶ ${listeningClip.segments?.length?'Phát hội thoại':'Phát đoạn nghe'}</button><button type="button" class="text-button" data-foundation-listening-stop>⏹ Dừng</button><button type="button" class="text-button" data-foundation-listening-transcript-toggle>Hiện transcript</button></div><p class="placement-disclaimer" id="foundationListeningStatus" aria-live="polite">Sẵn sàng phát · Có thể dừng bất cứ lúc nào.</p><div class="foundation-listening-transcript" data-foundation-listening-transcript hidden><strong>Transcript</strong>${listeningClip.segments?.length?`<div class="foundation-listening-transcript-turns">${listeningClip.segments.map(segment=>`<div><strong>${escapeHtml(segment.speaker)}</strong><p>${escapeHtml(segment.text)}</p></div>`).join('')}</div>`:`<p>${escapeHtml(listeningClip.script)}</p>`}</div>${listeningClip.questions.map((q,i)=>{const saved=state.foundationListeningProgress[id]?.evidence?.[q.id],hasDraft=Number.isInteger(state.foundationAssessmentDrafts[foundationDraftKey('foundation-listening',id)]?.answers?.[q.id]);return `<section class="foundation-question" data-foundation-listening-question="${escapeHtml(q.id)}"><h3>Câu nghe hiểu ${i+1}/${listeningClip.questions.length}</h3><p>${escapeHtml(q.prompt)}</p><div class="foundation-choices">${q.choices.map((choice,j)=>`<button type="button" class="foundation-choice ${state.foundationAssessmentDrafts[foundationDraftKey('foundation-listening',id)]?.answers?.[q.id]===j?'is-selected':''}" data-foundation-listening-answer="${j}" data-foundation-listening-lesson="${escapeHtml(id)}" data-foundation-listening-question-id="${escapeHtml(q.id)}">${String.fromCharCode(65+j)}. ${escapeHtml(choice)}</button>`).join('')}</div>${foundationDraftToolbar('foundation-listening',id,listeningClip.questions)}<p class="foundation-feedback" data-foundation-listening-feedback ${saved&&!hasDraft?'':'hidden'}>${saved&&!hasDraft?`${saved.latestCorrect?'Đúng ở lượt gần nhất.':'Cần nghe lại và ôn tập.'} · ${saved.attempts?.length||1} lượt.`:''}</p></section>`}).join('')}<p class="placement-disclaimer" data-foundation-listening-summary>${listeningSummary.uniqueQuestions}/${listeningClip.questions.length} câu độc lập · ${listeningSummary.accuracyPercent===null?'Chưa có kết quả':`${listeningSummary.accuracyPercent}% đúng gần nhất`}. Ngưỡng luyện tập: ${listeningSummary.minimumUniqueQuestions} câu độc lập và ${Math.round(listeningSummary.threshold*100)}% đúng; không phải chứng nhận CEFR.</p></section>`:'';
  const alphabetHtml=id==='pa1-alphabet'?renderAlphabetSoundLab():'';
- const content=`<p class="foundation-level detail-pill">${escapeHtml(x.level)} · MỤC TIÊU ${x.order}/10</p>${alphabetHtml}<section class="detail-section"><h4>SAU BÀI NÀY, BẠN CÓ THỂ</h4><p>${escapeHtml(x.objective)}</p></section><section class="detail-section"><h4>GIẢI THÍCH</h4><p>${escapeHtml(x.explanation)}</p><div class="foundation-focus">${escapeHtml(x.focus)}</div></section><section class="detail-section"><h4>VÍ DỤ SONG NGỮ</h4>${examples}</section><section class="detail-section"><h4>MẸO GHI NHỚ</h4><p>${escapeHtml(x.tip)}</p></section><section class="detail-section"><h4>BẰNG CHỨNG LUYỆN TẬP</h4><p data-foundation-evidence-summary>${evidence.uniqueQuestions}/3 câu độc lập · ${evidence.accuracyPercent===null?'Chưa có kết quả':`${evidence.accuracyPercent}% đúng gần nhất`}. Cần ít nhất 3 câu độc lập và 80% đúng để đạt ngưỡng luyện tập. Đây không phải chứng nhận CEFR.</p></section>${questions}${applicationHtml}${readingHtml}${listeningHtml}<p class="placement-disclaimer">Câu hỏi tự kiểm tra đo nhận biết/hiểu; tình huống vận dụng, đọc hiểu, nghe hiểu và lượt luyện tên chữ/từ mẫu được theo dõi riêng. TTS không đánh giá độ chính xác phát âm; bài học chưa đánh giá nói/viết tự do hoặc giao tiếp tự nhiên.</p>`;
+ const content=`<p class="foundation-level detail-pill">${escapeHtml(x.level)} · MỤC TIÊU ${x.order}/${lessonDenominator}</p>${alphabetHtml}<section class="detail-section"><h4>SAU BÀI NÀY, BẠN CÓ THỂ</h4><p>${escapeHtml(x.objective)}</p></section><section class="detail-section"><h4>GIẢI THÍCH</h4><p>${escapeHtml(x.explanation)}</p><div class="foundation-focus">${escapeHtml(x.focus)}</div></section><section class="detail-section"><h4>VÍ DỤ SONG NGỮ</h4>${examples}</section><section class="detail-section"><h4>MẸO GHI NHỚ</h4><p>${escapeHtml(x.tip)}</p></section><section class="detail-section"><h4>BẰNG CHỨNG LUYỆN TẬP</h4><p data-foundation-evidence-summary>${evidence.uniqueQuestions}/3 câu độc lập · ${evidence.accuracyPercent===null?'Chưa có kết quả':`${evidence.accuracyPercent}% đúng gần nhất`}. Cần ít nhất 3 câu độc lập và 80% đúng để đạt ngưỡng luyện tập. Đây không phải chứng nhận CEFR.</p></section>${questions}${recallHtml}${applicationHtml}${productionHtml}${readingHtml}${listeningHtml}<p class="placement-disclaimer">Câu hỏi tự kiểm tra đo nhận biết/hiểu; tình huống vận dụng, đọc hiểu, nghe hiểu và lượt luyện tên chữ/từ mẫu được theo dõi riêng. TTS không đánh giá độ chính xác phát âm; bài học chưa đánh giá nói/viết tự do hoặc giao tiếp tự nhiên.</p>`;
  openLearningDetail({kind:'learning-detail',title:x.title,subtitle:'Học theo từng bước · nghe, đọc, xem ví dụ, vận dụng và tự kiểm tra.',eyebrow:'FOUNDATION PATH · '+x.level,content});
  const candidates=[['foundation-recognition',bank],...(application? [['foundation-application',[{...application,id:application.id}]]]:[]),...(readingPassage?[['foundation-reading',readingPassage.questions]]:[]),...(listeningClip?[['foundation-listening',listeningClip.questions]]:[])];
  for(const [kind,items] of candidates){if(showFoundationAssessmentResult(kind,id,items))break;}
 }
 
-function playFoundationListening(clipId){
+async function playFoundationListening(clipId){
  const clip=state.foundationListeningClips.find(item=>item.id===clipId);if(!clip)return;
  if(!('speechSynthesis'in window)||typeof SpeechSynthesisUtterance==='undefined'){toast('Thiết bị chưa hỗ trợ đọc đoạn nghe. Hãy dùng Cấu hình để kiểm tra giọng đọc.','error');return;}
- speakText(clip.script,null,'',state.settings.tts?.defaultGender||'female');
+ const cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})};
+ const segments=Array.isArray(clip.segments)&&clip.segments.length?clip.segments:String(clip.script||'').match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map((text,index)=>({speaker:'Narrator',voice:cfg.defaultGender,text:text.trim(),accent:cfg.accent}))||[];
+ if(!segments.length){toast('Bài nghe chưa có nội dung để phát.','error');return;}
+ stopSpeech();const playbackToken=++listeningPlaybackToken;const status=$('#foundationListeningStatus');
+ if(status)status.textContent='Đang tải voice và chuẩn bị đoạn nghe…';
+ const prepared=await prepareSpeechEngine(playbackToken);
+ if(!prepared||playbackToken!==listeningPlaybackToken)return;
+ const speakerVoices=new Map();const usedVoiceNames={female:[],male:[]};
+ const resolveVoice=segment=>{
+   const speaker=String(segment.speaker||'Narrator').trim(),key=speaker.toLowerCase();
+   if(speakerVoices.has(key))return speakerVoices.get(key);
+   const gender=classifyVoiceHint(segment.voice||speaker)||cfg.defaultGender;
+   const voice=chooseEnglishVoice(segment.accent||cfg.accent,speaker,gender,usedVoiceNames[gender]||[]);
+   if(voice){speakerVoices.set(key,voice);(usedVoiceNames[gender]||[]).push(voice.name);}
+   return voice;
+ };
+ for(let index=0;index<segments.length;index++){
+   if(playbackToken!==listeningPlaybackToken)return;
+   const segment=segments[index],speaker=segment.speaker||`Lượt lời ${index+1}`;
+   const gender=classifyVoiceHint(segment.voice||speaker)||cfg.defaultGender;
+   const voice=resolveVoice(segment);
+   if(status)status.textContent=`Đang nghe ${speaker} (${index+1}/${segments.length})…`;
+   const played=await speakUtterance(segment.text,{accent:segment.accent||cfg.accent,gender,voice,rate:cfg.rate,onStart:()=>{if(status)status.textContent=`${speaker} đang nói…`; }},playbackToken);
+   if(playbackToken!==listeningPlaybackToken)return;
+   if(!played){if(status)status.textContent='Voice gặp lỗi khi phát. Hãy kiểm tra hoặc chọn lại giọng nam/nữ trong Cấu hình.';toast('Không thể phát lượt thoại bằng voice đã chọn. Hãy thử voice khác trong Cấu hình.','error');return;}
+   if(index<segments.length-1){
+     const gap=Math.max(500,Number(cfg.sentencePauseMs)||850);
+     if(status)status.textContent=`Đã hết lượt ${speaker} · nghỉ ${(gap/1000).toFixed(2)} giây…`;
+     if(!await waitSpeechGap(gap,playbackToken))return;
+   }
+ }
+ if(playbackToken===listeningPlaybackToken&&status)status.textContent='Đã phát xong. Bạn có thể nghe lại hoặc mở transcript.';
 }
 
 function answerFoundationListening(button){
@@ -2100,6 +2239,48 @@ function answerFoundationReading(button){
  const lessonId=button.dataset.foundationReadingLesson,questionId=button.dataset.foundationReadingQuestionId,index=Number(button.dataset.foundationReadingAnswer);
  const passage=state.foundationReadingPassages.find(item=>item.lessonId===lessonId);if(!passage)return;
  stageFoundationAssessment('foundation-reading',lessonId,questionId,index,passage.questions||[]);
+}
+
+function answerFoundationRecall(button){
+ const lessonId=button.dataset.foundationRecallLesson,questionId=button.dataset.foundationRecallQuestion,index=Number(button.dataset.foundationRecallAnswer);
+ const lesson=state.foundationLessons.find(item=>item.id===lessonId),question=lesson?.questionBank?.find(item=>item.id===questionId);if(!lesson||!question||!Number.isInteger(index))return;
+ const saved=state.foundationProgress?.[lessonId]?.evidence?.[questionId],dueAt=Number(saved?.recallDueAt)||0;
+ if(!dueAt||Date.now()<dueAt){toast('Câu hỏi chưa đến thời điểm ôn tập cách quãng.','error');return;}
+ const correct=index===Number(question.answerIndex);
+ const next=recordFoundationRecallAttempt(state.foundationProgress,lessonId,questionId,correct,Date.now());
+ if(next===state.foundationProgress){toast('Không thể ghi nhận lượt ôn tập. Hãy thử mở lại bài học.','error');return;}
+ state.foundationProgress=next;
+ try{localStorage.setItem('toeic:foundation-progress:v1',JSON.stringify(state.foundationProgress));}catch(error){console.warn('Không thể lưu lượt ôn Foundation:',error);}
+ openFoundationLesson(lessonId);renderFoundationPath();toast(correct?`Đúng. Đã hẹn ôn lại sau 3 ngày. ${question.rationale||''}`:`Chưa đúng. Đã hẹn ôn lại sau 1 ngày. ${question.rationale||''}`,correct?'success':'error');
+}
+
+function saveFoundationProduction(button){
+ const lessonId=button.dataset.foundationId,taskId=button.dataset.foundationTaskId,lesson=state.foundationLessons.find(item=>item.id===lessonId);
+ if(!lesson?.applicationTask||(lesson.productionTask?.id||lesson.applicationTask.id)!==taskId)return;
+ const panel=button.closest('[data-foundation-production]'),response=$('[data-foundation-production-text]',panel)?.value||'';
+ const productionTask=lesson.productionTask||null,minimumWords=Math.max(3,Number(productionTask?.minimumWords)||3);
+ const ratings=[0,1,2].map(index=>{const selected=$(`input[name="foundation-production-${lessonId}-${index}"]:checked`,panel);return selected?selected.value==='yes':null;});
+ if(response.trim().split(/\s+/).filter(Boolean).length<minimumWords){toast(`Hãy viết câu trả lời có ít nhất ${minimumWords} từ theo tình huống.`,'error');return;}
+ if(ratings.some(value=>value===null)){toast('Hãy tự đánh giá đủ 3 tiêu chí trước khi lưu.','error');return;}
+ const nextProgress=recordFoundationProductionAttempt(state.foundationProgress,lessonId,taskId,response,ratings,Date.now(),minimumWords);
+ try{localStorage.setItem('toeic:foundation-progress:v1',JSON.stringify(nextProgress));state.foundationProgress=nextProgress;}catch(error){console.warn('Không thể lưu tự đánh giá Foundation:',error);toast('Không thể lưu bằng chứng trên thiết bị này.','error');return;}
+ openFoundationLesson(lessonId);renderFoundationPath();const saved=state.foundationProgress[lessonId]?.productionEvidence?.[taskId];toast(`Đã lưu câu tự tạo và tự đánh giá ${saved?.latestScore||0}/3. Không có chấm điểm tự động.`);
+}
+
+function saveFoundationProductionRevision(button){
+ const lessonId=button.dataset.foundationId,taskId=button.dataset.foundationTaskId,lesson=state.foundationLessons.find(item=>item.id===lessonId);
+ if(!lesson?.applicationTask||(lesson.productionTask?.id||lesson.applicationTask.id)!==taskId)return;
+ const panel=button.closest('[data-foundation-production]'),task=lesson.productionTask||null;
+ const response=$('[data-foundation-revision-text]',panel)?.value||'',minimumWords=Math.max(3,Number(task?.minimumWords)||8);
+ const reviewChecks=$$('[data-foundation-revision-check]',panel).map(field=>field.checked);
+ const ratings=[0,1,2].map(index=>{const selected=$(`input[name="foundation-revision-${lessonId}-${index}"]:checked`,panel);return selected?selected.value==='yes':null;});
+ if(response.trim().split(/\s+/).filter(Boolean).length<minimumWords){toast(`Hãy viết lại câu trả lời có ít nhất ${minimumWords} từ.`,'error');return;}
+ if(reviewChecks.length!==3||reviewChecks.some(value=>!value)){toast('Hãy xác nhận đã rà soát đủ 3 yêu cầu trước khi lưu bản viết lại.','error');return;}
+ if(ratings.some(value=>value===null)){toast('Hãy tự đánh giá đủ 3 tiêu chí cho bản viết lại.','error');return;}
+ const nextProgress=recordFoundationProductionRevision(state.foundationProgress,lessonId,taskId,response,ratings,reviewChecks,Date.now(),minimumWords);
+ if(nextProgress===state.foundationProgress){toast('Bản viết lại cần khác bản trước và có đủ dữ liệu kiểm tra.','error');return;}
+ try{localStorage.setItem('toeic:foundation-progress:v1',JSON.stringify(nextProgress));state.foundationProgress=nextProgress;}catch(error){console.warn('Không thể lưu bản viết lại Foundation:',error);toast('Không thể lưu bản viết lại trên thiết bị này.','error');return;}
+openFoundationLesson(lessonId);renderFoundationPath();const saved=state.foundationProgress[lessonId]?.productionEvidence?.[taskId];toast(`Đã lưu bản viết lại lần ${saved?.revisionCount||1} cùng lịch sử đối chiếu. Không có chấm điểm tự động.`);
 }
 
 function answerFoundationApplication(button){
@@ -2231,6 +2412,7 @@ async function confirmPracticeBatchResult(){
   for(const row of result.records){const question=batch.questions[row.index];if(batch.kind==='listening'&&batch.item.editorialStatus==='reserve-pending-independent-review')continue;trackObjectivePractice(batch.id,{...question,__index:row.index},row.correct,row.answeredAt,Math.max(0,row.answeredAt-row.startedAt));}
   batch.store[batch.id]=batch.progress;await dbSet(batch.key,batch.store);await saveObjectivePractice();
   state.pendingPracticeBatch=null;closeAssessmentResultModal();batch.render(batch.id);renderToeicPartInsights();
+  const correct=result.records.filter(row=>row.correct).length,accuracy=Math.round(correct/Math.max(1,result.records.length)*100);
   toast(`Đã chấm ${result.committed} câu. Đáp án và giải thích đã mở.`);
 }
 function returnToPracticeBatch(){
@@ -2272,7 +2454,9 @@ function confirmFoundationAssessmentResult(){
     else if(kind==='foundation-reading')localStorage.setItem('toeic:foundation-reading-progress:v1',JSON.stringify(state.foundationReadingProgress));
     else localStorage.setItem('toeic:foundation-progress:v1',JSON.stringify(state.foundationProgress));
   }catch(error){console.warn('Không thể lưu kết quả Foundation:',error);}
-  delete state.foundationAssessmentDrafts[key];saveFoundationAssessmentDrafts();state.pendingFoundationAssessment=null;closeAssessmentResultModal();openFoundationLesson(lessonId);renderFoundationPath();toast('Đã lưu kết quả Foundation và mở phần xem lại.');
+  const correctCount=questions.filter(q=>draft[q.id]===Number(q.answerIndex)).length,accuracy=Math.round(correctCount/Math.max(1,questions.length)*100);
+  delete state.foundationAssessmentDrafts[key];saveFoundationAssessmentDrafts();state.pendingFoundationAssessment=null;closeAssessmentResultModal();openFoundationLesson(lessonId);renderFoundationPath();
+  toast('Đã lưu kết quả Foundation và mở phần xem lại.');
 }
 function returnToFoundationAssessment(){
   const pending=state.pendingFoundationAssessment;if(!pending)return;const {kind,lessonId}=pending;state.pendingFoundationAssessment=null;closeAssessmentResultModal();openFoundationLesson(lessonId);toast('Các lựa chọn Foundation tạm đã được lưu.');
@@ -2519,7 +2703,7 @@ function stopSpeech(){
   // Resolve any in-flight utterance before browser cancellation; some engines omit onerror for cancel().
   const cancelActive=activeSpeechCancel;activeSpeechCancel=null;if(cancelActive)cancelActive();
   if('speechSynthesis'in window){try{window.speechSynthesis.cancel();}catch(error){console.warn('Không thể dừng speech synthesis:',error);}}
-  const status=$('#listeningPlayerStatus');if(status)status.textContent='Đã dừng audio.';
+  const status=$('#listeningPlayerStatus');if(status)status.textContent='Đã dừng audio.';const foundationStatus=$('#foundationListeningStatus');if(foundationStatus)foundationStatus.textContent='Đã dừng audio.';
   if(typeof document!=='undefined')document.querySelectorAll('[data-reading-audio-status]').forEach(node=>{node.textContent='Đã dừng đọc.';});
   return listeningPlaybackToken;
 }
@@ -2747,6 +2931,297 @@ function openGoogleSearch(){
 }
 function openGoogleAIFromPanel(){openGoogleSearch();}
 
+function robotHeadMarkup(extraClass=''){
+  return `<svg class="robot-head-svg ${extraClass}" viewBox="0 0 100 100" role="img" aria-label="Robot Buddy" focusable="false">
+    <path class="robot-antenna-stem" d="M50 12V6"/><circle class="robot-antenna-light" cx="50" cy="5" r="4"/>
+    <path class="robot-shell" d="M17 47C17 26 31 16 50 16s33 10 33 31v18c0 15-13 25-33 25S17 80 17 65V47Z"/>
+    <path class="robot-ear" d="M17 48h-5v17h5M83 48h5v17h-5"/>
+    <path class="robot-face-panel" d="M25 48c0-13 10-22 25-22s25 9 25 22v16c0 12-10 19-25 19S25 76 25 64V48Z"/>
+    <ellipse class="robot-eye" cx="39" cy="52" rx="7" ry="9"/><ellipse class="robot-eye" cx="61" cy="52" rx="7" ry="9"/>
+    <circle class="robot-pupil" cx="40" cy="53" r="3.2"/><circle class="robot-pupil" cx="62" cy="53" r="3.2"/>
+    <path class="robot-brow robot-brow-left" d="M32 40q7-5 14 0"/><path class="robot-brow robot-brow-right" d="M54 40q7-5 14 0"/>
+    <path class="robot-mouth robot-mouth-smile" d="M39 68q11 12 22 0"/>
+    <path class="robot-mouth robot-mouth-flat" d="M41 70h18"/>
+    <path class="robot-mouth robot-mouth-o" d="M44 68q6-7 12 0q0 9-6 9t-6-9Z"/>
+    <path class="robot-mouth robot-mouth-worried" d="M40 74q10-10 20 0"/>
+    <path class="robot-cheek robot-cheek-left" d="M27 64q5 4 10 0"/><path class="robot-cheek robot-cheek-right" d="M63 64q5 4 10 0"/>
+    <path class="robot-shine" d="M31 30q5-7 12-8"/>
+  </svg>`;
+}
+function setRobotEmotion(emotion='happy'){
+  const allowed=['happy','thinking','celebrate','caring','sleepy','greeting','surprised','motivation','concerned','playful','listening','speaking','analyzing'];
+  const selected=allowed.includes(emotion)?emotion:'happy';
+  $$('#quickHelp .robot-head-svg').forEach(node=>{node.dataset.emotion=selected;});
+  const launcher=$('#quickHelpLauncher');if(launcher)launcher.dataset.emotion=selected;
+}
+function robotReadSettings(){
+  try{
+    const value=JSON.parse(localStorage.getItem(ROBOT_BUDDY_SETTINGS_KEY)||'null');
+    if(value&&typeof value==='object')return value;
+  }catch{}
+  // Migration reads only the old Robot onboarding preference, never learner progress.
+  // This prevents v2.83 users from seeing the first-use Placement question again.
+  try{
+    const legacy=JSON.parse(localStorage.getItem('toeic:robot-companion-onboarding:v1')||'null');
+    const choices={accepted:'start',skipped:'skip',returning:'returning'};
+    if(legacy&&typeof legacy==='object'&&choices[legacy.status]){
+      const migrated={onboardingChoice:choices[legacy.status],muted:false,migratedFrom:'v2.83.0'};
+      localStorage.setItem(ROBOT_BUDDY_SETTINGS_KEY,JSON.stringify({...migrated,updatedAt:Date.now()}));
+      return migrated;
+    }
+  }catch{}
+  return {};
+}
+function robotSaveSettings(patch){
+  const current=robotReadSettings();const next={...current,...patch,updatedAt:Date.now()};
+  try{localStorage.setItem(ROBOT_BUDDY_SETTINGS_KEY,JSON.stringify(next));}catch(error){console.warn('Không thể lưu tùy chọn Robot Buddy:',error);}
+  return next;
+}
+function updateRobotInsightsToggle(){
+  const button=$('#robotInsightsToggle');if(!button)return;
+  const enabled=robotReadSettings().learningInsightsEnabled!==false;
+  button.textContent=enabled?'Phân tích tiến độ: Bật':'Phân tích tiến độ: Tắt';
+  button.setAttribute('aria-pressed',String(enabled));
+}
+function updateRobotMuteToggle(){
+  const button=$('#robotMuteToggle');if(!button)return;
+  const enabled=!robotBuddyMuted;
+  button.textContent=enabled?'Lời nhắc: Bật':'Lời nhắc: Tắt';
+  button.setAttribute('aria-pressed',String(enabled));
+  button.title=enabled?'Tắt lời nhắc tự động':'Bật lời nhắc tự động';
+}
+function toggleRobotInsights(){
+  const enabled=robotReadSettings().learningInsightsEnabled!==false;
+  robotSaveSettings({learningInsightsEnabled:!enabled});updateRobotInsightsToggle();
+  appendRobotMessage('bot',!enabled?'Mình đã bật phân tích tiến độ. Khi bạn hỏi “Tiến độ học của tôi”, mình sẽ đọc các bản ghi trên thiết bị để tổng hợp.':'Mình đã tắt phân tích tiến độ. Mình sẽ không đọc dữ liệu học tập để phân tích nữa, nhưng vẫn trò chuyện và hướng dẫn chức năng bình thường.');
+}
+function appendRobotMessage(role,text,actions=[]){
+  const log=$('#robotChatLog');if(!log)return;
+  const item=document.createElement('article');item.className=`robot-chat-message ${role==='user'?'is-user':'is-bot'}`;
+  if(role!=='user'){
+    const avatar=document.createElement('span');avatar.className='robot-chat-avatar';avatar.innerHTML=robotHeadMarkup();
+    item.append(avatar);
+  }
+  const bubble=document.createElement('div');bubble.className='robot-chat-bubble';
+  const content=document.createElement('p');
+  const message=String(text||'');
+  if(role==='user')content.textContent=message;
+  else{
+    const emphasis=/(Robot Buddy|TOEIC Dictionary|Vũ Nguyễn Hoàng Phúc)/giu;
+    let cursor=0,match;
+    while((match=emphasis.exec(message))){
+      if(match.index>cursor)content.append(document.createTextNode(message.slice(cursor,match.index)));
+      const strong=document.createElement('strong');strong.textContent=match[0];content.append(strong);cursor=match.index+match[0].length;
+    }
+    if(cursor<message.length)content.append(document.createTextNode(message.slice(cursor)));
+  }
+  bubble.append(content);
+  if(Array.isArray(actions)&&actions.length){
+    const actionRow=document.createElement('div');actionRow.className='robot-chat-actions';
+    actions.forEach(action=>{
+      const button=document.createElement('button');button.type='button';button.className='robot-chat-action';button.textContent=action.label||'Mở';
+      if(action.command)button.dataset.robotCommand=action.command;
+      if(action.page)button.dataset.robotPage=action.page;
+      actionRow.append(button);
+    });
+    bubble.append(actionRow);
+  }
+  item.append(bubble);log.append(item);log.scrollTop=log.scrollHeight;
+  return item;
+}
+function appendRobotChoiceButtons(choices){
+  const log=$('#robotChatLog');if(!log)return;
+  const row=document.createElement('div');row.className='robot-onboarding-choices';
+  choices.forEach(choice=>{
+    const button=document.createElement('button');button.type='button';button.className=choice.primary?'robot-chat-action is-primary':'robot-chat-action';
+    button.textContent=choice.label;button.dataset.robotChoice=choice.value;row.append(button);
+  });
+  log.append(row);log.scrollTop=log.scrollHeight;
+}
+function renderRobotQuickPrompts(){
+  const root=$('#robotQuickPrompts');if(!root||!robotBuddyEngine)return;
+  root.innerHTML='';
+  robotBuddyEngine.quickPrompts.slice(0,12).forEach(prompt=>{
+    const button=document.createElement('button');button.type='button';button.className='robot-prompt-chip';button.textContent=prompt.label;button.dataset.robotPrompt=prompt.text;root.append(button);
+  });
+}
+function setRobotTyping(show){
+  const node=$('#robotTyping');if(node)node.hidden=!show;
+  if(show)setRobotEmotion('thinking');
+}
+function getRobotLearningSnapshot(){
+  return {words:state.words,vocabularyProgress:state.progress,flashProgress:state.flashProgress,grammarItems:state.grammarLessons,grammarProgress:state.grammarProgress,readingItems:state.readings,readingProgress:state.readingProgress,listeningItems:state.listening,listeningProgress:state.listeningProgress,foundationItems:state.foundationLessons,foundationProgressMap:state.foundationProgress,foundationReadingItems:state.foundationReadingPassages,foundationReadingProgress:state.foundationReadingProgress,foundationListeningItems:state.foundationListeningClips,foundationListeningProgress:state.foundationListeningProgress,objectiveProgress:state.objectiveProgress,objectiveResourceMap:state.objectiveResourceMap,mockHistory:state.mockHistory};
+}
+function getRobotLearningInsightsNow(){
+  if(robotReadSettings().learningInsightsEnabled===false)return null;
+  return buildRobotLearningInsights(getRobotLearningSnapshot());
+}
+function getRobotInsightActions(insights){
+  if(!insights?.hasEvidence)return [];
+  const routes=[
+    {test:/tu vung/,page:'dictionary',label:'Mở Từ vựng'},
+    {test:/flashcard/,page:'flashcards',label:'Mở Flashcard'},
+    {test:/ngu phap/,page:'grammar',label:'Mở Ngữ pháp'},
+    {test:/doc hieu|reading/,page:'reading',label:'Mở Đọc hiểu'},
+    {test:/nghe hieu|listening/,page:'listening',label:'Mở Nghe hiểu'},
+    {test:/foundation|nen tang|pre a1|a1 |a2 /,page:'foundation',label:'Mở Foundation'},
+    {test:/thi thu|mock/,page:'mock',label:'Mở Thi thử'},
+    {test:/on nho lai|recall/,page:'practice',label:'Mở Ôn tập'}
+  ];
+  const actions=[],seen=new Set();
+  for(const group of ['review','practice','learn']){
+    for(const item of insights.items?.[group]||[]){
+      const area=String(item.area||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+      const route=routes.find(entry=>entry.test.test(area));
+      if(route&&!seen.has(route.page)){
+        seen.add(route.page);actions.push({label:route.label,page:route.page});
+      }
+      if(actions.length>=4)return actions;
+    }
+  }
+  return actions;
+}
+function sendRobotMessage(rawText){
+  const text=String(rawText||'').trim();if(!text||!robotBuddyEngine)return;
+  appendRobotMessage('user',text);
+  const input=$('#robotChatInput');if(input)input.value='';
+  // Keep the quick-prompt menu available during the whole chat session.
+  setRobotTyping(true);
+  if(robotTypingTimer)clearTimeout(robotTypingTimer);
+  const intent=robotBuddyEngine.classify(text);
+  const settings=robotReadSettings();
+  const reply=robotBuddyEngine.reply(text);
+  if(intent.intent==='insights'&&settings.learningInsightsEnabled!==false){
+    const insights=getRobotLearningInsightsNow();
+    reply.text=formatRobotLearningInsights(insights);
+    reply.actions=getRobotInsightActions(insights);
+  }else if(intent.intent==='insights'&&settings.learningInsightsEnabled===false){
+    reply.text='Tính năng phân tích tiến độ đang được tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ” ở phía trên. Mình vẫn hỗ trợ trò chuyện và hướng dẫn sử dụng như bình thường.';
+  }
+  robotTypingTimer=setTimeout(()=>{
+    setRobotTyping(false);setRobotEmotion('speaking');
+    appendRobotMessage('bot',reply.text,reply.actions||[]);
+    if(robotSpeakingTimer)clearTimeout(robotSpeakingTimer);
+    robotSpeakingTimer=setTimeout(()=>setRobotEmotion(reply.emotion||'happy'),650);
+  },320);
+}
+function robotShowWelcome(){
+  const log=$('#robotChatLog');if(!log||robotChatInitialized)return;
+  robotChatInitialized=true;log.innerHTML='';
+  appendRobotMessage('bot','Xin chào! Mình là Robot Buddy 🤖. Mình có thể trò chuyện, giới thiệu chức năng, hướng dẫn bạn sử dụng ứng dụng và đọc tiến độ học được lưu ngay trên thiết bị để gợi ý nội dung cần học, luyện và ôn. Mình không gửi dữ liệu học tập ra ngoài và không phải chatbot AI trực tuyến.');
+  const settings=robotReadSettings();
+  if(!settings.onboardingChoice){
+    appendRobotMessage('bot','Trước khi bắt đầu, bạn có muốn làm bài đánh giá đầu vào có sẵn để tham khảo điểm bắt đầu không?');
+    appendRobotChoiceButtons([
+      {label:'Có, bắt đầu đánh giá',value:'start',primary:true},
+      {label:'Không cần, bỏ qua',value:'skip'}
+    ]);
+  }else{
+    appendRobotMessage('bot',robotBuddyEngine.pick('greeting'));
+    renderRobotQuickPrompts();
+  }
+}
+function setQuickHelpOpen(open){
+  const panel=$('#quickHelpPanel'),launcher=$('#quickHelpLauncher');if(!panel||!launcher)return;
+  panel.hidden=!open;launcher.setAttribute('aria-expanded',String(Boolean(open)));launcher.classList.toggle('is-open',Boolean(open));
+  launcher.title=open?'Ẩn Robot Buddy':'Mở Robot Buddy';
+  if(open){hideRobotIdleNudge();robotShowWelcome();launcher.classList.remove('has-update');setRobotEmotion('greeting');$('#robotChatInput')?.focus({preventScroll:true});}
+  else{scheduleRobotIdle(90000);}
+}
+function toggleQuickHelp(){setQuickHelpOpen($('#quickHelpPanel')?.hidden!==false);}
+function hideRobotIdleNudge(){const node=$('#robotIdleNudge');if(node)node.hidden=true;if(robotNudgeTimer){clearTimeout(robotNudgeTimer);robotNudgeTimer=null;}}
+function robotCanNudge(){
+  if(document.hidden||!document.hasFocus())return false;
+  if(robotBuddyMuted||Date.now()<robotIdleSnoozeUntil)return false;
+  if($('#quickHelp')?.hidden||$('#quickHelpPanel')&&!$('#quickHelpPanel').hidden)return false;
+  if(learningFocusState.active)return false;
+  if(state.activePage==='mock'&&state.mockExam?.status==='active')return false;
+  for(const selector of ['#modalBackdrop','#learningFocusBackdrop','#installInviteBackdrop','#googleSearchBackdrop','#mobileGroupMenu']){
+    const node=$(selector);if(node&&!node.hidden)return false;
+  }
+  const active=document.activeElement;
+  if(active&&active.matches('input,textarea,select,[contenteditable="true"]'))return false;
+  if(window.speechSynthesis?.speaking||window.speechSynthesis?.pending)return false;
+  const now=Date.now();robotIdleNoticeTimes=robotIdleNoticeTimes.filter(time=>now-time<3600000);
+  return robotIdleNoticeTimes.length<3;
+}
+function scheduleRobotIdle(delay=90000){
+  if(robotIdleTimer)clearTimeout(robotIdleTimer);
+  if(robotBuddyMuted)return;
+  const now=Date.now();robotIdleNoticeTimes=robotIdleNoticeTimes.filter(time=>now-time<3600000);
+  if(robotIdleNoticeTimes.length>=3){const wait=Math.max(1000,robotIdleNoticeTimes[0]+3600000-now+1000);robotIdleTimer=setTimeout(()=>scheduleRobotIdle(90000),wait);return;}
+  robotIdleTimer=setTimeout(()=>{
+    if(!robotCanNudge()){scheduleRobotIdle(30000);return;}
+    showRobotIdleNudge();
+  },Math.max(1000,delay));
+}
+function showRobotIdleNudge(){
+  const root=$('#robotIdleNudge'),message=$('#robotIdleMessage');if(!root||!message||!robotBuddyEngine)return;
+  const category=robotIdleStage===0?'caring':robotIdleStage===1?'encouragement':'caring';
+  const insights=getRobotLearningInsightsNow();
+  if(insights?.hasEvidence&&insights.totals.review>0&&robotIdleStage===0){
+    message.textContent=`Bạn đang có ${insights.totals.review} mục đến hạn ôn trên thiết bị. Khi thuận tiện, hãy mở mình và hỏi “Tiến độ học của tôi” nhé!`;
+  }else if(insights?.hasEvidence&&insights.totals.practice>0&&robotIdleStage===1){
+    message.textContent=`Mình thấy có ${insights.totals.practice} mục nên luyện thêm theo kết quả đã lưu. Bạn cứ học từng phần nhỏ nhé!`;
+  }else{message.textContent=robotBuddyEngine.pick(category);}
+  root.hidden=false;setRobotEmotion(robotIdleStage===1?'motivation':'caring');
+  robotIdleNoticeTimes.push(Date.now());robotIdleStage=Math.min(2,robotIdleStage+1);
+  if(robotNudgeTimer)clearTimeout(robotNudgeTimer);
+  robotNudgeTimer=setTimeout(()=>{hideRobotIdleNudge();scheduleRobotIdle(robotIdleStage===1?300000:600000);},14000);
+}
+function robotActivity(event){
+  if(event?.target?.closest?.('#quickHelp'))return;
+  hideRobotIdleNudge();
+  scheduleRobotIdle(90000);
+}
+function initializeRobotIdleWatchers(){
+  const onActivity=event=>robotActivity(event);
+  ['pointerdown','keydown','touchstart','wheel','scroll'].forEach(type=>document.addEventListener(type,onActivity,{passive:true,capture:true}));
+  document.addEventListener('visibilitychange',()=>{hideRobotIdleNudge();if(!document.hidden)scheduleRobotIdle(90000);else if(robotIdleTimer)clearTimeout(robotIdleTimer);});
+  window.addEventListener('focus',()=>scheduleRobotIdle(90000));
+  window.addEventListener('blur',()=>{if(robotIdleTimer)clearTimeout(robotIdleTimer);hideRobotIdleNudge();});
+  scheduleRobotIdle(90000);
+}
+function handleRobotChoice(choice){
+  if(choice!=='start'&&choice!=='skip')return;
+  robotSaveSettings({onboardingChoice:choice,muted:robotBuddyMuted});
+  if(choice==='start'){
+    appendRobotMessage('user','Có, bắt đầu đánh giá đầu vào.');
+    appendRobotMessage('bot','Được rồi! Mình sẽ mở bài Placement hiện có. Đây là bài đánh giá tham khảo để gợi ý điểm bắt đầu, không phải chứng chỉ CEFR hay điểm ETS.');
+    setQuickHelpOpen(false);setTimeout(()=>startPlacementDiagnostic(),250);return;
+  }
+  appendRobotMessage('user','Không cần, bỏ qua.');
+  appendRobotMessage('bot','Không sao cả! Bạn có thể vào học ngay. Khi cần tìm chức năng hoặc muốn trò chuyện, hãy nhấn vào đầu mình nhé.');
+  renderRobotQuickPrompts();
+}
+function handleRobotCommand(command,page=''){
+  if(command==='placement'){setQuickHelpOpen(false);startPlacementDiagnostic();return;}
+  if(page){setQuickHelpOpen(false);navigate(page);return;}
+}
+function handleRobotInput(event){
+  event.preventDefault();const input=$('#robotChatInput');if(!input)return;sendRobotMessage(input.value);
+}
+function initializeRobotCompanion(){
+  if(robotBuddyEngine)return;
+  const response=fetch(releaseDataUrl('./data/robot/robot-library.json'),{cache:'reload'})
+    .then(result=>{if(!result.ok)throw new Error(`HTTP ${result.status}`);return result.json();})
+    .catch(error=>{console.warn('Không tải được thư viện Robot Buddy; dùng bộ câu dự phòng.',error);return null;});
+  return response.then(library=>{
+    robotBuddyEngine=createRobotBuddy(library);
+    const settings=robotReadSettings();robotBuddyMuted=settings.muted===true;
+    updateRobotMuteToggle();updateRobotInsightsToggle();
+    if(!settings.onboardingChoice)setQuickHelpOpen(true);
+    else robotShowWelcome();
+    initializeRobotIdleWatchers();
+  });
+}
+function toggleRobotMute(){
+  robotBuddyMuted=!robotBuddyMuted;robotSaveSettings({muted:robotBuddyMuted});
+  updateRobotMuteToggle();
+  hideRobotIdleNudge();
+  if(robotBuddyMuted&&robotIdleTimer){clearTimeout(robotIdleTimer);robotIdleTimer=null;}
+  if(!robotBuddyMuted)scheduleRobotIdle(90000);
+}
 function detectDeviceProfile(){
   const ua=String(navigator.userAgent||'');
   const uaData=navigator.userAgentData||{};
@@ -2810,5 +3285,5 @@ async function registerSW(){
     return null;
   }
 }
-async function init(){bindEvents();updateDate();renderDeviceGreeting();try{await loadData();await initializePractice();loadMockState();if(state.pendingMockResult&&!state.pendingSinglePractice)showPendingMockResult();}catch(err){console.error(err);$('#metricWords').textContent='!';const status=$('#metricWordsStatus');if(status){status.textContent=`DỮ LIỆU CHƯA ĐỒNG BỘ · ${err.message}`;status.dataset.integrity='mismatch';}toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}await registerSW();initializeInstallInvite();}
+async function init(){bindEvents();updateDate();renderDeviceGreeting();try{await loadData();await initializePractice();loadMockState();if(state.pendingMockResult&&!state.pendingSinglePractice)showPendingMockResult();await initializeRobotCompanion();}catch(err){console.error(err);$('#metricWords').textContent='!';const status=$('#metricWordsStatus');if(status){status.textContent=`DỮ LIỆU CHƯA ĐỒNG BỘ · ${err.message}`;status.dataset.integrity='mismatch';}toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}await registerSW();initializeInstallInvite();}
 init();
