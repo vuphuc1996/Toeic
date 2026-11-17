@@ -21,6 +21,11 @@ progress = recordFoundationProductionAttempt(progress, lesson.id, taskId,
   firstResponse, [true, false, true], 1_800_000_000_000, task.minimumWords);
 progress = recordFoundationProductionRevision(progress, lesson.id, taskId,
   revisedResponse, [true, true, true], [true, true, true], 1_800_000_060_000, task.minimumWords);
+const extendedTask = lesson.additionalProductionTasks?.[0];
+assert.ok(extendedTask, 'each A2 lesson exposes an additional extended writing task');
+const extendedResponse = 'Hi Anna, I have prepared the revised notes for the training session. Could you please check the final page before Friday afternoon? Thank you.';
+progress = recordFoundationProductionAttempt(progress, lesson.id, extendedTask.id,
+  extendedResponse, [true, true, false], 1_800_000_090_000, extendedTask.minimumWords);
 // The historical application key must not leak into the new production portfolio export.
 progress = recordFoundationProductionAttempt(progress, lesson.id, lesson.applicationTask.id,
   'This is a legacy application record and must not be exported.', [true, true, true], 1_800_000_120_000, 3);
@@ -28,13 +33,16 @@ const before = structuredClone(progress);
 const exportText = buildFoundationProductionPortfolioMarkdown(progress, lessons, 1_800_000_180_000);
 
 assert.match(exportText, /^# Foundation A2 — Nhật ký bài viết/m);
-assert.match(exportText, /1\/13/);
+assert.match(exportText, /2\/26/);
 assert.match(exportText, /Tình huống:/);
 assert.match(exportText, /Bạn cần đồng nghiệp gửi biên bản cuộc họp/);
 assert.match(exportText, /Bản đầu tiên/);
 assert.match(exportText, /Bản viết lại 1/);
 assert.ok(exportText.includes(firstResponse));
 assert.ok(exportText.includes(revisedResponse));
+assert.ok(exportText.includes(extendedTask.title));
+assert.ok(exportText.includes(extendedResponse));
+assert.ok(exportText.includes(extendedTask.id));
 assert.match(exportText, /Chi tiết tự đánh giá:[\s\S]*- \[x\]/);
 assert.match(exportText, /Rà soát trước khi viết lại/);
 assert.ok(exportText.includes('Could you please send me the meeting notes before 3 p.m.? Thank you for your help.'));
@@ -44,7 +52,7 @@ assert.match(exportText, /````text[\s\S]*```draft```[\s\S]*````/,
 assert.deepEqual(progress, before, 'export generation must not mutate local learning progress');
 
 const empty = buildFoundationProductionPortfolioMarkdown({}, lessons, 1_800_000_180_000);
-assert.match(empty, /0\/13/);
+assert.match(empty, /0\/26/);
 assert.match(empty, /Chưa có câu trả lời A2 nào được lưu/);
 
 const app = await readFile(new URL('assets/js/app.js', root), 'utf8');

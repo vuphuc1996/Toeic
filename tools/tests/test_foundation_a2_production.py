@@ -46,6 +46,40 @@ class FoundationA2ProductionTests(unittest.TestCase):
                     self.assertIn(feature.casefold(), model)
                 self.assertGreaterEqual(len(task['modelAnswer'].split()), task['minimumWords'])
 
+    def test_thirteen_extended_a2_tasks_have_unique_ids_and_complete_scaffolding(self):
+        registry = json.loads((ROOT / 'tools/foundation-a2-extended-production-v2.88.0.json').read_text(encoding='utf-8'))
+        self.assertEqual(registry['version'], '2.88.0')
+        self.assertEqual(registry['totalA2Lessons'], 13)
+        self.assertTrue(registry['originalProductionTasksPreserved'])
+        self.assertFalse(registry['indexedDbSchemaChanged'])
+        self.assertFalse(registry['learnerProgressMigrated'])
+        rows = {row['lessonId']: row for row in registry['tasks']}
+        self.assertEqual(len(rows), 13)
+        all_ids = []
+        for lesson in self.a2:
+            task = lesson['additionalProductionTasks'][0]
+            all_ids.append(task['id'])
+            with self.subTest(lesson=lesson['id']):
+                self.assertEqual(task['id'], f"{lesson['id']}::produce2")
+                self.assertNotEqual(task['id'], lesson['productionTask']['id'])
+                self.assertNotEqual(task['id'], lesson['applicationTask']['id'])
+                self.assertEqual(task['evidenceType'], 'learner-authored-contextual-production')
+                self.assertEqual(task['reviewState'], 'pending-independent-editorial-review')
+                self.assertEqual(len(task['requirements']), 3)
+                self.assertEqual(len(task['rubric']), 3)
+                self.assertEqual(len(task['revisionChecklist']), 3)
+                self.assertGreaterEqual(task['minimumWords'], 20)
+                self.assertGreaterEqual(len(task['scenario']), 40)
+                self.assertGreaterEqual(len(task['instruction']), 40)
+                self.assertGreaterEqual(len(task['modelAnswer'].split()), task['minimumWords'])
+                for feature in task['requiredFeatures']:
+                    self.assertIn(feature.casefold(), task['modelAnswer'].casefold())
+                canonical = json.dumps(task, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+                self.assertEqual(rows[lesson['id']]['taskId'], task['id'])
+                self.assertEqual(rows[lesson['id']]['sha256'], hashlib.sha256(canonical).hexdigest())
+        self.assertEqual(len(all_ids), len(set(all_ids)))
+        self.assertEqual(sum(1 + len(item.get('additionalProductionTasks', [])) for item in self.a2), 26)
+
     def test_production_evidence_is_additive_and_distinct_from_application(self):
         for lesson in self.a2:
             task = lesson['productionTask']
@@ -91,7 +125,8 @@ class FoundationA2ProductionTests(unittest.TestCase):
         evidence = (ROOT / 'assets/js/foundation-evidence.js').read_text(encoding='utf-8')
         self.assertIn('legacyProductionSaved', app)
         self.assertIn('Bài tự tạo từ phiên bản trước vẫn được giữ', app)
-        self.assertIn('lesson.productionTask?.id || lesson.applicationTask?.id', evidence)
+        self.assertIn('listFoundationProductionTasks', evidence)
+        self.assertIn('additionalProductionTasks', app)
 
     def test_javascript_evidence_and_rendering_contract(self):
         result = subprocess.run(

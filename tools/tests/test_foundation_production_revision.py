@@ -72,6 +72,10 @@ class FoundationProductionRevisionTests(unittest.TestCase):
         self.assertIn('reviewChecks.some(value=>!value)', app)
         self.assertIn('ratings.some(value=>value===null)', app)
         self.assertIn('Bản trước để đối chiếu', app)
+        self.assertIn("const initialResponse=String(saved?.initialResponse||saved?.attempts?.[0]?.response||saved?.latestResponse||'')", app)
+        self.assertIn('const initialRatings=Array.isArray(initialAttempt?.ratings)', app)
+        self.assertIn('escapeHtml(initialResponse)', app)
+        self.assertIn('escapeHtml(latestResponse)', app)
 
     def test_javascript_revision_engine_passes(self):
         result = subprocess.run(

@@ -1,3 +1,14 @@
+## v2.88.0 — Foundation A2 extended writing tasks and portfolio expansion
+
+- Added 13 additional contextual A2 writing tasks, one for each of the 13 A2 lessons. The writing pathway now contains 26 distinct learner-authored production tasks: 13 original `::produce1` tasks and 13 extended `::produce2` tasks.
+- Each extended task uses a separate stable ID and includes a workplace/daily-life scenario, 3–4 sentence-form instruction, three task requirements, a writing frame, minimum 20-word response, three task-specific self-review criteria, a model answer, three guided-revision checks and a topic-specific revision hint.
+- Extended tasks are shown in a collapsed “Thử thách viết mở rộng” section so the existing lesson remains compact. Each task has independent response, self-rating and revision history in the existing `toeic:foundation-progress:v1` ledger.
+- Updated the Foundation A2 writing portfolio, outcome evidence aggregation and Markdown export to recognize both original and extended task IDs. Export remains learner-triggered, local-only and read-only; each task and its revisions are listed independently.
+- Added `tools/foundation-a2-extended-production-v2.88.0.json` with the 13 stable IDs, per-task SHA-256 fingerprints and editorial state. The original v2.78.0 and v2.87.0 scenario baselines remain unchanged.
+- Updated the legacy revision regression to expect a 26-task A2 portfolio and test coexistence of original and extended tasks. The new content, registry hashes, minimum-word gate, export, aggregation, syntax, CI coverage and preservation rules are covered by tests.
+- New extended prompts are explicitly marked `pending-independent-editorial-review`. The A2 pathway is not complete or CEFR-certified: varied Reading/Listening tasks, independent linguistic review and real-learner validation remain open.
+- No IndexedDB schema/store/version migration, localStorage key change, existing task ID replacement, progress reset/overwrite, automated grammar grading, external transfer, vocabulary corpus change, TOEIC question-bank change or Listening reserve approval change.
+
 ## v2.87.0 — Foundation A2 writing portfolio export & task-direction quality repair
 
 - Added a learner-initiated Markdown export to the local A2 writing portfolio. The export contains only saved A2 task context, learner-authored initial responses and revisions, task-specific self-ratings/revision checks, and the authored model answer for reference. It is generated entirely on-device and is not sent to any server or third party.

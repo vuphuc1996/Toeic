@@ -924,7 +924,43 @@
           "Đã thêm lời cảm ơn phù hợp với đồng nghiệp chưa?"
         ],
         "revisionHint": "Sau “Could you please” dùng động từ nguyên mẫu, không thêm “to”. Đặt tài liệu và thời hạn vào câu yêu cầu; kết thúc bằng lời cảm ơn ngắn."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-polite-requests::produce2",
+          "title": "Email yêu cầu đồng nghiệp hỗ trợ",
+          "minimumWords": 20,
+          "scenario": "Bạn đang hoàn tất báo cáo tháng. Bạn cần đồng nghiệp gửi biên bản cuộc họp đã cập nhật trước 3 giờ chiều để kiểm tra các quyết định mới.",
+          "instruction": "Viết email ngắn 3–4 câu cho đồng nghiệp. Đề nghị gửi meeting notes trước thời hạn, giải thích ngắn lý do và kết thúc lịch sự.",
+          "requirements": [
+            "Nêu rõ tài liệu cần nhận là meeting notes đã cập nhật.",
+            "Dùng “Could you please …?” hoặc “Would it be possible …?” để yêu cầu lịch sự.",
+            "Nêu thời hạn before 3 p.m. và cảm ơn người nhận."
+          ],
+          "sentenceFrame": "Hi …, Could you please send me … before …? I need it because … . Thank you for … .",
+          "requiredFeatures": [
+            "could you please",
+            "meeting notes",
+            "before 3 p.m.",
+            "thank you"
+          ],
+          "modelAnswer": "Hi Anna, Could you please send me the updated meeting notes before 3 p.m.? I need them to finish the monthly report. Thank you for your help.",
+          "rubric": [
+            "Tôi nêu rõ tài liệu, người nhận và thời hạn.",
+            "Tôi dùng cấu trúc yêu cầu lịch sự và đúng trật tự từ.",
+            "Email có lý do ngắn gọn và lời kết phù hợp."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Người nhận có hiểu chính xác tài liệu cần gửi không?",
+            "Câu yêu cầu có dùng Could you please hoặc Would it be possible không?",
+            "Thời hạn và lý do có rõ ràng, lịch sự không?"
+          ],
+          "revisionHint": "Đặt yêu cầu chính ở đầu email, dùng động từ nguyên mẫu sau “Could you please”, sau đó thêm thời hạn và một câu giải thích ngắn.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-quantities",
@@ -1036,7 +1072,43 @@
           "Ghi chú có nêu rõ cần bổ sung vật tư không?"
         ],
         "revisionHint": "Kiểm tra từng danh từ trước khi chọn lượng từ: folders đếm được số nhiều, còn printer ink là danh từ không đếm được. Sau đó nói rõ bộ phận mua hàng cần bổ sung gì."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-quantities::produce2",
+          "title": "Ghi chú kiểm kê gửi bộ phận mua hàng",
+          "minimumWords": 20,
+          "scenario": "Phòng hành chính đang chuẩn bị cho khóa đào tạo tuần tới. Kho còn một vài tập hồ sơ, một ít mực in và không đủ giấy để in tài liệu.",
+          "instruction": "Viết ghi chú cho bộ phận mua hàng. Mô tả số lượng còn lại và đề nghị đặt thêm vật tư cho khóa đào tạo.",
+          "requirements": [
+            "Dùng “a few” với folders và “a little” với printer ink.",
+            "Dùng ít nhất một cách diễn đạt số lượng giấy còn thiếu (not enough paper hoặc very little paper).",
+            "Nêu rõ vật tư cần đặt thêm và mục đích sử dụng."
+          ],
+          "sentenceFrame": "There are … left, and there is … . We do not have … . Please order … for … .",
+          "requiredFeatures": [
+            "a few folders",
+            "a little printer ink",
+            "not have enough paper",
+            "please order"
+          ],
+          "modelAnswer": "There are a few folders left, and there is only a little printer ink. We do not have enough paper for the training course. Please order more paper and ink this week.",
+          "rubric": [
+            "Tôi chọn lượng từ phù hợp với danh từ đếm được và không đếm được.",
+            "Tôi mô tả đúng tình trạng vật tư còn lại và phần thiếu.",
+            "Ghi chú nêu rõ yêu cầu mua thêm và thời điểm cần thiết."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "“A few” có đi với danh từ đếm được số nhiều không?",
+            "“A little” có đi với printer ink không đếm được không?",
+            "Vật tư cần đặt thêm và thời điểm có được nêu rõ không?"
+          ],
+          "revisionHint": "Kiểm tra danh từ trước khi chọn lượng từ. Dùng “a few” cho folders, “a little” cho printer ink và “not enough” để nói số lượng chưa đáp ứng nhu cầu.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-comparisons",
@@ -1148,7 +1220,42 @@
           "Các số liệu 2 ngày, 3 ngày và 5 ngày có được dùng đúng không?"
         ],
         "revisionHint": "So sánh thời gian nhỏ hơn nghĩa là nhanh hơn. Dùng “faster than” khi so hai tuyến và “the fastest” khi chọn trong cả ba tuyến."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-comparisons::produce2",
+          "title": "Đề xuất lựa chọn dịch vụ giao hàng",
+          "minimumWords": 20,
+          "scenario": "Nhóm cần chọn một dịch vụ giao hàng. Route A mất 3 ngày và có giá 450,000 VND. Route B mất 2 ngày và có giá 520,000 VND. Route C mất 5 ngày và có giá 380,000 VND.",
+          "instruction": "Viết đề xuất ngắn cho quản lý. So sánh ít nhất hai tuyến về thời gian và giá, sau đó nêu tuyến bạn đề xuất và lý do.",
+          "requirements": [
+            "Dùng một cấu trúc comparative với “than” để so sánh thời gian.",
+            "Dùng một cấu trúc so sánh giá hoặc dùng “the fastest”.",
+            "Đề xuất một tuyến và giải thích bằng dữ liệu đã cho."
+          ],
+          "sentenceFrame": "Route … is … than Route … . It is …, but … . I recommend … because … .",
+          "requiredFeatures": [
+            "faster than",
+            "the fastest",
+            "i recommend"
+          ],
+          "modelAnswer": "Route B is faster than Route A and it is the fastest option. It is more expensive than Route A, but it can deliver the documents in two days. I recommend Route B because time is important for this order.",
+          "rubric": [
+            "Tôi dùng đúng dạng so sánh hơn hoặc so sánh nhất.",
+            "Tôi đối chiếu dữ liệu thời gian/giá chính xác.",
+            "Đề xuất có lý do phù hợp với nhu cầu của nhóm."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Các tuyến có được so sánh đúng theo số ngày và giá không?",
+            "Từ “than” hoặc “the fastest” có được dùng đúng cấu trúc không?",
+            "Lý do chọn tuyến có phù hợp với dữ liệu không?"
+          ],
+          "revisionHint": "Số ngày ít hơn nghĩa là nhanh hơn; giá cao hơn không đồng nghĩa với dịch vụ nhanh hơn. Dùng dữ liệu riêng cho từng phép so sánh.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-past-work-events",
@@ -1260,7 +1367,42 @@
           "Hành động “sent” và người nhận báo cáo có rõ không?"
         ],
         "revisionHint": "Dùng Past Simple cho hành động đã hoàn tất hôm qua. Kiểm tra dạng quá khứ của từng động từ, đặc biệt “write → wrote”, và giữ thứ tự hoàn thành rồi gửi báo cáo."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-past-work-events::produce2",
+          "title": "Báo cáo ngắn về sự cố giao hàng hôm qua",
+          "minimumWords": 20,
+          "scenario": "Hôm qua, nhà cung cấp giao hàng muộn. Nhóm của bạn kiểm tra các thùng hàng, phát hiện hai thùng bị hỏng và báo cho quản lý để xin hàng thay thế.",
+          "instruction": "Viết một báo cáo công việc ngắn 3 câu về sự việc. Kể theo đúng trình tự và nêu hành động tiếp theo đã thực hiện.",
+          "requirements": [
+            "Dùng mốc thời gian “yesterday”.",
+            "Dùng ít nhất hai động từ quá khứ, trong đó có “found” hoặc “told”.",
+            "Nêu vấn đề phát hiện và người đã được thông báo."
+          ],
+          "sentenceFrame": "Yesterday, … . Then, we … . We … the manager and … .",
+          "requiredFeatures": [
+            "yesterday",
+            "found",
+            "told the manager"
+          ],
+          "modelAnswer": "Yesterday, the supplier delivered the order late. We checked the boxes and found two damaged items. I told the manager and asked for replacement items.",
+          "rubric": [
+            "Tôi dùng Past Simple cho các hành động đã kết thúc.",
+            "Tôi kể đúng trình tự giao hàng, kiểm tra và phát hiện vấn đề.",
+            "Báo cáo nêu người nhận thông tin và hành động tiếp theo."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Các động từ chính đã ở dạng quá khứ chưa?",
+            "Sự việc có theo đúng trình tự thời gian không?",
+            "Vấn đề và hành động báo cáo có cụ thể không?"
+          ],
+          "revisionHint": "Dùng Past Simple cho sự việc hôm qua. Chú ý các dạng bất quy tắc như find → found và tell → told.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-present-continuous",
@@ -1372,7 +1514,42 @@
           "Có từ “right now” để thể hiện hành động đang diễn ra không?"
         ],
         "revisionHint": "Với chủ ngữ số ít Mai/Long, dùng “is + V-ing”. Giữ đúng hai hành động đang diễn ra và thêm “right now” để làm rõ thời điểm."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-present-continuous::produce2",
+          "title": "Cập nhật tiến độ trong lúc chuẩn bị đào tạo",
+          "minimumWords": 20,
+          "scenario": "Buổi đào tạo sắp bắt đầu. Mai đang sắp xếp tài liệu, Long đang kiểm tra máy chiếu, hai nhân viên khác đang đón khách tại cửa.",
+          "instruction": "Viết cập nhật 3 câu cho người quản lý về những việc đang diễn ra ngay lúc này. Nêu ít nhất ba hoạt động và một vấn đề đang được xử lý.",
+          "requirements": [
+            "Dùng am/is/are + V-ing cho các hoạt động đang diễn ra.",
+            "Ghép đúng chủ ngữ với is/are.",
+            "Nêu vấn đề hoặc hành động đang được xử lý bằng hiện tại tiếp diễn."
+          ],
+          "sentenceFrame": "Mai is … . Long and … are … . We are … now because … .",
+          "requiredFeatures": [
+            "is arranging",
+            "is checking",
+            "are welcoming"
+          ],
+          "modelAnswer": "Mai is arranging the training materials, and Long is checking the projector. Two staff members are welcoming the guests at the door. We are checking the room now because the session is starting soon.",
+          "rubric": [
+            "Tôi dùng đúng am/is/are + V-ing.",
+            "Tôi chia động từ phù hợp với chủ ngữ số ít và số nhiều.",
+            "Cập nhật mô tả các hoạt động đang diễn ra, không nhầm với thói quen."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Các động từ có đuôi -ing và trợ động từ phù hợp không?",
+            "Mai/Long và two staff members có đi với is/are đúng không?",
+            "Nội dung có mô tả việc đang diễn ra lúc nói không?"
+          ],
+          "revisionHint": "Dùng “is” với Mai hoặc Long; dùng “are” với two staff members. Sau am/is/are, dùng động từ thêm -ing.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-obligation-permission",
@@ -1484,7 +1661,42 @@
           "Điều kiện có nhân viên phụ trách đi cùng đã được nêu chưa?"
         ],
         "revisionHint": "Tách nghĩa vụ và sự cho phép thành hai ý rõ ràng. Sau must/can dùng động từ nguyên mẫu; không bỏ điều kiện cần người phụ trách đi cùng."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-obligation-permission::produce2",
+          "title": "Hướng dẫn quy định cho khách đến văn phòng",
+          "minimumWords": 20,
+          "scenario": "Một nhóm khách mới đến văn phòng để tham dự buổi họp. Họ cần đăng ký tại lễ tân, đeo thẻ khách và chỉ được vào phòng máy chủ khi có nhân viên phụ trách cho phép.",
+          "instruction": "Viết thông báo ngắn cho khách. Nêu các việc bắt buộc, một điều được phép và một khu vực không được tự ý vào.",
+          "requirements": [
+            "Dùng must hoặc have to cho ít nhất một quy định.",
+            "Dùng can để nói về điều được phép.",
+            "Dùng must not/mustn’t cho khu vực hạn chế và giải thích điều kiện đi kèm."
+          ],
+          "sentenceFrame": "Visitors must … . They can … when … . They must not … without … .",
+          "requiredFeatures": [
+            "must register",
+            "can enter",
+            "must not enter"
+          ],
+          "modelAnswer": "Visitors must register at reception and wear a visitor badge. They can enter the meeting rooms when a staff member invites them. They must not enter the server room without permission.",
+          "rubric": [
+            "Tôi phân biệt rõ nghĩa vụ, sự cho phép và điều cấm.",
+            "Tôi dùng động từ nguyên mẫu sau must/can.",
+            "Thông báo nêu đủ điều kiện và dễ hiểu với khách."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Quy định bắt buộc có dùng must hoặc have to không?",
+            "Sự cho phép có dùng can và điều kiện rõ ràng không?",
+            "Khu vực hạn chế có được diễn đạt bằng must not không?"
+          ],
+          "revisionHint": "Không nhầm “must not” (không được phép) với “do not have to” (không bắt buộc). Sau must/can dùng động từ nguyên mẫu.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-directions",
@@ -1596,7 +1808,42 @@
           "Điểm đến có được xác định là “opposite the cafeteria” không?"
         ],
         "revisionHint": "Viết từng bước bằng động từ nguyên mẫu ở đầu câu. Giữ thứ tự di chuyển từ quầy lễ tân và chỉ dùng “opposite” để mô tả vị trí cuối cùng."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-directions::produce2",
+          "title": "Chỉ đường cho khách đến phòng đào tạo",
+          "minimumWords": 20,
+          "scenario": "Một khách đang đứng ở quầy lễ tân tầng một. Phòng đào tạo nằm đối diện căn-tin, gần thang máy phía bên trái hành lang.",
+          "instruction": "Viết chỉ dẫn 4 bước từ quầy lễ tân đến phòng đào tạo. Dùng câu mệnh lệnh và giới từ chỉ vị trí để khách có thể tự tìm đường.",
+          "requirements": [
+            "Mở đầu bằng “Go straight ahead”.",
+            "Có “turn left” và một mốc dễ nhận biết như the lift hoặc the cafeteria.",
+            "Kết thúc bằng vị trí phòng đào tạo đối diện căn-tin."
+          ],
+          "sentenceFrame": "Go … . Turn … at … . Walk … . The training room is … .",
+          "requiredFeatures": [
+            "go straight ahead",
+            "turn left",
+            "opposite the cafeteria"
+          ],
+          "modelAnswer": "Go straight ahead from reception. Turn left at the lift and walk along the corridor. Pass the cafeteria. The training room is opposite the cafeteria, next to the lift.",
+          "rubric": [
+            "Tôi sắp xếp chỉ dẫn theo đúng thứ tự di chuyển.",
+            "Tôi dùng đúng câu mệnh lệnh và từ chỉ hướng.",
+            "Điểm đến và mốc nhận biết được mô tả rõ ràng."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Các bước có bắt đầu từ đúng vị trí quầy lễ tân không?",
+            "Các hướng đi có theo thứ tự và dùng turn/go/walk đúng không?",
+            "Vị trí cuối có đối chiếu với căn-tin không?"
+          ],
+          "revisionHint": "Mỗi bước nên bắt đầu bằng động từ nguyên mẫu. Nêu mốc rẽ trước, sau đó mới mô tả vị trí phòng đích.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-invitations-offers",
@@ -1708,7 +1955,42 @@
           "Hai câu có thể hiện hai mục đích khác nhau và giọng điệu lịch sự không?"
         ],
         "revisionHint": "Không dùng hai mẫu câu như thể chúng cùng một mục đích: “Shall I …?” là đề nghị làm giúp, còn “Would you like …?” là lời mời/đề xuất người kia tham gia."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-invitations-offers::produce2",
+          "title": "Tin nhắn mời đồng nghiệp tham gia buổi rà soát",
+          "minimumWords": 20,
+          "scenario": "Nhóm của bạn chuẩn bị tài liệu cho buổi đào tạo vào thứ Năm. Bạn muốn mời một đồng nghiệp cùng rà soát và đề nghị chuẩn bị bản sao giúp họ.",
+          "instruction": "Viết tin nhắn 3 câu: mời đồng nghiệp tham gia, đề nghị một việc bạn có thể làm giúp và nêu thời gian dự kiến.",
+          "requirements": [
+            "Dùng “Would you like to …?” để mời.",
+            "Dùng “Shall I …?” để đề nghị giúp đỡ.",
+            "Nêu thời gian Thursday afternoon và giữ giọng điệu thân thiện."
+          ],
+          "sentenceFrame": "Would you like to … on …? Shall I … for you? We can … together.",
+          "requiredFeatures": [
+            "would you like to",
+            "shall i",
+            "thursday afternoon"
+          ],
+          "modelAnswer": "Would you like to review the training materials with me on Thursday afternoon? Shall I prepare some extra copies for you? We can check the final pages together.",
+          "rubric": [
+            "Tôi dùng mẫu lời mời và lời đề nghị đúng mục đích.",
+            "Tôi nêu rõ hoạt động và thời gian.",
+            "Tin nhắn tự nhiên, thân thiện và phù hợp nơi làm việc."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Would you like to có mở đầu lời mời không?",
+            "Shall I có nêu việc người nói sẵn sàng làm giúp không?",
+            "Thời gian và hoạt động có rõ ràng không?"
+          ],
+          "revisionHint": "“Would you like to…?” mời người khác tham gia; “Shall I…?” hỏi xem mình có nên làm giúp việc gì. Không đảo lẫn hai mục đích.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-sequencing-instructions",
@@ -1820,7 +2102,43 @@
           "“Finally” có kết thúc bằng việc lưu bản đã duyệt vào shared folder không?"
         ],
         "revisionHint": "Đối chiếu ba từ nối với đúng ba bước của quy trình. Bước cuối chỉ lưu bản đã được duyệt, không lưu bản chưa phê duyệt."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-sequencing-instructions::produce2",
+          "title": "Hướng dẫn gửi và lưu hồ sơ thanh toán",
+          "minimumWords": 20,
+          "scenario": "Nhân viên cần gửi hồ sơ thanh toán chi phí công tác. Quy trình gồm hoàn thành biểu mẫu, đính kèm hóa đơn, gửi quản lý kiểm tra và lưu một bản vào thư mục chung sau khi được duyệt.",
+          "instruction": "Viết hướng dẫn 4 bước cho nhân viên mới. Dùng từ nối chỉ trình tự và làm rõ thời điểm lưu bản cuối.",
+          "requirements": [
+            "Dùng first và next để giới thiệu hai bước đầu.",
+            "Dùng after that để mô tả việc gửi quản lý.",
+            "Dùng finally cho bước lưu bản đã duyệt vào shared folder."
+          ],
+          "sentenceFrame": "First, … . Next, … . After that, … . Finally, … .",
+          "requiredFeatures": [
+            "first",
+            "next",
+            "after that",
+            "finally"
+          ],
+          "modelAnswer": "First, complete the travel expense form. Next, attach all the receipts. After that, send the documents to your manager for approval. Finally, save the approved copy in the shared folder.",
+          "rubric": [
+            "Tôi sử dụng từ nối theo đúng thứ tự quy trình.",
+            "Mỗi bước mô tả một hành động rõ ràng.",
+            "Tôi chỉ lưu bản cuối sau khi được quản lý phê duyệt."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Bốn từ nối có xuất hiện theo đúng thứ tự không?",
+            "Mỗi bước có nêu đúng hành động và đối tượng không?",
+            "Bước cuối có nói rõ đây là bản đã được duyệt không?"
+          ],
+          "revisionHint": "Đối chiếu từng câu với quy trình. Không chuyển bước lưu hồ sơ lên trước bước gửi quản lý phê duyệt.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-plans-and-intentions",
@@ -1931,7 +2249,42 @@
           "Có thông tin chuẩn bị hoặc phối hợp với đồng nghiệp không?"
         ],
         "revisionHint": "Sau “are going to” dùng động từ nguyên mẫu. Nêu thời gian thực hiện và thêm việc chuẩn bị/phối hợp để thông báo có ích cho nhóm."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-plans-and-intentions::produce2",
+          "title": "Thông báo kế hoạch cập nhật hệ thống",
+          "minimumWords": 20,
+          "scenario": "Nhóm đã thống nhất cập nhật hệ thống vào chiều thứ Sáu. Trước khi bắt đầu, dữ liệu cần được sao lưu và các thành viên phải lưu công việc đang làm.",
+          "instruction": "Viết thông báo ngắn gửi cả nhóm. Nêu kế hoạch, người phụ trách một bước chuẩn bị và việc các thành viên cần làm trước thời điểm cập nhật.",
+          "requirements": [
+            "Dùng be going to + động từ nguyên mẫu cho kế hoạch.",
+            "Nêu rõ on Friday afternoon.",
+            "Dùng một câu yêu cầu hoặc hướng dẫn chuẩn bị trước khi cập nhật."
+          ],
+          "sentenceFrame": "We are going to … on … . … is going to … . Please … before then.",
+          "requiredFeatures": [
+            "are going to",
+            "on friday afternoon",
+            "please save"
+          ],
+          "modelAnswer": "We are going to update the system on Friday afternoon. Minh is going to back up the data before the update. Please save your work and close the open files before then.",
+          "rubric": [
+            "Tôi dùng đúng be going to + động từ nguyên mẫu.",
+            "Thông báo nêu thời gian và bước chuẩn bị cụ thể.",
+            "Hướng dẫn cho các thành viên rõ ràng, dễ thực hiện."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Cấu trúc am/is/are going to có đúng với chủ ngữ không?",
+            "Thời gian cập nhật có được nêu rõ không?",
+            "Các bước chuẩn bị có xảy ra trước khi cập nhật không?"
+          ],
+          "revisionHint": "Chọn am/is/are theo chủ ngữ, sau đó dùng động từ nguyên mẫu. Tách kế hoạch chính và việc chuẩn bị thành hai ý.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-present-perfect-experience",
@@ -2043,7 +2396,42 @@
           "Có tránh mốc quá khứ đã kết thúc như yesterday/last week không?"
         ],
         "revisionHint": "Present Perfect dùng have/has + past participle và liên hệ kết quả với hiện tại. Không ghép cấu trúc này với thời điểm quá khứ đã kết thúc; hãy dùng mốc phù hợp hoặc bỏ mốc."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-present-perfect-experience::produce2",
+          "title": "Email cập nhật trạng thái báo cáo",
+          "minimumWords": 20,
+          "scenario": "Bạn đã tải báo cáo đã chỉnh sửa lên thư mục chung. Bạn vẫn chưa nhận được xác nhận từ quản lý và muốn hỏi đồng nghiệp đã kiểm tra số liệu mới chưa.",
+          "instruction": "Viết email cập nhật 3 câu. Nêu việc đã hoàn thành, việc chưa xảy ra và hỏi đồng nghiệp về một kết quả liên quan hiện tại.",
+          "requirements": [
+            "Dùng have/has + past participle cho việc đã hoàn thành.",
+            "Dùng haven’t/hasn’t … yet cho việc chưa xảy ra.",
+            "Đặt câu hỏi Have you …? và không dùng mốc thời gian quá khứ đã kết thúc."
+          ],
+          "sentenceFrame": "I have already … . We have not … yet. Have you …?",
+          "requiredFeatures": [
+            "already uploaded",
+            "have not received",
+            "have you checked"
+          ],
+          "modelAnswer": "I have already uploaded the revised report to the shared folder. We have not received the manager’s approval yet. Have you checked the new figures?",
+          "rubric": [
+            "Tôi dùng đúng have/has + past participle.",
+            "Tôi phân biệt kết quả đã có và việc chưa xảy ra bằng yet.",
+            "Câu hỏi liên hệ tới tình trạng hiện tại và không dùng mốc quá khứ đã kết thúc."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Sau have/has có dùng past participle không?",
+            "Yet có được đặt tự nhiên trong câu phủ định không?",
+            "Có tránh yesterday hoặc last week với Present Perfect không?"
+          ],
+          "revisionHint": "Dùng already cho việc đã hoàn thành, yet cho việc chưa xảy ra hoặc câu hỏi. Kiểm tra dạng quá khứ phân từ sau have/has.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-basic-passive-voice",
@@ -2155,7 +2543,42 @@
           "Sự việc hôm qua có dùng “were replaced” không?"
         ],
         "revisionHint": "Trong câu bị động, dùng be + past participle. Chọn “are” cho hiện tại số nhiều và “were” cho sự việc quá khứ số nhiều; giữ visitor badges làm trọng tâm."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-basic-passive-voice::produce2",
+          "title": "Thông báo quy trình xử lý hóa đơn",
+          "minimumWords": 20,
+          "scenario": "Bộ phận tài chính kiểm tra hóa đơn mỗi buổi sáng. Hóa đơn hợp lệ được gửi đến kế toán. Hôm qua, hai hóa đơn sai thông tin đã được trả lại cho bộ phận gửi.",
+          "instruction": "Viết thông báo 3 câu tập trung vào hóa đơn và quy trình xử lý. Kết hợp câu bị động hiện tại với câu bị động quá khứ.",
+          "requirements": [
+            "Dùng are checked cho quy trình thường xuyên.",
+            "Dùng are sent cho bước tiếp theo.",
+            "Dùng were returned để kể việc đã xảy ra hôm qua."
+          ],
+          "sentenceFrame": "Invoices are … every morning. Approved invoices are … . Yesterday, two invoices were … .",
+          "requiredFeatures": [
+            "are checked",
+            "are sent",
+            "were returned"
+          ],
+          "modelAnswer": "Invoices are checked by the finance team every morning. Approved invoices are sent to accounting. Yesterday, two invoices with incorrect details were returned to the sending department.",
+          "rubric": [
+            "Tôi dùng đúng be + past participle trong câu bị động.",
+            "Tôi chia be đúng theo thì và chủ ngữ số nhiều.",
+            "Thông báo tập trung vào đối tượng nhận hành động và giữ đúng trình tự."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Các chủ ngữ số nhiều có đi với are/were không?",
+            "Sau be có dùng past participle không?",
+            "Câu cuối có dùng were returned cho sự việc hôm qua không?"
+          ],
+          "revisionHint": "Câu bị động dùng be + past participle. Dùng are cho quy trình hiện tại số nhiều và were cho sự việc đã xảy ra trong quá khứ.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     },
     {
       "id": "a2-defining-relative-clauses",
@@ -2267,7 +2690,42 @@
           "Động từ trong mệnh đề quan hệ có hòa hợp với chủ ngữ số ít không?"
         ],
         "revisionHint": "Dùng who cho người và that cho vật trong hai câu này. Kiểm tra chủ ngữ số ít ở mệnh đề quan hệ, chẳng hạn “the colleague who manages” và “the form that …”."
-      }
+      },
+      "additionalProductionTasks": [
+        {
+          "id": "a2-defining-relative-clauses::produce2",
+          "title": "Giới thiệu nhân sự và biểu mẫu cho nhân viên mới",
+          "minimumWords": 20,
+          "scenario": "Một nhân viên mới cần biết ai phụ trách hồ sơ khách hàng và phải sử dụng biểu mẫu nào trên ổ đĩa chung. Bạn cần viết lời giới thiệu ngắn cho họ.",
+          "instruction": "Viết 3 câu giới thiệu đồng nghiệp và chỉ rõ biểu mẫu cần dùng. Dùng who cho người và that/which cho vật.",
+          "requirements": [
+            "Dùng who trong mệnh đề bổ nghĩa cho colleague hoặc technician.",
+            "Dùng that hoặc which để xác định form.",
+            "Nêu nơi lưu biểu mẫu và một hành động nhân viên mới cần thực hiện."
+          ],
+          "sentenceFrame": "The colleague who … is … . Please open the form that … . It … .",
+          "requiredFeatures": [
+            "who manages",
+            "form that",
+            "shared drive"
+          ],
+          "modelAnswer": "The colleague who manages customer records is Lan from Room 4. Please open the form that is on the shared drive. It contains the information that new staff need.",
+          "rubric": [
+            "Tôi dùng who cho người và that/which cho vật.",
+            "Mệnh đề quan hệ xác định đúng người hoặc tài liệu.",
+            "Thông tin hướng dẫn đủ rõ để nhân viên mới thực hiện."
+          ],
+          "evidenceType": "learner-authored-contextual-production",
+          "modelAnswerNote": "Đây là một phương án tham khảo, không phải đáp án duy nhất. Câu trả lời của người học không được ứng dụng chấm tự động.",
+          "revisionChecklist": [
+            "Who có bổ nghĩa cho đúng người không?",
+            "That/which có xác định đúng biểu mẫu hoặc thông tin không?",
+            "Hướng dẫn có nêu nơi lưu và hành động cần làm không?"
+          ],
+          "revisionHint": "Đặt who ngay sau danh từ chỉ người và that/which sau danh từ chỉ vật. Kiểm tra động từ trong mệnh đề quan hệ hòa hợp với chủ ngữ.",
+          "reviewState": "pending-independent-editorial-review"
+        }
+      ]
     }
   ],
   "evidencePolicy": {

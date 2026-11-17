@@ -49,10 +49,14 @@ for (const lessonGroup of [preA1A1, a2]) {
       progress = recordFoundationAttempt(progress, lesson.id, question.id, true, start);
       progress = recordFoundationRecallAttempt(progress, lesson.id, question.id, true, start + 10 * DAY);
     }
-    const taskId = lesson.productionTask?.id || lesson.applicationTask.id;
-    const minimumWords = lesson.productionTask?.minimumWords || 3;
-    progress = recordFoundationProductionAttempt(progress, lesson.id, taskId,
-      'I would like to confirm the meeting schedule today.', [true, true, true], start + 2 * DAY, minimumWords);
+    const tasks = [lesson.productionTask, ...(lesson.additionalProductionTasks || [])].filter(Boolean);
+    if (!tasks.length && lesson.applicationTask) tasks.push(lesson.applicationTask);
+    for (const [taskIndex, task] of tasks.entries()) {
+      const minimumWords = task.minimumWords || 3;
+      const response = taskIndex ? 'I have prepared the updated information for our team meeting today and shared the final document with everyone before lunch this afternoon.' : 'I would like to confirm the meeting schedule today.';
+      progress = recordFoundationProductionAttempt(progress, lesson.id, task.id,
+        response, [true, true, true], start + 2 * DAY + taskIndex, minimumWords);
+    }
   }
 }
 const rows = summarizeFoundationOutcomeProgress(progress, lessons, outcomes, start + 11 * DAY);
@@ -64,11 +68,11 @@ for (const objectiveId of ['foundation-pre-a1-a1', 'foundation-a2']) {
   assert.deepEqual(group.map(row => row.kind).sort(), ['production', 'recognition', 'retention']);
   assert.equal(group.find(row => row.kind === 'recognition').uniqueItems, expectedQuestionCount);
   assert.equal(group.find(row => row.kind === 'retention').uniqueItems, expectedQuestionCount);
-  assert.equal(group.find(row => row.kind === 'production').uniqueItems, expectedLessonCount);
+  assert.equal(group.find(row => row.kind === 'production').uniqueItems, objectiveId === 'foundation-a2' ? 26 : expectedLessonCount);
   assert.ok(group.every(row => row.accuracyPercent === 100));
 }
 const a2Production = rows.find(row => row.objectiveId === 'foundation-a2' && row.kind === 'production');
-assert.equal(a2Production.uniqueItems, 13);
+assert.equal(a2Production.uniqueItems, 26);
 assert.equal(a2Production.selfReportOnly, true, 'production is explicitly learner self-report');
 assert.equal(summarizeFoundationProduction(progress, a2).scorePercent, 100);
 const retention = summarizeFoundationRetention(progress, a2, { now: start + 11 * DAY });

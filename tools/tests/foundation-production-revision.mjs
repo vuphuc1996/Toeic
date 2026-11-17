@@ -89,10 +89,10 @@ portfolioProgress = recordFoundationProductionAttempt(portfolioProgress, task3.i
 portfolioProgress = recordFoundationProductionAttempt(portfolioProgress, task1.id, task1.applicationTask.id,
   'Legacy practice remains separate from the portfolio record.', [true, true, true], 11000, 3);
 const emptyPortfolio = summarizeFoundationProductionPortfolio({}, lessons, { level: 'A2' });
-assert.equal(emptyPortfolio.totalTasks, 13);
+assert.equal(emptyPortfolio.totalTasks, 26, 'A2 portfolio includes 13 original and 13 extended tasks');
 assert.equal(emptyPortfolio.startedTasks, 0);
 const portfolio = summarizeFoundationProductionPortfolio(portfolioProgress, lessons, { level: 'A2' });
-assert.equal(portfolio.totalTasks, 13);
+assert.equal(portfolio.totalTasks, 26, 'extended tasks are available even before the learner starts them');
 assert.equal(portfolio.startedTasks, 3);
 assert.equal(portfolio.revisedTasks, 2);
 assert.equal(portfolio.totalAttempts, 5);
@@ -123,4 +123,4 @@ assert.match(evidence, /assessmentType: 'guided_revision'/);
 assert.match(evidence, /basedOnResponse: previousResponse/);
 assert.match(css, /foundation-revision-workspace/);
 assert.match(css, /foundation-revision-check/);
-console.log('PASS: 13 task-specific revision guides, first/revised response history, review gates, distinct revisions, additive legacy preservation, and no automated grading.');
+console.log('PASS: 13 original task-specific revision guides, 26-task portfolio, first/revised response history, review gates, distinct revisions, additive legacy preservation, and no automated grading.');

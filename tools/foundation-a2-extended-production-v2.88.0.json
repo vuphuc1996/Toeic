@@ -1,0 +1,117 @@
+{
+  "version": "2.88.0",
+  "baselineVersion": "2.87.0",
+  "changeType": "additive-a2-extended-production",
+  "scope": "13 additive extended writing tasks; existing productionTask/applicationTask IDs and content remain unchanged",
+  "reviewPolicy": "Practice-ready draft; independent linguistic/editorial review remains required before A2 completion or certification claims.",
+  "totalA2Lessons": 13,
+  "originalProductionTasksPreserved": true,
+  "indexedDbSchemaChanged": false,
+  "learnerProgressMigrated": false,
+  "tasks": [
+    {
+      "lessonId": "a2-polite-requests",
+      "taskId": "a2-polite-requests::produce2",
+      "title": "Email yêu cầu đồng nghiệp hỗ trợ",
+      "minimumWords": 20,
+      "sha256": "3a83d2b0c1f2e2437ccb3b64df23121c9e57fd315b2c32b6a1d9d19a7ba0e060",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-quantities",
+      "taskId": "a2-quantities::produce2",
+      "title": "Ghi chú kiểm kê gửi bộ phận mua hàng",
+      "minimumWords": 20,
+      "sha256": "8b4cac8725f0764e4420536e8ced3e4a9748d7a85a83026e62a3f3ad45fff918",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-comparisons",
+      "taskId": "a2-comparisons::produce2",
+      "title": "Đề xuất lựa chọn dịch vụ giao hàng",
+      "minimumWords": 20,
+      "sha256": "c6f730e259ad6b54414d76a97ae9374e2425d8437e753474c98a28f3b2365df9",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-past-work-events",
+      "taskId": "a2-past-work-events::produce2",
+      "title": "Báo cáo ngắn về sự cố giao hàng hôm qua",
+      "minimumWords": 20,
+      "sha256": "7030920e8f3a14b9ef2364540f9b88e03f1a3cee062f1bee80c92464835f4274",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-present-continuous",
+      "taskId": "a2-present-continuous::produce2",
+      "title": "Cập nhật tiến độ trong lúc chuẩn bị đào tạo",
+      "minimumWords": 20,
+      "sha256": "9d5bab219c68ed0fcefd3a0937eaf561f51110a249ad1dc07446f29b7440b772",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-obligation-permission",
+      "taskId": "a2-obligation-permission::produce2",
+      "title": "Hướng dẫn quy định cho khách đến văn phòng",
+      "minimumWords": 20,
+      "sha256": "df378dc5f8e3a31422a10cdf1019a8cfbde10f58836c791cae7586387b8f0c0d",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-directions",
+      "taskId": "a2-directions::produce2",
+      "title": "Chỉ đường cho khách đến phòng đào tạo",
+      "minimumWords": 20,
+      "sha256": "e42b6df747df43869c5c89354ddfcc5aa4437450fcc50b1535c54f600b3604fd",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-invitations-offers",
+      "taskId": "a2-invitations-offers::produce2",
+      "title": "Tin nhắn mời đồng nghiệp tham gia buổi rà soát",
+      "minimumWords": 20,
+      "sha256": "5f74799be7630654b235b6453a8d4bd622bcc218207010c271c81cf61b3af842",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-sequencing-instructions",
+      "taskId": "a2-sequencing-instructions::produce2",
+      "title": "Hướng dẫn gửi và lưu hồ sơ thanh toán",
+      "minimumWords": 20,
+      "sha256": "e7ba46a1802e9748a7673e24f30f36151a50c9711a19300e4dce3184ef9479ca",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-plans-and-intentions",
+      "taskId": "a2-plans-and-intentions::produce2",
+      "title": "Thông báo kế hoạch cập nhật hệ thống",
+      "minimumWords": 20,
+      "sha256": "3b0e9ebee1a2bccaedc2101d02bfe23988a841676df70a5d72943c977a2edaee",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-present-perfect-experience",
+      "taskId": "a2-present-perfect-experience::produce2",
+      "title": "Email cập nhật trạng thái báo cáo",
+      "minimumWords": 20,
+      "sha256": "33a73f1e59e6fe6c815b76bc4065b436710ea92a5b21d11b628284a246ef568d",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-basic-passive-voice",
+      "taskId": "a2-basic-passive-voice::produce2",
+      "title": "Thông báo quy trình xử lý hóa đơn",
+      "minimumWords": 20,
+      "sha256": "7f813be48ee443f6f22fa2323dd46a3f4aaf56c0fddd715c0170363fe008d1be",
+      "reviewState": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-defining-relative-clauses",
+      "taskId": "a2-defining-relative-clauses::produce2",
+      "title": "Giới thiệu nhân sự và biểu mẫu cho nhân viên mới",
+      "minimumWords": 20,
+      "sha256": "41f5bb00aa6b8813d076525d9fbdb0460d38fa5f6841f110a5a545b01a76e3a7",
+      "reviewState": "pending-independent-editorial-review"
+    }
+  ]
+}

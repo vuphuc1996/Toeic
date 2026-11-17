@@ -64,14 +64,22 @@ assert.equal(progress[target.id].productionEvidence[productionId].latestWordCoun
 assert.equal(progress[target.id].productionEvidence[productionId].minimumWords, 8);
 assert.equal(summarizeFoundationProduction(progress, [target]).uniqueItems, 1);
 assert.equal(summarizeFoundationProduction(progress, [target]).scorePercent, 67);
+const extendedTask = target.additionalProductionTasks[0];
+const extendedDraft = 'I have prepared the updated meeting notes and shared the final document with the training team this afternoon before the review meeting.';
+progress = recordFoundationProductionAttempt(progress, target.id, extendedTask.id,
+  extendedDraft, [true, true, true], 3500, extendedTask.minimumWords);
+assert.equal(progress[target.id].productionEvidence[extendedTask.id].latestResponse, extendedDraft);
+assert.equal(summarizeFoundationProduction(progress, [target]).uniqueItems, 2);
+assert.deepEqual(progress[target.id].productionEvidence[applicationId], legacySaved,
+  'the legacy application evidence remains separate after additional production is recorded');
 
 const outcomeRegistry = { objectives: [{
   objectiveId: 'foundation-a2',
   outcomes: [{ id: 'foundation-a2-production', title: 'Production', evidenceMetric: 'self_report', minimumUniqueItems: 1, masteryThreshold: 0.8 }]
 }] };
 const outcome = summarizeFoundationOutcomeProgress(progress, [target], outcomeRegistry)[0];
-assert.equal(outcome.uniqueItems, 1);
-assert.equal(outcome.accuracyPercent, 67);
+assert.equal(outcome.uniqueItems, 2);
+assert.equal(outcome.accuracyPercent, 83);
 assert.equal(outcome.selfReportOnly, true);
 
 const app = await readFile(new URL('assets/js/app.js', root), 'utf8');
@@ -80,10 +88,18 @@ const css = await readFile(new URL('assets/css/app.css', root), 'utf8');
 assert.match(app, /function renderFoundationProductionSection\(/);
 assert.match(app, /data-foundation-production-count/);
 assert.match(app, /<details class="foundation-production-model"/);
-assert.match(app, /lesson\.productionTask\?\.id\|\|lesson\.applicationTask\.id/);
+assert.match(app, /function foundationProductionTasks\(/);
+assert.match(app, /additionalProductionTasks/);
+assert.match(app, /foundation-production-extension/);
+assert.match(app, /foundationProductionFieldKey\(lessonId,taskId\)/);
+assert.ok(app.includes("const initialResponse=String(saved?.initialResponse||saved?.attempts?.[0]?.response||saved?.latestResponse||'')"));
+assert.match(app, /const initialRatings=Array\.isArray\(initialAttempt\?\.ratings\)/);
+assert.match(app, /escapeHtml\(initialResponse\)/);
+assert.match(app, /escapeHtml\(latestResponse\)/);
+assert.match(app, /findFoundationProductionTask\(lesson,taskId\)/);
 assert.match(app, /Date\.now\(\),minimumWords/);
 assert.match(evidence, /Math\.max\(3, Math\.min\(60, Number\(minimumWords\) \|\| 3\)\)/);
-assert.match(evidence, /lesson\.productionTask\?\.id \|\| lesson\.applicationTask\?\.id/);
+assert.match(evidence, /listFoundationProductionTasks/);
 assert.match(css, /foundation-production-context/);
 assert.match(css, /foundation-production-word-count/);
-console.log('PASS: 13 contextual A2 production tasks, hidden model answers, tailored self-check rubrics, minimum word gate, and legacy evidence preservation.');
+console.log('PASS: 13 original and 13 extended A2 writing tasks, independent task IDs, tailored rubrics, minimum word gates, and legacy evidence preservation.');

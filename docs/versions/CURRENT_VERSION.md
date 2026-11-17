@@ -1,7 +1,7 @@
 # Current Version
 
-- Current source: v2.87.0 — Foundation A2 writing portfolio export & task-direction quality repair.
-- Based on: v2.86.0.
-- Release package: `TOEIC_Dictionary_v2.87.0_FullSource.zip`.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.87.0.md`.
-- Foundation A2 writing report: `reports/FOUNDATION_A2_WRITING_PORTFOLIO_v2.87.0.md`.
+- Current source: v2.88.0 — Foundation A2 extended writing tasks and portfolio expansion.
+- Based on: v2.87.0.
+- Release package: `TOEIC_Dictionary_v2.88.0_FullSource.zip`.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.88.0.md`.
+- Foundation A2 extended writing report: `reports/FOUNDATION_A2_EXTENDED_WRITING_v2.88.0.md`.

@@ -2,13 +2,13 @@
 
 > One active register for release support, storage/data contracts and retirement decisions.
 
-## Current support window — 2026-11-16
+## Current support window — 2026-11-17
 
 | Role | Version | Policy |
 |---|---|---|
-| Previous release | v2.82.1 | Preserves v2.79 feature-level Google AI and Mock Exam icons; removes Quick Help prefix/masked-letter search. |
-| Current product source | v2.83.0 | Adds local Robot Buddy onboarding/progress feedback, removes the usage guide and all Quick Help word search, retains the entire v2.79 Google AI scope and Mock Exam icons. |
-| Older releases | ≤ v2.82.0 | Historical; prototype behavior and scope corrections are consolidated in `archive/PROJECT_HISTORY.md` and `CHANGELOG.md`. |
+| Previous release | v2.87.0 | Adds device-local A2 writing portfolio Markdown export and repairs the polite-request task scenario direction. |
+| Current product source | v2.88.0 | Adds 13 extended A2 writing production tasks (26 in total) with separate stable IDs, independent self-report/revision evidence, and portfolio/export aggregation. |
+| Older releases | ≤ v2.86.0 | Historical; prototype behavior and scope corrections are consolidated in `archive/PROJECT_HISTORY.md` and `CHANGELOG.md`. |
 
 - **SW002 repair:** `assets/js/learning-assistant.js` (active local Robot Buddy summary) and `assets/js/quick-help.js` (no-op compatibility tombstone) are present in both Service Worker `REQUIRED` and `APP_SHELL`. This directly addresses SW002 for these asset paths in an overlay update. Cache version is synced to `data/manifest.json`.
 - **CI contract:** `tools/tests/learning-assistant.mjs`, `tools/tests/quick-help.mjs` and `tools/tests/legacy-google-ai.mjs` are all invoked in `.github/workflows/validate-data.yml`; the CI coverage test enforces every JavaScript regression file is called.
@@ -60,3 +60,5 @@
 
 - Legacy GAS/iframe/cloud-backend proposals remain historical.
 - Do not create duplicate canonical runtime data, standalone roadmap/master or feature-specific design system copies.
+
+- v2.88.0 adds an `additionalProductionTasks` array to each of the 13 A2 lesson records. It appends one independent `::produce2` task to the existing `::produce1` task; no original lesson/task ID or existing `productionEvidence` entry is repurposed. Both task histories are stored as sibling properties in the existing `toeic:foundation-progress:v1` localStorage ledger. Portfolio/export/evidence aggregation enumerate both authored task IDs while continuing to exclude legacy `::apply1` application evidence from A2 production reporting. All extended tasks have a 20-word minimum and remain `pending-independent-editorial-review`. No new storage key, IndexedDB database/store/version, migration or remote sync is introduced.

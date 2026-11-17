@@ -13,7 +13,7 @@ import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrit
 import { createRobotBuddy } from './robot-buddy.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.87.0';
+const APP_RELEASE_VERSION = '2.88.0';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -2051,6 +2051,15 @@ function finalizePlacementDiagnostic(){
 }
 function applyPlacementLevel(level){if(!['PRE-A1','A1','A2','B1'].includes(level))return;state.foundationStartLevel=level;try{localStorage.setItem('toeic:learning-start-level:v1',level);}catch{}closeLearningFocus();renderFoundationPath();toast(`Đã đặt điểm bắt đầu ${level}.`);}
 
+function foundationProductionTasks(lesson){
+ const tasks=[lesson?.productionTask,...(Array.isArray(lesson?.additionalProductionTasks)?lesson.additionalProductionTasks:[])].filter(task=>task&&typeof task==='object'&&String(task.id||'').trim());
+ const unique=[...new Map(tasks.map(task=>[String(task.id),task])).values()];
+ return unique.length?unique:(lesson?.applicationTask?[lesson.applicationTask]:[]);
+}
+function foundationProductionFieldKey(lessonId,taskId){
+ return `foundation-production-${String(lessonId||'').replace(/[^a-zA-Z0-9_-]/g,'-')}-${String(taskId||'').replace(/[^a-zA-Z0-9_-]/g,'-')}`;
+}
+
 function renderFoundationPath(){
  const rank={'PRE-A1':0,'A1':1,'A2':2,'B1':3,'B2':4,'C1':5};
  const selector=$('#foundationStartLevel');if(selector)selector.value=state.foundationStartLevel||'ALL';
@@ -2081,8 +2090,9 @@ function renderFoundationPath(){
    const applicationStatus=application.uniqueTasks?`Vận dụng: ${application.accuracyPercent}% đúng gần nhất`:'Vận dụng: chưa thực hiện';
    const readingStatus=reading.uniqueQuestions?`Đọc hiểu: ${reading.uniqueQuestions}/${readingTarget} câu · ${reading.accuracyPercent}% (ngưỡng ${Math.round(reading.threshold*100)}%)`:'Đọc hiểu: chưa thực hiện';
    const listeningStatus=listening.uniqueQuestions?`Nghe hiểu: ${listening.uniqueQuestions}/${listeningTarget} câu · ${listening.accuracyPercent}% (ngưỡng ${Math.round(listening.threshold*100)}%)`:'Nghe hiểu: chưa thực hiện';
-   const productionSaved=lesson.applicationTask?state.foundationProgress[lesson.id]?.productionEvidence?.[lesson.applicationTask.id]:null;
-   const productionStatus=productionSaved?`Tự tạo câu: ${productionSaved.latestScore}/3 tự đánh giá`:'Tự tạo câu: chưa đánh giá';
+   const productionTasks=foundationProductionTasks(lesson);
+   const completedProductionTasks=productionTasks.filter(task=>Number.isFinite(Number(state.foundationProgress[lesson.id]?.productionEvidence?.[task.id]?.latestScore))).length;
+   const productionStatus=productionTasks.length?`Tự tạo câu: ${completedProductionTasks}/${productionTasks.length} nhiệm vụ có tự đánh giá`:'Tự tạo câu: chưa có nhiệm vụ';
    const recallDue=listDueFoundationRecallItems(state.foundationProgress,[lesson]).length;
    const recallStatus=recallDue?`Ôn lại: ${recallDue} câu đến hạn`:'Ôn lại: theo lịch';
    return `<article class="learning-card foundation-card"><div class="learning-card-top"><span class="learning-category">Bài ${String(index+1).padStart(2,'0')}</span><span class="learning-level">${escapeHtml(lesson.level)}</span></div><h3>${escapeHtml(lesson.title)}</h3><p>${escapeHtml(lesson.objective)}</p><div class="foundation-card-evidence"><span>${recognitionStatus}</span><span>${applicationStatus}</span><span>${readingStatus}</span><span>${listeningStatus}</span><span>${productionStatus}</span><span>${recallStatus}</span></div><div class="learning-card-footer foundation-card-footer"><small>${evidence.uniqueQuestions} câu nhận biết độc lập</small><button type="button" class="secondary-button" data-foundation-open="${escapeHtml(lesson.id)}">${evidence.uniqueQuestions?'Tiếp tục ôn':'Bắt đầu học'} →</button></div></article>`;
@@ -2156,10 +2166,12 @@ function playAlphabetSound(button){
  if(summaryNode)summaryNode.textContent=`${summary.practicedLetters}/${summary.expectedLetters} chữ đã luyện · ${summary.completedPairs}/${summary.expectedLetters} cặp đã chọn nghe đủ`;
 }
 
-function renderFoundationProductionSection(lesson, application, saved, legacySaved=null){
+function renderFoundationProductionSection(lesson, application, saved, legacySaved=null, taskOverride=null, taskIndex=0){
  if(!application)return '';
- const task=lesson.productionTask||null,taskId=task?.id||application.id;
+ const task=taskOverride||lesson.productionTask||null,taskId=task?.id||application.id;
  const minimumWords=Math.max(3,Number(task?.minimumWords)||3);
+ const fieldKey=foundationProductionFieldKey(lesson.id,taskId);
+ const responseId=`${fieldKey}-response`,revisionResponseId=`${fieldKey}-revision-response`;
  const rubric=Array.isArray(task?.rubric)&&task.rubric.length===3?task.rubric:[
   'Tôi giải thích được vì sao cấu trúc phù hợp với ý định',
   'Tôi chỉ ra được vì sao cách diễn đạt khác không phù hợp',
@@ -2167,15 +2179,22 @@ function renderFoundationProductionSection(lesson, application, saved, legacySav
  ];
  const requirements=(task?.requirements||[]).map(item=>`<li>${escapeHtml(item)}</li>`).join('');
  const contextHtml=task?`<div class="foundation-production-context"><div><strong>Bối cảnh</strong><p>${escapeHtml(task.scenario)}</p></div><div><strong>Nhiệm vụ</strong><p>${escapeHtml(task.instruction)}</p></div>${requirements?`<div><strong>Yêu cầu cần có</strong><ul>${requirements}</ul></div>`:''}${task.sentenceFrame?`<div class="foundation-production-frame"><strong>Khung gợi ý</strong><p>${escapeHtml(task.sentenceFrame)}</p></div>`:''}${task.modelAnswer?`<details class="foundation-production-model"><summary>Gợi ý tham khảo (chỉ mở sau khi bạn tự viết)</summary><p>${escapeHtml(task.modelAnswer)}</p><small>${escapeHtml(task.modelAnswerNote||'Đây là ví dụ tham khảo, không phải đáp án duy nhất.')}</small></details>`:''}</div>`:'';
- const count=String(saved?.latestResponse||'').trim().split(/\s+/).filter(Boolean).length;
- const legacyNotice=task&&legacySaved&&!saved?'<p class="placement-disclaimer">Bài tự tạo từ phiên bản trước vẫn được giữ trong dữ liệu học tập trên thiết bị. Bài tập theo tình huống A2 này có mã ghi nhận riêng nên cần thực hiện lại để được tính vào bằng chứng mới.</p>':'';
- const rubricHtml=rubric.map((label,index)=>`<div class="foundation-production-rubric-row"><strong>${index+1}. ${escapeHtml(label)}</strong><label><input type="radio" name="foundation-production-${escapeHtml(lesson.id)}-${index}" value="yes" ${saved?.latestRatings?.[index]===true?'checked':''}> Có</label><label><input type="radio" name="foundation-production-${escapeHtml(lesson.id)}-${index}" value="no" ${saved?.latestRatings?.[index]===false?'checked':''}> Chưa chắc</label></div>`).join('');
+ const initialResponse=String(saved?.initialResponse||saved?.attempts?.[0]?.response||saved?.latestResponse||'');
+ const latestResponse=String(saved?.latestResponse||initialResponse);
+ const initialAttempt=(saved?.attempts||[]).find(item=>item?.response===initialResponse)||saved?.attempts?.[0]||null;
+ const initialRatings=Array.isArray(initialAttempt?.ratings)&&initialAttempt.ratings.length===3?initialAttempt.ratings:(saved?.latestRatings||[]);
+ const count=initialResponse.trim().split(/\s+/).filter(Boolean).length;
+ const latestCount=latestResponse.trim().split(/\s+/).filter(Boolean).length;
+ const legacyNotice=taskIndex===0&&task&&legacySaved&&!saved?'<p class="placement-disclaimer">Bài tự tạo từ phiên bản trước vẫn được giữ trong dữ liệu học tập trên thiết bị. Bài tập theo tình huống A2 này có mã ghi nhận riêng nên cần thực hiện lại để được tính vào bằng chứng mới.</p>':'';
+ const rubricHtml=rubric.map((label,index)=>`<div class="foundation-production-rubric-row"><strong>${index+1}. ${escapeHtml(label)}</strong><label><input type="radio" name="${fieldKey}-self-${index}" value="yes" ${initialRatings?.[index]===true?'checked':''}> Có</label><label><input type="radio" name="${fieldKey}-self-${index}" value="no" ${initialRatings?.[index]===false?'checked':''}> Chưa chắc</label></div>`).join('');
  const revisionChecklist=Array.isArray(task?.revisionChecklist)&&task.revisionChecklist.length===3?task.revisionChecklist:[];
  const revisionChecksHtml=revisionChecklist.map((label,index)=>`<label class="foundation-revision-check"><input type="checkbox" data-foundation-revision-check value="${index}" ${saved?.latestRevisionChecks?.[index]===true?'checked':''}><span><strong>${escapeHtml(label)}</strong><small>Đã tự đối chiếu yêu cầu này</small></span></label>`).join('');
- const revisionRubricHtml=rubric.map((label,index)=>`<div class="foundation-production-rubric-row"><strong>${index+1}. ${escapeHtml(label)}</strong><label><input type="radio" name="foundation-revision-${escapeHtml(lesson.id)}-${index}" value="yes" ${saved?.latestRatings?.[index]===true?'checked':''}> Có</label><label><input type="radio" name="foundation-revision-${escapeHtml(lesson.id)}-${index}" value="no" ${saved?.latestRatings?.[index]===false?'checked':''}> Chưa chắc</label></div>`).join('');
+ const revisionRubricHtml=rubric.map((label,index)=>`<div class="foundation-production-rubric-row"><strong>${index+1}. ${escapeHtml(label)}</strong><label><input type="radio" name="${fieldKey}-revision-${index}" value="yes" ${saved?.latestRatings?.[index]===true?'checked':''}> Có</label><label><input type="radio" name="${fieldKey}-revision-${index}" value="no" ${saved?.latestRatings?.[index]===false?'checked':''}> Chưa chắc</label></div>`).join('');
  const previousRevisionSource=saved?.lastRevisionSource||saved?.initialResponse||saved?.latestResponse||'';
- const revisionHtml=saved&&revisionChecklist.length?`<details class="foundation-revision-workspace" open><summary>Rà soát và viết lại bản câu <span>${Number(saved.revisionCount)||0} lượt sửa</span></summary><div class="foundation-revision-body"><div class="foundation-revision-previous"><strong>Bản trước để đối chiếu</strong><p>${escapeHtml(previousRevisionSource)}</p></div><div class="foundation-revision-checklist"><strong>Tự rà soát từng yêu cầu</strong>${revisionChecksHtml}</div><div class="foundation-revision-hint"><strong>Gợi ý sửa theo chủ điểm</strong><p>${escapeHtml(task.revisionHint||'Đối chiếu từng yêu cầu với câu trả lời rồi viết lại cho rõ nghĩa.')}</p></div><label class="foundation-production-label" for="foundationRevisionResponse">Bản viết lại của bạn</label><textarea id="foundationRevisionResponse" class="foundation-production-textarea" maxlength="500" rows="4" data-foundation-revision-text placeholder="Rewrite your response here...">${escapeHtml(saved.latestResponse||'')}</textarea><p class="foundation-production-word-count" data-foundation-revision-count>${count}/${minimumWords} từ tối thiểu${count>=minimumWords?' · Đủ độ dài':''}</p><div class="foundation-production-rubric"><strong class="foundation-production-rubric-title">Tự đánh giá bản viết lại</strong>${revisionRubricHtml}</div><button type="button" class="primary-button" data-foundation-production-revision-save data-foundation-id="${escapeHtml(lesson.id)}" data-foundation-task-id="${escapeHtml(taskId)}">Lưu bản viết lại</button><p class="placement-disclaimer">Mỗi lần sửa được lưu thành một lượt riêng, gồm bản dựa trên, bản viết lại và tự đánh giá. Ứng dụng không tự chấm đúng/sai về ngôn ngữ.</p></div></details>`:'';
- return `<section class="detail-section foundation-production" data-foundation-production="${escapeHtml(taskId)}" data-minimum-words="${minimumWords}"><h4>TỰ TẠO CÂU / SẢN SINH NGÔN NGỮ</h4>${legacyNotice}<p>Viết câu trả lời theo tình huống và tự kiểm tra ba tiêu chí. Ứng dụng không tự chấm ngữ pháp; câu trả lời và tự đánh giá chỉ được lưu trên thiết bị này.</p>${contextHtml}<label class="foundation-production-label" for="foundationProductionResponse">Câu trả lời tiếng Anh của bạn</label><textarea id="foundationProductionResponse" class="foundation-production-textarea" maxlength="500" rows="4" data-foundation-production-text placeholder="Write your own response in English...">${escapeHtml(saved?.latestResponse||'')}</textarea><p class="foundation-production-word-count" data-foundation-production-count>${count}/${minimumWords} từ tối thiểu${count>=minimumWords?' · Đủ độ dài':''}</p><div class="foundation-production-rubric"><strong class="foundation-production-rubric-title">Tự kiểm tra trước khi lưu</strong>${rubricHtml}</div><button type="button" class="secondary-button" data-foundation-production-save data-foundation-id="${escapeHtml(lesson.id)}" data-foundation-task-id="${escapeHtml(taskId)}">Lưu câu và tự đánh giá</button><p class="placement-disclaimer" data-foundation-production-summary>${saved?`Lần gần nhất: ${saved.latestScore}/3 tiêu chí · ${saved.latestWordCount} từ · ${saved.attempts?.length||1} lượt · ${Number(saved.revisionCount)||0} lần viết lại. Đây là tự đánh giá, không phải kết quả chấm tự động.`:`Tối thiểu ${minimumWords} từ. Hệ thống giữ câu mới nhất và lịch sử tự đánh giá; không gửi câu trả lời lên máy chủ.`}</p>${revisionHtml}</section>`;
+ const revisionHtml=saved&&revisionChecklist.length?`<details class="foundation-revision-workspace" open><summary>Rà soát và viết lại <span>${Number(saved.revisionCount)||0} lượt sửa</span></summary><div class="foundation-revision-body"><div class="foundation-revision-previous"><strong>Bản trước để đối chiếu</strong><p>${escapeHtml(previousRevisionSource)}</p></div><div class="foundation-revision-checklist"><strong>Tự rà soát từng yêu cầu</strong>${revisionChecksHtml}</div><div class="foundation-revision-hint"><strong>Gợi ý sửa theo chủ điểm</strong><p>${escapeHtml(task.revisionHint||'Đối chiếu từng yêu cầu với câu trả lời rồi viết lại cho rõ nghĩa.')}</p></div><label class="foundation-production-label" for="${revisionResponseId}">Bản viết lại của bạn</label><textarea id="${revisionResponseId}" class="foundation-production-textarea" maxlength="500" rows="4" data-foundation-revision-text placeholder="Rewrite your response here...">${escapeHtml(latestResponse)}</textarea><p class="foundation-production-word-count" data-foundation-revision-count>${latestCount}/${minimumWords} từ tối thiểu${latestCount>=minimumWords?' · Đủ độ dài':''}</p><div class="foundation-production-rubric"><strong class="foundation-production-rubric-title">Tự đánh giá bản viết lại</strong>${revisionRubricHtml}</div><button type="button" class="primary-button" data-foundation-production-revision-save data-foundation-id="${escapeHtml(lesson.id)}" data-foundation-task-id="${escapeHtml(taskId)}">Lưu bản viết lại</button><p class="placement-disclaimer">Mỗi lần sửa được lưu thành một lượt riêng, gồm bản dựa trên, bản viết lại và tự đánh giá. Ứng dụng không tự chấm đúng/sai về ngôn ngữ.</p></div></details>`:'';
+ const heading=taskIndex===0?'TỰ TẠO CÂU / SẢN SINH NGÔN NGỮ':'THỬ THÁCH VIẾT MỞ RỘNG';
+ const title=task?.title?`<h5 class="foundation-production-task-title">${escapeHtml(task.title)}</h5>`:'';
+ return `<section class="detail-section foundation-production ${taskIndex>0?'foundation-production-extended':''}" data-foundation-production="${escapeHtml(taskId)}" data-minimum-words="${minimumWords}"><h4>${heading}</h4>${title}${legacyNotice}<p>${taskIndex===0?'Viết câu trả lời theo tình huống và tự kiểm tra ba tiêu chí.':'Bài viết mở rộng giúp bạn kết hợp nhiều câu và vận dụng cấu trúc vào tình huống gần thực tế hơn.'} ${saved?'Bản đầu tiên được giữ riêng để đối chiếu; dùng khu vực viết lại bên dưới để lưu phiên bản mới. ':''}Ứng dụng không tự chấm ngữ pháp; câu trả lời và tự đánh giá chỉ được lưu trên thiết bị này.</p>${contextHtml}<label class="foundation-production-label" for="${responseId}">${saved?'Bản trả lời đầu tiên':'Câu trả lời tiếng Anh của bạn'}</label><textarea id="${responseId}" class="foundation-production-textarea" maxlength="500" rows="4" data-foundation-production-text placeholder="Write your own response in English...">${escapeHtml(initialResponse)}</textarea><p class="foundation-production-word-count" data-foundation-production-count>${count}/${minimumWords} từ tối thiểu${count>=minimumWords?' · Đủ độ dài':''}</p><div class="foundation-production-rubric"><strong class="foundation-production-rubric-title">Tự kiểm tra trước khi lưu</strong>${rubricHtml}</div><button type="button" class="secondary-button" data-foundation-production-save data-foundation-id="${escapeHtml(lesson.id)}" data-foundation-task-id="${escapeHtml(taskId)}">Lưu câu và tự đánh giá</button><p class="placement-disclaimer" data-foundation-production-summary>${saved?`Lần gần nhất: ${saved.latestScore}/3 tiêu chí · ${saved.latestWordCount} từ · ${saved.attempts?.length||1} lượt · ${Number(saved.revisionCount)||0} lần viết lại. Đây là tự đánh giá, không phải kết quả chấm tự động.`:`Tối thiểu ${minimumWords} từ. Hệ thống giữ câu mới nhất và lịch sử tự đánh giá; không gửi câu trả lời lên máy chủ.`}</p>${revisionHtml}</section>`;
 }
 
 function openFoundationLesson(id){
@@ -2186,10 +2205,13 @@ function openFoundationLesson(id){
  const evidence=summarizeFoundationLesson(state.foundationProgress,id);
  const application=x.applicationTask;const applicationSaved=application?state.foundationProgress[id]?.applicationEvidence?.[application.id]:null;const applicationSummary=summarizeFoundationApplication(state.foundationProgress,id);
  const applicationHtml=application?`<section class="detail-section foundation-application" data-foundation-application="${escapeHtml(application.id)}"><h4>VẬN DỤNG TRONG NGỮ CẢNH</h4><p>${escapeHtml(application.focus||'Áp dụng kiến thức vào tình huống thực tế.')}</p><h3>${escapeHtml(application.prompt)}</h3><div class="foundation-choices">${application.choices.map((choice,index)=>`<button type="button" class="foundation-choice ${state.foundationAssessmentDrafts[foundationDraftKey('foundation-application',id)]?.answers?.[application.id]===index?'is-selected':''}" data-foundation-application-answer="${index}" data-foundation-id="${escapeHtml(x.id)}" data-foundation-task-id="${escapeHtml(application.id)}">${String.fromCharCode(65+index)}. ${escapeHtml(choice)}</button>`).join('')}</div>${foundationDraftToolbar('foundation-application',id,[{id:application.id}])}<p class="foundation-feedback" data-foundation-application-feedback ${applicationSaved?'':'hidden'}>${applicationSaved?`${applicationSaved.latestCorrect?'Đạt ở lượt gần nhất.':'Cần luyện thêm.'} ${escapeHtml(application.rationale)} · ${applicationSaved.attempts?.length||1} lượt.`:''}</p><p class="placement-disclaimer" data-foundation-application-summary>${applicationSummary.uniqueTasks} tình huống đã thực hiện · ${applicationSummary.accuracyPercent===null?'Chưa có kết quả':`${applicationSummary.accuracyPercent}% đúng gần nhất`}. Bằng chứng vận dụng được theo dõi riêng, không cộng vào câu hỏi nhận biết.</p></section>`:'';
- const productionTaskId=x.productionTask?.id||application?.id;
- const productionSaved=productionTaskId?state.foundationProgress[id]?.productionEvidence?.[productionTaskId]:null;
+ const productionTasks=foundationProductionTasks(x);
  const legacyProductionSaved=x.productionTask&&application?state.foundationProgress[id]?.productionEvidence?.[application.id]:null;
- const productionHtml=renderFoundationProductionSection(x,application,productionSaved,legacyProductionSaved);
+ const productionHtml=productionTasks.map((task,index)=>{
+   const productionSaved=state.foundationProgress[id]?.productionEvidence?.[task.id]||null;
+   const section=renderFoundationProductionSection(x,application,productionSaved,index===0?legacyProductionSaved:null,task,index);
+   return index===0?section:`<details class="foundation-production-extension"><summary><span><strong>${escapeHtml(task.title||'Thử thách viết mở rộng')}</strong><small>Thử thách bổ sung · tối thiểu ${Math.max(3,Number(task.minimumWords)||3)} từ</small></span><span class="foundation-portfolio-toggle">Mở bài viết</span></summary>${section}</details>`;
+ }).join('');
  const dueRecall=listDueFoundationRecallItems(state.foundationProgress,[x]);
  const recallScheduled=bank.filter(q=>Number(state.foundationProgress[id]?.evidence?.[q.id]?.recallDueAt)>0).length;
  const recallHtml=dueRecall.length?`<section class="detail-section foundation-recall"><h4>ÔN TẬP CÁCH QUÃNG · ${dueRecall.length} CÂU ĐẾN HẠN</h4><p>Trả lời lại trước khi xem đáp án. Đúng sẽ lên lịch sau 3 ngày; chưa đúng sẽ được nhắc lại sau 1 ngày.</p>${dueRecall.map(item=>`<article class="foundation-recall-card"><h3>${escapeHtml(item.question)}</h3><div class="foundation-choices">${item.choices.map((choice,index)=>`<button type="button" class="foundation-choice" data-foundation-recall-answer="${index}" data-foundation-recall-lesson="${escapeHtml(id)}" data-foundation-recall-question="${escapeHtml(item.questionId)}">${String.fromCharCode(65+index)}. ${escapeHtml(choice)}</button>`).join('')}</div><small>Đến hạn từ ${new Date(item.dueAt).toLocaleString('vi-VN')}</small></article>`).join('')}</section>`:`<section class="detail-section foundation-recall"><h4>ÔN TẬP CÁCH QUÃNG</h4><p>${recallScheduled?`${recallScheduled} câu đã được lên lịch ôn. Câu đầu tiên sẽ đến hạn sau 24 giờ; sau mỗi lượt ôn, lịch tiếp theo là 1 hoặc 3 ngày tùy kết quả.`:'Sau khi bạn trả lời câu nhận biết, hệ thống sẽ tự lên lịch ôn lại sau 24 giờ.'} ${dueRecall.length?'':'Chưa có câu đến hạn.'}</p></section>`;
@@ -2265,12 +2287,16 @@ function answerFoundationRecall(button){
  openFoundationLesson(lessonId);renderFoundationPath();toast(correct?`Đúng. Đã hẹn ôn lại sau 3 ngày. ${question.rationale||''}`:`Chưa đúng. Đã hẹn ôn lại sau 1 ngày. ${question.rationale||''}`,correct?'success':'error');
 }
 
+function findFoundationProductionTask(lesson,taskId){
+ return foundationProductionTasks(lesson).find(task=>String(task.id)===String(taskId))||null;
+}
+
 function saveFoundationProduction(button){
  const lessonId=button.dataset.foundationId,taskId=button.dataset.foundationTaskId,lesson=state.foundationLessons.find(item=>item.id===lessonId);
- if(!lesson?.applicationTask||(lesson.productionTask?.id||lesson.applicationTask.id)!==taskId)return;
+ const task=findFoundationProductionTask(lesson,taskId);if(!lesson?.applicationTask||!task)return;
  const panel=button.closest('[data-foundation-production]'),response=$('[data-foundation-production-text]',panel)?.value||'';
- const productionTask=lesson.productionTask||null,minimumWords=Math.max(3,Number(productionTask?.minimumWords)||3);
- const ratings=[0,1,2].map(index=>{const selected=$(`input[name="foundation-production-${lessonId}-${index}"]:checked`,panel);return selected?selected.value==='yes':null;});
+ const minimumWords=Math.max(3,Number(task.minimumWords)||3),fieldKey=foundationProductionFieldKey(lessonId,taskId);
+ const ratings=[0,1,2].map(index=>{const selected=$(`input[name="${fieldKey}-self-${index}"]:checked`,panel);return selected?selected.value==='yes':null;});
  if(response.trim().split(/\s+/).filter(Boolean).length<minimumWords){toast(`Hãy viết câu trả lời có ít nhất ${minimumWords} từ theo tình huống.`,'error');return;}
  if(ratings.some(value=>value===null)){toast('Hãy tự đánh giá đủ 3 tiêu chí trước khi lưu.','error');return;}
  const nextProgress=recordFoundationProductionAttempt(state.foundationProgress,lessonId,taskId,response,ratings,Date.now(),minimumWords);
@@ -2280,18 +2306,18 @@ function saveFoundationProduction(button){
 
 function saveFoundationProductionRevision(button){
  const lessonId=button.dataset.foundationId,taskId=button.dataset.foundationTaskId,lesson=state.foundationLessons.find(item=>item.id===lessonId);
- if(!lesson?.applicationTask||(lesson.productionTask?.id||lesson.applicationTask.id)!==taskId)return;
- const panel=button.closest('[data-foundation-production]'),task=lesson.productionTask||null;
- const response=$('[data-foundation-revision-text]',panel)?.value||'',minimumWords=Math.max(3,Number(task?.minimumWords)||8);
+ const task=findFoundationProductionTask(lesson,taskId);if(!lesson?.applicationTask||!task)return;
+ const panel=button.closest('[data-foundation-production]'),response=$('[data-foundation-revision-text]',panel)?.value||'';
+ const minimumWords=Math.max(3,Number(task.minimumWords)||8),fieldKey=foundationProductionFieldKey(lessonId,taskId);
  const reviewChecks=$$('[data-foundation-revision-check]',panel).map(field=>field.checked);
- const ratings=[0,1,2].map(index=>{const selected=$(`input[name="foundation-revision-${lessonId}-${index}"]:checked`,panel);return selected?selected.value==='yes':null;});
+ const ratings=[0,1,2].map(index=>{const selected=$(`input[name="${fieldKey}-revision-${index}"]:checked`,panel);return selected?selected.value==='yes':null;});
  if(response.trim().split(/\s+/).filter(Boolean).length<minimumWords){toast(`Hãy viết lại câu trả lời có ít nhất ${minimumWords} từ.`,'error');return;}
  if(reviewChecks.length!==3||reviewChecks.some(value=>!value)){toast('Hãy xác nhận đã rà soát đủ 3 yêu cầu trước khi lưu bản viết lại.','error');return;}
  if(ratings.some(value=>value===null)){toast('Hãy tự đánh giá đủ 3 tiêu chí cho bản viết lại.','error');return;}
  const nextProgress=recordFoundationProductionRevision(state.foundationProgress,lessonId,taskId,response,ratings,reviewChecks,Date.now(),minimumWords);
  if(nextProgress===state.foundationProgress){toast('Bản viết lại cần khác bản trước và có đủ dữ liệu kiểm tra.','error');return;}
  try{localStorage.setItem('toeic:foundation-progress:v1',JSON.stringify(nextProgress));state.foundationProgress=nextProgress;}catch(error){console.warn('Không thể lưu bản viết lại Foundation:',error);toast('Không thể lưu bản viết lại trên thiết bị này.','error');return;}
-openFoundationLesson(lessonId);renderFoundationPath();const saved=state.foundationProgress[lessonId]?.productionEvidence?.[taskId];toast(`Đã lưu bản viết lại lần ${saved?.revisionCount||1} cùng lịch sử đối chiếu. Không có chấm điểm tự động.`);
+ openFoundationLesson(lessonId);renderFoundationPath();const saved=state.foundationProgress[lessonId]?.productionEvidence?.[taskId];toast(`Đã lưu bản viết lại lần ${saved?.revisionCount||1} cùng lịch sử đối chiếu. Không có chấm điểm tự động.`);
 }
 
 function answerFoundationApplication(button){
