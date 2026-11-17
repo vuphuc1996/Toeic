@@ -16,5 +16,7 @@ export function summarizeFoundationReading(progress = {}, lessonId, policy = {})
   const minimumUniqueQuestions = Number(policy.minimumUniqueQuestions) > 0 ? Number(policy.minimumUniqueQuestions) : 2;
   const threshold = Number(policy.practiceAccuracyThreshold) > 0 ? Number(policy.practiceAccuracyThreshold) : 0.8;
   const accuracy = uniqueQuestions ? correct / uniqueQuestions : null;
-  return { uniqueQuestions, correct, accuracy, accuracyPercent: accuracy === null ? null : Math.round(accuracy * 100), minimumUniqueQuestions, threshold, status: uniqueQuestions < minimumUniqueQuestions ? 'insufficient_evidence' : accuracy >= threshold ? 'practice_threshold_met' : 'in_progress', totalAttempts: evidence.reduce((sum, item) => sum + (Array.isArray(item.attempts) ? item.attempts.length : 0), 0) };
+  const accuracyPercent = accuracy === null ? null : Math.round(accuracy * 100);
+  const thresholdPercent = Math.round(threshold * 100);
+  return { uniqueQuestions, correct, accuracy, accuracyPercent, minimumUniqueQuestions, threshold, status: uniqueQuestions < minimumUniqueQuestions ? 'insufficient_evidence' : accuracyPercent >= thresholdPercent ? 'practice_threshold_met' : 'in_progress', totalAttempts: evidence.reduce((sum, item) => sum + (Array.isArray(item.attempts) ? item.attempts.length : 0), 0) };
 }

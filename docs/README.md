@@ -1,14 +1,14 @@
-# TOEIC Dictionary v2.88.0 — Documentation
+# TOEIC Dictionary v2.89.0 — Documentation
 
-- Current product source: `v2.88.0` — `versions/CURRENT_VERSION.md`.
-- Previous release: `v2.87.0` — `versions/PREVIOUS_VERSION.md`.
+- Current product source: `v2.89.0` — `versions/CURRENT_VERSION.md`.
+- Previous release: `v2.88.0` — `versions/PREVIOUS_VERSION.md`.
 - Master status: `MASTER_STATUS.md` (single current roadmap/status source).
-- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.88.0.md`.
+- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.89.0.md`.
 - Robot Buddy specification: `reports/ROBOT_BUDDY_v2.86.0.md`.
 - Progress baseline/snapshot: `reports/PROJECT_PROGRESS_BASELINE_v2.83.0.md` and `reports/PROJECT_PROGRESS_SNAPSHOT_v2.83.0.md`.
 - Older detailed records are consolidated in `archive/PROJECT_HISTORY.md`; release-level history remains in `CHANGELOG.md`.
 - TOEIC remains the primary track; IELTS remains deferred until TOEIC development/acceptance gates are met and the owner approves a phase change.
-- Foundation pathway: 10 Pre-A1/A1 lessons and 13 A2 lessons; 23 Reading resources / 59 questions; 23 Listening resources / 59 questions; 26 contextual A2 writing tasks (13 foundational + 13 extended), each with separate local evidence/revision history, a writing portfolio and device-local Markdown export. The 13 extended tasks remain pending independent editorial review.
+- Foundation pathway: 10 Pre-A1/A1 lessons and 13 A2 lessons; 23 core Foundation Reading resources / 59 questions plus 13 supplementary A2 Reading resources / 39 questions (all supplementary items pending independent editorial review); 23 Listening resources / 59 questions; 26 contextual A2 writing tasks (13 foundational + 13 extended), each with separate local evidence/revision history, a writing portfolio and device-local Markdown export. The 13 extended writing tasks and 13 supplementary Reading passages (39 questions) remain pending independent editorial review.
 - Google AI: only the original v2.79 feature-level user-triggered actions are retained for vocabulary lookup, practice answer/review, Grammar, Reading and Listening; there is no shared contextual AI assistant or copy/transfer workflow.
 - Robot Buddy v2.86.0: head-only animated companion with 500 offline dialogue variants, 59 feature-help messages for 12 destinations (11 menu areas plus Placement), six FAQs and 16 quick prompts that remain available throughout the current chat session. The message area scrolls independently from the prompt menu. It can analyze already-loaded local learner progress in read-only mode; no learning data is sent outside the device. The user can disable progress analysis while retaining dialogue and help. Evidence-based insight replies can show up to four direct links to the corresponding existing learning modules.
 - Mock Exam icons: clipboard/check, bolt, stopwatch and trophy; the old clock glyph is retired.

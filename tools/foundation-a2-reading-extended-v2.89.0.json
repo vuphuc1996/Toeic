@@ -1,0 +1,163 @@
+{
+  "version": "2.89.0",
+  "scope": "Foundation A2 extended Reading tasks; structural source traceability only; independent editorial review pending",
+  "items": [
+    {
+      "id": "a2-polite-requests::reading2",
+      "lessonId": "a2-polite-requests",
+      "wordCount": 103,
+      "questionIds": [
+        "a2-polite-requests::reading2::q1",
+        "a2-polite-requests::reading2::q2",
+        "a2-polite-requests::reading2::q3"
+      ],
+      "contentSha256": "6e1bea0f1e3b2476278b0635c7f82f9850d842e457f28069c8750614c601355d",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-quantities::reading2",
+      "lessonId": "a2-quantities",
+      "wordCount": 103,
+      "questionIds": [
+        "a2-quantities::reading2::q1",
+        "a2-quantities::reading2::q2",
+        "a2-quantities::reading2::q3"
+      ],
+      "contentSha256": "5abd3c2903fd078d796140a05e17c17f915d03f127512355f729ba1479587d01",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-comparisons::reading2",
+      "lessonId": "a2-comparisons",
+      "wordCount": 100,
+      "questionIds": [
+        "a2-comparisons::reading2::q1",
+        "a2-comparisons::reading2::q2",
+        "a2-comparisons::reading2::q3"
+      ],
+      "contentSha256": "36254628636e1549e5a15eea5160519e6d3537d4dc64380a403d577e711d246f",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-past-work-events::reading2",
+      "lessonId": "a2-past-work-events",
+      "wordCount": 101,
+      "questionIds": [
+        "a2-past-work-events::reading2::q1",
+        "a2-past-work-events::reading2::q2",
+        "a2-past-work-events::reading2::q3"
+      ],
+      "contentSha256": "3558a19d0ee92cf604a2adb648fe9f2a56ab6046d1add757abcc446fbb675f74",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-present-continuous::reading2",
+      "lessonId": "a2-present-continuous",
+      "wordCount": 92,
+      "questionIds": [
+        "a2-present-continuous::reading2::q1",
+        "a2-present-continuous::reading2::q2",
+        "a2-present-continuous::reading2::q3"
+      ],
+      "contentSha256": "1f7e4356c1a1464da83fb1b30a589bb0e714a391c8b3249a81b92517c1615f44",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-obligation-permission::reading2",
+      "lessonId": "a2-obligation-permission",
+      "wordCount": 101,
+      "questionIds": [
+        "a2-obligation-permission::reading2::q1",
+        "a2-obligation-permission::reading2::q2",
+        "a2-obligation-permission::reading2::q3"
+      ],
+      "contentSha256": "e6543a335780ad2fac0909a43aa4708f4b8e8264c746ea41ff34c9bb04f367b4",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-directions::reading2",
+      "lessonId": "a2-directions",
+      "wordCount": 99,
+      "questionIds": [
+        "a2-directions::reading2::q1",
+        "a2-directions::reading2::q2",
+        "a2-directions::reading2::q3"
+      ],
+      "contentSha256": "2ef50d0d356014bc98cccea0cff9d42d69aa8cac46b79a6d98ae183a587e4b4b",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-invitations-offers::reading2",
+      "lessonId": "a2-invitations-offers",
+      "wordCount": 104,
+      "questionIds": [
+        "a2-invitations-offers::reading2::q1",
+        "a2-invitations-offers::reading2::q2",
+        "a2-invitations-offers::reading2::q3"
+      ],
+      "contentSha256": "25a2696958efb064e34abdbedd75aca2f2b41213b56a4d2cd06ed074b9b1b823",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-sequencing-instructions::reading2",
+      "lessonId": "a2-sequencing-instructions",
+      "wordCount": 103,
+      "questionIds": [
+        "a2-sequencing-instructions::reading2::q1",
+        "a2-sequencing-instructions::reading2::q2",
+        "a2-sequencing-instructions::reading2::q3"
+      ],
+      "contentSha256": "b0192d083605209feffb98270a06b37a6bc13f50519bfe9581eefaa942b69ceb",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-plans-and-intentions::reading2",
+      "lessonId": "a2-plans-and-intentions",
+      "wordCount": 96,
+      "questionIds": [
+        "a2-plans-and-intentions::reading2::q1",
+        "a2-plans-and-intentions::reading2::q2",
+        "a2-plans-and-intentions::reading2::q3"
+      ],
+      "contentSha256": "6d101a0ec1cbebc27d61160e748956290394de7db1b189e4ce46e8abce51a5e5",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-present-perfect-experience::reading2",
+      "lessonId": "a2-present-perfect-experience",
+      "wordCount": 96,
+      "questionIds": [
+        "a2-present-perfect-experience::reading2::q1",
+        "a2-present-perfect-experience::reading2::q2",
+        "a2-present-perfect-experience::reading2::q3"
+      ],
+      "contentSha256": "521a945fcb67c6f6b10a3c5054010e4e7d60928663216b098be6a5f5b5e47552",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-basic-passive-voice::reading2",
+      "lessonId": "a2-basic-passive-voice",
+      "wordCount": 99,
+      "questionIds": [
+        "a2-basic-passive-voice::reading2::q1",
+        "a2-basic-passive-voice::reading2::q2",
+        "a2-basic-passive-voice::reading2::q3"
+      ],
+      "contentSha256": "41480682a551c069b572371b8937da7fd3f18c80fb9e825d37590ae2884c73f4",
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "id": "a2-defining-relative-clauses::reading2",
+      "lessonId": "a2-defining-relative-clauses",
+      "wordCount": 104,
+      "questionIds": [
+        "a2-defining-relative-clauses::reading2::q1",
+        "a2-defining-relative-clauses::reading2::q2",
+        "a2-defining-relative-clauses::reading2::q3"
+      ],
+      "contentSha256": "4f5a40b0b5d821397f4de38e7c71bc6a19bd784a546ab9d88f32e6f81b4de09d",
+      "editorialStatus": "pending-independent-editorial-review"
+    }
+  ],
+  "hashPolicy": "SHA-256 of each complete passage object serialized as UTF-8 JSON with sorted keys, no extra spaces, and ensure_ascii=false."
+}

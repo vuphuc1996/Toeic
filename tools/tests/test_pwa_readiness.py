@@ -27,6 +27,7 @@ class PWAReadinessTests(unittest.TestCase):
         self.assertIn("./assets/js/practice-progress.js", required)
         self.assertIn("./assets/js/sentence-completion.js", required)
         self.assertIn("./data/practice/part5-sentence-completion.json", required)
+        self.assertIn("./data/learning-path/foundation-reading-extended.json", required)
 
     def test_part1_uses_jpg_only_and_has_no_svg_fallback_assets(self):
         required = self.array("REQUIRED")

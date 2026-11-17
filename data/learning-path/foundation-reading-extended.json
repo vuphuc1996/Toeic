@@ -1,0 +1,731 @@
+{
+  "schemaVersion": 1,
+  "version": "2.89.0",
+  "title": "Foundation A2 Extended Reading",
+  "description": "One additional longer workplace reading passage for each A2 Foundation lesson, separate from the original reading task and its evidence.",
+  "evidencePolicy": {
+    "scope": "extended-reading-practice-only; separate from original reading evidence; not CEFR certification or independent reading mastery",
+    "minimumUniqueQuestions": 3,
+    "practiceAccuracyThreshold": 0.67,
+    "storageKey": "toeic:foundation-reading-progress:v1",
+    "progressScopeSuffix": "reading2",
+    "editorialStatus": "pending-independent-editorial-review"
+  },
+  "passages": [
+    {
+      "lessonId": "a2-polite-requests",
+      "title": "Follow-up for the Customer Call",
+      "format": "Email",
+      "text": "On Tuesday morning, Mai received a message from the sales assistant about the customer call. Room 3 was reserved for 2:00 p.m., and the screen and speakerphone were checked before lunch. However, the customer wrote that he would join from a train, so he might have a weak internet connection. Mai asked the assistant to keep the room until 2:30 in case the call started late. She also prepared a short PDF version of the product list. Before noon, she sent the meeting link and the PDF to the customer. After the call, she planned to share the notes with the sales team.",
+      "questions": [
+        {
+          "skill": "find-detail",
+          "prompt": "What time was Room 3 first reserved for?",
+          "choices": [
+            "2:00 p.m.",
+            "1:30 p.m.",
+            "2:30 p.m.",
+            "3:00 p.m."
+          ],
+          "answerIndex": 0,
+          "evidenceText": "Room 3 was reserved for 2:00 p.m.",
+          "rationale": "The first reservation was for 2:00 p.m.",
+          "id": "a2-polite-requests::reading2::q1"
+        },
+        {
+          "skill": "understand-purpose-context",
+          "prompt": "Why might the customer have an internet problem?",
+          "choices": [
+            "He forgot the meeting link.",
+            "He will join from a train.",
+            "The room has no speakerphone.",
+            "The call is after lunch."
+          ],
+          "answerIndex": 1,
+          "evidenceText": "the customer wrote that he would join from a train, so he might have a weak internet connection.",
+          "rationale": "The passage connects the train journey with a possible weak connection.",
+          "id": "a2-polite-requests::reading2::q2"
+        },
+        {
+          "skill": "understand-next-action",
+          "prompt": "What did Mai send before noon?",
+          "choices": [
+            "A new room key",
+            "A printed invoice",
+            "The meeting link and a PDF",
+            "The meeting notes"
+          ],
+          "answerIndex": 2,
+          "evidenceText": "Before noon, she sent the meeting link and the PDF to the customer.",
+          "rationale": "The message and PDF were sent before the call.",
+          "id": "a2-polite-requests::reading2::q3"
+        }
+      ],
+      "id": "a2-polite-requests::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-quantities",
+      "title": "The Monthly Supply Order",
+      "format": "Memo",
+      "text": "The office coordinator checked the supply cabinet before preparing the monthly order. There were enough folders for the next two weeks, but only one box of printer paper remained. The team also needed three toner cartridges because two printers were being used for a large training event. The coordinator ordered four boxes of paper to keep one box in reserve. She did not order more folders because the storage room was already full. The supplier confirmed that the paper and toner would arrive on Thursday morning. The coordinator then sent the order number to the finance team so they could check the budget.",
+      "questions": [
+        {
+          "skill": "find-detail",
+          "prompt": "How many toner cartridges did the team request?",
+          "choices": [
+            "One",
+            "Three",
+            "Four",
+            "Two"
+          ],
+          "answerIndex": 1,
+          "evidenceText": "The team also needed three toner cartridges",
+          "rationale": "The order included three toner cartridges.",
+          "id": "a2-quantities::reading2::q1"
+        },
+        {
+          "skill": "understand-reason",
+          "prompt": "Why did the coordinator not order more folders?",
+          "choices": [
+            "The supplier had none.",
+            "The training was cancelled.",
+            "The storage room was already full.",
+            "Folders were too expensive."
+          ],
+          "answerIndex": 2,
+          "evidenceText": "She did not order more folders because the storage room was already full.",
+          "rationale": "There was not enough storage space for more folders.",
+          "id": "a2-quantities::reading2::q2"
+        },
+        {
+          "skill": "understand-time-reference",
+          "prompt": "When should the paper and toner arrive?",
+          "choices": [
+            "Wednesday afternoon",
+            "Friday morning",
+            "Thursday afternoon",
+            "Thursday morning"
+          ],
+          "answerIndex": 3,
+          "evidenceText": "The supplier confirmed that the paper and toner would arrive on Thursday morning.",
+          "rationale": "The supplier confirmed a Thursday morning delivery.",
+          "id": "a2-quantities::reading2::q3"
+        }
+      ],
+      "id": "a2-quantities::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-comparisons",
+      "title": "Choosing a Delivery Service",
+      "format": "Comparison note",
+      "text": "The purchasing team compared two delivery services for a box of product samples. SwiftGo charges 90,000 dong and usually delivers the next day. CityLine charges 70,000 dong, but its normal delivery time is two days. Both companies provide online tracking, and their websites show delivery updates. The customer needs the samples for a meeting on Friday morning, and the box must leave the office by Wednesday afternoon. The manager chose SwiftGo because the shorter delivery time was more important than the lower price. She asked the purchasing officer to keep the receipt and send the tracking number to the customer.",
+      "questions": [
+        {
+          "skill": "compare-options",
+          "prompt": "Which service normally costs less?",
+          "choices": [
+            "CityLine",
+            "SwiftGo",
+            "They cost the same",
+            "The passage does not say"
+          ],
+          "answerIndex": 0,
+          "evidenceText": "CityLine charges 70,000 dong",
+          "rationale": "CityLine is listed at 70,000 dong, less than SwiftGo.",
+          "id": "a2-comparisons::reading2::q1"
+        },
+        {
+          "skill": "understand-purpose-context",
+          "prompt": "Why did the manager choose SwiftGo?",
+          "choices": [
+            "It offers free packaging.",
+            "It can deliver sooner.",
+            "It has no tracking fee.",
+            "It is the only local company."
+          ],
+          "answerIndex": 1,
+          "evidenceText": "The manager chose SwiftGo because the shorter delivery time was more important than the lower price.",
+          "rationale": "The manager prioritised the faster delivery time.",
+          "id": "a2-comparisons::reading2::q2"
+        },
+        {
+          "skill": "infer-from-details",
+          "prompt": "What should the purchasing officer do after sending the box?",
+          "choices": [
+            "Cancel the Friday meeting.",
+            "Ask CityLine for a discount.",
+            "Buy more samples.",
+            "Keep the receipt and share the tracking number."
+          ],
+          "answerIndex": 3,
+          "evidenceText": "She asked the purchasing officer to keep the receipt and send the tracking number to the customer.",
+          "rationale": "The final sentence gives both follow-up actions.",
+          "id": "a2-comparisons::reading2::q3"
+        }
+      ],
+      "id": "a2-comparisons::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-past-work-events",
+      "title": "Report on Yesterday’s Delivery",
+      "format": "Incident report",
+      "text": "Yesterday, the office expected a delivery of twelve computer keyboards before 10 a.m. The driver arrived at 11:20 because a road near the warehouse was closed. The receptionist called the IT team and asked them to check the packages. Two boxes were wet, but the keyboards inside were dry and working. The IT assistant took photos of the boxes and wrote a short report for the supplier. The supplier apologised and offered to replace the damaged packaging. The manager accepted the offer and asked the receptionist to record the new delivery reference. The keyboards were then moved to the equipment room.",
+      "questions": [
+        {
+          "skill": "understand-sequence",
+          "prompt": "What happened before the IT team checked the packages?",
+          "choices": [
+            "The manager replaced the keyboards.",
+            "The supplier sent a new invoice.",
+            "The keyboards were moved upstairs.",
+            "The receptionist called the IT team."
+          ],
+          "answerIndex": 3,
+          "evidenceText": "The receptionist called the IT team and asked them to check the packages.",
+          "rationale": "The call to IT came before the package check.",
+          "id": "a2-past-work-events::reading2::q1"
+        },
+        {
+          "skill": "find-detail",
+          "prompt": "How many boxes had wet packaging?",
+          "choices": [
+            "Two",
+            "Twelve",
+            "Ten",
+            "One"
+          ],
+          "answerIndex": 0,
+          "evidenceText": "Two boxes were wet",
+          "rationale": "The report says two boxes were wet.",
+          "id": "a2-past-work-events::reading2::q2"
+        },
+        {
+          "skill": "understand-next-action",
+          "prompt": "What new information did the receptionist need to record?",
+          "choices": [
+            "The driver’s home address",
+            "The IT assistant’s phone number",
+            "The new delivery reference",
+            "The keyboard model"
+          ],
+          "answerIndex": 2,
+          "evidenceText": "asked the receptionist to record the new delivery reference.",
+          "rationale": "The manager asked for the new delivery reference to be recorded.",
+          "id": "a2-past-work-events::reading2::q3"
+        }
+      ],
+      "id": "a2-past-work-events::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-present-continuous",
+      "title": "Afternoon Project Update",
+      "format": "Team update",
+      "text": "At 3 p.m. today, the design team is preparing the final pictures for the new product page. Lan is checking the prices, while Nam is updating the delivery information. Two colleagues are speaking with the supplier because one product photo is missing. The web editor is not publishing the page yet; she is waiting for the new picture and the manager’s approval. The team is working in the small meeting room so that everyone can review the same screen. They are planning to finish the update before the office closes at 5:30.",
+      "questions": [
+        {
+          "skill": "find-detail",
+          "prompt": "What is Lan doing at 3 p.m.?",
+          "choices": [
+            "Checking the prices",
+            "Calling the customer",
+            "Printing the pictures",
+            "Publishing the page"
+          ],
+          "answerIndex": 0,
+          "evidenceText": "Lan is checking the prices",
+          "rationale": "Lan is responsible for checking prices.",
+          "id": "a2-present-continuous::reading2::q1"
+        },
+        {
+          "skill": "understand-condition",
+          "prompt": "Why is the web editor waiting?",
+          "choices": [
+            "The office is closed.",
+            "The supplier has cancelled the order.",
+            "A picture and approval are still missing.",
+            "The prices are too high."
+          ],
+          "answerIndex": 2,
+          "evidenceText": "she is waiting for the new picture and the manager’s approval.",
+          "rationale": "Both the missing picture and approval are still needed.",
+          "id": "a2-present-continuous::reading2::q2"
+        },
+        {
+          "skill": "understand-time-reference",
+          "prompt": "When does the team expect to finish?",
+          "choices": [
+            "Before 3 p.m.",
+            "Tomorrow morning",
+            "After 6 p.m.",
+            "Before the office closes at 5:30"
+          ],
+          "answerIndex": 3,
+          "evidenceText": "They are planning to finish the update before the office closes at 5:30.",
+          "rationale": "The stated target is before 5:30 p.m.",
+          "id": "a2-present-continuous::reading2::q3"
+        }
+      ],
+      "id": "a2-present-continuous::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-obligation-permission",
+      "title": "Visitor Safety Notice",
+      "format": "Notice",
+      "text": "All visitors must report to the reception desk when they arrive. The receptionist will prepare a visitor badge, which must be worn inside the building. Visitors may use the waiting area near the main entrance, but they must not enter the storage room without an employee. If a visitor needs to take a photograph, they must ask the office manager first. Guests do not need to bring their own safety vest because the reception desk has clean vests in different sizes. Please return the badge and vest before leaving. These rules help staff keep the office safe and protect company equipment.",
+      "questions": [
+        {
+          "skill": "understand-rule",
+          "prompt": "What must a visitor do when arriving?",
+          "choices": [
+            "Go directly to the storage room",
+            "Report to reception",
+            "Take a photograph",
+            "Choose a safety vest first"
+          ],
+          "answerIndex": 1,
+          "evidenceText": "All visitors must report to the reception desk when they arrive.",
+          "rationale": "Visitors are required to report to reception first.",
+          "id": "a2-obligation-permission::reading2::q1"
+        },
+        {
+          "skill": "understand-permission",
+          "prompt": "When may a visitor take a photograph?",
+          "choices": [
+            "Whenever the visitor wants",
+            "Only in the waiting area",
+            "After asking the office manager",
+            "After returning the badge"
+          ],
+          "answerIndex": 2,
+          "evidenceText": "they must ask the office manager first.",
+          "rationale": "Permission from the office manager is required.",
+          "id": "a2-obligation-permission::reading2::q2"
+        },
+        {
+          "skill": "infer-from-details",
+          "prompt": "Why does reception provide safety vests?",
+          "choices": [
+            "Visitors do not need to bring their own.",
+            "The storage room is open to everyone.",
+            "The company sells safety clothing.",
+            "The manager wants guests to take photos."
+          ],
+          "answerIndex": 0,
+          "evidenceText": "Guests do not need to bring their own safety vest because the reception desk has clean vests in different sizes.",
+          "rationale": "Reception provides vests so visitors do not need to bring one.",
+          "id": "a2-obligation-permission::reading2::q3"
+        }
+      ],
+      "id": "a2-obligation-permission::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-directions",
+      "title": "Finding the Training Room",
+      "format": "Directions",
+      "text": "The customer training room is on the third floor of the West Building. Enter through the main doors and walk past the reception desk. Take the lift to the second floor first, then follow the blue signs to the central stairs. The training room is directly opposite the small library on the third floor. Do not use the stairs beside the car park because they lead to the staff-only area. If you arrive early, you can wait at the chairs outside the library. A member of the training team will meet visitors there ten minutes before the session begins.",
+      "questions": [
+        {
+          "skill": "understand-sequence",
+          "prompt": "What should a visitor do after walking past reception?",
+          "choices": [
+            "Go outside the building",
+            "Enter the staff-only area",
+            "Take the lift to the second floor",
+            "Wait beside the car park"
+          ],
+          "answerIndex": 2,
+          "evidenceText": "Take the lift to the second floor first",
+          "rationale": "The directions say to take the lift after passing reception.",
+          "id": "a2-directions::reading2::q1"
+        },
+        {
+          "skill": "find-detail",
+          "prompt": "What is opposite the training room?",
+          "choices": [
+            "The reception desk",
+            "The small library",
+            "The car park",
+            "The main doors"
+          ],
+          "answerIndex": 1,
+          "evidenceText": "The training room is directly opposite the small library",
+          "rationale": "The library is directly opposite the room.",
+          "id": "a2-directions::reading2::q2"
+        },
+        {
+          "skill": "understand-condition",
+          "prompt": "Where should an early visitor wait?",
+          "choices": [
+            "Inside the staff-only area",
+            "At the main entrance outside",
+            "In the training room",
+            "At the chairs outside the library"
+          ],
+          "answerIndex": 3,
+          "evidenceText": "you can wait at the chairs outside the library.",
+          "rationale": "Early visitors are asked to wait outside the library.",
+          "id": "a2-directions::reading2::q3"
+        }
+      ],
+      "id": "a2-directions::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-invitations-offers",
+      "title": "Invitation to the Staff Lunch",
+      "format": "Invitation email",
+      "text": "Hello everyone, our monthly staff lunch will take place next Thursday at 12:15 in the garden room. This month, the office team has chosen a simple menu with rice, vegetables and chicken. A vegetarian meal is also available, so please tell Hoa about any food needs by Tuesday afternoon. You may bring one guest, but please include the guest’s name in your reply. The event will finish at 1:30, and the team will return to work afterward. If you need help finding the room, I can meet you at reception at noon. Please reply by Tuesday so we can confirm the number of meals.",
+      "questions": [
+        {
+          "skill": "find-detail",
+          "prompt": "When will the staff lunch begin?",
+          "choices": [
+            "At noon",
+            "At 12:15",
+            "At 1:30",
+            "On Tuesday afternoon"
+          ],
+          "answerIndex": 1,
+          "evidenceText": "will take place next Thursday at 12:15",
+          "rationale": "The invitation gives a start time of 12:15.",
+          "id": "a2-invitations-offers::reading2::q1"
+        },
+        {
+          "skill": "understand-condition",
+          "prompt": "What should an employee do to request a vegetarian meal?",
+          "choices": [
+            "Tell Hoa by Tuesday afternoon",
+            "Bring food from home",
+            "Arrive at 1:30",
+            "Call the garden room"
+          ],
+          "answerIndex": 0,
+          "evidenceText": "please tell Hoa about any food needs by Tuesday afternoon.",
+          "rationale": "Food requirements should be sent to Hoa by Tuesday afternoon.",
+          "id": "a2-invitations-offers::reading2::q2"
+        },
+        {
+          "skill": "understand-purpose-context",
+          "prompt": "Why should employees reply by Tuesday?",
+          "choices": [
+            "To choose the music",
+            "To change the lunch time",
+            "To book the meeting room",
+            "To confirm how many meals are needed"
+          ],
+          "answerIndex": 3,
+          "evidenceText": "Please reply by Tuesday so we can confirm the number of meals.",
+          "rationale": "The reply helps the team prepare the correct number of meals.",
+          "id": "a2-invitations-offers::reading2::q3"
+        }
+      ],
+      "id": "a2-invitations-offers::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-sequencing-instructions",
+      "title": "How to Process a Returned Item",
+      "format": "Procedure",
+      "text": "When a customer returns an item, first check the order number on the receipt. Next, ask the customer to explain the reason for the return and look at the product for damage. If the item is unused and the return is within seven days, complete the return form. Then place the product in the return box and attach a copy of the form. Send the form to the finance team before the end of the day. If the product is damaged, do not put it back on the shelf. Ask the supervisor to review it and record the problem in the service log.",
+      "questions": [
+        {
+          "skill": "understand-sequence",
+          "prompt": "What should staff check first?",
+          "choices": [
+            "The return box",
+            "The product shelf",
+            "The order number on the receipt",
+            "The finance team schedule"
+          ],
+          "answerIndex": 2,
+          "evidenceText": "first check the order number on the receipt.",
+          "rationale": "Checking the order number is the first stated step.",
+          "id": "a2-sequencing-instructions::reading2::q1"
+        },
+        {
+          "skill": "understand-condition",
+          "prompt": "When can staff complete the return form?",
+          "choices": [
+            "When the product is damaged",
+            "When the item is unused and returned within seven days",
+            "When the customer has no receipt",
+            "When the supervisor is away"
+          ],
+          "answerIndex": 1,
+          "evidenceText": "If the item is unused and the return is within seven days, complete the return form.",
+          "rationale": "Both conditions must be true.",
+          "id": "a2-sequencing-instructions::reading2::q2"
+        },
+        {
+          "skill": "understand-rule",
+          "prompt": "What should staff do with a damaged product?",
+          "choices": [
+            "Sell it at a lower price",
+            "Put it back on the shelf",
+            "Send it to the customer",
+            "Ask the supervisor to review it"
+          ],
+          "answerIndex": 3,
+          "evidenceText": "Ask the supervisor to review it and record the problem in the service log.",
+          "rationale": "Damaged products need a supervisor review and a service-log entry.",
+          "id": "a2-sequencing-instructions::reading2::q3"
+        }
+      ],
+      "id": "a2-sequencing-instructions::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-plans-and-intentions",
+      "title": "Plan for Next Week",
+      "format": "Weekly plan",
+      "text": "The operations team is preparing a schedule for next week. On Monday, they are going to check the new storage area and move the empty boxes. On Tuesday, the team will meet the delivery company to discuss the collection times. The manager plans to visit the second office on Wednesday, but she may change the visit if the monthly report is not ready. On Thursday, two employees are going to attend a short safety course. The team intends to finish the stock check by Friday afternoon and send the final numbers to finance before 4 p.m.",
+      "questions": [
+        {
+          "skill": "find-detail",
+          "prompt": "What is planned for Tuesday?",
+          "choices": [
+            "A visit to the second office",
+            "A safety course",
+            "A meeting with the delivery company",
+            "A final stock report"
+          ],
+          "answerIndex": 2,
+          "evidenceText": "On Tuesday, the team will meet the delivery company to discuss the collection times.",
+          "rationale": "The delivery-company meeting is scheduled for Tuesday.",
+          "id": "a2-plans-and-intentions::reading2::q1"
+        },
+        {
+          "skill": "understand-condition",
+          "prompt": "Why might the manager change her Wednesday visit?",
+          "choices": [
+            "The storage area is closed.",
+            "The delivery company is late.",
+            "The safety course is cancelled.",
+            "The monthly report may not be ready."
+          ],
+          "answerIndex": 3,
+          "evidenceText": "she may change the visit if the monthly report is not ready.",
+          "rationale": "The report being unfinished is the stated condition.",
+          "id": "a2-plans-and-intentions::reading2::q2"
+        },
+        {
+          "skill": "understand-time-reference",
+          "prompt": "When should the final numbers be sent to finance?",
+          "choices": [
+            "Before 4 p.m. on Friday",
+            "After 4 p.m. on Wednesday",
+            "Before noon on Monday",
+            "At the start of Thursday"
+          ],
+          "answerIndex": 0,
+          "evidenceText": "send the final numbers to finance before 4 p.m.",
+          "rationale": "The plan gives a Friday-afternoon deadline before 4 p.m.",
+          "id": "a2-plans-and-intentions::reading2::q3"
+        }
+      ],
+      "id": "a2-plans-and-intentions::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-present-perfect-experience",
+      "title": "A New Team Member",
+      "format": "Staff profile",
+      "text": "Our new customer service officer, Daniel, has worked in retail for three years. He has already completed the company’s product training and has helped the team answer more than fifty customer emails. He has not used our new booking system yet, so he will attend a practice session on Monday. Daniel has also worked with international customers, and he has handled questions about delivery times and payment methods. He has never managed a large team, but he is interested in learning how to support new staff. His supervisor will review his progress after the first month.",
+      "questions": [
+        {
+          "skill": "find-detail",
+          "prompt": "How long has Daniel worked in retail?",
+          "choices": [
+            "One year",
+            "Three years",
+            "Five years",
+            "Six months"
+          ],
+          "answerIndex": 1,
+          "evidenceText": "Daniel, has worked in retail for three years.",
+          "rationale": "His retail experience is three years.",
+          "id": "a2-present-perfect-experience::reading2::q1"
+        },
+        {
+          "skill": "understand-time-reference",
+          "prompt": "Which task has Daniel not done yet?",
+          "choices": [
+            "Answering customer emails",
+            "Completing product training",
+            "Working with international customers",
+            "Using the new booking system"
+          ],
+          "answerIndex": 3,
+          "evidenceText": "He has not used our new booking system yet",
+          "rationale": "The booking system is the task he has not used yet.",
+          "id": "a2-present-perfect-experience::reading2::q2"
+        },
+        {
+          "skill": "infer-from-details",
+          "prompt": "What can be understood about Daniel’s next training?",
+          "choices": [
+            "It will teach him to manage a large team.",
+            "It will begin after the first month.",
+            "It will give him practice with the booking system.",
+            "It will replace his customer-service work."
+          ],
+          "answerIndex": 2,
+          "evidenceText": "he will attend a practice session on Monday.",
+          "rationale": "The practice session follows the statement that he has not used the system yet.",
+          "id": "a2-present-perfect-experience::reading2::q3"
+        }
+      ],
+      "id": "a2-present-perfect-experience::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-basic-passive-voice",
+      "title": "Equipment Maintenance Notice",
+      "format": "Maintenance notice",
+      "text": "The office printers will be checked on Friday morning. During the maintenance period, the main printer will be turned off for about one hour, and its paper tray will be cleaned. The smaller printer will remain available for urgent documents. All print jobs that are waiting in the queue should be saved before 9 a.m. The maintenance work is being completed by an approved service company. After the check, a short report will be sent to the office manager. If a printer cannot be used after the visit, a replacement date will be shared with all staff by email.",
+      "questions": [
+        {
+          "skill": "find-detail",
+          "prompt": "When will the printers be checked?",
+          "choices": [
+            "On Friday morning",
+            "On Thursday evening",
+            "Next Monday afternoon",
+            "At the end of the month"
+          ],
+          "answerIndex": 0,
+          "evidenceText": "The office printers will be checked on Friday morning.",
+          "rationale": "The maintenance is scheduled for Friday morning.",
+          "id": "a2-basic-passive-voice::reading2::q1"
+        },
+        {
+          "skill": "understand-condition",
+          "prompt": "Which printer can staff use for urgent documents during maintenance?",
+          "choices": [
+            "The main printer",
+            "The smaller printer",
+            "Both printers are turned off",
+            "Neither printer is available"
+          ],
+          "answerIndex": 1,
+          "evidenceText": "The smaller printer will remain available for urgent documents.",
+          "rationale": "The smaller printer remains available.",
+          "id": "a2-basic-passive-voice::reading2::q2"
+        },
+        {
+          "skill": "understand-next-action",
+          "prompt": "What should staff do before 9 a.m.?",
+          "choices": [
+            "Send the report to the service company",
+            "Turn off the smaller printer",
+            "Order a new paper tray",
+            "Save print jobs waiting in the queue"
+          ],
+          "answerIndex": 3,
+          "evidenceText": "All print jobs that are waiting in the queue should be saved before 9 a.m.",
+          "rationale": "Staff should save queued print jobs before the maintenance starts.",
+          "id": "a2-basic-passive-voice::reading2::q3"
+        }
+      ],
+      "id": "a2-basic-passive-voice::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    },
+    {
+      "lessonId": "a2-defining-relative-clauses",
+      "title": "People Who Keep the Office Running",
+      "format": "Team introduction",
+      "text": "The office support team includes people who help employees every day. Hoa is the receptionist who welcomes visitors and answers the main phone. Minh is the technician who checks computers and printers when staff report a problem. The service desk also uses a tool that records each request and shows who is responsible for it. A new assistant, Linh, works with the finance officer who prepares monthly cost reports. Employees can contact the person who is listed beside each task in the service tool. This system helps the team answer requests more clearly and makes it easier to see which tasks are still open.",
+      "questions": [
+        {
+          "skill": "find-detail",
+          "prompt": "Who welcomes visitors and answers the main phone?",
+          "choices": [
+            "Minh",
+            "Linh",
+            "The finance officer",
+            "Hoa"
+          ],
+          "answerIndex": 3,
+          "evidenceText": "Hoa is the receptionist who welcomes visitors and answers the main phone.",
+          "rationale": "Hoa is identified as the receptionist.",
+          "id": "a2-defining-relative-clauses::reading2::q1"
+        },
+        {
+          "skill": "understand-purpose-context",
+          "prompt": "What does the service desk tool record?",
+          "choices": [
+            "Each request and the person responsible",
+            "Only monthly cost reports",
+            "Visitors’ home addresses",
+            "The office lunch menu"
+          ],
+          "answerIndex": 0,
+          "evidenceText": "a tool that records each request and shows who is responsible for it.",
+          "rationale": "The tool tracks requests and responsibility.",
+          "id": "a2-defining-relative-clauses::reading2::q2"
+        },
+        {
+          "skill": "find-detail",
+          "prompt": "Where can employees find the person responsible for each task?",
+          "choices": [
+            "In the monthly cost report",
+            "Beside each task in the service tool",
+            "On the main phone",
+            "At the reception desk"
+          ],
+          "answerIndex": 1,
+          "evidenceText": "Employees can contact the person who is listed beside each task in the service tool.",
+          "rationale": "The passage says the responsible person is listed beside each task in the service tool.",
+          "id": "a2-defining-relative-clauses::reading2::q3"
+        }
+      ],
+      "id": "a2-defining-relative-clauses::reading2",
+      "level": "A2",
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "editorialStatus": "pending-independent-editorial-review"
+    }
+  ]
+}

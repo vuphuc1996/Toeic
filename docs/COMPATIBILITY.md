@@ -6,9 +6,9 @@
 
 | Role | Version | Policy |
 |---|---|---|
-| Previous release | v2.87.0 | Adds device-local A2 writing portfolio Markdown export and repairs the polite-request task scenario direction. |
-| Current product source | v2.88.0 | Adds 13 extended A2 writing production tasks (26 in total) with separate stable IDs, independent self-report/revision evidence, and portfolio/export aggregation. |
-| Older releases | ≤ v2.86.0 | Historical; prototype behavior and scope corrections are consolidated in `archive/PROJECT_HISTORY.md` and `CHANGELOG.md`. |
+| Previous release | v2.88.0 | Adds 13 extended A2 writing production tasks (26 in total) with separate stable IDs, independent self-report/revision evidence, and portfolio/export aggregation. |
+| Current product source | v2.89.0 | Repairs generated canonical design-profile typography synchronization; adds 13 supplementary A2 Reading passages / 39 questions with isolated local evidence and independent review pending. |
+| Older releases | ≤ v2.87.0 | Historical; prototype behavior and scope corrections are consolidated in `archive/PROJECT_HISTORY.md` and `CHANGELOG.md`. |
 
 - **SW002 repair:** `assets/js/learning-assistant.js` (active local Robot Buddy summary) and `assets/js/quick-help.js` (no-op compatibility tombstone) are present in both Service Worker `REQUIRED` and `APP_SHELL`. This directly addresses SW002 for these asset paths in an overlay update. Cache version is synced to `data/manifest.json`.
 - **CI contract:** `tools/tests/learning-assistant.mjs`, `tools/tests/quick-help.mjs` and `tools/tests/legacy-google-ai.mjs` are all invoked in `.github/workflows/validate-data.yml`; the CI coverage test enforces every JavaScript regression file is called.
@@ -62,3 +62,7 @@
 - Do not create duplicate canonical runtime data, standalone roadmap/master or feature-specific design system copies.
 
 - v2.88.0 adds an `additionalProductionTasks` array to each of the 13 A2 lesson records. It appends one independent `::produce2` task to the existing `::produce1` task; no original lesson/task ID or existing `productionEvidence` entry is repurposed. Both task histories are stored as sibling properties in the existing `toeic:foundation-progress:v1` localStorage ledger. Portfolio/export/evidence aggregation enumerate both authored task IDs while continuing to exclude legacy `::apply1` application evidence from A2 production reporting. All extended tasks have a 20-word minimum and remain `pending-independent-editorial-review`. No new storage key, IndexedDB database/store/version, migration or remote sync is introduced.
+
+- v2.89.0 adds `data/learning-path/foundation-reading-extended.json`, one separate supplementary passage (`::reading2`) per A2 lesson, each with three questions and exact source evidence. Responses use the existing `toeic:foundation-reading-progress:v1` key under a scoped `{lessonId}::reading2` ledger entry; base reading progress remains untouched and separate. The new resource is mandatory in Service Worker `REQUIRED` and `APP_SHELL`; `test_foundation_reading_extended.py` and `foundation-reading-extended-evidence.mjs` enforce IDs, content hashes, evidence pointers, app integration and scope isolation. All new tasks remain pending independent editorial review and are practice-only.
+- v2.89.0 fixes the canonical typography profile mismatch by regenerating `assets/css/design-system.css` from the canonical design profile. The generated selector list now includes five previously omitted small-text selectors. `sync-design-profile.py --check` and all design-profile tests pass. The CI validator itself remains enabled and unchanged in strictness.
+- Foundation Reading practice thresholds compare the rounded percentage displayed in the UI to the configured rounded percentage threshold. This makes a 2/3 score consistently count as 67% when the resource threshold is 67%, without changing the minimum distinct-question requirement.
