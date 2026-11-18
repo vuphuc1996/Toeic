@@ -92,7 +92,7 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         self.assertEqual(len(batch_020["words"]), 13)
         self.assertTrue({w["id"] for w in batch_020["words"]}.issubset(set(ids)))
         self.assertEqual(len(ids), self.manifest["totalWords"])
-        self.assertEqual(len(ids), 1137)
+        self.assertEqual(len(ids), 1141)
         self.assertEqual(len(ids), len(set(ids)))
         batch_009 = load_json('data/vocabulary/batch-009.json')
         self.assertEqual(len(batch_009['words']), 34)

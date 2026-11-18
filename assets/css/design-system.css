@@ -1091,6 +1091,7 @@ body :where(
   .robot-weak-area span,
   .robot-weak-area strong,
   .row-action,
+  .score-readiness-status,
   .sense-example-label,
   .sense-relation-label,
   .sentence-breakdown b,

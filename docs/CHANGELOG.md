@@ -1,3 +1,41 @@
+## v2.93.0 — TOEIC L&R coverage expansion and score-readiness evidence tracker
+
+- Added 9 Grammar lessons / 27 exercises, 8 Listening units / 20 questions (2 Part 2, 3 Part 3, 3 Part 4), and 8 Reading Part 7 resources / 36 questions (4 single passages and 4 double passages).
+- Added 4 source-linked vocabulary headwords; US IPA is populated only where a single CMUdict pronunciation is available.
+- Added a local-only Full Mock trend tracker. It requires three completed 200-question Full Mocks before showing L/R averages and trend; it never converts raw accuracy into an ETS scaled score.
+- Updated objective-resource mapping and added batch integrity/evidence tests. All new Listening and Reading items remain practice-only pending independent review and excluded from Mock eligibility.
+- Preserved existing local progress keys and IndexedDB v1. B1 remains design-only; Speaking/Writing and IELTS are deferred.
+
+## v2.92.0 — TOEIC content batch 024: Grammar, Listening and Reading expansion
+
+- Added eight original Grammar lessons with 24 exercises covering business conditionals, reported speech, comparison structures, countability/quantifiers, gerund/infinitive patterns, passive voice, relative clauses and time/deadline prepositions. Lessons are tagged for TOEIC Parts 5/6 and use stable unique choice IDs.
+- Added six TOEIC Listening units / 18 questions: three multi-speaker Part 3 conversations and three Part 4 announcements/talks. Each item includes transcript translation, Vietnamese answer rationale and exact transcript evidence. All remain reserve-pending-independent-review and are excluded from Mock eligibility.
+- Added six TOEIC Reading Part 7 resources / 27 questions: three single passages (four questions each) and three double passages (five questions each) across HR, shipping, office administration, finance and quality assurance. Each includes Vietnamese translation, four-option questions and source-label/quote evidence. All remain reserve-pending-independent-review and are excluded from Mock eligibility.
+- Added `tools/content-batch-024-v2.92.0.json` with SHA-256 fingerprints for all 20 new resources, batch regression tests, and CI registration. Existing baseline resources and question IDs remain unchanged.
+- Added a 12-unit Foundation B1 curriculum blueprint defining four-skill outcomes and acceptance gates. B1 is not exposed as a completed or selectable pathway in this release.
+- Updated inventory reporting: Grammar 41 lessons / 110 exercises; Listening 113 units / 219 questions; Reading 57 resources / 227 questions. No invented completion percentages are used where total targets are undefined.
+- No learner progress reset, localStorage key change, IndexedDB v1 schema migration, vocabulary changes, Mock promotion, API/backend, or external learner-data transfer.
+- Independent second-person review of new reserve content, learner validation, remote GitHub Actions, Pages deployment and physical-device QA remain pending.
+
+## v2.91.0 — A2 extended Listening multi-turn and inference upgrade
+
+- Reworked all 13 supplementary A2 Listening clips in place, preserving stable clip/question IDs and the existing `{lessonId}::listening2` progress scope. Each now has six alternating speaker turns and 75–100 spoken words, up from the earlier four-turn, shorter dialogue format.
+- Rebuilt the 39 questions into a consistent progression: listening for detail, understanding purpose/context, and inferring the next action. Each question now carries an exact source-turn `evidenceText`; four choices remain unique and answer positions are balanced across the full Foundation Listening bank at A/B/C/D = 25/25/24/24.
+- Updated the lesson panel to disclose the six-turn dialogue format. Expanded regression coverage and the A2 assessment audit to check turn count, script length, question-skill sequence, exact evidence snippets, hash registry and isolated progress scope.
+- Added a project roadmap status report with defensible coverage figures and explicit review/deployment gates. It does not invent a single overall completion percentage because no approved total denominator or workstream weighting exists.
+- Preserved the 23 core Foundation Listening clips / 59 questions, all existing learner progress scopes and localStorage keys, IndexedDB schema v1, 99 TOEIC Listening reserve questions and Mock eligibility. No new backend, API or data transfer.
+- New supplementary material remains `pending-independent-review`, practice-only, device SpeechSynthesis (not authentic ETS audio), and excluded from official A2 outcome or Mock eligibility. Learner validation, independent editorial review, remote GitHub Actions, Pages and physical-device QA remain pending.
+
+## v2.90.0 — Foundation A2 supplementary Listening expansion
+
+- Added 13 supplementary A2 listening clips, one for each of the 13 A2 lessons, with 39 new questions. Formats include phone call, announcement, discussion, voicemail, workplace update, safety briefing, directions, invitation, process instructions, planning call, status call, notice and help-desk call. Each clip contains four alternating female/male TTS turns and 50–63 spoken words.
+- Added a collapsed “Nghe hiểu mở rộng” panel to each A2 lesson. Playback uses the learner's configured on-device English voices and inter-speaker pause; transcript remains hidden until requested. The UI clearly identifies this as browser SpeechSynthesis, not authentic ETS audio.
+- Supplementary attempts use the existing `toeic:foundation-listening-progress:v1` ledger under `{lessonId}::listening2`. Core Listening remains keyed by the original lesson ID. The two evidence streams, draft sets and completion results are separate; no new storage key or IndexedDB migration was introduced.
+- Preserved all 23 core Foundation Listening clips, their 59 questions, the v2.75.0 A2 q1/q2 content baseline, and the 99 TOEIC Listening reserve items / Mock eligibility boundary. The Foundation Listening inventory is now 23 core clips / 59 questions plus 13 supplementary A2 clips / 39 questions.
+- Added a SHA-256 registry for all 13 supplementary clips and regression coverage for content structure, question IDs, answer keys, format diversity, runtime rendering, scoped evidence, CI registration and project-progress reporting. Listening answer positions are balanced across the full Foundation bank at A/B/C/D = 25/25/24/24.
+- All supplementary content remains `pending-independent-review`. It is optional TTS practice only, not an official A2 outcome, CEFR certification, authentic recorded listening or TOEIC Mock content. Independent linguistic review and learner validation remain open.
+- No existing lesson/question IDs, localStorage key names, IndexedDB v1 schema, learner progress, vocabulary data, TOEIC Mock pool, APIs or server contracts were changed.
+
 ## v2.89.0 — canonical design-profile CI repair & Foundation A2 extended Reading
 
 - Fixed the CI failure in **Validate canonical design profile**. The source `assets/css/app.css` had acquired five fixed small-text selectors whose generated legacy typography-floor list in `assets/css/design-system.css` had not been regenerated. Ran `tools/sync-design-profile.py --apply`; the generated selector block now matches the canonical profile (54 tokens / 400 legacy font-floor selector groups). The exact `--check` command and all six `test_design_profile.py` tests pass locally. No validator was skipped or weakened.

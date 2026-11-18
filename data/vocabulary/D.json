@@ -3214,6 +3214,49 @@
         "job duties",
         "duty manager"
       ]
+    },
+    {
+      "id": "dedicate-v",
+      "word": "dedicate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈde.də.ˌkeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "dành riêng; cống hiến",
+          "definition_en": "to give time, effort, or resources to a particular purpose",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "examples": [
+        {
+          "en": "The company dedicated a training room to new employees.",
+          "vi": "Công ty dành riêng một phòng đào tạo cho nhân viên mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "dedicate time to",
+        "dedicated team",
+        "dedicated workspace"
+      ],
+      "verb_forms": {
+        "v1": "dedicate",
+        "vs_es": "dedicates",
+        "v2": "dedicated",
+        "v3": "dedicated",
+        "ving": "dedicateing"
+      }
     }
   ]
 }

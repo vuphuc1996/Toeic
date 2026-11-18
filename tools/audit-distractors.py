@@ -96,13 +96,13 @@ def main() -> int:
             if not isinstance(answer_index, int) or not 0 <= answer_index < len(choices):
                 errors.append(f"{item['id']} Q{qn}: reserve item has invalid answerIndex {answer_index!r}")
 
-    expected_counts = {'Part 3': 39, 'Part 4': 30, 'Part 7': 108}
+    expected_counts = {'Part 3': 39, 'Part 4': 30, 'Part 7': 171}
     for part, expected in expected_counts.items():
         if counts[part] != expected:
             errors.append(f'{part}: expected {expected} questions in the structural audit scope, got {counts[part]}')
     total = sum(counts.values())
-    if total != 177:
-        errors.append(f'Expected 177 questions in Part 3/4/7 audit scope, got {total}')
+    if total != 240:
+        errors.append(f'Expected 240 questions in Part 3/4/7 audit scope, got {total}')
 
     # Every revision target must be present, and its answer index must still be valid.
     by_library = {'Listening': load('data/listening/listening-library.json', 'listening'),
@@ -115,8 +115,8 @@ def main() -> int:
     lines = [
         f'# TOEIC Distractor & Answer-Uniqueness Audit — v{VERSION}', '',
         '## Scope and method',
-        '- Scope covers **177 questions** across Listening Part 3 (39), Listening Part 4 (30) and Reading Part 7 (108). The 63-question historical Part 7 review baseline remains traceable in Project History. The 45 new Part 7 questions in v2.33.0 include source-label/quotation evidence and passed structural key/choice checks; they are not represented as independently reviewed or covered by the historical 132-item semantic distractor certificate.',
-        '- The historical 132-item semantic review was performed against full transcripts/passages, keyed options and distractors. For the v2.33 additions, this release adds traceable source quotes, answer-key checks, four-distinct-choice checks, stable choice IDs and balanced answer positions. Semantic distractor uniqueness for new items still requires second-person review.',
+        '- Scope covers **240 questions** across Mock-eligible Listening Part 3 (39), Listening Part 4 (30) and the full Reading Part 7 inventory (171). The Part 7 inventory contains the 108-question pre-Batch-024 base, 27 v2.92.0 questions and 36 v2.93.0 questions. New reserve items remain pending independent review; structural checks do not confer semantic approval.',
+        '- The historical Part 7 base remains separately tracked from the v2.92.0 and v2.93.0 reserve additions. Batch 025 includes traceable source quotes, answer-key checks, four-distinct-choice checks, stable choice IDs and a balanced A/B/C/D answer-position distribution (9 each). Semantic distractor uniqueness for new items still requires second-person review.',
         '- Structural checks in this script verify four distinct options and a valid key. They do **not** certify semantic uniqueness by algorithm and are not a substitute for a second human reviewer or psychometric analysis.',
         '', '## Reviewed coverage',
         '| Library | Part | Sets | Questions in audit scope |', '|---|---|---:|---:|'
@@ -143,7 +143,7 @@ def main() -> int:
         '**Rebalancing method:** 27 question groups had only the keyed option exchanged with a distractor position: 8 in Part 3, 5 in Part 4 and 14 in Part 7. The answer text, source evidence, explanation, question IDs and question order were retained. Each changed question carries `previousChoices` and `previousChoiceIds` from v2.16.0; the matching `choiceIds` moved with the option. At startup, progress containing a v2.16 `choiceId` is relocated to its new index; older records without an ID are mapped through the v2.16 snapshot. The prior index is preserved in `previousChoiceIndex`. No random shuffle was used.',
         '', '## Quality decision and remaining limitations',
         '- The 12 revised groups now use distractors closer to the same document purpose, role, travel record, service request, business action or visitor-access context. The correct answer text and `answerIndex` were kept unchanged for every revised question.',
-        '- Historical reviewed groups were retained where the three alternatives are distinct and the transcript/passage supports one clear key. For the new v2.33 Part 7 groups, close dates/times, locations, delivery steps and document-purpose alternatives were authored to be plausible, but an independent reviewer must confirm that exactly one option is defensible.',
+        '- Historical reviewed groups were retained where the three alternatives are distinct and the transcript/passage supports one clear key. For the new v2.92.0 and v2.93.0 Part 7 groups, close dates/times, locations, delivery steps and document-purpose alternatives were authored to be plausible, but an independent reviewer must confirm that exactly one option is defensible.',
         f'- Listening reserve total: {sum(len(x.get("questions", [])) for x in reserve_all)} questions across {len(reserve_all)} units. This script structurally checks Part 3/4 reserve blocks; Part 2 response-fit is tracked separately. Structural checks never approve a reserve for Mock.',
         '- This is editorial review of original-authored content. It is not official ETS content, two-person independent review, statistical item analysis, difficulty calibration or proof of score equivalence.',
         '- Part 1 uses source-tracked licensed Pexels and AI-generated photographs with a JPG-only runtime contract; Listening audio remains browser SpeechSynthesis. Physical-device audio/voice review is still pending.',

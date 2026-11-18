@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "batch": "013",
+  "version": "2.93.0",
+  "focus": "TOEIC vocabulary expansion: workplace coordination, office administration, HR and business operations",
+  "count": 4,
+  "editorialStatus": "original editorial draft; structural validation pending; independent lexical review pending; CEFR levels are editorial estimates by sense",
+  "sourcePolicy": "Definitions, Vietnamese glosses, examples and collocations are project-authored. US IPA is populated only for exact single-pronunciation CMUdict matches; ambiguous or unmatched entries remain blank. No IPA is guessed.",
+  "sources": [
+    {
+      "name": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/",
+      "use": "Recommended independent lexical review source; no claim of completed independent review."
+    },
+    {
+      "name": "Merriam-Webster Dictionary",
+      "url": "https://www.merriam-webster.com/",
+      "use": "Recommended secondary lexical review source; no claim of completed independent review."
+    }
+  ],
+  "ipaSummary": {
+    "populated": 4,
+    "leftBlank": 0,
+    "blankWords": []
+  },
+  "words": [
+    {
+      "id": "appliance-n",
+      "word": "appliance",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ə.ˈplaɪ.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "thiết bị gia dụng/điện",
+          "definition_en": "a machine used for a particular purpose, especially in a home or office",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "examples": [
+        {
+          "en": "All electrical appliances must be inspected annually.",
+          "vi": "Tất cả thiết bị điện phải được kiểm tra hằng năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "electrical appliance",
+        "office appliance",
+        "household appliance"
+      ],
+      "verb_forms": {
+        "v1": "",
+        "vs_es": "",
+        "v2": "",
+        "v3": "",
+        "ving": ""
+      }
+    },
+    {
+      "id": "assemble-v",
+      "word": "assemble",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ə.ˈsem.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "lắp ráp; tập hợp",
+          "definition_en": "to put parts together or bring people together in one place",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "examples": [
+        {
+          "en": "Technicians will assemble the new display units on Monday.",
+          "vi": "Kỹ thuật viên sẽ lắp ráp các quầy trưng bày mới vào thứ Hai.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "assemble equipment",
+        "assemble a team",
+        "fully assembled"
+      ],
+      "verb_forms": {
+        "v1": "assemble",
+        "vs_es": "assembles",
+        "v2": "assembled",
+        "v3": "assembled",
+        "ving": "assembling"
+      }
+    },
+    {
+      "id": "collaborate-v",
+      "word": "collaborate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kə.ˈlæ.bɚ.ˌeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "cộng tác",
+          "definition_en": "to work with another person or group to achieve something",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "examples": [
+        {
+          "en": "The design and marketing teams collaborated on the campaign.",
+          "vi": "Nhóm thiết kế và tiếp thị đã phối hợp thực hiện chiến dịch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "collaborate with colleagues",
+        "closely collaborate",
+        "collaborative project"
+      ],
+      "verb_forms": {
+        "v1": "collaborate",
+        "vs_es": "collaborates",
+        "v2": "collaborated",
+        "v3": "collaborated",
+        "ving": "collaborating"
+      }
+    },
+    {
+      "id": "dedicate-v",
+      "word": "dedicate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈde.də.ˌkeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "dành riêng; cống hiến",
+          "definition_en": "to give time, effort, or resources to a particular purpose",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "examples": [
+        {
+          "en": "The company dedicated a training room to new employees.",
+          "vi": "Công ty dành riêng một phòng đào tạo cho nhân viên mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "dedicate time to",
+        "dedicated team",
+        "dedicated workspace"
+      ],
+      "verb_forms": {
+        "v1": "dedicate",
+        "vs_es": "dedicates",
+        "v2": "dedicated",
+        "v3": "dedicated",
+        "ving": "dedicating"
+      }
+    }
+  ]
+}

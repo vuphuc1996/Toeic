@@ -2,17 +2,58 @@
 
 > **Nguồn trạng thái và lộ trình duy nhất.** Mọi release cập nhật trực tiếp file này. `CHANGELOG.md` là log phát hành; `archive/PROJECT_HISTORY.md` lưu lịch sử đã chỉnh lý; `COMPATIBILITY.md` là sổ tương thích duy nhất.
 
-- **Ngày kiểm kê:** 2026-11-17.
-- **Phiên bản mã nguồn đang kiểm kê:** v2.89.0 — canonical design-profile CI repair and Foundation A2 extended Reading practice.
+- **Ngày kiểm kê:** 2026-11-18.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.93.0 — TOEIC L&R coverage expansion, Batch 025, and local score-readiness evidence tracker.
 - **Product source:** GitHub Pages static PWA; GitHub-only, không có backend riêng cho Robot.
 - **Robot Buddy:** đầu Robot SVG, biểu cảm/animation; giữ nguyên 500 câu hội thoại offline, 59 lời hướng dẫn tính năng cho 12 đích đến (11 khu vực menu và Placement), 6 FAQ và 16 quick prompts. Header dùng hai hàng riêng biệt; menu quick prompts luôn dùng lại được trong phiên chat và có vùng cuộn độc lập; nội dung hội thoại cuộn riêng, không ép menu co lại; composer/footer không bị co; footer quyền riêng tư 6.5px; trạng thái phân tích/lời nhắc hiển thị Bật/Tắt; tên Robot Buddy, TOEIC Dictionary và Vũ Nguyễn Hoàng Phúc được nhấn mạnh an toàn trong câu trả lời.
 - **Learning Insights:** Robot có thể nhận snapshot tiến độ local đã được ứng dụng nạp sẵn để phân loại Cần học / Cần luyện / Cần ôn. Cần học = bài/mục chưa có bằng chứng hoàn thành; Cần luyện = theo ngưỡng bằng chứng của từng module (Từ vựng ≥3 lượt, Flashcard ≥3 câu quiz, Grammar/Reading/Listening ≥5 câu, Foundation ≥3 mục độc lập, Mock theo kết quả bài hoàn thành); Cần ôn = lịch ôn từ vựng/Flashcard, recall Objective và Foundation đã đến hạn. Robot có thể liệt kê tối đa 5 nội dung mẫu trong mỗi nhóm và gắn tối đa 4 nút điều hướng tới khu vực tương ứng. Dữ liệu ít được báo chưa đủ bằng chứng, không kết luận kỹ năng yếu.
 - **Read-only boundary:** Robot không tự mở IndexedDB/LocalStorage. Ứng dụng chỉ truyền snapshot trong bộ nhớ từ các kho hiện hữu; aggregator thuần không sửa dữ liệu. Tắt Learning Insights không ảnh hưởng hội thoại/hướng dẫn. Không gửi tiến độ tới API, server, Google AI hoặc bên thứ ba.
 - **Preservation:** IndexedDB vẫn schema v1; giữ nguyên các key `studyProgress`, `flashProgress`, `grammarProgress`, `readingProgress`, `listeningProgress`, Foundation localStorage và Mock history. Không migration, overwrite hoặc delete progress trong release này.
-- **SW / offline shell:** `assets/js/robot-buddy.js`, `assets/js/robot-learning-insights.js`, `data/robot/robot-library.json` nằm trong `REQUIRED` và `APP_SHELL`; cache version được đồng bộ theo manifest v2.89.0; resource `foundation-reading-extended.json` nằm trong cả REQUIRED và APP_SHELL.
-- **Local release gates:** PASS — 32/32 JavaScript regression suites; 130/130 selected Python tests across 17 focused modules; `node --check` app.js and sw.js; canonical design profile 54 tokens / 400 generated font-floor selector groups; CSS parse 0 errors; vocabulary validator 1,137 records / 0 ERROR / 0 WARNING; learning-content validator 0 ERROR / 0 WARNING; Part 1 photos 9/9; version sync PASS. These are targeted local checks, not full-suite or production acceptance. Details in `reports/TEST_REPORT_TOEIC_Dictionary_v2.89.0.md`.
-- **Release QA still pending:** push GitHub, GitHub Actions, Pages production, browser visual QA, desktop 15.6-inch at 100% zoom and mobile/iOS/Android.
-- **Previous release:** v2.88.0.
+- **SW / offline shell:** `assets/js/robot-buddy.js`, `assets/js/robot-learning-insights.js`, `data/robot/robot-library.json` nằm trong `REQUIRED` và `APP_SHELL`; cache version được đồng bộ theo manifest v2.93.0; `assets/js/mock-score-readiness.js` nằm trong REQUIRED / APP_SHELL; các resource Foundation Reading mở rộng và Listening dùng chung JSON đã nằm trong REQUIRED / APP_SHELL.
+- **Foundation Listening inventory:** 23 core clips / 59 questions plus 13 supplementary A2 clips / 39 questions. Supplementary clips are stored and scored under `{lessonId}::listening2` in the existing local Listening ledger; each is a six-turn / 75–100-word dialogue with three skill-distinct questions, collapsed by default, using local browser TTS, and remains pending independent review. The original 99 TOEIC Listening reserve questions are preserved; v2.92.0 adds 18 and v2.93.0 adds 20 practice-only questions, bringing the pending reserve inventory to 137. Mock eligibility remains unchanged.
+- **v2.93 local release gates:** targeted checks PASS — 33/33 JavaScript regression suites; 100/100 selected Python tests across 13 modules; Python compileall; vocabulary validator 1,141 records / 0 ERROR / 0 WARNING (legacy baseline); learning-content validator 0 errors / 0 warnings; objective-resource links 339/339; 240-question distractor structural audit; Foundation A2 assessment audit; Part 1 photos 9/9; version sync; design profile 54 tokens / 401 font-floor selector groups; CSS parsing 0 errors; Batch 025 integrity/evidence tests; Mock score-readiness regression. The complete Python test discovery and remote/physical QA are not claimed. Details in `reports/TEST_REPORT_TOEIC_Dictionary_v2.93.0.md`.
+- **Release QA still pending:** user consolidated acceptance test of v2.93.0; then push GitHub, GitHub Actions, Pages production, browser visual QA, desktop 15.6-inch at 100% zoom and mobile/iOS/Android. Hold v2.94.0 until user feedback is recorded.
+- **Previous release:** v2.92.0.
+
+## v2.93.0 changes — TOEIC L&R coverage expansion and score-readiness evidence
+
+- **Batch 025 content:** added 9 Grammar lessons / 27 exercises; 8 Listening units / 20 questions (2 Part 2, 3 Part 3, 3 Part 4); and 8 Reading Part 7 resources / 36 questions (4 single passages × 4 and 4 double passages × 5). All new Listening/Reading items have Vietnamese explanations/translations and source evidence, remain `reserve-pending-independent-review`, practice-only and excluded from Mock.
+- **Vocabulary Batch 013:** added 4 new headwords (`appliance`, `assemble`, `collaborate`, `dedicate`), bringing the canonical vocabulary inventory to 1,141. US IPA is populated only from one exact CMUdict pronunciation; no pronunciation is guessed. The four new records remain pending independent lexical/CEFR review.
+- **Score Readiness:** added a local-only evidence tracker using the three latest completed 200-question Full Mocks. Before three qualifying attempts, it reports insufficient data. Once enough evidence exists, it shows L/R accuracy averages and direction of change. It does not convert raw accuracy to ETS scaled scores and does not claim 500+ or 850+ readiness.
+- **Roadmap boundary:** TOEIC Listening & Reading remain the only active exam-development track. B1 stays blueprint-only. Speaking, Writing and IELTS remain deferred until TOEIC L/R acceptance gates are met and the owner approves a phase change.
+- **Preservation:** no IndexedDB schema migration, no new learning-data storage key, no reset of vocabulary/practice/Mock history and no external data transfer. New score-readiness results are derived from the existing local Mock history.
+- **Updated inventory:** Vocabulary 1,141; Grammar 50 lessons / 137 exercises; Listening 121 units / 239 questions; Reading 65 resources / 263 questions. New reserve content is not Mock eligible.
+- **Review handoff:** `reports/TOEIC_BATCH_025_REVIEW_CHECKLIST_v2.93.0.md`; score-readiness behavior: `reports/TOEIC_SCORE_READINESS_v2.93.0.md`; consolidated user test: `reports/USER_ACCEPTANCE_TEST_v2.93.0.md`. Consolidated user acceptance test is now the next action; no v2.94.0 work should begin before feedback.
+
+## v2.92.0 changes — TOEIC Grammar, Listening and Reading content batch 024
+
+- **v2.92.0 content batch:** added 8 TOEIC Grammar lessons / 24 exercises; 6 TOEIC Listening units / 18 questions (3 Part 3 conversations + 3 Part 4 talks); and 6 TOEIC Reading Part 7 resources / 27 questions (3 single passages × 4 questions + 3 double passages × 5 questions). Added a SHA-256 registry, batch-specific tests and an item-level second-review checklist at `reports/TOEIC_BATCH_024_REVIEW_CHECKLIST_v2.92.0.md`. All new Listening/Reading resources are `reserve-pending-independent-review`, practice-only and excluded from Mock eligibility. The new questions include Vietnamese rationales, transcript/passage translations and source-grounded evidence.
+- **Updated TOEIC inventory:** Grammar 41 lessons / 110 exercises; Listening 113 units / 219 questions; Reading 57 resources / 227 questions. No total target is approved for these libraries, so no completion percentage is asserted.
+- **Foundation B1 planning:** added a 12-unit four-skill B1 curriculum blueprint with measurable outcomes and review gates. B1 is not added to the learner stage selector and is not represented as an implemented pathway.
+- **Preservation:** no vocabulary records, learner progress stores, localStorage keys, IndexedDB v1 schema, Foundation A2 evidence scopes, Mock history or server contracts changed. No backend/API or learner data transfer.
+
+- Local release gates are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.92.0.md`. Independent review, learner validation, GitHub Actions, Pages deployment and physical-device QA remain pending.
+
+## v2.91.0 changes — A2 extended Listening multi-turn and inference upgrade
+
+- Reworked all 13 supplementary A2 Listening clips in place; stable IDs `{lessonId}::listening2`, all 39 question IDs and the existing progress scope are preserved. Dialogues now contain six alternating turns (three female / three male voices) and 75–100 words each.
+- Questions now follow a consistent skill sequence: `listen-for-detail`, `understand-purpose-context`, `infer-next-action`. All 39 questions have four unique choices, a rationale and an exact `evidenceText` excerpt from the spoken script. Whole Foundation Listening answer positions remain A/B/C/D = 25/25/24/24.
+- Updated the lesson summary to disclose the six-turn format. The assessment audit and regression tests now validate six turns, word count, alternating speakers/voice balance, question skill sequence, exact evidence, stable IDs, SHA-256 content registry and progress isolation.
+- Updated project progress reporting and added `reports/PROJECT_ROADMAP_STATUS_v2.91.0.md`. It separates implemented structure, local verification, independent review, learner validation and deployment/device acceptance. No overall project percentage is invented because there is no approved global denominator or weighting.
+- Preserved 23 core Foundation Listening clips / 59 questions, original core A2 question baseline, all existing local progress keys, IndexedDB schema v1, the 99 TOEIC Listening reserve questions and Mock eligibility. No new API, server, backend or external data transfer.
+- Supplementary A2 Listening remains `pending-independent-review`, optional practice only, device SpeechSynthesis (not authentic ETS audio), and excluded from official A2 outcome / CEFR / Mock claims. Independent second-person review, learner validation, GitHub Actions, Pages deployment and real-device visual QA remain pending.
+- Local release gates and exact commands are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.92.0.md`.
+
+## v2.90.0 changes — Foundation A2 supplementary Listening
+
+- Added 13 supplementary A2 Listening clips (`{lessonId}::listening2`), one for each A2 lesson, with 39 questions across 13 formats: phone call, announcement, discussion, voicemail, workplace update, safety briefing, directions, invitation, process instructions, planning call, status call, notice and help-desk call. Each contains four alternating female/male voice turns and 50–63 spoken words.
+- Added a collapsed “Nghe hiểu mở rộng” panel in each A2 lesson. Playback respects saved device voice settings and inter-speaker pause. Transcript is hidden until requested. The interface explicitly says browser SpeechSynthesis, not ETS audio.
+- Added isolated progress scopes `{lessonId}::listening2` inside the existing `toeic:foundation-listening-progress:v1` localStorage ledger. Core listening progress remains under the original lesson ID. Drafts, results and summary counts remain independent; no new key or IndexedDB migration.
+- Preserved the original 23 core clips / 59 questions and the v2.75.0 q1/q2 hash baseline. The complete Foundation Listening inventory is 36 clips / 98 questions: 23 core clips (59 questions) plus 13 supplementary A2 clips (39 questions). The TOEIC Listening reserve pool of 99 pending items remains untouched and excluded from Mock eligibility.
+- Added a SHA-256 registry for all supplementary clips, four focused Python regression modules/tests and a project-progress inventory update. Full Foundation Listening answer positions are balanced A/B/C/D = 25/25/24/24.
+- New content remains `pending-independent-review`; it is supplementary TTS practice, not authentic audio, independent listening assessment, official A2 evidence, CEFR certification or Mock content. Independent second-person linguistic review and learner validation remain required.
+- No existing lesson/question IDs, progress key names, IndexedDB v1, learner history, vocabulary, TOEIC content, API or server behavior changed.
+- Local verification: see `reports/TEST_REPORT_TOEIC_Dictionary_v2.90.0.md`. Remote GitHub Actions, Pages and physical-device QA remain unverified until the release is pushed and tested.
 
 ## v2.89.0 changes — canonical design profile CI repair & Foundation A2 extended Reading
 
@@ -521,17 +562,18 @@
 - `validate-learning-content.py`: 0 errors and 8 warnings because eight original Pexels JPG binaries are omitted from this source snapshot. `validate-part1-photo-assets.py --allow-missing`: PASS with 1/9 photo bytes present here and 8 known missing-Pexels-JPG warnings. The user's original eight JPGs must remain in GitHub for strict CI photo validation.
 - No IndexedDB change: `toeic-vocabulary-phase1`, v1, store `workspace`. Vocabulary 1,100, Reading 200, Grammar 33 lessons/86 exercises, separate Part 5 bank 80; no changes to their IDs or progress.
 
-## 6. Current inventory — v2.77.0
+## 6. Current inventory — v2.93.0
 
 | Area | Inventory | Current development status |
 |---|---:|---|
-| Vocabulary | 1,137 headwords | 1,044 US IPA / 1,137 (91.8%); 276 word-family records / 1,137 (24.3%); 374 directed family links; 325 verb-form records; 967 collocation records |
-| Grammar | 33 lessons / 86 exercises | No overall target agreed; Part 5/6 tagging retained |
-| TOEIC Listening | 107 units / 201 questions | 102 Mock-eligible; 99 questions pending independent review; reserve pool is practice-only until approved |
-| TOEIC Reading | 51 resources / 200 questions | 45 expanded Part 7 questions remain second-review-gated; eligible bank supports two zero-overlap Full Reading forms according to the current inventory audit |
+| Vocabulary | 1,141 headwords | 1,048 US IPA / 1,141 (91.8%); 276 word-family records / 1,141; 374 directed family links; 329 verb-form records; 971 collocation records; 93 records still lack populated US IPA |
+| Grammar | 50 lessons / 137 exercises | No overall target agreed; v2.92.0 adds 8 lessons / 24 exercises; v2.93.0 adds 9 / 27; objective mapping 50/50 |
+| TOEIC Listening | 121 units / 239 questions | 102 Mock-eligible; 137 questions pending independent review (99 prior + 18 v2.92.0 + 20 v2.93.0); new items practice-only until approved |
+| TOEIC Reading | 65 resources / 263 questions | 27 v2.92.0 and 36 v2.93.0 Part 7 questions remain pending independent review; historical evidence-backed Part 7 items remain separately tracked |
 | Guided Foundation | 23 lessons | 3/6 stages represented: Pre-A1 (3), A1 (7), A2 (13). Stage presence does not mean full-stage completion |
-| Foundation Reading | 23 passages / 59 questions | 10 Pre-A1/A1 × 2 + 13 A2 × 3; separate bank, not TOEIC Mock inventory |
-| Foundation Listening | 23 scripts / 59 questions | 10 Pre-A1/A1 × 2 + 13 A2 × 3; 13 A2 four-turn dialogues use device SpeechSynthesis, not authentic ETS recordings |
+| Foundation Reading | 23 core passages / 59 questions + 13 supplementary A2 passages / 39 questions | Supplementary A2 remains pending independent review and separate from core evidence |
+| Foundation Listening | 23 core scripts / 59 questions + 13 supplementary A2 scripts / 39 questions | Supplementary dialogues are six turns / 75–100 words each, browser SpeechSynthesis, pending independent review; not ETS audio |
+| Foundation Writing | 26 A2 tasks | 13 foundational + 13 extended contextual tasks; extended content remains pending independent review |
 | Foundation A–Z sound lab | 26 letters | Two TTS actions per letter; no pronunciation scoring or mastery inference |
 | Separate TOEIC Part 5 practice | 80 questions | Four-choice practice pool; independent review pending; not Mock-eligible |
 | Mock formats | 15m/25Q · 60m/100Q · 120m/200Q | Existing test blueprints and indivisible passage/conversation blocks preserved |
@@ -546,13 +588,13 @@ No numeric total target has been agreed for the full Grammar, TOEIC Listening, T
 3. v2.77.0 corrected five identified repeated-information A2 tasks across Reading/Listening and added exact evidence pointers; A2 q1/q2 objects remain unchanged against the v2.75.0 hash baseline. The focused audit passed structural/source checks, but independent linguistic/editorial review is still required. The “reviewState” of the A2 objective remains review-depth-required. Do not promote structural completion to editorial approval.
 4. Outcome registry has 11 objectives and 33 criteria defined. Foundation recognition, learner-authored production self-report and delayed recall are wired separately; self-report is not auto-graded, and no learner mastery claim is allowed.
 5. TOEIC objective practice evidence is wired across 9/9 TOEIC objective groups. Practice thresholds (minimum unique items and accuracy) are local practice indicators only, not CEFR/ETS certification.
-6. Listening pending pool: 99 questions (Batch 013=11, Batch 014=17, Batch 015=70, Batch 017 Part 1=1). Pending questions remain available for ordinary practice but excluded from Mock until a second reviewer records approval.
-7. Current eligible Listening pool remains 102: P1=8, P2=25, P3=39, P4=30. One Full Listening form can be assembled; a second currently reuses 98/100 question IDs. Even after the 99 pending items are approved, two zero-repeat Full forms need three additional distinct Part 1 items.
+6. Listening pending pool: 137 questions (prior reserve 99: Batch 013=11, Batch 014=17, Batch 015=70, Batch 017 Part 1=1; v2.92.0 Batch 024 adds 18 and v2.93.0 Batch 025 adds 20). Pending questions remain available for ordinary practice but excluded from Mock until a second reviewer records approval.
+7. Current eligible Listening pool remains 102: P1=8, P2=25, P3=39, P4=30. One Full Listening form can be assembled; a second currently reuses 98/100 question IDs. Even after all 137 pending items are approved, two zero-repeat Full forms need three additional distinct Part 1 items.
 8. Part 1 uses nine JPG photos with source-specific attribution (8 licensed Pexels + 1 AI-generated project asset). All are embedded as 1448×1086 4:3 landscape JPEGs below 400,000 bytes. Strict photo validation passes 9/9; no SVG fallback or downloader step belongs to the current contract.
-9. Reading's 200-question bank supports two zero-overlap Full forms according to the current inventory audit. The 45 expanded Part 7 questions still need semantic second-person review.
+9. Reading's 263-question bank includes 27 v2.92.0 and 36 v2.93.0 Part 7 reserve questions. The prior 45 evidence-backed Part 7 questions remain separately tracked; all new reserve items require independent semantic review and are excluded from Mock eligibility.
 10. All 80 separate Part 5 practice items remain pending independent review and practice-only. Do not promote to Mock until answer-key uniqueness, distractors, grammar and naturalness have an independent review.
 11. Mock scores are raw practice counts/accuracy, not ETS-equated results. No ETS questions or recordings are included.
-12. Vocabulary contains 1,137 headwords, below the 3,000–5,000 internal planning target. 93 records still lack populated US IPA; no ambiguous pronunciation is to be guessed. Independent lexical/CEFR review remains active.
+12. Vocabulary contains 1,141 headwords, below the 3,000–5,000 internal planning target. 93 records still lack populated US IPA; no ambiguous pronunciation is to be guessed. Independent lexical/CEFR review remains active.
 13. Remote GitHub Actions, GitHub Pages deployment and physical iOS/Android/desktop audio/visual QA are not inferred from local checks.
 
 ## 8. Runtime and storage compatibility
@@ -569,14 +611,14 @@ No numeric total target has been agreed for the full Grammar, TOEIC Listening, T
 | Priority | Workstream | Next implementation |
 |---|---|---|
 | P0 | Foundation outcome instrumentation | COMPLETE for current Foundation scope: recognition, learner self-report production/explanation and delayed recall are wired separately; do not infer mastery or merge with TOEIC evidence |
-| P0 | Listening reserves | Continue second-person review of the 99 pending Listening questions; preserve reserve/Mock separation until recorded independent approval |
-| P1 | A2 completeness | v2.88.0 expands writing to 26 separate tasks; v2.89.0 adds 13 supplementary Reading passages / 39 questions (pending review). Next obtain second-person Reading review, broaden Listening task variety, then conduct learner validation before any A2 completion status |
-| P1 | B1 pathway | Start the B1 bridge only after defining level-specific outcomes, lesson/skill coverage and review gates; add no arbitrary completion denominator |
+| P0 | Listening reserves | Continue second-person review of the 137 pending Listening questions; preserve reserve/Mock separation until recorded independent approval |
+| P1 | A2 completeness | v2.88.0 expands writing to 26 separate tasks; v2.89.0 adds 13 supplementary Reading passages / 39 questions (pending review). Listening variety expansion includes v2.91.0 Foundation A2 (13 six-turn dialogues / 39 questions) and v2.92.0 TOEIC reserve (6 units / 18 questions). Next obtain second-person review of extended Reading, Listening and Writing, then conduct learner validation before any A2 completion status |
+| P1 | B1 pathway | Keep the 12-topic blueprint only. Do not implement B1 lessons or expose B1 as an active pathway until TOEIC L/R is completed and accepted |
 | P1 | Part 5 editorial review | Independent item-level review of all 80 sentence-completion questions; keep practice-only, no promotion to Mock before review |
-| P1 | Reading editorial quality | Second review of the 45 expanded Part 7 questions, focusing on semantic support, paraphrase and distractor uniqueness |
+| P1 | Reading editorial quality | Second review of the prior 45 evidence-backed Part 7 questions plus the 27 new v2.92.0 and 36 new v2.93.0 Part 7 reserve questions, focusing on semantic support, paraphrase and distractor uniqueness |
 | P1 | Vocabulary quality and growth | Continue source-supported definitions, sense-specific examples, unresolved IPA, word-family, verb forms and collocations; keep 3,000 as minimum target and distinguish quantity from quality |
 | P1 | PWA/device behavior | Targeted hardening for offline cache, reconnect, TTS and responsive layout; remote Actions/Pages and physical-device QA remain release gates |
-| P2 | Speaking & Writing | Define content schema, recording/feedback contracts and staged progression after TOEIC L&R acceptance gates; IELTS remains deferred |
+| P2 | Speaking & Writing | Do not implement until TOEIC L&R acceptance gates are passed and owner approves transition; IELTS remains deferred after S&W phase |
 
 IELTS remains deferred until TOEIC development backlog is closed and the user approves a phase change.
 

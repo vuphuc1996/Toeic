@@ -1,0 +1,63 @@
+{
+  "source": "CMU Pronouncing Dictionary via cmudict package; single exact pronunciation only",
+  "recordCount": 4,
+  "records": [
+    {
+      "id": "appliance-n",
+      "word": "appliance",
+      "arpabet": [
+        "AH0",
+        "P",
+        "L",
+        "AY1",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/ə.ˈplaɪ.əns/"
+    },
+    {
+      "id": "assemble-v",
+      "word": "assemble",
+      "arpabet": [
+        "AH0",
+        "S",
+        "EH1",
+        "M",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ə.ˈsem.bəl/"
+    },
+    {
+      "id": "collaborate-v",
+      "word": "collaborate",
+      "arpabet": [
+        "K",
+        "AH0",
+        "L",
+        "AE1",
+        "B",
+        "ER0",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/kə.ˈlæ.bɚ.ˌeɪt/"
+    },
+    {
+      "id": "dedicate-v",
+      "word": "dedicate",
+      "arpabet": [
+        "D",
+        "EH1",
+        "D",
+        "AH0",
+        "K",
+        "EY2",
+        "T"
+      ],
+      "phoneticUs": "/ˈde.də.ˌkeɪt/"
+    }
+  ]
+}

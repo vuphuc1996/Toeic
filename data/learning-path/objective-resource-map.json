@@ -87,7 +87,24 @@
         "perfect-tense-sequence-toeic",
         "reduced-relative-participial-clauses-toeic",
         "transition-connectors-part6-toeic",
-        "text-cohesion-part6-toeic"
+        "text-cohesion-part6-toeic",
+        "conditional-forms-business-toeic",
+        "reported-speech-workplace-toeic",
+        "comparatives-business-reporting-toeic",
+        "countability-quantifiers-toeic",
+        "gerund-infinitive-business-verbs-toeic",
+        "passive-reporting-process-toeic",
+        "relative-clauses-reference-toeic",
+        "prepositions-time-deadlines-toeic",
+        "batch025-parallel-structure-toeic",
+        "batch025-inversion-negative-adverbials-toeic",
+        "batch025-subjunctive-recommendation-toeic",
+        "batch025-causative-have-get-toeic",
+        "batch025-noun-clause-connectors-toeic",
+        "batch025-reduced-adverbial-clauses-toeic",
+        "batch025-articles-institutional-nouns-toeic",
+        "batch025-concessive-contrast-connectors-toeic",
+        "batch025-verb-complement-meaning-toeic"
       ],
       "availability": "available",
       "reviewState": "editorial_review_status_not_structured"
@@ -171,7 +188,9 @@
         "part2-server-room-inspection",
         "part2-sample-color-comparison",
         "part2-hotel-confirmation-delay",
-        "part2-survey-results-folder"
+        "part2-survey-results-folder",
+        "batch025-part2-client-appointment",
+        "batch025-part2-equipment-status"
       ],
       "availability": "available",
       "reviewState": "mixed_or_pending_review_check_item_level"
@@ -210,7 +229,13 @@
         "part3-month-end-expense-reconciliation",
         "part3-safety-training-evacuation",
         "part3-international-shipment-customs",
-        "part3-office-relocation-equipment"
+        "part3-office-relocation-equipment",
+        "part3-projector-maintenance-window",
+        "part3-vendor-invoice-correction",
+        "part3-training-room-change",
+        "batch025-part3-training-room-change",
+        "batch025-part3-invoice-clarification",
+        "batch025-part3-access-card-renewal"
       ],
       "availability": "available",
       "reviewState": "mixed_or_pending_review_check_item_level"
@@ -242,7 +267,13 @@
         "part4-quarterly-sales-data-cutoff",
         "part4-building-elevator-maintenance",
         "part4-travel-reimbursement-deadline",
-        "part4-conference-registration-policy"
+        "part4-conference-registration-policy",
+        "part4-parking-policy-update",
+        "part4-customer-survey-results",
+        "part4-inventory-count-schedule",
+        "batch025-part4-delivery-route-update",
+        "batch025-part4-benefits-enrollment",
+        "batch025-part4-display-maintenance"
       ],
       "availability": "available",
       "reviewState": "mixed_or_pending_review_check_item_level"
@@ -329,7 +360,21 @@
         "part7-single-contract-renewal-notice",
         "part7-single-facility-reservation",
         "part7-double-vendor-credit",
-        "part7-triple-conference-exhibitor-logistics"
+        "part7-triple-conference-exhibitor-logistics",
+        "part7-double-training-registration",
+        "part7-double-delivery-reschedule",
+        "part7-single-office-closure",
+        "part7-single-expense-guideline",
+        "part7-double-product-recall",
+        "part7-single-recruitment-fair",
+        "batch025-part7-single-equipment-inspection",
+        "batch025-part7-single-training-registration",
+        "batch025-part7-single-customer-feedback",
+        "batch025-part7-single-library-hours",
+        "batch025-part7-double-conference-booking",
+        "batch025-part7-double-shipping-delay",
+        "batch025-part7-double-job-fair",
+        "batch025-part7-double-software-renewal"
       ],
       "availability": "available",
       "reviewState": "part7_expansion_requires_second_review"

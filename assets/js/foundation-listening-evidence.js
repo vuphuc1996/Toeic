@@ -28,3 +28,5 @@ export function summarizeFoundationListening(progress = {}, lessonId, policy = {
     totalAttempts: evidence.reduce((sum, item) => sum + (Array.isArray(item.attempts) ? item.attempts.length : 0), 0)
   };
 }
+
+// Supplementary lesson scopes use a distinct lesson key (for example `${lessonId}::listening2`).

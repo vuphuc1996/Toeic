@@ -1,0 +1,55 @@
+{
+  "version": "2.92.0",
+  "grammar": [
+    "conditional-forms-business-toeic",
+    "reported-speech-workplace-toeic",
+    "comparatives-business-reporting-toeic",
+    "countability-quantifiers-toeic",
+    "gerund-infinitive-business-verbs-toeic",
+    "passive-reporting-process-toeic",
+    "relative-clauses-reference-toeic",
+    "prepositions-time-deadlines-toeic"
+  ],
+  "listening": [
+    "part3-projector-maintenance-window",
+    "part3-vendor-invoice-correction",
+    "part3-training-room-change",
+    "part4-parking-policy-update",
+    "part4-customer-survey-results",
+    "part4-inventory-count-schedule"
+  ],
+  "reading": [
+    "part7-double-training-registration",
+    "part7-double-delivery-reschedule",
+    "part7-single-office-closure",
+    "part7-single-expense-guideline",
+    "part7-double-product-recall",
+    "part7-single-recruitment-fair"
+  ],
+  "grammar_sha256": {
+    "conditional-forms-business-toeic": "29c74417928251a6c4b743bc13fbb9ed00d670f2c8c067e5754adbc8e03e96c4",
+    "reported-speech-workplace-toeic": "3c689fb648688d7527d95b4ddd95e4fa625a19d68cefe5db976971579ec9f8ca",
+    "comparatives-business-reporting-toeic": "a70752c000b69db82dabfa18b26c56f37e25dcb8eab014e4cce46fe69922a5ac",
+    "countability-quantifiers-toeic": "a8423807ff2426ffe6fa67c2f679a1b190ab8250cd85aee1f30ee3bfba3a6128",
+    "gerund-infinitive-business-verbs-toeic": "6e17b6915cb424f845d3d92175ef438fd13a305745eb5164cfbf0e3b7415cfdc",
+    "passive-reporting-process-toeic": "9f24372400085060c8c2797fa8cfcb161edc7bead6621f86216ef8ca2d4ea984",
+    "relative-clauses-reference-toeic": "af885447829d2e7fcea57af151e4dd600bfea93eb45307addd6404b4ed2bfbe8",
+    "prepositions-time-deadlines-toeic": "e18b3ea238efd14667ec38e407b617d0ed66bba9e05405e03f504f3d3fd16dd3"
+  },
+  "listening_sha256": {
+    "part3-projector-maintenance-window": "314b58109f22c8a216424fa9d9c0608db6d449d1f2ef243438a80dc8fce867ff",
+    "part3-vendor-invoice-correction": "3a0d9cc98ed989d7224e5bdbea62d75ef9702112702f5b6492bd97a054510fdb",
+    "part3-training-room-change": "cfb0a8dedb83afaea67a3c9d4261f363871d3e526432314aab3cdf603870ba0e",
+    "part4-parking-policy-update": "3d847dd812e6ebb40602a9e776b6371b3b4c6993e218f7e6abd2c34a99e1a2a4",
+    "part4-customer-survey-results": "dd221ae0892e0cfd38f1128849be4be05102d24be47fbe6686d5923df96937b0",
+    "part4-inventory-count-schedule": "e63d49e652725d3629ead929c933c0ec5f7a870b8d9429e63af0be8fbe544c96"
+  },
+  "reading_sha256": {
+    "part7-double-training-registration": "a924ca95666c5887094583e91af4439af3f5809f4ea78b7116a1d493ad908f21",
+    "part7-double-delivery-reschedule": "e0f838ce85a0066d7fce0312556f0e5e726c3342b18e16356747e8528a63589e",
+    "part7-single-office-closure": "3d718a999b289fa6ff49398a5ce709cae728c879030d083b4407c8fc7df7c756",
+    "part7-single-expense-guideline": "60747a9f4d9a61de47f1af4f2fdde00ff232047a9c3f125c068ac73456e85218",
+    "part7-double-product-recall": "da35e7c07c9bf7ae26840df3a2026b29b4e7a7c1206119a31352543055fd83fb",
+    "part7-single-recruitment-fair": "82a6875d908544af52799cbbb762f8d38b3564f5cb3923e27177026e0bcad401"
+  }
+}

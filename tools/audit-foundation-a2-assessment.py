@@ -34,9 +34,25 @@ def main() -> int:
         ('Reading', reading, lambda item: item.get('text', '')),
         ('Listening', listening, lambda item: '\n'.join(s.get('text', '') for s in item.get('segments', [])) or item.get('script', '')),
     ):
-        a2 = [item for item in items if item.get('level') == 'A2']
+        a2_all = [item for item in items if item.get('level') == 'A2']
+        a2 = [item for item in a2_all if not item.get('supplementary')] if modality == 'Listening' else a2_all
         if len(a2) != 13:
-            issues.append(f'{modality}: expected 13 A2 resources, found {len(a2)}')
+            issues.append(f'{modality}: expected 13 core A2 resources, found {len(a2)}')
+        if modality == 'Listening':
+            supplementary = [item for item in a2_all if item.get('supplementary')]
+            if len(supplementary) != 13 or {item.get('lessonId') for item in supplementary} != {item.get('lessonId') for item in a2}:
+                issues.append(f'Listening: expected 13 supplementary clips mapped one-to-one to core A2 lessons, found {len(supplementary)}')
+            for item in supplementary:
+                if item.get('reviewState') != 'pending-independent-review' or item.get('evidenceScope') != 'listening2':
+                    issues.append(f"{item.get('id')}: supplementary review/evidence scope is invalid")
+                if len(item.get('segments', [])) != 6 or not 75 <= len(item.get('script', '').split()) <= 100:
+                    issues.append(f"{item.get('id')}: expected six-turn 75–100-word extended dialogue")
+                if len(item.get('questions', [])) != 3:
+                    issues.append(f"{item.get('id')}: expected three supplementary questions")
+                for question in item.get('questions', []):
+                    evidence = question.get('evidenceText', '')
+                    if not evidence or evidence not in item.get('script', ''):
+                        issues.append(f"{question.get('id')}: supplementary evidenceText is not an exact source substring")
         questions = []
         prompts = set()
         for item in a2:
@@ -101,8 +117,9 @@ def main() -> int:
     for modality, items in (('Reading', reading), ('Listening', listening)):
         counts = Counter(q.get('answerIndex') for item in items for q in item.get('questions', []))
         distribution = [counts.get(i, 0) for i in range(4)]
-        if distribution != [15, 15, 15, 14]:
-            issues.append(f'{modality}: answer position distribution expected [15, 15, 15, 14], got {distribution}')
+        expected_distribution = [15, 15, 15, 14] if modality == 'Reading' else [25, 25, 24, 24]
+        if distribution != expected_distribution:
+            issues.append(f'{modality}: answer position distribution expected {expected_distribution}, got {distribution}')
 
     # Targeted semantic non-duplication checks for the exact pairs revised in this pass.
     targeted = [
@@ -119,9 +136,9 @@ def main() -> int:
             issues.append(f'Targeted pair still has duplicate correct answer: {left} / {right}')
 
     lines = [
-        '# Foundation A2 Assessment Quality Pass — v2.77.0', '',
+        f'# Foundation A2 Assessment Quality Pass — v{CURRENT_VERSION}', '',
         '## Scope',
-        '- 13 A2 Reading resources and 13 A2 Listening resources; 3 questions per resource (78 question records in total).',
+        '- 13 core A2 Reading resources + 13 core A2 Listening resources; the new 13 supplementary A2 Listening clips (39 questions) are separately scoped and pending independent review.',
         '- Focused review of within-resource q2/q3 repetition, answer-key uniqueness, four-choice integrity and explicit source traceability for changed/retained focus questions.',
         '- Five question prompts/answer tasks were materially revised; six reviewed question records now carry exact source-evidence pointers.',
         '', '## Automated integrity results',
@@ -135,7 +152,7 @@ def main() -> int:
         '- All A2 questions require four unique choices, a valid answer index, a non-empty prompt and rationale.',
         '- Each A2 resource must have three questions with non-identical q2/q3 correct answers.',
         '- Each source-evidence pointer is checked as an exact substring of its Reading passage or spoken Listening segment.',
-        '- Full-bank answer-position distribution remains A/B/C/D = 15/15/15/14 in each modality.',
+        '- Core Reading answer positions remain A/B/C/D = 15/15/15/14; Listening full bank including supplementary practice is A/B/C/D = 25/25/24/24.',
         '- Existing A2 q1/q2 objects remain protected by the v2.75.0 canonical-hash baseline tests.',
         '', '## Focused changes',
         '| Question | Change |', '|---|---|'
@@ -155,10 +172,11 @@ def main() -> int:
         lines.extend(f'- {issue}' for issue in issues)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text('\n'.join(lines) + '\n', encoding='utf-8')
-    print(f'A2 resources: Reading {bank_info[0][1]}/13; Listening {bank_info[1][1]}/13')
-    print(f'A2 questions: Reading {bank_info[0][2]}/39; Listening {bank_info[1][2]}/39')
+    print(f'A2 core resources: Reading {bank_info[0][1]}/13; Listening {bank_info[1][1]}/13')
+    print(f'A2 core questions: Reading {bank_info[0][2]}/39; Listening {bank_info[1][2]}/39')
+    print(f'A2 supplementary Listening: {sum(1 for x in listening if x.get("supplementary"))}/13 resources; {sum(len(x.get("questions", [])) for x in listening if x.get("supplementary"))}/39 questions')
     print(f'Source evidence: {len(actual_ids)}/{len(expected_ids)}')
-    print(f'Full-bank answer positions: Reading + Listening [15, 15, 15, 14]')
+    print(f'Full-bank answer positions: Reading [15, 15, 15, 14]; Listening [25, 25, 24, 24]')
     if issues:
         print('FAILED:')
         for issue in issues:

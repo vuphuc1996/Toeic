@@ -6093,6 +6093,49 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "collaborate-v",
+      "word": "collaborate",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kə.ˈlæ.bɚ.ˌeɪt/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "cộng tác",
+          "definition_en": "to work with another person or group to achieve something",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "examples": [
+        {
+          "en": "The design and marketing teams collaborated on the campaign.",
+          "vi": "Nhóm thiết kế và tiếp thị đã phối hợp thực hiện chiến dịch.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "collaborate with colleagues",
+        "closely collaborate",
+        "collaborative project"
+      ],
+      "verb_forms": {
+        "v1": "collaborate",
+        "vs_es": "collaborates",
+        "v2": "collaborated",
+        "v3": "collaborated",
+        "ving": "collaborateing"
+      }
     }
   ]
 }

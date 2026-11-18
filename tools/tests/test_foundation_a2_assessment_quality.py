@@ -25,8 +25,11 @@ class FoundationA2AssessmentQualityTests(unittest.TestCase):
     def test_a2_questions_have_four_unique_options_valid_keys_and_rationales(self):
         for modality, items in (('Reading', self.reading), ('Listening', self.listening)):
             with self.subTest(modality=modality):
-                a2 = [item for item in items if item.get('level') == 'A2']
+                a2 = [item for item in items if item.get('level') == 'A2' and (modality != 'Listening' or not item.get('supplementary'))]
                 self.assertEqual(len(a2), 13)
+                if modality == 'Listening':
+                    extended = [item for item in items if item.get('level') == 'A2' and item.get('supplementary')]
+                    self.assertEqual(len(extended), 13)
                 for item in a2:
                     self.assertEqual(len(item['questions']), 3, item['lessonId'])
                     for question in item['questions']:
@@ -39,7 +42,7 @@ class FoundationA2AssessmentQualityTests(unittest.TestCase):
     def test_each_a2_resource_q2_and_q3_test_different_correct_information(self):
         for modality, items in (('Reading', self.reading), ('Listening', self.listening)):
             for item in items:
-                if item.get('level') != 'A2':
+                if item.get('level') != 'A2' or (modality == 'Listening' and not item.get('supplementary')):
                     continue
                 q2, q3 = item['questions'][1:3]
                 a2 = q2['choices'][q2['answerIndex']].casefold().strip(' .')
@@ -70,7 +73,7 @@ class FoundationA2AssessmentQualityTests(unittest.TestCase):
         all_items = {
             q['id']: (item.get('text') or '\n'.join(s.get('text', '') for s in item.get('segments', [])), q)
             for items in (self.reading, self.listening)
-            for item in items if item.get('level') == 'A2'
+            for item in items if item.get('level') == 'A2' and not item.get('supplementary')
             for q in item['questions']
         }
         self.assertEqual(set(registry), {qid for qid, (_source, q) in all_items.items() if q.get('evidenceText')})
@@ -83,14 +86,14 @@ class FoundationA2AssessmentQualityTests(unittest.TestCase):
         for modality, items in (('Reading', self.reading), ('Listening', self.listening)):
             questions = [q for item in items for q in item['questions']]
             counts = [sum(q['answerIndex'] == i for q in questions) for i in range(4)]
-            self.assertEqual(counts, [15, 15, 15, 14], modality)
+            self.assertEqual(counts, [15, 15, 15, 14] if modality == 'Reading' else [25, 25, 24, 24], modality)
 
     def test_a2_question_pairs_from_v275_remain_unchanged(self):
         import hashlib
         baseline = load('tools/foundation-a2-question-baseline-v2.75.0.json')
         for modality, items in (('reading', self.reading), ('listening', self.listening)):
             for item in items:
-                if item.get('level') != 'A2':
+                if item.get('level') != 'A2' or (modality == 'listening' and item.get('supplementary')):
                     continue
                 payload = json.dumps(item['questions'][:2], ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
                 self.assertEqual(hashlib.sha256(payload).hexdigest(), baseline['resources'][modality][item['lessonId']], item['lessonId'])

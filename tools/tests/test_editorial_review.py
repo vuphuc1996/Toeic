@@ -12,10 +12,10 @@ def item(item_id):
 
 
 class Part7EditorialReviewTests(unittest.TestCase):
-    def test_part7_current_scope_remains_108_questions(self):
+    def test_part7_current_scope_is_135_questions_after_batch_024(self):
         rows = [x for x in READING if x.get("part") == "Part 7"]
-        self.assertEqual(sum(len(x.get("questions", [])) for x in rows), 108)
-        self.assertEqual(len(rows), 30)
+        self.assertEqual(sum(len(x.get("questions", [])) for x in rows), 135)
+        self.assertEqual(len(rows), 36)
 
     def test_hotel_room_dates_match_two_night_stays_and_departure(self):
         row = item("part7-triple-conference-arrangements")

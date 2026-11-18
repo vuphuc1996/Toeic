@@ -5095,6 +5095,92 @@
         "win an award",
         "award a contract"
       ]
+    },
+    {
+      "id": "appliance-n",
+      "word": "appliance",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ə.ˈplaɪ.əns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "thiết bị gia dụng/điện",
+          "definition_en": "a machine used for a particular purpose, especially in a home or office",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "examples": [
+        {
+          "en": "All electrical appliances must be inspected annually.",
+          "vi": "Tất cả thiết bị điện phải được kiểm tra hằng năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "electrical appliance",
+        "office appliance",
+        "household appliance"
+      ],
+      "verb_forms": {
+        "v1": "",
+        "vs_es": "",
+        "v2": "",
+        "v3": "",
+        "ving": ""
+      }
+    },
+    {
+      "id": "assemble-v",
+      "word": "assemble",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ə.ˈsem.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "lắp ráp; tập hợp",
+          "definition_en": "to put parts together or bring people together in one place",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "examples": [
+        {
+          "en": "Technicians will assemble the new display units on Monday.",
+          "vi": "Kỹ thuật viên sẽ lắp ráp các quầy trưng bày mới vào thứ Hai.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "assemble equipment",
+        "assemble a team",
+        "fully assembled"
+      ],
+      "verb_forms": {
+        "v1": "assemble",
+        "vs_es": "assembles",
+        "v2": "assembled",
+        "v3": "assembled",
+        "ving": "assembleing"
+      }
     }
   ]
 }

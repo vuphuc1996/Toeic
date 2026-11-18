@@ -1507,3 +1507,19 @@ body.google-search-open{overflow:hidden}
   .robot-chat-form button{width:30px;height:30px}
   .robot-local-note{font-size:6px;line-height:1.15}
 }
+
+/* Supplementary Foundation A2 Listening: keep the extension compact and independent. */
+.foundation-listening-extension{margin:14px 0;border:1px solid var(--border,#d9e2ec);border-radius:12px;background:var(--surface-soft,#f8fafc);overflow:hidden}
+.foundation-listening-extension>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;cursor:pointer;list-style:none}
+.foundation-listening-extension>summary::-webkit-details-marker{display:none}
+.foundation-listening-extension>summary>span:first-child{display:grid;gap:4px;min-width:0}
+.foundation-listening-extension>summary strong{font-size:14px;line-height:1.4;color:var(--ink,#243b53)}
+.foundation-listening-extension>summary small{font-size:12.5px;line-height:1.45;color:var(--muted,#667085)}
+.foundation-listening-extension[open]>summary{border-bottom:1px solid var(--border,#d9e2ec)}
+.foundation-listening-extension>.foundation-listening{margin:0;padding:14px;border:0;background:transparent}
+@media(max-width:560px){.foundation-listening-extension>summary{align-items:flex-start;flex-direction:column;gap:6px}.foundation-listening-extension>.foundation-listening{padding:10px}}
+
+
+/* v2.93.0 — evidence-only TOEIC score readiness panel */
+.score-readiness-panel{margin:16px 0;padding:18px 20px;border:1px solid var(--border-color,#dfe3ea);border-radius:18px;background:var(--panel-bg,#fff);color:var(--text-primary,#20242c)}
+.score-readiness-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.score-readiness-heading h3{margin:2px 0 8px;font-size:1.08rem}.score-readiness-status{white-space:nowrap;border-radius:999px;padding:5px 10px;background:var(--surface-muted,#f1f3f6);font-size:.78rem;font-weight:700}.score-readiness-panel p{margin:8px 0;color:var(--text-secondary,#626b78);line-height:1.55}.score-readiness-panel small{display:block;color:var(--text-secondary,#626b78);line-height:1.5}.score-readiness-progress{height:8px;border-radius:99px;background:var(--surface-muted,#edf0f4);overflow:hidden;margin:12px 0}.score-readiness-progress span{display:block;height:100%;border-radius:inherit;background:var(--accent,#3867d6)}.score-readiness-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.score-readiness-metrics>div{display:grid;gap:4px;padding:12px;border-radius:12px;background:var(--surface-muted,#f4f6f8)}.score-readiness-metrics small,.score-readiness-metrics span{color:var(--text-secondary,#626b78);font-size:.8rem}.score-readiness-metrics strong{font-size:1.65rem;font-variant-numeric:tabular-nums}@media(max-width:560px){.score-readiness-panel{padding:14px}.score-readiness-heading{display:block}.score-readiness-status{display:inline-block;margin-top:5px}.score-readiness-metrics{gap:8px}.score-readiness-metrics>div{padding:10px}}

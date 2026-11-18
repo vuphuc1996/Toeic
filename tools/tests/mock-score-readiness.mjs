@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import { buildMockScoreReadiness } from '../../assets/js/mock-score-readiness.js';
+const row=(completedAt, listeningAccuracy, readingAccuracy, extra={})=>({status:'completed',modeId:'full',questions:200,completedAt,listeningAccuracy,readingAccuracy,...extra});
+assert.equal(buildMockScoreReadiness([]).enough,false);
+assert.equal(buildMockScoreReadiness([row(1,80,70)]).count,1);
+assert.equal(buildMockScoreReadiness([row(1,80,70),row(2,82,72)]).enough,false);
+const result=buildMockScoreReadiness([row(1,70,60),row(2,75,65),row(3,80,75),{...row(4,99,99),modeId:'quick'}, {...row(5,99,99),questions:100}]);
+assert.equal(result.enough,true);
+assert.equal(result.count,3);
+assert.equal(result.listeningAverage,75);
+assert.equal(result.readingAverage,67);
+assert.equal(result.listeningChange,10);
+assert.equal(result.readingChange,15);
+assert.equal(buildMockScoreReadiness([row(1,80,70),row(2,82,72),row(3,84,74)]).listeningAverage,82);
+console.log('mock-score-readiness: PASS');

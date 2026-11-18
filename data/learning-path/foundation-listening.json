@@ -1306,6 +1306,1163 @@
       ],
       "minimumUniqueQuestions": 3,
       "practiceAccuracyThreshold": 0.67
+    },
+    {
+      "id": "a2-polite-requests::listening2",
+      "lessonId": "a2-polite-requests",
+      "level": "A2",
+      "supplementary": true,
+      "format": "phone-call",
+      "title": "Customer Call Rescheduled — Confirming the Change",
+      "script": "Linh: Hello, this is Linh from the service office. I am calling about tomorrow’s customer call.\nDavid: The customer asked to move it from two o’clock to three thirty because their manager is travelling.\nLinh: That is fine. I will update the calendar and reserve the small meeting room.\nDavid: Could you also check whether the sales team can join at the new time?\nLinh: I have checked with them. Everyone is available, so the new time should work.\nDavid: Great. Please send the revised invitation before the end of today, and I will notify the customer.",
+      "segments": [
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "Hello, this is Linh from the service office. I am calling about tomorrow’s customer call."
+        },
+        {
+          "speaker": "David",
+          "voice": "male",
+          "text": "The customer asked to move it from two o’clock to three thirty because their manager is travelling."
+        },
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "That is fine. I will update the calendar and reserve the small meeting room."
+        },
+        {
+          "speaker": "David",
+          "voice": "male",
+          "text": "Could you also check whether the sales team can join at the new time?"
+        },
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "I have checked with them. Everyone is available, so the new time should work."
+        },
+        {
+          "speaker": "David",
+          "voice": "male",
+          "text": "Great. Please send the revised invitation before the end of today, and I will notify the customer."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-polite-requests::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Why did the customer request a new time?",
+          "choices": [
+            "The meeting room is closed",
+            "The sales team is away",
+            "The manager is travelling",
+            "The customer lost the invitation"
+          ],
+          "answerIndex": 2,
+          "rationale": "The customer needs a later time because their manager is travelling.",
+          "evidenceText": "Hello, this is Linh from the service office. I am calling about tomorrow’s customer call."
+        },
+        {
+          "id": "a2-polite-requests::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What is Linh mainly calling to do?",
+          "choices": [
+            "Cancel the customer account",
+            "Request a new sales report",
+            "Confirm a change to a meeting",
+            "Ask for a room repair"
+          ],
+          "answerIndex": 2,
+          "rationale": "She is coordinating the revised time and room for the customer call.",
+          "evidenceText": "That is fine. I will update the calendar and reserve the small meeting room."
+        },
+        {
+          "id": "a2-polite-requests::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What will David most likely do after receiving the invitation?",
+          "choices": [
+            "Notify the customer of the confirmed time",
+            "Book a flight",
+            "Cancel the sales meeting",
+            "Move the call back to two o’clock"
+          ],
+          "answerIndex": 0,
+          "rationale": "Linh will send the revised invitation, and David says he will notify the customer.",
+          "evidenceText": "Great. Please send the revised invitation before the end of today, and I will notify the customer."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-quantities::listening2",
+      "lessonId": "a2-quantities",
+      "level": "A2",
+      "supplementary": true,
+      "format": "announcement-and-discussion",
+      "title": "Stockroom Safety Check — Preparing the Shelves",
+      "script": "Announcer: Attention, warehouse team. The stockroom will close at five thirty today for a safety inspection.\nMinh: Should we move the open cartons before the inspection begins?\nAnnouncer: Yes. Put the six open cartons on the lower shelves and keep the marked walkway clear.\nMinh: The afternoon delivery is due at five. Can the team finish before the driver arrives?\nAnnouncer: Please ask two colleagues to help. The inspection team needs the floor clear when they arrive.\nMinh: Understood. I will organise the move now and tell the driver to use the side entrance.",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "Attention, warehouse team. The stockroom will close at five thirty today for a safety inspection."
+        },
+        {
+          "speaker": "Minh",
+          "voice": "male",
+          "text": "Should we move the open cartons before the inspection begins?"
+        },
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "Yes. Put the six open cartons on the lower shelves and keep the marked walkway clear."
+        },
+        {
+          "speaker": "Minh",
+          "voice": "male",
+          "text": "The afternoon delivery is due at five. Can the team finish before the driver arrives?"
+        },
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "Please ask two colleagues to help. The inspection team needs the floor clear when they arrive."
+        },
+        {
+          "speaker": "Minh",
+          "voice": "male",
+          "text": "Understood. I will organise the move now and tell the driver to use the side entrance."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-quantities::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Why will the stockroom close early?",
+          "choices": [
+            "For a staff meeting",
+            "For a new delivery",
+            "For a computer upgrade",
+            "For a safety inspection"
+          ],
+          "answerIndex": 3,
+          "rationale": "The announcement says the stockroom closes for a safety inspection.",
+          "evidenceText": "Attention, warehouse team. The stockroom will close at five thirty today for a safety inspection."
+        },
+        {
+          "id": "a2-quantities::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why must the walkway remain clear?",
+          "choices": [
+            "So inspectors can move around safely",
+            "To make room for new desks",
+            "To help customers find the exit",
+            "To store the open cartons"
+          ],
+          "answerIndex": 0,
+          "rationale": "A clear walkway is required for the safety inspection.",
+          "evidenceText": "Yes. Put the six open cartons on the lower shelves and keep the marked walkway clear."
+        },
+        {
+          "id": "a2-quantities::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What will Minh do first?",
+          "choices": [
+            "Call the supplier",
+            "Move the cartons with two colleagues",
+            "Close the side entrance",
+            "Unload the afternoon delivery"
+          ],
+          "answerIndex": 1,
+          "rationale": "He says he will organise the move immediately and ask two colleagues to help.",
+          "evidenceText": "Understood. I will organise the move now and tell the driver to use the side entrance."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-comparisons::listening2",
+      "lessonId": "a2-comparisons",
+      "level": "A2",
+      "supplementary": true,
+      "format": "planning-discussion",
+      "title": "Choosing a Delivery Option — Meeting the Deadline",
+      "script": "Maya: We need to send the signed contract to the customer by Friday morning.\nPeter: Standard delivery costs less, but it usually takes three working days.\nMaya: The express option costs more and normally arrives the next business day.\nPeter: The customer also needs time to check the contract before signing it.\nMaya: Then express is safer. We cannot risk missing the deadline just to save a little money.\nPeter: Agreed. I will prepare the parcel today and ask the courier to collect it this afternoon.",
+      "segments": [
+        {
+          "speaker": "Maya",
+          "voice": "female",
+          "text": "We need to send the signed contract to the customer by Friday morning."
+        },
+        {
+          "speaker": "Peter",
+          "voice": "male",
+          "text": "Standard delivery costs less, but it usually takes three working days."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female",
+          "text": "The express option costs more and normally arrives the next business day."
+        },
+        {
+          "speaker": "Peter",
+          "voice": "male",
+          "text": "The customer also needs time to check the contract before signing it."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female",
+          "text": "Then express is safer. We cannot risk missing the deadline just to save a little money."
+        },
+        {
+          "speaker": "Peter",
+          "voice": "male",
+          "text": "Agreed. I will prepare the parcel today and ask the courier to collect it this afternoon."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-comparisons::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What must reach the customer?",
+          "choices": [
+            "A price list",
+            "A product sample",
+            "A monthly invoice",
+            "A signed contract"
+          ],
+          "answerIndex": 3,
+          "rationale": "The speakers are arranging delivery of the signed contract.",
+          "evidenceText": "We need to send the signed contract to the customer by Friday morning."
+        },
+        {
+          "id": "a2-comparisons::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why are they comparing two delivery services?",
+          "choices": [
+            "To choose the cheapest office",
+            "To make sure the contract arrives on time",
+            "To change the customer address",
+            "To return a damaged parcel"
+          ],
+          "answerIndex": 1,
+          "rationale": "They compare delivery speed and cost because the Friday deadline matters.",
+          "evidenceText": "Then express is safer. We cannot risk missing the deadline just to save a little money."
+        },
+        {
+          "id": "a2-comparisons::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What will Peter probably do this afternoon?",
+          "choices": [
+            "Ask the customer to visit",
+            "Give the parcel to the courier",
+            "Cancel the order",
+            "Choose standard delivery"
+          ],
+          "answerIndex": 1,
+          "rationale": "He says he will prepare the parcel and arrange collection this afternoon.",
+          "evidenceText": "Agreed. I will prepare the parcel today and ask the courier to collect it this afternoon."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-past-work-events::listening2",
+      "lessonId": "a2-past-work-events",
+      "level": "A2",
+      "supplementary": true,
+      "format": "voicemail-follow-up",
+      "title": "Printer Repair — Checking the Final Test",
+      "script": "Nora: Hello, this is Nora from the west branch. I am calling about the printer repair.\nTechnician: The replacement part arrived this morning, so I started the repair after lunch.\nNora: That is good news. Is the printer ready for the reports we need tomorrow?\nTechnician: It is printing in black and white, but I have not tested the colour function yet.\nNora: The design team needs colour copies before nine. Could you check that first?\nTechnician: Certainly. I will return tomorrow at eight thirty and finish the test before the office opens.",
+      "segments": [
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "Hello, this is Nora from the west branch. I am calling about the printer repair."
+        },
+        {
+          "speaker": "Technician",
+          "voice": "male",
+          "text": "The replacement part arrived this morning, so I started the repair after lunch."
+        },
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "That is good news. Is the printer ready for the reports we need tomorrow?"
+        },
+        {
+          "speaker": "Technician",
+          "voice": "male",
+          "text": "It is printing in black and white, but I have not tested the colour function yet."
+        },
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "The design team needs colour copies before nine. Could you check that first?"
+        },
+        {
+          "speaker": "Technician",
+          "voice": "male",
+          "text": "Certainly. I will return tomorrow at eight thirty and finish the test before the office opens."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-past-work-events::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What arrived this morning?",
+          "choices": [
+            "A new printer",
+            "A box of paper",
+            "A colour cartridge order",
+            "A replacement part"
+          ],
+          "answerIndex": 3,
+          "rationale": "The technician says the replacement part arrived in the morning.",
+          "evidenceText": "The replacement part arrived this morning, so I started the repair after lunch."
+        },
+        {
+          "id": "a2-past-work-events::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why is Nora asking about the colour function?",
+          "choices": [
+            "The printer is being moved",
+            "The design team needs colour copies",
+            "The office is closing",
+            "The reports are already printed"
+          ],
+          "answerIndex": 1,
+          "rationale": "Nora explains that the design team needs colour copies before nine.",
+          "evidenceText": "The design team needs colour copies before nine. Could you check that first?"
+        },
+        {
+          "id": "a2-past-work-events::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "When will the technician return?",
+          "choices": [
+            "Today at five",
+            "Tomorrow after lunch",
+            "Next Monday morning",
+            "Tomorrow at eight thirty"
+          ],
+          "answerIndex": 3,
+          "rationale": "He agrees to return at eight thirty tomorrow to complete the test.",
+          "evidenceText": "Certainly. I will return tomorrow at eight thirty and finish the test before the office opens."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-present-continuous::listening2",
+      "lessonId": "a2-present-continuous",
+      "level": "A2",
+      "supplementary": true,
+      "format": "workplace-update",
+      "title": "Reception Cover — Updating the Visitor List",
+      "script": "Manager: Nora is covering the reception desk this week while Alex is attending a training course.\nColleague: Who is checking the visitor appointments during that time?\nManager: I am checking the morning list, and Nora is welcoming visitors in the afternoon.\nColleague: Two suppliers are arriving on Thursday. Should I send their names to Nora?\nManager: Yes, please. Also add the delivery time so she can contact the right department.\nColleague: I will update the team notice and send Nora the supplier details before lunch.",
+      "segments": [
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "Nora is covering the reception desk this week while Alex is attending a training course."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "male",
+          "text": "Who is checking the visitor appointments during that time?"
+        },
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "I am checking the morning list, and Nora is welcoming visitors in the afternoon."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "male",
+          "text": "Two suppliers are arriving on Thursday. Should I send their names to Nora?"
+        },
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "Yes, please. Also add the delivery time so she can contact the right department."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "male",
+          "text": "I will update the team notice and send Nora the supplier details before lunch."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-present-continuous::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Why is Nora working at reception?",
+          "choices": [
+            "She is covering for Alex",
+            "She is meeting two suppliers",
+            "She is leading a training course",
+            "She is replacing the manager"
+          ],
+          "answerIndex": 0,
+          "rationale": "Nora is covering the desk while Alex attends training.",
+          "evidenceText": "Nora is covering the reception desk this week while Alex is attending a training course."
+        },
+        {
+          "id": "a2-present-continuous::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why should the supplier delivery time be added?",
+          "choices": [
+            "To change the training date",
+            "To reserve a meeting room",
+            "So Nora can contact the correct department",
+            "So the suppliers can choose a new office"
+          ],
+          "answerIndex": 2,
+          "rationale": "The time helps Nora contact the department that should receive the suppliers.",
+          "evidenceText": "Yes, please. Also add the delivery time so she can contact the right department."
+        },
+        {
+          "id": "a2-present-continuous::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What will the colleague do before lunch?",
+          "choices": [
+            "Leave the office",
+            "Update the notice and send supplier details",
+            "Call Alex about training",
+            "Cancel the supplier visit"
+          ],
+          "answerIndex": 1,
+          "rationale": "He says he will update the notice and send Nora the details before lunch.",
+          "evidenceText": "I will update the team notice and send Nora the supplier details before lunch."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-obligation-permission::listening2",
+      "lessonId": "a2-obligation-permission",
+      "level": "A2",
+      "supplementary": true,
+      "format": "safety-briefing",
+      "title": "Visitor Safety Briefing — Before Entering the Equipment Area",
+      "script": "Security Officer: Before entering the equipment area, all visitors must sign the safety register at reception.\nVisitor: I am here to watch the technician check the machine. May I take a few photographs?\nSecurity Officer: No, photography is not permitted because the equipment area contains confidential information.\nVisitor: I understand. Do I need any special clothing before I go inside?\nSecurity Officer: Please wear the visitor badge at all times and keep behind the yellow safety line.\nVisitor: All right. I will sign the register, put my phone away, and wait for the technician.",
+      "segments": [
+        {
+          "speaker": "Security Officer",
+          "voice": "female",
+          "text": "Before entering the equipment area, all visitors must sign the safety register at reception."
+        },
+        {
+          "speaker": "Visitor",
+          "voice": "male",
+          "text": "I am here to watch the technician check the machine. May I take a few photographs?"
+        },
+        {
+          "speaker": "Security Officer",
+          "voice": "female",
+          "text": "No, photography is not permitted because the equipment area contains confidential information."
+        },
+        {
+          "speaker": "Visitor",
+          "voice": "male",
+          "text": "I understand. Do I need any special clothing before I go inside?"
+        },
+        {
+          "speaker": "Security Officer",
+          "voice": "female",
+          "text": "Please wear the visitor badge at all times and keep behind the yellow safety line."
+        },
+        {
+          "speaker": "Visitor",
+          "voice": "male",
+          "text": "All right. I will sign the register, put my phone away, and wait for the technician."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-obligation-permission::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Where must visitors sign the safety register?",
+          "choices": [
+            "At reception",
+            "Inside the warehouse",
+            "Beside the machine",
+            "In the staff lounge"
+          ],
+          "answerIndex": 0,
+          "rationale": "The officer says visitors must sign at reception.",
+          "evidenceText": "Before entering the equipment area, all visitors must sign the safety register at reception."
+        },
+        {
+          "id": "a2-obligation-permission::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why are photographs not allowed?",
+          "choices": [
+            "The area contains confidential information",
+            "The machine is being repaired",
+            "The visitor has no camera",
+            "The room is too dark"
+          ],
+          "answerIndex": 0,
+          "rationale": "The officer gives confidentiality as the reason for the photography rule.",
+          "evidenceText": "No, photography is not permitted because the equipment area contains confidential information."
+        },
+        {
+          "id": "a2-obligation-permission::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What will the visitor do before entering the area?",
+          "choices": [
+            "Take a photograph",
+            "Move the yellow line",
+            "Sign the register and put the phone away",
+            "Ask another visitor for a badge"
+          ],
+          "answerIndex": 2,
+          "rationale": "The visitor repeats the required steps before entering.",
+          "evidenceText": "All right. I will sign the register, put my phone away, and wait for the technician."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-directions::listening2",
+      "lessonId": "a2-directions",
+      "level": "A2",
+      "supplementary": true,
+      "format": "directions-and-clarification",
+      "title": "Finding the New Training Room — Following the Signs",
+      "script": "Visitor: Excuse me. I need to find the new training room for the afternoon session.\nReceptionist: Take the lift to the second floor and turn left when you leave it.\nVisitor: I saw the computer laboratory there. Is the training room close to it?\nReceptionist: Yes. It is opposite the laboratory, beside the staff lounge.\nVisitor: There are two doors near the lounge. How can I recognise the correct one?\nReceptionist: Look for the blue sign marked Training Room 2. The session begins at two thirty.",
+      "segments": [
+        {
+          "speaker": "Visitor",
+          "voice": "female",
+          "text": "Excuse me. I need to find the new training room for the afternoon session."
+        },
+        {
+          "speaker": "Receptionist",
+          "voice": "male",
+          "text": "Take the lift to the second floor and turn left when you leave it."
+        },
+        {
+          "speaker": "Visitor",
+          "voice": "female",
+          "text": "I saw the computer laboratory there. Is the training room close to it?"
+        },
+        {
+          "speaker": "Receptionist",
+          "voice": "male",
+          "text": "Yes. It is opposite the laboratory, beside the staff lounge."
+        },
+        {
+          "speaker": "Visitor",
+          "voice": "female",
+          "text": "There are two doors near the lounge. How can I recognise the correct one?"
+        },
+        {
+          "speaker": "Receptionist",
+          "voice": "male",
+          "text": "Look for the blue sign marked Training Room 2. The session begins at two thirty."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-directions::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Which floor is the training room on?",
+          "choices": [
+            "The ground floor",
+            "The first floor",
+            "The third floor",
+            "The second floor"
+          ],
+          "answerIndex": 3,
+          "rationale": "The receptionist directs the visitor to the second floor.",
+          "evidenceText": "Take the lift to the second floor and turn left when you leave it."
+        },
+        {
+          "id": "a2-directions::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "What is the room opposite?",
+          "choices": [
+            "The computer laboratory",
+            "The reception desk",
+            "The main entrance",
+            "The meeting kitchen"
+          ],
+          "answerIndex": 0,
+          "rationale": "The receptionist says it is opposite the computer laboratory.",
+          "evidenceText": "Yes. It is opposite the laboratory, beside the staff lounge."
+        },
+        {
+          "id": "a2-directions::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What should the visitor look for near the staff lounge?",
+          "choices": [
+            "A red lift",
+            "A blue Training Room 2 sign",
+            "A green exit",
+            "A reception counter"
+          ],
+          "answerIndex": 1,
+          "rationale": "The blue sign identifies the correct door.",
+          "evidenceText": "Look for the blue sign marked Training Room 2. The session begins at two thirty."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-invitations-offers::listening2",
+      "lessonId": "a2-invitations-offers",
+      "level": "A2",
+      "supplementary": true,
+      "format": "invitation-and-response",
+      "title": "Customer Service Workshop — Preparing to Attend",
+      "script": "Mai: We are holding a short customer service workshop next Wednesday at ten.\nNam: That sounds useful. Is it for the whole team or only the supervisors?\nMai: Everyone who speaks with customers is welcome. We will review recent feedback together.\nNam: Should I bring the updated customer feedback report from last month?\nMai: Yes, please. There will also be time to ask questions about difficult cases.\nNam: I would be happy to attend. Please send me the room details when they are ready.",
+      "segments": [
+        {
+          "speaker": "Mai",
+          "voice": "female",
+          "text": "We are holding a short customer service workshop next Wednesday at ten."
+        },
+        {
+          "speaker": "Nam",
+          "voice": "male",
+          "text": "That sounds useful. Is it for the whole team or only the supervisors?"
+        },
+        {
+          "speaker": "Mai",
+          "voice": "female",
+          "text": "Everyone who speaks with customers is welcome. We will review recent feedback together."
+        },
+        {
+          "speaker": "Nam",
+          "voice": "male",
+          "text": "Should I bring the updated customer feedback report from last month?"
+        },
+        {
+          "speaker": "Mai",
+          "voice": "female",
+          "text": "Yes, please. There will also be time to ask questions about difficult cases."
+        },
+        {
+          "speaker": "Nam",
+          "voice": "male",
+          "text": "I would be happy to attend. Please send me the room details when they are ready."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-invitations-offers::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "When will the workshop take place?",
+          "choices": [
+            "Tomorrow at nine",
+            "Next Wednesday at ten",
+            "Friday afternoon",
+            "Next Monday at two"
+          ],
+          "answerIndex": 1,
+          "rationale": "Mai gives the time as next Wednesday at ten.",
+          "evidenceText": "We are holding a short customer service workshop next Wednesday at ten."
+        },
+        {
+          "id": "a2-invitations-offers::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Who is invited to the workshop?",
+          "choices": [
+            "Only supervisors",
+            "Only new employees",
+            "Everyone who speaks with customers",
+            "The finance team"
+          ],
+          "answerIndex": 2,
+          "rationale": "Mai says everyone who speaks with customers is welcome.",
+          "evidenceText": "Everyone who speaks with customers is welcome. We will review recent feedback together."
+        },
+        {
+          "id": "a2-invitations-offers::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What will Mai most likely send Nam?",
+          "choices": [
+            "A customer complaint",
+            "The workshop room details",
+            "A new report template",
+            "A list of suppliers"
+          ],
+          "answerIndex": 1,
+          "rationale": "Nam asks Mai to send the room details when they are ready.",
+          "evidenceText": "I would be happy to attend. Please send me the room details when they are ready."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-sequencing-instructions::listening2",
+      "lessonId": "a2-sequencing-instructions",
+      "level": "A2",
+      "supplementary": true,
+      "format": "process-instructions",
+      "title": "Returning an Office Item — Completing the Process",
+      "script": "Supervisor: To return an office item, first complete the return form and write down the item number.\nEmployee: The item is a desk lamp. Should I include the reason for returning it?\nSupervisor: Yes. Then place it on the service desk and attach the form to the handle.\nEmployee: Do I need to tell the stockroom team that it is ready?\nSupervisor: Please email them a photo of the completed form so they can update the inventory.\nEmployee: Understood. I will fill in the form, label the lamp, and email the photo now.",
+      "segments": [
+        {
+          "speaker": "Supervisor",
+          "voice": "female",
+          "text": "To return an office item, first complete the return form and write down the item number."
+        },
+        {
+          "speaker": "Employee",
+          "voice": "male",
+          "text": "The item is a desk lamp. Should I include the reason for returning it?"
+        },
+        {
+          "speaker": "Supervisor",
+          "voice": "female",
+          "text": "Yes. Then place it on the service desk and attach the form to the handle."
+        },
+        {
+          "speaker": "Employee",
+          "voice": "male",
+          "text": "Do I need to tell the stockroom team that it is ready?"
+        },
+        {
+          "speaker": "Supervisor",
+          "voice": "female",
+          "text": "Please email them a photo of the completed form so they can update the inventory."
+        },
+        {
+          "speaker": "Employee",
+          "voice": "male",
+          "text": "Understood. I will fill in the form, label the lamp, and email the photo now."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-sequencing-instructions::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "What should the employee do first?",
+          "choices": [
+            "Call the supplier",
+            "Move the desk",
+            "Update the staff calendar",
+            "Complete the return form"
+          ],
+          "answerIndex": 3,
+          "rationale": "The supervisor says completing the form is the first step.",
+          "evidenceText": "To return an office item, first complete the return form and write down the item number."
+        },
+        {
+          "id": "a2-sequencing-instructions::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why should the form be attached to the item?",
+          "choices": [
+            "To make the item look new",
+            "To reserve the service desk",
+            "So the stockroom can identify the return",
+            "To show the purchase price"
+          ],
+          "answerIndex": 2,
+          "rationale": "The form identifies the item and supports the stockroom process.",
+          "evidenceText": "Yes. Then place it on the service desk and attach the form to the handle."
+        },
+        {
+          "id": "a2-sequencing-instructions::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What will the employee email to the stockroom team?",
+          "choices": [
+            "A picture of the office",
+            "A photo of the completed form",
+            "A new order request",
+            "A copy of the meeting schedule"
+          ],
+          "answerIndex": 1,
+          "rationale": "The supervisor asks for a photo of the completed form.",
+          "evidenceText": "Understood. I will fill in the form, label the lamp, and email the photo now."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-plans-and-intentions::listening2",
+      "lessonId": "a2-plans-and-intentions",
+      "level": "A2",
+      "supplementary": true,
+      "format": "planning-call",
+      "title": "Branch Visit Plans — Preparing the Checklist",
+      "script": "Manager: I am planning to visit the southern branch on Thursday to meet the support team.\nColleague: Are you going to review the new service process while you are there?\nManager: Yes. I also intend to collect feedback from three regular customers.\nColleague: Would you like me to arrange short appointments with those customers?\nManager: That would help. Please leave fifteen minutes between each appointment.\nColleague: I will prepare the visit checklist and send it with the appointment times by Wednesday afternoon.",
+      "segments": [
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "I am planning to visit the southern branch on Thursday to meet the support team."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "male",
+          "text": "Are you going to review the new service process while you are there?"
+        },
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "Yes. I also intend to collect feedback from three regular customers."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "male",
+          "text": "Would you like me to arrange short appointments with those customers?"
+        },
+        {
+          "speaker": "Manager",
+          "voice": "female",
+          "text": "That would help. Please leave fifteen minutes between each appointment."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "male",
+          "text": "I will prepare the visit checklist and send it with the appointment times by Wednesday afternoon."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-plans-and-intentions::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Which branch will the manager visit?",
+          "choices": [
+            "The southern branch",
+            "The northern branch",
+            "The central office",
+            "The west warehouse"
+          ],
+          "answerIndex": 0,
+          "rationale": "The manager names the southern branch.",
+          "evidenceText": "I am planning to visit the southern branch on Thursday to meet the support team."
+        },
+        {
+          "id": "a2-plans-and-intentions::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why will the manager meet regular customers?",
+          "choices": [
+            "To collect feedback",
+            "To deliver new equipment",
+            "To interview new staff",
+            "To cancel their accounts"
+          ],
+          "answerIndex": 0,
+          "rationale": "The manager intends to collect feedback from three regular customers.",
+          "evidenceText": "Yes. I also intend to collect feedback from three regular customers."
+        },
+        {
+          "id": "a2-plans-and-intentions::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What will the colleague send by Wednesday afternoon?",
+          "choices": [
+            "The final customer invoices",
+            "A new service contract",
+            "The visit checklist and appointment times",
+            "The Thursday sales figures"
+          ],
+          "answerIndex": 2,
+          "rationale": "He agrees to prepare the checklist and include the appointment times.",
+          "evidenceText": "I will prepare the visit checklist and send it with the appointment times by Wednesday afternoon."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-present-perfect-experience::listening2",
+      "lessonId": "a2-present-perfect-experience",
+      "level": "A2",
+      "supplementary": true,
+      "format": "supplier-status-call",
+      "title": "Supplier Confirmation — Tracking the Second Shipment",
+      "script": "Linh: We have received the first shipment, but the second shipment has not arrived yet.\nSupplier: I have checked the tracking record. The second shipment left our warehouse this morning.\nLinh: That is helpful. Our purchasing team needs the delivery reference to prepare the receiving area.\nSupplier: I sent the updated reference ten minutes ago. It should be in their email now.\nLinh: Thank you. If the boxes arrive tomorrow morning, our team can check them before lunch.\nSupplier: I will monitor the delivery and call you if the driver reports any delay.",
+      "segments": [
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "We have received the first shipment, but the second shipment has not arrived yet."
+        },
+        {
+          "speaker": "Supplier",
+          "voice": "male",
+          "text": "I have checked the tracking record. The second shipment left our warehouse this morning."
+        },
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "That is helpful. Our purchasing team needs the delivery reference to prepare the receiving area."
+        },
+        {
+          "speaker": "Supplier",
+          "voice": "male",
+          "text": "I sent the updated reference ten minutes ago. It should be in their email now."
+        },
+        {
+          "speaker": "Linh",
+          "voice": "female",
+          "text": "Thank you. If the boxes arrive tomorrow morning, our team can check them before lunch."
+        },
+        {
+          "speaker": "Supplier",
+          "voice": "male",
+          "text": "I will monitor the delivery and call you if the driver reports any delay."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-present-perfect-experience::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Which shipment has already arrived?",
+          "choices": [
+            "The second shipment",
+            "The sample order",
+            "The first shipment",
+            "The replacement order"
+          ],
+          "answerIndex": 2,
+          "rationale": "Linh says the first shipment has been received.",
+          "evidenceText": "We have received the first shipment, but the second shipment has not arrived yet."
+        },
+        {
+          "id": "a2-present-perfect-experience::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why does purchasing need the delivery reference?",
+          "choices": [
+            "To cancel the shipment",
+            "To prepare the receiving area",
+            "To request a lower price",
+            "To change the supplier"
+          ],
+          "answerIndex": 1,
+          "rationale": "The reference helps the team prepare for the incoming boxes.",
+          "evidenceText": "That is helpful. Our purchasing team needs the delivery reference to prepare the receiving area."
+        },
+        {
+          "id": "a2-present-perfect-experience::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What will the supplier do if there is a delay?",
+          "choices": [
+            "Call Linh",
+            "Send a new invoice",
+            "Cancel the first shipment",
+            "Ask the team to close the warehouse"
+          ],
+          "answerIndex": 0,
+          "rationale": "The supplier promises to call if the driver reports a delay.",
+          "evidenceText": "I will monitor the delivery and call you if the driver reports any delay."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-basic-passive-voice::listening2",
+      "lessonId": "a2-basic-passive-voice",
+      "level": "A2",
+      "supplementary": true,
+      "format": "office-notice-and-follow-up",
+      "title": "Office Equipment Notice — Preparing the Meeting Room",
+      "script": "Announcer: The meeting room will be prepared before eight tomorrow morning.\nTechnician: The projector has already been checked, but the speaker system is being repaired.\nAnnouncer: A temporary speaker will be provided, so the morning meeting can continue as planned.\nTechnician: Will the room layout change while the equipment is being replaced?\nAnnouncer: No. The tables will remain in their usual positions, and the updated notice will be displayed today.\nTechnician: I will place the notice beside the booking screen after I finish the equipment check.",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "The meeting room will be prepared before eight tomorrow morning."
+        },
+        {
+          "speaker": "Technician",
+          "voice": "male",
+          "text": "The projector has already been checked, but the speaker system is being repaired."
+        },
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "A temporary speaker will be provided, so the morning meeting can continue as planned."
+        },
+        {
+          "speaker": "Technician",
+          "voice": "male",
+          "text": "Will the room layout change while the equipment is being replaced?"
+        },
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "No. The tables will remain in their usual positions, and the updated notice will be displayed today."
+        },
+        {
+          "speaker": "Technician",
+          "voice": "male",
+          "text": "I will place the notice beside the booking screen after I finish the equipment check."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-basic-passive-voice::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "When will the meeting room be prepared?",
+          "choices": [
+            "After lunch tomorrow",
+            "At the end of today",
+            "Next Monday",
+            "Before eight tomorrow"
+          ],
+          "answerIndex": 3,
+          "rationale": "The announcement says the room will be prepared before eight tomorrow.",
+          "evidenceText": "The meeting room will be prepared before eight tomorrow morning."
+        },
+        {
+          "id": "a2-basic-passive-voice::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why will a temporary speaker be provided?",
+          "choices": [
+            "The projector is missing",
+            "The meeting has been cancelled",
+            "The room is being painted",
+            "The speaker system is being repaired"
+          ],
+          "answerIndex": 3,
+          "rationale": "A temporary speaker allows the meeting to continue during the repair.",
+          "evidenceText": "A temporary speaker will be provided, so the morning meeting can continue as planned."
+        },
+        {
+          "id": "a2-basic-passive-voice::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "Where will the technician place the updated notice?",
+          "choices": [
+            "On the reception door",
+            "Inside the warehouse",
+            "Beside the booking screen",
+            "At the main entrance"
+          ],
+          "answerIndex": 2,
+          "rationale": "He says he will place it beside the booking screen after the check.",
+          "evidenceText": "I will place the notice beside the booking screen after I finish the equipment check."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
+    },
+    {
+      "id": "a2-defining-relative-clauses::listening2",
+      "lessonId": "a2-defining-relative-clauses",
+      "level": "A2",
+      "supplementary": true,
+      "format": "help-desk-call",
+      "title": "Identifying the Correct Contact — Travel Requests",
+      "script": "Employee: I need to speak to the person who handles staff travel bookings.\nReceptionist: That is Ms. Tran, who works in the administration office on the first floor.\nEmployee: Does she approve travel requests, or does she only arrange the tickets?\nReceptionist: She approves the requests and books the tickets. Her desk is near the finance office.\nEmployee: I have a trip next month, so I should bring the request form to her.\nReceptionist: Yes. Please complete the form first, then ask Ms. Tran to check the dates and approve it.",
+      "segments": [
+        {
+          "speaker": "Employee",
+          "voice": "male",
+          "text": "I need to speak to the person who handles staff travel bookings."
+        },
+        {
+          "speaker": "Receptionist",
+          "voice": "female",
+          "text": "That is Ms. Tran, who works in the administration office on the first floor."
+        },
+        {
+          "speaker": "Employee",
+          "voice": "male",
+          "text": "Does she approve travel requests, or does she only arrange the tickets?"
+        },
+        {
+          "speaker": "Receptionist",
+          "voice": "female",
+          "text": "She approves the requests and books the tickets. Her desk is near the finance office."
+        },
+        {
+          "speaker": "Employee",
+          "voice": "male",
+          "text": "I have a trip next month, so I should bring the request form to her."
+        },
+        {
+          "speaker": "Receptionist",
+          "voice": "female",
+          "text": "Yes. Please complete the form first, then ask Ms. Tran to check the dates and approve it."
+        }
+      ],
+      "questions": [
+        {
+          "id": "a2-defining-relative-clauses::listening2::q1",
+          "skill": "listen-for-detail",
+          "prompt": "Who does the employee need to contact?",
+          "choices": [
+            "The person handling travel bookings",
+            "The finance manager",
+            "The building technician",
+            "The customer service lead"
+          ],
+          "answerIndex": 0,
+          "rationale": "The receptionist identifies Ms. Tran as the person handling staff travel bookings.",
+          "evidenceText": "I need to speak to the person who handles staff travel bookings."
+        },
+        {
+          "id": "a2-defining-relative-clauses::listening2::q2",
+          "skill": "understand-purpose-context",
+          "prompt": "Why does the employee want to speak to Ms. Tran?",
+          "choices": [
+            "To report a printer problem",
+            "To book a meeting room",
+            "To ask about payroll",
+            "To request travel approval and tickets"
+          ],
+          "answerIndex": 3,
+          "rationale": "He has a trip next month and needs the travel request approved.",
+          "evidenceText": "She approves the requests and books the tickets. Her desk is near the finance office."
+        },
+        {
+          "id": "a2-defining-relative-clauses::listening2::q3",
+          "skill": "infer-next-action",
+          "prompt": "What should the employee do before meeting Ms. Tran?",
+          "choices": [
+            "Call the finance office",
+            "Buy the tickets himself",
+            "Change the travel dates",
+            "Complete the request form"
+          ],
+          "answerIndex": 3,
+          "rationale": "The receptionist tells him to complete the form before asking for approval.",
+          "evidenceText": "Yes. Please complete the form first, then ask Ms. Tran to check the dates and approve it."
+        }
+      ],
+      "minimumUniqueQuestions": 3,
+      "practiceAccuracyThreshold": 0.67,
+      "reviewState": "pending-independent-review",
+      "evidenceScope": "listening2"
     }
   ]
 }

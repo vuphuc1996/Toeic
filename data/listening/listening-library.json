@@ -7483,6 +7483,1162 @@
       "editorialBatch": "015",
       "contentBatch": "batch-015-listening-expansion",
       "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part3-projector-maintenance-window",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "A maintenance window for the conference room",
+      "topic": "Office & Facilities",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "Maya",
+          "voice": "female",
+          "text": "Hi, Daniel. The facilities team says the main conference room projector needs a replacement part. They can install it on Wednesday morning, but the room is booked for the quarterly planning session."
+        },
+        {
+          "speaker": "Daniel",
+          "voice": "male",
+          "text": "I can move the planning session to Room 4, but that room only seats twelve. We have fifteen department heads attending. Could the installation be done after lunch instead?"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female",
+          "text": "The technician has another appointment at one, so the earliest afternoon slot is three thirty. The room is free then. I will ask the team to reserve that time and send an updated notice."
+        },
+        {
+          "speaker": "Daniel",
+          "voice": "male",
+          "text": "That works. Please also ask them to test the wireless connection before they leave. We had trouble sharing slides during last month’s review."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What problem does the conference room have?",
+          "choices": [
+            "Its projector needs a replacement part",
+            "Its air conditioning is broken",
+            "Its seating capacity has been reduced",
+            "Its wireless network has been disconnected"
+          ],
+          "answerIndex": 0,
+          "explanation": "Nhóm cơ sở vật chất cho biết máy chiếu cần thay linh kiện.",
+          "choiceIds": [
+            "listening:part3-projector-maintenance-window:1:choice:1",
+            "listening:part3-projector-maintenance-window:1:choice:2",
+            "listening:part3-projector-maintenance-window:1:choice:3",
+            "listening:part3-projector-maintenance-window:1:choice:4"
+          ],
+          "evidenceText": "projector needs a replacement part"
+        },
+        {
+          "question": "Why does Daniel reject Room 4?",
+          "choices": [
+            "It is being renovated",
+            "It cannot seat all the attendees",
+            "It has no presentation screen",
+            "It is reserved for another team"
+          ],
+          "answerIndex": 1,
+          "explanation": "Phòng 4 chỉ có 12 chỗ, không đủ cho 15 trưởng bộ phận tham dự.",
+          "choiceIds": [
+            "listening:part3-projector-maintenance-window:2:choice:1",
+            "listening:part3-projector-maintenance-window:2:choice:2",
+            "listening:part3-projector-maintenance-window:2:choice:3",
+            "listening:part3-projector-maintenance-window:2:choice:4"
+          ],
+          "evidenceText": "only seats twelve"
+        },
+        {
+          "question": "What will Maya ask the facilities team to do?",
+          "choices": [
+            "Move the quarterly session",
+            "Order fifteen new chairs",
+            "Test the wireless connection",
+            "Install a second projector"
+          ],
+          "answerIndex": 2,
+          "explanation": "Daniel yêu cầu kiểm tra kết nối không dây trước khi kỹ thuật viên rời đi.",
+          "choiceIds": [
+            "listening:part3-projector-maintenance-window:3:choice:1",
+            "listening:part3-projector-maintenance-window:3:choice:2",
+            "listening:part3-projector-maintenance-window:3:choice:3",
+            "listening:part3-projector-maintenance-window:3:choice:4"
+          ],
+          "evidenceText": "test the wireless connection"
+        }
+      ],
+      "transcriptTranslation": "Chào Daniel. Bộ phận cơ sở vật chất cho biết máy chiếu ở phòng họp chính cần thay linh kiện. Họ có thể lắp vào sáng thứ Tư, nhưng phòng đã được đặt cho buổi lập kế hoạch quý. Daniel đề nghị chuyển buổi họp sang Phòng 4, nhưng phòng đó chỉ có 12 chỗ trong khi có 15 trưởng bộ phận tham dự. Maya đề nghị đặt lịch lắp đặt lúc 3 giờ 30 chiều, khi phòng trống, đồng thời kiểm tra kết nối không dây trước khi kỹ thuật viên rời đi.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "024",
+      "contentBatch": "batch-024-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part3-vendor-invoice-correction",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Correcting a vendor invoice",
+      "topic": "Finance & Purchasing",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "Leo",
+          "voice": "male",
+          "text": "Priya, I reviewed the invoice from Northstar Supplies. The total is correct, but the delivery fee appears twice. We should not approve it until the vendor sends a corrected copy."
+        },
+        {
+          "speaker": "Priya",
+          "voice": "female",
+          "text": "I noticed the duplicate charge too. The purchase order lists one delivery fee of eighty dollars. I will contact their billing department and attach the purchase order for reference."
+        },
+        {
+          "speaker": "Leo",
+          "voice": "male",
+          "text": "Please ask them to send the revision before Thursday. Accounts payable closes this month’s batch on Friday morning, and we need a full day to verify the changes."
+        },
+        {
+          "speaker": "Priya",
+          "voice": "female",
+          "text": "Understood. I will request the corrected invoice today and flag it in the tracking sheet. If it does not arrive tomorrow, I will call the account representative directly."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is wrong with the invoice?",
+          "choices": [
+            "The item quantities are incorrect",
+            "A delivery fee is listed twice",
+            "The tax rate is missing",
+            "The purchase order number is invalid"
+          ],
+          "answerIndex": 1,
+          "explanation": "Vấn đề là phí giao hàng xuất hiện hai lần trên hóa đơn.",
+          "choiceIds": [
+            "listening:part3-vendor-invoice-correction:1:choice:1",
+            "listening:part3-vendor-invoice-correction:1:choice:2",
+            "listening:part3-vendor-invoice-correction:1:choice:3",
+            "listening:part3-vendor-invoice-correction:1:choice:4"
+          ],
+          "evidenceText": "delivery fee appears twice"
+        },
+        {
+          "question": "What will Priya attach to her message?",
+          "choices": [
+            "A payment receipt",
+            "A shipping label",
+            "The purchase order",
+            "A monthly sales report"
+          ],
+          "answerIndex": 2,
+          "explanation": "Priya sẽ đính kèm đơn đặt hàng để đối chiếu khoản phí giao hàng.",
+          "choiceIds": [
+            "listening:part3-vendor-invoice-correction:2:choice:1",
+            "listening:part3-vendor-invoice-correction:2:choice:2",
+            "listening:part3-vendor-invoice-correction:2:choice:3",
+            "listening:part3-vendor-invoice-correction:2:choice:4"
+          ],
+          "evidenceText": "attach the purchase order"
+        },
+        {
+          "question": "Why is Thursday the requested deadline?",
+          "choices": [
+            "The vendor closes on Friday",
+            "The invoice must be paid immediately",
+            "Accounts payable closes its batch on Friday morning",
+            "The purchase order expires Thursday"
+          ],
+          "answerIndex": 2,
+          "explanation": "Bộ phận công nợ khóa đợt thanh toán vào sáng thứ Sáu nên cần nhận hóa đơn sửa trước đó.",
+          "choiceIds": [
+            "listening:part3-vendor-invoice-correction:3:choice:1",
+            "listening:part3-vendor-invoice-correction:3:choice:2",
+            "listening:part3-vendor-invoice-correction:3:choice:3",
+            "listening:part3-vendor-invoice-correction:3:choice:4"
+          ],
+          "evidenceText": "closes this month’s batch on Friday morning"
+        }
+      ],
+      "transcriptTranslation": "Priya, tôi đã kiểm tra hóa đơn của Northstar Supplies. Tổng tiền đúng nhưng phí giao hàng bị tính hai lần. Chúng ta không nên duyệt hóa đơn cho đến khi nhà cung cấp gửi bản điều chỉnh. Priya sẽ liên hệ bộ phận thanh toán và đính kèm đơn đặt hàng, trong đó ghi một khoản phí giao hàng 80 đô la. Cô ấy được yêu cầu xin bản sửa trước thứ Năm vì bộ phận công nợ khóa đợt thanh toán vào sáng thứ Sáu. Nếu chưa nhận được vào ngày mai, cô ấy sẽ gọi trực tiếp cho đại diện tài khoản.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "024",
+      "contentBatch": "batch-024-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part3-training-room-change",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Changing a training room",
+      "topic": "Human Resources",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "The customer service workshop has been moved from Room 2 to the learning center. The original room will be used for an equipment demonstration, and the workshop registration is higher than expected."
+        },
+        {
+          "speaker": "Ethan",
+          "voice": "male",
+          "text": "That should be fine. Does the learning center have enough computers for the software exercise? We have twenty-four participants, and everyone needs to complete the online simulation."
+        },
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "It has twenty computers. I have arranged four laptops from the support office, and the IT team will deliver them before nine. The workshop itself begins at nine thirty."
+        },
+        {
+          "speaker": "Ethan",
+          "voice": "male",
+          "text": "Great. I will update the calendar invitation and tell the trainer to arrive fifteen minutes early to check the login accounts."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why was the workshop moved?",
+          "choices": [
+            "The original room will host an equipment demonstration",
+            "The trainer requested a quieter room",
+            "The learning center is closer to reception",
+            "The workshop was postponed"
+          ],
+          "answerIndex": 0,
+          "explanation": "Phòng 2 được dùng cho buổi trình diễn thiết bị nên hội thảo phải chuyển phòng.",
+          "choiceIds": [
+            "listening:part3-training-room-change:1:choice:1",
+            "listening:part3-training-room-change:1:choice:2",
+            "listening:part3-training-room-change:1:choice:3",
+            "listening:part3-training-room-change:1:choice:4"
+          ],
+          "evidenceText": "used for an equipment demonstration"
+        },
+        {
+          "question": "What has Nora arranged?",
+          "choices": [
+            "Four additional laptops",
+            "A second trainer",
+            "Twenty new desktop computers",
+            "A later starting time"
+          ],
+          "answerIndex": 0,
+          "explanation": "Nora đã sắp xếp thêm bốn máy tính xách tay từ bộ phận hỗ trợ.",
+          "choiceIds": [
+            "listening:part3-training-room-change:2:choice:1",
+            "listening:part3-training-room-change:2:choice:2",
+            "listening:part3-training-room-change:2:choice:3",
+            "listening:part3-training-room-change:2:choice:4"
+          ],
+          "evidenceText": "four laptops from the support office"
+        },
+        {
+          "question": "What will Ethan do next?",
+          "choices": [
+            "Contact the equipment vendor",
+            "Prepare printed certificates",
+            "Update the calendar invitation",
+            "Cancel the online simulation"
+          ],
+          "answerIndex": 2,
+          "explanation": "Ethan sẽ cập nhật lời mời lịch để thông báo cho người tham dự.",
+          "choiceIds": [
+            "listening:part3-training-room-change:3:choice:1",
+            "listening:part3-training-room-change:3:choice:2",
+            "listening:part3-training-room-change:3:choice:3",
+            "listening:part3-training-room-change:3:choice:4"
+          ],
+          "evidenceText": "update the calendar invitation"
+        }
+      ],
+      "transcriptTranslation": "Buổi hội thảo dịch vụ khách hàng được chuyển từ Phòng 2 sang trung tâm đào tạo vì Phòng 2 sẽ dùng để trình diễn thiết bị và số người đăng ký vượt dự kiến. Trung tâm đào tạo có 20 máy tính, nhưng có 24 người tham gia. Nora đã mượn thêm bốn máy tính xách tay từ bộ phận hỗ trợ; nhóm IT sẽ chuyển chúng đến trước 9 giờ. Buổi học bắt đầu lúc 9 giờ 30. Ethan sẽ cập nhật lời mời lịch và nhắc giảng viên đến sớm 15 phút để kiểm tra tài khoản đăng nhập.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "024",
+      "contentBatch": "batch-024-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part4-parking-policy-update",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "An update to the employee parking policy",
+      "topic": "Office & Administration",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "Beginning next Monday, employees who use the south parking lot must display the new blue permit on the lower-left corner of the windshield. Permits can be collected from the security desk between eight and five. Please bring your employee identification card. Vehicles without a visible permit may be directed to the visitor area. The north lot is not affected by this change."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is being changed?",
+          "choices": [
+            "The employee parking permit procedure",
+            "The opening hours of the security desk",
+            "The location of the visitor entrance",
+            "The size of the north parking lot"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo nêu thay đổi quy định thẻ đỗ xe ở bãi phía Nam.",
+          "choiceIds": [
+            "listening:part4-parking-policy-update:1:choice:1",
+            "listening:part4-parking-policy-update:1:choice:2",
+            "listening:part4-parking-policy-update:1:choice:3",
+            "listening:part4-parking-policy-update:1:choice:4"
+          ],
+          "evidenceText": "new blue permit"
+        },
+        {
+          "question": "Where can employees collect the permits?",
+          "choices": [
+            "At the visitor entrance",
+            "From the security desk",
+            "In the north parking lot",
+            "At the human resources office"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nhân viên có thể nhận thẻ tại bàn an ninh.",
+          "choiceIds": [
+            "listening:part4-parking-policy-update:2:choice:1",
+            "listening:part4-parking-policy-update:2:choice:2",
+            "listening:part4-parking-policy-update:2:choice:3",
+            "listening:part4-parking-policy-update:2:choice:4"
+          ],
+          "evidenceText": "collected from the security desk"
+        },
+        {
+          "question": "Which area is unaffected?",
+          "choices": [
+            "The south parking lot",
+            "The visitor area",
+            "The north parking lot",
+            "The loading zone"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thông báo nói rõ bãi phía Bắc không bị ảnh hưởng.",
+          "choiceIds": [
+            "listening:part4-parking-policy-update:3:choice:1",
+            "listening:part4-parking-policy-update:3:choice:2",
+            "listening:part4-parking-policy-update:3:choice:3",
+            "listening:part4-parking-policy-update:3:choice:4"
+          ],
+          "evidenceText": "north lot is not affected"
+        }
+      ],
+      "transcriptTranslation": "Bắt đầu từ thứ Hai tới, nhân viên sử dụng bãi đỗ xe phía Nam phải đặt thẻ màu xanh mới ở góc dưới bên trái kính chắn gió. Có thể nhận thẻ tại bàn an ninh từ 8 giờ đến 17 giờ. Nhân viên cần mang theo thẻ nhận dạng. Xe không có thẻ hiển thị rõ có thể bị hướng dẫn sang khu vực dành cho khách. Bãi đỗ xe phía Bắc không bị ảnh hưởng bởi thay đổi này.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "024",
+      "contentBatch": "batch-024-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part4-customer-survey-results",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Results of a customer survey",
+      "topic": "Customer Service",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "Presenter",
+          "voice": "male",
+          "text": "The customer experience team has completed its quarterly service survey. Overall satisfaction increased by six percentage points, mainly because response times improved. However, customers still report difficulty finding the returns form on our website. The digital team will move the form to the support menu by the end of this week. Team leaders should review the detailed results before Monday’s staff meeting. A summary will be sent by email this afternoon."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What contributed to higher satisfaction?",
+          "choices": [
+            "Lower product prices",
+            "Faster response times",
+            "A new returns policy",
+            "Longer store hours"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thời gian phản hồi được cải thiện là nguyên nhân chính giúp mức hài lòng tăng.",
+          "choiceIds": [
+            "listening:part4-customer-survey-results:1:choice:1",
+            "listening:part4-customer-survey-results:1:choice:2",
+            "listening:part4-customer-survey-results:1:choice:3",
+            "listening:part4-customer-survey-results:1:choice:4"
+          ],
+          "evidenceText": "response times improved"
+        },
+        {
+          "question": "What problem do customers still report?",
+          "choices": [
+            "They cannot track deliveries",
+            "The returns form is difficult to find",
+            "The website loads too slowly",
+            "The support menu is unavailable"
+          ],
+          "answerIndex": 1,
+          "explanation": "Khách hàng vẫn gặp khó khăn khi tìm biểu mẫu trả hàng trên trang web.",
+          "choiceIds": [
+            "listening:part4-customer-survey-results:2:choice:1",
+            "listening:part4-customer-survey-results:2:choice:2",
+            "listening:part4-customer-survey-results:2:choice:3",
+            "listening:part4-customer-survey-results:2:choice:4"
+          ],
+          "evidenceText": "difficulty finding the returns form"
+        },
+        {
+          "question": "What should team leaders do before Monday?",
+          "choices": [
+            "Move the form to the website",
+            "Send a summary to customers",
+            "Review the detailed results",
+            "Conduct another survey"
+          ],
+          "answerIndex": 2,
+          "explanation": "Trưởng nhóm cần xem kết quả chi tiết trước cuộc họp thứ Hai.",
+          "choiceIds": [
+            "listening:part4-customer-survey-results:3:choice:1",
+            "listening:part4-customer-survey-results:3:choice:2",
+            "listening:part4-customer-survey-results:3:choice:3",
+            "listening:part4-customer-survey-results:3:choice:4"
+          ],
+          "evidenceText": "review the detailed results"
+        }
+      ],
+      "transcriptTranslation": "Nhóm trải nghiệm khách hàng đã hoàn thành khảo sát dịch vụ hàng quý. Mức độ hài lòng chung tăng sáu điểm phần trăm, chủ yếu nhờ thời gian phản hồi được cải thiện. Tuy nhiên, khách hàng vẫn gặp khó khăn khi tìm biểu mẫu trả hàng trên trang web. Nhóm kỹ thuật số sẽ chuyển biểu mẫu vào menu hỗ trợ trước cuối tuần này. Trưởng nhóm nên xem kết quả chi tiết trước cuộc họp nhân viên thứ Hai. Bản tóm tắt sẽ được gửi qua email vào chiều nay.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "024",
+      "contentBatch": "batch-024-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part4-inventory-count-schedule",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "A revised inventory count schedule",
+      "topic": "Warehouse Operations",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "Supervisor",
+          "voice": "female",
+          "text": "The annual inventory count will begin on Tuesday, October seventeenth, one day later than originally planned. The delay will allow the warehouse team to finish labeling the new storage area. Staff assigned to the count should report to the east entrance at seven thirty and collect a scanner from the operations desk. The morning shift will count small equipment, while the afternoon shift will verify boxed supplies. Please complete the online safety refresher before Monday."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why was the inventory count delayed?",
+          "choices": [
+            "Some scanners have not arrived",
+            "The new storage area needs labeling",
+            "The warehouse will be closed",
+            "The safety training was canceled"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nhóm kho cần hoàn tất việc dán nhãn khu lưu trữ mới.",
+          "choiceIds": [
+            "listening:part4-inventory-count-schedule:1:choice:1",
+            "listening:part4-inventory-count-schedule:1:choice:2",
+            "listening:part4-inventory-count-schedule:1:choice:3",
+            "listening:part4-inventory-count-schedule:1:choice:4"
+          ],
+          "evidenceText": "finish labeling the new storage area"
+        },
+        {
+          "question": "Where should staff report?",
+          "choices": [
+            "The west loading dock",
+            "The main reception",
+            "The east entrance",
+            "The operations parking area"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên cần có mặt tại lối vào phía Đông.",
+          "choiceIds": [
+            "listening:part4-inventory-count-schedule:2:choice:1",
+            "listening:part4-inventory-count-schedule:2:choice:2",
+            "listening:part4-inventory-count-schedule:2:choice:3",
+            "listening:part4-inventory-count-schedule:2:choice:4"
+          ],
+          "evidenceText": "report to the east entrance"
+        },
+        {
+          "question": "What must employees complete before Monday?",
+          "choices": [
+            "An online safety refresher",
+            "A stock transfer request",
+            "A scanner maintenance form",
+            "A shift preference survey"
+          ],
+          "answerIndex": 0,
+          "explanation": "Nhân viên cần hoàn thành khóa ôn tập an toàn trực tuyến trước thứ Hai.",
+          "choiceIds": [
+            "listening:part4-inventory-count-schedule:3:choice:1",
+            "listening:part4-inventory-count-schedule:3:choice:2",
+            "listening:part4-inventory-count-schedule:3:choice:3",
+            "listening:part4-inventory-count-schedule:3:choice:4"
+          ],
+          "evidenceText": "complete the online safety refresher"
+        }
+      ],
+      "transcriptTranslation": "Đợt kiểm kê hằng năm sẽ bắt đầu vào thứ Ba, ngày 17 tháng 10, muộn hơn kế hoạch ban đầu một ngày. Việc lùi lịch giúp nhóm kho hoàn tất dán nhãn khu vực lưu trữ mới. Nhân viên tham gia kiểm kê cần có mặt tại lối vào phía Đông lúc 7 giờ 30 và nhận máy quét ở bàn vận hành. Ca sáng kiểm đếm thiết bị nhỏ; ca chiều kiểm tra vật tư đóng hộp. Mọi người cần hoàn thành khóa ôn tập an toàn trực tuyến trước thứ Hai.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "024",
+      "contentBatch": "batch-024-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part2-client-appointment",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "A revised client appointment",
+      "topic": "Customer Service",
+      "level": "A2–B1",
+      "segments": [
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Could we move the client appointment to Thursday afternoon?"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch025-part2-client-appointment:1",
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "On Wednesday morning",
+            "On Thursday afternoon",
+            "After the monthly review"
+          ],
+          "answerIndex": 1,
+          "explanation": "Người nói đề nghị chuyển cuộc hẹn với khách hàng sang chiều thứ Năm. Cụm When would the revised appointment take place? hỏi thời điểm của lịch hẹn mới.",
+          "choiceIds": [
+            "listening:batch025-part2-client-appointment:1:choice:1",
+            "listening:batch025-part2-client-appointment:1:choice:2",
+            "listening:batch025-part2-client-appointment:1:choice:3"
+          ],
+          "evidenceText": "Thursday afternoon"
+        }
+      ],
+      "transcriptTranslation": "Người nói hỏi liệu có thể chuyển cuộc hẹn với khách hàng sang chiều thứ Năm hay không.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part2-equipment-status",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "A question about equipment delivery",
+      "topic": "Office Operations",
+      "level": "A2–B1",
+      "segments": [
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Has the replacement printer arrived at the branch yet?"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch025-part2-equipment-status:1",
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "Whether the replacement printer has arrived",
+            "Who approved the purchase",
+            "Why the meeting was canceled"
+          ],
+          "answerIndex": 0,
+          "explanation": "Người nói muốn xác nhận máy in thay thế đã được giao đến chi nhánh hay chưa. Câu hỏi Has ... arrived yet? yêu cầu thông tin về tình trạng giao hàng.",
+          "choiceIds": [
+            "listening:batch025-part2-equipment-status:1:choice:1",
+            "listening:batch025-part2-equipment-status:1:choice:2",
+            "listening:batch025-part2-equipment-status:1:choice:3"
+          ],
+          "evidenceText": "Has the replacement printer arrived"
+        }
+      ],
+      "transcriptTranslation": "Người nói muốn biết máy in thay thế đã được giao đến chi nhánh hay chưa.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part3-training-room-change",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "A change to the training room",
+      "topic": "Human Resources",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Mia",
+          "voice": "female",
+          "text": "Did you see the message about tomorrow’s customer-service training? The room has changed."
+        },
+        {
+          "speaker": "Daniel",
+          "voice": "male",
+          "text": "I thought it was in Conference Room B. Is that room unavailable?"
+        },
+        {
+          "speaker": "Mia",
+          "voice": "female",
+          "text": "Yes. The projector is being repaired, so the session will be held in Room D on the fourth floor."
+        },
+        {
+          "speaker": "Daniel",
+          "voice": "male",
+          "text": "I’ll update the calendar invitation and let the new employees know. Should they still arrive at nine?"
+        },
+        {
+          "speaker": "Mia",
+          "voice": "female",
+          "text": "Yes, the starting time is unchanged. Please remind them to bring their access cards."
+        },
+        {
+          "speaker": "Daniel",
+          "voice": "male",
+          "text": "All right. I’ll send a short notice before the end of the day."
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch025-part3-training-room-change:1",
+          "question": "Why was the training room changed?",
+          "choices": [
+            "The room is being renovated",
+            "The projector is being repaired",
+            "The instructor is unavailable",
+            "More employees registered"
+          ],
+          "answerIndex": 1,
+          "explanation": "Máy chiếu đang được sửa chữa nên buổi học chuyển sang phòng D.",
+          "choiceIds": [
+            "listening:batch025-part3-training-room-change:1:choice:1",
+            "listening:batch025-part3-training-room-change:1:choice:2",
+            "listening:batch025-part3-training-room-change:1:choice:3",
+            "listening:batch025-part3-training-room-change:1:choice:4"
+          ],
+          "evidenceText": "The projector is being repaired"
+        },
+        {
+          "id": "listening:batch025-part3-training-room-change:2",
+          "question": "What will Daniel do?",
+          "choices": [
+            "Prepare the training materials",
+            "Contact the building manager",
+            "Update the invitation and notify employees",
+            "Change the starting time"
+          ],
+          "answerIndex": 2,
+          "explanation": "Daniel sẽ cập nhật lời mời lịch và thông báo cho nhân viên mới.",
+          "choiceIds": [
+            "listening:batch025-part3-training-room-change:2:choice:1",
+            "listening:batch025-part3-training-room-change:2:choice:2",
+            "listening:batch025-part3-training-room-change:2:choice:3",
+            "listening:batch025-part3-training-room-change:2:choice:4"
+          ],
+          "evidenceText": "update the calendar invitation and let the new employees know"
+        },
+        {
+          "id": "listening:batch025-part3-training-room-change:3",
+          "question": "What should employees bring?",
+          "choices": [
+            "Their access cards",
+            "A printed report",
+            "A laptop charger",
+            "A parking receipt"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông tin trong đoạn nghe cho biết: Mia nhắc nhân viên mang thẻ ra vào.",
+          "choiceIds": [
+            "listening:batch025-part3-training-room-change:3:choice:1",
+            "listening:batch025-part3-training-room-change:3:choice:2",
+            "listening:batch025-part3-training-room-change:3:choice:3",
+            "listening:batch025-part3-training-room-change:3:choice:4"
+          ],
+          "evidenceText": "bring their access cards"
+        }
+      ],
+      "transcriptTranslation": "Buổi đào tạo dịch vụ khách hàng được chuyển từ phòng B sang phòng D vì máy chiếu đang được sửa. Daniel sẽ cập nhật lịch và thông báo cho nhân viên mới. Thời gian bắt đầu vẫn là 9 giờ và mọi người cần mang thẻ ra vào.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part3-invoice-clarification",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Clarifying a supplier invoice",
+      "topic": "Finance",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "I reviewed the invoice from Northstar Supplies. The total is higher than the purchase order."
+        },
+        {
+          "speaker": "Ethan",
+          "voice": "male",
+          "text": "That may be because they included the express delivery charge. The order was supposed to use standard shipping."
+        },
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "I checked the delivery note, and it says standard shipping. I’ll ask the supplier to issue a corrected invoice."
+        },
+        {
+          "speaker": "Ethan",
+          "voice": "male",
+          "text": "Please copy me on the email. We should hold the payment until the revised document arrives."
+        },
+        {
+          "speaker": "Nora",
+          "voice": "female",
+          "text": "I can do that. Their account representative usually responds within one business day."
+        },
+        {
+          "speaker": "Ethan",
+          "voice": "male",
+          "text": "Good. Once we receive the correction, I’ll approve the payment in the system."
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch025-part3-invoice-clarification:1",
+          "question": "What problem does Nora mention?",
+          "choices": [
+            "The invoice exceeds the purchase order",
+            "The goods were delivered late",
+            "The supplier changed its bank",
+            "The purchase order is missing"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông tin trong đoạn nghe cho biết: Tổng hóa đơn cao hơn đơn đặt hàng.",
+          "choiceIds": [
+            "listening:batch025-part3-invoice-clarification:1:choice:1",
+            "listening:batch025-part3-invoice-clarification:1:choice:2",
+            "listening:batch025-part3-invoice-clarification:1:choice:3",
+            "listening:batch025-part3-invoice-clarification:1:choice:4"
+          ],
+          "evidenceText": "The total is higher than the purchase order"
+        },
+        {
+          "id": "listening:batch025-part3-invoice-clarification:2",
+          "question": "What will Nora do next?",
+          "choices": [
+            "Cancel the order",
+            "Request a corrected invoice",
+            "Arrange express shipping",
+            "Contact the bank"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông tin trong đoạn nghe cho biết: Nora sẽ yêu cầu nhà cung cấp phát hành hóa đơn đã chỉnh sửa.",
+          "choiceIds": [
+            "listening:batch025-part3-invoice-clarification:2:choice:1",
+            "listening:batch025-part3-invoice-clarification:2:choice:2",
+            "listening:batch025-part3-invoice-clarification:2:choice:3",
+            "listening:batch025-part3-invoice-clarification:2:choice:4"
+          ],
+          "evidenceText": "ask the supplier to issue a corrected invoice"
+        },
+        {
+          "id": "listening:batch025-part3-invoice-clarification:3",
+          "question": "When will Ethan approve payment?",
+          "choices": [
+            "Before the goods arrive",
+            "After the supplier changes its account",
+            "Once the corrected invoice arrives",
+            "At the end of the quarter"
+          ],
+          "answerIndex": 2,
+          "explanation": "Ethan chỉ phê duyệt thanh toán sau khi nhận hóa đơn đã sửa.",
+          "choiceIds": [
+            "listening:batch025-part3-invoice-clarification:3:choice:1",
+            "listening:batch025-part3-invoice-clarification:3:choice:2",
+            "listening:batch025-part3-invoice-clarification:3:choice:3",
+            "listening:batch025-part3-invoice-clarification:3:choice:4"
+          ],
+          "evidenceText": "Once we receive the correction"
+        }
+      ],
+      "transcriptTranslation": "Nora phát hiện hóa đơn của nhà cung cấp cao hơn đơn đặt hàng do có thể tính nhầm phí giao nhanh. Cô sẽ yêu cầu hóa đơn điều chỉnh. Ethan sẽ tạm giữ thanh toán cho đến khi nhận được chứng từ đúng.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part3-access-card-renewal",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Renewing office access cards",
+      "topic": "Facilities",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Lena",
+          "voice": "female",
+          "text": "The security team is replacing access cards next week. Have you submitted the employee list?"
+        },
+        {
+          "speaker": "Mark",
+          "voice": "male",
+          "text": "Not yet. I’m waiting for the department heads to confirm which temporary staff are staying."
+        },
+        {
+          "speaker": "Lena",
+          "voice": "female",
+          "text": "The list must be finalized by Wednesday so the cards can be printed before Friday."
+        },
+        {
+          "speaker": "Mark",
+          "voice": "male",
+          "text": "I’ll send a reminder this afternoon. Can employees collect the new cards at reception?"
+        },
+        {
+          "speaker": "Lena",
+          "voice": "female",
+          "text": "Yes, but they must return their old cards when they sign for the replacements."
+        },
+        {
+          "speaker": "Mark",
+          "voice": "male",
+          "text": "Understood. I’ll include that instruction in the announcement."
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch025-part3-access-card-renewal:1",
+          "question": "What is Mark waiting for?",
+          "choices": [
+            "A security inspection",
+            "Confirmation about temporary staff",
+            "A new printer",
+            "A budget approval"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông tin trong đoạn nghe cho biết: Mark đang chờ trưởng bộ phận xác nhận nhân sự thời vụ nào tiếp tục làm việc.",
+          "choiceIds": [
+            "listening:batch025-part3-access-card-renewal:1:choice:1",
+            "listening:batch025-part3-access-card-renewal:1:choice:2",
+            "listening:batch025-part3-access-card-renewal:1:choice:3",
+            "listening:batch025-part3-access-card-renewal:1:choice:4"
+          ],
+          "evidenceText": "confirm which temporary staff are staying"
+        },
+        {
+          "id": "listening:batch025-part3-access-card-renewal:2",
+          "question": "By when must the list be finalized?",
+          "choices": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Friday"
+          ],
+          "answerIndex": 2,
+          "explanation": "Danh sách phải hoàn tất trước thứ Tư.",
+          "choiceIds": [
+            "listening:batch025-part3-access-card-renewal:2:choice:1",
+            "listening:batch025-part3-access-card-renewal:2:choice:2",
+            "listening:batch025-part3-access-card-renewal:2:choice:3",
+            "listening:batch025-part3-access-card-renewal:2:choice:4"
+          ],
+          "evidenceText": "finalized by Wednesday"
+        },
+        {
+          "id": "listening:batch025-part3-access-card-renewal:3",
+          "question": "What must employees do when collecting new cards?",
+          "choices": [
+            "Pay a replacement fee",
+            "Visit the security office",
+            "Return their old cards",
+            "Bring a passport photo"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên phải trả thẻ cũ khi ký nhận thẻ mới.",
+          "choiceIds": [
+            "listening:batch025-part3-access-card-renewal:3:choice:1",
+            "listening:batch025-part3-access-card-renewal:3:choice:2",
+            "listening:batch025-part3-access-card-renewal:3:choice:3",
+            "listening:batch025-part3-access-card-renewal:3:choice:4"
+          ],
+          "evidenceText": "return their old cards"
+        }
+      ],
+      "transcriptTranslation": "Nhóm an ninh sẽ thay thẻ ra vào. Mark đang chờ xác nhận danh sách nhân viên thời vụ và sẽ gửi lời nhắc. Nhân viên nhận thẻ mới tại lễ tân và phải trả lại thẻ cũ.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part4-delivery-route-update",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "An update to delivery routes",
+      "topic": "Logistics",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Dispatcher",
+          "voice": "female",
+          "text": "Good morning, drivers. Due to road maintenance near the central market, all deliveries to the eastern district will use Riverside Avenue today. Please check the revised route sheet before leaving the depot. The first departure is still scheduled for eight thirty. If a customer is unavailable, record the attempt in the handheld device and contact dispatch before returning the parcel. Updated maps are available beside the vehicle keys."
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch025-part4-delivery-route-update:1",
+          "question": "Why are routes being changed?",
+          "choices": [
+            "A bridge has reopened",
+            "Road maintenance is taking place",
+            "The depot is moving",
+            "A customer requested a delay"
+          ],
+          "answerIndex": 1,
+          "explanation": "Tuyến đường thay đổi do công tác bảo trì đường gần chợ trung tâm.",
+          "choiceIds": [
+            "listening:batch025-part4-delivery-route-update:1:choice:1",
+            "listening:batch025-part4-delivery-route-update:1:choice:2",
+            "listening:batch025-part4-delivery-route-update:1:choice:3",
+            "listening:batch025-part4-delivery-route-update:1:choice:4"
+          ],
+          "evidenceText": "Due to road maintenance"
+        },
+        {
+          "id": "listening:batch025-part4-delivery-route-update:2",
+          "question": "What should drivers do before leaving?",
+          "choices": [
+            "Collect a cash receipt",
+            "Call every customer",
+            "Check the revised route sheet",
+            "Refuel at the eastern station"
+          ],
+          "answerIndex": 2,
+          "explanation": "Tài xế cần xem bảng tuyến đường đã sửa trước khi rời kho.",
+          "choiceIds": [
+            "listening:batch025-part4-delivery-route-update:2:choice:1",
+            "listening:batch025-part4-delivery-route-update:2:choice:2",
+            "listening:batch025-part4-delivery-route-update:2:choice:3",
+            "listening:batch025-part4-delivery-route-update:2:choice:4"
+          ],
+          "evidenceText": "check the revised route sheet"
+        },
+        {
+          "id": "listening:batch025-part4-delivery-route-update:3",
+          "question": "What should a driver do if a customer is unavailable?",
+          "choices": [
+            "Leave the parcel outside",
+            "Record the attempt and contact dispatch",
+            "Return immediately without a note",
+            "Ask another driver to deliver it"
+          ],
+          "answerIndex": 1,
+          "explanation": "Tài xế cần ghi nhận lần giao và liên hệ điều phối.",
+          "choiceIds": [
+            "listening:batch025-part4-delivery-route-update:3:choice:1",
+            "listening:batch025-part4-delivery-route-update:3:choice:2",
+            "listening:batch025-part4-delivery-route-update:3:choice:3",
+            "listening:batch025-part4-delivery-route-update:3:choice:4"
+          ],
+          "evidenceText": "record the attempt in the handheld device and contact dispatch"
+        }
+      ],
+      "transcriptTranslation": "Do bảo trì đường gần chợ trung tâm, tài xế giao hàng đến quận phía Đông phải đi theo đại lộ Riverside. Họ cần xem tuyến đường mới và ghi nhận lần giao không thành công trên thiết bị.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part4-benefits-enrollment",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Quarterly benefits enrollment reminder",
+      "topic": "Human Resources",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "HR Coordinator",
+          "voice": "male",
+          "text": "This is a reminder that the quarterly benefits enrollment period closes on the twenty-eighth. Employees who want to change their medical or transportation options should submit the online form by five p.m. on that date. Existing selections will remain in place if no changes are submitted. A benefits specialist will be available in Meeting Room 3 on Tuesday and Thursday to answer individual questions. Please bring your employee identification number to the consultation."
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch025-part4-benefits-enrollment:1",
+          "question": "When does enrollment close?",
+          "choices": [
+            "On the twenty-first",
+            "On the twenty-eighth",
+            "At the end of the quarter",
+            "Next Thursday"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông tin trong đoạn nghe cho biết: Thời hạn kết thúc vào ngày 28.",
+          "choiceIds": [
+            "listening:batch025-part4-benefits-enrollment:1:choice:1",
+            "listening:batch025-part4-benefits-enrollment:1:choice:2",
+            "listening:batch025-part4-benefits-enrollment:1:choice:3",
+            "listening:batch025-part4-benefits-enrollment:1:choice:4"
+          ],
+          "evidenceText": "closes on the twenty-eighth"
+        },
+        {
+          "id": "listening:batch025-part4-benefits-enrollment:2",
+          "question": "What happens if an employee submits no changes?",
+          "choices": [
+            "All benefits are canceled",
+            "The employee must attend a meeting",
+            "Current selections remain",
+            "The form is automatically rejected"
+          ],
+          "answerIndex": 2,
+          "explanation": "Lựa chọn hiện tại được giữ nguyên nếu không gửi thay đổi.",
+          "choiceIds": [
+            "listening:batch025-part4-benefits-enrollment:2:choice:1",
+            "listening:batch025-part4-benefits-enrollment:2:choice:2",
+            "listening:batch025-part4-benefits-enrollment:2:choice:3",
+            "listening:batch025-part4-benefits-enrollment:2:choice:4"
+          ],
+          "evidenceText": "Existing selections will remain in place"
+        },
+        {
+          "id": "listening:batch025-part4-benefits-enrollment:3",
+          "question": "What should employees bring to a consultation?",
+          "choices": [
+            "A medical receipt",
+            "A passport",
+            "Their employee identification number",
+            "A completed paper survey"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên cần mang mã số nhân viên.",
+          "choiceIds": [
+            "listening:batch025-part4-benefits-enrollment:3:choice:1",
+            "listening:batch025-part4-benefits-enrollment:3:choice:2",
+            "listening:batch025-part4-benefits-enrollment:3:choice:3",
+            "listening:batch025-part4-benefits-enrollment:3:choice:4"
+          ],
+          "evidenceText": "employee identification number"
+        }
+      ],
+      "transcriptTranslation": "Đợt đăng ký quyền lợi theo quý kết thúc ngày 28 lúc 5 giờ chiều. Nếu không thay đổi, lựa chọn hiện tại được giữ nguyên. Chuyên viên nhân sự tư vấn vào thứ Ba và thứ Năm.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part4-display-maintenance",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Maintenance notice for a product display area",
+      "topic": "Retail Operations",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Store Manager",
+          "voice": "female",
+          "text": "Attention, store associates. The product display area on the second floor will be closed from six to eight tomorrow morning while the lighting system is upgraded. Please move promotional materials to the storage room before closing today. The maintenance team will reopen the area after completing a safety inspection. Customers may still access the other departments through the north escalator. Thank you for helping us keep the store organized."
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch025-part4-display-maintenance:1",
+          "question": "What will happen tomorrow morning?",
+          "choices": [
+            "The store will open late",
+            "The lighting system will be upgraded",
+            "A new department will open",
+            "The escalator will be replaced"
+          ],
+          "answerIndex": 1,
+          "explanation": "Khu trưng bày sẽ đóng để nâng cấp hệ thống chiếu sáng.",
+          "choiceIds": [
+            "listening:batch025-part4-display-maintenance:1:choice:1",
+            "listening:batch025-part4-display-maintenance:1:choice:2",
+            "listening:batch025-part4-display-maintenance:1:choice:3",
+            "listening:batch025-part4-display-maintenance:1:choice:4"
+          ],
+          "evidenceText": "lighting system is upgraded"
+        },
+        {
+          "id": "listening:batch025-part4-display-maintenance:2",
+          "question": "What should associates do before closing today?",
+          "choices": [
+            "Move promotional materials",
+            "Clean the north escalator",
+            "Count all products",
+            "Print new price labels"
+          ],
+          "answerIndex": 0,
+          "explanation": "Nhân viên cần chuyển tài liệu quảng bá vào kho.",
+          "choiceIds": [
+            "listening:batch025-part4-display-maintenance:2:choice:1",
+            "listening:batch025-part4-display-maintenance:2:choice:2",
+            "listening:batch025-part4-display-maintenance:2:choice:3",
+            "listening:batch025-part4-display-maintenance:2:choice:4"
+          ],
+          "evidenceText": "move promotional materials to the storage room"
+        },
+        {
+          "id": "listening:batch025-part4-display-maintenance:3",
+          "question": "When will the display area reopen?",
+          "choices": [
+            "At six tomorrow",
+            "After a safety inspection",
+            "When the store closes",
+            "Next Monday"
+          ],
+          "answerIndex": 1,
+          "explanation": "Khu vực mở lại sau khi đội bảo trì hoàn tất kiểm tra an toàn.",
+          "choiceIds": [
+            "listening:batch025-part4-display-maintenance:3:choice:1",
+            "listening:batch025-part4-display-maintenance:3:choice:2",
+            "listening:batch025-part4-display-maintenance:3:choice:3",
+            "listening:batch025-part4-display-maintenance:3:choice:4"
+          ],
+          "evidenceText": "after completing a safety inspection"
+        }
+      ],
+      "transcriptTranslation": "Khu trưng bày tầng hai đóng cửa từ 6 đến 8 giờ sáng để nâng cấp chiếu sáng. Nhân viên chuyển vật liệu quảng bá vào kho trước khi kết thúc ngày làm việc. Khu vực mở lại sau kiểm tra an toàn.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-listening-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
     }
   ]
 }

@@ -1,0 +1,78 @@
+{
+  "version": "2.93.0",
+  "batch": "025",
+  "grammar": [
+    "batch025-parallel-structure-toeic",
+    "batch025-inversion-negative-adverbials-toeic",
+    "batch025-subjunctive-recommendation-toeic",
+    "batch025-causative-have-get-toeic",
+    "batch025-noun-clause-connectors-toeic",
+    "batch025-reduced-adverbial-clauses-toeic",
+    "batch025-articles-institutional-nouns-toeic",
+    "batch025-concessive-contrast-connectors-toeic",
+    "batch025-verb-complement-meaning-toeic"
+  ],
+  "listening": [
+    "batch025-part2-client-appointment",
+    "batch025-part2-equipment-status",
+    "batch025-part3-training-room-change",
+    "batch025-part3-invoice-clarification",
+    "batch025-part3-access-card-renewal",
+    "batch025-part4-delivery-route-update",
+    "batch025-part4-benefits-enrollment",
+    "batch025-part4-display-maintenance"
+  ],
+  "reading": [
+    "batch025-part7-single-equipment-inspection",
+    "batch025-part7-single-training-registration",
+    "batch025-part7-single-customer-feedback",
+    "batch025-part7-single-library-hours",
+    "batch025-part7-double-conference-booking",
+    "batch025-part7-double-shipping-delay",
+    "batch025-part7-double-job-fair",
+    "batch025-part7-double-software-renewal"
+  ],
+  "vocabulary": [
+    "appliance-n",
+    "assemble-v",
+    "collaborate-v",
+    "dedicate-v"
+  ],
+  "grammar_sha256": {
+    "batch025-parallel-structure-toeic": "8445966c1cf66fde074dc24abed364af800bce3370ea54fb0210248772bbc295",
+    "batch025-inversion-negative-adverbials-toeic": "03523ef59c8a0458b10eeb0ebb60ab55e59ab43548d4f612e078b518a94ac717",
+    "batch025-subjunctive-recommendation-toeic": "70ae8bd2ca56a16f4bf129e7fd0c4ebb1e6eb65a01ba26c6a299bc8bf195b768",
+    "batch025-causative-have-get-toeic": "8d2ed90ca809e5e1a277197d01e4be38fbabf42bee9ed9868f941eeacb73efad",
+    "batch025-noun-clause-connectors-toeic": "f727aab7fd0f7c5d025cfc8ea10cfb9195b3c81b03878322a167bf55d77196b1",
+    "batch025-reduced-adverbial-clauses-toeic": "fd7b879a67ab64885022726858ff88eae17575c6a434adb03a4a81ecf6b7537f",
+    "batch025-articles-institutional-nouns-toeic": "f4483c21a49996efa3e24059a97e66180e13b2945e358073df7de7c545834ca3",
+    "batch025-concessive-contrast-connectors-toeic": "f2b1c1236ecd5c39532f4c9fdf8a23ddd66ee8ce0c7291f25d49d72147bc2624",
+    "batch025-verb-complement-meaning-toeic": "9227f63fc9de4a65aae710010ae307b62cb4b4575f1bfc86394b2ed529fb5455"
+  },
+  "listening_sha256": {
+    "batch025-part2-client-appointment": "1cefae284ce9069b039f859957f0cda379d85c478172ae67dc94d3dc8583a66c",
+    "batch025-part2-equipment-status": "ebc36b7fa22cf292ae49a6b81809ce09db56f55b013461107abcc25a7e51d846",
+    "batch025-part3-training-room-change": "005f653298cf2e21064d557d5f9bc54ec15099b81373e59904eda5c0ab0ff023",
+    "batch025-part3-invoice-clarification": "abc042e1d09624b06a30fab435ddda784e5dc42c19c187e82b884c5fac5ebded",
+    "batch025-part3-access-card-renewal": "2dbc1dd378770c476fc3f54878368703075006d3327c97a7e992a7f570a981c2",
+    "batch025-part4-delivery-route-update": "ee0b3c09fc277bc50207d378ab8cf838b308fb4517a0c209909a438474b7796d",
+    "batch025-part4-benefits-enrollment": "62c1ec43875a31e6969a3b08ac99b6c18c9602d1c462057c56f515c1ebbac8c1",
+    "batch025-part4-display-maintenance": "63b54539860ab1059bdf64342a706a89e4fa0206274aea0fb70621e873e444c3"
+  },
+  "reading_sha256": {
+    "batch025-part7-single-equipment-inspection": "0d43c6a9889e365c45bb626ed2850098e65c5b2ba69d95e15054e26a58edda2e",
+    "batch025-part7-single-training-registration": "8a071b65ac0955bedfaa0bc17b351d79f0326b6b3112f72a95d61bcd87bf9a85",
+    "batch025-part7-single-customer-feedback": "d136e47ef9a43665f063da06415aa3e8eef4dfc69ca85d0c2c57dcb9f3da51b5",
+    "batch025-part7-single-library-hours": "862c8b5b88fc0d43d3af8f5a35d1e3ea87099f709b8afc02cfe5dca0784c409d",
+    "batch025-part7-double-conference-booking": "4c569e74ce1f55433343d601db02650eee5508207af0c5e3a4b4890d65b95349",
+    "batch025-part7-double-shipping-delay": "50ca4d272fc2f5329e95cf38192f326f6f58d6fc2e1a8145ba6eb0533d568c2f",
+    "batch025-part7-double-job-fair": "6acad909cfb70882063973e612992a09ce35568ffb9f0f746ce3136e4796e3c0",
+    "batch025-part7-double-software-renewal": "7851443e8e71808d3a792c8b1af2befe74c3e90645feaf932b243b6f003cfc91"
+  },
+  "vocabulary_sha256": {
+    "appliance-n": "398adf88cd7f63fd9ad24b72f83ac89e0de75164b6a03fcfa5633a768ec4b7a8",
+    "assemble-v": "a347728a0c67df67b9e8ebcd47cc5ea8c55dcc813d31e37043b451eaf8f7e7f2",
+    "collaborate-v": "5365ac4ad2f39ca74d8dbb121b80bd0abd58c9fe9b893c1d1a917205db13e3b6",
+    "dedicate-v": "7aaf8a36b220e193712fb30047c4bc589a372932c0c62d39f1f9a8e1d34f8e5d"
+  }
+}

@@ -14,7 +14,10 @@ def main():
     readings=load('data/readings/reading-library.json')['readings']
     foundation=load('data/learning-path/pre-a1-a1.json')['lessons']
     alphabet_sounds=load('data/learning-path/alphabet-sounds.json')['letters']
-    foundation_listening=load('data/learning-path/foundation-listening.json')['clips']
+    foundation_listening_all=load('data/learning-path/foundation-listening.json')['clips']
+    foundation_listening_core=[x for x in foundation_listening_all if not x.get('supplementary')]
+    foundation_listening_extended=[x for x in foundation_listening_all if x.get('supplementary')]
+    foundation_listening=foundation_listening_core
     foundation_reading=load('data/learning-path/foundation-reading.json')['passages']
     p5=load('data/practice/part5-sentence-completion.json')
     objective_map=load('data/learning-path/objective-resource-map.json')['objectives']
@@ -34,7 +37,8 @@ def main():
     listening_q=sum(len(x.get('questions',[])) for x in listening)
     reading_q=sum(len(x.get('questions',[])) for x in readings)
     p5n=len(p5.get('questions',[]))
-    foundation_listening_questions=sum(len(x.get('questions',[])) for x in foundation_listening)
+    foundation_listening_questions=sum(len(x.get('questions',[])) for x in foundation_listening_core)
+    foundation_listening_extended_questions=sum(len(x.get('questions',[])) for x in foundation_listening_extended)
     foundation_reading_questions=sum(len(x.get('questions',[])) for x in foundation_reading)
     # Field-level metadata coverage is reported against the current headword base, not as a project target.
     vocab_files=[ROOT / x['file'].replace('./','',1) for x in manifest['letters']]
@@ -62,8 +66,8 @@ def main():
       f'| Placement question mapping | {len(load("data/learning-path/placement-objective-map.json")["questionMappings"])}/{len(diag)} | All diagnostic questions | **{pct(len(load("data/learning-path/placement-objective-map.json")["questionMappings"]),len(diag))}** | Structural mapping coverage only |',
       f'| Canonical objective-resource links | {objective_mapped}/{objective_total} | {pct(objective_mapped,objective_total)} | ID links only; not learning-outcome completion |',
       f'| Learning objectives with linked resources | {sum(bool(x.get("resourceIds")) for x in objective_map)}/{len(objective_map)} | {pct(sum(bool(x.get("resourceIds")) for x in objective_map),len(objective_map))} | Availability only; review and mastery separate |',
-      f'| Foundation Listening scripts mapped | {len(foundation_listening)}/{len(foundation)} | **{pct(len(foundation_listening),len(foundation))}** | One device-synthesized script per existing Pre-A1/A1/A2 lesson |',
-      f'| Foundation Listening questions | {foundation_listening_questions} | Chưa đo được — current inventory is 3 questions per A2 lesson and 2 per Pre-A1/A1 lesson; TTS practice, not ETS audio |',
+      f'| Foundation Listening core scripts mapped | {len(foundation_listening)}/{len(foundation)} | **{pct(len(foundation_listening),len(foundation))}** | One core device-synthesized script per existing Pre-A1/A1/A2 lesson; supplementary A2 counted separately |',
+      f'| Foundation Listening questions | {foundation_listening_questions} core + {foundation_listening_extended_questions} supplementary | Chưa đo được — supplementary A2 practice remains review-pending; TTS, not ETS audio |',
       f'| Foundation A–Z letter records | {len(alphabet_sounds)}/26 | **{pct(len(alphabet_sounds),26)}** | Complete letter-data coverage only; not pronunciation accuracy or learner mastery |',
       f'| Outcome criteria defined | {outcome_total}/{outcome_total} | {pct(outcome_total,outcome_total)} | Framework definition coverage; not learner mastery |',
       f'| Outcomes with evidence instrumentation | {outcome_instrumented}/{outcome_total} | {pct(outcome_instrumented,outcome_total)} | Collection path only; no learner completion inferred |',
@@ -78,7 +82,7 @@ def main():
       f'| Reading | {len(readings)} resources / {reading_q} questions | Chưa đo được — no agreed resource/question target |',
       f'| Separate Part 5 practice | {p5n} questions | Chưa đo được — no agreed size target; independent review remains separate |',
       f'| Foundation Reading | {len(foundation_reading)}/{len(foundation)} passages / {foundation_reading_questions} questions | {pct(len(foundation_reading),len(foundation))} within current Pre-A1/A1/A2 scope | Separate reading bank; not Foundation mastery |',
-      f'| Foundation Listening | {len(foundation_listening)}/{len(foundation)} scripts / {foundation_listening_questions} questions | {pct(len(foundation_listening),len(foundation))} within current Pre-A1/A1/A2 scope | Device Speech Synthesis; not authentic ETS recordings |',
+      f'| Foundation Listening | {len(foundation_listening)}/{len(foundation)} core scripts / {foundation_listening_questions} core questions + {len(foundation_listening_extended)} supplementary A2 scripts / {foundation_listening_extended_questions} questions | {pct(len(foundation_listening),len(foundation))} core lesson coverage | Device Speech Synthesis; supplementary A2 is review-pending, not authentic ETS recordings |',
       f'| Foundation A–Z sound lab | {len(alphabet_sounds)}/26 letters | {pct(len(alphabet_sounds),26)} | Two TTS actions per letter; action count is not pronunciation mastery |',
       '', f'## Vocabulary field coverage (against current {vocab:,}-headword base; not editorial approval)',
       '', '| Field | Records | Coverage |', '|---|---:|---:|',
@@ -93,10 +97,13 @@ def main():
       '- Listening Part 1 currently has 8 eligible unique questions (one additional mapped item is reserve-pending), below the 10-item minimum; at least 2 more unique, reviewed questions are needed before it can reach the practice threshold.',
       '- Foundation outcome evidence now records recognition, a learner-authored sentence with three self-report explanation/production ratings, and delayed recall. Self-report is not auto-graded; delayed recall is scheduled 1/3 days and is not a retention guarantee.',
       '- Foundation Listening stores attempts under a separate localStorage key; its bank coverage does not imply the learner has completed the questions or met the local practice threshold.',
+      '- Supplementary A2 Listening has 13 six-turn dialogues (75–100 words each), 39 questions across detail, purpose/context and inference/next-action, with exact source-evidence snippets; all remain pending independent review and use browser TTS.',
+      '- v2.92.0 batch 024 adds 8 Grammar lessons / 24 exercises, 6 TOEIC Listening units / 18 questions, and 6 TOEIC Reading Part 7 resources / 27 questions. All 12 new Listening/Reading resources remain reserve-pending-independent-review and excluded from Mock eligibility. v2.93.0 batch 025 adds 9 Grammar lessons / 27 exercises, 8 TOEIC Listening units / 20 questions, 8 TOEIC Reading Part 7 resources / 36 questions and 4 vocabulary headwords; new Listening/Reading items remain pending independent review and Mock-excluded.',
       '- Foundation A–Z records TTS play-button actions in `toeic:alphabet-sound-progress:v1`; no pronunciation analysis or mastery inference is performed.',
       '- Part 5 practice: pending independent review; do not count as Mock-eligible.',
       '- Listening pending-review pool and Mock-eligible counts must be tracked separately from raw inventory.',
       '- Placement is a short sample, not official CEFR/ETS certification.',
+      '- TOEIC score readiness is a local evidence tracker based on three completed 200-question Full Mocks; it shows L/R practice-accuracy trends only and does not convert raw accuracy into ETS scaled scores or claim 500+/850+ readiness.',
       '- Remote CI, GitHub Pages deployment and physical-device QA are not inferred from local checks.',
       '', '## Reporting rule',
       '', 'A percentage is shown only when a defensible target or denominator exists. Otherwise the report says “Chưa đo được” and records the current inventory without inventing a target.',

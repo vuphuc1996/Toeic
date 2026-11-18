@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "version": "2.89.0",
+  "version": "2.93.0",
   "letters": [
     {
       "letter": "A",
       "file": "./data/vocabulary/A.json",
-      "count": 123
+      "count": 125
     },
     {
       "letter": "B",
@@ -15,12 +15,12 @@
     {
       "letter": "C",
       "file": "./data/vocabulary/C.json",
-      "count": 151
+      "count": 152
     },
     {
       "letter": "D",
       "file": "./data/vocabulary/D.json",
-      "count": 76
+      "count": 77
     },
     {
       "letter": "E",
@@ -134,55 +134,22 @@
     }
   ],
   "categories": "./data/categories.json",
-  "totalWords": 1137,
+  "totalWords": 1141,
   "cefrLevels": {
     "A1": 64,
     "A2": 238,
-    "B1": 315,
+    "B1": 319,
     "B2": 398,
     "C1": 122
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
   "totalTopics": 32,
-  "previousReleaseTotalWords": 1100,
+  "previousReleaseTotalWords": 1137,
   "releaseAdditionIds": [
-    "clause-n",
-    "breach-nv",
-    "signatory-n",
-    "agreement-n",
-    "fixture-n",
-    "elevator-n",
-    "janitorial-adj",
-    "security-n",
-    "ventilation-n",
-    "repair-nv",
-    "refurbish-v",
-    "enforce-v",
-    "enforcement-n",
-    "litigation-n",
-    "dispute-nv",
-    "mediation-n",
-    "signature-n",
-    "fireproof-adj",
-    "generator-n",
-    "workspace-n",
-    "flooring-n",
-    "carpentry-n",
-    "electrician-n",
-    "electrical-adj",
-    "wiring-n",
-    "heating-n",
-    "cooling-n",
-    "roofing-n",
-    "janitor-n",
-    "custodial-adj",
-    "relocate-v",
-    "retrofit-nv",
-    "alteration-n",
-    "accessibility-n",
-    "accessible-adj",
-    "occupant-n",
-    "occupy-v"
+    "appliance-n",
+    "assemble-v",
+    "collaborate-v",
+    "dedicate-v"
   ],
   "releaseRepairProfiles": [
     {
@@ -345,7 +312,11 @@
         "accessibility-n",
         "accessible-adj",
         "occupant-n",
-        "occupy-v"
+        "occupy-v",
+        "appliance-n",
+        "assemble-v",
+        "collaborate-v",
+        "dedicate-v"
       ]
     },
     {
@@ -495,7 +466,11 @@
         "accessibility-n",
         "accessible-adj",
         "occupant-n",
-        "occupy-v"
+        "occupy-v",
+        "appliance-n",
+        "assemble-v",
+        "collaborate-v",
+        "dedicate-v"
       ]
     },
     {
@@ -611,7 +586,11 @@
         "accessibility-n",
         "accessible-adj",
         "occupant-n",
-        "occupy-v"
+        "occupy-v",
+        "appliance-n",
+        "assemble-v",
+        "collaborate-v",
+        "dedicate-v"
       ]
     },
     {
@@ -690,7 +669,11 @@
         "accessibility-n",
         "accessible-adj",
         "occupant-n",
-        "occupy-v"
+        "occupy-v",
+        "appliance-n",
+        "assemble-v",
+        "collaborate-v",
+        "dedicate-v"
       ]
     },
     {
@@ -732,7 +715,20 @@
         "accessibility-n",
         "accessible-adj",
         "occupant-n",
-        "occupy-v"
+        "occupy-v",
+        "appliance-n",
+        "assemble-v",
+        "collaborate-v",
+        "dedicate-v"
+      ]
+    },
+    {
+      "previousTotalWords": 1137,
+      "releaseAdditionIds": [
+        "appliance-n",
+        "assemble-v",
+        "collaborate-v",
+        "dedicate-v"
       ]
     }
   ]

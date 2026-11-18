@@ -5859,6 +5859,1995 @@
       "contentSource": "original-editorial",
       "editorialBatch": "023",
       "editorialStatus": "internal-editorial-reviewed"
+    },
+    {
+      "id": "part7-double-training-registration",
+      "title": "Part 7",
+      "topic": "Training & Human Resources",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B1–B2",
+      "documents": [
+        {
+          "label": "EMAIL FROM TRAINING",
+          "content": "To: Department Supervisors\nFrom: Learning and Development\nSubject: Registration for the service workshop\n\nThe next customer service workshop will take place on April 18 in Training Room C. Each department may register up to four employees. Please submit names through the staff portal by April 10. Employees who attended the January session should not register again because the new workshop covers the same introductory material. A separate advanced session is planned for June."
+        },
+        {
+          "label": "REPLY FROM OPERATIONS",
+          "content": "To: Learning and Development\nFrom: Operations Supervisor\nSubject: Re: Registration for the service workshop\n\nOur department would like to register three employees: Linh Tran, Marco Ruiz, and Helen Park. None of them attended the January session. Could you confirm whether laptops will be provided? They will need to access the updated customer record system during the final exercise.\n\nThank you,\nOperations"
+        }
+      ],
+      "passage": "EMAIL FROM TRAINING\nTo: Department Supervisors\nFrom: Learning and Development\nSubject: Registration for the service workshop\n\nThe next customer service workshop will take place on April 18 in Training Room C. Each department may register up to four employees. Please submit names through the staff portal by April 10. Employees who attended the January session should not register again because the new workshop covers the same introductory material. A separate advanced session is planned for June.\n\nREPLY FROM OPERATIONS\nTo: Learning and Development\nFrom: Operations Supervisor\nSubject: Re: Registration for the service workshop\n\nOur department would like to register three employees: Linh Tran, Marco Ruiz, and Helen Park. None of them attended the January session. Could you confirm whether laptops will be provided? They will need to access the updated customer record system during the final exercise.\n\nThank you,\nOperations",
+      "wordCount": 140,
+      "translation": "Email đầu thông báo hội thảo dịch vụ khách hàng sẽ diễn ra ngày 18 tháng 4 tại Phòng đào tạo C. Mỗi bộ phận được đăng ký tối đa bốn nhân viên trước ngày 10 tháng 4. Người đã tham dự buổi học nhập môn tháng 1 không nên đăng ký lại; một buổi nâng cao riêng dự kiến tổ chức vào tháng 6. Trong thư trả lời, giám sát vận hành muốn đăng ký ba nhân viên và hỏi liệu máy tính xách tay có được cung cấp để thực hiện bài tập trên hệ thống hồ sơ khách hàng hay không.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "What is the purpose of the first email?",
+          "choices": [
+            "To announce a new customer service workshop",
+            "To explain a change in employee benefits",
+            "To request feedback on a training course",
+            "To cancel a previously scheduled session"
+          ],
+          "answerIndex": 0,
+          "explanation": "Email đầu được gửi để thông báo ngày, địa điểm, điều kiện và cách đăng ký hội thảo dịch vụ khách hàng.",
+          "choiceIds": [
+            "reading:part7-double-training-registration:1:choice:1",
+            "reading:part7-double-training-registration:1:choice:2",
+            "reading:part7-double-training-registration:1:choice:3",
+            "reading:part7-double-training-registration:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL FROM TRAINING"
+            ],
+            "quotes": [
+              "The next customer service workshop will take place on April 18"
+            ]
+          }
+        },
+        {
+          "question": "By what date should supervisors submit employee names?",
+          "choices": [
+            "April 4",
+            "April 10",
+            "April 18",
+            "June 10"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hạn gửi danh sách nhân viên là ngày 10 tháng 4.",
+          "choiceIds": [
+            "reading:part7-double-training-registration:2:choice:1",
+            "reading:part7-double-training-registration:2:choice:3",
+            "reading:part7-double-training-registration:2:choice:2",
+            "reading:part7-double-training-registration:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL FROM TRAINING"
+            ],
+            "quotes": [
+              "Please submit names through the staff portal by April 10"
+            ]
+          }
+        },
+        {
+          "question": "Why should some employees not register?",
+          "choices": [
+            "The room has limited computer access",
+            "They have not completed the portal profile",
+            "They attended the same introductory session in January",
+            "Their departments have exceeded the registration limit"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên đã dự buổi nhập môn tháng 1 không nên đăng ký lại vì nội dung mới giống buổi trước.",
+          "choiceIds": [
+            "reading:part7-double-training-registration:3:choice:1",
+            "reading:part7-double-training-registration:3:choice:2",
+            "reading:part7-double-training-registration:3:choice:3",
+            "reading:part7-double-training-registration:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL FROM TRAINING"
+            ],
+            "quotes": [
+              "Employees who attended the January session should not register again"
+            ]
+          }
+        },
+        {
+          "question": "What does the Operations Supervisor want to know?",
+          "choices": [
+            "Whether meals will be served",
+            "Whether the session can be moved to June",
+            "Whether the advanced course is full",
+            "Whether laptops will be provided"
+          ],
+          "answerIndex": 3,
+          "explanation": "Giám sát vận hành muốn xác nhận liệu máy tính xách tay có được cung cấp hay không.",
+          "choiceIds": [
+            "reading:part7-double-training-registration:4:choice:1",
+            "reading:part7-double-training-registration:4:choice:3",
+            "reading:part7-double-training-registration:4:choice:4",
+            "reading:part7-double-training-registration:4:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY FROM OPERATIONS"
+            ],
+            "quotes": [
+              "Could you confirm whether laptops will be provided?"
+            ]
+          }
+        },
+        {
+          "question": "Which additional session is mentioned in the first email?",
+          "choices": [
+            "An advanced session in June",
+            "A leadership seminar in May",
+            "A software workshop in July",
+            "A safety briefing in August"
+          ],
+          "answerIndex": 0,
+          "explanation": "Email đầu nêu một buổi học nâng cao riêng dự kiến tổ chức vào tháng 6.",
+          "choiceIds": [
+            "reading:part7-double-training-registration:5:choice:2",
+            "reading:part7-double-training-registration:5:choice:1",
+            "reading:part7-double-training-registration:5:choice:3",
+            "reading:part7-double-training-registration:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL FROM TRAINING"
+            ],
+            "quotes": [
+              "A separate advanced session is planned for June."
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "024",
+      "editorialStatus": "reserve-pending-independent-review",
+      "contentBatch": "batch-024-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part7-double-delivery-reschedule",
+      "title": "Part 7",
+      "topic": "Shipping & Customer Service",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B1–B2",
+      "documents": [
+        {
+          "label": "CUSTOMER MESSAGE",
+          "content": "To: Harbor Office Delivery\nFrom: Daniel Cho\nSubject: Delivery appointment\n\nOur office renovation is taking longer than expected, and the receiving area will not be ready on August 7. Could you move the delivery of order HO-8842 to August 12? The building manager has confirmed that the loading bay will be available after 10 A.M. on that date. Please let me know if the change affects the delivery charge."
+        },
+        {
+          "label": "DELIVERY TEAM RESPONSE",
+          "content": "To: Daniel Cho\nFrom: Harbor Office Delivery\nSubject: Re: Delivery appointment\n\nWe have moved order HO-8842 to August 12. The delivery window is 10 A.M. to noon, as requested. There is no additional charge because the request was received more than three business days before the original appointment. Please ensure that the loading bay is clear when the driver arrives."
+        }
+      ],
+      "passage": "CUSTOMER MESSAGE\nTo: Harbor Office Delivery\nFrom: Daniel Cho\nSubject: Delivery appointment\n\nOur office renovation is taking longer than expected, and the receiving area will not be ready on August 7. Could you move the delivery of order HO-8842 to August 12? The building manager has confirmed that the loading bay will be available after 10 A.M. on that date. Please let me know if the change affects the delivery charge.\n\nDELIVERY TEAM RESPONSE\nTo: Daniel Cho\nFrom: Harbor Office Delivery\nSubject: Re: Delivery appointment\n\nWe have moved order HO-8842 to August 12. The delivery window is 10 A.M. to noon, as requested. There is no additional charge because the request was received more than three business days before the original appointment. Please ensure that the loading bay is clear when the driver arrives.",
+      "wordCount": 136,
+      "translation": "Daniel cho biết việc cải tạo văn phòng kéo dài nên khu vực nhận hàng chưa sẵn sàng vào ngày 7 tháng 8. Anh đề nghị chuyển đơn HO-8842 sang ngày 12 tháng 8, sau 10 giờ sáng. Đội giao hàng xác nhận khung giờ mới từ 10 giờ đến trưa. Không phát sinh phí vì yêu cầu được gửi trước lịch hẹn ban đầu hơn ba ngày làm việc. Daniel cần bảo đảm khu vực bốc dỡ thông thoáng khi tài xế đến.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "Why does Daniel request a new delivery date?",
+          "choices": [
+            "The order has not left the warehouse",
+            "The receiving area will not be ready",
+            "The driver is unavailable",
+            "The loading bay is being repaired"
+          ],
+          "answerIndex": 1,
+          "explanation": "Daniel yêu cầu đổi lịch vì khu vực nhận hàng chưa sẵn sàng do việc cải tạo kéo dài.",
+          "choiceIds": [
+            "reading:part7-double-delivery-reschedule:1:choice:1",
+            "reading:part7-double-delivery-reschedule:1:choice:2",
+            "reading:part7-double-delivery-reschedule:1:choice:3",
+            "reading:part7-double-delivery-reschedule:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CUSTOMER MESSAGE"
+            ],
+            "quotes": [
+              "receiving area will not be ready on August 7"
+            ]
+          }
+        },
+        {
+          "question": "What is the new delivery date?",
+          "choices": [
+            "August 7",
+            "August 10",
+            "August 12",
+            "August 14"
+          ],
+          "answerIndex": 2,
+          "explanation": "Đội giao hàng xác nhận ngày giao mới là 12 tháng 8.",
+          "choiceIds": [
+            "reading:part7-double-delivery-reschedule:2:choice:1",
+            "reading:part7-double-delivery-reschedule:2:choice:2",
+            "reading:part7-double-delivery-reschedule:2:choice:3",
+            "reading:part7-double-delivery-reschedule:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "DELIVERY TEAM RESPONSE"
+            ],
+            "quotes": [
+              "We have moved order HO-8842 to August 12"
+            ]
+          }
+        },
+        {
+          "question": "Why is there no additional charge?",
+          "choices": [
+            "The order is a priority shipment",
+            "The customer has a premium account",
+            "The delivery distance has changed",
+            "The request was made more than three business days in advance"
+          ],
+          "answerIndex": 3,
+          "explanation": "Không có phụ phí vì yêu cầu được gửi trước lịch cũ hơn ba ngày làm việc.",
+          "choiceIds": [
+            "reading:part7-double-delivery-reschedule:3:choice:1",
+            "reading:part7-double-delivery-reschedule:3:choice:2",
+            "reading:part7-double-delivery-reschedule:3:choice:4",
+            "reading:part7-double-delivery-reschedule:3:choice:3"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "DELIVERY TEAM RESPONSE"
+            ],
+            "quotes": [
+              "received more than three business days before the original appointment"
+            ]
+          }
+        },
+        {
+          "question": "What should Daniel ensure?",
+          "choices": [
+            "The loading bay is clear",
+            "A payment is made in advance",
+            "The order is divided into two shipments",
+            "A staff member signs at the warehouse"
+          ],
+          "answerIndex": 0,
+          "explanation": "Daniel cần bảo đảm khu vực bốc dỡ thông thoáng khi tài xế đến.",
+          "choiceIds": [
+            "reading:part7-double-delivery-reschedule:4:choice:1",
+            "reading:part7-double-delivery-reschedule:4:choice:2",
+            "reading:part7-double-delivery-reschedule:4:choice:3",
+            "reading:part7-double-delivery-reschedule:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "DELIVERY TEAM RESPONSE"
+            ],
+            "quotes": [
+              "Please ensure that the loading bay is clear"
+            ]
+          }
+        },
+        {
+          "question": "When will the loading bay be available on the new date?",
+          "choices": [
+            "Before 8 A.M.",
+            "After 10 A.M.",
+            "Only after 2 P.M.",
+            "Throughout the previous day"
+          ],
+          "answerIndex": 1,
+          "explanation": "Daniel cho biết khu vực bốc dỡ sẽ sẵn sàng sau 10 giờ sáng ngày 12 tháng 8.",
+          "choiceIds": [
+            "reading:part7-double-delivery-reschedule:5:choice:1",
+            "reading:part7-double-delivery-reschedule:5:choice:2",
+            "reading:part7-double-delivery-reschedule:5:choice:3",
+            "reading:part7-double-delivery-reschedule:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CUSTOMER MESSAGE"
+            ],
+            "quotes": [
+              "loading bay will be available after 10 A.M. on that date"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "024",
+      "editorialStatus": "reserve-pending-independent-review",
+      "contentBatch": "batch-024-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part7-single-office-closure",
+      "title": "Part 7",
+      "topic": "Office Administration",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "NOTICE",
+          "content": "NOTICE TO ALL STAFF\n\nThe third-floor office will be closed for electrical inspection on Friday, November 21. Employees assigned to that floor should work remotely or use available desks on the second floor. The inspection is expected to finish by 3 P.M.; however, staff should wait for an all-clear message from Facilities before returning. The small meeting room on the third floor will remain unavailable throughout the day. Questions should be directed to extension 204."
+        }
+      ],
+      "passage": "NOTICE\nNOTICE TO ALL STAFF\n\nThe third-floor office will be closed for electrical inspection on Friday, November 21. Employees assigned to that floor should work remotely or use available desks on the second floor. The inspection is expected to finish by 3 P.M.; however, staff should wait for an all-clear message from Facilities before returning. The small meeting room on the third floor will remain unavailable throughout the day. Questions should be directed to extension 204.",
+      "wordCount": 77,
+      "translation": "Văn phòng tầng ba sẽ đóng cửa vào thứ Sáu, ngày 21 tháng 11 để kiểm tra điện. Nhân viên làm việc tại tầng này có thể làm việc từ xa hoặc sử dụng bàn trống ở tầng hai. Việc kiểm tra dự kiến hoàn tất trước 3 giờ chiều, nhưng nhân viên phải chờ thông báo xác nhận an toàn từ bộ phận Cơ sở vật chất trước khi quay lại. Phòng họp nhỏ ở tầng ba sẽ không sử dụng được trong cả ngày. Có thể liên hệ số máy lẻ 204 nếu cần hỏi thêm.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "Why will the third-floor office be closed?",
+          "choices": [
+            "A new team is moving in",
+            "The building will be repainted",
+            "An electrical inspection is scheduled",
+            "The network is being upgraded"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thông báo cho biết tầng ba đóng cửa để kiểm tra hệ thống điện.",
+          "choiceIds": [
+            "reading:part7-single-office-closure:1:choice:1",
+            "reading:part7-single-office-closure:1:choice:3",
+            "reading:part7-single-office-closure:1:choice:2",
+            "reading:part7-single-office-closure:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "NOTICE"
+            ],
+            "quotes": [
+              "closed for electrical inspection"
+            ]
+          }
+        },
+        {
+          "question": "What may employees do during the closure?",
+          "choices": [
+            "Use the third-floor meeting room",
+            "Wait in the reception area",
+            "Transfer to another office building",
+            "Work remotely or use second-floor desks"
+          ],
+          "answerIndex": 3,
+          "explanation": "Nhân viên có thể làm từ xa hoặc dùng bàn trống ở tầng hai.",
+          "choiceIds": [
+            "reading:part7-single-office-closure:2:choice:2",
+            "reading:part7-single-office-closure:2:choice:3",
+            "reading:part7-single-office-closure:2:choice:4",
+            "reading:part7-single-office-closure:2:choice:1"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "NOTICE"
+            ],
+            "quotes": [
+              "work remotely or use available desks on the second floor"
+            ]
+          }
+        },
+        {
+          "question": "When may employees return to the third floor?",
+          "choices": [
+            "After receiving an all-clear message",
+            "Immediately after 3 P.M.",
+            "At the beginning of the afternoon",
+            "Once the meeting room is reopened"
+          ],
+          "answerIndex": 0,
+          "explanation": "Nhân viên chỉ được quay lại sau khi nhận thông báo xác nhận an toàn từ Facilities.",
+          "choiceIds": [
+            "reading:part7-single-office-closure:3:choice:3",
+            "reading:part7-single-office-closure:3:choice:1",
+            "reading:part7-single-office-closure:3:choice:2",
+            "reading:part7-single-office-closure:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "NOTICE"
+            ],
+            "quotes": [
+              "wait for an all-clear message from Facilities"
+            ]
+          }
+        },
+        {
+          "question": "What is stated about the small meeting room?",
+          "choices": [
+            "It will be available after lunch",
+            "It will remain closed all day",
+            "It will be used by the inspection team",
+            "It has been moved to the second floor"
+          ],
+          "answerIndex": 1,
+          "explanation": "Phòng họp nhỏ sẽ không sử dụng được trong suốt ngày hôm đó.",
+          "choiceIds": [
+            "reading:part7-single-office-closure:4:choice:1",
+            "reading:part7-single-office-closure:4:choice:2",
+            "reading:part7-single-office-closure:4:choice:3",
+            "reading:part7-single-office-closure:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "NOTICE"
+            ],
+            "quotes": [
+              "will remain unavailable throughout the day"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "024",
+      "editorialStatus": "reserve-pending-independent-review",
+      "contentBatch": "batch-024-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part7-single-expense-guideline",
+      "title": "Part 7",
+      "topic": "Finance & Administration",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1–B2",
+      "documents": [
+        {
+          "label": "INTERNAL GUIDELINE",
+          "content": "TRAVEL EXPENSE SUBMISSIONS\n\nEmployees must submit travel expenses within ten calendar days of returning from a business trip. Original receipts are required for individual expenses above $25. For public transportation, a digital ticket or payment confirmation is acceptable. Claims missing required documents will be returned to the employee and may be delayed until the next payment cycle. Managers should approve complete claims within three business days."
+        }
+      ],
+      "passage": "INTERNAL GUIDELINE\nTRAVEL EXPENSE SUBMISSIONS\n\nEmployees must submit travel expenses within ten calendar days of returning from a business trip. Original receipts are required for individual expenses above $25. For public transportation, a digital ticket or payment confirmation is acceptable. Claims missing required documents will be returned to the employee and may be delayed until the next payment cycle. Managers should approve complete claims within three business days.",
+      "wordCount": 68,
+      "translation": "Nhân viên phải gửi chi phí công tác trong vòng mười ngày theo lịch kể từ khi trở về. Hóa đơn gốc được yêu cầu đối với từng khoản chi trên 25 đô la. Với phương tiện công cộng, vé điện tử hoặc xác nhận thanh toán kỹ thuật số được chấp nhận. Hồ sơ thiếu giấy tờ sẽ được trả lại và có thể bị chuyển sang chu kỳ thanh toán tiếp theo. Quản lý nên phê duyệt hồ sơ đầy đủ trong vòng ba ngày làm việc.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "What is the deadline for submitting travel expenses?",
+          "choices": [
+            "Three business days after approval",
+            "Twenty-five days after departure",
+            "Ten calendar days after returning",
+            "Before the business trip begins"
+          ],
+          "answerIndex": 2,
+          "explanation": "Hạn nộp chi phí là mười ngày theo lịch kể từ ngày nhân viên trở về.",
+          "choiceIds": [
+            "reading:part7-single-expense-guideline:1:choice:1",
+            "reading:part7-single-expense-guideline:1:choice:3",
+            "reading:part7-single-expense-guideline:1:choice:2",
+            "reading:part7-single-expense-guideline:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "INTERNAL GUIDELINE"
+            ],
+            "quotes": [
+              "within ten calendar days of returning"
+            ]
+          }
+        },
+        {
+          "question": "When is an original receipt required?",
+          "choices": [
+            "For every public transportation trip",
+            "Only for hotel expenses",
+            "When a manager requests one",
+            "For individual expenses above $25"
+          ],
+          "answerIndex": 3,
+          "explanation": "Hóa đơn gốc bắt buộc đối với từng khoản chi trên 25 đô la.",
+          "choiceIds": [
+            "reading:part7-single-expense-guideline:2:choice:1",
+            "reading:part7-single-expense-guideline:2:choice:3",
+            "reading:part7-single-expense-guideline:2:choice:4",
+            "reading:part7-single-expense-guideline:2:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "INTERNAL GUIDELINE"
+            ],
+            "quotes": [
+              "Original receipts are required for individual expenses above $25"
+            ]
+          }
+        },
+        {
+          "question": "What document may be used for public transportation?",
+          "choices": [
+            "A digital ticket or payment confirmation",
+            "A manager’s handwritten note",
+            "A hotel invoice",
+            "A printed travel itinerary only"
+          ],
+          "answerIndex": 0,
+          "explanation": "Vé điện tử hoặc xác nhận thanh toán được chấp nhận cho phương tiện công cộng.",
+          "choiceIds": [
+            "reading:part7-single-expense-guideline:3:choice:3",
+            "reading:part7-single-expense-guideline:3:choice:1",
+            "reading:part7-single-expense-guideline:3:choice:2",
+            "reading:part7-single-expense-guideline:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "INTERNAL GUIDELINE"
+            ],
+            "quotes": [
+              "a digital ticket or payment confirmation is acceptable"
+            ]
+          }
+        },
+        {
+          "question": "What may happen to an incomplete claim?",
+          "choices": [
+            "It will be automatically approved",
+            "It may be delayed until the next payment cycle",
+            "It will be paid in cash",
+            "It will be transferred to another department"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hồ sơ thiếu giấy tờ có thể bị chuyển sang chu kỳ thanh toán kế tiếp.",
+          "choiceIds": [
+            "reading:part7-single-expense-guideline:4:choice:1",
+            "reading:part7-single-expense-guideline:4:choice:2",
+            "reading:part7-single-expense-guideline:4:choice:3",
+            "reading:part7-single-expense-guideline:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "INTERNAL GUIDELINE"
+            ],
+            "quotes": [
+              "may be delayed until the next payment cycle"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "024",
+      "editorialStatus": "reserve-pending-independent-review",
+      "contentBatch": "batch-024-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part7-double-product-recall",
+      "title": "Part 7",
+      "topic": "Quality Assurance & Customer Relations",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B2",
+      "documents": [
+        {
+          "label": "CUSTOMER BULLETIN",
+          "content": "PRODUCT NOTICE: MODEL AX-40\n\nNorthstar Electronics is asking customers who purchased an AX-40 desk scanner between February 1 and May 30 to stop using the device. A component may overheat during extended operation. Customers can request a free replacement by entering the serial number on the support website. The company will cover return shipping. Orders placed after May 30 use an updated component and are not included in this notice."
+        },
+        {
+          "label": "SERVICE TEAM EMAIL",
+          "content": "To: Customer Support Team\nFrom: Quality Assurance\nSubject: Handling AX-40 inquiries\n\nWhen customers contact us about an AX-40 scanner, first confirm the purchase date and serial number. If the device was purchased within the affected period, direct the customer to the replacement form. Do not promise a specific delivery date; replacement units are being shipped in batches. Escalate any report of smoke or unusual heat to the safety desk immediately."
+        }
+      ],
+      "passage": "CUSTOMER BULLETIN\nPRODUCT NOTICE: MODEL AX-40\n\nNorthstar Electronics is asking customers who purchased an AX-40 desk scanner between February 1 and May 30 to stop using the device. A component may overheat during extended operation. Customers can request a free replacement by entering the serial number on the support website. The company will cover return shipping. Orders placed after May 30 use an updated component and are not included in this notice.\n\nSERVICE TEAM EMAIL\nTo: Customer Support Team\nFrom: Quality Assurance\nSubject: Handling AX-40 inquiries\n\nWhen customers contact us about an AX-40 scanner, first confirm the purchase date and serial number. If the device was purchased within the affected period, direct the customer to the replacement form. Do not promise a specific delivery date; replacement units are being shipped in batches. Escalate any report of smoke or unusual heat to the safety desk immediately.",
+      "wordCount": 145,
+      "translation": "Northstar Electronics yêu cầu khách hàng đã mua máy quét bàn AX-40 trong khoảng từ ngày 1 tháng 2 đến 30 tháng 5 ngừng sử dụng thiết bị vì một linh kiện có thể quá nóng khi vận hành lâu. Khách hàng có thể yêu cầu đổi miễn phí bằng cách nhập số sê-ri trên trang hỗ trợ; công ty chịu phí vận chuyển trả hàng. Đơn hàng sau ngày 30 tháng 5 dùng linh kiện đã cập nhật và không thuộc diện thông báo. Nhóm hỗ trợ cần xác nhận ngày mua và số sê-ri trước, hướng dẫn khách đủ điều kiện điền biểu mẫu đổi máy, không hứa ngày giao cụ thể và chuyển ngay báo cáo có khói hoặc nhiệt bất thường tới bộ phận an toàn.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "What issue is associated with the AX-40?",
+          "choices": [
+            "Its scanning speed is inconsistent",
+            "Its power cable is too short",
+            "A component may overheat",
+            "The software cannot save files"
+          ],
+          "answerIndex": 2,
+          "explanation": "Vấn đề của AX-40 là một linh kiện có thể quá nóng khi thiết bị hoạt động lâu.",
+          "choiceIds": [
+            "reading:part7-double-product-recall:1:choice:1",
+            "reading:part7-double-product-recall:1:choice:3",
+            "reading:part7-double-product-recall:1:choice:2",
+            "reading:part7-double-product-recall:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CUSTOMER BULLETIN"
+            ],
+            "quotes": [
+              "A component may overheat"
+            ]
+          }
+        },
+        {
+          "question": "Which customers are included in the notice?",
+          "choices": [
+            "Those who bought the scanner after May 30",
+            "All customers who own any Northstar scanner",
+            "Only customers with an expired warranty",
+            "Those who bought it between February 1 and May 30"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo áp dụng cho khách hàng mua máy trong khoảng từ ngày 1 tháng 2 đến 30 tháng 5.",
+          "choiceIds": [
+            "reading:part7-double-product-recall:2:choice:1",
+            "reading:part7-double-product-recall:2:choice:3",
+            "reading:part7-double-product-recall:2:choice:4",
+            "reading:part7-double-product-recall:2:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CUSTOMER BULLETIN"
+            ],
+            "quotes": [
+              "between February 1 and May 30"
+            ]
+          }
+        },
+        {
+          "question": "What should support staff verify first?",
+          "choices": [
+            "The purchase date and serial number",
+            "The customer’s address and payment method",
+            "The device color and packaging",
+            "The software version and operating system"
+          ],
+          "answerIndex": 0,
+          "explanation": "Nhân viên hỗ trợ phải xác nhận ngày mua và số sê-ri trước tiên.",
+          "choiceIds": [
+            "reading:part7-double-product-recall:3:choice:3",
+            "reading:part7-double-product-recall:3:choice:1",
+            "reading:part7-double-product-recall:3:choice:2",
+            "reading:part7-double-product-recall:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SERVICE TEAM EMAIL"
+            ],
+            "quotes": [
+              "confirm the purchase date and serial number"
+            ]
+          }
+        },
+        {
+          "question": "What should staff do if a customer reports smoke?",
+          "choices": [
+            "Offer a discount on a new model",
+            "Escalate the report to the safety desk immediately",
+            "Ask the customer to restart the scanner",
+            "Wait for the next replacement batch"
+          ],
+          "answerIndex": 1,
+          "explanation": "Báo cáo có khói hoặc nhiệt bất thường phải được chuyển ngay đến bộ phận an toàn.",
+          "choiceIds": [
+            "reading:part7-double-product-recall:4:choice:1",
+            "reading:part7-double-product-recall:4:choice:3",
+            "reading:part7-double-product-recall:4:choice:2",
+            "reading:part7-double-product-recall:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SERVICE TEAM EMAIL"
+            ],
+            "quotes": [
+              "Escalate any report of smoke or unusual heat to the safety desk immediately"
+            ]
+          }
+        },
+        {
+          "question": "What are support employees instructed not to do?",
+          "choices": [
+            "Ask for the serial number",
+            "Direct customers to the replacement form",
+            "Promise a specific replacement delivery date",
+            "Confirm the purchase date"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên hỗ trợ không được hứa một ngày giao máy thay thế cụ thể.",
+          "choiceIds": [
+            "reading:part7-double-product-recall:5:choice:2",
+            "reading:part7-double-product-recall:5:choice:3",
+            "reading:part7-double-product-recall:5:choice:1",
+            "reading:part7-double-product-recall:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SERVICE TEAM EMAIL"
+            ],
+            "quotes": [
+              "Do not promise a specific delivery date"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "024",
+      "editorialStatus": "reserve-pending-independent-review",
+      "contentBatch": "batch-024-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "part7-single-recruitment-fair",
+      "title": "Part 7",
+      "topic": "Human Resources",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "EVENT ANNOUNCEMENT",
+          "content": "CAREER OPEN HOUSE\n\nThe annual career open house will be held on Saturday, September 13, from 9 A.M. to 1 P.M. at the Riverside Training Center. Visitors can speak with recruitment specialists, attend short sessions on interview preparation, and submit résumés for current openings. Registration is free, but attendees must reserve a time slot online. Parking is limited, so visitors are encouraged to use the public bus stop outside the east entrance. A confirmation email will include the room schedule."
+        }
+      ],
+      "passage": "EVENT ANNOUNCEMENT\nCAREER OPEN HOUSE\n\nThe annual career open house will be held on Saturday, September 13, from 9 A.M. to 1 P.M. at the Riverside Training Center. Visitors can speak with recruitment specialists, attend short sessions on interview preparation, and submit résumés for current openings. Registration is free, but attendees must reserve a time slot online. Parking is limited, so visitors are encouraged to use the public bus stop outside the east entrance. A confirmation email will include the room schedule.",
+      "wordCount": 84,
+      "translation": "Ngày hội nghề nghiệp thường niên diễn ra vào thứ Bảy, ngày 13 tháng 9, từ 9 giờ sáng đến 1 giờ chiều tại Trung tâm đào tạo Riverside. Khách có thể trao đổi với chuyên viên tuyển dụng, tham dự các buổi ngắn về chuẩn bị phỏng vấn và nộp hồ sơ cho vị trí đang tuyển. Việc đăng ký miễn phí nhưng người tham dự phải đặt khung giờ trực tuyến. Do chỗ đỗ xe hạn chế, ban tổ chức khuyến khích đi xe buýt và xuống tại điểm dừng bên ngoài lối vào phía Đông. Email xác nhận sẽ có lịch phòng.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "question": "What is the main purpose of the announcement?",
+          "choices": [
+            "To announce a change in office hours",
+            "To introduce a new training policy",
+            "To request employee volunteers",
+            "To advertise a recruitment event"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo nhằm giới thiệu ngày hội nghề nghiệp và các hoạt động tuyển dụng.",
+          "choiceIds": [
+            "reading:part7-single-recruitment-fair:1:choice:2",
+            "reading:part7-single-recruitment-fair:1:choice:3",
+            "reading:part7-single-recruitment-fair:1:choice:4",
+            "reading:part7-single-recruitment-fair:1:choice:1"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EVENT ANNOUNCEMENT"
+            ],
+            "quotes": [
+              "annual career open house"
+            ]
+          }
+        },
+        {
+          "question": "What must attendees do before arriving?",
+          "choices": [
+            "Reserve a time slot online",
+            "Pay an entrance fee",
+            "Send a résumé by mail",
+            "Contact a recruitment specialist"
+          ],
+          "answerIndex": 0,
+          "explanation": "Người tham dự phải đặt khung giờ trực tuyến trước khi đến.",
+          "choiceIds": [
+            "reading:part7-single-recruitment-fair:2:choice:2",
+            "reading:part7-single-recruitment-fair:2:choice:1",
+            "reading:part7-single-recruitment-fair:2:choice:3",
+            "reading:part7-single-recruitment-fair:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EVENT ANNOUNCEMENT"
+            ],
+            "quotes": [
+              "must reserve a time slot online"
+            ]
+          }
+        },
+        {
+          "question": "Why are visitors encouraged to use public transportation?",
+          "choices": [
+            "The event starts before buses operate",
+            "Parking is limited",
+            "The training center is closed to cars",
+            "The east entrance is under construction"
+          ],
+          "answerIndex": 1,
+          "explanation": "Ban tổ chức khuyến khích dùng phương tiện công cộng vì chỗ đỗ xe hạn chế.",
+          "choiceIds": [
+            "reading:part7-single-recruitment-fair:3:choice:1",
+            "reading:part7-single-recruitment-fair:3:choice:2",
+            "reading:part7-single-recruitment-fair:3:choice:3",
+            "reading:part7-single-recruitment-fair:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EVENT ANNOUNCEMENT"
+            ],
+            "quotes": [
+              "Parking is limited"
+            ]
+          }
+        },
+        {
+          "question": "What will the confirmation email contain?",
+          "choices": [
+            "A list of current vacancies",
+            "A parking permit",
+            "The room schedule",
+            "An interview result"
+          ],
+          "answerIndex": 2,
+          "explanation": "Email xác nhận sẽ cung cấp lịch sử dụng các phòng để người tham dự chuẩn bị.",
+          "choiceIds": [
+            "reading:part7-single-recruitment-fair:4:choice:1",
+            "reading:part7-single-recruitment-fair:4:choice:2",
+            "reading:part7-single-recruitment-fair:4:choice:3",
+            "reading:part7-single-recruitment-fair:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EVENT ANNOUNCEMENT"
+            ],
+            "quotes": [
+              "confirmation email will include the room schedule"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialBatch": "024",
+      "editorialStatus": "reserve-pending-independent-review",
+      "contentBatch": "batch-024-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part7-single-equipment-inspection",
+      "title": "Equipment inspection schedule",
+      "topic": "Facilities",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "MAINTENANCE NOTICE",
+          "content": "The annual inspection of office equipment will take place on May 6 and 7. Technicians will visit each department between 9 A.M. and 3 P.M. Employees should save their work and leave desktop computers powered on. Any device that cannot be inspected during the scheduled visit should be reported to Facilities by May 3. A temporary loan unit may be requested if essential equipment must be removed for repair."
+        }
+      ],
+      "passage": "MAINTENANCE NOTICE\nThe annual inspection of office equipment will take place on May 6 and 7. Technicians will visit each department between 9 A.M. and 3 P.M. Employees should save their work and leave desktop computers powered on. Any device that cannot be inspected during the scheduled visit should be reported to Facilities by May 3. A temporary loan unit may be requested if essential equipment must be removed for repair.",
+      "wordCount": 73,
+      "translation": "Thông báo lịch kiểm tra thiết bị văn phòng vào ngày 6 và 7 tháng 5. Nhân viên cần để máy tính bật nguồn và báo trước ngày 3 nếu thiết bị không thể kiểm tra đúng lịch.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch025-part7-single-equipment-inspection:1",
+          "question": "What is the purpose of the notice?",
+          "choices": [
+            "To announce an equipment inspection",
+            "To introduce a new computer system",
+            "To recruit maintenance staff",
+            "To report a power failure"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông tin trong tài liệu cho biết: Thông báo về lịch kiểm tra thiết bị văn phòng.",
+          "choiceIds": [
+            "reading:batch025-part7-single-equipment-inspection:1:choice:1",
+            "reading:batch025-part7-single-equipment-inspection:1:choice:2",
+            "reading:batch025-part7-single-equipment-inspection:1:choice:3",
+            "reading:batch025-part7-single-equipment-inspection:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "MAINTENANCE NOTICE"
+            ],
+            "quotes": [
+              "annual inspection of office equipment"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-equipment-inspection:2",
+          "question": "What should employees do with desktop computers?",
+          "choices": [
+            "Disconnect all cables",
+            "Leave them powered on",
+            "Move them to reception",
+            "Return them to the supplier"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nhân viên cần để máy tính để bàn bật nguồn.",
+          "choiceIds": [
+            "reading:batch025-part7-single-equipment-inspection:2:choice:1",
+            "reading:batch025-part7-single-equipment-inspection:2:choice:2",
+            "reading:batch025-part7-single-equipment-inspection:2:choice:3",
+            "reading:batch025-part7-single-equipment-inspection:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "MAINTENANCE NOTICE"
+            ],
+            "quotes": [
+              "leave desktop computers powered on"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-equipment-inspection:3",
+          "question": "By when should uninspectable devices be reported?",
+          "choices": [
+            "May 6",
+            "May 7",
+            "May 3",
+            "May 9"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thiết bị không thể kiểm tra theo lịch cần báo trước ngày 3 tháng 5.",
+          "choiceIds": [
+            "reading:batch025-part7-single-equipment-inspection:3:choice:2",
+            "reading:batch025-part7-single-equipment-inspection:3:choice:3",
+            "reading:batch025-part7-single-equipment-inspection:3:choice:1",
+            "reading:batch025-part7-single-equipment-inspection:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "MAINTENANCE NOTICE"
+            ],
+            "quotes": [
+              "reported to Facilities by May 3"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-equipment-inspection:4",
+          "question": "What may employees request?",
+          "choices": [
+            "A permanent replacement",
+            "A later inspection fee",
+            "A new office",
+            "A temporary loan unit"
+          ],
+          "answerIndex": 3,
+          "explanation": "Có thể yêu cầu thiết bị cho mượn tạm thời nếu thiết bị thiết yếu phải sửa chữa.",
+          "choiceIds": [
+            "reading:batch025-part7-single-equipment-inspection:4:choice:1",
+            "reading:batch025-part7-single-equipment-inspection:4:choice:2",
+            "reading:batch025-part7-single-equipment-inspection:4:choice:4",
+            "reading:batch025-part7-single-equipment-inspection:4:choice:3"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "MAINTENANCE NOTICE"
+            ],
+            "quotes": [
+              "A temporary loan unit may be requested"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part7-single-training-registration",
+      "title": "Training registration instructions",
+      "topic": "Human Resources",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "TRAINING PORTAL MESSAGE",
+          "content": "Registration for the project-management workshop is now open. The two-day workshop will be held June 18–19 in the West Training Center. Staff members must complete the online registration form and obtain approval from their supervisors by June 10. Because seating is limited to twenty-four participants, applications will be processed in the order received. A confirmation message will be sent within two business days."
+        }
+      ],
+      "passage": "TRAINING PORTAL MESSAGE\nRegistration for the project-management workshop is now open. The two-day workshop will be held June 18–19 in the West Training Center. Staff members must complete the online registration form and obtain approval from their supervisors by June 10. Because seating is limited to twenty-four participants, applications will be processed in the order received. A confirmation message will be sent within two business days.",
+      "wordCount": 67,
+      "translation": "Cổng đào tạo mở đăng ký workshop quản lý dự án trong hai ngày 18–19 tháng 6. Nhân viên cần hoàn tất biểu mẫu và xin quản lý phê duyệt trước ngày 10 tháng 6.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch025-part7-single-training-registration:1",
+          "question": "How long will the workshop last?",
+          "choices": [
+            "Two days",
+            "One day",
+            "Three days",
+            "One week"
+          ],
+          "answerIndex": 0,
+          "explanation": "Workshop diễn ra trong hai ngày 18–19 tháng 6.",
+          "choiceIds": [
+            "reading:batch025-part7-single-training-registration:1:choice:2",
+            "reading:batch025-part7-single-training-registration:1:choice:1",
+            "reading:batch025-part7-single-training-registration:1:choice:3",
+            "reading:batch025-part7-single-training-registration:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "TRAINING PORTAL MESSAGE"
+            ],
+            "quotes": [
+              "two-day workshop"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-training-registration:2",
+          "question": "What must staff obtain before registering?",
+          "choices": [
+            "A travel voucher",
+            "A supervisor’s approval",
+            "A printed certificate",
+            "A customer reference"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nhân viên phải có phê duyệt của quản lý.",
+          "choiceIds": [
+            "reading:batch025-part7-single-training-registration:2:choice:2",
+            "reading:batch025-part7-single-training-registration:2:choice:1",
+            "reading:batch025-part7-single-training-registration:2:choice:3",
+            "reading:batch025-part7-single-training-registration:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "TRAINING PORTAL MESSAGE"
+            ],
+            "quotes": [
+              "obtain approval from their supervisors"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-training-registration:3",
+          "question": "Why may some applicants not get a place?",
+          "choices": [
+            "The fee is too high",
+            "The workshop is canceled",
+            "Seats are limited",
+            "The form is unavailable"
+          ],
+          "answerIndex": 2,
+          "explanation": "Số chỗ chỉ giới hạn 24 người.",
+          "choiceIds": [
+            "reading:batch025-part7-single-training-registration:3:choice:1",
+            "reading:batch025-part7-single-training-registration:3:choice:2",
+            "reading:batch025-part7-single-training-registration:3:choice:3",
+            "reading:batch025-part7-single-training-registration:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "TRAINING PORTAL MESSAGE"
+            ],
+            "quotes": [
+              "seating is limited to twenty-four participants"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-training-registration:4",
+          "question": "When should applicants expect confirmation?",
+          "choices": [
+            "Immediately",
+            "On June 10",
+            "After the workshop",
+            "Within two business days"
+          ],
+          "answerIndex": 3,
+          "explanation": "Tin xác nhận được gửi trong vòng hai ngày làm việc.",
+          "choiceIds": [
+            "reading:batch025-part7-single-training-registration:4:choice:1",
+            "reading:batch025-part7-single-training-registration:4:choice:3",
+            "reading:batch025-part7-single-training-registration:4:choice:4",
+            "reading:batch025-part7-single-training-registration:4:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "TRAINING PORTAL MESSAGE"
+            ],
+            "quotes": [
+              "within two business days"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part7-single-customer-feedback",
+      "title": "Customer feedback summary",
+      "topic": "Customer Service",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "SERVICE QUALITY UPDATE",
+          "content": "The customer support team received 486 survey responses in April. Overall satisfaction increased from 82 percent to 87 percent, mainly because average response time fell by three hours. However, comments about the returns process remained negative. The operations manager will review the current return instructions and propose revisions at the May 14 meeting. Team leaders are asked to share the updated procedure with all agents after approval."
+        }
+      ],
+      "passage": "SERVICE QUALITY UPDATE\nThe customer support team received 486 survey responses in April. Overall satisfaction increased from 82 percent to 87 percent, mainly because average response time fell by three hours. However, comments about the returns process remained negative. The operations manager will review the current return instructions and propose revisions at the May 14 meeting. Team leaders are asked to share the updated procedure with all agents after approval.",
+      "wordCount": 70,
+      "translation": "Bản cập nhật cho biết mức hài lòng tăng nhờ thời gian phản hồi giảm. Tuy nhiên, quy trình đổi trả vẫn cần cải thiện và sẽ được xem xét tại cuộc họp ngày 14 tháng 5.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch025-part7-single-customer-feedback:1",
+          "question": "What improved in April?",
+          "choices": [
+            "Overall customer satisfaction",
+            "Product availability",
+            "Delivery costs",
+            "The number of returns"
+          ],
+          "answerIndex": 0,
+          "explanation": "Mức độ hài lòng tổng thể tăng từ 82% lên 87%.",
+          "choiceIds": [
+            "reading:batch025-part7-single-customer-feedback:1:choice:2",
+            "reading:batch025-part7-single-customer-feedback:1:choice:1",
+            "reading:batch025-part7-single-customer-feedback:1:choice:3",
+            "reading:batch025-part7-single-customer-feedback:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SERVICE QUALITY UPDATE"
+            ],
+            "quotes": [
+              "Overall satisfaction increased from 82 percent to 87 percent"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-customer-feedback:2",
+          "question": "What contributed to the improvement?",
+          "choices": [
+            "A new advertising campaign",
+            "A lower average response time",
+            "Longer opening hours",
+            "A price reduction"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông tin trong tài liệu cho biết: Thời gian phản hồi trung bình giảm ba giờ.",
+          "choiceIds": [
+            "reading:batch025-part7-single-customer-feedback:2:choice:2",
+            "reading:batch025-part7-single-customer-feedback:2:choice:1",
+            "reading:batch025-part7-single-customer-feedback:2:choice:3",
+            "reading:batch025-part7-single-customer-feedback:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SERVICE QUALITY UPDATE"
+            ],
+            "quotes": [
+              "average response time fell by three hours"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-customer-feedback:3",
+          "question": "What issue still requires attention?",
+          "choices": [
+            "The survey website",
+            "The office schedule",
+            "The returns process",
+            "The support team size"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thông tin trong tài liệu cho biết: Nhận xét về quy trình đổi trả vẫn tiêu cực.",
+          "choiceIds": [
+            "reading:batch025-part7-single-customer-feedback:3:choice:2",
+            "reading:batch025-part7-single-customer-feedback:3:choice:3",
+            "reading:batch025-part7-single-customer-feedback:3:choice:1",
+            "reading:batch025-part7-single-customer-feedback:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SERVICE QUALITY UPDATE"
+            ],
+            "quotes": [
+              "comments about the returns process remained negative"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-customer-feedback:4",
+          "question": "What are team leaders asked to do?",
+          "choices": [
+            "Rewrite all customer surveys",
+            "Cancel the May meeting",
+            "Hire additional agents",
+            "Share the approved procedure"
+          ],
+          "answerIndex": 3,
+          "explanation": "Trưởng nhóm cần chia sẻ quy trình cập nhật sau khi được duyệt.",
+          "choiceIds": [
+            "reading:batch025-part7-single-customer-feedback:4:choice:1",
+            "reading:batch025-part7-single-customer-feedback:4:choice:3",
+            "reading:batch025-part7-single-customer-feedback:4:choice:4",
+            "reading:batch025-part7-single-customer-feedback:4:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SERVICE QUALITY UPDATE"
+            ],
+            "quotes": [
+              "share the updated procedure with all agents after approval"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part7-single-library-hours",
+      "title": "Changes to library opening hours",
+      "topic": "Education",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "COMMUNITY LIBRARY ANNOUNCEMENT",
+          "content": "Beginning September 1, the Central Community Library will open at 8 A.M. on weekdays instead of 9 A.M. Weekend hours will remain unchanged. The earlier opening is intended to provide students and commuters with additional study time before work or classes. The self-service return box will continue to operate outside the building after closing. Visitors who need assistance with research databases should book a twenty-minute appointment with a librarian."
+        }
+      ],
+      "passage": "COMMUNITY LIBRARY ANNOUNCEMENT\nBeginning September 1, the Central Community Library will open at 8 A.M. on weekdays instead of 9 A.M. Weekend hours will remain unchanged. The earlier opening is intended to provide students and commuters with additional study time before work or classes. The self-service return box will continue to operate outside the building after closing. Visitors who need assistance with research databases should book a twenty-minute appointment with a librarian.",
+      "wordCount": 74,
+      "translation": "Thư viện mở cửa sớm hơn vào các ngày trong tuần từ ngày 1 tháng 9 để phục vụ sinh viên và người đi làm. Giờ cuối tuần không đổi.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch025-part7-single-library-hours:1",
+          "question": "When will the new weekday schedule begin?",
+          "choices": [
+            "September 1",
+            "August 1",
+            "September 9",
+            "October 1"
+          ],
+          "answerIndex": 0,
+          "explanation": "Lịch mới bắt đầu từ ngày 1 tháng 9.",
+          "choiceIds": [
+            "reading:batch025-part7-single-library-hours:1:choice:2",
+            "reading:batch025-part7-single-library-hours:1:choice:1",
+            "reading:batch025-part7-single-library-hours:1:choice:3",
+            "reading:batch025-part7-single-library-hours:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "COMMUNITY LIBRARY ANNOUNCEMENT"
+            ],
+            "quotes": [
+              "Beginning September 1"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-library-hours:2",
+          "question": "What will remain unchanged?",
+          "choices": [
+            "Weekday opening time",
+            "Weekend hours",
+            "The return box location",
+            "Research database access"
+          ],
+          "answerIndex": 1,
+          "explanation": "Giờ cuối tuần không thay đổi.",
+          "choiceIds": [
+            "reading:batch025-part7-single-library-hours:2:choice:1",
+            "reading:batch025-part7-single-library-hours:2:choice:2",
+            "reading:batch025-part7-single-library-hours:2:choice:3",
+            "reading:batch025-part7-single-library-hours:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "COMMUNITY LIBRARY ANNOUNCEMENT"
+            ],
+            "quotes": [
+              "Weekend hours will remain unchanged"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-library-hours:3",
+          "question": "Why is the library opening earlier?",
+          "choices": [
+            "To reduce staffing costs",
+            "To host weekend events",
+            "To provide more study time",
+            "To renovate the building"
+          ],
+          "answerIndex": 2,
+          "explanation": "Mục đích là tạo thêm thời gian học trước giờ làm hoặc học.",
+          "choiceIds": [
+            "reading:batch025-part7-single-library-hours:3:choice:1",
+            "reading:batch025-part7-single-library-hours:3:choice:3",
+            "reading:batch025-part7-single-library-hours:3:choice:2",
+            "reading:batch025-part7-single-library-hours:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "COMMUNITY LIBRARY ANNOUNCEMENT"
+            ],
+            "quotes": [
+              "additional study time before work or classes"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-single-library-hours:4",
+          "question": "How can visitors get help with research databases?",
+          "choices": [
+            "By sending a letter",
+            "By using the return box",
+            "By visiting on weekends only",
+            "By booking an appointment"
+          ],
+          "answerIndex": 3,
+          "explanation": "Khách cần đặt lịch 20 phút với thủ thư.",
+          "choiceIds": [
+            "reading:batch025-part7-single-library-hours:4:choice:1",
+            "reading:batch025-part7-single-library-hours:4:choice:3",
+            "reading:batch025-part7-single-library-hours:4:choice:4",
+            "reading:batch025-part7-single-library-hours:4:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "COMMUNITY LIBRARY ANNOUNCEMENT"
+            ],
+            "quotes": [
+              "book a twenty-minute appointment with a librarian"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part7-double-conference-booking",
+      "title": "Conference room booking and confirmation",
+      "topic": "Office Administration",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "EMAIL",
+          "content": "To: Department Coordinators\nSubject: Conference room reservations\nThe third-floor conference rooms will be unavailable on July 8 while new video equipment is installed. Teams that already reserved a room for that date may use the second-floor training rooms instead. Please reply to this email by July 2 with your preferred time. Reservations for all other dates are unaffected."
+        },
+        {
+          "label": "REPLY",
+          "content": "To: Facilities Desk\nSubject: Re: Conference room reservations\nOur product team has a reservation for July 8 at 10 A.M. We would like to use Training Room 2 at the same time. We will need the large display and a speakerphone for a remote presentation. Please confirm whether these items will be available before we notify the attendees."
+        }
+      ],
+      "passage": "EMAIL\nTo: Department Coordinators\nSubject: Conference room reservations\nThe third-floor conference rooms will be unavailable on July 8 while new video equipment is installed. Teams that already reserved a room for that date may use the second-floor training rooms instead. Please reply to this email by July 2 with your preferred time. Reservations for all other dates are unaffected.\n\nREPLY\nTo: Facilities Desk\nSubject: Re: Conference room reservations\nOur product team has a reservation for July 8 at 10 A.M. We would like to use Training Room 2 at the same time. We will need the large display and a speakerphone for a remote presentation. Please confirm whether these items will be available before we notify the attendees.",
+      "wordCount": 119,
+      "translation": "Email thông báo các phòng họp tầng ba tạm đóng ngày 8 tháng 7 để lắp thiết bị video. Nhóm sản phẩm xin chuyển sang Training Room 2 cùng giờ và cần xác nhận thiết bị trước khi báo người tham dự.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch025-part7-double-conference-booking:1",
+          "question": "Why are the third-floor rooms unavailable?",
+          "choices": [
+            "Video equipment is being installed",
+            "They are being painted",
+            "A conference is taking place",
+            "The floor is being expanded"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thiết bị video mới đang được lắp đặt.",
+          "choiceIds": [
+            "reading:batch025-part7-double-conference-booking:1:choice:2",
+            "reading:batch025-part7-double-conference-booking:1:choice:1",
+            "reading:batch025-part7-double-conference-booking:1:choice:3",
+            "reading:batch025-part7-double-conference-booking:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL"
+            ],
+            "quotes": [
+              "new video equipment is installed"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-conference-booking:2",
+          "question": "What must coordinators do by July 2?",
+          "choices": [
+            "Pay a room fee",
+            "Reply with a preferred time",
+            "Submit a list of attendees",
+            "Collect a room key"
+          ],
+          "answerIndex": 1,
+          "explanation": "Điều phối viên cần phản hồi thời gian mong muốn trước ngày 2 tháng 7.",
+          "choiceIds": [
+            "reading:batch025-part7-double-conference-booking:2:choice:1",
+            "reading:batch025-part7-double-conference-booking:2:choice:3",
+            "reading:batch025-part7-double-conference-booking:2:choice:2",
+            "reading:batch025-part7-double-conference-booking:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EMAIL"
+            ],
+            "quotes": [
+              "reply to this email by July 2 with your preferred time"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-conference-booking:3",
+          "question": "Which room does the product team request?",
+          "choices": [
+            "Conference Room 3",
+            "Training Room 1",
+            "Training Room 2",
+            "The main auditorium"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thông tin trong tài liệu cho biết: Nhóm sản phẩm yêu cầu Training Room 2.",
+          "choiceIds": [
+            "reading:batch025-part7-double-conference-booking:3:choice:1",
+            "reading:batch025-part7-double-conference-booking:3:choice:2",
+            "reading:batch025-part7-double-conference-booking:3:choice:3",
+            "reading:batch025-part7-double-conference-booking:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY"
+            ],
+            "quotes": [
+              "use Training Room 2"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-conference-booking:4",
+          "question": "What equipment does the team need?",
+          "choices": [
+            "A printer and scanner",
+            "Two laptops",
+            "A projector and microphone",
+            "A large display and speakerphone"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông tin trong tài liệu cho biết: Email yêu cầu màn hình lớn và điện thoại hội nghị.",
+          "choiceIds": [
+            "reading:batch025-part7-double-conference-booking:4:choice:1",
+            "reading:batch025-part7-double-conference-booking:4:choice:3",
+            "reading:batch025-part7-double-conference-booking:4:choice:4",
+            "reading:batch025-part7-double-conference-booking:4:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY"
+            ],
+            "quotes": [
+              "large display and a speakerphone"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-conference-booking:5",
+          "question": "What does the team want Facilities to do before notifying attendees?",
+          "choices": [
+            "Confirm equipment availability",
+            "Change the presentation topic",
+            "Move the meeting to July 9",
+            "Send a new calendar invitation"
+          ],
+          "answerIndex": 0,
+          "explanation": "Nhóm muốn xác nhận thiết bị có sẵn trước khi thông báo người tham dự.",
+          "choiceIds": [
+            "reading:batch025-part7-double-conference-booking:5:choice:1",
+            "reading:batch025-part7-double-conference-booking:5:choice:2",
+            "reading:batch025-part7-double-conference-booking:5:choice:3",
+            "reading:batch025-part7-double-conference-booking:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "REPLY"
+            ],
+            "quotes": [
+              "confirm whether these items will be available"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part7-double-shipping-delay",
+      "title": "Shipment delay and revised delivery plan",
+      "topic": "Logistics",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "CUSTOMER EMAIL",
+          "content": "Hello, our order of replacement filters was expected to arrive on March 12, but the tracking page has not changed for two days. We need the filters before our maintenance shutdown on March 18. Could you check the shipment status and advise whether delivery can be expedited?"
+        },
+        {
+          "label": "SUPPLIER RESPONSE",
+          "content": "Thank you for contacting us. The shipment was held at the regional sorting center because of severe weather. It has now been released and is scheduled to reach your facility on March 15. We cannot guarantee an earlier delivery, but we have upgraded the shipment to priority handling at no additional charge. The tracking page should refresh by this evening."
+        }
+      ],
+      "passage": "CUSTOMER EMAIL\nHello, our order of replacement filters was expected to arrive on March 12, but the tracking page has not changed for two days. We need the filters before our maintenance shutdown on March 18. Could you check the shipment status and advise whether delivery can be expedited?\n\nSUPPLIER RESPONSE\nThank you for contacting us. The shipment was held at the regional sorting center because of severe weather. It has now been released and is scheduled to reach your facility on March 15. We cannot guarantee an earlier delivery, but we have upgraded the shipment to priority handling at no additional charge. The tracking page should refresh by this evening.",
+      "wordCount": 111,
+      "translation": "Khách hàng hỏi về lô bộ lọc bị chậm do thời tiết xấu. Nhà cung cấp dự kiến giao ngày 15 tháng 3 và đã nâng cấp xử lý ưu tiên miễn phí.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch025-part7-double-shipping-delay:1",
+          "question": "What is the customer concerned about?",
+          "choices": [
+            "A missing invoice",
+            "A delayed shipment",
+            "A damaged warehouse",
+            "A price increase"
+          ],
+          "answerIndex": 1,
+          "explanation": "Khách lo lắng vì lô hàng bị chậm.",
+          "choiceIds": [
+            "reading:batch025-part7-double-shipping-delay:1:choice:1",
+            "reading:batch025-part7-double-shipping-delay:1:choice:2",
+            "reading:batch025-part7-double-shipping-delay:1:choice:3",
+            "reading:batch025-part7-double-shipping-delay:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CUSTOMER EMAIL"
+            ],
+            "quotes": [
+              "tracking page has not changed for two days"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-shipping-delay:2",
+          "question": "Why does the customer need the filters before March 18?",
+          "choices": [
+            "A new branch is opening",
+            "The supplier is closing",
+            "A maintenance shutdown is planned",
+            "An audit will begin"
+          ],
+          "answerIndex": 2,
+          "explanation": "Khách cần bộ lọc trước đợt dừng bảo trì ngày 18 tháng 3.",
+          "choiceIds": [
+            "reading:batch025-part7-double-shipping-delay:2:choice:2",
+            "reading:batch025-part7-double-shipping-delay:2:choice:3",
+            "reading:batch025-part7-double-shipping-delay:2:choice:1",
+            "reading:batch025-part7-double-shipping-delay:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "CUSTOMER EMAIL"
+            ],
+            "quotes": [
+              "maintenance shutdown on March 18"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-shipping-delay:3",
+          "question": "What caused the delay?",
+          "choices": [
+            "A customs inspection",
+            "A payment issue",
+            "Incorrect packaging",
+            "Severe weather"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thời tiết xấu khiến lô hàng bị giữ tại trung tâm phân loại.",
+          "choiceIds": [
+            "reading:batch025-part7-double-shipping-delay:3:choice:1",
+            "reading:batch025-part7-double-shipping-delay:3:choice:3",
+            "reading:batch025-part7-double-shipping-delay:3:choice:4",
+            "reading:batch025-part7-double-shipping-delay:3:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SUPPLIER RESPONSE"
+            ],
+            "quotes": [
+              "held at the regional sorting center because of severe weather"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-shipping-delay:4",
+          "question": "When is the shipment expected to arrive?",
+          "choices": [
+            "March 15",
+            "March 12",
+            "March 18",
+            "March 20"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông tin trong tài liệu cho biết: Nhà cung cấp dự kiến giao ngày 15 tháng 3.",
+          "choiceIds": [
+            "reading:batch025-part7-double-shipping-delay:4:choice:2",
+            "reading:batch025-part7-double-shipping-delay:4:choice:1",
+            "reading:batch025-part7-double-shipping-delay:4:choice:3",
+            "reading:batch025-part7-double-shipping-delay:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SUPPLIER RESPONSE"
+            ],
+            "quotes": [
+              "scheduled to reach your facility on March 15"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-shipping-delay:5",
+          "question": "What has the supplier done?",
+          "choices": [
+            "Canceled the order",
+            "Upgraded to priority handling",
+            "Charged for express delivery",
+            "Sent a replacement invoice"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông tin trong tài liệu cho biết: Nhà cung cấp nâng cấp xử lý ưu tiên miễn phí.",
+          "choiceIds": [
+            "reading:batch025-part7-double-shipping-delay:5:choice:1",
+            "reading:batch025-part7-double-shipping-delay:5:choice:3",
+            "reading:batch025-part7-double-shipping-delay:5:choice:2",
+            "reading:batch025-part7-double-shipping-delay:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "SUPPLIER RESPONSE"
+            ],
+            "quotes": [
+              "upgraded the shipment to priority handling"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part7-double-job-fair",
+      "title": "Job fair registration and visitor follow-up",
+      "topic": "Human Resources",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "EVENT WEBPAGE",
+          "content": "The Regional Careers Fair will take place on October 4 at the Civic Exhibition Hall. Employers from finance, technology and logistics will attend. Job seekers may register online until September 27. Bring printed copies of your résumé; on-site printing will not be available. A free shuttle will run every thirty minutes from Central Station."
+        },
+        {
+          "label": "FOLLOW-UP EMAIL",
+          "content": "Thank you for registering for the Regional Careers Fair. Your entry pass is attached. The logistics employers will be located in Hall C, while finance and technology companies will be in Hall A. The first career advice session begins at 10:30 A.M. If you can no longer attend, please cancel your registration so another visitor can use the place."
+        }
+      ],
+      "passage": "EVENT WEBPAGE\nThe Regional Careers Fair will take place on October 4 at the Civic Exhibition Hall. Employers from finance, technology and logistics will attend. Job seekers may register online until September 27. Bring printed copies of your résumé; on-site printing will not be available. A free shuttle will run every thirty minutes from Central Station.\n\nFOLLOW-UP EMAIL\nThank you for registering for the Regional Careers Fair. Your entry pass is attached. The logistics employers will be located in Hall C, while finance and technology companies will be in Hall A. The first career advice session begins at 10:30 A.M. If you can no longer attend, please cancel your registration so another visitor can use the place.",
+      "wordCount": 119,
+      "translation": "Trang sự kiện thông báo hội chợ nghề nghiệp ngày 4 tháng 10. Email xác nhận cung cấp sơ đồ gian hàng, thời gian tư vấn và đề nghị hủy đăng ký nếu không thể tham dự.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch025-part7-double-job-fair:1",
+          "question": "Where will the fair be held?",
+          "choices": [
+            "Central Station",
+            "Regional Training Center",
+            "Civic Exhibition Hall",
+            "Hall C only"
+          ],
+          "answerIndex": 2,
+          "explanation": "Địa điểm là Civic Exhibition Hall.",
+          "choiceIds": [
+            "reading:batch025-part7-double-job-fair:1:choice:1",
+            "reading:batch025-part7-double-job-fair:1:choice:3",
+            "reading:batch025-part7-double-job-fair:1:choice:2",
+            "reading:batch025-part7-double-job-fair:1:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EVENT WEBPAGE"
+            ],
+            "quotes": [
+              "at the Civic Exhibition Hall"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-job-fair:2",
+          "question": "What should visitors bring?",
+          "choices": [
+            "A laptop",
+            "A payment receipt",
+            "A company badge",
+            "A printed résumé"
+          ],
+          "answerIndex": 3,
+          "explanation": "Khách cần mang bản in hồ sơ xin việc.",
+          "choiceIds": [
+            "reading:batch025-part7-double-job-fair:2:choice:2",
+            "reading:batch025-part7-double-job-fair:2:choice:3",
+            "reading:batch025-part7-double-job-fair:2:choice:4",
+            "reading:batch025-part7-double-job-fair:2:choice:1"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "EVENT WEBPAGE"
+            ],
+            "quotes": [
+              "Bring printed copies of your résumé"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-job-fair:3",
+          "question": "Where will logistics employers be located?",
+          "choices": [
+            "Hall C",
+            "Hall A",
+            "Hall B",
+            "The main entrance"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông tin trong tài liệu cho biết: Nhà tuyển dụng ngành logistics ở Hall C.",
+          "choiceIds": [
+            "reading:batch025-part7-double-job-fair:3:choice:3",
+            "reading:batch025-part7-double-job-fair:3:choice:1",
+            "reading:batch025-part7-double-job-fair:3:choice:2",
+            "reading:batch025-part7-double-job-fair:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "FOLLOW-UP EMAIL"
+            ],
+            "quotes": [
+              "logistics employers will be located in Hall C"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-job-fair:4",
+          "question": "What time does the first advice session begin?",
+          "choices": [
+            "9:30 A.M.",
+            "10:30 A.M.",
+            "10:00 A.M.",
+            "11:30 A.M."
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông tin trong tài liệu cho biết: Buổi tư vấn đầu tiên bắt đầu lúc 10 giờ 30.",
+          "choiceIds": [
+            "reading:batch025-part7-double-job-fair:4:choice:1",
+            "reading:batch025-part7-double-job-fair:4:choice:3",
+            "reading:batch025-part7-double-job-fair:4:choice:2",
+            "reading:batch025-part7-double-job-fair:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "FOLLOW-UP EMAIL"
+            ],
+            "quotes": [
+              "begins at 10:30 A.M."
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-job-fair:5",
+          "question": "Why should people cancel if they cannot attend?",
+          "choices": [
+            "To receive a refund",
+            "To change the event date",
+            "To help another visitor attend",
+            "To request a printed pass"
+          ],
+          "answerIndex": 2,
+          "explanation": "Việc hủy đăng ký giúp người khác có thể sử dụng chỗ.",
+          "choiceIds": [
+            "reading:batch025-part7-double-job-fair:5:choice:1",
+            "reading:batch025-part7-double-job-fair:5:choice:3",
+            "reading:batch025-part7-double-job-fair:5:choice:2",
+            "reading:batch025-part7-double-job-fair:5:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "FOLLOW-UP EMAIL"
+            ],
+            "quotes": [
+              "so another visitor can use the place"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch025-part7-double-software-renewal",
+      "title": "Software renewal proposal and approval",
+      "topic": "Information Technology",
+      "part": "Part 7",
+      "documentType": "DOUBLE PASSAGE",
+      "level": "B1",
+      "documents": [
+        {
+          "label": "IT PROPOSAL",
+          "content": "The design department currently uses 18 licenses of the StudioPro application. The annual subscription expires on November 30. The vendor has offered a 12 percent discount if the company renews at least 15 licenses before November 15. Usage records show that three licenses have not been used in the past six months. IT recommends renewing 15 licenses and reallocating the remaining budget to staff training."
+        },
+        {
+          "label": "FINANCE APPROVAL",
+          "content": "The proposal is approved, provided that the department confirms the three unused licenses can be removed without losing archived project files. Please submit the final license count and training estimate by November 8. Finance will process the renewal after receiving written confirmation from IT. The discount should be listed separately in the purchase request."
+        }
+      ],
+      "passage": "IT PROPOSAL\nThe design department currently uses 18 licenses of the StudioPro application. The annual subscription expires on November 30. The vendor has offered a 12 percent discount if the company renews at least 15 licenses before November 15. Usage records show that three licenses have not been used in the past six months. IT recommends renewing 15 licenses and reallocating the remaining budget to staff training.\n\nFINANCE APPROVAL\nThe proposal is approved, provided that the department confirms the three unused licenses can be removed without losing archived project files. Please submit the final license count and training estimate by November 8. Finance will process the renewal after receiving written confirmation from IT. The discount should be listed separately in the purchase request.",
+      "wordCount": 123,
+      "translation": "IT đề xuất gia hạn 15 trên 18 giấy phép phần mềm do ba giấy phép không sử dụng. Finance chấp thuận với điều kiện xác nhận dữ liệu lưu trữ không bị mất và nhận số lượng cuối cùng trước ngày 8 tháng 11.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch025-part7-double-software-renewal:1",
+          "question": "How many licenses does the department currently use?",
+          "choices": [
+            "12",
+            "15",
+            "21",
+            "18"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông tin trong tài liệu cho biết: Bộ phận hiện sử dụng 18 giấy phép.",
+          "choiceIds": [
+            "reading:batch025-part7-double-software-renewal:1:choice:1",
+            "reading:batch025-part7-double-software-renewal:1:choice:2",
+            "reading:batch025-part7-double-software-renewal:1:choice:4",
+            "reading:batch025-part7-double-software-renewal:1:choice:3"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "IT PROPOSAL"
+            ],
+            "quotes": [
+              "uses 18 licenses"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-software-renewal:2",
+          "question": "Why does IT recommend renewing fewer licenses?",
+          "choices": [
+            "Three licenses have been unused",
+            "The vendor discontinued the product",
+            "The discount is unavailable",
+            "The department is closing"
+          ],
+          "answerIndex": 0,
+          "explanation": "Có ba giấy phép không được sử dụng trong sáu tháng.",
+          "choiceIds": [
+            "reading:batch025-part7-double-software-renewal:2:choice:2",
+            "reading:batch025-part7-double-software-renewal:2:choice:1",
+            "reading:batch025-part7-double-software-renewal:2:choice:3",
+            "reading:batch025-part7-double-software-renewal:2:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "IT PROPOSAL"
+            ],
+            "quotes": [
+              "three licenses have not been used"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-software-renewal:3",
+          "question": "What condition must be confirmed?",
+          "choices": [
+            "Training can be canceled",
+            "Archived files will remain accessible",
+            "The subscription can be transferred",
+            "The vendor will change its price"
+          ],
+          "answerIndex": 1,
+          "explanation": "Finance yêu cầu xác nhận có thể bỏ ba license mà không mất tệp dự án lưu trữ.",
+          "choiceIds": [
+            "reading:batch025-part7-double-software-renewal:3:choice:1",
+            "reading:batch025-part7-double-software-renewal:3:choice:2",
+            "reading:batch025-part7-double-software-renewal:3:choice:3",
+            "reading:batch025-part7-double-software-renewal:3:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "FINANCE APPROVAL"
+            ],
+            "quotes": [
+              "without losing archived project files"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-software-renewal:4",
+          "question": "By when should the final count be submitted?",
+          "choices": [
+            "November 15",
+            "November 30",
+            "November 8",
+            "December 8"
+          ],
+          "answerIndex": 2,
+          "explanation": "Hạn nộp số lượng cuối cùng là ngày 8 tháng 11.",
+          "choiceIds": [
+            "reading:batch025-part7-double-software-renewal:4:choice:2",
+            "reading:batch025-part7-double-software-renewal:4:choice:3",
+            "reading:batch025-part7-double-software-renewal:4:choice:1",
+            "reading:batch025-part7-double-software-renewal:4:choice:4"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "FINANCE APPROVAL"
+            ],
+            "quotes": [
+              "by November 8"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch025-part7-double-software-renewal:5",
+          "question": "When will Finance process the renewal?",
+          "choices": [
+            "Immediately after the proposal",
+            "At the end of December",
+            "Before the license count is known",
+            "After written IT confirmation"
+          ],
+          "answerIndex": 3,
+          "explanation": "Finance xử lý sau khi nhận xác nhận bằng văn bản từ IT.",
+          "choiceIds": [
+            "reading:batch025-part7-double-software-renewal:5:choice:1",
+            "reading:batch025-part7-double-software-renewal:5:choice:3",
+            "reading:batch025-part7-double-software-renewal:5:choice:4",
+            "reading:batch025-part7-double-software-renewal:5:choice:2"
+          ],
+          "evidence": {
+            "sourceLabels": [
+              "FINANCE APPROVAL"
+            ],
+            "quotes": [
+              "after receiving written confirmation from IT"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "025",
+      "contentBatch": "batch-025-reading-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
     }
   ]
 }

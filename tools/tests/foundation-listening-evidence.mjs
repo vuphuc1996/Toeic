@@ -24,4 +24,10 @@ assert.equal(summary.status, 'practice_threshold_met');
 assert.equal(summarizeFoundationListening(progress, 'a1-office').uniqueQuestions, 0);
 const invalid = recordFoundationListeningAttempt(progress, '', 'q3', true, 500);
 assert.equal(invalid, progress, 'invalid IDs should not mutate progress');
+
+let scoped = {};
+scoped = recordFoundationListeningAttempt(scoped, 'a2-directions::listening2', 'a2-directions::listening2::q1', true, 600);
+assert.equal(summarizeFoundationListening(scoped, 'a2-directions::listening2', { minimumUniqueQuestions: 3, practiceAccuracyThreshold: 0.67 }).uniqueQuestions, 1);
+assert.equal(summarizeFoundationListening(scoped, 'a2-directions').uniqueQuestions, 0, 'supplementary evidence must not inflate core Listening progress');
+
 console.log('Foundation listening evidence: PASS');

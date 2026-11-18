@@ -19,14 +19,14 @@ class DistractorQualityTests(unittest.TestCase):
     def find(items, item_id):
         return next(item for item in items if item['id'] == item_id)
 
-    def test_current_distractor_audit_scope_contains_177_part3_part4_part7_questions(self):
+    def test_current_distractor_audit_scope_contains_240_part3_part4_part7_questions(self):
         p3 = [x for x in self.listening if x.get('part') == 'Part 3' and x.get('editorialStatus') != 'reserve-pending-independent-review']
         p4 = [x for x in self.listening if x.get('part') == 'Part 4' and x.get('editorialStatus') != 'reserve-pending-independent-review']
         p7 = [x for x in self.reading if x.get('part') == 'Part 7']
         self.assertEqual(sum(len(x.get('questions', [])) for x in p3), 39)
         self.assertEqual(sum(len(x.get('questions', [])) for x in p4), 30)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in p7), 108)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in p3 + p4 + p7), 177)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in p7), 171)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in p3 + p4 + p7), 240)
 
     def test_reviewed_questions_have_four_unique_choices_and_valid_keys(self):
         scope = [x for x in self.listening if x.get('part') in ('Part 3', 'Part 4')]
@@ -88,10 +88,10 @@ class DistractorQualityTests(unittest.TestCase):
 
     def test_batch_013_reserve_questions_are_not_in_the_old_balance_certificate(self):
         reserve = [x for x in self.listening if x.get('editorialStatus') == 'reserve-pending-independent-review']
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 3'), 42)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 4'), 30)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 2'), 26)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve), 99)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 3'), 60)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 4'), 48)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 2'), 28)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve), 137)
         self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 1'), 1)
         batch014 = [x for x in reserve if x.get('editorialBatch') == '014']
         self.assertEqual(len(batch014), 9)
