@@ -15,11 +15,16 @@ class ContentBatch024Tests(unittest.TestCase):
   self.assertEqual(len(self.registry['grammar']),8)
   self.assertEqual(len(self.registry['listening']),6)
   self.assertEqual(len(self.registry['reading']),6)
-  for group,items in [('grammar',self.grammar),('listening',self.listening),('reading',self.reading)]:
+  for group,items in [('listening',self.listening),('reading',self.reading)]:
    by={x['id']:x for x in items}
    for ident,digest in self.registry[group+'_sha256'].items():
     self.assertIn(ident,by)
     self.assertEqual(self._hash(by[ident]),digest,ident)
+  # Original 2.92.0 grammar fingerprints remain immutable; this second map
+  # fingerprints the current 2.94.0 additive bilingual example enrichment.
+  by={x['id']:x for x in self.grammar}
+  for ident,digest in self.registry['grammar_sha256_v2_94_enriched'].items():
+   self.assertEqual(self._hash(by[ident]),digest,ident)
  def test_grammar_batch_has_24_valid_questions(self):
   by={x['id']:x for x in self.grammar}
   items=[by[x] for x in self.registry['grammar']]

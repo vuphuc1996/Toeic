@@ -74,5 +74,16 @@
     "assemble-v": "a347728a0c67df67b9e8ebcd47cc5ea8c55dcc813d31e37043b451eaf8f7e7f2",
     "collaborate-v": "5365ac4ad2f39ca74d8dbb121b80bd0abd58c9fe9b893c1d1a917205db13e3b6",
     "dedicate-v": "7aaf8a36b220e193712fb30047c4bc589a372932c0c62d39f1f9a8e1d34f8e5d"
+  },
+  "grammar_sha256_v2_94_enriched": {
+    "batch025-parallel-structure-toeic": "61fb175e48e46caf5857b37f6a0d10ed01a204069ed0d7cd58daf4250af4935a",
+    "batch025-inversion-negative-adverbials-toeic": "3edfc9662799e23ce2b29575e58630900062aca98c3a6de782e35a855b0410de",
+    "batch025-subjunctive-recommendation-toeic": "8b2127af25994f1aa9a3d7a462e2e5dd407de1e90eaa6044ac7305acee1a7269",
+    "batch025-causative-have-get-toeic": "8050847ca4792fa8313d23f3a6b5ef4fda7a1379ec4610cb5ee1a27c0d93b845",
+    "batch025-noun-clause-connectors-toeic": "d8972702f1185059c73236f9265b2efa7cfb9e87f06ffa87091a36ae922aaa79",
+    "batch025-reduced-adverbial-clauses-toeic": "e9cc7bd8343de39d7f1434c3e3d8bb9b6c814ef6b88eca7def1d1839511fabcd",
+    "batch025-articles-institutional-nouns-toeic": "6274f00d37032d926302de8ce38af9a7f62a787576637d5bcc457f5235fe5c77",
+    "batch025-concessive-contrast-connectors-toeic": "eb8caddc8e9870e8011c2f84e91c80125fd656ee98c37df99f4a813521890f74",
+    "batch025-verb-complement-meaning-toeic": "b444f493e9952c8673f156982be6b10d9971085cbe5e16518b2f85ba3c21111f"
   }
 }

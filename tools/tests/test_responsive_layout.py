@@ -23,4 +23,15 @@ class ResponsiveLayoutTests(unittest.TestCase):
  def test_dialogs_fit_dynamic_viewport(self):
   self.assertIn('100dvh',CSS)
   self.assertIn('overscroll-behavior:contain',CSS)
+ def test_mobile_robot_input_prevents_focus_zoom_without_disabling_user_zoom(self):
+  self.assertIn('@media (hover:none) and (pointer:coarse)',CSS)
+  self.assertRegex(CSS,r'#quickHelp \.robot-chat-form input\{[^}]*font-size:16px!important')
+  self.assertRegex(CSS,r'#quickHelp \.robot-chat-form input\{[^}]*min-height:42px')
+  self.assertNotRegex(HTML,r'user-scalable\s*=\s*no')
+ def test_robot_progress_dashboard_is_responsive_and_accessible(self):
+  self.assertIn('.robot-progress-dashboard{',CSS)
+  self.assertIn('.robot-progress-track span{',CSS)
+  self.assertIn('@media(max-width:430px){.robot-progress-dashboard',CSS)
+  self.assertIn("setAttribute('role','progressbar')", (ROOT/'assets/js/app.js').read_text(encoding='utf-8'))
+
 if __name__=='__main__': unittest.main()

@@ -17,10 +17,15 @@ class ContentBatch025Tests(unittest.TestCase):
   self.assertEqual(len(self.registry['listening']),8)
   self.assertEqual(len(self.registry['reading']),8)
   self.assertEqual(len(self.registry['vocabulary']),4)
-  for group,items in [('grammar',self.grammar),('listening',self.listening),('reading',self.reading)]:
+  for group,items in [('listening',self.listening),('reading',self.reading)]:
    by={x['id']:x for x in items}
    for ident,digest in self.registry[group+'_sha256'].items():
     self.assertIn(ident,by); self.assertEqual(self.digest(by[ident]),digest,ident)
+  # Preserve the original 2.93.0 fingerprints and fingerprint the additive
+  # 2.94.0 bilingual example enrichment separately.
+  by={x['id']:x for x in self.grammar}
+  for ident,digest in self.registry['grammar_sha256_v2_94_enriched'].items():
+   self.assertIn(ident,by); self.assertEqual(self.digest(by[ident]),digest,ident)
   for row in self.vocab['words']:
    self.assertEqual(self.digest(row),self.registry['vocabulary_sha256'][row['id']])
  def test_grammar_batch_has_27_exercises_and_part_tags(self):

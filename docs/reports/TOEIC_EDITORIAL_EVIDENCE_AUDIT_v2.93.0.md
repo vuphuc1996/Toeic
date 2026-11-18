@@ -4,8 +4,8 @@
 - Questions indexed: **502** (239 Listening + 263 Reading).
 - Every correct option is linked to its source transcript/passage or an explicit review category.
 - Direct/lexical matching is evidence discovery only. It does not prove that distractors are wrong or that a paraphrase/inference is unique.
-- In this editorial pass, 6 low-overlap paraphrase/inference items were checked against their transcript/passage; 8 Part 1 Pexels source descriptions, 25 baseline Part 2 response-fit items, all 60 Part 5 grammar items and all 32 Part 6 context-fit items were also reviewed.
-- 137 Listening questions remain explicitly reserve-pending-independent-review: 1 Batch 017 Part 1 image-description item, 11 Batch 013, 17 Batch 014 and 70 Batch 015. Batch 015 Part 2 evidence identifies the spoken prompt; Parts 3/4 carry transcript phrase pointers. The new AI-generated Part 1 item is intentionally held out of Mock until independent visual/content review. All reserve answers and distractor uniqueness still require an independent second reviewer; automated evidence mapping does not approve them.
+- Editorial review categories recorded in this source: 6 manually checked low-overlap paraphrase/inference items; 8 Part 1 image/action items; 25 Part 2 response-fit items; 60 Part 5 grammar items; and 32 Part 6 context/cohesion items.
+- 137 Listening questions remain reserve-pending-independent-review (Part 1: 1, Part 2: 28, Part 3: 60, Part 4: 48). All reserve answers and distractor uniqueness still require an independent second reviewer; automated evidence mapping does not approve them.
 - These are internal editorial checks, not two-person independent proofreading, psychometric validation or ETS approval.
 
 ## Coverage by evidence type
@@ -25,7 +25,7 @@
 | Reading | Explicit Part 7 passage/document quotation (v2.33.0 additions) | 108 |
 
 ## Editorial review record
-The following sections record categories reviewed manually during this pass. Direct/lexical categories remain source-evidence pointers; distractor plausibility and uniqueness for the 126 direct/lexical items plus six inference/paraphrase items were reviewed in v2.15.0. The current answer-position and option-identity audit is maintained separately in `TOEIC_DISTRACTOR_AUDIT_v2.93.0.md`.
+The following sections record the current evidence classifications. Direct/lexical categories are source pointers, not proof that distractors are implausible or unique. Use the current distractor audit and independent review checklist for those decisions; automated evidence mapping does not approve a question for Mock. The current answer-position and option-identity audit is maintained separately in `TOEIC_DISTRACTOR_AUDIT_v2.93.0.md`.
 
 ### Direct source phrase (66)
 | Part / ID / Q | Prompt | Correct option | Evidence note |
@@ -565,12 +565,7 @@ The following sections record categories reviewed manually during this pass. Dir
 | Part 4 · `batch025-part4-display-maintenance` · Q2 | What should associates do before closing today? | Move promotional materials | The batch evidence phrase appears in the transcript; keyed-answer correctness and distractor uniqueness still require independent review. |
 | Part 4 · `batch025-part4-display-maintenance` · Q3 | When will the display area reopen? | After a safety inspection | The batch evidence phrase appears in the transcript; keyed-answer correctness and distractor uniqueness still require independent review. |
 
-## Corrected issues in this batch
-- The Part 2 `part2-supplier-samples` display prompt was changed to the standard response-selection instruction so it no longer duplicates/rephrases the spoken question.
-- All 23 generic Part 2 transcript-translation placeholders were replaced with Vietnamese translations of the actual spoken line.
-- `part2-room-unavailable` now uses “That’s right…” to confirm the negative-tag statement without relying on a potentially confusing “Yes” response.
-
-## Remaining audit work
-- The historical 132-item distractor review was completed in v2.15.0; 45 added Part 7 questions in v2.33.0 carry explicit source-label and quotation metadata. The 99 Listening reserve questions remain excluded from Mock pending second-person review. Current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v2.93.0.md`.
+## Interpretation and remaining audit work
+- The current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v2.93.0.md`.
 - Verify browser audio playback, pacing and pronunciation on physical iPhone/iPad and Android voice packs; the current TTS remains browser-generated.
-- Obtain a second independent reviewer before releasing a scored mock. No official ETS scoring equivalence is claimed.
+- Obtain a second independent reviewer before releasing any reserve question or claiming psychometric approval. No official ETS scoring equivalence is claimed.

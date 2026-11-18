@@ -50,7 +50,14 @@ class LegacyCollocationCleanupTests(unittest.TestCase):
         for batch_name in ("batch-009.json", "batch-010.json", "batch-011.json", "batch-012.json"):
             batch_data=json.loads((ROOT / "data/vocabulary" / batch_name).read_text(encoding="utf-8"))
             self.assertTrue({row["id"] for row in batch_data["words"]}.issubset(ids), batch_name)
-        self.assertEqual(len(ids), 1137)
+        # Exact canonical identity = the immutable baseline plus every reviewed
+        # append-only vocabulary batch currently included in the manifest.
+        expected_ids = set(baseline)
+        for batch_number in range(6, 14):
+            batch_data = json.loads((ROOT / "data/vocabulary" / f"batch-{batch_number:03}.json").read_text(encoding="utf-8"))
+            expected_ids.update(row["id"] for row in batch_data["words"])
+        self.assertEqual(ids, expected_ids)
+        self.assertEqual(len(ids), len(expected_ids))
 
 
 if __name__ == "__main__":

@@ -2785,15 +2785,51 @@
       "examples": [
         {
           "en": "If the supplier confirms today, we will release the order tomorrow.",
-          "vi": "Nếu nhà cung cấp xác nhận hôm nay, chúng tôi sẽ phát hành đơn hàng vào ngày mai."
+          "vi": "Nếu nhà cung cấp xác nhận hôm nay, chúng tôi sẽ phát hành đơn hàng vào ngày mai.",
+          "breakdown": [
+            {
+              "part": "Conditional clause",
+              "text": "If the supplier confirms today",
+              "meaning": "Nếu nhà cung cấp xác nhận hôm nay — hiện tại đơn diễn tả điều kiện có thể xảy ra."
+            },
+            {
+              "part": "Main clause",
+              "text": "we will release the order tomorrow",
+              "meaning": "chúng tôi sẽ phát hành đơn hàng vào ngày mai — will + động từ nguyên mẫu diễn tả kết quả tương lai."
+            }
+          ]
         },
         {
           "en": "If the office were larger, we could add another training room.",
-          "vi": "Nếu văn phòng rộng hơn, chúng ta có thể bổ sung một phòng đào tạo."
+          "vi": "Nếu văn phòng rộng hơn, chúng ta có thể bổ sung một phòng đào tạo.",
+          "breakdown": [
+            {
+              "part": "Unreal present condition",
+              "text": "If the office were larger",
+              "meaning": "Nếu văn phòng rộng hơn — were diễn tả tình huống giả định trái với hiện tại."
+            },
+            {
+              "part": "Possible result",
+              "text": "we could add another training room",
+              "meaning": "chúng ta có thể bổ sung một phòng đào tạo — could + động từ nguyên mẫu nêu kết quả giả định."
+            }
+          ]
         },
         {
           "en": "If the team had checked the figures, it would have avoided the error.",
-          "vi": "Nếu nhóm đã kiểm tra số liệu, họ đã tránh được lỗi đó."
+          "vi": "Nếu nhóm đã kiểm tra số liệu, họ đã tránh được lỗi đó.",
+          "breakdown": [
+            {
+              "part": "Past unreal condition",
+              "text": "If the team had checked the figures",
+              "meaning": "Nếu nhóm đã kiểm tra số liệu — past perfect diễn tả điều kiện trái với quá khứ."
+            },
+            {
+              "part": "Past unreal result",
+              "text": "it would have avoided the error",
+              "meaning": "họ đã tránh được lỗi đó — would have + past participle diễn tả kết quả quá khứ không xảy ra."
+            }
+          ]
         }
       ],
       "tips": [
@@ -2869,15 +2905,51 @@
       "examples": [
         {
           "en": "The director said that the launch had been postponed.",
-          "vi": "Giám đốc nói rằng buổi ra mắt đã bị hoãn."
+          "vi": "Giám đốc nói rằng buổi ra mắt đã bị hoãn.",
+          "breakdown": [
+            {
+              "part": "Reporting verb",
+              "text": "The director said",
+              "meaning": "Giám đốc nói — động từ tường thuật ở quá khứ."
+            },
+            {
+              "part": "Reported clause",
+              "text": "that the launch had been postponed",
+              "meaning": "rằng buổi ra mắt đã bị hoãn — past perfect thể hiện việc hoãn xảy ra trước thời điểm phát biểu."
+            }
+          ]
         },
         {
           "en": "The supervisor asked us to submit the forms by Friday.",
-          "vi": "Giám sát viên yêu cầu chúng tôi nộp biểu mẫu trước thứ Sáu."
+          "vi": "Giám sát viên yêu cầu chúng tôi nộp biểu mẫu trước thứ Sáu.",
+          "breakdown": [
+            {
+              "part": "Reporting clause",
+              "text": "The supervisor asked us",
+              "meaning": "Giám sát viên yêu cầu chúng tôi — ask + object."
+            },
+            {
+              "part": "Infinitive construction",
+              "text": "to submit the forms by Friday",
+              "meaning": "nộp biểu mẫu trước thứ Sáu — ask + object + to-infinitive."
+            }
+          ]
         },
         {
           "en": "Mina asked whether the meeting room was available.",
-          "vi": "Mina hỏi liệu phòng họp có còn trống không."
+          "vi": "Mina hỏi liệu phòng họp có còn trống không.",
+          "breakdown": [
+            {
+              "part": "Reporting verb",
+              "text": "Mina asked",
+              "meaning": "Mina hỏi — động từ tường thuật câu hỏi."
+            },
+            {
+              "part": "Embedded yes/no question",
+              "text": "whether the meeting room was available",
+              "meaning": "liệu phòng họp có còn trống không — whether mở đầu mệnh đề danh từ, trật tự chủ ngữ + động từ."
+            }
+          ]
         }
       ],
       "tips": [
@@ -2953,15 +3025,51 @@
       "examples": [
         {
           "en": "The revised process is more efficient than the previous one.",
-          "vi": "Quy trình sửa đổi hiệu quả hơn quy trình trước."
+          "vi": "Quy trình sửa đổi hiệu quả hơn quy trình trước.",
+          "breakdown": [
+            {
+              "part": "Subject",
+              "text": "The revised process",
+              "meaning": "Quy trình sửa đổi — cụm danh từ làm chủ ngữ."
+            },
+            {
+              "part": "Comparative adjective phrase",
+              "text": "is more efficient than the previous one",
+              "meaning": "hiệu quả hơn quy trình trước — more + tính từ + than dùng để so sánh hơn."
+            }
+          ]
         },
         {
           "en": "This is the least expensive option available.",
-          "vi": "Đây là phương án ít tốn kém nhất hiện có."
+          "vi": "Đây là phương án ít tốn kém nhất hiện có.",
+          "breakdown": [
+            {
+              "part": "Subject and linking verb",
+              "text": "This is",
+              "meaning": "Đây là — this làm chủ ngữ, is là động từ nối."
+            },
+            {
+              "part": "Superlative phrase",
+              "text": "the least expensive option available",
+              "meaning": "phương án ít tốn kém nhất hiện có — the least + tính từ dài diễn tả mức thấp nhất."
+            }
+          ]
         },
         {
           "en": "The sooner we receive approval, the earlier we can begin.",
-          "vi": "Chúng ta nhận phê duyệt càng sớm thì càng có thể bắt đầu sớm."
+          "vi": "Chúng ta nhận phê duyệt càng sớm thì càng có thể bắt đầu sớm.",
+          "breakdown": [
+            {
+              "part": "Correlative comparative clause",
+              "text": "The sooner we receive approval",
+              "meaning": "Chúng ta nhận phê duyệt càng sớm — the + comparative mở đầu vế thứ nhất."
+            },
+            {
+              "part": "Parallel result clause",
+              "text": "the earlier we can begin",
+              "meaning": "thì chúng ta càng có thể bắt đầu sớm — the + comparative tạo cặp so sánh kép."
+            }
+          ]
         }
       ],
       "tips": [
@@ -3037,15 +3145,51 @@
       "examples": [
         {
           "en": "We received several applications this morning.",
-          "vi": "Chúng tôi nhận được một số hồ sơ ứng tuyển sáng nay."
+          "vi": "Chúng tôi nhận được một số hồ sơ ứng tuyển sáng nay.",
+          "breakdown": [
+            {
+              "part": "Subject and verb",
+              "text": "We received",
+              "meaning": "Chúng tôi nhận được — received là quá khứ đơn."
+            },
+            {
+              "part": "Countable plural noun phrase",
+              "text": "several applications this morning",
+              "meaning": "một số hồ sơ ứng tuyển sáng nay — several đi với danh từ đếm được số nhiều."
+            }
+          ]
         },
         {
           "en": "There is little information about the revised policy.",
-          "vi": "Có rất ít thông tin về chính sách sửa đổi."
+          "vi": "Có rất ít thông tin về chính sách sửa đổi.",
+          "breakdown": [
+            {
+              "part": "Existential structure",
+              "text": "There is",
+              "meaning": "Có — cấu trúc there + be để nêu sự tồn tại."
+            },
+            {
+              "part": "Uncountable noun phrase",
+              "text": "little information about the revised policy",
+              "meaning": "rất ít thông tin về chính sách sửa đổi — information không đếm được, dùng little."
+            }
+          ]
         },
         {
           "en": "The warehouse purchased three pieces of equipment.",
-          "vi": "Kho hàng đã mua ba thiết bị."
+          "vi": "Kho hàng đã mua ba thiết bị.",
+          "breakdown": [
+            {
+              "part": "Subject and verb",
+              "text": "The warehouse purchased",
+              "meaning": "Kho hàng đã mua — purchased là quá khứ đơn."
+            },
+            {
+              "part": "Measure phrase",
+              "text": "three pieces of equipment",
+              "meaning": "ba thiết bị — equipment không đếm được, dùng pieces of để đếm đơn vị."
+            }
+          ]
         }
       ],
       "tips": [
@@ -3121,15 +3265,51 @@
       "examples": [
         {
           "en": "The team postponed installing the new software.",
-          "vi": "Nhóm đã hoãn việc cài đặt phần mềm mới."
+          "vi": "Nhóm đã hoãn việc cài đặt phần mềm mới.",
+          "breakdown": [
+            {
+              "part": "Subject and verb",
+              "text": "The team postponed",
+              "meaning": "Nhóm đã hoãn — postpone là động từ chi phối V-ing."
+            },
+            {
+              "part": "Gerund phrase",
+              "text": "installing the new software",
+              "meaning": "việc cài đặt phần mềm mới — installing là danh động từ làm tân ngữ."
+            }
+          ]
         },
         {
           "en": "We plan to expand the customer service team.",
-          "vi": "Chúng tôi dự định mở rộng nhóm dịch vụ khách hàng."
+          "vi": "Chúng tôi dự định mở rộng nhóm dịch vụ khách hàng.",
+          "breakdown": [
+            {
+              "part": "Subject and verb",
+              "text": "We plan",
+              "meaning": "Chúng tôi dự định — plan thường đi với to-infinitive."
+            },
+            {
+              "part": "Infinitive phrase",
+              "text": "to expand the customer service team",
+              "meaning": "mở rộng nhóm dịch vụ khách hàng — to expand nêu hành động dự định."
+            }
+          ]
         },
         {
           "en": "Please remember to attach the signed form.",
-          "vi": "Vui lòng nhớ đính kèm biểu mẫu đã ký."
+          "vi": "Vui lòng nhớ đính kèm biểu mẫu đã ký.",
+          "breakdown": [
+            {
+              "part": "Imperative verb",
+              "text": "Please remember",
+              "meaning": "Vui lòng nhớ — remember + to-infinitive nhắc việc cần làm."
+            },
+            {
+              "part": "Infinitive phrase",
+              "text": "to attach the signed form",
+              "meaning": "đính kèm biểu mẫu đã ký — hành động cần thực hiện sau thời điểm nhắc."
+            }
+          ]
         }
       ],
       "tips": [
@@ -3205,15 +3385,51 @@
       "examples": [
         {
           "en": "All invoices are reviewed before payment.",
-          "vi": "Tất cả hóa đơn được kiểm tra trước khi thanh toán."
+          "vi": "Tất cả hóa đơn được kiểm tra trước khi thanh toán.",
+          "breakdown": [
+            {
+              "part": "Subject",
+              "text": "All invoices",
+              "meaning": "Tất cả hóa đơn — tân ngữ của câu chủ động được đưa lên làm chủ ngữ bị động."
+            },
+            {
+              "part": "Present simple passive",
+              "text": "are reviewed before payment",
+              "meaning": "được kiểm tra trước khi thanh toán — be + past participle diễn tả quy trình thường lệ."
+            }
+          ]
         },
         {
           "en": "The damaged units have been replaced.",
-          "vi": "Các thiết bị hư hỏng đã được thay thế."
+          "vi": "Các thiết bị hư hỏng đã được thay thế.",
+          "breakdown": [
+            {
+              "part": "Subject",
+              "text": "The damaged units",
+              "meaning": "Các thiết bị hư hỏng — cụm danh từ làm chủ ngữ."
+            },
+            {
+              "part": "Present perfect passive",
+              "text": "have been replaced",
+              "meaning": "đã được thay thế — have been + past participle diễn tả kết quả đến hiện tại."
+            }
+          ]
         },
         {
           "en": "Visitors must be accompanied by an employee.",
-          "vi": "Khách tham quan phải có nhân viên đi cùng."
+          "vi": "Khách tham quan phải có nhân viên đi cùng.",
+          "breakdown": [
+            {
+              "part": "Subject",
+              "text": "Visitors",
+              "meaning": "Khách tham quan — chủ ngữ số nhiều."
+            },
+            {
+              "part": "Modal passive",
+              "text": "must be accompanied by an employee",
+              "meaning": "phải có nhân viên đi cùng — must + be + past participle diễn tả nghĩa vụ."
+            }
+          ]
         }
       ],
       "tips": [
@@ -3289,15 +3505,66 @@
       "examples": [
         {
           "en": "The consultant who led the workshop will return next month.",
-          "vi": "Chuyên gia tư vấn đã dẫn dắt buổi hội thảo sẽ quay lại tháng tới."
+          "vi": "Chuyên gia tư vấn đã dẫn dắt buổi hội thảo sẽ quay lại tháng tới.",
+          "breakdown": [
+            {
+              "part": "Main noun phrase",
+              "text": "The consultant",
+              "meaning": "Chuyên gia tư vấn — danh từ được mệnh đề quan hệ bổ nghĩa."
+            },
+            {
+              "part": "Defining relative clause",
+              "text": "who led the workshop",
+              "meaning": "đã dẫn dắt buổi hội thảo — who thay cho người và làm chủ ngữ của mệnh đề."
+            },
+            {
+              "part": "Main predicate",
+              "text": "will return next month",
+              "meaning": "sẽ quay lại tháng tới — vị ngữ chính của câu."
+            }
+          ]
         },
         {
           "en": "The device that was installed yesterday is already operational.",
-          "vi": "Thiết bị được lắp hôm qua đã hoạt động."
+          "vi": "Thiết bị được lắp hôm qua đã hoạt động.",
+          "breakdown": [
+            {
+              "part": "Main noun phrase",
+              "text": "The device",
+              "meaning": "Thiết bị — danh từ được bổ nghĩa."
+            },
+            {
+              "part": "Reduced/passive relative clause",
+              "text": "that was installed yesterday",
+              "meaning": "được lắp hôm qua — that mở đầu mệnh đề quan hệ bị động."
+            },
+            {
+              "part": "Main predicate",
+              "text": "is already operational",
+              "meaning": "đã hoạt động — vị ngữ chính."
+            }
+          ]
         },
         {
           "en": "Employees working remotely must update their contact details.",
-          "vi": "Nhân viên làm việc từ xa phải cập nhật thông tin liên hệ."
+          "vi": "Nhân viên làm việc từ xa phải cập nhật thông tin liên hệ.",
+          "breakdown": [
+            {
+              "part": "Main subject",
+              "text": "Employees",
+              "meaning": "Nhân viên — danh từ số nhiều."
+            },
+            {
+              "part": "Reduced relative clause",
+              "text": "working remotely",
+              "meaning": "làm việc từ xa — V-ing rút gọn mệnh đề quan hệ chủ động."
+            },
+            {
+              "part": "Main predicate",
+              "text": "must update their contact details",
+              "meaning": "phải cập nhật thông tin liên hệ — must + động từ nguyên mẫu."
+            }
+          ]
         }
       ],
       "tips": [
@@ -3373,15 +3640,51 @@
       "examples": [
         {
           "en": "The briefing begins at 9:30 on Monday.",
-          "vi": "Buổi phổ biến bắt đầu lúc 9 giờ 30 vào thứ Hai."
+          "vi": "Buổi phổ biến bắt đầu lúc 9 giờ 30 vào thứ Hai.",
+          "breakdown": [
+            {
+              "part": "Main clause",
+              "text": "The briefing begins",
+              "meaning": "Buổi phổ biến bắt đầu — hiện tại đơn dùng cho lịch trình."
+            },
+            {
+              "part": "Time prepositions",
+              "text": "at 9:30 on Monday",
+              "meaning": "lúc 9 giờ 30 vào thứ Hai — at dùng cho giờ cụ thể, on dùng cho ngày."
+            }
+          ]
         },
         {
           "en": "Please submit the application by June 14.",
-          "vi": "Vui lòng nộp đơn chậm nhất ngày 14 tháng 6."
+          "vi": "Vui lòng nộp đơn chậm nhất ngày 14 tháng 6.",
+          "breakdown": [
+            {
+              "part": "Imperative",
+              "text": "Please submit the application",
+              "meaning": "Vui lòng nộp đơn — câu mệnh lệnh lịch sự."
+            },
+            {
+              "part": "Deadline preposition",
+              "text": "by June 14",
+              "meaning": "chậm nhất ngày 14 tháng 6 — by đặt hạn cuối, không bao gồm thời gian sau hạn đó."
+            }
+          ]
         },
         {
           "en": "The office will remain closed until Tuesday.",
-          "vi": "Văn phòng sẽ tiếp tục đóng cửa đến thứ Ba."
+          "vi": "Văn phòng sẽ tiếp tục đóng cửa đến thứ Ba.",
+          "breakdown": [
+            {
+              "part": "Future clause",
+              "text": "The office will remain closed",
+              "meaning": "Văn phòng sẽ tiếp tục đóng cửa — will remain diễn tả trạng thái trong tương lai."
+            },
+            {
+              "part": "Duration preposition",
+              "text": "until Tuesday",
+              "meaning": "đến thứ Ba — until chỉ thời điểm kết thúc trạng thái."
+            }
+          ]
         }
       ],
       "tips": [
@@ -3455,8 +3758,38 @@
       "formula": "A and B; either A or B; not only A but also B",
       "explanation": "Các thành phần được nối cần cùng dạng ngữ pháp: danh từ với danh từ, V-ing với V-ing, động từ nguyên mẫu với động từ nguyên mẫu hoặc mệnh đề tương ứng.",
       "examples": [
-        "The role requires planning, coordinating, and reporting.",
-        "The new system is not only faster but also more reliable."
+        {
+          "en": "The role requires planning, coordinating, and reporting.",
+          "vi": "Vai trò này đòi hỏi việc lập kế hoạch, điều phối và báo cáo.",
+          "breakdown": [
+            {
+              "part": "Main clause",
+              "text": "The role requires",
+              "meaning": "Vai trò này đòi hỏi — requires là động từ chính."
+            },
+            {
+              "part": "Parallel gerunds",
+              "text": "planning, coordinating, and reporting",
+              "meaning": "lập kế hoạch, điều phối và báo cáo — ba danh động từ cùng dạng làm tân ngữ."
+            }
+          ]
+        },
+        {
+          "en": "The new system is not only faster but also more reliable.",
+          "vi": "Hệ thống mới không chỉ nhanh hơn mà còn đáng tin cậy hơn.",
+          "breakdown": [
+            {
+              "part": "Subject and linking verb",
+              "text": "The new system is",
+              "meaning": "Hệ thống mới thì — is nối chủ ngữ với hai tính từ so sánh."
+            },
+            {
+              "part": "Correlative parallel pair",
+              "text": "not only faster but also more reliable",
+              "meaning": "không chỉ nhanh hơn mà còn đáng tin cậy hơn — not only...but also nối hai thành phần song song."
+            }
+          ]
+        }
       ],
       "tips": [
         "Kiểm tra dạng của thành phần ngay trước và sau liên từ.",
@@ -3532,8 +3865,43 @@
       "formula": "Negative adverbial + auxiliary + subject + main verb",
       "explanation": "Khi trạng từ/cụm phủ định đứng đầu câu để nhấn mạnh, trợ động từ hoặc động từ be được đưa lên trước chủ ngữ.",
       "examples": [
-        "Rarely does the director approve a request without documentation.",
-        "Not until Friday will the shipment be released."
+        {
+          "en": "Rarely does the director approve a request without documentation.",
+          "vi": "Giám đốc hiếm khi phê duyệt một yêu cầu nếu không có tài liệu.",
+          "breakdown": [
+            {
+              "part": "Negative adverbial",
+              "text": "Rarely",
+              "meaning": "Hiếm khi — trạng từ mang nghĩa phủ định đặt đầu câu để nhấn mạnh."
+            },
+            {
+              "part": "Subject–auxiliary inversion",
+              "text": "does the director approve",
+              "meaning": "giám đốc phê duyệt — trợ động từ does đứng trước chủ ngữ; động từ chính về nguyên mẫu."
+            },
+            {
+              "part": "Object phrase",
+              "text": "a request without documentation",
+              "meaning": "một yêu cầu không có tài liệu — cụm tân ngữ."
+            }
+          ]
+        },
+        {
+          "en": "Not until Friday will the shipment be released.",
+          "vi": "Mãi đến thứ Sáu lô hàng mới được xuất.",
+          "breakdown": [
+            {
+              "part": "Fronted time expression",
+              "text": "Not until Friday",
+              "meaning": "Mãi đến thứ Sáu — cụm thời gian phủ định được đưa lên đầu."
+            },
+            {
+              "part": "Subject–auxiliary inversion",
+              "text": "will the shipment be released",
+              "meaning": "lô hàng mới được xuất — will đứng trước chủ ngữ; be released là bị động."
+            }
+          ]
+        }
       ],
       "tips": [
         "Xác định trợ động từ phù hợp với thì và chủ ngữ.",
@@ -3608,8 +3976,38 @@
       "formula": "recommend/request/require + that + subject + base verb",
       "explanation": "Trong văn phong trang trọng, động từ chỉ yêu cầu/đề xuất có thể theo sau bởi that-clause với động từ nguyên mẫu không chia theo ngôi.",
       "examples": [
-        "The auditor recommended that the team retain all receipts.",
-        "Management requested that each branch submit a forecast."
+        {
+          "en": "The auditor recommended that the team retain all receipts.",
+          "vi": "Kiểm toán viên đề nghị nhóm giữ lại tất cả hóa đơn.",
+          "breakdown": [
+            {
+              "part": "Reporting verb",
+              "text": "The auditor recommended",
+              "meaning": "Kiểm toán viên đề nghị — recommend có thể dẫn mệnh đề giả định."
+            },
+            {
+              "part": "Subjunctive clause",
+              "text": "that the team retain all receipts",
+              "meaning": "nhóm giữ lại toàn bộ hóa đơn — retain ở dạng nguyên mẫu, không thêm -s."
+            }
+          ]
+        },
+        {
+          "en": "Management requested that each branch submit a forecast.",
+          "vi": "Ban quản lý yêu cầu mỗi chi nhánh nộp một bản dự báo.",
+          "breakdown": [
+            {
+              "part": "Reporting verb",
+              "text": "Management requested",
+              "meaning": "Ban quản lý yêu cầu — request diễn tả yêu cầu."
+            },
+            {
+              "part": "Subjunctive clause",
+              "text": "that each branch submit a forecast",
+              "meaning": "mỗi chi nhánh nộp dự báo — submit ở nguyên mẫu dù chủ ngữ each branch số ít."
+            }
+          ]
+        }
       ],
       "tips": [
         "Không thêm -s cho động từ trong that-clause.",
@@ -3684,8 +4082,38 @@
       "formula": "have/get + object + past participle; have + person + base verb",
       "explanation": "Cấu trúc causative diễn tả việc chủ thể sắp xếp để người khác thực hiện công việc. Với vật được tác động dùng quá khứ phân từ; với người thực hiện dùng động từ nguyên mẫu sau have.",
       "examples": [
-        "We had the office windows cleaned yesterday.",
-        "The manager had the technician inspect the server."
+        {
+          "en": "We had the office windows cleaned yesterday.",
+          "vi": "Hôm qua chúng tôi đã thuê người lau cửa sổ văn phòng.",
+          "breakdown": [
+            {
+              "part": "Causative have",
+              "text": "We had",
+              "meaning": "Chúng tôi đã yêu cầu/thuê — have + object + past participle."
+            },
+            {
+              "part": "Object and past participle",
+              "text": "the office windows cleaned yesterday",
+              "meaning": "cửa sổ văn phòng được lau hôm qua — windows nhận hành động, không tự lau."
+            }
+          ]
+        },
+        {
+          "en": "The manager had the technician inspect the server.",
+          "vi": "Người quản lý đã yêu cầu kỹ thuật viên kiểm tra máy chủ.",
+          "breakdown": [
+            {
+              "part": "Causative have",
+              "text": "The manager had",
+              "meaning": "Người quản lý đã yêu cầu — have + person + bare infinitive."
+            },
+            {
+              "part": "Person and bare infinitive",
+              "text": "the technician inspect the server",
+              "meaning": "kỹ thuật viên kiểm tra máy chủ — sau tân ngữ chỉ người là động từ nguyên mẫu không to."
+            }
+          ]
+        }
       ],
       "tips": [
         "Nhìn tân ngữ là vật hay người để chọn past participle hoặc base verb.",
@@ -3761,8 +4189,38 @@
       "formula": "verb + whether/if/that/what/how + clause",
       "explanation": "Mệnh đề danh từ có thể làm tân ngữ sau động từ hoặc làm chủ ngữ. Whether/if nêu lựa chọn hoặc điều chưa rõ; what mang nghĩa điều mà; how chỉ cách thức/mức độ; that nối một mệnh đề xác định.",
       "examples": [
-        "Please confirm whether the shipment has left the warehouse.",
-        "The report explains how the new process works."
+        {
+          "en": "Please confirm whether the shipment has left the warehouse.",
+          "vi": "Vui lòng xác nhận liệu lô hàng đã rời kho hay chưa.",
+          "breakdown": [
+            {
+              "part": "Main clause",
+              "text": "Please confirm",
+              "meaning": "Vui lòng xác nhận — câu mệnh lệnh lịch sự."
+            },
+            {
+              "part": "Noun clause",
+              "text": "whether the shipment has left the warehouse",
+              "meaning": "liệu lô hàng đã rời kho hay chưa — whether mở đầu mệnh đề làm tân ngữ của confirm."
+            }
+          ]
+        },
+        {
+          "en": "The report explains how the new process works.",
+          "vi": "Báo cáo giải thích cách quy trình mới vận hành.",
+          "breakdown": [
+            {
+              "part": "Main clause",
+              "text": "The report explains",
+              "meaning": "Báo cáo giải thích — explains là động từ chính."
+            },
+            {
+              "part": "Embedded wh-clause",
+              "text": "how the new process works",
+              "meaning": "cách quy trình mới vận hành — how mở đầu mệnh đề danh từ; giữ trật tự câu khẳng định."
+            }
+          ]
+        }
       ],
       "tips": [
         "Sau từ nối phải có cấu trúc mệnh đề phù hợp.",
@@ -3838,8 +4296,38 @@
       "formula": "While/When + V-ing; Once/When + past participle",
       "explanation": "Khi chủ ngữ hai mệnh đề giống nhau và quan hệ nghĩa rõ, mệnh đề trạng ngữ có thể rút gọn thành cụm phân từ. V-ing thường mang nghĩa chủ động; V3 mang nghĩa bị động.",
       "examples": [
-        "After reviewing the figures, the analyst submitted the report.",
-        "When completed, the forms should be sent to Human Resources."
+        {
+          "en": "After reviewing the figures, the analyst submitted the report.",
+          "vi": "Sau khi xem xét các số liệu, nhà phân tích đã nộp báo cáo.",
+          "breakdown": [
+            {
+              "part": "Reduced time clause",
+              "text": "After reviewing the figures",
+              "meaning": "Sau khi xem xét các số liệu — V-ing rút gọn khi chủ thể ngầm hiểu trùng với mệnh đề chính."
+            },
+            {
+              "part": "Main clause",
+              "text": "the analyst submitted the report",
+              "meaning": "nhà phân tích đã nộp báo cáo — mệnh đề chính ở quá khứ đơn."
+            }
+          ]
+        },
+        {
+          "en": "When completed, the forms should be sent to Human Resources.",
+          "vi": "Khi hoàn tất, các biểu mẫu nên được gửi đến phòng Nhân sự.",
+          "breakdown": [
+            {
+              "part": "Reduced passive time clause",
+              "text": "When completed",
+              "meaning": "Khi hoàn tất — phân từ II rút gọn mệnh đề bị động, chủ thể là the forms."
+            },
+            {
+              "part": "Main clause",
+              "text": "the forms should be sent to Human Resources",
+              "meaning": "các biểu mẫu nên được gửi đến phòng Nhân sự — should be sent là bị động với động từ khuyết thiếu."
+            }
+          ]
+        }
       ],
       "tips": [
         "Kiểm tra chủ thể thực hiện hành động để tránh dangling modifier.",
@@ -3914,8 +4402,38 @@
       "formula": "a/an + singular count noun; the + specific noun; zero article + general plural/uncountable",
       "explanation": "Mạo từ phụ thuộc vào tính đếm được, mức độ xác định và quy ước sử dụng. Danh từ số ít đếm được thường cần từ hạn định; danh từ số nhiều/không đếm được nói chung thường không dùng mạo từ.",
       "examples": [
-        "The regional office is on King Street.",
-        "Employees receive training twice a year."
+        {
+          "en": "The regional office is on King Street.",
+          "vi": "Văn phòng khu vực nằm trên đường King.",
+          "breakdown": [
+            {
+              "part": "Definite article",
+              "text": "The regional office",
+              "meaning": "Văn phòng khu vực — the xác định một văn phòng cụ thể."
+            },
+            {
+              "part": "Location predicate",
+              "text": "is on King Street",
+              "meaning": "nằm trên đường King — on dùng với tên đường."
+            }
+          ]
+        },
+        {
+          "en": "Employees receive training twice a year.",
+          "vi": "Nhân viên được đào tạo hai lần mỗi năm.",
+          "breakdown": [
+            {
+              "part": "Subject and verb",
+              "text": "Employees receive training",
+              "meaning": "Nhân viên được đào tạo — receive training là cụm động từ/danh từ tự nhiên."
+            },
+            {
+              "part": "Frequency expression",
+              "text": "twice a year",
+              "meaning": "hai lần mỗi năm — a mang nghĩa mỗi trong cụm tần suất."
+            }
+          ]
+        }
       ],
       "tips": [
         "Không bỏ mạo từ trước danh từ số ít đếm được khi không có từ hạn định khác.",
@@ -3990,8 +4508,38 @@
       "formula": "although/even though + clause; despite + noun/V-ing; nevertheless + sentence",
       "explanation": "Although/even though nối mệnh đề; despite đi với danh từ hoặc V-ing; whereas thể hiện tương phản trực tiếp; nevertheless là trạng từ liên kết.",
       "examples": [
-        "Although demand increased, production remained stable.",
-        "Despite the delay, the team met its target."
+        {
+          "en": "Although demand increased, production remained stable.",
+          "vi": "Mặc dù nhu cầu tăng, sản lượng vẫn ổn định.",
+          "breakdown": [
+            {
+              "part": "Concessive clause",
+              "text": "Although demand increased",
+              "meaning": "Mặc dù nhu cầu tăng — although nối mệnh đề đầy đủ chủ ngữ và động từ."
+            },
+            {
+              "part": "Main clause",
+              "text": "production remained stable",
+              "meaning": "sản lượng vẫn ổn định — nêu kết quả trái với kỳ vọng."
+            }
+          ]
+        },
+        {
+          "en": "Despite the delay, the team met its target.",
+          "vi": "Bất chấp sự chậm trễ, nhóm vẫn đạt mục tiêu.",
+          "breakdown": [
+            {
+              "part": "Prepositional concessive phrase",
+              "text": "Despite the delay",
+              "meaning": "Bất chấp sự chậm trễ — despite đi với cụm danh từ, không trực tiếp đi với mệnh đề."
+            },
+            {
+              "part": "Main clause",
+              "text": "the team met its target",
+              "meaning": "nhóm vẫn đạt mục tiêu — mệnh đề chính."
+            }
+          ]
+        }
       ],
       "tips": [
         "Không dùng despite + clause trực tiếp nếu thiếu the fact that.",
@@ -4066,8 +4614,38 @@
       "formula": "verb + V-ing / to-infinitive (meaning-dependent)",
       "explanation": "Một số động từ nhận cả V-ing và to-infinitive nhưng ý nghĩa thay đổi. Remember doing là nhớ việc đã làm; remember to do là nhớ cần làm. Stop doing là dừng hành động; stop to do là dừng việc khác để làm việc mới.",
       "examples": [
-        "Please remember to attach the receipt.",
-        "I remember meeting the supplier at the trade fair."
+        {
+          "en": "Please remember to attach the receipt.",
+          "vi": "Vui lòng nhớ đính kèm hóa đơn.",
+          "breakdown": [
+            {
+              "part": "Main verb",
+              "text": "Please remember",
+              "meaning": "Vui lòng nhớ — remember + to-infinitive nhắc một việc cần thực hiện."
+            },
+            {
+              "part": "Infinitive complement",
+              "text": "to attach the receipt",
+              "meaning": "đính kèm hóa đơn — hành động xảy ra sau thời điểm ghi nhớ."
+            }
+          ]
+        },
+        {
+          "en": "I remember meeting the supplier at the trade fair.",
+          "vi": "Tôi nhớ đã gặp nhà cung cấp tại hội chợ thương mại.",
+          "breakdown": [
+            {
+              "part": "Main verb",
+              "text": "I remember",
+              "meaning": "Tôi nhớ — remember + V-ing nói về ký ức của việc đã xảy ra."
+            },
+            {
+              "part": "Gerund complement",
+              "text": "meeting the supplier at the trade fair",
+              "meaning": "đã gặp nhà cung cấp tại hội chợ thương mại — meeting là danh động từ chỉ trải nghiệm trong quá khứ."
+            }
+          ]
+        }
       ],
       "tips": [
         "Học theo cặp động từ và ngữ cảnh, không chỉ học công thức.",

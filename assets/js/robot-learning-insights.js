@@ -25,12 +25,13 @@ const latestAnswer = (progress, index) => {
 };
 
 function summarizePracticeMap(items = [], progressMap = {}) {
-  let learn = 0, practice = 0, attempted = 0, questions = 0, correct = 0;
+  let learn = 0, practice = 0, attempted = 0, questions = 0, correct = 0, studiedUnits = 0, totalUnits = 0;
   const weak = [], learnItems = [], practiceItems = [];
   for (const item of items) {
     const qs = item.questions || item.exercises || [];
     if (!qs.length) continue;
     questions += qs.length;
+    totalUnits += 1;
     const progress = asObject(progressMap[item.id]);
     const answers = asObject(progress.answers);
     let seen = 0, right = 0;
@@ -39,14 +40,15 @@ function summarizePracticeMap(items = [], progressMap = {}) {
       if (answer) { seen += 1; if (answer.correct === true) right += 1; }
     }
     attempted += seen; correct += right;
+    if (seen) studiedUnits += 1;
     if (!seen) { learn += 1; learnItems.push({area:item.areaLabel || '',title:item.title || item.id}); }
     else if (seen >= 5 && right / seen < 0.7) { practice += 1; const row={area:item.areaLabel || '',title:item.title || item.id,accuracy:Math.round(right/seen*100),attempted:seen}; weak.push(row); practiceItems.push(row); }
   }
-  return { learn, practice, attempted, questions, correct, accuracy: attempted ? Math.round(correct / attempted * 100) : null, weak, learnItems, practiceItems };
+  return { learn, practice, attempted, questions, correct, accuracy: attempted ? Math.round(correct / attempted * 100) : null, studiedUnits, totalUnits, coveragePercent: totalUnits ? Math.round(studiedUnits / totalUnits * 100) : null, weak, learnItems, practiceItems };
 }
 
 function summarizeFoundationEvidence(groups = [], now = Date.now()) {
-  let learn = 0, practice = 0, review = 0, attempted = 0, questions = 0, correct = 0;
+  let learn = 0, practice = 0, review = 0, attempted = 0, questions = 0, correct = 0, studiedUnits = 0, totalUnits = 0;
   const learnItems = [], practiceItems = [], reviewItems = [];
   for (const group of groups) {
     const items = Array.isArray(group.items) ? group.items : [];
@@ -55,8 +57,11 @@ function summarizeFoundationEvidence(groups = [], now = Date.now()) {
       const record = asObject(progressMap[item.id]);
       const evidence = values(record.evidence);
       const itemQuestions = item.questionBank || item.questions || [];
+      if (!itemQuestions.length) continue;
       questions += itemQuestions.length;
+      totalUnits += 1;
       if (!evidence.length) { learn += 1; learnItems.push({area:'Foundation',title:item.title || item.id}); continue; }
+      studiedUnits += 1;
       attempted += evidence.length;
       const itemCorrect = evidence.filter(entry => entry.latestCorrect === true).length;
       correct += itemCorrect;
@@ -65,7 +70,7 @@ function summarizeFoundationEvidence(groups = [], now = Date.now()) {
       if (evidence.length >= 3 && itemCorrect / evidence.length < 0.8) { practice += 1; practiceItems.push({area:'Foundation',title:item.title || item.id,accuracy:Math.round(itemCorrect/evidence.length*100),attempted:evidence.length}); }
     }
   }
-  return { learn, practice, review, attempted, questions, correct, accuracy: attempted ? Math.round(correct / attempted * 100) : null, evidence: attempted, learnItems, practiceItems, reviewItems };
+  return { learn, practice, review, attempted, questions, correct, accuracy: attempted ? Math.round(correct / attempted * 100) : null, studiedUnits, totalUnits, coveragePercent: totalUnits ? Math.round(studiedUnits / totalUnits * 100) : null, evidence: attempted, learnItems, practiceItems, reviewItems };
 }
 
 export function buildRobotLearningInsights(snapshot = {}, now = Date.now()) {
@@ -83,11 +88,12 @@ export function buildRobotLearningInsights(snapshot = {}, now = Date.now()) {
     if (Number(p.dueAt) > 0 && Number(p.dueAt) <= now) { vocabularyReview += 1; reviewItems.push({area:'Từ vựng',title:word.word || word.id}); }
     else if (reviews >= 3 && (wrong > correct || correct / reviews < 0.7)) { vocabularyPractice += 1; practiceItems.push({area:'Từ vựng',title:word.word || word.id,accuracy:Math.round(correct/reviews*100),attempted:reviews}); }
   }
-  let flashLearn = 0, flashPractice = 0, flashReview = 0;
+  let flashLearn = 0, flashPractice = 0, flashReview = 0, flashStudied = 0;
   for (const word of words) {
     const p = asObject(flash[word.id]);
     const reps = Number(p.reps) || 0;
     if (!reps) { flashLearn += 1; learnItems.push({area:'Flashcard',title:word.word || word.id}); continue; }
+    flashStudied += 1;
     if (Number(p.dueAt) > 0 && Number(p.dueAt) <= now) { flashReview += 1; reviewItems.push({area:'Flashcard',title:word.word || word.id}); }
     else { const quizAttempts=(Number(p.lapses)||0)+(Number(p.correct)||0); if(quizAttempts>=3&&((Number(p.lapses)||0)>(Number(p.correct)||0)||(Number(p.correct)||0)/quizAttempts<0.7)){flashPractice += 1;practiceItems.push({area:'Flashcard',title:word.word || word.id,accuracy:Math.round((Number(p.correct)||0)/quizAttempts*100),attempted:quizAttempts});} }
   }
@@ -118,21 +124,21 @@ export function buildRobotLearningInsights(snapshot = {}, now = Date.now()) {
   const totalPractice = vocabularyPractice + flashPractice + grammar.practice + reading.practice + listening.practice + foundation.practice + weakMocks;
   const totalReview = vocabularyReview + flashReview + dueRecall;
 
-  const hasEvidence = vocabularyStudied > 0 || Object.keys(flash).length > 0 || attemptedModules > 0 || completedMocks > 0 || dueRecall > 0;
+  const hasEvidence = vocabularyStudied > 0 || flashStudied > 0 || attemptedModules > 0 || completedMocks > 0 || dueRecall > 0;
   const sections = [
-    { name: 'Từ vựng', learn: vocabularyLearn, practice: vocabularyPractice, review: vocabularyReview, evidence: vocabularyStudied },
-    { name: 'Flashcard', learn: flashLearn, practice: flashPractice, review: flashReview, evidence: Object.keys(flash).length },
+    { name: 'Từ vựng', learn: vocabularyLearn, practice: vocabularyPractice, review: vocabularyReview, evidence: vocabularyStudied, studiedUnits: vocabularyStudied, totalUnits: words.length },
+    { name: 'Flashcard', learn: flashLearn, practice: flashPractice, review: flashReview, evidence: flashStudied, studiedUnits: flashStudied, totalUnits: words.length },
     { name: 'Ngữ pháp', ...grammar, evidence: grammar.attempted, review: 0 },
     { name: 'Đọc hiểu', ...reading, evidence: reading.attempted, review: 0 },
     { name: 'Nghe hiểu', ...listening, evidence: listening.attempted, review: 0 },
     { name: 'Foundation', ...foundation, evidence: foundation.attempted },
-    { name: 'Thi thử', learn: 0, practice: weakMocks, review: 0, evidence: completedMocks.length, attempted: completedMocks.reduce((sum,item)=>sum+(Number(item.questions)||0),0), accuracy: completedMocks.length ? Math.round(completedMocks.reduce((sum,item)=>sum+Number(item.accuracy),0)/completedMocks.length) : null }
+    { name: 'Thi thử', learn: 0, practice: weakMocks, review: 0, evidence: completedMocks.length, studiedUnits: completedMocks.length, totalUnits: null, attempted: completedMocks.reduce((sum,item)=>sum+(Number(item.questions)||0),0), accuracy: completedMocks.length ? Math.round(completedMocks.reduce((sum,item)=>sum+Number(item.accuracy),0)/completedMocks.length) : null }
   ];
   return {
     hasEvidence, generatedAt: now,
     totals: { learn: totalLearn, practice: totalPractice, review: totalReview },
     dueRecall, vocabularyStudied, vocabularyTotal: words.length,
-    sections: sections.map(({ name, learn = 0, practice = 0, review = 0, evidence = 0, accuracy = null, attempted = 0 }) => ({ name, learn, practice, review, evidence, accuracy, attempted })),
+    sections: sections.map(({ name, learn = 0, practice = 0, review = 0, evidence = 0, accuracy = null, attempted = 0, studiedUnits = 0, totalUnits = null, coveragePercent = null }) => ({ name, learn, practice, review, evidence, accuracy, attempted, studiedUnits, totalUnits, coveragePercent:coveragePercent ?? (Number.isFinite(totalUnits) && totalUnits > 0 ? Math.round(studiedUnits / totalUnits * 100) : null) })),
     items: {learn:learnItems,practice:practiceItems,review:reviewItems},
     notes: { weakMockCount: weakMocks, completedMockCount: completedMocks.length }
   };

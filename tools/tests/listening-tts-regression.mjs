@@ -34,17 +34,23 @@ const spoken = [];
 const gapDurations = [];
 let cancelCalls = 0;
 let emitCancelEvent = false;
+let voiceCatalogThrows = false;
+let utteranceConstructorThrows = false;
 let voices = [];
 let voicesLoading = false;
 let voiceCatalogReads = 0;
+let resumeCalls = 0;
+const timerDurations = new Map();
 let currentUtterance = null;
 let holdGapTimers = false;
 let nextTimerId = 0;
 const pendingGapTimers = new Map();
 const speechSynthesis = {
-  getVoices() { voiceCatalogReads++; return voicesLoading && voiceCatalogReads === 1 ? [] : voices; },
+  getVoices() { voiceCatalogReads++; if (voiceCatalogThrows) throw new Error('voice catalogue not ready'); return voicesLoading && voiceCatalogReads === 1 ? [] : voices; },
   speaking: false,
   pending: false,
+  paused: false,
+  resume() { resumeCalls++; this.paused = false; },
   speak(utterance) { spoken.push(utterance); currentUtterance = utterance; },
   cancel() {
     cancelCalls++;
@@ -54,12 +60,13 @@ const speechSynthesis = {
   addEventListener() {},
 };
 class MockUtterance {
-  constructor(text) { this.text = text; this.rate = 1; this.pitch = 1; this.volume = 1; this.lang = ''; this.voice = null; }
+  constructor(text) { if (utteranceConstructorThrows) throw new Error('utterance constructor failed'); this.text = text; this.rate = 1; this.pitch = 1; this.volume = 1; this.lang = ''; this.voice = null; }
 }
 const context = {
   DEFAULT_TTS_SETTINGS,
   PART1_LEAD_IN_TEXT: 'Now, listen to the four statements.',
-  TTS_PREPARATION_DELAY_MS: 2000,
+  SPEECH_START_TIMEOUT_MS: 10000,
+  SPEECH_END_TIMEOUT_MIN_MS: 20000,
   PART1_TITLE_PAUSE_MS: 1000,
   PART1_LEAD_IN_PAUSE_MS: 1000,
   PART1_OPTION_LABEL_PAUSE_MS: 1500,
@@ -72,8 +79,8 @@ const context = {
   escapeHtml: value => String(value ?? '').replaceAll('&', '&amp;').replaceAll('\"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;'),
   toast: message => { context.toasts.push(message); },
   toasts: [],
-  setTimeout(callback, ms) { gapDurations.push(ms); const id = ++nextTimerId; if (holdGapTimers) pendingGapTimers.set(id, callback); else queueMicrotask(callback); return id; },
-  clearTimeout(id) { pendingGapTimers.delete(id); },
+  setTimeout(callback, ms) { if(ms<=2500)gapDurations.push(ms); const id = ++nextTimerId; timerDurations.set(id, ms); if (ms > 2500 || holdGapTimers) pendingGapTimers.set(id, callback); else queueMicrotask(callback); return id; },
+  clearTimeout(id) { pendingGapTimers.delete(id); timerDurations.delete(id); },
   queueMicrotask,
 };
 vm.createContext(context);
@@ -103,7 +110,7 @@ vm.runInContext(`${appSource.slice(foundationStart, foundationEnd)}\nglobalThis.
 context.__refreshSpeechVoiceSelectors();
 assert.equal(maleVoiceSelect.disabled, true, 'voice selectors are disabled while the device has no English voice catalogue');
 assert.equal(femaleVoiceSelect.disabled, true);
-assert.match(voiceStatusNode.textContent, /chưa cung cấp voice tiếng Anh/);
+assert.match(voiceStatusNode.textContent, /chưa cung cấp danh sách voice tiếng Anh/);
 
 const femaleUS = { name: 'Ava Enhanced', voiceURI: 'ava-us', lang: 'en-US', localService: true };
 const maleUS = { name: 'Microsoft Ryan Online (Natural)', voiceURI: 'ryan-us', lang: 'en-US', localService: false };
@@ -136,19 +143,33 @@ assert.ok(femaleVoiceSelect.options.some(option => option.value === 'missing-fem
 assert.match(voiceStatusNode.textContent, /3 voice tiếng Anh/);
 context.state.settings.tts.femaleVoiceURI = '';
 
-// Stop during the pre-play buffer cancels startup and must not enqueue the first utterance.
-context.state.listening = [{ id: 'tts-stop-during-prep', part: 'Part 2', segments: [
-  { speaker: 'Narrator', voice: 'female', text: 'This must not be spoken after Stop.' },
+// Playback must queue the first utterance in the original tap stack, even when the device voice list is empty.
+context.state.listening = [{ id: 'tts-no-voice-catalogue', part: 'Part 2', segments: [
+  { speaker: 'Narrator', voice: 'female', text: 'The default device voice should read this sentence.' },
 ] }];
-const prepCancelStart = spoken.length;
-holdGapTimers = true;
-const prepCancelPromise = context.__playListeningAudio('tts-stop-during-prep');
-await waitFor(() => pendingGapTimers.size > 0, 'startup preparation delay must be pending before speech');
+voices = [];
+voiceCatalogReads = 0;
+const noVoiceStart = spoken.length;
+const noVoicePromise = context.__playListeningAudio('tts-no-voice-catalogue');
+assert.equal(spoken.length, noVoiceStart + 1, 'first utterance must be queued synchronously before returning to the event loop');
+assert.equal(spoken[noVoiceStart].voice, null, 'system default voice is used when no English voice catalogue is published yet');
+assert.equal(spoken[noVoiceStart].lang, 'en-US', 'fallback retains the configured English locale');
+assert.ok(resumeCalls > 0, 'paused speech synthesis is resumed directly from the user action');
+spoken[noVoiceStart].onstart?.();spoken[noVoiceStart].onend();
+await noVoicePromise;
+assert.match(statusNode.textContent, /Đã phát xong/);
+
+// Stop during an active utterance resolves playback even when the browser omits cancellation events.
+context.state.listening = [{ id: 'tts-stop-during-active', part: 'Part 2', segments: [
+  { speaker: 'Narrator', voice: 'female', text: 'This must stop immediately.' },
+] }];
+voices = [femaleUS, maleUS, danielUK];
+const stopActiveStart=spoken.length;
+const stopActivePromise=context.__playListeningAudio('tts-stop-during-active');
+assert.equal(spoken.length,stopActiveStart+1,'active speech is queued synchronously');
 context.__stopSpeech();
-holdGapTimers = false;
-await prepCancelPromise;
-assert.equal(spoken.length, prepCancelStart, 'Stop during readiness must prevent the first utterance');
-assert.equal(pendingGapTimers.size, 0, 'Stop must clear the pending startup timer');
+await stopActivePromise;
+assert.equal(spoken.length,stopActiveStart+1,'stop does not enqueue later utterances');
 
 // Multi-speaker playback keeps a stable voice for each named speaker and preserves the configured turn pause.
 context.state.settings.tts.sentencePauseMs = 1000;
@@ -174,7 +195,7 @@ assert.deepEqual(gapDurations.slice(-2), [1000, 1000]);
 assert.equal(spoken[audioStart].rate, 0.85, 'per-lesson playback speed should be applied');
 assert.match(statusNode.textContent, /Đã phát xong/);
 
-// Part 1 uses a fixed and explicit spoken sequence: 2s preparation, title, 1s pause,
+// Part 1 uses a fixed and explicit spoken sequence: title, 1s pause,
 // lead-in, 1s pause, then each letter label, 1.5s pause, and its description.
 context.state.listening = [{ id: 'tts-part1-four-options', part: 'Part 1', topic: 'Warehouse & Shipping', title: 'Organizing warehouse inventory', segments: [
   { speaker: 'Narrator', voice: 'female', text: 'Passengers are boarding an aircraft by stairs.' },
@@ -187,7 +208,7 @@ const part1GapStart = gapDurations.length;
 voicesLoading = true;
 voiceCatalogReads = 0;
 const part1Promise = context.__playListeningAudio('tts-part1-four-options');
-await waitFor(() => spoken.length > part1Start, 'Part 1 title must start after the fixed two-second engine preparation');
+await waitFor(() => spoken.length > part1Start, 'Part 1 title must start immediately after synchronous engine preparation');
 assert.equal(spoken[part1Start].text, 'Part 1: Warehouse & Shipping');
 spoken[part1Start].onend();
 await waitFor(() => spoken.length > part1Start + 1, 'Part 1 lead-in must start after the title pause');
@@ -209,13 +230,13 @@ for (let index = 0; index < 4; index++) {
     'A worker is carrying a box.',
   ];
   assert.equal(descriptionUtterance.text, expectedDescriptions[index], `Part 1 option ${letter} description follows its label without duplicate prefixes`);
-  if (index === 0) assert.ok(voiceCatalogReads >= 2, 'voice catalogue must be checked again when it was initially empty');
+  if (index === 0) assert.ok(voiceCatalogReads >= 1, 'voice catalogue is queried immediately even when initially empty');
   descriptionUtterance.onend();
 }
 await part1Promise;
 voicesLoading = false;
 const part1Gaps = gapDurations.slice(part1GapStart);
-assert.ok(part1Gaps.includes(2000), 'every spoken route uses a fixed 2.0s preparation delay');
+assert.equal(part1Gaps.some(gap => gap > 2500), false, 'no artificial startup timer delays the first utterance');
 assert.ok(part1Gaps.includes(1000), 'Part 1 waits 1.0s after the spoken topic title and after the lead-in');
 assert.equal(part1Gaps.filter(gap => gap === 1500).length, 4, 'each A/B/C/D label is followed by a fixed 1.5s pause');
 assert.deepEqual(part1Gaps.filter(gap => gap === 1300), [1300, 1300, 1300], 'Part 1 pauses 1.3s between the descriptions');
@@ -343,16 +364,72 @@ assert.deepEqual(spoken.slice(legacyFoundationStart, legacyFoundationStart + 2).
 assert.deepEqual(gapDurations.slice(legacyFoundationGaps).filter(value => value === 950), [950]);
 assert.match(statusNode.textContent, /Đã phát xong/);
 
+// A selected device voice that fails is retried once with the system default voice.
+// Some mobile engines dispatch a cancellation error when cancel() is called during
+// fallback; the fallback path must not cancel the new utterance or accept stale events.
+context.state.settings.tts.femaleVoiceURI='ava-us';
+emitCancelEvent=true;
+const fallbackStart=spoken.length;
+const fallbackPromise=context.__speakText('Use the fallback voice if the selected one fails.');
+const cancelBeforeFallback=cancelCalls;
+let fallbackSettled=false;fallbackPromise.then(()=>{fallbackSettled=true;});
+assert.equal(spoken.length,fallbackStart+1,'selected voice is queued immediately');
+const selectedUtterance=spoken[fallbackStart];
+selectedUtterance.onerror?.({error:'voice-unavailable'});
+assert.equal(spoken.length,fallbackStart+2,'failed named voice is retried with the system voice');
+assert.equal(spoken[fallbackStart+1].voice,null);
+assert.equal(cancelCalls,cancelBeforeFallback,'fallback must not cancel the queue and trigger a stale cancellation event');
+selectedUtterance.onend?.();selectedUtterance.onerror?.({error:'synthesis-failed'});
+await Promise.resolve();
+assert.equal(fallbackSettled,false,'stale events from the failed voice cannot settle the fallback attempt');
+spoken[fallbackStart+1].onstart?.();spoken[fallbackStart+1].onend();
+assert.equal(await fallbackPromise,true);
+emitCancelEvent=false;
+context.state.settings.tts.femaleVoiceURI='';
+
+// A throwing voice catalogue falls back to the system default instead of silently failing.
+voiceCatalogThrows=true;
+const catalogueThrowStart=spoken.length;
+const catalogueThrowPromise=context.__speakText('Use the default voice when the catalogue throws.');
+assert.equal(spoken.length,catalogueThrowStart+1,'catalogue failure must not block the first utterance');
+assert.equal(spoken[catalogueThrowStart].voice,null);
+spoken[catalogueThrowStart].onstart?.();spoken[catalogueThrowStart].onend();
+assert.equal(await catalogueThrowPromise,true);
+voiceCatalogThrows=false;
+
+// Utterance construction failures are converted into a handled playback failure.
+const constructorToastStart=context.toasts.length;
+utteranceConstructorThrows=true;
+const constructorFailure=await context.__speakText('This utterance cannot be constructed.');
+utteranceConstructorThrows=false;
+assert.equal(constructorFailure,false);
+assert.ok(context.toasts.length>constructorToastStart,'constructor failure must surface a visible error');
+
+// Missing onstart/onend callbacks are surfaced through a bounded watchdog instead of a silent hang.
+const timeoutToastStart=context.toasts.length;
+const timeoutSpeechPromise=context.__speakText('The browser will not emit a speech event.');
+const timeoutSpeechIndex=spoken.length-1;
+assert.equal(spoken[timeoutSpeechIndex].text,'The browser will not emit a speech event.');
+const startWatchdog=[...timerDurations.entries()].find(([,duration])=>duration===10000);
+assert.ok(startWatchdog,'a ten-second speech-start watchdog must be armed');
+const timeoutCallback=pendingGapTimers.get(startWatchdog[0]);
+assert.equal(typeof timeoutCallback,'function');
+pendingGapTimers.delete(startWatchdog[0]);timerDurations.delete(startWatchdog[0]);
+timeoutCallback();
+assert.equal(await timeoutSpeechPromise,false,'a missing browser start event must resolve as a failure, not hang');
+assert.ok(context.toasts.length>timeoutToastStart);
+assert.match(context.toasts.at(-1),/10 giây/);
+
 // A cancellation error from the browser is not a user-facing voice failure.
 context.toasts.length = 0;
 const previewPromise = context.__speakText('A preview sentence.');
-await waitFor(() => spoken.at(-1)?.text === 'A preview sentence.', 'one-shot speech must wait for voice preparation');
+assert.equal(spoken.at(-1)?.text, 'A preview sentence.', 'one-shot speech queues immediately from the click handler');
 spoken.at(-1).onstart?.();
 spoken.at(-1).onend();
 assert.equal(await previewPromise, true);
 assert.equal(context.toasts.length, 0);
 
-// Reading passage uses the same delayed engine path and exposes accessible playback status.
+// Reading passage uses the same immediate guarded engine path and exposes accessible playback status.
 context.state.readings = [{ id: 'reading-tts', part: 'Part 7', passage: 'The office will remain closed on Monday. Employees may contact the support desk by email.' }];
 const readingStartCount = spoken.length;
 context.__playReadingText('reading-tts');
@@ -366,8 +443,12 @@ assert.match(readingAudioStatus.textContent, /Đã đọc xong/);
 
 // Reading and listening controls are present in source, and every speech route goes through the guarded queue.
 assert.match(appSource, /data-reading-speak=/);
-assert.equal((appSource.match(/speechSynthesis\.speak\(/g) || []).length, 1, 'all TTS playback must use the shared guarded utterance function');
-assert.match(appSource, /const TTS_PREPARATION_DELAY_MS = 2000/);
+assert.equal((appSource.match(/\bsynth\.speak\(utterance\)/g) || []).length, 1, 'all TTS playback must use the shared guarded utterance function');
+assert.match(appSource, /const SPEECH_START_TIMEOUT_MS = 10000/);
+assert.match(appSource, /const SPEECH_END_TIMEOUT_MIN_MS = 20000/);
+assert.doesNotMatch(appSource, /TTS_PREPARATION_DELAY_MS/);
+assert.equal((appSource.match(/function\s+speakText\s*\(/g)||[]).length,1,'only one single-utterance route implementation may exist');
+assert.equal((appSource.match(/function\s+speakUtterance\s*\(/g)||[]).length,1,'only one shared utterance guard may exist');
 assert.match(appSource, /const PART1_TITLE_PAUSE_MS = 1000/);
 assert.match(appSource, /const PART1_LEAD_IN_PAUSE_MS = 1000/);
 assert.match(appSource, /const PART1_OPTION_LABEL_PAUSE_MS = 1500/);
@@ -376,7 +457,7 @@ assert.match(appSource, /speakUtterance\(`\$\{letter\}\.`,/);
 assert.match(appSource, /speakUtterance\(isPart1\?optionText:segment\.text,/);
 assert.match(appSource, /Part 1: \$\{String\(item\.topic/);
 
-console.log('Listening/TTS regression PASS: voice readiness, Part 1 lead-in, spoken A-D labels, lead-in/options pauses, shared practice/mock playback, stable speaker voices, legacy Foundation fallback, safe cancellation, vocabulary pacing and Reading read-aloud.');
+console.log('Listening/TTS regression PASS: immediate gesture-stack playback, empty/throwing catalogue fallback, selected-voice retry, stale-event guard, constructor failure, speech watchdog contract, Part 1 sequence, speaker pacing, safe cancellation, vocabulary, Foundation and Reading read-aloud.');
 
 async function waitFor(predicate, message) {
   for (let attempt = 0; attempt < 100; attempt++) {

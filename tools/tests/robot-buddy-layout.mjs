@@ -35,3 +35,16 @@ const sendMessageBlock = app.slice(app.indexOf('function sendRobotMessage'), app
 assert.doesNotMatch(sendMessageBlock, /robotQuickPrompts[^\n]*hidden\s*=\s*true/, 'Sending a message must not hide the quick-prompt menu.');
 assert.match(sendMessageBlock, /Keep the quick-prompt menu available during the whole chat session/);
 console.log('PASS: Robot Buddy chat scrolls independently; quick prompts, composer and footer remain pinned; offline note uses compact type.');
+
+// Mobile composer must avoid iOS automatic focus zoom while retaining normal pinch zoom.
+assert.match(css, /@media \(hover:none\) and \(pointer:coarse\)\{[\s\S]*?#quickHelp \.robot-chat-form input\{[^}]*font-size:16px!important/);
+assert.match(css, /#quickHelp \.robot-chat-form input\{[^}]*min-height:42px/);
+assert.doesNotMatch(index, /user-scalable\s*=\s*no/);
+// Progress dashboard is constructed from read-only snapshots and uses accessible bounded meters.
+assert.match(app, /function appendRobotProgressDashboard\(insights,anchor=null\)/);
+assert.match(app, /role','progressbar'/);
+assert.match(app, /Phân tích tiến độ của tôi/);
+assert.match(css, /\.robot-progress-total\.is-learn/);
+assert.match(css, /\.robot-progress-total\.is-practice/);
+assert.match(css, /\.robot-progress-total\.is-review/);
+console.log('PASS: mobile focus zoom is prevented without disabling pinch zoom; Robot Buddy progress dashboard is responsive, color-coded and accessible.');

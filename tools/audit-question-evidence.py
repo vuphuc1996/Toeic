@@ -114,14 +114,25 @@ def main() -> int:
                 counters[kind][status] += 1
                 rows.append((kind, item.get('part', ''), item.get('id', ''), qi, q.get('question', ''), answer, status, note))
     total = len(rows)
+    inference_reviewed = len(REVIEWED_INFERENCES)
+    part1_reviewed = counters['Listening']['photo-source-reviewed']
+    part2_reviewed = counters['Listening']['response-fit-checked']
+    part5_reviewed = counters['Reading']['grammar-checked']
+    part6_reviewed = counters['Reading']['context-fit-checked']
+    reserve_by_part = Counter()
+    for item in listening:
+        if item.get('editorialStatus') == 'reserve-pending-independent-review':
+            reserve_by_part[item.get('part', 'Unspecified')] += len(item.get('questions', []))
+    reserve_total = sum(reserve_by_part.values())
+    reserve_breakdown = ', '.join(f'{part}: {count}' for part, count in sorted(reserve_by_part.items())) or 'none'
     lines = [
         f'# TOEIC Editorial Evidence Audit — v{VERSION}', '',
         '## Scope and interpretation',
         f'- Questions indexed: **{total}** ({sum(counters["Listening"].values())} Listening + {sum(counters["Reading"].values())} Reading).',
         '- Every correct option is linked to its source transcript/passage or an explicit review category.',
         '- Direct/lexical matching is evidence discovery only. It does not prove that distractors are wrong or that a paraphrase/inference is unique.',
-        f'- In this editorial pass, 6 low-overlap paraphrase/inference items were checked against their transcript/passage; 8 Part 1 Pexels source descriptions, {sum(len(x.get("questions", [])) for x in listening if x.get("part") == "Part 2" and not x.get("editorialStatus"))} baseline Part 2 response-fit items, all {sum(len(x.get("questions", [])) for x in reading if x.get("part") == "Part 5")} Part 5 grammar items and all {sum(len(x.get("questions", [])) for x in reading if x.get("part") == "Part 6")} Part 6 context-fit items were also reviewed.',
-        f'- {sum(len(x.get("questions", [])) for x in listening if x.get("editorialStatus") == "reserve-pending-independent-review")} Listening questions remain explicitly reserve-pending-independent-review: 1 Batch 017 Part 1 image-description item, 11 Batch 013, 17 Batch 014 and 70 Batch 015. Batch 015 Part 2 evidence identifies the spoken prompt; Parts 3/4 carry transcript phrase pointers. The new AI-generated Part 1 item is intentionally held out of Mock until independent visual/content review. All reserve answers and distractor uniqueness still require an independent second reviewer; automated evidence mapping does not approve them.',
+        f'- Editorial review categories recorded in this source: {inference_reviewed} manually checked low-overlap paraphrase/inference items; {part1_reviewed} Part 1 image/action items; {part2_reviewed} Part 2 response-fit items; {part5_reviewed} Part 5 grammar items; and {part6_reviewed} Part 6 context/cohesion items.',
+        f'- {reserve_total} Listening questions remain reserve-pending-independent-review ({reserve_breakdown}). All reserve answers and distractor uniqueness still require an independent second reviewer; automated evidence mapping does not approve them.',
         '- These are internal editorial checks, not two-person independent proofreading, psychometric validation or ETS approval.',
         '', '## Coverage by evidence type',
         '| Library | Evidence category | Questions |', '|---|---|---:|'
@@ -143,7 +154,7 @@ def main() -> int:
             if value:
                 lines.append(f'| {lib} | {label} | {value} |')
     lines += ['', '## Editorial review record',
-              'The following sections record categories reviewed manually during this pass. Direct/lexical categories remain source-evidence pointers; distractor plausibility and uniqueness for the 126 direct/lexical items plus six inference/paraphrase items were reviewed in v2.15.0. The current answer-position and option-identity audit is maintained separately in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
+              'The following sections record the current evidence classifications. Direct/lexical categories are source pointers, not proof that distractors are implausible or unique. Use the current distractor audit and independent review checklist for those decisions; automated evidence mapping does not approve a question for Mock. The current answer-position and option-identity audit is maintained separately in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
               '']
     for status, label in names.items():
         selected = [r for r in rows if r[6] == status]
@@ -159,15 +170,10 @@ def main() -> int:
             lines.append(f'| {part} · `{ident}` · Q{qi} | {prompt} | {answer} | {note} |')
         lines.append('')
     lines += [
-        '## Corrected issues in this batch',
-        '- The Part 2 `part2-supplier-samples` display prompt was changed to the standard response-selection instruction so it no longer duplicates/rephrases the spoken question.',
-        '- All 23 generic Part 2 transcript-translation placeholders were replaced with Vietnamese translations of the actual spoken line.',
-        '- `part2-room-unavailable` now uses “That’s right…” to confirm the negative-tag statement without relying on a potentially confusing “Yes” response.',
-        '',
-        '## Remaining audit work',
-        '- The historical 132-item distractor review was completed in v2.15.0; 45 added Part 7 questions in v2.33.0 carry explicit source-label and quotation metadata. The 99 Listening reserve questions remain excluded from Mock pending second-person review. Current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
+        '## Interpretation and remaining audit work',
+        '- The current answer-position distribution and stable-choice mapping are recorded in `TOEIC_DISTRACTOR_AUDIT_v' + VERSION + '.md`.',
         '- Verify browser audio playback, pacing and pronunciation on physical iPhone/iPad and Android voice packs; the current TTS remains browser-generated.',
-        '- Obtain a second independent reviewer before releasing a scored mock. No official ETS scoring equivalence is claimed.',
+        '- Obtain a second independent reviewer before releasing any reserve question or claiming psychometric approval. No official ETS scoring equivalence is claimed.',
         ''
     ]
     OUT.parent.mkdir(parents=True, exist_ok=True)

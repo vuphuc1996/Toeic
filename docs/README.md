@@ -1,13 +1,13 @@
-# TOEIC Dictionary v2.93.0 — Documentation
+# TOEIC Dictionary v2.94.0 — Documentation
 
-- Current product source: `v2.93.0` — `versions/CURRENT_VERSION.md`.
-- Previous release: `v2.92.0` — `versions/PREVIOUS_VERSION.md`.
+- Current product source: `v2.94.0` — `versions/CURRENT_VERSION.md`.
+- Previous release: `v2.93.0` — `versions/PREVIOUS_VERSION.md`.
 - Master status: `MASTER_STATUS.md` (single current roadmap/status source).
-- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.93.0.md`.
+- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.94.0.md`.
 - Robot Buddy specification: `reports/ROBOT_BUDDY_v2.86.0.md`.
 - Progress baseline/snapshot: `reports/PROJECT_PROGRESS_BASELINE_v2.83.0.md` and `reports/PROJECT_PROGRESS_SNAPSHOT_v2.83.0.md`.
-- Current progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.93.0.md`.
-- Overall roadmap assessment: `reports/PROJECT_ROADMAP_STATUS_v2.93.0.md`.
+- Current progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.94.0.md`.
+- Overall roadmap assessment: `reports/PROJECT_ROADMAP_STATUS_v2.94.0.md`.
 - A2 extended Listening review handoff: `reports/FOUNDATION_A2_LISTENING_REVIEW_CHECKLIST_v2.91.0.md`.
 - A2 extended Listening technical report: `reports/FOUNDATION_A2_EXTENDED_LISTENING_v2.91.0.md`.
 - Older detailed records are consolidated in `archive/PROJECT_HISTORY.md`; release-level history remains in `CHANGELOG.md`.
@@ -28,15 +28,18 @@
 
 - v2.92.0 content batch: Grammar 41 lessons / 110 exercises; TOEIC Listening 113 units / 219 questions; TOEIC Reading 57 resources / 227 questions. The 18 v2.92.0 Listening and 27 v2.92.0 Reading questions plus 20 v2.93.0 Listening and 36 v2.93.0 Reading questions remain pending independent review and are excluded from Mock.
 - B1 curriculum blueprint: `reports/FOUNDATION_B1_CURRICULUM_BLUEPRINT_v2.92.0.md` (design-only, not a selectable pathway).
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.93.0.md`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.94.0.md`.
 - v2.92.0 independent-review handoff: `reports/TOEIC_BATCH_024_REVIEW_CHECKLIST_v2.92.0.md`.
 
 - v2.93.0 adds the local Full Mock score-readiness evidence tracker. It requires three completed 200-question Full Mocks before showing L/R trends; it never converts accuracy into ETS scaled scores.
 - v2.93.0 review handoff: `reports/TOEIC_BATCH_025_REVIEW_CHECKLIST_v2.93.0.md`; score-readiness design: `reports/TOEIC_SCORE_READINESS_v2.93.0.md`.
 - TOEIC L/R remain the active scope. B1 remains design-only; Speaking/Writing and IELTS remain deferred.
 
-- Current v2.93.0 inventory: 1,141 vocabulary headwords; 50 Grammar lessons / 137 exercises; 121 Listening units / 239 questions; 65 Reading resources / 263 questions.
-- v2.93.0 score readiness uses three completed 200-question Full Mocks to show L/R trends only; it never estimates an ETS scaled score.
+- Current v2.94.0 inventory: 1,141 vocabulary headwords; 50 Grammar lessons / 137 exercises; 121 Listening units / 239 questions; 65 Reading resources / 263 questions.
+- Score Readiness (introduced in v2.93.0 and retained in v2.94.0) uses three completed 200-question Full Mocks to show L/R trends only; it never estimates an ETS scaled score.
 
-- v2.93.0 is the consolidated acceptance-test target. Hold v2.94.0 until the user completes the combined test and feedback is recorded in Master.
-- Consolidated user acceptance test: `reports/USER_ACCEPTANCE_TEST_v2.93.0.md`.
+- v2.94.0 consolidated release: repaired question-evidence CI assertions, unified browser SpeechSynthesis playback and fallback/watchdogs, prevented Robot Buddy mobile focus auto-zoom without disabling pinch zoom, added one-tap Robot progress analysis with accessible color-coded module meters, and enriched 42 examples across the newest 17 Grammar lessons.
+- Repository-integrity preflight audits PWA local paths, HTML/CSS/JS asset references, workflow scripts/tests and all JSON data; this is a structural guard, not a guarantee of defect-free software.
+- Current TOEIC inventory remains 1,141 vocabulary records, 50 Grammar lessons / 137 exercises, 121 Listening units / 239 questions and 65 Reading resources / 263 questions. New reserve content remains pending review and excluded from Mock.
+- v2.94.0 consolidated user acceptance test: `reports/USER_ACCEPTANCE_TEST_v2.94.0.md`. Do not start another release before recording this acceptance result.
+- Current supporting reports: `reports/VOICE_PLAYBACK_REGRESSION_v2.94.0.md`, `reports/GRAMMAR_EXAMPLES_COMPLETENESS_v2.94.0.md`, and `reports/REPOSITORY_INTEGRITY_v2.94.0.md`.

@@ -51,5 +51,15 @@
     "part7-single-expense-guideline": "60747a9f4d9a61de47f1af4f2fdde00ff232047a9c3f125c068ac73456e85218",
     "part7-double-product-recall": "da35e7c07c9bf7ae26840df3a2026b29b4e7a7c1206119a31352543055fd83fb",
     "part7-single-recruitment-fair": "82a6875d908544af52799cbbb762f8d38b3564f5cb3923e27177026e0bcad401"
+  },
+  "grammar_sha256_v2_94_enriched": {
+    "conditional-forms-business-toeic": "397ac9e248cacb78512cf17d9862d0969bff9055250238d13361d8e2888e5b09",
+    "reported-speech-workplace-toeic": "2766a9e7dcb964a258ad557a158bf344715705bbed0e9cc065ab913102753e97",
+    "comparatives-business-reporting-toeic": "cb14e19b3fb8e0eb527fb319590a07354f09e49cc54d44b54d6bb5990a5259c5",
+    "countability-quantifiers-toeic": "0f6ac2a4b44cce5d0eae8807c39dece1442493e89b6b914cc58dea807ce7a52e",
+    "gerund-infinitive-business-verbs-toeic": "68bbc39bcf74e5211efde9ac6323c9069765f25ceaf2b8794f88cd60da07eb98",
+    "passive-reporting-process-toeic": "b4fb7aa49c1aee453611d7c2d4aaf6791b6c8283712a3b8e0ad8e1192a4ea43a",
+    "relative-clauses-reference-toeic": "e5bf841ced2e5cd4e0d17b369c7cc1e15882f7e4aa957d66c74c57f64f9c81e6",
+    "prepositions-time-deadlines-toeic": "6fd303bee44ae47903bb191d9bd34071729133956fca8f22502cfe8ba9cd6381"
   }
 }

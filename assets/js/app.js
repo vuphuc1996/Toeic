@@ -14,7 +14,7 @@ import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrit
 import { createRobotBuddy } from './robot-buddy.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.93.0';
+const APP_RELEASE_VERSION = '2.94.0';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -95,7 +95,8 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const DB_NAME = 'toeic-vocabulary-phase1';
 const DB_STORE = 'workspace';
 const DEFAULT_TTS_SETTINGS = { accent: 'en-US', defaultGender: 'female', maleVoiceURI: '', femaleVoiceURI: '', rate: 0.92, pitch: 1, volume: 1, wordPauseMs: 900, sentencePauseMs: 850 };
-const TTS_PREPARATION_DELAY_MS = 2000;
+const SPEECH_START_TIMEOUT_MS = 10000;
+const SPEECH_END_TIMEOUT_MIN_MS = 20000;
 const PART1_TITLE_PAUSE_MS = 1000;
 const PART1_LEAD_IN_PAUSE_MS = 1000;
 const PART1_OPTION_LABEL_PAUSE_MS = 1500;
@@ -2287,9 +2288,8 @@ async function playFoundationListening(clipId){
  const segments=Array.isArray(clip.segments)&&clip.segments.length?clip.segments:String(clip.script||'').match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map((text,index)=>({speaker:'Narrator',voice:cfg.defaultGender,text:text.trim(),accent:cfg.accent}))||[];
  if(!segments.length){toast('Bài nghe chưa có nội dung để phát.','error');return;}
  stopSpeech();const playbackToken=++listeningPlaybackToken;const status=$(`[id="foundationListeningStatus-${String(clipId).replace(/[^a-zA-Z0-9_-]/g,'-')}"]`);
- if(status)status.textContent='Đang tải voice và chuẩn bị đoạn nghe…';
- const prepared=await prepareSpeechEngine(playbackToken);
- if(!prepared||playbackToken!==listeningPlaybackToken)return;
+ if(status)status.textContent='Đang khởi động giọng đọc…';
+ if(!prepareSpeechEngine(playbackToken)||playbackToken!==listeningPlaybackToken)return;
  const speakerVoices=new Map();const usedVoiceNames={female:[],male:[]};
  const resolveVoice=segment=>{
    const speaker=String(segment.speaker||'Narrator').trim(),key=speaker.toLowerCase();
@@ -2307,7 +2307,7 @@ async function playFoundationListening(clipId){
    if(status)status.textContent=`Đang nghe ${speaker} (${index+1}/${segments.length})…`;
    const played=await speakUtterance(segment.text,{accent:segment.accent||cfg.accent,gender,voice,rate:cfg.rate,onStart:()=>{if(status)status.textContent=`${speaker} đang nói…`; }},playbackToken);
    if(playbackToken!==listeningPlaybackToken)return;
-   if(!played){if(status)status.textContent='Voice gặp lỗi khi phát. Hãy kiểm tra hoặc chọn lại giọng nam/nữ trong Cấu hình.';toast('Không thể phát lượt thoại bằng voice đã chọn. Hãy thử voice khác trong Cấu hình.','error');return;}
+   if(!played){if(status)status.textContent=speechFailureMessage();toast(speechFailureMessage(),'error');return;}
    if(index<segments.length-1){
      const gap=Math.max(500,Number(cfg.sentencePauseMs)||850);
      if(status)status.textContent=`Đã hết lượt ${speaker} · nghỉ ${(gap/1000).toFixed(2)} giây…`;
@@ -2649,7 +2649,7 @@ function openReadingDetail(id){
   const questions=(reading.questions||[]).map((q,i)=>{const saved=prog.answers?.[i],draftChoice=getPracticeDraftChoice(prog,i),history=getPracticeAttemptHistory(prog,i),attemptLabel=history.length&&!saved?` · LÀM LẠI LẦN ${history.length+1}`:'';const feedback=saved?.answered?`<p class="exercise-feedback visible">${savedChoiceHistoryMarkup(q,saved)}${escapeHtml(q.explanation)}</p>${practiceRetryActionMarkup('reading',id,i,prog,saved)}`:`<p class="exercise-feedback" hidden></p>${history.length?`<small class="practice-retry-hint">Đã lưu ${history.length} lần trước. Bạn đang làm lại câu này.</small>${practiceAttemptHistoryMarkup(prog,i)}`:''}`;return `<article class="lesson-exercise reading-question" data-started-at="${Date.now()}" data-reading-question="${i}"><div class="exercise-kicker">CÂU HỎI ${i+1}${attemptLabel}</div><h4>${escapeHtml(q.question)}</h4><div class="exercise-choice-grid">${q.choices.map((choice,j)=>`<button type="button" class="exercise-choice ${saved?.answered&&j===q.answerIndex?'is-correct':''} ${savedChoiceWrongClass(q,saved,j)?'is-wrong':''} ${!saved?.answered&&draftChoice===j?'is-selected':''}" data-reading-choice data-reading-id="${escapeHtml(id)}" data-question-index="${i}" data-choice-index="${j}" data-choice-id="${escapeHtml(choiceIdAt(q,j))}" ${saved?.answered?'disabled':''}><span>${String.fromCharCode(65+j)}</span>${escapeHtml(choice)}</button>`).join('')}</div>${feedback}</article>`;}).join('');
   const vocabMarkup=vocab?`<section class="detail-section"><h4>TỪ VỰNG TRONG BÀI · NHẤN ĐỂ TRA CỨU</h4><div class="reading-vocab-grid">${vocab}</div></section>`:'';
   const retryToolbar=practiceRetryAllToolbar('reading',id,prog,reading.questions||[])+practiceDraftToolbar('reading',id,prog,reading.questions||[]);
-  const readerToolbar=(reading.passage||(reading.documents||[]).some(doc=>doc.content)||reading.part==='Part 5')?`<div class="reading-audio-toolbar"><div><strong>Nghe đọc nội dung</strong><small>Giọng đọc sẽ được chuẩn bị trước khi bắt đầu để tránh mất âm đầu.</small></div><div class="reading-audio-actions"><button type="button" class="secondary-button" data-reading-speak="${escapeHtml(id)}">▶ Nghe đọc bài</button><button type="button" class="text-button" data-stop-speech>⏹ Dừng</button></div><p class="reading-audio-status" data-reading-audio-status aria-live="polite">Sẵn sàng đọc bài bằng TTS.</p></div>`:'';
+  const readerToolbar=(reading.passage||(reading.documents||[]).some(doc=>doc.content)||reading.part==='Part 5')?`<div class="reading-audio-toolbar"><div><strong>Nghe đọc nội dung</strong><small>Giọng đọc bắt đầu ngay khi bạn nhấn nút; thiết bị có thể cần vài giây ở lần phát đầu tiên.</small></div><div class="reading-audio-actions"><button type="button" class="secondary-button" data-reading-speak="${escapeHtml(id)}">▶ Nghe đọc bài</button><button type="button" class="text-button" data-stop-speech>⏹ Dừng</button></div><p class="reading-audio-status" data-reading-audio-status aria-live="polite">Sẵn sàng đọc bài bằng TTS.</p></div>`:'';
   const content=`${passageMarkup}${readerToolbar}<details class="translation-details"><summary>Xem bản dịch tiếng Việt</summary><p>${escapeHtml(reading.translation||'Chưa có bản dịch.')}</p></details>${vocabMarkup}<section class="detail-section"><h4>${escapeHtml(reading.part||'READING')} · CÂU HỎI</h4>${retryToolbar}<div class="lesson-exercises">${questions}</div></section><div class="modal-actions"><button class="primary-button" data-ai-reading="${escapeHtml(id)}">${icon('sparkles','ui-icon button-icon')} Phân tích bài đọc bằng Google AI</button></div>`;
   openLearningDetail({title:reading.title,subtitle:`${reading.part||'Reading'} · ${reading.documentType||reading.topic} · ${reading.level}`,eyebrow:'READING · TOEIC LEARNING',content});
   maybeShowPracticeBatchResult('reading',id);
@@ -2661,8 +2661,8 @@ function playReadingText(id){
   let text=[String(reading.passage||'').trim(),...documents].filter(Boolean).join('\n\n');
   if(!text&&reading.part==='Part 5')text=(reading.questions||[]).map((question,index)=>`Question ${index+1}. ${question.question}. ${question.choices.map((choice,choiceIndex)=>`${String.fromCharCode(65+choiceIndex)}. ${choice}`).join('. ')}`).join('\n\n');
   if(!text){toast('Bài đọc này chưa có nội dung tiếng Anh để phát.','error');return;}
-  if(status)status.textContent='Đang chuẩn bị voice và nội dung đọc…';
-  speakText(text,null,'',state.settings.tts?.defaultGender||'female',{onStart:()=>{if(status)status.textContent='Đang đọc nội dung tiếng Anh…';},onEnd:()=>{if(status)status.textContent='Đã đọc xong. Bạn có thể nghe lại hoặc chọn Dừng.';},onError:()=>{if(status)status.textContent='Không thể đọc bằng voice hiện tại. Hãy thử đổi voice trong Cấu hình.';}});
+  if(status)status.textContent='Đang khởi động giọng đọc…';
+  speakText(text,null,'',state.settings.tts?.defaultGender||'female',{onStart:()=>{if(status)status.textContent='Đang đọc nội dung tiếng Anh…';},onEnd:()=>{if(status)status.textContent='Đã đọc xong. Bạn có thể nghe lại hoặc chọn Dừng.';},onError:()=>{if(status)status.textContent=speechFailureMessage();}});
 }
 async function answerReadingQuestion(button){return stagePracticeBatchAnswer('reading',button.dataset.readingId,Number(button.dataset.questionIndex),Number(button.dataset.choiceIndex),button);}
 
@@ -2697,7 +2697,14 @@ let activeSpeechCancel=null;
 let speechVoicesCache=[];
 function getSpeechVoices(){
   if(!('speechSynthesis' in window))return [];
-  speechVoicesCache=(window.speechSynthesis.getVoices()||[]).filter(v=>String(v.lang||'').toLowerCase().startsWith('en'));
+  try{
+    speechVoicesCache=(window.speechSynthesis.getVoices()||[]).filter(v=>String(v.lang||'').toLowerCase().startsWith('en'));
+  }catch(error){
+    // Some mobile engines throw while their voice catalogue is initializing.
+    // Keep playback available through the system-default voice in that case.
+    speechVoicesCache=[];
+    console.warn('Không đọc được voice catalog; sẽ dùng voice mặc định:',error);
+  }
   return speechVoicesCache;
 }
 function hasSpeechVoiceCatalog(){
@@ -2756,7 +2763,7 @@ function refreshSpeechVoiceSelectors(){
   if(status){
     status.textContent=voices.length
       ?`Đã tìm thấy ${voices.length} voice tiếng Anh trên thiết bị này.${suggestedMale?' Giọng nam gợi ý: '+suggestedMale.name+' — '+suggestedMale.lang+'.':''}`
-      :'Trình duyệt chưa cung cấp voice tiếng Anh. Thử tải lại danh sách hoặc kiểm tra cài đặt giọng nói của hệ điều hành.';
+      :'Trình duyệt chưa cung cấp danh sách voice tiếng Anh. Khi phát, ứng dụng sẽ thử voice mặc định của hệ thống; hãy cài thêm English voice nếu không nghe được.';
   }
 }
 function chooseEnglishVoice(accent='en-US',speaker='',voiceHint='',excludeNames=[]){
@@ -2779,9 +2786,9 @@ function chooseEnglishVoice(accent='en-US',speaker='',voiceHint='',excludeNames=
   const candidates=available.length?available:preferred;
   return candidates.find(v=>/natural|neural|premium|enhanced/i.test(v.name))||candidates.find(v=>v.localService!==false)||candidates[0]||null;
 }
-function configureUtterance(utterance,{accent,gender,voice,rate}={}){
+function configureUtterance(utterance,{accent,gender,voice,rate,systemDefault=false}={}){
   const cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})};
-  const chosen=voice||chooseEnglishVoice(accent||cfg.accent,'',gender||cfg.defaultGender);
+  const chosen=systemDefault?null:(voice||chooseEnglishVoice(accent||cfg.accent,'',gender||cfg.defaultGender));
   utterance.lang=chosen?.lang||accent||cfg.accent||'en-US';
   utterance.rate=Math.min(1.15,Math.max(.75,Number(rate??cfg.rate)||.92));
   utterance.pitch=Math.min(1.2,Math.max(.8,Number(cfg.pitch)||1));
@@ -2810,59 +2817,95 @@ function waitSpeechGap(ms,token){
     },Math.max(0,ms));
   });
 }
-async function waitForSpeechVoiceCatalog(token,timeoutMs=1200){
-  if(hasSpeechVoiceCatalog())return true;
-  const started=Date.now();
-  while(token===listeningPlaybackToken&&Date.now()-started<timeoutMs){
-    if(hasSpeechVoiceCatalog())return true;
-    const remaining=timeoutMs-(Date.now()-started);
-    if(!await waitSpeechGap(Math.min(100,Math.max(20,remaining)),token))return false;
-  }
-  // Some devices expose only their default system voice and never publish an English voice list.
-  // In that case, let SpeechSynthesis use its own fallback rather than blocking playback forever.
-  return token===listeningPlaybackToken&&hasSpeechVoiceCatalog();
-}
-async function prepareSpeechEngine(token){
+function prepareSpeechEngine(token){
   if(token!==listeningPlaybackToken||!('speechSynthesis'in window))return false;
   const synth=window.speechSynthesis;
-  await waitForSpeechVoiceCatalog(token,1200);
-  if(token!==listeningPlaybackToken)return false;
-  // A previous cancel() can leave the platform speech engine in a transition state.
-  // Cancel residual work and wait before the first real utterance is queued.
-  if(synth.speaking||synth.pending){try{synth.cancel();}catch(error){console.warn('Không thể làm sạch hàng đợi TTS:',error);}}
-  // Fixed two-second readiness buffer across every spoken learning/exam route.
-  // This is intentionally not user-configurable so practice and mock timing cannot drift.
-  return waitSpeechGap(TTS_PREPARATION_DELAY_MS,token);
+  // Do not await voiceschanged or a startup timer before the first utterance.
+  // Mobile Safari can drop transient user activation while async preparation is pending.
+  try{
+    if(typeof synth.getVoices==='function')synth.getVoices();
+    if(synth.paused&&typeof synth.resume==='function')synth.resume();
+  }catch(error){console.warn('Không thể khởi động speech synthesis:',error);}
+  return token===listeningPlaybackToken;
 }
 async function speakText(text,accent=null,speaker='',gender=null,lifecycle={}){
   if(!('speechSynthesis'in window)||typeof SpeechSynthesisUtterance==='undefined'){toast('Trình duyệt/thiết bị này chưa hỗ trợ đọc phát âm.','error');lifecycle.onError?.();return false;}
   const clean=String(text||'').trim();if(!clean)return false;
   stopSpeech();const token=listeningPlaybackToken;const cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})};
   if(lifecycle.onPrepare)lifecycle.onPrepare();
-  const ready=await prepareSpeechEngine(token);
-  if(!ready||token!==listeningPlaybackToken)return false;
+  if(!prepareSpeechEngine(token)||token!==listeningPlaybackToken)return false;
   const voice=chooseEnglishVoice(accent||cfg.accent,speaker,gender||cfg.defaultGender);
-  const ok=await speakUtterance(clean,{accent:accent||cfg.accent,gender:gender||cfg.defaultGender,voice,rate:cfg.rate,onStart:lifecycle.onStart},token);
+  // speakUtterance queues speech synchronously in the original click/tap call stack.
+  const speech=speakUtterance(clean,{accent:accent||cfg.accent,gender:gender||cfg.defaultGender,voice,rate:cfg.rate,onStart:lifecycle.onStart},token);
+  const ok=await speech;
   if(token!==listeningPlaybackToken)return false;
-  if(!ok){lifecycle.onError?.();toast('Không thể phát âm bằng voice đã chọn. Hãy thử voice khác trong Cấu hình.','error');return false;}
+  if(!ok){lifecycle.onError?.();toast(speechFailureMessage(),'error');return false;}
   lifecycle.onEnd?.();return true;
+}
+let lastSpeechError='';
+function speechFailureMessage(){
+  const messages={
+    'start-timeout':'Trình duyệt không khởi động được giọng đọc sau 10 giây. Hãy thử bấm nghe lại hoặc chọn voice khác trong Cấu hình.',
+    'end-timeout':'Giọng đọc đã bắt đầu nhưng không gửi tín hiệu kết thúc. Hãy dừng audio rồi thử phát lại.',
+    'not-allowed':'Trình duyệt đã chặn phát âm. Hãy bấm trực tiếp nút Nghe và kiểm tra quyền âm thanh của trang.',
+    'voice-unavailable':'Voice đã chọn không khả dụng. Hệ thống đã thử dùng voice mặc định; vui lòng chọn voice khác nếu vẫn không nghe được.',
+    'language-unavailable':'Thiết bị không có voice phù hợp với ngôn ngữ đang chọn. Hãy kiểm tra gói giọng đọc tiếng Anh.',
+    'network':'Voice trực tuyến gặp lỗi mạng. Hãy thử voice cài sẵn trên thiết bị.',
+    'synthesis-failed':'Bộ đọc của trình duyệt gặp lỗi. Hãy thử lại hoặc chọn voice khác trong Cấu hình.'
+  };
+  return messages[lastSpeechError]||'Không thể phát âm thanh. Hãy bấm nghe lại hoặc kiểm tra voice trong Cấu hình.';
 }
 function speakUtterance(text,{accent='en-US',voice=null,gender='female',rate=null,onStart=null}={},token){
   return new Promise(resolve=>{
-    if(token!==listeningPlaybackToken)return resolve(false);
-    const utterance=configureUtterance(new SpeechSynthesisUtterance(String(text||'')),{accent,gender,voice,rate});
-    let settled=false,cancelActive=null;
-    const finish=ok=>{
-      if(settled)return;settled=true;
+    const clean=String(text||'').trim();
+    if(token!==listeningPlaybackToken||!clean)return resolve(false);
+    let settled=false,startTimer=null,endTimer=null,fallbackAttempted=false,activeAttempt=0;
+    const clearWatchdogs=()=>{if(startTimer)clearTimeout(startTimer);if(endTimer)clearTimeout(endTimer);startTimer=null;endTimer=null;};
+    const finish=(ok,error='')=>{
+      if(settled)return;settled=true;activeAttempt++;clearWatchdogs();
+      if(error)lastSpeechError=error;
       if(activeSpeechCancel===cancelActive)activeSpeechCancel=null;
       resolve(ok&&token===listeningPlaybackToken);
     };
-    cancelActive=()=>finish(false);activeSpeechCancel=cancelActive;
-    utterance.onstart=()=>{if(token===listeningPlaybackToken)onStart?.();};
-    utterance.onend=()=>finish(true);utterance.onerror=()=>finish(false);
-    try{window.speechSynthesis.speak(utterance);}catch(error){finish(false);}
+    const cancelActive=()=>finish(false,'canceled');activeSpeechCancel=cancelActive;
+    const enqueue=(selectedVoice,usingFallback=false)=>{
+      if(settled||token!==listeningPlaybackToken)return finish(false,'canceled');
+      const attempt=++activeAttempt;
+      let utterance;
+      try{
+        utterance=configureUtterance(new SpeechSynthesisUtterance(clean),{accent,gender,voice:selectedVoice,rate,systemDefault:usingFallback});
+      }catch(error){finish(false,'synthesis-failed');return;}
+      const estimatedDuration=Math.min(180000,Math.max(SPEECH_END_TIMEOUT_MIN_MS,Math.ceil(clean.length*260/Math.max(.75,utterance.rate||1))+12000));
+      startTimer=setTimeout(()=>{if(attempt===activeAttempt)finish(false,'start-timeout');},SPEECH_START_TIMEOUT_MS);
+      endTimer=setTimeout(()=>{if(attempt===activeAttempt)finish(false,'end-timeout');},estimatedDuration);
+      utterance.onstart=()=>{
+        if(settled||attempt!==activeAttempt||token!==listeningPlaybackToken)return;
+        if(startTimer){clearTimeout(startTimer);startTimer=null;}
+        onStart?.();
+      };
+      utterance.onend=()=>{if(!settled&&attempt===activeAttempt)finish(true);};
+      utterance.onerror=event=>{
+        if(settled||attempt!==activeAttempt)return;
+        const error=String(event?.error||'synthesis-failed');
+        // Retry a failed named voice once with the system default. Do not cancel
+        // the synthesis queue here: cancel() can emit a stale error for this
+        // utterance on some engines and accidentally cancel the fallback too.
+        if(!usingFallback&&!fallbackAttempted&&selectedVoice&&token===listeningPlaybackToken&&!['canceled','interrupted'].includes(error)){
+          fallbackAttempted=true;clearWatchdogs();enqueue(null,true);return;
+        }
+        finish(false,error);
+      };
+      try{
+        const synth=window.speechSynthesis;
+        if(typeof synth.resume==='function')synth.resume();
+        synth.speak(utterance);
+      }catch(error){if(attempt===activeAttempt)finish(false,'synthesis-failed');}
+    };
+    lastSpeechError='';
+    enqueue(voice,false);
   });
 }
+
 async function playListeningAudio(id, options={}){
   if(!('speechSynthesis'in window)||typeof SpeechSynthesisUtterance==='undefined'){toast('Thiết bị chưa hỗ trợ Text-to-Speech.','error');return;}
   const item=state.listening.find(x=>x.id===id);if(!item)return;
@@ -2884,10 +2927,9 @@ async function playListeningAudio(id, options={}){
     const voice=chooseEnglishVoice(segmentAccent,speaker,gender,usedVoiceNames[gender]||[]);
     if(voice){speakerVoices.set(key,voice);(usedVoiceNames[gender]||[]).push(voice.name);}return voice;
   };
-  if(status)status.textContent='Đang tải voice và chuẩn bị bộ đọc…';
-  const prepared=await prepareSpeechEngine(playbackToken);
-  if(!prepared||playbackToken!==listeningPlaybackToken)return;
-  if(status)status.textContent=`Đã sẵn sàng · ${isPart1?'đọc câu dẫn rồi phát A–D':'bắt đầu bài nghe'}…`;
+  if(status)status.textContent='Đang khởi động giọng đọc…';
+  if(!prepareSpeechEngine(playbackToken)||playbackToken!==listeningPlaybackToken)return;
+  if(status)status.textContent=`Đang yêu cầu trình duyệt phát audio · ${isPart1?'Part 1':'Listening'}…`;
   if(isPart1){
     const first=segments[0],leadGender=classifyVoiceHint(first.voice||first.speaker)||cfg.defaultGender,leadVoice=resolveSpeakerVoice(first);
     if(!options.skipLeadIn){
@@ -2895,13 +2937,13 @@ async function playListeningAudio(id, options={}){
       if(status)status.textContent=`Đang giới thiệu ${partHeader}…`;
       const titleOk=await speakUtterance(partHeader,{accent:first.accent||cfg.accent,gender:leadGender,voice:leadVoice,rate:speed,onStart:()=>{if(status)status.textContent=partHeader;}},playbackToken);
       if(playbackToken!==listeningPlaybackToken)return;
-      if(!titleOk){if(status)status.textContent='Voice gặp lỗi khi đọc tên Part. Bạn có thể chọn voice khác trong Cấu hình.';return;}
+      if(!titleOk){if(status)status.textContent=speechFailureMessage();return;}
       if(status)status.textContent='Đã giới thiệu Part · nghỉ 1 giây trước câu dẫn…';
       if(!await waitSpeechGap(PART1_TITLE_PAUSE_MS,playbackToken))return;
       if(status)status.textContent='Đang đọc câu dẫn Part 1…';
       const leadOk=await speakUtterance(PART1_LEAD_IN_TEXT,{accent:first.accent||cfg.accent,gender:leadGender,voice:leadVoice,rate:speed,onStart:()=>{if(status)status.textContent=PART1_LEAD_IN_TEXT;}},playbackToken);
       if(playbackToken!==listeningPlaybackToken)return;
-      if(!leadOk){if(status)status.textContent='Voice gặp lỗi khi đọc câu dẫn. Bạn có thể chọn voice khác trong Cấu hình.';return;}
+      if(!leadOk){if(status)status.textContent=speechFailureMessage();return;}
       if(status)status.textContent='Câu dẫn đã kết thúc · nghỉ 1 giây trước lựa chọn A…';
       if(!await waitSpeechGap(PART1_LEAD_IN_PAUSE_MS,playbackToken))return;
     }
@@ -2918,13 +2960,13 @@ async function playListeningAudio(id, options={}){
     if(isPart1){
       const labelOk=await speakUtterance(`${letter}.`,{accent:segment.accent||cfg.accent,gender,voice,rate:speed,onStart:()=>{if(status)status.textContent=`Đang đọc nhãn ${letter}…`; }},playbackToken);
       if(playbackToken!==listeningPlaybackToken)return;
-      if(!labelOk){if(status)status.textContent='Voice gặp lỗi khi đọc nhãn lựa chọn.';return;}
+      if(!labelOk){if(status)status.textContent=speechFailureMessage();return;}
       if(status)status.textContent=`Đã đọc nhãn ${letter} · nghỉ 1,5 giây trước nội dung…`;
       if(!await waitSpeechGap(PART1_OPTION_LABEL_PAUSE_MS,playbackToken))return;
     }
     const optionOk=await speakUtterance(isPart1?optionText:segment.text,{accent:segment.accent||cfg.accent,gender,voice,rate:speed,onStart:()=>{if(status)status.textContent=`Đang nghe ${segmentLabel}…`; }},playbackToken);
     if(playbackToken!==listeningPlaybackToken)return;
-    if(!optionOk){if(status)status.textContent='Voice gặp lỗi khi phát nội dung. Bạn có thể chọn voice khác trong Cấu hình.';return;}
+    if(!optionOk){if(status)status.textContent=speechFailureMessage();return;}
     if(index<segments.length-1){
       const gap=isPart1?PART1_OPTION_GAP_MS:Math.max(500,Number(cfg.sentencePauseMs)||850);
       if(status)status.textContent=`${segmentLabel} vừa kết thúc · chuẩn bị lượt tiếp theo trong ${(gap/1000).toFixed(2)} giây…`;
@@ -2939,15 +2981,15 @@ async function playListeningVocabulary(id){
   const words=(item.vocabulary||[]).map(v=>String(v.word||'').trim()).filter(Boolean);
   if(!words.length){toast('Bài nghe này chưa có danh sách từ vựng để phát.','error');return;}
   stopSpeech();const token=++listeningPlaybackToken,cfg={...DEFAULT_TTS_SETTINGS,...(state.settings.tts||{})},status=$('#listeningPlayerStatus');
-  if(status)status.textContent='Đang chuẩn bị voice trước khi đọc danh sách từ…';
-  if(!await prepareSpeechEngine(token)||token!==listeningPlaybackToken)return;
-  if(status)status.textContent=`Đang đọc chậm danh sách ${words.length} từ…`;
+  if(status)status.textContent='Đang khởi động giọng đọc…';
+  if(!prepareSpeechEngine(token)||token!==listeningPlaybackToken)return;
+  if(status)status.textContent=`Đang yêu cầu đọc danh sách ${words.length} từ…`;
   for(let i=0;i<words.length;i++){
     if(token!==listeningPlaybackToken)return;
     if(status)status.textContent=`Từ ${i+1}/${words.length}: ${words[i]}`;
     const ok=await speakUtterance(words[i],{accent:cfg.accent,gender:cfg.defaultGender},token);
     if(token!==listeningPlaybackToken)return;
-    if(!ok){if(status)status.textContent='Voice gặp lỗi. Hãy chọn voice khác trong Cấu hình.';return;}
+    if(!ok){if(status)status.textContent=speechFailureMessage();return;}
     if(i<words.length-1&&!await waitSpeechGap(cfg.wordPauseMs,token))return;
   }
   if(token===listeningPlaybackToken&&status)status.textContent=`Đã đọc xong ${words.length} từ. Khoảng nghỉ giữa các từ: ${(cfg.wordPauseMs/1000).toFixed(1)} giây.`;
@@ -3174,6 +3216,54 @@ function getRobotInsightActions(insights){
   }
   return actions;
 }
+function appendRobotProgressDashboard(insights,anchor=null){
+  const log=$('#robotChatLog');if(!log||!insights)return null;
+  const dashboard=document.createElement('section');dashboard.className='robot-progress-dashboard';dashboard.setAttribute('aria-label','Bảng tiến độ học tập cục bộ');
+  const heading=document.createElement('div');heading.className='robot-progress-dashboard-heading';
+  const title=document.createElement('strong');title.textContent='Bản đồ tiến độ học tập';
+  const note=document.createElement('small');note.textContent='Số liệu trên thiết bị · không phải điểm TOEIC chính thức';
+  heading.append(title,note);dashboard.append(heading);
+  const totals=document.createElement('div');totals.className='robot-progress-totals';
+  const totalCards=[['Cần học',insights.totals?.learn||0,'learn'],['Cần luyện',insights.totals?.practice||0,'practice'],['Cần ôn',insights.totals?.review||0,'review']];
+  for(const [label,value,kind] of totalCards){const card=document.createElement('div');card.className=`robot-progress-total is-${kind}`;const caption=document.createElement('small');caption.textContent=label;const number=document.createElement('strong');number.textContent=Number(value).toLocaleString('vi-VN');card.append(caption,number);totals.append(card);}
+  dashboard.append(totals);
+  const list=document.createElement('div');list.className='robot-progress-section-list';
+  for(const section of insights.sections||[]){
+    const row=document.createElement('article');row.className='robot-progress-section';
+    const top=document.createElement('div');top.className='robot-progress-section-top';
+    const name=document.createElement('strong');name.textContent=section.name;
+    const metric=document.createElement('span');
+    if(Number.isFinite(section.totalUnits)&&section.totalUnits>0){metric.textContent=`${section.studiedUnits||0}/${section.totalUnits} mục có lượt học`;}else if(section.name==='Thi thử'){metric.textContent=`${section.studiedUnits||0} đề hoàn thành`;}else{metric.textContent='Chưa có mẫu số';}
+    top.append(name,metric);row.append(top);
+    if(Number.isFinite(section.coveragePercent)){
+      const track=document.createElement('div');track.className='robot-progress-track';track.setAttribute('role','progressbar');track.setAttribute('aria-label',`${section.name}: mức độ có lượt học`);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax','100');track.setAttribute('aria-valuenow',String(section.coveragePercent));
+      const fill=document.createElement('span');fill.style.width=`${Math.max(0,Math.min(100,section.coveragePercent))}%`;track.append(fill);row.append(track);
+      const foot=document.createElement('div');foot.className='robot-progress-section-foot';
+      const coverage=document.createElement('small');coverage.textContent=`Mức độ đã có lượt học: ${section.coveragePercent}%`;
+      const accuracy=document.createElement('small');accuracy.textContent=section.accuracy===null||section.attempted<5?`Chưa đủ dữ liệu đánh giá độ chính xác${section.attempted?` · ${section.attempted} câu đã trả lời`:''}`:`${section.accuracy}% đúng · ${section.attempted} câu`;
+      foot.append(coverage,accuracy);row.append(foot);
+    }else{
+      const foot=document.createElement('small');foot.className='robot-progress-section-foot-note';foot.textContent=section.accuracy===null?`Chưa có đủ bài thi đã hoàn thành để đánh giá.`:`Độ chính xác trung bình nội bộ: ${section.accuracy}% · ${section.attempted} câu`;
+      row.append(foot);
+    }
+    const chips=document.createElement('div');chips.className='robot-progress-section-chips';
+    for(const [label,key] of [['Học', 'learn'],['Luyện','practice'],['Ôn','review']]){const value=Number(section[key])||0;if(!value)continue;const chip=document.createElement('span');chip.className=`is-${key}`;chip.textContent=`${label}: ${value}`;chips.append(chip);}
+    if(chips.childNodes.length)row.append(chips);
+    list.append(row);
+  }
+  dashboard.append(list);
+  const foot=document.createElement('p');foot.className='robot-progress-dashboard-foot';foot.textContent='Tỷ lệ trên là số bài/tài nguyên đã có ít nhất một lượt học so với kho đang có, không phải tỷ lệ hoàn thành khóa học. Ngưỡng Cần luyện/Cần ôn là tín hiệu gợi ý nội bộ; khi dữ liệu ít, hệ thống không kết luận điểm yếu.';
+  dashboard.append(foot);
+  if(anchor?.parentNode)anchor.after(dashboard);else log.append(dashboard);
+  log.scrollTop=log.scrollHeight;return dashboard;
+}
+function runRobotProgressAnalysis(){
+  if(robotReadSettings().learningInsightsEnabled===false){appendRobotMessage('bot','Phân tích tiến độ đang tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ: Tắt” ở phía trên.');return;}
+  const insights=getRobotLearningInsightsNow();
+  appendRobotMessage('user','Phân tích tiến độ học tập của tôi.');
+  const message=appendRobotMessage('bot',formatRobotLearningInsights(insights),getRobotInsightActions(insights));
+  appendRobotProgressDashboard(insights,message);setRobotEmotion('analyzing');
+}
 function sendRobotMessage(rawText){
   const text=String(rawText||'').trim();if(!text||!robotBuddyEngine)return;
   appendRobotMessage('user',text);
@@ -3184,16 +3274,18 @@ function sendRobotMessage(rawText){
   const intent=robotBuddyEngine.classify(text);
   const settings=robotReadSettings();
   const reply=robotBuddyEngine.reply(text);
+  let progressInsights=null;
   if(intent.intent==='insights'&&settings.learningInsightsEnabled!==false){
-    const insights=getRobotLearningInsightsNow();
-    reply.text=formatRobotLearningInsights(insights);
-    reply.actions=getRobotInsightActions(insights);
+    progressInsights=getRobotLearningInsightsNow();
+    reply.text=formatRobotLearningInsights(progressInsights);
+    reply.actions=getRobotInsightActions(progressInsights);
   }else if(intent.intent==='insights'&&settings.learningInsightsEnabled===false){
     reply.text='Tính năng phân tích tiến độ đang được tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ” ở phía trên. Mình vẫn hỗ trợ trò chuyện và hướng dẫn sử dụng như bình thường.';
   }
   robotTypingTimer=setTimeout(()=>{
     setRobotTyping(false);setRobotEmotion('speaking');
-    appendRobotMessage('bot',reply.text,reply.actions||[]);
+    const message=appendRobotMessage('bot',reply.text,reply.actions||[]);
+    if(progressInsights)appendRobotProgressDashboard(progressInsights,message);
     if(robotSpeakingTimer)clearTimeout(robotSpeakingTimer);
     robotSpeakingTimer=setTimeout(()=>setRobotEmotion(reply.emotion||'happy'),650);
   },320);
@@ -3201,7 +3293,8 @@ function sendRobotMessage(rawText){
 function robotShowWelcome(){
   const log=$('#robotChatLog');if(!log||robotChatInitialized)return;
   robotChatInitialized=true;log.innerHTML='';
-  appendRobotMessage('bot','Xin chào! Mình là Robot Buddy 🤖. Mình có thể trò chuyện, giới thiệu chức năng, hướng dẫn bạn sử dụng ứng dụng và đọc tiến độ học được lưu ngay trên thiết bị để gợi ý nội dung cần học, luyện và ôn. Mình không gửi dữ liệu học tập ra ngoài và không phải chatbot AI trực tuyến.');
+  const enabled=robotReadSettings().learningInsightsEnabled!==false;
+  appendRobotMessage('bot','Xin chào! Mình là Robot Buddy 🤖. Mình có thể trò chuyện, giới thiệu chức năng, hướng dẫn bạn sử dụng ứng dụng và đọc tiến độ học được lưu ngay trên thiết bị để gợi ý nội dung cần học, luyện và ôn. Mình không gửi dữ liệu học tập ra ngoài và không phải chatbot AI trực tuyến.',[{label:enabled?'Phân tích tiến độ của tôi':'Bật phân tích tiến độ',command:enabled?'analyze-progress':'enable-progress-analysis'}]);
   const settings=robotReadSettings();
   if(!settings.onboardingChoice){
     appendRobotMessage('bot','Trước khi bắt đầu, bạn có muốn làm bài đánh giá đầu vào có sẵn để tham khảo điểm bắt đầu không?');
@@ -3288,6 +3381,8 @@ function handleRobotChoice(choice){
   renderRobotQuickPrompts();
 }
 function handleRobotCommand(command,page=''){
+  if(command==='analyze-progress'){runRobotProgressAnalysis();return;}
+  if(command==='enable-progress-analysis'){robotSaveSettings({learningInsightsEnabled:true});updateRobotInsightsToggle();runRobotProgressAnalysis();return;}
   if(command==='placement'){setQuickHelpOpen(false);startPlacementDiagnostic();return;}
   if(page){setQuickHelpOpen(false);navigate(page);return;}
 }

@@ -93,6 +93,10 @@ assert.match(css, /\.robot-prompt-chip\{[^}]*font:700 10px/);
 assert.match(css, /\.robot-mute-toggle\[aria-pressed=\"true\"\]\{background:#eef7ff/);
 assert.ok(app.includes('function updateRobotMuteToggle()'), 'Reminder state must be presented as an explicit on/off toggle.');
 assert.ok(app.includes('function getRobotInsightActions(insights)'), 'Learning insights must expose grounded navigation shortcuts.');
+assert.ok(app.includes('function appendRobotProgressDashboard(insights,anchor=null)'), 'Robot Buddy must expose a visual progress dashboard.');
+assert.ok(app.includes('function runRobotProgressAnalysis()'), 'Users must be able to start progress analysis with an explicit action.');
+assert.ok(app.includes("command:enabled?'analyze-progress':'enable-progress-analysis'"), 'First greeting must provide an explicit progress analysis action.');
+assert.ok(app.includes("if(command==='analyze-progress')") && app.includes("if(command==='enable-progress-analysis')"), 'Progress dashboard actions must be routed and functional.');
 const insightActionSource = app.slice(app.indexOf('function getRobotInsightActions'), app.indexOf('function sendRobotMessage'));
 const getInsightActions = new Function(`${insightActionSource}; return getRobotInsightActions;`)();
 assert.deepEqual(getInsightActions({ hasEvidence: false, items: { learn: [{ area: 'Từ vựng' }] } }), []);
@@ -124,4 +128,4 @@ for (const file of ['./assets/js/robot-buddy.js', './assets/js/robot-learning-in
 assert.match(read('assets/js/learning-assistant.js'), /Intentionally executes nothing/i);
 assert.match(read('assets/js/quick-help.js'), /intentionally executes nothing/i);
 
-console.log('PASS: offline dialogue library, feature/FAQ routing, read-only local progress integration, privacy toggle, head-only emotions and idle safeguards.');
+console.log('PASS: offline dialogue library, feature/FAQ routing, read-only local progress integration, explicit progress analysis CTA, privacy toggle, head-only emotions and idle safeguards.');
