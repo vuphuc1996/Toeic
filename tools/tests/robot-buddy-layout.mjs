@@ -41,10 +41,27 @@ assert.match(css, /@media \(hover:none\) and \(pointer:coarse\)\{[\s\S]*?#quickH
 assert.match(css, /#quickHelp \.robot-chat-form input\{[^}]*min-height:42px/);
 assert.doesNotMatch(index, /user-scalable\s*=\s*no/);
 // Progress dashboard is constructed from read-only snapshots and uses accessible bounded meters.
-assert.match(app, /function appendRobotProgressDashboard\(insights,anchor=null\)/);
+assert.match(app, /function appendRobotProgressDashboard\(insights,anchor=null,actions=\[\]\)/);
 assert.match(app, /role','progressbar'/);
 assert.match(app, /Phân tích tiến độ của tôi/);
 assert.match(css, /\.robot-progress-total\.is-learn/);
 assert.match(css, /\.robot-progress-total\.is-practice/);
 assert.match(css, /\.robot-progress-total\.is-review/);
 console.log('PASS: mobile focus zoom is prevented without disabling pinch zoom; Robot Buddy progress dashboard is responsive, color-coded and accessible.');
+
+// Page-only insight action buttons must be delegated and navigable.
+assert.match(app, /closest\('\[data-robot-command\],\[data-robot-page\]'\)/);
+assert.match(app, /handleRobotCommand\(command\.dataset\.robotCommand\|\|'',command\.dataset\.robotPage\|\|''\)/);
+const robotCommand = app.slice(app.indexOf('function handleRobotCommand('), app.indexOf('function handleRobotInput('));
+assert.match(robotCommand, /if\(page\)\{setQuickHelpOpen\(false\);navigate\(page\);return;\}/);
+// The progress insight response is one dashboard, not a duplicate prose summary.
+const insightSend = app.slice(app.indexOf('function sendRobotMessage('), app.indexOf('function robotShowWelcome('));
+assert.match(insightSend, /if\(progressInsights\)appendRobotProgressDashboard\(progressInsights,null,reply\.actions\|\|\[\]\)/);
+assert.match(insightSend, /if\(progressInsights\)appendRobotProgressDashboard\(progressInsights,null,reply\.actions\|\|\[\]\);\s*else appendRobotMessage\('bot',reply\.text,reply\.actions\|\|\[\]\)/s);
+assert.match(app, /function appendRobotProgressDashboard\(insights,anchor=null,actions=\[\]\)/);
+assert.match(app, /className='robot-progress-actions'/);
+assert.match(app, /button\.dataset\.robotPage=action\.page/);
+// Flashcard assessment confirmation must render above its focused learning backdrop (z-index 62).
+const assessmentOverlayRules = rules('.modal-backdrop[data-modal-type="assessment-result"]');
+assert.ok(assessmentOverlayRules.some(rule => Number((rule.match(/z-index\s*:\s*(\d+)/)||[])[1]) > 62), 'Flashcard result confirmation must stay above learning-focus-backdrop');
+console.log('PASS: Robot Buddy page actions navigate; progress analysis renders one dashboard with routes; flashcard assessment modal stacks above focused learning.');

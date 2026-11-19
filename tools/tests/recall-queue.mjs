@@ -27,8 +27,8 @@ const css = await (await import('node:fs/promises')).readFile(new URL('../../ass
 assert.match(app, /listDueRecallItems\(state\.objectiveProgress/);
 assert.match(app, /data-recall-open/);
 assert.match(app, /function openRecallItem\(/);
-assert.match(app, /startPracticeFocus\(itemId\)/, 'Part 5 queue action passes the exact due ID into the practice flow');
-assert.match(app, /chooseSentenceCompletionQuestion\(state\.sentenceCompletionItems,state\.words,state\.progress,state\.sentenceCompletionSeenIds,Math\.random,forcedWordId\)/);
+assert.match(app, /startPracticeFocus\(exactQuestion\?itemId:null\)/, 'Part 5 queue action passes only a valid exact due ID and safely falls back when the bank has changed');
+assert.match(app, /chooseSentenceCompletionQuestion\(state\.sentenceCompletionItems,getSentenceCompletionWordPool\(\),state\.progress,state\.sentenceCompletionSeenIds,Math\.random,forcedWordId\)/);
 assert.match(app, /visibilitychange.*renderRecallQueue/s, 'due list refreshes when the app becomes visible again');
 assert.match(html, /id="learningRecallQueue"/);
 assert.match(css, /\.recall-queue-item/);

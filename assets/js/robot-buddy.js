@@ -101,6 +101,7 @@ export class RobotBuddyEngine {
     if (/(ban la ai|robot buddy|ten gi|gioi thieu ban)/.test(text)) return { intent: 'identity', emotion: 'happy' };
     if (/(tien do|hoc den dau|ket qua hoc|phan tich hoc tap|can hoc|can luyen|can on|thong ke hoc|learning progress)/.test(text)) return { intent: 'insights', emotion: 'analyzing' };
     if (/(tat phan tich|ngung doc tien do|khong phan tich tien do)/.test(text)) return { intent: 'insights-off', emotion: 'caring' };
+    if (/(noi dung dang xem|noi dung nay|bai nay|cau nay|tu nay|giai thich (?:bai|cau|tu) nay|giup toi (?:bai|cau|tu) nay|explain this|help me with this)/.test(text)) return { intent: 'context-help', emotion: 'thinking' };
     if (/(^|\s)(xin chao|chao ban|hello|hi|hey)(?=\s|$)/.test(text)) return { intent: 'greeting', emotion: 'greeting' };
     if (/(chuc mung|tuyet voi|wow|yay|that tuyet)/.test(text)) return { intent: 'celebrate', emotion: 'celebrate' };
     if (/(ke chuyen cuoi|noi dua|dua chut|joke|vui mot chut)/.test(text)) return { intent: 'playful', emotion: 'playful' };
@@ -122,6 +123,25 @@ export class RobotBuddyEngine {
 
   reply(message = '', context = {}) {
     const match = this.classify(message);
+    if (match.intent === 'context-help') {
+      const pageLabel = String(context.pageLabel || 'khu vực hiện tại');
+      const item = context.currentItem && typeof context.currentItem === 'object' ? context.currentItem : null;
+      const title = String(item?.title || '').trim();
+      const snippet = String(item?.snippet || '').trim().slice(0, 180);
+      const tips = ({
+        dictionary: 'Hãy xem nghĩa theo từ loại, nghe phát âm và đọc ví dụ trước khi tự đặt một câu mới.',
+        flashcards: 'Thử tự nhớ nghĩa trước khi lật thẻ; nếu chưa nhớ, đọc ví dụ rồi thử lại.',
+        practice: 'Đọc kỹ câu hỏi, gạch từ khóa và tự loại trừ từng lựa chọn trước khi xem giải thích.',
+        grammar: 'Xem công thức và ví dụ song ngữ, sau đó tự làm một câu để kiểm tra cách dùng.',
+        reading: 'Đọc câu hỏi để xác định từ khóa, sau đó tìm bằng chứng trực tiếp trong đoạn hoặc tài liệu.',
+        listening: 'Lượt đầu nắm ý chính và người nói; lượt sau tập trung vào chi tiết, mục đích và hành động tiếp theo.',
+        foundation: 'Đọc mục tiêu bài học, xem ví dụ rồi làm phần tự kiểm tra trước khi chuyển sang bài tiếp theo.'
+      })[context.page] || 'Bạn có thể cho mình biết phần nào đang khó; mình sẽ hướng dẫn theo chức năng hiện có.';
+      const text = title
+        ? `Bạn đang ở ${pageLabel}, nội dung hiện tại là “${title}”.${snippet ? ` Thông tin đang hiển thị: ${snippet}.` : ''} ${tips}`
+        : `Bạn đang ở ${pageLabel}. ${tips}`;
+      return { intent: match.intent, emotion: 'thinking', text, actions: [], source: 'current-app-interaction-context' };
+    }
     if (match.intent === 'insights') return { intent: match.intent, emotion: 'analyzing', text: '', actions: [], source: 'local-learning-insights' };
     if (match.intent === 'insights-off') return { intent: match.intent, emotion: 'caring', text: 'Bạn có thể tắt phân tích tiến độ bằng nút trong phần đầu khung trò chuyện. Mình vẫn có thể trò chuyện và hướng dẫn sử dụng bình thường.', actions: [], source: 'local-dialogue-library' };
     if (match.intent === 'feature') {

@@ -1,68 +1,56 @@
 # Compatibility & Retirement Register
 
-> One active register for release support, storage/data contracts and retirement decisions.
+> Single register for current runtime, storage, offline and retirement contracts. Release history belongs in `CHANGELOG.md`.
 
-## Current support window — 2026-11-17
+## Current support window — 2026-11-18
 
 | Role | Version | Policy |
 |---|---|---|
-| Previous release | v2.88.0 | Adds 13 extended A2 writing production tasks (26 in total) with separate stable IDs, independent self-report/revision evidence, and portfolio/export aggregation. |
-| Current product source | v2.89.0 | Repairs generated canonical design-profile typography synchronization; adds 13 supplementary A2 Reading passages / 39 questions with isolated local evidence and independent review pending. |
-| Older releases | ≤ v2.87.0 | Historical; prototype behavior and scope corrections are consolidated in `archive/PROJECT_HISTORY.md` and `CHANGELOG.md`. |
+| Current product source | v2.95.8 | Five-defect regression baseline retained; local read-only Robot Buddy Learning Insights restored; repository documentation/cleanup improvements retained. |
+| Immediately previous source | v2.95.7 | Strict Robot Buddy privacy-isolation patch; its removal of Learning Insights is intentionally not carried forward because the approved product behavior retains opt-in local read-only learning support. |
+| Older releases | ≤ v2.95.6 | Historical; details are in `CHANGELOG.md` and the consolidated archive. |
 
-- **SW002 repair:** `assets/js/learning-assistant.js` (active local Robot Buddy summary) and `assets/js/quick-help.js` (no-op compatibility tombstone) are present in both Service Worker `REQUIRED` and `APP_SHELL`. This directly addresses SW002 for these asset paths in an overlay update. Cache version is synced to `data/manifest.json`.
-- **CI contract:** `tools/tests/learning-assistant.mjs`, `tools/tests/quick-help.mjs` and `tools/tests/legacy-google-ai.mjs` are all invoked in `.github/workflows/validate-data.yml`; the CI coverage test enforces every JavaScript regression file is called.
+## Runtime contracts
 
-## Runtime/data contracts
+- **Deployment:** GitHub Pages static PWA. No application backend, GAS, iframe or Cloudflare dependency.
+- **Canonical vocabulary:** `data/vocabulary/A.json`–`Z.json`; `data/manifest.json` declares the release version, letter files and total count. `data/vocabulary/batch-*.json` are editorial provenance, not runtime vocabulary sources.
+- **TOEIC content:** canonical Listening, Reading, Grammar, Part 5 practice and Foundation JSON files are loaded by the app and protected by validation/tests. Stable resource, question and choice IDs must not be repurposed.
+- **Mock eligibility:** reserve-pending-independent-review content and unknown statuses are excluded; inventory presence is not editorial approval. Keep practice-only Part 5 and supplementary Foundation content separate from Mock pools.
+- **TTS:** browser/device SpeechSynthesis only. It is synthesized speech, not ETS/native audio. Voice availability, voice quality and acoustic timing are device-dependent.
+- **Part 1 media:** JPG-only contract; each Part 1 item uses its `photo` asset and source attribution. Do not add SVG fallback or replace licensed/project-owned photos with unrelated generated assets.
 
-- **Legacy Google AI from v2.79:** preserve the original user-triggered Google AI feature actions for vocabulary detail/unknown-term lookup, practice answer and review analysis, Grammar, Reading and Listening. The existing shared preview is opened by each feature's own control; the user explicitly confirms before the external Google Search AI Mode handoff (`udm=50`, `hl=vi`). This is not a documented stable API. Google controls the external experience. No embedded model, API key or server-side AI exists.
-- **AI boundary:** only the original v2.79 feature-level Google AI actions are supported. There is no shared contextual AI assistant, assistant follow-up, copy/transfer flow or Google AI action inside Quick Help.
-- **Robot Buddy v2.83:** `assets/js/learning-assistant.js` reads the existing local progress state and derives restrained summaries/milestone messages. It is deterministic local code, not a generative model, not an external AI API and not a free-form answer engine. It does not send learning history outside the device. The first-run question reuses the existing Placement Diagnostic; the choice is stored under `toeic:robot-companion-onboarding:v1`.
-- **Quick Help retirement:** no usage guide, prefix lookup, suggestion list, masked vocabulary headword, missing-letter input or exact-match vocabulary shortcut remains. The Robot launcher/panel replaces the previous Quick Help UI. `assets/js/quick-help.js` is intentionally a no-op tombstone to overwrite stale copies from older GitHub checkouts; it has no runtime behavior.
-- **Robot progress thresholds:** the weakest Reading/Listening Part is suggested only after at least three unique answered questions in that Part. The snapshot reads latest answer per question, not retry counts as separate questions. A2 writing is reported from learner self-assessment within each task; different rubrics are not combined into a fake overall score. These summaries are guidance, not mastery or CEFR/ETS certification.
-- **Local milestone behavior:** Robot feedback is published after existing completed actions (e.g. three correct vocabulary answers in a row, Flashcard completion, Placement completion, Mock completion and A2 writing revision). It does not make unsupported AI claims.
-- **Mock Exam icons:** retain `icon-clipboard-check`, `icon-bolt`, `icon-stopwatch`, `icon-trophy`; do not revert to the old `◷` glyph.
-- **Source attribution exception:** `ai-generated` strings in Part 1 image attribution/audit files are provenance metadata only; they do not execute or activate AI features.
+## Robot Buddy and privacy boundary
 
-- Deployment remains GitHub Pages + static PWA; no backend/GAS/iframe/Cloudflare dependency.
-- Canonical vocabulary is `data/vocabulary/A.json`–`Z.json`; batch JSON is editorial provenance only. Stable IDs remain immutable.
-- Listening/Reading/Grammar resource, question and choice IDs stay stable. Listening Batch 013/014/015 reserve statuses remain unchanged.
-- **Mock eligibility:** legacy status-less units and existing v2.33 `internal-editorial-reviewed` Reading records remain eligible for backwards compatibility; `approved-for-mock` is eligible; `reserve-pending-independent-review` and unknown statuses are excluded. New content must not receive an eligible status without the required review decision.
-- Part 3/4 conversations/talks are indivisible three-question blocks. Part 6 is an indivisible four-question text; Part 7 single passages 2–4 questions and multiple passages 5 questions.
-- Retry/attempt history: `answers` stores latest answer and `attemptHistory` stores prior attempts. Legacy progress without history remains readable.
-- IndexedDB remains `toeic-vocabulary-phase1`, v1, store `workspace`; v2.38.0 performs no profile reset/import/export/inspection/migration; `sentenceCompletionSeenIds` is an optional additive field in the existing `practiceSession` object; v2.40.0 does not alter storage. v2.52.0 adds only the `objectiveProgress` key to the existing workspace store; no object-store/database-version migration or profile reset.
-- Foundation progress remains in localStorage key `toeic:foundation-progress:v1`. v2.74.0 adds recall-check history under each stable question evidence record and a separate `productionEvidence` map for learner-authored responses/self-ratings. A first recognition attempt becomes due for recall after 24 hours; correct recall schedules 3 days and incorrect recall 1 day. Early recall is rejected. These are local practice/self-report signals, not automated assessment or mastery; no IndexedDB v1 schema migration is introduced.
-- v2.75.0 adds only new A2 lesson, question, application, Reading passage and Listening script IDs to the existing Foundation JSON resources. It reuses the v2.74.0 evidence APIs and progress contract; there is no localStorage key change, IndexedDB migration, learner-data reset or overwrite of earlier lesson/resource IDs.
-- v2.76.0 adds A2 Reading q3 and Listening q3 to existing A2 resources, extends A2 passages/dialogue scripts and adds four-turn `segments` for multi-speaker playback. The exact v2.75 question-pair baseline verifies the old q1/q2 objects remain unchanged. Pre-A1/A1 legacy Listening scripts remain compatible through sentence-splitting fallback. A2 uses 3 questions / 67% local practice threshold; older levels continue 2 / 80%. No storage schema, progress key, stable old ID or audio dependency changes.
-- v2.77.0 revises five existing A2 question prompts/tasks to remove identified within-resource q2/q3 repetition and adds exact source-evidence metadata to five questions. The v2.75 canonical hash baseline still protects every prior A2 q1/q2 object. Question IDs, answer-position balance, progress keys, IndexedDB v1 and TTS contracts remain unchanged; the evidence fields are additive question metadata.
-- v2.78.0 adds a `productionTask` contract to each of the 13 A2 lessons, with new stable IDs `::produce1`, custom task prompts/rubrics and an eight-word response minimum. The new learner-authored responses are additive entries in the existing `productionEvidence` object under `toeic:foundation-progress:v1`; no new key/database or IndexedDB migration is introduced. Prior A2 `::apply1` production responses remain preserved and are not used as evidence for the new prompts. Pre-A1/A1 continues to use the existing `::apply1` IDs and three-word default. New task definitions are protected by a versioned SHA-256 baseline.
-- v2.79.0 extends the existing `productionEvidence` records with response text in newly captured attempts and `guided_revision` entries containing `basedOnResponse`, revised `response`, three learner-confirmed review checks and three self-ratings. No new localStorage key or database is added. Historical attempts from before v2.79.0 are preserved without reconstructing missing text; the last stored response is the revision starting point. `::produce1` and legacy `::apply1` evidence remain isolated. Revision data is device-local and not automatically graded; no IndexedDB v1 schema migration occurs.
-- Focus Workspace remains shared; `.learning-focus-content` is the only vertical scroll owner. The Part 5 Sentence Completion mode uses this shell and the existing answer-feedback/auto-next behavior.
-- `data/practice/part5-sentence-completion.json` is a separate 35-question original practice bank; it is not part of the 200-question Reading Mock bank. All items remain pending independent review and are practice-only.
-- Service Worker cache markers sync from `data/manifest.json`; `REQUIRED`/`APP_SHELL` include `assets/js/sentence-completion.js` and `data/practice/part5-sentence-completion.json`, with static integrity checked by `test_pwa_readiness.py`. This does not replace browser offline/reconnect QA.
-- Preserve `assets/listening/*.jpg` and mixed-source attribution. Listening Part 1 is photo-only: each record declares its JPG in `photo`; no per-item SVG fallback is declared, cached, referenced or retained. All nine optimized original/project-owned JPG assets are embedded in the current source, 1448×1086 (4:3 landscape), each below 400,000 bytes. Do not replace them with generated or unrelated stock images.
-- Browser SpeechSynthesis is synthesized audio, not ETS/native recording. Multi-speaker voice differentiation is best-effort and depends on installed OS/browser voices.
-- Mock metrics are practice correct-count/accuracy, not ETS-equated scores.
+- `assets/js/robot-buddy.js` and `data/robot/robot-library.json` implement the head-only offline companion and its static interaction library.
+- Robot Buddy may use its own onboarding/reminder preferences, the currently active app surface, the current word/question/lesson being viewed and idle-time context. Context-aware replies and nudges use only the current in-session item, not a stored learner profile. When the learner enables Learning Insights, the application may pass an in-memory snapshot of already-loaded local learning records to the pure `robot-learning-insights.js` aggregator. The aggregator is read-only: it does not open IndexedDB/localStorage, mutate records, migrate data or transmit learner data.
+- Learning Insights is opt-in and can be disabled from the Robot Buddy header. When disabled, the Buddy still supports scripted conversation, feature guidance, quick prompts, Placement consent/skip and generic idle reminders.
+- Personal progress analysis may summarize only evidence already present in the local snapshot. It must not claim mastery, predict ETS scores or infer weakness when evidence is insufficient. The visual dashboard is the single progress summary; do not repeat its totals in prose.
+- Robot Buddy does not call external APIs or send learner data outside the device. Feature-level Google AI handoffs remain separate and user-initiated.
+- `assets/js/learning-assistant.js` and `assets/js/quick-help.js` are intentionally inert compatibility tombstones. The current app does not import them. They remain in the source and offline shell only to overwrite/serve legacy paths during GitHub repository overlay updates; they are not active Robot logic or duplicate implementations.
+- Legacy feature-level Google AI handoffs remain user-triggered at their existing feature entry points and are separate from Robot Buddy.
 
-## CI test contract
+## Storage compatibility
 
-- `.github/workflows/validate-data.yml` must invoke every `tools/tests/test_*.py` module and every `tools/tests/*.mjs` regression suite.
-- `test_ci_coverage.py` enforces this wiring so future tests are not silently skipped.
-- A passing local coverage guard confirms workflow declarations only; it does not prove a remote GitHub Actions run passed.
+- IndexedDB remains `toeic-vocabulary-phase1`, schema version 1, store `workspace`. Do not reset, rename or migrate it without a separately approved migration plan.
+- Preserve existing vocabulary, practice, review, Flashcard, Mock and Foundation localStorage keys and learner records. New evidence fields must be additive and scoped by stable IDs.
+- Robot settings use `toeic:robot-buddy-settings:v1`; the one-time onboarding migration may read the legacy `toeic:robot-companion-onboarding:v1` key. Chat history remains in memory for the current session.
+- No profile import/export or cross-device sync is part of the current GitHub-only product contract.
 
-## Retirement / rotation
+## Offline / Service Worker
 
-- Keep only the current and immediately previous release-specific batch/report/update notes/manifest files.
-- Old docs are compacted into `archive/PROJECT_HISTORY.md`; do not clone old reports into new paths.
-- Do not overlay a non-adjacent version blindly. Do not touch app source, canonical JSON, assets, PWA shell, patches or learner profiles during document rotation.
+- `sw.js` `REQUIRED` resources must be present and also appear in `APP_SHELL`; optional illustrations/photos must not block installation.
+- The cache namespace version must match `data/manifest.json`. A release bump creates a new cache namespace; activation removes only older caches with the TOEIC-specific prefix.
+- Structural cache-list tests do not prove actual browser offline/reconnect behavior. Verify installed PWA update, offline navigation and recovery on real devices.
 
-## Retired/incompatible references
+## Developer and CI contract
 
-- Legacy GAS/iframe/cloud-backend proposals remain historical.
-- Do not create duplicate canonical runtime data, standalone roadmap/master or feature-specific design system copies.
+- `.github/workflows/validate-data.yml` must invoke every `tools/tests/test_*.py` module and every `tools/tests/*.mjs` suite.
+- `test_ci_coverage.py` enforces registration; `audit-repository-integrity.py` checks local references, PWA shell lists, workflow references and JSON syntax.
+- Canonical patch payloads under `patches/` and vocabulary batch JSON are retained as provenance/reproducible editorial history; they are not shipped runtime features and must not be deleted as presumed dead code.
+- Never remove a file solely because it lacks a direct import: check Service Worker compatibility, tests, data provenance, migration history and documentation references first.
 
-- v2.88.0 adds an `additionalProductionTasks` array to each of the 13 A2 lesson records. It appends one independent `::produce2` task to the existing `::produce1` task; no original lesson/task ID or existing `productionEvidence` entry is repurposed. Both task histories are stored as sibling properties in the existing `toeic:foundation-progress:v1` localStorage ledger. Portfolio/export/evidence aggregation enumerate both authored task IDs while continuing to exclude legacy `::apply1` application evidence from A2 production reporting. All extended tasks have a 20-word minimum and remain `pending-independent-editorial-review`. No new storage key, IndexedDB database/store/version, migration or remote sync is introduced.
+## Retired / incompatible
 
-- v2.89.0 adds `data/learning-path/foundation-reading-extended.json`, one separate supplementary passage (`::reading2`) per A2 lesson, each with three questions and exact source evidence. Responses use the existing `toeic:foundation-reading-progress:v1` key under a scoped `{lessonId}::reading2` ledger entry; base reading progress remains untouched and separate. The new resource is mandatory in Service Worker `REQUIRED` and `APP_SHELL`; `test_foundation_reading_extended.py` and `foundation-reading-extended-evidence.mjs` enforce IDs, content hashes, evidence pointers, app integration and scope isolation. All new tasks remain pending independent editorial review and are practice-only.
-- v2.89.0 fixes the canonical typography profile mismatch by regenerating `assets/css/design-system.css` from the canonical design profile. The generated selector list now includes five previously omitted small-text selectors. `sync-design-profile.py --check` and all design-profile tests pass. The CI validator itself remains enabled and unchanged in strictness.
-- Foundation Reading practice thresholds compare the rounded percentage displayed in the UI to the configured rounded percentage threshold. This makes a 2/3 score consistently count as 67% when the resource threshold is 67%, without changing the minimum distinct-question requirement.
+- Legacy GAS, iframe and backend proposals are historical only.
+- The old Quick Help word-search UI and the legacy v2.83 progress-reader implementation are retired. Current Robot learning insights use the separate `robot-learning-insights.js` pure aggregator; the inert tombstones above exist only for overlay compatibility.
+- No duplicate canonical data store, parallel Master roadmap or feature-specific design-system copy should be introduced.

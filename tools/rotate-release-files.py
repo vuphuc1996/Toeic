@@ -50,6 +50,40 @@ def append_archive_entries(existing: str, additions: list[str]) -> str:
     return existing.rstrip() + "\n\n" + heading + "\n\n" + "\n".join(additions) + "\n"
 
 
+
+def referenced_document_paths() -> set[str]:
+    """Protect historical Markdown still consumed by tests, tools or current docs.
+
+    A document is not safe to retire merely because its version is old: review
+    checklists and blueprints can remain active inputs to regression tests.
+    """
+    protected: set[str] = set()
+    scan_roots = [ROOT / 'tools', ROOT / '.github/workflows']
+    scan_files: list[Path] = []
+    for folder in scan_roots:
+        if folder.exists():
+            scan_files.extend(folder.rglob('*.py'))
+            scan_files.extend(folder.rglob('*.mjs'))
+            scan_files.extend(folder.rglob('*.yml'))
+            scan_files.extend(folder.rglob('*.yaml'))
+    for name in ('README.md', 'MASTER_STATUS.md', 'COMPATIBILITY.md', 'CHANGELOG.md', 'versions/CURRENT_VERSION.md', 'versions/PREVIOUS_VERSION.md'):
+        path = ROOT / 'docs' / name
+        if path.exists():
+            scan_files.append(path)
+    # Documentation links may be root-relative (`docs/reports/...`) or
+    # relative to the docs folder (`reports/...`). Normalize both forms.
+    pattern = re.compile(r"[`'\"]((?:docs/)?(?:batches|reports|sources)/[A-Za-z0-9_./-]+\.md)[`'\"]")
+    for path in scan_files:
+        try:
+            source = path.read_text(encoding='utf-8')
+        except (OSError, UnicodeError):
+            continue
+        for match in pattern.finditer(source):
+            relative = match.group(1)
+            protected.add(relative if relative.startswith('docs/') else f'docs/{relative}')
+    return protected
+
+
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--apply',action='store_true',help='perform the planned retirement; default is dry-run')
@@ -74,13 +108,16 @@ def main():
         for p in ROOT.glob(pattern):
             m=re.fullmatch(rx,p.name)
             if m and m.group(1) not in keep: root_release_files.append(p)
+    protected_docs = referenced_document_paths()
     docs=[]
     for folder in [ROOT/'docs/batches',ROOT/'docs/reports',ROOT/'docs/sources']:
         if not folder.exists(): continue
         for p in folder.glob('*.md'):
             versions=set(re.findall(r'v(\d+\.\d+\.\d+)',p.name))
-            if not versions or not (versions & keep): docs.append(p)
+            if (not versions or not (versions & keep)) and p.relative_to(ROOT).as_posix() not in protected_docs: docs.append(p)
     print(f'Current={current}; keep={sorted(keep)}')
+    for rel in sorted(protected_docs):
+        if (ROOT / rel).is_file(): print('KEEP (referenced by active tests/tools/docs)', rel)
     for p in docs: print('ARCHIVE + RETIRE',p.relative_to(ROOT))
     for p in root_release_files: print('RETIRE',p.relative_to(ROOT))
     if not args.apply:

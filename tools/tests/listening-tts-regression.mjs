@@ -71,6 +71,9 @@ const context = {
   PART1_LEAD_IN_PAUSE_MS: 1000,
   PART1_OPTION_LABEL_PAUSE_MS: 1500,
   PART1_OPTION_GAP_MS: 1300,
+  PART_SEQUENCE_PAUSE_MS: 1000,
+  PART_OPTION_LABEL_PAUSE_MS: 1000,
+  PART_OPTION_GAP_MS: 1000,
   state: { settings: { tts: { ...DEFAULT_TTS_SETTINGS } }, listening: [], listeningProgress: {}, readings: [], foundationListeningClips: [] },
   window: { speechSynthesis },
   SpeechSynthesisUtterance: MockUtterance,
@@ -94,7 +97,7 @@ globalThis.__stopSpeech = stopSpeech;
 globalThis.__speakText = speakText;
 globalThis.__prepareSpeechEngine = prepareSpeechEngine;`, context, { timeout: 1000 });
 
-const readingStart = appSource.indexOf('function playReadingText(id){');
+const readingStart = appSource.indexOf('async function playReadingText(id){');
 const readingEnd = appSource.indexOf('async function answerReadingQuestion(', readingStart);
 assert.notEqual(readingStart, -1, 'Reading aloud action must exist');
 assert.notEqual(readingEnd, -1, 'Reading aloud action boundary must exist');
@@ -151,11 +154,11 @@ voices = [];
 voiceCatalogReads = 0;
 const noVoiceStart = spoken.length;
 const noVoicePromise = context.__playListeningAudio('tts-no-voice-catalogue');
-assert.equal(spoken.length, noVoiceStart + 1, 'first utterance must be queued synchronously before returning to the event loop');
+assert.equal(spoken.length, noVoiceStart + 1, 'Part title must be queued synchronously before returning to the event loop');
 assert.equal(spoken[noVoiceStart].voice, null, 'system default voice is used when no English voice catalogue is published yet');
 assert.equal(spoken[noVoiceStart].lang, 'en-US', 'fallback retains the configured English locale');
 assert.ok(resumeCalls > 0, 'paused speech synthesis is resumed directly from the user action');
-spoken[noVoiceStart].onstart?.();spoken[noVoiceStart].onend();
+await consumeSpeechSequence(noVoiceStart, ['Part 2: Question–Response','Now, listen to the question and choose the best response.','The default device voice should read this sentence.'], 'No-voice fallback');
 await noVoicePromise;
 assert.match(statusNode.textContent, /Đã phát xong/);
 
@@ -166,7 +169,7 @@ context.state.listening = [{ id: 'tts-stop-during-active', part: 'Part 2', segme
 voices = [femaleUS, maleUS, danielUK];
 const stopActiveStart=spoken.length;
 const stopActivePromise=context.__playListeningAudio('tts-stop-during-active');
-assert.equal(spoken.length,stopActiveStart+1,'active speech is queued synchronously');
+assert.equal(spoken.length,stopActiveStart+1,'Part title is queued synchronously');
 context.__stopSpeech();
 await stopActivePromise;
 assert.equal(spoken.length,stopActiveStart+1,'stop does not enqueue later utterances');
@@ -175,7 +178,7 @@ assert.equal(spoken.length,stopActiveStart+1,'stop does not enqueue later uttera
 context.state.settings.tts.sentencePauseMs = 1000;
 context.state.settings.tts.maleVoiceURI = 'ryan-us';
 context.state.listening = [{
-  id: 'tts-two-speaker',
+  id: 'tts-two-speaker', part:'Part 3', topic:'Team Meeting',
   segments: [
     { speaker: 'Woman', voice: 'female', text: 'Good morning. The meeting starts at nine.' },
     { speaker: 'Man', voice: 'male', text: 'Thank you. I will be there.' },
@@ -184,13 +187,9 @@ context.state.listening = [{
 }];
 const audioStart = spoken.length;
 const audioPromise = context.__playListeningAudio('tts-two-speaker');
-for (let index = 0; index < 3; index++) {
-  await waitFor(() => spoken.length > audioStart + index, `utterance ${index + 1} was queued`);
-  const utterance = spoken[audioStart + index];
-  utterance.onend();
-}
+await consumeSpeechSequence(audioStart, ['Part 3: Conversations','Now, listen to the conversation and answer the questions.','Good morning. The meeting starts at nine.','Thank you. I will be there.','Please bring the updated report.'], 'Multi-speaker Part 3');
 await audioPromise;
-assert.deepEqual(spoken.slice(audioStart, audioStart + 3).map(item => item.voice?.voiceURI), ['ava-us', 'ryan-us', 'ava-us']);
+assert.deepEqual(spoken.slice(audioStart + 2, audioStart + 5).map(item => item.voice?.voiceURI), ['ava-us', 'ryan-us', 'ava-us']);
 assert.deepEqual(gapDurations.slice(-2), [1000, 1000]);
 assert.equal(spoken[audioStart].rate, 0.85, 'per-lesson playback speed should be applied');
 assert.match(statusNode.textContent, /Đã phát xong/);
@@ -240,7 +239,7 @@ assert.equal(part1Gaps.some(gap => gap > 2500), false, 'no artificial startup ti
 assert.ok(part1Gaps.includes(1000), 'Part 1 waits 1.0s after the spoken topic title and after the lead-in');
 assert.equal(part1Gaps.filter(gap => gap === 1500).length, 4, 'each A/B/C/D label is followed by a fixed 1.5s pause');
 assert.deepEqual(part1Gaps.filter(gap => gap === 1300), [1300, 1300, 1300], 'Part 1 pauses 1.3s between the descriptions');
-assert.match(statusNode.textContent, /tên Part, câu dẫn và bốn lựa chọn A–D/);
+assert.match(statusNode.textContent, /Part 1:.*câu dẫn, nội dung và bốn lựa chọn A–D/);
 
 // Stopping after the lead-in but before option A must cancel the transition and never start an option late.
 context.state.listening = [{ id: 'tts-part1-stop-after-lead-in', part: 'Part 1', topic: 'Office & Facilities', segments: [
@@ -429,17 +428,134 @@ spoken.at(-1).onend();
 assert.equal(await previewPromise, true);
 assert.equal(context.toasts.length, 0);
 
-// Reading passage uses the same immediate guarded engine path and exposes accessible playback status.
-context.state.readings = [{ id: 'reading-tts', part: 'Part 7', passage: 'The office will remain closed on Monday. Employees may contact the support desk by email.' }];
+// Parts 2–4 all announce the Part and lead-in, then read content and lettered answers.
+async function consumeSpeechSequence(start, expectedTexts, label) {
+  for (let index = 0; index < expectedTexts.length; index++) {
+    await waitFor(() => spoken.length > start + index, `${label} utterance ${index + 1}`);
+    const utterance = spoken[start + index];
+    assert.equal(utterance.text, expectedTexts[index], `${label} speech order at ${index + 1}`);
+    utterance.onstart?.();
+    utterance.onend?.();
+  }
+}
+function assertOneSecondOptionCadence(choiceCount, label) {
+  // One pause before the option set, one after every spoken A/B/C/D label,
+  // and one between the end of an option and the next label.
+  const expectedGapCount = 1 + choiceCount + Math.max(0, choiceCount - 1);
+  assert.deepEqual(gapDurations.slice(-expectedGapCount), Array(expectedGapCount).fill(1000),
+    `${label}: question/option labels and answer text must be separated by exactly 1 second`);
+}
+voices = [femaleUS, maleUS, danielUK];
+context.state.settings.tts.sentencePauseMs = 850;
+context.state.listening = [{ id: 'tts-part2-sequence', part: 'Part 2', topic: 'Questions', segments: [
+  { speaker: 'Speaker', voice: 'female', text: 'When will the manager return?' },
+], questions: [{ question: 'Choose the most appropriate response.', choices: ['At three o’clock.', 'In the main office.', 'The new manager.'] }] }];
+let sequenceStart = spoken.length;
+let sequencePromise = context.__playListeningAudio('tts-part2-sequence');
+await consumeSpeechSequence(sequenceStart, [
+  'Part 2: Question–Response',
+  'Now, listen to the question and choose the best response.',
+  'When will the manager return?',
+  'A.', 'At three o’clock.', 'B.', 'In the main office.', 'C.', 'The new manager.',
+], 'Part 2');
+await sequencePromise;
+assertOneSecondOptionCadence(3, 'Listening Part 2');
+assert.match(statusNode.textContent, /Đã phát xong Part 2/);
+
+context.state.listening = [{ id: 'tts-part3-sequence', part: 'Part 3', topic: 'Conversation', segments: [
+  { speaker: 'Woman', voice: 'female', text: 'I need to change my appointment.' },
+  { speaker: 'Man', voice: 'male', text: 'I can move it to Friday.' },
+], questions: [{ question: 'What does the woman want to do?', choices: ['Cancel an order', 'Change an appointment', 'Reserve a room', 'Request a refund'] }] }];
+sequenceStart = spoken.length;
+sequencePromise = context.__playListeningAudio('tts-part3-sequence');
+await consumeSpeechSequence(sequenceStart, [
+  'Part 3: Conversations',
+  'Now, listen to the conversation and answer the questions.',
+  'I need to change my appointment.',
+  'I can move it to Friday.',
+  'Question 1. What does the woman want to do?',
+  'A.', 'Cancel an order', 'B.', 'Change an appointment', 'C.', 'Reserve a room', 'D.', 'Request a refund',
+], 'Part 3');
+await sequencePromise;
+assertOneSecondOptionCadence(4, 'Listening Part 3');
+
+context.state.listening = [{ id: 'tts-part4-sequence', part: 'Part 4', topic: 'Announcement', segments: [
+  { speaker: 'Announcer', voice: 'male', text: 'The west entrance will close at noon for repairs.' },
+], questions: [{ question: 'When will the entrance close?', choices: ['At noon', 'At two', 'Tomorrow morning', 'On Friday'] }] }];
+sequenceStart = spoken.length;
+sequencePromise = context.__playListeningAudio('tts-part4-sequence');
+await consumeSpeechSequence(sequenceStart, [
+  'Part 4: Short Talks',
+  'Now, listen to the talk and answer the questions.',
+  'The west entrance will close at noon for repairs.',
+  'Question 1. When will the entrance close?',
+  'A.', 'At noon', 'B.', 'At two', 'C.', 'Tomorrow morning', 'D.', 'On Friday',
+], 'Part 4');
+await sequencePromise;
+assertOneSecondOptionCadence(4, 'Listening Part 4');
+assert.ok(gapDurations.slice(-30).includes(1000), 'Part headers, lead-ins, question/answer and letter labels use one-second pauses');
+
+// Reading Parts 5–7 announce their Part, then read text/questions/options in order.
+context.state.readings = [{ id: 'reading-tts', part: 'Part 7', title: 'Office Notice', passage: 'The office will remain closed on Monday. Employees may contact the support desk by email.', questions: [{ question: 'How can employees contact the support desk?', choices: ['By telephone', 'By email', 'In person', 'By regular mail'] }] }];
 const readingStartCount = spoken.length;
-context.__playReadingText('reading-tts');
-await waitFor(() => spoken.length === readingStartCount + 1, 'reading passage TTS must be queued after preparation');
-assert.match(spoken.at(-1).text, /office will remain closed/);
-spoken.at(-1).onstart?.();
-assert.match(readingAudioStatus.textContent, /Đang đọc/);
-spoken.at(-1).onend();
-await new Promise(resolve => setImmediate(resolve));
+const readingPromise = context.__playReadingText('reading-tts');
+await consumeSpeechSequence(readingStartCount, [
+  'Part 7: Reading Comprehension',
+  'Now, read the passage and answer the questions.',
+  'The office will remain closed on Monday. Employees may contact the support desk by email.',
+  'Question 1. How can employees contact the support desk?',
+  'A.', 'By telephone', 'B.', 'By email', 'C.', 'In person', 'D.', 'By regular mail',
+], 'Reading Part 7');
+await readingPromise;
+assertOneSecondOptionCadence(4, 'Reading Part 7');
 assert.match(readingAudioStatus.textContent, /Đã đọc xong/);
+
+context.state.readings = [{ id: 'reading-part5-tts', part: 'Part 5', title: 'Incomplete Sentences', questions: [{ question: 'The team ___ the proposal yesterday.', choices: ['finish', 'finished', 'finishing', 'finishes'] }] }];
+const readingPart5Start = spoken.length;
+const readingPart5Promise = context.__playReadingText('reading-part5-tts');
+await consumeSpeechSequence(readingPart5Start, [
+  'Part 5: Incomplete Sentences',
+  'Now, complete each sentence with the best answer.',
+  'Question 1. The team ___ the proposal yesterday.',
+  'A.', 'finish', 'B.', 'finished', 'C.', 'finishing', 'D.', 'finishes',
+], 'Reading Part 5');
+await readingPart5Promise;
+assertOneSecondOptionCadence(4, 'Reading Part 5');
+assert.match(readingAudioStatus.textContent, /Đã đọc xong/);
+
+// Reading Part 6 must announce its own title and instruction before the text.
+context.state.readings = [{ id: 'reading-part6-tts', part: 'Part 6', title: 'Text Completion', passage: 'The annual meeting has been moved to Friday. Employees should confirm attendance by Wednesday.', questions: [{ question: 'By when should employees confirm?', choices: ['Monday', 'Wednesday', 'Friday', 'Saturday'] }] }];
+const readingPart6Start = spoken.length;
+const readingPart6Promise = context.__playReadingText('reading-part6-tts');
+await consumeSpeechSequence(readingPart6Start, [
+  'Part 6: Text Completion',
+  'Now, read the text and choose the best answer for each blank.',
+  'The annual meeting has been moved to Friday. Employees should confirm attendance by Wednesday.',
+  'Question 1. By when should employees confirm?',
+  'A.', 'Monday', 'B.', 'Wednesday', 'C.', 'Friday', 'D.', 'Saturday',
+], 'Reading Part 6');
+await readingPart6Promise;
+assertOneSecondOptionCadence(4, 'Reading Part 6');
+
+// Mock transitions announce the heading/lead-in outside this player. The shared
+// player must honor skipLeadIn and begin with the dialogue, not repeat either.
+context.state.listening = [{ id: 'tts-mock-skip-leadin', part: 'Part 3', topic: 'Project Update', segments: [
+  { speaker: 'Woman', voice: 'female', text: 'The project review starts at ten.' },
+  { speaker: 'Man', voice: 'male', text: 'I will bring the revised schedule.' },
+], questions: [{ question: 'When does the review start?', choices: ['At nine', 'At ten', 'At eleven', 'At noon'] }] }];
+const mockSkipStart = spoken.length;
+const mockSkipPromise = context.__playListeningAudio('tts-mock-skip-leadin', { skipLeadIn: true });
+assert.equal(spoken[mockSkipStart]?.text, 'The project review starts at ten.', 'skipLeadIn starts directly with the listening content');
+await consumeSpeechSequence(mockSkipStart, [
+  'The project review starts at ten.',
+  'I will bring the revised schedule.',
+  'Question 1. When does the review start?',
+  'A.', 'At nine', 'B.', 'At ten', 'C.', 'At eleven', 'D.', 'At noon',
+], 'Mock Listening skipLeadIn');
+await mockSkipPromise;
+assertOneSecondOptionCadence(4, 'Guided Mock Listening');
+assert.doesNotMatch(spoken.slice(mockSkipStart).map(item => item.text).join(' | '), /Part 3: Conversations|Now, listen to the conversation/,
+  'Mock does not repeat the Part title or lead-in after its own transition');
 
 // Reading and listening controls are present in source, and every speech route goes through the guarded queue.
 assert.match(appSource, /data-reading-speak=/);
@@ -452,12 +568,15 @@ assert.equal((appSource.match(/function\s+speakUtterance\s*\(/g)||[]).length,1,'
 assert.match(appSource, /const PART1_TITLE_PAUSE_MS = 1000/);
 assert.match(appSource, /const PART1_LEAD_IN_PAUSE_MS = 1000/);
 assert.match(appSource, /const PART1_OPTION_LABEL_PAUSE_MS = 1500/);
+assert.match(appSource, /const PART_OPTION_LABEL_PAUSE_MS = 1000/);
+assert.match(appSource, /const PART_OPTION_GAP_MS = 1000/);
 assert.match(appSource, /prepareSpeechEngine\(playbackToken\)/);
-assert.match(appSource, /speakUtterance\(`\$\{letter\}\.`,/);
-assert.match(appSource, /speakUtterance\(isPart1\?optionText:segment\.text,/);
-assert.match(appSource, /Part 1: \$\{String\(item\.topic/);
+assert.match(appSource, /say\(isPart1\?/);
+assert.match(appSource, /speakUtterance\(value,\{accent:segment\?\.accent\|\|cfg\.accent/);
+assert.match(appSource, /'Part 2':\{name:'Question–Response'/);
+assert.match(appSource, /PART_OPTION_LABEL_PAUSE_MS,playbackToken/);
 
-console.log('Listening/TTS regression PASS: immediate gesture-stack playback, empty/throwing catalogue fallback, selected-voice retry, stale-event guard, constructor failure, speech watchdog contract, Part 1 sequence, speaker pacing, safe cancellation, vocabulary, Foundation and Reading read-aloud.');
+console.log('Listening/TTS regression PASS: Parts 1–4 title/lead-in/content/question/lettered-choice sequence, Reading Parts 5–7, immediate gesture-stack playback, voice fallbacks, stale-event guard, speech watchdog, speaker pacing and safe cancellation.');
 
 async function waitFor(predicate, message) {
   for (let attempt = 0; attempt < 100; attempt++) {

@@ -1,5 +1,4 @@
 # Previous Version
 
-- Previous source: v2.93.0 — TOEIC L&R coverage expansion, Batch 025 and local score-readiness tracker.
-- Current source: v2.94.0 — TTS reliability, Robot Buddy progress dashboard and repository-integrity preflight.
-- Previous release package: `TOEIC_Dictionary_v2.93.0_FullSource.zip`.
+- Previous source: **v2.95.7** — Robot Buddy strict learner-data isolation correction.
+- Superseded by: v2.95.8, which intentionally restores the user-approved opt-in local read-only Learning Insights while retaining safe non-conflicting maintenance improvements.

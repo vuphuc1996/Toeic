@@ -1,45 +1,45 @@
-# TOEIC Dictionary v2.94.0 — Documentation
+# TOEIC Dictionary v2.95.8 — Project Documentation
 
-- Current product source: `v2.94.0` — `versions/CURRENT_VERSION.md`.
-- Previous release: `v2.93.0` — `versions/PREVIOUS_VERSION.md`.
-- Master status: `MASTER_STATUS.md` (single current roadmap/status source).
-- Release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.94.0.md`.
-- Robot Buddy specification: `reports/ROBOT_BUDDY_v2.86.0.md`.
-- Progress baseline/snapshot: `reports/PROJECT_PROGRESS_BASELINE_v2.83.0.md` and `reports/PROJECT_PROGRESS_SNAPSHOT_v2.83.0.md`.
-- Current progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.94.0.md`.
-- Overall roadmap assessment: `reports/PROJECT_ROADMAP_STATUS_v2.94.0.md`.
-- A2 extended Listening review handoff: `reports/FOUNDATION_A2_LISTENING_REVIEW_CHECKLIST_v2.91.0.md`.
-- A2 extended Listening technical report: `reports/FOUNDATION_A2_EXTENDED_LISTENING_v2.91.0.md`.
-- Older detailed records are consolidated in `archive/PROJECT_HISTORY.md`; release-level history remains in `CHANGELOG.md`.
-- TOEIC remains the primary track; TOEIC Speaking/Writing remain deferred until L/R is complete and accepted; IELTS remains deferred until the later S/W phase is complete and the owner approves a phase change.
-- Foundation pathway: 10 Pre-A1/A1 lessons and 13 A2 lessons; 23 core Foundation Reading resources / 59 questions plus 13 supplementary A2 Reading resources / 39 questions and 13 supplementary A2 Listening resources / 39 questions (pending independent editorial review); 23 core Listening resources / 59 questions; 26 contextual A2 writing tasks (13 foundational + 13 extended), each with separate local evidence/revision history, a writing portfolio and device-local Markdown export. The 13 extended writing tasks, 13 supplementary Reading passages (39 questions) and 13 supplementary Listening clips (39 questions) remain pending independent editorial review.
-- Google AI: only the original v2.79 feature-level user-triggered actions are retained for vocabulary lookup, practice answer/review, Grammar, Reading and Listening; there is no shared contextual AI assistant or copy/transfer workflow.
-- Robot Buddy v2.86.0: head-only animated companion with 500 offline dialogue variants, 59 feature-help messages for 12 destinations (11 menu areas plus Placement), six FAQs and 16 quick prompts that remain available throughout the current chat session. The message area scrolls independently from the prompt menu. It can analyze already-loaded local learner progress in read-only mode; no learning data is sent outside the device. The user can disable progress analysis while retaining dialogue and help. Evidence-based insight replies can show up to four direct links to the corresponding existing learning modules.
-- Mock Exam icons: clipboard/check, bolt, stopwatch and trophy; the old clock glyph is retired.
-- Foundation production history remains device-local under `toeic:foundation-progress:v1`. Revision/self-review is not automated grading or learner mastery.
-- Listening Part 1: JPG-only photo contract; all nine optimized images are embedded, 4:3 landscape, <=400,000 bytes and retain source attribution. `ai-generated` source strings, where present, identify asset provenance only.
-- Vocabulary: 1,141 stable headwords; quantity coverage is 38.0% of the 3,000 minimum and 22.8% of the 5,000 planning target; quality review remains separate.
-- Robot Buddy uses `toeic:robot-buddy-settings:v1` for onboarding choice and idle-reminder mute preference. A one-time migration reads only the old v2.83 onboarding-choice key `toeic:robot-companion-onboarding:v1`. Learning progress is passed to the insights aggregator as an in-memory read-only snapshot; Robot itself does not open IndexedDB or localStorage. Chat history remains in memory for the current session. Existing learner progress keys and IndexedDB v1 remain unchanged.
+## Source of truth
 
-- SW002 validation: `assets/js/robot-buddy.js`, `assets/js/robot-learning-insights.js`, `data/robot/robot-library.json`, and the legacy no-op tombstones are included in Service Worker `REQUIRED` and `APP_SHELL`.
+- **Current source:** `versions/CURRENT_VERSION.md`.
+- **Immediately previous source:** `versions/PREVIOUS_VERSION.md`.
+- **Current project status and active backlog:** `MASTER_STATUS.md`.
+- **Chronological release history:** `CHANGELOG.md`.
+- **Storage, runtime and retirement contracts:** `COMPATIBILITY.md`.
+- **Consolidated retired-document index:** `archive/PROJECT_HISTORY.md`.
 
-- v2.92.0 and v2.93.0 expanded TOEIC Grammar, Listening and Reading. v2.93.0 adds 9 Grammar lessons / 27 exercises, 8 Listening units / 20 questions, 8 Reading Part 7 resources / 36 questions and 4 vocabulary headwords. New Listening/Reading content remains reserve-pending-independent-review and Mock-excluded.
-- Foundation B1 is documented as a 12-unit curriculum blueprint only; no B1 learner pathway is implemented or selectable yet.
+## Current product
 
-- v2.92.0 content batch: Grammar 41 lessons / 110 exercises; TOEIC Listening 113 units / 219 questions; TOEIC Reading 57 resources / 227 questions. The 18 v2.92.0 Listening and 27 v2.92.0 Reading questions plus 20 v2.93.0 Listening and 36 v2.93.0 Reading questions remain pending independent review and are excluded from Mock.
-- B1 curriculum blueprint: `reports/FOUNDATION_B1_CURRICULUM_BLUEPRINT_v2.92.0.md` (design-only, not a selectable pathway).
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.94.0.md`.
-- v2.92.0 independent-review handoff: `reports/TOEIC_BATCH_024_REVIEW_CHECKLIST_v2.92.0.md`.
+- GitHub Pages static PWA; GitHub-only. No app backend, GAS, iframe or Cloudflare runtime dependency.
+- TOEIC Listening & Reading is the active exam-development track. B1 remains a blueprint only; TOEIC Speaking/Writing and IELTS are deferred. B1 blueprint: `reports/FOUNDATION_B1_CURRICULUM_BLUEPRINT_v2.92.0.md`.
+- Robot Buddy is a head-only offline companion using its static interaction library, current app/item context, idle-time guidance and optional read-only local Learning Insights. The app passes an in-memory snapshot; the insight aggregator does not open storage or modify records. No learner data is sent externally.
+- Speech uses device/browser SpeechSynthesis. It is not authentic ETS audio; available voices and audible timing depend on the device and browser.
 
-- v2.93.0 adds the local Full Mock score-readiness evidence tracker. It requires three completed 200-question Full Mocks before showing L/R trends; it never converts accuracy into ETS scaled scores.
-- v2.93.0 review handoff: `reports/TOEIC_BATCH_025_REVIEW_CHECKLIST_v2.93.0.md`; score-readiness design: `reports/TOEIC_SCORE_READINESS_v2.93.0.md`.
-- TOEIC L/R remain the active scope. B1 remains design-only; Speaking/Writing and IELTS remain deferred.
+## Canonical inventory
 
-- Current v2.94.0 inventory: 1,141 vocabulary headwords; 50 Grammar lessons / 137 exercises; 121 Listening units / 239 questions; 65 Reading resources / 263 questions.
-- Score Readiness (introduced in v2.93.0 and retained in v2.94.0) uses three completed 200-question Full Mocks to show L/R trends only; it never estimates an ETS scaled score.
+| Area | Current inventory |
+|---|---:|
+| Vocabulary | 1,141 headwords across A–Z |
+| Grammar | 50 lessons / 137 exercises |
+| TOEIC Listening | 121 units / 239 questions |
+| TOEIC Reading | 65 resources / 263 questions |
+| Separate Part 5 practice | 80 questions; practice-only and review-pending |
+| Foundation | 23 lessons (10 Pre-A1/A1 + 13 A2); separate Reading and Listening evidence banks |
 
-- v2.94.0 consolidated release: repaired question-evidence CI assertions, unified browser SpeechSynthesis playback and fallback/watchdogs, prevented Robot Buddy mobile focus auto-zoom without disabling pinch zoom, added one-tap Robot progress analysis with accessible color-coded module meters, and enriched 42 examples across the newest 17 Grammar lessons.
-- Repository-integrity preflight audits PWA local paths, HTML/CSS/JS asset references, workflow scripts/tests and all JSON data; this is a structural guard, not a guarantee of defect-free software.
-- Current TOEIC inventory remains 1,141 vocabulary records, 50 Grammar lessons / 137 exercises, 121 Listening units / 239 questions and 65 Reading resources / 263 questions. New reserve content remains pending review and excluded from Mock.
-- v2.94.0 consolidated user acceptance test: `reports/USER_ACCEPTANCE_TEST_v2.94.0.md`. Do not start another release before recording this acceptance result.
-- Current supporting reports: `reports/VOICE_PLAYBACK_REGRESSION_v2.94.0.md`, `reports/GRAMMAR_EXAMPLES_COMPLETENESS_v2.94.0.md`, and `reports/REPOSITORY_INTEGRITY_v2.94.0.md`.
+Counts describe source inventory, not editorial approval, learner completion, mastery or Mock eligibility. See the current progress snapshot for field coverage and review status. Active independent-review handoffs remain at `reports/TOEIC_BATCH_024_REVIEW_CHECKLIST_v2.92.0.md` and `reports/TOEIC_BATCH_025_REVIEW_CHECKLIST_v2.93.0.md`; their reserve content must not be promoted to Mock eligibility until review is recorded.
+
+## Current release artifacts
+
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.8.md`.
+- Current user acceptance checklist: `reports/USER_ACCEPTANCE_TEST_v2.95.8.md`.
+- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.8.md`.
+- Current editorial evidence audit: `reports/TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.95.8.md`.
+- Current distractor structural audit: `reports/TOEIC_DISTRACTOR_AUDIT_v2.95.8.md`.
+- Current Foundation A2 assessment audit: `reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.95.8.md`.
+- Current Listening readiness audit: `reports/TOEIC_LISTENING_READINESS_v2.95.8.md`.
+- Previous release report and acceptance checklist remain available for comparison under the v2.95.7 names.
+
+## Documentation policy
+
+Update `MASTER_STATUS.md` for current decisions and backlog; add one entry to `CHANGELOG.md` per release. Keep only current and immediately previous release-specific reports in the active reports folder. Retire older report files through `tools/rotate-release-files.py`; do not delete canonical data, assets, patch provenance or learner-storage contracts as part of documentation rotation.

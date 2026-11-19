@@ -12,10 +12,21 @@ def item(item_id):
 
 
 class Part7EditorialReviewTests(unittest.TestCase):
-    def test_part7_current_scope_is_135_questions_after_batch_024(self):
+    def test_part7_inventory_is_monotonic_and_structurally_complete(self):
         rows = [x for x in READING if x.get("part") == "Part 7"]
-        self.assertEqual(sum(len(x.get("questions", [])) for x in rows), 135)
-        self.assertEqual(len(rows), 36)
+        # The floor protects already-reviewed coverage without pinning the suite
+        # to a historical count that breaks whenever a valid content batch grows.
+        self.assertGreaterEqual(len(rows), 44)
+        self.assertGreaterEqual(sum(len(x.get("questions", [])) for x in rows), 171)
+        ids = [row.get("id") for row in rows]
+        self.assertTrue(all(ids), "Every Part 7 resource needs a stable ID")
+        self.assertEqual(len(ids), len(set(ids)), "Part 7 resource IDs must be unique")
+        for row in rows:
+            self.assertTrue(row.get("passage") or any(doc.get("content", "").strip() for doc in row.get("documents", [])), row.get("id"))
+            self.assertTrue(row.get("questions"), row.get("id"))
+            for index, question in enumerate(row["questions"], 1):
+                self.assertIsInstance(question.get("question"), str, f"{row['id']} Q{index}")
+                self.assertTrue(question["question"].strip(), f"{row['id']} Q{index}")
 
     def test_hotel_room_dates_match_two_night_stays_and_departure(self):
         row = item("part7-triple-conference-arrangements")
@@ -42,6 +53,25 @@ class Part7EditorialReviewTests(unittest.TestCase):
                 self.assertTrue(0 <= q.get("answerIndex", -1) < 4, f"{row['id']} Q{qn}")
                 self.assertEqual(len(q.get("choiceIds", [])), 4, f"{row['id']} Q{qn}")
                 self.assertEqual(len(set(q["choiceIds"])), 4, f"{row['id']} Q{qn}")
+
+    def test_part7_choices_are_nonempty_and_textually_distinct(self):
+        """Catch editorially broken option sets that pass index/ID checks alone."""
+        for row in (x for x in READING if x.get("part") == "Part 7"):
+            for qn, question in enumerate(row.get("questions", []), 1):
+                choices = question.get("choices", [])
+                self.assertEqual(len(choices), 4, f"{row['id']} Q{qn}: exactly four choices")
+                normalized = [" ".join(str(choice).casefold().split()) for choice in choices]
+                self.assertTrue(all(normalized), f"{row['id']} Q{qn}: choices cannot be blank")
+                self.assertEqual(len(normalized), len(set(normalized)),
+                                 f"{row['id']} Q{qn}: duplicate choice text")
+
+    def test_part7_answer_index_is_an_integer_not_a_boolean_or_string(self):
+        """Python bool is an int subclass; reject it explicitly for answer keys."""
+        for row in (x for x in READING if x.get("part") == "Part 7"):
+            for qn, question in enumerate(row.get("questions", []), 1):
+                answer_index = question.get("answerIndex")
+                self.assertIs(type(answer_index), int, f"{row['id']} Q{qn}: answerIndex must be integer")
+                self.assertIn(answer_index, range(4), f"{row['id']} Q{qn}: answerIndex out of range")
 
 
 if __name__ == "__main__":

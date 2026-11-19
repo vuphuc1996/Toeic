@@ -17,6 +17,7 @@ function $(selector) {
   return nodes.get(selector);
 }
 const context = {
+  PART1_LEAD_IN_TEXT: 'Now, listen to the four statements.',
   state: {
     readings: [],
     readingProgress: {},

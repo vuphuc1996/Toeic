@@ -94,6 +94,35 @@ class ReleaseRotationTests(unittest.TestCase):
         self.assertTrue(exact_previous.exists())
         self.assertTrue(patch_neighbor.exists())
 
+    def test_rotation_preserves_historical_docs_referenced_by_active_tests(self):
+        required = self.root / "docs/reports/REVIEW_CHECKLIST_v2.28.0.md"
+        required.write_text("# Active review handoff\n", encoding="utf-8")
+        tests = self.root / "tools/tests"
+        tests.mkdir(parents=True)
+        (tests / "test_review_reference.py").write_text(
+            "CHECKLIST = \"docs/reports/REVIEW_CHECKLIST_v2.28.0.md\"\n",
+            encoding="utf-8",
+        )
+        result = self.run_rotation("--apply")
+        self.assertIn("KEEP (referenced by active tests/tools/docs) docs/reports/REVIEW_CHECKLIST_v2.28.0.md", result.stdout)
+        self.assertTrue(required.exists())
+        self.assertNotIn("REVIEW_CHECKLIST_v2.28.0.md", (self.root / "docs/archive/PROJECT_HISTORY.md").read_text(encoding="utf-8"))
+
+    def test_rotation_preserves_docs_relative_links_from_master_and_readme(self):
+        required = self.root / "docs/reports/ACTIVE_HANDOFF_v2.28.0.md"
+        required.write_text("# Active handoff linked relative to docs\n", encoding="utf-8")
+        (self.root / "docs/MASTER_STATUS.md").write_text(
+            "Current handoff: `reports/ACTIVE_HANDOFF_v2.28.0.md`\n", encoding="utf-8"
+        )
+        (self.root / "docs/CHANGELOG.md").write_text(
+            "Historical release reference: `reports/ACTIVE_HANDOFF_v2.28.0.md`\n", encoding="utf-8"
+        )
+        result = self.run_rotation("--apply")
+        self.assertIn("KEEP (referenced by active tests/tools/docs) docs/reports/ACTIVE_HANDOFF_v2.28.0.md", result.stdout)
+        self.assertTrue(required.exists())
+        history = (self.root / "docs/archive/PROJECT_HISTORY.md").read_text(encoding="utf-8")
+        self.assertNotIn("ACTIVE_HANDOFF_v2.28.0.md", history)
+
     def test_apply_consolidates_repeated_history_headings(self):
         history_path = self.root / "docs/archive/PROJECT_HISTORY.md"
         history_path.write_text(

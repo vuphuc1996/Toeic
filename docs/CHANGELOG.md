@@ -1,3 +1,50 @@
+## v2.95.8 — Five-defect consolidation, Robot Buddy Learning Insights preservation and source cleanup
+
+- Consolidated the five regression groups previously delivered across v2.95.1–v2.95.5: Buddy page-only routing; Part 7 editorial validation/CI guard; Guided Mock Listening lead-in handoff; exact A/B/C/D pause assertions; and single visual progress dashboard without duplicate prose.
+- Reaffirmed the approved Robot Buddy behavior: retain opt-in, local read-only Learning Insights and dashboard. The app passes an in-memory snapshot to the pure aggregator; no direct storage access, writes, migrations or external transmission are added. The v2.95.7 privacy-only removal of this feature is intentionally not carried forward.
+- Added context-aware Buddy guidance for the active page and current in-session word, Flashcard, practice question, Grammar lesson, Reading item, Listening item or Foundation lesson. Idle nudges use that current item first and only compute progress-derived reminders when no current item is open.
+- Adopted v2.95.7's documentation consolidation policy and safe dry-run-first release rotation utility, while retaining the five-defect tests and learning-insight regressions.
+- Removed generated Python bytecode/cache artifacts from the distributable source. Intentional compatibility tombstones remain documented and tested; they are not duplicate active modules.
+- No vocabulary/question bank, answer key, stable ID, IndexedDB schema, localStorage learner key or learner record was reset or migrated.
+- Local test and validation outcomes are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.8.md`; remote CI, Pages deployment and physical-device acceptance remain separate gates.
+
+## v2.95.5 — Robot Buddy duplicate progress output regression guard
+- Added an executable DOM-level regression for both explicit progress analysis and natural-language insight requests.
+- The test invokes the real dashboard renderer and both entry points, confirming each request creates exactly one visual dashboard, one set of three totals, and no second prose summary repeating the same progress.
+- Registered the new JavaScript regression in GitHub Actions. No learner progress, Robot dialogue library, insight thresholds or dashboard calculations were changed.
+
+## v2.95.4 — TTS A–D one-second cadence regression guard
+- Hardened the Listening/Reading TTS regression to assert the exact 1,000 ms pauses before answer-option sets, after each spoken A/B/C/D label, and between an option and the next label across Listening Parts 2–4, Reading Parts 5–7 and Guided Mock playback.
+- Kept the intentional Part 1 timing contract separate: 1,500 ms after each spoken label and 1,300 ms between descriptions.
+- No TTS timing constants or runtime behavior needed changing; the existing one-second contract is now explicitly executable and protected against regression.
+
+## v2.95.3 — Listening / Reading narration sequence correction
+- Fixed the shared Listening player to honor `skipLeadIn` when Guided Mock has already spoken its Part transition and lead-in; Mock no longer repeats the Part heading/instruction before the conversation or talk.
+- Expanded TTS sequence regression coverage for Reading Part 6 and the Guided Mock Listening handoff, while retaining Parts 1–4 and Reading Parts 5/7 checks.
+- No question content, answer keys, voice settings, learner progress, IndexedDB schema or standalone practice sequence changed.
+
+## v2.95.2 — Editorial review regression and CI guard
+- Expanded Part 7 editorial unit coverage to reject blank/duplicate answer choices and invalid `answerIndex` types (including booleans and strings), in addition to existing structure and reviewed-scenario checks.
+- Added a focused CI guard requiring exactly one dedicated `test_editorial_review.py` execution step and retained workflow path triggers for test/workflow changes.
+- Scope is limited to editorial review tests and CI coverage; no learner content, answer keys, progress, IndexedDB, voice, Robot Buddy runtime or dashboard behavior changed.
+
+## v2.95.1 — Robot Buddy page-only shortcut regression coverage
+
+- Kept the existing page-only action implementation unchanged: the delegated Buddy click listener accepts `data-robot-page`, closes the Buddy panel, then navigates to the selected page.
+- Strengthened `tools/tests/robot-buddy.mjs` to execute the actual delegated click-listener body and actual `handleRobotCommand()` handler with a page-only `data-robot-page` action. The regression now asserts the panel closes and the exact destination is opened; it no longer relies only on testing action generation or source text.
+- Scope is limited to Robot Buddy page-only shortcut dispatch and its regression test. No changes to `editorial_review`, Listening/Reading narration, TTS pause timing, progress-dashboard wording, learning content, or learner storage.
+- Release gate: Robot Buddy navigation regression, all registered JavaScript regression suites and repository-integrity preflight must pass locally. Remote GitHub Actions, Pages deployment and physical-device acceptance remain unverified until actually run.
+
+## v2.95.0 — Review-mode recovery, flashcard confirmation layering and interaction regressions
+
+- Fixed the Robot Buddy action delegation so buttons returned with a destination page are handled as well as command buttons. Page actions close the Buddy panel and navigate to the intended module; the progress-insight response continues to render one visual dashboard with its navigation actions inside the dashboard, without repeating a prose summary.
+- Fixed Review question selection so built-in Part 5 items remain usable even when a learner has hidden a linked headword from their personal dictionary. The effective personal vocabulary is preferred, missing built-in Part 5 targets are resolved from the immutable release vocabulary, and unavailable selected modes retry through a smart/common practice mode instead of stopping with an empty-question error.
+- Corrected the Part 5 recall route to pass an exact question ID only when it still exists in the current bank; stale recall IDs safely fall back to a valid question. The review header reflects the question mode actually opened.
+- Fixed the Flashcard completion confirmation stacking context: the assessment-result modal now renders above the focused learning workspace, so the user can confirm a completed 5/10-word quiz without the prompt being obscured by the flashcard panel. Existing confirmation-before-progress-write behavior remains unchanged.
+- Updated the Part 5 recall-queue regression to match the safe exact-ID/fallback contract, aligned Robot Buddy and TTS tests with the current UI/runtime behaviour, and added dedicated tests for Part 5 vocabulary resolution, all review-mode fallback routes and modal stacking. CI coverage verifies every Python test module and JavaScript regression suite is invoked by the workflow.
+- Preserved vocabulary content, Mock eligibility boundaries, review/Flashcard evidence, existing learner data keys and IndexedDB v1. No learner progress is reset, migrated or uploaded. TOEIC L/R remains the active scope; B1 remains blueprint-only and Speaking/Writing and IELTS stay deferred.
+- Local verification is recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.0.md`. Remote GitHub Actions, deployed GitHub Pages and device QA are only considered verified after the user pushes/deploys and reports the actual results.
+
 ## v2.94.0 — Voice reliability, Robot Buddy progress dashboard and repository-wide release preflight
 
 - Fixed the `question_evidence` CI regression: stale 401-question assertions were replaced by source-derived inventory and reserve counts. The current audit indexes all 502 TOEIC questions (239 Listening / 263 Reading), and its six unit tests pass.
