@@ -164,7 +164,40 @@ class PatchDataTests(unittest.TestCase):
         self.assertEqual(rows[0]["old"], "old alpha")
         self.assertEqual(rows[0]["new"], "new alpha")
         self.assertEqual(rows[0]["result"], "DRY_RUN_PASS")
+        self.assertEqual(rows[0]["mode"], "dry-run")
         self.assertIn("recordedAt", rows[0])
+
+
+    def test_apply_audit_log_records_apply_mode(self):
+        result = self.run_tool("--apply")
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        log_path = self.root / "logs/patch-data/operations.jsonl"
+        rows = [json.loads(line) for line in log_path.read_text(encoding="utf-8").splitlines()]
+        self.assertEqual({row["mode"] for row in rows}, {"apply"})
+        self.assertIn("APPLIED", {row["result"] for row in rows})
+
+    def test_rollback_audit_log_records_rollback_mode(self):
+        self.assertEqual(self.run_tool("--apply").returncode, 0)
+        manifest = json.loads((self.root / "data/manifest.json").read_text(encoding="utf-8"))
+        manifest["version"] = "2.9.9"
+        (self.root / "data/manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+        result = self.run_tool("--rollback")
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        log_path = self.root / "logs/patch-data/operations.jsonl"
+        rows = [json.loads(line) for line in log_path.read_text(encoding="utf-8").splitlines()]
+        rollback_rows = [row for row in rows if row["result"] == "ROLLED_BACK"]
+        self.assertTrue(rollback_rows)
+        self.assertTrue(all(row["mode"] == "rollback" for row in rollback_rows))
+
+    def test_repository_gitignore_excludes_audit_logs(self):
+        repository = SCRIPT.resolve().parents[1]
+        gitignore = (repository / ".gitignore").read_text(encoding="utf-8").splitlines()
+        self.assertIn("logs/", gitignore)
+        result = subprocess.run(
+            ["git", "check-ignore", "--no-index", "logs/patch-data/operations.jsonl"],
+            cwd=repository, text=True, capture_output=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_final_audit_log_failure_restores_all_files(self):
         spec = importlib.util.spec_from_file_location("patch_data_under_test", SCRIPT)

@@ -4,11 +4,30 @@
 
 ## 1. Current release
 
-- **Phiên bản mã nguồn đang kiểm kê:** v2.95.10 — fixed 10-card Flashcard sessions, protected 1,141 vocabulary IDs, guarded patch operations and consent-based PWA updates; v2.95.9 Robot Buddy baseline retained.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.95.11 — fixed 10-card Flashcard sessions, protected 1,141 vocabulary IDs, guarded patch operations and consent-based PWA updates; v2.95.9 Robot Buddy baseline retained.
 - **Previous source:** v2.95.9 — Robot Buddy progressive response streaming and context-aware local response composition.
 - **Product:** GitHub Pages static PWA, GitHub-only. No backend/GAS/iframe/Cloudflare runtime dependency.
 - **Scope:** TOEIC Listening & Reading is the active exam-development track. Foundation Pre-A1/A1/A2 remains available. B1 is blueprint-only; TOEIC Speaking/Writing and IELTS are deferred.
 - **This release changes:** retains the complete v2.95.9 functional baseline, removes the inconsistent 5-card Flashcard option in favor of a fixed maximum of 10, protects all 1,141 vocabulary IDs, enforces patch path allowlists/audit logs, and requires user consent for Service Worker updates. No generative AI or remote learner-data transfer was added.
+
+### v2.95.11 local working changes — not yet deployed
+
+- Patch audit output now labels every row as `dry-run`, `apply` or `rollback`; `.gitignore` excludes `logs/`. The patch-data suite has 20 cases.
+- Added a CSS design-token governance specification, `tools/design-token-rules.json`, `tools/audit-design-tokens.py`, an identity-based baseline and a CI step. The current CSS scan reports 2,778 legacy warning identities and zero new violations. The baseline was tightened only by removing three update-banner entries fixed by token migration.
+- The update banner now uses existing shared typography, color, spacing, radius and shadow tokens. CSS has not been mass-refactored.
+- `calm-study-blue` is documented as a conditional development/audit default. The profile remains `proposed-default-awaiting-user-preferences`; owner approval is not recorded.
+- `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` contains 14 owner-run checks. All 14 are **Chưa kiểm**; no GitHub Actions/Pages, PWA install, offline, two-tab, iOS/Android TTS or physical display/photo check is marked confirmed.
+- Robot Buddy progressive local replies and the fixed maximum 10-card Flashcard remain because they were explicitly requested by the owner. No vocabulary IDs, words, topics, questions, answer keys, learner records or IndexedDB schema were changed.
+- All changes in this workspace are local commits only. No push, remote CI run or Pages deployment has been performed.
+
+### v2.95.11 verification record
+
+- Focused Python verification: 10 modules / 95 tests passed; JavaScript: 37/37 suites passed. These are targeted results, not a claim that the full Python inventory completed.
+- Current local validators: vocabulary 1,141 records, ID additions 0 / missing 0, 0 errors / 0 warnings; learning content 0 errors / 0 warnings; repository integrity 367 references, 0 errors / 0 warnings; Part 1 photos 9/9 valid.
+- Design-token audit: 2,778 legacy warning identities, 0 new violations, no `RULE-DRIFT`. The audit scanner reports 979 hex values / 1,508 uses, 128 font-size values / 921 declarations, 47 border-radius values, 70 box-shadow values, 114 `!important`, 24 distinct media breakpoint values and 34 keyframes. Its font-size declaration count and breakpoint count differ from Claude's independent scanner (918 and 25); see `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.11.md` for measurement notes.
+- The aggregate Python discovery did not complete within this execution environment and is not counted as PASS. Claude's supplied 433-test result applied to v2.95.10, not this release.
+- Every item in `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` remains `Chưa kiểm` until performed by the owner. No GitHub Actions/Pages or device-level results are marked confirmed.
+- Detailed commands, durations and exit codes: `reports/COMMAND_LOG_INDEX_v2.95.11.md`; independent rerun instructions are packaged in `TOEIC_v2.95.11_Test_Logs.zip`.
 
 ## 2. Current canonical inventory
 
@@ -91,8 +110,8 @@ Detailed evidence: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.6.md`, `reports/P
 
 ### P0 — acceptance and integration
 
-1. Deploy v2.95.10 to the intended GitHub branch; verify remote Actions and Pages show the same version.
-2. Complete the v2.95.10 user acceptance checklist on Windows first, then iPhone/iPad and Android where available, including the fixed 10-card Flashcard flow, Robot Buddy streaming/auto-scroll, two-tab update consent, offline/reconnect and audible TTS cadence.
+1. Deploy v2.95.11 to the intended GitHub branch; verify remote Actions and Pages show the same version.
+2. Complete all 14 rows in `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` on Windows first, then iPhone/iPad and Android where available. Every item remains Chưa kiểm until the owner records date/device and result.
 3. Instrument the remaining 27 learning-outcome criteria only after each criterion has a defensible evidence source, stable scope, threshold policy and tests. Do not infer mastery from inventory or resource links.
 
 ### P1 — content quality and coverage

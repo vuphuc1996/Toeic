@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "rulesetVersion": "1.0.0",
+  "scanFiles": [
+    "assets/css/app.css",
+    "assets/css/design-system.css"
+  ],
+  "fontSize": {
+    "tokenPrefixes": ["--ds-font-", "--ds-text"],
+    "allowKeywords": ["inherit", "initial", "unset", "revert", "revert-layer"]
+  },
+  "fontWeight": {
+    "allowed": [400, 500, 600, 700, 800],
+    "allowKeywords": ["inherit", "initial", "unset", "revert", "revert-layer"],
+    "tokenPrefixes": ["--ds-font-weight"]
+  },
+  "borderRadius": {
+    "allowedAtoms": ["0", "0px", "0rem", "50%", "999px", "9999px"],
+    "tokenPrefixes": ["--ds-radius-"],
+    "allowKeywords": ["inherit", "initial", "unset", "revert", "revert-layer"]
+  },
+  "boxShadow": {
+    "tokenPrefixes": ["--ds-shadow-", "--ds-focus"],
+    "allowKeywords": ["none", "inherit", "initial", "unset", "revert", "revert-layer"]
+  },
+  "color": {
+    "canonicalTokenPrefix": "--ds-color-",
+    "variablePrefixes": ["--ds-color-"]
+  },
+  "breakpoints": {
+    "allowedBoundaryPx": [640, 641, 850, 851, 1199, 1200]
+  },
+  "important": {
+    "forbidNew": true
+  }
+}

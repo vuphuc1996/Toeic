@@ -14,7 +14,7 @@ import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrit
 import { createRobotBuddy } from './robot-buddy.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.10';
+const APP_RELEASE_VERSION = '2.95.11';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);

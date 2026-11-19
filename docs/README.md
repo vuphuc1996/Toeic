@@ -1,4 +1,4 @@
-# TOEIC Dictionary v2.95.10 — Project Documentation
+# TOEIC Dictionary v2.95.11 — Project Documentation
 
 ## Source of truth
 
@@ -32,11 +32,12 @@ Counts describe source inventory, not editorial approval, learner completion, ma
 ## Current release artifacts
 
 - Current Claude audit assessment: `reports/CLAUDE_AUDIT_ASSESSMENT_v2.95.10.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.10.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.11.md`.
 - Current Robot Buddy behavior report: `reports/ROBOT_BUDDY_v2.95.9.md`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.10.md`.
-- Current user acceptance checklist: `reports/USER_ACCEPTANCE_TEST_v2.95.10.md`.
-- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.10.md`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.11.md`.
+- Current manual acceptance checklist: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (14 items; all start as Chưa kiểm).
+- CSS design-token ratchet report: `reports/DESIGN_TOKEN_AUDIT_BASELINE_v2.95.11.md`.
+- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.10.md` (content inventory unchanged in the v2.95.11 tooling/governance update).
 - Current editorial evidence audit: `reports/TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.95.8.md`.
 - Current distractor structural audit: `reports/TOEIC_DISTRACTOR_AUDIT_v2.95.8.md`.
 - Current Foundation A2 assessment audit: `reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.95.8.md`.

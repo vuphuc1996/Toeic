@@ -1,8 +1,8 @@
 # TOEIC Dictionary — Design System & UI Governance
 
-**Effective candidate:** v2.64.0  
-**Profile:** `Calm Study Blue` (`design/design-profile.json`)  
-**Status:** implemented as the shared default; visual preferences awaiting owner selection  
+**Effective candidate:** v2.64.0
+**Profile:** `Calm Study Blue` (`design/design-profile.json`)
+**Status:** `calm-study-blue` is the conditional implementation/audit default only; owner approval is still pending
 **Runtime stylesheet:** `assets/css/design-system.css` (loaded after `assets/css/app.css`)
 
 ## 1. Product design direction
@@ -83,6 +83,100 @@ Use the native system font stack from `--ds-font-family`. It avoids an external 
 | Content maximum | `--ds-content-max` | 1600 px |
 
 Panels use the panel radius and low elevation. Cards use the card radius and subtle elevation. Inputs and buttons use the control radius. Avoid combining several shadow styles in one section. Use the spacing scale; do not introduce arbitrary 7 px / 13 px / 19 px spacing without a documented reason.
+
+### 4.1. Thông số quy định (mặc định có điều kiện)
+
+`calm-study-blue` được dùng làm mặc định kỹ thuật tạm thời để thống nhất các màn hình và thiết lập ratchet CSS. Đây **không phải** xác nhận rằng chủ dự án đã duyệt phong cách cuối cùng. Không đổi `design/design-profile.json` từ trạng thái `proposed-default-awaiting-user-preferences` cho tới khi chủ dự án xác nhận.
+
+#### Font và thang chữ
+
+- Chỉ dùng một font stack: `--ds-font-family` trong `design/design-profile.json`. Không tải font riêng theo module.
+- Mọi cỡ chữ mới phải gọi token `--ds-font-*` hoặc token nội dung tương ứng; không viết `font-size` literal mới trong selector.
+- Thang 9 vai trò hiện hành (giá trị fluid trong profile được giữ nguyên):
+
+| Bậc | Token | Cỡ chữ tham chiếu | Line-height |
+|---|---|---:|---:|
+| Caption | `--ds-font-caption` | 12.5 px | 1.45 |
+| Label | `--ds-font-label` | 13 px | 1.45 |
+| Supporting | `--ds-font-support` | 14 px | 1.55–1.62 |
+| Control / button | `--ds-font-control` / `--ds-font-button` | 14.5 px | 1.25–1.45 |
+| Body | `--ds-font-body` | 15–16 px | 1.62 |
+| Passage | `--ds-font-passage` | 15 px | 1.62 |
+| Card title | `--ds-font-card-title` | 17–19 px | 1.35 |
+| Section title | `--ds-font-section-title` | 20–23 px | 1.30 |
+| Page title | `--ds-font-page-title` | 25–34 px | 1.22–1.30 |
+
+Không thêm bậc chữ riêng cho một module. Dùng đúng token theo vai trò; ngoại lệ hiển thị (điểm số lớn, headword, timer, ký hiệu IPA) phải có lý do và kiểm thử, nhưng không được đổi font stack.
+
+#### Độ đậm chữ
+
+Chỉ chấp nhận các mức `400`, `500`, `600`, `700`, `800`. Không thêm `550`, `650`, `750`, `850`, `950`, `bold` hoặc giá trị lẻ khác. Khi cần nhấn mạnh, chọn đúng vai trò và mức trong thang này.
+
+#### Bo góc, đổ bóng và khoảng cách
+
+| Nhóm | Token / mức được phép | Giá trị hiện hành |
+|---|---|---|
+| Bo góc control | `--ds-radius-control` | 10 px |
+| Bo góc card | `--ds-radius-card` | 16 px |
+| Bo góc panel/modal | `--ds-radius-panel` | 18 px |
+| Bo góc pill/chip | `--ds-radius-pill` | 999 px |
+| Elevation thấp | `--ds-shadow-panel` | 2 px / 10 px, opacity thấp |
+| Elevation card | `--ds-shadow-card` | 4 px / 16 px |
+| Elevation nổi/modal/banner | `--ds-shadow-float` | 16 px / 44 px |
+| Spacing | `--ds-space-1`…`--ds-space-6`, `--ds-space-8`, `--ds-space-10` | 4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 px |
+
+Không tạo box-shadow hoặc radius tùy biến mới trong `app.css`. Dùng `none` khi component không cần elevation; mọi biến thể khác phải được định nghĩa trong profile trước.
+
+#### Bảng màu ngữ nghĩa
+
+| Vai trò | Token | Quy tắc sử dụng |
+|---|---|---|
+| Nền ứng dụng | `--ds-color-canvas` | Nền tổng thể |
+| Bề mặt | `--ds-color-surface`, `--ds-color-surface-subtle`, `--ds-color-surface-tint` | Card, panel, modal và vùng phụ |
+| Chữ chính / phụ | `--ds-color-ink`, `--ds-color-muted`, `--ds-color-muted-strong` | Nội dung và metadata |
+| Viền | `--ds-color-border`, `--ds-color-border-strong` | Phân tách bề mặt và control |
+| Thương hiệu | `--ds-color-brand`, `--ds-color-brand-deep`, `--ds-color-brand-soft` | Điều hướng và hành động chính |
+| Đúng / thành công | `--ds-color-success`, `--ds-color-accent` | Kết quả tích cực, tiến độ |
+| Sai / nguy hiểm | `--ds-color-danger` | Sai, lỗi hoặc thao tác phá hủy |
+| Cảnh báo | `--ds-color-warning` | Cảnh báo cần chú ý |
+
+Không đặt mã hex trực tiếp trong selector. Chỉ vùng định nghĩa token trong `design-system.css` được chứa giá trị màu canonical lấy từ `design/design-profile.json`.
+
+#### Breakpoint và vùng responsive
+
+Ứng dụng có đúng **4 vùng responsive**, theo viewport CSS, không theo kích thước vật lý màn hình:
+
+| Vùng | Viewport | Hành vi |
+|---|---|---|
+| Phone | 320–640 px | Bottom navigation, một cột khi cần, safe-area |
+| Compact tablet | 641–850 px | Icon rail, không dùng phone bottom navigation |
+| Tablet / small laptop | 851–1199 px | Sidebar gọn, grid theo chiều rộng nội dung |
+| Desktop | từ 1200 px | Sidebar đầy đủ, content tối đa 1600 px |
+
+Các cặp 640/641, 850/851 và 1199/1200 là hai phía của cùng ba ranh giới, không phải breakpoint mới. Không bổ sung mốc viewport riêng. Ưu tiên `clamp()`, grid/flex và container-aware reflow thay vì thêm media query tùy tiện.
+
+#### Thông số component
+
+| Component | Quy định dùng chung |
+|---|---|
+| Button | Dùng `.primary-button` / `.secondary-button`; cao tối thiểu 44 px; font `--ds-font-button`; radius control; màu brand/surface theo vai trò |
+| Input / select / textarea | Cao tối thiểu 44 px; dùng font control; không thu nhỏ chữ để tránh overflow; iPhone có thể cần 16 px để tránh Safari auto-zoom |
+| Card | Dùng `.learning-card` hoặc `.panel`; surface, border, radius card/panel, shadow token; nội dung được phép tăng chiều cao |
+| Modal | Dùng modal dùng chung; radius panel, shadow float, focus-visible và đóng bằng bàn phím; không tạo overlay riêng theo module |
+| Chip | Dùng pill radius, màu ngữ nghĩa và font label/caption; trạng thái phân biệt được cả bằng chữ/icon, không chỉ màu |
+| Tab | Dùng token màu brand cho active, muted cho inactive; focus rõ; vùng chạm tối thiểu 44 px |
+| Update banner | Dùng surface, border, radius panel, shadow float, font label/caption và spacing token; nằm trên mobile navigation, tôn trọng safe-area |
+
+#### Quy trình thêm token và ratchet
+
+1. Kiểm tra token hiện có trong `design/design-profile.json`; ưu tiên tái sử dụng.
+2. Nếu thực sự thiếu, đề xuất tên, giá trị, vai trò, tương phản và phạm vi dùng trong cùng thay đổi; không thêm token chỉ để hợp thức hóa một CSS riêng.
+3. Chạy `python tools/sync-design-profile.py --apply`, sau đó `--check` và các test design profile/system.
+4. Chạy `python tools/audit-design-tokens.py`. `tools/design-token-baseline.json` là ratchet: baseline hiện hữu chỉ được siết bằng cách xóa vi phạm đã sửa; không thêm vi phạm mới để làm xanh CI.
+5. Mọi thay đổi rule phải qua review riêng. Hash bộ luật được khóa trong baseline; thay đổi tham số sẽ báo `RULE-DRIFT` và không được tự động cập nhật baseline.
+6. Chuyển CSS legacy theo từng nhóm màn hình nhỏ và xem giao diện thật trước khi siết baseline. Không đại tu toàn bộ CSS khi chưa có kết quả browser/device QA.
+
+Các vi phạm đã có trong baseline chỉ là `WARNING`; vi phạm mới, thay đổi giá trị ngoài thang trên cùng selector hoặc `RULE-DRIFT` là `ERROR` và làm CI thất bại. `!important` mới bị cấm.
 
 ## 5. Component recipes
 

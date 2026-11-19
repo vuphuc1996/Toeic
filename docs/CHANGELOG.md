@@ -1,3 +1,12 @@
+## v2.95.11 — patch audit-log classification, CSS token ratchet and manual acceptance
+
+- `tools/patch-data.py` records an explicit `mode` (`dry-run`, `apply`, `rollback`) on every operation log row; `.gitignore` excludes `logs/` so local audit output is not accidentally committed.
+- Added `tools/audit-design-tokens.py`, a canonical rule file and an identity-based ratchet baseline. Existing v2.95.10 CSS findings remain warnings; new identities/values, increased occurrences and policy-hash drift fail CI. The baseline was tightened only by removing three update-banner violations fixed in this change.
+- Added the formal design specification: one system font, nine semantic text roles with line-height, five permitted font weights, tokenized radius/shadow/spacing/color roles, four responsive bands and shared recipes for button/input/card/modal/chip/tab/banner. `calm-study-blue` remains a conditional default awaiting owner approval.
+- Migrated the PWA update banner to existing spacing, typography, surface, border, radius and shadow tokens. No bulk CSS migration was performed.
+- Added `docs/reports/MANUAL_ACCEPTANCE_CHECKLIST.md` with 14 real-world GitHub/PWA/offline/update/two-tab/TTS/Flashcard/photo/path checks. All 14 begin as `Chưa kiểm`; no remote or device QA is claimed.
+- Retained the user-requested Robot Buddy progressive local replies and the fixed maximum 10-card Flashcard behavior. No vocabulary IDs, words, topics, question content, learner records or IndexedDB schema changed.
+
 ## v2.95.10 — Flashcard fixed batch, vocabulary identity baseline, safe data patching and consent-based PWA updates
 
 - Removed the inactive 5-word Flashcard option from the UI and runtime. Every Flashcard entry route (all topics, Học tổng hợp, continue/next batch and wrong-answer review) now uses one consistent maximum of 10 words; the wrong-answer flow prioritizes missed words and fills remaining slots with new words. This does not modify vocabulary records or learner progress.

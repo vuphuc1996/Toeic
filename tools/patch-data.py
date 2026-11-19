@@ -66,6 +66,7 @@ def append_audit_log(root: Path, patch: dict, mode: str, result: str, error: str
             new_value = expected.get("old") if mode == "rollback" else operation.get("new")
             records.append({
                 "recordedAt": recorded_at,
+                "mode": mode,
                 "batchId": patch.get("batchId"),
                 "operation": index,
                 "id": operation.get("id"),
@@ -76,7 +77,7 @@ def append_audit_log(root: Path, patch: dict, mode: str, result: str, error: str
                 **({"error": error} if error else {}),
             })
     else:
-        records.append({"recordedAt": recorded_at, "batchId": patch.get("batchId"), "result": result, **({"error": error} if error else {})})
+        records.append({"recordedAt": recorded_at, "mode": mode, "batchId": patch.get("batchId"), "result": result, **({"error": error} if error else {})})
     payload = "".join(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n" for record in records)
     with log_path.open("a", encoding="utf-8") as stream:
         stream.write(payload)
@@ -255,14 +256,14 @@ def main() -> int:
     root = args.root.resolve()
     patch_path = args.patch if args.patch.is_absolute() else (root / args.patch)
     patch = None
-    mode = "rollback" if args.rollback else "apply"
+    mode = "dry-run" if args.dry_run else ("rollback" if args.rollback else "apply")
     try:
         patch = read_json(patch_path)
         if patch.get("schemaVersion") != 1:
             raise ValueError("schemaVersion patch phải bằng 1")
         found, ids = validate_patch_context(root, patch, mode)
         staged = verify_operations(patch, found, mode)
-        action = "ROLLBACK" if args.rollback else "APPLY"
+        action = "DRY-RUN" if args.dry_run else ("ROLLBACK" if args.rollback else "APPLY")
         print(f"{action} {patch.get('batchId')}: {len(patch['operations'])} operations / {len(staged)} files")
         for path in sorted(staged):
             print(f"  - {path.relative_to(root)}")

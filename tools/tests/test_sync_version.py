@@ -34,7 +34,18 @@ class SyncVersionTests(unittest.TestCase):
         (self.root / "assets" / "js" / "app.js").write_text(f"const APP_RELEASE_VERSION = '{v}';\n", encoding="utf-8")
         (self.root / "sw.js").write_text(sw or f"const VERSION = '{v}'; // @version\n", encoding="utf-8")
         (self.root / "index.html").write_text(index or INDEX.format(v=v), encoding="utf-8")
-        (self.root / "docs" / "README.md").write_text(readme or f"# TOEIC Dictionary v{v}\n\ntext v0.0.1 stays\n", encoding="utf-8")
+        readme_text = readme or f"# TOEIC Dictionary v{v}\n\ntext v0.0.1 stays\n"
+        newline = "\r\n" if "\r\n" in readme_text else "\n"
+        if "Current release test report:" not in readme_text:
+            readme_text += f"- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v{v}.md`." + newline
+        if "Current command-log index:" not in readme_text:
+            readme_text += f"- Current command-log index: `reports/COMMAND_LOG_INDEX_v{v}.md`." + newline
+        (self.root / "docs" / "README.md").write_text(readme_text, encoding="utf-8")
+        (self.root / "docs" / "versions").mkdir(parents=True, exist_ok=True)
+        (self.root / "docs" / "versions" / "CURRENT_VERSION.md").write_text(
+            f"# Current Version\n\n- Current source: **v{v}** — current.\n- Release package: `TOEIC_Dictionary_v{v}_FullSource.zip`.\n- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v{v}.md`.\n",
+            encoding="utf-8",
+        )
         (self.root / "docs" / "MASTER_STATUS.md").write_text(
             master or f"- **Phiên bản mã nguồn đang kiểm kê:** v{v} (draft)\nold v9.9.9 stays\n", encoding="utf-8")
         (self.root / "docs" / "CHANGELOG.md").write_text(changelog or f"# Changelog\n\n## v{v} — x\n- y\n\n## v0.1.0 — old\n", encoding="utf-8")
@@ -77,7 +88,13 @@ class SyncVersionTests(unittest.TestCase):
         code, out = self.tool("--apply")
         self.assertEqual(code, 0, out)
         self.assertEqual((self.root / "docs" / "README.md").read_text(encoding="utf-8"),
-                         "# TOEIC Dictionary v1.2.3\n\ntext v0.0.1 stays\n")
+                         "# TOEIC Dictionary v1.2.3\n\ntext v0.0.1 stays\n"
+                         "- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v1.2.3.md`.\n"
+                         "- Current command-log index: `reports/COMMAND_LOG_INDEX_v1.2.3.md`.\n")
+        current_version = (self.root / "docs" / "versions" / "CURRENT_VERSION.md").read_text(encoding="utf-8")
+        self.assertIn("Current source: **v1.2.3**", current_version)
+        self.assertIn("TOEIC_Dictionary_v1.2.3_FullSource.zip", current_version)
+        self.assertIn("TEST_REPORT_TOEIC_Dictionary_v1.2.3.md", current_version)
         self.assertIn("old v9.9.9 stays", (self.root / "docs" / "MASTER_STATUS.md").read_text(encoding="utf-8"))
         self.assertEqual(changelog_before, sha(self.root / "docs" / "CHANGELOG.md"))
         self.assertEqual(self.tool("--check")[0], 0)
@@ -123,7 +140,9 @@ class SyncVersionTests(unittest.TestCase):
         self.build("1.2.3", readme="# TOEIC Dictionary v1.0.0\r\n\r\nbody\r\n")
         self.tool("--apply")
         raw = (self.root / "docs" / "README.md").read_bytes()
-        self.assertEqual(raw, b"# TOEIC Dictionary v1.2.3\r\n\r\nbody\r\n")
+        self.assertEqual(raw, b"# TOEIC Dictionary v1.2.3\r\n\r\nbody\r\n"
+                               b"- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v1.2.3.md`.\r\n"
+                               b"- Current command-log index: `reports/COMMAND_LOG_INDEX_v1.2.3.md`.\r\n")
 
 
 if __name__ == "__main__":
