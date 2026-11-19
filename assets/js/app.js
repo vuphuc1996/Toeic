@@ -14,7 +14,7 @@ import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrit
 import { createRobotBuddy } from './robot-buddy.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.8';
+const APP_RELEASE_VERSION = '2.95.10';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -125,6 +125,7 @@ let robotIdleNoticeTimes = [];
 let robotChatInitialized = false;
 let robotTypingTimer = null;
 let robotSpeakingTimer = null;
+let robotStreamState = null;
 let robotBuddyMuted = false;
 const ROBOT_BUDDY_SETTINGS_KEY = 'toeic:robot-buddy-settings:v1';
 
@@ -1871,7 +1872,7 @@ function renderFlashHome(){
 }
 function flashShuffle(a){const x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]];}return x;}
 function flashPickBatch(topic,size,exclude=[]){const now=Date.now(),pool=state.words.filter(w=>flashTopicMatches(w,topic)&&!exclude.includes(w.id));const due=pool.filter(w=>(state.flashProgress[w.id]?.dueAt||0)<=now);const ranked=flashShuffle(pool).sort((a,b)=>{const pa=state.flashProgress[a.id]||{},pb=state.flashProgress[b.id]||{};const score=x=>{const p=state.flashProgress[x.id]||{};return (p.lapses||0)*4+(p.dueAt&&p.dueAt<=now?8:0)-(p.interval||0)*.25;};return score(b)-score(a);});const dueRank=flashShuffle(due);const combined=[...dueRank,...ranked.filter(w=>!dueRank.some(d=>d.id===w.id))];return flashShuffle(combined.slice(0,Math.min(size,pool.length)));}
-function startFlashSession(topic='ALL',size=10,includeIds=[]){const words=includeIds.map(flashRecord).filter(Boolean);const selected=words.length?words:flashPickBatch(topic,size);if(!selected.length){toast('Chủ đề này chưa có từ vựng.','error');return;}state.flashSession={topic,size:selected.length,words:selected,index:0,flipped:false,reviewIds:includeIds};$('#flashQuiz').hidden=true;$('#flashResult').hidden=true;$('#flashSession').hidden=false;const topicLabel=FLASH_TOPIC_META[topic]?.label||FLASH_TOPIC_GROUPS.find(x=>x.id===topic)?.label||'Học tổng hợp';$('#flashSessionTitle').textContent=`${topicLabel} · ${selected.length} từ`;$('#flashSessionEyebrow').textContent=includeIds.length?'REVIEW · ÔN TỪ CHƯA NHỚ':'VOCABULARY QUEST';renderFlashCard();openLearningFocus({kind:'flashcards',title:topicLabel,subtitle:'Chạm vào thẻ để lật xem nghĩa; chạm lần nữa để chuyển sang từ tiếp theo.',eyebrow:'FLASHCARD · FOCUSED LEARNING',elements:['#flashSession','#flashQuiz','#flashResult']});}
+function startFlashSession(topic='ALL',includeIds=[]){const reviewIds=includeIds.slice(0,10);const words=reviewIds.map(flashRecord).filter(Boolean);const selected=words.length?words:flashPickBatch(topic,10);if(!selected.length){toast('Chủ đề này chưa có từ vựng.','error');return;}state.flashSession={topic,size:selected.length,words:selected,index:0,flipped:false,reviewIds};$('#flashQuiz').hidden=true;$('#flashResult').hidden=true;$('#flashSession').hidden=false;const topicLabel=FLASH_TOPIC_META[topic]?.label||FLASH_TOPIC_GROUPS.find(x=>x.id===topic)?.label||'Học tổng hợp';$('#flashSessionTitle').textContent=`${topicLabel} · ${selected.length} từ`;$('#flashSessionEyebrow').textContent=reviewIds.length?'REVIEW · ÔN TỪ CHƯA NHỚ':'VOCABULARY QUEST';renderFlashCard();openLearningFocus({kind:'flashcards',title:topicLabel,subtitle:'Chạm vào thẻ để lật xem nghĩa; chạm lần nữa để chuyển sang từ tiếp theo.',eyebrow:'FLASHCARD · FOCUSED LEARNING',elements:['#flashSession','#flashQuiz','#flashResult']});}
 function advanceFlashCard(){const ss=state.flashSession;if(!ss)return;if(!ss.flipped){ss.flipped=true;renderFlashCard();return;}ss.index++;ss.flipped=false;if(ss.index>=ss.words.length)finishFlashLearning();else renderFlashCard();}
 function renderFlashCard(){
  const ss=state.flashSession;if(!ss)return;const w=ss.words[ss.index];if(!w)return;
@@ -1912,11 +1913,11 @@ async function confirmFlashQuizResult(){
  for(const answer of pending.answers){const p=state.flashProgress[answer.id]||{};if(answer.correct){p.correct=(p.correct||0)+1;p.interval=Math.min(30,Math.max(1,(p.interval||0)*2||2));p.lapses=Math.max(0,(p.lapses||0)-1);}else{p.lapses=(p.lapses||0)+1;p.interval=0;p.dueAt=Date.now()+60000;}p.lastQuiz=answer.answeredAt||Date.now();state.flashProgress[answer.id]=p;}
  await dbSet('flashProgress',state.flashProgress);
  const good=pending.answers.filter(x=>x.correct),wrong=pending.answers.filter(x=>!x.correct),pct=Math.round(good.length/ss.quiz.length*100),wrongIds=wrong.map(x=>x.id);
- const chosenSize=Number($('#flashNextBatch')?.value||10),nextSize=pct>=80?chosenSize:5;
+ const nextSize=10;
  ss.pendingWrongIds=wrongIds;ss.recommendedNextSize=nextSize;state.pendingFlashQuizResult=null;closeAssessmentResultModal();
  $('#flashQuiz').hidden=true;$('#flashResult').hidden=false;setLearningFocusHeader('Hoàn thành lượt học','Xem kết quả và đối chiếu từng câu trước khi chọn lượt tiếp theo.','FLASHCARD · SESSION REVIEW');
- const nextLabel=pct>=80?`Học tiếp ${nextSize} từ mới`:'Ôn từ sai + 5 từ mới';
- const reviewCount=Math.min(5,wrong.length),reviewLabel=wrong.length?`Ôn ${reviewCount} từ sai + từ mới (tối đa 10 thẻ)`:'';
+ const nextLabel=`Học tiếp ${nextSize} từ mới`;
+ const reviewCount=Math.min(10,wrong.length),reviewLabel=wrong.length?`Ôn ${reviewCount} từ sai + từ mới (tối đa 10 từ)`:'';
  const reviewRows=pending.answers.map((answer,index)=>{const word=ss.quiz.find(item=>item.id===answer.id);const correctMeaning=getPrimarySense(word||{}).meaning_vi||'Chưa có nghĩa';return `<article class="flash-quiz-review-row ${answer.correct?'is-correct':'is-wrong'}"><div><strong>${index+1}. ${escapeHtml(displayWord(word?.word||answer.id))}</strong><span>${answer.correct?'Đúng':'Chưa đúng'}</span></div><p>Bạn chọn: ${escapeHtml(answer.choice)}</p><p>Đáp án: ${escapeHtml(correctMeaning)}</p></article>`;}).join('');
  $('#flashResult').innerHTML=`<div class="flash-result-emoji">${pct>=80?'🏆':pct>=60?'✨':'💪'}</div><span class="flash-kicker">SESSION COMPLETE</span><h2>${pct>=80?'Quá tốt! Bạn đang tiến bộ.':pct>=60?'Làm tốt! Hãy củng cố thêm.':'Đừng lo, sai là một phần của việc ghi nhớ.'}</h2><div class="flash-score"><strong>${good.length}/${ss.quiz.length}</strong><span>${pct}% chính xác · ${wrong.length} câu cần củng cố</span></div><div class="flash-result-bar"><span style="width:${pct}%"></span></div><section class="flash-quiz-review"><h3>Đối chiếu câu trả lời</h3>${reviewRows}</section><p>${wrong.length?`Có ${wrong.length} từ cần ôn lại. Những từ này sẽ được ưu tiên ở lượt tiếp theo.`:'Bạn đã hoàn thành lượt này rất tốt. Lượt tiếp theo sẽ mở thêm từ mới.'}</p><div class="flash-result-actions">${wrong.length?`<button class="primary-button" data-flash-review-wrong>${reviewLabel}</button>`:`<button class="primary-button" data-flash-next-batch>${nextLabel}</button>`}<button class="secondary-button" data-flash-next-batch>${wrong.length?'Chỉ học từ mới':nextLabel}</button><button class="text-button" data-flash-home>Về chọn chủ đề</button></div>`;
  renderFlashHome();
@@ -1985,7 +1986,7 @@ function bindEvents(){
     const image=event.target;if(!(image instanceof HTMLImageElement))return;
     if(image.matches('.mock-part1-image')&&!image.dataset.fallbackApplied){const fallback=image.dataset.fallbackSrc;if(fallback&&image.src!==new URL(fallback,document.baseURI).href){image.dataset.fallbackApplied='1';image.src=fallback;return;}image.closest('.mock-part1-frame')?.classList.add('image-missing');}
   },true);
-  $('#flashTopicGrid')?.addEventListener('click',e=>{const b=e.target.closest('[data-flash-topic]');if(b)startFlashSession(b.dataset.flashTopic,10);});
+  $('#flashTopicGrid')?.addEventListener('click',e=>{const b=e.target.closest('[data-flash-topic]');if(b)startFlashSession(b.dataset.flashTopic);});
   $('#flashTopicSearch')?.addEventListener('input',renderFlashHome);
   $('#flashcardStage')?.addEventListener('click',e=>{const speak=e.target.closest('[data-flash-speak]');if(speak){e.stopPropagation();speakText(speak.dataset.flashSpeak,null,'',state.settings.tts?.defaultGender||'female');return;}if(e.target.closest('[data-flash-flip]')||e.target.closest('[data-flash-card]'))advanceFlashCard();});
   $('#flashcardStage')?.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-flash-card]')){e.preventDefault();advanceFlashCard();}});
@@ -1993,7 +1994,7 @@ function bindEvents(){
   $('#flashQuizStage')?.addEventListener('click',e=>{const b=e.target.closest('[data-flash-answer]');if(b)answerFlashQuiz(b.dataset.flashAnswer);});
   $('#flashQuizActions')?.addEventListener('click',e=>{const b=e.target.closest('[data-flash-quiz-speak]');if(b)speakText(b.dataset.flashQuizSpeak,null,'',state.settings.tts?.defaultGender||'female');});
   $('#flashQuizActions')?.addEventListener('click',e=>{if(e.target.closest('[data-flash-quiz-next]')){state.flashQuizIndex++;renderFlashQuiz();}});
-  $('#flashResult')?.addEventListener('click',e=>{if(e.target.closest('[data-flash-next-batch]'))startFlashSession(state.flashSession?.topic||'ALL',state.flashSession?.recommendedNextSize||Number($('#flashNextBatch').value||10));if(e.target.closest('[data-flash-review-wrong]')){const allWrong=state.flashSession?.pendingWrongIds||state.flashQuizAnswers.filter(x=>!x.correct).map(x=>x.id);const ids=allWrong.slice(0,5);const fresh=flashPickBatch(state.flashSession?.topic||'ALL',Math.max(0,10-ids.length),ids).map(x=>x.id);startFlashSession(state.flashSession?.topic||'ALL',ids.length+fresh.length,[...ids,...fresh]);}if(e.target.closest('[data-flash-home]'))closeLearningFocus();});
+  $('#flashResult')?.addEventListener('click',e=>{if(e.target.closest('[data-flash-next-batch]'))startFlashSession(state.flashSession?.topic||'ALL');if(e.target.closest('[data-flash-review-wrong]')){const topic=state.flashSession?.topic||'ALL';const allWrong=state.flashSession?.pendingWrongIds||state.flashQuizAnswers.filter(x=>!x.correct).map(x=>x.id);const ids=allWrong.slice(0,10);const fresh=flashPickBatch(topic,Math.max(0,10-ids.length),ids).map(x=>x.id);startFlashSession(topic,[...ids,...fresh]);}if(e.target.closest('[data-flash-home]'))closeLearningFocus();});
   $('#grammarCardList').addEventListener('click',e=>{const b=e.target.closest('[data-grammar-open]');if(b)openGrammarLesson(b.dataset.grammarOpen);});
   $('#readingCardList').addEventListener('click',e=>{const b=e.target.closest('[data-reading-open]');if(b)openReadingDetail(b.dataset.readingOpen);});
   $('#listeningCardList').addEventListener('click',e=>{const b=e.target.closest('[data-listening-open]');if(b)openListeningDetail(b.dataset.listeningOpen);});
@@ -3263,8 +3264,29 @@ function toggleRobotInsights(){
   robotSaveSettings({learningInsightsEnabled:!enabled});updateRobotInsightsToggle();
   appendRobotMessage('bot',!enabled?'Mình đã bật phân tích tiến độ. Khi bạn hỏi “Tiến độ học của tôi”, mình sẽ đọc các bản ghi trên thiết bị để tổng hợp.':'Mình đã tắt phân tích tiến độ. Mình sẽ không đọc dữ liệu học tập để phân tích nữa, nhưng vẫn trò chuyện và hướng dẫn chức năng bình thường.');
 }
-function appendRobotMessage(role,text,actions=[]){
-  const log=$('#robotChatLog');if(!log)return;
+function renderRobotMessageText(content,message){
+  content.textContent='';
+  const emphasis=/(Robot Buddy|TOEIC Dictionary|Vũ Nguyễn Hoàng Phúc)/giu;
+  let cursor=0,match;
+  while((match=emphasis.exec(message))){
+    if(match.index>cursor)content.append(document.createTextNode(message.slice(cursor,match.index)));
+    const strong=document.createElement('strong');strong.textContent=match[0];content.append(strong);cursor=match.index+match[0].length;
+  }
+  if(cursor<message.length)content.append(document.createTextNode(message.slice(cursor)));
+}
+function appendRobotActions(bubble,actions=[]){
+  if(!Array.isArray(actions)||!actions.length)return;
+  const actionRow=document.createElement('div');actionRow.className='robot-chat-actions';
+  actions.forEach(action=>{
+    const button=document.createElement('button');button.type='button';button.className='robot-chat-action';button.textContent=action.label||'Mở';
+    if(action.command)button.dataset.robotCommand=action.command;
+    if(action.page)button.dataset.robotPage=action.page;
+    actionRow.append(button);
+  });
+  if(actionRow.childNodes.length)bubble.append(actionRow);
+}
+function appendRobotMessage(role,text,actions=[],options={}){
+  const log=$('#robotChatLog');if(!log)return null;
   const item=document.createElement('article');item.className=`robot-chat-message ${role==='user'?'is-user':'is-bot'}`;
   if(role!=='user'){
     const avatar=document.createElement('span');avatar.className='robot-chat-avatar';avatar.innerHTML=robotHeadMarkup();
@@ -3274,29 +3296,51 @@ function appendRobotMessage(role,text,actions=[]){
   const content=document.createElement('p');
   const message=String(text||'');
   if(role==='user')content.textContent=message;
-  else{
-    const emphasis=/(Robot Buddy|TOEIC Dictionary|Vũ Nguyễn Hoàng Phúc)/giu;
-    let cursor=0,match;
-    while((match=emphasis.exec(message))){
-      if(match.index>cursor)content.append(document.createTextNode(message.slice(cursor,match.index)));
-      const strong=document.createElement('strong');strong.textContent=match[0];content.append(strong);cursor=match.index+match[0].length;
-    }
-    if(cursor<message.length)content.append(document.createTextNode(message.slice(cursor)));
-  }
+  else if(options.stream){item.setAttribute('aria-busy','true');content.classList.add('is-streaming');content.textContent='';}
+  else renderRobotMessageText(content,message);
   bubble.append(content);
-  if(Array.isArray(actions)&&actions.length){
-    const actionRow=document.createElement('div');actionRow.className='robot-chat-actions';
-    actions.forEach(action=>{
-      const button=document.createElement('button');button.type='button';button.className='robot-chat-action';button.textContent=action.label||'Mở';
-      if(action.command)button.dataset.robotCommand=action.command;
-      if(action.page)button.dataset.robotPage=action.page;
-      actionRow.append(button);
-    });
-    bubble.append(actionRow);
-  }
+  if(!options.deferActions)appendRobotActions(bubble,actions);
   item.append(bubble);log.append(item);log.scrollTop=log.scrollHeight;
-  return item;
+  return options.stream?{item,content,bubble}:item;
 }
+function finishRobotStream(){
+  const active=robotStreamState;if(!active)return;
+  if(active.timer)clearTimeout(active.timer);
+  robotStreamState=null;
+  active.item.removeAttribute('aria-busy');
+  active.content.classList.remove('is-streaming');
+  renderRobotMessageText(active.content,active.message);
+  appendRobotActions(active.bubble,active.actions);
+  const log=$('#robotChatLog');if(log)log.scrollTop=log.scrollHeight;
+  if(typeof active.onComplete==='function')active.onComplete();
+}
+function streamRobotMessage(text,actions=[],onComplete=null){
+  finishRobotStream();
+  const message=String(text||'');
+  const rendered=appendRobotMessage('bot',message,[],{stream:true,deferActions:true});
+  if(!rendered)return null;
+  const segmenter=typeof Intl!=='undefined'&&typeof Intl.Segmenter==='function'?new Intl.Segmenter('vi',{granularity:'grapheme'}):null;
+  const characters=segmenter?Array.from(segmenter.segment(message),part=>part.segment):Array.from(message);
+  const active={...rendered,message,actions,onComplete,timer:null,index:0,characters};
+  robotStreamState=active;
+  const log=$('#robotChatLog');
+  const finish=()=>{if(robotStreamState===active)finishRobotStream();};
+  const reducedMotion=Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+  if(reducedMotion||active.characters.length<2){finish();return rendered.item;}
+  const tick=()=>{
+    if(robotStreamState!==active)return;
+    const character=active.characters[active.index]||'';
+    active.index=Math.min(active.characters.length,active.index+(/[.!?…。！？\n]/u.test(character)?1:2));
+    active.content.textContent=active.characters.slice(0,active.index).join('');
+    if(log)log.scrollTop=log.scrollHeight;
+    if(active.index>=active.characters.length){finish();return;}
+    const pause=/[.!?…。！？]/u.test(character)?125:28;
+    active.timer=setTimeout(tick,pause);
+  };
+  active.timer=setTimeout(tick,18);
+  return rendered.item;
+}
+
 function appendRobotChoiceButtons(choices){
   const log=$('#robotChatLog');if(!log)return;
   const row=document.createElement('div');row.className='robot-onboarding-choices';
@@ -3396,10 +3440,13 @@ function appendRobotProgressDashboard(insights,anchor=null,actions=[]){
   log.scrollTop=log.scrollHeight;return dashboard;
 }
 function runRobotProgressAnalysis(){
-  if(robotReadSettings().learningInsightsEnabled===false){appendRobotMessage('bot','Phân tích tiến độ đang tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ: Tắt” ở phía trên.');return;}
+  if(robotReadSettings().learningInsightsEnabled===false){streamRobotMessage('Phân tích tiến độ đang tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ: Tắt” ở phía trên.');return;}
   const insights=getRobotLearningInsightsNow();
   appendRobotMessage('user','Phân tích tiến độ học tập của tôi.');
-  appendRobotProgressDashboard(insights,null,getRobotInsightActions(insights));setRobotEmotion('analyzing');
+  setRobotEmotion('analyzing');
+  streamRobotMessage('Mình sẽ tổng hợp những dấu vết học tập có sẵn trên thiết bị. Sau phần giới thiệu ngắn này, bạn sẽ thấy bảng riêng cho Cần học, Cần luyện và Cần ôn.',[],()=>{
+    appendRobotProgressDashboard(insights,null,getRobotInsightActions(insights));setRobotEmotion('analyzing');
+  });
 }
 function getRobotAppContext(){
   const page=state.activePage||'dashboard';
@@ -3439,11 +3486,14 @@ function getRobotContextualNudge(category){
 }
 function sendRobotMessage(rawText){
   const text=String(rawText||'').trim();if(!text||!robotBuddyEngine)return;
+  finishRobotStream();
+  if(robotSpeakingTimer){clearTimeout(robotSpeakingTimer);robotSpeakingTimer=null;}
+  if(robotTypingTimer){clearTimeout(robotTypingTimer);robotTypingTimer=null;}
+  setRobotTyping(false);
   appendRobotMessage('user',text);
-  const input=$('#robotChatInput');if(input)input.value='';
   // Keep the quick-prompt menu available during the whole chat session.
+  const input=$('#robotChatInput');if(input)input.value='';
   setRobotTyping(true);
-  if(robotTypingTimer)clearTimeout(robotTypingTimer);
   const intent=robotBuddyEngine.classify(text);
   const settings=robotReadSettings();
   const reply=robotBuddyEngine.reply(text,getRobotAppContext());
@@ -3452,16 +3502,22 @@ function sendRobotMessage(rawText){
     progressInsights=getRobotLearningInsightsNow();
     reply.actions=getRobotInsightActions(progressInsights);
   }else if(intent.intent==='insights'&&settings.learningInsightsEnabled===false){
-    reply.text='Tính năng phân tích tiến độ đang được tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ” ở phía trên. Mình vẫn hỗ trợ trò chuyện và hướng dẫn sử dụng như bình thường.';
+    reply.text='Phân tích tiến độ đang tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ” phía trên; các hướng dẫn học tập thông thường vẫn hoạt động.';
   }
   robotTypingTimer=setTimeout(()=>{
-    setRobotTyping(false);setRobotEmotion('speaking');
-    if(progressInsights)appendRobotProgressDashboard(progressInsights,null,reply.actions||[]);
-    else appendRobotMessage('bot',reply.text,reply.actions||[]);
-    if(robotSpeakingTimer)clearTimeout(robotSpeakingTimer);
-    robotSpeakingTimer=setTimeout(()=>setRobotEmotion(reply.emotion||'happy'),650);
-  },320);
+    robotTypingTimer=null;setRobotTyping(false);setRobotEmotion('speaking');
+    const onComplete=()=>{
+      if(robotSpeakingTimer)clearTimeout(robotSpeakingTimer);
+      robotSpeakingTimer=setTimeout(()=>setRobotEmotion(reply.emotion||'happy'),220);
+    };
+    if(progressInsights){
+      streamRobotMessage('Mình đang tổng hợp những dấu vết học tập đã có trên thiết bị. Bảng dưới đây tách riêng phần cần học, cần luyện và cần ôn; đây là gợi ý nội bộ, không phải điểm TOEIC chính thức.',[],()=>{
+        appendRobotProgressDashboard(progressInsights,null,reply.actions||[]);onComplete();
+      });
+    }else streamRobotMessage(reply.text,reply.actions||[],onComplete);
+  },360);
 }
+
 function robotShowWelcome(){
   const log=$('#robotChatLog');if(!log||robotChatInitialized)return;
   robotChatInitialized=true;log.innerHTML='';
@@ -3550,11 +3606,11 @@ function handleRobotChoice(choice){
   robotSaveSettings({onboardingChoice:choice,muted:robotBuddyMuted});
   if(choice==='start'){
     appendRobotMessage('user','Có, bắt đầu đánh giá đầu vào.');
-    appendRobotMessage('bot','Được rồi! Mình sẽ mở bài Placement hiện có. Đây là bài đánh giá tham khảo để gợi ý điểm bắt đầu, không phải chứng chỉ CEFR hay điểm ETS.');
+    streamRobotMessage('Được rồi! Mình sẽ mở bài Placement hiện có. Đây là bài đánh giá tham khảo để gợi ý điểm bắt đầu, không phải chứng chỉ CEFR hay điểm ETS.');
     setQuickHelpOpen(false);setTimeout(()=>startPlacementDiagnostic(),250);return;
   }
   appendRobotMessage('user','Không cần, bỏ qua.');
-  appendRobotMessage('bot','Không sao cả! Bạn có thể vào học ngay. Khi cần tìm chức năng hoặc muốn trò chuyện, hãy nhấn vào đầu mình nhé.');
+  streamRobotMessage('Không sao cả! Bạn có thể vào học ngay. Khi cần tìm chức năng hoặc muốn trò chuyện, hãy nhấn vào đầu mình nhé.');
   renderRobotQuickPrompts();
 }
 function handleRobotCommand(command,page=''){
@@ -3624,6 +3680,31 @@ function renderDeviceGreeting(){
 }
 
 function updateDate(){const now=new Date();$('#todayLabel').textContent=new Intl.DateTimeFormat('vi-VN',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(now);}
+function showServiceWorkerUpdateBanner(registration){
+  const waiting=registration?.waiting,banner=$('#appUpdateBanner'),button=$('#appUpdateApply');
+  if(!waiting||!navigator.serviceWorker.controller||!banner||!button)return;
+  banner.hidden=false;
+  button.disabled=false;
+  button.textContent='Tải lại';
+  button.onclick=()=>{
+    const pending=registration.waiting;
+    if(!pending){banner.hidden=true;return;}
+    button.disabled=true;
+    button.textContent='Đang cập nhật...';
+    pending.postMessage({type:'SKIP_WAITING'});
+  };
+}
+function watchServiceWorkerUpdates(registration){
+  const checkWaiting=()=>showServiceWorkerUpdateBanner(registration);
+  checkWaiting();
+  registration.addEventListener('updatefound',()=>{
+    const installing=registration.installing;
+    if(!installing)return;
+    installing.addEventListener('statechange',()=>{
+      if(installing.state==='installed'&&navigator.serviceWorker.controller)checkWaiting();
+    });
+  });
+}
 async function registerSW(){
   if(!('serviceWorker'in navigator))return null;
   const hadController=Boolean(navigator.serviceWorker.controller);
@@ -3631,16 +3712,17 @@ async function registerSW(){
   const reloadAfterWorkerSwap=()=>{
     if(!hadController||reloadedForRelease)return;
     reloadedForRelease=true;
-    // The active worker may have just replaced cached app.js/index.html.
-    // Reload once so the running PWA executes one consistent release shell.
+    // Reload only after a user-approved waiting worker takes control.
     window.location.reload();
   };
   navigator.serviceWorker.addEventListener('controllerchange',reloadAfterWorkerSwap,{once:true});
   try{
     const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});
+    state.swRegistration=registration;
+    watchServiceWorkerUpdates(registration);
     await navigator.serviceWorker.ready;
     try{await registration.update();}catch(updateError){console.warn('Không kiểm tra được bản Service Worker mới:',updateError);}
-    state.swRegistration=registration;
+    showServiceWorkerUpdateBanner(registration);
     state.notificationProvider=new LocalNotificationProvider(()=>state.swRegistration);
     return registration;
   }catch(err){

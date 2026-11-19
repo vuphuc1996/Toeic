@@ -6,13 +6,17 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.95.8 – Robot Buddy Learning Insights</title>
+  <title>TOEIC Dictionary v2.95.10 – Robot Buddy Progressive Replies</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
   <link rel="stylesheet" href="./assets/css/design-system.css">
 </head>
 <body>
+  <div class="app-update-banner" id="appUpdateBanner" role="status" aria-live="polite" hidden>
+    <div class="app-update-copy"><strong>Có bản mới</strong><small>Bản cập nhật đã sẵn sàng để áp dụng.</small></div>
+    <button type="button" class="primary-button" id="appUpdateApply">Tải lại</button>
+  </div>
 
   <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
     <symbol id="icon-book-open" viewBox="0 0 24 24"><path d="M3.5 5.8c3.4-.9 6.2-.3 8.5 1.7v12c-2.3-2-5.1-2.6-8.5-1.7z"/><path d="M20.5 5.8c-3.4-.9-6.2-.3-8.5 1.7v12c2.3-2 5.1-2.6 8.5-1.7z"/><path d="M12 7.5v12"/><path d="M6.2 9.3c1.4-.2 2.5 0 3.5.6M6.2 12.2c1.4-.2 2.5 0 3.5.6M17.8 9.3c-1.4-.2-2.5 0-3.5.6M17.8 12.2c-1.4-.2-2.5 0-3.5.6"/></symbol>
@@ -76,7 +80,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.95.8 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.95.10 · GitHub-only</div>
       </div>
     </aside>
 
@@ -172,7 +176,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.95.8:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy dùng thư viện hội thoại cục bộ và có thể phân tích tiến độ học trên thiết bị theo chế độ chỉ đọc khi người dùng bật tính năng. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.95.10:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy kết hợp thư viện hội thoại, quy tắc và ngữ cảnh hiện tại để phản hồi từng phần; có thể phân tích tiến độ học trên thiết bị theo chế độ chỉ đọc khi người dùng bật tính năng. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
@@ -270,7 +274,7 @@
       <section class="page" id="page-flashcards">
         <div class="page-heading compact-heading"><div><p class="eyebrow">SMART FLASHCARD STUDIO</p><h1>Học từ vựng bằng Flashcard</h1><p class="muted">Học theo chủ đề bằng thẻ tương tác: chạm để lật, xem nghĩa và ví dụ, sau đó kiểm tra ghi nhớ.</p></div><span class="library-count" id="flashcardMasteryLabel">Bắt đầu hành trình</span></div>
         <section class="flash-welcome panel"><div><span class="flash-kicker">YOUR DAILY WORD QUEST</span><h2>Mỗi ngày tốt hơn 10 từ ✨</h2><p>Hệ thống ưu tiên từ mới, từ bạn hay quên và từ đã đến lịch ôn. Tiến độ chỉ lưu trên thiết bị này.</p><div class="flash-welcome-stats"><span><strong id="flashKnownCount">0</strong><small>Đã ghi nhớ</small></span><span><strong id="flashDueCount">0</strong><small>Cần ôn lại</small></span><span><strong id="flashStreakCount">0</strong><small>Đã học hôm nay</small></span></div></div><div class="flash-welcome-art" aria-hidden="true">🧠<span>✦</span><b>📚</b></div></section>
-        <section class="flash-topic-section"><div class="section-heading"><div><h2>Chọn hành trình</h2><p>44 hành trình chủ đề · Chọn một chủ đề hoặc học tổng hợp tất cả.</p></div><label class="flash-batch-select">Số từ tiếp theo<select id="flashNextBatch"><option value="5">5 từ</option><option value="10" selected>10 từ</option></select></label></div><label class="flash-topic-search"><span>⌕</span><input id="flashTopicSearch" type="search" placeholder="Tìm chủ đề: Office, Banking, Travel..."></label><div class="flash-topic-grid" id="flashTopicGrid"></div></section>
+        <section class="flash-topic-section"><div class="section-heading"><div><h2>Chọn hành trình</h2><p>44 hành trình chủ đề · Mỗi lượt học gồm tối đa 10 từ.</p></div></div><label class="flash-topic-search"><span>⌕</span><input id="flashTopicSearch" type="search" placeholder="Tìm chủ đề: Office, Banking, Travel..."></label><div class="flash-topic-grid" id="flashTopicGrid"></div></section>
         <section class="flash-session panel" id="flashSession" hidden><div class="flash-session-head"><div><span class="flash-kicker" id="flashSessionEyebrow">VOCABULARY QUEST</span><h2 id="flashSessionTitle">Lượt học của bạn</h2></div><div class="flash-progress-wrap"><strong id="flashProgressText">0 / 10</strong><div class="flash-progress"><span id="flashProgressBar"></span></div></div></div><div id="flashcardStage"></div><div class="flash-session-actions" id="flashSessionActions"></div></section>
         <section class="flash-session panel" id="flashQuiz" hidden><div class="flash-session-head"><div><span class="flash-kicker">QUICK CHECK</span><h2>Kiểm tra nhanh</h2><p class="muted">Chọn nghĩa đúng nhất cho từng từ vừa học.</p></div><strong id="flashQuizProgress">1 / 10</strong></div><div id="flashQuizStage"></div><div class="flash-session-actions" id="flashQuizActions"></div></section>
         <section class="flash-result panel" id="flashResult" hidden></section>
@@ -441,7 +445,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.95.8</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.95.10</span></footer>
     </main>
   </div>
 
@@ -529,14 +533,14 @@
       </header>
       <div class="robot-chat-shell">
         <div class="robot-chat-log" id="robotChatLog" role="log" aria-live="polite" aria-relevant="additions" aria-label="Cuộc trò chuyện với Robot Buddy"></div>
-        <div class="robot-typing" id="robotTyping" hidden><span></span><span></span><span></span><small>Robot Buddy đang nghĩ...</small></div>
+        <div class="robot-typing" id="robotTyping" hidden><span></span><span></span><span></span><small>Robot Buddy đang chuẩn bị câu trả lời...</small></div>
         <div class="robot-quick-prompts" id="robotQuickPrompts" aria-label="Gợi ý trò chuyện"></div>
         <form class="robot-chat-form" id="robotChatForm">
           <label class="sr-only" for="robotChatInput">Nhập nội dung trò chuyện với Robot Buddy</label>
           <input id="robotChatInput" name="message" type="text" maxlength="240" autocomplete="off" placeholder="Nhắn điều bạn muốn hỏi...">
           <button type="submit" aria-label="Gửi tin nhắn"><span aria-hidden="true">➤</span></button>
         </form>
-        <p class="robot-local-note">Offline · Hội thoại có sẵn; chỉ đọc tiến độ cục bộ khi bật phân tích. Không gửi dữ liệu ra ngoài, không phải chatbot AI trực tuyến.</p>
+        <p class="robot-local-note">Offline · Phản hồi được kết hợp theo ngữ cảnh và hiển thị từng phần; chỉ đọc tiến độ cục bộ khi bật phân tích. Không gọi AI/API trực tuyến, không gửi dữ liệu học tập ra ngoài.</p>
       </div>
     </section>
   </aside>

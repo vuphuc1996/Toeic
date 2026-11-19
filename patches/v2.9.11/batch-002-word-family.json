@@ -852,5 +852,8 @@
         }
       ]
     }
+  ],
+  "allowedPaths": [
+    "/word_family"
   ]
 }

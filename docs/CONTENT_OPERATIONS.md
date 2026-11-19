@@ -28,7 +28,9 @@
 - Word family, verb forms, synonyms, antonyms và collocations là trường có điều kiện; không ép thêm dữ liệu không tự nhiên.
 - Word-family chỉ liên kết các lemma có quan hệ hình thái/từ loại rõ ràng. Ưu tiên từ đã tồn tại trong từ điển; POS và `meaning_vi` phải khớp sense tương ứng của mục được liên kết. Không suy diễn quan hệ chỉ vì hai từ giống mặt chữ; tránh các trường hợp khác nghĩa hoặc chỉ liên quan theo chủ đề.
 - Khi một cặp có hai mục từ trong kho, giữ liên kết hai chiều nếu phù hợp với POS. Không thay ID, thứ tự sense, ví dụ hoặc tiến độ học của headword hiện hữu.
-- Mỗi data patch pin `baseDataVersion`, `targetDataVersion`, ID-set hash, stable ID, JSON Pointer và `expect.old`; dry-run trước khi apply.
+- Mỗi data patch pin `baseDataVersion`, `targetDataVersion`, ID-set hash, stable ID, JSON Pointer và `expect.old`; khai báo `allowedPaths` là danh sách JSON Pointer chính xác được phép dùng trong batch. Operation nào nằm ngoài allowlist thì từ chối toàn bộ batch.
+- `/id`, `/word` và `/topics` là bất biến; patch-data từ chối các đường dẫn này kể cả khi chúng được ghi vào `allowedPaths`. Không đổi stable ID, headword hay topic taxonomy qua patch.
+- Quy trình bắt buộc: tạo patch có `expect.old` → `--dry-run` → rà log → `--apply` → validator → lưu audit log. `tools/patch-data.py` ghi từng operation vào `logs/patch-data/operations.jsonl` với batch ID, record ID, pointer, giá trị cũ/mới, kết quả và thời điểm UTC. Rollback cũng phải qua optimistic locking và ghi log riêng.
 
 ## 4. Listening quality and reserve lifecycle
 

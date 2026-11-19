@@ -4,6 +4,11 @@
   "baseDataVersion": "2.9.8",
   "targetDataVersion": "2.9.9",
   "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "allowedPaths": [
+    "/examples/0/en",
+    "/examples/0/vi",
+    "/senses/0/definition_en"
+  ],
   "description": "Manual editorial correction: 40 headwords, English definitions and TOEIC-context examples with Vietnamese translations.",
   "operations": [
     {

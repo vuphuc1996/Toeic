@@ -1,4 +1,4 @@
-# TOEIC Dictionary v2.95.8 — Project Documentation
+# TOEIC Dictionary v2.95.10 — Project Documentation
 
 ## Source of truth
 
@@ -13,7 +13,7 @@
 
 - GitHub Pages static PWA; GitHub-only. No app backend, GAS, iframe or Cloudflare runtime dependency.
 - TOEIC Listening & Reading is the active exam-development track. B1 remains a blueprint only; TOEIC Speaking/Writing and IELTS are deferred. B1 blueprint: `reports/FOUNDATION_B1_CURRICULUM_BLUEPRINT_v2.92.0.md`.
-- Robot Buddy is a head-only offline companion using its static interaction library, current app/item context, idle-time guidance and optional read-only local Learning Insights. The app passes an in-memory snapshot; the insight aggregator does not open storage or modify records. No learner data is sent externally.
+- Flashcard sessions use a fixed maximum of 10 cards across all topic and mixed-learning paths; the retired 5-card setting is removed. Robot Buddy is a head-only offline companion. It streams replies progressively and composes varied local responses from its bundled dialogue/FAQ library, lightweight rules and current app/item context; optional read-only Learning Insights use an in-memory snapshot. It is not a generative chatbot and does not call AI/API services or send learner data externally.
 - Speech uses device/browser SpeechSynthesis. It is not authentic ETS audio; available voices and audible timing depend on the device and browser.
 
 ## Canonical inventory
@@ -31,14 +31,18 @@ Counts describe source inventory, not editorial approval, learner completion, ma
 
 ## Current release artifacts
 
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.8.md`.
-- Current user acceptance checklist: `reports/USER_ACCEPTANCE_TEST_v2.95.8.md`.
-- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.8.md`.
+- Current Claude audit assessment: `reports/CLAUDE_AUDIT_ASSESSMENT_v2.95.10.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.10.md`.
+- Current Robot Buddy behavior report: `reports/ROBOT_BUDDY_v2.95.9.md`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.10.md`.
+- Current user acceptance checklist: `reports/USER_ACCEPTANCE_TEST_v2.95.10.md`.
+- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.10.md`.
 - Current editorial evidence audit: `reports/TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.95.8.md`.
 - Current distractor structural audit: `reports/TOEIC_DISTRACTOR_AUDIT_v2.95.8.md`.
 - Current Foundation A2 assessment audit: `reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.95.8.md`.
-- Current Listening readiness audit: `reports/TOEIC_LISTENING_READINESS_v2.95.8.md`.
-- Previous release report and acceptance checklist remain available for comparison under the v2.95.7 names.
+- Current Listening readiness audit: `reports/TOEIC_LISTENING_READINESS_v2.95.10.md`.
+- Current content coverage audit: `reports/TOEIC_CONTENT_COVERAGE_v2.95.10.md`.
+- Previous release report and acceptance checklist remain available for comparison under the v2.95.9 names.
 
 ## Documentation policy
 

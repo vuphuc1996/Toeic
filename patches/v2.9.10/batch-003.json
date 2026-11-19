@@ -4,6 +4,10 @@
   "baseDataVersion": "2.9.9",
   "targetDataVersion": "2.9.10",
   "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "allowedPaths": [
+    "/collocations",
+    "/verb_forms"
+  ],
   "description": "Verb forms and curated TOEIC collocations; 31 verb-form records.",
   "operations": [
     {

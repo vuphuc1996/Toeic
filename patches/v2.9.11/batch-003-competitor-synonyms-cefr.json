@@ -43,5 +43,11 @@
       },
       "new": "Cambridge Dictionary CEFR B1; verified 2026-11-09"
     }
+  ],
+  "allowedPaths": [
+    "/cefr_level",
+    "/level_basis",
+    "/senses/0/cefr_level",
+    "/senses/0/synonyms"
   ]
 }

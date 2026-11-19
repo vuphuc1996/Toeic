@@ -1,8 +1,9 @@
 /**
  * Robot Buddy — scripted, offline companion for the GitHub Pages PWA.
- * It uses the bundled dialogue library and receives optional, read-only local
- * learning insights from the application. It never opens storage, calls APIs,
- * sends learner data outside the device or uses a generative model.
+ * It composes varied offline replies from the bundled dialogue/FAQ library,
+ * lightweight rules and current in-memory app context. The UI streams the reply
+ * progressively. It never opens storage, calls APIs, sends learner data outside
+ * the device or uses a generative model.
  */
 
 export function normalizeRobotText(value = '') {
@@ -89,10 +90,29 @@ export class RobotBuddyEngine {
 
   pickFaq(message) {
     const text = normalizeRobotText(message);
-    const match = (this.library.faq || []).find(item =>
-      (item.keywords || []).some(keyword => text.includes(normalizeRobotText(keyword)))
-    );
-    return match ? String(match.answer || '') : '';
+    const tokens = new Set(text.split(' ').filter(token => token.length > 1));
+    let best = null;
+    let bestScore = 0;
+    for (const item of this.library.faq || []) {
+      let score = 0;
+      for (const keyword of item.keywords || []) {
+        const normalized = normalizeRobotText(keyword);
+        if (normalized && (normalized.length <= 3 ? tokens.has(normalized) : text.includes(normalized))) score += Math.max(2, normalized.split(' ').length * 2);
+        else {
+          for (const token of normalized.split(' ')) if (token.length > 2 && tokens.has(token)) score += 1;
+        }
+      }
+      if (score > bestScore) { best = item; bestScore = score; }
+    }
+    return best && bestScore >= 2 ? String(best.answer || '') : '';
+  }
+
+  pickResponse(group, variants) {
+    return this.pick(`response:${group}`, variants);
+  }
+
+  composeResponse(group, parts) {
+    return parts.map(part => String(part || '').trim()).filter(Boolean).join(' ');
   }
 
   classify(message = '') {
@@ -137,36 +157,105 @@ export class RobotBuddyEngine {
         listening: 'Lượt đầu nắm ý chính và người nói; lượt sau tập trung vào chi tiết, mục đích và hành động tiếp theo.',
         foundation: 'Đọc mục tiêu bài học, xem ví dụ rồi làm phần tự kiểm tra trước khi chuyển sang bài tiếp theo.'
       })[context.page] || 'Bạn có thể cho mình biết phần nào đang khó; mình sẽ hướng dẫn theo chức năng hiện có.';
-      const text = title
-        ? `Bạn đang ở ${pageLabel}, nội dung hiện tại là “${title}”.${snippet ? ` Thông tin đang hiển thị: ${snippet}.` : ''} ${tips}`
-        : `Bạn đang ở ${pageLabel}. ${tips}`;
+      const opener = this.pickResponse('context-open', [
+        'Được, mình sẽ dựa vào nội dung bạn đang mở để hướng dẫn nhé.',
+        'Mình đã nhận ra khu vực bạn đang học. Cùng xem từng bước nhé.',
+        'Để mình bám sát màn hình hiện tại thay vì hướng dẫn chung chung nhé.'
+      ]);
+      const contextLine = title
+        ? `Bạn đang ở ${pageLabel}, nội dung hiện tại là “${title}”.${snippet ? ` Thông tin đang hiển thị: ${snippet}.` : ''}`
+        : `Bạn đang ở ${pageLabel}.`;
+      const transition = this.pickResponse('context-transition', [
+        'Một cách làm phù hợp ở bước này là:',
+        'Bạn có thể thử theo trình tự sau:',
+        'Mình gợi ý bạn bắt đầu như sau:'
+      ]);
+      const close = this.pickResponse('context-close', [
+        'Bạn cứ làm từng bước; khi gặp đúng chỗ vướng, hãy gửi câu hỏi cụ thể hơn cho mình.',
+        'Thử cách này trước nhé. Mình vẫn có thể hướng dẫn tiếp theo nội dung bạn đang mở.',
+        'Đừng vội chuyển bài; tự kiểm tra lại một lần sẽ giúp bạn nhớ lâu hơn.'
+      ]);
+      const text = this.composeResponse('context', [opener, contextLine, transition, tips, close]);
       return { intent: match.intent, emotion: 'thinking', text, actions: [], source: 'current-app-interaction-context' };
     }
     if (match.intent === 'insights') return { intent: match.intent, emotion: 'analyzing', text: '', actions: [], source: 'local-learning-insights' };
     if (match.intent === 'insights-off') return { intent: match.intent, emotion: 'caring', text: 'Bạn có thể tắt phân tích tiến độ bằng nút trong phần đầu khung trò chuyện. Mình vẫn có thể trò chuyện và hướng dẫn sử dụng bình thường.', actions: [], source: 'local-dialogue-library' };
     if (match.intent === 'feature') {
       const command = PAGE_COMMANDS[match.action];
+      const label = command?.label?.replace(/^Mở\s+/, '') || 'mục bạn cần';
+      const opener = this.pickResponse('feature-open', [
+        `Được nhé, mình hiểu bạn đang muốn đến phần ${label}.`,
+        `Mình sẽ đưa bạn đến đúng khu vực ${label}.`,
+        `Bạn đang cần ${label}; mình chỉ nhanh đường vào nhé.`
+      ]);
+      const guidance = this.pickFeature(match.action);
+      const nextStep = command
+        ? this.pickResponse('feature-close', [
+          `Bạn có thể nhấn nút “${command.label}” bên dưới để chuyển thẳng đến đó.`,
+          `Dùng nút “${command.label}” bên dưới là nhanh nhất.`,
+          `Mình đã chuẩn bị lối tắt “${command.label}” ngay dưới câu trả lời.`
+        ])
+        : '';
       return {
         intent: match.intent, emotion: match.emotion,
-        text: this.pickFeature(match.action),
+        text: this.composeResponse('feature', [opener, guidance, nextStep]),
         actions: command ? [{ ...command, action: match.action }] : [],
-        source: 'static-feature-library'
+        source: 'local-context-composition'
       };
     }
     if (match.intent === 'faq') {
-      return { intent: match.intent, emotion: match.emotion, text: this.pickFaq(message), actions: [], source: 'static-faq' };
+      const answer = this.pickFaq(message);
+      const opener = this.pickResponse('faq-open', [
+        'Mình tìm được hướng dẫn phù hợp trong tài liệu hỗ trợ hiện có.',
+        'Mình sẽ giải thích dựa trên thông tin được tích hợp trong ứng dụng nhé.',
+        'Phần này mình có thể hướng dẫn dựa trên nội dung hỗ trợ sẵn có:'
+      ]);
+      const close = this.pickResponse('faq-close', [
+        'Bạn thử theo các bước đó nhé.',
+        'Bạn có thể làm theo hướng dẫn này ngay trong ứng dụng.',
+        'Nếu bạn đang ở màn hình liên quan, mình có thể chỉ tiếp đường đi.'
+      ]);
+      return { intent: match.intent, emotion: match.emotion, text: this.composeResponse('faq', [opener, answer, close]), actions: [], source: 'local-faq-composition' };
     }
     const group = ({
       identity: 'greeting', greeting: 'greeting', thanks: 'reaction', goodbye: 'rest',
       celebrate: 'reaction', playful: 'reaction', encouragement: 'encouragement', rest: 'rest', help: 'help', unknown: 'help'
     })[match.intent] || 'help';
     let text = this.pick(group);
-    if (match.intent === 'celebrate') text = `${text} Cùng giữ tinh thần tích cực nhé!`;
-    if (match.intent === 'playful') text = `${text} Mình cũng thích những phút vui vẻ như thế này!`;
-    if (match.intent === 'identity') text = 'Chào bạn! 😊 Mình là Robot Buddy, người bạn đồng hành được tạo ra dành riêng cho TOEIC Dictionary. Mình được tạo ra bởi nhà phát triển Vũ Nguyễn Hoàng Phúc với mong muốn giúp việc học tiếng Anh của bạn thú vị và dễ dàng hơn. Mình có thể trò chuyện, hướng dẫn các chức năng, đọc tiến độ học được lưu ngay trên thiết bị để gợi ý nội dung cần học, luyện và ôn. Mình không phải chatbot AI trực tuyến: không gọi API, không kết nối máy chủ để phân tích và không gửi dữ liệu học tập của bạn ra ngoài thiết bị. 💙';
-    if (match.intent === 'thanks') text = `${text} Cảm ơn bạn đã trò chuyện cùng mình!`;
-    if (match.intent === 'unknown') text = `${text} Hiện tại mình phản hồi theo các chủ đề và từ khóa đã được chuẩn bị sẵn, nên có thể chưa hiểu mọi câu hỏi tự do.`;
-    return { intent: match.intent, emotion: match.emotion, text, actions: [], source: 'static-dialogue-library' };
+    if (match.intent === 'celebrate') {
+      text = this.composeResponse('celebrate', [text, this.pickResponse('celebrate-close', [
+        'Cùng giữ nhịp học tích cực này nhé!', 'Một bước tiến nhỏ cũng đáng được ghi nhận. Tiếp tục nào!',
+        'Hãy tận dụng đà này để hoàn thành thêm một mục tiêu nhỏ nhé.'
+      ])]);
+    }
+    if (match.intent === 'playful') {
+      text = this.composeResponse('playful', [text, this.pickResponse('playful-close', [
+        'Học nghiêm túc nhưng vẫn nên có những phút vui vẻ mà!', 'Nạp chút năng lượng rồi mình quay lại TOEIC nhé!',
+        'Một chút vui vẻ cũng giúp buổi học dễ chịu hơn.'
+      ])]);
+    }
+    if (match.intent === 'identity') {
+      const opener = this.pickResponse('identity-open', ['Chào bạn! 😊 Mình là Robot Buddy.', 'Mình là Robot Buddy đây! Rất vui được đồng hành cùng bạn.']);
+      const role = 'Mình là người bạn đồng hành trong TOEIC Dictionary, được xây dựng bởi Vũ Nguyễn Hoàng Phúc để hỗ trợ tìm chức năng, hướng dẫn cách học và đọc tiến độ học được lưu trên thiết bị khi bạn bật phân tích.';
+      const boundary = 'Mình không phải chatbot AI trực tuyến và không gọi API để tạo câu trả lời; nội dung được kết hợp từ thư viện hỗ trợ, quy tắc và ngữ cảnh ứng dụng ngay trên thiết bị. Dữ liệu học tập không được gửi ra ngoài.';
+      text = this.composeResponse('identity', [opener, role, boundary, '💙']);
+    }
+    if (match.intent === 'thanks') text = this.composeResponse('thanks', [text, this.pickResponse('thanks-close', ['Mình vui vì giúp được bạn!', 'Cứ gọi mình khi cần hỗ trợ nhé!', 'Rất sẵn lòng đồng hành cùng bạn.'])]);
+    if (match.intent === 'unknown') {
+      const current = context.currentItem?.title ? ` Mình thấy bạn đang học “${String(context.currentItem.title).slice(0, 90)}” trong mục ${context.pageLabel || 'hiện tại'}.` : '';
+      const opener = this.pickResponse('unknown-open', [
+        'Mình chưa xác định chắc ý bạn muốn hỏi, nên không muốn đoán sai.',
+        'Câu hỏi này nằm ngoài phần mình nhận diện được ngay lúc này.',
+        'Mình cần thêm một chút ngữ cảnh để trả lời đúng trọng tâm.'
+      ]);
+      const clarify = this.pickResponse('unknown-clarify', [
+        'Bạn đang muốn hỏi về từ vựng, ngữ pháp, Listening, Reading hay cách sử dụng ứng dụng?',
+        'Bạn có thể nói rõ hơn mục tiêu: giải thích kiến thức, hướng dẫn thao tác hay tìm bài luyện phù hợp?',
+        'Bạn gửi thêm tên từ, câu hỏi hoặc phần bài học đang xem nhé; mình sẽ bám vào thông tin đó để hỗ trợ.'
+      ]);
+      text = this.composeResponse('unknown', [opener, current, clarify]);
+    }
+    return { intent: match.intent, emotion: match.emotion, text, actions: [], source: match.intent === 'unknown' ? 'local-clarification-composition' : 'local-dialogue-composition' };
   }
 
   get quickPrompts() {

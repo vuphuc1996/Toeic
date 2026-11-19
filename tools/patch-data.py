@@ -7,6 +7,7 @@ import json
 import os
 import re
 import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -18,6 +19,69 @@ def id_sha256(ids: list[str]) -> str:
 def read_json(path: Path) -> Any:
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
+
+
+FORBIDDEN_ROOT_PATHS = {"id", "word", "topics"}
+
+
+def validate_allowed_paths(patch: dict) -> set[str]:
+    allowed = patch.get("allowedPaths")
+    if not isinstance(allowed, list) or not allowed:
+        raise ValueError("Patch phải khai báo allowedPaths là danh sách JSON Pointer không rỗng.")
+    if any(not isinstance(path, str) for path in allowed):
+        raise ValueError("allowedPaths chỉ được chứa chuỗi JSON Pointer.")
+    if len(set(allowed)) != len(allowed):
+        raise ValueError("allowedPaths có đường dẫn trùng.")
+    for path in allowed:
+        parts = pointer_parts(path)
+        if parts[0] in FORBIDDEN_ROOT_PATHS:
+            raise ValueError(f"Đường dẫn bị cấm trong allowedPaths: {path}")
+    operations = patch.get("operations")
+    if not isinstance(operations, list) or not operations:
+        raise ValueError("Patch không có operations hợp lệ.")
+    for index, operation in enumerate(operations, 1):
+        if not isinstance(operation, dict):
+            raise ValueError(f"Operation #{index} không phải object")
+        pointer = operation.get("path")
+        parts = pointer_parts(pointer)
+        if parts[0] in FORBIDDEN_ROOT_PATHS:
+            raise ValueError(f"Đường dẫn bị cấm: {pointer} (id, word, topics là bất biến)")
+        if pointer not in allowed:
+            raise ValueError(f"Operation #{index}: {pointer} không nằm trong allowedPaths; từ chối toàn bộ batch.")
+    return set(allowed)
+
+
+def append_audit_log(root: Path, patch: dict, mode: str, result: str, error: str | None = None) -> None:
+    log_dir = root / "logs" / "patch-data"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_path = log_dir / "operations.jsonl"
+    recorded_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    operations = patch.get("operations") if isinstance(patch.get("operations"), list) else []
+    records = []
+    if operations:
+        for index, operation in enumerate(operations, 1):
+            operation = operation if isinstance(operation, dict) else {}
+            expected = operation.get("expect") if isinstance(operation.get("expect"), dict) else {}
+            old_value = operation.get("new") if mode == "rollback" else expected.get("old")
+            new_value = expected.get("old") if mode == "rollback" else operation.get("new")
+            records.append({
+                "recordedAt": recorded_at,
+                "batchId": patch.get("batchId"),
+                "operation": index,
+                "id": operation.get("id"),
+                "pointer": operation.get("path"),
+                "old": old_value,
+                "new": new_value,
+                "result": result,
+                **({"error": error} if error else {}),
+            })
+    else:
+        records.append({"recordedAt": recorded_at, "batchId": patch.get("batchId"), "result": result, **({"error": error} if error else {})})
+    payload = "".join(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n" for record in records)
+    with log_path.open("a", encoding="utf-8") as stream:
+        stream.write(payload)
+        stream.flush()
+        os.fsync(stream.fileno())
 
 
 def pointer_parts(pointer: str) -> list[str]:
@@ -91,6 +155,7 @@ def verify_operations(patch: dict, found: dict[str, tuple[Path, dict]], mode: st
     ops = patch.get("operations")
     if not isinstance(ops, list) or not ops:
         raise ValueError("Patch không có operations hợp lệ.")
+    validate_allowed_paths(patch)
     for i, op in enumerate(ops, 1):
         if not isinstance(op, dict):
             raise ValueError(f"Operation #{i} không phải object")
@@ -124,7 +189,7 @@ def verify_operations(patch: dict, found: dict[str, tuple[Path, dict]], mode: st
     return staged
 
 
-def write_atomically(staged: dict[Path, dict]) -> None:
+def write_atomically(staged: dict[Path, dict]) -> dict[Path, bytes]:
     temps: dict[Path, Path] = {}
     originals: dict[Path, bytes] = {}
     replaced: list[Path] = []
@@ -155,6 +220,27 @@ def write_atomically(staged: dict[Path, dict]) -> None:
         for tmp in temps.values():
             if tmp.exists():
                 tmp.unlink()
+    return originals
+
+
+def restore_atomically(originals: dict[Path, bytes]) -> None:
+    """Restore the pre-operation bytes if the final audit record cannot be committed."""
+    temps: dict[Path, Path] = {}
+    try:
+        for path, payload in originals.items():
+            fd, tmp_name = tempfile.mkstemp(prefix=f".{path.name}.audit-restore.", suffix=".tmp", dir=str(path.parent))
+            tmp = Path(tmp_name)
+            with os.fdopen(fd, "wb") as stream:
+                stream.write(payload)
+                stream.flush()
+                os.fsync(stream.fileno())
+            temps[path] = tmp
+        for path, tmp in temps.items():
+            os.replace(tmp, path)
+    finally:
+        for tmp in temps.values():
+            if tmp.exists():
+                tmp.unlink()
 
 
 def main() -> int:
@@ -168,11 +254,12 @@ def main() -> int:
     args = parser.parse_args()
     root = args.root.resolve()
     patch_path = args.patch if args.patch.is_absolute() else (root / args.patch)
+    patch = None
+    mode = "rollback" if args.rollback else "apply"
     try:
         patch = read_json(patch_path)
         if patch.get("schemaVersion") != 1:
             raise ValueError("schemaVersion patch phải bằng 1")
-        mode = "rollback" if args.rollback else "apply"
         found, ids = validate_patch_context(root, patch, mode)
         staged = verify_operations(patch, found, mode)
         action = "ROLLBACK" if args.rollback else "APPLY"
@@ -190,12 +277,34 @@ def main() -> int:
                 after_text = after_text[:97] + "..."
             print(f"  * {op['id']} {op['path']}: {before_text} -> {after_text}")
         if args.dry_run:
-            print("DRY-RUN PASS — không ghi file")
+            append_audit_log(root, patch, mode, "DRY_RUN_PASS")
+            print("DRY-RUN PASS — không ghi dữ liệu; đã ghi operation audit log")
             return 0
-        write_atomically(staged)
-        print(f"{action} PASS — đã ghi {len(staged)} file")
+        append_audit_log(root, patch, mode, "VALIDATED")
+        originals = write_atomically(staged)
+        final_result = "ROLLED_BACK" if args.rollback else "APPLIED"
+        try:
+            append_audit_log(root, patch, mode, final_result)
+        except Exception as log_exc:
+            try:
+                restore_atomically(originals)
+            except Exception as restore_exc:
+                print(f"FATAL: ghi audit log cuối thất bại ({log_exc}); tự phục hồi dữ liệu cũng thất bại ({restore_exc}). Cần kiểm tra thủ công các file đã liệt kê phía trên.")
+                return 2
+            try:
+                append_audit_log(root, patch, mode, "REJECTED", f"Final audit log failed; original file bytes restored: {log_exc}")
+            except Exception as retry_exc:
+                print(f"AUDIT LOG ERROR: không ghi được bản ghi phục hồi: {retry_exc}")
+            print(f"ERROR: audit log cuối thất bại; đã phục hồi nguyên trạng {len(originals)} file, không commit batch: {log_exc}")
+            return 1
+        print(f"{action} PASS — đã ghi {len(staged)} file và operation audit log")
         return 0
     except Exception as exc:
+        if isinstance(patch, dict):
+            try:
+                append_audit_log(root, patch, mode, "REJECTED", str(exc))
+            except Exception as log_exc:
+                print(f"AUDIT LOG ERROR: {log_exc}")
         print(f"ERROR: {exc}")
         return 1
 

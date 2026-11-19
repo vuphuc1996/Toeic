@@ -56,8 +56,9 @@ const robotCommand = app.slice(app.indexOf('function handleRobotCommand('), app.
 assert.match(robotCommand, /if\(page\)\{setQuickHelpOpen\(false\);navigate\(page\);return;\}/);
 // The progress insight response is one dashboard, not a duplicate prose summary.
 const insightSend = app.slice(app.indexOf('function sendRobotMessage('), app.indexOf('function robotShowWelcome('));
-assert.match(insightSend, /if\(progressInsights\)appendRobotProgressDashboard\(progressInsights,null,reply\.actions\|\|\[\]\)/);
-assert.match(insightSend, /if\(progressInsights\)appendRobotProgressDashboard\(progressInsights,null,reply\.actions\|\|\[\]\);\s*else appendRobotMessage\('bot',reply\.text,reply\.actions\|\|\[\]\)/s);
+assert.match(insightSend, /if\(progressInsights\)\{[\s\S]*?streamRobotMessage\(/);
+assert.match(insightSend, /appendRobotProgressDashboard\(progressInsights,null,reply\.actions\|\|\[\]\)/);
+assert.match(insightSend, /else streamRobotMessage\(reply\.text,reply\.actions\|\|\[\],onComplete\)/);
 assert.match(app, /function appendRobotProgressDashboard\(insights,anchor=null,actions=\[\]\)/);
 assert.match(app, /className='robot-progress-actions'/);
 assert.match(app, /button\.dataset\.robotPage=action\.page/);

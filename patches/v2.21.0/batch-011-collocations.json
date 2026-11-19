@@ -108,5 +108,8 @@
     "Replace collocations whose lexical head did not directly match the canonical headword with direct headword collocations.",
     "Keep stable IDs, senses, definitions, examples, word-family data, and all learning/question content unchanged.",
     "Sources are indexed in docs/sources/TOEIC_LEXICAL_CLEANUP_BATCH_011_v2.21.0.md."
+  ],
+  "allowedPaths": [
+    "/collocations"
   ]
 }

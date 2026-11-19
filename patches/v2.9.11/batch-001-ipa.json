@@ -253,5 +253,8 @@
       },
       "new": "/ˌmæn.jəˈfæk.tʃɚ.ɚ/"
     }
+  ],
+  "allowedPaths": [
+    "/phonetic/us"
   ]
 }

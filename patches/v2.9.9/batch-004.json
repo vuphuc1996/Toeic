@@ -4,6 +4,11 @@
   "baseDataVersion": "2.9.8",
   "targetDataVersion": "2.9.9",
   "idSetSha256": "dd1705e64c8df4ad7ebca188a6ad856fff1d180d99730d2d77d2ba6fbdc12656",
+  "allowedPaths": [
+    "/examples/0/en",
+    "/examples/0/vi",
+    "/senses/0/definition_en"
+  ],
   "description": "Manual editorial correction for the final 40 headwords in the placeholder-definition debt list. All first-sense English definitions and TOEIC-context examples/translations are rewritten with POS-checked patches.",
   "operations": [
     {

@@ -1,4 +1,4 @@
-const VERSION = '2.95.8';
+const VERSION = '2.95.10';
 const CACHE_NAME = `toeic-vocab-github-only-v${VERSION}`;
 const OLD_CACHE_PREFIX = 'toeic-vocab-github-only-v';
 
@@ -38,9 +38,19 @@ self.addEventListener('install', event => {
       }
     }));
 
-    // Activate only after the complete required shell is installed.
-    await self.skipWaiting();
+    // First install has no active worker to protect, so it may activate immediately.
+    // During an update, keep the new worker waiting until the user accepts the reload.
+    if (!self.registration.active) {
+      await self.skipWaiting();
+    } else {
+      console.info('[SW] Bản mới đã cài xong và đang chờ người dùng xác nhận.');
+    }
   })());
+});
+
+self.addEventListener('message', event => {
+  if (event.data?.type !== 'SKIP_WAITING') return;
+  event.waitUntil(self.skipWaiting());
 });
 
 self.addEventListener('activate', event => {

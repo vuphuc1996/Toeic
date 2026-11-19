@@ -146,5 +146,8 @@
         }
       ]
     }
+  ],
+  "allowedPaths": [
+    "/word_family"
   ]
 }

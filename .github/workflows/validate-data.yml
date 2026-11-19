@@ -227,6 +227,9 @@ jobs:
           node tools/tests/quick-help.mjs
           node tools/tests/learning-assistant.mjs
           node tools/tests/robot-buddy.mjs
+          node tools/tests/robot-buddy-streaming.mjs
+          node tools/tests/flashcard-fixed-batch.mjs
+          node tools/tests/service-worker-update.mjs
           node tools/tests/robot-buddy-layout.mjs
           node tools/tests/robot-learning-insights.mjs
           node tools/tests/robot-progress-dashboard.mjs

@@ -68,7 +68,8 @@ for (const faq of library.faq) {
   assert.ok(result.text.length > 10, `FAQ answer missing: ${faq.id}`);
 }
 assert.equal(engine.reply('Ứng dụng có dùng offline không?').intent, 'faq');
-assert.match(engine.reply('Bạn có thể kể về tàu vũ trụ Sao Hỏa không?').text, /chưa hiểu mọi câu hỏi tự do/);
+assert.match(engine.reply('Bạn có thể kể về tàu vũ trụ Sao Hỏa không?').text, /không muốn đoán sai|thêm một chút ngữ cảnh/);
+assert.match(engine.reply('Bạn có thể kể về tàu vũ trụ Sao Hỏa không?', { page: 'dictionary', pageLabel: 'Từ vựng', currentItem: { title: 'schedule' } }).text, /schedule/);
 assert.ok(['motivation','caring','sleepy','listening','thinking'].includes(engine.reply('Hãy động viên tôi nhé').emotion));
 
 // Robot receives already-loaded local progress snapshots; it must not open storage itself.

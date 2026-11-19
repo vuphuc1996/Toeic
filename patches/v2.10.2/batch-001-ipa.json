@@ -93,5 +93,8 @@
       },
       "new": "/ədˌmɪn.əˈstreɪ.ʃən/"
     }
+  ],
+  "allowedPaths": [
+    "/phonetic/us"
   ]
 }

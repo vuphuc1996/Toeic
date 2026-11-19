@@ -42,13 +42,14 @@ const fakeDocument = { createElement: tag => new Element(tag) };
 const fakeDollar = selector => selector === '#robotChatLog' ? log : selector === '#robotChatInput' ? input : null;
 const classifyEngine = { classify: () => ({ intent: 'insights' }), reply: () => ({ text: 'legacy prose should not be rendered', actions: [], emotion: 'happy' }) };
 
-const functions = new Function('document', '$', 'robotReadSettings', 'getRobotLearningInsightsNow', 'appendRobotMessage', 'getRobotInsightActions', 'setRobotEmotion', 'setRobotTyping', 'robotBuddyEngine', 'state', 'displayWord', 'getPrimarySense', 'setTimeout', 'clearTimeout',
+const functions = new Function('document', '$', 'robotReadSettings', 'getRobotLearningInsightsNow', 'appendRobotMessage', 'getRobotInsightActions', 'setRobotEmotion', 'setRobotTyping', 'robotBuddyEngine', 'state', 'displayWord', 'getPrimarySense', 'setTimeout', 'clearTimeout', 'finishRobotStream', 'streamRobotMessage',
   `${app.slice(dashboardStart, dashboardEnd)}\n${app.slice(analysisStart, analysisEnd)}\nlet robotTypingTimer=null; let robotSpeakingTimer=null;\n${app.slice(sendStart, sendEnd)}\nreturn { appendRobotProgressDashboard, runRobotProgressAnalysis, sendRobotMessage };`)(
   fakeDocument, fakeDollar, () => settings, () => insights,
   (role, text) => messages.push({ role, text }), () => actions,
   () => {}, () => {}, classifyEngine,
   { activePage: 'dashboard' }, value => value, () => null,
-  callback => { callback(); return 1; }, () => {}
+  callback => { callback(); return 1; }, () => {},
+  () => {}, (text, actions, onComplete) => { if (typeof onComplete === 'function') onComplete(); }
 );
 
 // Explicit analysis must append one dashboard, with no duplicate bot prose summary.
