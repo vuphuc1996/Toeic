@@ -1,3 +1,12 @@
+## v2.95.15 — close the highest-frequency related-term glossary gaps
+
+- Added four Cambridge-sourced Vietnamese glosses for the remaining synonym/antonym terms with at least three references: `aim`, `avoid`, `cause` and `conceal`. The related-term glossary rises from 383 to 387 entries.
+- POS/sense scope: `aim` is noun-only in the current relationship graph; `avoid` and `conceal` are verbs; `cause` covers noun and verb usage. Glosses explain referenced terms without changing the underlying synonym/antonym arrays.
+- Added provenance ledger `data/vocabulary/batch-022.json`, an absent-only patch with base-file SHA-256 guard, dedicated Python tests, workflow registration and JavaScript release-integrity assertions.
+- Canonical dictionary remains 1,141 headwords. No vocabulary ID, headword, topic, question, answer key, learner record, IndexedDB schema, localStorage key or runtime data contract was changed.
+- Exact-term audit moves from 372/804 to 376/804 referenced terms with glossary entries; 428 distinct terms and 465 of 1,037 link occurrences remain without a glossary entry. These figures use the exact case-insensitive term join, not the validator's separate informational counter.
+- Local candidate only. All four new glosses remain provisional pending independent lexical review; remote GitHub Actions/Pages, browser/PWA/device acceptance and deployment are not claimed.
+
 ## v2.95.14 — sourced related-term glossary backfill
 
 - Added ten Cambridge-sourced Vietnamese glosses for frequently referenced synonym/antonym terms: `requirement`, `pay`, `ignore`, `withhold`, `retain`, `earnings`, `duty`, `distribute`, `discourage` and `decline`. The related-term glossary rises from 373 to 383 entries.

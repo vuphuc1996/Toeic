@@ -74,7 +74,8 @@ class RelatedGlossaryBatch021Tests(unittest.TestCase):
     def test_glossary_has_no_duplicate_casefolded_terms(self):
         keys = [row["term"].casefold() for row in self.related_doc["terms"]]
         self.assertEqual(len(keys), len(set(keys)))
-        self.assertEqual(len(self.related_doc["terms"]), 383)
+        for entry in self.batch["records"]:
+            self.assertIn(entry["term"].casefold(), self.related)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.15-related-glossary-001",
+  "baseFileSha256": "57c97c32c8d681ebbbb0129e9b21dc0ba3d4c7f8e12731a9d0f54d6a42b83fbc",
+  "description": "Add four Cambridge-sourced Vietnamese glosses for the remaining most frequently referenced unglossed synonym/antonym terms.",
+  "editorialStatus": "provisional glossary additions; independent lexical review pending",
+  "accessedOn": "2026-11-20",
+  "operations": [
+    {
+      "term": "aim",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "aim",
+        "meaning_vi": "mục tiêu; mục đích; điều hướng tới hoặc nhằm đạt được",
+        "pos": "n",
+        "definition_en": "something that you plan or hope to achieve",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/aim"
+        ]
+      }
+    },
+    {
+      "term": "avoid",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "avoid",
+        "meaning_vi": "tránh; né; phòng tránh hoặc ngăn điều gì xảy ra",
+        "pos": "v",
+        "definition_en": "to stay away from someone or something, or to prevent something from happening",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/avoid"
+        ]
+      }
+    },
+    {
+      "term": "cause",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "cause",
+        "meaning_vi": "nguyên nhân; lý do; gây ra hoặc khiến điều gì xảy ra",
+        "pos": "n/v",
+        "definition_en": "the reason why something happens, or to make something happen",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/cause"
+        ]
+      }
+    },
+    {
+      "term": "conceal",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "conceal",
+        "meaning_vi": "che giấu; giấu đi; giữ kín để người khác không nhìn thấy hoặc biết được",
+        "pos": "v",
+        "definition_en": "to prevent something from being seen or known about",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/conceal"
+        ]
+      }
+    }
+  ]
+}

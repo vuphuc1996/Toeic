@@ -4,8 +4,8 @@
 
 ## 1. Current release
 
-- **Phiên bản mã nguồn đang kiểm kê:** v2.95.14 — adds ten Cambridge-sourced related-term glosses on top of v2.95.13; no canonical headword or learner-data change.
-- **Previous source:** v2.95.13 — sense expansions, sense-linked examples and POS-specific family-link corrections.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.95.15 — adds four Cambridge-sourced related-term glosses for the highest-frequency remaining synonym/antonym terms; no canonical headword or learner-data change.
+- **Previous source:** v2.95.14 — ten Cambridge-sourced related-term glosses; v2.95.13 remains the prior sense-expansion release.
 - **Product:** GitHub Pages static PWA, GitHub-only. No backend/GAS/iframe/Cloudflare runtime dependency.
 - **Scope:** TOEIC Listening & Reading is the active exam-development track. Foundation Pre-A1/A1/A2 remains available. B1 is blueprint-only; TOEIC Speaking/Writing and IELTS are deferred.
 - **This release changes:** adds ten sourced Vietnamese glosses to the existing related-term glossary, raising it from 373 to 383 entries. It retains the fixed maximum 10-card Flashcard, Robot Buddy streaming, data-patch safety, consent-based PWA updates and the GitHub-only/offline architecture. No canonical headword, relationship, learner storage or runtime API was changed.
@@ -21,6 +21,16 @@
 - This does not mean the entire 57-module Python inventory or remote GitHub Actions completed. Remote Pages, real browser/PWA/offline/two-tab behavior and device TTS remain unverified. All 21 owner-run acceptance rows remain **Chưa kiểm**.
 - All ten new glosses remain provisional pending independent lexical review. No GitHub push or deployment was performed.
 - Detailed evidence: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.14.md`, `reports/COMMAND_LOG_INDEX_v2.95.14.md` and `reports/VOCABULARY_GLOSSARY_EXPANSION_v2.95.14.md`.
+
+### v2.95.15 candidate verification record
+
+- Candidate baseline: v2.95.14 at parent commit `e269173`; candidate version: v2.95.15.
+- Vocabulary remains 1,141 canonical headwords; stable ID-set SHA-256, headwords and topic arrays are unchanged. Related-term glossary rises from 383 to 387 entries.
+- New entries: `aim` (n), `avoid` (v), `cause` (n/v), `conceal` (v). Each already exists in canonical synonym/antonym relationships at least three times. Exact-term join after the batch: 376/804 distinct references have glosses; 428 distinct terms / 465 occurrences remain unglossed.
+- Patch: four `expect.absent=true` operations, exact base-file SHA-256 and Cambridge host/path checks. Dry-run and apply passed; rollback in a disposable workspace restored the exact baseline SHA-256 `57c97c32c8d681ebbbb0129e9b21dc0ba3d4c7f8e12731a9d0f54d6a42b83fbc`.
+- Focused Python regression: 5 modules / 36 cases passed (batch 022: 9; batch 021: 7; related-term patcher: 11; CI coverage: 3; release rotation: 6). JavaScript regression: 38/38 `.mjs` suites passed. JavaScript syntax checks and Python `compileall` passed. Vocabulary validator: 1,141 records, 0 ID additions/missing, 0 errors / 0 legacy warnings; learning-content validator: 0 errors / 0 warnings; repository integrity: 384 references/data files, 0 errors / 0 optional warnings; version synchronization and vocabulary release integrity passed. All newly added glosses remain provisional pending independent lexical review.
+- Full Python discovery is not claimed. Remote GitHub Actions/Pages, real browser/PWA/offline/two-tab behavior and physical-device TTS remain unverified. All 22 owner-run manual acceptance rows remain **Chưa kiểm**. No GitHub push or deployment was performed.
+- Detailed evidence: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.15.md`, `reports/COMMAND_LOG_INDEX_v2.95.15.md` and `reports/VOCABULARY_GLOSSARY_EXPANSION_v2.95.15.md`.
 
 ### v2.95.11 inherited controls — historical release
 
@@ -57,7 +67,7 @@
 | Area | Inventory | Boundary |
 |---|---:|---|
 | Vocabulary | 1,141 headwords / 26 letter files | 3,000 minimum target; lexical quality is a separate backlog |
-| Related-term glossary | 383 sourced/legacy entries | Ten additions in v2.95.14; independent lexical review is pending |
+| Related-term glossary | 387 sourced/legacy entries | Four additions in v2.95.15; independent lexical review is pending |
 | Grammar | 50 lessons / 137 exercises | No approved total-size target |
 | TOEIC Listening | 121 units / 239 questions | 102 eligible / 137 reserve-pending-independent-review |
 | TOEIC Reading | 65 resources / 263 questions | Part 7 second-review gate remains |
@@ -134,14 +144,14 @@ Detailed evidence: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.6.md`, `reports/P
 
 ### P0 — acceptance and integration
 
-1. Reconcile Claude's pending review of v2.95.13 against baseline v2.95.12 (`85be68a`); preserve findings and apply any required correction to v2.95.14.
-2. Review the v2.95.13 → v2.95.14 glossary-only delta and approve the candidate before any deployment; then verify remote Actions and Pages show the same version.
-3. Complete all 21 rows in `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` on Windows first, then iPhone/iPad and Android where available. Every item remains Chưa kiểm until the owner records date/device and result.
+1. Reconcile Claude's pending review of v2.95.13 against baseline v2.95.12 (`85be68a`); preserve findings and apply any required correction to the current v2.95.15 candidate without losing the v2.95.14–v2.95.15 work.
+2. Review the v2.95.14 → v2.95.15 glossary-only delta and approve the candidate before any deployment; then verify remote Actions and Pages show the same version.
+3. Complete all 22 rows in `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` on Windows first, then iPhone/iPad and Android where available. Every item remains Chưa kiểm until the owner records date/device and result.
 4. Instrument the remaining 27 learning-outcome criteria only after each criterion has a defensible evidence source, stable scope, threshold policy and tests. Do not infer mastery from inventory or resource links.
 
 ### P1 — content quality and coverage
 
-1. Grow vocabulary toward 3,000 minimum; review 93 missing US IPA entries and improve word-family, verb-form, collocation, synonym and antonym coverage with source support. Current exact-term audit: 432 distinct terms remain unglossed across 477 link occurrences (804 distinct referenced terms / 1,037 total occurrences); this differs from the validator's `323/804` informational metric and should not be compared as if the definitions were identical.
+1. Grow vocabulary toward 3,000 minimum; review 93 missing US IPA entries and improve word-family, verb-form, collocation, synonym and antonym coverage with source support. Current exact-term audit: 428 distinct terms remain unglossed across 465 link occurrences (804 distinct referenced terms / 1,037 total occurrences); this differs from the validator's `321/804` informational metric and should not be compared as if the definitions were identical.
 2. Editorially review the four repeated definition pairs and the `package` word/sense CEFR difference; preserve legitimate sense distinctions.
 3. Complete independent review for 137 TOEIC Listening reserve questions, Part 7 second-review items, 80 separate Part 5 practice questions and supplementary Foundation A2 Reading/Listening content before changing eligibility. Active handoffs: `reports/TOEIC_BATCH_024_REVIEW_CHECKLIST_v2.92.0.md` and `reports/TOEIC_BATCH_025_REVIEW_CHECKLIST_v2.93.0.md`.
 4. Continue review of grammar examples and distractor uniqueness; structural audits do not replace semantic review by a second person.

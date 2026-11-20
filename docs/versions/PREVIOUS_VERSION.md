@@ -1,7 +1,7 @@
 # Previous Version
 
-- Previous source: **v2.95.13** — ten existing-headword sense expansions, 24 sense-linked examples, four related-term glosses and two POS-specific family-link corrections.
-- Superseded by: v2.95.14, which adds ten sourced related-term glossary entries without changing canonical vocabulary headwords or learner data.
-- The v2.95.11 design-token ratchet, patch audit controls and owner checklist remain inherited.
+- Previous source: **v2.95.14** — ten Cambridge-sourced related-term glossary entries, CI coverage for related-term patch folders, no canonical headword or learner-data change.
+- Superseded by: v2.95.15, which adds four Cambridge-sourced glosses for `aim`, `avoid`, `cause` and `conceal`; no vocabulary identity or learner storage changed.
+- Independent lexical review remains pending for all v2.95.14 and v2.95.15 gloss additions.
 - Flashcard retains the fixed maximum of 10 cards; the retired 5-card option remains removed.
 - IndexedDB remains `toeic-vocabulary-phase1`, version 1, store `workspace`. Preserve localStorage learner keys and records; no reset/migration or cross-device sync is authorized.

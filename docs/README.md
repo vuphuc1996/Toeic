@@ -1,4 +1,4 @@
-# TOEIC Dictionary v2.95.14 — Project Documentation
+# TOEIC Dictionary v2.95.15 — Project Documentation
 
 ## Source of truth
 
@@ -21,6 +21,7 @@
 | Area | Current inventory |
 |---|---:|
 | Vocabulary | 1,141 headwords across A–Z |
+| Related-term glossary | 387 entries (gloss coverage remains incomplete) |
 | Grammar | 50 lessons / 137 exercises |
 | TOEIC Listening | 121 units / 239 questions |
 | TOEIC Reading | 65 resources / 263 questions |
@@ -28,6 +29,13 @@
 | Foundation | 23 lessons (10 Pre-A1/A1 + 13 A2); separate Reading and Listening evidence banks |
 
 Counts describe source inventory, not editorial approval, learner completion, mastery or Mock eligibility. See the current progress snapshot for field coverage and review status. Active independent-review handoffs remain at `reports/TOEIC_BATCH_024_REVIEW_CHECKLIST_v2.92.0.md` and `reports/TOEIC_BATCH_025_REVIEW_CHECKLIST_v2.93.0.md`; their reserve content must not be promoted to Mock eligibility until review is recorded.
+
+## v2.95.15 candidate content update
+
+- Added four Cambridge-sourced Vietnamese glosses for frequently referenced existing synonym/antonym terms: `aim`, `avoid`, `cause` and `conceal`. Glossary inventory increases from 383 to 387 entries.
+- POS scope is explicit: `aim` (n), `avoid` (v), `cause` (n/v), `conceal` (v). No canonical relationship, headword, stable ID or topic was changed.
+- Exact-term coverage after the update: 376/804 distinct referenced terms have a glossary record; 428 distinct terms and 465 of 1,037 link occurrences remain without one. This exact join is separate from the validator's informational counter.
+- New content is provisional and pending independent lexical review. See `reports/VOCABULARY_GLOSSARY_EXPANSION_v2.95.15.md`, `reports/CHANGE_MANIFEST_v2.95.15.md` and `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.15.md`.
 
 ## v2.95.14 candidate content update
 
@@ -51,19 +59,19 @@ Counts describe source inventory, not editorial approval, learner completion, ma
 
 ## Current release artifacts
 
-- Previous Claude review package manifest: `reports/CHANGE_MANIFEST_v2.95.13.md` (submitted by the owner; result pending). Current release change manifest: `reports/CHANGE_MANIFEST_v2.95.14.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.14.md`.
+- Previous Claude review package manifest: `reports/CHANGE_MANIFEST_v2.95.13.md` (submitted by the owner; result pending). Current release change manifest: `reports/CHANGE_MANIFEST_v2.95.15.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.15.md`.
 - Current Robot Buddy behavior report: `reports/ROBOT_BUDDY_v2.95.9.md`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.14.md`.
-- Current manual acceptance checklist: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (21 items; all remain Chưa kiểm).
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.15.md`.
+- Current manual acceptance checklist: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (22 items; all remain Chưa kiểm).
 - CSS design-token ratchet report: `reports/DESIGN_TOKEN_AUDIT_BASELINE_v2.95.11.md`.
-- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.14.md`.
-- Current glossary expansion report: `reports/VOCABULARY_GLOSSARY_EXPANSION_v2.95.14.md`.
+- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.15.md`.
+- Current glossary expansion report: `reports/VOCABULARY_GLOSSARY_EXPANSION_v2.95.15.md`.
 - Previous vocabulary sense-expansion report: `reports/VOCABULARY_SENSE_EXPANSION_v2.95.13.md`.
 - Current distractor structural audit: `reports/TOEIC_DISTRACTOR_AUDIT_v2.95.8.md`.
 - Current Foundation A2 assessment audit: `reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.95.8.md`.
 - Current Listening readiness audit: `reports/TOEIC_LISTENING_READINESS_v2.95.10.md`.
-- Latest inherited content coverage audit: `reports/TOEIC_CONTENT_COVERAGE_v2.95.13.md` (the 2.95.14 change is glossary-only).
+- Latest inherited content coverage audit: `reports/TOEIC_CONTENT_COVERAGE_v2.95.13.md` (v2.95.14 and v2.95.15 are glossary-only).
 - Previous release report and acceptance checklist remain available for comparison under the v2.95.9 names.
 
 ## Documentation policy

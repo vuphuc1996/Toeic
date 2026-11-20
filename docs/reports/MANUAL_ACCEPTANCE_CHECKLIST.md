@@ -1,4 +1,4 @@
-# Manual Acceptance Checklist — TOEIC Dictionary v2.95.14
+# Manual Acceptance Checklist — TOEIC Dictionary v2.95.15
 
 **Purpose:** checklist for the project owner to execute on GitHub and real browsers/devices. This document is a blank record; it does not assert that any remote or device-level check has passed.
 
@@ -29,12 +29,14 @@
 | 20 | Word-family theo nghĩa mới của `value` | Mở `valuable` và `valuation`, xem liên kết đến `value`; đối chiếu nghĩa/loại từ được hiển thị. | `valuable → value (n)` hiển thị nghĩa giá trị tiền tệ; `valuation → value (v)` hiển thị nghĩa định giá; không còn nghĩa gộp `n/v`. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 | 21 | Glossary synonym/antonym v2.95.14 | Mở các mục có liên kết từ đồng/trái nghĩa cho `requirement`, `pay`, `ignore`, `withhold`, `retain`, `earnings`, `duty`, `distribute`, `discourage` và `decline`. | Mỗi từ liên kết mới có giải nghĩa tiếng Việt và loại từ; nội dung khớp nghĩa đang học; không làm thay đổi từ gốc hoặc quan hệ synonym/antonym. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 
+| 22 | Glossary synonym/antonym v2.95.15 | Mở các liên kết synonym/antonym tương ứng và kiểm tra `aim`, `avoid`, `cause`, `conceal`; kiểm tra loại từ và nghĩa tiếng Việt. | `aim` là danh từ; `avoid` và `conceal` là động từ; `cause` phân biệt danh từ/động từ; gloss không làm thay đổi quan hệ liên kết. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+
 ## Kết luận nghiệm thu
 
-- Tổng số hạng mục: **21**.
+- Tổng số hạng mục: **22**.
 - Đạt: Chưa ghi.
 - Không đạt: Chưa ghi.
-- Chưa kiểm: **21/21**.
+- Chưa kiểm: **22/22**.
 - Người thực hiện: Chưa ghi.
 - Ngày nghiệm thu: Chưa ghi.
 

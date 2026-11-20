@@ -76,6 +76,16 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "aim",
+      "meaning_vi": "mục tiêu; mục đích; điều hướng tới hoặc nhằm đạt được",
+      "pos": "n",
+      "definition_en": "something that you plan or hope to achieve",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/aim"
+      ]
+    },
+    {
       "term": "allocate",
       "meaning_vi": "phân bổ",
       "source": "curated-related-glossary"
@@ -253,6 +263,16 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "avoid",
+      "meaning_vi": "tránh; né; phòng tránh hoặc ngăn điều gì xảy ra",
+      "pos": "v",
+      "definition_en": "to stay away from someone or something, or to prevent something from happening",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/avoid"
+      ]
+    },
+    {
       "term": "baggage",
       "meaning_vi": "hành lý",
       "source": "curated-related-glossary"
@@ -330,6 +350,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "cause",
+      "meaning_vi": "nguyên nhân; lý do; gây ra hoặc khiến điều gì xảy ra",
+      "pos": "n/v",
+      "definition_en": "the reason why something happens, or to make something happen",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/cause"
+      ]
+    },
+    {
       "term": "cautious",
       "meaning_vi": "thận trọng",
       "pos": "",
@@ -394,6 +424,16 @@
       "meaning_vi": "thành phần; linh kiện",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "conceal",
+      "meaning_vi": "che giấu; giấu đi; giữ kín để người khác không nhìn thấy hoặc biết được",
+      "pos": "v",
+      "definition_en": "to prevent something from being seen or known about",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/conceal"
+      ]
     },
     {
       "term": "condition",

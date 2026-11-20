@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "batch": "022",
+  "release": "2.95.15",
+  "title": "High-frequency related-term glossary completion for the remaining repeated synonym/antonym gaps",
+  "editorialStatus": "provisional additions; independent lexical review pending",
+  "sourcePolicy": "Vietnamese glosses and concise English definitions are paraphrased from linked Cambridge Dictionary entries. The four terms already occur in canonical synonym/antonym fields at least three times each; no headword, relationship or learner record is changed.",
+  "count": 4,
+  "records": [
+    {
+      "term": "aim",
+      "meaning_vi": "mục tiêu; mục đích; điều hướng tới hoặc nhằm đạt được",
+      "pos": "n",
+      "definition_en": "something that you plan or hope to achieve",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/aim"
+      ]
+    },
+    {
+      "term": "avoid",
+      "meaning_vi": "tránh; né; phòng tránh hoặc ngăn điều gì xảy ra",
+      "pos": "v",
+      "definition_en": "to stay away from someone or something, or to prevent something from happening",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/avoid"
+      ]
+    },
+    {
+      "term": "cause",
+      "meaning_vi": "nguyên nhân; lý do; gây ra hoặc khiến điều gì xảy ra",
+      "pos": "n/v",
+      "definition_en": "the reason why something happens, or to make something happen",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/cause"
+      ]
+    },
+    {
+      "term": "conceal",
+      "meaning_vi": "che giấu; giấu đi; giữ kín để người khác không nhìn thấy hoặc biết được",
+      "pos": "v",
+      "definition_en": "to prevent something from being seen or known about",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/conceal"
+      ]
+    }
+  ]
+}
