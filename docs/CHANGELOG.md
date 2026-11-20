@@ -1,3 +1,11 @@
+## v2.95.14 — sourced related-term glossary backfill
+
+- Added ten Cambridge-sourced Vietnamese glosses for frequently referenced synonym/antonym terms: `requirement`, `pay`, `ignore`, `withhold`, `retain`, `earnings`, `duty`, `distribute`, `discourage` and `decline`. The related-term glossary rises from 373 to 383 entries.
+- The ten terms already occurred in canonical synonym/antonym fields; this release adds explanations only. It does not add headwords, alter synonym/antonym relationships, or change vocabulary identities, topics, questions, answers or learner records.
+- Glossary coverage audit after the patch: 804 distinct referenced terms; 372 have a matching glossary entry and 432 remain unglossed. At occurrence level, 477 of 1,037 synonym/antonym links still point to terms without a glossary entry. These are separate measures and are not a count of missing dictionary headwords.
+- Added a provenance ledger, absent-only patch, a dedicated six-case Python regression module and aggregate JavaScript release-integrity assertions. CI now triggers on `patches-related-terms/**` for both pushes and pull requests. All new editorial glosses remain provisional pending independent lexical review.
+- Local source checks only; remote GitHub Actions/Pages, browser/device acceptance and Claude's independent review of v2.95.13 are not being represented as complete.
+
 ## v2.95.13 — additional TOEIC sense coverage and family-link precision
 
 - Expanded ten existing workplace/business headwords with clearer part-of-speech and usage distinctions: `bill`, `charge`, `document`, `experience`, `function`, `host`, `minute`, `offer`, `supply` and `value`. Added 24 original bilingual examples with explicit `sense_index` coverage. The project-wide multi-sense count rises 39 → 49; examples attached to multi-sense records rise 81 → 105.

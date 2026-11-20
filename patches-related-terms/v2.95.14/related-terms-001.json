@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.14-related-glossary-001",
+  "baseFileSha256": "cd9d3c2d948d9d1bb53ed9edd8085818f05289c52e424a7b843bbfdd92e8c9cf",
+  "description": "Add ten Cambridge-sourced Vietnamese glosses for frequently used synonym/antonym terms already referenced by canonical vocabulary senses.",
+  "editorialStatus": "provisional glossary additions; independent lexical review pending",
+  "accessedOn": "2026-11-20",
+  "operations": [
+    {
+      "term": "requirement",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "requirement",
+        "meaning_vi": "điều kiện; yêu cầu bắt buộc",
+        "pos": "n",
+        "definition_en": "something that is needed or necessary, or an official rule that must be met",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/requirement"
+        ]
+      }
+    },
+    {
+      "term": "pay",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "pay",
+        "meaning_vi": "tiền lương; khoản thanh toán; trả tiền hoặc trả lương",
+        "pos": "n/v",
+        "definition_en": "money paid for work, or to give money to someone for goods, services, or work",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/pay"
+        ]
+      }
+    },
+    {
+      "term": "ignore",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "ignore",
+        "meaning_vi": "phớt lờ; không chú ý đến",
+        "pos": "v",
+        "definition_en": "to deliberately give no attention to someone or something",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/ignore"
+        ]
+      }
+    },
+    {
+      "term": "withhold",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "withhold",
+        "meaning_vi": "giữ lại; không cung cấp hoặc chi trả",
+        "pos": "v",
+        "definition_en": "to refuse to give something or to keep something back",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/withhold"
+        ]
+      }
+    },
+    {
+      "term": "retain",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "retain",
+        "meaning_vi": "giữ lại; duy trì; giữ chân",
+        "pos": "v",
+        "definition_en": "to keep or continue to have something, such as a position, right, or customer",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/retain"
+        ]
+      }
+    },
+    {
+      "term": "earnings",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "earnings",
+        "meaning_vi": "thu nhập; tiền kiếm được từ công việc; lợi nhuận doanh nghiệp",
+        "pos": "n (plural)",
+        "definition_en": "money a person receives for work, or a company’s profits in a particular period",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/earnings"
+        ]
+      }
+    },
+    {
+      "term": "duty",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "duty",
+        "meaning_vi": "nhiệm vụ; nghĩa vụ; trách nhiệm",
+        "pos": "n",
+        "definition_en": "something that a person has to do because it is part of their job or responsibility",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/duty"
+        ]
+      }
+    },
+    {
+      "term": "distribute",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "distribute",
+        "meaning_vi": "phân phát; phân phối; cung ứng",
+        "pos": "v",
+        "definition_en": "to give something to several people, or to make products available through supply and sale",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/distribute"
+        ]
+      }
+    },
+    {
+      "term": "discourage",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "discourage",
+        "meaning_vi": "làm nản lòng; khiến ai ít sẵn lòng; ngăn cản",
+        "pos": "v",
+        "definition_en": "to make someone less confident or willing to do something, or to try to prevent an action",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/discourage"
+        ]
+      }
+    },
+    {
+      "term": "decline",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "decline",
+        "meaning_vi": "giảm; suy giảm; từ chối; sự suy giảm",
+        "pos": "n/v",
+        "definition_en": "to become less or lower, to refuse an offer or request, or a reduction in amount or quality",
+        "source": "Cambridge Dictionary (accessed 2026-11-20)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/decline"
+        ]
+      }
+    }
+  ]
+}

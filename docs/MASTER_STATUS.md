@@ -4,11 +4,23 @@
 
 ## 1. Current release
 
-- **Phiên bản mã nguồn đang kiểm kê:** v2.95.13 — adds ten more existing TOEIC headword sense expansions, 24 sense-linked examples, four related-term glosses and two POS-specific family-link corrections; v2.95.12 is the comparison baseline.
-- **Previous source:** v2.95.12 — earlier sense expansion and Flashcard multi-sense rendering release.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.95.14 — adds ten Cambridge-sourced related-term glosses on top of v2.95.13; no canonical headword or learner-data change.
+- **Previous source:** v2.95.13 — sense expansions, sense-linked examples and POS-specific family-link corrections.
 - **Product:** GitHub Pages static PWA, GitHub-only. No backend/GAS/iframe/Cloudflare runtime dependency.
 - **Scope:** TOEIC Listening & Reading is the active exam-development track. Foundation Pre-A1/A1/A2 remains available. B1 is blueprint-only; TOEIC Speaking/Writing and IELTS are deferred.
-- **This release changes:** extends the sense-specific vocabulary data already rendered by Flashcard, adds four sourced glossary entries and corrects two POS-specific family links. It retains the fixed maximum 10-card Flashcard, Robot Buddy streaming, data-patch safety, consent-based PWA updates and the GitHub-only/offline architecture. No learner storage or runtime API was changed.
+- **This release changes:** adds ten sourced Vietnamese glosses to the existing related-term glossary, raising it from 373 to 383 entries. It retains the fixed maximum 10-card Flashcard, Robot Buddy streaming, data-patch safety, consent-based PWA updates and the GitHub-only/offline architecture. No canonical headword, relationship, learner storage or runtime API was changed.
+
+### v2.95.14 candidate verification record
+
+- Candidate baseline: v2.95.13 source and patch history bundle at commit `a04a4d97472cb856c2459aab19d2a18090204e40`; candidate version: v2.95.14.
+- Vocabulary remains 1,141 canonical headwords; stable ID-set SHA-256 unchanged; 0 IDs added / 0 missing. Multi-sense headwords remain 49 with 105 linked examples. Related-term glossary rises from 373 to 383.
+- Ten new entries are for terms already referenced by canonical synonym/antonym fields. Exact-term join: 372/804 referenced terms have glosses; 432 distinct terms remain unglossed. At occurrence level, 477/1,037 links remain unglossed. These metrics are not the same as the validator's informational `323/804` value.
+- Focused Python regression: five modules / 43 cases passed (glossary batch 021: 6; related-term patcher: 11; vocabulary detail/examples: 19; CI coverage: 3; project progress: 4). JavaScript regression: 38/38 `.mjs` suites passed.
+- Data validator: 1,141 records; ID additions 0 / missing 0; 0 errors / 0 warnings. Learning-content validator: 0 errors / 0 warnings. Repository integrity: 382 references/data files, 0 errors / 0 optional warnings. Version synchronization and the release-integrity test passed.
+- The related-term patch was rollback-tested, dry-run tested and applied with absent-only preconditions; all ten additions are represented in `batch-021.json` and a dedicated CI test.
+- This does not mean the entire 57-module Python inventory or remote GitHub Actions completed. Remote Pages, real browser/PWA/offline/two-tab behavior and device TTS remain unverified. All 21 owner-run acceptance rows remain **Chưa kiểm**.
+- All ten new glosses remain provisional pending independent lexical review. No GitHub push or deployment was performed.
+- Detailed evidence: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.14.md`, `reports/COMMAND_LOG_INDEX_v2.95.14.md` and `reports/VOCABULARY_GLOSSARY_EXPANSION_v2.95.14.md`.
 
 ### v2.95.11 inherited controls — historical release
 
@@ -16,7 +28,7 @@
 - Added a CSS design-token governance specification, `tools/design-token-rules.json`, `tools/audit-design-tokens.py`, an identity-based baseline and a CI step. The current CSS scan reports 2,778 legacy warning identities and zero new violations. The baseline was tightened only by removing three update-banner entries fixed by token migration.
 - The update banner now uses existing shared typography, color, spacing, radius and shadow tokens. CSS has not been mass-refactored.
 - `calm-study-blue` is documented as a conditional development/audit default. The profile remains `proposed-default-awaiting-user-preferences`; owner approval is not recorded.
-- `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` currently contains 20 owner-run checks. All 20 are **Chưa kiểm**; no GitHub Actions/Pages, PWA install, offline, two-tab, iOS/Android TTS or physical display/photo check is marked confirmed.
+- `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` at v2.95.11 contained 20 owner-run checks. All 20 were **Chưa kiểm**; no GitHub Actions/Pages, PWA install, offline, two-tab, iOS/Android TTS or physical display/photo check is marked confirmed.
 - Robot Buddy progressive local replies and the fixed maximum 10-card Flashcard remain because they were explicitly requested by the owner. No vocabulary IDs, words, topics, questions, answer keys, learner records or IndexedDB schema were changed.
 - All changes in this workspace are local commits only. No push, remote CI run or Pages deployment has been performed.
 
@@ -32,7 +44,7 @@
 ### v2.95.13 candidate verification record
 
 - Candidate baseline: v2.95.12, Git commit `85be68a`; candidate source version: v2.95.13.
-- Vocabulary: 1,141 canonical headwords; stable ID-set SHA-256 unchanged; 0 IDs added / 0 missing; validator 0 errors / 0 legacy warnings. Multi-sense headwords 39 → 49; linked examples 81 → 105; related-term glossary 369 → 373.
+- Vocabulary: 1,141 canonical headwords; stable ID-set SHA-256 unchanged; 0 IDs added / 0 missing; validator 0 errors / 0 legacy warnings. Multi-sense headwords 39 → 49; linked examples 81 → 105; related-term glossary 369 → 373 (then 373 → 383 in v2.95.14).
 - Learning-content validator: 0 errors / 0 warnings. Listening 121 units / 239 questions; Reading 65 resources / 263 questions; Grammar 50 lessons / 137 exercises; separate Part 5 practice 80 questions.
 - Repository integrity: 380 references/data files, 0 errors / 0 optional warnings. Part 1 photos: 9/9 valid. Design-token audit: 2,778 pre-existing legacy warning identities, 0 new violations. Version synchronization: PASS.
 - Focused Python verification: 17 modules / 175 test cases passed in 54 seconds combined across individual module runs. JavaScript regression: 38/38 `.mjs` suites exited 0. This is not a claim that the full Python test inventory or aggregate discovery completed; `test_validator.py` and the complete aggregate remain NOT RUN to completion.
@@ -45,6 +57,7 @@
 | Area | Inventory | Boundary |
 |---|---:|---|
 | Vocabulary | 1,141 headwords / 26 letter files | 3,000 minimum target; lexical quality is a separate backlog |
+| Related-term glossary | 383 sourced/legacy entries | Ten additions in v2.95.14; independent lexical review is pending |
 | Grammar | 50 lessons / 137 exercises | No approved total-size target |
 | TOEIC Listening | 121 units / 239 questions | 102 eligible / 137 reserve-pending-independent-review |
 | TOEIC Reading | 65 resources / 263 questions | Part 7 second-review gate remains |
@@ -121,14 +134,14 @@ Detailed evidence: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.6.md`, `reports/P
 
 ### P0 — acceptance and integration
 
-1. Review the v2.95.13 candidate delta against baseline v2.95.12 (`85be68a`) in one consolidated Claude review before any deployment.
-2. After owner approval, deploy v2.95.13 to the intended GitHub branch; verify remote Actions and Pages show the same version.
-3. Complete all 20 rows in `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` on Windows first, then iPhone/iPad and Android where available. Every item remains Chưa kiểm until the owner records date/device and result.
+1. Reconcile Claude's pending review of v2.95.13 against baseline v2.95.12 (`85be68a`); preserve findings and apply any required correction to v2.95.14.
+2. Review the v2.95.13 → v2.95.14 glossary-only delta and approve the candidate before any deployment; then verify remote Actions and Pages show the same version.
+3. Complete all 21 rows in `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` on Windows first, then iPhone/iPad and Android where available. Every item remains Chưa kiểm until the owner records date/device and result.
 4. Instrument the remaining 27 learning-outcome criteria only after each criterion has a defensible evidence source, stable scope, threshold policy and tests. Do not infer mastery from inventory or resource links.
 
 ### P1 — content quality and coverage
 
-1. Grow vocabulary toward 3,000 minimum; review 93 missing US IPA entries and improve word-family, verb-form, collocation, synonym and antonym coverage with source support, including glosses for the 338 currently unglossed synonym/antonym terms.
+1. Grow vocabulary toward 3,000 minimum; review 93 missing US IPA entries and improve word-family, verb-form, collocation, synonym and antonym coverage with source support. Current exact-term audit: 432 distinct terms remain unglossed across 477 link occurrences (804 distinct referenced terms / 1,037 total occurrences); this differs from the validator's `323/804` informational metric and should not be compared as if the definitions were identical.
 2. Editorially review the four repeated definition pairs and the `package` word/sense CEFR difference; preserve legitimate sense distinctions.
 3. Complete independent review for 137 TOEIC Listening reserve questions, Part 7 second-review items, 80 separate Part 5 practice questions and supplementary Foundation A2 Reading/Listening content before changing eligibility. Active handoffs: `reports/TOEIC_BATCH_024_REVIEW_CHECKLIST_v2.92.0.md` and `reports/TOEIC_BATCH_025_REVIEW_CHECKLIST_v2.93.0.md`.
 4. Continue review of grammar examples and distractor uniqueness; structural audits do not replace semantic review by a second person.

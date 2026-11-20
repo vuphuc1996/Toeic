@@ -1,4 +1,4 @@
-# Manual Acceptance Checklist — TOEIC Dictionary v2.95.13
+# Manual Acceptance Checklist — TOEIC Dictionary v2.95.14
 
 **Purpose:** checklist for the project owner to execute on GitHub and real browsers/devices. This document is a blank record; it does not assert that any remote or device-level check has passed.
 
@@ -7,7 +7,7 @@
 | # | Hạng mục | Cách làm | Kết quả mong đợi | Đạt / Không đạt / Chưa kiểm | Ngày | Thiết bị |
 |---:|---|---|---|---|---|---|
 | 1 | GitHub Actions | Mở repository `vuphuc1996/Toeic` → Actions → chạy workflow kiểm tra source hiện tại; mở từng job nếu workflow đỏ. | Toàn bộ jobs kết thúc xanh; không có `continue-on-error`; có bước `Audit CSS design-token ratchet` chạy test và `tools/audit-design-tokens.py`. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
-| 2 | GitHub Pages deploy | Sau khi Actions xanh, mở Pages URL của repository và xác nhận phiên bản ở title/sidebar/footer. | Trang tải thành công; hiển thị v2.95.13; không có lỗi 404 asset hoặc lệch manifest/version. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 2 | GitHub Pages deploy | Sau khi Actions xanh, mở Pages URL của repository và xác nhận phiên bản ở title/sidebar/footer. | Trang tải thành công; hiển thị v2.95.14; không có lỗi 404 asset hoặc lệch manifest/version. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 | 3 | Đường dẫn con `/Toeic/` | Mở trực tiếp URL có path `/Toeic/`, refresh; mở thêm một route/hash nội bộ và quay lại trang chủ. | CSS/JS/data/image nạp đúng dưới `/Toeic/`; không bị điều hướng nhầm về domain root; refresh không thành 404. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 | 4 | Cài PWA | Truy cập website bằng HTTPS trên trình duyệt hỗ trợ; dùng lệnh cài ứng dụng của trình duyệt/OS. Mở ứng dụng đã cài. | PWA được cài; icon, tên và app shell đúng; không mất đường dẫn con hoặc tài nguyên cục bộ. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 | 5 | Offline ở lần mở đầu chưa có cache | Dùng một browser profile thử nghiệm mới, tắt mạng trước lần truy cập đầu tiên; không xóa dữ liệu profile đang học. | Trường hợp chưa từng tải cache phải báo trạng thái không có mạng một cách rõ ràng; không treo hoặc hiển thị trang trắng khó hiểu. Không kỳ vọng tải nội dung chưa cache khi offline. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
@@ -27,13 +27,14 @@
 | 18 | Robot Buddy streaming và tự cuộn | Mở Buddy, hỏi một câu liên quan đến từ/bài đang học và quan sát khi câu trả lời đang chạy. | Chữ xuất hiện dần; khung hội thoại theo tới cuối câu trả lời; chỉ vùng hội thoại cuộn; nút hành động hiện sau khi trả lời xong. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 | 19 | Nghĩa và ví dụ của lô từ v2.95.13 | Mở chi tiết/Flashcard các từ `bill`, `charge`, `document`, `experience`, `function`, `host`, `minute`, `offer`, `supply`, `value`; xem từng nghĩa và ví dụ. | Phân biệt đúng nghĩa theo từ loại/ngữ cảnh; đủ ví dụ cho từng nghĩa; đặc biệt `charge` (phí/sạc), `offer` (đề nghị/cung cấp), `value` (giá trị/định giá/coi trọng) không bị trộn. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 | 20 | Word-family theo nghĩa mới của `value` | Mở `valuable` và `valuation`, xem liên kết đến `value`; đối chiếu nghĩa/loại từ được hiển thị. | `valuable → value (n)` hiển thị nghĩa giá trị tiền tệ; `valuation → value (v)` hiển thị nghĩa định giá; không còn nghĩa gộp `n/v`. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 21 | Glossary synonym/antonym v2.95.14 | Mở các mục có liên kết từ đồng/trái nghĩa cho `requirement`, `pay`, `ignore`, `withhold`, `retain`, `earnings`, `duty`, `distribute`, `discourage` và `decline`. | Mỗi từ liên kết mới có giải nghĩa tiếng Việt và loại từ; nội dung khớp nghĩa đang học; không làm thay đổi từ gốc hoặc quan hệ synonym/antonym. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 
 ## Kết luận nghiệm thu
 
-- Tổng số hạng mục: **20**.
+- Tổng số hạng mục: **21**.
 - Đạt: Chưa ghi.
 - Không đạt: Chưa ghi.
-- Chưa kiểm: **20/20**.
+- Chưa kiểm: **21/21**.
 - Người thực hiện: Chưa ghi.
 - Ngày nghiệm thu: Chưa ghi.
 
