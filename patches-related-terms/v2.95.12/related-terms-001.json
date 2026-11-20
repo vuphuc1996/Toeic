@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.12-related-glossary-001",
+  "baseFileSha256": "e06699a6c059005b7e3dc9f371ac31a41a585f44521fc455b3efd98307ae2d4e",
+  "description": "Add Cambridge-sourced Vietnamese glosses for vocabulary synonyms and antonyms introduced or refined in batches 014 and 015.",
+  "editorialStatus": "provisional glossary additions; independent lexical review pending",
+  "accessedOn": "2026-11-19",
+  "operations": [
+    {
+      "term": "application software",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "application software",
+        "meaning_vi": "phần mềm ứng dụng",
+        "pos": "n",
+        "definition_en": "computer software designed to perform particular tasks",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/application-software"
+        ]
+      }
+    },
+    {
+      "term": "assert",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "assert",
+        "meaning_vi": "khẳng định; quả quyết",
+        "pos": "v",
+        "definition_en": "to say that something is certainly true",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/assert"
+        ]
+      }
+    },
+    {
+      "term": "cancel",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "cancel",
+        "meaning_vi": "hủy; hủy bỏ",
+        "pos": "v",
+        "definition_en": "to decide that an arranged event or order will not happen",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/cancel"
+        ]
+      }
+    },
+    {
+      "term": "deal with",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "deal with",
+        "meaning_vi": "xử lý; giải quyết",
+        "pos": "v",
+        "definition_en": "to take action about a problem or situation",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/deal-with",
+          "https://dictionary.cambridge.org/dictionary/english/handle"
+        ]
+      }
+    },
+    {
+      "term": "directive",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "directive",
+        "meaning_vi": "chỉ thị chính thức",
+        "pos": "n",
+        "definition_en": "an official instruction",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/directive"
+        ]
+      }
+    },
+    {
+      "term": "duration",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "duration",
+        "meaning_vi": "thời lượng; khoảng thời gian kéo dài",
+        "pos": "n",
+        "definition_en": "the length of time that something lasts",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/duration"
+        ]
+      }
+    },
+    {
+      "term": "erase",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "erase",
+        "meaning_vi": "xóa; xóa bỏ dữ liệu",
+        "pos": "v",
+        "definition_en": "to remove information or a recording from storage",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/erase"
+        ]
+      }
+    },
+    {
+      "term": "handle",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "handle",
+        "meaning_vi": "xử lý; đảm trách",
+        "pos": "v",
+        "definition_en": "to deal with something or be responsible for it",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/handle"
+        ]
+      }
+    },
+    {
+      "term": "instruction",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "instruction",
+        "meaning_vi": "chỉ thị; hướng dẫn",
+        "pos": "n",
+        "definition_en": "something that someone tells another person to do, or written guidance",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/instruction"
+        ]
+      }
+    },
+    {
+      "term": "log",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "log",
+        "meaning_vi": "ghi lại; ghi nhận vào sổ hoặc hệ thống",
+        "pos": "v",
+        "definition_en": "to put information into a written or official record",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/log"
+        ]
+      }
+    },
+    {
+      "term": "matter",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "matter",
+        "meaning_vi": "vấn đề; sự việc cần xem xét",
+        "pos": "n",
+        "definition_en": "a question, problem, or subject being considered",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/matter"
+        ]
+      }
+    },
+    {
+      "term": "preliminary version",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "preliminary version",
+        "meaning_vi": "bản sơ bộ; phiên bản ban đầu",
+        "pos": "n",
+        "definition_en": "an early version of a document that may be changed before completion",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/draft"
+        ]
+      }
+    },
+    {
+      "term": "prepare",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "prepare",
+        "meaning_vi": "chuẩn bị; soạn thảo",
+        "pos": "v",
+        "definition_en": "to make something ready, including preparing a document or report",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/prepare"
+        ]
+      }
+    },
+    {
+      "term": "problem",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "problem",
+        "meaning_vi": "vấn đề; sự cố",
+        "pos": "n",
+        "definition_en": "something that causes difficulty or needs to be dealt with",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/problem"
+        ]
+      }
+    },
+    {
+      "term": "provide",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "provide",
+        "meaning_vi": "cung cấp; đưa ra",
+        "pos": "v",
+        "definition_en": "to give someone something that is needed",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/provide"
+        ]
+      }
+    },
+    {
+      "term": "purchase order",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "purchase order",
+        "meaning_vi": "đơn đặt hàng",
+        "pos": "n",
+        "definition_en": "a document asking a supplier to provide goods or services with details of the transaction",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/purchase-order"
+        ]
+      }
+    },
+    {
+      "term": "request",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "request",
+        "meaning_vi": "yêu cầu; đề nghị",
+        "pos": "n/v",
+        "definition_en": "the act of asking for something, or to ask for it formally or politely",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/request"
+        ]
+      }
+    },
+    {
+      "term": "role",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "role",
+        "meaning_vi": "vai trò; nhiệm vụ",
+        "pos": "n",
+        "definition_en": "the position, purpose, or duty someone has in an organization or situation",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/role"
+        ]
+      }
+    },
+    {
+      "term": "semester",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "semester",
+        "meaning_vi": "học kỳ",
+        "pos": "n",
+        "definition_en": "one of the periods into which a school or college year is divided",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/semester"
+        ]
+      }
+    },
+    {
+      "term": "situation",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "situation",
+        "meaning_vi": "tình hình; hoàn cảnh",
+        "pos": "n",
+        "definition_en": "the set of conditions that exist at a particular time and place",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/situation"
+        ]
+      }
+    },
+    {
+      "term": "standing",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "standing",
+        "meaning_vi": "uy tín; vị thế; cấp bậc",
+        "pos": "n",
+        "definition_en": "a person’s reputation, rank, or position in a group or organization",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/standing"
+        ]
+      }
+    },
+    {
+      "term": "state",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "state",
+        "meaning_vi": "nêu rõ; tuyên bố",
+        "pos": "v",
+        "definition_en": "to say or write something clearly and carefully",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/state"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.13-related-glossary-002",
+  "baseFileSha256": "b194a1765a7d401b9c2aa7855aa5de4a8116301dc99f7e31c54cfb75b59b3a25",
+  "description": "Add Cambridge-sourced Vietnamese glosses for four new comparison terms used in the v2.95.13 vocabulary sense expansion.",
+  "editorialStatus": "provisional glossary additions; independent lexical review pending",
+  "accessedOn": "2026-11-19",
+  "operations": [
+    {
+      "term": "demand",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "demand",
+        "meaning_vi": "nhu cầu; yêu cầu mạnh mẽ",
+        "pos": "n",
+        "definition_en": "a need for goods or services that customers want to buy or use",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/demand"
+        ]
+      }
+    },
+    {
+      "term": "guest",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "guest",
+        "meaning_vi": "khách; khách mời hoặc khách lưu trú",
+        "pos": "n",
+        "definition_en": "a person who has been invited to a place or is staying there",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/guest"
+        ]
+      }
+    },
+    {
+      "term": "inexperience",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "inexperience",
+        "meaning_vi": "sự thiếu kinh nghiệm",
+        "pos": "n",
+        "definition_en": "lack of knowledge or experience",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/inexperience"
+        ]
+      }
+    },
+    {
+      "term": "refund",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "refund",
+        "meaning_vi": "khoản tiền hoàn lại; tiền được trả lại cho người mua",
+        "pos": "n",
+        "definition_en": "an amount of money given back, especially after a purchased product or service is unsatisfactory",
+        "source": "Cambridge Dictionary (accessed 2026-11-19)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/refund"
+        ]
+      }
+    }
+  ]
+}
