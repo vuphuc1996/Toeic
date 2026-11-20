@@ -4,11 +4,11 @@
 
 ## 1. Current release
 
-- **Phiên bản mã nguồn đang kiểm kê:** v2.95.15 — adds four Cambridge-sourced related-term glosses for the highest-frequency remaining synonym/antonym terms; no canonical headword or learner-data change.
-- **Previous source:** v2.95.14 — ten Cambridge-sourced related-term glosses; v2.95.13 remains the prior sense-expansion release.
+- **Phiên bản mã nguồn đang kiểm kê:** v2.95.16 — adds a lightweight ZIP packaging tool that exports committed source files under exactly one `Toeic_Dictionary_vX.Y.Z/` root and excludes auxiliary folders/files.
+- **Previous source:** v2.95.15 — related-term glossary update.
 - **Product:** GitHub Pages static PWA, GitHub-only. No backend/GAS/iframe/Cloudflare runtime dependency.
 - **Scope:** TOEIC Listening & Reading is the active exam-development track. Foundation Pre-A1/A1/A2 remains available. B1 is blueprint-only; TOEIC Speaking/Writing and IELTS are deferred.
-- **This release changes:** adds ten sourced Vietnamese glosses to the existing related-term glossary, raising it from 373 to 383 entries. It retains the fixed maximum 10-card Flashcard, Robot Buddy streaming, data-patch safety, consent-based PWA updates and the GitHub-only/offline architecture. No canonical headword, relationship, learner storage or runtime API was changed.
+- **This release changes:** adds `tools/package_source.py` and tests. ZIP generation is based on `git archive`, has a single versioned root folder, filters auxiliary archive/log/cache/release paths, and refuses tracked working-tree changes. No vocabulary, learner data, runtime behavior or exam content was changed.
 
 ### v2.95.14 candidate verification record
 

@@ -1,3 +1,11 @@
+## v2.95.16 — lightweight Git-tracked commit package
+
+- Added `tools/package_source.py` to create the GitHub commit ZIP from `git archive`, using exactly one root folder `Toeic_Dictionary_vX.Y.Z/`.
+- Package output contains committed files only; untracked local logs and release artifacts are excluded. Tracked edits must be committed first. Nested ZIPs, bundles, logs, `.git`, cache and release/archive paths are rejected.
+- Added package contract tests for one root folder, exclusion of untracked logs, dirty tracked-tree refusal and version format.
+- Packaging-tool release only. No vocabulary records, learner data, application runtime behavior or exam content changed.
+- Local verification: package tests 3/3 PASS; version synchronization is being checked. Remote GitHub CI, Pages and browser/device acceptance remain unverified.
+
 ## v2.95.15 — close the highest-frequency related-term glossary gaps
 
 - Added four Cambridge-sourced Vietnamese glosses for the remaining synonym/antonym terms with at least three references: `aim`, `avoid`, `cause` and `conceal`. The related-term glossary rises from 383 to 387 entries.

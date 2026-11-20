@@ -1,4 +1,4 @@
-# TOEIC Dictionary v2.95.15 — Project Documentation
+# TOEIC Dictionary v2.95.16 — Project Documentation
 
 ## Source of truth
 
@@ -15,6 +15,13 @@
 - TOEIC Listening & Reading is the active exam-development track. B1 remains a blueprint only; TOEIC Speaking/Writing and IELTS are deferred. B1 blueprint: `reports/FOUNDATION_B1_CURRICULUM_BLUEPRINT_v2.92.0.md`.
 - Flashcard sessions use a fixed maximum of 10 cards across all topic and mixed-learning paths; the retired 5-card setting is removed. Robot Buddy is a head-only offline companion. It streams replies progressively and composes varied local responses from its bundled dialogue/FAQ library, lightweight rules and current app/item context; optional read-only Learning Insights use an in-memory snapshot. It is not a generative chatbot and does not call AI/API services or send learner data externally.
 - Speech uses device/browser SpeechSynthesis. It is not authentic ETS audio; available voices and audible timing depend on the device and browser.
+
+## GitHub commit ZIP contract
+
+- Commit ZIPs are generated from committed Git files only (`git archive`), not from the working folder.
+- ZIP has one root folder: `Toeic_Dictionary_vX.Y.Z/`.
+- Local logs, `.git`, bundles, nested ZIPs, caches, release artifacts and archive folders are not included.
+- Use `python tools/package_source.py X.Y.Z output.zip`; tracked changes must be committed first.
 
 ## Canonical inventory
 
@@ -60,9 +67,9 @@ Counts describe source inventory, not editorial approval, learner completion, ma
 ## Current release artifacts
 
 - Previous Claude review package manifest: `reports/CHANGE_MANIFEST_v2.95.13.md` (submitted by the owner; result pending). Current release change manifest: `reports/CHANGE_MANIFEST_v2.95.15.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.15.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.16.md`.
 - Current Robot Buddy behavior report: `reports/ROBOT_BUDDY_v2.95.9.md`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.15.md`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.16.md`.
 - Current manual acceptance checklist: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (22 items; all remain Chưa kiểm).
 - CSS design-token ratchet report: `reports/DESIGN_TOKEN_AUDIT_BASELINE_v2.95.11.md`.
 - Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.15.md`.
