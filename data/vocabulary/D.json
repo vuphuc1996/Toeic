@@ -2817,12 +2817,22 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A2",
-          "meaning_vi": "tài liệu; lập hồ sơ",
-          "definition_en": "a written or digital record with information",
+          "meaning_vi": "tài liệu; văn bản hoặc tệp chứa thông tin",
+          "definition_en": "a paper or electronic file that contains written or printed information",
           "synonyms": [
             "file",
+            "record"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "ghi lại; lập tài liệu về một sự việc",
+          "definition_en": "to record information about something in writing, photographs, or another form",
+          "synonyms": [
             "record"
           ],
           "antonyms": []
@@ -2842,9 +2852,14 @@
       },
       "examples": [
         {
-          "en": "Please attach the required documents.",
-          "vi": "Vui lòng đính kèm các tài liệu được yêu cầu.",
+          "en": "Keep a copy of the signed document for your records.",
+          "vi": "Hãy giữ một bản sao tài liệu đã ký để lưu hồ sơ.",
           "sense_index": 0
+        },
+        {
+          "en": "The technician documented the damage before starting repairs.",
+          "vi": "Kỹ thuật viên đã ghi nhận hư hỏng trước khi bắt đầu sửa chữa.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -2968,12 +2983,24 @@
       },
       "senses": [
         {
-          "pos": "n/v",
-          "meaning_vi": "bản nháp; soạn thảo",
-          "definition_en": "an early version of a document or message",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "A2"
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "bản nháp; bản dự thảo",
+          "definition_en": "an early version of a document or message that may be changed before it is finished",
+          "synonyms": [
+            "preliminary version"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "soạn bản đầu tiên; viết dự thảo",
+          "definition_en": "to write the first version of a document, letter, or proposal for later review",
+          "synonyms": [
+            "prepare"
+          ],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -2990,8 +3017,13 @@
       "examples": [
         {
           "en": "Please review the draft before it is sent.",
-          "vi": "Vui lòng xem bản nháp trước khi gửi.",
+          "vi": "Vui lòng xem lại bản nháp trước khi gửi.",
           "sense_index": 0
+        },
+        {
+          "en": "The communications team will draft a response to the customer complaint.",
+          "vi": "Nhóm truyền thông sẽ soạn bản trả lời cho khiếu nại của khách hàng.",
+          "sense_index": 1
         }
       ],
       "collocations": [

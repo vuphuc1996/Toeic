@@ -1,0 +1,61 @@
+{
+  "release": "2.95.13",
+  "batchId": "v2.95.13-family-gloss-001",
+  "count": 1,
+  "editorialStatus": "provisional consistency correction; independent lexical review pending",
+  "sourcePatch": "patches/v2.95.13/batch-002-family-gloss.json",
+  "records": [
+    {
+      "id": "valuable-adj",
+      "word": "valuable",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate",
+      "phonetic": {
+        "us": "/ˈvæl.jə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "có giá trị; quý giá",
+          "definition_en": "worth a lot of money or useful",
+          "synonyms": [
+            "useful",
+            "precious"
+          ],
+          "antonyms": [
+            "worthless"
+          ]
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "value",
+          "pos": "n",
+          "meaning_vi": "giá trị; số tiền mà một thứ đáng giá"
+        },
+        {
+          "word": "valuation",
+          "pos": "n",
+          "meaning_vi": "sự định giá; kết quả xác định giá trị"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The training provided valuable information.",
+          "vi": "Khóa đào tạo cung cấp thông tin có giá trị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "valuable experience",
+        "valuable resource"
+      ]
+    }
+  ]
+}

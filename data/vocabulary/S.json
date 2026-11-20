@@ -3182,17 +3182,26 @@
       },
       "senses": [
         {
-          "pos": "n/v",
-          "cefr_level": "A2",
-          "meaning_vi": "nguồn cung; cung cấp",
-          "definition_en": "an amount available or to provide what is needed",
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "nguồn cung; lượng hàng hóa hoặc vật liệu sẵn có để sử dụng",
+          "definition_en": "an amount of something that is available for people to use",
           "synonyms": [
-            "provide",
-            "deliver"
+            "amount"
           ],
           "antonyms": [
             "demand"
           ]
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "cung cấp; giao hoặc đáp ứng thứ đang cần",
+          "definition_en": "to provide something that is wanted or needed",
+          "synonyms": [
+            "provide"
+          ],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -3215,9 +3224,14 @@
       },
       "examples": [
         {
+          "en": "The warehouse has an adequate supply of packing materials.",
+          "vi": "Kho hàng có đủ nguồn cung vật liệu đóng gói.",
+          "sense_index": 0
+        },
+        {
           "en": "The supplier can supply the parts next week.",
           "vi": "Nhà cung cấp có thể cung cấp linh kiện vào tuần tới.",
-          "sense_index": 0
+          "sense_index": 1
         }
       ],
       "collocations": [

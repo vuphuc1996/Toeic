@@ -1454,11 +1454,22 @@
         {
           "pos": "n",
           "cefr_level": "A2",
-          "meaning_vi": "vị trí; chức vụ",
-          "definition_en": "a job or the place where someone or something is",
+          "meaning_vi": "vị trí công việc; chức vụ hoặc cấp bậc",
+          "definition_en": "a job or a rank within a company or organization",
           "synonyms": [
             "post",
             "role"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "tình hình; vị thế hoặc hoàn cảnh của một người hay tổ chức",
+          "definition_en": "the situation or status that a person or organization is in",
+          "synonyms": [
+            "situation",
+            "standing"
           ],
           "antonyms": []
         }
@@ -1474,6 +1485,11 @@
           "en": "The firm advertised a part-time position.",
           "vi": "Công ty đăng tuyển một vị trí bán thời gian.",
           "sense_index": 0
+        },
+        {
+          "en": "The company is in a strong financial position after the merger.",
+          "vi": "Công ty đang ở vị thế tài chính vững mạnh sau thương vụ sáp nhập.",
+          "sense_index": 1
         }
       ],
       "collocations": [

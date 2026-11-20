@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.12-family-link-001",
+  "baseDataVersion": "2.95.11",
+  "targetDataVersion": "2.95.12",
+  "idSetSha256": "adccbdb4c98872207d2bede7bdc530e1c079bbd8b3679e7e4f6288054c7e404b",
+  "allowedPaths": [
+    "/word_family/0"
+  ],
+  "description": "Narrow claimant -> claim family link to the noun sense for compensation request; preserve all word identities and topics.",
+  "editorialStatus": "provisional consistency correction; independent lexical review pending",
+  "accessedOn": "2026-11-19",
+  "sourceEvidence": [
+    {
+      "id": "claimant-n",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/claim",
+        "https://dictionary.cambridge.org/dictionary/english/claimant"
+      ]
+    }
+  ],
+  "identityGuard": [
+    {
+      "id": "claimant-n",
+      "word": "claimant",
+      "topics": [
+        "LEGAL"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "claimant-n",
+      "path": "/word_family/0",
+      "expect": {
+        "old": {
+          "word": "claim",
+          "pos": "n/v",
+          "meaning_vi": "yêu cầu bồi thường; tuyên bố"
+        }
+      },
+      "new": {
+        "word": "claim",
+        "pos": "n",
+        "meaning_vi": "yêu cầu bồi thường"
+      }
+    }
+  ]
+}

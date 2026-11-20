@@ -1153,13 +1153,23 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A1",
-          "meaning_vi": "địa chỉ; phát biểu với",
-          "definition_en": "details of where someone lives or speaks to someone",
+          "meaning_vi": "địa chỉ (nơi liên hệ hoặc nhận thư)",
+          "definition_en": "the place where a person or organization can be found or receive mail",
           "synonyms": [
-            "location",
-            "mention"
+            "location"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "giải quyết; xử lý (một vấn đề hoặc nhu cầu)",
+          "definition_en": "to give attention to and deal with a matter, need, or problem",
+          "synonyms": [
+            "deal with",
+            "handle"
           ],
           "antonyms": []
         }
@@ -1181,6 +1191,11 @@
           "en": "Please send the invoice to our new address.",
           "vi": "Vui lòng gửi hóa đơn đến địa chỉ mới của chúng tôi.",
           "sense_index": 0
+        },
+        {
+          "en": "The HR manager will address the concerns raised by employees.",
+          "vi": "Quản lý nhân sự sẽ giải quyết những mối quan ngại do nhân viên nêu ra.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -3116,11 +3131,23 @@
       "senses": [
         {
           "pos": "n",
-          "meaning_vi": "đơn; hồ sơ; ứng dụng",
-          "definition_en": "a formal request for something, especially a job or permission",
-          "synonyms": [],
-          "antonyms": [],
-          "cefr_level": "A2"
+          "cefr_level": "A2",
+          "meaning_vi": "đơn; hồ sơ xin việc hoặc xin cấp phép",
+          "definition_en": "an official request for something, usually made in writing",
+          "synonyms": [
+            "request"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "ứng dụng phần mềm",
+          "definition_en": "a computer program designed to perform a particular task",
+          "synonyms": [
+            "application software"
+          ],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -3149,6 +3176,11 @@
           "en": "Your application has been received.",
           "vi": "Chúng tôi đã nhận được hồ sơ của bạn.",
           "sense_index": 0
+        },
+        {
+          "en": "The HR application lets employees update their personal details online.",
+          "vi": "Ứng dụng nhân sự cho phép nhân viên cập nhật thông tin cá nhân trực tuyến.",
+          "sense_index": 1
         }
       ],
       "collocations": [

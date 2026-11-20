@@ -141,6 +141,16 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "application software",
+      "meaning_vi": "phần mềm ứng dụng",
+      "pos": "n",
+      "definition_en": "computer software designed to perform particular tasks",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/application-software"
+      ]
+    },
+    {
       "term": "appointment",
       "meaning_vi": "cuộc hẹn; lịch hẹn",
       "source": "curated-related-glossary"
@@ -180,6 +190,16 @@
       "term": "assemble",
       "meaning_vi": "tập hợp; lắp ráp",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "assert",
+      "meaning_vi": "khẳng định; quả quyết",
+      "pos": "v",
+      "definition_en": "to say that something is certainly true",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/assert"
+      ]
     },
     {
       "term": "assertion",
@@ -293,6 +313,16 @@
       "meaning_vi": "hủy bỏ",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "cancel",
+      "meaning_vi": "hủy; hủy bỏ",
+      "pos": "v",
+      "definition_en": "to decide that an arranged event or order will not happen",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/cancel"
+      ]
     },
     {
       "term": "cargo",
@@ -487,9 +517,30 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "deal with",
+      "meaning_vi": "xử lý; giải quyết",
+      "pos": "v",
+      "definition_en": "to take action about a problem or situation",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/deal-with",
+        "https://dictionary.cambridge.org/dictionary/english/handle"
+      ]
+    },
+    {
       "term": "delay",
       "meaning_vi": "sự trì hoãn; làm chậm",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "demand",
+      "meaning_vi": "nhu cầu; yêu cầu mạnh mẽ",
+      "pos": "n",
+      "definition_en": "a need for goods or services that customers want to buy or use",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/demand"
+      ]
     },
     {
       "term": "deny",
@@ -521,6 +572,16 @@
       "term": "direction",
       "meaning_vi": "hướng; chỉ dẫn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "directive",
+      "meaning_vi": "chỉ thị chính thức",
+      "pos": "n",
+      "definition_en": "an official instruction",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/directive"
+      ]
     },
     {
       "term": "disadvantage",
@@ -585,6 +646,16 @@
       "term": "due date",
       "meaning_vi": "ngày đến hạn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "duration",
+      "meaning_vi": "thời lượng; khoảng thời gian kéo dài",
+      "pos": "n",
+      "definition_en": "the length of time that something lasts",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/duration"
+      ]
     },
     {
       "term": "edition",
@@ -656,6 +727,16 @@
       "meaning_vi": "trạng thái cân bằng",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "erase",
+      "meaning_vi": "xóa; xóa bỏ dữ liệu",
+      "pos": "v",
+      "definition_en": "to remove information or a recording from storage",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/erase"
+      ]
     },
     {
       "term": "essential",
@@ -806,6 +887,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "guest",
+      "meaning_vi": "khách; khách mời hoặc khách lưu trú",
+      "pos": "n",
+      "definition_en": "a person who has been invited to a place or is staying there",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/guest"
+      ]
+    },
+    {
       "term": "guest service",
       "meaning_vi": "dịch vụ dành cho khách",
       "source": "curated-related-glossary"
@@ -820,6 +911,16 @@
       "term": "guideline",
       "meaning_vi": "hướng dẫn; nguyên tắc chỉ đạo",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "handle",
+      "meaning_vi": "xử lý; đảm trách",
+      "pos": "v",
+      "definition_en": "to deal with something or be responsible for it",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/handle"
+      ]
     },
     {
       "term": "hazard",
@@ -878,6 +979,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "inexperience",
+      "meaning_vi": "sự thiếu kinh nghiệm",
+      "pos": "n",
+      "definition_en": "lack of knowledge or experience",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/inexperience"
+      ]
+    },
+    {
       "term": "inflexible",
       "meaning_vi": "không linh hoạt; cứng nhắc",
       "source": "curated-related-glossary"
@@ -902,6 +1013,16 @@
       "meaning_vi": "kỳ trả góp",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "instruction",
+      "meaning_vi": "chỉ thị; hướng dẫn",
+      "pos": "n",
+      "definition_en": "something that someone tells another person to do, or written guidance",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/instruction"
+      ]
     },
     {
       "term": "interim",
@@ -970,6 +1091,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "log",
+      "meaning_vi": "ghi lại; ghi nhận vào sổ hoặc hệ thống",
+      "pos": "v",
+      "definition_en": "to put information into a written or official record",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/log"
+      ]
+    },
+    {
       "term": "loss",
       "meaning_vi": "sự mất mát; khoản lỗ",
       "source": "curated-related-glossary"
@@ -1031,6 +1162,16 @@
       "term": "market",
       "meaning_vi": "thị trường; tiếp thị",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "matter",
+      "meaning_vi": "vấn đề; sự việc cần xem xét",
+      "pos": "n",
+      "definition_en": "a question, problem, or subject being considered",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/matter"
+      ]
     },
     {
       "term": "meeting",
@@ -1246,6 +1387,26 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "preliminary version",
+      "meaning_vi": "bản sơ bộ; phiên bản ban đầu",
+      "pos": "n",
+      "definition_en": "an early version of a document that may be changed before completion",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/draft"
+      ]
+    },
+    {
+      "term": "prepare",
+      "meaning_vi": "chuẩn bị; soạn thảo",
+      "pos": "v",
+      "definition_en": "to make something ready, including preparing a document or report",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/prepare"
+      ]
+    },
+    {
       "term": "present",
       "meaning_vi": "trình bày; hiện tại; có mặt",
       "source": "curated-related-glossary"
@@ -1271,6 +1432,16 @@
       "meaning_vi": "phần thưởng",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "problem",
+      "meaning_vi": "vấn đề; sự cố",
+      "pos": "n",
+      "definition_en": "something that causes difficulty or needs to be dealt with",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/problem"
+      ]
     },
     {
       "term": "proceeds",
@@ -1344,6 +1515,16 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "provide",
+      "meaning_vi": "cung cấp; đưa ra",
+      "pos": "v",
+      "definition_en": "to give someone something that is needed",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/provide"
+      ]
+    },
+    {
       "term": "provider",
       "meaning_vi": "nhà cung cấp; đơn vị cung ứng",
       "source": "curated-related-glossary"
@@ -1358,6 +1539,16 @@
       "meaning_vi": "mua hàng",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "purchase order",
+      "meaning_vi": "đơn đặt hàng",
+      "pos": "n",
+      "definition_en": "a document asking a supplier to provide goods or services with details of the transaction",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/purchase-order"
+      ]
     },
     {
       "term": "purchaser",
@@ -1441,6 +1632,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "refund",
+      "meaning_vi": "khoản tiền hoàn lại; tiền được trả lại cho người mua",
+      "pos": "n",
+      "definition_en": "an amount of money given back, especially after a purchased product or service is unsatisfactory",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/refund"
+      ]
+    },
+    {
       "term": "refuse",
       "meaning_vi": "từ chối",
       "source": "curated-related-glossary"
@@ -1493,6 +1694,16 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "request",
+      "meaning_vi": "yêu cầu; đề nghị",
+      "pos": "n/v",
+      "definition_en": "the act of asking for something, or to ask for it formally or politely",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/request"
+      ]
+    },
+    {
       "term": "required",
       "meaning_vi": "được yêu cầu; bắt buộc",
       "source": "curated-related-glossary"
@@ -1538,6 +1749,16 @@
       "meaning_vi": "đối thủ; đối thủ cạnh tranh",
       "pos": "n",
       "definition_en": "a person or organization competing with another"
+    },
+    {
+      "term": "role",
+      "meaning_vi": "vai trò; nhiệm vụ",
+      "pos": "n",
+      "definition_en": "the position, purpose, or duty someone has in an organization or situation",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/role"
+      ]
     },
     {
       "term": "rule",
@@ -1586,6 +1807,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "semester",
+      "meaning_vi": "học kỳ",
+      "pos": "n",
+      "definition_en": "one of the periods into which a school or college year is divided",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/semester"
+      ]
+    },
+    {
       "term": "separate",
       "meaning_vi": "riêng biệt; tách ra",
       "source": "curated-related-glossary"
@@ -1614,6 +1845,16 @@
       "term": "short-term",
       "meaning_vi": "ngắn hạn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "situation",
+      "meaning_vi": "tình hình; hoàn cảnh",
+      "pos": "n",
+      "definition_en": "the set of conditions that exist at a particular time and place",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/situation"
+      ]
     },
     {
       "term": "sixty minutes",
@@ -1646,6 +1887,26 @@
       "meaning_vi": "được tiêu chuẩn hóa",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "standing",
+      "meaning_vi": "uy tín; vị thế; cấp bậc",
+      "pos": "n",
+      "definition_en": "a person’s reputation, rank, or position in a group or organization",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/standing"
+      ]
+    },
+    {
+      "term": "state",
+      "meaning_vi": "nêu rõ; tuyên bố",
+      "pos": "v",
+      "definition_en": "to say or write something clearly and carefully",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/state"
+      ]
     },
     {
       "term": "statement",

@@ -1,0 +1,788 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.12-sense-expansion-001",
+  "baseDataVersion": "2.95.11",
+  "targetDataVersion": "2.95.12",
+  "idSetSha256": "adccbdb4c98872207d2bede7bdc530e1c079bbd8b3679e7e4f6288054c7e404b",
+  "allowedPaths": [
+    "/examples",
+    "/senses"
+  ],
+  "description": "Split and expand nine existing TOEIC headwords into distinct sense-linked meanings with original workplace-context examples. No id, word, or topics fields are modified.",
+  "editorialStatus": "provisional additions; independent lexical review pending",
+  "accessedOn": "2026-11-19",
+  "sourceEvidence": [
+    {
+      "id": "address-v",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/address"
+      ]
+    },
+    {
+      "id": "application-n",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/application",
+        "https://dictionary.cambridge.org/dictionary/english/application-software"
+      ]
+    },
+    {
+      "id": "claim-v",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/claim"
+      ]
+    },
+    {
+      "id": "draft-nv",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/draft"
+      ]
+    },
+    {
+      "id": "issue-v",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/issue"
+      ]
+    },
+    {
+      "id": "order-v",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/order"
+      ]
+    },
+    {
+      "id": "record-v",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/record"
+      ]
+    },
+    {
+      "id": "position-n",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/position"
+      ]
+    },
+    {
+      "id": "term-n",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/term"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "address-v",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n/v",
+            "cefr_level": "A1",
+            "meaning_vi": "địa chỉ; phát biểu với",
+            "definition_en": "details of where someone lives or speaks to someone",
+            "synonyms": [
+              "location",
+              "mention"
+            ],
+            "antonyms": []
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "địa chỉ (nơi liên hệ hoặc nhận thư)",
+          "definition_en": "the place where a person or organization can be found or receive mail",
+          "synonyms": [
+            "location"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "giải quyết; xử lý (một vấn đề hoặc nhu cầu)",
+          "definition_en": "to give attention to and deal with a matter, need, or problem",
+          "synonyms": [
+            "deal with",
+            "handle"
+          ],
+          "antonyms": []
+        }
+      ]
+    },
+    {
+      "id": "address-v",
+      "path": "/examples",
+      "expect": {
+        "old": [
+          {
+            "en": "Please send the invoice to our new address.",
+            "vi": "Vui lòng gửi hóa đơn đến địa chỉ mới của chúng tôi.",
+            "sense_index": 0
+          }
+        ]
+      },
+      "new": [
+        {
+          "en": "Please send the invoice to our new address.",
+          "vi": "Vui lòng gửi hóa đơn đến địa chỉ mới của chúng tôi.",
+          "sense_index": 0
+        },
+        {
+          "en": "The HR manager will address the concerns raised by employees.",
+          "vi": "Quản lý nhân sự sẽ giải quyết những mối quan ngại do nhân viên nêu ra.",
+          "sense_index": 1
+        }
+      ]
+    },
+    {
+      "id": "application-n",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n",
+            "meaning_vi": "đơn; hồ sơ; ứng dụng",
+            "definition_en": "a formal request for something, especially a job or permission",
+            "synonyms": [],
+            "antonyms": [],
+            "cefr_level": "A2"
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "đơn; hồ sơ xin việc hoặc xin cấp phép",
+          "definition_en": "an official request for something, usually made in writing",
+          "synonyms": [
+            "request"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "ứng dụng phần mềm",
+          "definition_en": "a computer program designed to perform a particular task",
+          "synonyms": [
+            "application software"
+          ],
+          "antonyms": []
+        }
+      ]
+    },
+    {
+      "id": "application-n",
+      "path": "/examples",
+      "expect": {
+        "old": [
+          {
+            "en": "Your application has been received.",
+            "vi": "Chúng tôi đã nhận được hồ sơ của bạn.",
+            "sense_index": 0
+          }
+        ]
+      },
+      "new": [
+        {
+          "en": "Your application has been received.",
+          "vi": "Chúng tôi đã nhận được hồ sơ của bạn.",
+          "sense_index": 0
+        },
+        {
+          "en": "The HR application lets employees update their personal details online.",
+          "vi": "Ứng dụng nhân sự cho phép nhân viên cập nhật thông tin cá nhân trực tuyến.",
+          "sense_index": 1
+        }
+      ]
+    },
+    {
+      "id": "claim-v",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n/v",
+            "cefr_level": "B1",
+            "meaning_vi": "yêu cầu bồi thường; tuyên bố",
+            "definition_en": "a formal request for something or a statement",
+            "synonyms": [
+              "request",
+              "assertion"
+            ],
+            "antonyms": [
+              "deny"
+            ]
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "yêu cầu bồi thường; yêu cầu quyền lợi",
+          "definition_en": "a formal request for money or another benefit that someone believes they are entitled to",
+          "synonyms": [
+            "request"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "tuyên bố; khẳng định một điều là đúng",
+          "definition_en": "to state that something is true, especially when it has not been proved",
+          "synonyms": [
+            "assert",
+            "state"
+          ],
+          "antonyms": [
+            "deny"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "claim-v",
+      "path": "/examples",
+      "expect": {
+        "old": [
+          {
+            "en": "Please submit a claim for the damaged package.",
+            "vi": "Vui lòng gửi yêu cầu bồi thường cho kiện hàng bị hỏng.",
+            "sense_index": 0
+          }
+        ]
+      },
+      "new": [
+        {
+          "en": "Please submit a claim for the damaged package.",
+          "vi": "Vui lòng gửi yêu cầu bồi thường cho kiện hàng bị hỏng.",
+          "sense_index": 0
+        },
+        {
+          "en": "The supplier claims that the shipment left the warehouse on Monday.",
+          "vi": "Nhà cung cấp khẳng định lô hàng đã rời kho vào thứ Hai.",
+          "sense_index": 1
+        }
+      ]
+    },
+    {
+      "id": "draft-nv",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n/v",
+            "meaning_vi": "bản nháp; soạn thảo",
+            "definition_en": "an early version of a document or message",
+            "synonyms": [],
+            "antonyms": [],
+            "cefr_level": "A2"
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "bản nháp; bản dự thảo",
+          "definition_en": "an early version of a document or message that may be changed before it is finished",
+          "synonyms": [
+            "preliminary version"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "soạn bản đầu tiên; viết dự thảo",
+          "definition_en": "to write the first version of a document, letter, or proposal for later review",
+          "synonyms": [
+            "prepare"
+          ],
+          "antonyms": []
+        }
+      ]
+    },
+    {
+      "id": "draft-nv",
+      "path": "/examples",
+      "expect": {
+        "old": [
+          {
+            "en": "Please review the draft before it is sent.",
+            "vi": "Vui lòng xem bản nháp trước khi gửi.",
+            "sense_index": 0
+          }
+        ]
+      },
+      "new": [
+        {
+          "en": "Please review the draft before it is sent.",
+          "vi": "Vui lòng xem lại bản nháp trước khi gửi.",
+          "sense_index": 0
+        },
+        {
+          "en": "The communications team will draft a response to the customer complaint.",
+          "vi": "Nhóm truyền thông sẽ soạn bản trả lời cho khiếu nại của khách hàng.",
+          "sense_index": 1
+        }
+      ]
+    },
+    {
+      "id": "issue-v",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n/v",
+            "cefr_level": "A2",
+            "meaning_vi": "vấn đề; phát hành",
+            "definition_en": "an important subject or a problem",
+            "synonyms": [
+              "problem",
+              "matter"
+            ],
+            "antonyms": [
+              "solution"
+            ]
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "vấn đề; vấn đề cần được xem xét",
+          "definition_en": "an important subject or a problem that people are discussing or dealing with",
+          "synonyms": [
+            "problem",
+            "matter"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "ban hành; cấp hoặc phát hành văn bản chính thức",
+          "definition_en": "to produce or provide something official, such as a statement, permit, or document",
+          "synonyms": [
+            "release",
+            "provide"
+          ],
+          "antonyms": []
+        }
+      ]
+    },
+    {
+      "id": "issue-v",
+      "path": "/examples",
+      "expect": {
+        "old": [
+          {
+            "en": "Please report any technical issue to support.",
+            "vi": "Vui lòng báo mọi vấn đề kỹ thuật cho bộ phận hỗ trợ.",
+            "sense_index": 0
+          }
+        ]
+      },
+      "new": [
+        {
+          "en": "Please report any technical issue to support.",
+          "vi": "Vui lòng báo mọi vấn đề kỹ thuật cho bộ phận hỗ trợ.",
+          "sense_index": 0
+        },
+        {
+          "en": "The office will issue new identification cards to all employees.",
+          "vi": "Văn phòng sẽ cấp thẻ nhận dạng mới cho toàn bộ nhân viên.",
+          "sense_index": 1
+        }
+      ]
+    },
+    {
+      "id": "order-v",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n/v",
+            "cefr_level": "A1",
+            "meaning_vi": "đơn hàng; đặt hàng",
+            "definition_en": "a request for goods or to request them",
+            "synonyms": [
+              "request",
+              "purchase"
+            ],
+            "antonyms": [
+              "cancel"
+            ]
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "đơn đặt hàng; yêu cầu mua hàng",
+          "definition_en": "a request made to a company or shop for goods or services",
+          "synonyms": [
+            "purchase request"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "đặt mua; yêu cầu cung cấp hàng hóa hoặc dịch vụ",
+          "definition_en": "to ask a company or shop to supply goods or services",
+          "synonyms": [
+            "request",
+            "purchase"
+          ],
+          "antonyms": [
+            "cancel"
+          ]
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "mệnh lệnh; chỉ thị",
+          "definition_en": "an official instruction telling someone what they must do",
+          "synonyms": [
+            "instruction",
+            "directive"
+          ],
+          "antonyms": []
+        }
+      ]
+    },
+    {
+      "id": "order-v",
+      "path": "/examples",
+      "expect": {
+        "old": [
+          {
+            "en": "Your order will be shipped tomorrow.",
+            "vi": "Đơn hàng của bạn sẽ được gửi vào ngày mai.",
+            "sense_index": 0
+          }
+        ]
+      },
+      "new": [
+        {
+          "en": "Your order will be shipped tomorrow.",
+          "vi": "Đơn đặt hàng của bạn sẽ được gửi đi vào ngày mai.",
+          "sense_index": 0
+        },
+        {
+          "en": "Please order replacement toner before the supply runs out.",
+          "vi": "Vui lòng đặt mua mực in thay thế trước khi nguồn dự trữ cạn hết.",
+          "sense_index": 1
+        },
+        {
+          "en": "The supervisor gave an order to stop the production line.",
+          "vi": "Người giám sát đã ra lệnh dừng dây chuyền sản xuất.",
+          "sense_index": 2
+        }
+      ]
+    },
+    {
+      "id": "record-v",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n/v",
+            "cefr_level": "A2",
+            "meaning_vi": "hồ sơ; ghi lại",
+            "definition_en": "a written account or to store information",
+            "synonyms": [
+              "document",
+              "register"
+            ],
+            "antonyms": [
+              "erase"
+            ]
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "hồ sơ; bản ghi thông tin",
+          "definition_en": "information about a person or event that is written down or stored on a computer",
+          "synonyms": [
+            "file",
+            "document"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "ghi lại; lưu thông tin để dùng sau",
+          "definition_en": "to keep information for the future by writing it down or storing it on a computer",
+          "synonyms": [
+            "log",
+            "document"
+          ],
+          "antonyms": [
+            "erase"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "record-v",
+      "path": "/examples",
+      "expect": {
+        "old": [
+          {
+            "en": "Please record each visitor's name and arrival time in the building security log.",
+            "vi": "Vui lòng ghi lại tên và thời gian đến của từng khách vào sổ an ninh tòa nhà.",
+            "sense_index": 0
+          }
+        ]
+      },
+      "new": [
+        {
+          "en": "The personnel department keeps a record of each employee's training.",
+          "vi": "Phòng nhân sự lưu hồ sơ đào tạo của từng nhân viên.",
+          "sense_index": 0
+        },
+        {
+          "en": "Please record each visitor's name and arrival time in the building security log.",
+          "vi": "Vui lòng ghi lại tên và thời gian đến của từng khách vào sổ an ninh tòa nhà.",
+          "sense_index": 1
+        }
+      ]
+    },
+    {
+      "id": "position-n",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n",
+            "cefr_level": "A2",
+            "meaning_vi": "vị trí; chức vụ",
+            "definition_en": "a job or the place where someone or something is",
+            "synonyms": [
+              "post",
+              "role"
+            ],
+            "antonyms": []
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "vị trí công việc; chức vụ hoặc cấp bậc",
+          "definition_en": "a job or a rank within a company or organization",
+          "synonyms": [
+            "post",
+            "role"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "tình hình; vị thế hoặc hoàn cảnh của một người hay tổ chức",
+          "definition_en": "the situation or status that a person or organization is in",
+          "synonyms": [
+            "situation",
+            "standing"
+          ],
+          "antonyms": []
+        }
+      ]
+    },
+    {
+      "id": "position-n",
+      "path": "/examples",
+      "expect": {
+        "old": [
+          {
+            "en": "The firm advertised a part-time position.",
+            "vi": "Công ty đăng tuyển một vị trí bán thời gian.",
+            "sense_index": 0
+          }
+        ]
+      },
+      "new": [
+        {
+          "en": "The firm advertised a part-time position.",
+          "vi": "Công ty đăng tuyển một vị trí bán thời gian.",
+          "sense_index": 0
+        },
+        {
+          "en": "The company is in a strong financial position after the merger.",
+          "vi": "Công ty đang ở vị thế tài chính vững mạnh sau thương vụ sáp nhập.",
+          "sense_index": 1
+        }
+      ]
+    },
+    {
+      "id": "term-n",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n",
+            "cefr_level": "A2",
+            "meaning_vi": "điều khoản; học kỳ; thời hạn",
+            "definition_en": "a word or condition in an agreement",
+            "synonyms": [
+              "condition",
+              "period"
+            ],
+            "antonyms": []
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "điều khoản; điều kiện trong thỏa thuận",
+          "definition_en": "a condition or requirement included in an agreement",
+          "synonyms": [
+            "condition"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "thời hạn; nhiệm kỳ của một thỏa thuận hoặc chức vụ",
+          "definition_en": "the fixed period of time that an agreement or a person's position lasts",
+          "synonyms": [
+            "period",
+            "duration"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "học kỳ; một giai đoạn trong năm học",
+          "definition_en": "one of the periods into which a school or university year is divided",
+          "synonyms": [
+            "semester"
+          ],
+          "antonyms": []
+        }
+      ]
+    },
+    {
+      "id": "term-n",
+      "path": "/examples",
+      "expect": {
+        "old": [
+          {
+            "en": "Please read the terms of the agreement.",
+            "vi": "Vui lòng đọc các điều khoản của thỏa thuận.",
+            "sense_index": 0
+          }
+        ]
+      },
+      "new": [
+        {
+          "en": "Please read the terms of the agreement.",
+          "vi": "Vui lòng đọc các điều khoản của thỏa thuận.",
+          "sense_index": 0
+        },
+        {
+          "en": "The lease has a term of five years.",
+          "vi": "Hợp đồng thuê có thời hạn năm năm.",
+          "sense_index": 1
+        },
+        {
+          "en": "The university spring term begins in January.",
+          "vi": "Học kỳ mùa xuân của trường đại học bắt đầu vào tháng Một.",
+          "sense_index": 2
+        }
+      ]
+    }
+  ],
+  "identityGuard": [
+    {
+      "id": "address-v",
+      "word": "address",
+      "topics": [
+        "OFFICE",
+        "DAILY"
+      ]
+    },
+    {
+      "id": "application-n",
+      "word": "application",
+      "topics": [
+        "HR"
+      ]
+    },
+    {
+      "id": "claim-v",
+      "word": "claim",
+      "topics": [
+        "FINANCE",
+        "CUSTOMER"
+      ]
+    },
+    {
+      "id": "draft-nv",
+      "word": "draft",
+      "topics": [
+        "COMMUNICATION"
+      ]
+    },
+    {
+      "id": "issue-v",
+      "word": "issue",
+      "topics": [
+        "OFFICE",
+        "BUSINESS"
+      ]
+    },
+    {
+      "id": "order-v",
+      "word": "order",
+      "topics": [
+        "PURCHASING",
+        "SHIPPING"
+      ]
+    },
+    {
+      "id": "record-v",
+      "word": "record",
+      "topics": [
+        "OFFICE",
+        "TECHNOLOGY"
+      ]
+    },
+    {
+      "id": "position-n",
+      "word": "position",
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ]
+    },
+    {
+      "id": "term-n",
+      "word": "term",
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ]
+    }
+  ]
+}

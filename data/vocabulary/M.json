@@ -978,14 +978,22 @@
       "senses": [
         {
           "pos": "n",
-          "meaning_vi": "phút; biên bản cuộc họp (số nhiều: minutes)",
-          "definition_en": "a period of 60 seconds; an official written record of a meeting",
+          "cefr_level": "A1",
+          "meaning_vi": "phút; một phần sáu mươi của một giờ",
+          "definition_en": "one of the sixty equal parts of an hour, each lasting sixty seconds",
+          "synonyms": [],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "biên bản cuộc họp; bản ghi những nội dung đã được thảo luận hoặc quyết định",
+          "definition_en": "the written record of what was said and decided at a meeting",
           "synonyms": [
-            "moment",
-            "meeting record"
+            "record",
+            "meeting"
           ],
-          "antonyms": [],
-          "cefr_level": "A1"
+          "antonyms": []
         }
       ],
       "topics": [
@@ -1000,6 +1008,11 @@
           "en": "The meeting will begin in five minutes.",
           "vi": "Cuộc họp sẽ bắt đầu sau năm phút.",
           "sense_index": 0
+        },
+        {
+          "en": "Please review the meeting minutes before approving the record.",
+          "vi": "Vui lòng xem lại biên bản cuộc họp trước khi phê duyệt bản ghi.",
+          "sense_index": 1
         }
       ],
       "collocations": [

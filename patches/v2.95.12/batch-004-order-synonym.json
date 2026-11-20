@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.12-order-synonym-001",
+  "baseDataVersion": "2.95.11",
+  "targetDataVersion": "2.95.12",
+  "idSetSha256": "adccbdb4c98872207d2bede7bdc530e1c079bbd8b3679e7e4f6288054c7e404b",
+  "allowedPaths": [
+    "/senses"
+  ],
+  "description": "Use the established procurement term purchase order instead of purchase request for the goods-order noun sense.",
+  "editorialStatus": "provisional lexical precision correction; independent lexical review pending",
+  "accessedOn": "2026-11-19",
+  "sourceEvidence": [
+    {
+      "id": "order-v",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/order",
+        "https://dictionary.cambridge.org/dictionary/english/purchase-order"
+      ]
+    }
+  ],
+  "identityGuard": [
+    {
+      "id": "order-v",
+      "word": "order",
+      "topics": [
+        "PURCHASING",
+        "SHIPPING"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "order-v",
+      "path": "/senses",
+      "expect": {
+        "old": [
+          {
+            "pos": "n",
+            "cefr_level": "A1",
+            "meaning_vi": "đơn đặt hàng; yêu cầu mua hàng",
+            "definition_en": "a request made to a company or shop for goods or services",
+            "synonyms": [
+              "purchase request"
+            ],
+            "antonyms": []
+          },
+          {
+            "pos": "v",
+            "cefr_level": "A1",
+            "meaning_vi": "đặt mua; yêu cầu cung cấp hàng hóa hoặc dịch vụ",
+            "definition_en": "to ask a company or shop to supply goods or services",
+            "synonyms": [
+              "request",
+              "purchase"
+            ],
+            "antonyms": [
+              "cancel"
+            ]
+          },
+          {
+            "pos": "n",
+            "cefr_level": "A1",
+            "meaning_vi": "mệnh lệnh; chỉ thị",
+            "definition_en": "an official instruction telling someone what they must do",
+            "synonyms": [
+              "instruction",
+              "directive"
+            ],
+            "antonyms": []
+          }
+        ]
+      },
+      "new": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "đơn đặt hàng; yêu cầu mua hàng",
+          "definition_en": "a request made to a company or shop for goods or services",
+          "synonyms": [
+            "purchase order"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "đặt mua; yêu cầu cung cấp hàng hóa hoặc dịch vụ",
+          "definition_en": "to ask a company or shop to supply goods or services",
+          "synonyms": [
+            "request",
+            "purchase"
+          ],
+          "antonyms": [
+            "cancel"
+          ]
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "mệnh lệnh; chỉ thị",
+          "definition_en": "an official instruction telling someone what they must do",
+          "synonyms": [
+            "instruction",
+            "directive"
+          ],
+          "antonyms": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.13-family-gloss-001",
+  "baseDataVersion": "2.95.12",
+  "targetDataVersion": "2.95.13",
+  "idSetSha256": "adccbdb4c98872207d2bede7bdc530e1c079bbd8b3679e7e4f6288054c7e404b",
+  "allowedPaths": [
+    "/word_family/0"
+  ],
+  "description": "Align the reverse valuable -> value noun-family gloss with the newly separated value monetary-worth noun sense.",
+  "editorialStatus": "provisional consistency correction; independent lexical review pending",
+  "accessedOn": "2026-11-19",
+  "sourceEvidence": [
+    {
+      "id": "valuable-adj",
+      "urls": [
+        "https://dictionary.cambridge.org/dictionary/english/valuable",
+        "https://dictionary.cambridge.org/dictionary/english/value"
+      ]
+    }
+  ],
+  "identityGuard": [
+    {
+      "id": "valuable-adj",
+      "word": "valuable",
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "valuable-adj",
+      "path": "/word_family/0",
+      "expect": {
+        "old": {
+          "word": "value",
+          "pos": "n",
+          "meaning_vi": "giá trị; coi trọng"
+        }
+      },
+      "new": {
+        "word": "value",
+        "pos": "n",
+        "meaning_vi": "giá trị; số tiền mà một thứ đáng giá"
+      }
+    }
+  ]
+}

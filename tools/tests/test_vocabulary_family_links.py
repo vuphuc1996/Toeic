@@ -61,7 +61,7 @@ PAIRS = [
     ('finance', 'financing', 'n/v', 'n'),
     ('project', 'projection', 'n/v', 'n'),
     ('settle', 'settlement', 'v', 'n'),
-    ('value', 'valuation', 'n/v', 'n'),
+    ('value', 'valuation', 'v', 'n'),
     ('valuable', 'valuation', 'adj', 'n'),
     ('subcontract', 'subcontracting', 'v/n', 'n'),
     ('subcontractor', 'subcontracting', 'n', 'n'),
@@ -70,7 +70,8 @@ PAIRS = [
     ('defect', 'defective', 'n', 'adj'),
     ('reliable', 'reliability', 'adj', 'n'),
     ('package', 'packaging', 'v', 'n'),
-    ('claim', 'claimant', 'n/v', 'n'),
+    # claimant derives from the compensation/request noun sense of claim.
+    ('claim', 'claimant', 'n', 'n'),
     ('designate', 'designation', 'v', 'n'),
     ('revise', 'revision', 'v', 'n'),
     ('specify', 'specification', 'v', 'n'),
@@ -160,6 +161,17 @@ class VocabularyFamilyLinkTests(unittest.TestCase):
         self.family_member(reservation, 'reserve')
         self.family_member(reserve, 'reservation')
         self.assertTrue(any(item.get('word') == 'reserved' for item in reservation['word_family']))
+
+    def test_batch015_claimant_link_targets_the_claim_noun_sense(self):
+        batch = json.loads((ROOT / 'data/vocabulary/batch-015.json').read_text(encoding='utf-8'))
+        self.assertEqual(batch['release'], '2.95.12')
+        self.assertIn('independent lexical review pending', batch['editorialStatus'])
+        record = self.records['claimant']
+        link = self.family_member(record, 'claim')
+        claim = self.records['claim']
+        self.assertEqual(link, batch['records'][0]['word_family_after'])
+        self.assertEqual(link['pos'], 'n')
+        self.assertEqual(link['meaning_vi'], sense_meaning(claim, 'n'))
 
 
 if __name__ == '__main__':

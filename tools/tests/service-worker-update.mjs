@@ -11,6 +11,8 @@ const appSource = read('assets/js/app.js');
 const html = read('index.html');
 const css = read('assets/css/app.css');
 
+assert.equal((swSource.match(/\.\/assets\/js\/flashcard-senses\.js/g) || []).length, 2, 'multi-sense Flashcard helper must be precached as required and app-shell assets');
+
 function createWorker({ active = false, failRequired = false, failOptional = false } = {}) {
   const listeners = new Map();
   const cacheStore = new Map();

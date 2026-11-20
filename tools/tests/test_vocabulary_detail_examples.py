@@ -133,10 +133,137 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
                 sentences.append(en.casefold())
         self.assertEqual(len(sentences), len(set(sentences)))
 
+    def test_batch014_sense_expansion_matches_canonical_records_and_sources(self):
+        batch = load_json("data/vocabulary/batch-014.json")
+        self.assertEqual(batch["batch"], "014")
+        self.assertEqual(batch["release"], "2.95.12")
+        self.assertEqual(batch["count"], 9)
+        self.assertIn("independent lexical review pending", batch["editorialStatus"])
+        canonical = {record["id"]: record for record in self.records}
+        patch = load_json("patches/v2.95.12/batch-001.json")
+        self.assertEqual(patch["allowedPaths"], ["/examples", "/senses"])
+        self.assertTrue(all(op["path"] in {"/examples", "/senses"} for op in patch["operations"]))
+        self.assertEqual({op["id"] for op in patch["operations"]}, {row["id"] for row in batch["records"]})
+        self.assertEqual(patch["idSetSha256"], load_json("tools/baseline-ids.json")["idSetSha256"])
+        self.assertEqual({entry["id"] for entry in patch["identityGuard"]}, {row["id"] for row in batch["records"]})
+        self.assertTrue(all(entry["id"] and entry["word"] and isinstance(entry["topics"], list) for entry in patch["identityGuard"]))
+        guarded = {entry["id"]: entry for entry in patch["identityGuard"]}
+        for rid, identity in guarded.items():
+            current = canonical[rid]
+            self.assertEqual(current["id"], identity["id"])
+            self.assertEqual(current["word"], identity["word"])
+            self.assertEqual(current.get("topics", []), identity["topics"])
+        evidence = {entry["id"]: set(entry["urls"]) for entry in patch["sourceEvidence"]}
+        self.assertEqual(set(evidence), {row["id"] for row in batch["records"]})
+        for url_set in evidence.values():
+            self.assertTrue(url_set)
+            self.assertTrue(all(url.startswith("https://dictionary.cambridge.org/") for url in url_set))
+        for entry in batch["records"]:
+            self.assertIn(entry["id"], canonical)
+            current = canonical[entry["id"]]
+            self.assertEqual(current["word"], entry["word"])
+            self.assertEqual(current["senses"], entry["senses"])
+            self.assertEqual(current["examples"], entry["examples"])
+            self.assertTrue(entry["sourceUrls"])
+            self.assertEqual({e["sense_index"] for e in entry["examples"]}, set(range(len(entry["senses"]))))
+
+    def test_batch016_related_glossary_entries_cover_batch014_terms(self):
+        glossary_batch = load_json("data/vocabulary/batch-016.json")
+        self.assertEqual(glossary_batch["release"], "2.95.12")
+        self.assertEqual(glossary_batch["count"], 22)
+        self.assertIn("independent lexical review pending", glossary_batch["editorialStatus"])
+        sense_terms = set()
+        batch = load_json("data/vocabulary/batch-014.json")
+        for entry in batch["records"]:
+            for sense in entry["senses"]:
+                sense_terms.update(sense.get("synonyms", []))
+                sense_terms.update(sense.get("antonyms", []))
+        glossary_terms = {entry["term"] for entry in glossary_batch["records"]}
+        self.assertTrue(glossary_terms.issubset(sense_terms))
+        for entry in glossary_batch["records"]:
+            self.assertTrue(entry["meaning_vi"])
+            self.assertTrue(entry["sourceUrls"])
+            self.assertTrue(all(url.startswith("https://dictionary.cambridge.org/") for url in entry["sourceUrls"]))
+
+    def test_batch017_sense_expansion_matches_canonical_records_and_sources(self):
+        batch = load_json("data/vocabulary/batch-017.json")
+        self.assertEqual(batch["batch"], "017")
+        self.assertEqual(batch["release"], "2.95.13")
+        self.assertEqual(batch["count"], 10)
+        self.assertIn("independent lexical review pending", batch["editorialStatus"])
+        canonical = {record["id"]: record for record in self.records}
+        patch = load_json("patches/v2.95.13/batch-001.json")
+        self.assertEqual(patch["allowedPaths"], ["/examples", "/senses"])
+        self.assertEqual(len(patch["operations"]), 20)
+        self.assertEqual(patch["idSetSha256"], load_json("tools/baseline-ids.json")["idSetSha256"])
+        self.assertEqual({entry["id"] for entry in patch["identityGuard"]}, {row["id"] for row in batch["records"]})
+        guarded = {entry["id"]: entry for entry in patch["identityGuard"]}
+        evidence = {entry["id"]: set(entry["urls"]) for entry in patch["sourceEvidence"]}
+        self.assertEqual(set(evidence), {row["id"] for row in batch["records"]})
+        for entry in batch["records"]:
+            current = canonical[entry["id"]]
+            self.assertEqual(current["word"], entry["word"])
+            self.assertEqual(current["senses"], entry["senses"])
+            self.assertEqual(current["examples"], entry["examples"])
+            self.assertEqual(current["id"], guarded[entry["id"]]["id"])
+            self.assertEqual(current["word"], guarded[entry["id"]]["word"])
+            self.assertEqual(current.get("topics", []), guarded[entry["id"]]["topics"])
+            self.assertTrue(entry["sourceUrls"])
+            self.assertEqual(set(entry["sourceUrls"]), evidence[entry["id"]])
+            self.assertTrue(all(url.startswith("https://dictionary.cambridge.org/") for url in entry["sourceUrls"]))
+            self.assertEqual({e["sense_index"] for e in entry["examples"]}, set(range(len(entry["senses"]))))
+
+    def test_batch018_related_glosses_are_sourced_and_present(self):
+        batch = load_json("data/vocabulary/batch-018.json")
+        self.assertEqual(batch["batch"], "018")
+        self.assertEqual(batch["release"], "2.95.13")
+        self.assertEqual(batch["count"], 4)
+        self.assertIn("independent lexical review pending", batch["editorialStatus"])
+        related = {row["term"].casefold(): row for row in load_json("data/related-terms.json")["terms"]}
+        patch = load_json("patches-related-terms/v2.95.13/related-terms-001.json")
+        self.assertEqual(len(patch["operations"]), 4)
+        for entry in batch["records"]:
+            current = related[entry["term"].casefold()]
+            self.assertEqual(current, entry)
+            self.assertTrue(entry["meaning_vi"])
+            self.assertTrue(entry["sourceUrls"])
+            self.assertTrue(all(url.startswith("https://dictionary.cambridge.org/") for url in entry["sourceUrls"]))
+
+    def test_batch019_valuable_family_gloss_matches_value_noun_sense(self):
+        batch = load_json("data/vocabulary/batch-019.json")
+        self.assertEqual(batch["release"], "2.95.13")
+        self.assertEqual(batch["count"], 1)
+        entry = batch["records"][0]
+        canonical = {record["id"]: record for record in self.records}[entry["id"]]
+        self.assertEqual(canonical, entry)
+        patch = load_json("patches/v2.95.13/batch-002-family-gloss.json")
+        self.assertEqual(patch["allowedPaths"], ["/word_family/0"])
+        self.assertEqual(patch["operations"][0]["expect"]["old"]["meaning_vi"], "giá trị; coi trọng")
+        value = {record["word"]: record for record in self.records}["value"]
+        noun = next(sense for sense in value["senses"] if sense["pos"] == "n")
+        link = next(row for row in canonical["word_family"] if row["word"] == "value")
+        self.assertEqual(link["pos"], "n")
+        self.assertEqual(link["meaning_vi"], noun["meaning_vi"])
+
+    def test_batch020_valuation_family_gloss_matches_value_verb_sense(self):
+        batch = load_json("data/vocabulary/batch-020.json")
+        self.assertEqual(batch["release"], "2.95.13")
+        self.assertEqual(batch["count"], 1)
+        entry = batch["records"][0]
+        canonical = {record["id"]: record for record in self.records}[entry["id"]]
+        self.assertEqual(canonical, entry)
+        patch = load_json("patches/v2.95.13/batch-003-family-gloss.json")
+        self.assertEqual(patch["allowedPaths"], ["/word_family/0"])
+        value = {record["word"]: record for record in self.records}["value"]
+        verb = next(sense for sense in value["senses"] if sense["pos"] == "v")
+        link = next(row for row in canonical["word_family"] if row["word"] == "value")
+        self.assertEqual(link["pos"], "v")
+        self.assertEqual(link["meaning_vi"], verb["meaning_vi"])
+
     def test_multisense_entries_have_examples_for_all_senses(self):
         multi = [record for record in self.records if len(record["senses"]) > 1]
-        self.assertEqual(len(multi), 30)
-        self.assertEqual(sum(len(record["examples"]) for record in multi), 61)
+        self.assertEqual(len(multi), 49)
+        self.assertEqual(sum(len(record["examples"]) for record in multi), 105)
         self.assertTrue(all(len({e.get("sense_index", 0) for e in record["examples"]}) == len(record["senses"]) for record in multi))
 
     def test_detail_modal_groups_meanings_by_pos_without_duplicate_pos_strip(self):

@@ -570,13 +570,24 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A2",
-          "meaning_vi": "hồ sơ; ghi lại",
-          "definition_en": "a written account or to store information",
+          "meaning_vi": "hồ sơ; bản ghi thông tin",
+          "definition_en": "information about a person or event that is written down or stored on a computer",
           "synonyms": [
-            "document",
-            "register"
+            "file",
+            "document"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "ghi lại; lưu thông tin để dùng sau",
+          "definition_en": "to keep information for the future by writing it down or storing it on a computer",
+          "synonyms": [
+            "log",
+            "document"
           ],
           "antonyms": [
             "erase"
@@ -597,9 +608,14 @@
       },
       "examples": [
         {
+          "en": "The personnel department keeps a record of each employee's training.",
+          "vi": "Phòng nhân sự lưu hồ sơ đào tạo của từng nhân viên.",
+          "sense_index": 0
+        },
+        {
           "en": "Please record each visitor's name and arrival time in the building security log.",
           "vi": "Vui lòng ghi lại tên và thời gian đến của từng khách vào sổ an ninh tòa nhà.",
-          "sense_index": 0
+          "sense_index": 1
         }
       ],
       "collocations": [

@@ -1,4 +1,4 @@
-# TOEIC Dictionary v2.95.11 — Project Documentation
+# TOEIC Dictionary v2.95.13 — Project Documentation
 
 ## Source of truth
 
@@ -29,20 +29,33 @@
 
 Counts describe source inventory, not editorial approval, learner completion, mastery or Mock eligibility. See the current progress snapshot for field coverage and review status. Active independent-review handoffs remain at `reports/TOEIC_BATCH_024_REVIEW_CHECKLIST_v2.92.0.md` and `reports/TOEIC_BATCH_025_REVIEW_CHECKLIST_v2.93.0.md`; their reserve content must not be promoted to Mock eligibility until review is recorded.
 
+## v2.95.13 candidate content update
+
+- Ten existing headwords (`bill`, `charge`, `document`, `experience`, `function`, `host`, `minute`, `offer`, `supply`, `value`) gained clearer sense-specific meanings and 24 bilingual examples linked by sense index.
+- Four new sourced Vietnamese glosses were added for `demand`, `guest`, `inexperience` and `refund`; two reverse family links now point to the correct noun/verb sense of `value`.
+- Multi-sense coverage now stands at 49 headwords / 105 linked examples; related-term glossary at 373 entries. Canonical vocabulary remains 1,141 headwords; all additions are pending independent lexical review.
+- See `reports/VOCABULARY_SENSE_EXPANSION_v2.95.13.md` and `reports/CHANGE_MANIFEST_v2.95.13.md` for patch and provenance detail.
+
+## v2.95.12 candidate content update
+
+- Nine existing headwords have additional sense distinctions and 20 sense-linked examples; 22 supporting related-term entries have sourced Vietnamese glosses. Flashcard backs display additional meanings and the example mapped to each extra sense, with the helper included in the Service Worker cache.
+- Multi-sense coverage is 39 headwords with 81 linked examples. All additions remain pending independent lexical review.
+- Stable identity/topic contract is unchanged; no new canonical headwords were added. See `reports/VOCABULARY_SENSE_EXPANSION_v2.95.12.md`.
+
 ## Current release artifacts
 
-- Current Claude audit assessment: `reports/CLAUDE_AUDIT_ASSESSMENT_v2.95.10.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.11.md`.
+- Current Claude review package manifest: `reports/CHANGE_MANIFEST_v2.95.13.md` (one-shot review pending).
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.13.md`.
 - Current Robot Buddy behavior report: `reports/ROBOT_BUDDY_v2.95.9.md`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.11.md`.
-- Current manual acceptance checklist: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (14 items; all start as Chưa kiểm).
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.13.md`.
+- Current manual acceptance checklist: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (20 items; all start as Chưa kiểm).
 - CSS design-token ratchet report: `reports/DESIGN_TOKEN_AUDIT_BASELINE_v2.95.11.md`.
-- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.10.md` (content inventory unchanged in the v2.95.11 tooling/governance update).
-- Current editorial evidence audit: `reports/TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.95.8.md`.
+- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.13.md`.
+- Current vocabulary sense-expansion report: `reports/VOCABULARY_SENSE_EXPANSION_v2.95.13.md`.
 - Current distractor structural audit: `reports/TOEIC_DISTRACTOR_AUDIT_v2.95.8.md`.
 - Current Foundation A2 assessment audit: `reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.95.8.md`.
 - Current Listening readiness audit: `reports/TOEIC_LISTENING_READINESS_v2.95.10.md`.
-- Current content coverage audit: `reports/TOEIC_CONTENT_COVERAGE_v2.95.10.md`.
+- Current content coverage audit: `reports/TOEIC_CONTENT_COVERAGE_v2.95.13.md`.
 - Previous release report and acceptance checklist remain available for comparison under the v2.95.9 names.
 
 ## Documentation policy

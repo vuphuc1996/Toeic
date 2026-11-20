@@ -1,10 +1,10 @@
 # Current Version
 
-- Current source: **v2.95.11** — fixed 10-card Flashcard sessions, protected vocabulary ID baseline and guarded content patches.
-- Previous source: **v2.95.9** — Robot Buddy progressive response streaming and local context-aware reply composition.
-- Release package: `TOEIC_Dictionary_v2.95.11_FullSource.zip`.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.11.md`.
-- Audit assessment: `reports/CLAUDE_AUDIT_ASSESSMENT_v2.95.10.md`.
-- Manual acceptance: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (14 items; all Chưa kiểm until completed by the owner).
+- Current source: **v2.95.13** — candidate release; ten additional sense expansions, 24 sense-linked examples and supporting glossary/family-link corrections.
+- Previous source: **v2.95.12** — earlier sense-specific vocabulary release and Flashcard sense rendering.
+- Release package: `TOEIC_Dictionary_v2.95.13_FullSource.zip`.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.13.md`.
+- Change manifest: `reports/CHANGE_MANIFEST_v2.95.13.md`; Claude one-shot review is pending.
+- Manual acceptance: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (20 items; all Chưa kiểm until completed by the owner).
 - Scope remains TOEIC Listening & Reading; Foundation is retained. IELTS and Speaking/Writing remain deferred.
 - No learner record, vocabulary identity, question, answer key, IndexedDB schema or localStorage learner key was reset or migrated. No GitHub push or deployment has been performed from this workspace.

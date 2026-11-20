@@ -20,5 +20,11 @@ assert.match(app, /const nextSize=10/);
 assert.match(app, /allWrong\.slice\(0,10\)/);
 assert.match(app, /flashPickBatch\(topic,Math\.max\(0,10-ids\.length\),ids\)/);
 assert.match(workflow, /node tools\/tests\/flashcard-fixed-batch\.mjs/);
+assert.match(app, /renderAdditionalFlashSenses\(w,posDisplayLabel\)/);
+assert.match(app, /from '\.\/flashcard-senses\.js'/);
+assert.match(workflow, /node tools\/tests\/flashcard-senses\.mjs/);
+assert.match(read('assets/css/app.css'), /\.flash-additional-senses[\s\S]*?var\(--ds-color-border\)/);
+assert.match(read('assets/css/app.css'), /\.flash-additional-sense>strong[\s\S]*?var\(--ds-font-support\)/);
+assert.match(read('assets/css/app.css'), /\.flash-additional-example[\s\S]*?var\(--ds-line-body\)/);
 
-console.log('PASS: Flashcard has one 10-word session size across topic, next-batch and wrong-answer review flows; 5-word selector removed.');
+console.log('PASS: Flashcard has one 10-word session size across all flows; multi-sense flashcards reveal remaining meanings and sense-linked examples with design tokens; 5-word selector removed.');

@@ -1,0 +1,478 @@
+{
+  "schemaVersion": 1,
+  "batch": "017",
+  "release": "2.95.13",
+  "title": "Sense expansion for ten existing TOEIC and workplace headwords",
+  "editorialStatus": "provisional additions; independent lexical review pending",
+  "sourcePolicy": "Definitions are paraphrased from the linked Cambridge Dictionary entries. Example sentences and Vietnamese translations are original project-authored workplace contexts.",
+  "count": 10,
+  "records": [
+    {
+      "id": "bill-v",
+      "word": "bill",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "hóa đơn; khoản tiền cần thanh toán",
+          "definition_en": "a request for payment for goods or services, or the document showing what is owed",
+          "synonyms": [
+            "statement"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "lập hóa đơn; gửi hóa đơn yêu cầu thanh toán",
+          "definition_en": "to send someone a statement showing the money they owe for goods or services",
+          "synonyms": [
+            "charge"
+          ],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "Please settle the hotel bill before checking out.",
+          "vi": "Vui lòng thanh toán hóa đơn khách sạn trước khi trả phòng.",
+          "sense_index": 0
+        },
+        {
+          "en": "The supplier will bill the client separately for the airport transfer service.",
+          "vi": "Nhà cung cấp sẽ lập hóa đơn riêng cho khách hàng đối với dịch vụ đưa đón sân bay.",
+          "sense_index": 1
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/bill"
+      ]
+    },
+    {
+      "id": "charge-v",
+      "word": "charge",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "khoản phí; số tiền phải trả cho dịch vụ",
+          "definition_en": "the amount of money that must be paid for a product, activity, or service",
+          "synonyms": [
+            "fee",
+            "cost"
+          ],
+          "antonyms": [
+            "refund"
+          ]
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "tính phí; yêu cầu thanh toán",
+          "definition_en": "to ask someone to pay a particular amount for a product or service",
+          "synonyms": [
+            "bill"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "sạc điện; nạp năng lượng cho pin hoặc thiết bị",
+          "definition_en": "to put electrical energy into a battery or device so that it can be used",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "An additional handling charge will appear on the final invoice.",
+          "vi": "Một khoản phí xử lý bổ sung sẽ được ghi trên hóa đơn cuối cùng.",
+          "sense_index": 0
+        },
+        {
+          "en": "The hotel will charge guests for late checkout.",
+          "vi": "Khách sạn sẽ tính phí khách lưu trú trả phòng muộn.",
+          "sense_index": 1
+        },
+        {
+          "en": "Please charge the handheld scanner before the inventory count.",
+          "vi": "Vui lòng sạc máy quét cầm tay trước khi kiểm kê hàng tồn kho.",
+          "sense_index": 2
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/charge"
+      ]
+    },
+    {
+      "id": "document-v",
+      "word": "document",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "tài liệu; văn bản hoặc tệp chứa thông tin",
+          "definition_en": "a paper or electronic file that contains written or printed information",
+          "synonyms": [
+            "file",
+            "record"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "ghi lại; lập tài liệu về một sự việc",
+          "definition_en": "to record information about something in writing, photographs, or another form",
+          "synonyms": [
+            "record"
+          ],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "Keep a copy of the signed document for your records.",
+          "vi": "Hãy giữ một bản sao tài liệu đã ký để lưu hồ sơ.",
+          "sense_index": 0
+        },
+        {
+          "en": "The technician documented the damage before starting repairs.",
+          "vi": "Kỹ thuật viên đã ghi nhận hư hỏng trước khi bắt đầu sửa chữa.",
+          "sense_index": 1
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/document"
+      ]
+    },
+    {
+      "id": "experience-v",
+      "word": "experience",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "kinh nghiệm; kiến thức hoặc kỹ năng tích lũy qua thực tế",
+          "definition_en": "knowledge or skill gained by doing, seeing, or feeling things over time",
+          "synonyms": [],
+          "antonyms": [
+            "inexperience"
+          ]
+        },
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "trải nghiệm; sự việc đã xảy ra và tạo ảnh hưởng đến một người",
+          "definition_en": "something that happens to you and affects how you feel or think",
+          "synonyms": [],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "trải qua; gặp phải một sự việc hoặc cảm giác",
+          "definition_en": "to have something happen to you, or to do or feel something",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "She has five years of experience in sales.",
+          "vi": "Cô ấy có năm năm kinh nghiệm trong lĩnh vực bán hàng.",
+          "sense_index": 0
+        },
+        {
+          "en": "The conference was a valuable experience for new employees.",
+          "vi": "Hội nghị là một trải nghiệm quý báu đối với nhân viên mới.",
+          "sense_index": 1
+        },
+        {
+          "en": "Customers may experience delays during the system upgrade.",
+          "vi": "Khách hàng có thể gặp tình trạng chậm trễ trong quá trình nâng cấp hệ thống.",
+          "sense_index": 2
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/experience"
+      ]
+    },
+    {
+      "id": "function-v",
+      "word": "function",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "chức năng; mục đích hoặc nhiệm vụ của một vật hay người",
+          "definition_en": "the purpose of something or the duty that a person has",
+          "synonyms": [
+            "role"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "hoạt động; vận hành theo đúng chức năng",
+          "definition_en": "to work or operate in the intended way",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "The main function of the reception desk is to welcome visitors.",
+          "vi": "Chức năng chính của quầy lễ tân là đón tiếp khách.",
+          "sense_index": 0
+        },
+        {
+          "en": "The backup generator can function during a power failure.",
+          "vi": "Máy phát điện dự phòng có thể hoạt động khi mất điện.",
+          "sense_index": 1
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/function"
+      ]
+    },
+    {
+      "id": "host-v",
+      "word": "host",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "chủ nhà; người hoặc tổ chức tiếp đón khách hay đăng cai sự kiện",
+          "definition_en": "a person or organization that receives guests or provides a place for an event",
+          "synonyms": [],
+          "antonyms": [
+            "guest"
+          ]
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "đăng cai; tổ chức và cung cấp địa điểm cho một sự kiện",
+          "definition_en": "to provide the place and necessary arrangements for a special event",
+          "synonyms": [
+            "arrange"
+          ],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "The host welcomed participants at the annual conference.",
+          "vi": "Đơn vị đăng cai chào đón những người tham dự hội nghị thường niên.",
+          "sense_index": 0
+        },
+        {
+          "en": "Our department will host the annual meeting.",
+          "vi": "Phòng ban chúng tôi sẽ tổ chức cuộc họp thường niên.",
+          "sense_index": 1
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/host"
+      ]
+    },
+    {
+      "id": "minute-n",
+      "word": "minute",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "phút; một phần sáu mươi của một giờ",
+          "definition_en": "one of the sixty equal parts of an hour, each lasting sixty seconds",
+          "synonyms": [],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "biên bản cuộc họp; bản ghi những nội dung đã được thảo luận hoặc quyết định",
+          "definition_en": "the written record of what was said and decided at a meeting",
+          "synonyms": [
+            "record",
+            "meeting"
+          ],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "The meeting will begin in five minutes.",
+          "vi": "Cuộc họp sẽ bắt đầu sau năm phút.",
+          "sense_index": 0
+        },
+        {
+          "en": "Please review the meeting minutes before approving the record.",
+          "vi": "Vui lòng xem lại biên bản cuộc họp trước khi phê duyệt bản ghi.",
+          "sense_index": 1
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/minute"
+      ]
+    },
+    {
+      "id": "offer-v",
+      "word": "offer",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "lời đề nghị; đề xuất sẵn sàng cho hoặc làm điều gì",
+          "definition_en": "an act of asking whether someone would like something, or a proposal to give or do something",
+          "synonyms": [
+            "proposal",
+            "suggestion"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "đề nghị; ngỏ ý cho hoặc làm điều gì",
+          "definition_en": "to say that you are willing to give something or do something for someone",
+          "synonyms": [],
+          "antonyms": [
+            "refuse"
+          ]
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "cung cấp; đem đến một sản phẩm, dịch vụ hoặc cơ hội",
+          "definition_en": "to provide or make a product, service, or opportunity available",
+          "synonyms": [
+            "provide",
+            "supply"
+          ],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "The candidate accepted the company’s offer of employment.",
+          "vi": "Ứng viên đã chấp nhận lời mời làm việc của công ty.",
+          "sense_index": 0
+        },
+        {
+          "en": "The supplier offered a lower price for the next order.",
+          "vi": "Nhà cung cấp đề nghị mức giá thấp hơn cho đơn hàng tiếp theo.",
+          "sense_index": 1
+        },
+        {
+          "en": "The company offers free delivery to business customers.",
+          "vi": "Công ty cung cấp dịch vụ giao hàng miễn phí cho khách hàng doanh nghiệp.",
+          "sense_index": 2
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/offer"
+      ]
+    },
+    {
+      "id": "supply-v",
+      "word": "supply",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "nguồn cung; lượng hàng hóa hoặc vật liệu sẵn có để sử dụng",
+          "definition_en": "an amount of something that is available for people to use",
+          "synonyms": [
+            "amount"
+          ],
+          "antonyms": [
+            "demand"
+          ]
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "cung cấp; giao hoặc đáp ứng thứ đang cần",
+          "definition_en": "to provide something that is wanted or needed",
+          "synonyms": [
+            "provide"
+          ],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "The warehouse has an adequate supply of packing materials.",
+          "vi": "Kho hàng có đủ nguồn cung vật liệu đóng gói.",
+          "sense_index": 0
+        },
+        {
+          "en": "The supplier can supply the parts next week.",
+          "vi": "Nhà cung cấp có thể cung cấp linh kiện vào tuần tới.",
+          "sense_index": 1
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/supply"
+      ]
+    },
+    {
+      "id": "value-v",
+      "word": "value",
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "giá trị; số tiền mà một thứ đáng giá",
+          "definition_en": "the amount of money that something is worth",
+          "synonyms": [
+            "cost"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "định giá; xác định một thứ đáng giá bao nhiêu tiền",
+          "definition_en": "to judge or state how much money something is worth",
+          "synonyms": [
+            "assess"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "coi trọng; xem một người hoặc điều gì là quan trọng",
+          "definition_en": "to consider someone or something important and worth having",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "examples": [
+        {
+          "en": "The estimated value of the equipment is listed in the report.",
+          "vi": "Giá trị ước tính của thiết bị được ghi trong báo cáo.",
+          "sense_index": 0
+        },
+        {
+          "en": "An independent surveyor valued the property before the sale.",
+          "vi": "Một chuyên gia thẩm định độc lập đã định giá bất động sản trước khi bán.",
+          "sense_index": 1
+        },
+        {
+          "en": "The company values long-term relationships with its suppliers.",
+          "vi": "Công ty coi trọng các mối quan hệ lâu dài với nhà cung cấp.",
+          "sense_index": 2
+        }
+      ],
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/value"
+      ]
+    }
+  ]
+}

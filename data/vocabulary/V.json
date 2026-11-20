@@ -151,7 +151,7 @@
         {
           "word": "value",
           "pos": "n",
-          "meaning_vi": "giá trị; coi trọng"
+          "meaning_vi": "giá trị; số tiền mà một thứ đáng giá"
         },
         {
           "word": "valuation",
@@ -195,8 +195,8 @@
       "word_family": [
         {
           "word": "value",
-          "pos": "n/v",
-          "meaning_vi": "giá trị; coi trọng"
+          "pos": "v",
+          "meaning_vi": "định giá; xác định một thứ đáng giá bao nhiêu tiền"
         },
         {
           "word": "valuable",
@@ -230,14 +230,31 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A2",
-          "meaning_vi": "giá trị; coi trọng",
-          "definition_en": "the worth of something or to consider important",
+          "meaning_vi": "giá trị; số tiền mà một thứ đáng giá",
+          "definition_en": "the amount of money that something is worth",
           "synonyms": [
-            "worth",
-            "importance"
+            "cost"
           ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "định giá; xác định một thứ đáng giá bao nhiêu tiền",
+          "definition_en": "to judge or state how much money something is worth",
+          "synonyms": [
+            "assess"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "coi trọng; xem một người hoặc điều gì là quan trọng",
+          "definition_en": "to consider someone or something important and worth having",
+          "synonyms": [],
           "antonyms": []
         }
       ],
@@ -266,9 +283,19 @@
       },
       "examples": [
         {
-          "en": "The company places great value on customer feedback.",
-          "vi": "Công ty rất coi trọng phản hồi của khách hàng.",
+          "en": "The estimated value of the equipment is listed in the report.",
+          "vi": "Giá trị ước tính của thiết bị được ghi trong báo cáo.",
           "sense_index": 0
+        },
+        {
+          "en": "An independent surveyor valued the property before the sale.",
+          "vi": "Một chuyên gia thẩm định độc lập đã định giá bất động sản trước khi bán.",
+          "sense_index": 1
+        },
+        {
+          "en": "The company values long-term relationships with its suppliers.",
+          "vi": "Công ty coi trọng các mối quan hệ lâu dài với nhà cung cấp.",
+          "sense_index": 2
         }
       ],
       "collocations": [

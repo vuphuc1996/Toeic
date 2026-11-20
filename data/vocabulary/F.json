@@ -1599,17 +1599,22 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A2",
-          "meaning_vi": "chức năng; hoạt động",
-          "definition_en": "the purpose of something or to work",
+          "meaning_vi": "chức năng; mục đích hoặc nhiệm vụ của một vật hay người",
+          "definition_en": "the purpose of something or the duty that a person has",
           "synonyms": [
-            "purpose",
-            "operate"
+            "role"
           ],
-          "antonyms": [
-            "malfunction"
-          ]
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "hoạt động; vận hành theo đúng chức năng",
+          "definition_en": "to work or operate in the intended way",
+          "synonyms": [],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -1626,9 +1631,14 @@
       },
       "examples": [
         {
-          "en": "This button has a different function.",
-          "vi": "Nút này có chức năng khác.",
+          "en": "The main function of the reception desk is to welcome visitors.",
+          "vi": "Chức năng chính của quầy lễ tân là đón tiếp khách.",
           "sense_index": 0
+        },
+        {
+          "en": "The backup generator can function during a power failure.",
+          "vi": "Máy phát điện dự phòng có thể hoạt động khi mất điện.",
+          "sense_index": 1
         }
       ],
       "collocations": [

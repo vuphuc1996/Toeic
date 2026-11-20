@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "batch": "018",
+  "release": "2.95.13",
+  "title": "Sourced glosses for four comparison terms in sense expansion batch 017",
+  "editorialStatus": "provisional additions; independent lexical review pending",
+  "sourcePolicy": "Vietnamese glosses and short definitions are paraphrased from the linked Cambridge Dictionary pages.",
+  "count": 4,
+  "records": [
+    {
+      "term": "demand",
+      "meaning_vi": "nhu cầu; yêu cầu mạnh mẽ",
+      "pos": "n",
+      "definition_en": "a need for goods or services that customers want to buy or use",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/demand"
+      ]
+    },
+    {
+      "term": "guest",
+      "meaning_vi": "khách; khách mời hoặc khách lưu trú",
+      "pos": "n",
+      "definition_en": "a person who has been invited to a place or is staying there",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/guest"
+      ]
+    },
+    {
+      "term": "inexperience",
+      "meaning_vi": "sự thiếu kinh nghiệm",
+      "pos": "n",
+      "definition_en": "lack of knowledge or experience",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/inexperience"
+      ]
+    },
+    {
+      "term": "refund",
+      "meaning_vi": "khoản tiền hoàn lại; tiền được trả lại cho người mua",
+      "pos": "n",
+      "definition_en": "an amount of money given back, especially after a purchased product or service is unsatisfactory",
+      "source": "Cambridge Dictionary (accessed 2026-11-19)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/refund"
+      ]
+    }
+  ]
+}

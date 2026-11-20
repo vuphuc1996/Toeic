@@ -369,17 +369,36 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A1",
-          "meaning_vi": "đề nghị; lời chào mời",
-          "definition_en": "to say that you are willing to give or do something",
+          "meaning_vi": "lời đề nghị; đề xuất sẵn sàng cho hoặc làm điều gì",
+          "definition_en": "an act of asking whether someone would like something, or a proposal to give or do something",
           "synonyms": [
             "proposal",
-            "provide"
+            "suggestion"
           ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "đề nghị; ngỏ ý cho hoặc làm điều gì",
+          "definition_en": "to say that you are willing to give something or do something for someone",
+          "synonyms": [],
           "antonyms": [
             "refuse"
           ]
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "cung cấp; đem đến một sản phẩm, dịch vụ hoặc cơ hội",
+          "definition_en": "to provide or make a product, service, or opportunity available",
+          "synonyms": [
+            "provide",
+            "supply"
+          ],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -396,9 +415,19 @@
       },
       "examples": [
         {
-          "en": "The supplier offered a lower price.",
-          "vi": "Nhà cung cấp đề nghị mức giá thấp hơn.",
+          "en": "The candidate accepted the company’s offer of employment.",
+          "vi": "Ứng viên đã chấp nhận lời mời làm việc của công ty.",
           "sense_index": 0
+        },
+        {
+          "en": "The supplier offered a lower price for the next order.",
+          "vi": "Nhà cung cấp đề nghị mức giá thấp hơn cho đơn hàng tiếp theo.",
+          "sense_index": 1
+        },
+        {
+          "en": "The company offers free delivery to business customers.",
+          "vi": "Công ty cung cấp dịch vụ giao hàng miễn phí cho khách hàng doanh nghiệp.",
+          "sense_index": 2
         }
       ],
       "collocations": [
@@ -719,10 +748,20 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A1",
-          "meaning_vi": "đơn hàng; đặt hàng",
-          "definition_en": "a request for goods or to request them",
+          "meaning_vi": "đơn đặt hàng; yêu cầu mua hàng",
+          "definition_en": "a request made to a company or shop for goods or services",
+          "synonyms": [
+            "purchase order"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A1",
+          "meaning_vi": "đặt mua; yêu cầu cung cấp hàng hóa hoặc dịch vụ",
+          "definition_en": "to ask a company or shop to supply goods or services",
           "synonyms": [
             "request",
             "purchase"
@@ -730,6 +769,17 @@
           "antonyms": [
             "cancel"
           ]
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A1",
+          "meaning_vi": "mệnh lệnh; chỉ thị",
+          "definition_en": "an official instruction telling someone what they must do",
+          "synonyms": [
+            "instruction",
+            "directive"
+          ],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -747,8 +797,18 @@
       "examples": [
         {
           "en": "Your order will be shipped tomorrow.",
-          "vi": "Đơn hàng của bạn sẽ được gửi vào ngày mai.",
+          "vi": "Đơn đặt hàng của bạn sẽ được gửi đi vào ngày mai.",
           "sense_index": 0
+        },
+        {
+          "en": "Please order replacement toner before the supply runs out.",
+          "vi": "Vui lòng đặt mua mực in thay thế trước khi nguồn dự trữ cạn hết.",
+          "sense_index": 1
+        },
+        {
+          "en": "The supervisor gave an order to stop the production line.",
+          "vi": "Người giám sát đã ra lệnh dừng dây chuyền sản xuất.",
+          "sense_index": 2
         }
       ],
       "collocations": [

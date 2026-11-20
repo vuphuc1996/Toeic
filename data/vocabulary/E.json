@@ -2503,17 +2503,30 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A2",
-          "meaning_vi": "kinh nghiệm; trải nghiệm",
-          "definition_en": "knowledge gained by doing something",
-          "synonyms": [
-            "knowledge",
-            "practice"
-          ],
+          "meaning_vi": "kinh nghiệm; kiến thức hoặc kỹ năng tích lũy qua thực tế",
+          "definition_en": "knowledge or skill gained by doing, seeing, or feeling things over time",
+          "synonyms": [],
           "antonyms": [
             "inexperience"
           ]
+        },
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "trải nghiệm; sự việc đã xảy ra và tạo ảnh hưởng đến một người",
+          "definition_en": "something that happens to you and affects how you feel or think",
+          "synonyms": [],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "trải qua; gặp phải một sự việc hoặc cảm giác",
+          "definition_en": "to have something happen to you, or to do or feel something",
+          "synonyms": [],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -2531,8 +2544,18 @@
       "examples": [
         {
           "en": "She has five years of experience in sales.",
-          "vi": "Cô ấy có năm năm kinh nghiệm bán hàng.",
+          "vi": "Cô ấy có năm năm kinh nghiệm trong lĩnh vực bán hàng.",
           "sense_index": 0
+        },
+        {
+          "en": "The conference was a valuable experience for new employees.",
+          "vi": "Hội nghị là một trải nghiệm quý báu đối với nhân viên mới.",
+          "sense_index": 1
+        },
+        {
+          "en": "Customers may experience delays during the system upgrade.",
+          "vi": "Khách hàng có thể gặp tình trạng chậm trễ trong quá trình nâng cấp hệ thống.",
+          "sense_index": 2
         }
       ],
       "collocations": [

@@ -449,11 +449,31 @@
         {
           "pos": "n",
           "cefr_level": "A2",
-          "meaning_vi": "điều khoản; học kỳ; thời hạn",
-          "definition_en": "a word or condition in an agreement",
+          "meaning_vi": "điều khoản; điều kiện trong thỏa thuận",
+          "definition_en": "a condition or requirement included in an agreement",
           "synonyms": [
-            "condition",
-            "period"
+            "condition"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "thời hạn; nhiệm kỳ của một thỏa thuận hoặc chức vụ",
+          "definition_en": "the fixed period of time that an agreement or a person's position lasts",
+          "synonyms": [
+            "period",
+            "duration"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "học kỳ; một giai đoạn trong năm học",
+          "definition_en": "one of the periods into which a school or university year is divided",
+          "synonyms": [
+            "semester"
           ],
           "antonyms": []
         }
@@ -469,6 +489,16 @@
           "en": "Please read the terms of the agreement.",
           "vi": "Vui lòng đọc các điều khoản của thỏa thuận.",
           "sense_index": 0
+        },
+        {
+          "en": "The lease has a term of five years.",
+          "vi": "Hợp đồng thuê có thời hạn năm năm.",
+          "sense_index": 1
+        },
+        {
+          "en": "The university spring term begins in January.",
+          "vi": "Học kỳ mùa xuân của trường đại học bắt đầu vào tháng Một.",
+          "sense_index": 2
         }
       ],
       "collocations": [

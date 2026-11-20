@@ -2303,17 +2303,26 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A2",
-          "meaning_vi": "vấn đề; phát hành",
-          "definition_en": "an important subject or a problem",
+          "meaning_vi": "vấn đề; vấn đề cần được xem xét",
+          "definition_en": "an important subject or a problem that people are discussing or dealing with",
           "synonyms": [
             "problem",
             "matter"
           ],
-          "antonyms": [
-            "solution"
-          ]
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "ban hành; cấp hoặc phát hành văn bản chính thức",
+          "definition_en": "to produce or provide something official, such as a statement, permit, or document",
+          "synonyms": [
+            "release",
+            "provide"
+          ],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -2333,6 +2342,11 @@
           "en": "Please report any technical issue to support.",
           "vi": "Vui lòng báo mọi vấn đề kỹ thuật cho bộ phận hỗ trợ.",
           "sense_index": 0
+        },
+        {
+          "en": "The office will issue new identification cards to all employees.",
+          "vi": "Văn phòng sẽ cấp thẻ nhận dạng mới cho toàn bộ nhân viên.",
+          "sense_index": 1
         }
       ],
       "collocations": [

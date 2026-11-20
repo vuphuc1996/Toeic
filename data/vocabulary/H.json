@@ -391,17 +391,24 @@
       },
       "senses": [
         {
-          "pos": "n/v",
-          "cefr_level": "A2",
-          "meaning_vi": "chủ nhà; tổ chức",
-          "definition_en": "a person who receives guests or to organize an event",
-          "synonyms": [
-            "organizer",
-            "presenter"
-          ],
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "chủ nhà; người hoặc tổ chức tiếp đón khách hay đăng cai sự kiện",
+          "definition_en": "a person or organization that receives guests or provides a place for an event",
+          "synonyms": [],
           "antonyms": [
             "guest"
           ]
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B2",
+          "meaning_vi": "đăng cai; tổ chức và cung cấp địa điểm cho một sự kiện",
+          "definition_en": "to provide the place and necessary arrangements for a special event",
+          "synonyms": [
+            "arrange"
+          ],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -418,9 +425,14 @@
       },
       "examples": [
         {
+          "en": "The host welcomed participants at the annual conference.",
+          "vi": "Đơn vị đăng cai chào đón những người tham dự hội nghị thường niên.",
+          "sense_index": 0
+        },
+        {
           "en": "Our department will host the annual meeting.",
           "vi": "Phòng ban chúng tôi sẽ tổ chức cuộc họp thường niên.",
-          "sense_index": 0
+          "sense_index": 1
         }
       ],
       "collocations": [

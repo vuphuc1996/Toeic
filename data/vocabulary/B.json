@@ -731,17 +731,24 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A1",
-          "meaning_vi": "hóa đơn; tính tiền",
-          "definition_en": "a statement of money owed for goods or services",
+          "meaning_vi": "hóa đơn; khoản tiền cần thanh toán",
+          "definition_en": "a request for payment for goods or services, or the document showing what is owed",
           "synonyms": [
-            "invoice",
             "statement"
           ],
-          "antonyms": [
-            "payment"
-          ]
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "lập hóa đơn; gửi hóa đơn yêu cầu thanh toán",
+          "definition_en": "to send someone a statement showing the money they owe for goods or services",
+          "synonyms": [
+            "charge"
+          ],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -758,9 +765,14 @@
       },
       "examples": [
         {
-          "en": "The hotel will bill the client separately for the airport transfer service.",
-          "vi": "Khách sạn sẽ tính phí riêng cho khách hàng đối với dịch vụ đưa đón sân bay.",
+          "en": "Please settle the hotel bill before checking out.",
+          "vi": "Vui lòng thanh toán hóa đơn khách sạn trước khi trả phòng.",
           "sense_index": 0
+        },
+        {
+          "en": "The supplier will bill the client separately for the airport transfer service.",
+          "vi": "Nhà cung cấp sẽ lập hóa đơn riêng cho khách hàng đối với dịch vụ đưa đón sân bay.",
+          "sense_index": 1
         }
       ],
       "collocations": [

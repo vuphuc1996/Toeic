@@ -1082,17 +1082,35 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "A2",
-          "meaning_vi": "phí; tính phí; sạc",
-          "definition_en": "an amount asked for a service or to ask payment",
+          "meaning_vi": "khoản phí; số tiền phải trả cho dịch vụ",
+          "definition_en": "the amount of money that must be paid for a product, activity, or service",
           "synonyms": [
             "fee",
-            "bill"
+            "cost"
           ],
           "antonyms": [
             "refund"
           ]
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "tính phí; yêu cầu thanh toán",
+          "definition_en": "to ask someone to pay a particular amount for a product or service",
+          "synonyms": [
+            "bill"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "A2",
+          "meaning_vi": "sạc điện; nạp năng lượng cho pin hoặc thiết bị",
+          "definition_en": "to put electrical energy into a battery or device so that it can be used",
+          "synonyms": [],
+          "antonyms": []
         }
       ],
       "topics": [
@@ -1109,9 +1127,19 @@
       },
       "examples": [
         {
-          "en": "The hotel does not charge for Wi-Fi.",
-          "vi": "Khách sạn không tính phí Wi-Fi.",
+          "en": "An additional handling charge will appear on the final invoice.",
+          "vi": "Một khoản phí xử lý bổ sung sẽ được ghi trên hóa đơn cuối cùng.",
           "sense_index": 0
+        },
+        {
+          "en": "The hotel will charge guests for late checkout.",
+          "vi": "Khách sạn sẽ tính phí khách lưu trú trả phòng muộn.",
+          "sense_index": 1
+        },
+        {
+          "en": "Please charge the handheld scanner before the inventory count.",
+          "vi": "Vui lòng sạc máy quét cầm tay trước khi kiểm kê hàng tồn kho.",
+          "sense_index": 2
         }
       ],
       "collocations": [
@@ -1440,13 +1468,23 @@
       },
       "senses": [
         {
-          "pos": "n/v",
+          "pos": "n",
           "cefr_level": "B1",
-          "meaning_vi": "yêu cầu bồi thường; tuyên bố",
-          "definition_en": "a formal request for something or a statement",
+          "meaning_vi": "yêu cầu bồi thường; yêu cầu quyền lợi",
+          "definition_en": "a formal request for money or another benefit that someone believes they are entitled to",
           "synonyms": [
-            "request",
-            "assertion"
+            "request"
+          ],
+          "antonyms": []
+        },
+        {
+          "pos": "v",
+          "cefr_level": "B1",
+          "meaning_vi": "tuyên bố; khẳng định một điều là đúng",
+          "definition_en": "to state that something is true, especially when it has not been proved",
+          "synonyms": [
+            "assert",
+            "state"
           ],
           "antonyms": [
             "deny"
@@ -1476,6 +1514,11 @@
           "en": "Please submit a claim for the damaged package.",
           "vi": "Vui lòng gửi yêu cầu bồi thường cho kiện hàng bị hỏng.",
           "sense_index": 0
+        },
+        {
+          "en": "The supplier claims that the shipment left the warehouse on Monday.",
+          "vi": "Nhà cung cấp khẳng định lô hàng đã rời kho vào thứ Hai.",
+          "sense_index": 1
         }
       ],
       "collocations": [
@@ -1505,8 +1548,8 @@
       "word_family": [
         {
           "word": "claim",
-          "pos": "n/v",
-          "meaning_vi": "yêu cầu bồi thường; tuyên bố"
+          "pos": "n",
+          "meaning_vi": "yêu cầu bồi thường; yêu cầu quyền lợi"
         }
       ],
       "verb_forms": null,

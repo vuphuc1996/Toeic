@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "batch": "015",
+  "release": "2.95.12",
+  "title": "Sense-specific correction to the claimant word-family link",
+  "editorialStatus": "provisional correction; independent lexical review pending",
+  "sourcePolicy": "The noun link is restricted to the compensation/request sense of claim; source definitions are paraphrased from the linked Cambridge Dictionary entries.",
+  "count": 1,
+  "records": [
+    {
+      "id": "claimant-n",
+      "word": "claimant",
+      "word_family_before": {
+        "word": "claim",
+        "pos": "n/v",
+        "meaning_vi": "yêu cầu bồi thường; tuyên bố"
+      },
+      "word_family_after": {
+        "word": "claim",
+        "pos": "n",
+        "meaning_vi": "yêu cầu bồi thường; yêu cầu quyền lợi"
+      },
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/claim",
+        "https://dictionary.cambridge.org/dictionary/english/claimant"
+      ]
+    }
+  ]
+}
