@@ -258,7 +258,7 @@ class LearningContentTests(unittest.TestCase):
 
     def test_listening_reserve_batch_counts_and_units(self):
         counts = {f'Part {i}': sum(len(x.get('questions', [])) for x in self.listening if x.get('part') == f'Part {i}') for i in range(1, 5)}
-        self.assertEqual(counts, {'Part 1': 9, 'Part 2': 53, 'Part 3': 99, 'Part 4': 78})
+        self.assertEqual(counts, {'Part 1': 9, 'Part 2': 61, 'Part 3': 123, 'Part 4': 102})
         p3 = next(x for x in self.listening if x.get('id') == 'part3-training-handouts')
         p4 = next(x for x in self.listening if x.get('id') == 'part4-east-elevator-maintenance')
         self.assertEqual(len(p3['segments']), 4)

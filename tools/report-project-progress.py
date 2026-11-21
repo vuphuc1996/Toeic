@@ -2,6 +2,7 @@
 """Generate a target-based progress snapshot from canonical project data."""
 from __future__ import annotations
 import json
+from collections import Counter
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 def load(path): return json.loads((ROOT / path).read_text(encoding='utf-8'))
@@ -37,6 +38,12 @@ def main():
     listening_q=sum(len(x.get('questions',[])) for x in listening)
     reading_q=sum(len(x.get('questions',[])) for x in readings)
     p5n=len(p5.get('questions',[]))
+    listening_pending_units=[x for x in listening if x.get('editorialStatus')=='reserve-pending-independent-review']
+    listening_pending_questions=sum(len(x.get('questions',[])) for x in listening_pending_units)
+    p7_pending_resources=[x for x in readings if x.get('part')=='Part 7' and x.get('editorialStatus')=='reserve-pending-independent-review']
+    p7_pending_questions=sum(len(x.get('questions',[])) for x in p7_pending_resources)
+    p5_pending_questions=p5n if p5.get('editorialStatus')=='reserve-pending-independent-review' else 0
+    independent_review_total=listening_pending_questions+p7_pending_questions+p5_pending_questions
     foundation_listening_questions=sum(len(x.get('questions',[])) for x in foundation_listening_core)
     foundation_listening_extended_questions=sum(len(x.get('questions',[])) for x in foundation_listening_extended)
     foundation_reading_questions=sum(len(x.get('questions',[])) for x in foundation_reading)
@@ -45,6 +52,20 @@ def main():
     vocab_records=[]
     for path in vocab_files:
         vocab_records.extend(json.loads(path.read_text(encoding='utf-8')).get('words', []))
+    related_keys={str(x.get('term','')).casefold() for x in load('data/related-terms.json').get('terms', [])}
+    related_frequency=Counter(
+      str(term).casefold()
+      for record in vocab_records
+      for sense in record.get('senses', [])
+      for field in ('synonyms','antonyms')
+      for term in (sense.get(field) or [])
+    )
+    related_total_distinct=len(related_frequency)
+    related_covered_distinct=len(set(related_frequency) & related_keys)
+    related_total_occurrences=sum(related_frequency.values())
+    related_covered_occurrences=sum(count for term,count in related_frequency.items() if term in related_keys)
+    related_missing_distinct=related_total_distinct-related_covered_distinct
+    related_missing_occurrences=related_total_occurrences-related_covered_occurrences
     field_counts={
       'US IPA':sum(bool((x.get('phonetic') or {}).get('us')) for x in vocab_records),
       'Word family':sum(bool(x.get('word_family')) for x in vocab_records),
@@ -62,6 +83,7 @@ def main():
       '|---|---:|---:|---:|---|',
       f'| Vocabulary headwords | {vocab:,} | 3,000 minimum | **{pct(vocab,3000)}** | Lower-bound target coverage; quality review separate |',
       f'| Vocabulary headwords | {vocab:,} | 5,000 planning ceiling | **{pct(vocab,5000)}** | Conservative ceiling coverage; not a quality score |',
+      f'| Related-term glossary exact reference join | {related_covered_distinct}/{related_total_distinct} | **{pct(related_covered_distinct,related_total_distinct)}** | {related_missing_distinct} distinct terms / {related_missing_occurrences} occurrences remain unglossed; exact case-insensitive join only |',
       f'| Guided pathway stages represented | {len(stages)}/6 | Pre-A1, A1, A2, B1, B2, C1 | **{pct(len(stages),6)}** | Stage presence only; not full-stage completion |',
       f'| Placement question mapping | {len(load("data/learning-path/placement-objective-map.json")["questionMappings"])}/{len(diag)} | All diagnostic questions | **{pct(len(load("data/learning-path/placement-objective-map.json")["questionMappings"]),len(diag))}** | Structural mapping coverage only |',
       f'| Canonical objective-resource links | {objective_mapped}/{objective_total} | {pct(objective_mapped,objective_total)} | ID links only; not learning-outcome completion |',
@@ -81,6 +103,7 @@ def main():
       f'| Listening | {len(listening)} units / {listening_q} questions | Chưa đo được — no agreed unit/question target |',
       f'| Reading | {len(readings)} resources / {reading_q} questions | Chưa đo được — no agreed resource/question target |',
       f'| Separate Part 5 practice | {p5n} questions | Chưa đo được — no agreed size target; independent review remains separate |',
+      f'| Independent review queue | {listening_pending_questions} Listening + {p7_pending_questions} Reading Part 7 + {p5_pending_questions} Part 5 = {independent_review_total} questions | Reviewer handoff only; no reserve item is Mock-approved by queue inclusion |',
       f'| Foundation Reading | {len(foundation_reading)}/{len(foundation)} passages / {foundation_reading_questions} questions | {pct(len(foundation_reading),len(foundation))} within current Pre-A1/A1/A2 scope | Separate reading bank; not Foundation mastery |',
       f'| Foundation Listening | {len(foundation_listening)}/{len(foundation)} core scripts / {foundation_listening_questions} core questions + {len(foundation_listening_extended)} supplementary A2 scripts / {foundation_listening_extended_questions} questions | {pct(len(foundation_listening),len(foundation))} core lesson coverage | Device Speech Synthesis; supplementary A2 is review-pending, not authentic ETS recordings |',
       f'| Foundation A–Z sound lab | {len(alphabet_sounds)}/26 letters | {pct(len(alphabet_sounds),26)} | Two TTS actions per letter; action count is not pronunciation mastery |',
@@ -101,6 +124,7 @@ def main():
       '- v2.92.0 batch 024 adds 8 Grammar lessons / 24 exercises, 6 TOEIC Listening units / 18 questions, and 6 TOEIC Reading Part 7 resources / 27 questions. All 12 new Listening/Reading resources remain reserve-pending-independent-review and excluded from Mock eligibility. v2.93.0 batch 025 adds 9 Grammar lessons / 27 exercises, 8 TOEIC Listening units / 20 questions, 8 TOEIC Reading Part 7 resources / 36 questions and 4 vocabulary headwords; new Listening/Reading items remain pending independent review and Mock-excluded.',
       '- Foundation A–Z records TTS play-button actions in `toeic:alphabet-sound-progress:v1`; no pronunciation analysis or mastery inference is performed.',
       '- Part 5 practice: pending independent review; do not count as Mock-eligible.',
+      f'- Independent-review handoff queue: {listening_pending_questions} Listening questions across {len(listening_pending_units)} units + {p7_pending_questions} Reading Part 7 questions across {len(p7_pending_resources)} resources + {p5_pending_questions} separate Part 5 questions = {independent_review_total} item-level decisions. Queue presence means traceable reviewer handoff only, not approval or Mock eligibility.',
       '- Listening pending-review pool and Mock-eligible counts must be tracked separately from raw inventory.',
       '- Placement is a short sample, not official CEFR/ETS certification.',
       '- TOEIC score readiness is a local evidence tracker based on three completed 200-question Full Mocks; it shows L/R practice-accuracy trends only and does not convert raw accuracy into ETS scaled scores or claim 500+/850+ readiness.',

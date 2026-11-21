@@ -1,0 +1,2889 @@
+{
+  "schemaVersion": 2,
+  "glossaryCount": 527,
+  "uniqueUnglossedTerms": 288,
+  "uncoveredReferenceCount": 289,
+  "terms": [
+    {
+      "term": "disorganize",
+      "references": 2,
+      "synonymReferences": 0,
+      "antonymReferences": 2,
+      "sourceHeadwordCount": 2,
+      "sourceHeadwords": [
+        "arrange",
+        "organize"
+      ]
+    },
+    {
+      "term": "administer",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "manage"
+      ]
+    },
+    {
+      "term": "alert",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "remind"
+      ]
+    },
+    {
+      "term": "alike",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "similar"
+      ]
+    },
+    {
+      "term": "appeal",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "solicitation"
+      ]
+    },
+    {
+      "term": "article",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "item"
+      ]
+    },
+    {
+      "term": "ask for",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "request"
+      ]
+    },
+    {
+      "term": "assist",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "support"
+      ]
+    },
+    {
+      "term": "assume",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "undertake"
+      ]
+    },
+    {
+      "term": "backer",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "sponsor"
+      ]
+    },
+    {
+      "term": "bargaining",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "negotiation"
+      ]
+    },
+    {
+      "term": "begin",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "embark"
+      ]
+    },
+    {
+      "term": "book",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "reserve"
+      ]
+    },
+    {
+      "term": "bring",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "deliver"
+      ]
+    },
+    {
+      "term": "business",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "commercial"
+      ]
+    },
+    {
+      "term": "caller",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "visitor"
+      ]
+    },
+    {
+      "term": "capable",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "efficient"
+      ]
+    },
+    {
+      "term": "car",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "vehicle"
+      ]
+    },
+    {
+      "term": "carry",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "transport"
+      ]
+    },
+    {
+      "term": "change",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "transition"
+      ]
+    },
+    {
+      "term": "characteristic",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "feature"
+      ]
+    },
+    {
+      "term": "choice",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "option"
+      ]
+    },
+    {
+      "term": "clothing",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "attire"
+      ]
+    },
+    {
+      "term": "comments",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "feedback"
+      ]
+    },
+    {
+      "term": "communicate with",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "contact"
+      ]
+    },
+    {
+      "term": "company",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "employer"
+      ]
+    },
+    {
+      "term": "comparable",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "similar"
+      ]
+    },
+    {
+      "term": "compute",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "calculate"
+      ]
+    },
+    {
+      "term": "conformity",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "compliance"
+      ]
+    },
+    {
+      "term": "connection",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "network"
+      ]
+    },
+    {
+      "term": "consequence",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "outcome"
+      ]
+    },
+    {
+      "term": "consideration",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "consider"
+      ]
+    },
+    {
+      "term": "consistent",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "regular"
+      ]
+    },
+    {
+      "term": "consolidation",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "merger"
+      ]
+    },
+    {
+      "term": "contain",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "include"
+      ]
+    },
+    {
+      "term": "continuity",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "retention"
+      ]
+    },
+    {
+      "term": "conversion",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "transition"
+      ]
+    },
+    {
+      "term": "currency",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "cash"
+      ]
+    },
+    {
+      "term": "customs duty",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "tariff"
+      ]
+    },
+    {
+      "term": "declaration",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "statement"
+      ]
+    },
+    {
+      "term": "defeat",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "failure"
+      ]
+    },
+    {
+      "term": "description",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "specification"
+      ]
+    },
+    {
+      "term": "destruction",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "demolition"
+      ]
+    },
+    {
+      "term": "details",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "information"
+      ]
+    },
+    {
+      "term": "development",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "progress"
+      ]
+    },
+    {
+      "term": "discussion",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "negotiation"
+      ]
+    },
+    {
+      "term": "disturbance",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "disruption"
+      ]
+    },
+    {
+      "term": "down payment",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "deposit"
+      ]
+    },
+    {
+      "term": "eager",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "willing"
+      ]
+    },
+    {
+      "term": "earning capacity",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "profitability"
+      ]
+    },
+    {
+      "term": "employees",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "staff"
+      ]
+    },
+    {
+      "term": "endure",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "withstand"
+      ]
+    },
+    {
+      "term": "engineer",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "technician"
+      ]
+    },
+    {
+      "term": "entire",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "complete"
+      ]
+    },
+    {
+      "term": "entry-level",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "junior"
+      ]
+    },
+    {
+      "term": "eventuality",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "contingency"
+      ]
+    },
+    {
+      "term": "example",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "sample"
+      ]
+    },
+    {
+      "term": "execution",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "implementation"
+      ]
+    },
+    {
+      "term": "existing",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "current"
+      ]
+    },
+    {
+      "term": "expand",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "extend"
+      ]
+    },
+    {
+      "term": "expected",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "due"
+      ]
+    },
+    {
+      "term": "experienced",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "senior"
+      ]
+    },
+    {
+      "term": "external",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "offsite"
+      ]
+    },
+    {
+      "term": "fault",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "error"
+      ]
+    },
+    {
+      "term": "field",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "industry"
+      ]
+    },
+    {
+      "term": "figure out",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "calculate"
+      ]
+    },
+    {
+      "term": "figures",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "data"
+      ]
+    },
+    {
+      "term": "finance office",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "treasury"
+      ]
+    },
+    {
+      "term": "financial system",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "economy"
+      ]
+    },
+    {
+      "term": "find",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "locate"
+      ]
+    },
+    {
+      "term": "finish",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "complete"
+      ]
+    },
+    {
+      "term": "fit",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "install"
+      ]
+    },
+    {
+      "term": "following",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "subsequent"
+      ]
+    },
+    {
+      "term": "foundation",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "infrastructure"
+      ]
+    },
+    {
+      "term": "framework",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "infrastructure"
+      ]
+    },
+    {
+      "term": "free",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "available"
+      ]
+    },
+    {
+      "term": "garbage",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "waste"
+      ]
+    },
+    {
+      "term": "group",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "team"
+      ]
+    },
+    {
+      "term": "grow",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "develop"
+      ]
+    },
+    {
+      "term": "growth",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "increase"
+      ]
+    },
+    {
+      "term": "handy",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "convenient"
+      ]
+    },
+    {
+      "term": "help",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "support"
+      ]
+    },
+    {
+      "term": "high-ranking",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "senior"
+      ]
+    },
+    {
+      "term": "hinder",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "hamper"
+      ]
+    },
+    {
+      "term": "hold-up",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "delay"
+      ]
+    },
+    {
+      "term": "important",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "significant"
+      ]
+    },
+    {
+      "term": "improvement",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "progress"
+      ]
+    },
+    {
+      "term": "in agreement",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "unanimous"
+      ]
+    },
+    {
+      "term": "initial",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "preliminary"
+      ]
+    },
+    {
+      "term": "inside",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "within"
+      ]
+    },
+    {
+      "term": "inspire",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "motivate"
+      ]
+    },
+    {
+      "term": "intellectual property right",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "patent"
+      ]
+    },
+    {
+      "term": "intensify",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "escalate"
+      ]
+    },
+    {
+      "term": "intermediation",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "brokerage"
+      ]
+    },
+    {
+      "term": "interruption",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "disruption"
+      ]
+    },
+    {
+      "term": "investigation",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "research"
+      ]
+    },
+    {
+      "term": "job",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "task"
+      ]
+    },
+    {
+      "term": "later",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "subsequent"
+      ]
+    },
+    {
+      "term": "latest",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "recent"
+      ]
+    },
+    {
+      "term": "lawful",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "legal"
+      ]
+    },
+    {
+      "term": "layout",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "design"
+      ]
+    },
+    {
+      "term": "leader",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "manager"
+      ]
+    },
+    {
+      "term": "least",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "minimum"
+      ]
+    },
+    {
+      "term": "leave employment",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "retire"
+      ]
+    },
+    {
+      "term": "lengthen",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "extend"
+      ]
+    },
+    {
+      "term": "less than",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "within"
+      ]
+    },
+    {
+      "term": "long-lasting",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "sustainable"
+      ]
+    },
+    {
+      "term": "lower",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "reduce"
+      ]
+    },
+    {
+      "term": "lower-ranking",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "junior"
+      ]
+    },
+    {
+      "term": "lowest",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "minimum"
+      ]
+    },
+    {
+      "term": "main",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "key"
+      ]
+    },
+    {
+      "term": "make ready",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "prepare"
+      ]
+    },
+    {
+      "term": "make sure",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "ensure"
+      ]
+    },
+    {
+      "term": "manufacturing site",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "factory"
+      ]
+    },
+    {
+      "term": "match",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "reconcile"
+      ]
+    },
+    {
+      "term": "mechanical",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "technical"
+      ]
+    },
+    {
+      "term": "mechanize",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "automate"
+      ]
+    },
+    {
+      "term": "meet",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "satisfy"
+      ]
+    },
+    {
+      "term": "mistake",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "error"
+      ]
+    },
+    {
+      "term": "misuse",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "waste"
+      ]
+    },
+    {
+      "term": "money management",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "finance"
+      ]
+    },
+    {
+      "term": "necessitate",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "require"
+      ]
+    },
+    {
+      "term": "need",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "require"
+      ]
+    },
+    {
+      "term": "new",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "recent"
+      ]
+    },
+    {
+      "term": "obstruct",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "hamper"
+      ]
+    },
+    {
+      "term": "office",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "branch"
+      ]
+    },
+    {
+      "term": "one-of-a-kind",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "unique"
+      ]
+    },
+    {
+      "term": "organization",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "employer"
+      ]
+    },
+    {
+      "term": "orientation",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "onboarding"
+      ]
+    },
+    {
+      "term": "outfit",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "attire"
+      ]
+    },
+    {
+      "term": "part",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "section"
+      ]
+    },
+    {
+      "term": "particular",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "specific"
+      ]
+    },
+    {
+      "term": "persevere",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "persist"
+      ]
+    },
+    {
+      "term": "personnel planning",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "staffing"
+      ]
+    },
+    {
+      "term": "pick",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "select"
+      ]
+    },
+    {
+      "term": "plant",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "factory"
+      ]
+    },
+    {
+      "term": "please",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "satisfy"
+      ]
+    },
+    {
+      "term": "possible",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "potential"
+      ]
+    },
+    {
+      "term": "potential customer",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "prospect"
+      ]
+    },
+    {
+      "term": "practical",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "viable"
+      ]
+    },
+    {
+      "term": "precise",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "specific"
+      ]
+    },
+    {
+      "term": "preparatory",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "preliminary"
+      ]
+    },
+    {
+      "term": "preservation",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "retention"
+      ]
+    },
+    {
+      "term": "price",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "cost"
+      ]
+    },
+    {
+      "term": "price estimate",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "quotation"
+      ]
+    },
+    {
+      "term": "price increase",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "inflation"
+      ]
+    },
+    {
+      "term": "prior",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "previous"
+      ]
+    },
+    {
+      "term": "productive",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "efficient"
+      ]
+    },
+    {
+      "term": "program",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "initiative"
+      ]
+    },
+    {
+      "term": "prompt",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "remind"
+      ]
+    },
+    {
+      "term": "propose",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "suggest"
+      ]
+    },
+    {
+      "term": "prospective",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "potential"
+      ]
+    },
+    {
+      "term": "protect",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "preserve"
+      ]
+    },
+    {
+      "term": "publish",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "release"
+      ]
+    },
+    {
+      "term": "purchasing",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "procurement"
+      ]
+    },
+    {
+      "term": "qualified",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "professional"
+      ]
+    },
+    {
+      "term": "questioning",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "interview"
+      ]
+    },
+    {
+      "term": "raise",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "escalate"
+      ]
+    },
+    {
+      "term": "ready",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "willing"
+      ]
+    },
+    {
+      "term": "recognition",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "credit"
+      ]
+    },
+    {
+      "term": "recognize",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "identify"
+      ]
+    },
+    {
+      "term": "remainder",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "balance"
+      ]
+    },
+    {
+      "term": "remedy",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "solution"
+      ]
+    },
+    {
+      "term": "reply",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "respond"
+      ]
+    },
+    {
+      "term": "report",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "statement"
+      ]
+    },
+    {
+      "term": "resist",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "withstand"
+      ]
+    },
+    {
+      "term": "rise",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "increase"
+      ]
+    },
+    {
+      "term": "save",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "reserve"
+      ]
+    },
+    {
+      "term": "sector",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "industry"
+      ]
+    },
+    {
+      "term": "set up",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "install"
+      ]
+    },
+    {
+      "term": "several",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "various"
+      ]
+    },
+    {
+      "term": "shop trade",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "retail"
+      ]
+    },
+    {
+      "term": "show",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "indicate"
+      ]
+    },
+    {
+      "term": "signal",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "indicate"
+      ]
+    },
+    {
+      "term": "skilled",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "professional"
+      ]
+    },
+    {
+      "term": "specialized",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "technical"
+      ]
+    },
+    {
+      "term": "specimen",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "sample"
+      ]
+    },
+    {
+      "term": "spending",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "expenditure"
+      ]
+    },
+    {
+      "term": "station",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "terminal"
+      ]
+    },
+    {
+      "term": "stay",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "remain"
+      ]
+    },
+    {
+      "term": "stop",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "prevent"
+      ]
+    },
+    {
+      "term": "structure",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "system"
+      ]
+    },
+    {
+      "term": "substance",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "material"
+      ]
+    },
+    {
+      "term": "substitute",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "replace"
+      ]
+    },
+    {
+      "term": "successful",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "effective"
+      ]
+    },
+    {
+      "term": "suitable",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "convenient"
+      ]
+    },
+    {
+      "term": "supply management",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "logistics"
+      ]
+    },
+    {
+      "term": "supporter",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "sponsor"
+      ]
+    },
+    {
+      "term": "susceptibility",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "exposure"
+      ]
+    },
+    {
+      "term": "swap",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "exchange"
+      ]
+    },
+    {
+      "term": "tag",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "label"
+      ]
+    },
+    {
+      "term": "takeover",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "acquisition"
+      ]
+    },
+    {
+      "term": "technique",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "method"
+      ]
+    },
+    {
+      "term": "three-month period",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "quarter"
+      ]
+    },
+    {
+      "term": "track",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "monitor"
+      ]
+    },
+    {
+      "term": "training session",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "workshop"
+      ]
+    },
+    {
+      "term": "travel",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "journey"
+      ]
+    },
+    {
+      "term": "traveler",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "passenger"
+      ]
+    },
+    {
+      "term": "traveller",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "passenger"
+      ]
+    },
+    {
+      "term": "trip",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "journey"
+      ]
+    },
+    {
+      "term": "unable to",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "unable"
+      ]
+    },
+    {
+      "term": "unit",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "department"
+      ]
+    },
+    {
+      "term": "use",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "utilization"
+      ]
+    },
+    {
+      "term": "useful",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "valuable"
+      ]
+    },
+    {
+      "term": "usual",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "regular"
+      ]
+    },
+    {
+      "term": "variety",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "range"
+      ]
+    },
+    {
+      "term": "vary",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "fluctuate"
+      ]
+    },
+    {
+      "term": "vital",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "indispensable"
+      ]
+    },
+    {
+      "term": "wages",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "salary"
+      ]
+    },
+    {
+      "term": "work clothes",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "uniform"
+      ]
+    },
+    {
+      "term": "work together",
+      "references": 1,
+      "synonymReferences": 1,
+      "antonymReferences": 0,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "cooperate"
+      ]
+    },
+    {
+      "term": "abandonment",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "implementation"
+      ]
+    },
+    {
+      "term": "able",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "unable"
+      ]
+    },
+    {
+      "term": "accuracy",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "error"
+      ]
+    },
+    {
+      "term": "actual",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "potential"
+      ]
+    },
+    {
+      "term": "careless",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "careful"
+      ]
+    },
+    {
+      "term": "certainty",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "contingency"
+      ]
+    },
+    {
+      "term": "compete",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "cooperate"
+      ]
+    },
+    {
+      "term": "compliment",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "complaint"
+      ]
+    },
+    {
+      "term": "conserve",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "waste"
+      ]
+    },
+    {
+      "term": "debit",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "credit"
+      ]
+    },
+    {
+      "term": "demote",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "promote"
+      ]
+    },
+    {
+      "term": "destroy",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "create"
+      ]
+    },
+    {
+      "term": "disagree",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "reconcile"
+      ]
+    },
+    {
+      "term": "disappoint",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "satisfy"
+      ]
+    },
+    {
+      "term": "disservice",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "service"
+      ]
+    },
+    {
+      "term": "distant",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "recent"
+      ]
+    },
+    {
+      "term": "downgrade",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "upgrade"
+      ]
+    },
+    {
+      "term": "driver",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "passenger"
+      ]
+    },
+    {
+      "term": "exclude",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "include"
+      ]
+    },
+    {
+      "term": "face",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "avoid"
+      ]
+    },
+    {
+      "term": "final",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "preliminary"
+      ]
+    },
+    {
+      "term": "follow",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "lead"
+      ]
+    },
+    {
+      "term": "forget",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "remind"
+      ]
+    },
+    {
+      "term": "general",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "specific"
+      ]
+    },
+    {
+      "term": "hesitate",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "decide"
+      ]
+    },
+    {
+      "term": "illegal",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "legal"
+      ]
+    },
+    {
+      "term": "improvisation",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "strategy"
+      ]
+    },
+    {
+      "term": "inability",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "skill"
+      ]
+    },
+    {
+      "term": "incomplete",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "complete"
+      ]
+    },
+    {
+      "term": "inconvenient",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "convenient"
+      ]
+    },
+    {
+      "term": "ineffective",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "effective"
+      ]
+    },
+    {
+      "term": "inefficient",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "efficient"
+      ]
+    },
+    {
+      "term": "insignificant",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "significant"
+      ]
+    },
+    {
+      "term": "invalid",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "valid"
+      ]
+    },
+    {
+      "term": "irregular",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "regular"
+      ]
+    },
+    {
+      "term": "irresponsibility",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "responsibility"
+      ]
+    },
+    {
+      "term": "jeopardize",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "ensure"
+      ]
+    },
+    {
+      "term": "local",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "worldwide"
+      ]
+    },
+    {
+      "term": "lose",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "locate"
+      ]
+    },
+    {
+      "term": "management",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "staff"
+      ]
+    },
+    {
+      "term": "misidentify",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "identify"
+      ]
+    },
+    {
+      "term": "mislead",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "guide"
+      ]
+    },
+    {
+      "term": "mismanage",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "manage"
+      ]
+    },
+    {
+      "term": "noncommercial",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "commercial"
+      ]
+    },
+    {
+      "term": "nontechnical",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "technical"
+      ]
+    },
+    {
+      "term": "outside",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "within"
+      ]
+    },
+    {
+      "term": "privilege",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "duty"
+      ]
+    },
+    {
+      "term": "prohibit",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "permit"
+      ]
+    },
+    {
+      "term": "prohibition",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "license"
+      ]
+    },
+    {
+      "term": "rare",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "frequent"
+      ]
+    },
+    {
+      "term": "rejection",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "proposal"
+      ]
+    },
+    {
+      "term": "sale",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "acquisition"
+      ]
+    },
+    {
+      "term": "same",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "various"
+      ]
+    },
+    {
+      "term": "separation",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "merger"
+      ]
+    },
+    {
+      "term": "services",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "goods"
+      ]
+    },
+    {
+      "term": "shorten",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "extend"
+      ]
+    },
+    {
+      "term": "shutdown",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "operation"
+      ]
+    },
+    {
+      "term": "similarity",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "difference"
+      ]
+    },
+    {
+      "term": "spend",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "earn"
+      ]
+    },
+    {
+      "term": "stabilize",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "fluctuate"
+      ]
+    },
+    {
+      "term": "subjective",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "objective"
+      ]
+    },
+    {
+      "term": "substandard",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "standard"
+      ]
+    },
+    {
+      "term": "success",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "failure"
+      ]
+    },
+    {
+      "term": "succumb",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "withstand"
+      ]
+    },
+    {
+      "term": "unavailable",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "available"
+      ]
+    },
+    {
+      "term": "unemployment",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "employment"
+      ]
+    },
+    {
+      "term": "unlimited amount",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "limit"
+      ]
+    },
+    {
+      "term": "unprofessional",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "professional"
+      ]
+    },
+    {
+      "term": "unprofitability",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "profitability"
+      ]
+    },
+    {
+      "term": "unsustainable",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "sustainable"
+      ]
+    },
+    {
+      "term": "unwilling",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "willing"
+      ]
+    },
+    {
+      "term": "unworkable",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "viable"
+      ]
+    },
+    {
+      "term": "violation",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "compliance"
+      ]
+    },
+    {
+      "term": "waive",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "require"
+      ]
+    },
+    {
+      "term": "whole",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "section"
+      ]
+    },
+    {
+      "term": "worsen",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "improve"
+      ]
+    },
+    {
+      "term": "worthless",
+      "references": 1,
+      "synonymReferences": 0,
+      "antonymReferences": 1,
+      "sourceHeadwordCount": 1,
+      "sourceHeadwords": [
+        "valuable"
+      ]
+    }
+  ]
+}

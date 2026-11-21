@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "release": "2.71.0",
+  "release": "2.95.30",
   "title": "Cumulative US IPA backfill from CMUdict single-pronunciation entries",
   "source": {
     "name": "CMU Pronouncing Dictionary (CMUdict)",
@@ -23,7 +23,7 @@
     "editorial_review_pending": 1,
     "policy": "Leave phonetic.us blank until a lexical/editorial decision selects the correct US reading. The 91 unresolved records from the 1,063-headword base are inherited; Batch 012 exclusions are counted cumulatively."
   },
-  "recordCount": 333,
+  "recordCount": 334,
   "records": [
     {
       "id": "absenteeism-n",
@@ -4938,10 +4938,25 @@
         "AY2"
       ],
       "phoneticUs": "/ˈɑk.jə.ˌpaɪ/"
+    },
+    {
+      "id": "dispute-nv",
+      "word": "dispute",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "P",
+        "Y",
+        "UW1",
+        "T"
+      ],
+      "phoneticUs": "/dɪ.ˈspjut/"
     }
   ],
   "notes": [
     "This is a cumulative ledger: v2.70.0 entries plus exact single-pronunciation Batch 012 entries.",
-    "Batch 012 additions with multiple CMUdict pronunciations, no exact entry, or failed conversion are left blank pending editorial review."
+    "Batch 012 additions with multiple CMUdict pronunciations, no exact entry, or failed conversion are left blank pending editorial review.",
+    "1 exact single-variant missing-IPA records safely backfilled in v2.95.30 after converter validation; ambiguous and conversion-failing records remain blank."
   ]
 }

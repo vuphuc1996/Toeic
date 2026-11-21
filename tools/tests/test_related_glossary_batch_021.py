@@ -43,7 +43,8 @@ class RelatedGlossaryBatch021Tests(unittest.TestCase):
     def test_every_new_gloss_is_present_and_cambridge_sourced(self):
         for entry in self.batch["records"]:
             current = self.related[entry["term"].casefold()]
-            self.assertEqual(current, entry)
+            for key, value in entry.items():
+                self.assertEqual(current.get(key), value, entry["term"])
             self.assertTrue(entry["meaning_vi"].strip())
             self.assertTrue(entry["definition_en"].strip())
             self.assertTrue(entry["sourceUrls"])

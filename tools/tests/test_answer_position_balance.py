@@ -78,9 +78,9 @@ class AnswerPositionBalanceTests(unittest.TestCase):
         historical_listening = [x for x in self.listening if x.get('editorialStatus') != 'reserve-pending-independent-review']
         reserve_listening = [x for x in self.listening if x.get('editorialStatus') == 'reserve-pending-independent-review']
         self.assertEqual(sum(len(x.get('questions', [])) for x in historical_listening), 102)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve_listening), 137)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 239)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in self.reading), 263)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve_listening), 161)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 263)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in self.reading), 287)
 
     def test_v233_new_part7_answer_balance_keeps_choice_identity(self):
         mapping = json.loads((ROOT / 'tools/answer-position-balance-v2.33.0.json').read_text(encoding='utf-8'))

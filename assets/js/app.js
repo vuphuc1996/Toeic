@@ -15,7 +15,7 @@ import { createRobotBuddy } from './robot-buddy.js';
 import { renderAdditionalFlashSenses } from './flashcard-senses.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.16';
+const APP_RELEASE_VERSION = '2.95.39';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -982,12 +982,16 @@ function getChoiceExplanation(q, choice, isCorrect) {
       return `Nghĩa của ${displayWord(exact.word)}: ${senses||'Chưa có nghĩa tiếng Việt.'}`;
     }
     const alias=state.relatedTerms?.get(normalizedAnswer(choice));
+    const relationKey=q.mode==='synonym'?'synonyms':'antonyms';
     const relation=q.mode==='synonym'?'đồng nghĩa với':'trái nghĩa với';
     const source=state.words.find(w=>w.id===q.wordId);
-    const refs=findRelatedSources(choice);
+    // Keep explanatory context relation-specific; an antonym reference must not be
+    // presented as evidence for a synonym (or vice versa).
+    const refs=findRelatedSources(choice,relationKey);
     if(alias) {
-      const context=refs.length?` Có liên hệ trong dữ liệu với: ${refs.map(w=>`${displayWord(w.word)} (${getPrimarySense(w).meaning_vi})`).join('; ')}.`:'';
-      return `Nghĩa tiếng Việt: ${alias.meaning_vi}. Đây là phương án ${relation} ${displayWord(q.word)} trong câu hỏi hiện tại.${context}`;
+      const details=[alias.pos?`Loại từ: ${alias.pos}`:'',alias.definition_en?`English: ${alias.definition_en}`:''].filter(Boolean).join(' · ');
+      const context=refs.length?` Có liên hệ ${relationKey==='synonyms'?'đồng nghĩa':'trái nghĩa'} trong dữ liệu với: ${refs.map(w=>`${displayWord(w.word)} (${getPrimarySense(w).meaning_vi})`).join('; ')}.`:'';
+      return `Nghĩa tiếng Việt: ${alias.meaning_vi}.${details?` ${details}.`:''} Đây là phương án ${relation} ${displayWord(q.word)} trong câu hỏi hiện tại.${context}`;
     }
     if(isCorrect) {
       const meaning=source?getPrimarySense(source).meaning_vi:'';
@@ -3250,7 +3254,7 @@ function robotSaveSettings(patch){
 }
 function updateRobotInsightsToggle(){
   const button=$('#robotInsightsToggle');if(!button)return;
-  const enabled=robotReadSettings().learningInsightsEnabled!==false;
+  const enabled=robotReadSettings().learningInsightsEnabled===true;
   button.textContent=enabled?'Phân tích tiến độ: Bật':'Phân tích tiến độ: Tắt';
   button.setAttribute('aria-pressed',String(enabled));
 }
@@ -3261,10 +3265,15 @@ function updateRobotMuteToggle(){
   button.setAttribute('aria-pressed',String(enabled));
   button.title=enabled?'Tắt lời nhắc tự động':'Bật lời nhắc tự động';
 }
+function clearRobotProgressDashboards(){
+  document.querySelectorAll('#robotChatLog .robot-progress-dashboard').forEach(node=>node.remove());
+}
 function toggleRobotInsights(){
-  const enabled=robotReadSettings().learningInsightsEnabled!==false;
-  robotSaveSettings({learningInsightsEnabled:!enabled});updateRobotInsightsToggle();
-  appendRobotMessage('bot',!enabled?'Mình đã bật phân tích tiến độ. Khi bạn hỏi “Tiến độ học của tôi”, mình sẽ đọc các bản ghi trên thiết bị để tổng hợp.':'Mình đã tắt phân tích tiến độ. Mình sẽ không đọc dữ liệu học tập để phân tích nữa, nhưng vẫn trò chuyện và hướng dẫn chức năng bình thường.');
+  const enabled=robotReadSettings().learningInsightsEnabled===true;
+  const nextEnabled=!enabled;
+  robotSaveSettings({learningInsightsEnabled:nextEnabled});updateRobotInsightsToggle();
+  if(!nextEnabled)clearRobotProgressDashboards();
+  appendRobotMessage('bot',nextEnabled?'Mình đã bật phân tích tiến độ. Khi bạn hỏi “Tiến độ học của tôi”, mình sẽ đọc các bản ghi trên thiết bị để tổng hợp.':'Mình đã tắt phân tích tiến độ. Mình sẽ không đọc dữ liệu học tập để phân tích nữa. Bảng phân tích đã hiển thị được gỡ khỏi cuộc trò chuyện, nhưng các tin nhắn khác vẫn được giữ nguyên. Mình vẫn trò chuyện và hướng dẫn chức năng bình thường.');
 }
 function renderRobotMessageText(content,message){
   content.textContent='';
@@ -3367,7 +3376,7 @@ function getRobotLearningSnapshot(){
   return {words:state.words,vocabularyProgress:state.progress,flashProgress:state.flashProgress,grammarItems:state.grammarLessons,grammarProgress:state.grammarProgress,readingItems:state.readings,readingProgress:state.readingProgress,listeningItems:state.listening,listeningProgress:state.listeningProgress,foundationItems:state.foundationLessons,foundationProgressMap:state.foundationProgress,foundationReadingItems:state.foundationReadingPassages,foundationReadingProgress:state.foundationReadingProgress,foundationListeningItems:state.foundationListeningClips,foundationListeningProgress:state.foundationListeningProgress,objectiveProgress:state.objectiveProgress,objectiveResourceMap:state.objectiveResourceMap,mockHistory:state.mockHistory};
 }
 function getRobotLearningInsightsNow(){
-  if(robotReadSettings().learningInsightsEnabled===false)return null;
+  if(robotReadSettings().learningInsightsEnabled!==true)return null;
   return buildRobotLearningInsights(getRobotLearningSnapshot());
 }
 function getRobotInsightActions(insights){
@@ -3442,7 +3451,7 @@ function appendRobotProgressDashboard(insights,anchor=null,actions=[]){
   log.scrollTop=log.scrollHeight;return dashboard;
 }
 function runRobotProgressAnalysis(){
-  if(robotReadSettings().learningInsightsEnabled===false){streamRobotMessage('Phân tích tiến độ đang tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ: Tắt” ở phía trên.');return;}
+  if(robotReadSettings().learningInsightsEnabled!==true){streamRobotMessage('Phân tích tiến độ đang tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ: Tắt” ở phía trên.');return;}
   const insights=getRobotLearningInsightsNow();
   appendRobotMessage('user','Phân tích tiến độ học tập của tôi.');
   setRobotEmotion('analyzing');
@@ -3500,10 +3509,10 @@ function sendRobotMessage(rawText){
   const settings=robotReadSettings();
   const reply=robotBuddyEngine.reply(text,getRobotAppContext());
   let progressInsights=null;
-  if(intent.intent==='insights'&&settings.learningInsightsEnabled!==false){
+  if(intent.intent==='insights'&&settings.learningInsightsEnabled===true){
     progressInsights=getRobotLearningInsightsNow();
     reply.actions=getRobotInsightActions(progressInsights);
-  }else if(intent.intent==='insights'&&settings.learningInsightsEnabled===false){
+  }else if(intent.intent==='insights'&&settings.learningInsightsEnabled!==true){
     reply.text='Phân tích tiến độ đang tắt. Bạn có thể bật lại bằng nút “Phân tích tiến độ” phía trên; các hướng dẫn học tập thông thường vẫn hoạt động.';
   }
   robotTypingTimer=setTimeout(()=>{
@@ -3523,8 +3532,8 @@ function sendRobotMessage(rawText){
 function robotShowWelcome(){
   const log=$('#robotChatLog');if(!log||robotChatInitialized)return;
   robotChatInitialized=true;log.innerHTML='';
-  const enabled=robotReadSettings().learningInsightsEnabled!==false;
-  appendRobotMessage('bot','Xin chào! Mình là Robot Buddy 🤖. Mình có thể trò chuyện, giới thiệu chức năng, hướng dẫn bạn sử dụng ứng dụng và đọc tiến độ học được lưu ngay trên thiết bị để gợi ý nội dung cần học, luyện và ôn. Mình không gửi dữ liệu học tập ra ngoài và không phải chatbot AI trực tuyến.',[{label:enabled?'Phân tích tiến độ của tôi':'Bật phân tích tiến độ',command:enabled?'analyze-progress':'enable-progress-analysis'}]);
+  const enabled=robotReadSettings().learningInsightsEnabled===true;
+  appendRobotMessage('bot','Xin chào! Mình là Robot Buddy 🤖. Mình có thể trò chuyện, giới thiệu chức năng và hướng dẫn bạn sử dụng ứng dụng. Nếu bạn chủ động bật Phân tích tiến độ, mình có thể tổng hợp dữ liệu học đã lưu ngay trên thiết bị để gợi ý nội dung cần học, luyện và ôn. Mình không gửi dữ liệu học tập ra ngoài và không phải chatbot AI trực tuyến.',[{label:enabled?'Phân tích tiến độ của tôi':'Bật phân tích tiến độ',command:enabled?'analyze-progress':'enable-progress-analysis'}]);
   const settings=robotReadSettings();
   if(!settings.onboardingChoice){
     appendRobotMessage('bot','Trước khi bắt đầu, bạn có muốn làm bài đánh giá đầu vào có sẵn để tham khảo điểm bắt đầu không?');

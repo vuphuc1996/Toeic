@@ -4,12 +4,12 @@ from __future__ import annotations
 import argparse, io, re, subprocess, tarfile, zipfile
 from pathlib import Path
 
-EXCLUDED_DIRS = {".git", "logs", "archive", "__pycache__", ".pytest_cache", "node_modules", "release", "releases"}
-EXCLUDED_SUFFIXES = {".zip", ".bundle", ".log", ".pyc"}
+EXCLUDED_DIRS = {".git", "logs", "__pycache__", ".pytest_cache", "node_modules", "release", "releases"}
+EXCLUDED_SUFFIXES = {".zip", ".bundle", ".log", ".pyc", ".tmp"}
 
 def is_excluded(path: str) -> bool:
     parts = Path(path).parts
-    if any(part in EXCLUDED_DIRS or part.startswith("release_") for part in parts):
+    if (parts and parts[0] == "archive") or any(part in EXCLUDED_DIRS or part.startswith("release_") for part in parts):
         return True
     if Path(path).suffix.lower() in EXCLUDED_SUFFIXES:
         return True

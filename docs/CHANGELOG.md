@@ -1,3 +1,206 @@
+## v2.95.39 — Related Glossary research batch 033 (8 terms)
+
+- Added 8 previously uncovered synonym/antonym terms: **ability, acceptable, action, accusation, advertise, advise, allow, announce**.
+- Each entry now includes Vietnamese meaning, part of speech, a concise paraphrased English definition and a direct Cambridge Dictionary source URL.
+- Source terms and relation arrays were not rewritten; canonical vocabulary, learner data, question keys, IndexedDB schema and UI layout remain unchanged.
+- Added a dedicated 3-test regression suite and CI registration. Editorial review remains pending; dictionary-source research is not equivalent to independent pedagogical approval.
+- Validation in this release is recorded in `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.95.39.md`.
+
+## v2.95.38 — Context-aware synonym/antonym explanations
+
+- Packaging: FullSource **559 files**; Update Patch **12 files (9 changed + 3 added)**, no deletions; replay on v2.95.37 exact **559/559**; CRC/root/SHA PASS.
+
+- Corrected choice-review context lookup to filter relation sources by the active question type: synonym explanations only use synonym references; antonym explanations only use antonym references. Prevents misleading cross-relation evidence.
+- Related Glossary alias explanations now include available POS and English definition alongside Vietnamese meaning. Missing metadata is omitted; no definitions or relations were invented.
+- Added 3 focused regression tests and registered the suite in CI Python syntax and test steps.
+- Validation: focused tests **3/3 PASS**; version sync check PASS. No vocabulary relations, canonical word records, question answers, learner data, IndexedDB schema, or UI layout changed.
+- This release is a focused functional correctness patch, not a content-completion milestone.
+
+## v2.95.37 — Listening expansion batch 027 (32 questions)
+
+- Added 16 original-editorial Listening resources: 8 Part 2 response items, 4 Part 3 conversations and 4 Part 4 talks, totaling 32 questions.
+- Added transcript evidence pointers for every question, Vietnamese explanations, stable choice IDs, review notes, and batch/source metadata. All 16 units are reserve-pending independent review and fail-closed excluded from Mock.
+- Mapped all 16 new resources into the corresponding Listening objective resource groups; canonical objective-resource links are now **379/379**.
+- Updated listening readiness and question-evidence audits, made the distractor structural audit version-aware/dynamic instead of retaining stale 240/171 totals, and refreshed mock-reserve count tests.
+- Validation: learning content 0 errors/0 warnings; 104 focused Python tests PASS; 39/39 JavaScript suites PASS; objective resource mapping 379/379; distractor structural audit PASS; version sync PASS. Full Python discovery, remote CI, Pages deployment and physical-device QA not run.
+- Listening inventory: **145 units / 295 questions**; 102 eligible and 193 pending review. Part 1 still has only 8 eligible questions; one pending item is retained. No Mock eligibility changed.
+- No UI redesign, vocabulary IDs, glossary entries, learner progress, IndexedDB schema or answer-history records changed.
+
+## v2.95.35 — canonical glossary provenance recovery batch 031
+
+- Added canonical sense-index (`sourceSenseIndex: 0`) for **155** exact-match single-sense glossary entries.
+- Recovered missing source-headword/source-release fields for **37** entries and POS for **6** entries; total **165** glossary rows changed (some updates overlap).
+- New policy: source sense index is assigned only for a single-sense canonical match. Multi-sense rows remain unindexed and missing definitions are not auto-joined. Existing English definitions and Vietnamese glosses are preserved.
+- Added reusable idempotent enrichment tool and 5 regression tests; batch provenance tests were hardened to allow additional provenance fields while checking original batch values.
+- Quality snapshot: 519 glossary rows; 156 missing definitions; 73 placeholders; 223 missing POS; 75 audit-flagged missing source labels; 0 duplicate normalized terms. (Flag counts overlap; priorities are exclusive.)
+- Validation: 79/79 focused glossary tests, 3/3 CI coverage tests and 39/39 JavaScript suites PASS; data/content/integrity/version validators PASS. Full Python discovery remains incomplete due runtime timeout. FullSource 535 files; Patch 26 entries (18 changed + 8 added), 0 deletions; exact replay 535/535; CRC/SHA PASS.
+
+## v2.95.34 — Related Glossary canonical definition backfill (73 terms)
+
+- Backfilled English definitions and POS for 73 glossary terms with an exact canonical vocabulary headword and a single canonical sense; copied values verbatim, no external paraphrase or inference.
+- Preserved every existing Vietnamese meaning and all 519 term identities. Ambiguous multi-sense exact matches and non-matching terms remain untouched.
+- Added batch 030 ledger and 3 focused regression tests; registered the suite in CI and repository-integrity coverage.
+- Verification: Python 592 PASS / 1 SKIP (Git metadata-dependent), JavaScript 39/39 PASS; vocabulary and learning validators PASS with 0 errors/warnings; repository integrity 406 files, 0 errors/warnings; version sync PASS. FullSource 527 files; patch 24 entries (15 changed + 9 added), 0 deletions; replay exact 527/527; CRC and SHA PASS. No UI, learner progress, IndexedDB, or question-answer content changed.
+
+## v2.95.33 — Related Glossary QC triage
+
+- Added deterministic High/Medium/Low review-priority classification to the read-only related-glossary audit. High priority includes missing/placeholder definitions, malformed rows, duplicate normalized terms and term-echo definitions; Medium flags missing POS, Vietnamese gloss or provenance; Low captures short-definition review.
+- Report now sorts by actionable risk and emits reconciled priority counts. No glossary data was edited or definitions inferred.
+- Added 2 regression tests for priority classification and count/order reconciliation.
+
+## v2.95.32 — Major TOEIC content expansion and QC closure
+
+- Closed baseline QC on v2.95.31: 580 Python tests and 39 JavaScript regression suites PASS after repairing stale test expectations for glossary/IPA metrics.
+- Major content batch 026 adds 8 Grammar lessons / 32 exercises, 8 Listening units / 24 questions (four Part 3 conversations, four Part 4 talks), and 8 Reading Part 7 single passages / 24 questions. Total addition: 24 resources / 80 exercises and questions.
+- All new content has Vietnamese explanations, exact transcript/passage evidence, stable IDs, source/batch metadata, balanced answer positions and source SHA-256 inventory.
+- Listening/Reading are original-editorial practice content with reserve-pending-independent-review status, fail-closed Mock exclusion and reviewer notes. The new 24+24 questions remain excluded from Mock eligibility.
+- All 24 batch resources are linked to learning objectives. Objective-resource map is now **363/363**.
+- Independent review queue: **328** items (161 Listening + 87 Reading Part 7 + 80 Part 5). Question evidence audit indexes **550** current Listening/Reading questions.
+- Post-batch learning-content validation: 0 errors / 0 warnings; vocabulary validation: 0 errors / 0 warnings; repository integrity: 405 references, 0 errors / 0 optional warnings. Final Python suite 587/587 PASS; JavaScript suites 39/39 PASS; batch 026 focused tests 6/6 PASS; mock-engine regression PASS.
+- No UI redesign, canonical vocabulary, synonym/antonym relations, learner progress/history or IndexedDB schema changes.
+- Packaging: FullSource 512 files; patch 39 entries / 0 deletions; exact replay 512/512; CRC and SHA-256 PASS.
+- Remote GitHub Actions, Pages deployment and browser/device acceptance not run.
+
+## v2.95.31 — safe CMUdict IPA backfill and syllable-onset correction
+
+- Added a preview-first safe backfill tool that applies only exact-headword, unique-pronunciation CMUdict entries that pass the project IPA converter; ambiguous/missing/conversion-failing records remain review-only.
+- Added 1 verified source-linked US IPA entry (`dispute`) to the cumulative ledger and canonical data (IPA `/dɪ.ˈspjut/`).
+- Corrected the syllable-onset allowlist for the `spj` cluster, keeping the glide with the stressed syllable.
+- Added 8 pipeline tests and 1 converter regression; registered both in CI and repository-integrity coverage.
+- No UI, question/answer, learner progress, or relation data changed.
+
+## v2.95.30 — missing US IPA research queue (non-mutating)
+
+
+- Added CMUdict candidate review queue for the 80 canonical words without US IPA: 6 single-pronunciation candidates, 49 ambiguous pronunciation sets, 25 no exact dictionary match.
+- Queue builder preserves alternate ARPABET pronunciations, deduplicates identical lines, sorts consistently, and never auto-applies IPA.
+- Added 8 focused tests and CI registration. No canonical vocabulary, UI, learner progress, relations, or answer data changed.
+
+## v2.95.29 — canonical related-glossary expansion (89 terms)
+
+- Added 89 missing related-term entries only when each term had an exact canonical vocabulary headword match and every canonical sense contained both Vietnamese and English definitions. Multi-sense glosses preserve all canonical sense definitions joined for reference.
+- Added provenance (`canonical-vocabulary-senses`, exact source headword, source release `2.95.28`) to every addition. No existing glossary row, vocabulary headword, synonym/antonym relationship, learning question/answer, learner record, or UI was overwritten.
+- Added deterministic enrichment utility, 8 tests and CI registration. Exact eligible missing canonical candidates remaining: 0.
+- Review note: this reduces glossary lookup gaps, but joined multi-sense terms may still need human sense-specific review; it does not claim to resolve relation meaning in every context.
+
+## v2.95.28 — vocabulary relationship graph audit
+
+- Added read-only cross-file audit of canonical synonym/antonym graph: dangling targets, related-glossary coverage, unresolved terms, duplicate headwords/references, self-links, non-reciprocal relations, and malformed records. Non-reciprocal flags are review-only; no relations or learner-facing data changed.
+- Added focused tests and CI audit step.
+
+## v2.95.27 — glossary quality audit robustness
+
+- Duplicate detection now applies Unicode NFKC normalization and collapses internal whitespace before case-folding, improving detection of visually equivalent term variants.
+- Audit input now reports a non-list `terms` container explicitly instead of crashing; empty lists remain valid.
+- Added three robustness tests. The audit remains read-only; no runtime glossary, vocabulary, relationships, questions, learner data, or UI changed.
+
+## v2.95.26 — glossary quality audit hardening
+
+- Hardened the related-glossary quality audit with missing Vietnamese gloss checks, malformed row handling, normalized duplicate detection and JSON report output.
+- Added tests and CI registration; no runtime data or UI changes.
+
+# v2.95.25 — related glossary quality flag audit
+
+- Added `tools/audit-related-glossary-quality.py`, a read-only screening tool for missing English definitions, placeholder definitions, short definitions, term-echo definitions, missing POS and missing source provenance.
+- Generated `reports/RELATED_GLOSSARY_QUALITY_FLAGS_v2.95.25.md`: 430 entries scanned, 305 entries flagged for editorial review. Flags overlap; they are not unique issue totals and do not indicate all entries are wrong.
+- Added 4 deterministic tests and CI registration. No glossary data, vocabulary, relation arrays, learner data or UI changed.
+
+# v2.95.25 — read-only related glossary candidate audit
+
+- Added `tools/audit-related-glossary-candidates.py`, a read-only candidate audit that ranks unglossed synonym/antonym references and flags placeholder definitions.
+- Added deterministic reconciliation tests (3) and CI registration.
+- No vocabulary, glossary runtime data, relation arrays, questions, learner data or UI changed.
+- Focused verification: 3/3 candidate-audit tests PASS.
+
+## v2.95.25 — related glossary canonical-sense batch 028
+
+- Added seven previously unglossed related terms (`adherence`, `agreement`, `appraise`, `assign`, `assumption`, `authorization`, `breakdown`) using exact canonical headword senses, retaining English definitions, Vietnamese meanings and POS, with sourceHeadword provenance.
+- Exact related-term coverage improved 412 → 419/804 (51.2% → 52.1%); unglossed terms 392 → 385; unglossed references 393 → 386.
+- No vocabulary headwords or synonym/antonym relationship arrays changed. Batch ledger, absent-only patch, focused tests and CI registration added.
+- Verification after this follow-up: 34 focused Python tests across seven modules PASS; all 39 JavaScript suites PASS; vocabulary, content, repository integrity and version-sync checks PASS. Full Python discovery, remote CI and device acceptance remain unverified.
+
+## v2.95.25 — learning-outcome evidence matrix and audit detail
+
+- Expanded the major-release audit with per-outcome criterion detail, evidence status distribution, metric, threshold and minimum item count.
+- Added generated `LEARNING_OUTCOME_EVIDENCE_MATRIX_v2.95.25.md` so the 33 criteria can be reviewed individually; no learner progress or mastery is inferred.
+- Added regression tests for status-count reconciliation and required criterion fields.
+- Verification for this follow-up: 78 focused Python tests across 11 modules PASS, 39 JavaScript suites PASS, data/content validators PASS and version sync PASS. Full Python discovery and a slow validator unittest module remain incomplete/time-limited.
+- No UI, vocabulary headwords, question bank, answer keys, learner storage or runtime learning behavior changed.
+
+## v2.95.25 — canonical-sense glossary backfill and major quality audit
+- Verification refresh: 66 focused Python tests across nine modules PASS; 39 JavaScript regression suites PASS; vocabulary/content validation and version synchronization PASS. Repository integrity 1/1 PASS. Full Python discovery was not completed within execution limits.
+- Release packaging fix: preserve nested `docs/archive/` history while excluding only the repository-root archive and temporary `.tmp` files. Added regression checks for both boundaries.
+- Robot Buddy privacy refinement: when the user turns progress analysis OFF, any rendered progress dashboard is immediately removed from the chat panel; other conversation messages remain. Analysis remains local, opt-in, and read-only.
+
+- Robot Buddy progress analysis is explicitly opt-in: missing preference is treated as disabled. The welcome prompt explains that local analysis is optional; it only runs after enabling or asking for it while enabled. Existing contextual help, scripted conversation, navigation, placement-test flow and idle nudges based on current surface remain available without progress analysis. Aggregation uses already-loaded in-memory snapshots, does not directly open learner stores, does not mutate records and does not send data remotely.
+- Added a CI regression for the Robot Buddy data boundary and explicit opt-in gate.
+
+- Backfilled 43 existing related-glossary entries whose English definitions were placeholders, using exact canonical vocabulary headword senses. Existing Vietnamese meanings and relation graph remain unchanged; source provenance is recorded.
+- Placeholder English definitions reduced from 116 to 73. No new glossary terms were added; no uncertain or unmatched entries were rewritten.
+- Added an auditable baseline candidate report, cross-domain major-release audit, five-plus backfill safety tests and CI registration.
+- Local targeted Python: 53 tests PASS plus version-sync 12/12; JavaScript: 38/38 PASS. Data/content validators and audits report PASS. Full Python discovery, remote CI, browser/device QA and deployment remain unverified.
+
+## v2.95.24 — case-insensitive glossary backlog aggregation
+
+- Fixed backlog aggregation so case variants of the same missing related-term merge into one row. Synonym/antonym counts combine, source-headword anchors deduplicate, and display spelling is deterministic.
+- Added regression coverage for mixed-case duplicates. Existing canonical data has no such duplicates, so coverage totals remain unchanged.
+- No vocabulary, relation, learning content, UI or runtime changes.
+
+## v2.95.23 — glossary backlog traceability
+
+- Upgraded the unglossed related-term backlog to schema v2: each missing term now lists its source headwords, distinct-headword count, synonym/antonym reference split, and deterministic review priority.
+- This helps editorial review select terms with broader vocabulary impact without inventing definitions or automatically adding unsourced glosses. Existing missing-term and occurrence counts remain unchanged.
+- Added regression coverage for provenance anchors, reference-type totals, schema and sort order. No vocabulary glosses, canonical headwords, relation arrays, questions, answer keys, learner data or UI/runtime behavior changed.
+- Local candidate only; full repository suite, remote CI, deployment and device acceptance are not claimed.
+
+## v2.95.22 — related-term backlog automation
+
+- Added a deterministic, frequency-ranked report for unglossed synonym/antonym terms, including JSON data and a Markdown reviewer queue.
+- Added two regression tests for report counts, ordering and glossary exclusion; registered the script/test in CI syntax and unit-test steps.
+- No vocabulary definitions, headwords, stable IDs, relations, learning content, UI, progress storage or runtime behavior changed.
+- Candidate is locally validated; full repository Python discovery and remote CI/deployment are not claimed.
+
+## v2.95.21 — continue high-frequency glossary coverage and repair progress regression
+
+- Added 23 Cambridge-referenced Vietnamese lookup glosses for the highest-frequency source-verified unglossed terms in canonical synonym/antonym relations. Each added term occurs exactly twice; the glossary grows from 400 to 423 entries.
+- Exact case-insensitive relation join improves from 389/804 (48.4%) to 412/804 (51.2%). Occurrence coverage improves from 598/1,037 (57.7%) to 644/1,037 (62.1%); 392 distinct terms / 393 occurrences remain unglossed.
+- Added a dedicated Batch 027 provenance ledger, absent-only SHA-256-guarded patch and five focused regression tests. Registered the new suite in GitHub Actions and the release-integrity Node test. Four additional two-reference terms were included after a second backlog scan. `disorganize` remains deferred because no direct Cambridge dictionary definition page met the source policy.
+- Corrected the stale project-progress test that still expected the v2.95.17 coverage figure (385/804). Project-progress output remains generated from canonical data, and the v2.95.21 snapshot now reports the measured 412/804 value.
+- No headword, stable vocabulary ID, synonym/antonym relation, question, answer key, learner record, storage key, UI layout, CSS, navigation or runtime behavior changed. Only release-version markers were synchronized.
+- All new glosses remain provisional pending independent lexical review. The 280-item Listening/Reading/Part 5 review queue is unchanged and remains pending. Local candidate only; remote CI, deployment, browser/device QA and owner manual acceptance are not claimed.
+
+## v2.95.20 — related-term glossary Batch 026
+
+- Added four Cambridge Dictionary lookup glosses: `method`, `consume`, `function`, and `launch`.
+- The related-term glossary increases from 396 to **400 entries**. Existing synonym/antonym relations, canonical headwords, stable IDs, learning content, answer keys and learner data remain unchanged.
+- Added an absent-only SHA-256 guarded patch, provenance ledger, five regression checks, and a dedicated CI test step.
+- The release source is reconstructed from the locally available v2.95.19 FullSource ZIP; earlier v2.95.20/21 claims from chat were not present as artifacts in this workspace. This candidate is based on the recovered v2.95.19 source and only the changes verified here.
+- UI/layout is unchanged. Local checks only; remote CI, Pages deployment and device acceptance are not verified.
+
+## v2.95.19 — clear Listening evidence gaps and consolidate independent review queue
+
+- Added exact transcript evidence pointers to 29 legacy Listening reserve questions that previously lacked `evidenceText`; all 137 pending Listening questions now have a matching transcript pointer. Part 1's pending photo item also records a separate internal visual-action note.
+- Added explicit `internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending` notes to 16 legacy Listening units that had no review-state note. The `reserve-pending-independent-review` status is retained for all 137 questions; none is promoted to Mock.
+- Added a generated, item-level independent review packet covering 137 Listening questions, 63 Reading Part 7 reserve questions and 80 separate Part 5 sentence-completion questions (280 total). The queue supplies transcript/passage context, answer keys and source pointers with per-question decisions and correction fields.
+- Strengthened Listening regression tests to require a source-matching evidence pointer for every reserve question and a separate visual note for Part 1. The evidence report now distinguishes traceability from correctness/approval. CI runs the review-queue generator test. The generated progress snapshot now reports the 280-item independent-review queue from the canonical reserve statuses. The Part 1 reviewer packet includes the spoken A–D statement translation alongside generic answer labels, so the photo-action review can compare the image against all four statements.
+- No UI/CSS/layout, vocabulary headword, stable ID, learner record, question key, or Mock eligibility changed. This release removes evidence-packet gaps and reduces reviewer handoff friction; independent reviewer sign-off, device QA and remote CI remain open.
+
+## v2.95.18 — source-checked US IPA backfill batch 024
+
+- Added US IPA transcriptions for 13 existing TOEIC headwords: `accountable`, `admission`, `backlog`, `carrier`, `confidentiality`, `creditor`, `credential`, `designation`, `documentation`, `duration`, `eligible`, `emerge` and `exemption`.
+- US IPA coverage rises from 1,048/1,141 (91.8%) to **1,061/1,141 (93.0%)**; 80 canonical headwords still have no US IPA. Entries with POS-dependent pronunciation variants or no clearly verified Cambridge US form were intentionally left blank.
+- Changes are limited to the existing `/phonetic/us` field. Stable IDs, headwords, meanings, examples, topics, word-family/relationship arrays, questions, answer keys, learner data and UI structure are unchanged.
+- Added source ledger `data/vocabulary/batch-024.json`, an optimistic-lock patch `patches/v2.95.18/batch-001-ipa.json`, six focused Python regression tests, CI registration and JavaScript release-integrity assertions. New transcriptions remain pending independent phonetic review.
+- Local candidate only. Remote GitHub Actions/Pages, deployment, browser/device QA and owner manual acceptance are not claimed.
+
+## v2.95.17 — related-term glossary completion batch 023
+
+- Added nine Cambridge-sourced Vietnamese lookup glosses: `choose`, `distribution`, `effect`, `estimate`, `former`, `inform`, `origin`, `possibility` and `responsibility`. The related-term glossary rises from 387 to 396 entries.
+- Each new term already appears exactly twice in existing canonical synonym/antonym references. Exact case-insensitive coverage rises from 376/804 to 385/804 referenced terms; remaining gaps fall from 428 terms / 465 occurrences to 419 terms / 447 occurrences.
+- The change adds explanatory lookup records only. No canonical headword, ID, topic, synonym/antonym relationship, question, answer, learner record or runtime data contract was changed. All nine additions remain provisional pending independent lexical review.
+- Added batch provenance, an absent-only SHA-256-guarded patch, nine focused regression tests and a dedicated CI step. Historical glossary tests now use non-regressive minimum-size assertions rather than failing when future batches add entries. JavaScript release-integrity assertions cover Batch 023.
+- Local checks: focused Python suites 46/46 passed; JavaScript release-integrity check passed; vocabulary, learning-content, repository-integrity and version-sync validators passed. Remote GitHub Actions/Pages and browser/device acceptance remain unverified. Remote GitHub Actions/Pages and browser/device acceptance are not claimed.
+
 ## v2.95.16 — lightweight Git-tracked commit package
 
 - Added `tools/package_source.py` to create the GitHub commit ZIP from `git archive`, using exactly one root folder `Toeic_Dictionary_vX.Y.Z/`.
@@ -538,3 +741,25 @@
 - Added reading progress line to Foundation lesson cards and responsive passage styling.
 - Added module/data to Service Worker REQUIRED and APP_SHELL for offline availability.
 - Preserved existing lesson, recognition-question and contextual-application IDs; no IndexedDB schema migration or learner-data reset.
+
+### v2.95.25 — audit refinement continuation
+- Enhanced the read-only related-glossary candidate audit with canonical-sense previews, single-/multi-sense review tiers, and reconciled glossary-definition categories.
+- Candidate audit now separates 229 missing English definitions, 73 placeholder definitions, and 128 non-placeholder definitions (430 total entries); previews are review-only and do not copy definitions.
+- Expanded focused tests from 3 to 4, including tier structure and definition-category reconciliation. No app UI/runtime or learning data changed.
+
+## v2.95.26 — glossary quality audit hardening
+- Quality audit now flags missing Vietnamese glosses, malformed rows and normalized duplicate terms without merging or editing records.
+- Supports a structured JSON report alongside Markdown; deterministic index references help review entries without changing source data.
+- Added regression tests for duplicate normalization and malformed input handling.
+
+## Package verification — v2.95.37
+
+- FullSource: **556 files**.
+- Update Patch: **35 entries** (22 changed + 13 added), **0 deletions**.
+- Patch replay on v2.95.36: **556/556 files byte-for-byte identical** to v2.95.37 FullSource.
+- ZIP CRC, one-root structure, excluded-path policy and SHA-256 verification: PASS.
+
+## v2.95.36 — Related Glossary Definition Recovery (Batch 032)
+- Added Cambridge-sourced, paraphrased definitions and POS for six existing related-glossary terms: account, acknowledgment, acquire, adaptable, advance, advantage.
+- Preserved all six Vietnamese meanings, term identities, glossary ordering, and vocabulary/question/progress data.
+- Added Batch 032 ledger and regression tests. Independent review of these definitions remains pending; source excerpts/pages were inspected during preparation.

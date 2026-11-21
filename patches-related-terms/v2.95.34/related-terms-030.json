@@ -1,0 +1,740 @@
+{
+  "schemaVersion": 1,
+  "batch": "030-related-glossary-canonical-backfill",
+  "version": "2.95.34",
+  "focus": "Fill missing English definitions and part-of-speech only when exact canonical headword matches and has one unambiguous sense.",
+  "sourcePolicy": "No inference or external dictionary paraphrase. Exact definition and POS copied from a single-sense canonical vocabulary entry; preserve Vietnamese meaning and all existing fields.",
+  "count": 73,
+  "records": [
+    {
+      "term": "acquisition",
+      "definition_en": "the process of buying or obtaining a company or asset",
+      "pos": "n",
+      "sourceHeadword": "acquisition",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "việc thu nhận; việc mua lại"
+    },
+    {
+      "term": "admission",
+      "definition_en": "permission to enter a place or event; the fee charged for entry",
+      "pos": "n",
+      "sourceHeadword": "admission",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "sự cho phép vào; sự thừa nhận"
+    },
+    {
+      "term": "advice",
+      "definition_en": "an opinion about what someone should do",
+      "pos": "n",
+      "sourceHeadword": "advice",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "lời khuyên"
+    },
+    {
+      "term": "agenda",
+      "definition_en": "a list of items to be discussed at a meeting",
+      "pos": "n",
+      "sourceHeadword": "agenda",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "chương trình nghị sự"
+    },
+    {
+      "term": "allocate",
+      "definition_en": "to give a particular amount of time, money, or resources to someone or something",
+      "pos": "v",
+      "sourceHeadword": "allocate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "phân bổ"
+    },
+    {
+      "term": "allowance",
+      "definition_en": "an amount of money given regularly for a particular purpose",
+      "pos": "n",
+      "sourceHeadword": "allowance",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "phụ cấp; khoản trợ cấp"
+    },
+    {
+      "term": "amenity",
+      "definition_en": "a feature or service that makes a place comfortable",
+      "pos": "n",
+      "sourceHeadword": "amenity",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tiện nghi"
+    },
+    {
+      "term": "announcement",
+      "definition_en": "a public or official statement",
+      "pos": "n",
+      "sourceHeadword": "announcement",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "thông báo"
+    },
+    {
+      "term": "annual",
+      "definition_en": "happening once every year",
+      "pos": "adj",
+      "sourceHeadword": "annual",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "hằng năm; thường niên"
+    },
+    {
+      "term": "annually",
+      "definition_en": "once every year",
+      "pos": "adv",
+      "sourceHeadword": "annually",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "hằng năm"
+    },
+    {
+      "term": "appointment",
+      "definition_en": "an arrangement to meet someone at a particular time",
+      "pos": "n",
+      "sourceHeadword": "appointment",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "cuộc hẹn; lịch hẹn"
+    },
+    {
+      "term": "approve",
+      "definition_en": "to officially accept or agree to something",
+      "pos": "v",
+      "sourceHeadword": "approve",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "phê duyệt; chấp thuận"
+    },
+    {
+      "term": "arrange",
+      "definition_en": "to organize something or make plans",
+      "pos": "v",
+      "sourceHeadword": "arrange",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "sắp xếp; thu xếp"
+    },
+    {
+      "term": "assemble",
+      "definition_en": "to put parts together or bring people together in one place",
+      "pos": "v",
+      "sourceHeadword": "assemble",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tập hợp; lắp ráp"
+    },
+    {
+      "term": "assess",
+      "definition_en": "to examine something and judge its quality, value, importance, or condition",
+      "pos": "v",
+      "sourceHeadword": "assess",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "đánh giá"
+    },
+    {
+      "term": "assessment",
+      "definition_en": "a judgment about the quality, importance, or ability of someone or something",
+      "pos": "n",
+      "sourceHeadword": "assessment",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "sự đánh giá; bài đánh giá"
+    },
+    {
+      "term": "baggage",
+      "definition_en": "the bags and cases a traveler carries",
+      "pos": "n",
+      "sourceHeadword": "baggage",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "hành lý"
+    },
+    {
+      "term": "bargain",
+      "definition_en": "an agreement reached after discussion, or something bought at a price lower than usual",
+      "pos": "n/v",
+      "sourceHeadword": "bargain",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "món hời; sự mặc cả"
+    },
+    {
+      "term": "booking",
+      "definition_en": "an arrangement to reserve a room, seat, or service",
+      "pos": "n",
+      "sourceHeadword": "booking",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "việc đặt chỗ; đặt phòng"
+    },
+    {
+      "term": "buyer",
+      "definition_en": "a person or company that purchases something",
+      "pos": "n",
+      "sourceHeadword": "buyer",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "người mua"
+    },
+    {
+      "term": "calculate",
+      "definition_en": "to find an amount or answer using mathematics",
+      "pos": "v",
+      "sourceHeadword": "calculate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tính toán"
+    },
+    {
+      "term": "cargo",
+      "definition_en": "goods carried by a ship, aircraft, train, or truck",
+      "pos": "n",
+      "sourceHeadword": "cargo",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "hàng hóa vận chuyển"
+    },
+    {
+      "term": "collect",
+      "definition_en": "to bring things together or receive payment",
+      "pos": "v",
+      "sourceHeadword": "collect",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "thu thập; thu tiền"
+    },
+    {
+      "term": "confirm",
+      "definition_en": "to state or show that something is definitely true",
+      "pos": "v",
+      "sourceHeadword": "confirm",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "xác nhận"
+    },
+    {
+      "term": "consignment",
+      "definition_en": "a quantity of goods sent to someone, usually for sale or delivery",
+      "pos": "n",
+      "sourceHeadword": "consignment",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "lô hàng ký gửi; lô hàng được giao"
+    },
+    {
+      "term": "cost",
+      "definition_en": "the amount of money needed to buy or do something",
+      "pos": "n/v",
+      "sourceHeadword": "cost",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "chi phí; trị giá"
+    },
+    {
+      "term": "delay",
+      "definition_en": "a period of waiting or to make something late",
+      "pos": "n/v",
+      "sourceHeadword": "delay",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "sự trì hoãn; làm chậm"
+    },
+    {
+      "term": "deposit",
+      "definition_en": "money paid in advance or put into a bank",
+      "pos": "n/v",
+      "sourceHeadword": "deposit",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tiền đặt cọc; khoản tiền gửi"
+    },
+    {
+      "term": "dispatch",
+      "definition_en": "the act of sending goods or people to a destination",
+      "pos": "n",
+      "sourceHeadword": "dispatch",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "gửi đi; điều phối; chuyến hàng gửi đi"
+    },
+    {
+      "term": "employer",
+      "definition_en": "a person or organization that pays people to work",
+      "pos": "n",
+      "sourceHeadword": "employer",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "người sử dụng lao động"
+    },
+    {
+      "term": "ensure",
+      "definition_en": "to make certain that something happens",
+      "pos": "v",
+      "sourceHeadword": "ensure",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "đảm bảo"
+    },
+    {
+      "term": "exchange",
+      "definition_en": "the act of giving something and receiving something else",
+      "pos": "n/v",
+      "sourceHeadword": "exchange",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "trao đổi; đổi"
+    },
+    {
+      "term": "expenditure",
+      "definition_en": "the total amount of money spent",
+      "pos": "n",
+      "sourceHeadword": "expenditure",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "khoản chi; chi tiêu"
+    },
+    {
+      "term": "expense",
+      "definition_en": "money spent to buy or do something",
+      "pos": "n",
+      "sourceHeadword": "expense",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "chi phí; khoản phí"
+    },
+    {
+      "term": "expertise",
+      "definition_en": "special skill or knowledge in a subject",
+      "pos": "n",
+      "sourceHeadword": "expertise",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "chuyên môn; kiến thức chuyên sâu"
+    },
+    {
+      "term": "generate",
+      "definition_en": "to produce or create something, such as income, information, or electricity",
+      "pos": "v",
+      "sourceHeadword": "generate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tạo ra; phát sinh"
+    },
+    {
+      "term": "goods",
+      "definition_en": "things that are made or sold",
+      "pos": "n",
+      "sourceHeadword": "goods",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "hàng hóa"
+    },
+    {
+      "term": "guideline",
+      "definition_en": "a general rule or piece of advice that helps people make decisions or perform a task",
+      "pos": "n",
+      "sourceHeadword": "guideline",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "hướng dẫn; nguyên tắc chỉ đạo"
+    },
+    {
+      "term": "hire",
+      "definition_en": "to employ someone or pay to use something",
+      "pos": "v",
+      "sourceHeadword": "hire",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "thuê; tuyển dụng"
+    },
+    {
+      "term": "income",
+      "definition_en": "money received from work or investments",
+      "pos": "n",
+      "sourceHeadword": "income",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "thu nhập"
+    },
+    {
+      "term": "inquiry",
+      "definition_en": "a request for information, or an official examination of a matter",
+      "pos": "n",
+      "sourceHeadword": "inquiry",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "yêu cầu thông tin; câu hỏi; cuộc điều tra"
+    },
+    {
+      "term": "introduce",
+      "definition_en": "to tell someone another person's name or bring something new",
+      "pos": "v",
+      "sourceHeadword": "introduce",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "giới thiệu; đưa vào sử dụng"
+    },
+    {
+      "term": "manage",
+      "definition_en": "to control or organize people or activities",
+      "pos": "v",
+      "sourceHeadword": "manage",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "quản lý; xoay xở"
+    },
+    {
+      "term": "participate",
+      "definition_en": "to take part in an activity or event",
+      "pos": "v",
+      "sourceHeadword": "participate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tham gia"
+    },
+    {
+      "term": "preserve",
+      "definition_en": "to keep something in its original or existing condition",
+      "pos": "v",
+      "sourceHeadword": "preserve",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "bảo quản; giữ gìn"
+    },
+    {
+      "term": "proceeds",
+      "definition_en": "money received from selling something or from an event",
+      "pos": "n",
+      "sourceHeadword": "proceeds",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tiền thu được; doanh thu từ việc bán"
+    },
+    {
+      "term": "produce",
+      "definition_en": "to make or create something",
+      "pos": "v/n",
+      "sourceHeadword": "produce",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "sản xuất; nông sản"
+    },
+    {
+      "term": "profit",
+      "definition_en": "money gained after costs are paid",
+      "pos": "n/v",
+      "sourceHeadword": "profit",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "lợi nhuận; thu lợi"
+    },
+    {
+      "term": "promote",
+      "definition_en": "to encourage sales or give someone a higher position",
+      "pos": "v",
+      "sourceHeadword": "promote",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "thăng chức; quảng bá; xúc tiến"
+    },
+    {
+      "term": "provisional",
+      "definition_en": "temporary and intended to be confirmed, changed, or replaced later",
+      "pos": "adj",
+      "sourceHeadword": "provisional",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tạm thời; dự kiến"
+    },
+    {
+      "term": "receive",
+      "definition_en": "to get something that someone sends or gives",
+      "pos": "v",
+      "sourceHeadword": "receive",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "nhận; tiếp nhận"
+    },
+    {
+      "term": "recruit",
+      "definition_en": "to find and employ new people",
+      "pos": "v",
+      "sourceHeadword": "recruit",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tuyển dụng; tuyển người"
+    },
+    {
+      "term": "reduce",
+      "definition_en": "to make something smaller or less",
+      "pos": "v",
+      "sourceHeadword": "reduce",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "giảm; cắt giảm"
+    },
+    {
+      "term": "reject",
+      "definition_en": "to refuse to accept or consider something",
+      "pos": "v",
+      "sourceHeadword": "reject",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "từ chối; bác bỏ"
+    },
+    {
+      "term": "release",
+      "definition_en": "to make something available to the public",
+      "pos": "n/v",
+      "sourceHeadword": "release",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "phát hành; công bố; giải phóng"
+    },
+    {
+      "term": "relocate",
+      "definition_en": "to move a person, office, or business to a different place",
+      "pos": "v",
+      "sourceHeadword": "relocate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "di dời; chuyển địa điểm"
+    },
+    {
+      "term": "rent",
+      "definition_en": "money paid regularly to use a property",
+      "pos": "n/v",
+      "sourceHeadword": "rent",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "thuê; tiền thuê"
+    },
+    {
+      "term": "revise",
+      "definition_en": "to change something to improve or correct it",
+      "pos": "v",
+      "sourceHeadword": "revise",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "sửa đổi; ôn tập"
+    },
+    {
+      "term": "revision",
+      "definition_en": "revision: sự sửa đổi; bản chỉnh sửa.",
+      "pos": "n",
+      "sourceHeadword": "revision",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "sự sửa đổi; bản chỉnh sửa"
+    },
+    {
+      "term": "service",
+      "definition_en": "work done for customers rather than producing goods",
+      "pos": "n",
+      "sourceHeadword": "service",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "dịch vụ; phục vụ"
+    },
+    {
+      "term": "shipment",
+      "definition_en": "a quantity of goods sent from one place to another",
+      "pos": "n",
+      "sourceHeadword": "shipment",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "lô hàng; việc vận chuyển hàng"
+    },
+    {
+      "term": "staff",
+      "definition_en": "the people who work for an organization",
+      "pos": "n/v",
+      "sourceHeadword": "staff",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "nhân viên; đội ngũ nhân sự"
+    },
+    {
+      "term": "standard",
+      "definition_en": "a level of quality that is considered acceptable",
+      "pos": "n/adj",
+      "sourceHeadword": "standard",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "tiêu chuẩn; mức chuẩn"
+    },
+    {
+      "term": "statement",
+      "definition_en": "a formal account or an expression of facts",
+      "pos": "n",
+      "sourceHeadword": "statement",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "bản tuyên bố; sao kê"
+    },
+    {
+      "term": "submit",
+      "definition_en": "to give a document or proposal to someone for consideration",
+      "pos": "v",
+      "sourceHeadword": "submit",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "nộp; trình lên"
+    },
+    {
+      "term": "supplier",
+      "definition_en": "a person or company that provides goods or services",
+      "pos": "n",
+      "sourceHeadword": "supplier",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "nhà cung cấp"
+    },
+    {
+      "term": "surcharge",
+      "definition_en": "an extra amount of money added to the usual price or basic charge",
+      "pos": "n",
+      "sourceHeadword": "surcharge",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "phụ phí"
+    },
+    {
+      "term": "vendor",
+      "definition_en": "a person or company that sells goods or services",
+      "pos": "n",
+      "sourceHeadword": "vendor",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "người bán; nhà cung cấp"
+    },
+    {
+      "term": "verify",
+      "definition_en": "to check that something is true or accurate",
+      "pos": "v",
+      "sourceHeadword": "verify",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "xác minh; kiểm chứng"
+    },
+    {
+      "term": "warranty",
+      "definition_en": "a written promise to repair or replace a product if necessary",
+      "pos": "n",
+      "sourceHeadword": "warranty",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "bảo hành; giấy bảo hành"
+    },
+    {
+      "term": "weekday",
+      "definition_en": "any day from Monday to Friday",
+      "pos": "n",
+      "sourceHeadword": "weekday",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "ngày trong tuần (thường từ thứ Hai đến thứ Sáu)"
+    },
+    {
+      "term": "weekend",
+      "definition_en": "Saturday and Sunday, or the period around them",
+      "pos": "n",
+      "sourceHeadword": "weekend",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "cuối tuần"
+    },
+    {
+      "term": "workforce",
+      "definition_en": "the total number of people employed by an organization or country",
+      "pos": "n",
+      "sourceHeadword": "workforce",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "source": "canonical-vocabulary-senses",
+      "baselineMeaningVi": "lực lượng lao động"
+    }
+  ]
+}

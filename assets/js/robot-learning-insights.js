@@ -1,6 +1,8 @@
 /**
  * Read-only learning insights for Robot Buddy.
- * Receives already-loaded local snapshots; never opens storage or mutates progress.
+ * Receives already-loaded local snapshots ONLY after the user explicitly enables Learning Insights.
+ * Never opens storage, never mutates progress, never sends data outside the device.
+ * This is an opt-in snapshot summary, not background tracking or an AI diagnosis.
  */
 const asObject = value => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
 function getDueObjectiveRecallItems(progress = {}, resourceMap = {}, now = Date.now()) {

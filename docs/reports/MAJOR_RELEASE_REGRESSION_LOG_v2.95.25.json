@@ -1,0 +1,34 @@
+{
+  "release": "2.95.25",
+  "status": "focused-verification-complete",
+  "python": {
+    "focusedModules": 11,
+    "testsPassed": 53,
+    "syncVersionTestsPassed": 12,
+    "fullDiscovery": "attempted-incomplete-not-counted"
+  },
+  "javascript": {
+    "suites": 38,
+    "passed": 38,
+    "failed": 0
+  },
+  "validators": {
+    "vocabulary": "PASS (1141 records; 0 errors; 0 warnings; stable IDs unchanged)",
+    "learningContent": "PASS (0 errors; 0 warnings)",
+    "repositoryIntegrity": "PASS (395 local refs/data files; 0 errors; 0 optional warnings)"
+  },
+  "audits": {
+    "objectiveResources": "PASS (339/339)",
+    "learningOutcomes": "PASS (11 objectives; 33 criteria; 6 instrumented)",
+    "questionEvidence": "PASS (502 questions indexed)",
+    "distractors": "PASS (240 in scope; structural audit PASS)",
+    "listeningReadiness": "PASS (102 eligible; 137 pending)"
+  },
+  "external": [
+    "Remote GitHub Actions not verified",
+    "GitHub Pages deployment not performed",
+    "Browser/device QA not performed",
+    "Offline/reconnect acceptance not performed",
+    "Physical TTS/audio quality not verified"
+  ]
+}

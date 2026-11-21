@@ -104,7 +104,15 @@
         "batch025-reduced-adverbial-clauses-toeic",
         "batch025-articles-institutional-nouns-toeic",
         "batch025-concessive-contrast-connectors-toeic",
-        "batch025-verb-complement-meaning-toeic"
+        "batch025-verb-complement-meaning-toeic",
+        "batch026-conditionals-toeic",
+        "batch026-passive-operations-toeic",
+        "batch026-relative-clauses-toeic",
+        "batch026-modals-policy-toeic",
+        "batch026-comparatives-toeic",
+        "batch026-contrast-connectors-toeic",
+        "batch026-quantifiers-toeic",
+        "batch026-reported-speech-toeic"
       ],
       "availability": "available",
       "reviewState": "editorial_review_status_not_structured"
@@ -190,7 +198,15 @@
         "part2-hotel-confirmation-delay",
         "part2-survey-results-folder",
         "batch025-part2-client-appointment",
-        "batch025-part2-equipment-status"
+        "batch025-part2-equipment-status",
+        "batch027-part2-room-booking",
+        "batch027-part2-invoice-copy",
+        "batch027-part2-training-start",
+        "batch027-part2-parking-access",
+        "batch027-part2-catering-count",
+        "batch027-part2-maintenance",
+        "batch027-part2-project-update",
+        "batch027-part2-delivery-window"
       ],
       "availability": "available",
       "reviewState": "mixed_or_pending_review_check_item_level"
@@ -235,7 +251,15 @@
         "part3-training-room-change",
         "batch025-part3-training-room-change",
         "batch025-part3-invoice-clarification",
-        "batch025-part3-access-card-renewal"
+        "batch025-part3-access-card-renewal",
+        "batch026-part3-vendor-call",
+        "batch026-part3-training-room",
+        "batch026-part3-invoice-correction",
+        "batch026-part3-access-card",
+        "batch027-part3-equipment-return",
+        "batch027-part3-benefits-enrollment",
+        "batch027-part3-vendor-quotation",
+        "batch027-part3-client-appointment"
       ],
       "availability": "available",
       "reviewState": "mixed_or_pending_review_check_item_level"
@@ -273,7 +297,15 @@
         "part4-inventory-count-schedule",
         "batch025-part4-delivery-route-update",
         "batch025-part4-benefits-enrollment",
-        "batch025-part4-display-maintenance"
+        "batch025-part4-display-maintenance",
+        "batch026-part4-building-notice",
+        "batch026-part4-travel-update",
+        "batch026-part4-product-launch",
+        "batch026-part4-policy-reminder",
+        "batch027-part4-maintenance-notice",
+        "batch027-part4-travel-expense-policy",
+        "batch027-part4-product-training",
+        "batch027-part4-store-hours"
       ],
       "availability": "available",
       "reviewState": "mixed_or_pending_review_check_item_level"
@@ -374,7 +406,15 @@
         "batch025-part7-double-conference-booking",
         "batch025-part7-double-shipping-delay",
         "batch025-part7-double-job-fair",
-        "batch025-part7-double-software-renewal"
+        "batch025-part7-double-software-renewal",
+        "batch026-part7-schedule-email",
+        "batch026-part7-room-ad",
+        "batch026-part7-cafeteria-notice",
+        "batch026-part7-interview-memo",
+        "batch026-part7-shipment-email",
+        "batch026-part7-award-news",
+        "batch026-part7-payment-terms",
+        "batch026-part7-travel-change"
       ],
       "availability": "available",
       "reviewState": "part7_expansion_requires_second_review"

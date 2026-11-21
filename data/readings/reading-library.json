@@ -7848,6 +7848,806 @@
       "editorialBatch": "025",
       "contentBatch": "batch-025-reading-expansion",
       "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part7-schedule-email",
+      "title": "Revised customer-support schedule",
+      "topic": "Office Scheduling",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "passage": "Hello team, Beginning next Monday, the customer-support desk will open at 7:30 a.m. instead of 8:00 a.m. to cover early inquiries from overseas clients. The afternoon shift will end at 4:30 p.m., and the rotating lunch schedule remains unchanged. Employees who cannot work the revised hours should contact Jordan in Human Resources by Thursday. The updated roster will be posted on the internal portal Friday afternoon. Please review your assigned hours before the weekend.",
+      "wordCount": 80,
+      "translation": "Chăm sóc khách hàng sẽ mở cửa sớm hơn từ thứ Hai tới để hỗ trợ khách hàng quốc tế. Nhân viên cần báo HR nếu không thể làm theo lịch mới trước thứ Năm; lịch sẽ được đăng vào chiều thứ Sáu.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch026-part7-schedule-email:1",
+          "question": "When will the revised schedule begin?",
+          "choices": [
+            "Next Monday",
+            "This Friday",
+            "Next Thursday",
+            "At the end of the month"
+          ],
+          "answerIndex": 0,
+          "explanation": "Lịch mới bắt đầu từ thứ Hai tuần tới.",
+          "choiceIds": [
+            "reading:batch026-part7-schedule-email:1:choice:1",
+            "reading:batch026-part7-schedule-email:1:choice:2",
+            "reading:batch026-part7-schedule-email:1:choice:3",
+            "reading:batch026-part7-schedule-email:1:choice:4"
+          ],
+          "evidenceText": "Beginning next Monday",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "Beginning next Monday"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-schedule-email:2",
+          "question": "Why will the desk open earlier?",
+          "choices": [
+            "To train new staff",
+            "To cover overseas client inquiries",
+            "To reduce lunch breaks",
+            "To prepare the roster"
+          ],
+          "answerIndex": 1,
+          "explanation": "Giờ mở cửa sớm hơn để hỗ trợ khách quốc tế.",
+          "choiceIds": [
+            "reading:batch026-part7-schedule-email:2:choice:1",
+            "reading:batch026-part7-schedule-email:2:choice:2",
+            "reading:batch026-part7-schedule-email:2:choice:3",
+            "reading:batch026-part7-schedule-email:2:choice:4"
+          ],
+          "evidenceText": "to cover early inquiries from overseas clients",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "to cover early inquiries from overseas clients"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-schedule-email:3",
+          "question": "What should employees do by Thursday?",
+          "choices": [
+            "Review the portal",
+            "Change their lunch break",
+            "Contact HR if unable to work the new hours",
+            "Submit a customer report"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên không thể làm theo giờ mới cần liên hệ HR trước thứ Năm.",
+          "choiceIds": [
+            "reading:batch026-part7-schedule-email:3:choice:1",
+            "reading:batch026-part7-schedule-email:3:choice:2",
+            "reading:batch026-part7-schedule-email:3:choice:3",
+            "reading:batch026-part7-schedule-email:3:choice:4"
+          ],
+          "evidenceText": "contact Jordan in Human Resources by Thursday",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "contact Jordan in Human Resources by Thursday"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part7-room-ad",
+      "title": "Conference room booking advertisement",
+      "topic": "Office Services",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "passage": "Need a quiet space for a client presentation? The Riverside Business Center offers four meeting rooms with video conferencing, whiteboards, and complimentary Wi-Fi. Small rooms accommodate up to six guests, while the largest room seats twenty. Bookings made at least three days in advance receive a ten-percent discount. Catering is available by request, but orders must be placed before 5 p.m. on the previous business day. Call the reception desk to check availability. The center also provides a projector at no extra charge, and its staff can help arrange seating before the event.",
+      "wordCount": 94,
+      "translation": "Riverside Business Center có bốn phòng họp trang bị họp video, bảng trắng và Wi-Fi. Đặt trước ít nhất ba ngày được giảm 10%; catering phải đặt trước 17 giờ ngày làm việc liền trước.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch026-part7-room-ad:1",
+          "question": "What service is being advertised?",
+          "choices": [
+            "Office furniture sales",
+            "Video equipment repairs",
+            "Catering delivery only",
+            "Meeting room rentals"
+          ],
+          "answerIndex": 3,
+          "explanation": "Trung tâm cho thuê phòng họp.",
+          "choiceIds": [
+            "reading:batch026-part7-room-ad:1:choice:1",
+            "reading:batch026-part7-room-ad:1:choice:2",
+            "reading:batch026-part7-room-ad:1:choice:3",
+            "reading:batch026-part7-room-ad:1:choice:4"
+          ],
+          "evidenceText": "offers four meeting rooms",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "offers four meeting rooms"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-room-ad:2",
+          "question": "How many people can the largest room accommodate?",
+          "choices": [
+            "Twenty",
+            "Ten",
+            "Twelve",
+            "Six"
+          ],
+          "answerIndex": 0,
+          "explanation": "Phòng lớn nhất có sức chứa 20 người.",
+          "choiceIds": [
+            "reading:batch026-part7-room-ad:2:choice:1",
+            "reading:batch026-part7-room-ad:2:choice:2",
+            "reading:batch026-part7-room-ad:2:choice:3",
+            "reading:batch026-part7-room-ad:2:choice:4"
+          ],
+          "evidenceText": "largest room seats twenty",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "largest room seats twenty"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-room-ad:3",
+          "question": "How can customers receive a discount?",
+          "choices": [
+            "Pay in cash",
+            "Book three days in advance",
+            "Order catering",
+            "Book after 5 p.m."
+          ],
+          "answerIndex": 1,
+          "explanation": "Đặt trước ít nhất ba ngày được giảm giá.",
+          "choiceIds": [
+            "reading:batch026-part7-room-ad:3:choice:1",
+            "reading:batch026-part7-room-ad:3:choice:2",
+            "reading:batch026-part7-room-ad:3:choice:3",
+            "reading:batch026-part7-room-ad:3:choice:4"
+          ],
+          "evidenceText": "at least three days in advance receive a ten-percent discount",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "at least three days in advance receive a ten-percent discount"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part7-cafeteria-notice",
+      "title": "Cafeteria service notice",
+      "topic": "Facilities",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "A2-B1",
+      "passage": "The company cafeteria will close at 2 p.m. on Thursday for a scheduled deep cleaning. Lunch service will be available from 11 a.m. to 1:30 p.m., and the coffee station will remain open until noon. Employees may use the vending area on the first floor after the cafeteria closes. The regular cafeteria schedule will resume on Friday. Please remove personal items from the tables before leaving. The cleaning contractor will place signs near the elevators to direct employees to the alternative facilities.",
+      "wordCount": 86,
+      "translation": "Căng-tin đóng cửa lúc 14 giờ thứ Năm để vệ sinh tổng thể. Bữa trưa phục vụ đến 13:30; khu máy bán hàng tầng một vẫn có thể sử dụng sau khi đóng cửa.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch026-part7-cafeteria-notice:1",
+          "question": "Why will the cafeteria close early?",
+          "choices": [
+            "A staff meeting",
+            "A menu change",
+            "Deep cleaning",
+            "Equipment delivery"
+          ],
+          "answerIndex": 2,
+          "explanation": "Căng tin đóng cửa để vệ sinh tổng thể.",
+          "choiceIds": [
+            "reading:batch026-part7-cafeteria-notice:1:choice:1",
+            "reading:batch026-part7-cafeteria-notice:1:choice:2",
+            "reading:batch026-part7-cafeteria-notice:1:choice:3",
+            "reading:batch026-part7-cafeteria-notice:1:choice:4"
+          ],
+          "evidenceText": "scheduled deep cleaning",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "scheduled deep cleaning"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-cafeteria-notice:2",
+          "question": "Until what time is lunch served?",
+          "choices": [
+            "Noon",
+            "1 p.m.",
+            "2 p.m.",
+            "1:30 p.m."
+          ],
+          "answerIndex": 3,
+          "explanation": "Bữa trưa được phục vụ đến 13 giờ 30.",
+          "choiceIds": [
+            "reading:batch026-part7-cafeteria-notice:2:choice:1",
+            "reading:batch026-part7-cafeteria-notice:2:choice:2",
+            "reading:batch026-part7-cafeteria-notice:2:choice:3",
+            "reading:batch026-part7-cafeteria-notice:2:choice:4"
+          ],
+          "evidenceText": "from 11 a.m. to 1:30 p.m.",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "from 11 a.m. to 1:30 p.m."
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-cafeteria-notice:3",
+          "question": "What can employees use after the cafeteria closes?",
+          "choices": [
+            "The vending area",
+            "The coffee station all day",
+            "The second-floor kitchen",
+            "The meeting room"
+          ],
+          "answerIndex": 0,
+          "explanation": "Khu máy bán hàng được dùng sau khi căng tin đóng cửa.",
+          "choiceIds": [
+            "reading:batch026-part7-cafeteria-notice:3:choice:1",
+            "reading:batch026-part7-cafeteria-notice:3:choice:2",
+            "reading:batch026-part7-cafeteria-notice:3:choice:3",
+            "reading:batch026-part7-cafeteria-notice:3:choice:4"
+          ],
+          "evidenceText": "use the vending area on the first floor after the cafeteria closes",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "use the vending area on the first floor after the cafeteria closes"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part7-interview-memo",
+      "title": "Interview arrangements for a technician position",
+      "topic": "Human Resources",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "passage": "The facilities department will interview three candidates for the maintenance technician position next Wednesday. Each interview will last thirty minutes and take place in Room 204. Candidates should bring a copy of their certification and a list of previous projects. The hiring panel includes the facilities supervisor and two senior technicians. HR will send parking instructions to candidates who confirm attendance by Monday afternoon. Applicants who need to change their appointment should reply to the invitation rather than call the facilities desk.",
+      "wordCount": 82,
+      "translation": "Bộ phận cơ sở vật chất phỏng vấn ba ứng viên vào thứ Tư tuần tới. Mỗi buổi kéo dài 30 phút tại phòng 204. Ứng viên cần mang chứng chỉ và danh sách dự án đã làm.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch026-part7-interview-memo:1",
+          "question": "How many candidates will be interviewed?",
+          "choices": [
+            "Two",
+            "Three",
+            "Four",
+            "Five"
+          ],
+          "answerIndex": 1,
+          "explanation": "Bản ghi nêu có ba ứng viên sẽ được phỏng vấn.",
+          "choiceIds": [
+            "reading:batch026-part7-interview-memo:1:choice:1",
+            "reading:batch026-part7-interview-memo:1:choice:2",
+            "reading:batch026-part7-interview-memo:1:choice:3",
+            "reading:batch026-part7-interview-memo:1:choice:4"
+          ],
+          "evidenceText": "interview three candidates",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "interview three candidates"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-interview-memo:2",
+          "question": "What should candidates bring?",
+          "choices": [
+            "A laptop and invoice",
+            "A passport and photo",
+            "Certification and project list",
+            "A reference letter only"
+          ],
+          "answerIndex": 2,
+          "explanation": "Ứng viên cần mang chứng chỉ và danh sách dự án.",
+          "choiceIds": [
+            "reading:batch026-part7-interview-memo:2:choice:1",
+            "reading:batch026-part7-interview-memo:2:choice:2",
+            "reading:batch026-part7-interview-memo:2:choice:3",
+            "reading:batch026-part7-interview-memo:2:choice:4"
+          ],
+          "evidenceText": "bring a copy of their certification and a list of previous projects",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "bring a copy of their certification and a list of previous projects"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-interview-memo:3",
+          "question": "When will parking instructions be sent?",
+          "choices": [
+            "After the interview",
+            "To all applicants immediately",
+            "On Wednesday morning",
+            "To those confirming by Monday afternoon"
+          ],
+          "answerIndex": 3,
+          "explanation": "HR gửi hướng dẫn đỗ xe cho người xác nhận trước chiều thứ Hai.",
+          "choiceIds": [
+            "reading:batch026-part7-interview-memo:3:choice:1",
+            "reading:batch026-part7-interview-memo:3:choice:2",
+            "reading:batch026-part7-interview-memo:3:choice:3",
+            "reading:batch026-part7-interview-memo:3:choice:4"
+          ],
+          "evidenceText": "confirm attendance by Monday afternoon",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "confirm attendance by Monday afternoon"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part7-shipment-email",
+      "title": "Shipment tracking update",
+      "topic": "Logistics",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "passage": "Dear Ms. Tran, Your order of display stands has left our central warehouse and is scheduled to arrive at your store on Tuesday, October 14. The carrier will call approximately one hour before delivery. Please ensure that the loading area is clear and that a staff member is available to sign the receipt. If the delivery address has changed, notify our logistics desk before 4 p.m. today. Tracking details are available in your account.",
+      "wordCount": 75,
+      "translation": "Đơn hàng giá trưng bày đã rời kho trung tâm và dự kiến đến cửa hàng vào thứ Ba, 14/10. Đơn vị vận chuyển sẽ gọi trước khoảng một giờ; cần bố trí người ký nhận và báo đổi địa chỉ trước 16 giờ hôm nay.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch026-part7-shipment-email:1",
+          "question": "What has already happened to the order?",
+          "choices": [
+            "It left the central warehouse",
+            "It was returned",
+            "It was installed",
+            "It was canceled"
+          ],
+          "answerIndex": 0,
+          "explanation": "Đơn hàng đã được gửi khỏi kho trung tâm.",
+          "choiceIds": [
+            "reading:batch026-part7-shipment-email:1:choice:1",
+            "reading:batch026-part7-shipment-email:1:choice:2",
+            "reading:batch026-part7-shipment-email:1:choice:3",
+            "reading:batch026-part7-shipment-email:1:choice:4"
+          ],
+          "evidenceText": "has left our central warehouse",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "has left our central warehouse"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-shipment-email:2",
+          "question": "When will the order arrive?",
+          "choices": [
+            "Monday, October 13",
+            "Tuesday, October 14",
+            "Wednesday, October 15",
+            "Friday, October 17"
+          ],
+          "answerIndex": 1,
+          "explanation": "Đơn hàng được lên lịch giao vào thứ Ba, ngày 14 tháng 10.",
+          "choiceIds": [
+            "reading:batch026-part7-shipment-email:2:choice:1",
+            "reading:batch026-part7-shipment-email:2:choice:2",
+            "reading:batch026-part7-shipment-email:2:choice:3",
+            "reading:batch026-part7-shipment-email:2:choice:4"
+          ],
+          "evidenceText": "arrive at your store on Tuesday, October 14",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "arrive at your store on Tuesday, October 14"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-shipment-email:3",
+          "question": "What should the recipient ensure?",
+          "choices": [
+            "The stands are assembled",
+            "The store is closed",
+            "A staff member can sign",
+            "The address is removed"
+          ],
+          "answerIndex": 2,
+          "explanation": "Người nhận cần bố trí người ký xác nhận nhận hàng.",
+          "choiceIds": [
+            "reading:batch026-part7-shipment-email:3:choice:1",
+            "reading:batch026-part7-shipment-email:3:choice:2",
+            "reading:batch026-part7-shipment-email:3:choice:3",
+            "reading:batch026-part7-shipment-email:3:choice:4"
+          ],
+          "evidenceText": "a staff member is available to sign the receipt",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "a staff member is available to sign the receipt"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part7-award-news",
+      "title": "Employee recognition announcement",
+      "topic": "Company News",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "passage": "Congratulations to the customer-service team for receiving this quarter’s service award. The team reduced average response time by 18 percent while maintaining its customer satisfaction rating. The award will be presented during the monthly staff meeting on November 6. Team members who work at the regional office may join by video conference. The department director thanked employees for sharing updated response templates and coordinating their schedules during the busy period. A short summary of the team’s improvement will appear in the internal newsletter later this month.",
+      "wordCount": 88,
+      "translation": "Đội chăm sóc khách hàng nhận giải quý vì giảm 18% thời gian phản hồi nhưng vẫn giữ mức hài lòng. Giải được trao trong cuộc họp nhân viên ngày 6/11; nhân viên ở văn phòng vùng có thể tham dự qua video.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch026-part7-award-news:1",
+          "question": "Why did the team receive the award?",
+          "choices": [
+            "It hired more staff",
+            "It reduced its service hours",
+            "It opened a new office",
+            "It improved response time while maintaining satisfaction"
+          ],
+          "answerIndex": 3,
+          "explanation": "Đội đã giảm thời gian phản hồi và giữ mức hài lòng của khách hàng.",
+          "choiceIds": [
+            "reading:batch026-part7-award-news:1:choice:1",
+            "reading:batch026-part7-award-news:1:choice:2",
+            "reading:batch026-part7-award-news:1:choice:3",
+            "reading:batch026-part7-award-news:1:choice:4"
+          ],
+          "evidenceText": "reduced average response time by 18 percent while maintaining its customer satisfaction rating",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "reduced average response time by 18 percent while maintaining its customer satisfaction rating"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-award-news:2",
+          "question": "When will the award be presented?",
+          "choices": [
+            "November 6",
+            "November 16",
+            "December 6",
+            "October 6"
+          ],
+          "answerIndex": 0,
+          "explanation": "Giải được trao trong cuộc họp nhân viên ngày 6 tháng 11.",
+          "choiceIds": [
+            "reading:batch026-part7-award-news:2:choice:1",
+            "reading:batch026-part7-award-news:2:choice:2",
+            "reading:batch026-part7-award-news:2:choice:3",
+            "reading:batch026-part7-award-news:2:choice:4"
+          ],
+          "evidenceText": "monthly staff meeting on November 6",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "monthly staff meeting on November 6"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-award-news:3",
+          "question": "How can regional-office employees attend?",
+          "choices": [
+            "By phone only",
+            "By video conference",
+            "In person at headquarters",
+            "They cannot attend"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nhân viên văn phòng vùng có thể tham dự qua video.",
+          "choiceIds": [
+            "reading:batch026-part7-award-news:3:choice:1",
+            "reading:batch026-part7-award-news:3:choice:2",
+            "reading:batch026-part7-award-news:3:choice:3",
+            "reading:batch026-part7-award-news:3:choice:4"
+          ],
+          "evidenceText": "may join by video conference",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "may join by video conference"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part7-payment-terms",
+      "title": "Updated payment terms",
+      "topic": "Finance",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "passage": "Starting with orders placed in January, business customers may choose either a thirty-day invoice or a discounted prepaid option. The discount applies only when payment is received before the order is shipped. Customers who select the invoice option will receive a reminder five days before the due date. Questions about account balances should be directed to the billing team rather than the sales representative. Account statements can be downloaded from the customer portal, and billing inquiries are answered on business days.",
+      "wordCount": 81,
+      "translation": "Từ tháng Một, khách hàng doanh nghiệp có thể chọn thanh toán hóa đơn 30 ngày hoặc trả trước có chiết khấu. Trả trước chỉ được giảm khi tiền đến trước lúc giao hàng; câu hỏi về số dư gửi nhóm billing.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch026-part7-payment-terms:1",
+          "question": "When does the new policy begin?",
+          "choices": [
+            "In December",
+            "In March",
+            "In January",
+            "Immediately"
+          ],
+          "answerIndex": 2,
+          "explanation": "Chính sách mới được áp dụng cho đơn đặt hàng từ tháng Một.",
+          "choiceIds": [
+            "reading:batch026-part7-payment-terms:1:choice:1",
+            "reading:batch026-part7-payment-terms:1:choice:2",
+            "reading:batch026-part7-payment-terms:1:choice:3",
+            "reading:batch026-part7-payment-terms:1:choice:4"
+          ],
+          "evidenceText": "Starting with orders placed in January",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "Starting with orders placed in January"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-payment-terms:2",
+          "question": "When is the prepaid discount applied?",
+          "choices": [
+            "After shipment",
+            "Only after a reminder",
+            "At the end of the month",
+            "When payment arrives before shipment"
+          ],
+          "answerIndex": 3,
+          "explanation": "Chiết khấu được áp dụng khi thanh toán đến trước lúc giao hàng.",
+          "choiceIds": [
+            "reading:batch026-part7-payment-terms:2:choice:1",
+            "reading:batch026-part7-payment-terms:2:choice:2",
+            "reading:batch026-part7-payment-terms:2:choice:3",
+            "reading:batch026-part7-payment-terms:2:choice:4"
+          ],
+          "evidenceText": "payment is received before the order is shipped",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "payment is received before the order is shipped"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-payment-terms:3",
+          "question": "Who should customers contact about account balances?",
+          "choices": [
+            "The billing team",
+            "The warehouse",
+            "The sales representative",
+            "The shipping driver"
+          ],
+          "answerIndex": 0,
+          "explanation": "Câu hỏi về số dư cần gửi đến nhóm billing.",
+          "choiceIds": [
+            "reading:batch026-part7-payment-terms:3:choice:1",
+            "reading:batch026-part7-payment-terms:3:choice:2",
+            "reading:batch026-part7-payment-terms:3:choice:3",
+            "reading:batch026-part7-payment-terms:3:choice:4"
+          ],
+          "evidenceText": "directed to the billing team",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "directed to the billing team"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part7-travel-change",
+      "title": "Conference travel update",
+      "topic": "Travel",
+      "part": "Part 7",
+      "documentType": "SINGLE PASSAGE",
+      "level": "B1",
+      "passage": "Due to a timetable change, the express train to Central City will depart at 7:40 a.m. instead of 8:10 a.m. on Friday. Conference registration opens at 9:30, so travelers should use the earlier service to avoid arriving late. Tickets purchased for the original departure remain valid. The travel coordinator will email the group with platform information on Thursday evening. Travelers should keep the confirmation email available and arrive at the station at least ten minutes early.",
+      "wordCount": 81,
+      "translation": "Do thay đổi lịch tàu, chuyến express đến Central City thứ Sáu khởi hành 7:40 thay vì 8:10. Vé cũ vẫn có hiệu lực; điều phối viên sẽ gửi thông tin sân ga tối thứ Năm.",
+      "vocabulary": [],
+      "questions": [
+        {
+          "id": "reading:batch026-part7-travel-change:1",
+          "question": "What has changed?",
+          "choices": [
+            "The registration time",
+            "The train departure time",
+            "The ticket price",
+            "The conference location"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông báo cho biết giờ khởi hành tàu đã thay đổi.",
+          "choiceIds": [
+            "reading:batch026-part7-travel-change:1:choice:1",
+            "reading:batch026-part7-travel-change:1:choice:2",
+            "reading:batch026-part7-travel-change:1:choice:3",
+            "reading:batch026-part7-travel-change:1:choice:4"
+          ],
+          "evidenceText": "will depart at 7:40 a.m. instead of 8:10 a.m.",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "will depart at 7:40 a.m. instead of 8:10 a.m."
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-travel-change:2",
+          "question": "Why should travelers take the earlier train?",
+          "choices": [
+            "To meet the coordinator",
+            "To collect tickets",
+            "To avoid arriving late",
+            "To visit the station office"
+          ],
+          "answerIndex": 2,
+          "explanation": "Chuyến tàu sớm được đề xuất để tránh đến muộn.",
+          "choiceIds": [
+            "reading:batch026-part7-travel-change:2:choice:1",
+            "reading:batch026-part7-travel-change:2:choice:2",
+            "reading:batch026-part7-travel-change:2:choice:3",
+            "reading:batch026-part7-travel-change:2:choice:4"
+          ],
+          "evidenceText": "use the earlier service to avoid arriving late",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "use the earlier service to avoid arriving late"
+            ]
+          }
+        },
+        {
+          "id": "reading:batch026-part7-travel-change:3",
+          "question": "When will platform information be emailed?",
+          "choices": [
+            "Wednesday morning",
+            "After registration",
+            "Friday at 7:40",
+            "Thursday evening"
+          ],
+          "answerIndex": 3,
+          "explanation": "Điều phối viên sẽ gửi thông tin sân ga cho nhóm vào tối thứ Năm.",
+          "choiceIds": [
+            "reading:batch026-part7-travel-change:3:choice:1",
+            "reading:batch026-part7-travel-change:3:choice:2",
+            "reading:batch026-part7-travel-change:3:choice:3",
+            "reading:batch026-part7-travel-change:3:choice:4"
+          ],
+          "evidenceText": "email the group with platform information on Thursday evening",
+          "evidence": {
+            "sourceLabels": [
+              "SINGLE PASSAGE"
+            ],
+            "quotes": [
+              "email the group with platform information on Thursday evening"
+            ]
+          }
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
     }
   ]
 }

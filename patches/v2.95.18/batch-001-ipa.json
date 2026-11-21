@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.18-us-ipa-001",
+  "baseDataVersion": "2.95.17",
+  "targetDataVersion": "2.95.18",
+  "idSetSha256": "adccbdb4c98872207d2bede7bdc530e1c079bbd8b3679e7e4f6288054c7e404b",
+  "allowedPaths": [
+    "/phonetic/us"
+  ],
+  "description": "Fill missing US IPA fields for 13 existing unambiguous headword records; preserve word IDs and content.",
+  "editorialStatus": "Cambridge US phonetic transcription source-checked; independent phonetic review pending",
+  "accessedOn": "2026-11-20",
+  "sourcePolicy": "US IPA is transcribed from the linked Cambridge English Dictionary pronunciation pages. Entries with conflicting part-of-speech pronunciation variants or no directly verified US form were excluded.",
+  "sourceEvidence": [
+    {
+      "id": "accountable-adj",
+      "word": "accountable",
+      "url": "https://dictionary.cambridge.org/us/pronunciation/english/accountable",
+      "ipa": "/əˈkaʊn.t̬ə.bəl/"
+    },
+    {
+      "id": "admission-n",
+      "word": "admission",
+      "url": "https://dictionary.cambridge.org/us/pronunciation/english/admission",
+      "ipa": "/ədˈmɪʃ.ən/"
+    },
+    {
+      "id": "backlog-n",
+      "word": "backlog",
+      "url": "https://dictionary.cambridge.org/us/pronunciation/english/backlog",
+      "ipa": "/ˈbæk.lɑːɡ/"
+    },
+    {
+      "id": "carrier-n",
+      "word": "carrier",
+      "url": "https://dictionary.cambridge.org/us/pronunciation/english/carrier",
+      "ipa": "/ˈker.i.ɚ/"
+    },
+    {
+      "id": "confidentiality-n",
+      "word": "confidentiality",
+      "url": "https://dictionary.cambridge.org/pronunciation/english/confidentiality",
+      "ipa": "/ˌkɑːn.fə.den.ʃiˈæl.ə.t̬i/"
+    },
+    {
+      "id": "creditor-n",
+      "word": "creditor",
+      "url": "https://dictionary.cambridge.org/pronunciation/english/creditor",
+      "ipa": "/ˈkred.ɪ.t̬ɚ/"
+    },
+    {
+      "id": "credential-n",
+      "word": "credential",
+      "url": "https://dictionary.cambridge.org/us/pronunciation/english/credential",
+      "ipa": "/krɪˈden.ʃəl/"
+    },
+    {
+      "id": "designation-n",
+      "word": "designation",
+      "url": "https://dictionary.cambridge.org/pronunciation/english/designation",
+      "ipa": "/ˌdez.ɪɡˈneɪ.ʃən/"
+    },
+    {
+      "id": "documentation-n",
+      "word": "documentation",
+      "url": "https://dictionary.cambridge.org/pronunciation/english/documentation",
+      "ipa": "/ˌdɑː.kjə.menˈteɪ.ʃən/"
+    },
+    {
+      "id": "duration-n",
+      "word": "duration",
+      "url": "https://dictionary.cambridge.org/us/pronunciation/english/duration",
+      "ipa": "/duːˈreɪ.ʃən/"
+    },
+    {
+      "id": "eligible-adj",
+      "word": "eligible",
+      "url": "https://dictionary.cambridge.org/us/pronunciation/english/eligible",
+      "ipa": "/ˈel.ə.dʒə.bəl/"
+    },
+    {
+      "id": "emerge-v",
+      "word": "emerge",
+      "url": "https://dictionary.cambridge.org/us/pronunciation/english/emerge",
+      "ipa": "/ɪˈmɝːdʒ/"
+    },
+    {
+      "id": "exemption-n",
+      "word": "exemption",
+      "url": "https://dictionary.cambridge.org/pronunciation/english/exemption",
+      "ipa": "/ɪɡˈzemp.ʃən/"
+    }
+  ],
+  "identityGuard": [
+    {
+      "id": "accountable-adj",
+      "word": "accountable"
+    },
+    {
+      "id": "admission-n",
+      "word": "admission"
+    },
+    {
+      "id": "backlog-n",
+      "word": "backlog"
+    },
+    {
+      "id": "carrier-n",
+      "word": "carrier"
+    },
+    {
+      "id": "confidentiality-n",
+      "word": "confidentiality"
+    },
+    {
+      "id": "creditor-n",
+      "word": "creditor"
+    },
+    {
+      "id": "credential-n",
+      "word": "credential"
+    },
+    {
+      "id": "designation-n",
+      "word": "designation"
+    },
+    {
+      "id": "documentation-n",
+      "word": "documentation"
+    },
+    {
+      "id": "duration-n",
+      "word": "duration"
+    },
+    {
+      "id": "eligible-adj",
+      "word": "eligible"
+    },
+    {
+      "id": "emerge-v",
+      "word": "emerge"
+    },
+    {
+      "id": "exemption-n",
+      "word": "exemption"
+    }
+  ],
+  "operations": [
+    {
+      "id": "accountable-adj",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/əˈkaʊn.t̬ə.bəl/"
+    },
+    {
+      "id": "admission-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ədˈmɪʃ.ən/"
+    },
+    {
+      "id": "backlog-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈbæk.lɑːɡ/"
+    },
+    {
+      "id": "carrier-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈker.i.ɚ/"
+    },
+    {
+      "id": "confidentiality-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˌkɑːn.fə.den.ʃiˈæl.ə.t̬i/"
+    },
+    {
+      "id": "creditor-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈkred.ɪ.t̬ɚ/"
+    },
+    {
+      "id": "credential-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/krɪˈden.ʃəl/"
+    },
+    {
+      "id": "designation-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˌdez.ɪɡˈneɪ.ʃən/"
+    },
+    {
+      "id": "documentation-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˌdɑː.kjə.menˈteɪ.ʃən/"
+    },
+    {
+      "id": "duration-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/duːˈreɪ.ʃən/"
+    },
+    {
+      "id": "eligible-adj",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ˈel.ə.dʒə.bəl/"
+    },
+    {
+      "id": "emerge-v",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ɪˈmɝːdʒ/"
+    },
+    {
+      "id": "exemption-n",
+      "path": "/phonetic/us",
+      "expect": {
+        "old": ""
+      },
+      "new": "/ɪɡˈzemp.ʃən/"
+    }
+  ]
+}

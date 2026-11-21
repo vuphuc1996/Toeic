@@ -52,7 +52,8 @@
             "listening:part1-office-cleaning:1:choice:2",
             "listening:part1-office-cleaning:1:choice:3",
             "listening:part1-office-cleaning:1:choice:4"
-          ]
+          ],
+          "evidenceText": "A maintenance worker is sweeping the floor in a hallway."
         }
       ],
       "transcriptTranslation": "A. Một nhân viên bảo trì đang quét sàn hành lang. B. Một nhân viên vệ sinh đang lau cửa kính bằng khăn. C. Một công nhân đang đẩy xe vệ sinh dọc hành lang. D. Một số chiếc ghế đang được sắp xếp gần lối vào.",
@@ -65,7 +66,8 @@
       "editorialBatch": "017",
       "contentBatch": "batch-017-part1-ai-generated-photo",
       "reviewNote": "internal-author-check; independent-second-review-pending",
-      "photoSourceType": "ai-generated"
+      "photoSourceType": "ai-generated",
+      "visualEvidenceNote": "Image check: the worker is visibly using a broom to sweep the tiled hallway floor; the cleaning cart is stationary beside him. The image does not show wiping the glass doors, pushing the cart, or arranging chairs. This is an internal visual check, not independent certification."
     },
     {
       "id": "part2-report-deadline",
@@ -3816,7 +3818,8 @@
             "listening:part2-monitor-delivery-arrival:1:choice:1",
             "listening:part2-monitor-delivery-arrival:1:choice:2",
             "listening:part2-monitor-delivery-arrival:1:choice:3"
-          ]
+          ],
+          "evidenceText": "Has the replacement monitor arrived yet?"
         }
       ],
       "transcriptTranslation": "Màn hình thay thế đã được giao đến chưa? — Chưa; đơn vị chuyển phát dự kiến giao sau bữa trưa.",
@@ -3837,7 +3840,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
       "contentBatch": "batch-013-listening-reserve",
-      "editorialStatus": "reserve-pending-independent-review"
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-revised-budget-approval",
@@ -3868,7 +3872,8 @@
             "listening:part2-revised-budget-approval:1:choice:1",
             "listening:part2-revised-budget-approval:1:choice:2",
             "listening:part2-revised-budget-approval:1:choice:3"
-          ]
+          ],
+          "evidenceText": "Who needs to approve the revised budget?"
         }
       ],
       "transcriptTranslation": "Ai cần phê duyệt ngân sách đã điều chỉnh? — Giám đốc khu vực.",
@@ -3889,7 +3894,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
       "contentBatch": "batch-013-listening-reserve",
-      "editorialStatus": "reserve-pending-independent-review"
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-visitor-parking",
@@ -3920,7 +3926,8 @@
             "listening:part2-visitor-parking:1:choice:1",
             "listening:part2-visitor-parking:1:choice:2",
             "listening:part2-visitor-parking:1:choice:3"
-          ]
+          ],
+          "evidenceText": "Where should visitors park during the renovation?"
         }
       ],
       "transcriptTranslation": "Khách nên đỗ xe ở đâu trong thời gian sửa chữa? — Trong nhà để xe đối diện lối vào chính.",
@@ -3941,7 +3948,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
       "contentBatch": "batch-013-listening-reserve",
-      "editorialStatus": "reserve-pending-independent-review"
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-training-session-reschedule",
@@ -3972,7 +3980,8 @@
             "listening:part2-training-session-reschedule:1:choice:1",
             "listening:part2-training-session-reschedule:1:choice:2",
             "listening:part2-training-session-reschedule:1:choice:3"
-          ]
+          ],
+          "evidenceText": "Would you mind moving the training session to Thursday?"
         }
       ],
       "transcriptTranslation": "Bạn có phiền chuyển buổi đào tạo sang thứ Năm không? — Được thôi; giảng viên rảnh vào ngày đó.",
@@ -3993,7 +4002,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
       "contentBatch": "batch-013-listening-reserve",
-      "editorialStatus": "reserve-pending-independent-review"
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-customer-survey-sent",
@@ -4024,7 +4034,8 @@
             "listening:part2-customer-survey-sent:1:choice:1",
             "listening:part2-customer-survey-sent:1:choice:2",
             "listening:part2-customer-survey-sent:1:choice:3"
-          ]
+          ],
+          "evidenceText": "Haven't you sent the customer survey yet?"
         }
       ],
       "transcriptTranslation": "Bạn vẫn chưa gửi khảo sát khách hàng à? — Tôi gửi rồi; sáng nay tôi đã gửi email đến danh sách nhận thư.",
@@ -4045,7 +4056,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Original TOEIC-style practice item written for this project; not copied from ETS material.",
       "contentBatch": "batch-013-listening-reserve",
-      "editorialStatus": "reserve-pending-independent-review"
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part3-training-handouts",
@@ -4096,7 +4108,8 @@
             "listening:part3-training-handouts:1:choice:2",
             "listening:part3-training-handouts:1:choice:3",
             "listening:part3-training-handouts:1:choice:4"
-          ]
+          ],
+          "evidenceText": "The printed handouts for tomorrow’s workshop still haven’t arrived."
         },
         {
           "question": "Why are the printed handouts needed earlier?",
@@ -4113,7 +4126,8 @@
             "listening:part3-training-handouts:2:choice:2",
             "listening:part3-training-handouts:2:choice:3",
             "listening:part3-training-handouts:2:choice:4"
-          ]
+          ],
+          "evidenceText": "The workshop begins at nine in the morning, and the participants need the materials when they arrive."
         },
         {
           "question": "What will the man do this afternoon?",
@@ -4130,7 +4144,8 @@
             "listening:part3-training-handouts:3:choice:2",
             "listening:part3-training-handouts:3:choice:3",
             "listening:part3-training-handouts:3:choice:4"
-          ]
+          ],
+          "evidenceText": "I will upload it to the training portal this afternoon and email the participants a link."
         }
       ],
       "transcriptTranslation": "Tài liệu in cho buổi workshop ngày mai vẫn chưa đến. Người phụ nữ hỏi thông tin từ nhà cung cấp. Người đàn ông giải thích đơn vị chuyển phát nhận hàng muộn nên gói hàng chỉ đến vào chiều hôm sau. Vì buổi workshop bắt đầu lúc 9 giờ sáng, người đàn ông sẽ tải bản PDF cuối cùng lên cổng đào tạo và gửi đường dẫn cho người tham dự trong chiều nay.",
@@ -4155,7 +4170,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Original TOEIC-style conversation written for this project; not copied from ETS material.",
       "contentBatch": "batch-013-listening-reserve",
-      "editorialStatus": "reserve-pending-independent-review"
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part4-east-elevator-maintenance",
@@ -4188,7 +4204,8 @@
             "listening:part4-east-elevator-maintenance:1:choice:2",
             "listening:part4-east-elevator-maintenance:1:choice:3",
             "listening:part4-east-elevator-maintenance:1:choice:4"
-          ]
+          ],
+          "evidenceText": "The elevators in the east wing will be out of service this Friday from one until four in the afternoon"
         },
         {
           "question": "When will the maintenance take place?",
@@ -4205,7 +4222,8 @@
             "listening:part4-east-elevator-maintenance:2:choice:2",
             "listening:part4-east-elevator-maintenance:2:choice:3",
             "listening:part4-east-elevator-maintenance:2:choice:4"
-          ]
+          ],
+          "evidenceText": "this Friday from one until four in the afternoon"
         },
         {
           "question": "What are employees asked to do during the maintenance?",
@@ -4222,7 +4240,8 @@
             "listening:part4-east-elevator-maintenance:3:choice:2",
             "listening:part4-east-elevator-maintenance:3:choice:3",
             "listening:part4-east-elevator-maintenance:3:choice:4"
-          ]
+          ],
+          "evidenceText": "During that time, please use the west elevator bank near the main lobby"
         }
       ],
       "transcriptTranslation": "Thông báo cho nhân viên biết các thang máy ở cánh phía đông sẽ ngừng hoạt động vào thứ Sáu, từ 1 đến 4 giờ chiều, để kỹ thuật viên thay bảng điều khiển. Trong thời gian đó, nhân viên cần sử dụng cụm thang máy phía tây gần sảnh chính. Những người có đơn giao hàng lớn nên sắp xếp trước buổi trưa. Ban quản lý xin lỗi vì sự bất tiện và cảm ơn mọi người đã hợp tác.",
@@ -4247,7 +4266,8 @@
       "contentSource": "original-editorial",
       "sourceNote": "Original TOEIC-style announcement written for this project; not copied from ETS material.",
       "contentBatch": "batch-013-listening-reserve",
-      "editorialStatus": "reserve-pending-independent-review"
+      "editorialStatus": "reserve-pending-independent-review",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-vendor-credit-note",
@@ -4277,7 +4297,8 @@
             "listening:part2-vendor-credit-note:1:choice:1",
             "listening:part2-vendor-credit-note:1:choice:2",
             "listening:part2-vendor-credit-note:1:choice:3"
-          ]
+          ],
+          "evidenceText": "Has the supplier issued the credit note yet?"
         }
       ],
       "transcriptTranslation": "Nhà cung cấp đã phát hành phiếu ghi có chưa? — Chưa; bộ phận kế toán dự kiến sẽ nhận được vào ngày mai.",
@@ -4297,7 +4318,8 @@
       ],
       "contentSource": "original-editorial",
       "editorialStatus": "reserve-pending-independent-review",
-      "editorialBatch": "014"
+      "editorialBatch": "014",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-warehouse-shipment-hold",
@@ -4327,7 +4349,8 @@
             "listening:part2-warehouse-shipment-hold:1:choice:1",
             "listening:part2-warehouse-shipment-hold:1:choice:2",
             "listening:part2-warehouse-shipment-hold:1:choice:3"
-          ]
+          ],
+          "evidenceText": "Could you ask the warehouse to hold the shipment until Monday?"
         }
       ],
       "transcriptTranslation": "Bạn có thể nhờ kho giữ lô hàng đến thứ Hai không? — Được, tôi sẽ thông báo cho bộ phận điều phối xuất hàng.",
@@ -4347,7 +4370,8 @@
       ],
       "contentSource": "original-editorial",
       "editorialStatus": "reserve-pending-independent-review",
-      "editorialBatch": "014"
+      "editorialBatch": "014",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-purchase-order-return",
@@ -4377,7 +4401,8 @@
             "listening:part2-purchase-order-return:1:choice:1",
             "listening:part2-purchase-order-return:1:choice:2",
             "listening:part2-purchase-order-return:1:choice:3"
-          ]
+          ],
+          "evidenceText": "Why was the purchase order returned?"
         }
       ],
       "transcriptTranslation": "Tại sao đơn đặt hàng mua bị trả lại? — Vì thiếu mã trung tâm chi phí.",
@@ -4397,7 +4422,8 @@
       ],
       "contentSource": "original-editorial",
       "editorialStatus": "reserve-pending-independent-review",
-      "editorialBatch": "014"
+      "editorialBatch": "014",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-orientation-leader",
@@ -4427,7 +4453,8 @@
             "listening:part2-orientation-leader:1:choice:1",
             "listening:part2-orientation-leader:1:choice:2",
             "listening:part2-orientation-leader:1:choice:3"
-          ]
+          ],
+          "evidenceText": "Who will lead the new employee orientation?"
         }
       ],
       "transcriptTranslation": "Ai sẽ phụ trách buổi định hướng nhân viên mới? — Cô Alvarez thuộc bộ phận Nhân sự.",
@@ -4447,7 +4474,8 @@
       ],
       "contentSource": "original-editorial",
       "editorialStatus": "reserve-pending-independent-review",
-      "editorialBatch": "014"
+      "editorialBatch": "014",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-inventory-report-frequency",
@@ -4477,7 +4505,8 @@
             "listening:part2-inventory-report-frequency:1:choice:1",
             "listening:part2-inventory-report-frequency:1:choice:2",
             "listening:part2-inventory-report-frequency:1:choice:3"
-          ]
+          ],
+          "evidenceText": "How often is the inventory report updated?"
         }
       ],
       "transcriptTranslation": "Báo cáo tồn kho được cập nhật bao lâu một lần? — Vào mỗi chiều thứ Sáu.",
@@ -4497,7 +4526,8 @@
       ],
       "contentSource": "original-editorial",
       "editorialStatus": "reserve-pending-independent-review",
-      "editorialBatch": "014"
+      "editorialBatch": "014",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part3-printer-maintenance-contract",
@@ -4544,7 +4574,8 @@
             "listening:part3-printer-maintenance-contract:1:choice:2",
             "listening:part3-printer-maintenance-contract:1:choice:3",
             "listening:part3-printer-maintenance-contract:1:choice:4"
-          ]
+          ],
+          "evidenceText": "I reviewed the draft maintenance agreement from Apex Office Systems."
         },
         {
           "question": "Why did the operations team request next-business-day service?",
@@ -4561,7 +4592,8 @@
             "listening:part3-printer-maintenance-contract:2:choice:2",
             "listening:part3-printer-maintenance-contract:2:choice:3",
             "listening:part3-printer-maintenance-contract:2:choice:4"
-          ]
+          ],
+          "evidenceText": "because the new printers are used for customer orders."
         },
         {
           "question": "What does the man ask the woman to do next?",
@@ -4578,7 +4610,8 @@
             "listening:part3-printer-maintenance-contract:3:choice:2",
             "listening:part3-printer-maintenance-contract:3:choice:3",
             "listening:part3-printer-maintenance-contract:3:choice:4"
-          ]
+          ],
+          "evidenceText": "Please send the revised clause to Legal before we sign anything."
         }
       ],
       "transcriptTranslation": "Người phụ nữ đã xem dự thảo hợp đồng bảo trì của Apex Office Systems. Mức phí năm không đổi nhưng thời gian phản hồi sửa chữa khẩn cấp vẫn là hai ngày làm việc. Nhóm vận hành muốn được hỗ trợ vào ngày làm việc kế tiếp vì máy in phục vụ đơn hàng khách hàng. Nhà cung cấp đồng ý nếu hợp đồng được gia hạn thêm một năm. Người đàn ông đề nghị gửi điều khoản sửa đổi cho bộ phận Pháp chế trước khi ký.",
@@ -4602,7 +4635,8 @@
       ],
       "contentSource": "original-editorial",
       "editorialStatus": "reserve-pending-independent-review",
-      "editorialBatch": "014"
+      "editorialBatch": "014",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part3-branch-inventory-transfer",
@@ -4649,7 +4683,8 @@
             "listening:part3-branch-inventory-transfer:1:choice:2",
             "listening:part3-branch-inventory-transfer:1:choice:3",
             "listening:part3-branch-inventory-transfer:1:choice:4"
-          ]
+          ],
+          "evidenceText": "The inventory report lists eighteen wireless keyboards as available, but the cycle count in aisle B12 shows none."
         },
         {
           "question": "Why should the cartons be excluded from this warehouse’s available stock?",
@@ -4666,7 +4701,8 @@
             "listening:part3-branch-inventory-transfer:2:choice:2",
             "listening:part3-branch-inventory-transfer:2:choice:3",
             "listening:part3-branch-inventory-transfer:2:choice:4"
-          ]
+          ],
+          "evidenceText": "They are marked for the Riverside branch, not this warehouse."
         },
         {
           "question": "When will the woman update the inventory count?",
@@ -4683,7 +4719,8 @@
             "listening:part3-branch-inventory-transfer:3:choice:2",
             "listening:part3-branch-inventory-transfer:3:choice:3",
             "listening:part3-branch-inventory-transfer:3:choice:4"
-          ]
+          ],
+          "evidenceText": "I will move the cartons to the branch-transfer section and update the count after the driver signs."
         }
       ],
       "transcriptTranslation": "Báo cáo tồn kho ghi nhận có 18 bàn phím không dây sẵn có nhưng kiểm kê tại dãy B12 không thấy sản phẩm nào. Người phụ nữ tìm thấy các thùng hàng ở khu vực chuyển kho và xác nhận chúng được ghi nhãn dành cho chi nhánh Riverside. Người đàn ông nói chúng không được tính vào lượng hàng sẵn có của kho hiện tại. Cô ấy sẽ chuyển thùng hàng sang khu vực điều chuyển chi nhánh và cập nhật số liệu sau khi tài xế ký biểu mẫu.",
@@ -4707,7 +4744,8 @@
       ],
       "contentSource": "original-editorial",
       "editorialStatus": "reserve-pending-independent-review",
-      "editorialBatch": "014"
+      "editorialBatch": "014",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part4-expense-reimbursement-procedure",
@@ -4739,7 +4777,8 @@
             "listening:part4-expense-reimbursement-procedure:1:choice:2",
             "listening:part4-expense-reimbursement-procedure:1:choice:3",
             "listening:part4-expense-reimbursement-procedure:1:choice:4"
-          ]
+          ],
+          "evidenceText": "employees must submit travel and meal expense claims through the finance portal"
         },
         {
           "question": "When is an itemized receipt required?",
@@ -4756,7 +4795,8 @@
             "listening:part4-expense-reimbursement-procedure:2:choice:2",
             "listening:part4-expense-reimbursement-procedure:2:choice:3",
             "listening:part4-expense-reimbursement-procedure:2:choice:4"
-          ]
+          ],
+          "evidenceText": "Each claim must include an itemized receipt for expenses over twenty dollars"
         },
         {
           "question": "By when must claims for the previous month be submitted?",
@@ -4773,7 +4813,8 @@
             "listening:part4-expense-reimbursement-procedure:3:choice:2",
             "listening:part4-expense-reimbursement-procedure:3:choice:3",
             "listening:part4-expense-reimbursement-procedure:3:choice:4"
-          ]
+          ],
+          "evidenceText": "Claims for the previous month are due by the fifth business day of the following month"
         }
       ],
       "transcriptTranslation": "Kể từ ngày 1 tháng 12, nhân viên phải gửi yêu cầu thanh toán chi phí đi lại và ăn uống qua cổng tài chính. Mỗi yêu cầu phải có hóa đơn chi tiết đối với khoản chi trên 20 đô la. Các khoản của tháng trước phải được gửi trước ngày làm việc thứ năm của tháng kế tiếp. Biểu mẫu giấy sẽ không còn được chấp nhận; quản lý tiếp tục phê duyệt trực tuyến. Nhân viên cần trợ giúp có thể liên hệ bộ phận công nợ phải trả.",
@@ -4797,7 +4838,8 @@
       ],
       "contentSource": "original-editorial",
       "editorialStatus": "reserve-pending-independent-review",
-      "editorialBatch": "014"
+      "editorialBatch": "014",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part4-new-employee-orientation-room-change",
@@ -4829,7 +4871,8 @@
             "listening:part4-new-employee-orientation-room-change:1:choice:2",
             "listening:part4-new-employee-orientation-room-change:1:choice:3",
             "listening:part4-new-employee-orientation-room-change:1:choice:4"
-          ]
+          ],
+          "evidenceText": "the session will now take place in Conference Room C"
         },
         {
           "question": "Why has the room been changed?",
@@ -4846,7 +4889,8 @@
             "listening:part4-new-employee-orientation-room-change:2:choice:2",
             "listening:part4-new-employee-orientation-room-change:2:choice:3",
             "listening:part4-new-employee-orientation-room-change:2:choice:4"
-          ]
+          ],
+          "evidenceText": "Because the projector in Training Room Two is being repaired"
         },
         {
           "question": "What should participants bring?",
@@ -4863,7 +4907,8 @@
             "listening:part4-new-employee-orientation-room-change:3:choice:2",
             "listening:part4-new-employee-orientation-room-change:3:choice:3",
             "listening:part4-new-employee-orientation-room-change:3:choice:4"
-          ]
+          ],
+          "evidenceText": "Participants should bring their laptops"
         }
       ],
       "transcriptTranslation": "Thông báo về việc đổi phòng cho buổi định hướng nhân viên mới vào thứ Tư. Do máy chiếu tại Training Room Two đang được sửa chữa, buổi học sẽ chuyển sang Conference Room C. Giờ bắt đầu vẫn là 9 giờ 30 sáng. Người tham gia cần mang laptop; bản in sổ tay nhân viên sẽ được phát ở cửa. Ai không thể tham dự cần báo cho bộ phận Nhân sự trước chiều thứ Ba.",
@@ -4887,7 +4932,8 @@
       ],
       "contentSource": "original-editorial",
       "editorialStatus": "reserve-pending-independent-review",
-      "editorialBatch": "014"
+      "editorialBatch": "014",
+      "reviewNote": "internal-author-check; transcript-evidence-linked-v2.95.19; independent-second-review-pending"
     },
     {
       "id": "part2-freight-invoice-surcharge",
@@ -8639,6 +8685,1968 @@
       "editorialBatch": "025",
       "contentBatch": "batch-025-listening-expansion",
       "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part3-vendor-call",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "A call about a delayed component order",
+      "topic": "Purchasing & Supply",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Maya",
+          "voice": "female",
+          "text": "Hi Daniel, the replacement components were supposed to arrive this morning. Do you have an update from the supplier?",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Daniel",
+          "voice": "male",
+          "text": "They called ten minutes ago. The truck was held at the distribution center, so delivery is now expected around three this afternoon.",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female",
+          "text": "That is still before our technicians leave. Please tell receiving to inspect the boxes immediately and send me the count.",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Daniel",
+          "voice": "male",
+          "text": "I will. If anything is missing, I will contact the supplier before the warehouse closes.",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch026-part3-vendor-call:1",
+          "question": "When are the components expected to arrive?",
+          "choices": [
+            "At about three",
+            "At noon",
+            "Tomorrow morning",
+            "After the warehouse closes"
+          ],
+          "answerIndex": 0,
+          "explanation": "Daniel cho biết hàng dự kiến đến khoảng 3 giờ chiều.",
+          "choiceIds": [
+            "listening:batch026-part3-vendor-call:1:choice:1",
+            "listening:batch026-part3-vendor-call:1:choice:2",
+            "listening:batch026-part3-vendor-call:1:choice:3",
+            "listening:batch026-part3-vendor-call:1:choice:4"
+          ],
+          "evidenceText": "delivery is now expected around three this afternoon"
+        },
+        {
+          "id": "listening:batch026-part3-vendor-call:2",
+          "question": "What does Maya ask receiving to do?",
+          "choices": [
+            "Store the boxes overnight",
+            "Inspect the boxes immediately",
+            "Return the order",
+            "Call the technicians"
+          ],
+          "answerIndex": 1,
+          "explanation": "Maya cần yêu cầu bộ phận nhận hàng kiểm tra các thùng ngay lập tức.",
+          "choiceIds": [
+            "listening:batch026-part3-vendor-call:2:choice:1",
+            "listening:batch026-part3-vendor-call:2:choice:2",
+            "listening:batch026-part3-vendor-call:2:choice:3",
+            "listening:batch026-part3-vendor-call:2:choice:4"
+          ],
+          "evidenceText": "inspect the boxes immediately"
+        },
+        {
+          "id": "listening:batch026-part3-vendor-call:3",
+          "question": "What will Daniel do if items are missing?",
+          "choices": [
+            "Ask Maya to drive there",
+            "Cancel the order",
+            "Contact the supplier",
+            "Reschedule the technicians"
+          ],
+          "answerIndex": 2,
+          "explanation": "Daniel sẽ liên hệ nhà cung cấp trước khi kho đóng cửa nếu thiếu hàng.",
+          "choiceIds": [
+            "listening:batch026-part3-vendor-call:3:choice:1",
+            "listening:batch026-part3-vendor-call:3:choice:2",
+            "listening:batch026-part3-vendor-call:3:choice:3",
+            "listening:batch026-part3-vendor-call:3:choice:4"
+          ],
+          "evidenceText": "contact the supplier before the warehouse closes"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part3-training-room",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Changing the training room",
+      "topic": "Staff Training",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Alex",
+          "voice": "male",
+          "text": "Did you see the email about tomorrow’s software training? The room has changed.",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Priya",
+          "voice": "female",
+          "text": "Yes, but I thought it was still in Conference Room A. Where are we meeting now?",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Alex",
+          "voice": "male",
+          "text": "It will be in the computer lab on the fourth floor. The instructor needs a workstation for every participant.",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Priya",
+          "voice": "female",
+          "text": "I will update the calendar and send a message to the team. Should we arrive early?",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Alex",
+          "voice": "male",
+          "text": "Please be there fifteen minutes before nine so we can sign in.",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch026-part3-training-room:1",
+          "question": "What is the purpose of the conversation?",
+          "choices": [
+            "To cancel a course",
+            "To order computers",
+            "To hire an instructor",
+            "To confirm a room change"
+          ],
+          "answerIndex": 3,
+          "explanation": "Cuộc trao đổi nêu rằng địa điểm đào tạo ngày mai đã thay đổi.",
+          "choiceIds": [
+            "listening:batch026-part3-training-room:1:choice:1",
+            "listening:batch026-part3-training-room:1:choice:2",
+            "listening:batch026-part3-training-room:1:choice:3",
+            "listening:batch026-part3-training-room:1:choice:4"
+          ],
+          "evidenceText": "The room has changed"
+        },
+        {
+          "id": "listening:batch026-part3-training-room:2",
+          "question": "Where will the training take place?",
+          "choices": [
+            "The computer lab",
+            "The lobby",
+            "Conference Room A",
+            "The cafeteria"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông tin cho biết buổi học diễn ra tại phòng máy tầng bốn.",
+          "choiceIds": [
+            "listening:batch026-part3-training-room:2:choice:1",
+            "listening:batch026-part3-training-room:2:choice:2",
+            "listening:batch026-part3-training-room:2:choice:3",
+            "listening:batch026-part3-training-room:2:choice:4"
+          ],
+          "evidenceText": "computer lab on the fourth floor"
+        },
+        {
+          "id": "listening:batch026-part3-training-room:3",
+          "question": "What time should participants arrive?",
+          "choices": [
+            "9:00",
+            "8:45",
+            "9:15",
+            "10:00"
+          ],
+          "answerIndex": 1,
+          "explanation": "Người tham dự cần đến trước 9 giờ 15 phút.",
+          "choiceIds": [
+            "listening:batch026-part3-training-room:3:choice:1",
+            "listening:batch026-part3-training-room:3:choice:2",
+            "listening:batch026-part3-training-room:3:choice:3",
+            "listening:batch026-part3-training-room:3:choice:4"
+          ],
+          "evidenceText": "fifteen minutes before nine"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part3-invoice-correction",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Correcting an invoice",
+      "topic": "Accounting",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Noah",
+          "voice": "male",
+          "text": "I noticed that the invoice from Bright Office lists twenty chairs, but we ordered twelve.",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Lena",
+          "voice": "female",
+          "text": "You are right. The purchase order shows twelve chairs. I will ask the vendor to issue a corrected invoice.",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Noah",
+          "voice": "male",
+          "text": "Please copy me on the email. Finance cannot schedule payment until the quantities match.",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Lena",
+          "voice": "female",
+          "text": "I will send it this morning and request the revised document by Friday.",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch026-part3-invoice-correction:1",
+          "question": "What discrepancy did Noah notice?",
+          "choices": [
+            "The delivery date",
+            "The unit price",
+            "The chair quantity",
+            "The vendor name"
+          ],
+          "answerIndex": 2,
+          "explanation": "Hóa đơn cho biết có 20 ghế, trong khi đơn chỉ đặt 12.",
+          "choiceIds": [
+            "listening:batch026-part3-invoice-correction:1:choice:1",
+            "listening:batch026-part3-invoice-correction:1:choice:2",
+            "listening:batch026-part3-invoice-correction:1:choice:3",
+            "listening:batch026-part3-invoice-correction:1:choice:4"
+          ],
+          "evidenceText": "lists twenty chairs, but we ordered twelve"
+        },
+        {
+          "id": "listening:batch026-part3-invoice-correction:2",
+          "question": "What will Lena request?",
+          "choices": [
+            "A refund check",
+            "A new purchase order",
+            "A delivery appointment",
+            "A corrected invoice"
+          ],
+          "answerIndex": 3,
+          "explanation": "Lena cần yêu cầu nhà cung cấp phát hành hóa đơn điều chỉnh.",
+          "choiceIds": [
+            "listening:batch026-part3-invoice-correction:2:choice:1",
+            "listening:batch026-part3-invoice-correction:2:choice:2",
+            "listening:batch026-part3-invoice-correction:2:choice:3",
+            "listening:batch026-part3-invoice-correction:2:choice:4"
+          ],
+          "evidenceText": "issue a corrected invoice"
+        },
+        {
+          "id": "listening:batch026-part3-invoice-correction:3",
+          "question": "Why can Finance not schedule payment yet?",
+          "choices": [
+            "The quantities do not match",
+            "The vendor is closed",
+            "The order was canceled",
+            "The email is missing"
+          ],
+          "answerIndex": 0,
+          "explanation": "Finance không thể lên lịch thanh toán do số lượng chưa khớp.",
+          "choiceIds": [
+            "listening:batch026-part3-invoice-correction:3:choice:1",
+            "listening:batch026-part3-invoice-correction:3:choice:2",
+            "listening:batch026-part3-invoice-correction:3:choice:3",
+            "listening:batch026-part3-invoice-correction:3:choice:4"
+          ],
+          "evidenceText": "quantities match"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part3-access-card",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Renewing an access card",
+      "topic": "Building Administration",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Erin",
+          "voice": "female",
+          "text": "My access card expires at the end of this week. Do I need to visit security to renew it?",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Luis",
+          "voice": "male",
+          "text": "You can submit the renewal form online. Security will send a confirmation once your manager approves it.",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Erin",
+          "voice": "female",
+          "text": "How long does approval usually take? I have a client meeting early Monday.",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Luis",
+          "voice": "male",
+          "text": "Usually one business day. If you submit it before noon today, it should be ready tomorrow afternoon.",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch026-part3-access-card:1",
+          "question": "How can Erin renew her access card?",
+          "choices": [
+            "By calling the client",
+            "By submitting an online form",
+            "By visiting the warehouse",
+            "By purchasing a new card"
+          ],
+          "answerIndex": 1,
+          "explanation": "Erin có thể nộp biểu mẫu gia hạn trực tuyến.",
+          "choiceIds": [
+            "listening:batch026-part3-access-card:1:choice:1",
+            "listening:batch026-part3-access-card:1:choice:2",
+            "listening:batch026-part3-access-card:1:choice:3",
+            "listening:batch026-part3-access-card:1:choice:4"
+          ],
+          "evidenceText": "submit the renewal form online"
+        },
+        {
+          "id": "listening:batch026-part3-access-card:2",
+          "question": "Who must approve the renewal?",
+          "choices": [
+            "The receptionist",
+            "The client",
+            "Her manager",
+            "The vendor"
+          ],
+          "answerIndex": 2,
+          "explanation": "Quản lý của Erin phải phê duyệt yêu cầu.",
+          "choiceIds": [
+            "listening:batch026-part3-access-card:2:choice:1",
+            "listening:batch026-part3-access-card:2:choice:2",
+            "listening:batch026-part3-access-card:2:choice:3",
+            "listening:batch026-part3-access-card:2:choice:4"
+          ],
+          "evidenceText": "once your manager approves it"
+        },
+        {
+          "id": "listening:batch026-part3-access-card:3",
+          "question": "When should the card be ready if she submits before noon?",
+          "choices": [
+            "This evening",
+            "Monday morning",
+            "Next week",
+            "Tomorrow afternoon"
+          ],
+          "answerIndex": 3,
+          "explanation": "Nộp trước buổi trưa thì thẻ dự kiến sẵn sàng chiều mai.",
+          "choiceIds": [
+            "listening:batch026-part3-access-card:3:choice:1",
+            "listening:batch026-part3-access-card:3:choice:2",
+            "listening:batch026-part3-access-card:3:choice:3",
+            "listening:batch026-part3-access-card:3:choice:4"
+          ],
+          "evidenceText": "ready tomorrow afternoon"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part4-building-notice",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Building maintenance announcement",
+      "topic": "Facilities",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "Good afternoon. Water service on floors six through eight will be temporarily unavailable tomorrow from 9 a.m. to 11 a.m. while plumbing work is completed. Please use the restrooms on floors three or five during this period. The maintenance team will post an update if the work finishes early. We apologize for the inconvenience and appreciate your cooperation.",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch026-part4-building-notice:1",
+          "question": "Which floors will have no water service?",
+          "choices": [
+            "Six through eight",
+            "Three through five",
+            "All floors",
+            "The lobby only"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo cho biết các tầng sáu đến tám sẽ bị gián đoạn nước.",
+          "choiceIds": [
+            "listening:batch026-part4-building-notice:1:choice:1",
+            "listening:batch026-part4-building-notice:1:choice:2",
+            "listening:batch026-part4-building-notice:1:choice:3",
+            "listening:batch026-part4-building-notice:1:choice:4"
+          ],
+          "evidenceText": "Water service on floors six through eight"
+        },
+        {
+          "id": "listening:batch026-part4-building-notice:2",
+          "question": "When will the work take place?",
+          "choices": [
+            "Today at noon",
+            "Tomorrow from 9 to 11",
+            "Tomorrow after 5",
+            "Next week"
+          ],
+          "answerIndex": 1,
+          "explanation": "Công việc được thực hiện từ 9 đến 11 giờ sáng ngày mai.",
+          "choiceIds": [
+            "listening:batch026-part4-building-notice:2:choice:1",
+            "listening:batch026-part4-building-notice:2:choice:2",
+            "listening:batch026-part4-building-notice:2:choice:3",
+            "listening:batch026-part4-building-notice:2:choice:4"
+          ],
+          "evidenceText": "tomorrow from 9 a.m. to 11 a.m."
+        },
+        {
+          "id": "listening:batch026-part4-building-notice:3",
+          "question": "Where should people go during the interruption?",
+          "choices": [
+            "The rooftop",
+            "The parking garage",
+            "Floors three or five",
+            "The maintenance office"
+          ],
+          "answerIndex": 2,
+          "explanation": "Người dùng được hướng dẫn đến nhà vệ sinh tầng ba hoặc năm.",
+          "choiceIds": [
+            "listening:batch026-part4-building-notice:3:choice:1",
+            "listening:batch026-part4-building-notice:3:choice:2",
+            "listening:batch026-part4-building-notice:3:choice:3",
+            "listening:batch026-part4-building-notice:3:choice:4"
+          ],
+          "evidenceText": "use the restrooms on floors three or five"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part4-travel-update",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Updated travel itinerary",
+      "topic": "Travel & Scheduling",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "male",
+          "text": "Travelers attending the regional sales meeting should note a change to the return schedule. The shuttle will leave the hotel at 4:20 p.m., rather than 4:45, because the airport road is expected to be busy. Please check out before lunch and leave your luggage with the front desk. The driver will collect everyone at the main entrance.",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch026-part4-travel-update:1",
+          "question": "What schedule has changed?",
+          "choices": [
+            "The arrival flight",
+            "The hotel check-in",
+            "The meeting agenda",
+            "The return shuttle"
+          ],
+          "answerIndex": 3,
+          "explanation": "Thông báo cho biết lịch xe đưa khách về đã thay đổi.",
+          "choiceIds": [
+            "listening:batch026-part4-travel-update:1:choice:1",
+            "listening:batch026-part4-travel-update:1:choice:2",
+            "listening:batch026-part4-travel-update:1:choice:3",
+            "listening:batch026-part4-travel-update:1:choice:4"
+          ],
+          "evidenceText": "change to the return schedule"
+        },
+        {
+          "id": "listening:batch026-part4-travel-update:2",
+          "question": "What time will the shuttle depart?",
+          "choices": [
+            "4:20 p.m.",
+            "4:45 p.m.",
+            "5:20 p.m.",
+            "5:45 p.m."
+          ],
+          "answerIndex": 0,
+          "explanation": "Xe được lên lịch rời khách sạn lúc 4 giờ 20 chiều.",
+          "choiceIds": [
+            "listening:batch026-part4-travel-update:2:choice:1",
+            "listening:batch026-part4-travel-update:2:choice:2",
+            "listening:batch026-part4-travel-update:2:choice:3",
+            "listening:batch026-part4-travel-update:2:choice:4"
+          ],
+          "evidenceText": "shuttle will leave the hotel at 4:20 p.m."
+        },
+        {
+          "id": "listening:batch026-part4-travel-update:3",
+          "question": "Where should travelers leave their luggage?",
+          "choices": [
+            "On the shuttle",
+            "At the front desk",
+            "In the meeting room",
+            "At the airport"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hành khách cần gửi hành lý tại quầy lễ tân.",
+          "choiceIds": [
+            "listening:batch026-part4-travel-update:3:choice:1",
+            "listening:batch026-part4-travel-update:3:choice:2",
+            "listening:batch026-part4-travel-update:3:choice:3",
+            "listening:batch026-part4-travel-update:3:choice:4"
+          ],
+          "evidenceText": "leave your luggage with the front desk"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part4-product-launch",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Product launch briefing",
+      "topic": "Marketing",
+      "level": "B2",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "The marketing team will launch the updated scheduling app on Tuesday. The demonstration has been moved to the second-floor auditorium to accommodate additional guests. Representatives should collect their presentation badges from reception by 8:30 a.m. Printed brochures will be available at the entrance, but the product guide is now distributed digitally. Please test your demonstration account before arriving.",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch026-part4-product-launch:1",
+          "question": "When will the app be launched?",
+          "choices": [
+            "Monday",
+            "Wednesday",
+            "Tuesday",
+            "Friday"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thông báo nêu ứng dụng lịch mới được ra mắt vào thứ Ba.",
+          "choiceIds": [
+            "listening:batch026-part4-product-launch:1:choice:1",
+            "listening:batch026-part4-product-launch:1:choice:2",
+            "listening:batch026-part4-product-launch:1:choice:3",
+            "listening:batch026-part4-product-launch:1:choice:4"
+          ],
+          "evidenceText": "launch the updated scheduling app on Tuesday"
+        },
+        {
+          "id": "listening:batch026-part4-product-launch:2",
+          "question": "Why was the demonstration moved?",
+          "choices": [
+            "The projector failed",
+            "The app is delayed",
+            "The auditorium is closed",
+            "More guests are expected"
+          ],
+          "answerIndex": 3,
+          "explanation": "Buổi giới thiệu được chuyển địa điểm để tiếp nhận thêm khách.",
+          "choiceIds": [
+            "listening:batch026-part4-product-launch:2:choice:1",
+            "listening:batch026-part4-product-launch:2:choice:2",
+            "listening:batch026-part4-product-launch:2:choice:3",
+            "listening:batch026-part4-product-launch:2:choice:4"
+          ],
+          "evidenceText": "to accommodate additional guests"
+        },
+        {
+          "id": "listening:batch026-part4-product-launch:3",
+          "question": "What should representatives collect by 8:30?",
+          "choices": [
+            "Presentation badges",
+            "Printed invoices",
+            "Product samples",
+            "Parking permits"
+          ],
+          "answerIndex": 0,
+          "explanation": "Đại diện cần nhận thẻ trình bày tại lễ tân trước 8 giờ 30.",
+          "choiceIds": [
+            "listening:batch026-part4-product-launch:3:choice:1",
+            "listening:batch026-part4-product-launch:3:choice:2",
+            "listening:batch026-part4-product-launch:3:choice:3",
+            "listening:batch026-part4-product-launch:3:choice:4"
+          ],
+          "evidenceText": "collect their presentation badges from reception by 8:30 a.m."
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch026-part4-policy-reminder",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Expense policy reminder",
+      "topic": "Finance & Administration",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "male",
+          "text": "A reminder to all employees who travel for business: expense claims must be submitted within ten working days after the trip. Receipts for meals and transportation should be attached to the online form. If a receipt is unavailable, include a brief explanation in the notes section. Claims submitted after the deadline may be returned for correction.",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "id": "listening:batch026-part4-policy-reminder:1",
+          "question": "How long do employees have to submit expense claims?",
+          "choices": [
+            "Five working days",
+            "Ten working days",
+            "Two weeks",
+            "One month"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nhân viên được yêu cầu gửi yêu cầu chi phí trong mười ngày làm việc.",
+          "choiceIds": [
+            "listening:batch026-part4-policy-reminder:1:choice:1",
+            "listening:batch026-part4-policy-reminder:1:choice:2",
+            "listening:batch026-part4-policy-reminder:1:choice:3",
+            "listening:batch026-part4-policy-reminder:1:choice:4"
+          ],
+          "evidenceText": "within ten working days after the trip"
+        },
+        {
+          "id": "listening:batch026-part4-policy-reminder:2",
+          "question": "What should be attached to the online form?",
+          "choices": [
+            "Meeting notes",
+            "A passport copy",
+            "Meal and transportation receipts",
+            "A manager biography"
+          ],
+          "answerIndex": 2,
+          "explanation": "Cần đính kèm hóa đơn ăn uống và phương tiện đi lại.",
+          "choiceIds": [
+            "listening:batch026-part4-policy-reminder:2:choice:1",
+            "listening:batch026-part4-policy-reminder:2:choice:2",
+            "listening:batch026-part4-policy-reminder:2:choice:3",
+            "listening:batch026-part4-policy-reminder:2:choice:4"
+          ],
+          "evidenceText": "Receipts for meals and transportation should be attached"
+        },
+        {
+          "id": "listening:batch026-part4-policy-reminder:3",
+          "question": "What should employees do if a receipt is missing?",
+          "choices": [
+            "Cancel the claim",
+            "Ask the hotel for a refund",
+            "Submit the form blank",
+            "Include an explanation in the notes"
+          ],
+          "answerIndex": 3,
+          "explanation": "Nếu thiếu hóa đơn, cần ghi lời giải thích trong phần ghi chú.",
+          "choiceIds": [
+            "listening:batch026-part4-policy-reminder:3:choice:1",
+            "listening:batch026-part4-policy-reminder:3:choice:2",
+            "listening:batch026-part4-policy-reminder:3:choice:3",
+            "listening:batch026-part4-policy-reminder:3:choice:4"
+          ],
+          "evidenceText": "include a brief explanation in the notes section"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "026",
+      "contentBatch": "batch-026-major-expansion",
+      "reviewNote": "internal-author-check; independent-second-review-pending"
+    },
+    {
+      "id": "batch027-part2-room-booking",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "A room booking",
+      "topic": "Office & Scheduling",
+      "level": "A2–B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "female",
+          "text": "Could you reserve the smaller conference room for Thursday?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "Sure, I’ll check its availability.",
+            "The report is about last quarter.",
+            "It was delivered by courier."
+          ],
+          "answerIndex": 0,
+          "explanation": "Người nói yêu cầu đặt phòng họp. Lựa chọn A đáp lại đúng bằng việc kiểm tra tình trạng phòng; B và C không xử lý yêu cầu đặt phòng.",
+          "choiceIds": [
+            "listening:batch027-part2-room-booking:1:choice:1",
+            "listening:batch027-part2-room-booking:1:choice:2",
+            "listening:batch027-part2-room-booking:1:choice:3"
+          ],
+          "evidenceText": "Could you reserve the smaller conference room for Thursday?"
+        }
+      ],
+      "transcriptTranslation": "Bạn có thể đặt phòng họp nhỏ cho thứ Năm không?",
+      "vocabulary": [
+        {
+          "word": "reserve",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "availability",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": "Reserve: new short-response practice; verify question intent, distractor fit and naturalness."
+    },
+    {
+      "id": "batch027-part2-invoice-copy",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "An invoice copy",
+      "topic": "Finance & Administration",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "male",
+          "text": "Who should I send the revised invoice to?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "It was revised yesterday.",
+            "Please send it to Ms. Nguyen in accounting.",
+            "The printer is out of paper."
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu hỏi Who hỏi người nhận. Lựa chọn B xác định người nhận và bộ phận; A nói thời gian, C nói thiết bị.",
+          "choiceIds": [
+            "listening:batch027-part2-invoice-copy:1:choice:1",
+            "listening:batch027-part2-invoice-copy:1:choice:2",
+            "listening:batch027-part2-invoice-copy:1:choice:3"
+          ],
+          "evidenceText": "Who should I send the revised invoice to?"
+        }
+      ],
+      "transcriptTranslation": "Tôi nên gửi hóa đơn đã chỉnh sửa cho ai?",
+      "vocabulary": [
+        {
+          "word": "revised invoice",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "accounting",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": "Reserve: new short-response practice; verify who-question target and distractor fit."
+    },
+    {
+      "id": "batch027-part2-training-start",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Training schedule",
+      "topic": "Training & HR",
+      "level": "A2–B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "female",
+          "text": "What time does the safety training begin?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "In the training room upstairs.",
+            "It begins at nine thirty.",
+            "She has completed the online form."
+          ],
+          "answerIndex": 1,
+          "explanation": "What time yêu cầu giờ bắt đầu; B trả lời 9:30. A là địa điểm, C không liên quan.",
+          "choiceIds": [
+            "listening:batch027-part2-training-start:1:choice:1",
+            "listening:batch027-part2-training-start:1:choice:2",
+            "listening:batch027-part2-training-start:1:choice:3"
+          ],
+          "evidenceText": "What time does the safety training begin?"
+        }
+      ],
+      "transcriptTranslation": "Buổi đào tạo an toàn bắt đầu lúc mấy giờ?",
+      "vocabulary": [
+        {
+          "word": "safety training",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "begin",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": "Reserve: new short-response practice; verify time-question target and distractor fit."
+    },
+    {
+      "id": "batch027-part2-parking-access",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Parking access",
+      "topic": "Facilities & Transportation",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "male",
+          "text": "Where can visitors park during the renovation?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "The visitor lot behind Building C.",
+            "It should be finished next week.",
+            "They renovated the lobby."
+          ],
+          "answerIndex": 0,
+          "explanation": "Where yêu cầu địa điểm. A chỉ rõ bãi đỗ xe; B trả lời thời gian và C nói về công việc cải tạo.",
+          "choiceIds": [
+            "listening:batch027-part2-parking-access:1:choice:1",
+            "listening:batch027-part2-parking-access:1:choice:2",
+            "listening:batch027-part2-parking-access:1:choice:3"
+          ],
+          "evidenceText": "Where can visitors park during the renovation?"
+        }
+      ],
+      "transcriptTranslation": "Khách có thể đỗ xe ở đâu trong thời gian cải tạo?",
+      "vocabulary": [
+        {
+          "word": "visitor lot",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "renovation",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": "Reserve: new short-response practice; verify location-question target and distractor fit."
+    },
+    {
+      "id": "batch027-part2-catering-count",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Catering estimate",
+      "topic": "Events & Procurement",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "female",
+          "text": "Have we confirmed how many meals the caterer needs?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "The catering company is new.",
+            "Yes, I emailed them the updated count this morning.",
+            "We will meet after lunch."
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu hỏi Have we confirmed…? hỏi xác nhận hành động; B nêu đã gửi số lượng cập nhật.",
+          "choiceIds": [
+            "listening:batch027-part2-catering-count:1:choice:1",
+            "listening:batch027-part2-catering-count:1:choice:2",
+            "listening:batch027-part2-catering-count:1:choice:3"
+          ],
+          "evidenceText": "Have we confirmed how many meals the caterer needs?"
+        }
+      ],
+      "transcriptTranslation": "Chúng ta đã xác nhận số suất ăn bên cung cấp cần chưa?",
+      "vocabulary": [
+        {
+          "word": "caterer",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "updated count",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": "Reserve: new short-response practice; verify confirmation-response intent and distractor fit."
+    },
+    {
+      "id": "batch027-part2-maintenance",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Maintenance request",
+      "topic": "Facilities & Operations",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "male",
+          "text": "Why is the elevator out of service?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "A technician is replacing a control panel.",
+            "Take the elevator to the fifth floor.",
+            "The service desk closes at six."
+          ],
+          "answerIndex": 0,
+          "explanation": "Why hỏi nguyên nhân; A nêu kỹ thuật viên đang thay bảng điều khiển.",
+          "choiceIds": [
+            "listening:batch027-part2-maintenance:1:choice:1",
+            "listening:batch027-part2-maintenance:1:choice:2",
+            "listening:batch027-part2-maintenance:1:choice:3"
+          ],
+          "evidenceText": "Why is the elevator out of service?"
+        }
+      ],
+      "transcriptTranslation": "Tại sao thang máy không hoạt động?",
+      "vocabulary": [
+        {
+          "word": "out of service",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "control panel",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": "Reserve: new short-response practice; verify why-question response and distractor fit."
+    },
+    {
+      "id": "batch027-part2-project-update",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Project update",
+      "topic": "Project Management",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "female",
+          "text": "Would you like me to include the cost estimates in the presentation?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "The presentation is in Room 12.",
+            "Yes, that would make the proposal more complete.",
+            "We estimated three hours."
+          ],
+          "answerIndex": 1,
+          "explanation": "Would you like me to… là lời đề nghị; B chấp nhận và nêu lợi ích. A là địa điểm, C nói thời lượng.",
+          "choiceIds": [
+            "listening:batch027-part2-project-update:1:choice:1",
+            "listening:batch027-part2-project-update:1:choice:2",
+            "listening:batch027-part2-project-update:1:choice:3"
+          ],
+          "evidenceText": "Would you like me to include the cost estimates in the presentation?"
+        }
+      ],
+      "transcriptTranslation": "Bạn có muốn tôi đưa các ước tính chi phí vào bài thuyết trình không?",
+      "vocabulary": [
+        {
+          "word": "cost estimate",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "proposal",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": "Reserve: new short-response practice; verify offer-response naturalness and distractor fit."
+    },
+    {
+      "id": "batch027-part2-delivery-window",
+      "part": "Part 2",
+      "type": "question-response",
+      "title": "Delivery window",
+      "topic": "Shipping & Logistics",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Speaker",
+          "voice": "male",
+          "text": "The replacement parts should arrive before noon, shouldn’t they?"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Choose the most appropriate response.",
+          "choices": [
+            "The parts are made of steel.",
+            "No, the shipment was rescheduled for two o’clock.",
+            "I replaced the window last year."
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu hỏi đuôi yêu cầu xác nhận thời gian; B điều chỉnh thông tin bằng thời điểm giao mới.",
+          "choiceIds": [
+            "listening:batch027-part2-delivery-window:1:choice:1",
+            "listening:batch027-part2-delivery-window:1:choice:2",
+            "listening:batch027-part2-delivery-window:1:choice:3"
+          ],
+          "evidenceText": "The replacement parts should arrive before noon, shouldn’t they?"
+        }
+      ],
+      "transcriptTranslation": "Các linh kiện thay thế sẽ đến trước buổi trưa, đúng không?",
+      "vocabulary": [
+        {
+          "word": "replacement parts",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "reschedule",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": "Reserve: new short-response practice; verify tag-question response and distractor fit."
+    },
+    {
+      "id": "batch027-part3-equipment-return",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Returning office equipment",
+      "topic": "Office & Purchasing",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Hi, I’m returning the projector I borrowed for yesterday’s workshop."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Thanks. Did you notice any problems with it?"
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "The image was a little blurry, even after I adjusted the focus."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "I’ll tag it for inspection before the next reservation."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is the woman returning the projector?",
+          "choices": [
+            "The workshop was canceled.",
+            "She has finished using it.",
+            "It was purchased for her department.",
+            "It needs a new cable."
+          ],
+          "answerIndex": 1,
+          "explanation": "Cô ấy trả máy chiếu sau khi mượn cho buổi workshop hôm qua; buổi đó đã kết thúc.",
+          "choiceIds": [
+            "listening:batch027-part3-equipment-return:1:choice:1",
+            "listening:batch027-part3-equipment-return:1:choice:2",
+            "listening:batch027-part3-equipment-return:1:choice:3",
+            "listening:batch027-part3-equipment-return:1:choice:4"
+          ],
+          "evidenceText": "Hi, I’m returning the projector I borrowed for yesterday’s workshop."
+        },
+        {
+          "question": "What problem did she report?",
+          "choices": [
+            "The image was blurry.",
+            "The sound was too loud.",
+            "The lamp would not turn on.",
+            "The screen was missing."
+          ],
+          "answerIndex": 0,
+          "explanation": "Cô ấy nói hình ảnh hơi mờ ngay cả sau khi điều chỉnh tiêu cự.",
+          "choiceIds": [
+            "listening:batch027-part3-equipment-return:2:choice:1",
+            "listening:batch027-part3-equipment-return:2:choice:2",
+            "listening:batch027-part3-equipment-return:2:choice:3",
+            "listening:batch027-part3-equipment-return:2:choice:4"
+          ],
+          "evidenceText": "The image was a little blurry, even after I adjusted the focus."
+        },
+        {
+          "question": "What will the man do next?",
+          "choices": [
+            "Cancel the next workshop.",
+            "Order a replacement projector.",
+            "Send the device for inspection.",
+            "Change the reservation time."
+          ],
+          "answerIndex": 2,
+          "explanation": "Anh ấy sẽ đánh dấu thiết bị để kiểm tra trước lượt đặt tiếp theo.",
+          "choiceIds": [
+            "listening:batch027-part3-equipment-return:3:choice:1",
+            "listening:batch027-part3-equipment-return:3:choice:2",
+            "listening:batch027-part3-equipment-return:3:choice:3",
+            "listening:batch027-part3-equipment-return:3:choice:4"
+          ],
+          "evidenceText": "I’ll tag it for inspection before the next reservation."
+        }
+      ],
+      "transcriptTranslation": "Người phụ nữ trả máy chiếu sau workshop và báo hình ảnh hơi mờ. Nhân viên sẽ đưa thiết bị đi kiểm tra.",
+      "vocabulary": [
+        {
+          "word": "projector",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "adjust the focus",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "inspection",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": [
+        "Hi, I’m returning the projector I borrowed for yesterday’s workshop.",
+        "The image was a little blurry, even after I adjusted the focus.",
+        "I’ll tag it for inspection before the next reservation."
+      ]
+    },
+    {
+      "id": "batch027-part3-benefits-enrollment",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Benefits enrollment",
+      "topic": "Human Resources",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "I still haven’t submitted my benefits selection. Is the deadline this Friday?"
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Yes, but you can complete it online. The portal closes at five p.m."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Can I change my selection after submitting it?"
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "You can make changes until the enrollment period ends. After that, contact HR if you have a qualifying event."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the man concerned about?",
+          "choices": [
+            "A payroll error",
+            "A benefits enrollment deadline",
+            "A vacation request",
+            "A training certificate"
+          ],
+          "answerIndex": 1,
+          "explanation": "Câu hỏi là về thời hạn đăng ký quyền lợi; người đàn ông hỏi khi nào phải hoàn tất lựa chọn.",
+          "choiceIds": [
+            "listening:batch027-part3-benefits-enrollment:1:choice:1",
+            "listening:batch027-part3-benefits-enrollment:1:choice:2",
+            "listening:batch027-part3-benefits-enrollment:1:choice:3",
+            "listening:batch027-part3-benefits-enrollment:1:choice:4"
+          ],
+          "evidenceText": "I still haven’t submitted my benefits selection. Is the deadline this Friday?"
+        },
+        {
+          "question": "How can employees submit their selections?",
+          "choices": [
+            "By calling the manager",
+            "At the reception desk",
+            "Through an online portal",
+            "By mailing a printed form"
+          ],
+          "answerIndex": 2,
+          "explanation": "Người phụ nữ cho biết có thể hoàn tất trực tuyến trên portal.",
+          "choiceIds": [
+            "listening:batch027-part3-benefits-enrollment:2:choice:1",
+            "listening:batch027-part3-benefits-enrollment:2:choice:2",
+            "listening:batch027-part3-benefits-enrollment:2:choice:3",
+            "listening:batch027-part3-benefits-enrollment:2:choice:4"
+          ],
+          "evidenceText": "Yes, but you can complete it online. The portal closes at five p.m."
+        },
+        {
+          "question": "When can the man change his selection?",
+          "choices": [
+            "Only before noon today",
+            "Until the enrollment period ends",
+            "After the next payroll",
+            "Once he receives a certificate"
+          ],
+          "answerIndex": 1,
+          "explanation": "Anh ấy có thể thay đổi cho đến khi kỳ đăng ký kết thúc.",
+          "choiceIds": [
+            "listening:batch027-part3-benefits-enrollment:3:choice:1",
+            "listening:batch027-part3-benefits-enrollment:3:choice:2",
+            "listening:batch027-part3-benefits-enrollment:3:choice:3",
+            "listening:batch027-part3-benefits-enrollment:3:choice:4"
+          ],
+          "evidenceText": "You can make changes until the enrollment period ends."
+        }
+      ],
+      "transcriptTranslation": "Hai đồng nghiệp trao đổi về đăng ký quyền lợi, thời hạn trên cổng trực tuyến và quy định thay đổi lựa chọn.",
+      "vocabulary": [
+        {
+          "word": "benefits selection",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "enrollment period",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "qualifying event",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": [
+        "I still haven’t submitted my benefits selection. Is the deadline this Friday?",
+        "Yes, but you can complete it online. The portal closes at five p.m.",
+        "You can make changes until the enrollment period ends."
+      ]
+    },
+    {
+      "id": "batch027-part3-vendor-quotation",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Comparing vendor quotations",
+      "topic": "Procurement",
+      "level": "B1–B2",
+      "segments": [
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "We received three quotations for the new office chairs. One is significantly lower than the others."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Does it include delivery and assembly?"
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "Delivery is included, but assembly is charged separately. The other vendors include both services."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Let’s compare the total cost before we make a recommendation."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are the speakers discussing?",
+          "choices": [
+            "Office chair quotations",
+            "A delayed meeting",
+            "A damaged shipment",
+            "An employee transfer"
+          ],
+          "answerIndex": 0,
+          "explanation": "Họ đang so sánh báo giá cho ghế văn phòng mới.",
+          "choiceIds": [
+            "listening:batch027-part3-vendor-quotation:1:choice:1",
+            "listening:batch027-part3-vendor-quotation:1:choice:2",
+            "listening:batch027-part3-vendor-quotation:1:choice:3",
+            "listening:batch027-part3-vendor-quotation:1:choice:4"
+          ],
+          "evidenceText": "We received three quotations for the new office chairs. One is significantly lower than the others."
+        },
+        {
+          "question": "What is excluded from the lowest quotation?",
+          "choices": [
+            "Delivery",
+            "Warranty coverage",
+            "Assembly",
+            "Taxes"
+          ],
+          "answerIndex": 2,
+          "explanation": "Báo giá thấp bao gồm giao hàng nhưng tính riêng lắp ráp.",
+          "choiceIds": [
+            "listening:batch027-part3-vendor-quotation:2:choice:1",
+            "listening:batch027-part3-vendor-quotation:2:choice:2",
+            "listening:batch027-part3-vendor-quotation:2:choice:3",
+            "listening:batch027-part3-vendor-quotation:2:choice:4"
+          ],
+          "evidenceText": "Delivery is included, but assembly is charged separately. The other vendors include both services."
+        },
+        {
+          "question": "What will they do before recommending a vendor?",
+          "choices": [
+            "Place an order immediately",
+            "Compare the total cost",
+            "Ask employees to return chairs",
+            "Cancel the procurement request"
+          ],
+          "answerIndex": 1,
+          "explanation": "Người đàn ông đề nghị so sánh tổng chi phí trước khi đưa ra khuyến nghị.",
+          "choiceIds": [
+            "listening:batch027-part3-vendor-quotation:3:choice:1",
+            "listening:batch027-part3-vendor-quotation:3:choice:2",
+            "listening:batch027-part3-vendor-quotation:3:choice:3",
+            "listening:batch027-part3-vendor-quotation:3:choice:4"
+          ],
+          "evidenceText": "Let’s compare the total cost before we make a recommendation."
+        }
+      ],
+      "transcriptTranslation": "Hai nhân viên xem ba báo giá ghế văn phòng, nhận ra một báo giá thấp không bao gồm phí lắp ráp và quyết định so sánh tổng chi phí.",
+      "vocabulary": [
+        {
+          "word": "quotation",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "assembly",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "total cost",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": [
+        "We received three quotations for the new office chairs. One is significantly lower than the others.",
+        "Delivery is included, but assembly is charged separately. The other vendors include both services.",
+        "Let’s compare the total cost before we make a recommendation."
+      ]
+    },
+    {
+      "id": "batch027-part3-client-appointment",
+      "part": "Part 3",
+      "type": "conversation",
+      "title": "Rescheduling a client visit",
+      "topic": "Customer Service",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "Our client asked to move tomorrow’s site visit to the afternoon."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "I can change it to two thirty, but the technician is unavailable after four."
+        },
+        {
+          "speaker": "Man",
+          "voice": "male",
+          "text": "That works. Please confirm the new time with the client and update the calendar."
+        },
+        {
+          "speaker": "Woman",
+          "voice": "female",
+          "text": "I’ll send the confirmation right away."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What change did the client request?",
+          "choices": [
+            "A different technician",
+            "A later appointment",
+            "A new service contract",
+            "A revised invoice"
+          ],
+          "answerIndex": 1,
+          "explanation": "Khách hàng là người yêu cầu chuyển buổi thăm hiện trường sang buổi chiều.",
+          "choiceIds": [
+            "listening:batch027-part3-client-appointment:1:choice:1",
+            "listening:batch027-part3-client-appointment:1:choice:2",
+            "listening:batch027-part3-client-appointment:1:choice:3",
+            "listening:batch027-part3-client-appointment:1:choice:4"
+          ],
+          "evidenceText": "Our client asked to move tomorrow’s site visit to the afternoon."
+        },
+        {
+          "question": "When is the technician unavailable?",
+          "choices": [
+            "Before noon",
+            "After four o’clock",
+            "At two thirty",
+            "All day tomorrow"
+          ],
+          "answerIndex": 1,
+          "explanation": "Người phụ nữ nói kỹ thuật viên không thể sau 4 giờ.",
+          "choiceIds": [
+            "listening:batch027-part3-client-appointment:2:choice:1",
+            "listening:batch027-part3-client-appointment:2:choice:2",
+            "listening:batch027-part3-client-appointment:2:choice:3",
+            "listening:batch027-part3-client-appointment:2:choice:4"
+          ],
+          "evidenceText": "I can change it to two thirty, but the technician is unavailable after four."
+        },
+        {
+          "question": "What will the woman do?",
+          "choices": [
+            "Send a confirmation",
+            "Prepare a contract",
+            "Call another technician",
+            "Print an invoice"
+          ],
+          "answerIndex": 0,
+          "explanation": "Cô ấy sẽ gửi xác nhận ngay sau khi cập nhật lịch.",
+          "choiceIds": [
+            "listening:batch027-part3-client-appointment:3:choice:1",
+            "listening:batch027-part3-client-appointment:3:choice:2",
+            "listening:batch027-part3-client-appointment:3:choice:3",
+            "listening:batch027-part3-client-appointment:3:choice:4"
+          ],
+          "evidenceText": "I’ll send the confirmation right away."
+        }
+      ],
+      "transcriptTranslation": "Khách hàng muốn chuyển lịch thăm hiện trường sang buổi chiều. Hai nhân viên thống nhất 2:30 và xác nhận lịch mới.",
+      "vocabulary": [
+        {
+          "word": "site visit",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "confirm",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "calendar update",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": [
+        "Our client asked to move tomorrow’s site visit to the afternoon.",
+        "I can change it to two thirty, but the technician is unavailable after four.",
+        "I’ll send the confirmation right away."
+      ]
+    },
+    {
+      "id": "batch027-part4-maintenance-notice",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Scheduled maintenance notice",
+      "topic": "Facilities & Operations",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "Good afternoon. The building's water supply will be temporarily shut off this Saturday from eight in the morning until noon while maintenance crews replace a valve. Please fill any bottles you may need before leaving on Friday. Restrooms on the first floor of the neighboring building will remain available. We apologize for the inconvenience."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the announcement mainly about?",
+          "choices": [
+            "A water service interruption",
+            "A building security change",
+            "A new cafeteria opening",
+            "A parking restriction"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo về việc tạm ngừng cấp nước để thay van.",
+          "choiceIds": [
+            "listening:batch027-part4-maintenance-notice:1:choice:1",
+            "listening:batch027-part4-maintenance-notice:1:choice:2",
+            "listening:batch027-part4-maintenance-notice:1:choice:3",
+            "listening:batch027-part4-maintenance-notice:1:choice:4"
+          ],
+          "evidenceText": "The building's water supply will be temporarily shut off this Saturday from eight in the morning until noon while maintenance crews replace a valve."
+        },
+        {
+          "question": "When will the work take place?",
+          "choices": [
+            "Friday afternoon",
+            "Saturday morning",
+            "Saturday evening",
+            "Monday morning"
+          ],
+          "answerIndex": 1,
+          "explanation": "Việc bảo trì diễn ra từ 8 giờ sáng đến 12 giờ trưa thứ Bảy.",
+          "choiceIds": [
+            "listening:batch027-part4-maintenance-notice:2:choice:1",
+            "listening:batch027-part4-maintenance-notice:2:choice:2",
+            "listening:batch027-part4-maintenance-notice:2:choice:3",
+            "listening:batch027-part4-maintenance-notice:2:choice:4"
+          ],
+          "evidenceText": "Please fill any bottles you may need before leaving on Friday."
+        },
+        {
+          "question": "What are employees advised to do?",
+          "choices": [
+            "Move their desks",
+            "Contact the maintenance crew",
+            "Fill water bottles before Friday ends",
+            "Use the restroom on the top floor"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên được nhắc lấy nước cần dùng trước khi rời đi vào thứ Sáu.",
+          "choiceIds": [
+            "listening:batch027-part4-maintenance-notice:3:choice:1",
+            "listening:batch027-part4-maintenance-notice:3:choice:2",
+            "listening:batch027-part4-maintenance-notice:3:choice:3",
+            "listening:batch027-part4-maintenance-notice:3:choice:4"
+          ],
+          "evidenceText": "Restrooms on the first floor of the neighboring building will remain available."
+        }
+      ],
+      "transcriptTranslation": "Thông báo tạm ngừng cấp nước sáng thứ Bảy để thay van; nhân viên nên chuẩn bị nước từ trước.",
+      "vocabulary": [
+        {
+          "word": "shut off",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "maintenance crew",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "valve",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": [
+        "The building’s water supply will be temporarily shut off this Saturday from eight in the morning until noon while maintenance crews replace a valve.",
+        "Please fill any bottles you may need before leaving on Friday.",
+        "Restrooms on the first floor of the neighboring building will remain available."
+      ]
+    },
+    {
+      "id": "batch027-part4-travel-expense-policy",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Travel expense reminder",
+      "topic": "Finance & Travel",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "male",
+          "text": "This is a reminder that travel expense reports for last month's business trips are due by the end of the day on Wednesday. Please attach receipts for hotel stays, meals, and transportation. If a receipt is missing, include a brief explanation in the comments field. Reports submitted after Wednesday may be processed in the following pay cycle. Contact Finance if you have questions."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Who is the announcement intended for?",
+          "choices": [
+            "New customers",
+            "Employees who traveled for business",
+            "Hotel managers",
+            "Finance department applicants"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thông báo dành cho nhân viên đã đi công tác tháng trước và cần nộp báo cáo chi phí.",
+          "choiceIds": [
+            "listening:batch027-part4-travel-expense-policy:1:choice:1",
+            "listening:batch027-part4-travel-expense-policy:1:choice:2",
+            "listening:batch027-part4-travel-expense-policy:1:choice:3",
+            "listening:batch027-part4-travel-expense-policy:1:choice:4"
+          ],
+          "evidenceText": "Travel expense reports for last month's business trips are due by the end of the day on Wednesday."
+        },
+        {
+          "question": "What should employees do if a receipt is missing?",
+          "choices": [
+            "Request a new travel card",
+            "Leave the report blank",
+            "Explain the missing receipt in comments",
+            "Submit the report next month"
+          ],
+          "answerIndex": 2,
+          "explanation": "Nếu thiếu hóa đơn, nhân viên phải giải thích ngắn trong phần comments.",
+          "choiceIds": [
+            "listening:batch027-part4-travel-expense-policy:2:choice:1",
+            "listening:batch027-part4-travel-expense-policy:2:choice:2",
+            "listening:batch027-part4-travel-expense-policy:2:choice:3",
+            "listening:batch027-part4-travel-expense-policy:2:choice:4"
+          ],
+          "evidenceText": "If a receipt is missing, include a brief explanation in the comments field."
+        },
+        {
+          "question": "What may happen to late reports?",
+          "choices": [
+            "They may be processed in the next pay cycle.",
+            "They will be automatically rejected.",
+            "They will be paid in cash.",
+            "They must be approved by the hotel."
+          ],
+          "answerIndex": 0,
+          "explanation": "Báo cáo nộp trễ có thể được xử lý ở kỳ lương tiếp theo.",
+          "choiceIds": [
+            "listening:batch027-part4-travel-expense-policy:3:choice:1",
+            "listening:batch027-part4-travel-expense-policy:3:choice:2",
+            "listening:batch027-part4-travel-expense-policy:3:choice:3",
+            "listening:batch027-part4-travel-expense-policy:3:choice:4"
+          ],
+          "evidenceText": "Reports submitted after Wednesday may be processed in the following pay cycle."
+        }
+      ],
+      "transcriptTranslation": "Nhắc nhân viên nộp báo cáo công tác đúng hạn, đính kèm hóa đơn hoặc giải thích khi thiếu hóa đơn.",
+      "vocabulary": [
+        {
+          "word": "expense report",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "receipt",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "pay cycle",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": [
+        "Travel expense reports for last month’s business trips are due by the end of the day on Wednesday.",
+        "If a receipt is missing, include a brief explanation in the comments field.",
+        "Reports submitted after Wednesday may be processed in the following pay cycle."
+      ]
+    },
+    {
+      "id": "batch027-part4-product-training",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Product training session",
+      "topic": "Sales & Training",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "female",
+          "text": "Next week, our sales team will attend a training session on the updated inventory platform. The session will be held in the computer lab on Tuesday at ten. Please bring your laptop, although several demonstration devices will be available. The trainer will cover searching stock, creating transfer requests, and reviewing delivery status. A short practice exercise will follow each topic."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What will the sales team learn about?",
+          "choices": [
+            "A new inventory platform",
+            "A revised travel policy",
+            "A marketing campaign",
+            "A customer loyalty program"
+          ],
+          "answerIndex": 0,
+          "explanation": "Buổi đào tạo tập trung vào nền tảng inventory được cập nhật.",
+          "choiceIds": [
+            "listening:batch027-part4-product-training:1:choice:1",
+            "listening:batch027-part4-product-training:1:choice:2",
+            "listening:batch027-part4-product-training:1:choice:3",
+            "listening:batch027-part4-product-training:1:choice:4"
+          ],
+          "evidenceText": "Our sales team will attend a training session on the updated inventory platform."
+        },
+        {
+          "question": "Where will the training take place?",
+          "choices": [
+            "In the main auditorium",
+            "At the warehouse",
+            "In the computer lab",
+            "At the reception area"
+          ],
+          "answerIndex": 2,
+          "explanation": "Buổi học diễn ra trong phòng máy tính.",
+          "choiceIds": [
+            "listening:batch027-part4-product-training:2:choice:1",
+            "listening:batch027-part4-product-training:2:choice:2",
+            "listening:batch027-part4-product-training:2:choice:3",
+            "listening:batch027-part4-product-training:2:choice:4"
+          ],
+          "evidenceText": "The session will be held in the computer lab on Tuesday at ten."
+        },
+        {
+          "question": "What will participants do after each topic?",
+          "choices": [
+            "Take a long break",
+            "Complete a short exercise",
+            "Submit a travel report",
+            "Interview a customer"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sau mỗi chủ đề sẽ có bài thực hành ngắn.",
+          "choiceIds": [
+            "listening:batch027-part4-product-training:3:choice:1",
+            "listening:batch027-part4-product-training:3:choice:2",
+            "listening:batch027-part4-product-training:3:choice:3",
+            "listening:batch027-part4-product-training:3:choice:4"
+          ],
+          "evidenceText": "The trainer will cover searching stock, creating transfer requests, and reviewing delivery status."
+        }
+      ],
+      "transcriptTranslation": "Thông báo buổi đào tạo nền tảng quản lý tồn kho vào thứ Ba tuần sau, có nội dung và bài thực hành theo từng chủ đề.",
+      "vocabulary": [
+        {
+          "word": "inventory platform",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "transfer request",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "delivery status",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": [
+        "Our sales team will attend a training session on the updated inventory platform.",
+        "The session will be held in the computer lab on Tuesday at ten.",
+        "The trainer will cover searching stock, creating transfer requests, and reviewing delivery status."
+      ]
+    },
+    {
+      "id": "batch027-part4-store-hours",
+      "part": "Part 4",
+      "type": "talk",
+      "title": "Holiday store hours",
+      "topic": "Retail & Customer Service",
+      "level": "B1",
+      "segments": [
+        {
+          "speaker": "Announcer",
+          "voice": "male",
+          "text": "Please note that our downtown service counter will close at three p.m. on the day before the public holiday. Regular hours will resume on the following Monday. Customers who need to collect repaired items should do so before closing time. The online support team will remain available until six p.m. for urgent inquiries. Thank you for planning ahead."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What change is being announced?",
+          "choices": [
+            "The online service is permanently closed.",
+            "The service counter will close early.",
+            "Repairs are no longer available.",
+            "The store is moving downtown."
+          ],
+          "answerIndex": 1,
+          "explanation": "Quầy dịch vụ sẽ đóng sớm lúc 3 giờ chiều trước ngày lễ.",
+          "choiceIds": [
+            "listening:batch027-part4-store-hours:1:choice:1",
+            "listening:batch027-part4-store-hours:1:choice:2",
+            "listening:batch027-part4-store-hours:1:choice:3",
+            "listening:batch027-part4-store-hours:1:choice:4"
+          ],
+          "evidenceText": "Our downtown service counter will close at three p.m. on the day before the public holiday."
+        },
+        {
+          "question": "When will regular hours resume?",
+          "choices": [
+            "The next morning",
+            "On the public holiday",
+            "The following Monday",
+            "At six p.m."
+          ],
+          "answerIndex": 2,
+          "explanation": "Giờ hoạt động bình thường trở lại vào thứ Hai tiếp theo.",
+          "choiceIds": [
+            "listening:batch027-part4-store-hours:2:choice:1",
+            "listening:batch027-part4-store-hours:2:choice:2",
+            "listening:batch027-part4-store-hours:2:choice:3",
+            "listening:batch027-part4-store-hours:2:choice:4"
+          ],
+          "evidenceText": "Regular hours will resume on the following Monday."
+        },
+        {
+          "question": "Which service remains available until six p.m.?",
+          "choices": [
+            "Item collection",
+            "The downtown counter",
+            "The repair workshop",
+            "Online support for urgent inquiries"
+          ],
+          "answerIndex": 3,
+          "explanation": "Đội hỗ trợ trực tuyến là bộ phận vẫn tiếp nhận vấn đề khẩn cấp đến 6 giờ.",
+          "choiceIds": [
+            "listening:batch027-part4-store-hours:3:choice:1",
+            "listening:batch027-part4-store-hours:3:choice:2",
+            "listening:batch027-part4-store-hours:3:choice:3",
+            "listening:batch027-part4-store-hours:3:choice:4"
+          ],
+          "evidenceText": "The online support team will remain available until six p.m. for urgent inquiries."
+        }
+      ],
+      "transcriptTranslation": "Thông báo giờ đóng cửa sớm trước ngày lễ và nhắc khách nhận đồ sửa chữa trước 3 giờ; hỗ trợ trực tuyến vẫn hoạt động đến 6 giờ.",
+      "vocabulary": [
+        {
+          "word": "service counter",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "resume",
+          "meaning": "từ/cụm từ trọng tâm"
+        },
+        {
+          "word": "urgent inquiry",
+          "meaning": "từ/cụm từ trọng tâm"
+        }
+      ],
+      "contentSource": "original-editorial",
+      "reviewStatus": "reserve-pending-independent-review",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "027",
+      "contentBatch": "batch-027-listening-expansion",
+      "reviewNote": [
+        "Our downtown service counter will close at three p.m. on the day before the public holiday.",
+        "Regular hours will resume on the following Monday.",
+        "The online support team will remain available until six p.m. for urgent inquiries."
+      ]
     }
   ]
 }

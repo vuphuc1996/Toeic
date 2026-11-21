@@ -13,8 +13,8 @@ class CmudictIpaBackfillTests(unittest.TestCase):
         cls.records, _ = load_records()
 
     def test_backfill_has_the_audited_record_count(self):
-        self.assertEqual(self.ledger["recordCount"], 333)
-        self.assertEqual(len(self.ledger["records"]), 333)
+        self.assertEqual(self.ledger["recordCount"], 334)
+        self.assertEqual(len(self.ledger["records"]), 334)
 
     def test_every_ledger_entry_matches_canonical_record_and_conversion(self):
         seen = set()
@@ -41,9 +41,12 @@ class CmudictIpaBackfillTests(unittest.TestCase):
         self.assertEqual(excluded["no_exact_CMUdict_entry"], 25)
         self.assertEqual(excluded["multiple_primary_stress"], 6)
         self.assertEqual(excluded["editorial_review_pending"], 1)
-        self.assertEqual(self.records["dispute-nv"]["phonetic"]["us"], "")
+        self.assertEqual(self.records["dispute-nv"]["phonetic"]["us"], "/dɪ.ˈspjut/")
         self.assertEqual(self.records["ventilation-n"]["phonetic"]["us"], "")
         self.assertIn("Leave phonetic.us blank", excluded["policy"])
+
+    def test_dispute_syllable_onset_keeps_spy_cluster_together(self):
+        self.assertEqual(arpabet_to_ipa(["D", "IH0", "S", "P", "Y", "UW1", "T"]), "/dɪ.ˈspjut/")
 
     def test_ipa_format_uses_supported_project_symbols(self):
         allowed = set(" ()./;abdefhijklmnoprstuvwzæðŋɑɔəɚɝɡɪʃʊʌʒˈˌː\u032cθ")

@@ -191,6 +191,8 @@ class PatchDataTests(unittest.TestCase):
 
     def test_repository_gitignore_excludes_audit_logs(self):
         repository = SCRIPT.resolve().parents[1]
+        if not (repository / ".git").exists():
+            self.skipTest("source archive has no Git metadata; gitignore assertion requires a clone")
         gitignore = (repository / ".gitignore").read_text(encoding="utf-8").splitlines()
         self.assertIn("logs/", gitignore)
         result = subprocess.run(

@@ -1,0 +1,90 @@
+{
+  "batch": "033",
+  "release": "2.95.39",
+  "title": "Cambridge-sourced Related Glossary completion — high-priority relation terms",
+  "count": 8,
+  "editorialStatus": "Cambridge Dictionary entries inspected; English definitions paraphrased; Vietnamese glosses curated; independent editorial review remains pending",
+  "sourcePolicy": "Each new entry links to its exact Cambridge Dictionary headword page. Definitions are concise paraphrases of dictionary senses, not copied examples. Existing relation arrays and canonical vocabulary are unchanged.",
+  "records": [
+    {
+      "term": "ability",
+      "meaning_vi_preserved": "khả năng; năng lực",
+      "pos": "n",
+      "definition_en": "the physical or mental power or skill needed to do something",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/ability"
+      ]
+    },
+    {
+      "term": "acceptable",
+      "meaning_vi_preserved": "có thể chấp nhận được; đạt mức yêu cầu",
+      "pos": "adj",
+      "definition_en": "good enough to be agreed to or approved; satisfactory",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/acceptable"
+      ]
+    },
+    {
+      "term": "action",
+      "meaning_vi_preserved": "hành động; biện pháp; bước thực hiện",
+      "pos": "n",
+      "definition_en": "something done, especially a step taken to deal with a problem or situation",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/action"
+      ]
+    },
+    {
+      "term": "accusation",
+      "meaning_vi_preserved": "sự buộc tội; lời cáo buộc",
+      "pos": "n",
+      "definition_en": "a statement that someone has done something wrong, illegal, or unkind",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/accusation"
+      ]
+    },
+    {
+      "term": "advertise",
+      "meaning_vi_preserved": "quảng cáo; thông báo công khai",
+      "pos": "v",
+      "definition_en": "to make a product, service, or opportunity known publicly, often to attract customers",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/advertise"
+      ]
+    },
+    {
+      "term": "advise",
+      "meaning_vi_preserved": "khuyên; tư vấn; đưa ra lời khuyên",
+      "pos": "v",
+      "definition_en": "to give someone useful information or recommend what they should do",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/advise"
+      ]
+    },
+    {
+      "term": "allow",
+      "meaning_vi_preserved": "cho phép; tạo điều kiện; dành (thời gian)",
+      "pos": "v",
+      "definition_en": "to give permission or make it possible for something to happen",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/allow"
+      ]
+    },
+    {
+      "term": "announce",
+      "meaning_vi_preserved": "thông báo; công bố chính thức",
+      "pos": "v",
+      "definition_en": "to make information known publicly or tell people about something officially",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/announce"
+      ]
+    }
+  ]
+}

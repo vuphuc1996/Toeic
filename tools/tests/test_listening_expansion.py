@@ -25,6 +25,16 @@ class ListeningExpansionTests(unittest.TestCase):
             self.assertEqual(unit.get("reviewNote"), "internal-author-check; independent-second-review-pending", unit["id"])
             self.assertEqual(unit.get("contentBatch"), "batch-015-listening-expansion", unit["id"])
 
+    def test_batch_026_units_are_reserved_and_review_metadata_complete(self):
+        batch = [u for u in self.units if u.get('editorialBatch') == '026']
+        self.assertEqual(len(batch), 8)
+        self.assertEqual(sum(len(u['questions']) for u in batch), 24)
+        for unit in batch:
+            self.assertEqual(unit.get('editorialStatus'), 'reserve-pending-independent-review')
+            self.assertEqual(unit.get('contentBatch'), 'batch-026-major-expansion')
+            self.assertEqual(unit.get('reviewNote'), 'internal-author-check; independent-second-review-pending')
+            self.assertEqual(unit.get('contentSource'), 'original-editorial')
+
     def test_question_choice_ids_are_unique_and_keys_valid(self):
         item_ids = [u["id"] for u in self.units]
         self.assertEqual(len(item_ids), len(set(item_ids)))
@@ -68,15 +78,39 @@ class ListeningExpansionTests(unittest.TestCase):
         for unit in (p2, procurement, customs):
             self.assertEqual(unit.get("editorialStatus"), "reserve-pending-independent-review")
 
+    def test_every_pending_question_has_a_traceable_transcript_evidence_pointer(self):
+        pending = [u for u in self.units if u.get('editorialStatus') == 'reserve-pending-independent-review']
+        checked = 0
+        for unit in pending:
+            source = ' '.join(segment.get('text', '') for segment in unit.get('segments', []))
+            self.assertTrue(unit.get('reviewNote'), unit['id'])
+            for index, question in enumerate(unit.get('questions', []), 1):
+                evidence = question.get('evidenceText', '').strip()
+                self.assertTrue(evidence, f"{unit['id']} Q{index}: missing evidenceText")
+                self.assertIn(evidence.casefold(), source.casefold(), f"{unit['id']} Q{index}: evidenceText not in transcript")
+                checked += 1
+            if unit.get('part') == 'Part 1':
+                self.assertTrue(unit.get('visualEvidenceNote', '').strip(), unit['id'])
+                self.assertTrue(unit.get('photo') and unit.get('imageAlt'), unit['id'])
+        self.assertEqual(checked, 193)
+        self.assertTrue(all(u.get('editorialStatus') == 'reserve-pending-independent-review' for u in pending))
+
+    def test_batch_027_reserve_is_fail_closed_and_has_traceable_evidence(self):
+        batch = [u for u in self.units if u.get('editorialBatch') == '027']
+        self.assertEqual(len(batch), 16)
+        self.assertEqual(sum(len(u.get('questions', [])) for u in batch), 32)
+        self.assertTrue(all(u.get('editorialStatus') == 'reserve-pending-independent-review' for u in batch))
+        self.assertTrue(all(u.get('reviewNote') and u.get('contentBatch') == 'batch-027-listening-expansion' for u in batch))
+
     def test_listening_inventory_separates_eligible_and_pending(self):
         pending = [u for u in self.units if u.get("editorialStatus") == "reserve-pending-independent-review"]
         eligible = [u for u in self.units if not u.get("editorialStatus") or u.get("editorialStatus") == "approved-for-mock"]
         self.assertEqual(sum(len(u["questions"]) for u in eligible), 102)
-        self.assertEqual(sum(len(u["questions"]) for u in pending), 137)
+        self.assertEqual(sum(len(u["questions"]) for u in pending), 193)
         projected = Counter()
         for unit in eligible + pending:
             projected[unit["part"]] += len(unit["questions"])
-        self.assertEqual(projected, Counter({"Part 1": 9, "Part 2": 53, "Part 3": 99, "Part 4": 78}))
+        self.assertEqual(projected, Counter({"Part 1": 9, "Part 2": 61, "Part 3": 123, "Part 4": 102}))
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,33 @@
+{
+  "version": "2.95.37",
+  "batch": "027",
+  "listening": [
+    "batch027-part2-room-booking",
+    "batch027-part2-invoice-copy",
+    "batch027-part2-training-start",
+    "batch027-part2-parking-access",
+    "batch027-part2-catering-count",
+    "batch027-part2-maintenance",
+    "batch027-part2-project-update",
+    "batch027-part2-delivery-window",
+    "batch027-part3-equipment-return",
+    "batch027-part3-benefits-enrollment",
+    "batch027-part3-vendor-quotation",
+    "batch027-part3-client-appointment",
+    "batch027-part4-maintenance-notice",
+    "batch027-part4-travel-expense-policy",
+    "batch027-part4-product-training",
+    "batch027-part4-store-hours"
+  ],
+  "counts": {
+    "listeningUnits": 16,
+    "listeningQuestions": 32,
+    "part2Units": 8,
+    "part3Units": 4,
+    "part4Units": 4
+  },
+  "reviewStatus": "reserve-pending-independent-review",
+  "mockExamEligibility": "excluded-until-independent-review",
+  "contentSource": "original-editorial",
+  "listening_sha256": "32fa347f500e3dbb241c183f48892572cbb529be6aa5a26c76d831bae7cf8111"
+}

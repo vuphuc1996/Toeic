@@ -8,66 +8,223 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "ability",
+      "meaning_vi": "khả năng; năng lực",
+      "pos": "n",
+      "definition_en": "the physical or mental power or skill needed to do something",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/ability"
+      ]
+    },
+    {
       "term": "accept",
       "meaning_vi": "chấp nhận",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to agree to take or receive something",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "accept",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "acceptable",
+      "meaning_vi": "có thể chấp nhận được; đạt mức yêu cầu",
+      "pos": "adj",
+      "definition_en": "good enough to be agreed to or approved; satisfactory",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/acceptable"
+      ]
+    },
+    {
+      "term": "access",
+      "meaning_vi": "quyền truy cập; lối vào / truy cập; tiếp cận",
+      "definition_en": "the right or opportunity to use or enter something / to reach or use information or a place",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "access",
+      "sourceRelease": "2.95.28"
     },
     {
       "term": "accessible",
       "meaning_vi": "có thể tiếp cận",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "adj",
+      "definition_en": "easy to reach, enter, obtain, or use",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "accessible",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "account",
       "meaning_vi": "tài khoản; bản tường trình",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Learner’s Dictionary (source excerpt, accessed 2026-11-21)",
+      "pos": "n",
+      "definition_en": "A record of financial transactions, or a description of events or experiences.",
+      "sourceUrls": [
+        "https://www.yumpu.com/en/document/view/11808737/cambridge-university-press-9781107660151-cambridge-"
+      ]
+    },
+    {
+      "term": "accusation",
+      "meaning_vi": "sự buộc tội; lời cáo buộc",
+      "pos": "n",
+      "definition_en": "a statement that someone has done something wrong, illegal, or unkind",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/accusation"
+      ]
     },
     {
       "term": "acknowledgment",
       "meaning_vi": "sự xác nhận; lời cảm ơn",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Learner’s Dictionary (source excerpt, accessed 2026-11-21)",
+      "pos": "n",
+      "definition_en": "Recognition that something is true or exists; a confirmation that something was received; or a note of thanks in a book.",
+      "sourceUrls": [
+        "https://fliphtml5.com/uydxs/lmob/9781107660151/14/"
+      ]
     },
     {
       "term": "acquire",
       "meaning_vi": "có được; thu nhận",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Learner’s Dictionary (source excerpt, accessed 2026-11-21)",
+      "pos": "v",
+      "definition_en": "To obtain something, or to gain knowledge or a skill through learning or experience.",
+      "sourceUrls": [
+        "https://drupal-s3fs-prod.s3.eu-west-1.amazonaws.com/files/9113/8071/5737/cambridge-learners-dictionary4-intermediate-paperback-with-cd-rom-sample-pages.pdf"
+      ]
     },
     {
       "term": "acquisition",
       "meaning_vi": "việc thu nhận; việc mua lại",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "the process of buying or obtaining a company or asset",
+      "pos": "n",
+      "sourceHeadword": "acquisition",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "action",
+      "meaning_vi": "hành động; biện pháp; bước thực hiện",
+      "pos": "n",
+      "definition_en": "something done, especially a step taken to deal with a problem or situation",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/action"
+      ]
+    },
+    {
+      "term": "activity",
+      "meaning_vi": "hoạt động; hoạt động kinh doanh",
+      "pos": "n",
+      "definition_en": "a situation in which people or organizations are doing things or in which events are happening",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/activity"
+      ]
     },
     {
       "term": "adaptable",
       "meaning_vi": "có khả năng thích nghi",
-      "source": "curated-related-glossary"
+      "source": "Cambridge School Dictionary (source excerpt, accessed 2026-11-21)",
+      "pos": "adj",
+      "definition_en": "Able to change to suit different situations or uses.",
+      "sourceUrls": [
+        "https://api.pageplace.de/preview/DT0400.9780511451270_A25081870/preview-9780511451270_A25081870.pdf"
+      ]
+    },
+    {
+      "term": "adherence",
+      "meaning_vi": "sự tuân thủ",
+      "pos": "n",
+      "definition_en": "the act of following a rule, agreement, or standard",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "adherence",
+      "sourceRelease": "2.95.25",
+      "sourceSenseIndex": 0
     },
     {
       "term": "admission",
       "meaning_vi": "sự cho phép vào; sự thừa nhận",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "permission to enter a place or event; the fee charged for entry",
+      "pos": "n",
+      "sourceHeadword": "admission",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "advance",
       "meaning_vi": "sự tiến bộ; khoản ứng trước; tiến lên",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary (accessed 2026-11-21)",
+      "pos": "n/v",
+      "definition_en": "To move or develop forward; progress or improvement; or money paid before it is normally due.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/advance"
+      ]
     },
     {
       "term": "advantage",
       "meaning_vi": "lợi thế; ưu điểm",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary (accessed 2026-11-21)",
+      "pos": "n",
+      "definition_en": "A condition or feature that improves the chance of success or makes a situation better.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/advantage"
+      ]
+    },
+    {
+      "term": "advertise",
+      "meaning_vi": "quảng cáo; thông báo công khai",
+      "pos": "v",
+      "definition_en": "to make a product, service, or opportunity known publicly, often to attract customers",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/advertise"
+      ]
     },
     {
       "term": "advice",
       "meaning_vi": "lời khuyên",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "an opinion about what someone should do",
+      "pos": "n",
+      "sourceHeadword": "advice",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "advise",
+      "meaning_vi": "khuyên; tư vấn; đưa ra lời khuyên",
+      "pos": "v",
+      "definition_en": "to give someone useful information or recommend what they should do",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/advise"
+      ]
     },
     {
       "term": "agenda",
       "meaning_vi": "chương trình nghị sự",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a list of items to be discussed at a meeting",
+      "pos": "n",
+      "sourceHeadword": "agenda",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "agreement",
+      "meaning_vi": "thỏa thuận; hợp đồng",
+      "pos": "n",
+      "definition_en": "a formal or informal arrangement that two or more parties accept",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "agreement",
+      "sourceRelease": "2.95.25",
+      "sourceSenseIndex": 0
     },
     {
       "term": "aide",
@@ -88,12 +245,32 @@
     {
       "term": "allocate",
       "meaning_vi": "phân bổ",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to give a particular amount of time, money, or resources to someone or something",
+      "pos": "v",
+      "sourceHeadword": "allocate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "allow",
+      "meaning_vi": "cho phép; tạo điều kiện; dành (thời gian)",
+      "pos": "v",
+      "definition_en": "to give permission or make it possible for something to happen",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/allow"
+      ]
     },
     {
       "term": "allowance",
       "meaning_vi": "phụ cấp; khoản trợ cấp",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "an amount of money given regularly for a particular purpose",
+      "pos": "n",
+      "sourceHeadword": "allowance",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "alternative",
@@ -104,13 +281,22 @@
     {
       "term": "amend",
       "meaning_vi": "sửa đổi",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to make a formal change to a document, contract, or law",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "amend",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "amenity",
       "meaning_vi": "tiện nghi",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a feature or service that makes a place comfortable",
+      "pos": "n",
+      "sourceHeadword": "amenity",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "amount",
@@ -119,19 +305,54 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "announce",
+      "meaning_vi": "thông báo; công bố chính thức",
+      "pos": "v",
+      "definition_en": "to make information known publicly or tell people about something officially",
+      "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/announce"
+      ]
+    },
+    {
       "term": "announcement",
       "meaning_vi": "thông báo",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a public or official statement",
+      "pos": "n",
+      "sourceHeadword": "announcement",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "annual",
       "meaning_vi": "hằng năm; thường niên",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "happening once every year",
+      "pos": "adj",
+      "sourceHeadword": "annual",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "annually",
       "meaning_vi": "hằng năm",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "once every year",
+      "pos": "adv",
+      "sourceHeadword": "annually",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "answer",
+      "meaning_vi": "câu trả lời; lời giải; trả lời hoặc phản hồi",
+      "pos": "n/v",
+      "definition_en": "a reaction or reply to a question or communication; a solution to a problem; to respond to someone or something",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/answer"
+      ]
     },
     {
       "term": "apparatus",
@@ -141,14 +362,21 @@
     {
       "term": "applicant",
       "meaning_vi": "người ứng tuyển",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a person who formally asks for a job",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "applicant",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "application",
       "meaning_vi": "đơn đăng ký",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "an official request for something, usually made in writing / a computer program designed to perform a particular task",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "application",
+      "sourceRelease": "2.95.24"
     },
     {
       "term": "application software",
@@ -163,18 +391,52 @@
     {
       "term": "appointment",
       "meaning_vi": "cuộc hẹn; lịch hẹn",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "an arrangement to meet someone at a particular time",
+      "pos": "n",
+      "sourceHeadword": "appointment",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "appraisal",
       "meaning_vi": "sự thẩm định",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a formal assessment of an employee’s work",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "appraisal",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "appraise",
+      "meaning_vi": "đánh giá; định giá",
+      "pos": "v",
+      "definition_en": "to examine and judge the value or quality of something",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "appraise",
+      "sourceRelease": "2.95.25",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "approach",
+      "meaning_vi": "cách tiếp cận; phương pháp; tiếp cận hoặc xử lý một vấn đề",
+      "pos": "n/v",
+      "definition_en": "a way of considering or doing something; to deal with something or communicate with someone to make a request or agreement",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/approach"
+      ]
     },
     {
       "term": "approve",
       "meaning_vi": "phê duyệt; chấp thuận",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to officially accept or agree to something",
+      "pos": "v",
+      "sourceHeadword": "approve",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "approximation",
@@ -189,7 +451,12 @@
     {
       "term": "arrange",
       "meaning_vi": "sắp xếp; thu xếp",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to organize something or make plans",
+      "pos": "v",
+      "sourceHeadword": "arrange",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "arrive",
@@ -199,7 +466,12 @@
     {
       "term": "assemble",
       "meaning_vi": "tập hợp; lắp ráp",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to put parts together or bring people together in one place",
+      "pos": "v",
+      "sourceHeadword": "assemble",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "assert",
@@ -220,24 +492,68 @@
     {
       "term": "assess",
       "meaning_vi": "đánh giá",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to examine something and judge its quality, value, importance, or condition",
+      "pos": "v",
+      "sourceHeadword": "assess",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "assessment",
       "meaning_vi": "sự đánh giá; bài đánh giá",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a judgment about the quality, importance, or ability of someone or something",
+      "pos": "n",
+      "sourceHeadword": "assessment",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "asset",
       "meaning_vi": "tài sản; nguồn lực",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "something valuable that an organization owns or controls",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "asset",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "assign",
+      "meaning_vi": "giao; phân công; chỉ định",
+      "pos": "v",
+      "definition_en": "to give someone a particular task or responsibility",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "assign",
+      "sourceRelease": "2.95.25",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "assistance",
+      "meaning_vi": "sự hỗ trợ; trợ giúp",
+      "definition_en": "help or support given to someone who needs it",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "assistance",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "associate",
       "meaning_vi": "cộng sự",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "assumption",
+      "meaning_vi": "giả định; điều giả sử",
+      "pos": "n",
+      "definition_en": "something that is accepted as true without proof",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "assumption",
+      "sourceRelease": "2.95.25",
+      "sourceSenseIndex": 0
     },
     {
       "term": "assurance",
@@ -257,10 +573,24 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "authorization",
+      "meaning_vi": "sự ủy quyền; giấy phép",
+      "pos": "n",
+      "definition_en": "official permission to do something or to access something",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "authorization",
+      "sourceRelease": "2.95.25",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "authorize",
       "meaning_vi": "cấp quyền",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to give someone official permission to do something",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "authorize",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "avoid",
@@ -270,33 +600,78 @@
       "source": "Cambridge Dictionary (accessed 2026-11-20)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/avoid"
-      ]
+      ],
+      "sourceHeadword": "avoid",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "baggage",
       "meaning_vi": "hành lý",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "the bags and cases a traveler carries",
+      "pos": "n",
+      "sourceHeadword": "baggage",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "bargain",
       "meaning_vi": "món hời; sự mặc cả",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "an agreement reached after discussion, or something bought at a price lower than usual",
+      "pos": "n/v",
+      "sourceHeadword": "bargain",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "benchmark",
       "meaning_vi": "mốc chuẩn",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n/v",
+      "definition_en": "a standard used to compare performance; to compare against a standard",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "benchmark",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "bill",
       "meaning_vi": "hóa đơn; dự luật",
-      "source": "curated-related-glossary"
+      "source": "curated-related-glossary",
+      "pos": "n/v",
+      "sourceHeadword": "bill",
+      "sourceRelease": "2.95.34"
     },
     {
       "term": "booking",
       "meaning_vi": "việc đặt chỗ; đặt phòng",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "an arrangement to reserve a room, seat, or service",
+      "pos": "n",
+      "sourceHeadword": "booking",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "borrow",
+      "meaning_vi": "mượn",
+      "definition_en": "to take something temporarily and return it later",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "borrow",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "breakdown",
+      "meaning_vi": "sự hỏng hóc; bảng phân tích chi tiết",
+      "pos": "n",
+      "definition_en": "a failure of a machine, or a division of information into parts",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "breakdown",
+      "sourceRelease": "2.95.25",
+      "sourceSenseIndex": 0
     },
     {
       "term": "business day",
@@ -311,12 +686,22 @@
     {
       "term": "buyer",
       "meaning_vi": "người mua",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a person or company that purchases something",
+      "pos": "n",
+      "sourceHeadword": "buyer",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "calculate",
       "meaning_vi": "tính toán",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to find an amount or answer using mathematics",
+      "pos": "v",
+      "sourceHeadword": "calculate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "calendar date",
@@ -342,12 +727,40 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/cancel"
-      ]
+      ],
+      "sourceHeadword": "cancel",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "capital",
+      "meaning_vi": "vốn; nguồn vốn",
+      "definition_en": "money or property used to start or operate a business",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "capital",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "cargo",
       "meaning_vi": "hàng hóa vận chuyển",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "goods carried by a ship, aircraft, train, or truck",
+      "pos": "n",
+      "sourceHeadword": "cargo",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "carry out",
+      "meaning_vi": "thực hiện; tiến hành; hoàn thành nhiệm vụ",
+      "pos": "v",
+      "definition_en": "to do or complete a task, activity, instruction, or plan",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/carry-out"
+      ]
     },
     {
       "term": "cause",
@@ -357,7 +770,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-20)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/cause"
-      ]
+      ],
+      "sourceHeadword": "cause",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "cautious",
@@ -389,7 +805,10 @@
     {
       "term": "charge",
       "meaning_vi": "tính phí; khoản phí; phụ trách",
-      "source": "curated-related-glossary"
+      "source": "curated-related-glossary",
+      "pos": "n/v",
+      "sourceHeadword": "charge",
+      "sourceRelease": "2.95.34"
     },
     {
       "term": "check",
@@ -397,10 +816,40 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "choose",
+      "meaning_vi": "chọn; quyết định muốn lấy hoặc sử dụng người hay vật nào trong các phương án",
+      "pos": "v",
+      "definition_en": "to decide which person or thing you want from two or more options",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/choose"
+      ]
+    },
+    {
+      "term": "circumstance",
+      "meaning_vi": "hoàn cảnh; tình huống",
+      "definition_en": "a fact or condition that affects a situation",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "circumstance",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "coaching",
       "meaning_vi": "huấn luyện",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "collaborate",
+      "meaning_vi": "cộng tác",
+      "definition_en": "to work with another person or group to achieve something",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "collaborate",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "collaborator",
@@ -411,7 +860,22 @@
     {
       "term": "collect",
       "meaning_vi": "thu thập; thu tiền",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to bring things together or receive payment",
+      "pos": "v",
+      "sourceHeadword": "collect",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "combination",
+      "meaning_vi": "sự kết hợp; sự kết hợp của nhiều yếu tố",
+      "pos": "n",
+      "definition_en": "a mixture or joining of two or more things",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/combination"
+      ]
     },
     {
       "term": "commerce",
@@ -420,10 +884,40 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "common",
+      "meaning_vi": "phổ biến; thường gặp",
+      "pos": "adj",
+      "definition_en": "happening frequently or found in many places or among many people",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/common"
+      ]
+    },
+    {
+      "term": "competitor",
+      "meaning_vi": "đối thủ cạnh tranh",
+      "definition_en": "a person or organization that offers similar products or services and competes for the same customers",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "competitor",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "component",
       "meaning_vi": "thành phần; linh kiện",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "comprise",
+      "meaning_vi": "bao gồm; gồm có; cấu thành",
+      "definition_en": "to consist of particular parts or members",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "comprise",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "conceal",
@@ -438,13 +932,22 @@
     {
       "term": "condition",
       "meaning_vi": "điều kiện; tình trạng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the state something is in or a requirement",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "condition",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "confirm",
       "meaning_vi": "xác nhận",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to state or show that something is definitely true",
+      "pos": "v",
+      "sourceHeadword": "confirm",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "connect",
@@ -452,9 +955,24 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "considerable",
+      "meaning_vi": "đáng kể; khá lớn",
+      "definition_en": "large in amount, size, or importance",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "considerable",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "consignment",
       "meaning_vi": "lô hàng ký gửi; lô hàng được giao",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a quantity of goods sent to someone, usually for sale or delivery",
+      "pos": "n",
+      "sourceHeadword": "consignment",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "constantly",
@@ -462,10 +980,27 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "consume",
+      "meaning_vi": "tiêu thụ; sử dụng tài nguyên hoặc thời gian; ăn/uống",
+      "pos": "v",
+      "definition_en": "to use fuel, energy, time, or a product; also to eat or drink",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/consume"
+      ],
+      "sourceHeadword": "consume",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "consumer",
       "meaning_vi": "người tiêu dùng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a person who buys or uses goods and services",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "consumer",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "contender",
@@ -479,6 +1014,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "continue",
+      "meaning_vi": "tiếp tục; duy trì; tiếp diễn",
+      "pos": "v",
+      "definition_en": "to keep happening, existing, or doing something, or to start again after a pause",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/continue"
+      ]
+    },
+    {
       "term": "convention",
       "meaning_vi": "hội nghị; quy ước",
       "source": "curated-related-glossary"
@@ -486,8 +1031,12 @@
     {
       "term": "convey",
       "meaning_vi": "chuyển tải",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to communicate or express an idea, feeling, or information",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "convey",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "conveyance",
@@ -496,9 +1045,24 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "coordinate",
+      "meaning_vi": "điều phối; phối hợp",
+      "definition_en": "to organize people, activities, or resources so that they work together effectively",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "coordinate",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "cost",
       "meaning_vi": "chi phí; trị giá",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "the amount of money needed to buy or do something",
+      "pos": "n/v",
+      "sourceHeadword": "cost",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "course",
@@ -515,14 +1079,38 @@
     {
       "term": "coverage",
       "meaning_vi": "phạm vi bảo hiểm",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the protection or services included in an insurance or warranty plan; the area or amount included",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "coverage",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "coworker",
       "meaning_vi": "đồng nghiệp",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "create",
+      "meaning_vi": "tạo ra; sáng tạo",
+      "definition_en": "to make something new",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "create",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "credit",
+      "meaning_vi": "tín dụng; khoản ghi có",
+      "definition_en": "an arrangement to pay later or money added to an account",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "credit",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "criterion",
@@ -552,6 +1140,16 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "data",
+      "meaning_vi": "dữ liệu",
+      "definition_en": "facts or information used for analysis",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "data",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "deal",
       "meaning_vi": "thỏa thuận; giao dịch",
       "source": "curated-related-glossary"
@@ -575,12 +1173,29 @@
       "source": "Cambridge Dictionary (accessed 2026-11-20)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/decline"
+      ],
+      "sourceHeadword": "decline",
+      "sourceRelease": "2.95.34"
+    },
+    {
+      "term": "decrease",
+      "meaning_vi": "giảm; sự giảm; làm giảm",
+      "pos": "n/v",
+      "definition_en": "to become less or make something less; a reduction in amount, size, or level",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/decrease"
       ]
     },
     {
       "term": "delay",
       "meaning_vi": "sự trì hoãn; làm chậm",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a period of waiting or to make something late",
+      "pos": "n/v",
+      "sourceHeadword": "delay",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "demand",
@@ -600,7 +1215,12 @@
     {
       "term": "deposit",
       "meaning_vi": "tiền đặt cọc; khoản tiền gửi",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "money paid in advance or put into a bank",
+      "pos": "n/v",
+      "sourceHeadword": "deposit",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "depot",
@@ -608,9 +1228,39 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "destination",
+      "meaning_vi": "điểm đến",
+      "definition_en": "the place someone is going to",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "destination",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "determine",
+      "meaning_vi": "xác định; tìm ra; quyết định",
+      "pos": "v",
+      "definition_en": "to discover or establish facts or information, or to decide what will happen",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/determine"
+      ]
+    },
+    {
       "term": "diary",
       "meaning_vi": "nhật ký; sổ lịch",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "different",
+      "meaning_vi": "khác; không giống; có sự khác biệt",
+      "pos": "adj",
+      "definition_en": "not the same as another person or thing",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/different"
+      ]
     },
     {
       "term": "direct",
@@ -661,7 +1311,12 @@
     {
       "term": "dispatch",
       "meaning_vi": "gửi đi; điều phối; chuyến hàng gửi đi",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "the act of sending goods or people to a destination",
+      "pos": "n",
+      "sourceHeadword": "dispatch",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "disperse",
@@ -672,6 +1327,16 @@
       "term": "disprove",
       "meaning_vi": "chứng minh là sai; bác bỏ",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "dispute",
+      "meaning_vi": "tranh chấp; tranh cãi; phản đối tính đúng đắn",
+      "definition_en": "a serious disagreement; to question or challenge something",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "dispute",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "distinction",
@@ -693,7 +1358,23 @@
       "source": "Cambridge Dictionary (accessed 2026-11-20)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/distribute"
-      ]
+      ],
+      "sourceHeadword": "distribute",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "distribution",
+      "meaning_vi": "phân phối; sự phân phối hoặc cung ứng hàng hóa, dịch vụ",
+      "pos": "n",
+      "definition_en": "the process of supplying or giving things to people or places, or the way things are spread",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/distribution"
+      ],
+      "sourceHeadword": "distribution",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "division",
@@ -704,8 +1385,11 @@
     {
       "term": "document",
       "meaning_vi": "tài liệu; ghi nhận",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n/v",
+      "definition_en": "a paper or electronic file that contains written or printed information / to record information about something in writing, photographs, or another form",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "document",
+      "sourceRelease": "2.95.24"
     },
     {
       "term": "drawback",
@@ -725,7 +1409,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/duration"
-      ]
+      ],
+      "sourceHeadword": "duration",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "duty",
@@ -735,7 +1422,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-20)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/duty"
-      ]
+      ],
+      "sourceHeadword": "duty",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "earnings",
@@ -754,14 +1444,62 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "effect",
+      "meaning_vi": "kết quả; tác động; tạo ra hoặc làm phát sinh một kết quả",
+      "pos": "n/v",
+      "definition_en": "a result produced by an action or influence; to bring about a change or result",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/effect"
+      ]
+    },
+    {
+      "term": "efficient",
+      "meaning_vi": "hiệu suất cao; tiết kiệm nguồn lực",
+      "definition_en": "working well without wasting time or resources",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "efficient",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "employ",
       "meaning_vi": "thuê; tuyển dụng; sử dụng",
       "source": "curated-related-glossary"
     },
     {
+      "term": "employee",
+      "meaning_vi": "nhân viên; người được thuê và trả lương",
+      "pos": "n",
+      "definition_en": "a person who is paid to work for another person or an organization",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/employee"
+      ],
+      "sourceHeadword": "employee",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "employer",
       "meaning_vi": "người sử dụng lao động",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a person or organization that pays people to work",
+      "pos": "n",
+      "sourceHeadword": "employer",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "encourage",
+      "meaning_vi": "khuyến khích",
+      "definition_en": "to give someone support or confidence to do something",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "encourage",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "endeavor",
@@ -776,6 +1514,16 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "enforce",
+      "meaning_vi": "thực thi; buộc tuân thủ",
+      "definition_en": "to make sure that a law, rule, or agreement is obeyed",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "enforce",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "engagement",
       "meaning_vi": "cam kết; cuộc hẹn; sự tham gia",
       "source": "curated-related-glossary"
@@ -783,8 +1531,12 @@
     {
       "term": "enhance",
       "meaning_vi": "nâng cao",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to improve the quality, value, or strength of something",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "enhance",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "enlist",
@@ -794,13 +1546,22 @@
     {
       "term": "enroll",
       "meaning_vi": "ghi danh",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to officially join a course or school",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "enroll",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "ensure",
       "meaning_vi": "đảm bảo",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to make certain that something happens",
+      "pos": "v",
+      "sourceHeadword": "ensure",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "enter",
@@ -819,6 +1580,16 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "equivalent",
+      "meaning_vi": "tương đương",
+      "definition_en": "equal in value, function, meaning, or importance to something else",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "equivalent",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "erase",
       "meaning_vi": "xóa; xóa bỏ dữ liệu",
       "pos": "v",
@@ -832,6 +1603,28 @@
       "term": "essential",
       "meaning_vi": "thiết yếu; cần thiết",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "establish",
+      "meaning_vi": "thành lập; thiết lập; xác lập",
+      "definition_en": "to start an organization or create a system, relationship, or fact",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "establish",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "estimate",
+      "meaning_vi": "ước tính; sự ước lượng hoặc con số ước tính",
+      "pos": "n/v",
+      "definition_en": "to calculate approximately, or an approximate judgment of cost, size, amount, or value",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/estimate"
+      ],
+      "sourceHeadword": "estimate",
+      "sourceRelease": "2.95.34"
     },
     {
       "term": "evade",
@@ -857,7 +1650,12 @@
     {
       "term": "exchange",
       "meaning_vi": "trao đổi; đổi",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "the act of giving something and receiving something else",
+      "pos": "n/v",
+      "sourceHeadword": "exchange",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "execute",
@@ -866,24 +1664,59 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "exemption",
+      "meaning_vi": "sự miễn trừ",
+      "definition_en": "special permission not to follow a rule or pay a charge",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "exemption",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "expenditure",
       "meaning_vi": "khoản chi; chi tiêu",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "the total amount of money spent",
+      "pos": "n",
+      "sourceHeadword": "expenditure",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "expense",
       "meaning_vi": "chi phí; khoản phí",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "money spent to buy or do something",
+      "pos": "n",
+      "sourceHeadword": "expense",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "expertise",
       "meaning_vi": "chuyên môn; kiến thức chuyên sâu",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "special skill or knowledge in a subject",
+      "pos": "n",
+      "sourceHeadword": "expertise",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "falsify",
       "meaning_vi": "làm giả; xuyên tạc",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "feasible",
+      "meaning_vi": "khả thi",
+      "definition_en": "possible and practical to do under the available conditions",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "feasible",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "fee",
@@ -908,15 +1741,47 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "former",
+      "meaning_vi": "trước đây; thuộc về thời kỳ hoặc vị trí trong quá khứ",
+      "pos": "adj",
+      "definition_en": "from an earlier time, or describing someone who previously held a role",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/former"
+      ]
+    },
+    {
       "term": "four times a year",
       "meaning_vi": "bốn lần một năm",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "function",
+      "meaning_vi": "chức năng; nhiệm vụ; hoạt động",
+      "pos": "n/v",
+      "definition_en": "the purpose or duty of something or someone; to work or operate",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/function"
+      ],
+      "sourceHeadword": "function",
+      "sourceRelease": "2.95.34"
     },
     {
       "term": "functioning",
       "meaning_vi": "sự hoạt động",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "funding",
+      "meaning_vi": "nguồn tài trợ; khoản kinh phí được cấp",
+      "pos": "n",
+      "definition_en": "money provided by a government or organization for an activity, event, or project",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/funding"
+      ]
     },
     {
       "term": "funds",
@@ -931,8 +1796,12 @@
     {
       "term": "gather",
       "meaning_vi": "thu thập",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to collect things or bring people together",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "gather",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "gear",
@@ -942,7 +1811,12 @@
     {
       "term": "generate",
       "meaning_vi": "tạo ra; phát sinh",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to produce or create something, such as income, information, or electricity",
+      "pos": "v",
+      "sourceHeadword": "generate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "get",
@@ -956,9 +1830,27 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "goal",
+      "meaning_vi": "mục tiêu; điều muốn đạt được",
+      "pos": "n",
+      "definition_en": "an aim or purpose, or something that a person or organization wants to achieve",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/goal"
+      ],
+      "sourceHeadword": "goal",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "goods",
       "meaning_vi": "hàng hóa",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "things that are made or sold",
+      "pos": "n",
+      "sourceHeadword": "goods",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "grade",
@@ -968,13 +1860,20 @@
     {
       "term": "grievance",
       "meaning_vi": "khiếu nại; bất bình",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a formal complaint about something considered unfair",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "grievance",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "guarantee",
       "meaning_vi": "đảm bảo; bảo hành",
-      "source": "curated-related-glossary"
+      "source": "curated-related-glossary",
+      "pos": "n/v",
+      "sourceHeadword": "guarantee",
+      "sourceRelease": "2.95.34"
     },
     {
       "term": "guest",
@@ -984,7 +1883,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/guest"
-      ]
+      ],
+      "sourceHeadword": "guest",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "guest service",
@@ -994,13 +1896,32 @@
     {
       "term": "guidance",
       "meaning_vi": "sự hướng dẫn",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "help or advice about how to do something",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "guidance",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "guide",
+      "meaning_vi": "hướng dẫn; hướng dẫn viên",
+      "definition_en": "information that helps someone or a person who leads",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "guide",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "guideline",
       "meaning_vi": "hướng dẫn; nguyên tắc chỉ đạo",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a general rule or piece of advice that helps people make decisions or perform a task",
+      "pos": "n",
+      "sourceHeadword": "guideline",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "handle",
@@ -1010,13 +1931,30 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/handle"
-      ]
+      ],
+      "sourceHeadword": "handle",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "hazard",
       "meaning_vi": "mối nguy",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "something that may cause harm",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "hazard",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "headquarters",
+      "meaning_vi": "trụ sở chính",
+      "definition_en": "the main office or center of an organization",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "headquarters",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "helper",
@@ -1027,7 +1965,12 @@
     {
       "term": "hire",
       "meaning_vi": "thuê; tuyển dụng",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to employ someone or pay to use something",
+      "pos": "v",
+      "sourceHeadword": "hire",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "holder",
@@ -1045,6 +1988,16 @@
       "term": "housing",
       "meaning_vi": "nhà ở; chỗ ở",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "identify",
+      "meaning_vi": "nhận diện; xác định",
+      "definition_en": "to recognize or find out what something is",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "identify",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "ignorance",
@@ -1068,6 +2021,26 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "improve",
+      "meaning_vi": "cải thiện",
+      "definition_en": "to make or become better",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "improve",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "inaction",
+      "meaning_vi": "sự không hành động; việc không làm gì để giải quyết vấn đề",
+      "pos": "n",
+      "definition_en": "a failure to take action that might help solve a problem",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/inaction"
+      ]
+    },
+    {
       "term": "incapable",
       "meaning_vi": "không có khả năng",
       "pos": "",
@@ -1076,7 +2049,22 @@
     {
       "term": "income",
       "meaning_vi": "thu nhập",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "money received from work or investments",
+      "pos": "n",
+      "sourceHeadword": "income",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "increase",
+      "meaning_vi": "sự gia tăng; tăng lên",
+      "definition_en": "a rise in number, amount, or level",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "increase",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "inexperience",
@@ -1094,6 +2082,26 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "inform",
+      "meaning_vi": "thông báo; cung cấp thông tin hoặc báo cho ai biết",
+      "pos": "v",
+      "definition_en": "to tell someone facts or details, especially in a clear or official way",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/inform"
+      ]
+    },
+    {
+      "term": "information",
+      "meaning_vi": "thông tin",
+      "definition_en": "facts or details about something",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "information",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "initiate",
       "meaning_vi": "khởi xướng; bắt đầu",
       "source": "curated-related-glossary"
@@ -1101,7 +2109,12 @@
     {
       "term": "inquiry",
       "meaning_vi": "yêu cầu thông tin; câu hỏi; cuộc điều tra",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a request for information, or an official examination of a matter",
+      "pos": "n",
+      "sourceHeadword": "inquiry",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "installation",
@@ -1111,8 +2124,12 @@
     {
       "term": "installment",
       "meaning_vi": "kỳ trả góp",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "one of a series of regular payments for something",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "installment",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "instruction",
@@ -1122,13 +2139,20 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/instruction"
-      ]
+      ],
+      "sourceHeadword": "instruction",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "interim",
       "meaning_vi": "tạm thời",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "adj/n",
+      "definition_en": "temporary and intended to last until something permanent is arranged",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "interim",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "international",
@@ -1139,13 +2163,32 @@
     {
       "term": "introduce",
       "meaning_vi": "giới thiệu; đưa vào sử dụng",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to tell someone another person's name or bring something new",
+      "pos": "v",
+      "sourceHeadword": "introduce",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "inventory",
       "meaning_vi": "hàng tồn kho",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a list of goods or the goods held by a business",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "inventory",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "item",
+      "meaning_vi": "mặt hàng; mục",
+      "definition_en": "a single thing in a list or group",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "item",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "job opening",
@@ -1153,9 +2196,41 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "join",
+      "meaning_vi": "tham gia; gia nhập; nối",
+      "definition_en": "to become a member of a group or connect things",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "join",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "junior",
+      "meaning_vi": "cấp dưới; ít thâm niên",
+      "definition_en": "having a lower rank or less experience",
+      "pos": "adj/n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "junior",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "keep",
       "meaning_vi": "giữ; duy trì",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "launch",
+      "meaning_vi": "ra mắt; khởi động; phát động",
+      "pos": "n/v",
+      "definition_en": "to begin something or introduce a product or service; the act of starting or introducing something",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/launch"
+      ],
+      "sourceHeadword": "launch",
+      "sourceRelease": "2.95.34"
     },
     {
       "term": "leaflet",
@@ -1174,10 +2249,44 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "lend",
+      "meaning_vi": "cho mượn; cho vay",
+      "definition_en": "to give something temporarily expecting it back",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "lend",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "levy",
+      "meaning_vi": "khoản thuế hoặc phí do cơ quan có thẩm quyền áp đặt",
+      "definition_en": "a tax or fee imposed by a government or other authorized body",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "levy",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "license",
+      "meaning_vi": "giấy phép; cấp phép",
+      "definition_en": "official permission to do or use something",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "license",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "loan",
       "meaning_vi": "khoản vay; cho vay",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "money borrowed from a bank or another person",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "loan",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "location",
@@ -1233,15 +2342,60 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "maintain",
+      "meaning_vi": "duy trì; bảo trì; giữ gìn",
+      "definition_en": "to keep something in good condition or at the same level",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "maintain",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "make",
+      "meaning_vi": "làm ra; tạo ra; sản xuất; kiếm được",
+      "pos": "v",
+      "definition_en": "to produce or create something, cause something to happen, or earn money",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/make"
+      ]
+    },
+    {
       "term": "manage",
       "meaning_vi": "quản lý; xoay xở",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to control or organize people or activities",
+      "pos": "v",
+      "sourceHeadword": "manage",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "manager",
+      "meaning_vi": "quản lý; người điều hành",
+      "definition_en": "a person responsible for controlling a team or activity",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "manager",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "manual",
       "meaning_vi": "sổ tay; thủ công",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "manufacture",
+      "meaning_vi": "sản xuất",
+      "definition_en": "to make goods in large quantities using machinery",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "manufacture",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "mark",
@@ -1274,6 +2428,26 @@
       ]
     },
     {
+      "term": "maximum",
+      "meaning_vi": "mức tối đa; lớn nhất được phép hoặc có thể",
+      "pos": "adj",
+      "definition_en": "being the largest amount or number allowed or possible",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/maximum"
+      ]
+    },
+    {
+      "term": "mediation",
+      "meaning_vi": "sự hòa giải; quá trình trung gian giải quyết tranh chấp",
+      "definition_en": "a process in which an independent person helps parties reach an agreement",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "mediation",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "meeting",
       "meaning_vi": "cuộc họp",
       "source": "curated-related-glossary"
@@ -1290,6 +2464,38 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "merchandise",
+      "meaning_vi": "hàng hóa; sản phẩm thương mại / quảng bá hoặc kinh doanh hàng hóa",
+      "definition_en": "goods that are bought and sold / to promote or sell products",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "merchandise",
+      "sourceRelease": "2.95.28"
+    },
+    {
+      "term": "method",
+      "meaning_vi": "phương pháp; cách thức thực hiện",
+      "pos": "n",
+      "definition_en": "a particular way of doing something",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/method"
+      ],
+      "sourceHeadword": "method",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "minor",
+      "meaning_vi": "nhỏ; không đáng kể; ít quan trọng",
+      "pos": "adj",
+      "definition_en": "having little importance, influence, or effect compared with other things",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/minor"
+      ]
+    },
+    {
       "term": "modify",
       "meaning_vi": "điều chỉnh",
       "pos": "",
@@ -1303,7 +2509,20 @@
     {
       "term": "monthly",
       "meaning_vi": "hằng tháng; hàng tháng",
-      "source": "curated-related-glossary"
+      "source": "curated-related-glossary",
+      "pos": "adj/adv",
+      "sourceHeadword": "monthly",
+      "sourceRelease": "2.95.34"
+    },
+    {
+      "term": "motivate",
+      "meaning_vi": "tạo động lực; thúc đẩy",
+      "definition_en": "to make someone want to do something",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "motivate",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "move",
@@ -1314,6 +2533,16 @@
       "term": "neglect",
       "meaning_vi": "bỏ bê; sao nhãng",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "network",
+      "meaning_vi": "mạng lưới; kết nối",
+      "definition_en": "a group of connected people or systems",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "network",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "never",
@@ -1357,6 +2586,29 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "objective",
+      "meaning_vi": "mục tiêu; điều dự định đạt được",
+      "pos": "n",
+      "definition_en": "something that a person or organization plans to do or achieve",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/objective"
+      ],
+      "sourceHeadword": "objective",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "obligation",
+      "meaning_vi": "nghĩa vụ; trách nhiệm ràng buộc",
+      "definition_en": "something that a person or organization must do",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "obligation",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "observation",
       "meaning_vi": "sự quan sát",
       "pos": "",
@@ -1368,6 +2620,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "obtain",
+      "meaning_vi": "đạt được; có được; thu thập",
+      "definition_en": "to get something, especially by effort",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "obtain",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "occasion",
       "meaning_vi": "dịp; cơ hội",
       "source": "curated-related-glossary"
@@ -1377,6 +2639,15 @@
       "meaning_vi": "nghề nghiệp",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "offer",
+      "meaning_vi": "lời đề nghị; đề xuất sẵn sàng cho hoặc làm điều gì / đề nghị; ngỏ ý cho hoặc làm điều gì / cung cấp; đem đến một sản phẩm, dịch vụ hoặc cơ hội",
+      "definition_en": "an act of asking whether someone would like something, or a proposal to give or do something / to say that you are willing to give something or do something for someone / to provide or make a product, service, or opportunity available",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "offer",
+      "sourceRelease": "2.95.28"
     },
     {
       "term": "once a month",
@@ -1400,20 +2671,84 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "oppose",
+      "meaning_vi": "phản đối; chống lại",
+      "pos": "v",
+      "definition_en": "to disagree with someone or something and speak or act against it",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/oppose"
+      ]
+    },
+    {
       "term": "optional",
       "meaning_vi": "không bắt buộc; tùy chọn",
       "source": "curated-related-glossary"
     },
     {
+      "term": "organize",
+      "meaning_vi": "tổ chức; sắp xếp",
+      "definition_en": "to arrange something in a structured way",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "organize",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "origin",
+      "meaning_vi": "nguồn gốc; điểm hoặc nơi bắt đầu hay xuất phát",
+      "pos": "n",
+      "definition_en": "the place or point where something begins, comes from, or is produced",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/origin"
+      ]
+    },
+    {
+      "term": "outcome",
+      "meaning_vi": "kết quả; hậu quả",
+      "definition_en": "the final result of an action or event",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "outcome",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "outlay",
       "meaning_vi": "khoản chi",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "an amount of money spent for a particular purpose, especially an initial investment in equipment or a business activity",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "outlay",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "output",
       "meaning_vi": "đầu ra; sản lượng",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "overdue",
+      "meaning_vi": "quá hạn",
+      "definition_en": "not paid, returned, or completed by the expected or required date",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "overdue",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "oversee",
+      "meaning_vi": "giám sát; trông coi",
+      "definition_en": "to be in charge of an activity and make sure it is done properly",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "oversee",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "pamphlet",
@@ -1423,7 +2758,12 @@
     {
       "term": "participate",
       "meaning_vi": "tham gia",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to take part in an activity or event",
+      "pos": "v",
+      "sourceHeadword": "participate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "path",
@@ -1448,6 +2788,26 @@
       ]
     },
     {
+      "term": "payable",
+      "meaning_vi": "phải trả; đến hạn thanh toán",
+      "definition_en": "required to be paid, especially by a stated date",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "payable",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "penalty",
+      "meaning_vi": "tiền phạt; hình phạt",
+      "definition_en": "a punishment or additional amount of money imposed for breaking a rule or failing to meet an obligation",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "penalty",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "per-month",
       "meaning_vi": "mỗi tháng",
       "source": "curated-related-glossary"
@@ -1465,13 +2825,46 @@
     {
       "term": "permit",
       "meaning_vi": "cho phép",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n/v",
+      "definition_en": "an official document or to allow something",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "permit",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "personnel",
+      "meaning_vi": "nhân sự; đội ngũ nhân viên",
+      "definition_en": "the people who work for an organization",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "personnel",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "plan",
       "meaning_vi": "kế hoạch; dự định",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "position",
+      "meaning_vi": "vị trí công việc; chức vụ hoặc cấp bậc / tình hình; vị thế hoặc hoàn cảnh của một người hay tổ chức",
+      "definition_en": "a job or a rank within a company or organization / the situation or status that a person or organization is in",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "position",
+      "sourceRelease": "2.95.28"
+    },
+    {
+      "term": "possibility",
+      "meaning_vi": "khả năng; điều có thể xảy ra hoặc phương án có thể lựa chọn",
+      "pos": "n",
+      "definition_en": "a chance that something may happen or be true, or an option that can be chosen",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/possibility"
+      ]
     },
     {
       "term": "post",
@@ -1483,6 +2876,16 @@
       "term": "postal code",
       "meaning_vi": "mã bưu chính",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "postponement",
+      "meaning_vi": "sự trì hoãn; việc hoãn lại",
+      "definition_en": "the act of arranging for an event or activity to take place at a later time",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "postponement",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "precious",
@@ -1514,7 +2917,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/prepare"
-      ]
+      ],
+      "sourceHeadword": "prepare",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "present",
@@ -1524,7 +2930,12 @@
     {
       "term": "preserve",
       "meaning_vi": "bảo quản; giữ gìn",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to keep something in its original or existing condition",
+      "pos": "v",
+      "sourceHeadword": "preserve",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "pressing",
@@ -1534,8 +2945,12 @@
     {
       "term": "prevent",
       "meaning_vi": "ngăn ngừa",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to stop something from happening",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "prevent",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "prize",
@@ -1554,14 +2969,54 @@
       ]
     },
     {
+      "term": "procedure",
+      "meaning_vi": "quy trình; thủ tục",
+      "definition_en": "a series of actions used to do something",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "procedure",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "proceeds",
       "meaning_vi": "tiền thu được; doanh thu từ việc bán",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "money received from selling something or from an event",
+      "pos": "n",
+      "sourceHeadword": "proceeds",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "process",
+      "meaning_vi": "quy trình; xử lý",
+      "definition_en": "a series of steps or to deal with information",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "process",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "produce",
       "meaning_vi": "sản xuất; nông sản",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to make or create something",
+      "pos": "v/n",
+      "sourceHeadword": "produce",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "product",
+      "meaning_vi": "sản phẩm",
+      "definition_en": "something made or grown to be sold",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "product",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "products",
@@ -1577,7 +3032,12 @@
     {
       "term": "profit",
       "meaning_vi": "lợi nhuận; thu lợi",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "money gained after costs are paid",
+      "pos": "n/v",
+      "sourceHeadword": "profit",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "progress report",
@@ -1587,13 +3047,22 @@
     {
       "term": "projection",
       "meaning_vi": "dự phóng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "an estimate of a future amount, result, or trend based on current information",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "projection",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "promote",
       "meaning_vi": "thăng chức; quảng bá; xúc tiến",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to encourage sales or give someone a higher position",
+      "pos": "v",
+      "sourceHeadword": "promote",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "proof of payment",
@@ -1603,20 +3072,32 @@
     {
       "term": "proposal",
       "meaning_vi": "đề xuất",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a plan or suggestion presented for consideration",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "proposal",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "proprietor",
       "meaning_vi": "chủ sở hữu",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the owner of a business or property",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "proprietor",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "prospect",
       "meaning_vi": "triển vọng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a person or organization that may become a customer, or a possibility for future success",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "prospect",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "protection",
@@ -1632,7 +3113,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/provide"
-      ]
+      ],
+      "sourceHeadword": "provide",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "provider",
@@ -1642,13 +3126,21 @@
     {
       "term": "provisional",
       "meaning_vi": "tạm thời; dự kiến",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "temporary and intended to be confirmed, changed, or replaced later",
+      "pos": "adj",
+      "sourceHeadword": "provisional",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "purchase",
       "meaning_vi": "mua hàng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v/n",
+      "definition_en": "to buy something / the act of buying something",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "purchase",
+      "sourceRelease": "2.95.24"
     },
     {
       "term": "purchase order",
@@ -1658,7 +3150,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/purchase-order"
-      ]
+      ],
+      "sourceHeadword": "purchase order",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "purchaser",
@@ -1672,10 +3167,24 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "quality",
+      "meaning_vi": "chất lượng; phẩm chất",
+      "definition_en": "how good or bad something is",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "quality",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "quantity",
       "meaning_vi": "số lượng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the amount or number of something",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "quantity",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "question",
@@ -1687,6 +3196,26 @@
       "meaning_vi": "bảng câu hỏi",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "quotation",
+      "meaning_vi": "báo giá; câu trích dẫn",
+      "definition_en": "a formal statement of the price of goods or services",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "quotation",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "quote",
+      "meaning_vi": "báo giá; trích dẫn",
+      "definition_en": "a statement of a price or to repeat exact words",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "quote",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "radiograph",
@@ -1713,23 +3242,51 @@
     {
       "term": "receive",
       "meaning_vi": "nhận; tiếp nhận",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to get something that someone sends or gives",
+      "pos": "v",
+      "sourceHeadword": "receive",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "recommend",
+      "meaning_vi": "đề xuất; khuyến nghị",
+      "definition_en": "to suggest that someone or something is good",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "recommend",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "record",
       "meaning_vi": "hồ sơ; ghi lại",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n/v",
+      "definition_en": "information about a person or event that is written down or stored on a computer / to keep information for the future by writing it down or storing it on a computer",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "record",
+      "sourceRelease": "2.95.24"
     },
     {
       "term": "recruit",
       "meaning_vi": "tuyển dụng; tuyển người",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to find and employ new people",
+      "pos": "v",
+      "sourceHeadword": "recruit",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "reduce",
       "meaning_vi": "giảm; cắt giảm",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to make something smaller or less",
+      "pos": "v",
+      "sourceHeadword": "reduce",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "reduction",
@@ -1749,7 +3306,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/refund"
-      ]
+      ],
+      "sourceHeadword": "refund",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "refuse",
@@ -1762,25 +3322,54 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "regular",
+      "meaning_vi": "thường xuyên; đều đặn",
+      "definition_en": "happening often or at fixed times",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "regular",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "reimbursement",
       "meaning_vi": "khoản hoàn trả",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "money paid back to someone for expenses they have incurred",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "reimbursement",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "reject",
       "meaning_vi": "từ chối; bác bỏ",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to refuse to accept or consider something",
+      "pos": "v",
+      "sourceHeadword": "reject",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "release",
       "meaning_vi": "phát hành; công bố; giải phóng",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to make something available to the public",
+      "pos": "n/v",
+      "sourceHeadword": "release",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "relocate",
       "meaning_vi": "di dời; chuyển địa điểm",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to move a person, office, or business to a different place",
+      "pos": "v",
+      "sourceHeadword": "relocate",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "remove",
@@ -1790,7 +3379,12 @@
     {
       "term": "rent",
       "meaning_vi": "thuê; tiền thuê",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "money paid regularly to use a property",
+      "pos": "n/v",
+      "sourceHeadword": "rent",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "rental agreement",
@@ -1800,8 +3394,22 @@
     {
       "term": "repayment",
       "meaning_vi": "sự hoàn trả",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the act of paying back money that has been borrowed, or an amount paid back",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "repayment",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "replacement",
+      "meaning_vi": "sự thay thế; vật thay thế",
+      "definition_en": "a person or thing that takes the place of another that is missing, damaged, or no longer suitable",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "replacement",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "request",
@@ -1811,7 +3419,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/request"
-      ]
+      ],
+      "sourceHeadword": "request",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "required",
@@ -1826,12 +3437,58 @@
       "source": "Cambridge Dictionary (accessed 2026-11-20)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/requirement"
-      ]
+      ],
+      "sourceHeadword": "requirement",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "resolve",
+      "meaning_vi": "giải quyết; xử lý dứt điểm",
+      "definition_en": "to find an acceptable solution to a problem or disagreement",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "resolve",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "response",
+      "meaning_vi": "phản hồi; câu trả lời",
+      "definition_en": "an answer or reaction",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "response",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "responsibility",
+      "meaning_vi": "trách nhiệm; nghĩa vụ phải xử lý hoặc bảo đảm một việc được thực hiện",
+      "pos": "n",
+      "definition_en": "a duty to deal with something or to make sure that it is done",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/responsibility"
+      ],
+      "sourceHeadword": "responsibility",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "restriction",
       "meaning_vi": "sự hạn chế; quy định giới hạn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "result",
+      "meaning_vi": "kết quả; dẫn đến",
+      "definition_en": "something that happens because of an action",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "result",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "retain",
@@ -1841,7 +3498,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-20)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/retain"
-      ]
+      ],
+      "sourceHeadword": "retain",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "retract",
@@ -1860,14 +3520,44 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "revenue",
+      "meaning_vi": "doanh thu",
+      "definition_en": "income generated from normal business activities",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "revenue",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "review",
+      "meaning_vi": "đánh giá; xem xét lại",
+      "definition_en": "a careful examination or to examine something again",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "review",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "revise",
       "meaning_vi": "sửa đổi; ôn tập",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to change something to improve or correct it",
+      "pos": "v",
+      "sourceHeadword": "revise",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "revision",
       "meaning_vi": "sự sửa đổi; bản chỉnh sửa",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "revision: sự sửa đổi; bản chỉnh sửa.",
+      "pos": "n",
+      "sourceHeadword": "revision",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "rigid",
@@ -1888,7 +3578,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/role"
-      ]
+      ],
+      "sourceHeadword": "role",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "rule",
@@ -1899,6 +3592,16 @@
       "term": "run",
       "meaning_vi": "chạy; vận hành; điều hành",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "safety",
+      "meaning_vi": "sự an toàn",
+      "definition_en": "the condition of being protected from danger",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "safety",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "saturday and sunday",
@@ -1913,7 +3616,10 @@
     {
       "term": "schedule",
       "meaning_vi": "lịch trình; lên lịch",
-      "source": "curated-related-glossary"
+      "source": "curated-related-glossary",
+      "pos": "n/v",
+      "sourceHeadword": "schedule",
+      "sourceRelease": "2.95.34"
     },
     {
       "term": "scope",
@@ -1947,6 +3653,36 @@
       ]
     },
     {
+      "term": "seminar",
+      "meaning_vi": "hội thảo chuyên đề",
+      "definition_en": "a meeting for discussion or training",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "seminar",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "send",
+      "meaning_vi": "gửi; chuyển đi; phái hoặc sai đi",
+      "pos": "v",
+      "definition_en": "to cause something to go to another place, especially by post or email, or to cause someone to go somewhere",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/send"
+      ]
+    },
+    {
+      "term": "senior",
+      "meaning_vi": "cấp cao; thâm niên",
+      "definition_en": "having a higher position or more experience",
+      "pos": "adj/n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "senior",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "separate",
       "meaning_vi": "riêng biệt; tách ra",
       "source": "curated-related-glossary"
@@ -1954,12 +3690,27 @@
     {
       "term": "service",
       "meaning_vi": "dịch vụ; phục vụ",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "work done for customers rather than producing goods",
+      "pos": "n",
+      "sourceHeadword": "service",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "set off",
       "meaning_vi": "khởi hành; kích hoạt",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "shareholder",
+      "meaning_vi": "cổ đông",
+      "definition_en": "a person or organization that owns shares in a company",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "shareholder",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "shift",
@@ -1969,12 +3720,37 @@
     {
       "term": "shipment",
       "meaning_vi": "lô hàng; việc vận chuyển hàng",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a quantity of goods sent from one place to another",
+      "pos": "n",
+      "sourceHeadword": "shipment",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "short-term",
       "meaning_vi": "ngắn hạn",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "shortage",
+      "meaning_vi": "tình trạng thiếu hụt",
+      "definition_en": "a situation in which there is not enough of something",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "shortage",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "significant",
+      "meaning_vi": "đáng kể; quan trọng",
+      "definition_en": "large or important enough to be noticed",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "significant",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "situation",
@@ -1984,7 +3760,10 @@
       "source": "Cambridge Dictionary (accessed 2026-11-19)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/situation"
-      ]
+      ],
+      "sourceHeadword": "situation",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "sixty minutes",
@@ -2000,7 +3779,12 @@
     {
       "term": "staff",
       "meaning_vi": "nhân viên; đội ngũ nhân sự",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "the people who work for an organization",
+      "pos": "n/v",
+      "sourceHeadword": "staff",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "staff member",
@@ -2010,7 +3794,12 @@
     {
       "term": "standard",
       "meaning_vi": "tiêu chuẩn; mức chuẩn",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a level of quality that is considered acceptable",
+      "pos": "n/adj",
+      "sourceHeadword": "standard",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "standardized",
@@ -2041,7 +3830,22 @@
     {
       "term": "statement",
       "meaning_vi": "bản tuyên bố; sao kê",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a formal account or an expression of facts",
+      "pos": "n",
+      "sourceHeadword": "statement",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "stock",
+      "meaning_vi": "hàng tồn kho; cổ phiếu",
+      "definition_en": "goods kept for sale or shares in a company",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "stock",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "storage facility",
@@ -2049,9 +3853,54 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "study",
+      "meaning_vi": "học; nghiên cứu; khảo sát hoặc xem xét kỹ",
+      "pos": "n/v",
+      "definition_en": "to learn about or examine a subject carefully; the activity or report of examining a subject in detail",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/study"
+      ]
+    },
+    {
       "term": "submit",
       "meaning_vi": "nộp; trình lên",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to give a document or proposal to someone for consideration",
+      "pos": "v",
+      "sourceHeadword": "submit",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "subsequent",
+      "meaning_vi": "tiếp theo; xảy ra sau đó",
+      "definition_en": "happening or coming after something else",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "subsequent",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "substantial",
+      "meaning_vi": "đáng kể; lớn về quy mô",
+      "definition_en": "large in amount, size, or importance",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "substantial",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "suggest",
+      "meaning_vi": "đề xuất; gợi ý",
+      "definition_en": "to mention an idea for someone to consider",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "suggest",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "suggestion",
@@ -2065,20 +3914,76 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "supervise",
+      "meaning_vi": "giám sát",
+      "definition_en": "to manage and watch over work or people",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "supervise",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "supervisor",
+      "meaning_vi": "người giám sát; quản lý trực tiếp",
+      "definition_en": "a person who oversees employees or an activity",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "supervisor",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "supplier",
       "meaning_vi": "nhà cung cấp",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a person or company that provides goods or services",
+      "pos": "n",
+      "sourceHeadword": "supplier",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "supply",
       "meaning_vi": "nguồn cung; cung cấp",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n/v",
+      "definition_en": "an amount of something that is available for people to use / to provide something that is wanted or needed",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "supply",
+      "sourceRelease": "2.95.24"
+    },
+    {
+      "term": "support",
+      "meaning_vi": "hỗ trợ; ủng hộ; sự hỗ trợ hoặc ủng hộ",
+      "pos": "n/v",
+      "definition_en": "to help or encourage someone or something; help, encouragement, or agreement given to a person or idea",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/support"
+      ],
+      "sourceHeadword": "support",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
     },
     {
       "term": "surcharge",
       "meaning_vi": "phụ phí",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "an extra amount of money added to the usual price or basic charge",
+      "pos": "n",
+      "sourceHeadword": "surcharge",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "system",
+      "meaning_vi": "hệ thống",
+      "definition_en": "a set of connected things working together",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "system",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "take part",
@@ -2087,10 +3992,40 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "target",
+      "meaning_vi": "mục tiêu; nhắm tới",
+      "definition_en": "a result or level that someone aims to achieve",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "target",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "task",
+      "meaning_vi": "nhiệm vụ; công việc",
+      "definition_en": "a piece of work that must be done",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "task",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "teller",
       "meaning_vi": "giao dịch viên ngân hàng",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "tenant",
+      "meaning_vi": "người thuê",
+      "definition_en": "a person who rents a property",
+      "pos": "n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "tenant",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "tendency",
@@ -2111,8 +4046,21 @@
     {
       "term": "trade",
       "meaning_vi": "thương mại; trao đổi",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n/v",
+      "definition_en": "the activity of buying and selling goods",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "trade",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "transfer",
+      "meaning_vi": "chuyển; điều chuyển; chuyển khoản / sự chuyển giao; lệnh chuyển",
+      "definition_en": "to move someone or something from one place or person to another / the act of moving someone or something",
+      "pos": "v/n",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "transfer",
+      "sourceRelease": "2.95.28"
     },
     {
       "term": "travel plan",
@@ -2141,15 +4089,39 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "undertake",
+      "meaning_vi": "đảm nhận; cam kết thực hiện",
+      "definition_en": "to accept responsibility for doing something",
+      "pos": "v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "undertake",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "undertaking",
       "meaning_vi": "công việc; cam kết",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a formal promise or a task that is being undertaken",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "undertaking",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "unnecessary",
       "meaning_vi": "không cần thiết",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "upgrade",
+      "meaning_vi": "nâng cấp",
+      "definition_en": "to improve equipment or a system",
+      "pos": "n/v",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "upgrade",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
     },
     {
       "term": "usefulness",
@@ -2170,12 +4142,22 @@
     {
       "term": "vendor",
       "meaning_vi": "người bán; nhà cung cấp",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a person or company that sells goods or services",
+      "pos": "n",
+      "sourceHeadword": "vendor",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "verify",
       "meaning_vi": "xác minh; kiểm chứng",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "to check that something is true or accurate",
+      "pos": "v",
+      "sourceHeadword": "verify",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "versatile",
@@ -2183,10 +4165,24 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "viable",
+      "meaning_vi": "khả thi; có thể thực hiện",
+      "definition_en": "able to work successfully or be done",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "viable",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "volume",
       "meaning_vi": "khối lượng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the amount of space or sound, or a book in a series",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "volume",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "warrant",
@@ -2196,22 +4192,40 @@
     {
       "term": "warranty",
       "meaning_vi": "bảo hành; giấy bảo hành",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "a written promise to repair or replace a product if necessary",
+      "pos": "n",
+      "sourceHeadword": "warranty",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "weekday",
       "meaning_vi": "ngày trong tuần (thường từ thứ Hai đến thứ Sáu)",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "any day from Monday to Friday",
+      "pos": "n",
+      "sourceHeadword": "weekday",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "weekend",
       "meaning_vi": "cuối tuần",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "Saturday and Sunday, or the period around them",
+      "pos": "n",
+      "sourceHeadword": "weekend",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "weekly",
       "meaning_vi": "hằng tuần",
-      "source": "curated-related-glossary"
+      "source": "curated-related-glossary",
+      "pos": "adj/adv",
+      "sourceHeadword": "weekly",
+      "sourceRelease": "2.95.34"
     },
     {
       "term": "welcome",
@@ -2219,16 +4233,44 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "wholesale",
+      "meaning_vi": "bán buôn; sỉ",
+      "definition_en": "the activity of selling goods in large quantities to businesses",
+      "pos": "n/adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "wholesale",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "willing",
+      "meaning_vi": "sẵn lòng; sẵn sàng",
+      "definition_en": "ready or happy to do something",
+      "pos": "adj",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "willing",
+      "sourceRelease": "2.95.28",
+      "sourceSenseIndex": 0
+    },
+    {
       "term": "withdraw",
       "meaning_vi": "rút lui",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to take something back or remove it from a place",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "withdraw",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "withdrawal",
       "meaning_vi": "sự rút tiền; rút lui",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the act of taking money out of an account or removing something",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "withdrawal",
+      "sourceRelease": "2.95.24",
+      "sourceSenseIndex": 0
     },
     {
       "term": "withhold",
@@ -2238,6 +4280,19 @@
       "source": "Cambridge Dictionary (accessed 2026-11-20)",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/withhold"
+      ],
+      "sourceHeadword": "withhold",
+      "sourceRelease": "2.95.34",
+      "sourceSenseIndex": 0
+    },
+    {
+      "term": "work",
+      "meaning_vi": "công việc; lao động; làm việc; hoạt động có hiệu quả",
+      "pos": "n/v",
+      "definition_en": "activity done as a job or requiring effort; to do a job or to operate effectively",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/work"
       ]
     },
     {
@@ -2248,13 +4303,21 @@
     {
       "term": "workforce",
       "meaning_vi": "lực lượng lao động",
-      "source": "curated-related-glossary"
+      "source": "canonical-vocabulary-senses",
+      "definition_en": "the total number of people employed by an organization or country",
+      "pos": "n",
+      "sourceHeadword": "workforce",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0
     },
     {
       "term": "yearly",
       "meaning_vi": "hằng năm",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "adj/adv",
+      "definition_en": "happening once every year / once a year",
+      "source": "canonical-vocabulary-senses",
+      "sourceHeadword": "yearly",
+      "sourceRelease": "2.95.24"
     }
   ]
 }

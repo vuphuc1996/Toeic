@@ -1,0 +1,71 @@
+{
+  "batch": "028",
+  "release": "2.95.25",
+  "count": 7,
+  "method": "exact canonical vocabulary headword and bilingual sense; no relation graph changes",
+  "records": [
+    {
+      "term": "adherence",
+      "meaning_vi": "sự tuân thủ",
+      "pos": "n",
+      "definition_en": "the act of following a rule, agreement, or standard",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "adherence",
+      "sourceRelease": "2.95.25"
+    },
+    {
+      "term": "agreement",
+      "meaning_vi": "thỏa thuận; hợp đồng",
+      "pos": "n",
+      "definition_en": "a formal or informal arrangement that two or more parties accept",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "agreement",
+      "sourceRelease": "2.95.25"
+    },
+    {
+      "term": "appraise",
+      "meaning_vi": "đánh giá; định giá",
+      "pos": "v",
+      "definition_en": "to examine and judge the value or quality of something",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "appraise",
+      "sourceRelease": "2.95.25"
+    },
+    {
+      "term": "assign",
+      "meaning_vi": "giao; phân công; chỉ định",
+      "pos": "v",
+      "definition_en": "to give someone a particular task or responsibility",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "assign",
+      "sourceRelease": "2.95.25"
+    },
+    {
+      "term": "assumption",
+      "meaning_vi": "giả định; điều giả sử",
+      "pos": "n",
+      "definition_en": "something that is accepted as true without proof",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "assumption",
+      "sourceRelease": "2.95.25"
+    },
+    {
+      "term": "authorization",
+      "meaning_vi": "sự ủy quyền; giấy phép",
+      "pos": "n",
+      "definition_en": "official permission to do something or to access something",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "authorization",
+      "sourceRelease": "2.95.25"
+    },
+    {
+      "term": "breakdown",
+      "meaning_vi": "sự hỏng hóc; bảng phân tích chi tiết",
+      "pos": "n",
+      "definition_en": "a failure of a machine, or a division of information into parts",
+      "source": "canonical-vocabulary-glossary-addition",
+      "sourceHeadword": "breakdown",
+      "sourceRelease": "2.95.25"
+    }
+  ]
+}

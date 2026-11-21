@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "batchId": "glossary-v2.95.20-batch-026",
+  "baseFileSha256": "1a30203c0a49fcc5cbbc6f20ad0ecbcefed9406efc9b5344854c8424f4a0b091",
+  "operations": [
+    {
+      "term": "method",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "method",
+        "meaning_vi": "phương pháp; cách thức thực hiện",
+        "pos": "n",
+        "definition_en": "a particular way of doing something",
+        "source": "Cambridge Dictionary",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/method"
+        ]
+      }
+    },
+    {
+      "term": "consume",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "consume",
+        "meaning_vi": "tiêu thụ; sử dụng tài nguyên hoặc thời gian; ăn/uống",
+        "pos": "v",
+        "definition_en": "to use fuel, energy, time, or a product; also to eat or drink",
+        "source": "Cambridge Dictionary",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/consume"
+        ]
+      }
+    },
+    {
+      "term": "function",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "function",
+        "meaning_vi": "chức năng; nhiệm vụ; hoạt động",
+        "pos": "n/v",
+        "definition_en": "the purpose or duty of something or someone; to work or operate",
+        "source": "Cambridge Dictionary",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/function"
+        ]
+      }
+    },
+    {
+      "term": "launch",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "launch",
+        "meaning_vi": "ra mắt; khởi động; phát động",
+        "pos": "n/v",
+        "definition_en": "to begin something or introduce a product or service; the act of starting or introducing something",
+        "source": "Cambridge Dictionary",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/launch"
+        ]
+      }
+    }
+  ]
+}

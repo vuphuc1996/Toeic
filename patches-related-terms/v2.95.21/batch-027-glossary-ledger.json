@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "batch": "027",
+  "release": "2.95.21",
+  "title": "High-frequency related-term glossary continuation",
+  "editorialStatus": "provisional lookup glosses; independent lexical review pending",
+  "sourcePolicy": "Entries are lookup glosses based on Cambridge Dictionary references; canonical synonym and antonym relations are unchanged.",
+  "selectionRule": "Prioritize currently unglossed terms appearing twice in canonical synonym/antonym fields; terms without verified Cambridge lookup evidence are deferred. All directly definition-supported terms at the same two-reference priority were added; `disorganize` is intentionally deferred because only pronunciation/thesaurus evidence (not a direct dictionary definition page) was found.",
+  "count": 23,
+  "records": [
+    {
+      "term": "activity",
+      "meaning_vi": "hoạt động; hoạt động kinh doanh",
+      "pos": "n",
+      "definition_en": "a situation in which people or organizations are doing things or in which events are happening",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/activity"
+      ]
+    },
+    {
+      "term": "answer",
+      "meaning_vi": "câu trả lời; lời giải; trả lời hoặc phản hồi",
+      "pos": "n/v",
+      "definition_en": "a reaction or reply to a question or communication; a solution to a problem; to respond to someone or something",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/answer"
+      ]
+    },
+    {
+      "term": "carry out",
+      "meaning_vi": "thực hiện; tiến hành; hoàn thành nhiệm vụ",
+      "pos": "v",
+      "definition_en": "to do or complete a task, activity, instruction, or plan",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/carry-out"
+      ]
+    },
+    {
+      "term": "combination",
+      "meaning_vi": "sự kết hợp; sự kết hợp của nhiều yếu tố",
+      "pos": "n",
+      "definition_en": "a mixture or joining of two or more things",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/combination"
+      ]
+    },
+    {
+      "term": "common",
+      "meaning_vi": "phổ biến; thường gặp",
+      "pos": "adj",
+      "definition_en": "happening frequently or found in many places or among many people",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/common"
+      ]
+    },
+    {
+      "term": "continue",
+      "meaning_vi": "tiếp tục; duy trì; tiếp diễn",
+      "pos": "v",
+      "definition_en": "to keep happening, existing, or doing something, or to start again after a pause",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/continue"
+      ]
+    },
+    {
+      "term": "decrease",
+      "meaning_vi": "giảm; sự giảm; làm giảm",
+      "pos": "n/v",
+      "definition_en": "to become less or make something less; a reduction in amount, size, or level",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/decrease"
+      ]
+    },
+    {
+      "term": "employee",
+      "meaning_vi": "nhân viên; người được thuê và trả lương",
+      "pos": "n",
+      "definition_en": "a person who is paid to work for another person or an organization",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/employee"
+      ]
+    },
+    {
+      "term": "funding",
+      "meaning_vi": "nguồn tài trợ; khoản kinh phí được cấp",
+      "pos": "n",
+      "definition_en": "money provided by a government or organization for an activity, event, or project",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/funding"
+      ]
+    },
+    {
+      "term": "goal",
+      "meaning_vi": "mục tiêu; điều muốn đạt được",
+      "pos": "n",
+      "definition_en": "an aim or purpose, or something that a person or organization wants to achieve",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/goal"
+      ]
+    },
+    {
+      "term": "inaction",
+      "meaning_vi": "sự không hành động; việc không làm gì để giải quyết vấn đề",
+      "pos": "n",
+      "definition_en": "a failure to take action that might help solve a problem",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/inaction"
+      ]
+    },
+    {
+      "term": "make",
+      "meaning_vi": "làm ra; tạo ra; sản xuất; kiếm được",
+      "pos": "v",
+      "definition_en": "to produce or create something, cause something to happen, or earn money",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/make"
+      ]
+    },
+    {
+      "term": "minor",
+      "meaning_vi": "nhỏ; không đáng kể; ít quan trọng",
+      "pos": "adj",
+      "definition_en": "having little importance, influence, or effect compared with other things",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/minor"
+      ]
+    },
+    {
+      "term": "objective",
+      "meaning_vi": "mục tiêu; điều dự định đạt được",
+      "pos": "n",
+      "definition_en": "something that a person or organization plans to do or achieve",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/objective"
+      ]
+    },
+    {
+      "term": "oppose",
+      "meaning_vi": "phản đối; chống lại",
+      "pos": "v",
+      "definition_en": "to disagree with someone or something and speak or act against it",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/oppose"
+      ]
+    },
+    {
+      "term": "send",
+      "meaning_vi": "gửi; chuyển đi; phái hoặc sai đi",
+      "pos": "v",
+      "definition_en": "to cause something to go to another place, especially by post or email, or to cause someone to go somewhere",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/send"
+      ]
+    },
+    {
+      "term": "study",
+      "meaning_vi": "học; nghiên cứu; khảo sát hoặc xem xét kỹ",
+      "pos": "n/v",
+      "definition_en": "to learn about or examine a subject carefully; the activity or report of examining a subject in detail",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/study"
+      ]
+    },
+    {
+      "term": "support",
+      "meaning_vi": "hỗ trợ; ủng hộ; sự hỗ trợ hoặc ủng hộ",
+      "pos": "n/v",
+      "definition_en": "to help or encourage someone or something; help, encouragement, or agreement given to a person or idea",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/support"
+      ]
+    },
+    {
+      "term": "work",
+      "meaning_vi": "công việc; lao động; làm việc; hoạt động có hiệu quả",
+      "pos": "n/v",
+      "definition_en": "activity done as a job or requiring effort; to do a job or to operate effectively",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/work"
+      ]
+    },
+    {
+      "term": "maximum",
+      "meaning_vi": "mức tối đa; lớn nhất được phép hoặc có thể",
+      "pos": "adj",
+      "definition_en": "being the largest amount or number allowed or possible",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/maximum"
+      ]
+    },
+    {
+      "term": "different",
+      "meaning_vi": "khác; không giống; có sự khác biệt",
+      "pos": "adj",
+      "definition_en": "not the same as another person or thing",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/different"
+      ]
+    },
+    {
+      "term": "determine",
+      "meaning_vi": "xác định; tìm ra; quyết định",
+      "pos": "v",
+      "definition_en": "to discover or establish facts or information, or to decide what will happen",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/determine"
+      ]
+    },
+    {
+      "term": "approach",
+      "meaning_vi": "cách tiếp cận; phương pháp; tiếp cận hoặc xử lý một vấn đề",
+      "pos": "n/v",
+      "definition_en": "a way of considering or doing something; to deal with something or communicate with someone to make a request or agreement",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/approach"
+      ]
+    }
+  ]
+}

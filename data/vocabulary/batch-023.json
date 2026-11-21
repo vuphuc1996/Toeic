@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "batch": "023",
+  "release": "2.95.17",
+  "title": "Repeated synonym/antonym glossary gaps — nine Cambridge-sourced lookup terms",
+  "editorialStatus": "provisional additions; independent lexical review pending",
+  "sourcePolicy": "Vietnamese glosses and concise English definitions are paraphrased from linked Cambridge Dictionary entries. Each selected term occurs at least twice in canonical synonym/antonym references. Glossary-only change; existing headwords, relationships and learner data are unchanged.",
+  "count": 9,
+  "records": [
+    {
+      "term": "choose",
+      "meaning_vi": "chọn; quyết định muốn lấy hoặc sử dụng người hay vật nào trong các phương án",
+      "pos": "v",
+      "definition_en": "to decide which person or thing you want from two or more options",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/choose"
+      ]
+    },
+    {
+      "term": "distribution",
+      "meaning_vi": "phân phối; sự phân phối hoặc cung ứng hàng hóa, dịch vụ",
+      "pos": "n",
+      "definition_en": "the process of supplying or giving things to people or places, or the way things are spread",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/distribution"
+      ]
+    },
+    {
+      "term": "effect",
+      "meaning_vi": "kết quả; tác động; tạo ra hoặc làm phát sinh một kết quả",
+      "pos": "n/v",
+      "definition_en": "a result produced by an action or influence; to bring about a change or result",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/effect"
+      ]
+    },
+    {
+      "term": "estimate",
+      "meaning_vi": "ước tính; sự ước lượng hoặc con số ước tính",
+      "pos": "n/v",
+      "definition_en": "to calculate approximately, or an approximate judgment of cost, size, amount, or value",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/estimate"
+      ]
+    },
+    {
+      "term": "former",
+      "meaning_vi": "trước đây; thuộc về thời kỳ hoặc vị trí trong quá khứ",
+      "pos": "adj",
+      "definition_en": "from an earlier time, or describing someone who previously held a role",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/former"
+      ]
+    },
+    {
+      "term": "inform",
+      "meaning_vi": "thông báo; cung cấp thông tin hoặc báo cho ai biết",
+      "pos": "v",
+      "definition_en": "to tell someone facts or details, especially in a clear or official way",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/inform"
+      ]
+    },
+    {
+      "term": "origin",
+      "meaning_vi": "nguồn gốc; điểm hoặc nơi bắt đầu hay xuất phát",
+      "pos": "n",
+      "definition_en": "the place or point where something begins, comes from, or is produced",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/origin"
+      ]
+    },
+    {
+      "term": "possibility",
+      "meaning_vi": "khả năng; điều có thể xảy ra hoặc phương án có thể lựa chọn",
+      "pos": "n",
+      "definition_en": "a chance that something may happen or be true, or an option that can be chosen",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/possibility"
+      ]
+    },
+    {
+      "term": "responsibility",
+      "meaning_vi": "trách nhiệm; nghĩa vụ phải xử lý hoặc bảo đảm một việc được thực hiện",
+      "pos": "n",
+      "definition_en": "a duty to deal with something or to make sure that it is done",
+      "source": "Cambridge Dictionary (accessed 2026-11-20)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/responsibility"
+      ]
+    }
+  ]
+}

@@ -97,6 +97,21 @@ class QuestionEvidenceAuditTests(unittest.TestCase):
                         "reserve-pending-independent-review",
                     )
 
+    def test_all_listening_reserves_report_traceable_evidence_not_approval(self):
+        reserve = [item for item in self.libraries['Listening'] if item.get('editorialStatus') == 'reserve-pending-independent-review']
+        total = sum(len(item.get('questions', [])) for item in reserve)
+        linked = 0
+        for item in reserve:
+            source = AUDIT.get_source(item, 'Listening')
+            for question in item.get('questions', []):
+                evidence = str(question.get('evidenceText', '')).strip()
+                self.assertTrue(evidence, item['id'])
+                self.assertIn(AUDIT.norm(evidence), AUDIT.norm(source), item['id'])
+                linked += 1
+        self.assertEqual(linked, total)
+        self.assertIn(f'Reserve traceability gate: **{linked}/{total}** questions have a transcript evidence pointer', self.report)
+        self.assertIn('still require an independent second reviewer', self.report)
+
     def test_manual_inference_review_registry_is_reflected_without_stale_release_counts(self):
         reviewed_count = len(AUDIT.REVIEWED_INFERENCES)
         self.assertEqual(self.expected[("Listening", "manual-paraphrase-verified")] + self.expected[("Reading", "manual-paraphrase-verified")], reviewed_count)

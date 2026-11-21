@@ -23,7 +23,9 @@ assert.equal(MOCK_MODES.full.listeningSeconds + MOCK_MODES.full.readingSeconds, 
 // Reserve-pending questions stay out of mock exams until independent review.
 const reservedUnits = listening.filter(item => item.editorialStatus === 'reserve-pending-independent-review');
 const reservedUnitIds = new Set(reservedUnits.map(item => item.id));
-assert.equal(reservedUnits.reduce((n,item) => n + item.questions.length,0), 137);
+assert.equal(reservedUnits.reduce((n,item) => n + item.questions.length,0), 193);
+assert.equal(reservedUnits.filter(item => item.editorialBatch === '027').reduce((n,item) => n + item.questions.length,0), 32);
+assert.equal(reservedUnits.filter(item => item.editorialBatch === '026').reduce((n,item) => n + item.questions.length,0), 24);
 assert.equal(reservedUnits.filter(item => item.editorialBatch === '014').reduce((n,item) => n + item.questions.length,0), 17);
 assert.equal(reservedUnits.filter(item => item.editorialBatch === '015').reduce((n,item) => n + item.questions.length,0), 70);
 assert.equal(reservedUnits.filter(item => item.editorialBatch === '017').reduce((n,item) => n + item.questions.length,0), 1);
@@ -33,6 +35,7 @@ assert.equal(reservedUnits.filter(item => !item.editorialBatch).reduce((n,item) 
 const reservedReadingUnits = readings.filter(item => item.editorialStatus === 'reserve-pending-independent-review');
 assert.equal(reservedReadingUnits.filter(item => item.editorialBatch === '024').reduce((n,item) => n + item.questions.length,0), 27);
 assert.equal(reservedReadingUnits.filter(item => item.editorialBatch === '025').reduce((n,item) => n + item.questions.length,0), 36);
+assert.equal(reservedReadingUnits.filter(item => item.editorialBatch === '026').reduce((n,item) => n + item.questions.length,0), 24);
 assert.ok(reservedReadingUnits.every(item => !isMockEligible(item)), 'all pending Part 7 reserve resources must remain excluded from Mock');
 assert.equal(isMockEligible({ id: 'legacy-item' }), true, 'legacy records without editorialStatus remain eligible');
 assert.equal(isMockEligible({ id: 'approved-item', editorialStatus: 'approved-for-mock' }), true);
@@ -132,4 +135,4 @@ assert.ok(result.listening.target75 >= 0);
 assert.ok(result.reading.target75 >= 0);
 assert.ok(result.parts['Part 1']);
 
-console.log('Mock exam engine PASS: quick 15m (25Q), half 60m (100Q), full 120m (200Q), exact Part blueprint, indivisible blocks, 137 Listening + 63 Reading reserve questions excluded, unknown editorial states fail closed, no in-form duplicates, usage rotation, timer boundaries and scoring.');
+console.log('Mock exam engine PASS: quick 15m (25Q), half 60m (100Q), full 120m (200Q), exact Part blueprint, indivisible blocks, 193 Listening + 87 Reading reserve questions excluded, unknown editorial states fail closed, no in-form duplicates, usage rotation, timer boundaries and scoring.');

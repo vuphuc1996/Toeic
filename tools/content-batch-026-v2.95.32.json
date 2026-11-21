@@ -1,0 +1,47 @@
+{
+  "version": "2.95.32",
+  "batch": "026",
+  "grammar": [
+    "batch026-conditionals-toeic",
+    "batch026-passive-operations-toeic",
+    "batch026-relative-clauses-toeic",
+    "batch026-modals-policy-toeic",
+    "batch026-comparatives-toeic",
+    "batch026-contrast-connectors-toeic",
+    "batch026-quantifiers-toeic",
+    "batch026-reported-speech-toeic"
+  ],
+  "listening": [
+    "batch026-part3-vendor-call",
+    "batch026-part3-training-room",
+    "batch026-part3-invoice-correction",
+    "batch026-part3-access-card",
+    "batch026-part4-building-notice",
+    "batch026-part4-travel-update",
+    "batch026-part4-product-launch",
+    "batch026-part4-policy-reminder"
+  ],
+  "reading": [
+    "batch026-part7-schedule-email",
+    "batch026-part7-room-ad",
+    "batch026-part7-cafeteria-notice",
+    "batch026-part7-interview-memo",
+    "batch026-part7-shipment-email",
+    "batch026-part7-award-news",
+    "batch026-part7-payment-terms",
+    "batch026-part7-travel-change"
+  ],
+  "counts": {
+    "grammarLessons": 8,
+    "grammarExercises": 32,
+    "listeningUnits": 8,
+    "listeningQuestions": 24,
+    "readingResources": 8,
+    "readingQuestions": 24
+  },
+  "grammar_sha256": "3e8169cc9e5bb29edc22c46e85732f350597ae73ebb2f7f5abfcfada4cfe7982",
+  "listening_sha256": "32fa347f500e3dbb241c183f48892572cbb529be6aa5a26c76d831bae7cf8111",
+  "reading_sha256": "f7165c37af11e97333714b5b8c80ccd83332f5df22c7afef82555ba1f0372eba",
+  "reviewStatus": "reserve-pending-independent-review",
+  "mockExamEligibility": "excluded-until-independent-review"
+}

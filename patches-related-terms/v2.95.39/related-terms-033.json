@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-033-v2.95.39",
+  "operations": [
+    {
+      "term": "ability",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "ability",
+        "meaning_vi": "khả năng; năng lực",
+        "pos": "n",
+        "definition_en": "the physical or mental power or skill needed to do something",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/ability"
+        ]
+      }
+    },
+    {
+      "term": "acceptable",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "acceptable",
+        "meaning_vi": "có thể chấp nhận được; đạt mức yêu cầu",
+        "pos": "adj",
+        "definition_en": "good enough to be agreed to or approved; satisfactory",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/acceptable"
+        ]
+      }
+    },
+    {
+      "term": "action",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "action",
+        "meaning_vi": "hành động; biện pháp; bước thực hiện",
+        "pos": "n",
+        "definition_en": "something done, especially a step taken to deal with a problem or situation",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/action"
+        ]
+      }
+    },
+    {
+      "term": "accusation",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "accusation",
+        "meaning_vi": "sự buộc tội; lời cáo buộc",
+        "pos": "n",
+        "definition_en": "a statement that someone has done something wrong, illegal, or unkind",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/accusation"
+        ]
+      }
+    },
+    {
+      "term": "advertise",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "advertise",
+        "meaning_vi": "quảng cáo; thông báo công khai",
+        "pos": "v",
+        "definition_en": "to make a product, service, or opportunity known publicly, often to attract customers",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/advertise"
+        ]
+      }
+    },
+    {
+      "term": "advise",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "advise",
+        "meaning_vi": "khuyên; tư vấn; đưa ra lời khuyên",
+        "pos": "v",
+        "definition_en": "to give someone useful information or recommend what they should do",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/advise"
+        ]
+      }
+    },
+    {
+      "term": "allow",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "allow",
+        "meaning_vi": "cho phép; tạo điều kiện; dành (thời gian)",
+        "pos": "v",
+        "definition_en": "to give permission or make it possible for something to happen",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/allow"
+        ]
+      }
+    },
+    {
+      "term": "announce",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "announce",
+        "meaning_vi": "thông báo; công bố chính thức",
+        "pos": "v",
+        "definition_en": "to make information known publicly or tell people about something officially",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-21)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/announce"
+        ]
+      }
+    }
+  ],
+  "baseFileSha256": "e7a56459c3656ae74d1a3155742c0582f754ce5baded4bb36242f91f8983dc60"
+}

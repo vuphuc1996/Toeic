@@ -44,11 +44,18 @@ def get_source(item: dict, kind: str) -> str:
 def evidence_status(kind: str, part: str, item: dict, q: dict, source: str, answer: str) -> tuple[str, str]:
     if kind == 'Listening' and item.get('editorialStatus') == 'reserve-pending-independent-review':
         evidence = str(q.get('evidenceText', '')).strip()
+        if not evidence:
+            return 'reserve-pending-independent-review', 'MISSING transcript evidence pointer; reserve remains excluded from Mock.'
+        if norm(evidence) not in norm(source):
+            return 'reserve-pending-independent-review', 'BROKEN transcript evidence pointer; reserve remains excluded from Mock.'
+        if part == 'Part 1':
+            visual_note = str(item.get('visualEvidenceNote', '')).strip()
+            if not visual_note:
+                return 'reserve-pending-independent-review', 'Audio statement is traceable; visual-action note is missing; independent image review remains required.'
+            return 'reserve-pending-independent-review', 'Audio statement is traceable and a separate internal visual note is recorded; image/key match and distractor uniqueness still require independent review.'
         if part == 'Part 2':
-            return 'reserve-pending-independent-review', 'The spoken question prompt is recorded; response-option fit and the keyed answer still require independent review.'
-        if evidence and norm(evidence) in norm(source):
-            return 'reserve-pending-independent-review', 'The batch evidence phrase appears in the transcript; keyed-answer correctness and distractor uniqueness still require independent review.'
-        return 'reserve-pending-independent-review', 'Reserve status retained; transcript evidence pointer requires manual second-person verification.'
+            return 'reserve-pending-independent-review', 'Spoken prompt is traceable in the transcript; response-option fit, naturalness and one-best-answer uniqueness still require independent review.'
+        return 'reserve-pending-independent-review', 'Key evidence phrase is traceable in the transcript; keyed-answer correctness and distractor uniqueness still require independent review.'
     if kind == 'Listening' and part == 'Part 1':
         letter = 'ABCD'[q['answerIndex']]
         source_type = item.get('photoSourceType', 'licensed-stock')
@@ -125,6 +132,21 @@ def main() -> int:
             reserve_by_part[item.get('part', 'Unspecified')] += len(item.get('questions', []))
     reserve_total = sum(reserve_by_part.values())
     reserve_breakdown = ', '.join(f'{part}: {count}' for part, count in sorted(reserve_by_part.items())) or 'none'
+    reserve_linked = 0
+    reserve_missing = 0
+    reserve_visual_notes = 0
+    for item in listening:
+        if item.get('editorialStatus') != 'reserve-pending-independent-review':
+            continue
+        if item.get('part') == 'Part 1' and item.get('visualEvidenceNote', '').strip():
+            reserve_visual_notes += 1
+        source = get_source(item, 'Listening')
+        for question in item.get('questions', []):
+            evidence = str(question.get('evidenceText', '')).strip()
+            if evidence and norm(evidence) in norm(source):
+                reserve_linked += 1
+            else:
+                reserve_missing += 1
     lines = [
         f'# TOEIC Editorial Evidence Audit — v{VERSION}', '',
         '## Scope and interpretation',
@@ -133,6 +155,8 @@ def main() -> int:
         '- Direct/lexical matching is evidence discovery only. It does not prove that distractors are wrong or that a paraphrase/inference is unique.',
         f'- Editorial review categories recorded in this source: {inference_reviewed} manually checked low-overlap paraphrase/inference items; {part1_reviewed} Part 1 image/action items; {part2_reviewed} Part 2 response-fit items; {part5_reviewed} Part 5 grammar items; and {part6_reviewed} Part 6 context/cohesion items.',
         f'- {reserve_total} Listening questions remain reserve-pending-independent-review ({reserve_breakdown}). All reserve answers and distractor uniqueness still require an independent second reviewer; automated evidence mapping does not approve them.',
+        f'- Reserve traceability gate: **{reserve_linked}/{reserve_total}** questions have a transcript evidence pointer that matches the source ({reserve_missing} missing/broken); Part 1 visual evidence note recorded for {reserve_visual_notes} pending photo item(s).',
+        '- Traceable evidence is a review aid, not proof that the key is correct, the distractors are uniquely wrong or the item is ready for Mock.',
         '- These are internal editorial checks, not two-person independent proofreading, psychometric validation or ETS approval.',
         '', '## Coverage by evidence type',
         '| Library | Evidence category | Questions |', '|---|---|---:|'

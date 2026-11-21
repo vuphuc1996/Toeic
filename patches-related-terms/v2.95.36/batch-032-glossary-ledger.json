@@ -1,0 +1,70 @@
+{
+  "batch": "032",
+  "release": "2.95.36",
+  "title": "Cambridge-sourced Related Glossary definition/POS remediation",
+  "count": 6,
+  "editorialStatus": "source snippets inspected; paraphrased definitions; review remains pending",
+  "sourcePolicy": "Definitions are paraphrased from retrieved Cambridge dictionary excerpts/pages. Vietnamese meanings, term identity, and order are preserved.",
+  "records": [
+    {
+      "term": "account",
+      "meaning_vi_preserved": "tài khoản; bản tường trình",
+      "pos": "n",
+      "definition_en": "A record of financial transactions, or a description of events or experiences.",
+      "source": "Cambridge Learner’s Dictionary (source excerpt, accessed 2026-11-21)",
+      "sourceUrls": [
+        "https://www.yumpu.com/en/document/view/11808737/cambridge-university-press-9781107660151-cambridge-"
+      ]
+    },
+    {
+      "term": "acknowledgment",
+      "meaning_vi_preserved": "sự xác nhận; lời cảm ơn",
+      "pos": "n",
+      "definition_en": "Recognition that something is true or exists; a confirmation that something was received; or a note of thanks in a book.",
+      "source": "Cambridge Learner’s Dictionary (source excerpt, accessed 2026-11-21)",
+      "sourceUrls": [
+        "https://fliphtml5.com/uydxs/lmob/9781107660151/14/"
+      ]
+    },
+    {
+      "term": "acquire",
+      "meaning_vi_preserved": "có được; thu nhận",
+      "pos": "v",
+      "definition_en": "To obtain something, or to gain knowledge or a skill through learning or experience.",
+      "source": "Cambridge Learner’s Dictionary (source excerpt, accessed 2026-11-21)",
+      "sourceUrls": [
+        "https://drupal-s3fs-prod.s3.eu-west-1.amazonaws.com/files/9113/8071/5737/cambridge-learners-dictionary4-intermediate-paperback-with-cd-rom-sample-pages.pdf"
+      ]
+    },
+    {
+      "term": "adaptable",
+      "meaning_vi_preserved": "có khả năng thích nghi",
+      "pos": "adj",
+      "definition_en": "Able to change to suit different situations or uses.",
+      "source": "Cambridge School Dictionary (source excerpt, accessed 2026-11-21)",
+      "sourceUrls": [
+        "https://api.pageplace.de/preview/DT0400.9780511451270_A25081870/preview-9780511451270_A25081870.pdf"
+      ]
+    },
+    {
+      "term": "advance",
+      "meaning_vi_preserved": "sự tiến bộ; khoản ứng trước; tiến lên",
+      "pos": "n/v",
+      "definition_en": "To move or develop forward; progress or improvement; or money paid before it is normally due.",
+      "source": "Cambridge Dictionary (accessed 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/advance"
+      ]
+    },
+    {
+      "term": "advantage",
+      "meaning_vi_preserved": "lợi thế; ưu điểm",
+      "pos": "n",
+      "definition_en": "A condition or feature that improves the chance of success or makes a situation better.",
+      "source": "Cambridge Dictionary (accessed 2026-11-21)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/advantage"
+      ]
+    }
+  ]
+}

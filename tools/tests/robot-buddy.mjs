@@ -105,7 +105,7 @@ assert.match(idleSource, /if\(context\.currentItem\)\{\s*message\.textContent=ge
 assert.match(idleSource, /insights\.totals\.review>0/);
 assert.match(idleSource, /insights\.totals\.practice>0/);
 assert.ok(app.includes('insights.totals.review>0') && app.includes('insights.totals.practice>0'), 'Idle nudges may use grounded local progress signals.');
-assert.ok(app.includes('learningInsightsEnabled!==false'), 'Progress analysis must be independently switchable.');
+assert.ok(app.includes('learningInsightsEnabled===true'), 'Progress analysis must be independently switchable.');
 assert.ok(app.includes("import { createRobotBuddy } from './robot-buddy.js'"));
 assert.ok(app.includes("import { buildRobotLearningInsights } from './robot-learning-insights.js'"));
 assert.ok(!app.includes('formatRobotLearningInsights'), 'The duplicate prose summary must not be restored beside the visual progress dashboard.');

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "batch": "024",
+  "release": "2.95.18",
+  "title": "Cambridge-verified US IPA backfill for 13 existing TOEIC headwords",
+  "editorialStatus": "source-checked IPA additions; independent phonetic review pending",
+  "sourcePolicy": "US IPA is transcribed from the linked Cambridge English Dictionary pronunciation pages. Entries with conflicting part-of-speech pronunciation variants or no directly verified US form were excluded.",
+  "count": 13,
+  "records": [
+    {
+      "id": "accountable-adj",
+      "word": "accountable",
+      "phonetic": {
+        "us": "/əˈkaʊn.t̬ə.bəl/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/us/pronunciation/english/accountable"
+    },
+    {
+      "id": "admission-n",
+      "word": "admission",
+      "phonetic": {
+        "us": "/ədˈmɪʃ.ən/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/us/pronunciation/english/admission"
+    },
+    {
+      "id": "backlog-n",
+      "word": "backlog",
+      "phonetic": {
+        "us": "/ˈbæk.lɑːɡ/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/us/pronunciation/english/backlog"
+    },
+    {
+      "id": "carrier-n",
+      "word": "carrier",
+      "phonetic": {
+        "us": "/ˈker.i.ɚ/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/us/pronunciation/english/carrier"
+    },
+    {
+      "id": "confidentiality-n",
+      "word": "confidentiality",
+      "phonetic": {
+        "us": "/ˌkɑːn.fə.den.ʃiˈæl.ə.t̬i/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/pronunciation/english/confidentiality"
+    },
+    {
+      "id": "creditor-n",
+      "word": "creditor",
+      "phonetic": {
+        "us": "/ˈkred.ɪ.t̬ɚ/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/pronunciation/english/creditor"
+    },
+    {
+      "id": "credential-n",
+      "word": "credential",
+      "phonetic": {
+        "us": "/krɪˈden.ʃəl/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/us/pronunciation/english/credential"
+    },
+    {
+      "id": "designation-n",
+      "word": "designation",
+      "phonetic": {
+        "us": "/ˌdez.ɪɡˈneɪ.ʃən/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/pronunciation/english/designation"
+    },
+    {
+      "id": "documentation-n",
+      "word": "documentation",
+      "phonetic": {
+        "us": "/ˌdɑː.kjə.menˈteɪ.ʃən/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/pronunciation/english/documentation"
+    },
+    {
+      "id": "duration-n",
+      "word": "duration",
+      "phonetic": {
+        "us": "/duːˈreɪ.ʃən/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/us/pronunciation/english/duration"
+    },
+    {
+      "id": "eligible-adj",
+      "word": "eligible",
+      "phonetic": {
+        "us": "/ˈel.ə.dʒə.bəl/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/us/pronunciation/english/eligible"
+    },
+    {
+      "id": "emerge-v",
+      "word": "emerge",
+      "phonetic": {
+        "us": "/ɪˈmɝːdʒ/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/us/pronunciation/english/emerge"
+    },
+    {
+      "id": "exemption-n",
+      "word": "exemption",
+      "phonetic": {
+        "us": "/ɪɡˈzemp.ʃən/"
+      },
+      "source": "Cambridge Dictionary US pronunciation (accessed 2026-11-20)",
+      "sourceUrl": "https://dictionary.cambridge.org/pronunciation/english/exemption"
+    }
+  ]
+}

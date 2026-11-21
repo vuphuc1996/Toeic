@@ -4707,6 +4707,734 @@
       "contentSource": "original-editorial",
       "editorialBatch": "025",
       "contentBatch": "batch-025-grammar-expansion"
+    },
+    {
+      "id": "batch026-conditionals-toeic",
+      "title": "Điều kiện thực tế và unless trong thông báo công việc",
+      "category": "Conditionals",
+      "level": "B1",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Dùng if, when và unless để diễn đạt điều kiện trong lịch trình, chính sách và quy trình.",
+      "formula": "if / when + present simple, main clause (will / imperative)",
+      "explanation": "Trong điều kiện có khả năng xảy ra, mệnh đề if/when thường dùng hiện tại đơn dù nói về tương lai. Unless mang nghĩa if not và không cần thêm not trong cùng mệnh đề unless.",
+      "examples": [
+        "If the shipment arrives early, we will inspect it today.",
+        "Unless you submit the form, your request cannot be processed."
+      ],
+      "tips": [
+        "Không dùng will trong mệnh đề if/when chỉ điều kiện tương lai.",
+        "Unless đã mang nghĩa phủ định; tránh unless ... not."
+      ],
+      "exercises": [
+        {
+          "question": "If the supplier _____ before noon, we will begin installation today.",
+          "choices": [
+            "arrives",
+            "arrived",
+            "will arrive",
+            "arrival"
+          ],
+          "answerIndex": 0,
+          "explanation": "Sau if diễn tả điều kiện tương lai, dùng hiện tại đơn: arrives.",
+          "choiceIds": [
+            "grammar:batch026-conditionals-toeic:1:choice:1",
+            "grammar:batch026-conditionals-toeic:1:choice:2",
+            "grammar:batch026-conditionals-toeic:1:choice:3",
+            "grammar:batch026-conditionals-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "_____ the payment is confirmed, the order will be released.",
+          "choices": [
+            "Although",
+            "Once",
+            "Unless",
+            "Despite"
+          ],
+          "answerIndex": 1,
+          "explanation": "Once diễn tả thời điểm điều kiện hoàn tất; mệnh đề dùng hiện tại đơn.",
+          "choiceIds": [
+            "grammar:batch026-conditionals-toeic:2:choice:1",
+            "grammar:batch026-conditionals-toeic:2:choice:2",
+            "grammar:batch026-conditionals-toeic:2:choice:3",
+            "grammar:batch026-conditionals-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "Unless the room is available, we _____ the meeting online.",
+          "choices": [
+            "held",
+            "holding",
+            "will hold",
+            "holds"
+          ],
+          "answerIndex": 2,
+          "explanation": "Unless = if not; mệnh đề chính dùng will hold.",
+          "choiceIds": [
+            "grammar:batch026-conditionals-toeic:3:choice:1",
+            "grammar:batch026-conditionals-toeic:3:choice:2",
+            "grammar:batch026-conditionals-toeic:3:choice:3",
+            "grammar:batch026-conditionals-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "Please contact reception if you _____ any assistance.",
+          "choices": [
+            "needed",
+            "will need",
+            "needing",
+            "need"
+          ],
+          "answerIndex": 3,
+          "explanation": "Trong mệnh đề if, dùng hiện tại đơn need.",
+          "choiceIds": [
+            "grammar:batch026-conditionals-toeic:4:choice:1",
+            "grammar:batch026-conditionals-toeic:4:choice:2",
+            "grammar:batch026-conditionals-toeic:4:choice:3",
+            "grammar:batch026-conditionals-toeic:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "batch026-passive-operations-toeic",
+      "title": "Câu bị động trong quy trình và thông báo",
+      "category": "Passive Voice",
+      "level": "B1",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Nhận diện câu bị động trong thông báo vận hành, đơn hàng và quy trình xử lý.",
+      "formula": "be + past participle",
+      "explanation": "Câu bị động nhấn mạnh đối tượng hoặc kết quả. Chọn đúng dạng be theo thì và chủ ngữ; động từ chính luôn ở past participle.",
+      "examples": [
+        "All invoices are reviewed by the finance team.",
+        "The equipment was delivered yesterday."
+      ],
+      "tips": [
+        "Tìm đối tượng nhận hành động trước khi chọn đáp án.",
+        "Sau modal, dạng bị động là be + V3."
+      ],
+      "exercises": [
+        {
+          "question": "All travel requests _____ by the department manager.",
+          "choices": [
+            "are approved",
+            "approve",
+            "approving",
+            "have approve"
+          ],
+          "answerIndex": 0,
+          "explanation": "Travel requests là đối tượng được duyệt; hiện tại đơn bị động are approved.",
+          "choiceIds": [
+            "grammar:batch026-passive-operations-toeic:1:choice:1",
+            "grammar:batch026-passive-operations-toeic:1:choice:2",
+            "grammar:batch026-passive-operations-toeic:1:choice:3",
+            "grammar:batch026-passive-operations-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "The new software _____ last Friday.",
+          "choices": [
+            "installed",
+            "was installed",
+            "is installing",
+            "has install"
+          ],
+          "answerIndex": 1,
+          "explanation": "Last Friday xác định quá khứ; bị động was installed.",
+          "choiceIds": [
+            "grammar:batch026-passive-operations-toeic:2:choice:1",
+            "grammar:batch026-passive-operations-toeic:2:choice:2",
+            "grammar:batch026-passive-operations-toeic:2:choice:3",
+            "grammar:batch026-passive-operations-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "The documents _____ before the contract is signed.",
+          "choices": [
+            "must check",
+            "must checking",
+            "must be checked",
+            "must checked"
+          ],
+          "answerIndex": 2,
+          "explanation": "Modal bị động: must be + past participle.",
+          "choiceIds": [
+            "grammar:batch026-passive-operations-toeic:3:choice:1",
+            "grammar:batch026-passive-operations-toeic:3:choice:2",
+            "grammar:batch026-passive-operations-toeic:3:choice:3",
+            "grammar:batch026-passive-operations-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "Several offices _____ during the renovation next month.",
+          "choices": [
+            "will relocate",
+            "are relocating",
+            "relocated",
+            "will be relocated"
+          ],
+          "answerIndex": 3,
+          "explanation": "Dự kiến tương lai bị động: will be relocated.",
+          "choiceIds": [
+            "grammar:batch026-passive-operations-toeic:4:choice:1",
+            "grammar:batch026-passive-operations-toeic:4:choice:2",
+            "grammar:batch026-passive-operations-toeic:4:choice:3",
+            "grammar:batch026-passive-operations-toeic:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "batch026-relative-clauses-toeic",
+      "title": "Mệnh đề quan hệ trong mô tả nhân sự và dịch vụ",
+      "category": "Relative Clauses",
+      "level": "B1",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Dùng who, which, that và whose để bổ sung thông tin về người, vật hoặc quyền sở hữu.",
+      "formula": "noun + who / which / that / whose + clause",
+      "explanation": "Who thay cho người; which cho vật; that có thể thay who/which trong mệnh đề xác định; whose biểu thị sở hữu. Không dùng đại từ quan hệ làm chủ ngữ nếu mệnh đề đã có chủ ngữ đầy đủ.",
+      "examples": [
+        "The technician who repaired the printer will return tomorrow.",
+        "The company whose offices are downtown is hiring."
+      ],
+      "tips": [
+        "Không nhầm whose (sở hữu) với who (người).",
+        "Mệnh đề quan hệ cần giữ đúng vai trò chủ ngữ hoặc tân ngữ."
+      ],
+      "exercises": [
+        {
+          "question": "The consultant _____ prepared the proposal will join the call.",
+          "choices": [
+            "who",
+            "where",
+            "whose",
+            "when"
+          ],
+          "answerIndex": 0,
+          "explanation": "Who thay consultant và làm chủ ngữ của prepared.",
+          "choiceIds": [
+            "grammar:batch026-relative-clauses-toeic:1:choice:1",
+            "grammar:batch026-relative-clauses-toeic:1:choice:2",
+            "grammar:batch026-relative-clauses-toeic:1:choice:3",
+            "grammar:batch026-relative-clauses-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "Please review the file _____ contains the updated prices.",
+          "choices": [
+            "who",
+            "which",
+            "where",
+            "whose"
+          ],
+          "answerIndex": 1,
+          "explanation": "Which thay file, là chủ ngữ của contains.",
+          "choiceIds": [
+            "grammar:batch026-relative-clauses-toeic:2:choice:1",
+            "grammar:batch026-relative-clauses-toeic:2:choice:2",
+            "grammar:batch026-relative-clauses-toeic:2:choice:3",
+            "grammar:batch026-relative-clauses-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "We contacted a supplier _____ products meet our safety standards.",
+          "choices": [
+            "who",
+            "where",
+            "whose",
+            "when"
+          ],
+          "answerIndex": 2,
+          "explanation": "Whose biểu thị sản phẩm thuộc nhà cung cấp.",
+          "choiceIds": [
+            "grammar:batch026-relative-clauses-toeic:3:choice:1",
+            "grammar:batch026-relative-clauses-toeic:3:choice:2",
+            "grammar:batch026-relative-clauses-toeic:3:choice:3",
+            "grammar:batch026-relative-clauses-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "The branch _____ opened in May is already profitable.",
+          "choices": [
+            "who",
+            "where",
+            "whose",
+            "which"
+          ],
+          "answerIndex": 3,
+          "explanation": "Which thay branch và làm chủ ngữ opened.",
+          "choiceIds": [
+            "grammar:batch026-relative-clauses-toeic:4:choice:1",
+            "grammar:batch026-relative-clauses-toeic:4:choice:2",
+            "grammar:batch026-relative-clauses-toeic:4:choice:3",
+            "grammar:batch026-relative-clauses-toeic:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "batch026-modals-policy-toeic",
+      "title": "Modal verbs trong quy định và yêu cầu",
+      "category": "Modal Verbs",
+      "level": "B1",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Phân biệt must, have to, should, may và can trong quy định, đề xuất và quyền hạn.",
+      "formula": "modal + base verb; have to + base verb",
+      "explanation": "Modal verb đứng trước động từ nguyên mẫu không to. Should thường là lời khuyên; must/have to diễn đạt yêu cầu; may/can biểu thị khả năng hoặc quyền cho phép tùy ngữ cảnh.",
+      "examples": [
+        "Visitors must sign in at the front desk.",
+        "Employees may request flexible hours."
+      ],
+      "tips": [
+        "Modal + bare infinitive.",
+        "Đọc ngữ cảnh để phân biệt nghĩa vụ, lời khuyên và sự cho phép."
+      ],
+      "exercises": [
+        {
+          "question": "Employees _____ wear their identification badges inside the building.",
+          "choices": [
+            "must",
+            "must to",
+            "must wearing",
+            "must wears"
+          ],
+          "answerIndex": 0,
+          "explanation": "Must đi trực tiếp với động từ nguyên mẫu wear.",
+          "choiceIds": [
+            "grammar:batch026-modals-policy-toeic:1:choice:1",
+            "grammar:batch026-modals-policy-toeic:1:choice:2",
+            "grammar:batch026-modals-policy-toeic:1:choice:3",
+            "grammar:batch026-modals-policy-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "You _____ submit the expense report by Friday; it is required.",
+          "choices": [
+            "should",
+            "have to",
+            "might",
+            "could"
+          ],
+          "answerIndex": 1,
+          "explanation": "Have to diễn đạt nghĩa vụ được quy định.",
+          "choiceIds": [
+            "grammar:batch026-modals-policy-toeic:2:choice:1",
+            "grammar:batch026-modals-policy-toeic:2:choice:2",
+            "grammar:batch026-modals-policy-toeic:2:choice:3",
+            "grammar:batch026-modals-policy-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "Staff _____ use the conference room after 3 p.m. if it is free.",
+          "choices": [
+            "must not",
+            "have",
+            "may",
+            "should to"
+          ],
+          "answerIndex": 2,
+          "explanation": "May diễn đạt quyền được phép khi phòng trống.",
+          "choiceIds": [
+            "grammar:batch026-modals-policy-toeic:3:choice:1",
+            "grammar:batch026-modals-policy-toeic:3:choice:2",
+            "grammar:batch026-modals-policy-toeic:3:choice:3",
+            "grammar:batch026-modals-policy-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "The supervisor _____ review the draft before publication.",
+          "choices": [
+            "ought",
+            "is should",
+            "should to",
+            "should"
+          ],
+          "answerIndex": 3,
+          "explanation": "Should + động từ nguyên mẫu review là lời khuyên/yêu cầu phù hợp.",
+          "choiceIds": [
+            "grammar:batch026-modals-policy-toeic:4:choice:1",
+            "grammar:batch026-modals-policy-toeic:4:choice:2",
+            "grammar:batch026-modals-policy-toeic:4:choice:3",
+            "grammar:batch026-modals-policy-toeic:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "batch026-comparatives-toeic",
+      "title": "So sánh trong báo cáo và lựa chọn nhà cung cấp",
+      "category": "Comparatives",
+      "level": "B1",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "So sánh giá, thời gian, hiệu suất và lựa chọn trong báo cáo kinh doanh.",
+      "formula": "comparative + than; as + adjective + as; the + superlative",
+      "explanation": "Tính từ ngắn thường thêm -er; tính từ dài dùng more. So sánh bằng dùng as...as; dạng nhất dùng the most hoặc -est theo quy tắc.",
+      "examples": [
+        "The new printer is faster than the previous model.",
+        "This route is as reliable as the express service."
+      ],
+      "tips": [
+        "Than thường đi với comparative.",
+        "As...as dùng tính từ nguyên dạng."
+      ],
+      "exercises": [
+        {
+          "question": "The revised schedule is _____ than the original one.",
+          "choices": [
+            "more flexible",
+            "most flexible",
+            "flexible as",
+            "flexiblest"
+          ],
+          "answerIndex": 0,
+          "explanation": "Than yêu cầu dạng so sánh hơn; flexible dùng more flexible.",
+          "choiceIds": [
+            "grammar:batch026-comparatives-toeic:1:choice:1",
+            "grammar:batch026-comparatives-toeic:1:choice:2",
+            "grammar:batch026-comparatives-toeic:1:choice:3",
+            "grammar:batch026-comparatives-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "This supplier offers the _____ delivery service in the region.",
+          "choices": [
+            "reliable",
+            "most reliable",
+            "more reliable",
+            "reliably"
+          ],
+          "answerIndex": 1,
+          "explanation": "So sánh nhất trong nhóm: the most reliable.",
+          "choiceIds": [
+            "grammar:batch026-comparatives-toeic:2:choice:1",
+            "grammar:batch026-comparatives-toeic:2:choice:2",
+            "grammar:batch026-comparatives-toeic:2:choice:3",
+            "grammar:batch026-comparatives-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "The two proposals are not as _____ as we expected.",
+          "choices": [
+            "cost",
+            "costlier",
+            "costly",
+            "costliest"
+          ],
+          "answerIndex": 2,
+          "explanation": "Cấu trúc as + adjective + as dùng costly.",
+          "choiceIds": [
+            "grammar:batch026-comparatives-toeic:3:choice:1",
+            "grammar:batch026-comparatives-toeic:3:choice:2",
+            "grammar:batch026-comparatives-toeic:3:choice:3",
+            "grammar:batch026-comparatives-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "The downtown office is _____ convenient for clients than the airport location.",
+          "choices": [
+            "least",
+            "few",
+            "little",
+            "less"
+          ],
+          "answerIndex": 3,
+          "explanation": "Less convenient than diễn đạt kém thuận tiện hơn.",
+          "choiceIds": [
+            "grammar:batch026-comparatives-toeic:4:choice:1",
+            "grammar:batch026-comparatives-toeic:4:choice:2",
+            "grammar:batch026-comparatives-toeic:4:choice:3",
+            "grammar:batch026-comparatives-toeic:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "batch026-contrast-connectors-toeic",
+      "title": "Liên từ tương phản và nhượng bộ",
+      "category": "Concession & Contrast",
+      "level": "B2",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Chọn although, despite, however và nevertheless theo cấu trúc câu và mối quan hệ ý.",
+      "formula": "although + clause; despite + noun/V-ing; however + sentence",
+      "explanation": "Although nối mệnh đề có chủ ngữ và động từ. Despite/in spite of theo sau danh từ hoặc V-ing. However thường nối hai câu bằng dấu câu phù hợp.",
+      "examples": [
+        "Although the shipment was delayed, the client accepted it.",
+        "Despite the delay, the client accepted the shipment."
+      ],
+      "tips": [
+        "Although + clause; despite + noun hoặc V-ing.",
+        "Không ghép however trực tiếp vào mệnh đề không có dấu câu."
+      ],
+      "exercises": [
+        {
+          "question": "_____ the high demand, the store extended its opening hours.",
+          "choices": [
+            "Despite",
+            "Although",
+            "However",
+            "Because"
+          ],
+          "answerIndex": 0,
+          "explanation": "Despite đi với cụm danh từ the high demand.",
+          "choiceIds": [
+            "grammar:batch026-contrast-connectors-toeic:1:choice:1",
+            "grammar:batch026-contrast-connectors-toeic:1:choice:2",
+            "grammar:batch026-contrast-connectors-toeic:1:choice:3",
+            "grammar:batch026-contrast-connectors-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "The proposal is expensive. _____, it may reduce maintenance costs.",
+          "choices": [
+            "Despite",
+            "However",
+            "Although",
+            "Because of"
+          ],
+          "answerIndex": 1,
+          "explanation": "However nối hai câu độc lập để thể hiện tương phản.",
+          "choiceIds": [
+            "grammar:batch026-contrast-connectors-toeic:2:choice:1",
+            "grammar:batch026-contrast-connectors-toeic:2:choice:2",
+            "grammar:batch026-contrast-connectors-toeic:2:choice:3",
+            "grammar:batch026-contrast-connectors-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "_____ the technician arrived late, the repair was completed on time.",
+          "choices": [
+            "Despite",
+            "However",
+            "Although",
+            "In spite"
+          ],
+          "answerIndex": 2,
+          "explanation": "Although theo sau là mệnh đề đầy đủ.",
+          "choiceIds": [
+            "grammar:batch026-contrast-connectors-toeic:3:choice:1",
+            "grammar:batch026-contrast-connectors-toeic:3:choice:2",
+            "grammar:batch026-contrast-connectors-toeic:3:choice:3",
+            "grammar:batch026-contrast-connectors-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "_____ having limited staff, the team completed the inventory.",
+          "choices": [
+            "Although",
+            "Even",
+            "However",
+            "Despite"
+          ],
+          "answerIndex": 3,
+          "explanation": "Despite + V-ing diễn đạt nhượng bộ.",
+          "choiceIds": [
+            "grammar:batch026-contrast-connectors-toeic:4:choice:1",
+            "grammar:batch026-contrast-connectors-toeic:4:choice:2",
+            "grammar:batch026-contrast-connectors-toeic:4:choice:3",
+            "grammar:batch026-contrast-connectors-toeic:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "batch026-quantifiers-toeic",
+      "title": "Lượng từ trong báo cáo tồn kho và ngân sách",
+      "category": "Quantifiers",
+      "level": "B1",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Phân biệt much, many, few, little, several và enough với danh từ đếm được/không đếm được.",
+      "formula": "many/few + countable; much/little + uncountable; enough + noun",
+      "explanation": "Many/several/few đi với danh từ đếm được số nhiều; much/little đi với danh từ không đếm được. Enough đứng trước danh từ và sau tính từ.",
+      "examples": [
+        "Several orders are awaiting confirmation.",
+        "We have enough time to complete the audit."
+      ],
+      "tips": [
+        "Equipment, information, furniture thường là danh từ không đếm được.",
+        "Fewer dùng danh từ đếm được; less dùng không đếm được."
+      ],
+      "exercises": [
+        {
+          "question": "There are _____ invoices waiting for approval.",
+          "choices": [
+            "several",
+            "little",
+            "much",
+            "enough of"
+          ],
+          "answerIndex": 0,
+          "explanation": "Invoices là danh từ đếm được số nhiều; several phù hợp.",
+          "choiceIds": [
+            "grammar:batch026-quantifiers-toeic:1:choice:1",
+            "grammar:batch026-quantifiers-toeic:1:choice:2",
+            "grammar:batch026-quantifiers-toeic:1:choice:3",
+            "grammar:batch026-quantifiers-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "We do not have _____ information to finalize the report.",
+          "choices": [
+            "many",
+            "enough",
+            "few",
+            "several"
+          ],
+          "answerIndex": 1,
+          "explanation": "Information không đếm được; enough information.",
+          "choiceIds": [
+            "grammar:batch026-quantifiers-toeic:2:choice:1",
+            "grammar:batch026-quantifiers-toeic:2:choice:2",
+            "grammar:batch026-quantifiers-toeic:2:choice:3",
+            "grammar:batch026-quantifiers-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "Very _____ equipment was damaged during transport.",
+          "choices": [
+            "many",
+            "few",
+            "little",
+            "several"
+          ],
+          "answerIndex": 2,
+          "explanation": "Equipment không đếm được; little biểu thị số lượng ít.",
+          "choiceIds": [
+            "grammar:batch026-quantifiers-toeic:3:choice:1",
+            "grammar:batch026-quantifiers-toeic:3:choice:2",
+            "grammar:batch026-quantifiers-toeic:3:choice:3",
+            "grammar:batch026-quantifiers-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "The department received _____ requests this week than last week.",
+          "choices": [
+            "less",
+            "few",
+            "little",
+            "fewer"
+          ],
+          "answerIndex": 3,
+          "explanation": "Requests đếm được; fewer than dùng so sánh số lượng.",
+          "choiceIds": [
+            "grammar:batch026-quantifiers-toeic:4:choice:1",
+            "grammar:batch026-quantifiers-toeic:4:choice:2",
+            "grammar:batch026-quantifiers-toeic:4:choice:3",
+            "grammar:batch026-quantifiers-toeic:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial"
+    },
+    {
+      "id": "batch026-reported-speech-toeic",
+      "title": "Reported speech trong email và thông báo",
+      "category": "Reported Speech",
+      "level": "B2",
+      "parts": [
+        "Part 5"
+      ],
+      "summary": "Chuyển lời nói thành tường thuật trong báo cáo cuộc họp và email.",
+      "formula": "reporting verb + (that) clause; tell + object + clause",
+      "explanation": "Khi động từ tường thuật ở quá khứ, thì trong lời nói thường lùi một bước nếu ngữ cảnh yêu cầu. Say không cần tân ngữ trực tiếp; tell cần tân ngữ.",
+      "examples": [
+        "The director said that the project was on schedule.",
+        "She told us that the office would close early."
+      ],
+      "tips": [
+        "Say + clause; tell + object + clause.",
+        "Lùi thì theo ngữ cảnh, không đổi máy móc nếu thông tin vẫn còn đúng."
+      ],
+      "exercises": [
+        {
+          "question": "The manager said that the meeting _____ at 2 p.m.",
+          "choices": [
+            "would start",
+            "will start",
+            "starts",
+            "starting"
+          ],
+          "answerIndex": 0,
+          "explanation": "Reported speech với said ở quá khứ thường lùi will thành would.",
+          "choiceIds": [
+            "grammar:batch026-reported-speech-toeic:1:choice:1",
+            "grammar:batch026-reported-speech-toeic:1:choice:2",
+            "grammar:batch026-reported-speech-toeic:1:choice:3",
+            "grammar:batch026-reported-speech-toeic:1:choice:4"
+          ]
+        },
+        {
+          "question": "The supervisor _____ us that the forms were incomplete.",
+          "choices": [
+            "said",
+            "told",
+            "spoke",
+            "talked"
+          ],
+          "answerIndex": 1,
+          "explanation": "Tell cần tân ngữ us.",
+          "choiceIds": [
+            "grammar:batch026-reported-speech-toeic:2:choice:1",
+            "grammar:batch026-reported-speech-toeic:2:choice:2",
+            "grammar:batch026-reported-speech-toeic:2:choice:3",
+            "grammar:batch026-reported-speech-toeic:2:choice:4"
+          ]
+        },
+        {
+          "question": "Mr. Lee said he _____ the revised contract the next day.",
+          "choices": [
+            "reviewed",
+            "will review",
+            "would review",
+            "reviews"
+          ],
+          "answerIndex": 2,
+          "explanation": "Reported future lùi will review thành would review.",
+          "choiceIds": [
+            "grammar:batch026-reported-speech-toeic:3:choice:1",
+            "grammar:batch026-reported-speech-toeic:3:choice:2",
+            "grammar:batch026-reported-speech-toeic:3:choice:3",
+            "grammar:batch026-reported-speech-toeic:3:choice:4"
+          ]
+        },
+        {
+          "question": "The assistant said that she _____ the reservation already.",
+          "choices": [
+            "has confirmed",
+            "will confirm",
+            "confirm",
+            "had confirmed"
+          ],
+          "answerIndex": 3,
+          "explanation": "Present perfect thường lùi thành past perfect trong reported speech.",
+          "choiceIds": [
+            "grammar:batch026-reported-speech-toeic:4:choice:1",
+            "grammar:batch026-reported-speech-toeic:4:choice:2",
+            "grammar:batch026-reported-speech-toeic:4:choice:3",
+            "grammar:batch026-reported-speech-toeic:4:choice:4"
+          ]
+        }
+      ],
+      "contentSource": "original-editorial"
     }
   ]
 }

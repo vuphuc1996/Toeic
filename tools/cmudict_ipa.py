@@ -15,7 +15,7 @@ CONSONANTS = {"B":"b","CH":"tʃ","D":"d","DH":"ð","F":"f","G":"ɡ","HH":"h","JH
 PHONE_MAP = {**VOWELS, **CONSONANTS}
 VOWEL_PHONES = set(VOWELS)
 SINGLE_ONSETS = set(CONSONANTS.values()) - {"ŋ"}
-LEGAL_ONSETS = {"pl","pr","bl","br","tr","dr","kl","kr","gl","gr","fl","fr","θr","sp","st","sk","sm","sn","sl","sw","tw","dw","kw","gw","spl","spr","str","skr","skw"}
+LEGAL_ONSETS = {"pl","pr","bl","br","tr","dr","kl","kr","gl","gr","fl","fr","θr","sp","st","sk","sm","sn","sl","sw","tw","dw","kw","gw","spl","spr","str","skr","skw","spj"}
 IPA_ALLOWED = set(" ()./;abdefhijklmnoprstuvwzæðŋɑɔəɚɝɡɪʃʊʌʒˈˌː\u032cθ")
 
 

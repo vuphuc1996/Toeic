@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "batch": "026",
+  "release": "2.95.20",
+  "title": "Cambridge-sourced related-term glossary additions",
+  "editorialStatus": "provisional lookup glosses; independent lexical review pending",
+  "sourcePolicy": "Entries are lookup glosses only; canonical synonym and antonym relations are unchanged.",
+  "count": 4,
+  "records": [
+    {
+      "term": "method",
+      "meaning_vi": "phương pháp; cách thức thực hiện",
+      "pos": "n",
+      "definition_en": "a particular way of doing something",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/method"
+      ]
+    },
+    {
+      "term": "consume",
+      "meaning_vi": "tiêu thụ; sử dụng tài nguyên hoặc thời gian; ăn/uống",
+      "pos": "v",
+      "definition_en": "to use fuel, energy, time, or a product; also to eat or drink",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/consume"
+      ]
+    },
+    {
+      "term": "function",
+      "meaning_vi": "chức năng; nhiệm vụ; hoạt động",
+      "pos": "n/v",
+      "definition_en": "the purpose or duty of something or someone; to work or operate",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/function"
+      ]
+    },
+    {
+      "term": "launch",
+      "meaning_vi": "ra mắt; khởi động; phát động",
+      "pos": "n/v",
+      "definition_en": "to begin something or introduce a product or service; the act of starting or introducing something",
+      "source": "Cambridge Dictionary",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/launch"
+      ]
+    }
+  ]
+}

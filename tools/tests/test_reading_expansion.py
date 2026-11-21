@@ -20,14 +20,14 @@ class ReadingExpansionTests(unittest.TestCase):
         cls.p7_multi = [x for x in cls.p7 if x.get("documentType") in ("DOUBLE PASSAGE", "TRIPLE PASSAGE")]
         cls.p7_single = [x for x in cls.p7 if x not in cls.p7_multi]
 
-    def test_reading_pool_has_263_questions_with_exact_part_totals(self):
+    def test_reading_pool_has_287_questions_with_exact_part_totals(self):
         counts = {
             f"Part {part}": sum(len(x.get("questions", [])) for x in self.items if x.get("part") == f"Part {part}")
             for part in (5, 6, 7)
         }
-        self.assertEqual(counts, {"Part 5": 60, "Part 6": 32, "Part 7": 171})
-        self.assertEqual(sum(counts.values()), 263)
-        self.assertEqual(len(self.items), 65)
+        self.assertEqual(counts, {"Part 5": 60, "Part 6": 32, "Part 7": 195})
+        self.assertEqual(sum(counts.values()), 287)
+        self.assertEqual(len(self.items), 73)
 
     def test_part6_keeps_all_four_blanks_and_questions_together(self):
         import re
@@ -38,8 +38,8 @@ class ReadingExpansionTests(unittest.TestCase):
             self.assertEqual(len(item.get("questions", [])), 4, item["id"])
 
     def test_part7_single_passages_are_complete_two_to_four_question_blocks(self):
-        self.assertEqual(len(self.p7_single), 27)
-        self.assertEqual(sum(len(x.get("questions", [])) for x in self.p7_single), 86)
+        self.assertEqual(len(self.p7_single), 35)
+        self.assertEqual(sum(len(x.get("questions", [])) for x in self.p7_single), 110)
         for item in self.p7_single:
             self.assertIn(len(item.get("questions", [])), (2, 3, 4), item["id"])
             self.assertTrue(item.get("passage", "").strip() or item.get("documents"), item["id"])
@@ -53,14 +53,14 @@ class ReadingExpansionTests(unittest.TestCase):
             self.assertEqual(len(item.get("questions", [])), 5, item["id"])
             self.assertTrue(all(d.get("label", "").strip() and d.get("content", "").strip() for d in item["documents"]), item["id"])
 
-    def test_new_part7_questions_have_45_traceable_source_quotes(self):
+    def test_new_part7_questions_have_69_traceable_source_quotes(self):
         new_questions = [
             (item, q)
             for item in self.p7
             for q in item.get("questions", [])
             if q.get("evidence") and q.get("evidence", {}).get("sourceLabels") and item.get('editorialBatch') not in ('024', '025')
         ]
-        self.assertEqual(len(new_questions), 45)
+        self.assertEqual(len(new_questions), 69)
         for item, q in new_questions:
             evidence = q["evidence"]
             labels = evidence.get("sourceLabels", [])
@@ -117,8 +117,8 @@ class ReadingExpansionTests(unittest.TestCase):
             for q in item.get("questions", [])
             if q.get("evidence", {}).get("sourceLabels") and item.get('editorialBatch') not in ('024', '025')
         )
-        self.assertEqual(distribution, {0: 11, 1: 11, 2: 11, 3: 12})
-        self.assertEqual(distribution, {0: 11, 1: 11, 2: 11, 3: 12})
+        self.assertEqual(distribution, {0: 17, 1: 17, 2: 17, 3: 18})
+        self.assertEqual(distribution, {0: 17, 1: 17, 2: 17, 3: 18})
 
     def test_new_content_is_original_editorial_and_part7_batch_is_tagged(self):
         new_items = [x for x in self.items if x.get("editorialBatch") == "023"]
@@ -128,7 +128,7 @@ class ReadingExpansionTests(unittest.TestCase):
             q for item in self.p7 for q in item.get("questions", [])
             if item.get("editorialBatch") not in ("024", "025") and q.get("evidence", {}).get("sourceLabels") and q.get("evidence", {}).get("quotes")
         ]
-        self.assertEqual(len(p7_evidence_questions), 45)
+        self.assertEqual(len(p7_evidence_questions), 69)
         self.assertTrue(all(x.get("editorialStatus") == "internal-editorial-reviewed" for x in new_items))
 
 
