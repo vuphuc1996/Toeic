@@ -1,0 +1,21 @@
+{
+  "batch": "034",
+  "release": "2.95.40",
+  "title": "Current canonical glossary definition drift correction",
+  "count": 1,
+  "editorialStatus": "Exact single-sense canonical definition restored after source drift; independent lexical review remains pending",
+  "sourcePolicy": "Keep existing term identity, Vietnamese meaning, POS and original canonical provenance. Update only the English definition to match the current exact canonical headword sense.",
+  "records": [
+    {
+      "term": "revision",
+      "previousDefinitionEn": "revision: sự sửa đổi; bản chỉnh sửa.",
+      "definition_en": "a change made to something after it has been reviewed, or a version containing such changes",
+      "meaning_vi_preserved": "sự sửa đổi; bản chỉnh sửa",
+      "pos": "n",
+      "sourceHeadword": "revision",
+      "sourceRelease": "2.95.32",
+      "sourceSenseIndex": 0,
+      "verifiedAgainstRelease": "2.95.40"
+    }
+  ]
+}

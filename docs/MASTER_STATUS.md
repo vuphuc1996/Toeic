@@ -1,3 +1,17 @@
+## v2.95.40 — Major Release Quality Audit 025 metric reconciliation
+
+- **Root cause closed:** the v2.95.25 audit test retained the historical glossary expectation of 519 rows from before Batch 033. v2.95.39 Batch 033 added eight legitimate Cambridge-sourced terms (ability, acceptable, action, accusation, advertise, advise, allow, announce), bringing the canonical glossary to 527 rows.
+- **Verified source count:** `data/related-terms.json` contains 527 rows, 527 NFKC/whitespace/case-folded unique terms and 0 duplicate normalized terms. The 519 value was a stale pre-Batch-033 test literal, not evidence of eight invalid rows.
+- **Audit contract strengthened:** `relatedGlossary.entries` is explicitly the canonical raw-row count; the audit now also reports `uniqueEntries` and `duplicateEntries`. Relationship joins use the same NFKC/whitespace/case-folding normalization used by the glossary quality audit.
+- **Regression corrected:** `test_major_release_quality_audit_025.py` now checks metrics against the canonical glossary file, asserts the v2.95.39 527-row inventory and confirms 0 duplicate normalized terms. The CI workflow continues to run this suite.
+- **Batch 034 correction:** one existing glossary definition (`revision`) had drifted from its current exact single-sense canonical headword after the historical Batch 030 snapshot. Its English definition now matches the current canonical sense; Vietnamese meaning, POS, term identity and original source provenance remain unchanged. A hash-guarded update patch and atomic updater were added.
+- **Historical-test hardening:** Batch 030 regression now loads only manifest-listed A–Z canonical files (not editorial batch snapshots) and checks current glossary text against current canonical senses, while preserving the historical patch ledger.
+- **Reports refreshed:** current Major Release Quality Audit, Learning Outcome Evidence Matrix, candidate glossary audit, glossary backlog and quality flags are regenerated from the v2.95.40 source.
+- **Preservation:** no headword or relation array, learner record, IndexedDB schema, question/answer key, UI or Mock eligibility changed. One existing related-glossary English definition was corrected to its current canonical source.
+- **Local release gates:** Audit 025 8/8; Batch 030 4/4; Batch 034 6/6; 137/137 focused Python tests across 23 modules; JavaScript 39/39; compileall, validators, version sync, design profile, repository integrity and content audits PASS. Full Python discovery is not claimed because the full `test_validator.py` module exceeded the execution limit.
+- **Packaging:** Full Source **587 files**; ZIP CRC/root/exclusion checks PASS; exact source comparison **587/587**; SHA-256 sidecar verified.
+- **External gates:** Remote GitHub Actions, GitHub Pages deployment/cache, browser/device acceptance and independent lexical review remain pending.
+
 ## v2.95.39 — Related Glossary research batch 033
 
 - Added 8 Cambridge-sourced glosses for previously uncovered relation terms: ability, acceptable, action, accusation, advertise, advise, allow and announce.
@@ -54,7 +68,7 @@
 
 ## v2.95.30 — missing US IPA research queue
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.39
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.40
 
 - Added **89** related-term glosses from exact canonical vocabulary matches with complete bilingual senses; multi-sense definitions are joined for reference.
 - Related glossary: **430 → 519**. Provenance on each addition: `canonical-vocabulary-senses`, exact source headword, source release `2.95.28`.
@@ -76,7 +90,7 @@
 - Missing IPA count decreased from 80 to 79.
 - Safe backfill pipeline is preview-first; only single-variant entries that convert successfully can be applied. Five single-variant candidates still fail conversion and remain review-only; 49 multi-variant and 25 unmatched entries remain unresolved.
 - No UI or learning-question data changes.
-- Release v2.95.31 package: FullSource 501 files; Update Patch 22 files; patch replay exact 501/501; SHA-256 verified.
+- Release v2.95.31 package: FullSource 501 files; Update Patch 22 files; patch replay exact 501/501; SHA-256 sidecar verified.
 
 ## v2.95.32 — Major content batch 026
 

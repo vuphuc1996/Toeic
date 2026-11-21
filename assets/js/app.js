@@ -15,7 +15,7 @@ import { createRobotBuddy } from './robot-buddy.js';
 import { renderAdditionalFlashSenses } from './flashcard-senses.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.39';
+const APP_RELEASE_VERSION = '2.95.40';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);

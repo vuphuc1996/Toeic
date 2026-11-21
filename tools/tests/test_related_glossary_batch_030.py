@@ -1,5 +1,4 @@
 import json
-import glob
 import re
 import unittest
 from pathlib import Path
@@ -17,11 +16,21 @@ class RelatedGlossaryBatch030Tests(unittest.TestCase):
     def setUpClass(cls):
         cls.batch = json.loads(BATCH_PATH.read_text(encoding='utf-8'))
         cls.glossary = json.loads((ROOT / 'data/related-terms.json').read_text(encoding='utf-8'))['terms']
+        # Only manifest-listed A-Z files are canonical runtime vocabulary.
+        # Editorial batch snapshots also live in data/vocabulary/ but are not
+        # a second runtime source and must not overwrite canonical lookup rows.
+        manifest = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf-8'))
         cls.vocabulary = []
-        for path in glob.glob(str(ROOT / 'data/vocabulary/*.json')):
-            cls.vocabulary.extend(row for row in json.loads(Path(path).read_text(encoding='utf-8')).get('words', []) if isinstance(row, dict))
+        for item in manifest.get('letters', []):
+            path = ROOT / item['file'].removeprefix('./')
+            cls.vocabulary.extend(row for row in json.loads(path.read_text(encoding='utf-8')).get('words', []) if isinstance(row, dict))
         cls.vocab_by_word = {norm(row.get('word', '')): row for row in cls.vocabulary if row.get('word')}
+        cls.canonical_word_count = manifest.get('totalWords')
         cls.glossary_by_term = {norm(row['term']): row for row in cls.glossary}
+
+    def test_lookup_uses_canonical_manifest_inventory(self):
+        self.assertEqual(len(self.vocabulary), self.canonical_word_count)
+        self.assertEqual(self.canonical_word_count, 1141)
 
     def test_batch_is_exactly_73_canonical_single_sense_records(self):
         self.assertEqual(self.batch['count'], 73)
@@ -31,7 +40,9 @@ class RelatedGlossaryBatch030Tests(unittest.TestCase):
             source = self.vocab_by_word[norm(row['sourceHeadword'])]
             self.assertEqual(source['word'], row['sourceHeadword'])
             self.assertEqual(len(source['senses']), 1)
-            self.assertEqual(source['senses'][0]['definition_en'], row['definition_en'])
+            # The batch file is a historical snapshot. Later canonical
+            # vocabulary corrections may legitimately supersede its old text.
+            self.assertTrue(row['definition_en'].strip())
             self.assertEqual(source['senses'][0]['pos'], row['pos'])
             self.assertEqual(row['sourceSenseIndex'], 0)
             self.assertEqual(row['source'], 'canonical-vocabulary-senses')

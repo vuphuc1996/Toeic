@@ -1,11 +1,13 @@
-# TOEIC Dictionary v2.95.39 — Project Documentation
+# TOEIC Dictionary v2.95.40 — Project Documentation
 
-## Current candidate — v2.95.39
+## Current candidate — v2.95.40
 
-- Added 8 Cambridge-sourced Related Glossary terms in Batch 033: ability, acceptable, action, accusation, advertise, advise, allow and announce. Each entry has Vietnamese meaning, POS, paraphrased English definition and a direct source URL.
-- Related Glossary: 527 entries; 516/804 referenced terms covered (64.2%); 288 unique terms remain uncovered. 73 placeholder definitions remain for editorial remediation.
-- Added batch ledger, absent-only patch, 3 regression tests and CI registration.
-- Current reports: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.39.md`, `reports/COMMAND_LOG_INDEX_v2.95.39.md`, `reports/MAJOR_RELEASE_QUALITY_AUDIT_v2.95.39.md`. Independent editorial review remains pending.
+- Reconciled Major Release Quality Audit 025: the old 519 test expectation belonged to the pre-Batch-033 snapshot. The current canonical source has 527 raw glossary rows, 527 normalized unique terms and 0 duplicate normalized terms.
+- Updated the audit generator to expose raw rows, unique terms and duplicate rows separately; corrected regression to derive counts from canonical source. Current glossary: 527 raw / 527 unique / 0 duplicates.
+- Batch 034 corrected the existing `revision` English gloss to match its current exact canonical single-sense entry; Vietnamese meaning, POS and original provenance are preserved. Added a SHA-guarded atomic update utility and 6 regression tests.
+- Batch 033 additions (ability, acceptable, action, accusation, advertise, advise, allow and announce) remain included with source provenance; independent editorial review remains pending.
+- Current reports: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.40.md`, `reports/COMMAND_LOG_INDEX_v2.95.40.md`, `reports/AUDIT025_GLOSSARY_RECONCILIATION_v2.95.40.md`, `reports/MAJOR_RELEASE_QUALITY_AUDIT_v2.95.40.md`. No learner records or IndexedDB schema changed.
+- Full Source package contains 587 files; archive CRC and 587/587 source comparison PASS.
 
 
 ## Source of truth
@@ -36,11 +38,11 @@
 | Area | Current inventory |
 |---|---:|
 | Vocabulary | 1,141 headwords across A–Z |
-| US IPA coverage | 1,061/1,141 headwords (93.0%; 80 still blank, independent phonetic review pending) |
-| Related-term glossary | 423 entries (412/804 exact referenced-term join; 644/1,037 occurrences; independent lexical review pending) |
-| Grammar | 50 lessons / 137 exercises |
-| TOEIC Listening | 121 units / 239 questions |
-| TOEIC Reading | 65 resources / 263 questions |
+| US IPA coverage | 1,062/1,141 headwords (93.1%; 79 still blank, independent phonetic review pending) |
+| Related-term glossary | 527 entries (516/804 exact referenced-term join; 288 unique relation terms remain uncovered; 73 placeholder definitions; independent lexical review pending) |
+| Grammar | 58 lessons / 169 exercises |
+| TOEIC Listening | 145 units / 295 questions |
+| TOEIC Reading | 73 resources / 287 questions |
 | Separate Part 5 practice | 80 questions; practice-only and review-pending |
 | Foundation | 23 lessons (10 Pre-A1/A1 + 13 A2); separate Reading and Listening evidence banks |
 
@@ -105,9 +107,9 @@ Counts describe source inventory, not editorial approval, learner completion, ma
 ## Current release artifacts
 
 - Previous Claude review package manifest: `reports/CHANGE_MANIFEST_v2.95.13.md` (submitted by the owner; result pending). Current release change manifest: `reports/CHANGE_MANIFEST_v2.95.23.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.39.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.40.md`.
 - Current Robot Buddy behavior report: `reports/ROBOT_BUDDY_v2.95.9.md`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.39.md`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.40.md`.
 - Current independent-review queue: `reports/TOEIC_INDEPENDENT_REVIEW_QUEUE_v2.95.21.md` (280 pending item-level decisions).
 - Current manual acceptance checklist: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (22 items; all remain Chưa kiểm).
 - CSS design-token ratchet report: `reports/DESIGN_TOKEN_AUDIT_BASELINE_v2.95.11.md`.

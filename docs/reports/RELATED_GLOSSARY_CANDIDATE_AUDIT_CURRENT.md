@@ -1,12 +1,12 @@
 # Related Glossary Candidate Audit (read-only)
 
 - Vocabulary headwords: **1141**
-- Glossary entries: **519**
+- Glossary entries: **527**
 - Referenced terms: **804**
-- Covered: **508**
-- Missing unique terms: **296** (297 occurrences)
+- Covered: **516**
+- Missing unique terms: **288** (289 occurrences)
 - Missing terms with canonical headword: **0**
-- Definition audit: **217 present / 229 missing / 73 placeholder**
+- Definition audit: **304 present / 150 missing / 73 placeholder**
 
 ## Missing candidate review tiers
 
@@ -14,20 +14,12 @@
 |---|---:|---|---:|
 | disorganize | 2 | no-canonical-headword | 0 |
 | abandonment | 1 | no-canonical-headword | 0 |
-| ability | 1 | no-canonical-headword | 0 |
 | able | 1 | no-canonical-headword | 0 |
-| acceptable | 1 | no-canonical-headword | 0 |
 | accuracy | 1 | no-canonical-headword | 0 |
-| accusation | 1 | no-canonical-headword | 0 |
-| action | 1 | no-canonical-headword | 0 |
 | actual | 1 | no-canonical-headword | 0 |
 | administer | 1 | no-canonical-headword | 0 |
-| advertise | 1 | no-canonical-headword | 0 |
-| advise | 1 | no-canonical-headword | 0 |
 | alert | 1 | no-canonical-headword | 0 |
 | alike | 1 | no-canonical-headword | 0 |
-| allow | 1 | no-canonical-headword | 0 |
-| announce | 1 | no-canonical-headword | 0 |
 | appeal | 1 | no-canonical-headword | 0 |
 | article | 1 | no-canonical-headword | 0 |
 | ask for | 1 | no-canonical-headword | 0 |
@@ -112,11 +104,19 @@
 | financial system | 1 | no-canonical-headword | 0 |
 | find | 1 | no-canonical-headword | 0 |
 | finish | 1 | no-canonical-headword | 0 |
+| fit | 1 | no-canonical-headword | 0 |
+| follow | 1 | no-canonical-headword | 0 |
+| following | 1 | no-canonical-headword | 0 |
+| forget | 1 | no-canonical-headword | 0 |
+| foundation | 1 | no-canonical-headword | 0 |
+| framework | 1 | no-canonical-headword | 0 |
+| free | 1 | no-canonical-headword | 0 |
+| garbage | 1 | no-canonical-headword | 0 |
 
 ## Definition audit
 
-- Missing English definitions: **229**
+- Missing English definitions: **150**
 - Placeholder definitions: **73**
-- Non-placeholder definitions: **217**
+- Non-placeholder definitions: **304**
 
 > Audit-only: candidate tiers and canonical previews are review aids, not permission to copy meanings. No vocabulary or glossary data is modified.

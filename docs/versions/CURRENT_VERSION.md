@@ -1,16 +1,13 @@
-# Current Version — TOEIC Dictionary v2.95.39
-- Current source: **v2.95.39**.
-- Release package: `TOEIC_Dictionary_v2.95.39_FullSource.zip`.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.39.md`.
-- Batch 033: added 8 Cambridge-sourced related-term glosses (ability, acceptable, action, accusation, advertise, advise, allow, announce), each with POS, paraphrased definition and direct source URL. Independent editorial review remains pending.
-- Batch 028: related-term explanation now filters reference context by synonym/antonym relation type and includes glossary alias POS/English definition where available.
-- Batch 027: 16 original-editorial Listening resources / 32 questions (Part 2: 8 items; Part 3: 4 conversations / 12 questions; Part 4: 4 talks / 12 questions).
-- Every new question has a transcript evidence pointer and stable choice IDs; each resource includes review notes and batch metadata. All remain pending independent review and fail-closed excluded from Mock.
-- Objective-resource mapping: **379/379** canonical links.
-- Listening inventory: 145 resources / 295 questions; Mock-eligible 102 / independent-review reserve 193. Part 1 still has 8 eligible + 1 pending, below the 10-item evidence threshold.
-- Validation: **49 focused glossary regression tests PASS**, plus explanation-context, practice-fallback and CI-coverage suites PASS; **39/39 JavaScript regression suites PASS**; data and learning-content validators PASS with 0 errors/warnings; repository integrity 409 references / 0 errors / 0 optional warnings; objective-resource audit 379/379; distractor structural audit PASS; version sync PASS.
-- Full Python unittest discovery was attempted but timed out; it is not counted as passed. Remote CI, GitHub Pages deployment, browser/device acceptance and independent review remain unverified.
-- No UI redesign, vocabulary headword IDs, Glossary, learner progress, IndexedDB schema, or answer-history data changed.
-
-
-- Packaging: FullSource **569 files**; Update Patch **28 files (10 added + 18 modified, 0 deleted)**; replay exact **569/569**; CRC/root/exclusions/SHA PASS.
+# Current Version — TOEIC Dictionary v2.95.40
+- Current source: **v2.95.40**.
+- Release package: `TOEIC_Dictionary_v2.95.40_FullSource.zip`.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.40.md`.
+- Audit 025: 519 was a stale pre-Batch-033 expectation. Current glossary is 527 raw rows / 527 normalized unique terms / 0 duplicates; the regression now derives its count from canonical data.
+- Batch 034: corrected the existing `revision` English definition to the current exact single-sense canonical definition. Vietnamese meaning, POS, term identity and original source provenance are preserved. Guarded patch + atomic updater + 6 tests.
+- Batch 030 regression now reads only the 26 manifest-listed canonical A–Z files, not editorial batch snapshots; current glossary definitions are checked against current canonical senses.
+- Batch 033 additions remain: ability, acceptable, action, accusation, advertise, advise, allow and announce. Independent editorial review remains pending.
+- Canonical inventory: 1,141 vocabulary headwords; Grammar 58/169; Listening 145/295; Reading 73/287; Part 5 practice 80 (practice-only).
+- Related Glossary: 527 entries; 516/804 referenced unique terms covered (64.2%); 288 unique relation terms / 289 occurrences remain unglossed; 73 placeholder English definitions remain.
+- Full Source package: **587 files**; exact archive-to-source comparison 587/587; ZIP CRC/root/exclusion checks PASS. SHA-256 sidecar verified.
+- Validation evidence: see the v2.95.40 test report and command log. Remote GitHub Actions, GitHub Pages deployment, browser/device acceptance and independent editorial review remain unverified.
+- No UI redesign, canonical headword IDs, relationship arrays, learner records, IndexedDB schema, answer history, Robot Buddy permissions or Mock eligibility changed.

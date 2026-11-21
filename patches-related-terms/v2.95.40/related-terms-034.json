@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-034-v2.95.40",
+  "baseFileSha256": "1e97b453e518ad72701903f76e57b3a9a8221d2e9fa98ca1de379053c7adce65",
+  "operations": [
+    {
+      "term": "revision",
+      "expect": {
+        "definition_en": "revision: sự sửa đổi; bản chỉnh sửa.",
+        "meaning_vi": "sự sửa đổi; bản chỉnh sửa",
+        "pos": "n",
+        "source": "canonical-vocabulary-senses",
+        "sourceHeadword": "revision",
+        "sourceRelease": "2.95.32",
+        "sourceSenseIndex": 0
+      },
+      "set": {
+        "definition_en": "a change made to something after it has been reviewed, or a version containing such changes"
+      }
+    }
+  ]
+}

@@ -13,7 +13,18 @@ class MajorReleaseQualityAudit025(unittest.TestCase):
             self.assertGreaterEqual(value['count'],0); self.assertLessEqual(value['count'],v['headwords'])
             self.assertGreaterEqual(value['percent'],0); self.assertLessEqual(value['percent'],100)
     def test_glossary_metrics_are_consistent(self):
-        g=self.audit['relatedGlossary']; self.assertEqual(g['entries'],519)
+        g=self.audit['relatedGlossary']
+        rows=mod.read('data/related-terms.json')['terms']
+        normalized={mod.normalize_relation_term(row.get('term')) for row in rows}
+        normalized.discard('')
+        # v2.95.39 Batch 033 legitimately added eight Cambridge-sourced rows
+        # after the older 519-entry v2.95.34/v2.95.35 baseline.
+        self.assertEqual(len(rows),527)
+        self.assertEqual(g['entries'],len(rows))
+        self.assertEqual(g['uniqueEntries'],len(normalized))
+        self.assertEqual(g['duplicateEntries'],len(rows)-len(normalized))
+        self.assertEqual(g['uniqueEntries'],527)
+        self.assertEqual(g['duplicateEntries'],0)
         self.assertLessEqual(g['coveredUniqueTerms'],g['referencedUniqueTerms'])
         self.assertEqual(g['unglossedUniqueTerms'],g['referencedUniqueTerms']-g['coveredUniqueTerms'])
         self.assertEqual(g['backfilledFromCanonicalVocabulary'],205)

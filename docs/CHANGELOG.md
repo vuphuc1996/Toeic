@@ -1,3 +1,16 @@
+## v2.95.40 — Audit 025 glossary metric reconciliation
+
+- Fixed the stale `test_major_release_quality_audit_025.py` expectation: 519 was the glossary count before Batch 033; the current canonical source correctly contains 527 entries after eight sourced additions.
+- `relatedGlossary.entries` remains the raw canonical row count and now reports `uniqueEntries` and `duplicateEntries` separately. Normalized counting uses NFKC, collapsed whitespace and case-folding.
+- Current source verification: **527 raw rows / 527 normalized unique terms / 0 duplicate groups**. No glossary data was removed or rewritten to force the metric.
+- Added Batch 034: corrected the stale English definition for `revision` to match its current exact single-sense canonical vocabulary entry. Vietnamese meaning, POS, term identity and original source provenance remain unchanged. The guarded patch checks the original `related-terms.json` SHA-256 and all old field values before applying atomically.
+- Fixed the Batch 030 regression harness to load only manifest-listed A–Z vocabulary files, not editorial batch snapshots. Current glossary definition/POS must match the current canonical single-sense entry.
+- Added 6 guarded-update tests; regenerated the current major-release audit, Learning Outcome Evidence Matrix, glossary candidate audit, backlog and glossary quality reports.
+- No application UI, vocabulary headword IDs/relations, questions/answers, learner progress, IndexedDB schema, Robot Buddy behavior or Mock eligibility changed.
+- Focused verification: 137/137 Python tests across 23 modules; JavaScript 39/39; validators and integrity audits PASS. Full Python discovery is not claimed due to the test-validator execution limit.
+- Packaging: Full Source **587 files**; CRC/root/exclusions PASS; exact comparison **587/587**; SHA-256 sidecar verified.
+- Evidence: `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.95.40.md` and `docs/reports/COMMAND_LOG_INDEX_v2.95.40.md`. Remote CI, GitHub Pages deployment and physical-device acceptance remain unverified.
+
 ## v2.95.39 — Related Glossary research batch 033 (8 terms)
 
 - Added 8 previously uncovered synonym/antonym terms: **ability, acceptable, action, accusation, advertise, advise, allow, announce**.
