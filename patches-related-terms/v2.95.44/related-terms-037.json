@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-037-v2.95.44",
+  "baseFileSha256": "7fb4e0f35378d2068bb96873ff5a3cb33e5396b7106feeb7f00a7346468c20b0",
+  "operations": [
+    {
+      "term": "begin",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "begin",
+        "meaning_vi": "bắt đầu; khởi đầu",
+        "pos": "v",
+        "definition_en": "to start to happen, exist, or be done.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/begin"
+        ]
+      }
+    },
+    {
+      "term": "book",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "book",
+        "meaning_vi": "đặt trước; đăng ký trước (chỗ, phòng, vé hoặc lịch hẹn)",
+        "pos": "v",
+        "definition_en": "to arrange for a seat, room, ticket, or appointment to be available at a particular future time.",
+        "source": "Cambridge Business English Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/book"
+        ]
+      }
+    },
+    {
+      "term": "bring",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "bring",
+        "meaning_vi": "mang; đem; đưa đến",
+        "pos": "v",
+        "definition_en": "to take or carry a person or thing to a particular place or to someone.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/bring"
+        ]
+      }
+    },
+    {
+      "term": "characteristic",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "characteristic",
+        "meaning_vi": "đặc điểm; đặc trưng; tính chất tiêu biểu",
+        "pos": "n",
+        "definition_en": "a typical or noticeable quality that helps identify a person or thing.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; noun sense selected; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/characteristic"
+        ]
+      }
+    },
+    {
+      "term": "clothing",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "clothing",
+        "meaning_vi": "quần áo; trang phục",
+        "pos": "n",
+        "definition_en": "clothes, especially those of a particular type or worn in a particular situation.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/clothing"
+        ]
+      }
+    },
+    {
+      "term": "comparable",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "comparable",
+        "meaning_vi": "có thể so sánh; tương đương về quy mô, số lượng hoặc chất lượng",
+        "pos": "adj",
+        "definition_en": "similar in size, amount, or quality to another thing.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/comparable"
+        ]
+      }
+    },
+    {
+      "term": "compute",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "compute",
+        "meaning_vi": "tính toán; tính ra bằng phương pháp toán học hoặc máy tính",
+        "pos": "v",
+        "definition_en": "to calculate a number or amount using mathematical methods or a machine.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; formal verb sense; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/compute"
+        ]
+      }
+    },
+    {
+      "term": "consequence",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "consequence",
+        "meaning_vi": "kết quả; hậu quả",
+        "pos": "n",
+        "definition_en": "a result of an action or situation, often an unpleasant or serious one.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; result sense; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/consequence"
+        ]
+      }
+    },
+    {
+      "term": "currency",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "currency",
+        "meaning_vi": "tiền tệ; đơn vị tiền tệ được sử dụng tại một quốc gia",
+        "pos": "n",
+        "definition_en": "the money that is used in a particular country at a particular time.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; money sense selected; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/currency"
+        ]
+      }
+    },
+    {
+      "term": "down payment",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "down payment",
+        "meaning_vi": "khoản trả trước; tiền đặt cọc một phần giá mua",
+        "pos": "n",
+        "definition_en": "an amount paid toward the total price when something is bought, with the remaining cost paid later.",
+        "source": "Cambridge Business English Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/down-payment"
+        ]
+      }
+    },
+    {
+      "term": "disturbance",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "disturbance",
+        "meaning_vi": "sự gián đoạn; sự náo động; tình trạng gây rối",
+        "pos": "n",
+        "definition_en": "something that interrupts normal activity, especially something noisy or causing trouble.",
+        "source": "Cambridge Academic Content Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; interruption sense selected; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/disturbance"
+        ]
+      }
+    },
+    {
+      "term": "development",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "development",
+        "meaning_vi": "sự phát triển; quá trình tiến bộ hoặc tạo ra điều mới",
+        "pos": "n",
+        "definition_en": "growth or changes that make something more advanced, or the process of creating something new.",
+        "source": "Cambridge Business English Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; growth and creation senses paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/development"
+        ]
+      }
+    },
+    {
+      "term": "declaration",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "declaration",
+        "meaning_vi": "bản tuyên bố; lời khai; sự công bố chính thức",
+        "pos": "n",
+        "definition_en": "an official or public statement about something, or the act of making such a statement.",
+        "source": "Cambridge Business English Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; official statement sense; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/declaration"
+        ]
+      }
+    },
+    {
+      "term": "eager",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "eager",
+        "meaning_vi": "háo hức; rất mong muốn làm hoặc có điều gì",
+        "pos": "adj",
+        "definition_en": "wanting very much to do or have something, especially something interesting.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/eager"
+        ]
+      }
+    },
+    {
+      "term": "entire",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "entire",
+        "meaning_vi": "toàn bộ; trọn vẹn; đầy đủ",
+        "pos": "adj",
+        "definition_en": "whole or complete, with nothing missing.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/entire"
+        ]
+      }
+    },
+    {
+      "term": "eventuality",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "eventuality",
+        "meaning_vi": "tình huống có thể xảy ra, thường bất ngờ hoặc không mong muốn",
+        "pos": "n",
+        "definition_en": "something unpleasant or unexpected that might happen or exist in the future.",
+        "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; contingency synonym noted; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/eventuality"
+        ]
+      }
+    }
+  ]
+}

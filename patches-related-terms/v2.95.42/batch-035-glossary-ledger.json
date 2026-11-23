@@ -1,0 +1,90 @@
+{
+  "batch": "035",
+  "release": "2.95.42",
+  "title": "Cambridge-sourced Related Glossary coverage expansion — 8 high-priority relation targets",
+  "count": 8,
+  "editorialStatus": "Cambridge Dictionary search-result entry excerpts reviewed on 2026-11-22; definitions paraphrased; Vietnamese glosses curated; independent editorial review remains pending. Direct entry pages could not be opened by the browser due to HTTP 403.",
+  "sourcePolicy": "Each new entry points to its exact Cambridge Dictionary headword page. Definitions are concise paraphrases of the search-indexed Cambridge entry excerpt matching the vocabulary relation; direct page access returned HTTP 403. No example sentences copied. Existing canonical headwords, IDs, relation arrays, questions and learner records are unchanged.",
+  "records": [
+    {
+      "term": "administer",
+      "meaning_vi_preserved": "quản lý; điều hành; thực hiện (một chương trình hoặc công việc)",
+      "pos": "v",
+      "definition_en": "to manage or control the operation of a program, activity, or business task",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/administer"
+      ]
+    },
+    {
+      "term": "alert",
+      "meaning_vi_preserved": "cảnh báo; báo cho biết",
+      "pos": "v",
+      "definition_en": "to warn someone about a possible danger or important situation",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/alert"
+      ]
+    },
+    {
+      "term": "alike",
+      "meaning_vi_preserved": "giống nhau; tương tự; theo cách tương tự",
+      "pos": "adj/adv",
+      "definition_en": "similar to each other, or happening or done in a similar way",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/alike"
+      ]
+    },
+    {
+      "term": "appeal",
+      "meaning_vi_preserved": "lời kêu gọi; yêu cầu chính thức",
+      "pos": "n",
+      "definition_en": "a serious or formal request for help, information, money, or support",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/appeal"
+      ]
+    },
+    {
+      "term": "article",
+      "meaning_vi_preserved": "món/đồ vật; bài viết",
+      "pos": "n",
+      "definition_en": "a particular item or thing, or a piece of writing about a subject",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/article"
+      ]
+    },
+    {
+      "term": "assist",
+      "meaning_vi_preserved": "hỗ trợ; giúp đỡ",
+      "pos": "v",
+      "definition_en": "to help a person or support an activity, task, or process",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/assist"
+      ]
+    },
+    {
+      "term": "backer",
+      "meaning_vi_preserved": "người ủng hộ; nhà tài trợ",
+      "pos": "n",
+      "definition_en": "a person or organization that supports someone or something, often financially",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/backer"
+      ]
+    },
+    {
+      "term": "bargaining",
+      "meaning_vi_preserved": "sự thương lượng; đàm phán",
+      "pos": "n",
+      "definition_en": "discussions intended to reach an agreement about prices, wages, terms, or conditions",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/bargaining"
+      ]
+    }
+  ]
+}

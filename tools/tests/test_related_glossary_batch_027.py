@@ -72,7 +72,10 @@ class RelatedGlossaryBatch027Tests(unittest.TestCase):
         self.assertGreaterEqual(len(keys), 519)
         covered = len(set(self.frequency) & set(keys))
         covered_occurrences = sum(count for term, count in self.frequency.items() if term in set(keys))
-        self.assertEqual((covered, covered_occurrences), (516, 748))
+        backlog = read_json("docs/reports/related-glossary-backlog.json")
+        self.assertEqual(len(keys), backlog["glossaryCount"])
+        self.assertEqual(covered + backlog["uniqueUnglossedTerms"], len(self.frequency))
+        self.assertEqual(sum(self.frequency.values()) - covered_occurrences, backlog["uncoveredReferenceCount"])
 
 if __name__ == "__main__":
     unittest.main()

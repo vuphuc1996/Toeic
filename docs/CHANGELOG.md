@@ -1,3 +1,47 @@
+## v2.95.45 — alternate QA runner merge + relation-aligned glossary corrections
+
+- Compared the alternate user-supplied v2.95.44 source with the released v2.95.44 source; preserved the newer Batch 037 glossary data and runtime as the baseline.
+- Imported isolated Python test sharding with resumable, versioned checkpoints and process-group timeout cleanup, plus a reproducible Release Acceptance runner. It derives its version from `data/manifest.json`, stores the same value in JSON and Markdown, and terminates timed-out child process groups via the shared sharder helper.
+- Added five Cambridge-verified Related Glossary relation targets (`ask for`, `change`, `comments`, `communicate with`, `connection`) and exact-guarded sense corrections for `caller`, `article` and `assume`, aligned to existing relationship anchors.
+- Related Glossary: 562 → 567 records; exact coverage 551/804 → 556/804 (69.2%); remaining 248 unique targets / 249 occurrences. No canonical headwords, IDs, relation arrays or learner question/answer content changed.
+- Focused Python regression: 283 PASS / 1 environment-dependent SKIP across 35 distinct modules; the sharder/acceptance-runner tests are 12/12 and 10/10 respectively; JavaScript 39/39; syntax 19/19; data, learning-content, repository and version validators PASS. Full 88-module Python discovery and aggregate Release Acceptance remain INCOMPLETE due the execution limit. Independent editorial review remains pending. Remote CI, Pages deployment/cache and device QA remain unverified.
+
+## v2.95.44 — Related Glossary coverage batch 037
+
+- Added 16 Cambridge Dictionary-sourced lookup glosses for existing relation targets: `begin`, `book`, `bring`, `characteristic`, `clothing`, `comparable`, `compute`, `consequence`, `currency`, `down payment`, `disturbance`, `development`, `declaration`, `eager`, `entire` and `eventuality`.
+- Each record contains a selected POS, concise English paraphrase, Vietnamese lookup meaning, and exact Cambridge headword URL. Search-result entry content was retrieved on 2026-11-23; independent editorial review remains pending. No Cambridge example sentences, IPA or uncertain pronunciation variants were added.
+- Related Glossary grows 546 → 562 entries. Exact unique relation-target coverage grows 535/804 (66.5%) → 551/804 (68.5%); 253 unique terms / 254 relation occurrences remain uncovered. Normalized duplicate count remains zero.
+- Added seven Batch 037 regression checks; hardened Batch 036 historical hash reconstruction for subsequent additive batches; registered Batch 037 in Python CI compile and test steps. Regenerated backlog, candidate, quality, relationship graph, major release and progress audits.
+- No canonical headwords/IDs, synonym/antonym arrays, questions, choices, answer keys, learner IndexedDB schema/data, Mock eligibility, UI layout, Robot Buddy data boundary or backend architecture changed. No Cloudflare/backend introduced.
+- Independent editorial review, remote GitHub Actions, GitHub Pages deployment/cache and physical browser/device acceptance remain unverified.
+
+## v2.95.43 — Related Glossary coverage batch 036
+
+- Added 11 Cambridge-indexed Related Glossary entries for uncovered relation targets: able, accuracy, actual, assume, business, caller, capable, car, carry, choice and company. Each record has POS, concise English paraphrase, Vietnamese gloss and exact Cambridge Dictionary URL.
+- Added a batch-specific regression contract with canonical A–Z vocabulary and protected Grammar/Listening/Reading/Part 5 bank SHA-256 fingerprints; registered test and compile checks in GitHub Actions. Batch 035 historical base-hash test now excludes later additive glossary batches dynamically.
+- Related Glossary: 535 → 546 rows; 524/804 → 535/804 unique relation-target coverage (65.2% → 66.5%); 269 unique / 270 occurrences remain uncovered; placeholder definitions remain 73.
+- Cambridge search excerpts reviewed 2026-11-23; direct entry fetches returned HTTP 403. Independent editorial review, remote GitHub Actions, Pages deployment and device acceptance remain unverified.
+- No UI redesign, canonical vocabulary IDs/headwords, relation arrays, learning questions/answers, learner IndexedDB, Mock eligibility, Robot Buddy permission boundary or backend/deployment changes.
+
+## v2.95.42 — Related Glossary coverage expansion (Batch 035)
+
+- Added 8 source-linked English glosses for previously uncovered relationship targets: administer, alert, alike, appeal, article, assist, backer and bargaining.
+- Definitions are concise Cambridge Dictionary sense paraphrases; Vietnamese meanings and part-of-speech labels were curated to match the relation target meaning. Independent editorial review remains pending.
+- Updated candidate-coverage tests, batch-specific provenance/data tests, and the current glossary audit/backlog/progress reports.
+- No canonical headwords, vocabulary IDs, relation arrays, learner data/IndexedDB, learning questions/answers, Mock eligibility, or UI were changed.
+- Source patch: `patches-related-terms/v2.95.42/related-terms-035.json`; batch ledger: `batch-035-glossary-ledger.json`.
+- Local regression and validation results are recorded in the v2.95.42 test report. Remote GitHub Actions, Pages deployment, and device QA remain unverified.
+- Full Source 620 files; Patch 40 overlay files (17 modified + 23 added, 0 deletions); CRC/root/exclusion checks and actual patch replay 620/620 exact; SHA-256 sidecars verified.
+
+
+## v2.95.41 — Listening reserve inventory regression correction
+
+- Fixed the stale `test_answer_position_balance.py` inventory assertions: the prior 161-reserve / 263-total expectation predated v2.95.37 Listening Batch 027. Current canonical data has 102 Mock-eligible + 193 reserve-pending questions = 295 Listening questions.
+- The regression now asserts per-Part eligible counts (8/25/39/30), pending counts (1/36/84/72), and the Batch 027 boundary (16 resources / 32 questions: Part 2=8, Part 3=12, Part 4=12). All Batch 027 items must remain reserve-pending and Mock-excluded until independent approval.
+- Choice array lengths, unique `choiceIds`, valid answer indexes and the historic 27-key movement identity checks remain enforced. No Listening/Reading question, answer key, question order, choice ID or editorial status was changed.
+- GitHub Actions already runs `test_answer_position_balance.py`; the existing CI step is retained. Updated listening readiness, question evidence and distractor audit reports are regenerated from canonical data.
+- Local verification: answer-position suite 4/4 PASS; related listening expansion, question-evidence, distractor and mock-engine checks recorded in the v2.95.41 test report. Remote GitHub Actions, Pages deployment and physical-device QA remain unverified.
+
 ## v2.95.40 — Audit 025 glossary metric reconciliation
 
 - Fixed the stale `test_major_release_quality_audit_025.py` expectation: 519 was the glossary count before Batch 033; the current canonical source correctly contains 527 entries after eight sourced additions.

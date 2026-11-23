@@ -17,13 +17,13 @@ class MajorReleaseQualityAudit025(unittest.TestCase):
         rows=mod.read('data/related-terms.json')['terms']
         normalized={mod.normalize_relation_term(row.get('term')) for row in rows}
         normalized.discard('')
-        # v2.95.39 Batch 033 legitimately added eight Cambridge-sourced rows
-        # after the older 519-entry v2.95.34/v2.95.35 baseline.
-        self.assertEqual(len(rows),527)
+        # v2.95.45 Batch 038 adds five verified relation-target glosses
+        # after the v2.95.44 Batch 037 inventory; guarded sense fixes do not add rows.
+        self.assertEqual(len(rows),567)
         self.assertEqual(g['entries'],len(rows))
         self.assertEqual(g['uniqueEntries'],len(normalized))
         self.assertEqual(g['duplicateEntries'],len(rows)-len(normalized))
-        self.assertEqual(g['uniqueEntries'],527)
+        self.assertEqual(g['uniqueEntries'],567)
         self.assertEqual(g['duplicateEntries'],0)
         self.assertLessEqual(g['coveredUniqueTerms'],g['referencedUniqueTerms'])
         self.assertEqual(g['unglossedUniqueTerms'],g['referencedUniqueTerms']-g['coveredUniqueTerms'])

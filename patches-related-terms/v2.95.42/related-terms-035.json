@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-035-v2.95.42",
+  "baseFileSha256": "070a788b1327bc210cab78e16beb3e566353518f0dd3fa1214c399c8fd0a5b07",
+  "operations": [
+    {
+      "term": "administer",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "pos": "v",
+        "definition_en": "to manage or control the operation of a program, activity, or business task",
+        "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/administer"
+        ],
+        "term": "administer",
+        "meaning_vi": "quản lý; điều hành; thực hiện (một chương trình hoặc công việc)"
+      }
+    },
+    {
+      "term": "alert",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "pos": "v",
+        "definition_en": "to warn someone about a possible danger or important situation",
+        "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/alert"
+        ],
+        "term": "alert",
+        "meaning_vi": "cảnh báo; báo cho biết"
+      }
+    },
+    {
+      "term": "alike",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "pos": "adj/adv",
+        "definition_en": "similar to each other, or happening or done in a similar way",
+        "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/alike"
+        ],
+        "term": "alike",
+        "meaning_vi": "giống nhau; tương tự; theo cách tương tự"
+      }
+    },
+    {
+      "term": "appeal",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "pos": "n",
+        "definition_en": "a serious or formal request for help, information, money, or support",
+        "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/appeal"
+        ],
+        "term": "appeal",
+        "meaning_vi": "lời kêu gọi; yêu cầu chính thức"
+      }
+    },
+    {
+      "term": "article",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "pos": "n",
+        "definition_en": "a particular item or thing, or a piece of writing about a subject",
+        "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/article"
+        ],
+        "term": "article",
+        "meaning_vi": "món/đồ vật; bài viết"
+      }
+    },
+    {
+      "term": "assist",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "pos": "v",
+        "definition_en": "to help a person or support an activity, task, or process",
+        "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/assist"
+        ],
+        "term": "assist",
+        "meaning_vi": "hỗ trợ; giúp đỡ"
+      }
+    },
+    {
+      "term": "backer",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "pos": "n",
+        "definition_en": "a person or organization that supports someone or something, often financially",
+        "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/backer"
+        ],
+        "term": "backer",
+        "meaning_vi": "người ủng hộ; nhà tài trợ"
+      }
+    },
+    {
+      "term": "bargaining",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "pos": "n",
+        "definition_en": "discussions intended to reach an agreement about prices, wages, terms, or conditions",
+        "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/bargaining"
+        ],
+        "term": "bargaining",
+        "meaning_vi": "sự thương lượng; đàm phán"
+      }
+    }
+  ]
+}

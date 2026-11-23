@@ -18,6 +18,16 @@
       ]
     },
     {
+      "term": "able",
+      "meaning_vi": "có thể; đủ khả năng hoặc điều kiện để làm việc gì",
+      "pos": "adj",
+      "definition_en": "having the strength, skill, time, money, or opportunity needed to do something; also skilled at what one does",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/able"
+      ]
+    },
+    {
       "term": "accept",
       "meaning_vi": "chấp nhận",
       "pos": "v",
@@ -64,6 +74,16 @@
       "definition_en": "A record of financial transactions, or a description of events or experiences.",
       "sourceUrls": [
         "https://www.yumpu.com/en/document/view/11808737/cambridge-university-press-9781107660151-cambridge-"
+      ]
+    },
+    {
+      "term": "accuracy",
+      "meaning_vi": "độ chính xác; tính đúng đắn",
+      "pos": "n",
+      "definition_en": "the quality of being exact or correct, or the ability to do something without mistakes",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/accuracy"
       ]
     },
     {
@@ -127,6 +147,16 @@
       ]
     },
     {
+      "term": "actual",
+      "meaning_vi": "thực tế; có thật; đúng thực tế",
+      "pos": "adj",
+      "definition_en": "existing in fact or real, rather than imagined, expected, or planned",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/actual"
+      ]
+    },
+    {
       "term": "adaptable",
       "meaning_vi": "có khả năng thích nghi",
       "source": "Cambridge School Dictionary (source excerpt, accessed 2026-11-21)",
@@ -145,6 +175,16 @@
       "sourceHeadword": "adherence",
       "sourceRelease": "2.95.25",
       "sourceSenseIndex": 0
+    },
+    {
+      "pos": "v",
+      "definition_en": "to manage or control the operation of a program, activity, or business task",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/administer"
+      ],
+      "term": "administer",
+      "meaning_vi": "quản lý; điều hành; thực hiện (một chương trình hoặc công việc)"
     },
     {
       "term": "admission",
@@ -241,6 +281,26 @@
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/aim"
       ]
+    },
+    {
+      "pos": "v",
+      "definition_en": "to warn someone about a possible danger or important situation",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/alert"
+      ],
+      "term": "alert",
+      "meaning_vi": "cảnh báo; báo cho biết"
+    },
+    {
+      "pos": "adj/adv",
+      "definition_en": "similar to each other, or happening or done in a similar way",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/alike"
+      ],
+      "term": "alike",
+      "meaning_vi": "giống nhau; tương tự; theo cách tương tự"
     },
     {
       "term": "allocate",
@@ -360,6 +420,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "pos": "n",
+      "definition_en": "a serious or formal request for help, information, money, or support",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/appeal"
+      ],
+      "term": "appeal",
+      "meaning_vi": "lời kêu gọi; yêu cầu chính thức"
+    },
+    {
       "term": "applicant",
       "meaning_vi": "người ứng tuyển",
       "pos": "n",
@@ -464,6 +534,26 @@
       "source": "curated-related-glossary"
     },
     {
+      "pos": "n",
+      "definition_en": "a particular object, especially one among several things of a similar type or in the same place",
+      "source": "Cambridge Dictionary (object sense selected to match the existing canonical synonym anchor \"item\"; other newspaper/grammar senses are not selected here; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/article"
+      ],
+      "term": "article",
+      "meaning_vi": "món đồ; vật phẩm; mặt hàng"
+    },
+    {
+      "term": "ask for",
+      "meaning_vi": "yêu cầu; đề nghị cung cấp",
+      "pos": "v phr",
+      "definition_en": "to request that someone give or provide something",
+      "source": "Cambridge Dictionary (request sense of the existing phrasal form \"ask for\"; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/ask"
+      ]
+    },
+    {
       "term": "assemble",
       "meaning_vi": "tập hợp; lắp ráp",
       "source": "canonical-vocabulary-senses",
@@ -530,6 +620,16 @@
       "sourceSenseIndex": 0
     },
     {
+      "pos": "v",
+      "definition_en": "to help a person or support an activity, task, or process",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/assist"
+      ],
+      "term": "assist",
+      "meaning_vi": "hỗ trợ; giúp đỡ"
+    },
+    {
       "term": "assistance",
       "meaning_vi": "sự hỗ trợ; trợ giúp",
       "definition_en": "help or support given to someone who needs it",
@@ -544,6 +644,16 @@
       "meaning_vi": "cộng sự",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "assume",
+      "meaning_vi": "đảm nhận; nhận trách nhiệm",
+      "pos": "v",
+      "definition_en": "to take on responsibility, control, or a particular role",
+      "source": "Cambridge Business English Dictionary (responsibility/control sense selected to match the existing canonical synonym anchor \"undertake\"; the separate accept-as-true sense is not selected here; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/assume"
+      ]
     },
     {
       "term": "assumption",
@@ -606,6 +716,16 @@
       "sourceSenseIndex": 0
     },
     {
+      "pos": "n",
+      "definition_en": "a person or organization that supports someone or something, often financially",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/backer"
+      ],
+      "term": "backer",
+      "meaning_vi": "người ủng hộ; nhà tài trợ"
+    },
+    {
       "term": "baggage",
       "meaning_vi": "hành lý",
       "source": "canonical-vocabulary-senses",
@@ -626,6 +746,26 @@
       "sourceSenseIndex": 0
     },
     {
+      "pos": "n",
+      "definition_en": "discussions intended to reach an agreement about prices, wages, terms, or conditions",
+      "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/bargaining"
+      ],
+      "term": "bargaining",
+      "meaning_vi": "sự thương lượng; đàm phán"
+    },
+    {
+      "term": "begin",
+      "meaning_vi": "bắt đầu; khởi đầu",
+      "pos": "v",
+      "definition_en": "to start to happen, exist, or be done.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/begin"
+      ]
+    },
+    {
       "term": "benchmark",
       "meaning_vi": "mốc chuẩn",
       "pos": "n/v",
@@ -642,6 +782,16 @@
       "pos": "n/v",
       "sourceHeadword": "bill",
       "sourceRelease": "2.95.34"
+    },
+    {
+      "term": "book",
+      "meaning_vi": "đặt trước; đăng ký trước (chỗ, phòng, vé hoặc lịch hẹn)",
+      "pos": "v",
+      "definition_en": "to arrange for a seat, room, ticket, or appointment to be available at a particular future time.",
+      "source": "Cambridge Business English Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/book"
+      ]
     },
     {
       "term": "booking",
@@ -672,6 +822,26 @@
       "sourceHeadword": "breakdown",
       "sourceRelease": "2.95.25",
       "sourceSenseIndex": 0
+    },
+    {
+      "term": "bring",
+      "meaning_vi": "mang; đem; đưa đến",
+      "pos": "v",
+      "definition_en": "to take or carry a person or thing to a particular place or to someone.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/bring"
+      ]
+    },
+    {
+      "term": "business",
+      "meaning_vi": "kinh doanh; hoạt động thương mại; doanh nghiệp",
+      "pos": "n",
+      "definition_en": "the activity of buying and selling goods or services, or an organization that does this",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/business"
+      ]
     },
     {
       "term": "business day",
@@ -720,6 +890,16 @@
       "definition_en": "Reference gloss for practice distractors."
     },
     {
+      "term": "caller",
+      "meaning_vi": "người đến thăm; khách ghé thăm",
+      "pos": "n",
+      "definition_en": "a person who visits a house or building",
+      "source": "Cambridge Dictionary (visitor sense selected to match the existing canonical synonym anchor \"visitor\"; Cambridge entry also lists a phone-caller sense; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/caller"
+      ]
+    },
+    {
       "term": "cancel",
       "meaning_vi": "hủy; hủy bỏ",
       "pos": "v",
@@ -733,6 +913,16 @@
       "sourceSenseIndex": 0
     },
     {
+      "term": "capable",
+      "meaning_vi": "có năng lực; có khả năng",
+      "pos": "adj",
+      "definition_en": "able to do something effectively and skillfully or to achieve results",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/capable"
+      ]
+    },
+    {
       "term": "capital",
       "meaning_vi": "vốn; nguồn vốn",
       "definition_en": "money or property used to start or operate a business",
@@ -743,6 +933,16 @@
       "sourceSenseIndex": 0
     },
     {
+      "term": "car",
+      "meaning_vi": "xe ô tô",
+      "pos": "n",
+      "definition_en": "a road vehicle with an engine, usually four wheels, and seats for a small number of people",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/car"
+      ]
+    },
+    {
       "term": "cargo",
       "meaning_vi": "hàng hóa vận chuyển",
       "source": "canonical-vocabulary-senses",
@@ -751,6 +951,16 @@
       "sourceHeadword": "cargo",
       "sourceRelease": "2.95.32",
       "sourceSenseIndex": 0
+    },
+    {
+      "term": "carry",
+      "meaning_vi": "mang; vận chuyển; chở",
+      "pos": "v",
+      "definition_en": "to hold or move a person or thing from one place to another",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/carry"
+      ]
     },
     {
       "term": "carry out",
@@ -803,6 +1013,26 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "change",
+      "meaning_vi": "sự thay đổi; sự chuyển đổi",
+      "pos": "n",
+      "definition_en": "the process of becoming different, or the result of something becoming different",
+      "source": "Cambridge Dictionary (noun sense selected for the existing canonical synonym anchor \"transition\"; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/change"
+      ]
+    },
+    {
+      "term": "characteristic",
+      "meaning_vi": "đặc điểm; đặc trưng; tính chất tiêu biểu",
+      "pos": "n",
+      "definition_en": "a typical or noticeable quality that helps identify a person or thing.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; noun sense selected; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/characteristic"
+      ]
+    },
+    {
       "term": "charge",
       "meaning_vi": "tính phí; khoản phí; phụ trách",
       "source": "curated-related-glossary",
@@ -814,6 +1044,16 @@
       "term": "check",
       "meaning_vi": "kiểm tra; tấm séc",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "choice",
+      "meaning_vi": "sự lựa chọn; quyền lựa chọn; các lựa chọn",
+      "pos": "n",
+      "definition_en": "the act or possibility of choosing, or a range of things available to choose from",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/choice"
+      ]
     },
     {
       "term": "choose",
@@ -834,6 +1074,16 @@
       "sourceHeadword": "circumstance",
       "sourceRelease": "2.95.28",
       "sourceSenseIndex": 0
+    },
+    {
+      "term": "clothing",
+      "meaning_vi": "quần áo; trang phục",
+      "pos": "n",
+      "definition_en": "clothes, especially those of a particular type or worn in a particular situation.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/clothing"
+      ]
     },
     {
       "term": "coaching",
@@ -878,6 +1128,16 @@
       ]
     },
     {
+      "term": "comments",
+      "meaning_vi": "các nhận xét; ý kiến phản hồi",
+      "pos": "n pl",
+      "definition_en": "remarks or opinions that someone expresses about a subject or situation",
+      "source": "Cambridge Dictionary (plural form of \"comment\"; opinion/remark sense selected for the existing canonical relation anchor \"feedback\"; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/comment"
+      ]
+    },
+    {
       "term": "commerce",
       "meaning_vi": "thương mại",
       "pos": "",
@@ -891,6 +1151,36 @@
       "source": "Cambridge Dictionary",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/common"
+      ]
+    },
+    {
+      "term": "communicate with",
+      "meaning_vi": "liên lạc với; trao đổi thông tin với",
+      "pos": "v phr",
+      "definition_en": "to share information or exchange messages with a person or group",
+      "source": "Cambridge Dictionary (share-information sense of \"communicate with\"; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/communicate"
+      ]
+    },
+    {
+      "term": "company",
+      "meaning_vi": "công ty; doanh nghiệp",
+      "pos": "n",
+      "definition_en": "an organization that sells goods or services in order to make money",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/company"
+      ]
+    },
+    {
+      "term": "comparable",
+      "meaning_vi": "có thể so sánh; tương đương về quy mô, số lượng hoặc chất lượng",
+      "pos": "adj",
+      "definition_en": "similar in size, amount, or quality to another thing.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/comparable"
       ]
     },
     {
@@ -918,6 +1208,16 @@
       "sourceHeadword": "comprise",
       "sourceRelease": "2.95.28",
       "sourceSenseIndex": 0
+    },
+    {
+      "term": "compute",
+      "meaning_vi": "tính toán; tính ra bằng phương pháp toán học hoặc máy tính",
+      "pos": "v",
+      "definition_en": "to calculate a number or amount using mathematical methods or a machine.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; formal verb sense; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/compute"
+      ]
     },
     {
       "term": "conceal",
@@ -953,6 +1253,26 @@
       "term": "connect",
       "meaning_vi": "kết nối; liên kết",
       "source": "curated-related-glossary"
+    },
+    {
+      "term": "connection",
+      "meaning_vi": "mối liên hệ; sự kết nối",
+      "pos": "n",
+      "definition_en": "the state of being related to someone or something else",
+      "source": "Cambridge Dictionary (relation sense selected for the existing canonical relation target \"network\"; other joining/phone/transport senses are not selected here; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/connection"
+      ]
+    },
+    {
+      "term": "consequence",
+      "meaning_vi": "kết quả; hậu quả",
+      "pos": "n",
+      "definition_en": "a result of an action or situation, often an unpleasant or serious one.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; result sense; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/consequence"
+      ]
     },
     {
       "term": "considerable",
@@ -1124,6 +1444,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "currency",
+      "meaning_vi": "tiền tệ; đơn vị tiền tệ được sử dụng tại một quốc gia",
+      "pos": "n",
+      "definition_en": "the money that is used in a particular country at a particular time.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; money sense selected; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/currency"
+      ]
+    },
+    {
       "term": "customer",
       "meaning_vi": "khách hàng",
       "source": "curated-related-glossary"
@@ -1163,6 +1493,16 @@
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/deal-with",
         "https://dictionary.cambridge.org/dictionary/english/handle"
+      ]
+    },
+    {
+      "term": "declaration",
+      "meaning_vi": "bản tuyên bố; lời khai; sự công bố chính thức",
+      "pos": "n",
+      "definition_en": "an official or public statement about something, or the act of making such a statement.",
+      "source": "Cambridge Business English Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; official statement sense; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/declaration"
       ]
     },
     {
@@ -1245,6 +1585,16 @@
       "source": "Cambridge Dictionary",
       "sourceUrls": [
         "https://dictionary.cambridge.org/dictionary/english/determine"
+      ]
+    },
+    {
+      "term": "development",
+      "meaning_vi": "sự phát triển; quá trình tiến bộ hoặc tạo ra điều mới",
+      "pos": "n",
+      "definition_en": "growth or changes that make something more advanced, or the process of creating something new.",
+      "source": "Cambridge Business English Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; growth and creation senses paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/development"
       ]
     },
     {
@@ -1377,6 +1727,16 @@
       "sourceSenseIndex": 0
     },
     {
+      "term": "disturbance",
+      "meaning_vi": "sự gián đoạn; sự náo động; tình trạng gây rối",
+      "pos": "n",
+      "definition_en": "something that interrupts normal activity, especially something noisy or causing trouble.",
+      "source": "Cambridge Academic Content Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; interruption sense selected; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/disturbance"
+      ]
+    },
+    {
       "term": "division",
       "meaning_vi": "bộ phận; sự phân chia",
       "pos": "",
@@ -1390,6 +1750,16 @@
       "source": "canonical-vocabulary-senses",
       "sourceHeadword": "document",
       "sourceRelease": "2.95.24"
+    },
+    {
+      "term": "down payment",
+      "meaning_vi": "khoản trả trước; tiền đặt cọc một phần giá mua",
+      "pos": "n",
+      "definition_en": "an amount paid toward the total price when something is bought, with the remaining cost paid later.",
+      "source": "Cambridge Business English Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/down-payment"
+      ]
     },
     {
       "term": "drawback",
@@ -1426,6 +1796,16 @@
       "sourceHeadword": "duty",
       "sourceRelease": "2.95.34",
       "sourceSenseIndex": 0
+    },
+    {
+      "term": "eager",
+      "meaning_vi": "háo hức; rất mong muốn làm hoặc có điều gì",
+      "pos": "adj",
+      "definition_en": "wanting very much to do or have something, especially something interesting.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/eager"
+      ]
     },
     {
       "term": "earnings",
@@ -1569,6 +1949,16 @@
       "source": "curated-related-glossary"
     },
     {
+      "term": "entire",
+      "meaning_vi": "toàn bộ; trọn vẹn; đầy đủ",
+      "pos": "adj",
+      "definition_en": "whole or complete, with nothing missing.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/entire"
+      ]
+    },
+    {
       "term": "entry",
       "meaning_vi": "mục nhập; lối vào; sự tham gia",
       "source": "curated-related-glossary"
@@ -1631,6 +2021,16 @@
       "meaning_vi": "né tránh",
       "pos": "",
       "definition_en": "Reference gloss for practice distractors."
+    },
+    {
+      "term": "eventuality",
+      "meaning_vi": "tình huống có thể xảy ra, thường bất ngờ hoặc không mong muốn",
+      "pos": "n",
+      "definition_en": "something unpleasant or unexpected that might happen or exist in the future.",
+      "source": "Cambridge Dictionary (entry content retrieved from Cambridge search result on 2026-11-23; definition paraphrased; contingency synonym noted; independent editorial review pending)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/eventuality"
+      ]
     },
     {
       "term": "every three months",

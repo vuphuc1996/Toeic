@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-035-v2.95.43",
+  "baseFileSha256": "070a788b1327bc210cab78e16beb3e566353518f0dd3fa1214c399c8fd0a5b07",
+  "operations": [
+    {
+      "term": "administer",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "administer",
+        "meaning_vi": "quản lý; điều hành; quản trị",
+        "pos": "v",
+        "definition_en": "to control the operation or arrangement of a programme, process, or organization",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/administer"
+        ]
+      }
+    },
+    {
+      "term": "alike",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "alike",
+        "meaning_vi": "giống nhau; tương tự nhau",
+        "pos": "adj",
+        "definition_en": "similar to one another in appearance or qualities",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/alike"
+        ]
+      }
+    },
+    {
+      "term": "appeal",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "appeal",
+        "meaning_vi": "lời kêu gọi; yêu cầu hỗ trợ chính thức",
+        "pos": "n",
+        "definition_en": "a serious or formal request to the public for money, information, or help",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/appeal"
+        ]
+      }
+    },
+    {
+      "term": "article",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "article",
+        "meaning_vi": "món đồ; vật phẩm; mặt hàng",
+        "pos": "n",
+        "definition_en": "a particular object or item, especially one that is being described or identified",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/article"
+        ]
+      }
+    },
+    {
+      "term": "ask for",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "ask for",
+        "meaning_vi": "yêu cầu; đề nghị cung cấp",
+        "pos": "v phr",
+        "definition_en": "to request that someone give or provide something",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/ask"
+        ]
+      }
+    },
+    {
+      "term": "assist",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "assist",
+        "meaning_vi": "hỗ trợ; giúp đỡ",
+        "pos": "v",
+        "definition_en": "to help someone or contribute to the completion of a task",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/assist"
+        ]
+      }
+    },
+    {
+      "term": "assume",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "assume",
+        "meaning_vi": "đảm nhận; nhận trách nhiệm",
+        "pos": "v",
+        "definition_en": "to take on responsibility, control, or a particular role",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/assume"
+        ]
+      }
+    },
+    {
+      "term": "backer",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "backer",
+        "meaning_vi": "người hậu thuẫn; nhà tài trợ",
+        "pos": "n",
+        "definition_en": "a person or organization that provides financial support for a project or activity",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/backer"
+        ]
+      }
+    },
+    {
+      "term": "bargaining",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "bargaining",
+        "meaning_vi": "sự thương lượng; đàm phán",
+        "pos": "n",
+        "definition_en": "discussions intended to reach an agreement, for example about prices, wages, or conditions",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/bargaining"
+        ]
+      }
+    },
+    {
+      "term": "begin",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "begin",
+        "meaning_vi": "bắt đầu; khởi đầu",
+        "pos": "v",
+        "definition_en": "to start happening or to start doing something",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/begin"
+        ]
+      }
+    },
+    {
+      "term": "book",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "book",
+        "meaning_vi": "đặt trước; giữ chỗ",
+        "pos": "v",
+        "definition_en": "to arrange in advance a room, seat, ticket, or service for a future time",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/book"
+        ]
+      }
+    },
+    {
+      "term": "bring",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "bring",
+        "meaning_vi": "mang đến; đưa đến",
+        "pos": "v",
+        "definition_en": "to take or carry someone or something to a person or place",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/bring"
+        ]
+      }
+    },
+    {
+      "term": "caller",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "caller",
+        "meaning_vi": "người đến thăm; khách ghé thăm",
+        "pos": "n",
+        "definition_en": "a visitor to a house or other building",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/caller"
+        ]
+      }
+    },
+    {
+      "term": "capable",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "capable",
+        "meaning_vi": "có năng lực; có khả năng thực hiện hiệu quả",
+        "pos": "adj",
+        "definition_en": "able to do something effectively and skilfully and to achieve results",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/capable"
+        ]
+      }
+    },
+    {
+      "term": "carry",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "carry",
+        "meaning_vi": "mang; vận chuyển",
+        "pos": "v",
+        "definition_en": "to transport or take a person or thing from one place to another",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/carry"
+        ]
+      }
+    },
+    {
+      "term": "change",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "change",
+        "meaning_vi": "sự thay đổi; sự chuyển đổi",
+        "pos": "n",
+        "definition_en": "the process or result of becoming different",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/change"
+        ]
+      }
+    },
+    {
+      "term": "characteristic",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "characteristic",
+        "meaning_vi": "đặc điểm; đặc trưng",
+        "pos": "n",
+        "definition_en": "a typical or noticeable quality of a person or thing",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/characteristic"
+        ]
+      }
+    },
+    {
+      "term": "choice",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "choice",
+        "meaning_vi": "sự lựa chọn; khả năng lựa chọn",
+        "pos": "n",
+        "definition_en": "the act or possibility of selecting from available people or things",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/choice"
+        ]
+      }
+    },
+    {
+      "term": "clothing",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "clothing",
+        "meaning_vi": "quần áo; trang phục",
+        "pos": "n",
+        "definition_en": "clothes, especially those worn for a particular activity, occasion, or situation",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/clothing"
+        ]
+      }
+    },
+    {
+      "term": "comments",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "comments",
+        "meaning_vi": "các nhận xét; ý kiến phản hồi",
+        "pos": "n pl",
+        "definition_en": "remarks or opinions that someone expresses about a subject or situation",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/comment"
+        ]
+      }
+    },
+    {
+      "term": "communicate with",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "communicate with",
+        "meaning_vi": "liên lạc với; trao đổi thông tin với",
+        "pos": "v phr",
+        "definition_en": "to share information or exchange messages with a person or group",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/communicate"
+        ]
+      }
+    },
+    {
+      "term": "comparable",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "comparable",
+        "meaning_vi": "có thể so sánh; tương đương",
+        "pos": "adj",
+        "definition_en": "similar enough in size, amount, or quality to be compared",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/comparable"
+        ]
+      }
+    },
+    {
+      "term": "compute",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "compute",
+        "meaning_vi": "tính toán; tính ra",
+        "pos": "v",
+        "definition_en": "to calculate a number or amount by using mathematics or a computer",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/compute"
+        ]
+      }
+    },
+    {
+      "term": "connection",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "connection",
+        "meaning_vi": "mối liên hệ; sự kết nối",
+        "pos": "n",
+        "definition_en": "the state of being related to someone or something else",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/connection"
+        ]
+      }
+    },
+    {
+      "term": "consequence",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "consequence",
+        "meaning_vi": "kết quả; hệ quả",
+        "pos": "n",
+        "definition_en": "a result or effect that follows from an action or situation",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/consequence"
+        ]
+      }
+    },
+    {
+      "term": "consideration",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "consideration",
+        "meaning_vi": "sự cân nhắc; điều cần xem xét",
+        "pos": "n",
+        "definition_en": "careful thought about something before making a decision",
+        "source": "Cambridge Dictionary (entry inspected 2026-11-23; definition paraphrased)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/consideration"
+        ]
+      }
+    }
+  ]
+}

@@ -1,3 +1,50 @@
+## v2.95.45 — Merge alternate-source QA infrastructure + glossary sense reconciliation
+
+- **Source comparison:** compared the user-uploaded alternate v2.95.44 FullSource (683 files) against the released v2.95.44 FullSource (664 files): 46 upload-only paths, 27 release-only paths, 43 changed common files and 594 byte-identical common files. The upload is a distinct branch, not a drop-in replacement.
+- **Adopted engineering improvements:** imported `tools/run-python-tests-sharded.py` and its 12 tests, plus `tools/run-release-acceptance.py` and its 10 tests. Sharded execution isolates modules, kills descendant process groups on timeout, writes a version/inventory-bound checkpoint, resumes only modules already proven PASS, and preserves failed/timeout output. Release Acceptance runs ordered local gates, resolves the version from `data/manifest.json`, writes consistent JSON/Markdown version metadata and terminates timed-out child process groups through the shared sharder helper.
+- **Batch 038 content:** adds five Cambridge-sourced terms already used by existing relations: `ask for` (request), `change` (transition), `comments` (feedback), `communicate with` (contact) and `connection` (network). Each record has POS, a paraphrased English definition, Vietnamese lookup meaning and Cambridge URL. Independent editorial approval remains pending.
+- **Sense corrections:** `caller` now selects the visitor sense to match canonical anchor `visitor`; `article` selects the object sense to match `item`; `assume` selects responsibility/control to match `undertake`. These are exact-guarded field updates with old/new provenance retained in the Batch 038 ledger. Cambridge also lists other senses for these words; those senses are deliberately not mixed into the relationship-aligned lookup record.
+- **Glossary:** 567 rows / 567 normalized unique / 0 duplicates; exact coverage 556/804 (69.2%); 248 unique terms / 249 relation occurrences remain uncovered. `consideration` was not imported because it is a noun derived from linked verb `consider`; it remains an editorial candidate rather than being presented as a synonym.
+- **Protected content:** canonical A–Z vocabulary files, IDs and relationships; Grammar/Listening/Reading/Part 5 banks; question/choice IDs and answer keys; learner IndexedDB schema/progress and Mock eligibility remained unchanged. No UI redesign or backend/Cloudflare runtime added.
+- **Tests:** new merge suite 8/8, sharded-runner suite 12/12, release-acceptance suite 10/10, CI coverage 3/3, Batch 034 6/6, Batch 027 5/5, Batch 037 7/7, Batch 036 6/6 and Batch 035 5/5 passed. Broader Python shard and local release acceptance outcomes are documented separately; no aggregate status is inferred from partial runs.
+- **External gates:** remote GitHub Actions, GitHub Pages deployment/cache, browser/device acceptance and independent editorial review are not claimed unless the current report contains direct verification.
+- **Artifacts:** Full Source/Patch v2.95.45, replay comparison, SHA-256 and package verification recorded in `reports/CHANGE_MANIFEST_v2.95.45.md` and `reports/PACKAGE_VERIFICATION_v2.95.45.md`.
+
+## v2.95.43 — Related Glossary batch 036
+
+- **Implemented:** 11 new sourced glosses for uncovered synonym/antonym targets: able, accuracy, actual, assume, business, caller, capable, car, carry, choice and company. Related Glossary **535 → 546**; exact unique coverage **524/804 → 535/804**; uncovered unique terms **280 → 269**; occurrences **281 → 270**. No duplicates.
+- **Research/provenance:** Cambridge Dictionary search-index excerpts reviewed 2026-11-23; definitions paraphrased and Vietnamese glosses curated; direct Cambridge page fetches returned 403. Independent review remains pending; sources linked in records.
+- **Integrity:** Batch 036 adds six tests including canonical vocabulary and protected learning-bank SHA-256 guards. Batch 035 historical base reconstruction now removes later additive ledgers dynamically. CI registers Batch 036 and syntax checks.
+- **Preservation:** A–Z vocabulary file bytes and learning bank bytes were hash-verified unchanged; no headword IDs/relations, questions, choice IDs/answer keys, learner IndexedDB, UI, Mock eligibility or Robot Buddy permissions changed.
+- **Local validation:** Batch 036 6/6; Batch 035 5/5; patch updater 11/11; CI coverage 3/3 (after CI-step correction). Remaining release checks are recorded in v2.95.43 report.
+- **External gates:** remote GitHub Actions, GitHub Pages deployment, browser/device QA and independent editorial review not verified.
+- **Artifacts:** batch ledger and guarded patch under `patches-related-terms/v2.95.43/`; report `reports/TOEIC_GLOSSARY_BATCH_036_v2.95.43.md`. Full Source 641 files; Patch 39 files (18 modified + 21 added, 0 deletions); actual replay 641/641 exact; ZIP CRC/root/exclusions and SHA-256 sidecars verified.
+
+
+## v2.95.42 — Related Glossary coverage expansion (Batch 035)
+
+- **Implemented:** 8 new sourced glosses for relation targets: administer, alert, alike, appeal, article, assist, backer, bargaining.
+- **Source/provenance:** Cambridge Dictionary indexed entry excerpts reviewed 2026-11-22; direct entry pages returned HTTP 403; definitions paraphrased; direct source URLs retained per record. Editorial review pending.
+- **Impact:** Related Glossary grows 527 → 535 entries; normalized duplicates remain 0; the 8 added terms are relation targets not canonical A–Z headwords.
+- **Preservation:** no canonical vocabulary, IDs, relations, learner records/IndexedDB, learning question/answer keys, Mock eligibility, UI or deployment configuration changed.
+- **Verification:** Batch 035 data/provenance regression and current coverage/audit tests; broader validators and package replay are listed in the release report.
+- **External limits:** GitHub Actions, Pages deployment, browser/device QA and independent editorial approval not verified.
+- **Coverage change:** 516/804 (64.2%) → 524/804 (65.2%); 280 unique / 281 occurrences remain uncovered; 73 placeholder English definitions remain.
+- **Current reports:** `reports/TOEIC_GLOSSARY_BATCH_035_v2.95.42.md`, `reports/RELATED_GLOSSARY_CANDIDATE_AUDIT_v2.95.42.md`, `reports/RELATED_GLOSSARY_QUALITY_FLAGS_v2.95.42.md`, `reports/VOCABULARY_RELATIONSHIP_GRAPH_AUDIT_v2.95.42.md`, `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.42.md`.
+- **Package:** Full Source 620 files; Patch 40 overlay files (17 modified + 23 added, 0 deletions); CRC/root/exclusion PASS; actual patch replay 620/620 exact; SHA-256 sidecars verified.
+
+## v2.95.41 — Listening reserve inventory regression correction
+
+- **Current canonical Listening inventory:** 145 units / 295 questions: 102 eligible for Mock and 193 reserve-pending independent review. By Part, eligible = P1 8 / P2 25 / P3 39 / P4 30; pending = P1 1 / P2 36 / P3 84 / P4 72.
+- **Root cause:** `test_answer_position_balance.py` retained the 161 reserve / 263 total values from before v2.95.37 Batch 027. Batch 027 added 16 reserve resources / 32 original-editorial questions (P2=8, P3=12, P4=12), now included in the canonical 295-question pool.
+- **Fix:** the test now asserts per-Part eligible and pending counts, total 295, Batch 027's 32 questions and its fail-closed reserve status. Existing 27-key move / stable choice identity checks and choice-ID uniqueness checks remain in place.
+- **CI:** existing GitHub Actions test step for `test_answer_position_balance.py` is retained; CI coverage regression confirms all Python test modules remain registered.
+- **Reports regenerated:** Listening Readiness, Editorial Evidence, Distractor Audit, Content Coverage and Project Progress for v2.95.41.
+- **Data safety:** no question/choice text, question order, answer key/index, choice ID, resource ID, editorial status, learner progress, IndexedDB, UI or Mock eligibility changed. Reserve questions remain excluded from Mock pending independent approval.
+- **Focused verification:** answer-position 4/4; listening expansion 8/8; question evidence 7/7; distractor quality 6/6; Batch 027 6/6; CI coverage 3/3; version sync 12/12. Further command-level and release checks are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.41.md`.
+- **Package:** `TOEIC_Dictionary_v2.95.41_FullSource.zip`, 597 files; CRC/root/exclusion checks PASS; exact comparison 597/597; SHA-256 sidecar verified.
+- **External gates:** remote GitHub Actions, GitHub Pages deployment/cache, browser/device acceptance and second-person review are not claimed.
+
 ## v2.95.40 — Major Release Quality Audit 025 metric reconciliation
 
 - **Root cause closed:** the v2.95.25 audit test retained the historical glossary expectation of 519 rows from before Batch 033. v2.95.39 Batch 033 added eight legitimate Cambridge-sourced terms (ability, acceptable, action, accusation, advertise, advise, allow, announce), bringing the canonical glossary to 527 rows.
@@ -68,7 +115,7 @@
 
 ## v2.95.30 — missing US IPA research queue
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.40
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.45
 
 - Added **89** related-term glosses from exact canonical vocabulary matches with complete bilingual senses; multi-sense definitions are joined for reference.
 - Related glossary: **430 → 519**. Provenance on each addition: `canonical-vocabulary-senses`, exact source headword, source release `2.95.28`.

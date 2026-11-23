@@ -13,7 +13,7 @@ class ProjectProgressTests(unittest.TestCase):
         self.assertIn('US IPA | 1,062/1,141 | **93.1%**',out)
         self.assertIn('Word family | 276/1,141 | **24.2%**',out)
         self.assertIn('Word-family directed links | 374 links',out)
-        self.assertIn('Related-term glossary exact reference join | 508/804 | **63.2%** | 296 distinct terms / 297 occurrences remain unglossed',out)
+        self.assertIn('Related-term glossary exact reference join | 556/804 | **69.2%** | 248 distinct terms / 249 occurrences remain unglossed',out)
         self.assertIn('| Guided pathway stages represented | 3/6 | Pre-A1, A1, A2, B1, B2, C1 | **50.0%** |',out)
         self.assertIn('| Canonical objective-resource links | 379/379 |',out)
         self.assertIn('| Foundation outcome evidence wired | 6/6 | 100.0% |',out)

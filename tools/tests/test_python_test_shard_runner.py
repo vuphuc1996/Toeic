@@ -1,0 +1,134 @@
+"""Regression tests for isolated, non-fail-fast Python test execution."""
+from __future__ import annotations
+import importlib.util
+import json
+import subprocess
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+
+ROOT = Path(__file__).resolve().parents[2]
+SCRIPT = ROOT / "tools/run-python-tests-sharded.py"
+spec = importlib.util.spec_from_file_location("python_test_shard_runner", SCRIPT)
+runner = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(runner)
+
+
+class PythonTestShardRunnerTests(unittest.TestCase):
+    def test_discovery_is_sorted_and_limited_to_test_modules(self):
+        names = runner.discover_modules(ROOT)
+        self.assertEqual(names, sorted(names))
+        self.assertTrue(names)
+        self.assertTrue(all(name.startswith("test_") and name.endswith(".py") for name in names))
+
+    def test_module_pass_requires_exit_zero_and_unittest_summary(self):
+        output = "test_one (sample.Test) ... ok\n\nRan 1 test in 0.001s\n\nOK\n"
+        with patch.object(runner, "run_isolated_command", return_value=(0, output, False)):
+            result = runner.run_module(ROOT, "test_sample.py", 5)
+        self.assertEqual(result["status"], "PASS")
+        self.assertEqual(result["tests"], 1)
+        self.assertEqual(result["exit_code"], 0)
+
+    def test_large_module_can_be_run_in_case_batches(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            test_dir = root / "tools" / "tests"
+            test_dir.mkdir(parents=True)
+            (test_dir / "test_large.py").write_text(
+                "import unittest\nclass DemoTests(unittest.TestCase):\n"
+                "    def test_one(self): pass\n    def test_two(self): pass\n"
+                "    def test_three(self): pass\n", encoding="utf-8"
+            )
+            results = [(0, "Ran 2 tests in 0.001s\n\nOK\n", False), (0, "Ran 1 test in 0.001s\n\nOK\n", False)]
+            with patch.object(runner, "run_isolated_command", side_effect=results) as run:
+                result = runner.run_module(root, "test_large.py", 5, split_large=True, split_threshold=2, group_size=2)
+            self.assertEqual(result["status"], "PASS")
+            self.assertEqual(result["execution_mode"], "case-batched")
+            self.assertEqual(result["tests"], 3)
+            self.assertEqual(len(result["commands"]), 2)
+            self.assertEqual(run.call_count, 2)
+
+    def test_zero_exit_without_unittest_summary_is_not_pass(self):
+        with patch.object(runner, "run_isolated_command", return_value=(0, "no tests discovered", False)):
+            result = runner.run_module(ROOT, "test_empty.py", 5)
+        self.assertEqual(result["status"], "INCOMPLETE")
+
+    def test_timeout_is_recorded_without_raising(self):
+        with patch.object(runner, "run_isolated_command", return_value=(None, "partial", True)):
+            result = runner.run_module(ROOT, "test_slow.py", 1)
+        self.assertEqual(result["status"], "TIMEOUT")
+        self.assertIn("TIMEOUT after 1s", result["output_tail"])
+
+
+    def test_module_timeout_kills_child_process_group(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            tests = root / "tools" / "tests"
+            tests.mkdir(parents=True)
+            (tests / "test_hanging.py").write_text(
+                "import subprocess, sys, time, unittest\n"
+                "class HangingTests(unittest.TestCase):\n"
+                "    def test_child_inherits_pipe(self):\n"
+                "        subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(30)'])\n"
+                "        time.sleep(30)\n",
+                encoding="utf-8",
+            )
+            result = runner.run_module(root, "test_hanging.py", 1)
+            self.assertEqual(result["status"], "TIMEOUT")
+            self.assertEqual(result["exit_code"], None)
+            self.assertIn("TIMEOUT after 1s", result["output_tail"])
+
+    def test_nonzero_exit_is_failure_and_output_is_retained(self):
+        with patch.object(runner, "run_isolated_command", return_value=(2, "FAILED (errors=1)", False)):
+            result = runner.run_module(ROOT, "test_broken.py", 5)
+        self.assertEqual(result["status"], "FAIL")
+        self.assertIn("FAILED", result["output_tail"])
+
+    def test_runner_continues_after_timeout_and_failure(self):
+        records = [
+            {"status": "TIMEOUT", "module": "test_a.py", "tests": 0, "duration_seconds": 1.0},
+            {"status": "PASS", "module": "test_b.py", "tests": 2, "duration_seconds": 0.2},
+        ]
+        with patch.object(runner, "run_module", side_effect=records) as run_one:
+            result = runner.run_modules(ROOT, ["test_a.py", "test_b.py"], 1)
+        self.assertEqual([row["status"] for row in result], ["TIMEOUT", "PASS"])
+        self.assertEqual(run_one.call_count, 2)
+
+    def test_overall_pass_requires_every_module_to_pass(self):
+        stats = runner.summary([
+            {"status": "PASS", "tests": 3, "skipped": 0},
+            {"status": "TIMEOUT", "tests": 0, "skipped": 0},
+        ])
+        self.assertEqual(stats["overall_status"], "INCOMPLETE / FAIL")
+        self.assertEqual(stats["discovered_test_cases"], 3)
+        self.assertEqual(stats["timed_out_modules"], 1)
+
+    def test_checkpoint_persists_partial_results_and_pending_modules(self):
+        with tempfile.TemporaryDirectory() as directory:
+            modules = ["test_a.py", "test_b.py"]
+            result_map = {"test_a.py": {"module": "test_a.py", "status": "PASS", "tests": 2, "skipped": 0,
+                                       "exit_code": 0, "duration_seconds": 0.1, "command": [], "output_tail": ""}}
+            json_path, md_path = runner.write_checkpoint(Path(directory), "2.95.43", "2026-11-23T00:00:00Z", modules, result_map)
+            payload = json.loads(json_path.read_text(encoding="utf-8"))
+            self.assertEqual(payload["summary"]["completed_modules"], 1)
+            self.assertEqual(payload["summary"]["pending_modules"], 1)
+            self.assertEqual(payload["summary"]["overall_status"], "INCOMPLETE / FAIL")
+            self.assertIn("test_b.py", md_path.read_text(encoding="utf-8"))
+
+    def test_checkpoint_resume_retries_nonpass_but_skips_pass(self):
+        statuses = {"test_a.py": {"status": "PASS"}, "test_b.py": {"status": "TIMEOUT"}}
+        self.assertFalse(runner.should_run_module("test_a.py", statuses))
+        self.assertTrue(runner.should_run_module("test_b.py", statuses))
+        self.assertTrue(runner.should_run_module("test_c.py", statuses))
+
+    def test_checkpoint_rejects_changed_inventory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "checkpoint.json"
+            path.write_text(json.dumps({"version": "2.95.43", "modules": ["test_a.py"], "results": []}), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "inventory differs"):
+                runner.load_checkpoint(path, "2.95.43", ["test_a.py", "test_b.py"])
+
+
+if __name__ == "__main__":
+    unittest.main()

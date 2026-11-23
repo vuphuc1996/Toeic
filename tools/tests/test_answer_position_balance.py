@@ -7,6 +7,18 @@ from helpers import PART7_BASELINE_QUESTION_COUNTS_V232
 
 ROOT = Path(__file__).resolve().parents[2]
 
+# Current canonical Listening inventory after v2.95.37 Batch 027.
+# Batch 027 added 32 reserve questions; they must remain excluded from Mock.
+EXPECTED_LISTENING_ELIGIBLE_BY_PART = {
+    'Part 1': 8, 'Part 2': 25, 'Part 3': 39, 'Part 4': 30,
+}
+EXPECTED_LISTENING_RESERVE_BY_PART = {
+    'Part 1': 1, 'Part 2': 36, 'Part 3': 84, 'Part 4': 72,
+}
+EXPECTED_LISTENING_BATCH_027_BY_PART = {
+    'Part 2': 8, 'Part 3': 12, 'Part 4': 12,
+}
+
 
 class AnswerPositionBalanceTests(unittest.TestCase):
     @classmethod
@@ -75,12 +87,43 @@ class AnswerPositionBalanceTests(unittest.TestCase):
                 self.assertEqual(len(q['choiceIds']), 4, item['id'])
                 self.assertEqual(len(set(q['choiceIds'])), 4, item['id'])
                 self.assertIn(q['answerIndex'], range(4), item['id'])
-        historical_listening = [x for x in self.listening if x.get('editorialStatus') != 'reserve-pending-independent-review']
-        reserve_listening = [x for x in self.listening if x.get('editorialStatus') == 'reserve-pending-independent-review']
-        self.assertEqual(sum(len(x.get('questions', [])) for x in historical_listening), 102)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve_listening), 161)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 263)
+        eligible_listening = [
+            x for x in self.listening
+            if not x.get('editorialStatus') or x.get('editorialStatus') == 'approved-for-mock'
+        ]
+        reserve_listening = [
+            x for x in self.listening
+            if x.get('editorialStatus') == 'reserve-pending-independent-review'
+        ]
+        unexpected_statuses = {
+            x.get('editorialStatus') for x in self.listening
+            if x not in eligible_listening and x not in reserve_listening
+        }
+        self.assertFalse(unexpected_statuses, f'Unclassified Listening editorial statuses: {unexpected_statuses}')
+
+        def part_counts(items):
+            counts = Counter()
+            for item in items:
+                counts[item['part']] += len(item.get('questions', []))
+            return counts
+
+        eligible_counts = part_counts(eligible_listening)
+        reserve_counts = part_counts(reserve_listening)
+        self.assertEqual(dict(eligible_counts), EXPECTED_LISTENING_ELIGIBLE_BY_PART)
+        self.assertEqual(dict(reserve_counts), EXPECTED_LISTENING_RESERVE_BY_PART)
+        self.assertEqual(sum(eligible_counts.values()), 102)
+        self.assertEqual(sum(reserve_counts.values()), 193)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 295)
         self.assertEqual(sum(len(x.get('questions', [])) for x in self.reading), 287)
+
+        # Batch 027 added 32 questions in 16 reserve resources. All must remain
+        # pending independent review, not silently become Mock-eligible.
+        batch_027 = [x for x in reserve_listening if x.get('editorialBatch') == '027']
+        self.assertEqual(len(batch_027), 16)
+        batch_027_counts = part_counts(batch_027)
+        self.assertEqual(dict(batch_027_counts), EXPECTED_LISTENING_BATCH_027_BY_PART)
+        self.assertEqual(sum(batch_027_counts.values()), 32)
+        self.assertTrue(all(x.get('editorialStatus') == 'reserve-pending-independent-review' for x in batch_027))
 
     def test_v233_new_part7_answer_balance_keeps_choice_identity(self):
         mapping = json.loads((ROOT / 'tools/answer-position-balance-v2.33.0.json').read_text(encoding='utf-8'))

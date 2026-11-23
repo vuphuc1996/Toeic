@@ -1,12 +1,12 @@
 # Related Glossary Candidate Audit (read-only)
 
 - Vocabulary headwords: **1141**
-- Glossary entries: **527**
+- Glossary entries: **562**
 - Referenced terms: **804**
-- Covered: **516**
-- Missing unique terms: **288** (289 occurrences)
+- Covered: **551**
+- Missing unique terms: **253** (254 occurrences)
 - Missing terms with canonical headword: **0**
-- Definition audit: **304 present / 150 missing / 73 placeholder**
+- Definition audit: **339 present / 150 missing / 73 placeholder**
 
 ## Missing candidate review tiers
 
@@ -14,43 +14,16 @@
 |---|---:|---|---:|
 | disorganize | 2 | no-canonical-headword | 0 |
 | abandonment | 1 | no-canonical-headword | 0 |
-| able | 1 | no-canonical-headword | 0 |
-| accuracy | 1 | no-canonical-headword | 0 |
-| actual | 1 | no-canonical-headword | 0 |
-| administer | 1 | no-canonical-headword | 0 |
-| alert | 1 | no-canonical-headword | 0 |
-| alike | 1 | no-canonical-headword | 0 |
-| appeal | 1 | no-canonical-headword | 0 |
-| article | 1 | no-canonical-headword | 0 |
 | ask for | 1 | no-canonical-headword | 0 |
-| assist | 1 | no-canonical-headword | 0 |
-| assume | 1 | no-canonical-headword | 0 |
-| backer | 1 | no-canonical-headword | 0 |
-| bargaining | 1 | no-canonical-headword | 0 |
-| begin | 1 | no-canonical-headword | 0 |
-| book | 1 | no-canonical-headword | 0 |
-| bring | 1 | no-canonical-headword | 0 |
-| business | 1 | no-canonical-headword | 0 |
-| caller | 1 | no-canonical-headword | 0 |
-| capable | 1 | no-canonical-headword | 0 |
-| car | 1 | no-canonical-headword | 0 |
 | careless | 1 | no-canonical-headword | 0 |
-| carry | 1 | no-canonical-headword | 0 |
 | certainty | 1 | no-canonical-headword | 0 |
 | change | 1 | no-canonical-headword | 0 |
-| characteristic | 1 | no-canonical-headword | 0 |
-| choice | 1 | no-canonical-headword | 0 |
-| clothing | 1 | no-canonical-headword | 0 |
 | comments | 1 | no-canonical-headword | 0 |
 | communicate with | 1 | no-canonical-headword | 0 |
-| company | 1 | no-canonical-headword | 0 |
-| comparable | 1 | no-canonical-headword | 0 |
 | compete | 1 | no-canonical-headword | 0 |
 | compliment | 1 | no-canonical-headword | 0 |
-| compute | 1 | no-canonical-headword | 0 |
 | conformity | 1 | no-canonical-headword | 0 |
 | connection | 1 | no-canonical-headword | 0 |
-| consequence | 1 | no-canonical-headword | 0 |
 | conserve | 1 | no-canonical-headword | 0 |
 | consideration | 1 | no-canonical-headword | 0 |
 | consistent | 1 | no-canonical-headword | 0 |
@@ -58,34 +31,26 @@
 | contain | 1 | no-canonical-headword | 0 |
 | continuity | 1 | no-canonical-headword | 0 |
 | conversion | 1 | no-canonical-headword | 0 |
-| currency | 1 | no-canonical-headword | 0 |
 | customs duty | 1 | no-canonical-headword | 0 |
 | debit | 1 | no-canonical-headword | 0 |
-| declaration | 1 | no-canonical-headword | 0 |
 | defeat | 1 | no-canonical-headword | 0 |
 | demote | 1 | no-canonical-headword | 0 |
 | description | 1 | no-canonical-headword | 0 |
 | destroy | 1 | no-canonical-headword | 0 |
 | destruction | 1 | no-canonical-headword | 0 |
 | details | 1 | no-canonical-headword | 0 |
-| development | 1 | no-canonical-headword | 0 |
 | disagree | 1 | no-canonical-headword | 0 |
 | disappoint | 1 | no-canonical-headword | 0 |
 | discussion | 1 | no-canonical-headword | 0 |
 | disservice | 1 | no-canonical-headword | 0 |
 | distant | 1 | no-canonical-headword | 0 |
-| disturbance | 1 | no-canonical-headword | 0 |
-| down payment | 1 | no-canonical-headword | 0 |
 | downgrade | 1 | no-canonical-headword | 0 |
 | driver | 1 | no-canonical-headword | 0 |
-| eager | 1 | no-canonical-headword | 0 |
 | earning capacity | 1 | no-canonical-headword | 0 |
 | employees | 1 | no-canonical-headword | 0 |
 | endure | 1 | no-canonical-headword | 0 |
 | engineer | 1 | no-canonical-headword | 0 |
-| entire | 1 | no-canonical-headword | 0 |
 | entry-level | 1 | no-canonical-headword | 0 |
-| eventuality | 1 | no-canonical-headword | 0 |
 | example | 1 | no-canonical-headword | 0 |
 | exclude | 1 | no-canonical-headword | 0 |
 | execution | 1 | no-canonical-headword | 0 |
@@ -112,11 +77,46 @@
 | framework | 1 | no-canonical-headword | 0 |
 | free | 1 | no-canonical-headword | 0 |
 | garbage | 1 | no-canonical-headword | 0 |
+| general | 1 | no-canonical-headword | 0 |
+| group | 1 | no-canonical-headword | 0 |
+| grow | 1 | no-canonical-headword | 0 |
+| growth | 1 | no-canonical-headword | 0 |
+| handy | 1 | no-canonical-headword | 0 |
+| help | 1 | no-canonical-headword | 0 |
+| hesitate | 1 | no-canonical-headword | 0 |
+| high-ranking | 1 | no-canonical-headword | 0 |
+| hinder | 1 | no-canonical-headword | 0 |
+| hold-up | 1 | no-canonical-headword | 0 |
+| illegal | 1 | no-canonical-headword | 0 |
+| important | 1 | no-canonical-headword | 0 |
+| improvement | 1 | no-canonical-headword | 0 |
+| improvisation | 1 | no-canonical-headword | 0 |
+| in agreement | 1 | no-canonical-headword | 0 |
+| inability | 1 | no-canonical-headword | 0 |
+| incomplete | 1 | no-canonical-headword | 0 |
+| inconvenient | 1 | no-canonical-headword | 0 |
+| ineffective | 1 | no-canonical-headword | 0 |
+| inefficient | 1 | no-canonical-headword | 0 |
+| initial | 1 | no-canonical-headword | 0 |
+| inside | 1 | no-canonical-headword | 0 |
+| insignificant | 1 | no-canonical-headword | 0 |
+| inspire | 1 | no-canonical-headword | 0 |
+| intellectual property right | 1 | no-canonical-headword | 0 |
+| intensify | 1 | no-canonical-headword | 0 |
+| intermediation | 1 | no-canonical-headword | 0 |
+| interruption | 1 | no-canonical-headword | 0 |
+| invalid | 1 | no-canonical-headword | 0 |
+| investigation | 1 | no-canonical-headword | 0 |
+| irregular | 1 | no-canonical-headword | 0 |
+| irresponsibility | 1 | no-canonical-headword | 0 |
+| jeopardize | 1 | no-canonical-headword | 0 |
+| job | 1 | no-canonical-headword | 0 |
+| later | 1 | no-canonical-headword | 0 |
 
 ## Definition audit
 
 - Missing English definitions: **150**
 - Placeholder definitions: **73**
-- Non-placeholder definitions: **304**
+- Non-placeholder definitions: **339**
 
 > Audit-only: candidate tiers and canonical previews are review aids, not permission to copy meanings. No vocabulary or glossary data is modified.

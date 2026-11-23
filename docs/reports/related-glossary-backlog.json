@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "glossaryCount": 527,
-  "uniqueUnglossedTerms": 288,
-  "uncoveredReferenceCount": 289,
+  "glossaryCount": 567,
+  "uniqueUnglossedTerms": 248,
+  "uncoveredReferenceCount": 249,
   "terms": [
     {
       "term": "disorganize",
@@ -16,276 +16,6 @@
       ]
     },
     {
-      "term": "administer",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "manage"
-      ]
-    },
-    {
-      "term": "alert",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "remind"
-      ]
-    },
-    {
-      "term": "alike",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "similar"
-      ]
-    },
-    {
-      "term": "appeal",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "solicitation"
-      ]
-    },
-    {
-      "term": "article",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "item"
-      ]
-    },
-    {
-      "term": "ask for",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "request"
-      ]
-    },
-    {
-      "term": "assist",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "support"
-      ]
-    },
-    {
-      "term": "assume",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "undertake"
-      ]
-    },
-    {
-      "term": "backer",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "sponsor"
-      ]
-    },
-    {
-      "term": "bargaining",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "negotiation"
-      ]
-    },
-    {
-      "term": "begin",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "embark"
-      ]
-    },
-    {
-      "term": "book",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "reserve"
-      ]
-    },
-    {
-      "term": "bring",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "deliver"
-      ]
-    },
-    {
-      "term": "business",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "commercial"
-      ]
-    },
-    {
-      "term": "caller",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "visitor"
-      ]
-    },
-    {
-      "term": "capable",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "efficient"
-      ]
-    },
-    {
-      "term": "car",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "vehicle"
-      ]
-    },
-    {
-      "term": "carry",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "transport"
-      ]
-    },
-    {
-      "term": "change",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "transition"
-      ]
-    },
-    {
-      "term": "characteristic",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "feature"
-      ]
-    },
-    {
-      "term": "choice",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "option"
-      ]
-    },
-    {
-      "term": "clothing",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "attire"
-      ]
-    },
-    {
-      "term": "comments",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "feedback"
-      ]
-    },
-    {
-      "term": "communicate with",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "contact"
-      ]
-    },
-    {
-      "term": "company",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "employer"
-      ]
-    },
-    {
-      "term": "comparable",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "similar"
-      ]
-    },
-    {
-      "term": "compute",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "calculate"
-      ]
-    },
-    {
       "term": "conformity",
       "references": 1,
       "synonymReferences": 1,
@@ -293,26 +23,6 @@
       "sourceHeadwordCount": 1,
       "sourceHeadwords": [
         "compliance"
-      ]
-    },
-    {
-      "term": "connection",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "network"
-      ]
-    },
-    {
-      "term": "consequence",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "outcome"
       ]
     },
     {
@@ -376,16 +86,6 @@
       ]
     },
     {
-      "term": "currency",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "cash"
-      ]
-    },
-    {
       "term": "customs duty",
       "references": 1,
       "synonymReferences": 1,
@@ -393,16 +93,6 @@
       "sourceHeadwordCount": 1,
       "sourceHeadwords": [
         "tariff"
-      ]
-    },
-    {
-      "term": "declaration",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "statement"
       ]
     },
     {
@@ -446,16 +136,6 @@
       ]
     },
     {
-      "term": "development",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "progress"
-      ]
-    },
-    {
       "term": "discussion",
       "references": 1,
       "synonymReferences": 1,
@@ -463,36 +143,6 @@
       "sourceHeadwordCount": 1,
       "sourceHeadwords": [
         "negotiation"
-      ]
-    },
-    {
-      "term": "disturbance",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "disruption"
-      ]
-    },
-    {
-      "term": "down payment",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "deposit"
-      ]
-    },
-    {
-      "term": "eager",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "willing"
       ]
     },
     {
@@ -536,16 +186,6 @@
       ]
     },
     {
-      "term": "entire",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "complete"
-      ]
-    },
-    {
       "term": "entry-level",
       "references": 1,
       "synonymReferences": 1,
@@ -553,16 +193,6 @@
       "sourceHeadwordCount": 1,
       "sourceHeadwords": [
         "junior"
-      ]
-    },
-    {
-      "term": "eventuality",
-      "references": 1,
-      "synonymReferences": 1,
-      "antonymReferences": 0,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "contingency"
       ]
     },
     {
@@ -2123,36 +1753,6 @@
       "sourceHeadwordCount": 1,
       "sourceHeadwords": [
         "implementation"
-      ]
-    },
-    {
-      "term": "able",
-      "references": 1,
-      "synonymReferences": 0,
-      "antonymReferences": 1,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "unable"
-      ]
-    },
-    {
-      "term": "accuracy",
-      "references": 1,
-      "synonymReferences": 0,
-      "antonymReferences": 1,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "error"
-      ]
-    },
-    {
-      "term": "actual",
-      "references": 1,
-      "synonymReferences": 0,
-      "antonymReferences": 1,
-      "sourceHeadwordCount": 1,
-      "sourceHeadwords": [
-        "potential"
       ]
     },
     {

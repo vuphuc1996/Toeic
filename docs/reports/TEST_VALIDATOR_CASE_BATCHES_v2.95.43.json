@@ -1,0 +1,316 @@
+[
+  {
+    "batch": 1,
+    "tests": [
+      "ValidatorTests.test_added_ids_are_reported_not_failed",
+      "ValidatorTests.test_allow_remove_permits_intentional_removal",
+      "ValidatorTests.test_appshell_missing_file",
+      "ValidatorTests.test_cache_name_must_match_manifest_version"
+    ],
+    "tests_run": 4,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 6.686,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_added_ids_are_reported_not_failed",
+      "-k",
+      "ValidatorTests.test_allow_remove_permits_intentional_removal",
+      "-k",
+      "ValidatorTests.test_appshell_missing_file",
+      "-k",
+      "ValidatorTests.test_cache_name_must_match_manifest_version",
+      "-v"
+    ]
+  },
+  {
+    "batch": 2,
+    "tests": [
+      "ValidatorTests.test_cache_name_prefix_is_enforced",
+      "ValidatorTests.test_cefr_out_of_range",
+      "ValidatorTests.test_duplicate_example_sentence",
+      "ValidatorTests.test_duplicate_headword_is_structural_error"
+    ],
+    "tests_run": 4,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 5.897,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_cache_name_prefix_is_enforced",
+      "-k",
+      "ValidatorTests.test_cefr_out_of_range",
+      "-k",
+      "ValidatorTests.test_duplicate_example_sentence",
+      "-k",
+      "ValidatorTests.test_duplicate_headword_is_structural_error",
+      "-v"
+    ]
+  },
+  {
+    "batch": 3,
+    "tests": [
+      "ValidatorTests.test_duplicate_id_is_structural_error",
+      "ValidatorTests.test_every_sense_requires_its_own_example",
+      "ValidatorTests.test_example_sense_index_must_be_in_range",
+      "ValidatorTests.test_init_refuses_to_overwrite_existing_baseline"
+    ],
+    "tests_run": 4,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 6.184,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_duplicate_id_is_structural_error",
+      "-k",
+      "ValidatorTests.test_every_sense_requires_its_own_example",
+      "-k",
+      "ValidatorTests.test_example_sense_index_must_be_in_range",
+      "-k",
+      "ValidatorTests.test_init_refuses_to_overwrite_existing_baseline",
+      "-v"
+    ]
+  },
+  {
+    "batch": 4,
+    "tests": [
+      "ValidatorTests.test_init_refuses_when_structural_errors_exist",
+      "ValidatorTests.test_invalid_ipa_character",
+      "ValidatorTests.test_ipa_missing_counter_includes_absent_phonetic_object",
+      "ValidatorTests.test_ipa_missing_counter_includes_missing_us_key"
+    ],
+    "tests_run": 4,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 5.409,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_init_refuses_when_structural_errors_exist",
+      "-k",
+      "ValidatorTests.test_invalid_ipa_character",
+      "-k",
+      "ValidatorTests.test_ipa_missing_counter_includes_absent_phonetic_object",
+      "-k",
+      "ValidatorTests.test_ipa_missing_counter_includes_missing_us_key",
+      "-v"
+    ]
+  },
+  {
+    "batch": 5,
+    "tests": [
+      "ValidatorTests.test_legacy_defect_in_baseline_is_warning",
+      "ValidatorTests.test_manifest_letters_must_stay_an_array",
+      "ValidatorTests.test_manifest_total_words_wrong",
+      "ValidatorTests.test_missing_baseline_makes_ids_check_fail"
+    ],
+    "tests_run": 4,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 5.328,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_legacy_defect_in_baseline_is_warning",
+      "-k",
+      "ValidatorTests.test_manifest_letters_must_stay_an_array",
+      "-k",
+      "ValidatorTests.test_manifest_total_words_wrong",
+      "-k",
+      "ValidatorTests.test_missing_baseline_makes_ids_check_fail",
+      "-v"
+    ]
+  },
+  {
+    "batch": 6,
+    "tests": [
+      "ValidatorTests.test_missing_id_against_baseline_is_error",
+      "ValidatorTests.test_missing_optional_cache_asset_is_not_a_structural_error",
+      "ValidatorTests.test_missing_required_field",
+      "ValidatorTests.test_new_defect_not_hidden_by_equal_count"
+    ],
+    "tests_run": 4,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 5.686,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_missing_id_against_baseline_is_error",
+      "-k",
+      "ValidatorTests.test_missing_optional_cache_asset_is_not_a_structural_error",
+      "-k",
+      "ValidatorTests.test_missing_required_field",
+      "-k",
+      "ValidatorTests.test_new_defect_not_hidden_by_equal_count",
+      "-v"
+    ]
+  },
+  {
+    "batch": 7,
+    "tests": [
+      "ValidatorTests.test_new_defect_outside_baseline_is_error",
+      "ValidatorTests.test_normal_run_never_modifies_baseline",
+      "ValidatorTests.test_rule_drift_is_error",
+      "ValidatorTests.test_template_examples_detected_by_repetition"
+    ],
+    "tests_run": 4,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 6.533,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_new_defect_outside_baseline_is_error",
+      "-k",
+      "ValidatorTests.test_normal_run_never_modifies_baseline",
+      "-k",
+      "ValidatorTests.test_rule_drift_is_error",
+      "-k",
+      "ValidatorTests.test_template_examples_detected_by_repetition",
+      "-v"
+    ]
+  },
+  {
+    "batch": 8,
+    "tests": [
+      "ValidatorTests.test_tighten_refuses_when_new_debt_exists_and_never_adds",
+      "ValidatorTests.test_tighten_removes_only_resolved_entries",
+      "ValidatorTests.test_unknown_topic",
+      "ValidatorTests.test_unlisted_asset_in_baseline_is_warning"
+    ],
+    "tests_run": 4,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 6.803,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_tighten_refuses_when_new_debt_exists_and_never_adds",
+      "-k",
+      "ValidatorTests.test_tighten_removes_only_resolved_entries",
+      "-k",
+      "ValidatorTests.test_unknown_topic",
+      "-k",
+      "ValidatorTests.test_unlisted_asset_in_baseline_is_warning",
+      "-v"
+    ]
+  },
+  {
+    "batch": 9,
+    "tests": [
+      "ValidatorTests.test_unlisted_asset_is_new_error",
+      "ValidatorTests.test_valid_repo_passes",
+      "ValidatorTests.test_verb_forms_v1_must_match_headword",
+      "ValidatorTests.test_verb_sense_requires_collocations"
+    ],
+    "tests_run": 4,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 5.761,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_unlisted_asset_is_new_error",
+      "-k",
+      "ValidatorTests.test_valid_repo_passes",
+      "-k",
+      "ValidatorTests.test_verb_forms_v1_must_match_headword",
+      "-k",
+      "ValidatorTests.test_verb_sense_requires_collocations",
+      "-v"
+    ]
+  },
+  {
+    "batch": 10,
+    "tests": [
+      "ValidatorTests.test_verb_sense_requires_verb_forms",
+      "ValidatorTests.test_wrong_type_examples_is_structural_error"
+    ],
+    "tests_run": 2,
+    "exit_code": 0,
+    "status": "PASS",
+    "duration_seconds": 2.717,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-p",
+      "test_validator.py",
+      "-k",
+      "ValidatorTests.test_verb_sense_requires_verb_forms",
+      "-k",
+      "ValidatorTests.test_wrong_type_examples_is_structural_error",
+      "-v"
+    ]
+  }
+]

@@ -1,0 +1,122 @@
+{
+  "batch": "036",
+  "release": "2.95.43",
+  "title": "Cambridge-indexed Related Glossary A–C coverage expansion — 11 relation targets",
+  "count": 11,
+  "editorialStatus": "Cambridge Dictionary indexed entry excerpts reviewed 2026-11-23; direct entry pages returned HTTP 403; concise English definitions paraphrased; Vietnamese glosses curated; independent editorial review remains pending.",
+  "sourcePolicy": "Each new record links to its exact Cambridge Dictionary headword page. Definitions are paraphrases of indexed Cambridge excerpts; direct pages could not be fetched (HTTP 403). No Cambridge examples copied. Relation arrays and canonical vocabulary are not changed.",
+  "canonicalVocabularySha256": "8c35a6fce159d056832f1e7c6ab395a5dd1d1b34d94e371cb464d6ae1bef11a2",
+  "protectedLearningBankSha256": "4c90ec8718784a8a73e8c357a279ceeabcc339a961fd78ca118f019a930141d9",
+  "records": [
+    {
+      "term": "able",
+      "meaning_vi_preserved": "có thể; đủ khả năng hoặc điều kiện để làm việc gì",
+      "pos": "adj",
+      "definition_en": "having the strength, skill, time, money, or opportunity needed to do something; also skilled at what one does",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/able"
+      ]
+    },
+    {
+      "term": "accuracy",
+      "meaning_vi_preserved": "độ chính xác; tính đúng đắn",
+      "pos": "n",
+      "definition_en": "the quality of being exact or correct, or the ability to do something without mistakes",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/accuracy"
+      ]
+    },
+    {
+      "term": "actual",
+      "meaning_vi_preserved": "thực tế; có thật; đúng thực tế",
+      "pos": "adj",
+      "definition_en": "existing in fact or real, rather than imagined, expected, or planned",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/actual"
+      ]
+    },
+    {
+      "term": "assume",
+      "meaning_vi_preserved": "cho rằng (chưa có chứng cứ); đảm nhận",
+      "pos": "v",
+      "definition_en": "to accept something as true without proof, or to take on responsibility or control",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/assume"
+      ]
+    },
+    {
+      "term": "business",
+      "meaning_vi_preserved": "kinh doanh; hoạt động thương mại; doanh nghiệp",
+      "pos": "n",
+      "definition_en": "the activity of buying and selling goods or services, or an organization that does this",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/business"
+      ]
+    },
+    {
+      "term": "caller",
+      "meaning_vi_preserved": "người gọi điện (đến)",
+      "pos": "n",
+      "definition_en": "a person who makes a telephone call",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/caller"
+      ]
+    },
+    {
+      "term": "capable",
+      "meaning_vi_preserved": "có năng lực; có khả năng",
+      "pos": "adj",
+      "definition_en": "able to do something effectively and skillfully or to achieve results",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/capable"
+      ]
+    },
+    {
+      "term": "car",
+      "meaning_vi_preserved": "xe ô tô",
+      "pos": "n",
+      "definition_en": "a road vehicle with an engine, usually four wheels, and seats for a small number of people",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/car"
+      ]
+    },
+    {
+      "term": "carry",
+      "meaning_vi_preserved": "mang; vận chuyển; chở",
+      "pos": "v",
+      "definition_en": "to hold or move a person or thing from one place to another",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/carry"
+      ]
+    },
+    {
+      "term": "choice",
+      "meaning_vi_preserved": "sự lựa chọn; quyền lựa chọn; các lựa chọn",
+      "pos": "n",
+      "definition_en": "the act or possibility of choosing, or a range of things available to choose from",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/choice"
+      ]
+    },
+    {
+      "term": "company",
+      "meaning_vi_preserved": "công ty; doanh nghiệp",
+      "pos": "n",
+      "definition_en": "an organization that sells goods or services in order to make money",
+      "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/company"
+      ]
+    }
+  ]
+}

@@ -224,7 +224,12 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         self.assertEqual(len(patch["operations"]), 4)
         for entry in batch["records"]:
             current = related[entry["term"].casefold()]
-            self.assertEqual(current, entry)
+            # Later canonical-sense enrichment may add traceability metadata to an
+            # existing related gloss without changing the original Batch 018 fields.
+            for key, value in entry.items():
+                self.assertEqual(current.get(key), value, f"{entry['term']}: {key}")
+            extra = set(current) - set(entry)
+            self.assertLessEqual(extra, {"sourceHeadword", "sourceRelease", "sourceSenseIndex"})
             self.assertTrue(entry["meaning_vi"])
             self.assertTrue(entry["sourceUrls"])
             self.assertTrue(all(url.startswith("https://dictionary.cambridge.org/") for url in entry["sourceUrls"]))

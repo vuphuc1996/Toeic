@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-038-v2.95.45",
+  "baseFileSha256": "73b6027fa3a639b1d2c9a1443b528f02562f91e001de9414ef1275d96c28b0af",
+  "operations": [
+    {
+      "term": "ask for",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "ask for",
+        "meaning_vi": "yêu cầu; đề nghị cung cấp",
+        "pos": "v phr",
+        "definition_en": "to request that someone give or provide something",
+        "source": "Cambridge Dictionary (request sense of the existing phrasal form \"ask for\"; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/ask"
+        ]
+      }
+    },
+    {
+      "term": "change",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "change",
+        "meaning_vi": "sự thay đổi; sự chuyển đổi",
+        "pos": "n",
+        "definition_en": "the process of becoming different, or the result of something becoming different",
+        "source": "Cambridge Dictionary (noun sense selected for the existing canonical synonym anchor \"transition\"; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/change"
+        ]
+      }
+    },
+    {
+      "term": "comments",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "comments",
+        "meaning_vi": "các nhận xét; ý kiến phản hồi",
+        "pos": "n pl",
+        "definition_en": "remarks or opinions that someone expresses about a subject or situation",
+        "source": "Cambridge Dictionary (plural form of \"comment\"; opinion/remark sense selected for the existing canonical relation anchor \"feedback\"; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/comment"
+        ]
+      }
+    },
+    {
+      "term": "communicate with",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "communicate with",
+        "meaning_vi": "liên lạc với; trao đổi thông tin với",
+        "pos": "v phr",
+        "definition_en": "to share information or exchange messages with a person or group",
+        "source": "Cambridge Dictionary (share-information sense of \"communicate with\"; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/communicate"
+        ]
+      }
+    },
+    {
+      "term": "connection",
+      "expect": {
+        "absent": true
+      },
+      "new": {
+        "term": "connection",
+        "meaning_vi": "mối liên hệ; sự kết nối",
+        "pos": "n",
+        "definition_en": "the state of being related to someone or something else",
+        "source": "Cambridge Dictionary (relation sense selected for the existing canonical relation target \"network\"; other joining/phone/transport senses are not selected here; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/connection"
+        ]
+      }
+    }
+  ]
+}

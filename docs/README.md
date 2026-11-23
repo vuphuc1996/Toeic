@@ -1,14 +1,18 @@
-# TOEIC Dictionary v2.95.40 — Project Documentation
+# TOEIC Dictionary v2.95.45 — Project Documentation
 
-## Current candidate — v2.95.40
+## Current candidate — v2.95.45
 
-- Reconciled Major Release Quality Audit 025: the old 519 test expectation belonged to the pre-Batch-033 snapshot. The current canonical source has 527 raw glossary rows, 527 normalized unique terms and 0 duplicate normalized terms.
-- Updated the audit generator to expose raw rows, unique terms and duplicate rows separately; corrected regression to derive counts from canonical source. Current glossary: 527 raw / 527 unique / 0 duplicates.
-- Batch 034 corrected the existing `revision` English gloss to match its current exact canonical single-sense entry; Vietnamese meaning, POS and original provenance are preserved. Added a SHA-guarded atomic update utility and 6 regression tests.
-- Batch 033 additions (ability, acceptable, action, accusation, advertise, advise, allow and announce) remain included with source provenance; independent editorial review remains pending.
-- Current reports: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.40.md`, `reports/COMMAND_LOG_INDEX_v2.95.40.md`, `reports/AUDIT025_GLOSSARY_RECONCILIATION_v2.95.40.md`, `reports/MAJOR_RELEASE_QUALITY_AUDIT_v2.95.40.md`. No learner records or IndexedDB schema changed.
-- Full Source package contains 587 files; archive CRC and 587/587 source comparison PASS.
+- Reconciles the owner-supplied alternate v2.95.44 FullSource with the released v2.95.44 source. The alternate source has 683 files versus 664 in the release; its 46 exclusive, 27 release-exclusive and 43 changed common paths were reviewed. It is not used as a wholesale replacement.
+- Adopted the isolated Python test-shard runner and the reproducible release-acceptance runner from the alternate source. The acceptance runner now defaults its report version from `data/manifest.json`, rather than a stale hard-coded version. Checkpoints are versioned and inventory-guarded; timeout/failure/incomplete results are never treated as PASS.
+- Related Glossary Batch 038 adds five verified existing relation targets: `ask for`, `change`, `comments`, `communicate with` and `connection`. Three existing entries were sense-corrected against their existing relation anchors: `caller` → visitor sense, `article` → object/item sense, `assume` → responsibility/control sense. The existing synonym/antonym arrays were not changed.
+- Glossary: **567 entries / 567 normalized unique / 0 duplicates**; **556/804** exact relation targets covered (**69.2%**); **248 unique terms / 249 occurrences** remain uncovered. `consideration` from the alternate source was not merged because its noun POS does not directly match the linked verb `consider`; retain it for editorial review.
+- No canonical vocabulary headwords/IDs, relation arrays, question/choice IDs, answer keys, learner IndexedDB data/schema, Mock eligibility, Robot Buddy boundary or UI layout changed. No Cloudflare/backend was added.
+- Current reports: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.45.md`, `reports/COMMAND_LOG_INDEX_v2.95.45.md`, `reports/TOEIC_GLOSSARY_BATCH_038_v2.95.45.md`, `reports/COMPARE_MERGE_REVIEW_v2.95.45.md`, `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.45.md` and `reports/RELEASE_ACCEPTANCE_v2.95.45.md`.
+- Remote GitHub Actions, GitHub Pages deployment/cache and physical browser/device acceptance remain unverified; content is provisional pending independent editorial review.
 
+## Previous release — v2.95.44
+
+- Related Glossary Batch 037 added 16 Cambridge Dictionary-sourced relation-target glosses. See `reports/TOEIC_GLOSSARY_BATCH_037_v2.95.44.md` and the v2.95.44 FullSource/Patch release records.
 
 ## Source of truth
 
@@ -39,7 +43,7 @@
 |---|---:|
 | Vocabulary | 1,141 headwords across A–Z |
 | US IPA coverage | 1,062/1,141 headwords (93.1%; 79 still blank, independent phonetic review pending) |
-| Related-term glossary | 527 entries (516/804 exact referenced-term join; 288 unique relation terms remain uncovered; 73 placeholder definitions; independent lexical review pending) |
+| Related-term glossary | 567 entries (556/804 exact referenced-term join; 248 unique relation terms / 249 occurrences remain uncovered; 150 missing English definitions, 73 placeholders; independent lexical review pending) |
 | Grammar | 58 lessons / 169 exercises |
 | TOEIC Listening | 145 units / 295 questions |
 | TOEIC Reading | 73 resources / 287 questions |
@@ -53,14 +57,14 @@ Counts describe source inventory, not editorial approval, learner completion, ma
 - Continued Batch 027 in the related-term glossary: 23 Cambridge-referenced Vietnamese lookup glosses were added for terms already used by canonical synonym/antonym relations. The 23 records include the additional source-verified terms `maximum`, `different`, `determine` and `approach`; `disorganize` remains deferred because the direct dictionary-definition source requirement was not met.
 - Glossary inventory increases from 400 to 423. Exact case-insensitive coverage rises from 389/804 (48.4%) to 412/804 (51.2%); occurrence coverage rises from 598/1,037 (57.7%) to 644/1,037 (62.1%). Remaining: 392 distinct terms / 393 occurrences.
 - Canonical headwords and stable IDs, synonym/antonym relations, learning content, learner records and UI/layout are unchanged. New glossary entries remain provisional pending independent lexical review.
-- Focused local checks and all 39 JavaScript suites pass; aggregate Python discovery remains incomplete due to the execution limit. Remote CI, deployment and browser/device acceptance are not claimed. See `reports/CHANGE_MANIFEST_v2.95.23.md`, `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.21.md` and `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.23.md`.
+- Focused local checks and all 39 JavaScript suites pass; aggregate Python discovery remains incomplete due to the execution limit. Remote CI, deployment and browser/device acceptance are not claimed. See `reports/CHANGE_MANIFEST_v2.95.23.md`, `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.21.md` and `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.42.md`.
 
 ## v2.95.18 candidate content update
 
 - Added source-checked US IPA for 13 existing single-pronunciation headwords: `accountable`, `admission`, `backlog`, `carrier`, `confidentiality`, `creditor`, `credential`, `designation`, `documentation`, `duration`, `eligible`, `emerge` and `exemption`.
 - US IPA coverage rises from 1,048/1,141 (91.8%) to 1,061/1,141 (93.0%). The remaining 80 blanks are not guessed; polysemous entries with POS-specific pronunciation variants require separate review.
 - Only the existing `phonetic.us` field changed. No headword, ID, topic, learning content, answer key, learner data, or UI layout was changed. Independent phonetic review remains pending.
-- See `reports/US_IPA_BACKFILL_v2.95.18.md`, `reports/CHANGE_MANIFEST_v2.95.18.md`, `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.18.md` and `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.23.md`.
+- See `reports/US_IPA_BACKFILL_v2.95.18.md`, `reports/CHANGE_MANIFEST_v2.95.18.md`, `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.18.md` and `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.42.md`.
 
 ## v2.95.17 candidate content update
 
@@ -106,22 +110,23 @@ Counts describe source inventory, not editorial approval, learner completion, ma
 
 ## Current release artifacts
 
-- Previous Claude review package manifest: `reports/CHANGE_MANIFEST_v2.95.13.md` (submitted by the owner; result pending). Current release change manifest: `reports/CHANGE_MANIFEST_v2.95.23.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.40.md`.
-- Current Robot Buddy behavior report: `reports/ROBOT_BUDDY_v2.95.9.md`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.40.md`.
-- Current independent-review queue: `reports/TOEIC_INDEPENDENT_REVIEW_QUEUE_v2.95.21.md` (280 pending item-level decisions).
-- Current manual acceptance checklist: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md` (22 items; all remain Chưa kiểm).
-- CSS design-token ratchet report: `reports/DESIGN_TOKEN_AUDIT_BASELINE_v2.95.11.md`.
-- Current generated progress snapshot: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.23.md`.
-- Current US IPA backfill report: `reports/US_IPA_BACKFILL_v2.95.18.md`. Latest glossary expansion report: `reports/VOCABULARY_GLOSSARY_EXPANSION_v2.95.21.md`.
-- Current editorial evidence audit: `reports/TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.95.21.md`.
-- Previous vocabulary sense-expansion report: `reports/VOCABULARY_SENSE_EXPANSION_v2.95.13.md`.
-- Current distractor structural audit: `reports/TOEIC_DISTRACTOR_AUDIT_v2.95.19.md` (latest inherited audit).
-- Current Foundation A2 assessment audit: `reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.95.18.md`.
-- Current Listening readiness audit: `reports/TOEIC_LISTENING_READINESS_v2.95.19.md` (latest inherited audit).
-- Latest inherited content coverage audit: `reports/TOEIC_CONTENT_COVERAGE_v2.95.19.md` (latest inherited content coverage audit; no new content coverage audit generated in v2.95.21).
-- Previous release report and acceptance checklist remain available for comparison under the v2.95.9 names.
+- Current release comparison: `reports/COMPARE_MERGE_REVIEW_v2.95.45.md`.
+- Current release change manifest: `reports/CHANGE_MANIFEST_v2.95.45.md`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.45.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.45.md`.
+- Current release acceptance status: `reports/RELEASE_ACCEPTANCE_v2.95.45.md` (full Python suite incomplete; do not infer aggregate PASS).
+- Current project progress: `reports/PROJECT_PROGRESS_SNAPSHOT_v2.95.45.md`.
+- Current glossary batch report: `reports/TOEIC_GLOSSARY_BATCH_038_v2.95.45.md`.
+- Current related-term candidate/backlog/quality audits: `reports/RELATED_GLOSSARY_CANDIDATE_AUDIT_v2.95.45.md`, `reports/RELATED_GLOSSARY_BACKLOG.md` and `reports/RELATED_GLOSSARY_QUALITY_FLAGS_v2.95.45.md`.
+- Current relationship graph audit: `reports/VOCABULARY_RELATIONSHIP_GRAPH_AUDIT_v2.95.45.md`.
+- Current content/listening/distractor audits: `reports/TOEIC_CONTENT_COVERAGE_v2.95.45.md`, `reports/TOEIC_LISTENING_READINESS_v2.95.45.md`, `reports/TOEIC_DISTRACTOR_AUDIT_v2.95.45.md`.
+- Current Full Source and Patch: `TOEIC_Dictionary_v2.95.45_FullSource.zip` and `TOEIC_Dictionary_v2.95.45_Patch.zip` (the Patch is based on released v2.95.44).
+- Current independent-review queue: `reports/TOEIC_INDEPENDENT_REVIEW_QUEUE_v2.95.45.md` (360 pending decisions; Listening 193, Part 7 87, Part 5 80).
+- Current manual acceptance checklist: `reports/MANUAL_ACCEPTANCE_CHECKLIST.md`; physical browser/device items remain unverified.
+- CSS design-token baseline: `reports/DESIGN_TOKEN_AUDIT_BASELINE_v2.95.11.md`.
+- Current editorial evidence audit: `reports/TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.95.45.md`.
+- Current Foundation A2 assessment audit: `reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v2.95.45.md`.
+
 
 ## Documentation policy
 

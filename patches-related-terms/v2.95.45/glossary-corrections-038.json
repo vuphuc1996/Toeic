@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-sense-corrections-038-v2.95.45",
+  "baseFileSha256": "c6ff5f9b0f606ba7b40ef2e76263f39094598b407841a85bdafba67f7f681a19",
+  "operations": [
+    {
+      "term": "caller",
+      "expect": {
+        "meaning_vi": "người gọi điện (đến)",
+        "pos": "n",
+        "definition_en": "a person who makes a telephone call",
+        "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/caller"
+        ]
+      },
+      "set": {
+        "meaning_vi": "người đến thăm; khách ghé thăm",
+        "pos": "n",
+        "definition_en": "a person who visits a house or building",
+        "source": "Cambridge Dictionary (visitor sense selected to match the existing canonical synonym anchor \"visitor\"; Cambridge entry also lists a phone-caller sense; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/caller"
+        ]
+      }
+    },
+    {
+      "term": "article",
+      "expect": {
+        "meaning_vi": "món/đồ vật; bài viết",
+        "pos": "n",
+        "definition_en": "a particular item or thing, or a piece of writing about a subject",
+        "source": "Cambridge Dictionary (indexed entry excerpt reviewed 2026-11-22)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/article"
+        ]
+      },
+      "set": {
+        "meaning_vi": "món đồ; vật phẩm; mặt hàng",
+        "pos": "n",
+        "definition_en": "a particular object, especially one among several things of a similar type or in the same place",
+        "source": "Cambridge Dictionary (object sense selected to match the existing canonical synonym anchor \"item\"; other newspaper/grammar senses are not selected here; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/article"
+        ]
+      }
+    },
+    {
+      "term": "assume",
+      "expect": {
+        "meaning_vi": "cho rằng (chưa có chứng cứ); đảm nhận",
+        "pos": "v",
+        "definition_en": "to accept something as true without proof, or to take on responsibility or control",
+        "source": "Cambridge Dictionary (indexed entry excerpts reviewed 2026-11-23; direct entry fetch returned HTTP 403)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/assume"
+        ]
+      },
+      "set": {
+        "meaning_vi": "đảm nhận; nhận trách nhiệm",
+        "pos": "v",
+        "definition_en": "to take on responsibility, control, or a particular role",
+        "source": "Cambridge Business English Dictionary (responsibility/control sense selected to match the existing canonical synonym anchor \"undertake\"; the separate accept-as-true sense is not selected here; verified 2026-11-23; definition paraphrased; independent editorial review pending)",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/assume"
+        ]
+      }
+    }
+  ]
+}

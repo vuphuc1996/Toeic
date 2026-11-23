@@ -1,13 +1,18 @@
-# Current Version — TOEIC Dictionary v2.95.40
-- Current source: **v2.95.40**.
-- Release package: `TOEIC_Dictionary_v2.95.40_FullSource.zip`.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.40.md`.
-- Audit 025: 519 was a stale pre-Batch-033 expectation. Current glossary is 527 raw rows / 527 normalized unique terms / 0 duplicates; the regression now derives its count from canonical data.
-- Batch 034: corrected the existing `revision` English definition to the current exact single-sense canonical definition. Vietnamese meaning, POS, term identity and original source provenance are preserved. Guarded patch + atomic updater + 6 tests.
-- Batch 030 regression now reads only the 26 manifest-listed canonical A–Z files, not editorial batch snapshots; current glossary definitions are checked against current canonical senses.
-- Batch 033 additions remain: ability, acceptable, action, accusation, advertise, advise, allow and announce. Independent editorial review remains pending.
-- Canonical inventory: 1,141 vocabulary headwords; Grammar 58/169; Listening 145/295; Reading 73/287; Part 5 practice 80 (practice-only).
-- Related Glossary: 527 entries; 516/804 referenced unique terms covered (64.2%); 288 unique relation terms / 289 occurrences remain unglossed; 73 placeholder English definitions remain.
-- Full Source package: **587 files**; exact archive-to-source comparison 587/587; ZIP CRC/root/exclusion checks PASS. SHA-256 sidecar verified.
-- Validation evidence: see the v2.95.40 test report and command log. Remote GitHub Actions, GitHub Pages deployment, browser/device acceptance and independent editorial review remain unverified.
-- No UI redesign, canonical headword IDs, relationship arrays, learner records, IndexedDB schema, answer history, Robot Buddy permissions or Mock eligibility changed.
+# Current Version — TOEIC Dictionary v2.95.45
+
+- Current source: **v2.95.45** (alternate QA infrastructure merge + Related Glossary Batch 038).
+- Release package: `TOEIC_Dictionary_v2.95.45_FullSource.zip`.
+- Full Source contains 698 packaged source files; Patch contains 55 overlay entries (21 modified + 34 added).
+- Patch package: `TOEIC_Dictionary_v2.95.45_Patch.zip` (55 overlay entries: 21 modified + 34 added; base: released v2.95.44).
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.45.md`.
+- Command log: `reports/COMMAND_LOG_INDEX_v2.95.45.md`.
+- Change manifest: `reports/CHANGE_MANIFEST_v2.95.45.md`.
+- Comparison report: `reports/COMPARE_MERGE_REVIEW_v2.95.45.md`.
+- Batch 038 adds five relation-target terms and makes three exact-guarded, sense-aligned corrections; details and provenance are in `patches-related-terms/v2.95.45/`.
+- Related Glossary: 567 rows / 567 normalized unique / 0 duplicates; 556/804 relation targets covered (69.2%); 248 unique / 249 occurrences remain unglossed.
+- Added isolated Python test-shard and release acceptance runners. The latter uses the manifest version by default. Full-suite result and acceptance gates are reported with individual statuses; only proven PASS modules are reused on resume.
+- No canonical headword/ID, synonym/antonym relation array, learning question/choice ID, answer key, learner IndexedDB schema/progress, Mock eligibility, Robot Buddy boundary or UI layout changed. No Cloudflare/backend added.
+- Remote GitHub Actions, GitHub Pages deployment/cache, browser/device QA and independent editorial approval remain unverified/pending.
+
+- Focused local validation: 283 Python PASS / 1 environment-dependent SKIP across 35 modules; JavaScript 39/39; syntax 19/19; data/content/repository/version checks PASS. Full Python discovery is INCOMPLETE, not PASS.
+- Acceptance/deployment: combined acceptance run was interrupted by the execution limit; remote GitHub Actions, Pages deployment/cache and physical-device QA remain unverified.

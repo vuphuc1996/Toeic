@@ -1,0 +1,2580 @@
+{
+  "entries": 546,
+  "flagged_entries": 227,
+  "container_issue": null,
+  "issue_counts": {
+    "missing-definition": 150,
+    "missing-pos": 217,
+    "missing-source-provenance": 75,
+    "placeholder-definition": 73,
+    "short-definition-review": 2
+  },
+  "duplicates": [],
+  "priority_counts": {
+    "high": 223,
+    "medium": 2,
+    "low": 2
+  },
+  "flagged": [
+    {
+      "index": 0,
+      "term": "24-hour period",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "khoảng thời gian 24 giờ",
+      "priority": "high"
+    },
+    {
+      "index": 27,
+      "term": "aide",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "trợ lý",
+      "priority": "high"
+    },
+    {
+      "index": 34,
+      "term": "alternative",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "phương án thay thế",
+      "priority": "high"
+    },
+    {
+      "index": 37,
+      "term": "amount",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "lượng; số tiền",
+      "priority": "high"
+    },
+    {
+      "index": 43,
+      "term": "apparatus",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thiết bị; bộ máy",
+      "priority": "high"
+    },
+    {
+      "index": 53,
+      "term": "approximation",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sự ước lượng; giá trị xấp xỉ",
+      "priority": "high"
+    },
+    {
+      "index": 54,
+      "term": "area",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "khu vực; lĩnh vực",
+      "priority": "high"
+    },
+    {
+      "index": 56,
+      "term": "arrive",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "đến; tới nơi",
+      "priority": "high"
+    },
+    {
+      "index": 60,
+      "term": "assertion",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "lời khẳng định",
+      "priority": "high"
+    },
+    {
+      "index": 67,
+      "term": "associate",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "cộng sự",
+      "priority": "high"
+    },
+    {
+      "index": 70,
+      "term": "assurance",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sự đảm bảo; sự cam đoan",
+      "priority": "high"
+    },
+    {
+      "index": 71,
+      "term": "attempt",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sự cố gắng",
+      "priority": "high"
+    },
+    {
+      "index": 72,
+      "term": "attentive",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "chú ý; cẩn thận",
+      "priority": "high"
+    },
+    {
+      "index": 81,
+      "term": "bill",
+      "issues": [
+        "missing-definition"
+      ],
+      "definition_en": "",
+      "meaning_vi": "hóa đơn; dự luật",
+      "priority": "high"
+    },
+    {
+      "index": 86,
+      "term": "business day",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "ngày làm việc",
+      "priority": "high"
+    },
+    {
+      "index": 87,
+      "term": "buy",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "mua",
+      "priority": "high"
+    },
+    {
+      "index": 90,
+      "term": "calendar date",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "ngày cụ thể trên lịch",
+      "priority": "high"
+    },
+    {
+      "index": 91,
+      "term": "calendar month",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "tháng dương lịch",
+      "priority": "high"
+    },
+    {
+      "index": 92,
+      "term": "call off",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "hủy bỏ",
+      "priority": "high"
+    },
+    {
+      "index": 102,
+      "term": "cautious",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "thận trọng",
+      "priority": "high"
+    },
+    {
+      "index": 103,
+      "term": "central office",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "văn phòng trung tâm",
+      "priority": "high"
+    },
+    {
+      "index": 104,
+      "term": "central theme",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "chủ đề chính",
+      "priority": "high"
+    },
+    {
+      "index": 106,
+      "term": "chance",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "cơ hội; khả năng",
+      "priority": "high"
+    },
+    {
+      "index": 107,
+      "term": "charge",
+      "issues": [
+        "missing-definition"
+      ],
+      "definition_en": "",
+      "meaning_vi": "tính phí; khoản phí; phụ trách",
+      "priority": "high"
+    },
+    {
+      "index": 108,
+      "term": "check",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "kiểm tra; tấm séc",
+      "priority": "high"
+    },
+    {
+      "index": 112,
+      "term": "coaching",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "huấn luyện",
+      "priority": "high"
+    },
+    {
+      "index": 114,
+      "term": "collaborator",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "cộng tác viên",
+      "priority": "high"
+    },
+    {
+      "index": 117,
+      "term": "commerce",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "thương mại",
+      "priority": "high"
+    },
+    {
+      "index": 121,
+      "term": "component",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "thành phần; linh kiện",
+      "priority": "high"
+    },
+    {
+      "index": 126,
+      "term": "connect",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "kết nối; liên kết",
+      "priority": "high"
+    },
+    {
+      "index": 129,
+      "term": "constantly",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "liên tục; thường xuyên",
+      "priority": "high"
+    },
+    {
+      "index": 132,
+      "term": "contender",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "đối thủ; ứng viên cạnh tranh",
+      "priority": "high"
+    },
+    {
+      "index": 133,
+      "term": "continually",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "liên tục; không ngừng",
+      "priority": "high"
+    },
+    {
+      "index": 135,
+      "term": "convention",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "hội nghị; quy ước",
+      "priority": "high"
+    },
+    {
+      "index": 137,
+      "term": "conveyance",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "phương tiện vận chuyển",
+      "priority": "high"
+    },
+    {
+      "index": 140,
+      "term": "course",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "lộ trình",
+      "priority": "high"
+    },
+    {
+      "index": 141,
+      "term": "courtyard",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sân trong",
+      "priority": "high"
+    },
+    {
+      "index": 143,
+      "term": "coworker",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "đồng nghiệp",
+      "priority": "high"
+    },
+    {
+      "index": 146,
+      "term": "criterion",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "tiêu chí",
+      "priority": "high"
+    },
+    {
+      "index": 147,
+      "term": "critical",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "quan trọng; mang tính quyết định; nghiêm trọng",
+      "priority": "high"
+    },
+    {
+      "index": 148,
+      "term": "customer",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "khách hàng",
+      "priority": "high"
+    },
+    {
+      "index": 149,
+      "term": "daily",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "hằng ngày",
+      "priority": "high"
+    },
+    {
+      "index": 150,
+      "term": "danger",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "nguy hiểm",
+      "priority": "high"
+    },
+    {
+      "index": 152,
+      "term": "deal",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thỏa thuận; giao dịch",
+      "priority": "high"
+    },
+    {
+      "index": 158,
+      "term": "deny",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "phủ nhận; từ chối",
+      "priority": "high"
+    },
+    {
+      "index": 160,
+      "term": "depot",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "kho; trạm trung chuyển",
+      "priority": "high"
+    },
+    {
+      "index": 163,
+      "term": "diary",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "nhật ký; sổ lịch",
+      "priority": "high"
+    },
+    {
+      "index": 165,
+      "term": "direct",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "hướng dẫn; trực tiếp",
+      "priority": "high"
+    },
+    {
+      "index": 166,
+      "term": "direction",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "hướng; chỉ dẫn",
+      "priority": "high"
+    },
+    {
+      "index": 168,
+      "term": "disadvantage",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "bất lợi; nhược điểm",
+      "priority": "high"
+    },
+    {
+      "index": 170,
+      "term": "discuss",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thảo luận",
+      "priority": "high"
+    },
+    {
+      "index": 171,
+      "term": "dismiss",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "bác bỏ; cho thôi việc",
+      "priority": "high"
+    },
+    {
+      "index": 173,
+      "term": "disperse",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "phân tán; giải tán",
+      "priority": "high"
+    },
+    {
+      "index": 174,
+      "term": "disprove",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "chứng minh là sai; bác bỏ",
+      "priority": "high"
+    },
+    {
+      "index": 176,
+      "term": "distinction",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sự phân biệt",
+      "priority": "high"
+    },
+    {
+      "index": 177,
+      "term": "distinctive",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "đặc trưng",
+      "priority": "high"
+    },
+    {
+      "index": 180,
+      "term": "division",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "bộ phận; sự phân chia",
+      "priority": "high"
+    },
+    {
+      "index": 182,
+      "term": "drawback",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "nhược điểm; bất lợi",
+      "priority": "high"
+    },
+    {
+      "index": 183,
+      "term": "due date",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "ngày đến hạn",
+      "priority": "high"
+    },
+    {
+      "index": 187,
+      "term": "edition",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "phiên bản; ấn bản",
+      "priority": "high"
+    },
+    {
+      "index": 190,
+      "term": "employ",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thuê; tuyển dụng; sử dụng",
+      "priority": "high"
+    },
+    {
+      "index": 194,
+      "term": "endeavor",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "nỗ lực",
+      "priority": "high"
+    },
+    {
+      "index": 195,
+      "term": "endpoint",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "điểm cuối",
+      "priority": "high"
+    },
+    {
+      "index": 197,
+      "term": "engagement",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "cam kết; cuộc hẹn; sự tham gia",
+      "priority": "high"
+    },
+    {
+      "index": 199,
+      "term": "enlist",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "tuyển mộ; đăng ký tham gia",
+      "priority": "high"
+    },
+    {
+      "index": 202,
+      "term": "enter",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "đi vào; nhập dữ liệu",
+      "priority": "high"
+    },
+    {
+      "index": 203,
+      "term": "entry",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "mục nhập; lối vào; sự tham gia",
+      "priority": "high"
+    },
+    {
+      "index": 204,
+      "term": "equilibrium",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "trạng thái cân bằng",
+      "priority": "high"
+    },
+    {
+      "index": 207,
+      "term": "essential",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thiết yếu; cần thiết",
+      "priority": "high"
+    },
+    {
+      "index": 210,
+      "term": "evade",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "né tránh",
+      "priority": "high"
+    },
+    {
+      "index": 211,
+      "term": "every three months",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "ba tháng một lần",
+      "priority": "high"
+    },
+    {
+      "index": 212,
+      "term": "every week",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "mỗi tuần",
+      "priority": "high"
+    },
+    {
+      "index": 213,
+      "term": "examine",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "kiểm tra; xem xét",
+      "priority": "high"
+    },
+    {
+      "index": 215,
+      "term": "execute",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "thực hiện",
+      "priority": "high"
+    },
+    {
+      "index": 220,
+      "term": "falsify",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "làm giả; xuyên tạc",
+      "priority": "high"
+    },
+    {
+      "index": 222,
+      "term": "fee",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "khoản phí",
+      "priority": "high"
+    },
+    {
+      "index": 223,
+      "term": "file",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "tệp; hồ sơ; nộp hồ sơ",
+      "priority": "high"
+    },
+    {
+      "index": 224,
+      "term": "financial institution",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "tổ chức tài chính",
+      "priority": "high"
+    },
+    {
+      "index": 225,
+      "term": "fire",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sa thải; hỏa hoạn",
+      "priority": "high"
+    },
+    {
+      "index": 227,
+      "term": "four times a year",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "bốn lần một năm",
+      "priority": "high"
+    },
+    {
+      "index": 229,
+      "term": "functioning",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sự hoạt động",
+      "priority": "high"
+    },
+    {
+      "index": 231,
+      "term": "funds",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "nguồn vốn; quỹ tiền",
+      "priority": "high"
+    },
+    {
+      "index": 232,
+      "term": "gain",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thu được; lợi ích; khoản tăng",
+      "priority": "high"
+    },
+    {
+      "index": 234,
+      "term": "gear",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thiết bị; bánh răng",
+      "priority": "high"
+    },
+    {
+      "index": 236,
+      "term": "get",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "nhận; lấy; đạt được",
+      "priority": "high"
+    },
+    {
+      "index": 237,
+      "term": "global",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "toàn cầu",
+      "priority": "high"
+    },
+    {
+      "index": 240,
+      "term": "grade",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "cấp bậc; điểm số; xếp loại",
+      "priority": "high"
+    },
+    {
+      "index": 242,
+      "term": "guarantee",
+      "issues": [
+        "missing-definition"
+      ],
+      "definition_en": "",
+      "meaning_vi": "đảm bảo; bảo hành",
+      "priority": "high"
+    },
+    {
+      "index": 244,
+      "term": "guest service",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "dịch vụ dành cho khách",
+      "priority": "high"
+    },
+    {
+      "index": 251,
+      "term": "helper",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "người hỗ trợ",
+      "priority": "high"
+    },
+    {
+      "index": 253,
+      "term": "holder",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "người nắm giữ",
+      "priority": "high"
+    },
+    {
+      "index": 254,
+      "term": "honor",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "vinh danh",
+      "priority": "high"
+    },
+    {
+      "index": 255,
+      "term": "housing",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "nhà ở; chỗ ở",
+      "priority": "high"
+    },
+    {
+      "index": 257,
+      "term": "ignorance",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sự thiếu hiểu biết",
+      "priority": "high"
+    },
+    {
+      "index": 259,
+      "term": "imbalance",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sự mất cân bằng",
+      "priority": "high"
+    },
+    {
+      "index": 262,
+      "term": "incapable",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "không có khả năng",
+      "priority": "high"
+    },
+    {
+      "index": 266,
+      "term": "inflexible",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "không linh hoạt; cứng nhắc",
+      "priority": "high"
+    },
+    {
+      "index": 269,
+      "term": "initiate",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "khởi xướng; bắt đầu",
+      "priority": "high"
+    },
+    {
+      "index": 271,
+      "term": "installation",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sự lắp đặt; thiết bị được lắp đặt",
+      "priority": "high"
+    },
+    {
+      "index": 275,
+      "term": "international",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "quốc tế",
+      "priority": "high"
+    },
+    {
+      "index": 279,
+      "term": "job opening",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "vị trí tuyển dụng còn trống",
+      "priority": "high"
+    },
+    {
+      "index": 282,
+      "term": "keep",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "giữ; duy trì",
+      "priority": "high"
+    },
+    {
+      "index": 284,
+      "term": "leaflet",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "tờ rơi; tờ thông tin",
+      "priority": "high"
+    },
+    {
+      "index": 285,
+      "term": "leave",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "rời đi; nghỉ phép",
+      "priority": "high"
+    },
+    {
+      "index": 286,
+      "term": "legitimate",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "hợp pháp; chính đáng",
+      "priority": "high"
+    },
+    {
+      "index": 291,
+      "term": "location",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "địa điểm; vị trí",
+      "priority": "high"
+    },
+    {
+      "index": 292,
+      "term": "lodging",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "chỗ ở; nơi lưu trú",
+      "priority": "high"
+    },
+    {
+      "index": 294,
+      "term": "loss",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sự mất mát; khoản lỗ",
+      "priority": "high"
+    },
+    {
+      "index": 295,
+      "term": "lot",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "khu đất; lô",
+      "priority": "high"
+    },
+    {
+      "index": 296,
+      "term": "machinery",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "máy móc",
+      "priority": "high"
+    },
+    {
+      "index": 297,
+      "term": "magazine",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "tạp chí",
+      "priority": "high"
+    },
+    {
+      "index": 298,
+      "term": "main address",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "địa chỉ chính",
+      "priority": "high"
+    },
+    {
+      "index": 299,
+      "term": "main office",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "trụ sở chính; văn phòng chính",
+      "priority": "high"
+    },
+    {
+      "index": 304,
+      "term": "manual",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sổ tay; thủ công",
+      "priority": "high"
+    },
+    {
+      "index": 306,
+      "term": "mark",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "đánh dấu; điểm số",
+      "priority": "high"
+    },
+    {
+      "index": 307,
+      "term": "mark down",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "giảm giá; ghi chú",
+      "priority": "high"
+    },
+    {
+      "index": 308,
+      "term": "markdown",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "mức giảm giá; sự giảm giá",
+      "priority": "high"
+    },
+    {
+      "index": 309,
+      "term": "market",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thị trường; tiếp thị",
+      "priority": "high"
+    },
+    {
+      "index": 313,
+      "term": "meeting",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "cuộc họp",
+      "priority": "high"
+    },
+    {
+      "index": 314,
+      "term": "meeting record",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "biên bản cuộc họp",
+      "priority": "high"
+    },
+    {
+      "index": 315,
+      "term": "mention",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "đề cập",
+      "priority": "high"
+    },
+    {
+      "index": 319,
+      "term": "modify",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "điều chỉnh",
+      "priority": "high"
+    },
+    {
+      "index": 320,
+      "term": "moment",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "khoảnh khắc; thời điểm",
+      "priority": "high"
+    },
+    {
+      "index": 321,
+      "term": "monthly",
+      "issues": [
+        "missing-definition"
+      ],
+      "definition_en": "",
+      "meaning_vi": "hằng tháng; hàng tháng",
+      "priority": "high"
+    },
+    {
+      "index": 323,
+      "term": "move",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "di chuyển; chuyển động",
+      "priority": "high"
+    },
+    {
+      "index": 324,
+      "term": "neglect",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "bỏ bê; sao nhãng",
+      "priority": "high"
+    },
+    {
+      "index": 326,
+      "term": "never",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "không bao giờ",
+      "priority": "high"
+    },
+    {
+      "index": 327,
+      "term": "night",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "ban đêm; buổi tối",
+      "priority": "high"
+    },
+    {
+      "index": 328,
+      "term": "nil",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "số không; không có",
+      "priority": "high"
+    },
+    {
+      "index": 329,
+      "term": "none",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "không có gì; không ai",
+      "priority": "high"
+    },
+    {
+      "index": 330,
+      "term": "nonurgent",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "không khẩn cấp",
+      "priority": "high"
+    },
+    {
+      "index": 331,
+      "term": "notification",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thông báo",
+      "priority": "high"
+    },
+    {
+      "index": 332,
+      "term": "nought",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "số không",
+      "priority": "high"
+    },
+    {
+      "index": 333,
+      "term": "objection",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sự phản đối",
+      "priority": "high"
+    },
+    {
+      "index": 336,
+      "term": "observation",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sự quan sát",
+      "priority": "high"
+    },
+    {
+      "index": 337,
+      "term": "observe",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "quan sát; tuân thủ",
+      "priority": "high"
+    },
+    {
+      "index": 339,
+      "term": "occasion",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "dịp; cơ hội",
+      "priority": "high"
+    },
+    {
+      "index": 340,
+      "term": "occupation",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "nghề nghiệp",
+      "priority": "high"
+    },
+    {
+      "index": 342,
+      "term": "once a month",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "mỗi tháng một lần",
+      "priority": "high"
+    },
+    {
+      "index": 343,
+      "term": "once a week",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "mỗi tuần một lần",
+      "priority": "high"
+    },
+    {
+      "index": 344,
+      "term": "once-a-year",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "mỗi năm một lần",
+      "priority": "high"
+    },
+    {
+      "index": 345,
+      "term": "opening",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "lễ khai trương; vị trí còn trống; phần mở đầu",
+      "priority": "high"
+    },
+    {
+      "index": 347,
+      "term": "optional",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "không bắt buộc; tùy chọn",
+      "priority": "high"
+    },
+    {
+      "index": 352,
+      "term": "output",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "đầu ra; sản lượng",
+      "priority": "high"
+    },
+    {
+      "index": 355,
+      "term": "pamphlet",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sách mỏng; tập tài liệu giới thiệu",
+      "priority": "high"
+    },
+    {
+      "index": 357,
+      "term": "path",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "con đường",
+      "priority": "high"
+    },
+    {
+      "index": 358,
+      "term": "pattern",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "mô hình; quy luật",
+      "priority": "high"
+    },
+    {
+      "index": 362,
+      "term": "per-month",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "mỗi tháng",
+      "priority": "high"
+    },
+    {
+      "index": 363,
+      "term": "period",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "khoảng thời gian; thời kỳ",
+      "priority": "high"
+    },
+    {
+      "index": 364,
+      "term": "permanent",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "lâu dài; vĩnh viễn",
+      "priority": "high"
+    },
+    {
+      "index": 367,
+      "term": "plan",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "kế hoạch; dự định",
+      "priority": "high"
+    },
+    {
+      "index": 370,
+      "term": "post",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "vị trí công việc",
+      "priority": "high"
+    },
+    {
+      "index": 371,
+      "term": "postal code",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "mã bưu chính",
+      "priority": "high"
+    },
+    {
+      "index": 373,
+      "term": "precious",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "quý giá",
+      "priority": "high"
+    },
+    {
+      "index": 374,
+      "term": "prediction",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sự dự đoán",
+      "priority": "high"
+    },
+    {
+      "index": 377,
+      "term": "present",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "trình bày; hiện tại; có mặt",
+      "priority": "high"
+    },
+    {
+      "index": 379,
+      "term": "pressing",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "cấp bách; khẩn thiết",
+      "priority": "high"
+    },
+    {
+      "index": 381,
+      "term": "prize",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "phần thưởng",
+      "priority": "high"
+    },
+    {
+      "index": 388,
+      "term": "products",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sản phẩm",
+      "priority": "high"
+    },
+    {
+      "index": 389,
+      "term": "profession",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "nghề nghiệp",
+      "priority": "high"
+    },
+    {
+      "index": 391,
+      "term": "progress report",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "báo cáo tiến độ",
+      "priority": "high"
+    },
+    {
+      "index": 394,
+      "term": "proof of payment",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "chứng từ thanh toán; bằng chứng đã trả tiền",
+      "priority": "high"
+    },
+    {
+      "index": 398,
+      "term": "protection",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sự bảo vệ",
+      "priority": "high"
+    },
+    {
+      "index": 400,
+      "term": "provider",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "nhà cung cấp; đơn vị cung ứng",
+      "priority": "high"
+    },
+    {
+      "index": 404,
+      "term": "purchaser",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "người mua",
+      "priority": "high"
+    },
+    {
+      "index": 405,
+      "term": "put off",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "trì hoãn; hoãn lại",
+      "priority": "high"
+    },
+    {
+      "index": 408,
+      "term": "question",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "câu hỏi; vấn đề",
+      "priority": "high"
+    },
+    {
+      "index": 409,
+      "term": "questionnaire",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "bảng câu hỏi",
+      "priority": "high"
+    },
+    {
+      "index": 412,
+      "term": "radiograph",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "ảnh X-quang",
+      "priority": "high"
+    },
+    {
+      "index": 413,
+      "term": "ratio",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "tỷ lệ",
+      "priority": "high"
+    },
+    {
+      "index": 414,
+      "term": "reach",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "đạt tới; liên hệ; tầm với",
+      "priority": "high"
+    },
+    {
+      "index": 415,
+      "term": "reason",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "lý do; nguyên nhân",
+      "priority": "high"
+    },
+    {
+      "index": 421,
+      "term": "reduction",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sự giảm; mức cắt giảm",
+      "priority": "high"
+    },
+    {
+      "index": 422,
+      "term": "refresh",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "làm mới; cập nhật",
+      "priority": "high"
+    },
+    {
+      "index": 424,
+      "term": "refuse",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "từ chối",
+      "priority": "high"
+    },
+    {
+      "index": 425,
+      "term": "region",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "khu vực; vùng",
+      "priority": "high"
+    },
+    {
+      "index": 431,
+      "term": "remove",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "loại bỏ; di chuyển",
+      "priority": "high"
+    },
+    {
+      "index": 433,
+      "term": "rental agreement",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "hợp đồng thuê",
+      "priority": "high"
+    },
+    {
+      "index": 437,
+      "term": "required",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "được yêu cầu; bắt buộc",
+      "priority": "high"
+    },
+    {
+      "index": 442,
+      "term": "restriction",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sự hạn chế; quy định giới hạn",
+      "priority": "high"
+    },
+    {
+      "index": 445,
+      "term": "retract",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "rút lại",
+      "priority": "high"
+    },
+    {
+      "index": 446,
+      "term": "retreat",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "rút lui; nơi nghỉ dưỡng",
+      "priority": "high"
+    },
+    {
+      "index": 447,
+      "term": "return",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "trả lại; quay về; lợi nhuận",
+      "priority": "high"
+    },
+    {
+      "index": 452,
+      "term": "rigid",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "cứng nhắc; không linh hoạt",
+      "priority": "high"
+    },
+    {
+      "index": 455,
+      "term": "rule",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "quy tắc; quy định",
+      "priority": "high"
+    },
+    {
+      "index": 456,
+      "term": "run",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "chạy; vận hành; điều hành",
+      "priority": "high"
+    },
+    {
+      "index": 458,
+      "term": "saturday and sunday",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thứ Bảy và Chủ nhật; cuối tuần",
+      "priority": "high"
+    },
+    {
+      "index": 459,
+      "term": "scatter",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "rải ra; phân tán",
+      "priority": "high"
+    },
+    {
+      "index": 460,
+      "term": "schedule",
+      "issues": [
+        "missing-definition"
+      ],
+      "definition_en": "",
+      "meaning_vi": "lịch trình; lên lịch",
+      "priority": "high"
+    },
+    {
+      "index": 461,
+      "term": "scope",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "phạm vi",
+      "priority": "high"
+    },
+    {
+      "index": 462,
+      "term": "see",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "nhìn thấy; gặp; hiểu",
+      "priority": "high"
+    },
+    {
+      "index": 463,
+      "term": "sell",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "bán",
+      "priority": "high"
+    },
+    {
+      "index": 464,
+      "term": "seller",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "người bán",
+      "priority": "high"
+    },
+    {
+      "index": 469,
+      "term": "separate",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "riêng biệt; tách ra",
+      "priority": "high"
+    },
+    {
+      "index": 471,
+      "term": "set off",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "khởi hành; kích hoạt",
+      "priority": "high"
+    },
+    {
+      "index": 473,
+      "term": "shift",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "ca làm việc; sự thay đổi; chuyển dịch",
+      "priority": "high"
+    },
+    {
+      "index": 475,
+      "term": "short-term",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "ngắn hạn",
+      "priority": "high"
+    },
+    {
+      "index": 479,
+      "term": "sixty minutes",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sáu mươi phút; một giờ",
+      "priority": "high"
+    },
+    {
+      "index": 480,
+      "term": "specialist",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "chuyên gia",
+      "priority": "high"
+    },
+    {
+      "index": 482,
+      "term": "staff member",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thành viên nhân viên; nhân viên",
+      "priority": "high"
+    },
+    {
+      "index": 484,
+      "term": "standardized",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "được tiêu chuẩn hóa",
+      "priority": "high"
+    },
+    {
+      "index": 489,
+      "term": "storage facility",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "cơ sở lưu kho; kho chứa hàng",
+      "priority": "high"
+    },
+    {
+      "index": 495,
+      "term": "suggestion",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "gợi ý; đề xuất",
+      "priority": "high"
+    },
+    {
+      "index": 496,
+      "term": "summit",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "hội nghị thượng đỉnh; đỉnh núi",
+      "priority": "high"
+    },
+    {
+      "index": 504,
+      "term": "take part",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "tham gia",
+      "priority": "high"
+    },
+    {
+      "index": 507,
+      "term": "teller",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "giao dịch viên ngân hàng",
+      "priority": "high"
+    },
+    {
+      "index": 509,
+      "term": "tendency",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "xu hướng",
+      "priority": "high"
+    },
+    {
+      "index": 510,
+      "term": "time limit",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "giới hạn thời gian",
+      "priority": "high"
+    },
+    {
+      "index": 511,
+      "term": "timetable",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "thời khóa biểu; lịch trình",
+      "priority": "high"
+    },
+    {
+      "index": 514,
+      "term": "travel plan",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "kế hoạch chuyến đi",
+      "priority": "high"
+    },
+    {
+      "index": 515,
+      "term": "travel to work",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "đi lại đến nơi làm việc",
+      "priority": "high"
+    },
+    {
+      "index": 516,
+      "term": "trigger",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "kích hoạt; nguyên nhân khởi phát",
+      "priority": "high"
+    },
+    {
+      "index": 517,
+      "term": "twelve months",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "mười hai tháng; một năm",
+      "priority": "high"
+    },
+    {
+      "index": 518,
+      "term": "understanding",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "sự hiểu biết; thỏa thuận",
+      "priority": "high"
+    },
+    {
+      "index": 521,
+      "term": "unnecessary",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "không cần thiết",
+      "priority": "high"
+    },
+    {
+      "index": 523,
+      "term": "usefulness",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "tính hữu ích",
+      "priority": "high"
+    },
+    {
+      "index": 524,
+      "term": "validate",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "xác nhận tính hợp lệ; kiểm chứng",
+      "priority": "high"
+    },
+    {
+      "index": 525,
+      "term": "variation",
+      "issues": [
+        "placeholder-definition",
+        "missing-pos",
+        "missing-source-provenance"
+      ],
+      "definition_en": "Reference gloss for practice distractors.",
+      "meaning_vi": "sự biến đổi",
+      "priority": "high"
+    },
+    {
+      "index": 528,
+      "term": "versatile",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "đa năng; linh hoạt",
+      "priority": "high"
+    },
+    {
+      "index": 531,
+      "term": "warrant",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "bảo đảm; chứng minh là cần thiết",
+      "priority": "high"
+    },
+    {
+      "index": 535,
+      "term": "weekly",
+      "issues": [
+        "missing-definition"
+      ],
+      "definition_en": "",
+      "meaning_vi": "hằng tuần",
+      "priority": "high"
+    },
+    {
+      "index": 536,
+      "term": "welcome",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "chào đón; sự hoan nghênh",
+      "priority": "high"
+    },
+    {
+      "index": 543,
+      "term": "worker",
+      "issues": [
+        "missing-definition",
+        "missing-pos"
+      ],
+      "definition_en": "",
+      "meaning_vi": "người lao động; công nhân",
+      "priority": "high"
+    },
+    {
+      "index": 105,
+      "term": "challenger",
+      "issues": [
+        "missing-source-provenance"
+      ],
+      "definition_en": "a person or organization that competes against another",
+      "meaning_vi": "người thách thức; đối thủ cạnh tranh",
+      "priority": "medium"
+    },
+    {
+      "index": 453,
+      "term": "rival",
+      "issues": [
+        "missing-source-provenance"
+      ],
+      "definition_en": "a person or organization competing with another",
+      "meaning_vi": "đối thủ; đối thủ cạnh tranh",
+      "priority": "medium"
+    },
+    {
+      "index": 41,
+      "term": "annually",
+      "issues": [
+        "short-definition-review"
+      ],
+      "definition_en": "once every year",
+      "meaning_vi": "hằng năm",
+      "priority": "low"
+    },
+    {
+      "index": 167,
+      "term": "directive",
+      "issues": [
+        "short-definition-review"
+      ],
+      "definition_en": "an official instruction",
+      "meaning_vi": "chỉ thị chính thức",
+      "priority": "low"
+    }
+  ]
+}

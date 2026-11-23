@@ -1,0 +1,338 @@
+{
+  "batch": "035",
+  "release": "2.95.43",
+  "title": "Cambridge-sourced Related Glossary expansion — contextual business and workplace terms",
+  "count": 26,
+  "editorialStatus": "Cambridge Dictionary entries inspected and definitions paraphrased; Vietnamese glosses curated; relation arrays preserved; independent lexical/pedagogical review remains pending",
+  "sourcePolicy": "Each new glossary row links to a Cambridge Dictionary entry for the added term. Definitions are paraphrased for the sense relevant to the existing source relation. Relation arrays and canonical headwords are not rewritten. A dictionary lookup supports the meaning of a term but does not constitute independent approval of the underlying synonym relationship.",
+  "baselineMetrics": {
+    "entries": 527,
+    "coveredUniqueTerms": 516,
+    "referencedUniqueTerms": 804,
+    "unglossedUniqueTerms": 288,
+    "unglossedReferenceOccurrences": 289,
+    "coveragePercent": 64.2
+  },
+  "expectedAfterApply": {
+    "entries": 553,
+    "coveredUniqueTerms": 542,
+    "referencedUniqueTerms": 804,
+    "unglossedUniqueTerms": 262,
+    "unglossedReferenceOccurrences": 263,
+    "coveragePercent": 67.4
+  },
+  "records": [
+    {
+      "term": "administer",
+      "meaning_vi_added": "quản lý; điều hành; quản trị",
+      "pos": "v",
+      "definition_en": "to control the operation or arrangement of a programme, process, or organization",
+      "sourceHeadword": "manage",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/administer"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "alike",
+      "meaning_vi_added": "giống nhau; tương tự nhau",
+      "pos": "adj",
+      "definition_en": "similar to one another in appearance or qualities",
+      "sourceHeadword": "similar",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/alike"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "appeal",
+      "meaning_vi_added": "lời kêu gọi; yêu cầu hỗ trợ chính thức",
+      "pos": "n",
+      "definition_en": "a serious or formal request to the public for money, information, or help",
+      "sourceHeadword": "solicitation",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/appeal"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "article",
+      "meaning_vi_added": "món đồ; vật phẩm; mặt hàng",
+      "pos": "n",
+      "definition_en": "a particular object or item, especially one that is being described or identified",
+      "sourceHeadword": "item",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/article"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "ask for",
+      "meaning_vi_added": "yêu cầu; đề nghị cung cấp",
+      "pos": "v phr",
+      "definition_en": "to request that someone give or provide something",
+      "sourceHeadword": "request",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/ask"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "assist",
+      "meaning_vi_added": "hỗ trợ; giúp đỡ",
+      "pos": "v",
+      "definition_en": "to help someone or contribute to the completion of a task",
+      "sourceHeadword": "support",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/assist"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "assume",
+      "meaning_vi_added": "đảm nhận; nhận trách nhiệm",
+      "pos": "v",
+      "definition_en": "to take on responsibility, control, or a particular role",
+      "sourceHeadword": "undertake",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/assume"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "backer",
+      "meaning_vi_added": "người hậu thuẫn; nhà tài trợ",
+      "pos": "n",
+      "definition_en": "a person or organization that provides financial support for a project or activity",
+      "sourceHeadword": "sponsor",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/backer"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "bargaining",
+      "meaning_vi_added": "sự thương lượng; đàm phán",
+      "pos": "n",
+      "definition_en": "discussions intended to reach an agreement, for example about prices, wages, or conditions",
+      "sourceHeadword": "negotiation",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/bargaining"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "begin",
+      "meaning_vi_added": "bắt đầu; khởi đầu",
+      "pos": "v",
+      "definition_en": "to start happening or to start doing something",
+      "sourceHeadword": "embark",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/begin"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "book",
+      "meaning_vi_added": "đặt trước; giữ chỗ",
+      "pos": "v",
+      "definition_en": "to arrange in advance a room, seat, ticket, or service for a future time",
+      "sourceHeadword": "reserve",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/book"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "bring",
+      "meaning_vi_added": "mang đến; đưa đến",
+      "pos": "v",
+      "definition_en": "to take or carry someone or something to a person or place",
+      "sourceHeadword": "deliver",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/bring"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "caller",
+      "meaning_vi_added": "người đến thăm; khách ghé thăm",
+      "pos": "n",
+      "definition_en": "a visitor to a house or other building",
+      "sourceHeadword": "visitor",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/caller"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "capable",
+      "meaning_vi_added": "có năng lực; có khả năng thực hiện hiệu quả",
+      "pos": "adj",
+      "definition_en": "able to do something effectively and skilfully and to achieve results",
+      "sourceHeadword": "efficient",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/capable"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "carry",
+      "meaning_vi_added": "mang; vận chuyển",
+      "pos": "v",
+      "definition_en": "to transport or take a person or thing from one place to another",
+      "sourceHeadword": "transport",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/carry"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "change",
+      "meaning_vi_added": "sự thay đổi; sự chuyển đổi",
+      "pos": "n",
+      "definition_en": "the process or result of becoming different",
+      "sourceHeadword": "transition",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/change"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "characteristic",
+      "meaning_vi_added": "đặc điểm; đặc trưng",
+      "pos": "n",
+      "definition_en": "a typical or noticeable quality of a person or thing",
+      "sourceHeadword": "feature",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/characteristic"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "choice",
+      "meaning_vi_added": "sự lựa chọn; khả năng lựa chọn",
+      "pos": "n",
+      "definition_en": "the act or possibility of selecting from available people or things",
+      "sourceHeadword": "option",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/choice"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "clothing",
+      "meaning_vi_added": "quần áo; trang phục",
+      "pos": "n",
+      "definition_en": "clothes, especially those worn for a particular activity, occasion, or situation",
+      "sourceHeadword": "attire",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/clothing"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "comments",
+      "meaning_vi_added": "các nhận xét; ý kiến phản hồi",
+      "pos": "n pl",
+      "definition_en": "remarks or opinions that someone expresses about a subject or situation",
+      "sourceHeadword": "feedback",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/comment"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "communicate with",
+      "meaning_vi_added": "liên lạc với; trao đổi thông tin với",
+      "pos": "v phr",
+      "definition_en": "to share information or exchange messages with a person or group",
+      "sourceHeadword": "contact",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/communicate"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "comparable",
+      "meaning_vi_added": "có thể so sánh; tương đương",
+      "pos": "adj",
+      "definition_en": "similar enough in size, amount, or quality to be compared",
+      "sourceHeadword": "similar",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/comparable"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "compute",
+      "meaning_vi_added": "tính toán; tính ra",
+      "pos": "v",
+      "definition_en": "to calculate a number or amount by using mathematics or a computer",
+      "sourceHeadword": "calculate",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/compute"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "connection",
+      "meaning_vi_added": "mối liên hệ; sự kết nối",
+      "pos": "n",
+      "definition_en": "the state of being related to someone or something else",
+      "sourceHeadword": "network",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/connection"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "consequence",
+      "meaning_vi_added": "kết quả; hệ quả",
+      "pos": "n",
+      "definition_en": "a result or effect that follows from an action or situation",
+      "sourceHeadword": "outcome",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/consequence"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    },
+    {
+      "term": "consideration",
+      "meaning_vi_added": "sự cân nhắc; điều cần xem xét",
+      "pos": "n",
+      "definition_en": "careful thought about something before making a decision",
+      "sourceHeadword": "consider",
+      "relationType": "synonym",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/consideration"
+      ],
+      "editorialNote": "Dictionary meaning supports the glossary lookup; relation membership is inherited unchanged from the existing canonical vocabulary relation."
+    }
+  ]
+}

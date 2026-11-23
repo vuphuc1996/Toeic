@@ -52,7 +52,17 @@ class RelatedGlossaryBatch034Tests(unittest.TestCase):
         self.assertEqual(self.revision['sourceSenseIndex'], 0)
 
     def test_patch_hash_and_old_value_guard_are_reproducible(self):
-        raw = DATA_PATH.read_bytes()
+        # Reconstruct the v2.95.40 baseline without any later additive glossary
+        # batches before reversing this guarded correction. Historical patch hashes
+        # remain replayable as new batch ledgers are added.
+        current = json.loads(DATA_PATH.read_text(encoding='utf-8'))
+        later_terms = set()
+        for ledger_path in (ROOT / 'patches-related-terms').glob('**/batch-*-glossary-ledger.json'):
+            later = read_json(ledger_path)
+            if int(later.get('batch', 0)) > 34:
+                later_terms.update(r['term'].casefold() for r in later.get('records', []))
+        current['terms'] = [r for r in current['terms'] if r['term'].casefold() not in later_terms]
+        raw = (json.dumps(current, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
         old = self.patch['operations'][0]['expect']['definition_en'].encode('utf-8')
         new = self.patch['operations'][0]['set']['definition_en'].encode('utf-8')
         restored = raw.replace(new, old)

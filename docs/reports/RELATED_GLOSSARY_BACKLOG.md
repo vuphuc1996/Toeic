@@ -1,8 +1,8 @@
 # Related-term Glossary Backlog
 
-- Glossary entries: **527**
-- Unglossed unique terms: **288**
-- Unglossed references: **289**
+- Glossary entries: **567**
+- Unglossed unique terms: **248**
+- Unglossed references: **249**
 - Queue priority: number of references, distinct source headwords, synonym references, then term.
 - Each row includes source headwords for editorial context; this is a review queue, not an automatic glossary import.
 
@@ -11,61 +11,24 @@
 | Term | References | Headwords | Synonym | Antonym | Source headwords |
 |---|---:|---:|---:|---:|---|
 | disorganize | 2 | 2 | 0 | 2 | arrange, organize |
-| administer | 1 | 1 | 1 | 0 | manage |
-| alert | 1 | 1 | 1 | 0 | remind |
-| alike | 1 | 1 | 1 | 0 | similar |
-| appeal | 1 | 1 | 1 | 0 | solicitation |
-| article | 1 | 1 | 1 | 0 | item |
-| ask for | 1 | 1 | 1 | 0 | request |
-| assist | 1 | 1 | 1 | 0 | support |
-| assume | 1 | 1 | 1 | 0 | undertake |
-| backer | 1 | 1 | 1 | 0 | sponsor |
-| bargaining | 1 | 1 | 1 | 0 | negotiation |
-| begin | 1 | 1 | 1 | 0 | embark |
-| book | 1 | 1 | 1 | 0 | reserve |
-| bring | 1 | 1 | 1 | 0 | deliver |
-| business | 1 | 1 | 1 | 0 | commercial |
-| caller | 1 | 1 | 1 | 0 | visitor |
-| capable | 1 | 1 | 1 | 0 | efficient |
-| car | 1 | 1 | 1 | 0 | vehicle |
-| carry | 1 | 1 | 1 | 0 | transport |
-| change | 1 | 1 | 1 | 0 | transition |
-| characteristic | 1 | 1 | 1 | 0 | feature |
-| choice | 1 | 1 | 1 | 0 | option |
-| clothing | 1 | 1 | 1 | 0 | attire |
-| comments | 1 | 1 | 1 | 0 | feedback |
-| communicate with | 1 | 1 | 1 | 0 | contact |
-| company | 1 | 1 | 1 | 0 | employer |
-| comparable | 1 | 1 | 1 | 0 | similar |
-| compute | 1 | 1 | 1 | 0 | calculate |
 | conformity | 1 | 1 | 1 | 0 | compliance |
-| connection | 1 | 1 | 1 | 0 | network |
-| consequence | 1 | 1 | 1 | 0 | outcome |
 | consideration | 1 | 1 | 1 | 0 | consider |
 | consistent | 1 | 1 | 1 | 0 | regular |
 | consolidation | 1 | 1 | 1 | 0 | merger |
 | contain | 1 | 1 | 1 | 0 | include |
 | continuity | 1 | 1 | 1 | 0 | retention |
 | conversion | 1 | 1 | 1 | 0 | transition |
-| currency | 1 | 1 | 1 | 0 | cash |
 | customs duty | 1 | 1 | 1 | 0 | tariff |
-| declaration | 1 | 1 | 1 | 0 | statement |
 | defeat | 1 | 1 | 1 | 0 | failure |
 | description | 1 | 1 | 1 | 0 | specification |
 | destruction | 1 | 1 | 1 | 0 | demolition |
 | details | 1 | 1 | 1 | 0 | information |
-| development | 1 | 1 | 1 | 0 | progress |
 | discussion | 1 | 1 | 1 | 0 | negotiation |
-| disturbance | 1 | 1 | 1 | 0 | disruption |
-| down payment | 1 | 1 | 1 | 0 | deposit |
-| eager | 1 | 1 | 1 | 0 | willing |
 | earning capacity | 1 | 1 | 1 | 0 | profitability |
 | employees | 1 | 1 | 1 | 0 | staff |
 | endure | 1 | 1 | 1 | 0 | withstand |
 | engineer | 1 | 1 | 1 | 0 | technician |
-| entire | 1 | 1 | 1 | 0 | complete |
 | entry-level | 1 | 1 | 1 | 0 | junior |
-| eventuality | 1 | 1 | 1 | 0 | contingency |
 | example | 1 | 1 | 1 | 0 | sample |
 | execution | 1 | 1 | 1 | 0 | implementation |
 | existing | 1 | 1 | 1 | 0 | current |
@@ -222,9 +185,6 @@
 | work clothes | 1 | 1 | 1 | 0 | uniform |
 | work together | 1 | 1 | 1 | 0 | cooperate |
 | abandonment | 1 | 1 | 0 | 1 | implementation |
-| able | 1 | 1 | 0 | 1 | unable |
-| accuracy | 1 | 1 | 0 | 1 | error |
-| actual | 1 | 1 | 0 | 1 | potential |
 | careless | 1 | 1 | 0 | 1 | careful |
 | certainty | 1 | 1 | 0 | 1 | contingency |
 | compete | 1 | 1 | 0 | 1 | cooperate |
