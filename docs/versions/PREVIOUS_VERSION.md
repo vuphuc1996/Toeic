@@ -1,5 +1,7 @@
 # Previous Version
 
-- Previous source: **v2.95.44** — Related Glossary Batch 037 added 16 Cambridge-sourced relation-target glosses; FullSource had 664 files and Patch replayed exactly against v2.95.43.
-- Superseded by **v2.95.45**, which selectively merges the alternate v2.95.44 branch's stronger QA infrastructure, adds five relation-target glosses and corrects three relationship-aligned glossary senses.
-- Preserved the v2.95.44 released data baseline; no canonical vocabulary IDs/relations, learning question/answer data, learner IndexedDB schema/progress, Mock eligibility or UI layout changed.
+- Version: **v2.95.45** — immediately previous official source and the only approved baseline for candidate v2.95.46.
+- FullSource: `TOEIC_Dictionary_v2.95.45_FullSource.zip`; 698 files; SHA-256 `2d4f1f58aa355c8515b311d11fe01852f80d8c4dea57f5fff8631e955a6f112e`.
+- Patch lineage: v2.95.44 → v2.95.45; the previous official package was replay-verified byte-for-byte.
+- The alternate uploaded v2.95.44 was a separate branch and is not the official previous source.
+- No canonical vocabulary IDs/headwords/relationship arrays, learner question/choice IDs, answer keys, IndexedDB schema or learner history may be changed without a verified defect and approved migration.

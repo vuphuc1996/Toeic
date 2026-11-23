@@ -1,0 +1,17 @@
+{
+  "baselineVersion": "2.95.45",
+  "listening": {
+    "eligibleQuestions": 102,
+    "reserveQuestions": 193,
+    "totalQuestions": 295
+  },
+  "part7": {
+    "reserveQuestions": 87
+  },
+  "part5": {
+    "practiceOnly": true,
+    "totalQuestions": 80,
+    "reviewPendingQuestions": 80
+  },
+  "note": "Regression snapshot only. Current reports must calculate live values from canonical question data via tools/editorial_inventory.py. Update this baseline only with an intentional, reviewed inventory change."
+}

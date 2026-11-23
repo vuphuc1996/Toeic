@@ -27,7 +27,11 @@ class MajorReleaseQualityAudit025(unittest.TestCase):
         self.assertEqual(g['duplicateEntries'],0)
         self.assertLessEqual(g['coveredUniqueTerms'],g['referencedUniqueTerms'])
         self.assertEqual(g['unglossedUniqueTerms'],g['referencedUniqueTerms']-g['coveredUniqueTerms'])
-        self.assertEqual(g['backfilledFromCanonicalVocabulary'],205)
+        self.assertEqual(g['canonicalVocabularySourceEntries'], sum(row.get('source') == 'canonical-vocabulary-senses' for row in rows))
+        self.assertEqual(g['canonicalVocabularySourceEntries'],205)
+        report = mod.REPORT.read_text(encoding='utf-8')
+        self.assertIn('cumulative inventory; not this release delta', report)
+        self.assertNotIn('Canonical headword sense backfills in this release', report)
     def test_content_inventory_is_nonempty_and_known(self):
         c=self.audit['contentInventory']; self.assertEqual(c,{'grammarLessons':58,'listeningResources':145,'readingResources':73,'part5PracticeQuestions':80})
     def test_outcome_instrumentation_is_not_claimed_complete(self):

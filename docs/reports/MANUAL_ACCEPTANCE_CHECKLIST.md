@@ -1,4 +1,4 @@
-# Manual Acceptance Checklist — TOEIC Dictionary v2.95.15
+# Manual Acceptance Checklist — TOEIC Dictionary v2.95.46
 
 **Purpose:** checklist for the project owner to execute on GitHub and real browsers/devices. This document is a blank record; it does not assert that any remote or device-level check has passed.
 
@@ -7,7 +7,7 @@
 | # | Hạng mục | Cách làm | Kết quả mong đợi | Đạt / Không đạt / Chưa kiểm | Ngày | Thiết bị |
 |---:|---|---|---|---|---|---|
 | 1 | GitHub Actions | Mở repository `vuphuc1996/Toeic` → Actions → chạy workflow kiểm tra source hiện tại; mở từng job nếu workflow đỏ. | Toàn bộ jobs kết thúc xanh; không có `continue-on-error`; có bước `Audit CSS design-token ratchet` chạy test và `tools/audit-design-tokens.py`. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
-| 2 | GitHub Pages deploy | Sau khi Actions xanh, mở Pages URL của repository và xác nhận phiên bản ở title/sidebar/footer. | Trang tải thành công; hiển thị v2.95.14; không có lỗi 404 asset hoặc lệch manifest/version. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 2 | GitHub Pages deploy | Sau khi Actions xanh, mở Pages URL của repository và xác nhận phiên bản ở title/sidebar/footer. | Trang tải thành công; hiển thị v2.95.46; không có lỗi 404 asset hoặc lệch manifest/version. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 | 3 | Đường dẫn con `/Toeic/` | Mở trực tiếp URL có path `/Toeic/`, refresh; mở thêm một route/hash nội bộ và quay lại trang chủ. | CSS/JS/data/image nạp đúng dưới `/Toeic/`; không bị điều hướng nhầm về domain root; refresh không thành 404. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 | 4 | Cài PWA | Truy cập website bằng HTTPS trên trình duyệt hỗ trợ; dùng lệnh cài ứng dụng của trình duyệt/OS. Mở ứng dụng đã cài. | PWA được cài; icon, tên và app shell đúng; không mất đường dẫn con hoặc tài nguyên cục bộ. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 | 5 | Offline ở lần mở đầu chưa có cache | Dùng một browser profile thử nghiệm mới, tắt mạng trước lần truy cập đầu tiên; không xóa dữ liệu profile đang học. | Trường hợp chưa từng tải cache phải báo trạng thái không có mạng một cách rõ ràng; không treo hoặc hiển thị trang trắng khó hiểu. Không kỳ vọng tải nội dung chưa cache khi offline. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
@@ -31,12 +31,20 @@
 
 | 22 | Glossary synonym/antonym v2.95.15 | Mở các liên kết synonym/antonym tương ứng và kiểm tra `aim`, `avoid`, `cause`, `conceal`; kiểm tra loại từ và nghĩa tiếng Việt. | `aim` là danh từ; `avoid` và `conceal` là động từ; `cause` phân biệt danh từ/động từ; gloss không làm thay đổi quan hệ liên kết. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
 
+
+| 23 | Deployment identity | Sau khi Source Release được chấp nhận và GitHub Actions/Pages chạy, đối chiếu commit SHA, artifact/release hash và URL đang phục vụ. | Deployed commit/artifact khớp chính xác Source Release được chấp nhận; không suy luận từ nhãn version trên UI. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 24 | Isolated production test profile | Tạo browser profile riêng hoặc dùng thiết bị test riêng; không dùng profile đang học thật. Ghi nhận profile/test fixture ID. | Mọi smoke test và dữ liệu thử chỉ thuộc profile cô lập; không đọc/xóa dữ liệu học thật. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 25 | Synthetic learner fixture | Nạp dữ liệu giả lập có nhận diện rõ: saved words, review history, attempts và Mock history; ghi pre-test snapshot. | Fixture được đọc/ghi đúng phạm vi; không có record thật hoặc profile khác bị sửa. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 26 | IndexedDB continuity across update | Trên profile test riêng, tạo fixture trong `toeic-vocabulary-phase1` / `workspace`, cập nhật PWA qua Service Worker rồi kiểm tra lại. | Database/schema không bị reset ngoài kế hoạch; fixture, saved words, review và Mock history còn nguyên. Cleanup chỉ xóa fixture do test tạo. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 27 | Service Worker / cache recovery | Dùng profile test riêng; kiểm tra update install/wait/accept, cache namespace mới, old-cache cleanup và reconnect sau offline. | Cache mới được cài trước khi cache cũ bị dọn; lỗi install giữ được cache cũ; offline/reconnect không tạo update loop hoặc trang trắng. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 28 | Production desktop/mobile smoke | Trên browser/device thật có sẵn, kiểm tra đăng nhập không yêu cầu backend, Vocabulary, Flashcard, Review, Listening, Reading, Grammar và Mock flow được phép. | Các workflow cốt lõi chạy; không có lỗi runtime nghiêm trọng; ghi đầy đủ OS/browser/device/screen. Chỉ đánh dấu thiết bị đã thực sự thử. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+
 ## Kết luận nghiệm thu
 
-- Tổng số hạng mục: **22**.
+- Tổng số hạng mục: **28**.
 - Đạt: Chưa ghi.
 - Không đạt: Chưa ghi.
-- Chưa kiểm: **22/22**.
+- Chưa kiểm: **28/28**.
 - Người thực hiện: Chưa ghi.
 - Ngày nghiệm thu: Chưa ghi.
 

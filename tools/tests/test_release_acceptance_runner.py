@@ -31,12 +31,12 @@ class ReleaseAcceptanceRunnerTests(unittest.TestCase):
 
     def test_commands_include_full_suite_and_core_gates(self):
         names = {name for name, _ in runner.COMMANDS}
-        self.assertTrue({"repository_integrity", "data_validator", "learning_content_validator", "version_sync", "full_python_suite"}.issubset(names))
+        self.assertTrue({"repository_integrity", "data_validator", "learning_content_validator", "version_sync", "related_glossary_backlog", "editorial_review_queue", "full_python_suite"}.issubset(names))
         full_suite = next(command for name, command in runner.COMMANDS if name == "full_python_suite")
         self.assertIn("tools/run-python-tests-sharded.py", full_suite)
         self.assertIn("--timeout-per-module", full_suite)
         self.assertIn("--resume", full_suite)
-        self.assertIn("--split-large-modules", full_suite)
+        self.assertNotIn("--split-large-modules", full_suite)
         self.assertEqual(runner.COMMANDS[-1][0], "full_python_suite")
 
     def test_dry_run_records_not_run_without_execution(self):

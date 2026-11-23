@@ -2,13 +2,15 @@
 
 > Single register for current runtime, storage, offline and retirement contracts. Release history belongs in `CHANGELOG.md`.
 
-## Current support window — 2026-11-19
+## Current support window — 2026-11-23
 
 | Role | Version | Policy |
 |---|---|---|
-| Current product source | v2.95.9 | v2.95.8 functional baseline retained; Robot Buddy progressive response stream and context-aware local composition added. |
-| Immediately previous source | v2.95.8 | Five-defect consolidation, opt-in local read-only Learning Insights, one visual progress dashboard and repository cleanup. |
-| Older releases | ≤ v2.95.6 | Historical; details are in `CHANGELOG.md` and the consolidated archive. |
+| Current development candidate | v2.95.46 | Governance, source-derived Editorial Review Queue metrics, consolidated Master Development Prompt and controlled documentation retention. **Candidate only; Source Release Acceptance is not yet granted.** |
+| Immediately previous official source | v2.95.45 | Last verified official FullSource baseline: 698 files; SHA-256 `2d4f1f58aa355c8515b311d11fe01852f80d8c4dea57f5fff8631e955a6f112e`. |
+| Older releases | ≤ v2.95.44 | Historical; details are in `CHANGELOG.md` and `archive/PROJECT_HISTORY.md`. Retain required ledgers, provenance, patch payloads and test inputs. |
+
+The version in `data/manifest.json` identifies the current source candidate during development; it does not by itself imply Source Release Accepted or Production Deployment Accepted. These acceptance levels and their evidence requirements are defined in `MASTER_DEVELOPMENT_PROMPT.md` Sections 14.1–14.4.
 
 ## Runtime contracts
 
@@ -47,6 +49,9 @@
 
 - `.github/workflows/validate-data.yml` must invoke every `tools/tests/test_*.py` module and every `tools/tests/*.mjs` suite.
 - `test_ci_coverage.py` enforces registration; `audit-repository-integrity.py` checks local references, PWA shell lists, workflow references and JSON syntax.
+- Dynamic test inventory is governed by `tools/test-inventory-policy.json`; the v2.95.45 baseline has 88 modules and candidate v2.95.46 discovers 89, including the added fingerprint regression module. This is a comparison baseline, not a maximum.
+- `tools/source-fingerprint-policy.json` explicitly defines source fingerprint exclusions, normalized paths, symlink handling and generated release-evidence output patterns. The FullSource ZIP CRC and SHA-256 still cover every packaged file, including generated reports.
+- Strict Python test checkpoints bind the complete source fingerprint, test inventory, runtime/environment fingerprint, dependency lockfile hashes and exact command arguments. Any mismatch invalidates prior results.
 - Canonical patch payloads under `patches/` and vocabulary batch JSON are retained as provenance/reproducible editorial history; they are not shipped runtime features and must not be deleted as presumed dead code.
 - Never remove a file solely because it lacks a direct import: check Service Worker compatibility, tests, data provenance, migration history and documentation references first.
 
@@ -63,3 +68,10 @@
 - A later worker update installs its complete required shell, then waits. It does not call `skipWaiting()` automatically.
 - The app displays “Có bản mới – Tải lại”; only that explicit action sends `SKIP_WAITING`. The old worker/cache remains active until confirmation and successful activation.
 - Activation then removes only older `toeic-vocab-github-only-v*` caches. This behavior still requires real-browser acceptance with two open tabs; local simulation is not a substitute.
+
+## Release acceptance and non-destructive testing
+
+- **Source Release Accepted** and **Production Deployment Accepted** are separate states. Local source/package validation cannot prove GitHub Pages deployment or real-device behavior.
+- Production acceptance must verify the deployed commit/artifact identity, GitHub Actions, GitHub Pages, application smoke tests, PWA/Service Worker, offline/cache recovery and learner-data continuity.
+- Use isolated browser profiles/devices and synthetic test fixtures. A different URL path on the same origin does not isolate IndexedDB. Never reset or clean up a real learner profile, IndexedDB database, review history or Mock history.
+- See `MASTER_DEVELOPMENT_PROMPT.md` Sections 13–15 for the full test inventory, fingerprint, acceptance and future-prompt anti-drift contract.

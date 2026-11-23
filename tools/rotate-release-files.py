@@ -7,11 +7,17 @@ current and immediately previous root UPDATE_NOTES files. It never touches app
 code, vocabulary, question data, assets, user images, or IndexedDB.
 """
 from __future__ import annotations
-import argparse, json, re
+import argparse, hashlib, json, re
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 ARCHIVE=ROOT/'docs/archive/PROJECT_HISTORY.md'
+# Active generated/current documents without a release suffix must not be
+# retired merely because their filenames do not carry the current version.
+PRESERVED_ACTIVE_REPORTS = {
+    'docs/reports/MANUAL_ACCEPTANCE_CHECKLIST.md',
+    'docs/reports/RELATED_GLOSSARY_BACKLOG.md',
+}
 
 def version_tuple(s): return tuple(map(int,s.split('.')))
 
@@ -51,6 +57,37 @@ def append_archive_entries(existing: str, additions: list[str]) -> str:
 
 
 
+
+def append_full_archive_documents(existing: str, documents: list[tuple[str, bytes]]) -> str:
+    """Consolidate complete historical documents into one archive, preserving exact text."""
+    if not documents:
+        return existing
+    heading = "## Full archived documents"
+    if heading in existing:
+        prefix, body = existing.split(heading, 1)
+    else:
+        prefix, body = existing.rstrip(), ""
+    additions = []
+    for relative, raw in documents:
+        digest = hashlib.sha256(raw).hexdigest()
+        marker = f"<!-- ARCHIVED-DOCUMENT: {relative} SHA256:{digest} -->"
+        if marker in existing or marker in body:
+            continue
+        text = raw.decode("utf-8", errors="replace").rstrip()
+        additions.append(
+            marker + "\n" +
+            f"### Archived source: `{relative}`\n\n" +
+            f"- Original SHA-256: `{digest}`\n" +
+            f"- Original byte size: {len(raw)}\n\n" +
+            text + "\n" +
+            f"<!-- END ARCHIVED-DOCUMENT: {relative} -->"
+        )
+    if not additions:
+        return existing
+    body = body.rstrip()
+    full = "\n\n".join(part for part in (body, "\n\n".join(additions)) if part)
+    return prefix.rstrip() + "\n\n" + heading + "\n\n" + full.rstrip() + "\n"
+
 def referenced_document_paths() -> set[str]:
     """Protect historical Markdown still consumed by tests, tools or current docs.
 
@@ -66,7 +103,7 @@ def referenced_document_paths() -> set[str]:
             scan_files.extend(folder.rglob('*.mjs'))
             scan_files.extend(folder.rglob('*.yml'))
             scan_files.extend(folder.rglob('*.yaml'))
-    for name in ('README.md', 'MASTER_STATUS.md', 'COMPATIBILITY.md', 'CHANGELOG.md', 'versions/CURRENT_VERSION.md', 'versions/PREVIOUS_VERSION.md'):
+    for name in ('README.md', 'MASTER_STATUS.md', 'MASTER_DEVELOPMENT_PROMPT.md', 'COMPATIBILITY.md', 'CHANGELOG.md', 'versions/CURRENT_VERSION.md', 'versions/PREVIOUS_VERSION.md'):
         path = ROOT / 'docs' / name
         if path.exists():
             scan_files.append(path)
@@ -108,7 +145,7 @@ def main():
         for p in ROOT.glob(pattern):
             m=re.fullmatch(rx,p.name)
             if m and m.group(1) not in keep: root_release_files.append(p)
-    protected_docs = referenced_document_paths()
+    protected_docs = referenced_document_paths() | PRESERVED_ACTIVE_REPORTS
     docs=[]
     for folder in [ROOT/'docs/batches',ROOT/'docs/reports',ROOT/'docs/sources']:
         if not folder.exists(): continue
@@ -126,12 +163,16 @@ def main():
     ARCHIVE.parent.mkdir(parents=True,exist_ok=True)
     existing=ARCHIVE.read_text(encoding='utf-8') if ARCHIVE.exists() else '# Consolidated Project History\n'
     additions=[]
+    archived_bytes=[]
     for p in docs + root_release_files:
         rel=p.relative_to(ROOT).as_posix()
+        raw=p.read_bytes()
         marker=f'`{rel}`'
         if marker not in existing:
-            additions.append(compact_summary(p.relative_to(ROOT),p.read_text(encoding='utf-8')))
+            additions.append(compact_summary(p.relative_to(ROOT),raw.decode('utf-8', errors='replace')))
+        archived_bytes.append((rel, raw))
     updated_archive = append_archive_entries(existing, additions)
+    updated_archive = append_full_archive_documents(updated_archive, archived_bytes)
     if updated_archive != existing:
         ARCHIVE.write_text(updated_archive, encoding='utf-8')
     for p in docs+root_release_files: p.unlink(missing_ok=True)

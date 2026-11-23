@@ -18,7 +18,7 @@ Date: 2026-11-23. Baseline: released v2.95.44 FullSource. Candidate: selectively
 | Python test-shard runner | **12/12 PASS** | Includes process-group timeout termination, versioned checkpoint, resume and large-module splitting |
 | Release Acceptance runner | **10/10 PASS** | Includes manifest-derived version, JSON/Markdown version consistency, timeout status and child-process-group cleanup |
 
-The 35 focused Python modules include Batch 027, 034, 035, 036, 037 and 038; glossary candidate/quality/backlog audits; relation graph; project progress; major release audit; patch updater/data; CI coverage; baseline IDs; choice history/identity; answer-position; sync-version; vocabulary detail/examples; and both runner suites. Module-level result lists and command details are in `TOEIC_Dictionary_v2.95.45_TEST_COMMAND_LOG.md`.
+The 35 focused Python modules include Batch 027, 034, 035, 036, 037 and 038; glossary candidate/quality/backlog audits; relation graph; project progress; major release audit; patch updater/data; CI coverage; baseline IDs; choice history/identity; answer-position; sync-version; vocabulary detail/examples; and both runner suites. Module-level result lists and command details are in `COMMAND_LOG_INDEX_v2.95.45.md`.
 
 ## Full Python discovery / aggregate acceptance
 
@@ -50,4 +50,4 @@ The sharded runner report is `PYTHON_TEST_SHARDS_v2.95.45.md` (17/88 PASS, 71 pe
 - Browser and physical Android/iOS/tablet/desktop acceptance: not verified.
 - Independent lexical/pedagogical review of new/corrected glossary senses: pending.
 
-See `RELEASE_ACCEPTANCE_v2.95.45.md`, `COMPARE_MERGE_REVIEW_v2.95.45.md` and `TOEIC_Dictionary_v2.95.45_TEST_COMMAND_LOG.md` for limitations and supporting detail.
+See `RELEASE_ACCEPTANCE_v2.95.45.md`, `COMPARE_MERGE_REVIEW_v2.95.45.md` and `COMMAND_LOG_INDEX_v2.95.45.md` for limitations and supporting detail.

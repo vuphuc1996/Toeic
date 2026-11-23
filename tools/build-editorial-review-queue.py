@@ -3,6 +3,7 @@
 from __future__ import annotations
 import json
 from pathlib import Path
+from editorial_inventory import collect_editorial_inventory
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf-8'))['version']
@@ -24,8 +25,18 @@ def main() -> int:
     listen_rows = [u for u in listening if u.get('editorialStatus') == 'reserve-pending-independent-review']
     p7_rows = [u for u in readings if u.get('part') == 'Part 7' and u.get('editorialStatus') == 'reserve-pending-independent-review']
     p5_rows = [q for q in p5['questions'] if q.get('editorialStatus', p5.get('editorialStatus')) == 'reserve-pending-independent-review']
-    listen_count = sum(len(u.get('questions', [])) for u in listen_rows)
-    p7_count = sum(len(u.get('questions', [])) for u in p7_rows)
+    inventory = collect_editorial_inventory(ROOT)
+    listen_count = inventory['listening']['reserve_questions']
+    listen_eligible_count = inventory['listening']['eligible_questions']
+    listen_total_count = inventory['listening']['total_questions']
+    p7_count = inventory['part7']['reserve_questions']
+    p5_count = inventory['part5']['review_pending_questions']
+    if listen_count != sum(len(u.get('questions', [])) for u in listen_rows):
+        raise ValueError('Shared Listening metrics do not match queue resource selection')
+    if p7_count != sum(len(u.get('questions', [])) for u in p7_rows):
+        raise ValueError('Shared Part 7 metrics do not match queue resource selection')
+    if p5_count != len([q for q in p5['questions'] if q.get('editorialStatus', p5.get('editorialStatus')) == 'reserve-pending-independent-review']):
+        raise ValueError('Shared Part 5 metrics do not match queue question selection')
 
     lines = [
         f'# TOEIC Independent Editorial Review Queue — v{VERSION}', '',
@@ -35,8 +46,12 @@ def main() -> int:
         '|---|---:|---:|---|',
         f'| Listening Parts 1–4 | {listen_count} | {len(listen_rows)} units | Source/key fit, response fit, distractor uniqueness; P1 photo/action match |',
         f'| Reading Part 7 | {p7_count} | {len(p7_rows)} resources | Document evidence, inference, cross-document links, one-best-answer uniqueness |',
-        f'| Separate Part 5 sentence completion | {len(p5_rows)} | 1 bank | Grammar, naturalness, distractors, translation and one-answer uniqueness |',
-        f'| **Total** | **{listen_count + p7_count + len(p5_rows)}** | **{len(listen_rows) + len(p7_rows) + 1}** | **Independent review required** |', '',
+        f'| Separate Part 5 sentence completion | {p5_count} | 1 bank | Grammar, naturalness, distractors, translation and one-answer uniqueness |',
+        f'| **Total** | **{listen_count + p7_count + p5_count}** | **{len(listen_rows) + len(p7_rows) + 1}** | **Independent review required** |', '',
+        '## Protected inventory metrics', '',
+        f"- Listening: **{listen_eligible_count} eligible + {listen_count} reserve = {listen_total_count} total**.",
+        f"- Part 7 reserve: **{p7_count} questions**; remains separate from Listening and Part 5.",
+        f"- Separate Part 5 practice-only bank: **{inventory['part5']['total_questions']} questions**; {p5_count} are review-pending.", '',
         '## Reviewer record', '',
         '- Reviewer name / role: ____________________________________',
         '- Review date: _____________________________________________',
@@ -95,7 +110,7 @@ def main() -> int:
                       '- Decision: `________` · Correction / notes: __________________________________________']
         lines.append('')
 
-    lines += ['## C. Separate TOEIC Part 5 sentence-completion reserve', '', 'This 80-question bank is separate from Reading Part 5 and must not be counted as Mock-eligible. Check the complete sentence, grammar focus, distractors, translation and every option explanation.', '']
+    lines += ['## C. Separate TOEIC Part 5 sentence-completion reserve', '', f"This {inventory['part5']['total_questions']}-question bank is separate from Reading Part 5 and must not be counted as Mock-eligible. Check the complete sentence, grammar focus, distractors, translation and every option explanation.", '']
     for q in p5_rows:
         key = q.get('answerIndex', -1)
         choices = q.get('choices', [])
@@ -112,14 +127,14 @@ def main() -> int:
                   '- Decision: `________` · Correction / notes: __________________________________________', '']
 
     lines += ['## Release rule', '',
-              '- The current 102 eligible Listening questions remain the only approved Listening pool; the 137 reserve questions are not promoted by this packet.',
-              '- Part 7 reserve remains excluded from Mock approval until item-level independent review is recorded.',
-              '- Part 5 sentence completion remains separate practice content; its review status must be changed only after item-level sign-off.',
+              f"- The current {listen_eligible_count} eligible Listening questions remain the only approved Listening pool; the {listen_count} reserve questions are not promoted by this packet.",
+              f"- The {p7_count} Part 7 reserve questions remain excluded from Mock approval until item-level independent review is recorded.",
+              f"- The separate Part 5 practice-only bank contains {inventory['part5']['total_questions']} questions and remains outside Mock eligibility; any review-status change requires item-level sign-off.",
               '- A structural pass, traceable evidence quote or AI-assisted audit is not a substitute for the independent reviewer decision.', '']
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text('\n'.join(lines), encoding='utf-8')
     print(f'Wrote {OUT.relative_to(ROOT)}')
-    print(f'Listening={listen_count}; Part7={p7_count}; Part5={len(p5_rows)}; total={listen_count+p7_count+len(p5_rows)}')
+    print(f'Listening eligible={listen_eligible_count}, reserve={listen_count}, total={listen_total_count}; Part7 reserve={p7_count}; separate Part5 practice-only={inventory["part5"]["total_questions"]} (review-pending={p5_count})')
     return 0
 
 if __name__ == '__main__':

@@ -123,6 +123,36 @@ class ReleaseRotationTests(unittest.TestCase):
         history = (self.root / "docs/archive/PROJECT_HISTORY.md").read_text(encoding="utf-8")
         self.assertNotIn("ACTIVE_HANDOFF_v2.28.0.md", history)
 
+
+    def test_rotation_preserves_pinned_current_unversioned_reports(self):
+        manual = self.root / "docs/reports/MANUAL_ACCEPTANCE_CHECKLIST.md"
+        backlog = self.root / "docs/reports/RELATED_GLOSSARY_BACKLOG.md"
+        manual.write_text("# Current manual acceptance checklist\n", encoding="utf-8")
+        backlog.write_text("# Current generated glossary backlog\n", encoding="utf-8")
+        result = self.run_rotation("--apply")
+        self.assertIn("KEEP (referenced by active tests/tools/docs) docs/reports/MANUAL_ACCEPTANCE_CHECKLIST.md", result.stdout)
+        self.assertIn("KEEP (referenced by active tests/tools/docs) docs/reports/RELATED_GLOSSARY_BACKLOG.md", result.stdout)
+        self.assertTrue(manual.exists())
+        self.assertTrue(backlog.exists())
+
+
+    def test_rotation_preserves_reports_linked_only_by_changelog_or_master_contract(self):
+        changelog_report = self.root / "docs/reports/CHANGELOG_LINK_v2.28.0.md"
+        master_report = self.root / "docs/reports/MASTER_LINK_v2.28.0.md"
+        changelog_report.write_text("# Referenced only by changelog\n", encoding="utf-8")
+        master_report.write_text("# Referenced only by master contract\n", encoding="utf-8")
+        (self.root / "docs/CHANGELOG.md").write_text(
+            "Historical reference: `reports/CHANGELOG_LINK_v2.28.0.md`\n", encoding="utf-8"
+        )
+        (self.root / "docs/MASTER_DEVELOPMENT_PROMPT.md").write_text(
+            "Contract reference: `reports/MASTER_LINK_v2.28.0.md`\n", encoding="utf-8"
+        )
+        result = self.run_rotation("--apply")
+        self.assertIn("KEEP (referenced by active tests/tools/docs) docs/reports/CHANGELOG_LINK_v2.28.0.md", result.stdout)
+        self.assertIn("KEEP (referenced by active tests/tools/docs) docs/reports/MASTER_LINK_v2.28.0.md", result.stdout)
+        self.assertTrue(changelog_report.exists())
+        self.assertTrue(master_report.exists())
+
     def test_apply_consolidates_repeated_history_headings(self):
         history_path = self.root / "docs/archive/PROJECT_HISTORY.md"
         history_path.write_text(
@@ -137,6 +167,16 @@ class ReleaseRotationTests(unittest.TestCase):
         self.assertIn("Older record A", history)
         self.assertIn("Older record B", history)
         self.assertIn("OLD_BATCH_v2.28.0.md", history)
+
+
+    def test_archived_documents_preserve_full_content_and_original_hash(self):
+        old_content = "# Historical detail\n\nA complete test log and provenance record.\n"
+        self.old_batch.write_text(old_content, encoding="utf-8")
+        self.run_rotation("--apply")
+        history = (self.root / "docs/archive/PROJECT_HISTORY.md").read_text(encoding="utf-8")
+        self.assertIn("A complete test log and provenance record.", history)
+        self.assertIn("ARCHIVED-DOCUMENT: docs/batches/OLD_BATCH_v2.28.0.md SHA256:", history)
+        self.assertFalse(self.old_batch.exists())
 
 
 if __name__ == "__main__":

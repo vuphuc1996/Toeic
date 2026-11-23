@@ -11,6 +11,12 @@
 | Separate Part 5 sentence completion | 80 | 1 bank | Grammar, naturalness, distractors, translation and one-answer uniqueness |
 | **Total** | **360** | **112** | **Independent review required** |
 
+## Protected inventory metrics
+
+- Listening: **102 eligible + 193 reserve = 295 total**.
+- Part 7 reserve: **87 questions**; remains separate from Listening and Part 5.
+- Separate Part 5 practice-only bank: **80 questions**; 80 are review-pending.
+
 ## Reviewer record
 
 - Reviewer name / role: ____________________________________
@@ -4093,7 +4099,7 @@ This 80-question bank is separate from Reading Part 5 and must not be counted as
 
 ## Release rule
 
-- The current 102 eligible Listening questions remain the only approved Listening pool; the 137 reserve questions are not promoted by this packet.
-- Part 7 reserve remains excluded from Mock approval until item-level independent review is recorded.
-- Part 5 sentence completion remains separate practice content; its review status must be changed only after item-level sign-off.
+- The current 102 eligible Listening questions remain the only approved Listening pool; the 193 reserve questions are not promoted by this packet.
+- The 87 Part 7 reserve questions remain excluded from Mock approval until item-level independent review is recorded.
+- The separate Part 5 practice-only bank contains 80 questions and remains outside Mock eligibility; any review-status change requires item-level sign-off.
 - A structural pass, traceable evidence quote or AI-assisted audit is not a substitute for the independent reviewer decision.

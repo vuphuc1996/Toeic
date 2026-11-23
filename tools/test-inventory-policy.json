@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "approved_roots": [
+    "tools/tests"
+  ],
+  "include_patterns": [
+    "test_*.py"
+  ],
+  "exclude_paths": [],
+  "baseline_inventory": "tools/test-inventory-baseline-v2.95.45.json",
+  "strict_release": {
+    "invalidate_all_checkpoints_on_source_release_fingerprint_change": true
+  },
+  "accepted_environment_skip_reasons": [
+    "source archive has no Git metadata; gitignore assertion requires a clone"
+  ]
+}

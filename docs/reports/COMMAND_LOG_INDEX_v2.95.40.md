@@ -21,7 +21,7 @@ python tools/sync-version.py --check
 python tools/sync-design-profile.py --check
 python tools/audit-repository-integrity.py
 python tools/audit-major-release.py
-python tools/audit-related-glossary-candidates.py --output docs/reports/RELATED_GLOSSARY_CANDIDATE_AUDIT_CURRENT.md
+python tools/audit-related-glossary-candidates.py --output docs/reports/RELATED_GLOSSARY_CANDIDATE_AUDIT_v2.95.44.md
 python tools/build-related-glossary-backlog.py
 python tools/audit-related-glossary-quality.py --output docs/reports/RELATED_GLOSSARY_QUALITY_FLAGS_v2.95.40.md --json-output docs/reports/RELATED_GLOSSARY_QUALITY_FLAGS_v2.95.40.json
 python tools/audit-toeic-coverage.py

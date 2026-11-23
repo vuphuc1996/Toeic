@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 1,
+  "baselineVersion": "2.95.45",
+  "baselineFullSourceSha256": "2d4f1f58aa355c8515b311d11fe01852f80d8c4dea57f5fff8631e955a6f112e",
+  "moduleCount": 88,
+  "modules": [
+    {
+      "path": "tools/tests/test_alphabet_sound_lab.py",
+      "sha256": "b5be232d185901a298dcdbec8e844600afa19bbaaa48c6e4a193c98ff3bb770a",
+      "size": 2884
+    },
+    {
+      "path": "tools/tests/test_answer_position_balance.py",
+      "sha256": "42f743c6d2bb79082d8944aec83eb813977b745bd3bc9358c87d98001ae9dcbc",
+      "size": 7953
+    },
+    {
+      "path": "tools/tests/test_audit_design_tokens.py",
+      "sha256": "0551530f7ae6f04a4bed98a8776e98ceb11e0e1d63e4c81203f3d7672b3f7dfb",
+      "size": 5487
+    },
+    {
+      "path": "tools/tests/test_baseline_ids.py",
+      "sha256": "30eb67ec9153f948e7746000ee245052b53632ebd09991ab37ae8586a5b8535b",
+      "size": 5779
+    },
+    {
+      "path": "tools/tests/test_choice_history.py",
+      "sha256": "515c4fc52176519de09ca591b12000e3477b8fcbcca6dac6d8e1492caed4ddba",
+      "size": 6360
+    },
+    {
+      "path": "tools/tests/test_choice_identity.py",
+      "sha256": "8e33e77e5ffc2ebebbba40188755119e224ac1e8c26810dc7f46d7f05d8e8b5a",
+      "size": 5207
+    },
+    {
+      "path": "tools/tests/test_ci_coverage.py",
+      "sha256": "5c25949b42d630f2b3de35aeb06c20ae911a33fd8c8c437a6bb7a60599f55c7d",
+      "size": 1704
+    },
+    {
+      "path": "tools/tests/test_cmudict_ipa_backfill.py",
+      "sha256": "c5c09ac505becae5a89050d00686681cd24cbd82153c8257a016f7e2c66d9413",
+      "size": 2851
+    },
+    {
+      "path": "tools/tests/test_content_batch_024.py",
+      "sha256": "847cdf0ef10b7d6d97333d99dd036c63d857acfd573f600ea408cc61a668c657",
+      "size": 5080
+    },
+    {
+      "path": "tools/tests/test_content_batch_025.py",
+      "sha256": "542d1df20fcac006b7745d88795119d5f5a9243a141698bf6dc9c27b583f6b23",
+      "size": 5172
+    },
+    {
+      "path": "tools/tests/test_content_batch_026.py",
+      "sha256": "0d65348408676afea218e5599406ab5180908f83457b4925e95be02d37e59f58",
+      "size": 4658
+    },
+    {
+      "path": "tools/tests/test_content_batch_027.py",
+      "sha256": "a5a88951ea0b0c2d7ef88e88d34e5f38b9967bf5611f8e6501a37a6f089aeb20",
+      "size": 3981
+    },
+    {
+      "path": "tools/tests/test_dashboard_layout.py",
+      "sha256": "6d9baa12af23d056d4f4a8ec693a39da583318e141b9d1d09de697826cf281af",
+      "size": 2770
+    },
+    {
+      "path": "tools/tests/test_design_profile.py",
+      "sha256": "3aed1f5e94163db1fe7c65eac26f37b7ae89f6931e1f0333b1ff93db67407a87",
+      "size": 3598
+    },
+    {
+      "path": "tools/tests/test_design_system.py",
+      "sha256": "cb5d8bc242098d0376135712158e7145a49a815a81ea0bd180ecf2fc0622a15e",
+      "size": 6422
+    },
+    {
+      "path": "tools/tests/test_distractor_quality.py",
+      "sha256": "50d4508d6ccb91a13aa1edc8cca8899914bcdeb03619f4c8951254969e143206",
+      "size": 8156
+    },
+    {
+      "path": "tools/tests/test_editorial_review.py",
+      "sha256": "0b0675a0fd2b4f380584f750118f1925a2c1c73ff0370588a9d3fcdb0e2320c6",
+      "size": 4689
+    },
+    {
+      "path": "tools/tests/test_editorial_review_queue.py",
+      "sha256": "df98c808e3bbb3c81ae8c82e1bb11322c48da9fe2240ae730e342b4e47055a3e",
+      "size": 3174
+    },
+    {
+      "path": "tools/tests/test_foundation_a2_assessment_quality.py",
+      "sha256": "100ed2e9ebca93f04ead97bd06f8e9e823d0b4efb711f3f7ba93eab4651cc4fa",
+      "size": 6746
+    },
+    {
+      "path": "tools/tests/test_foundation_a2_production.py",
+      "sha256": "b2498d492e5d158980dc75227efc464011c1d702b614fcdff5a56dc2e4c38640",
+      "size": 8071
+    },
+    {
+      "path": "tools/tests/test_foundation_listening.py",
+      "sha256": "9cf9fb179c42f1c4f830d8e709d7de79ad54c6e29926a6f410921154a8c3e611",
+      "size": 9959
+    },
+    {
+      "path": "tools/tests/test_foundation_listening_extended.py",
+      "sha256": "34d5200437b4cfa09f6290ae4d1faf13264f676940416f86f56b768925f67332",
+      "size": 4750
+    },
+    {
+      "path": "tools/tests/test_foundation_outcome_evidence.py",
+      "sha256": "39e5feb45330eed1e66b3f50d726d921dae9ca95f776eb469463a30475e41c7e",
+      "size": 836
+    },
+    {
+      "path": "tools/tests/test_foundation_pathway.py",
+      "sha256": "d9bd4a1ea409aae6f39e788044a1e1e1ebf660822d1348538430a42acb500034",
+      "size": 6351
+    },
+    {
+      "path": "tools/tests/test_foundation_production_revision.py",
+      "sha256": "128902048d051e363febed2a5bdcc7b4e45d8cb6bf6a834798f0d2012bfea464",
+      "size": 5123
+    },
+    {
+      "path": "tools/tests/test_foundation_reading.py",
+      "sha256": "05f7d891be7bd2209d7827608d2a1e6e3cffcaee60aea07c680229d982e4b34c",
+      "size": 5305
+    },
+    {
+      "path": "tools/tests/test_foundation_reading_extended.py",
+      "sha256": "6aae7060f7f8e502fce8d81a372b0523f9e80c16ca963141efaf7edf492e312f",
+      "size": 6429
+    },
+    {
+      "path": "tools/tests/test_grammar_examples_quality.py",
+      "sha256": "7fe843a43dc9b2979238e529b1198d6938738f1a43385bd3b79669167e8a78b7",
+      "size": 3295
+    },
+    {
+      "path": "tools/tests/test_grammar_expansion.py",
+      "sha256": "42e634333b0beb3844b7a1857224f8441e6eb4e0121f0ed358b8dc8bd791a937",
+      "size": 4062
+    },
+    {
+      "path": "tools/tests/test_ipa_backfill_batch_024.py",
+      "sha256": "b3b8b5c8dc1c82c9e32992cc4fca4cd7de84520b62c8ae3bd99f991d71967417",
+      "size": 3563
+    },
+    {
+      "path": "tools/tests/test_learning_content.py",
+      "sha256": "249405a5e91818fe4b83c8d8e587f2873cb98dc1407b21d5b29015fc495ac86f",
+      "size": 20002
+    },
+    {
+      "path": "tools/tests/test_learning_detail_scope.py",
+      "sha256": "557e555066d50711aa874d948133e8c7dd385f270ebd4d72c99f83b75b1f505b",
+      "size": 2306
+    },
+    {
+      "path": "tools/tests/test_learning_outcome_progress.py",
+      "sha256": "8432c2d5f0008d9c2b2c7d9645a1b81f568887943d2569cb0ee5eb66e74d4a4c",
+      "size": 1649
+    },
+    {
+      "path": "tools/tests/test_learning_outcomes.py",
+      "sha256": "13813f6f389859466815f29766c79a0ee209ca1c5ece80b332c2ae4f3f396ff1",
+      "size": 1478
+    },
+    {
+      "path": "tools/tests/test_learning_start_level.py",
+      "sha256": "614940eef9d8a7435c389933a84000463062e6bcab9377e5bfcc8e46a9046776",
+      "size": 1694
+    },
+    {
+      "path": "tools/tests/test_learning_surface_consistency.py",
+      "sha256": "87d63cb0504c97ae6c3a851bc08efc61faa6ddf2a2d86923003d19d395b9e2b8",
+      "size": 2738
+    },
+    {
+      "path": "tools/tests/test_legacy_collocation_cleanup.py",
+      "sha256": "b06cdbf1d9cf592ec50477c99f96d0a34e34a71ed154fa92ea4f8f9aeb74cb91",
+      "size": 3585
+    },
+    {
+      "path": "tools/tests/test_listening_expansion.py",
+      "sha256": "a3c7d7a5358de4f87e71d7301098f818b190ed3d6d5993815b9f77550c523df7",
+      "size": 7288
+    },
+    {
+      "path": "tools/tests/test_major_release_quality_audit_025.py",
+      "sha256": "750db2674c3cb215746e384bb368d672a0915e59ace71df367af27926faf1574",
+      "size": 4156
+    },
+    {
+      "path": "tools/tests/test_missing_ipa_review_queue.py",
+      "sha256": "9e4b0f3a27eade0a9ca96e8d097115e134b62acb565468d37bd71e1fb6329fe9",
+      "size": 1962
+    },
+    {
+      "path": "tools/tests/test_missing_ipa_safe_backfill.py",
+      "sha256": "bab1ae15003c5597c4a3c46b4ea25c01c5d4734eba7e467c9c750bc019728645",
+      "size": 2183
+    },
+    {
+      "path": "tools/tests/test_objective_resource_map.py",
+      "sha256": "8e4199389170f21ccce5a3278335b90dcd0fd00b470aed1f4cc72a0a91ed662e",
+      "size": 1440
+    },
+    {
+      "path": "tools/tests/test_package_source.py",
+      "sha256": "0cdb7aa95e3e8748197bd55fd6db6d1606c0de5e8e081e32bea660214a4c5945",
+      "size": 2566
+    },
+    {
+      "path": "tools/tests/test_part1_photo_assets.py",
+      "sha256": "823448ff9c4f2e745f543b612cd2f80a9d2a045540e9704feb1416d9d0dfe534",
+      "size": 4336
+    },
+    {
+      "path": "tools/tests/test_patch_data.py",
+      "sha256": "4c89f017b01599d6987a274c7e0799fe57ee8e7d41f283ddaae2919ffc7a176f",
+      "size": 13754
+    },
+    {
+      "path": "tools/tests/test_patch_related_terms.py",
+      "sha256": "e70c6caf2cf4b79f8715b5535625f46e11d8b6ed42cab4099ac6f07a65ec92e8",
+      "size": 7643
+    },
+    {
+      "path": "tools/tests/test_placement_diagnostic.py",
+      "sha256": "6359f292e218ba412211202704b09e89a2fd0f6be7436aba8928b7e6c9276d79",
+      "size": 2533
+    },
+    {
+      "path": "tools/tests/test_practice_mode_fallback.py",
+      "sha256": "1a2b7d7e080a73d2d0eae35f69606fabb031862e62d9919debd5b6b5cf948154",
+      "size": 5343
+    },
+    {
+      "path": "tools/tests/test_project_progress.py",
+      "sha256": "c38fad6614d71c06448ec4b3705539b0243e96f3df1375894c5d6df7891c5bf9",
+      "size": 3397
+    },
+    {
+      "path": "tools/tests/test_pwa_readiness.py",
+      "sha256": "3c0065cf2f87bd4d75e1a3f9883adae54d4a26881f481cc6fd17f55e645f8725",
+      "size": 2712
+    },
+    {
+      "path": "tools/tests/test_python_test_shard_runner.py",
+      "sha256": "68ed397b01f90a7c24078e734216650c51f3f44f61667f36feb3a2ae5c73a38d",
+      "size": 7107
+    },
+    {
+      "path": "tools/tests/test_question_evidence.py",
+      "sha256": "c6a440b9b105088bd198f170226ae94aec2ddbfa82c653f5bd69343898925b56",
+      "size": 7245
+    },
+    {
+      "path": "tools/tests/test_reading_expansion.py",
+      "sha256": "b81a8ac410b5597fe3d281df272a9fb847ffb05d8a1821dc077759f71be65c45",
+      "size": 7223
+    },
+    {
+      "path": "tools/tests/test_related_glossary_backfill_025.py",
+      "sha256": "1cd7574285fe696dc2bb5d64c1479e1f98817752abb9d62c12e34fad05960a00",
+      "size": 4429
+    },
+    {
+      "path": "tools/tests/test_related_glossary_backlog.py",
+      "sha256": "fe0b52fe98ab33f2c78ce98937acd9bc90810150d8e4999c6ca6e04d6e60fb98",
+      "size": 2194
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_021.py",
+      "sha256": "3c23181ae6a48721ec63345c5dcca6d99f16853ba7eca70ddcb7b0202ed8be4e",
+      "size": 3930
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_022.py",
+      "sha256": "80cac161ad27a5defb3d4fc43c3815b02efb77cddb3d58c4583d0730534e8540",
+      "size": 4860
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_023.py",
+      "sha256": "cc82fa01e01322291c619e91cfb2361c77dc3f2b8bdbb94a45b5a1e8250647ae",
+      "size": 4993
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_026.py",
+      "sha256": "9b135bd9915e20ce4c53304836188349141cd804870f7fd09120469e6a0087a4",
+      "size": 2937
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_027.py",
+      "sha256": "60c483abd509260ac7a865b7160a92ed11643776e722ac77e41ea3e3f0fc02ab",
+      "size": 3988
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_028.py",
+      "sha256": "9533028441b6d39761bb9896d685ddf73fc411e8831fe479aaf9ae671776e419",
+      "size": 2417
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_030.py",
+      "sha256": "730f776517bb204d81dbba453a77ae3ca5f7f1085f68cce0b7e885b2f46e3e3f",
+      "size": 3627
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_032.py",
+      "sha256": "956c3a82aece3b52a8e9555b19f911c3c5149cd8d99cd8516ec8742b6e960a75",
+      "size": 2165
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_033.py",
+      "sha256": "0795c142051a7b48bc935b5524fbeaa428f9838d99f661957db4518a25477e66",
+      "size": 2309
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_034.py",
+      "sha256": "59ce76fb6684cc0219567dbecd6f9c682f718de23b01be680e909cda0e3ed44b",
+      "size": 5687
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_035.py",
+      "sha256": "b15330949831eeb242c01e7b8776ec9d05d480f5093a90eaf6857fe5043b384d",
+      "size": 5204
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_036.py",
+      "sha256": "d9c1e6a278e86ba76b06215de60fc1dd81ef6924c63dba63a32b4ab1ab575d8f",
+      "size": 6800
+    },
+    {
+      "path": "tools/tests/test_related_glossary_batch_037.py",
+      "sha256": "649a50bfb7b2dc4759648a1b5b7df48cdea54def81c5739af9d2b7d7a36cd2bf",
+      "size": 6735
+    },
+    {
+      "path": "tools/tests/test_related_glossary_candidate_audit.py",
+      "sha256": "cd57575c4357fef90faf55f48eacbfb606fd81ef44d929a9eb6b0af82864c056",
+      "size": 1955
+    },
+    {
+      "path": "tools/tests/test_related_glossary_canonical_enrichment_029.py",
+      "sha256": "ba4218c83ad3ee4f92c51d5f2f5dbc4b067c734790f487d5f4da3f8d64b8bbd0",
+      "size": 3991
+    },
+    {
+      "path": "tools/tests/test_related_glossary_exact_match_enrichment_035.py",
+      "sha256": "02ef6a93330ae2edefbb4fa4f434bbfd0f90bceabb917e3c2b47cfa0d584e0c6",
+      "size": 2254
+    },
+    {
+      "path": "tools/tests/test_related_glossary_merge_038.py",
+      "sha256": "6a6215fbf59038f981a9b76f674ef106f75e13891fe8488940f99cda2f1558aa",
+      "size": 6364
+    },
+    {
+      "path": "tools/tests/test_related_glossary_quality_audit.py",
+      "sha256": "925135055cfe697a687fac27f79fa78fbc151df3732bdb976561e1eccdbeec52",
+      "size": 5036
+    },
+    {
+      "path": "tools/tests/test_related_term_explanation_context.py",
+      "sha256": "d90126236390d913f7bfcb5dbcbfaa617e5559079b6c5c4fcd748b0c58e98ca0",
+      "size": 1486
+    },
+    {
+      "path": "tools/tests/test_release_acceptance_runner.py",
+      "sha256": "0ce5e48f726300e5cf16e3afc0be6452bcdd87885e8e3d7bdb9096cb6c7c37c8",
+      "size": 3941
+    },
+    {
+      "path": "tools/tests/test_release_rotation.py",
+      "sha256": "33c7d734bcc0be7b4de491abff6e52815224c36eab348b3045f93a3afbaaa856",
+      "size": 7569
+    },
+    {
+      "path": "tools/tests/test_remaining_content_review.py",
+      "sha256": "38872b67a9230ede51b6e6e2c4b51212dc3b76b9ee803a1de731a3e78acb949f",
+      "size": 8727
+    },
+    {
+      "path": "tools/tests/test_repository_integrity.py",
+      "sha256": "f5b65753e2f159c2d520a862fb28daf02177a05e1cf29c0962bb27b0b9a872dd",
+      "size": 654
+    },
+    {
+      "path": "tools/tests/test_responsive_layout.py",
+      "sha256": "749b0e260df5cc318e2937511352c319670b6df25963d236a8be655b84715f5e",
+      "size": 2243
+    },
+    {
+      "path": "tools/tests/test_sentence_completion.py",
+      "sha256": "d320d455301d63bff6046f02bbf91f0a278577dc00936e69e12a323f553a6f5c",
+      "size": 6771
+    },
+    {
+      "path": "tools/tests/test_sync_version.py",
+      "sha256": "43ad82169af34469273906d02b953908cd00806fc98cad036d73eed124e8ce80",
+      "size": 7779
+    },
+    {
+      "path": "tools/tests/test_tts_readiness.py",
+      "sha256": "242dee0ab688c52f04848b4321fbcc26825f2a7da4c89a42d80a66053223852b",
+      "size": 9965
+    },
+    {
+      "path": "tools/tests/test_validator.py",
+      "sha256": "49198cc2c05d8a3232ce9d0f06e1e03c0b1515f4a7e37a959b927c81addd2d0c",
+      "size": 14305
+    },
+    {
+      "path": "tools/tests/test_visual_composition.py",
+      "sha256": "694e29506aafed8f372992e8b48a481215aa1844b4976aa0092c5a952c724a4f",
+      "size": 3794
+    },
+    {
+      "path": "tools/tests/test_vocabulary_batch_012.py",
+      "sha256": "152950a9fccce9d14574fb07e9b5c9065739aea8dcb97d2fb72704d8416299e0",
+      "size": 3295
+    },
+    {
+      "path": "tools/tests/test_vocabulary_detail_examples.py",
+      "sha256": "c94b11855ef9875429b6cae3dbbc2956d2e6b00cf68f417e1815aa34f117ee4e",
+      "size": 18248
+    },
+    {
+      "path": "tools/tests/test_vocabulary_family_links.py",
+      "sha256": "fde66e204e8ef27c1f41337ed125a0552d799e31cb6422a1a219a9358ff21c2c",
+      "size": 7744
+    },
+    {
+      "path": "tools/tests/test_vocabulary_relationship_graph_audit.py",
+      "sha256": "c70b1cdc84540e56663b96cd02168dc82d65391fcf90656b865551a82edba4ac",
+      "size": 2255
+    }
+  ]
+}

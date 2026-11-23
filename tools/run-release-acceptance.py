@@ -33,7 +33,9 @@ COMMANDS = [
     ("distractor_audit", [sys.executable, "tools/audit-distractors.py"]),
     ("learning_outcomes", [sys.executable, "tools/audit-learning-outcomes.py"]),
     ("major_release_audit", [sys.executable, "tools/audit-major-release.py"]),
-    ("full_python_suite", [sys.executable, "tools/run-python-tests-sharded.py", "--timeout-per-module", "180", "--resume", "--split-large-modules"]),
+    ("related_glossary_backlog", [sys.executable, "tools/build-related-glossary-backlog.py"]),
+    ("editorial_review_queue", [sys.executable, "tools/build-editorial-review-queue.py"]),
+    ("full_python_suite", [sys.executable, "tools/run-python-tests-sharded.py", "--timeout-per-module", "180", "--resume"]),
 ]
 
 
@@ -126,7 +128,7 @@ def main() -> int:
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     results = run_commands(root, max(1, args.timeout), args.dry_run)
     if not args.dry_run:
-        report_dir = args.report_dir if args.report_dir is not None else root / "docs/reports"
+        report_dir = args.report_dir if args.report_dir is not None else root / "logs/release-acceptance"
         write_reports(report_dir, results, version, stamp)
     for result in results:
         print(f"[{result['status']}] {result['name']}: {result['command']}")

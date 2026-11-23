@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "exclude_directories": [
+    ".git",
+    "__pycache__",
+    ".pytest_cache",
+    "node_modules"
+  ],
+  "exclude_directory_prefixes": [
+    "release_"
+  ],
+  "exclude_paths": [
+    "logs"
+  ],
+  "exclude_suffixes": [
+    ".zip",
+    ".bundle",
+    ".log",
+    ".pyc",
+    ".tmp"
+  ],
+  "include_file_metadata": [
+    "relative_path",
+    "kind",
+    "size",
+    "mode",
+    "content_sha256"
+  ],
+  "timestamps_in_fingerprint": false,
+  "owner_metadata_in_fingerprint": false,
+  "symlink_policy": "record_target_without_following_and_reject_targets_outside_source_root",
+  "exclude_patterns": [
+    "docs/reports/TEST_REPORT_*.md",
+    "docs/reports/COMMAND_LOG_INDEX_*.md",
+    "docs/reports/CHANGE_MANIFEST_*.md",
+    "docs/reports/RELEASE_DELTA_*.md",
+    "docs/reports/PACKAGE_VERIFICATION_*.md",
+    "docs/reports/PROJECT_PROGRESS_SNAPSHOT_*.md",
+    "docs/reports/RELEASE_ACCEPTANCE_*.md",
+    "docs/reports/RELEASE_ACCEPTANCE_*.json"
+  ],
+  "fingerprint_note": "Generated release evidence documents matched by exclude_patterns remain included in the FullSource ZIP and are covered by ZIP CRC and archive SHA-256; they are excluded only from source/test input fingerprints to prevent self-referential evidence updates."
+}
