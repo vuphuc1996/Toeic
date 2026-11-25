@@ -1,16 +1,17 @@
-# TOEIC Dictionary v2.95.64 — Project Documentation
+# TOEIC Dictionary v2.95.65 — Project Documentation
 
-## Current source — v2.95.64 (GitHub commit-readiness and CI hardening)
+## Current source — v2.95.65 (Batch 035 and shared modal overlay repair)
 
-- **Exact predecessor:** `TOEIC_Dictionary_v2.95.63_FullSource.zip`; SHA-256 `6d43a7f44e1cc84d6ad7f3ee9dae660cceb83c792668d0966ce1060f4aa9ea80`. This exact complete FullSource was verified before editing.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.64.md`.
-- Current GitHub commit-readiness report: `reports/GIT_COMMIT_READINESS_v2.95.64.md`.
-- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.64.md`.
-- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.64.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.64.md`.
-- Git preflight checks clean/staged Git state, case-insensitive path conflicts, Windows path portability, symlinks, oversized files, accidental release artifacts, ignore rules, LF/binary attributes and whitespace in the current change.
-- GitHub Actions now pins its three external actions to verified full commit SHAs, syntax-checks the complete `tools/` tree, checks all Python and Node regression inventory, and understands default unittest discovery.
-- No learning content, stable IDs, learner IndexedDB data/schema, PWA runtime/cache behavior, UI layout or hosting architecture changed.
+- **Exact predecessor:** `TOEIC_Dictionary_v2.95.64_FullSource.zip`; SHA-256 `03ec4c80e88bc76e435cfc0782e933474be882a4f271318a23375a35e9242673`. This exact complete FullSource was verified before editing; no older source or Patch was used as the baseline.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.65.md`.
+- Current implementation report: `reports/GITHUB_CAMBRIDGE_AND_MODAL_OVERLAY_FIX_v2.95.65.md`.
+- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.65.md`.
+- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.65.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.65.md`.
+- The Batch 035 split Cambridge test is included in source and selected by the wildcard discovery step; historical rows, corrections, relation anchors and base hash are reconstructed instead of using stale fixed values.
+- `learningFocusBackdrop` is the only screen-wide dimming/blur layer; `modalLayer` contains only the modal panel. Both ordinary and focused-session modals use the same root.
+- GitHub Actions now runs a dedicated single-overlay contract test in addition to all Node modal and full Python discovery tests.
+- No vocabulary/question/answer data, stable IDs, learner IndexedDB records/schema, PWA storage contract, UI layout or hosting architecture changed.
 - Hosted GitHub Actions, GitHub Pages deployment, PWA cache/offline behavior and physical-device acceptance remain unverified until directly tested.
 
 ## Single source of truth

@@ -42,6 +42,7 @@ const context = {
   toast: () => {}, window: { confirm: () => true },
   stopSpeech: () => {},
   openLearningFocus: () => {},
+  hideModalLayer: () => { $('#modalLayer').hidden = true; },
   dbSet: async (key, value) => { context.persisted ??= {}; context.persisted[key] = structuredClone(value); context.persistedWrites = (context.persistedWrites || 0) + 1; },
 };
 vm.createContext(context);
@@ -107,7 +108,7 @@ assert.match($('#readingCardList').innerHTML, /1 câu đã làm/);
 openReadingDetail(part5.id);
 assert.match($('#modalContent').innerHTML, /reviews/);
 assert.match($('#modalContent').innerHTML, /PART 5 · INCOMPLETE SENTENCES/);
-assert.equal($('#modalBackdrop').hidden, true, 'learning detail must use the common focus shell, not the legacy detail modal');
+assert.equal($('#modalLayer').hidden, true, 'learning detail must use the common focus shell, not the legacy detail modal');
 assert.match($('#modalContent').innerHTML, /learning-detail-surface/);
 
 const part7 = {

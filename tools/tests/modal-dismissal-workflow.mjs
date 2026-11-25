@@ -17,10 +17,12 @@ function makeNode() {
       add: (...values) => values.forEach(value => classes.add(value)),
       remove: (...values) => values.forEach(value => classes.delete(value)),
       contains: value => classes.has(value),
+      toggle: (value, force) => { if (force === undefined ? !classes.has(value) : force) classes.add(value); else classes.delete(value); return classes.has(value); },
     },
     setAttribute(name, value) { this.attributes[name] = String(value); },
     removeAttribute(name) { delete this.attributes[name]; },
     focus() { this.focused = true; },
+    querySelector() { return null; },
   };
 }
 function $(selector) {
@@ -28,6 +30,8 @@ function $(selector) {
   return nodes.get(selector);
 }
 const context = {
+  learningFocusState: { active: false, kind: '', nodes: [] },
+  document: { body: { classList: { add() {}, remove() {}, contains() { return false; } } } },
   state: {
     modalActionInProgress: false,
     pendingPracticeBatch: null,
@@ -55,7 +59,7 @@ const context = {
   async updatePracticeProgress() { context.updatedProgress = true; },
   renderReminderStatus() {},
   openPracticeReviewModal() { context.openedReview = true; },
-  closeAssessmentResultModal() { $('#modalBackdrop').hidden = true; },
+  closeAssessmentResultModal() { context.resetModalLayer(); },
   async confirmPracticeBatchResult() { context.confirmedBatch = true; },
   getPracticeBatch() { return { progress: {}, questions: Array.from({ length: 10 }, () => ({})) }; },
   isPracticeDraftSetComplete() { return true; },
@@ -81,7 +85,9 @@ function expose(name, endMarker) {
   return context.__exposed;
 }
 
-expose('resetModalBackdrop', 'async function confirmPendingAssessmentResult');
+expose('showModalLayer', 'function hideModalLayer');
+expose('hideModalLayer', 'function openLearningFocus');
+expose('resetModalLayer', 'async function confirmPendingAssessmentResult');
 expose('confirmPendingAssessmentResult', 'async function dismissPracticeReviewModal');
 expose('dismissPracticeReviewModal', 'function closeModal');
 expose('closeModal', 'function downloadFile');
@@ -95,8 +101,8 @@ expose('showSinglePracticeResult', 'async function confirmSinglePracticeResult')
 // A completed single answer shows a real results modal with the three requested statistics.
 context.state.pendingSinglePractice = { wordId: 'w-1', correct: true, mode: 'word-to-meaning' };
 context.showSinglePracticeResult();
-assert.equal($('#modalBackdrop').hidden, false);
-assert.equal($('#modalBackdrop').dataset.modalType, 'assessment-result');
+assert.equal($('#modalLayer').hidden, false);
+assert.equal($('#modalLayer').dataset.modalType, 'assessment-result');
 assert.equal($('#closeModal').hidden, false, 'result modal must expose a safe close action');
 assert.equal($('#closeModal').focused, true, 'result modal must put keyboard focus on the close control');
 assert.match($('#modalContent').innerHTML, /<strong>1<\/strong><span>Đúng<\/span>/);
@@ -106,7 +112,7 @@ assert.match($('#modalContent').innerHTML, /<strong>1<\/strong><span>Tổng câu
 // Completing a multi-question practice set displays aggregate completion statistics.
 context.state.pendingSinglePractice = null;
 assert.equal(context.maybeShowPracticeBatchResult('grammar', 'lesson-1'), true);
-assert.equal($('#modalBackdrop').hidden, false);
+assert.equal($('#modalLayer').hidden, false);
 assert.equal(context.state.pendingPracticeBatch.kind, 'grammar');
 assert.match($('#modalContent').innerHTML, /<strong>8<\/strong><span>Đúng<\/span>/);
 assert.match($('#modalContent').innerHTML, /<strong>2<\/strong><span>Chưa đúng<\/span>/);
@@ -129,55 +135,83 @@ context.state.pendingSinglePractice = { wordId: 'w-1', correct: false, input: 'i
 context.state.practiceReviewPending = true;
 context.state.lastFeedback = { correct: false, input: 'invoices', expected: 'invoice' };
 context.state.progress = { 'w-1': { streak: 0 } };
-$('#modalBackdrop').hidden = false;
-$('#modalBackdrop').dataset.modalType = 'assessment-result';
+$('#modalLayer').hidden = false;
+$('#modalLayer').dataset.modalType = 'assessment-result';
 context.closeModal();
 await new Promise(resolve => setTimeout(resolve, 0));
 assert.equal(context.state.pendingSinglePractice, null);
 assert.equal(context.state.practiceReviewPending, false);
-assert.equal($('#modalBackdrop').hidden, true, 'closing a completed-answer result must actually hide modalBackdrop');
+assert.equal($('#modalLayer').hidden, true, 'closing a completed-answer result must actually hide modalLayer');
 assert.equal(context.renderedQuestion, true, 'answer explanation remains available inline after safe close');
 
 // The modal-aware close dispatcher maps each remaining modal to a safe next action.
 context.state.pendingPracticeBatch = { id: 'batch' };
-$('#modalBackdrop').hidden = false;
-$('#modalBackdrop').dataset.modalType = 'assessment-result';
+$('#modalLayer').hidden = false;
+$('#modalLayer').dataset.modalType = 'assessment-result';
 context.closeModal();
 await Promise.resolve();
 assert.equal(context.confirmedBatch, true, 'closing assessment result confirms and commits the staged batch');
 context.state.pendingPracticeBatch = null;
 
 context.state.practiceReviewPending = true;
-$('#modalBackdrop').hidden = false;
-$('#modalBackdrop').dataset.modalType = 'practice-review';
+$('#modalLayer').hidden = false;
+$('#modalLayer').dataset.modalType = 'practice-review';
 context.closeModal();
 await new Promise(resolve => setTimeout(resolve, 0));
 assert.equal(context.state.practiceReviewPending, false);
 assert.equal(context.state.autoAdvanceCancelled, true);
-assert.equal($('#modalBackdrop').hidden, true);
+assert.equal($('#modalLayer').hidden, true);
 assert.equal(context.updatedAutoAdvance, true);
 assert.equal(context.savedSession, true, 'closing explanation modal must persist the current answered question');
 
 context.state.autoAdvanceWaiting = true;
-$('#modalBackdrop').hidden = false;
-$('#modalBackdrop').dataset.modalType = 'practice-wait';
+$('#modalLayer').hidden = false;
+$('#modalLayer').dataset.modalType = 'practice-wait';
 context.closeModal();
 await Promise.resolve();
 assert.equal(context.state.autoAdvanceWaiting, false, 'closing the wait modal cancels the timer');
 assert.equal(context.state.autoAdvanceCancelled, true);
-assert.equal($('#modalBackdrop').hidden, true, 'closing the wait modal must hide the backdrop');
+assert.equal($('#modalLayer').hidden, true, 'closing the wait modal must hide the backdrop');
 
 // A modal with no pending workflow still closes and clears every transient visual state.
 context.state.autoAdvanceWaiting = false;
-$('#modalBackdrop').hidden = false;
-$('#modalBackdrop').dataset.modalType = 'ordinary';
-$('#modalBackdrop').classList.add('is-practice-review', 'is-auto-advance-wait', 'is-learning-detail');
+$('#modalLayer').hidden = false;
+$('#modalLayer').dataset.modalType = 'ordinary';
+$('#modalLayer').classList.add('is-practice-review', 'is-auto-advance-wait', 'is-learning-detail');
 context.closeModal();
-assert.equal($('#modalBackdrop').hidden, true);
-assert.equal($('#modalBackdrop').dataset.modalType, undefined);
+assert.equal($('#modalLayer').hidden, true);
+assert.equal($('#modalLayer').dataset.modalType, undefined);
 for (const cls of ['is-practice-review', 'is-auto-advance-wait', 'is-learning-detail']) {
-  assert.equal($('#modalBackdrop').classList.contains(cls), false, `stale modal class must be removed: ${cls}`);
+  assert.equal($('#modalLayer').classList.contains(cls), false, `stale modal class must be removed: ${cls}`);
 }
 assert.match(source, /#closeModal'\)\.addEventListener\('click',closeModal\)/, 'the close control must be wired to the state-aware dispatcher');
-assert.match(source, /else if\(\$\('#modalBackdrop'\)&&!\$\('#modalBackdrop'\)\.hidden\)\{e\.preventDefault\(\);closeModal\(\);\}/, 'Escape must close the visible modal through the same safe dispatcher');
-console.log('Modal dismissal workflow PASS: single- and multi-question completion statistics render; keyboard focus reaches the close control; X/Escape dispatch safely commits or dismisses each pending state; learning progress remains saved; stale backdrop classes are cleared.');
+assert.match(source, /else if\(\$\('#modalLayer'\)&&!\$\('#modalLayer'\)\.hidden\)\{e\.preventDefault\(\);closeModal\(\);\}/, 'Escape must close the visible modal through the same safe dispatcher');
+assert.doesNotMatch(source, /modalBackdrop|modal-backdrop/, 'the duplicate modal backdrop must be removed from source');
+const html = fs.readFileSync(new URL('../../index.html', import.meta.url), 'utf8');
+assert.match(html, /id="modalLayer"[^>]*hidden/, 'modal panel layer must live in the shared learning focus overlay');
+assert.doesNotMatch(html, /id="modalBackdrop"|class="modal-backdrop"/, 'there must not be a second full-screen backdrop');
+assert.equal((html.match(/class="learning-focus-backdrop"/g) || []).length, 1, 'the application must use exactly one full-screen learning backdrop');
+
+// A regular modal activates the shared learning backdrop without a second dimming surface.
+context.learningFocusState.active = false;
+context.showModalLayer();
+assert.equal($('#learningFocusBackdrop').hidden, false);
+assert.equal($('#learningFocusBackdrop').classList.contains('is-modal-only'), true);
+assert.equal($('#modalLayer').hidden, false);
+context.hideModalLayer();
+assert.equal($('#learningFocusBackdrop').hidden, true, 'closing a modal-only overlay hides the one shared backdrop');
+
+// A modal opened during a focused session reuses the existing backdrop and keeps the session mounted.
+context.learningFocusState.active = true;
+$('#learningFocusBackdrop').hidden = false;
+context.showModalLayer();
+assert.equal($('#learningFocusBackdrop').classList.contains('is-modal-only'), false);
+assert.equal($('#learningFocusBackdrop').hidden, false, 'closing a nested modal must not close the active focus session');
+assert.equal($('#learningFocusDialog').attributes['aria-hidden'], 'true');
+context.hideModalLayer();
+assert.equal($('#learningFocusBackdrop').hidden, false);
+assert.equal($('#learningFocusDialog').attributes['aria-hidden'], 'false');
+context.learningFocusState.active = false;
+$('#learningFocusBackdrop').hidden = true;
+assert.equal($('#learningFocusDialog').attributes['aria-hidden'], 'false');
+console.log('Modal dismissal workflow PASS: assessment statistics render; X/Escape dispatch safely commits or dismisses each pending state; learning progress remains saved; normal and focused modals share one dimming backdrop.');

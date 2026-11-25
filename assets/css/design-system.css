@@ -240,7 +240,7 @@ img, svg, video, canvas { max-width: 100%; }
 .quick-link:active,
 .choice-option:active { transform: scale(.985); }
 .page.active { animation: ds-page-in var(--ds-motion-slow) ease both; }
-.modal-backdrop:not([hidden]) .modal { animation: ds-modal-in 220ms cubic-bezier(.2,.75,.25,1) both; }
+.modal-layer:not([hidden]) .modal { animation: ds-modal-in 220ms cubic-bezier(.2,.75,.25,1) both; }
 @keyframes ds-page-in {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
@@ -345,7 +345,7 @@ img, svg, video, canvas { max-width: 100%; }
   .mobile-bottom-nav button small { font-size: 11px; line-height: 1.2; white-space: nowrap; }
   .mobile-bottom-nav button.active { color: var(--navy); font-weight: 750; }
   .mobile-bottom-nav button.active span { transform: translateY(-1px); }
-  .modal-backdrop { padding: 8px 8px calc(8px + env(safe-area-inset-bottom)); }
+  .modal-layer { padding: 8px 8px calc(8px + env(safe-area-inset-bottom)); }
   .modal { max-height: calc(92dvh - env(safe-area-inset-top)); overflow: auto; }
 }
 
@@ -1943,6 +1943,6 @@ body :where(.mock-exam-brand strong, .mock-exam-timer span,
   .quick-help { right: 12px; bottom: calc(78px + env(safe-area-inset-bottom)); }
   .quick-help-panel { width: min(400px, calc(100vw - 24px)); max-height: min(68dvh, 620px); }
   .robot-idle-nudge { bottom: 72px; right: 0; }
-  .modal-backdrop { padding: 12px 12px calc(12px + env(safe-area-inset-bottom)); }
+  .modal-layer { padding: 12px 12px calc(12px + env(safe-area-inset-bottom)); }
   .modal { max-height: calc(92dvh - env(safe-area-inset-top)); overflow: auto; }
 }

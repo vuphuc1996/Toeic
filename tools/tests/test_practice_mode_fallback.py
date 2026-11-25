@@ -76,7 +76,7 @@ class PracticeModeFallbackTests(unittest.TestCase):
         self.assertIn("dataset.modalType='assessment-result'", backdrop)
         self.assertIn("dataset.modalType", backdrop)
         self.assertIn("data-assessment-confirm", backdrop)
-        rule = re.search(r"\.modal-backdrop\[data-modal-type=\"assessment-result\"\]\s*\{([^}]*)\}", CSS)
+        rule = re.search(r"\.modal-layer\[data-modal-type=\"assessment-result\"\]\s*\{([^}]*)\}", CSS)
         focus = re.search(r"\.learning-focus-backdrop\s*\{([^}]*)\}", CSS)
         self.assertIsNotNone(rule, "Flashcard assessment result stacking rule is required")
         self.assertIsNotNone(focus, "Learning focus overlay rule is required")

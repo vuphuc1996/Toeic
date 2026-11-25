@@ -1,18 +1,19 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.64
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.65
 
-**Current source:** v2.95.64 — GitHub commit-readiness, workflow pinning and CI test-discovery hardening. Learning content is unchanged.
+**Current source:** v2.95.65 — Batch 035 Cambridge test-history repair and single shared modal overlay. Learning content is unchanged.
 
 ## Current release
 
-- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.63_FullSource.zip`; SHA-256 `6d43a7f44e1cc84d6ad7f3ee9dae660cceb83c792668d0966ce1060f4aa9ea80`. This exact complete archive and checksum were verified before editing; v2.95.62 and older archives were not used.
-- FullSource: `TOEIC_Dictionary_v2.95.64_FullSource.zip`; file inventory, ZIP CRC and exact Git-tree comparison are recorded in `reports/PACKAGE_VERIFICATION_v2.95.64.md`; output SHA-256 is in the detached sidecar.
-- Patch: `TOEIC_Dictionary_v2.95.64_Patch_From_v2.95.63.zip`; bound to the exact v2.95.63 predecessor; clean-extraction replay and exact tree comparison are recorded in package verification.
-- GitHub CI hardening: three external actions are SHA-pinned; checkout depth 2 enables latest-commit whitespace verification; complete tools syntax compilation uses `compileall`; default unittest discovery is recognized by repository integrity; duplicate test invocations are removed.
-- Added `tools/audit-git-commit-readiness.py`, `.gitattributes` and expanded `.gitignore`; the audit is read-only and can run in `--staged` mode before a local commit or `--require-clean` mode after checkout/commit.
-- Local results, test inventory and limitations are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.64.md` and `reports/GIT_COMMIT_READINESS_v2.95.64.md`. Hosted GitHub Actions and cross-platform Windows/macOS commit behavior remain unverified.
-- Learning content, all stable vocabulary/question/choice/answer IDs, learner IndexedDB schema/data, UI layout, service worker cache behavior and hosting architecture are unchanged.
+- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.64_FullSource.zip`; SHA-256 `03ec4c80e88bc76e435cfc0782e933474be882a4f271318a23375a35e9242673`. This exact complete archive and checksum were verified before editing; no older release or Patch was used as a source baseline.
+- FullSource: `TOEIC_Dictionary_v2.95.65_FullSource.zip` (779 files; ZIP CRC and exact Git-tree bytes PASS); output SHA-256 is in its detached sidecar and details are in `reports/PACKAGE_VERIFICATION_v2.95.65.md`.
+- Patch: `TOEIC_Dictionary_v2.95.65_Patch_From_v2.95.64.zip`; bound to the exact v2.95.64 predecessor; clean-extraction replay matched 779/779 files byte-for-byte (0 missing/extra/changed).
+- Replaced the stale Cambridge Batch 035 split test at its exact filename with a historical reconstruction test. It validates eight Batch 035 records, ledger/provenance, canonical relationship anchors and reconstructed pre-batch hash after reversing later batches/corrections; it no longer asserts obsolete current row count 553 or stale `article` content.
+- Removed the duplicate modal backdrop element and class. `learningFocusBackdrop` is the only full-screen dimming/blur surface; `modalLayer` is a nested, transparent panel layer shared by ordinary modals and focused learning. Added state/ARIA/body-scroll handling and a dedicated CI contract test.
+- Design-token audit: zero new violations after selector identity reconciliation; the duplicate old backdrop-background identity was retired because the shared learning-focus root already owns the dimming surface.
+- Existing UI composition is unchanged. No vocabulary/Related Glossary content, canonical IDs/headwords/relations, question/choice IDs, answer keys, Mock eligibility, learner IndexedDB records/schema, Robot Buddy boundary or hosting architecture changed.
+- Local release commit and post-commit Git audit pass (779 paths, 0 errors/0 warnings, clean worktree). Local results and limitations are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.65.md` and `reports/PACKAGE_VERIFICATION_v2.95.65.md`. Hosted GitHub Actions/Pages, deployed PWA cache/offline and physical devices remain unverified until deployed.
 
 ## Stage 2 progress
 
@@ -30,13 +31,13 @@ Stage 2: **6/6 workstreams implemented (100%)**; item 9 is structurally instrume
 ## Non-negotiable data boundaries
 
 - The 193 Listening reserve questions and 87 Reading reserve questions remain excluded from Mock until independent approval.
-- Across v2.95.61–v2.95.63, no canonical vocabulary IDs/headwords/meanings/relations, question IDs/choices/answer keys, Mock eligibility, learner-history schema, or Robot Buddy access boundary changed. v2.95.63 modifies only application modal lifecycle, CI discovery patterns, regression tests and release documentation; learner IndexedDB stores/schema and records are untouched.
+- Across v2.95.61–v2.95.65, no canonical vocabulary IDs/headwords/meanings/relations, question IDs/choices/answer keys, Mock eligibility, learner-history schema, or Robot Buddy access boundary changed. v2.95.65 modifies only Batch 035 historical test coverage, shared modal shell mechanics, CI registration, design-token selector identity and release documentation; learner IndexedDB stores/schema and records are untouched.
 - The v2.95.55 complete learner-data backup and guarded restore remains intact. Existing attempt-history records are read without migration.
 - UI layout and navigation were not redesigned.
 
 ## Acceptance boundary
 
-For v2.95.64, 64/64 focused Python cases across 7 modules and 43/43 Node regression scripts pass. The full 97-module Python suite is **INCOMPLETE**: 19 modules / 144 cases passed before the outer execution window expired, with 78 modules pending; no full-suite PASS is claimed. Repository integrity, data/learning-content/photo validation, version sync, staged Git audit, local commit and post-commit clean-tree audit pass. Hosted GitHub Actions, GitHub Pages deployment, installed-PWA cache propagation and physical iOS/iPadOS/Android behavior remain **UNVERIFIED**.
+For v2.95.65, 111/111 focused Python cases across 13 modules and 43/43 Node regression scripts pass. The full 97-module Python suite was not run to completion in this batch; no full-suite PASS is claimed. Repository integrity (363 inspected references, 0 errors/0 warnings), data (1,141 records, 0 errors/0 warnings), learning-content validation, Part 1 assets, version synchronization and design-token audit (0 new violations) pass. Hosted GitHub Actions, GitHub Pages deployment, installed-PWA cache propagation and physical iOS/iPadOS/Android behavior remain **UNVERIFIED**.
 
 ## Previous completed work
 
@@ -50,6 +51,14 @@ For v2.95.64, 64/64 focused Python cases across 7 modules and 43/43 Node regress
 - Added read-only complexity triage for the full Listening/Reading question inventory. Observable signals include source length, prompt length, answer-option length spread, inference/purpose wording and multi-document indicators.
 - Does not infer difficulty or CEFR, does not use learner response statistics, and does not modify question content or Mock eligibility.
 - Reserve-pending items remain excluded from Mock. Independent review, pilot response data and psychometric calibration remain open.
+
+## v2.95.65 — Batch 035 Cambridge history and single shared modal overlay (2026-11-25)
+
+- Baseline: exact `TOEIC_Dictionary_v2.95.64_FullSource.zip`; SHA-256 `03ec4c80e88bc76e435cfc0782e933474be882a4f271318a23375a35e9242673`.
+- Replaced the stale hosted-only `test_related_glossary_batch_035_cambridge.py` with a checked-in historical test that reverses later Batch 036–038 additions and reviewed correction operations before asserting the Batch 035 snapshot/hash. Both modules are selected by `test_related_glossary_batch_035*.py`; 10/10 tests pass locally.
+- Removed `modalBackdrop`/`.modal-backdrop`; the modal panel layer is nested within the existing `learningFocusBackdrop`, which is the sole full-screen overlay. Modal-only and active-focus cases preserve their distinct close behavior without duplicating the dimming layer.
+- Added overlay contract regression tests and an explicit GitHub Actions test step. Modal dismissal simulation and all Node regression scripts pass. Design-token audit reports zero new violations after documented selector identity reconciliation.
+- No learning content or learner IndexedDB data/schema changed. Hosted Actions, Pages deployment and device testing remain unverified.
 
 ## v2.95.64 — GitHub commit-readiness and CI reliability (2026-11-25)
 

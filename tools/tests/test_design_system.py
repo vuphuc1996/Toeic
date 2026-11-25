@@ -59,7 +59,7 @@ class DesignSystemTests(unittest.TestCase):
 
     def test_page_and_modal_effects_are_short_and_reduced_motion_safe(self):
         self.assertIn(".page.active { animation: ds-page-in", CSS)
-        self.assertIn(".modal-backdrop:not([hidden]) .modal { animation: ds-modal-in 220ms", CSS)
+        self.assertIn(".modal-layer:not([hidden]) .modal { animation: ds-modal-in 220ms", CSS)
         reduce_block = CSS.split("@media (prefers-reduced-motion: reduce)", 1)[1]
         self.assertIn("animation-duration: .01ms !important", reduce_block)
 

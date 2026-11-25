@@ -1674,7 +1674,7 @@
     {
       "rule": "BORDER-RADIUS",
       "file": "assets/css/app.css",
-      "selector": ".modal-backdrop.is-auto-advance-wait .modal",
+      "selector": ".modal-layer.is-auto-advance-wait .modal",
       "property": "border-radius",
       "values": [
         "22px"
@@ -2687,7 +2687,7 @@
     {
       "rule": "BORDER-RADIUS",
       "file": "assets/css/app.css",
-      "selector": "@media(max-width:760px) | .modal-backdrop.is-auto-advance-wait .modal",
+      "selector": "@media(max-width:760px) | .modal-layer.is-auto-advance-wait .modal",
       "property": "border-radius",
       "values": [
         "20px 20px 14px 14px"
@@ -2697,7 +2697,7 @@
     {
       "rule": "BORDER-RADIUS",
       "file": "assets/css/app.css",
-      "selector": "@media(max-width:760px) | .modal-backdrop.is-practice-review .modal",
+      "selector": "@media(max-width:760px) | .modal-layer.is-practice-review .modal",
       "property": "border-radius",
       "values": [
         "17px 17px 12px 12px"
@@ -3128,7 +3128,7 @@
     {
       "rule": "BOX-SHADOW",
       "file": "assets/css/app.css",
-      "selector": ".modal-backdrop.is-auto-advance-wait .modal",
+      "selector": ".modal-layer.is-auto-advance-wait .modal",
       "property": "box-shadow",
       "values": [
         "0 28px 90px rgba(10,31,56,.28)"
@@ -7654,7 +7654,7 @@
     {
       "rule": "FONT-SIZE",
       "file": "assets/css/app.css",
-      "selector": ".modal-backdrop.is-auto-advance-wait .modal-header h2",
+      "selector": ".modal-layer.is-auto-advance-wait .modal-header h2",
       "property": "font-size",
       "values": [
         "clamp(19px,3vw,24px)"
@@ -21020,17 +21020,7 @@
     {
       "rule": "HEX-COLOR",
       "file": "assets/css/app.css",
-      "selector": ".modal-backdrop",
-      "property": "background",
-      "values": [
-        "#10243c80"
-      ],
-      "occurrences": 1
-    },
-    {
-      "rule": "HEX-COLOR",
-      "file": "assets/css/app.css",
-      "selector": ".modal-backdrop.is-auto-advance-wait .modal",
+      "selector": ".modal-layer.is-auto-advance-wait .modal",
       "property": "border",
       "values": [
         "#e0eaf4"
@@ -26968,7 +26958,7 @@
     {
       "rule": "IMPORTANT",
       "file": "assets/css/app.css",
-      "selector": ".modal-backdrop.is-auto-advance-wait #closeModal[hidden]",
+      "selector": ".modal-layer.is-auto-advance-wait #closeModal[hidden]",
       "property": "display",
       "values": [
         "none!important"
@@ -26978,7 +26968,7 @@
     {
       "rule": "IMPORTANT",
       "file": "assets/css/app.css",
-      "selector": ".modal-backdrop.is-practice-review #closeModal[hidden]",
+      "selector": ".modal-layer.is-practice-review #closeModal[hidden]",
       "property": "display",
       "values": [
         "none!important"
@@ -27956,6 +27946,6 @@
       "occurrences": 1
     }
   ],
-  "baselineRevision": 2,
-  "tighteningNote": "Removed exactly three fixed update-banner identities; no new identity or value was added."
+  "baselineRevision": 3,
+  "tighteningNote": "Removed exactly three fixed update-banner identities; no new identity or value was added. Modal overlay identity migration in v2.95.65: selectors renamed from .modal-backdrop to .modal-layer; the duplicate legacy backdrop background finding was removed because the existing .learning-focus-backdrop now owns the single shared dimming surface. No new visual token was introduced."
 }
