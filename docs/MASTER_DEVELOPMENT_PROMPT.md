@@ -2,15 +2,16 @@
 
 **Purpose:** the single authoritative development contract for every future TOEIC Dictionary task, batch, review, release and handoff. This document consolidates the project rules in Sections 1–15. A later user prompt supplies the task scope; it does not silently replace this contract.
 
-**Current task baseline (candidate v2.95.46 is derived from this source):**
+**Current task baseline (candidate v2.95.66 is derived from this exact source):**
 
-- Official input Full Source: `TOEIC_Dictionary_v2.95.45_FullSource.zip`
-- Baseline version: `2.95.45`
-- Baseline files: `698`
-- Baseline SHA-256: `2d4f1f58aa355c8515b311d11fe01852f80d8c4dea57f5fff8631e955a6f112e`
-- Immediately previous released source: `v2.95.44`
-- The alternate uploaded `v2.95.44` was a distinct source branch and was selectively reviewed; it is not an approved replacement baseline.
-- No complete, verifiable Batch 039 source/ledger was present in the accessible v2.95.45 source or current work directory at the time this guide was consolidated. Never invent or assume that candidate exists; inspect any newly attached/library source before deciding whether to reuse it.
+- Official input Full Source: `TOEIC_Dictionary_v2.95.65_FullSource.zip`
+- Baseline version: `2.95.65`
+- Baseline files: `779`
+- Baseline SHA-256: `a1b95e807e08052bfa599a08ff88bc3237ae086688557ce3ae77b78e814814fb`
+- Immediately previous released source: `v2.95.64`
+- Current candidate branch: `fix/v2.95.66-pwa-release-coherence-ci-batch022`
+- Candidate changes: release-query cache busting for the HTML app shell, startup HTML/app version guard, versioned Service Worker registration, Batch 022 unittest-discovery assertion repair, and CI/runtime regression coverage.
+- Candidate is not an accepted release until PR Actions, package replay and required device checks pass. Update this baseline only after the candidate has become the official accepted FullSource.
 
 After a release is explicitly accepted, `docs/versions/CURRENT_VERSION.md`, `PREVIOUS_VERSION.md`, the manifest and the corresponding verified package/hash become the new source-of-truth references. Do not keep using the baseline hash above after the official baseline changes.
 
