@@ -12,4 +12,5 @@
 - HTML, CSS and app.js now carry the manifest release query; the Service Worker REQUIRED/APP_SHELL arrays precache the exact versioned URLs, while registration stays stable at `./sw.js`. A startup guard blocks mismatched HTML/app releases before binding DOM events.
 - Batch 022 CI contract checks the active unittest discovery selector; PWA readiness strips query strings before checking local file paths.
 - No learning-data, learner IndexedDB, stable identity, Mock eligibility or Robot Buddy privacy-boundary migration is included.
-- Hosted GitHub Actions, Pages and installed-PWA/device acceptance remain pending. This candidate must not be marked accepted until the complete workflow and exact package replay pass.
+- Hosted GitHub Actions: PASS — run 45589650195, 130/130 steps; Full Python 762/762 PASS; Node 44/44 PASS; data and learning validators PASS.
+- FullSource/Patch generation, detached SHA-256/ZIP CRC/exact replay, GitHub Pages deployment after merge, and installed-PWA/device acceptance remain pending. This candidate must not be marked fully accepted until package replay and deployment/device checks pass.
