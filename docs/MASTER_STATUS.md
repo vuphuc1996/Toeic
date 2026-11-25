@@ -1,19 +1,19 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.65
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.66
 
-**Current source:** v2.95.65 — Batch 035 Cambridge test-history repair and single shared modal overlay. Learning content is unchanged.
+**Current source:** v2.95.66 candidate — versioned PWA shell assets, runtime release-coherence guard, and Batch 022 unittest-discovery correction.
 
-## Current release
+## Current candidate
 
-- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.64_FullSource.zip`; SHA-256 `03ec4c80e88bc76e435cfc0782e933474be882a4f271318a23375a35e9242673`. This exact complete archive and checksum were verified before editing; no older release or Patch was used as a source baseline.
-- FullSource: `TOEIC_Dictionary_v2.95.65_FullSource.zip` (779 files; ZIP CRC and exact Git-tree bytes PASS); output SHA-256 is in its detached sidecar and details are in `reports/PACKAGE_VERIFICATION_v2.95.65.md`.
-- Patch: `TOEIC_Dictionary_v2.95.65_Patch_From_v2.95.64.zip`; bound to the exact v2.95.64 predecessor; clean-extraction replay matched 779/779 files byte-for-byte (0 missing/extra/changed).
-- Replaced the stale Cambridge Batch 035 split test at its exact filename with a historical reconstruction test. It validates eight Batch 035 records, ledger/provenance, canonical relationship anchors and reconstructed pre-batch hash after reversing later batches/corrections; it no longer asserts obsolete current row count 553 or stale `article` content.
-- Removed the duplicate modal backdrop element and class. `learningFocusBackdrop` is the only full-screen dimming/blur surface; `modalLayer` is a nested, transparent panel layer shared by ordinary modals and focused learning. Added state/ARIA/body-scroll handling and a dedicated CI contract test.
-- Design-token audit: zero new violations after selector identity reconciliation; the duplicate old backdrop-background identity was retired because the shared learning-focus root already owns the dimming surface.
-- Existing UI composition is unchanged. No vocabulary/Related Glossary content, canonical IDs/headwords/relations, question/choice IDs, answer keys, Mock eligibility, learner IndexedDB records/schema, Robot Buddy boundary or hosting architecture changed.
-- Local release commit and post-commit Git audit pass (779 paths, 0 errors/0 warnings, clean worktree). Local results and limitations are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.65.md` and `reports/PACKAGE_VERIFICATION_v2.95.65.md`. Hosted GitHub Actions/Pages, deployed PWA cache/offline and physical devices remain unverified until deployed.
+- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.65_FullSource.zip`; SHA-256 `a1b95e807e08052bfa599a08ff88bc3237ae086688557ce3ae77b78e814814fb` (779 files). No older archive, Patch or alternate branch is used as the baseline.
+- Candidate version markers: `data/manifest.json`, `assets/js/app.js`, `sw.js`, HTML title/sidebar/phase/footer and docs are synchronized to v2.95.66.
+- Runtime fix: the app stylesheet, design-system stylesheet and app module use `?v=2.95.66` URLs. The Service Worker REQUIRED and APP_SHELL arrays precache those exact URLs; its registration URL also carries the release marker with `updateViaCache: 'none'`.
+- Startup guard: HTML `meta[name="toeic-release"]` must match `APP_RELEASE_VERSION`. A mismatch shows a reload notice and returns before `bindEvents()`, preventing the previous null-listener failure from surfacing as an opaque `addEventListener` exception.
+- CI fix: Batch 022 validates the actual `unittest discover -p` selector with glob semantics. PWA readiness checks the local file path without treating the release query as part of the filesystem path.
+- New `tools/tests/release-asset-coherence.mjs` is explicitly registered in the JavaScript regression step; it verifies manifest/HTML/app/SW version agreement, query-versioned app-shell resources, and bypass of the prior app.js cache key.
+- Candidate branch: `fix/v2.95.66-pwa-release-coherence-ci-batch022`. GitHub Pages and full Actions acceptance are pending the pull-request run. Do not describe the candidate as accepted or fully tested until every CI job completes.
+- No vocabulary/Related Glossary content, canonical IDs/headwords/relations, question/choice IDs, answer keys, Mock eligibility, learner IndexedDB data/schema, Robot Buddy boundary, visual layout or hosting architecture changed.
 
 ## Stage 2 progress
 
@@ -31,13 +31,13 @@ Stage 2: **6/6 workstreams implemented (100%)**; item 9 is structurally instrume
 ## Non-negotiable data boundaries
 
 - The 193 Listening reserve questions and 87 Reading reserve questions remain excluded from Mock until independent approval.
-- Across v2.95.61–v2.95.65, no canonical vocabulary IDs/headwords/meanings/relations, question IDs/choices/answer keys, Mock eligibility, learner-history schema, or Robot Buddy access boundary changed. v2.95.65 modifies only Batch 035 historical test coverage, shared modal shell mechanics, CI registration, design-token selector identity and release documentation; learner IndexedDB stores/schema and records are untouched.
+- Across v2.95.61–v2.95.66 candidate, no canonical vocabulary IDs/headwords/meanings/relations, question IDs/choices/answer keys, Mock eligibility, learner-history schema, or Robot Buddy access boundary changed. v2.95.65 modifies only Batch 035 historical test coverage, shared modal shell mechanics, CI registration, design-token selector identity and release documentation; learner IndexedDB stores/schema and records are untouched.
 - The v2.95.55 complete learner-data backup and guarded restore remains intact. Existing attempt-history records are read without migration.
 - UI layout and navigation were not redesigned.
 
 ## Acceptance boundary
 
-For v2.95.65, 111/111 focused Python cases across 13 modules and 43/43 Node regression scripts pass. The full 97-module Python suite was not run to completion in this batch; no full-suite PASS is claimed. Repository integrity (363 inspected references, 0 errors/0 warnings), data (1,141 records, 0 errors/0 warnings), learning-content validation, Part 1 assets, version synchronization and design-token audit (0 new violations) pass. Hosted GitHub Actions, GitHub Pages deployment, installed-PWA cache propagation and physical iOS/iPadOS/Android behavior remain **UNVERIFIED**.
+For the v2.95.66 candidate, Batch 022 discovery, release asset coherence, PWA readiness and the complete Python/Node test suite are **PENDING hosted Actions**. No full-suite PASS is claimed. GitHub Pages deployment, installed-PWA update/cache propagation, offline startup and real Windows/macOS/iOS/iPadOS/Android behavior remain **UNVERIFIED** until the candidate is merged and device acceptance is recorded.
 
 ## Previous completed work
 
