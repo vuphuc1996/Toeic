@@ -19,7 +19,7 @@
 - Bump manifest, app, Service Worker and visible release markers to v2.95.66.
 - Version the HTML references to app.css, design-system.css and app.js with ?v=2.95.66.
 - Put the same versioned asset URLs in Service Worker REQUIRED and APP_SHELL.
-- Register the Service Worker using a release-specific __release query and retain updateViaCache: 'none'.
+- Keep the Service Worker script URL stable at ./sw.js with updateViaCache: 'none'; isolate CSS/JS app-shell cache keys through release-specific asset URLs.
 - Check the HTML release meta against APP_RELEASE_VERSION before bindEvents(); show an explicit recovery message and skip initialization when the shell/module pair is mismatched.
 - Change Batch 022's CI assertion to test the actual unittest discover selector, using glob semantics.
 - Normalize query strings out of local file existence checks in the PWA readiness test.
