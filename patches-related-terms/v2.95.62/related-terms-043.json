@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-043-v2.95.62",
+  "baseFileSha256": "5783c70ea0ae04b12f2ee8ca220d2bb6a218c7766486319cce5ecc395c0f24d8",
+  "operations": [
+    {
+      "term": "apparatus",
+      "expect": {
+        "term": "apparatus",
+        "meaning_vi": "thiết bị; bộ máy",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a set of tools, machines, or equipment used for a particular purpose; the term can also describe an organized system.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Equipment sense; the linked relationship is the equipment synonym, while the system sense is retained to reflect “bộ máy” in the existing Vietnamese gloss.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/apparatus"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "approximation",
+      "expect": {
+        "term": "approximation",
+        "meaning_vi": "sự ước lượng; giá trị xấp xỉ",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a rough estimate of a number or value that is close to the actual amount but is not exact.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Estimate sense; retains the approximate-number/value meaning in the existing Vietnamese gloss.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/approximation"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "arrive",
+      "expect": {
+        "term": "arrive",
+        "meaning_vi": "đến; tới nơi",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to reach a place, especially at the end of a journey.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Reach-a-destination sense; target is an existing antonym of depart.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/arrive"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "assurance",
+      "expect": {
+        "term": "assurance",
+        "meaning_vi": "sự đảm bảo; sự cam đoan",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a firm promise that something will happen or be done, often given to remove doubt.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Promise/guarantee sense; avoids the unrelated confidence and insurance senses.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/assurance"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "attempt",
+      "expect": {
+        "term": "attempt",
+        "meaning_vi": "sự cố gắng",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an act of trying to do something, especially when it is difficult.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Noun sense of trying; aligned with the existing effort synonym anchor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/attempt"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "buy",
+      "expect": {
+        "term": "buy",
+        "meaning_vi": "mua",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to obtain something by paying money for it.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Pay-for-goods sense; aligned with the existing purchase synonym anchor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/buy"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "calendar month",
+      "expect": {
+        "term": "calendar month",
+        "meaning_vi": "tháng dương lịch",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "one of the twelve named months into which a calendar year is divided.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Calendar-month sense; distinguishes a named calendar month from a rolling month-long period.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/calendar-month"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "chance",
+      "expect": {
+        "term": "chance",
+        "meaning_vi": "cơ hội; khả năng",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an opportunity to do something; also, the likelihood that something will happen.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Opportunity sense is the relation anchor; likelihood is included because the existing Vietnamese gloss also says “khả năng”.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/chance"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "cautious",
+      "expect": {
+        "term": "cautious",
+        "meaning_vi": "thận trọng",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "careful about what one does or says in order to avoid risks or possible problems.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Risk-avoidance sense; aligned with the existing careful synonym anchor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/cautious"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "coaching",
+      "expect": {
+        "term": "coaching",
+        "meaning_vi": "huấn luyện",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the activity of giving focused instruction or training to help someone improve a skill or prepare for a task.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Instruction/training sense; aligned with the existing training synonym anchor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/coaching"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "collaborator",
+      "expect": {
+        "term": "collaborator",
+        "meaning_vi": "cộng tác viên",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a person who works together with others for a particular purpose.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Cooperative-work sense only; excludes the unrelated wartime-collaboration sense.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/collaborator"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "commerce",
+      "expect": {
+        "term": "commerce",
+        "meaning_vi": "thương mại",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the activity of buying and selling goods or services.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Buying-and-selling sense; aligned with the existing trade synonym anchor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/commerce"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "coworker",
+      "expect": {
+        "term": "coworker",
+        "meaning_vi": "đồng nghiệp",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a person who works with another person, often in a similar job or at a similar level of responsibility.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Workplace colleague sense; the spelling “coworker” is the U.S. form shown by the cited entry.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/coworker"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "criterion",
+      "expect": {
+        "term": "criterion",
+        "meaning_vi": "tiêu chí",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a standard or condition used to judge, decide about, or evaluate something.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Evaluation standard sense; aligned with the existing standard synonym anchor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/criterion"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "danger",
+      "expect": {
+        "term": "danger",
+        "meaning_vi": "nguy hiểm",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the possibility that someone or something may be harmed; a person or thing that may cause harm.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Possibility-of-harm sense; aligned with the existing risk synonym anchor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/danger"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "distinctive",
+      "expect": {
+        "term": "distinctive",
+        "meaning_vi": "đặc trưng",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "having features that make something easy to recognize as different from other things.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Recognizable-difference sense; the paraphrase preserves the “different from others” nuance rather than claiming absolute one-of-a-kind status.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/distinctive"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "edition",
+      "expect": {
+        "term": "edition",
+        "meaning_vi": "phiên bản; ấn bản",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a particular published form of a book, magazine, or newspaper, often distinguished by its format or publication date.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Published-form sense; aligned with the existing version synonym anchor and the existing “phiên bản; ấn bản” gloss.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/edition"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "endeavor",
+      "expect": {
+        "term": "endeavor",
+        "meaning_vi": "nỗ lực",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n/v",
+        "definition_en": "an effort or attempt to achieve something; as a verb, to try to do something.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; U.S. spelling entry; both noun and verb are recorded because the dictionary entry includes both forms.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/endeavor"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "evade",
+      "expect": {
+        "term": "evade",
+        "meaning_vi": "né tránh",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to avoid or escape someone or something, especially by avoiding a duty, responsibility, or difficult issue.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Avoidance/escape sense; aligned with the existing avoid synonym anchor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/evade"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "financial institution",
+      "expect": {
+        "term": "financial institution",
+        "meaning_vi": "tổ chức tài chính",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an organization that provides financial services, such as banking, insurance, or investment services.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Financial-services organization sense; “bank” is an example within the broader category, not a definition limited to banks.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/financial-institution"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    },
+    {
+      "term": "convention",
+      "expect": {
+        "term": "convention",
+        "meaning_vi": "hội nghị; quy ước",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceHeadword": null,
+        "sourceRelease": null,
+        "sourceSenseIndex": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a large formal meeting of people with shared work or interests; also, an accepted way of doing or arranging something.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-25; paraphrased definition; independent editorial review pending; Meeting sense is the relation anchor; the customary-practice sense is retained to reflect “quy ước” in the existing Vietnamese gloss.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/convention"
+        ],
+        "sourceRelease": "2.95.62"
+      }
+    }
+  ]
+}

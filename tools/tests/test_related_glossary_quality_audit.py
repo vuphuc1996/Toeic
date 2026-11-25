@@ -116,8 +116,31 @@ class RelatedGlossaryEnrichmentQueueTests(unittest.TestCase):
         self.assertEqual(patch['batchId'], 'related-glossary-040-v2.95.51')
         restored = json.loads(json.dumps(glossary, ensure_ascii=False))
         by_key = {row['term'].casefold(): row for row in restored['terms']}
-        # Reverse the later Batch 041 first so this historical test reconstructs
-        # the exact pre-040 snapshot rather than hashing today's enriched data.
+        # Reverse later Batch 042 and Batch 041 in descending order so this
+        # historical test reconstructs the exact pre-040 snapshot.
+        # Reverse Batch 043 before Batch 042 and Batch 041 for the Batch 040 base.
+        batch_043_path = ROOT / 'patches-related-terms/v2.95.62/related-terms-043.json'
+        batch_043 = json.loads(batch_043_path.read_text(encoding='utf-8'))
+        for operation in batch_043['operations']:
+            row = by_key[operation['term'].casefold()]
+            for field, old_value in operation['expect'].items():
+                if field == 'term':
+                    continue
+                if old_value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = old_value
+        batch_042_path = ROOT / 'patches-related-terms/v2.95.61/related-terms-042.json'
+        batch_042 = json.loads(batch_042_path.read_text(encoding='utf-8'))
+        for operation in batch_042['operations']:
+            row = by_key[operation['term'].casefold()]
+            for field, old_value in operation['expect'].items():
+                if field == 'term':
+                    continue
+                if old_value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = old_value
         batch_041_path = ROOT / 'patches-related-terms/v2.95.52/related-terms-041.json'
         batch_041 = json.loads(batch_041_path.read_text(encoding='utf-8'))
         for operation in batch_041['operations']:

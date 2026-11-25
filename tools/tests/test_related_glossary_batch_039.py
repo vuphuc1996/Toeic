@@ -68,8 +68,29 @@ class RelatedGlossaryBatch039Tests(unittest.TestCase):
         self.assertEqual(self.patch['batchId'], 'related-glossary-039-v2.95.50')
         restored = copy.deepcopy(self.glossary)
         by = {row['term'].casefold(): row for row in restored['terms']}
-        # Reverse later Batch 041 and Batch 040 in descending order before
+        # Reverse Batch 042 first, then Batch 041 and Batch 040, before
         # reconstructing the Batch 039 base snapshot.
+        # Reverse Batch 043 before Batch 042 so this test reconstructs the true Batch 039 predecessor.
+        batch_043 = read_json(ROOT / 'patches-related-terms/v2.95.62/related-terms-043.json')
+        for op in batch_043['operations']:
+            row = by[op['term'].casefold()]
+            for field, old_value in op['expect'].items():
+                if field == 'term':
+                    continue
+                if old_value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = old_value
+        batch_042 = read_json(ROOT / 'patches-related-terms/v2.95.61/related-terms-042.json')
+        for op in batch_042['operations']:
+            row = by[op['term'].casefold()]
+            for field, old_value in op['expect'].items():
+                if field == 'term':
+                    continue
+                if old_value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = old_value
         batch_041_path = ROOT / 'patches-related-terms/v2.95.52/related-terms-041.json'
         batch_041 = read_json(batch_041_path)
         for op in batch_041['operations']:

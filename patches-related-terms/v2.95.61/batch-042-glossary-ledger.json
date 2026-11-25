@@ -1,0 +1,382 @@
+{
+  "batch": "042",
+  "release": "2.95.61",
+  "title": "Sourced enrichment of twenty existing high-priority Related Glossary targets",
+  "count": 20,
+  "editorialStatus": "Cambridge Dictionary indexed entry excerpts reviewed 2026-11-25; definitions paraphrased and sense-aligned. Four exact canonical headword entries reuse all current canonical sense definitions verbatim. Independent editorial review remains pending.",
+  "sourcePolicy": "Only existing relation-target rows are updated. Term identity, Vietnamese meanings and all synonym/antonym relation arrays are preserved. Cambridge paraphrases retain their exact dictionary URLs. Four rows reuse exact definitions from the current canonical vocabulary release. No new glossary term or canonical headword is created.",
+  "baseRelatedTermsSha256": "dbc233b11ab0b8f351092bb404fe2010f9e54091e2590c5765b68cc1b8d3f97e",
+  "records": [
+    {
+      "term": "enter",
+      "previousPos": null,
+      "pos": "v",
+      "meaning_vi_preserved": "đi vào; nhập dữ liệu",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "to go into a place, become involved in an activity, or put information into a computer or document",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/enter"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; to enter a place or take part in something; the information-entry sense is included because the existing Vietnamese gloss also covers data entry.",
+      "senseAlignment": "to enter a place or take part in something; the information-entry sense is included because the existing Vietnamese gloss also covers data entry",
+      "relationAnchors": [
+        "access",
+        "penetrate"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "examine",
+      "previousPos": null,
+      "pos": "v",
+      "meaning_vi_preserved": "kiểm tra; xem xét",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "to look at or study a person or thing carefully in order to discover facts or identify possible problems",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/examine"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; careful inspection/study sense, aligned with inspect and review.",
+      "senseAlignment": "careful inspection/study sense, aligned with inspect and review",
+      "relationAnchors": [
+        "inspect",
+        "review"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "guarantee",
+      "previousPos": "n/v",
+      "pos": "n/v",
+      "meaning_vi_preserved": "đảm bảo; bảo hành",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "a promise that something will happen or work as stated; to promise that something will be done or will work",
+      "sourceUrls": [],
+      "source": "canonical-vocabulary-senses; definitions copied verbatim from the exact existing canonical headword and all listed senses; independent editorial review pending.",
+      "senseAlignment": "All canonical senses are copied verbatim without synthesis or omission; this glossary row is an existing relation target and no canonical relation is changed.",
+      "relationAnchors": [
+        "ensure",
+        "warranty"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "mark",
+      "previousPos": null,
+      "pos": "n/v",
+      "meaning_vi_preserved": "đánh dấu; điểm số",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "to put a sign, label, or other indication on something; a mark can also be a score or grade given to work",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/mark"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; indicate/label sense selected for date and label relation anchors; grade sense retained because it is part of the existing Vietnamese gloss.",
+      "senseAlignment": "indicate/label sense selected for date and label relation anchors; grade sense retained because it is part of the existing Vietnamese gloss",
+      "relationAnchors": [
+        "date",
+        "label"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "monthly",
+      "previousPos": "adj/adv",
+      "pos": "adj/adv",
+      "meaning_vi_preserved": "hằng tháng; hàng tháng",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "happening or produced once a month; once every month",
+      "sourceUrls": [],
+      "source": "canonical-vocabulary-senses; definitions copied verbatim from the exact existing canonical headword and all listed senses; independent editorial review pending.",
+      "senseAlignment": "All canonical senses are copied verbatim without synthesis or omission; this glossary row is an existing relation target and no canonical relation is changed.",
+      "relationAnchors": [
+        "weekly",
+        "yearly"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "observe",
+      "previousPos": null,
+      "pos": "v",
+      "meaning_vi_preserved": "quan sát; tuân thủ",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "to watch something carefully or notice it; to obey a law, rule, or custom",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/observe"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; watch/notice senses aligned with monitor and notice; obey sense retained as a common secondary meaning.",
+      "senseAlignment": "watch/notice senses aligned with monitor and notice; obey sense retained as a common secondary meaning",
+      "relationAnchors": [
+        "monitor",
+        "notice"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "occasion",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi_preserved": "dịp; cơ hội",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "a particular time when something happens, or an important event",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/occasion"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; particular-time and event senses aligned with time and event.",
+      "senseAlignment": "particular-time and event senses aligned with time and event",
+      "relationAnchors": [
+        "event",
+        "time"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "optional",
+      "previousPos": null,
+      "pos": "adj",
+      "meaning_vi_preserved": "không bắt buộc; tùy chọn",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "not required or compulsory; something that may be chosen if wanted",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/optional"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; choice/not-required adjective sense aligned with necessary and voluntary.",
+      "senseAlignment": "choice/not-required adjective sense aligned with necessary and voluntary",
+      "relationAnchors": [
+        "necessary",
+        "voluntary"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "period",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi_preserved": "khoảng thời gian; thời kỳ",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "a length of time, especially one with a particular beginning and end",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/period"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; time-span noun sense aligned with term and time.",
+      "senseAlignment": "time-span noun sense aligned with term and time",
+      "relationAnchors": [
+        "term",
+        "time"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "reach",
+      "previousPos": null,
+      "pos": "v",
+      "meaning_vi_preserved": "đạt tới; liên hệ; tầm với",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "to arrive at a place or level, achieve a decision, or communicate with someone in another place",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/reach"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; arrive/achieve/contact verb senses aligned with access and contact.",
+      "senseAlignment": "arrive/achieve/contact verb senses aligned with access and contact",
+      "relationAnchors": [
+        "access",
+        "contact"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "remove",
+      "previousPos": null,
+      "pos": "v",
+      "meaning_vi_preserved": "loại bỏ; di chuyển",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "to take something or someone away from a place, or to take something off",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/remove"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; take-away/take-off verb sense aligned with install and withdraw.",
+      "senseAlignment": "take-away/take-off verb sense aligned with install and withdraw",
+      "relationAnchors": [
+        "install",
+        "withdraw"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "restriction",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi_preserved": "sự hạn chế; quy định giới hạn",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "an official rule or limit that controls what people may do or the amount, size, or use of something",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/restriction"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; official-limit noun sense aligned with access and limit.",
+      "senseAlignment": "official-limit noun sense aligned with access and limit",
+      "relationAnchors": [
+        "access",
+        "limit"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "return",
+      "previousPos": null,
+      "pos": "n/v",
+      "meaning_vi_preserved": "trả lại; quay về; lợi nhuận",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "to go back to a place or situation or to give something back; as a noun, the profit made by an investment or business activity",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/return"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; financial-return noun sense aligned with profitability and yield; return/give-back verb senses retained to reflect the existing Vietnamese gloss.",
+      "senseAlignment": "financial-return noun sense aligned with profitability and yield; return/give-back verb senses retained to reflect the existing Vietnamese gloss",
+      "relationAnchors": [
+        "profitability",
+        "yield"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "rule",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi_preserved": "quy tắc; quy định",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "an official instruction about what must or must not be done, or a principle that guides how something works",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/rule"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; instruction/principle noun sense aligned with policy and regulation.",
+      "senseAlignment": "instruction/principle noun sense aligned with policy and regulation",
+      "relationAnchors": [
+        "policy",
+        "regulation"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "schedule",
+      "previousPos": "n/v",
+      "pos": "n/v",
+      "meaning_vi_preserved": "lịch trình; lên lịch",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "a plan that lists the times when events or tasks will happen; to plan for something to happen at a particular time",
+      "sourceUrls": [],
+      "source": "canonical-vocabulary-senses; definitions copied verbatim from the exact existing canonical headword and all listed senses; independent editorial review pending.",
+      "senseAlignment": "All canonical senses are copied verbatim without synthesis or omission; this glossary row is an existing relation target and no canonical relation is changed.",
+      "relationAnchors": [
+        "agenda",
+        "itinerary"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "seller",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi_preserved": "người bán",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "a person or organization that sells goods or services",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/seller"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; person/organization noun sense aligned with buyer and vendor.",
+      "senseAlignment": "person/organization noun sense aligned with buyer and vendor",
+      "relationAnchors": [
+        "buyer",
+        "vendor"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "shift",
+      "previousPos": null,
+      "pos": "n/v",
+      "meaning_vi_preserved": "ca làm việc; sự thay đổi; chuyển dịch",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "to move or change from one position, direction, or state to another; a shift can also be a scheduled period of work",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/shift"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; move/change verb and noun senses aligned with fluctuate and transfer; work-period noun sense retained for the existing Vietnamese gloss.",
+      "senseAlignment": "move/change verb and noun senses aligned with fluctuate and transfer; work-period noun sense retained for the existing Vietnamese gloss",
+      "relationAnchors": [
+        "fluctuate",
+        "transfer"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "validate",
+      "previousPos": null,
+      "pos": "v",
+      "meaning_vi_preserved": "xác nhận tính hợp lệ; kiểm chứng",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "to check that something is true, correct, or acceptable, or to make it officially valid",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/validate"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; check/confirm validity verb sense aligned with confirm and verify.",
+      "senseAlignment": "check/confirm validity verb sense aligned with confirm and verify",
+      "relationAnchors": [
+        "confirm",
+        "verify"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "weekly",
+      "previousPos": "adj/adv",
+      "pos": "adj/adv",
+      "meaning_vi_preserved": "hằng tuần",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "happening or published once a week; once every week",
+      "sourceUrls": [],
+      "source": "canonical-vocabulary-senses; definitions copied verbatim from the exact existing canonical headword and all listed senses; independent editorial review pending.",
+      "senseAlignment": "All canonical senses are copied verbatim without synthesis or omission; this glossary row is an existing relation target and no canonical relation is changed.",
+      "relationAnchors": [
+        "monthly",
+        "yearly"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "business day",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi_preserved": "ngày làm việc",
+      "previousDefinition": null,
+      "previousSource": "curated-related-glossary",
+      "definition_en": "a day on which businesses and banks are open for normal operations",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/business-day"
+      ],
+      "source": "Cambridge Dictionary; indexed entry reviewed 2026-11-25; paraphrased definition; independent editorial review pending; business-operating-day noun sense aligned with weekday.",
+      "senseAlignment": "business-operating-day noun sense aligned with weekday",
+      "relationAnchors": [
+        "weekday"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    }
+  ]
+}

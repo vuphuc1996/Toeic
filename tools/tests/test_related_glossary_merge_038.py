@@ -84,9 +84,30 @@ class RelatedGlossaryMerge038Tests(unittest.TestCase):
             self.assertIn("sense", ledger[term]["reason"].lower(), term)
 
     def _restore_batch039(self, glossary):
-        # Current source includes Batch 041, Batch 040 and Batch 039. Reverse all three batches
-        # in descending order before reconstructing the historical Batch 038 base.
+        # Current source includes Batch 042, Batch 041, Batch 040 and Batch 039.
+        # Reverse them in descending order before reconstructing the Batch 038 base.
         by = {row["term"].casefold(): row for row in glossary["terms"]}
+        # Reverse Batch 043 before Batch 042 when rebuilding the historical Batch 038 base.
+        batch_043 = read_json("patches-related-terms/v2.95.62/related-terms-043.json")
+        for op in batch_043["operations"]:
+            row = by[op["term"].casefold()]
+            for field, value in op["expect"].items():
+                if field == "term":
+                    continue
+                if value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = value
+        batch_042 = read_json("patches-related-terms/v2.95.61/related-terms-042.json")
+        for op in batch_042["operations"]:
+            row = by[op["term"].casefold()]
+            for field, value in op["expect"].items():
+                if field == "term":
+                    continue
+                if value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = value
         batch_041 = read_json("patches-related-terms/v2.95.52/related-terms-041.json")
         for op in batch_041["operations"]:
             row = by[op["term"].casefold()]

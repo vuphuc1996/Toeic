@@ -25,10 +25,21 @@ class GlossaryBackfill025Tests(unittest.TestCase):
     def test_current_source_has_expected_remaining_placeholder_and_backfill_counts(self):
         placeholders=[r for r in self.current if mod.PLACEHOLDER in r.get('definition_en','').casefold()]
         backfilled=[r for r in self.current if r.get('source')==mod.SOURCE]
-        self.assertEqual(len(placeholders),63)
+        self.assertEqual(len(placeholders),50)
         self.assertEqual(len(backfilled),205)
     def test_baseline_audit_identifies_exact_candidates(self):
         baseline=[dict(r) for r in self.current]
+        # Restore Batch 043's predecessor values before reconstructing the
+        # historical Batch 025 input; otherwise later Cambridge repairs hide
+        # placeholders that were present in that old snapshot.
+        batch_043=json.loads((ROOT/'patches-related-terms/v2.95.62/related-terms-043.json').read_text(encoding='utf-8'))
+        baseline_by={r['term'].casefold():r for r in baseline}
+        for operation in batch_043['operations']:
+            row=baseline_by[operation['term'].casefold()]
+            for field,old_value in operation['expect'].items():
+                if field=='term': continue
+                if old_value is None: row.pop(field,None)
+                else: row[field]=old_value
         for row in baseline:
             if row.get('source')==mod.SOURCE:
                 row['definition_en']=mod.PLACEHOLDER

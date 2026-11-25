@@ -11,6 +11,28 @@ def restore_batch_039(glossary: dict, root: Path) -> dict:
     by_key = {row['term'].casefold(): row for row in restored['terms']}
     # Reverse later batches in descending order before Batch 039. This keeps
     # historical reconstruction deterministic as the source advances.
+    batch_043_path = root / 'patches-related-terms/v2.95.62/related-terms-043.json'
+    batch_043 = json.loads(batch_043_path.read_text(encoding='utf-8'))
+    for operation in batch_043['operations']:
+        row = by_key[operation['term'].casefold()]
+        for field, old_value in operation['expect'].items():
+            if field == 'term':
+                continue
+            if old_value is None:
+                row.pop(field, None)
+            else:
+                row[field] = old_value
+    batch_042_path = root / 'patches-related-terms/v2.95.61/related-terms-042.json'
+    batch_042 = json.loads(batch_042_path.read_text(encoding='utf-8'))
+    for operation in batch_042['operations']:
+        row = by_key[operation['term'].casefold()]
+        for field, old_value in operation['expect'].items():
+            if field == 'term':
+                continue
+            if old_value is None:
+                row.pop(field, None)
+            else:
+                row[field] = old_value
     batch_041_path = root / 'patches-related-terms/v2.95.52/related-terms-041.json'
     batch_041 = json.loads(batch_041_path.read_text(encoding='utf-8'))
     for operation in batch_041['operations']:

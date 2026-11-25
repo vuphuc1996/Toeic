@@ -1,3 +1,31 @@
+## v2.95.63 — CI test discovery and safe answer-result modal lifecycle (2026-11-25)
+
+- Fixed the GitHub Actions Batch 035 unittest discovery contract by changing its selector to `test_related_glossary_batch_035*.py`. The wildcard selects both the existing Batch 035 module and a split Cambridge module such as `test_related_glossary_batch_035_cambridge.py`; the repository preflight and CI coverage regression both verify this.
+- Fixed the answer-result modal close lifecycle. Result, explanation-review and auto-advance-wait states now expose a visible close control and share one state-aware close dispatcher for the X button and Escape key. A result-modal close commits the pending result through the existing confirmation path; closing explanation review preserves the saved answer and leaves inline feedback available; closing the wait modal cancels auto-advance while keeping the current question.
+- Added keyboard focus to the result and auto-advance close controls, clears stale modal classes/type/content on close, and serializes pending confirmation actions to prevent duplicate commits. Backdrop clicks remain conservative while a result is pending; explicit X/Escape remain available.
+- Retained the existing completion modal and its three statistics (Đúng / Chưa đúng / Tổng câu), with the existing confirmation gate before answers and explanations are revealed. No new modal design or navigation was introduced.
+- Added the modal-dismissal regression suite and CI registration; expanded CI coverage tests to match `unittest discover` glob semantics and prove the Batch 035 Cambridge split module is selected.
+- No vocabulary/Related Glossary content, canonical IDs/headwords/relations, question IDs, choice IDs/order, answer keys, Mock eligibility, learner IndexedDB schema/data or Robot Buddy boundary changed. No service-worker storage schema or backend was added.
+- UI layout remains frozen. Product remains GitHub Pages/GitHub-only; Cloudflare and backend services remain out of scope. Local checks are in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.63.md`; hosted Actions, deployed Pages, real PWA cache/offline behavior and physical devices remain unverified.
+
+## v2.95.62 — Related Glossary Batch 043: twenty-one sourced existing relation targets (2026-11-25)
+
+- Enriched 21 existing Related Glossary rows with paraphrased English definitions, POS and Cambridge Dictionary provenance, selected only where a current vocabulary synonym/antonym relation provided a defensible sense anchor. No glossary rows or canonical vocabulary headwords were added or removed.
+- Added guarded patch `patches-related-terms/v2.95.62/related-terms-043.json`, a source/provenance ledger, six dedicated regression tests and historical reconstruction updates so Batch 038–042 tests reverse Batch 043 before restoring earlier snapshots.
+- Quality audit improved from 178 to 157 flagged rows (−21); missing definitions 111→103, placeholders 63→50, missing POS 174→153, and missing provenance 65→52. Duplicate normalized-term groups remain zero. Relation coverage remains 556/804.
+- Preserved all 567 glossary term identities and Vietnamese meanings. Existing canonical vocabulary IDs/headwords/senses/relations, question and choice IDs, answer keys, Mock eligibility, learner IndexedDB data/schema and Robot Buddy boundary were not changed.
+- Cambridge definitions are paraphrased from indexed entry excerpts reviewed 2026-11-25. Direct page fetch status was not asserted, and independent editorial review remains pending; no IPA or example sentences were invented or added.
+- GitHub Pages/GitHub-only architecture and frozen UI remain. Local validators and tests are documented in `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.95.62.md`; hosted Actions, actual Pages deployment, offline/cache propagation and physical-device tests remain unverified.
+
+## v2.95.61 — Related Glossary Batch 042: twenty sourced existing targets (2026-11-25)
+
+- Enriched 20 existing Related Glossary targets with English definitions and POS: 16 Cambridge Dictionary paraphrases aligned to their existing relation anchors, plus 4 exact multi-sense definition sets copied from current canonical vocabulary entries (`guarantee`, `monthly`, `schedule`, `weekly`).
+- Added exact-old-value and file-SHA-guarded patch `related-terms-042.json`, provenance/sense-alignment ledger, and five regression tests. Historical glossary reconstruction tests now reverse Batch 042 before replaying older batches; assertions are preserved.
+- Quality audit improved from 198 to 178 flagged rows, 131 to 111 missing definitions, and 190 to 174 missing POS. Placeholder count remains 63; no unsupported placeholder was converted. Relation coverage remains 556/804, with 248 distinct missing relation terms.
+- Preserved all 567 term identities and Vietnamese meanings; no canonical headword/ID/relation array, question/choice ID, answer key, Mock eligibility, learner data/IndexedDB, Robot Buddy privacy boundary, UI layout or hosting architecture changed.
+- Cambridge entry excerpts were reviewed on 2026-11-25; direct fetch was unavailable for some pages (HTTP 403), and independent editorial review remains pending. No example sentences or IPA were copied or invented.
+- Local validators, focused Python/Node tests, source/package integrity and exact Patch replay are recorded in the v2.95.61 reports. Hosted GitHub Actions/Pages and physical-device acceptance remain unverified.
+
 ## v2.95.60 — consolidated IPA and Related Glossary review queues (2026-11-24)
 
 - Consolidated a deterministic, read-only missing-US-IPA queue from exact-headword CMUdict matching. The queue records 79 missing-IPA entries: 5 single-pronunciation candidates, 49 multiple-variant review cases and 25 with no exact dictionary key. No IPA was converted, approved or applied automatically.

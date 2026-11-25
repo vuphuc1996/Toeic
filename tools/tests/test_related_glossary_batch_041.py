@@ -65,6 +65,27 @@ class RelatedGlossaryBatch041Tests(unittest.TestCase):
     def test_patch_guards_reconstruct_exact_pre_batch_glossary(self):
         restored = copy.deepcopy(self.glossary)
         by = {r['term'].casefold(): r for r in restored['terms']}
+        # Reverse later Batch 043 first, then Batch 042, to reconstruct the Batch 041 base.
+        batch_043 = read_json(ROOT / 'patches-related-terms/v2.95.62/related-terms-043.json')
+        for later_op in batch_043['operations']:
+            row = by[later_op['term'].casefold()]
+            for field, old_value in later_op['expect'].items():
+                if field == 'term':
+                    continue
+                if old_value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = old_value
+        batch_042 = read_json(ROOT / 'patches-related-terms/v2.95.61/related-terms-042.json')
+        for later_op in batch_042['operations']:
+            row = by[later_op['term'].casefold()]
+            for field, old_value in later_op['expect'].items():
+                if field == 'term':
+                    continue
+                if old_value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = old_value
         for op in self.patch['operations']:
             row = by[op['term'].casefold()]
             for field, value in op['expect'].items():

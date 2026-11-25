@@ -1,12 +1,15 @@
-# Current Version — TOEIC Dictionary v2.95.60
+# Current Version — TOEIC Dictionary v2.95.63
 
-- Current source: **v2.95.60** — consolidated read-only learning-content quality queues for missing US IPA and Related Glossary enrichment.
-- Exact predecessor: `TOEIC_Dictionary_v2.95.59_FullSource.zip` (SHA-256 `b5dbb4e7c974814c8d59fc6bf653737f7208e7da2c2d49141078efff385d993c`).
-- Release package: `TOEIC_Dictionary_v2.95.60_FullSource.zip`.
-- Patch: `TOEIC_Dictionary_v2.95.60_Patch_From_v2.95.59.zip`.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.60.md`.
-- Missing IPA queue: `reports/MISSING_IPA_REVIEW_QUEUE_v2.95.60.md` and `.json`.
-- Related Glossary audits and priority queue: `reports/RELATED_GLOSSARY_QUALITY_v2.95.60.md`, `RELATED_GLOSSARY_CANDIDATE_AUDIT_v2.95.60.md`, and `RELATED_GLOSSARY_ENRICHMENT_QUEUE_v2.95.60.md`.
-- All outputs are read-only review artifacts. No IPA, definition, POS, translation or provenance is automatically inserted into canonical content.
-- No vocabulary IDs/headwords/relations, question IDs/choices/answer keys, Mock eligibility, learner records/IndexedDB schema, UI layout or hosting architecture changed.
-- Hosted GitHub Actions, GitHub Pages and physical-device acceptance remain unverified unless separately confirmed.
+- Current source: **v2.95.63** — GitHub Actions Batch 035 test discovery fix and safe answer-result modal lifecycle.
+- Exact predecessor: `TOEIC_Dictionary_v2.95.62_FullSource.zip` (SHA-256 `b9d56cd27d0d13c4c8781732ac72c17b526b2aa451fa1393c39fd30820260f96`).
+- Release package: `TOEIC_Dictionary_v2.95.63_FullSource.zip`.
+- Package verification: 758 files; ZIP CRC and exact source-tree comparison PASS.
+- Patch: `TOEIC_Dictionary_v2.95.63_Patch_From_v2.95.62.zip` (758/758 clean replay match).
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.63.md`.
+- Change manifest: `reports/CHANGE_MANIFEST_v2.95.63.md`.
+- Package verification: `reports/PACKAGE_VERIFICATION_v2.95.63.md`.
+- Command log: `reports/COMMAND_LOG_INDEX_v2.95.63.md`.
+- CI Batch 035 unittest discovery uses `test_related_glossary_batch_035*.py` and is covered by the CI contract test.
+- Completion modal retains Đúng / Chưa đúng / Tổng câu statistics; safe X/Escape close routes persist/confirm or safely dismiss pending states without losing learner answers.
+- No vocabulary, Related Glossary, question/choice/answer-key data, learner IndexedDB data/schema or Mock eligibility changed. UI layout remains frozen; no Cloudflare/backend changes.
+- Hosted GitHub Actions, deployed Pages, installed PWA cache/offline behavior and physical-device acceptance remain unverified.

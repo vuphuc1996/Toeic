@@ -1,18 +1,16 @@
-# TOEIC Dictionary v2.95.60 — Project Documentation
+# TOEIC Dictionary v2.95.63 — Project Documentation
 
-## Current source — v2.95.59 (transparent item-complexity review queue)
+## Current source — v2.95.63 (GitHub test discovery and safe result-modal lifecycle)
 
-- **Exact predecessor:** v2.95.55 FullSource; learner backup/restore from that release remains intact.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.60.md`.
-- Answer leakage diagnostic: `reports/TOEIC_ANSWER_LEAKAGE_DIAGNOSTIC_v2.95.57.md`.
-- Item complexity review queue: `reports/TOEIC_ITEM_COMPLEXITY_REVIEW_v2.95.59.md`.
-- Listening form-diversity report: `reports/MOCK_LISTENING_FORM_DIVERSITY_v2.95.56.md`.
-- Package verification: `reports/PACKAGE_VERIFICATION_v2.95.59.md`; release acceptance: `reports/RELEASE_ACCEPTANCE_v2.95.57.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.60.md`.
-- Learner backup/restore contract: `reports/LEARNER_DATA_BACKUP_v2.95.55.md`.
-- Item complexity audit and focused tests are recorded in the v2.95.59 report.
-- Data validator and version sync: PASS; 1,141 records, 0 errors / 0 warnings. No question or vocabulary content was changed.
-- Hosted GitHub Actions/Pages and physical-device/browser-storage acceptance remain unverified.
+- **Exact predecessor:** `TOEIC_Dictionary_v2.95.62_FullSource.zip`; SHA-256 `b9d56cd27d0d13c4c8781732ac72c17b526b2aa451fa1393c39fd30820260f96`. This exact final FullSource was verified before editing; the uploaded v2.95.60 archive was not used.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.63.md`.
+- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.63.md`.
+- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.63.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.63.md`.
+- Related Glossary quality audit remains read-only: 567 rows, 157 flagged; this release did not modify glossary content.
+- The result modal already presents Đúng / Chưa đúng / Tổng câu. The release repairs the close/keyboard path for result, review and auto-advance states; it does not redesign the UI.
+- GitHub Pages static PWA, GitHub-only source and on-device IndexedDB contract remain unchanged. No Cloudflare, API, backend, vocabulary/question mutation or learner-data migration was introduced.
+- All local tests and deployment/device limitations are documented in the v2.95.63 test report. Hosted GitHub Actions, GitHub Pages deployment/cache propagation and physical-device testing remain unverified.
 
 ## Single source of truth
 

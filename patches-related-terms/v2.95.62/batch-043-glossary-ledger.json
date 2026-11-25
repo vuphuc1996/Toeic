@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 1,
+  "batch": "043",
+  "release": "2.95.62",
+  "predecessorRelease": "2.95.61",
+  "baseRelatedTermsSha256": "5783c70ea0ae04b12f2ee8ca220d2bb6a218c7766486319cce5ecc395c0f24d8",
+  "count": 21,
+  "sourcePublisher": "Cambridge University Press",
+  "sourceReviewMethod": "Web-indexed dictionary entry excerpts were inspected on 2026-11-25; definitions are concise paraphrases. The source text was not copied. Direct page fetch status was not asserted. Independent editorial review remains pending.",
+  "records": [
+    {
+      "term": "apparatus",
+      "pos": "n",
+      "definition_en": "a set of tools, machines, or equipment used for a particular purpose; the term can also describe an organized system.",
+      "meaning_vi_preserved": "thiết bị; bộ máy",
+      "relationAnchor": "equipment",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/apparatus",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Equipment sense; the linked relationship is the equipment synonym, while the system sense is retained to reflect “bộ máy” in the existing Vietnamese gloss.",
+      "originalTermPreserved": "apparatus",
+      "relationAnchors": [
+        {
+          "headword": "equipment",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "approximation",
+      "pos": "n",
+      "definition_en": "a rough estimate of a number or value that is close to the actual amount but is not exact.",
+      "meaning_vi_preserved": "sự ước lượng; giá trị xấp xỉ",
+      "relationAnchor": "estimate",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/approximation",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Estimate sense; retains the approximate-number/value meaning in the existing Vietnamese gloss.",
+      "originalTermPreserved": "approximation",
+      "relationAnchors": [
+        {
+          "headword": "estimate",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "arrive",
+      "pos": "v",
+      "definition_en": "to reach a place, especially at the end of a journey.",
+      "meaning_vi_preserved": "đến; tới nơi",
+      "relationAnchor": "depart",
+      "relationAnchorType": "antonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/arrive",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Reach-a-destination sense; target is an existing antonym of depart.",
+      "originalTermPreserved": "arrive",
+      "relationAnchors": [
+        {
+          "headword": "depart",
+          "type": "antonym"
+        }
+      ]
+    },
+    {
+      "term": "assurance",
+      "pos": "n",
+      "definition_en": "a firm promise that something will happen or be done, often given to remove doubt.",
+      "meaning_vi_preserved": "sự đảm bảo; sự cam đoan",
+      "relationAnchor": "guarantee",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/assurance",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Promise/guarantee sense; avoids the unrelated confidence and insurance senses.",
+      "originalTermPreserved": "assurance",
+      "relationAnchors": [
+        {
+          "headword": "guarantee",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "attempt",
+      "pos": "n",
+      "definition_en": "an act of trying to do something, especially when it is difficult.",
+      "meaning_vi_preserved": "sự cố gắng",
+      "relationAnchor": "effort",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/attempt",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun sense of trying; aligned with the existing effort synonym anchor.",
+      "originalTermPreserved": "attempt",
+      "relationAnchors": [
+        {
+          "headword": "effort",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "buy",
+      "pos": "v",
+      "definition_en": "to obtain something by paying money for it.",
+      "meaning_vi_preserved": "mua",
+      "relationAnchor": "purchase",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/buy",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Pay-for-goods sense; aligned with the existing purchase synonym anchor.",
+      "originalTermPreserved": "buy",
+      "relationAnchors": [
+        {
+          "headword": "purchase",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "calendar month",
+      "pos": "n",
+      "definition_en": "one of the twelve named months into which a calendar year is divided.",
+      "meaning_vi_preserved": "tháng dương lịch",
+      "relationAnchor": "month",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/calendar-month",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Calendar-month sense; distinguishes a named calendar month from a rolling month-long period.",
+      "originalTermPreserved": "calendar month",
+      "relationAnchors": [
+        {
+          "headword": "month",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "chance",
+      "pos": "n",
+      "definition_en": "an opportunity to do something; also, the likelihood that something will happen.",
+      "meaning_vi_preserved": "cơ hội; khả năng",
+      "relationAnchor": "opportunity",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/chance",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Opportunity sense is the relation anchor; likelihood is included because the existing Vietnamese gloss also says “khả năng”.",
+      "originalTermPreserved": "chance",
+      "relationAnchors": [
+        {
+          "headword": "opportunity",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "cautious",
+      "pos": "adj",
+      "definition_en": "careful about what one does or says in order to avoid risks or possible problems.",
+      "meaning_vi_preserved": "thận trọng",
+      "relationAnchor": "careful",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/cautious",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Risk-avoidance sense; aligned with the existing careful synonym anchor.",
+      "originalTermPreserved": "cautious",
+      "relationAnchors": [
+        {
+          "headword": "careful",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "coaching",
+      "pos": "n",
+      "definition_en": "the activity of giving focused instruction or training to help someone improve a skill or prepare for a task.",
+      "meaning_vi_preserved": "huấn luyện",
+      "relationAnchor": "training",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/coaching",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Instruction/training sense; aligned with the existing training synonym anchor.",
+      "originalTermPreserved": "coaching",
+      "relationAnchors": [
+        {
+          "headword": "training",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "collaborator",
+      "pos": "n",
+      "definition_en": "a person who works together with others for a particular purpose.",
+      "meaning_vi_preserved": "cộng tác viên",
+      "relationAnchor": "partner",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/collaborator",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Cooperative-work sense only; excludes the unrelated wartime-collaboration sense.",
+      "originalTermPreserved": "collaborator",
+      "relationAnchors": [
+        {
+          "headword": "partner",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "commerce",
+      "pos": "n",
+      "definition_en": "the activity of buying and selling goods or services.",
+      "meaning_vi_preserved": "thương mại",
+      "relationAnchor": "trade",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/commerce",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Buying-and-selling sense; aligned with the existing trade synonym anchor.",
+      "originalTermPreserved": "commerce",
+      "relationAnchors": [
+        {
+          "headword": "trade",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "coworker",
+      "pos": "n",
+      "definition_en": "a person who works with another person, often in a similar job or at a similar level of responsibility.",
+      "meaning_vi_preserved": "đồng nghiệp",
+      "relationAnchor": "colleague",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/coworker",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Workplace colleague sense; the spelling “coworker” is the U.S. form shown by the cited entry.",
+      "originalTermPreserved": "coworker",
+      "relationAnchors": [
+        {
+          "headword": "colleague",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "criterion",
+      "pos": "n",
+      "definition_en": "a standard or condition used to judge, decide about, or evaluate something.",
+      "meaning_vi_preserved": "tiêu chí",
+      "relationAnchor": "standard",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/criterion",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Evaluation standard sense; aligned with the existing standard synonym anchor.",
+      "originalTermPreserved": "criterion",
+      "relationAnchors": [
+        {
+          "headword": "standard",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "danger",
+      "pos": "n",
+      "definition_en": "the possibility that someone or something may be harmed; a person or thing that may cause harm.",
+      "meaning_vi_preserved": "nguy hiểm",
+      "relationAnchor": "risk",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/danger",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Possibility-of-harm sense; aligned with the existing risk synonym anchor.",
+      "originalTermPreserved": "danger",
+      "relationAnchors": [
+        {
+          "headword": "risk",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "distinctive",
+      "pos": "adj",
+      "definition_en": "having features that make something easy to recognize as different from other things.",
+      "meaning_vi_preserved": "đặc trưng",
+      "relationAnchor": "unique",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/distinctive",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Recognizable-difference sense; the paraphrase preserves the “different from others” nuance rather than claiming absolute one-of-a-kind status.",
+      "originalTermPreserved": "distinctive",
+      "relationAnchors": [
+        {
+          "headword": "unique",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "edition",
+      "pos": "n",
+      "definition_en": "a particular published form of a book, magazine, or newspaper, often distinguished by its format or publication date.",
+      "meaning_vi_preserved": "phiên bản; ấn bản",
+      "relationAnchor": "version",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/edition",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Published-form sense; aligned with the existing version synonym anchor and the existing “phiên bản; ấn bản” gloss.",
+      "originalTermPreserved": "edition",
+      "relationAnchors": [
+        {
+          "headword": "version",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "endeavor",
+      "pos": "n/v",
+      "definition_en": "an effort or attempt to achieve something; as a verb, to try to do something.",
+      "meaning_vi_preserved": "nỗ lực",
+      "relationAnchor": "effort",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/endeavor",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "U.S. spelling entry; both noun and verb are recorded because the dictionary entry includes both forms.",
+      "originalTermPreserved": "endeavor",
+      "relationAnchors": [
+        {
+          "headword": "effort",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "evade",
+      "pos": "v",
+      "definition_en": "to avoid or escape someone or something, especially by avoiding a duty, responsibility, or difficult issue.",
+      "meaning_vi_preserved": "né tránh",
+      "relationAnchor": "avoid",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/evade",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Avoidance/escape sense; aligned with the existing avoid synonym anchor.",
+      "originalTermPreserved": "evade",
+      "relationAnchors": [
+        {
+          "headword": "avoid",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "financial institution",
+      "pos": "n",
+      "definition_en": "an organization that provides financial services, such as banking, insurance, or investment services.",
+      "meaning_vi_preserved": "tổ chức tài chính",
+      "relationAnchor": "bank",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/financial-institution",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Financial-services organization sense; “bank” is an example within the broader category, not a definition limited to banks.",
+      "originalTermPreserved": "financial institution",
+      "relationAnchors": [
+        {
+          "headword": "bank",
+          "type": "synonym"
+        }
+      ]
+    },
+    {
+      "term": "convention",
+      "pos": "n",
+      "definition_en": "a large formal meeting of people with shared work or interests; also, an accepted way of doing or arranging something.",
+      "meaning_vi_preserved": "hội nghị; quy ước",
+      "relationAnchor": "conference",
+      "relationAnchorType": "synonym",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/convention",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "indexed dictionary entry excerpt reviewed; concise paraphrase; no example text copied",
+      "reviewedDate": "2026-11-25",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Meeting sense is the relation anchor; the customary-practice sense is retained to reflect “quy ước” in the existing Vietnamese gloss.",
+      "originalTermPreserved": "convention",
+      "relationAnchors": [
+        {
+          "headword": "conference",
+          "type": "synonym"
+        }
+      ]
+    }
+  ]
+}
