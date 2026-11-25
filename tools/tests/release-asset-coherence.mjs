@@ -8,7 +8,7 @@ const app = read('../../assets/js/app.js');
 const sw = read('../../sw.js');
 const version = manifest.version;
 
-assert.match(version, /^\\d+\\.\\d+\\.\\d+$/);
+assert.match(version, /^\d+\.\d+\.\d+$/);
 assert.match(html, new RegExp(`<meta name="toeic-release" content="${version}">`));
 assert.match(html, new RegExp(`href="./assets/css/app\\.css\\?v=${version}"`));
 assert.match(html, new RegExp(`href="./assets/css/design-system\\.css\\?v=${version}"`));
@@ -39,9 +39,9 @@ const oldWorkerCache = new Set([
 ]);
 const newAppRequest = new URL(`./assets/js/app.js?v=${version}`, 'https://example.test/Toeic/').href;
 assert.equal(oldWorkerCache.has(newAppRequest), false, 'new app release URL must bypass the previous cache key');
-assert.match(app, /workerScript\\.searchParams\\.set\\('__release',APP_RELEASE_VERSION\\)/);
+assert.ok(app.includes("workerScript.searchParams.set('__release',APP_RELEASE_VERSION)"));
 assert.match(app, /htmlReleaseVersion!==APP_RELEASE_VERSION/);
-assert.doesNotMatch(app, /\\$\\('#modalBackdrop'\\)\\.addEventListener/);
-assert.match(app, /\\$\\('#modalLayer'\\)\\.addEventListener/);
+assert.equal(app.includes("$('#modalBackdrop').addEventListener"), false);
+assert.ok(app.includes("$('#modalLayer').addEventListener"));
 
 console.log(`PASS: release asset coherence v${version} — HTML, CSS, app.js and Service Worker share the manifest version; old app.js cache keys cannot shadow the new modal shell; startup rejects mismatched HTML/app releases.`);
