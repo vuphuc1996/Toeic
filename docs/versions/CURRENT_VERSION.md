@@ -2,7 +2,8 @@
 
 - Current source: **v2.95.66** — PWA asset cache coherence and Batch 022 CI discovery repair (candidate).
 - Exact predecessor: `TOEIC_Dictionary_v2.95.65_FullSource.zip` (SHA-256 `a1b95e807e08052bfa599a08ff88bc3237ae086688557ce3ae77b78e814814fb`; 779 files).
-- Candidate release package: `TOEIC_Dictionary_v2.95.66_FullSource.zip` (package generation and detached SHA-256 verification pending final acceptance).
+- Release package: `TOEIC_Dictionary_v2.95.66_FullSource.zip`.
+- Package generation, detached SHA-256 verification and ZIP CRC: PENDING final acceptance.
 - Candidate Patch: `TOEIC_Dictionary_v2.95.66_Patch_From_v2.95.65.zip` (exact-base replay pending package generation).
 - Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.66.md`.
 - Change manifest: `reports/CHANGE_MANIFEST_v2.95.66.md`.
