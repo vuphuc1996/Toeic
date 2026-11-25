@@ -9,7 +9,7 @@
 - Current change manifest: `reports/CHANGE_MANIFEST_v2.95.66.md`.
 - Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.66.md`.
 - The browser error at `app.js:2135:170` was traced to v2.95.64's stale `modalBackdrop` listener being served from an old Service Worker cache while the HTML had moved to `modalLayer`.
-- CSS, app.js and Service Worker registration now use release-specific query URLs; REQUIRED and APP_SHELL precache the exact versioned URLs. App startup compares the HTML release meta with the app module release marker and displays a recovery notice instead of binding events when they differ.
+- CSS and app.js now use release-specific query URLs; REQUIRED and APP_SHELL precache the exact versioned URLs. The Service Worker keeps its stable ./sw.js registration URL with updateViaCache: none. App startup compares the HTML release meta with the app module release marker and displays a recovery notice instead of binding events when they differ.
 - Batch 022's CI regression now validates the actual `unittest discover -p` selector instead of searching for a file-path string that the workflow never contains. PWA readiness strips query parameters before checking source file existence.
 - A new release-asset coherence regression is registered in GitHub Actions. Full hosted workflow and package status remain pending the candidate PR run.
 - No learner content, stable IDs, question/answer data, IndexedDB schema/records, Mock eligibility or Robot Buddy privacy boundary changed. UI layout and hosting architecture remain unchanged.
