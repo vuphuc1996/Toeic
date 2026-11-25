@@ -1,6 +1,7 @@
 import json
 import re
 import unittest
+from urllib.parse import urlsplit
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -20,7 +21,11 @@ class PWAReadinessTests(unittest.TestCase):
         required = self.array("REQUIRED")
         shell = self.array("APP_SHELL")
         self.assertTrue(set(required).issubset(set(shell)))
-        missing = [p for p in shell if p != "./" and not (ROOT / p.removeprefix("./")).is_file()]
+        missing = [
+            item for item in shell
+            if urlsplit(item).path != "./"
+            and not (ROOT / urlsplit(item).path.removeprefix("./")).is_file()
+        ]
         self.assertEqual(missing, [])
         self.assertIn("./data/listening/listening-library.json", required)
         self.assertIn("./assets/js/mock-engine.js", required)
@@ -28,6 +33,15 @@ class PWAReadinessTests(unittest.TestCase):
         self.assertIn("./assets/js/sentence-completion.js", required)
         self.assertIn("./data/practice/part5-sentence-completion.json", required)
         self.assertIn("./data/learning-path/foundation-reading-extended.json", required)
+
+    def test_release_shell_assets_are_versioned_and_precached(self):
+        version = self.manifest["version"]
+        required = self.array("REQUIRED")
+        shell = self.array("APP_SHELL")
+        for path in ("./assets/css/app.css", "./assets/css/design-system.css", "./assets/js/app.js"):
+            versioned = f"{path}?v={version}"
+            self.assertIn(versioned, required)
+            self.assertIn(versioned, shell)
 
     def test_part1_uses_jpg_only_and_has_no_svg_fallback_assets(self):
         required = self.array("REQUIRED")
