@@ -2,7 +2,7 @@
 
 - Reproduced the reported `app.js:2135:170` failure against repository history: the referenced `$('#modalBackdrop').addEventListener` call exists at that line/column in v2.95.64, while v2.95.65 HTML has only `modalLayer`. The browser was receiving stale cached app.js with the newer HTML shell.
 - Added release query parameters to the app CSS, design-system CSS and app.js URLs in HTML. The same versioned URLs are included in Service Worker REQUIRED and APP_SHELL, preventing older worker cache entries from matching the previous app.js URL.
-- Service Worker registration now carries the current release marker in its script URL and retains `updateViaCache: 'none'`.
+- Service Worker registration keeps the stable `./sw.js` URL and retains `updateViaCache: 'none'`; the versioned CSS/JS requests isolate app-shell cache keys without changing registration URL each release.
 - Added a startup HTML/app release guard. When the meta release and JS release marker differ, the app displays a reload notice and returns before `bindEvents()`; this turns a future mixed-shell failure into an explicit release-coherence diagnostic.
 - Fixed Batch 022's CI test: it now validates the actual `unittest discover` selector rather than requiring a source-path literal absent from the workflow.
 - Updated PWA readiness to strip query parameters when verifying precached source paths. Added a release-asset-coherence Node regression and registered it in GitHub Actions.
