@@ -1,6 +1,6 @@
-# Manual Acceptance Checklist — TOEIC Dictionary v2.95.46
+# Manual Acceptance Checklist — TOEIC Dictionary v2.95.66
 
-**Purpose:** checklist for the project owner to execute on GitHub and real browsers/devices. This document is a blank record; it does not assert that any remote or device-level check has passed.
+**Purpose:** checklist for the project owner to execute on GitHub and real browsers/devices. The candidate v2.95.66 release-coherence checks below are not marked passed until run on the deployed app. This document is a blank record; it does not assert that any remote or device-level check has passed.
 
 **Rule:** every result starts as `Chưa kiểm`. Fill in the result, date and device only after performing that exact check. Do not clear IndexedDB or learner localStorage to make a test easier; use a separate browser profile for clean-install scenarios.
 
@@ -49,3 +49,12 @@
 - Ngày nghiệm thu: Chưa ghi.
 
 Chỉ thay đổi trạng thái của một hàng sau khi kiểm đúng hướng dẫn, ghi ngày và thiết bị tương ứng. Kết quả của GitHub Actions không thay thế kiểm thử trình duyệt/thiết bị thật; kiểm tra mô phỏng cục bộ cũng không được ghi nhận như kết quả QA thực tế.
+
+
+## v2.95.66 — release-coherence acceptance
+
+| # | Hạng mục | Cách làm | Kết quả mong đợi | Đạt / Không đạt / Chưa kiểm | Ngày | Thiết bị |
+|---:|---|---|---|---|---|---|
+| 13 | HTML / JS release coherence | Mở F12 → Console; kiểm tra `document.querySelector('meta[name="toeic-release"]')?.content`, URL app.js trong Network và `navigator.serviceWorker.controller?.scriptURL`. | Meta, app.js query `?v=` và SW script query `__release=` đều cùng phiên bản; không có lỗi null `addEventListener` hoặc selector `modalBackdrop` cũ. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 14 | Cập nhật từ cache v2.95.65 | Giữ PWA/tab cũ đang được worker v2.95.65 điều khiển; sau khi v2.95.66 deploy, reload hoặc chấp thuận banner cập nhật; quan sát Network cho app.js. | Trang nạp `app.js?v=2.95.66`, không trả bản cũ từ cache v2.95.65; HTML meta và app JS release trùng nhau; app khởi tạo đủ. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
+| 15 | Mismatch guard | Dùng browser profile thử nghiệm và bản HTML/app có release khác nhau; không thao tác trên hồ sơ học thật. | App hiển thị thông báo release mismatch và không gọi `bindEvents()`; nút tải lại hoạt động; không xuất hiện lỗi null listener. | **Chưa kiểm** | Chưa ghi | Chưa ghi |
