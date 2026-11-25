@@ -345,6 +345,7 @@ jobs:
           node tools/tests/flashcard-fixed-batch.mjs
           node tools/tests/flashcard-senses.mjs
           node tools/tests/service-worker-update.mjs
+          node tools/tests/release-asset-coherence.mjs
           node tools/tests/robot-buddy-layout.mjs
           node tools/tests/robot-learning-insights.mjs
           node tools/tests/robot-buddy-data-boundary.mjs
