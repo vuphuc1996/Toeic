@@ -12,4 +12,3 @@
 - Batch 022 CI contract checks the active unittest discovery selector; PWA readiness strips query strings before checking local file paths.
 - No learning-data, learner IndexedDB, stable identity, Mock eligibility or Robot Buddy privacy-boundary migration is included.
 - Hosted GitHub Actions, Pages and installed-PWA/device acceptance remain pending. This candidate must not be marked accepted until the complete workflow and exact package replay pass.
-
