@@ -3867,9 +3867,7 @@ async function registerSW(){
   };
   navigator.serviceWorker.addEventListener('controllerchange',reloadAfterWorkerSwap,{once:true});
   try{
-    const workerScript=new URL('./sw.js',document.baseURI);
-    workerScript.searchParams.set('__release',APP_RELEASE_VERSION);
-    const registration=await navigator.serviceWorker.register(workerScript.href,{scope:'./',updateViaCache:'none'});
+    const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});
     state.swRegistration=registration;
     watchServiceWorkerUpdates(registration);
     await navigator.serviceWorker.ready;
