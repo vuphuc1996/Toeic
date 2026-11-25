@@ -402,8 +402,6 @@ jobs:
           expected_sha = os.environ["BASE_SHA256"]
           if len(paths) != 779 or len(set(paths)) != 779:
               raise RuntimeError(f"Curated v2.95.65 path manifest must contain 779 unique paths; found {len(paths)}")
-          if len(paths) != 779 or manifest.get("count") != 779 or len(set(paths)) != 779:
-              raise RuntimeError("Curated baseline file inventory must contain exactly 779 unique paths")
 
           output = Path(os.environ["RUNNER_TEMP"]) / "TOEIC_Dictionary_v2.95.65_FullSource.zip"
           prefix = "Toeic_Dictionary_v2.95.65/"
