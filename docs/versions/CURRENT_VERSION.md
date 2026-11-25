@@ -8,7 +8,7 @@
 - Change manifest: `reports/CHANGE_MANIFEST_v2.95.66.md`.
 - Package verification: `reports/PACKAGE_VERIFICATION_v2.95.66.md`.
 - Command-log index: `reports/COMMAND_LOG_INDEX_v2.95.66.md`.
-- HTML, CSS and app.js now carry the manifest release query; the Service Worker REQUIRED/APP_SHELL arrays and registration URL carry the same release marker. A startup guard blocks mismatched HTML/app releases before binding DOM events.
+- HTML, CSS and app.js now carry the manifest release query; the Service Worker REQUIRED/APP_SHELL arrays precache the exact versioned URLs, while registration stays stable at `./sw.js`. A startup guard blocks mismatched HTML/app releases before binding DOM events.
 - Batch 022 CI contract checks the active unittest discovery selector; PWA readiness strips query strings before checking local file paths.
 - No learning-data, learner IndexedDB, stable identity, Mock eligibility or Robot Buddy privacy-boundary migration is included.
 - Hosted GitHub Actions, Pages and installed-PWA/device acceptance remain pending. This candidate must not be marked accepted until the complete workflow and exact package replay pass.
