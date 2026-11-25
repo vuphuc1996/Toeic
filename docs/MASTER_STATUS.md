@@ -12,7 +12,7 @@
 - Startup guard: HTML `meta[name="toeic-release"]` must match `APP_RELEASE_VERSION`. A mismatch shows a reload notice and returns before `bindEvents()`, preventing the previous null-listener failure from surfacing as an opaque `addEventListener` exception.
 - CI fix: Batch 022 validates the actual `unittest discover -p` selector with glob semantics. PWA readiness checks the local file path without treating the release query as part of the filesystem path.
 - New `tools/tests/release-asset-coherence.mjs` is explicitly registered in the JavaScript regression step; it verifies manifest/HTML/app/SW version agreement, query-versioned app-shell resources, and bypass of the prior app.js cache key.
-- Candidate branch: `fix/v2.95.66-pwa-release-coherence-ci-batch022`. GitHub Pages and full Actions acceptance are pending the pull-request run. Do not describe the candidate as accepted or fully tested until every CI job completes.
+- Candidate branch: `fix/v2.95.66-pwa-release-coherence-ci-batch022`. GitHub Actions PR validation has completed: 130/130 steps PASS, 0 failures and 0 skipped. Full Python discovery is 762/762 PASS and Node regression scripts are 44/44 PASS. GitHub Pages deployment after merge, source packages and physical-device acceptance remain pending.
 - No vocabulary/Related Glossary content, canonical IDs/headwords/relations, question/choice IDs, answer keys, Mock eligibility, learner IndexedDB data/schema, Robot Buddy boundary, visual layout or hosting architecture changed.
 
 ## Stage 2 progress
@@ -37,7 +37,7 @@ Stage 2: **6/6 workstreams implemented (100%)**; item 9 is structurally instrume
 
 ## Acceptance boundary
 
-For the v2.95.66 candidate, Batch 022 discovery, release asset coherence, PWA readiness and the complete Python/Node test suite are **PENDING hosted Actions**. No full-suite PASS is claimed. GitHub Pages deployment, installed-PWA update/cache propagation, offline startup and real Windows/macOS/iOS/iPadOS/Android behavior remain **UNVERIFIED** until the candidate is merged and device acceptance is recorded.
+For the v2.95.66 candidate, hosted GitHub Actions is **PASS** (130/130 steps, 0 failures / 0 skipped); full Python discovery is **762/762 PASS** and Node regressions are **44/44 PASS**. Data validator retains 1,141 records with zero errors, zero new warnings and no ID changes. GitHub Pages deployment after merge, package SHA/CRC/replay and installed-PWA update/offline behavior on Windows/macOS/iOS/iPadOS/Android remain **UNVERIFIED** until deployed and tested.
 
 ## Previous completed work
 
