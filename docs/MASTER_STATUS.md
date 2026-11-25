@@ -8,7 +8,7 @@
 
 - Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.65_FullSource.zip`; SHA-256 `a1b95e807e08052bfa599a08ff88bc3237ae086688557ce3ae77b78e814814fb` (779 files). No older archive, Patch or alternate branch is used as the baseline.
 - Candidate version markers: `data/manifest.json`, `assets/js/app.js`, `sw.js`, HTML title/sidebar/phase/footer and docs are synchronized to v2.95.66.
-- Runtime fix: the app stylesheet, design-system stylesheet and app module use `?v=2.95.66` URLs. The Service Worker REQUIRED and APP_SHELL arrays precache those exact URLs; its registration URL also carries the release marker with `updateViaCache: 'none'`.
+- Runtime fix: the app stylesheet, design-system stylesheet and app module use `?v=2.95.66` URLs. The Service Worker REQUIRED and APP_SHELL arrays precache those exact URLs; its registration URL stays stable at `./sw.js` with `updateViaCache: 'none'`.
 - Startup guard: HTML `meta[name="toeic-release"]` must match `APP_RELEASE_VERSION`. A mismatch shows a reload notice and returns before `bindEvents()`, preventing the previous null-listener failure from surfacing as an opaque `addEventListener` exception.
 - CI fix: Batch 022 validates the actual `unittest discover -p` selector with glob semantics. PWA readiness checks the local file path without treating the release query as part of the filesystem path.
 - New `tools/tests/release-asset-coherence.mjs` is explicitly registered in the JavaScript regression step; it verifies manifest/HTML/app/SW version agreement, query-versioned app-shell resources, and bypass of the prior app.js cache key.
