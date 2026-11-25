@@ -17,7 +17,7 @@ import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-qu
 import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.65';
+const APP_RELEASE_VERSION = '2.95.66';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -3867,7 +3867,9 @@ async function registerSW(){
   };
   navigator.serviceWorker.addEventListener('controllerchange',reloadAfterWorkerSwap,{once:true});
   try{
-    const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});
+    const workerScript=new URL('./sw.js',document.baseURI);
+    workerScript.searchParams.set('__release',APP_RELEASE_VERSION);
+    const registration=await navigator.serviceWorker.register(workerScript.href,{scope:'./',updateViaCache:'none'});
     state.swRegistration=registration;
     watchServiceWorkerUpdates(registration);
     await navigator.serviceWorker.ready;
@@ -3882,5 +3884,33 @@ async function registerSW(){
     return null;
   }
 }
-async function init(){bindEvents();updateDate();renderDeviceGreeting();try{await loadData();await initializePractice();loadMockState();if(state.pendingMockResult&&!state.pendingSinglePractice)showPendingMockResult();await initializeRobotCompanion();}catch(err){console.error(err);$('#metricWords').textContent='!';const status=$('#metricWordsStatus');if(status){status.textContent=`DỮ LIỆU CHƯA ĐỒNG BỘ · ${err.message}`;status.dataset.integrity='mismatch';}toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}await registerSW();initializeInstallInvite();}
+function releaseShellVersion(){
+  return document.querySelector('meta[name="toeic-release"]')?.content?.trim()||'';
+}
+async function init(){
+  const htmlReleaseVersion=releaseShellVersion();
+  if(htmlReleaseVersion!==APP_RELEASE_VERSION){
+    const message=`HTML v${htmlReleaseVersion||'không xác định'} không khớp app.js v${APP_RELEASE_VERSION}. Hãy tải lại để đồng bộ phiên bản.`;
+    console.error(`[Release coherence] ${message}`);
+    const banner=$('#appUpdateBanner');
+    const copy=banner?.querySelector('.app-update-copy small');
+    if(copy)copy.textContent=message;
+    if(banner)banner.hidden=false;
+    $('#appUpdateApply')?.addEventListener('click',()=>window.location.reload(),{once:true});
+    return;
+  }
+  bindEvents();updateDate();renderDeviceGreeting();
+  try{
+    await loadData();await initializePractice();loadMockState();
+    if(state.pendingMockResult&&!state.pendingSinglePractice)showPendingMockResult();
+    await initializeRobotCompanion();
+  }catch(err){
+    console.error(err);$('#metricWords').textContent='!';
+    const status=$('#metricWordsStatus');
+    if(status){status.textContent=`DỮ LIỆU CHƯA ĐỒNG BỘ · ${err.message}`;status.dataset.integrity='mismatch';}
+    toast(`Không tải được dữ liệu: ${err.message}`,'error');
+    $('#resultCount').textContent='Không tải được dữ liệu';
+  }
+  await registerSW();initializeInstallInvite();
+}
 init();
