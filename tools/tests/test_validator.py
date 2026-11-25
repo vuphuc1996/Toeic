@@ -271,6 +271,29 @@ class ValidatorTests(unittest.TestCase):
         self.assertIn("thêm 1", out)
 
     # ---- Service worker
+    def test_versioned_service_worker_cache_urls_resolve_to_existing_files(self):
+        self.repo.extra_assets = ["assets/css/design-system.css"]
+        self.repo.sw_omit = {"assets/css/app.css", "assets/js/app.js"}
+        self.repo.sw_extra_paths = [
+            "./assets/css/app.css?v=1.0.0",
+            "./assets/css/design-system.css?v=1.0.0",
+            "./assets/js/app.js?v=1.0.0",
+        ]
+        self.repo.save()
+        self.clean_with_baseline()
+        code, out = self.repo.run()
+        self.assertEqual(code, 0, out)
+        self.assertIn("RESULT: PASS", out)
+
+    def test_versioned_service_worker_cache_url_still_rejects_missing_file(self):
+        self.clean_with_baseline()
+        self.repo.sw_extra_paths = ["./assets/topics/ghost.webp?v=1.0.0"]
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1, out)
+        self.assertIn("SW001", out)
+        self.assertIn("ghost.webp?v=1.0.0", out)
+
     def test_appshell_missing_file(self):
         self.clean_with_baseline()
         self.repo.sw_extra_paths = ["./assets/topics/ghost.webp"]
