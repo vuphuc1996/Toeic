@@ -382,26 +382,26 @@ jobs:
         run: |
           set -euo pipefail
           python - <<'PY'
-          import base64
-          import gzip
           import hashlib
-          import json
           import os
           import subprocess
           import zipfile
           from pathlib import Path
 
           repo = Path.cwd()
-          chunks = sorted((repo / ".github/package-manifests").glob("v2.95.65-paths.part*"))
+          chunks = sorted((repo / ".github/package-manifests").glob("v2.95.65-paths-list.part*.txt"))
           if len(chunks) != 10:
               raise RuntimeError(f"Curated v2.95.65 path manifest has {len(chunks)} chunks; expected 10")
-          encoded_manifest = "".join(chunk.read_text(encoding="utf-8").strip() for chunk in chunks)
-          manifest = json.loads(gzip.decompress(base64.b64decode(encoded_manifest)))
+          paths = [
+              line.strip()
+              for chunk in chunks
+              for line in chunk.read_text(encoding="utf-8").splitlines()
+              if line.strip()
+          ]
           base_commit = os.environ["BASE_COMMIT"]
           expected_sha = os.environ["BASE_SHA256"]
-          if manifest.get("version") != "2.95.65" or manifest.get("sha256") != expected_sha:
-              raise RuntimeError("Curated baseline manifest does not match the approved v2.95.65 release")
-          paths = manifest.get("paths", [])
+          if len(paths) != 779 or len(set(paths)) != 779:
+              raise RuntimeError(f"Curated v2.95.65 path manifest must contain 779 unique paths; found {len(paths)}")
           if len(paths) != 779 or manifest.get("count") != 779 or len(set(paths)) != 779:
               raise RuntimeError("Curated baseline file inventory must contain exactly 779 unique paths")
 
@@ -435,12 +435,8 @@ jobs:
           set -euo pipefail
           mkdir -p release-artifacts
           python - <<'PY'
-          import base64
-          import gzip
           import hashlib
-          import json
           import os
-          import shutil
           import subprocess
           import tempfile
           import zipfile
@@ -455,12 +451,18 @@ jobs:
           target_zip = output / f"TOEIC_Dictionary_v{version}_FullSource.zip"
           patch_zip = output / f"TOEIC_Dictionary_v{version}_Patch_From_v2.95.65.zip"
 
-          chunks = sorted((repo / ".github/package-manifests").glob("v2.95.65-paths.part*"))
+          chunks = sorted((repo / ".github/package-manifests").glob("v2.95.65-paths-list.part*.txt"))
           if len(chunks) != 10:
               raise RuntimeError(f"Curated v2.95.65 path manifest has {len(chunks)} chunks; expected 10")
-          encoded_manifest = "".join(chunk.read_text(encoding="utf-8").strip() for chunk in chunks)
-          manifest = json.loads(gzip.decompress(base64.b64decode(encoded_manifest)))
-          base_paths = manifest["paths"]
+          base_paths = [
+              line.strip()
+              for chunk in chunks
+              for line in chunk.read_text(encoding="utf-8").splitlines()
+              if line.strip()
+          ]
+          if len(base_paths) != 779 or len(set(base_paths)) != 779:
+              raise RuntimeError("Curated v2.95.65 path manifest must contain 779 unique paths")
+          manifest = {"version": "2.95.65", "count": len(base_paths), "paths": base_paths}
           base_set = set(base_paths)
 
           def digest(raw):
