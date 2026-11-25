@@ -48,7 +48,6 @@ tools/tests/robot-progress-dashboard.mjs
 tools/tests/runtime-render-smoke.mjs
 tools/tests/sentence-completion.mjs
 tools/tests/service-worker-update.mjs
-tools/tests/robot-buddy-streaming.mjs
 tools/tests/test_alphabet_sound_lab.py
 tools/tests/test_answer_leakage_audit.py
 tools/tests/test_answer_position_balance.py
