@@ -5,9 +5,11 @@
 - Service Worker registration keeps the stable `./sw.js` URL and retains `updateViaCache: 'none'`; the versioned CSS/JS requests isolate app-shell cache keys without changing registration URL each release.
 - Added a startup HTML/app release guard. When the meta release and JS release marker differ, the app displays a reload notice and returns before `bindEvents()`; this turns a future mixed-shell failure into an explicit release-coherence diagnostic.
 - Fixed Batch 022's CI test: it now validates the actual `unittest discover` selector rather than requiring a source-path literal absent from the workflow.
-- Updated PWA readiness to strip query parameters when verifying precached source paths. Added a release-asset-coherence Node regression and registered it in GitHub Actions.
+- Updated PWA readiness and vocabulary validator SW001/SW002 checks to strip query parameters only for physical file lookup, preserving versioned cache keys. Added regressions proving existing versioned files pass and missing versioned paths still fail. Added a release-asset-coherence Node regression and registered it in GitHub Actions.
 - No learning content, vocabulary IDs, canonical relations, question/choice/answer-key data, Mock eligibility or learner storage changed. UI layout and GitHub Pages-only architecture remain unchanged.
 - Hosted Actions, exact package replay and physical-device cache/update acceptance remain pending the candidate PR run and post-merge testing.
+
+- Hosted CI acceptance: 130/130 workflow steps PASS, 762/762 full Python tests PASS, and 44/44 Node regression scripts PASS. Data validator retained all 1,141 IDs with zero errors and zero new warnings. FullSource/Patch verification and real-device PWA acceptance remain separate pending gates.
 
 ## v2.95.65 — Batch 035 Cambridge historical tests and single modal overlay (2026-11-25)
 
