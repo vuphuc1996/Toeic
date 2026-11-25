@@ -1,18 +1,18 @@
-# TOEIC Dictionary v2.95.65 — Project Documentation
+# TOEIC Dictionary v2.95.66 — Project Documentation
 
-## Current source — v2.95.65 (Batch 035 and shared modal overlay repair)
+## Current source — v2.95.66 candidate (PWA cache coherence and CI discovery repair)
 
-- **Exact predecessor:** `TOEIC_Dictionary_v2.95.64_FullSource.zip`; SHA-256 `03ec4c80e88bc76e435cfc0782e933474be882a4f271318a23375a35e9242673`. This exact complete FullSource was verified before editing; no older source or Patch was used as the baseline.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.65.md`.
-- Current implementation report: `reports/GITHUB_CAMBRIDGE_AND_MODAL_OVERLAY_FIX_v2.95.65.md`.
-- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.65.md`.
-- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.65.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.65.md`.
-- The Batch 035 split Cambridge test is included in source and selected by the wildcard discovery step; historical rows, corrections, relation anchors and base hash are reconstructed instead of using stale fixed values.
-- `learningFocusBackdrop` is the only screen-wide dimming/blur layer; `modalLayer` contains only the modal panel. Both ordinary and focused-session modals use the same root.
-- GitHub Actions now runs a dedicated single-overlay contract test in addition to all Node modal and full Python discovery tests.
-- No vocabulary/question/answer data, stable IDs, learner IndexedDB records/schema, PWA storage contract, UI layout or hosting architecture changed.
-- Hosted GitHub Actions, GitHub Pages deployment, PWA cache/offline behavior and physical-device acceptance remain unverified until directly tested.
+- **Exact predecessor:** `TOEIC_Dictionary_v2.95.65_FullSource.zip`; SHA-256 `a1b95e807e08052bfa599a08ff88bc3237ae086688557ce3ae77b78e814814fb` (779 files). This is the only source baseline for this candidate.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.66.md`.
+- Current implementation report: `reports/PWA_RELEASE_COHERENCE_AND_BATCH022_FIX_v2.95.66.md`.
+- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.66.md`.
+- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.66.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.66.md`.
+- The browser error at `app.js:2135:170` was traced to v2.95.64's stale `modalBackdrop` listener being served from an old Service Worker cache while the HTML had moved to `modalLayer`.
+- CSS, app.js and Service Worker registration now use release-specific query URLs; REQUIRED and APP_SHELL precache the exact versioned URLs. App startup compares the HTML release meta with the app module release marker and displays a recovery notice instead of binding events when they differ.
+- Batch 022's CI regression now validates the actual `unittest discover -p` selector instead of searching for a file-path string that the workflow never contains. PWA readiness strips query parameters before checking source file existence.
+- A new release-asset coherence regression is registered in GitHub Actions. Full hosted workflow and package status remain pending the candidate PR run.
+- No learner content, stable IDs, question/answer data, IndexedDB schema/records, Mock eligibility or Robot Buddy privacy boundary changed. UI layout and hosting architecture remain unchanged.
 
 ## Single source of truth
 
