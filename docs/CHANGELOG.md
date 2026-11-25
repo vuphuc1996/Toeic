@@ -1,3 +1,13 @@
+## v2.95.64 — GitHub commit-readiness and CI reliability hardening (2026-11-25)
+
+- Added a dependency-free Git commit-readiness audit and a dedicated integration test suite. The check validates staged/clean Git state, case-insensitive path collisions, Windows-reserved names and characters, symlinks, large files, accidental release ZIP/checksum artifacts, expected `.gitignore` coverage, LF attributes and whitespace in the current commit/staged diff. It does not stage, commit or mutate Git state.
+- Added `.gitattributes` rules to normalize text files to LF and preserve media as binary. Expanded `.gitignore` for Python/test caches, local virtual environments, logs, editor/OS files and generated release archives/checksums. Added workflow path filters for both Git hygiene files.
+- Pinned `actions/checkout`, `actions/setup-python` and `actions/setup-node` to verified full commit SHAs (`v7.0.1`, `v7.1.0`, `v7.1.0`) and set checkout depth to 2 so CI can verify the current commit diff without scanning legacy history.
+- Repaired repository-integrity discovery logic to include the documented default `unittest discover` pattern `test*.py`; new test modules are no longer falsely reported as uncovered when the workflow's full discovery step selects them. CI coverage now detects duplicate Python test selectors and duplicate step labels.
+- Removed two duplicate Python test executions (Batch 021 and safe missing-IPA backfill) without reducing module coverage. Replaced the hand-maintained `py_compile` file list with `compileall -q tools` so future helper/test modules are syntax-checked automatically.
+- No vocabulary, Related Glossary, question/choice IDs, answer keys, learner data/IndexedDB schema, UI layout, PWA runtime behavior, service worker cache or GitHub Pages architecture changed.
+- Local focused tests and commit-preflight results are documented in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.64.md`. Hosted GitHub Actions and actual Windows/macOS client commit behavior remain unverified.
+
 ## v2.95.63 — CI test discovery and safe answer-result modal lifecycle (2026-11-25)
 
 - Fixed the GitHub Actions Batch 035 unittest discovery contract by changing its selector to `test_related_glossary_batch_035*.py`. The wildcard selects both the existing Batch 035 module and a split Cambridge module such as `test_related_glossary_batch_035_cambridge.py`; the repository preflight and CI coverage regression both verify this.

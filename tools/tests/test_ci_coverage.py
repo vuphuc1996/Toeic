@@ -1,5 +1,6 @@
 """Prevent newly added regression suites from being silently omitted from CI."""
 import fnmatch
+from collections import Counter
 import re
 import unittest
 from pathlib import Path
@@ -15,11 +16,41 @@ class ContinuousIntegrationCoverageTests(unittest.TestCase):
         cls.workflow = WORKFLOW.read_text(encoding="utf-8")
 
     def test_every_python_test_module_is_invoked_by_workflow(self):
-        files = sorted(TESTS.glob("test_*.py"))
+        files = sorted(TESTS.rglob("test_*.py"))
         commands = [line for line in self.workflow.splitlines() if "python -m unittest discover" in line]
-        patterns = [pattern for line in commands for pattern in re.findall(r"-p ['\"]([^'\"]+)['\"]", line)]
+        patterns = []
+        for line in commands:
+            explicit = re.findall(r"-p ['\"]([^'\"]+)['\"]", line)
+            patterns.extend(explicit or ["test*.py"])  # unittest's documented default
         missing = [path.name for path in files if not any(fnmatch.fnmatchcase(path.name, pattern) for pattern in patterns)]
         self.assertEqual(missing, [], f"Python test modules missing from CI: {missing}")
+
+    def test_github_actions_are_pinned_to_verified_full_commit_shas(self):
+        expected = {
+            "actions/checkout": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "actions/setup-python": "6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+            "actions/setup-node": "949feb2413d6458794dcd2491c4babbbce0c15c1",
+        }
+        uses = dict(re.findall(r"uses:\s+([\w.-]+/[\w.-]+)@([0-9a-f]{40})", self.workflow))
+        for action, sha in expected.items():
+            self.assertEqual(uses.get(action), sha, f"{action} must stay pinned to the reviewed immutable commit")
+
+    def test_unittest_patterns_and_step_names_are_not_duplicated(self):
+        commands = [line for line in self.workflow.splitlines() if "python -m unittest discover" in line]
+        explicit_patterns = [pattern for line in commands for pattern in re.findall(r"-p ['\"]([^'\"]+)['\"]", line)]
+        duplicate_patterns = {pattern: count for pattern, count in Counter(explicit_patterns).items() if count > 1}
+        self.assertEqual(duplicate_patterns, {}, f"Duplicate Python test invocations: {duplicate_patterns}")
+        step_names = [name.strip() for name in re.findall(r"^\s*- name:\s*(.+)$", self.workflow, re.MULTILINE)]
+        duplicate_names = {name: count for name, count in Counter(step_names).items() if count > 1}
+        self.assertEqual(duplicate_names, {}, f"Duplicate GitHub Actions step names: {duplicate_names}")
+
+    def test_git_commit_preflight_runs_before_repository_validation(self):
+        preflight = self.workflow.index("python tools/audit-git-commit-readiness.py --require-clean")
+        integrity = self.workflow.index("python tools/audit-repository-integrity.py")
+        self.assertLess(preflight, integrity)
+
+    def test_python_syntax_check_compiles_the_entire_tools_tree(self):
+        self.assertIn("python -m compileall -q tools", self.workflow)
 
     def test_batch_035_pattern_covers_cambridge_split_module(self):
         patterns = re.findall(r"-p ['\"]([^'\"]+)['\"]", self.workflow)

@@ -1,20 +1,18 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.63
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.64
 
-**Current source:** v2.95.63 — CI Batch 035 unittest wildcard and answer-result modal close lifecycle. Learning content is unchanged.
+**Current source:** v2.95.64 — GitHub commit-readiness, workflow pinning and CI test-discovery hardening. Learning content is unchanged.
 
 ## Current release
 
-- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.62_FullSource.zip`; SHA-256 `b9d56cd27d0d13c4c8781732ac72c17b526b2aa451fa1393c39fd30820260f96`. This is the exact one-root archive and sidecar verified before edits; uploaded v2.95.60 was not used.
-- FullSource: `TOEIC_Dictionary_v2.95.63_FullSource.zip`; 758 files, ZIP CRC and exact tracked-tree hash comparison are recorded in `reports/PACKAGE_VERIFICATION_v2.95.63.md`; output SHA-256 is in the detached `.sha256` sidecar.
-- Patch: `TOEIC_Dictionary_v2.95.63_Patch_From_v2.95.62.zip`; bound to the exact v2.95.62 SHA; 758/758 clean-extraction replay match is recorded in package verification; output SHA-256 is in the detached sidecar.
-- CI fix: Batch 035 uses `test_related_glossary_batch_035*.py`, which selects split modules such as `test_related_glossary_batch_035_cambridge.py`; `test_ci_coverage.py` asserts this pattern.
-- Modal fix: result modal, explanation review and auto-advance wait all expose explicit X/Escape handling through one state-aware dispatcher. Pending answer/result is confirmed or saved safely; current question remains available after dismissing explanation/wait.
-- Existing completion result modal continues to display Đúng / Chưa đúng / Tổng câu before answer/explanation reveal. No extra UI design or new interaction flow was introduced.
-- Related Glossary audit is unchanged and read-only: 567 entries; 157 flagged (103 missing definitions, 50 placeholders, 153 missing POS, 52 missing provenance); 0 duplicate normalized-term groups.
-- Local validators, 43/43 Node regression scripts and focused Python test results are in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.63.md`; exact commands in `reports/COMMAND_LOG_INDEX_v2.95.63.md`.
-- Hosted GitHub Actions, actual Pages deployment, installed-PWA cache/offline propagation and physical-device acceptance remain unverified.
+- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.63_FullSource.zip`; SHA-256 `6d43a7f44e1cc84d6ad7f3ee9dae660cceb83c792668d0966ce1060f4aa9ea80`. This exact complete archive and checksum were verified before editing; v2.95.62 and older archives were not used.
+- FullSource: `TOEIC_Dictionary_v2.95.64_FullSource.zip`; file inventory, ZIP CRC and exact Git-tree comparison are recorded in `reports/PACKAGE_VERIFICATION_v2.95.64.md`; output SHA-256 is in the detached sidecar.
+- Patch: `TOEIC_Dictionary_v2.95.64_Patch_From_v2.95.63.zip`; bound to the exact v2.95.63 predecessor; clean-extraction replay and exact tree comparison are recorded in package verification.
+- GitHub CI hardening: three external actions are SHA-pinned; checkout depth 2 enables latest-commit whitespace verification; complete tools syntax compilation uses `compileall`; default unittest discovery is recognized by repository integrity; duplicate test invocations are removed.
+- Added `tools/audit-git-commit-readiness.py`, `.gitattributes` and expanded `.gitignore`; the audit is read-only and can run in `--staged` mode before a local commit or `--require-clean` mode after checkout/commit.
+- Local results, test inventory and limitations are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.64.md` and `reports/GIT_COMMIT_READINESS_v2.95.64.md`. Hosted GitHub Actions and cross-platform Windows/macOS commit behavior remain unverified.
+- Learning content, all stable vocabulary/question/choice/answer IDs, learner IndexedDB schema/data, UI layout, service worker cache behavior and hosting architecture are unchanged.
 
 ## Stage 2 progress
 
@@ -38,7 +36,7 @@ Stage 2: **6/6 workstreams implemented (100%)**; item 9 is structurally instrume
 
 ## Acceptance boundary
 
-For v2.95.63, 43/43 Node regression scripts and the focused Python suites are recorded in the current report. Repository integrity, data/learning-content/photo validation and design-profile checks pass. Full Python discovery is NOT RUN in this batch. Hosted GitHub Actions, GitHub Pages deployment, installed-PWA cache propagation and physical iOS/iPadOS/Android behavior remain **UNVERIFIED**.
+For v2.95.64, 64/64 focused Python cases across 7 modules and 43/43 Node regression scripts pass. The full 97-module Python suite is **INCOMPLETE**: 19 modules / 144 cases passed before the outer execution window expired, with 78 modules pending; no full-suite PASS is claimed. Repository integrity, data/learning-content/photo validation, version sync, staged Git audit, local commit and post-commit clean-tree audit pass. Hosted GitHub Actions, GitHub Pages deployment, installed-PWA cache propagation and physical iOS/iPadOS/Android behavior remain **UNVERIFIED**.
 
 ## Previous completed work
 
@@ -52,6 +50,14 @@ For v2.95.63, 43/43 Node regression scripts and the focused Python suites are re
 - Added read-only complexity triage for the full Listening/Reading question inventory. Observable signals include source length, prompt length, answer-option length spread, inference/purpose wording and multi-document indicators.
 - Does not infer difficulty or CEFR, does not use learner response statistics, and does not modify question content or Mock eligibility.
 - Reserve-pending items remain excluded from Mock. Independent review, pilot response data and psychometric calibration remain open.
+
+## v2.95.64 — GitHub commit-readiness and CI reliability (2026-11-25)
+
+- Baseline: exact `TOEIC_Dictionary_v2.95.63_FullSource.zip`; SHA-256 `6d43a7f44e1cc84d6ad7f3ee9dae660cceb83c792668d0966ce1060f4aa9ea80`.
+- Added read-only Git commit readiness checks for clean/staged status, path portability/case collisions, symlinks, file size, release artifacts, ignored output paths, LF/binary attributes and whitespace in only the current commit/staged diff (legacy historical trailing whitespace is not mass-edited).
+- Pinned official GitHub Actions at verified full SHAs; added `fetch-depth: 2` for the commit-diff preflight and trigger paths for `.gitignore`/`.gitattributes`.
+- Repository-integrity audit now recognizes default `unittest discover` `test*.py`; CI coverage detects duplicate module selectors and duplicate workflow step labels. Two duplicate test executions were removed; full tools syntax check now uses `compileall`.
+- No learning data or UI/runtime changes. Focused commit-preflight tests are recorded; complete 97-module Python suite started but the container execution window expired after 19 modules had passed. The full suite is therefore **INCOMPLETE**, not PASS. GitHub-hosted Actions and real Windows/macOS clone/commit checks remain unverified.
 
 ## v2.95.63 — CI discovery and modal lifecycle remediation (2026-11-25)
 

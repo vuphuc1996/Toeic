@@ -1,16 +1,17 @@
-# TOEIC Dictionary v2.95.63 — Project Documentation
+# TOEIC Dictionary v2.95.64 — Project Documentation
 
-## Current source — v2.95.63 (GitHub test discovery and safe result-modal lifecycle)
+## Current source — v2.95.64 (GitHub commit-readiness and CI hardening)
 
-- **Exact predecessor:** `TOEIC_Dictionary_v2.95.62_FullSource.zip`; SHA-256 `b9d56cd27d0d13c4c8781732ac72c17b526b2aa451fa1393c39fd30820260f96`. This exact final FullSource was verified before editing; the uploaded v2.95.60 archive was not used.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.63.md`.
-- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.63.md`.
-- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.63.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.63.md`.
-- Related Glossary quality audit remains read-only: 567 rows, 157 flagged; this release did not modify glossary content.
-- The result modal already presents Đúng / Chưa đúng / Tổng câu. The release repairs the close/keyboard path for result, review and auto-advance states; it does not redesign the UI.
-- GitHub Pages static PWA, GitHub-only source and on-device IndexedDB contract remain unchanged. No Cloudflare, API, backend, vocabulary/question mutation or learner-data migration was introduced.
-- All local tests and deployment/device limitations are documented in the v2.95.63 test report. Hosted GitHub Actions, GitHub Pages deployment/cache propagation and physical-device testing remain unverified.
+- **Exact predecessor:** `TOEIC_Dictionary_v2.95.63_FullSource.zip`; SHA-256 `6d43a7f44e1cc84d6ad7f3ee9dae660cceb83c792668d0966ce1060f4aa9ea80`. This exact complete FullSource was verified before editing.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.64.md`.
+- Current GitHub commit-readiness report: `reports/GIT_COMMIT_READINESS_v2.95.64.md`.
+- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.64.md`.
+- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.64.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.64.md`.
+- Git preflight checks clean/staged Git state, case-insensitive path conflicts, Windows path portability, symlinks, oversized files, accidental release artifacts, ignore rules, LF/binary attributes and whitespace in the current change.
+- GitHub Actions now pins its three external actions to verified full commit SHAs, syntax-checks the complete `tools/` tree, checks all Python and Node regression inventory, and understands default unittest discovery.
+- No learning content, stable IDs, learner IndexedDB data/schema, PWA runtime/cache behavior, UI layout or hosting architecture changed.
+- Hosted GitHub Actions, GitHub Pages deployment, PWA cache/offline behavior and physical-device acceptance remain unverified until directly tested.
 
 ## Single source of truth
 

@@ -1,4 +1,4 @@
-const VERSION = '2.95.63';
+const VERSION = '2.95.64';
 const CACHE_NAME = `toeic-vocab-github-only-v${VERSION}`;
 const OLD_CACHE_PREFIX = 'toeic-vocab-github-only-v';
 

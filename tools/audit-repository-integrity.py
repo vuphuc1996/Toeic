@@ -44,6 +44,27 @@ def parse_js_array(source: str, name: str) -> list[str]:
         return []
 
 
+
+
+def configured_unittest_patterns(workflow: str) -> list[str]:
+    """Return explicit unittest patterns plus Python's default discovery pattern.
+
+    `python -m unittest discover` defaults to `test*.py`; ignoring that default
+    caused the integrity audit to report modules that the final full-suite step
+    already discovered and executed.
+    """
+    patterns: list[str] = []
+    for line in workflow.splitlines():
+        if "python -m unittest discover" not in line:
+            continue
+        matches = re.findall(r"(?:^|\s)-p\s+['\"]([^'\"]+)['\"]", line)
+        if matches:
+            patterns.extend(matches)
+        else:
+            patterns.append("test*.py")
+    return patterns
+
+
 def main() -> int:
     global CHECKED
     sw_path = ROOT / "sw.js"
@@ -95,8 +116,8 @@ def main() -> int:
         explicit_paths = set(re.findall(r"(?<![\w./-])((?:tools|assets|data)/[\w./-]+\.(?:py|mjs|js))\b", workflow))
         for value in sorted(explicit_paths):
             record_path(value, ROOT, "GitHub Actions command")
-        patterns = re.findall(r"-p\s+['\"]([^'\"]+)['\"]", workflow)
-        test_files = list((ROOT / "tools/tests").glob("test_*.py"))
+        patterns = configured_unittest_patterns(workflow)
+        test_files = list((ROOT / "tools/tests").rglob("test_*.py"))
         for test in test_files:
             relative = test.relative_to(ROOT).as_posix()
             if not any(test.match(pattern) for pattern in patterns):

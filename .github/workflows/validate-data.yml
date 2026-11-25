@@ -14,6 +14,8 @@ on:
       - "index.html"
       - "manifest.webmanifest"
       - "docs/**"
+      - ".gitignore"
+      - ".gitattributes"
       - ".github/workflows/validate-data.yml"
   pull_request:
     paths:
@@ -27,6 +29,8 @@ on:
       - "index.html"
       - "manifest.webmanifest"
       - "docs/**"
+      - ".gitignore"
+      - ".gitattributes"
       - ".github/workflows/validate-data.yml"
   workflow_dispatch:
 
@@ -38,19 +42,23 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout v7.0.1
+        with:
+          fetch-depth: 2
       - name: Set up Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # actions/setup-python v7.1.0
         with:
           python-version: "3.12"
       - name: Set up Node
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # actions/setup-node v7.1.0
         with:
           node-version: "24"
+      - name: Git commit readiness preflight
+        run: python tools/audit-git-commit-readiness.py --require-clean
       - name: Repository integrity preflight
         run: python tools/audit-repository-integrity.py
-      - name: Python syntax check
-        run: python -m py_compile tools/validate-data.py tools/validate-learning-content.py tools/audit-toeic-coverage.py tools/audit-question-evidence.py tools/audit-distractors.py tools/audit-answer-leakage.py tools/audit-item-complexity.py tools/sync-version.py tools/refresh-photo-source-fingerprints.py tools/refresh-part1-svg-fallback-fingerprints.py tools/patch-data.py tools/patch-related-terms.py tools/update-related-terms.py tools/build-related-glossary-enrichment-queue.py tools/build_missing_ipa_review_queue.py tools/render_missing_ipa_review_queue.py tools/tests/test_missing_ipa_markdown_report.py tools/tests/test_related_glossary_backfill_025.py tools/tests/test_related_glossary_batch_034.py tools/tests/test_related_glossary_batch_035.py tools/tests/test_related_glossary_batch_036.py tools/tests/test_related_glossary_batch_037.py tools/tests/test_patch_related_terms.py tools/tests/test_vocabulary_detail_examples.py tools/tests/test_related_glossary_batch_021.py tools/tests/test_related_glossary_batch_022.py tools/tests/test_related_glossary_batch_023.py tools/tests/test_related_glossary_batch_026.py tools/tests/test_related_glossary_batch_027.py tools/tests/test_related_glossary_batch_028.py tools/tests/test_ipa_backfill_batch_024.py tools/package_source.py tools/tests/test_package_source.py tools/cmudict_ipa.py tools/tests/test_cmudict_ipa_backfill.py tools/tests/test_vocabulary_batch_012.py tools/tests/test_legacy_collocation_cleanup.py tools/tests/test_editorial_review.py tools/tests/test_ci_coverage.py tools/validate-part1-photo-assets.py tools/tests/test_part1_photo_assets.py tools/tests/test_tts_readiness.py tools/tests/test_repository_integrity.py tools/tests/test_grammar_examples_quality.py tools/tests/test_grammar_expansion.py tools/tests/test_reading_expansion.py tools/tests/test_listening_expansion.py tools/tests/test_pwa_readiness.py tools/audit-listening-readiness.py tools/rotate-release-files.py tools/tests/test_release_rotation.py tools/tests/test_foundation_pathway.py tools/tests/test_foundation_reading.py tools/tests/test_foundation_reading_extended.py tools/tests/test_foundation_listening.py tools/tests/test_foundation_listening_extended.py tools/tests/test_foundation_a2_assessment_quality.py tools/tests/test_foundation_a2_production.py tools/tests/test_foundation_production_revision.py tools/tests/test_alphabet_sound_lab.py tools/tests/test_visual_composition.py tools/tests/test_learning_start_level.py tools/tests/test_placement_diagnostic.py tools/tests/test_responsive_layout.py tools/tests/test_learning_surface_consistency.py tools/audit-learning-outcomes.py tools/audit-foundation-a2-assessment.py tools/tests/test_learning_outcomes.py tools/tests/test_learning_outcome_progress.py tools/tests/test_foundation_outcome_evidence.py tools/report-project-progress.py tools/build-editorial-review-queue.py tools/build-related-glossary-backlog.py tools/tests/test_related_glossary_backlog.py tools/sync-design-profile.py tools/tests/test_content_batch_025.py tools/audit-related-glossary-quality.py tools/tests/test_related_glossary_quality_audit.py tools/audit-vocabulary-relationship-graph.py tools/tests/test_vocabulary_relationship_graph_audit.py tools/enrich-related-glossary-from-canonical.py tools/tests/test_related_glossary_canonical_enrichment_029.py tools/tests/test_related_glossary_batch_030.py tools/tests/test_related_glossary_batch_032.py tools/tests/test_related_glossary_batch_033.py tools/tests/test_practice_mode_fallback.py tools/tests/test_related_term_explanation_context.py tools/run-python-tests-sharded.py tools/test_fingerprints.py tools/run-release-acceptance.py tools/tests/test_python_test_shard_runner.py tools/tests/test_release_acceptance_runner.py tools/tests/test_related_glossary_merge_038.py tools/tests/glossary_test_helpers.py tools/tests/test_related_glossary_batch_039.py tools/tests/test_related_glossary_batch_041.py tools/tests/test_related_glossary_batch_042.py tools/tests/test_related_glossary_batch_043.py tools/tests/test_answer_leakage_audit.py
+      - name: Python syntax check (all tools and tests)
+        run: python -m compileall -q tools
       - name: Unit tests — baseline_ids
         run: python -m unittest discover -s tools/tests -p 'test_baseline_ids.py' -v
       - name: Unit tests — patch_data
@@ -259,8 +267,6 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_part1_photo_assets.py' -v
       - name: Unit tests — vocabulary_detail_examples
         run: python -m unittest discover -s tools/tests -p 'test_vocabulary_detail_examples.py' -v
-      - name: Unit tests — related glossary batch 021
-        run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_021.py' -v
       - name: Unit tests — legacy_collocation_cleanup
         run: python -m unittest discover -s tools/tests -p 'test_legacy_collocation_cleanup.py' -v
       - name: Unit tests — vocabulary_family_links
@@ -271,11 +277,7 @@ jobs:
         run: |
           python tools/cmudict_ipa.py --check
           python -m unittest discover -s tools/tests -p 'test_cmudict_ipa_backfill.py' -v
-      - name: Safe missing IPA backfill regression
-        run: |
-          python -m py_compile tools/backfill_missing_ipa_from_cmudict.py
-          python -m unittest discover -s tools/tests -p 'test_missing_ipa_safe_backfill.py' -v
-      - name: Validate safe missing IPA backfill pipeline
+      - name: Safe missing IPA backfill syntax and regression
         run: |
           python -m py_compile tools/backfill_missing_ipa_from_cmudict.py tools/tests/test_missing_ipa_safe_backfill.py
           python -m unittest discover -s tools/tests -p 'test_missing_ipa_safe_backfill.py' -v

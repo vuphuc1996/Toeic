@@ -1,0 +1,16 @@
+# Keep repository text stable across Windows, macOS and Linux commits.
+* text=auto eol=lf
+
+# Preserve byte-exact media and generated archives.
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.gif binary
+*.mp3 binary
+*.wav binary
+*.m4a binary
+*.mp4 binary
+*.zip binary
+*.tar binary
+*.gz binary

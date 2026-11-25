@@ -1,3 +1,26 @@
+# Python and test caches
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.venv/
+venv/
+.coverage
+.coverage.*
+coverage.xml
+
+# Runtime/test outputs
 logs/
+*.log
+
+# Local editor / operating-system files
+.DS_Store
+Thumbs.db
+
+# Release artifacts are generated outside the source tree
+*.zip
+*.sha256
+*.tar
+*.tar.gz

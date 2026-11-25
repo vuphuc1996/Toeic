@@ -17,7 +17,7 @@ import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-qu
 import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.63';
+const APP_RELEASE_VERSION = '2.95.64';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
