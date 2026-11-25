@@ -39,7 +39,8 @@ const oldWorkerCache = new Set([
 ]);
 const newAppRequest = new URL(`./assets/js/app.js?v=${version}`, 'https://example.test/Toeic/').href;
 assert.equal(oldWorkerCache.has(newAppRequest), false, 'new app release URL must bypass the previous cache key');
-assert.ok(app.includes("workerScript.searchParams.set('__release',APP_RELEASE_VERSION)"));
+assert.ok(app.includes("navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'})"));
+assert.doesNotMatch(app, /workerScript\.searchParams/);
 assert.match(app, /htmlReleaseVersion!==APP_RELEASE_VERSION/);
 assert.equal(app.includes("$('#modalBackdrop').addEventListener"), false);
 assert.ok(app.includes("$('#modalLayer').addEventListener"));
