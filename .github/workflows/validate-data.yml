@@ -407,7 +407,19 @@ jobs:
           prefix = "Toeic_Dictionary_v2.95.65/"
           with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
               for rel_path in paths:
-                  content = subprocess.check_output(["git", "show", f"{base_commit}:{rel_path}"], cwd=repo)
+                  try:
+                      content = subprocess.check_output(["git", "show", f"{base_commit}:{rel_path}"], cwd=repo)
+                  except subprocess.CalledProcessError:
+                      # Twenty historical release files were present in the verified
+                      # FullSource but not in the current base commit. Recover those exact
+                      # historical bytes from the previous release's pre-package commit.
+                      if rel_path == "CHANGELOG.md":
+                          content = (repo / ".github/package-manifests/CHANGELOG_v2.95.65.md").read_bytes()
+                      else:
+                          content = subprocess.check_output(
+                              ["git", "show", f"43113b8a3faf596a75eed80ea54af5b0075590d1:{rel_path}"],
+                              cwd=repo,
+                          )
                   # Reproduce the ZIP metadata of the verified v2.95.65 release archive.
                   info = zipfile.ZipInfo(prefix + rel_path, date_time=(2026, 11, 25, 6, 55, 26))
                   info.compress_type = zipfile.ZIP_DEFLATED
@@ -504,10 +516,23 @@ jobs:
               if exists:
                   target_paths.append(rel_path)
           target_paths.extend(sorted(set(added_paths)))
-          target_contents = {
-              rel_path: subprocess.check_output(["git", "show", f"{target_commit}:{rel_path}"], cwd=repo)
-              for rel_path in target_paths
-          }
+          with zipfile.ZipFile(baseline_zip) as archive:
+              baseline_contents = {
+                  name.removeprefix("Toeic_Dictionary_v2.95.65/"): archive.read(name)
+                  for name in archive.namelist()
+              }
+          target_contents = {}
+          for rel_path in target_paths:
+              try:
+                  target_contents[rel_path] = subprocess.check_output(
+                      ["git", "show", f"{target_commit}:{rel_path}"], cwd=repo
+                  )
+              except subprocess.CalledProcessError:
+                  # Preserve an unchanged legacy FullSource-only file when it
+                  # has no Git blob in this candidate's repository history.
+                  if rel_path not in baseline_contents:
+                      raise
+                  target_contents[rel_path] = baseline_contents[rel_path]
           prefix = f"Toeic_Dictionary_v{version}/"
           with zipfile.ZipFile(target_zip, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
               for rel_path in target_paths:
