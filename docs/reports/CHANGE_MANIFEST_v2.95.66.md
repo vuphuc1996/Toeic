@@ -33,8 +33,9 @@ No vocabulary/Related Glossary content, canonical word IDs/headwords/relations, 
 ## Acceptance status
 
 - Source changes: committed to the candidate branch.
-- GitHub Actions PR validation: PENDING.
-- Full Python discovery: PENDING.
-- Node regression suite: PENDING.
-- ZIP/patch generation, checksum verification and exact replay: PENDING.
-- GitHub Pages deploy and real installed-PWA/device cache acceptance: PENDING.
+- GitHub Actions PR validation: PASS — run 45589650195, 130/130 steps, 0 failed / 0 skipped.
+- Full Python discovery: PASS — 762/762.
+- Node regression suite: PASS — 44/44 scripts.
+- Data/learning validators, release asset coherence, Service Worker lifecycle, version sync and commit preflight: PASS.
+- ZIP/Patch generation, SHA-256/CRC verification and exact replay: PENDING.
+- GitHub Pages deploy after merge and real installed-PWA/device cache acceptance: PENDING.
