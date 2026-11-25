@@ -22,8 +22,8 @@ class DesignSystemTests(unittest.TestCase):
         self.assertNotIn("display: none", compact.group(1))
 
     def test_design_system_stylesheet_is_linked_after_feature_styles(self):
-        app_stylesheet = re.search(r'href="(\\./assets/css/app\\.css(?:\\?[^"]*)?)"', HTML)
-        design_stylesheet = re.search(r'href="(\\./assets/css/design-system\\.css(?:\\?[^"]*)?)"', HTML)
+        app_stylesheet = re.search(r'href="(\./assets/css/app\.css(?:\?[^"]*)?)"', HTML)
+        design_stylesheet = re.search(r'href="(\./assets/css/design-system\.css(?:\?[^"]*)?)"', HTML)
         self.assertIsNotNone(app_stylesheet, "Feature stylesheet must be linked")
         self.assertIsNotNone(design_stylesheet, "Design-system stylesheet must be linked")
         self.assertLess(app_stylesheet.start(), design_stylesheet.start())
