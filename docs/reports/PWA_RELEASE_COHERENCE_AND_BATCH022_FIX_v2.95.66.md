@@ -15,7 +15,7 @@ The v2.95.65 Service Worker used cache-first lookup for same-origin non-data ass
 - Add meta name="toeic-release" content="2.95.66".
 - Load app CSS, design-system CSS and app.js with ?v=2.95.66.
 - Precache the same versioned URLs in Service Worker REQUIRED and APP_SHELL.
-- Add ?__release=2.95.66 to the Service Worker registration URL; retain updateViaCache: 'none'.
+- Keep the Service Worker registration URL stable at ./sw.js and retain updateViaCache: 'none', allowing the browser to update the script in the existing scope without creating URL churn. The versioned CSS/JS requests, not a changing worker URL, isolate app-shell cache keys.
 - Before bindEvents(), require the HTML release marker to match APP_RELEASE_VERSION. On mismatch, log a specific release-coherence error, display the existing update banner with a reload action, and stop initialization rather than producing a misleading null-listener failure.
 - Fix Batch 022's CI test to validate the actual unittest discover selector with glob semantics.
 - Update PWA readiness to strip query parameters from local asset paths.
