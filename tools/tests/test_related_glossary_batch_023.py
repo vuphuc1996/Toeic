@@ -1,6 +1,8 @@
 """Regression checks for the v2.95.17 related-term glossary backfill."""
 from __future__ import annotations
+import fnmatch
 import json
+import re
 import unittest
 from collections import Counter
 from pathlib import Path
@@ -97,8 +99,21 @@ class RelatedGlossaryBatch023Tests(unittest.TestCase):
 
     def test_ci_registers_the_batch_test(self):
         workflow = (ROOT / ".github/workflows/validate-data.yml").read_text(encoding="utf-8")
-        self.assertIn("tools/tests/test_related_glossary_batch_023.py", workflow)
         self.assertIn("Unit tests — related glossary batch 023", workflow)
+        commands = [line.strip() for line in workflow.splitlines() if "python -m unittest discover" in line]
+        selectors = [
+            pattern
+            for line in commands
+            for pattern in re.findall(r"-p ['\"]([^'\"]+)['\"]", line)
+        ]
+        self.assertIn("test_related_glossary_batch_023.py", selectors)
+        self.assertTrue(
+            any(
+                fnmatch.fnmatchcase("test_related_glossary_batch_023.py", pattern)
+                for pattern in selectors
+            ),
+            "Batch 023 module must be selected by an actual unittest discover pattern",
+        )
 
 
 if __name__ == "__main__":
