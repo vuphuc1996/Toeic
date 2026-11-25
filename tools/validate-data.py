@@ -24,6 +24,7 @@ import sys
 import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
+from urllib.parse import urlsplit
 
 CEFR_LEVELS = ("A1", "A2", "B1", "B2", "C1")
 REQUIRED_RECORD_KEYS = (
@@ -514,10 +515,15 @@ def check_service_worker(ctx: Context) -> None:
     listed: set[str] = set()
     for name, paths in lists.items():
         for p in paths:
-            listed.add(p.replace("./", "", 1) if p.startswith("./") else p)
-            if p in ("./", "/"):
+            # Service Worker cache keys may include release/version query strings.
+            # Resolve the underlying repository file from the URL path only, while
+            # keeping the query-bearing URL distinct in Cache Storage at runtime.
+            local_path = urlsplit(p).path
+            normalized_path = local_path.replace("./", "", 1) if local_path.startswith("./") else local_path
+            listed.add(normalized_path)
+            if normalized_path in ("", ".", "/"):
                 continue
-            if not rel(ctx, p).exists():
+            if not rel(ctx, local_path).exists():
                 # OPTIONAL resources may legitimately be absent from a source snapshot.
                 # Required app-shell resources remain hard errors; Part 1 photo binaries
                 # are additionally enforced by the strict photo release validator in CI.
