@@ -392,10 +392,11 @@ jobs:
           from pathlib import Path
 
           repo = Path.cwd()
-          encoded_lines = (repo / ".github/package-manifests/TOEIC_Dictionary_v2.95.65.paths.json.gz.b64").read_text().splitlines()
-          if len(encoded_lines) != 2:
-              raise RuntimeError("Curated v2.95.65 path manifest has an invalid envelope")
-          manifest = json.loads(gzip.decompress(base64.b64decode(encoded_lines[1])))
+          chunks = sorted((repo / ".github/package-manifests").glob("v2.95.65-paths.part*"))
+          if len(chunks) != 10:
+              raise RuntimeError(f"Curated v2.95.65 path manifest has {len(chunks)} chunks; expected 10")
+          encoded_manifest = "".join(chunk.read_text(encoding="utf-8").strip() for chunk in chunks)
+          manifest = json.loads(gzip.decompress(base64.b64decode(encoded_manifest)))
           base_commit = os.environ["BASE_COMMIT"]
           expected_sha = os.environ["BASE_SHA256"]
           if manifest.get("version") != "2.95.65" or manifest.get("sha256") != expected_sha:
@@ -454,8 +455,11 @@ jobs:
           target_zip = output / f"TOEIC_Dictionary_v{version}_FullSource.zip"
           patch_zip = output / f"TOEIC_Dictionary_v{version}_Patch_From_v2.95.65.zip"
 
-          envelope = (repo / ".github/package-manifests/TOEIC_Dictionary_v2.95.65.paths.json.gz.b64").read_text().splitlines()
-          manifest = json.loads(gzip.decompress(base64.b64decode(envelope[1])))
+          chunks = sorted((repo / ".github/package-manifests").glob("v2.95.65-paths.part*"))
+          if len(chunks) != 10:
+              raise RuntimeError(f"Curated v2.95.65 path manifest has {len(chunks)} chunks; expected 10")
+          encoded_manifest = "".join(chunk.read_text(encoding="utf-8").strip() for chunk in chunks)
+          manifest = json.loads(gzip.decompress(base64.b64decode(encoded_manifest)))
           base_paths = manifest["paths"]
           base_set = set(base_paths)
 
@@ -466,7 +470,7 @@ jobs:
               parts = Path(path).parts
               return (
                   not path
-                  or path == ".github/package-manifests/TOEIC_Dictionary_v2.95.65.paths.json.gz.b64"
+                  or ".github/package-manifests" in parts
                   or any(part in {".git", "logs", "__pycache__", ".pytest_cache", "node_modules", "release", "releases"} or part.startswith("release_") for part in parts)
                   or Path(path).suffix.lower() in {".zip", ".bundle", ".log", ".pyc", ".tmp", ".sha256"}
               )
