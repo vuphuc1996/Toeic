@@ -381,10 +381,51 @@ jobs:
           BASE_SHA256: a1b95e807e08052bfa599a08ff88bc3237ae086688557ce3ae77b78e814814fb
         run: |
           set -euo pipefail
-          git worktree add --detach "$RUNNER_TEMP/toeic-v29565" "$BASE_COMMIT"
-          python tools/package_source.py 2.95.65 "$RUNNER_TEMP/TOEIC_Dictionary_v2.95.65_FullSource.zip" --repo "$RUNNER_TEMP/toeic-v29565"
-          echo "$BASE_SHA256  $RUNNER_TEMP/TOEIC_Dictionary_v2.95.65_FullSource.zip" | sha256sum --check -
-      - name: Build FullSource, Patch and verify exact replay
+          python - <<'PY'
+          import base64
+          import gzip
+          import hashlib
+          import json
+          import os
+          import subprocess
+          import zipfile
+          from pathlib import Path
+
+          repo = Path.cwd()
+          encoded_lines = (repo / ".github/package-manifests/TOEIC_Dictionary_v2.95.65.paths.json.gz.b64").read_text().splitlines()
+          if len(encoded_lines) != 2:
+              raise RuntimeError("Curated v2.95.65 path manifest has an invalid envelope")
+          manifest = json.loads(gzip.decompress(base64.b64decode(encoded_lines[1])))
+          base_commit = os.environ["BASE_COMMIT"]
+          expected_sha = os.environ["BASE_SHA256"]
+          if manifest.get("version") != "2.95.65" or manifest.get("sha256") != expected_sha:
+              raise RuntimeError("Curated baseline manifest does not match the approved v2.95.65 release")
+          paths = manifest.get("paths", [])
+          if len(paths) != 779 or manifest.get("count") != 779 or len(set(paths)) != 779:
+              raise RuntimeError("Curated baseline file inventory must contain exactly 779 unique paths")
+
+          output = Path(os.environ["RUNNER_TEMP"]) / "TOEIC_Dictionary_v2.95.65_FullSource.zip"
+          prefix = "Toeic_Dictionary_v2.95.65/"
+          with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+              for rel_path in paths:
+                  content = subprocess.check_output(["git", "show", f"{base_commit}:{rel_path}"], cwd=repo)
+                  archive.writestr(prefix + rel_path, content)
+
+          actual_sha = hashlib.sha256(output.read_bytes()).hexdigest()
+          if actual_sha != expected_sha:
+              raise RuntimeError(
+                  f"v2.95.65 baseline archive mismatch: expected {expected_sha}, got {actual_sha}. "
+                  "Do not package from the larger GitHub repository tree."
+              )
+          with zipfile.ZipFile(output) as archive:
+              if archive.testzip() is not None:
+                  raise RuntimeError("Rebuilt v2.95.65 baseline ZIP CRC failed")
+              roots = {name.split("/", 1)[0] for name in archive.namelist()}
+              if roots != {"Toeic_Dictionary_v2.95.65"} or len(archive.namelist()) != 779:
+                  raise RuntimeError("Rebuilt v2.95.65 baseline root or inventory is invalid")
+          print(f"PASS: exact v2.95.65 baseline reconstructed from {len(paths)} curated files; SHA-256 {actual_sha}")
+          PY
+      - name: Build curated FullSource, Patch and verify exact replay
         env:
           BASE_COMMIT: bfb28d63669508dc8fd766802c1203f6a2e86087
           BASE_SHA256: a1b95e807e08052bfa599a08ff88bc3237ae086688557ce3ae77b78e814814fb
@@ -392,93 +433,168 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p release-artifacts
-          python tools/package_source.py "$TARGET_VERSION" "release-artifacts/TOEIC_Dictionary_v2.95.66_FullSource.zip"
           python - <<'PY'
+          import base64
+          import gzip
           import hashlib
           import json
           import os
+          import shutil
           import subprocess
           import tempfile
           import zipfile
           from pathlib import Path
-          from tools.package_source import is_excluded
 
           repo = Path.cwd()
-          out = repo / "release-artifacts"
+          output = repo / "release-artifacts"
           version = os.environ["TARGET_VERSION"]
           base_commit = os.environ["BASE_COMMIT"]
-          base_sha = os.environ["BASE_SHA256"]
-          target_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
-          base_zip = Path(os.environ["RUNNER_TEMP"]) / "TOEIC_Dictionary_v2.95.65_FullSource.zip"
-          target_zip = out / "TOEIC_Dictionary_v2.95.66_FullSource.zip"
-          patch_zip = out / "TOEIC_Dictionary_v2.95.66_Patch_From_v2.95.65.zip"
+          target_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo, text=True).strip()
+          baseline_zip = Path(os.environ["RUNNER_TEMP"]) / "TOEIC_Dictionary_v2.95.65_FullSource.zip"
+          target_zip = output / f"TOEIC_Dictionary_v{version}_FullSource.zip"
+          patch_zip = output / f"TOEIC_Dictionary_v{version}_Patch_From_v2.95.65.zip"
 
-          def digest(data):
-              return hashlib.sha256(data).hexdigest()
+          envelope = (repo / ".github/package-manifests/TOEIC_Dictionary_v2.95.65.paths.json.gz.b64").read_text().splitlines()
+          manifest = json.loads(gzip.decompress(base64.b64decode(envelope[1])))
+          base_paths = manifest["paths"]
+          base_set = set(base_paths)
 
-          assert digest(base_zip.read_bytes()) == base_sha, "Exact v2.95.65 predecessor checksum mismatch"
-          assert zipfile.ZipFile(base_zip).testzip() is None, "Baseline ZIP CRC failed"
-          assert zipfile.ZipFile(target_zip).testzip() is None, "Candidate FullSource ZIP CRC failed"
+          def digest(raw):
+              return hashlib.sha256(raw).hexdigest()
 
-          changed = subprocess.check_output(
-              ["git", "diff", "--name-only", base_commit, target_commit], text=True
+          def excluded(path):
+              parts = Path(path).parts
+              return (
+                  not path
+                  or path == ".github/package-manifests/TOEIC_Dictionary_v2.95.65.paths.json.gz.b64"
+                  or any(part in {".git", "logs", "__pycache__", ".pytest_cache", "node_modules", "release", "releases"} or part.startswith("release_") for part in parts)
+                  or Path(path).suffix.lower() in {".zip", ".bundle", ".log", ".pyc", ".tmp", ".sha256"}
+              )
+
+          status_lines = subprocess.check_output(
+              ["git", "diff", "--name-status", "--no-renames", base_commit, target_commit],
+              cwd=repo, text=True
           ).splitlines()
-          included = [name for name in changed if not is_excluded(name)]
-          if not included:
-              raise RuntimeError("No package-eligible changes found for the Patch")
-          diff = subprocess.check_output(
-              ["git", "diff", "--binary", base_commit, target_commit, "--", *included]
-          )
-          diff_sha = digest(diff)
-          target_sha = digest(target_zip.read_bytes())
+          added_paths = []
+          for line in status_lines:
+              fields = line.split("\t")
+              if len(fields) != 2:
+                  raise RuntimeError(f"Unexpected Git name-status row: {line}")
+              status, rel_path = fields
+              if status == "A" and rel_path not in base_set and not excluded(rel_path):
+                  added_paths.append(rel_path)
 
-          patch_readme = (
-              "TOEIC Dictionary v2.95.66 Patch\n\n"
-              "Apply this binary Git Patch to a clean extraction of the exact predecessor FullSource.\n\n"
-              f"Base version: v2.95.65\nBase FullSource SHA-256: {base_sha}\n"
-              f"Target version: v{version}\nTarget FullSource SHA-256: {target_sha}\n"
-              f"Target Git commit: {target_commit}\nChanged paths: {len(included)}\n"
-              f"Binary diff SHA-256: {diff_sha}\n"
-          )
-          manifest = {
-              "schemaVersion": 1,
-              "baseVersion": "2.95.65",
-              "targetVersion": version,
-              "baseCommit": base_commit,
-              "targetCommit": target_commit,
-              "baseFullSourceSha256": base_sha,
-              "targetFullSourceSha256": target_sha,
-              "patchDiffSha256": diff_sha,
-              "changedPathCount": len(included),
-              "changedPaths": included,
+          # Keep the exact approved 779-file release inventory, overlay current bytes
+          # for those paths, and append only new package-eligible paths from this PR.
+          target_paths = []
+          for rel_path in base_paths:
+              exists = subprocess.run(
+                  ["git", "cat-file", "-e", f"{target_commit}:{rel_path}"],
+                  cwd=repo, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+              ).returncode == 0
+              if exists:
+                  target_paths.append(rel_path)
+          target_paths.extend(sorted(set(added_paths)))
+          target_contents = {
+              rel_path: subprocess.check_output(["git", "show", f"{target_commit}:{rel_path}"], cwd=repo)
+              for rel_path in target_paths
           }
-          with zipfile.ZipFile(patch_zip, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
-              zf.writestr("PATCH_README.md", patch_readme)
-              zf.writestr("PATCH_MANIFEST.json", json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
-              zf.writestr("BASE_SHA256.txt", base_sha + "  TOEIC_Dictionary_v2.95.65_FullSource.zip\n")
-              zf.writestr("patch.diff", diff)
+          prefix = f"Toeic_Dictionary_v{version}/"
+          with zipfile.ZipFile(target_zip, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+              for rel_path in target_paths:
+                  archive.writestr(prefix + rel_path, target_contents[rel_path])
 
-          assert zipfile.ZipFile(patch_zip).testzip() is None, "Patch ZIP CRC failed"
-          with zipfile.ZipFile(patch_zip) as zf:
-              assert set(zf.namelist()) == {"PATCH_README.md", "PATCH_MANIFEST.json", "BASE_SHA256.txt", "patch.diff"}
+          if zipfile.ZipFile(target_zip).testzip() is not None:
+              raise RuntimeError("Candidate FullSource ZIP CRC failed")
+          with zipfile.ZipFile(target_zip) as archive:
+              names = archive.namelist()
+              roots = {name.split("/", 1)[0] for name in names}
+              if roots != {prefix.rstrip("/")}:
+                  raise RuntimeError(f"Candidate FullSource has unexpected root(s): {roots}")
+              if len(names) != len(target_paths) or len(set(names)) != len(names):
+                  raise RuntimeError("Candidate FullSource inventory has duplicate or missing paths")
 
-          with tempfile.TemporaryDirectory(prefix="toeic-patch-replay-") as temp:
-              root = Path(temp)
-              base_dir = root / "base"
-              target_dir = root / "target"
-              base_dir.mkdir()
-              target_dir.mkdir()
-              with zipfile.ZipFile(base_zip) as zf:
-                  zf.extractall(base_dir)
-              with zipfile.ZipFile(target_zip) as zf:
-                  zf.extractall(target_dir)
-              base_roots = [p for p in base_dir.iterdir() if p.is_dir()]
-              target_roots = [p for p in target_dir.iterdir() if p.is_dir()]
-              assert len(base_roots) == len(target_roots) == 1, "FullSource must have exactly one root directory"
-              diff_file = root / "patch.diff"
-              diff_file.write_bytes(diff)
-              subprocess.run(["git", "apply", "--check", str(diff_file)], cwd=base_roots[0], check=True)
-              subprocess.run(["git", "apply", str(diff_file)], cwd=base_roots[0], check=True)
+          # Construct a binary Git Patch from the exact extracted release baseline,
+          # not from the larger repository tree (which contains extra archived docs).
+          with tempfile.TemporaryDirectory(prefix="toeic-release-patch-") as temporary:
+              root = Path(temporary)
+              base_extract = root / "base"
+              target_extract = root / "target"
+              base_extract.mkdir()
+              target_extract.mkdir()
+              with zipfile.ZipFile(baseline_zip) as archive:
+                  archive.extractall(base_extract)
+              with zipfile.ZipFile(target_zip) as archive:
+                  archive.extractall(target_extract)
+              base_root = base_extract / "Toeic_Dictionary_v2.95.65"
+              target_root = target_extract / f"Toeic_Dictionary_v{version}"
+              assert base_root.is_dir() and target_root.is_dir()
+
+              subprocess.run(["git", "init", "-q"], cwd=base_root, check=True)
+              subprocess.run(["git", "config", "user.name", "TOEIC Release Builder"], cwd=base_root, check=True)
+              subprocess.run(["git", "config", "user.email", "release-builder@users.noreply.github.com"], cwd=base_root, check=True)
+              subprocess.run(["git", "add", "-f", "-A"], cwd=base_root, check=True)
+              subprocess.run(["git", "commit", "-q", "-m", "v2.95.65 exact FullSource baseline"], cwd=base_root, check=True)
+
+              target_snapshot = {
+                  p.relative_to(target_root).as_posix(): p.read_bytes()
+                  for p in target_root.rglob("*") if p.is_file()
+              }
+              for p in base_root.rglob("*"):
+                  if p.is_file() and ".git" not in p.relative_to(base_root).parts:
+                      if p.relative_to(base_root).as_posix() not in target_snapshot:
+                          p.unlink()
+              for rel_path, content in target_snapshot.items():
+                  dest = base_root / rel_path
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  dest.write_bytes(content)
+              subprocess.run(["git", "add", "-f", "-A"], cwd=base_root, check=True)
+              diff = subprocess.check_output(["git", "diff", "--binary", "HEAD"], cwd=base_root)
+              if not diff:
+                  raise RuntimeError("No curated source changes were generated for the Patch")
+
+              patch_manifest = {
+                  "schemaVersion": 1,
+                  "baseVersion": "2.95.65",
+                  "targetVersion": version,
+                  "baseFullSourceSha256": manifest["sha256"],
+                  "targetFullSourceSha256": digest(target_zip.read_bytes()),
+                  "patchDiffSha256": digest(diff),
+                  "baseFileCount": manifest["count"],
+                  "targetFileCount": len(target_paths),
+                  "addedPackagePaths": sorted(set(added_paths)),
+                  "baseCommit": base_commit,
+                  "targetCommit": target_commit,
+              }
+              patch_readme = (
+                  f"# TOEIC Dictionary v{version} Patch\n\n"
+                  "Apply this binary Git Patch to a clean extraction of the exact approved predecessor FullSource.\n\n"
+                  f"- Base version: v2.95.65\n- Base FullSource SHA-256: {manifest['sha256']}\n"
+                  f"- Target version: v{version}\n- Target FullSource SHA-256: {patch_manifest['targetFullSourceSha256']}\n"
+                  f"- Target Git commit: {target_commit}\n- Target package files: {len(target_paths)}\n"
+                  f"- Binary diff SHA-256: {patch_manifest['patchDiffSha256']}\n"
+              )
+              with zipfile.ZipFile(patch_zip, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+                  archive.writestr("PATCH_README.md", patch_readme)
+                  archive.writestr("PATCH_MANIFEST.json", json.dumps(patch_manifest, ensure_ascii=False, indent=2) + "\n")
+                  archive.writestr("BASE_SHA256.txt", manifest["sha256"] + "  TOEIC_Dictionary_v2.95.65_FullSource.zip\n")
+                  archive.writestr("patch.diff", diff)
+
+              if zipfile.ZipFile(patch_zip).testzip() is not None:
+                  raise RuntimeError("Patch ZIP CRC failed")
+              with zipfile.ZipFile(patch_zip) as archive:
+                  if set(archive.namelist()) != {"PATCH_README.md", "PATCH_MANIFEST.json", "BASE_SHA256.txt", "patch.diff"}:
+                      raise RuntimeError("Patch ZIP does not have the exact four-member contract")
+
+              replay_dir = root / "replay"
+              replay_dir.mkdir()
+              with zipfile.ZipFile(baseline_zip) as archive:
+                  archive.extractall(replay_dir)
+              replay_root = replay_dir / "Toeic_Dictionary_v2.95.65"
+              diff_path = root / "candidate.patch"
+              diff_path.write_bytes(diff)
+              subprocess.run(["git", "apply", "--check", str(diff_path)], cwd=replay_root, check=True)
+              subprocess.run(["git", "apply", str(diff_path)], cwd=replay_root, check=True)
 
               def snapshot(folder):
                   return {
@@ -486,36 +602,32 @@ jobs:
                       for p in folder.rglob("*") if p.is_file()
                   }
 
-              replayed = snapshot(base_roots[0])
-              packaged = snapshot(target_roots[0])
-              assert replayed.keys() == packaged.keys(), (
-                  f"Replay inventory mismatch: missing={sorted(packaged.keys()-replayed.keys())}, "
-                  f"extra={sorted(replayed.keys()-packaged.keys())}"
-              )
-              mismatched = sorted(name for name in packaged if replayed[name] != packaged[name])
+              replayed = snapshot(replay_root)
+              packaged = snapshot(target_root)
+              assert replayed.keys() == packaged.keys(), "Patch replay inventory mismatch"
+              mismatched = sorted(path for path in packaged if replayed[path] != packaged[path])
               assert not mismatched, f"Patch replay byte mismatch: {mismatched[:20]}"
               replay_count = len(packaged)
-              packaged_count = replay_count
 
-          full_sha = target_sha
+          full_sha = digest(target_zip.read_bytes())
           patch_sha = digest(patch_zip.read_bytes())
-          (out / "TOEIC_Dictionary_v2.95.66_FullSource.zip.sha256").write_text(
+          (output / "TOEIC_Dictionary_v2.95.66_FullSource.zip.sha256").write_text(
               f"{full_sha}  TOEIC_Dictionary_v2.95.66_FullSource.zip\n", encoding="utf-8"
           )
-          (out / "TOEIC_Dictionary_v2.95.66_Patch_From_v2.95.65.zip.sha256").write_text(
+          (output / "TOEIC_Dictionary_v2.95.66_Patch_From_v2.95.65.zip.sha256").write_text(
               f"{patch_sha}  TOEIC_Dictionary_v2.95.66_Patch_From_v2.95.65.zip\n", encoding="utf-8"
           )
           verification = (
               "# Package Verification — TOEIC Dictionary v2.95.66\n\n"
-              f"- Base FullSource SHA-256: {base_sha} (exact predecessor verified).\n"
+              f"- Exact predecessor FullSource SHA-256: {manifest['sha256']} (779 curated files verified by rebuilt ZIP hash).\n"
               f"- Candidate FullSource SHA-256: {full_sha}.\n"
-              f"- FullSource ZIP CRC: PASS; source files: {packaged_count}.\n"
+              f"- Candidate FullSource ZIP CRC: PASS; files: {len(target_paths)}.\n"
               f"- Patch SHA-256: {patch_sha}; Patch ZIP CRC: PASS; four members: PASS.\n"
-              "- Patch git apply --check: PASS; git apply: PASS.\n"
+              "- Exact predecessor replay: git apply --check PASS; git apply PASS.\n"
               f"- Replay comparison: {replay_count}/{replay_count} files byte-identical; 0 missing/extra/changed.\n"
-              f"- Base commit: {base_commit}; target commit: {target_commit}.\n"
+              f"- Baseline Git commit: {base_commit}; candidate Git commit: {target_commit}.\n"
           )
-          (out / "PACKAGE_VERIFICATION_v2.95.66.md").write_text(verification, encoding="utf-8")
+          (output / "PACKAGE_VERIFICATION_v2.95.66.md").write_text(verification, encoding="utf-8")
           print(verification)
           print(f"FullSource SHA-256: {full_sha}")
           print(f"Patch SHA-256: {patch_sha}")
