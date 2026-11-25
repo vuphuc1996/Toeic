@@ -1,6 +1,7 @@
 """Regression checks for the v2.95.15 related-term glossary backfill."""
 from __future__ import annotations
 import json
+import re
 import unittest
 from collections import Counter
 from pathlib import Path
@@ -65,8 +66,21 @@ class RelatedGlossaryBatch022Tests(unittest.TestCase):
 
     def test_ci_registers_the_batch_test(self):
         workflow = (ROOT / ".github/workflows/validate-data.yml").read_text(encoding="utf-8")
-        self.assertIn("tools/tests/test_related_glossary_batch_022.py", workflow)
         self.assertIn("Unit tests — related glossary batch 022", workflow)
+        commands = [line.strip() for line in workflow.splitlines() if "python -m unittest discover" in line]
+        selectors = [
+            pattern
+            for line in commands
+            for pattern in re.findall(r"-p ['\"]([^'\"]+)['\"]", line)
+        ]
+        self.assertIn("test_related_glossary_batch_022.py", selectors)
+        self.assertTrue(
+            any(
+                __import__("fnmatch").fnmatchcase("test_related_glossary_batch_022.py", pattern)
+                for pattern in selectors
+            ),
+            "Batch 022 module must be selected by an actual unittest discover pattern",
+        )
         self.assertGreaterEqual(workflow.count('"patches-related-terms/**"'), 2)
 
     def test_each_added_term_meets_frequency_threshold(self):
