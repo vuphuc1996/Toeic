@@ -408,7 +408,12 @@ jobs:
           with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
               for rel_path in paths:
                   content = subprocess.check_output(["git", "show", f"{base_commit}:{rel_path}"], cwd=repo)
-                  archive.writestr(prefix + rel_path, content)
+                  # Reproduce the ZIP metadata of the verified v2.95.65 release archive.
+                  info = zipfile.ZipInfo(prefix + rel_path, date_time=(2026, 11, 25, 6, 55, 26))
+                  info.compress_type = zipfile.ZIP_DEFLATED
+                  info.external_attr = 0x1800000
+                  info.create_system = 3
+                  archive.writestr(info, content, compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
 
           actual_sha = hashlib.sha256(output.read_bytes()).hexdigest()
           if actual_sha != expected_sha:
