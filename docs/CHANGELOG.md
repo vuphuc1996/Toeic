@@ -1,3 +1,14 @@
+## v2.95.66 — PWA release coherence and Batch 022 CI repair (2026-11-25)
+
+- Reproduced the reported `app.js:2135:170` failure against repository history: the referenced `$('#modalBackdrop').addEventListener` call exists at that line/column in v2.95.64, while v2.95.65 HTML has only `modalLayer`. The browser was receiving stale cached app.js with the newer HTML shell.
+- Added release query parameters to the app CSS, design-system CSS and app.js URLs in HTML. The same versioned URLs are included in Service Worker REQUIRED and APP_SHELL, preventing older worker cache entries from matching the previous app.js URL.
+- Service Worker registration now carries the current release marker in its script URL and retains `updateViaCache: 'none'`.
+- Added a startup HTML/app release guard. When the meta release and JS release marker differ, the app displays a reload notice and returns before `bindEvents()`; this turns a future mixed-shell failure into an explicit release-coherence diagnostic.
+- Fixed Batch 022's CI test: it now validates the actual `unittest discover` selector rather than requiring a source-path literal absent from the workflow.
+- Updated PWA readiness to strip query parameters when verifying precached source paths. Added a release-asset-coherence Node regression and registered it in GitHub Actions.
+- No learning content, vocabulary IDs, canonical relations, question/choice/answer-key data, Mock eligibility or learner storage changed. UI layout and GitHub Pages-only architecture remain unchanged.
+- Hosted Actions, exact package replay and physical-device cache/update acceptance remain pending the candidate PR run and post-merge testing.
+
 ## v2.95.65 — Batch 035 Cambridge historical tests and single modal overlay (2026-11-25)
 
 - Replaced the stale split Cambridge Batch 035 test module that was present in the GitHub runner but absent from v2.95.64 FullSource. The compatibility suite now reconstructs the historical Batch 035 state from the current 567-row Related Glossary by reversing later additions/corrections and validates the original eight records, their exact source ledger, relation anchors and pre-batch file hash. It does not freeze the current glossary at 553 rows or compare the corrected `article` row with an obsolete pre-correction value.
