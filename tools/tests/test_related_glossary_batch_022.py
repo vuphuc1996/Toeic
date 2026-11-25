@@ -1,5 +1,6 @@
 """Regression checks for the v2.95.15 related-term glossary backfill."""
 from __future__ import annotations
+import fnmatch
 import json
 import re
 import unittest
@@ -76,7 +77,7 @@ class RelatedGlossaryBatch022Tests(unittest.TestCase):
         self.assertIn("test_related_glossary_batch_022.py", selectors)
         self.assertTrue(
             any(
-                __import__("fnmatch").fnmatchcase("test_related_glossary_batch_022.py", pattern)
+                fnmatch.fnmatchcase("test_related_glossary_batch_022.py", pattern)
                 for pattern in selectors
             ),
             "Batch 022 module must be selected by an actual unittest discover pattern",
