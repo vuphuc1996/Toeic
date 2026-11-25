@@ -495,6 +495,7 @@ jobs:
               mismatched = sorted(name for name in packaged if replayed[name] != packaged[name])
               assert not mismatched, f"Patch replay byte mismatch: {mismatched[:20]}"
               replay_count = len(packaged)
+              packaged_count = replay_count
 
           full_sha = target_sha
           patch_sha = digest(patch_zip.read_bytes())
@@ -508,7 +509,7 @@ jobs:
               "# Package Verification — TOEIC Dictionary v2.95.66\n\n"
               f"- Base FullSource SHA-256: {base_sha} (exact predecessor verified).\n"
               f"- Candidate FullSource SHA-256: {full_sha}.\n"
-              f"- FullSource ZIP CRC: PASS; source files: {len(snapshot(target_roots[0]))}.\n"
+              f"- FullSource ZIP CRC: PASS; source files: {packaged_count}.\n"
               f"- Patch SHA-256: {patch_sha}; Patch ZIP CRC: PASS; four members: PASS.\n"
               "- Patch git apply --check: PASS; git apply: PASS.\n"
               f"- Replay comparison: {replay_count}/{replay_count} files byte-identical; 0 missing/extra/changed.\n"
