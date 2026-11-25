@@ -75,3 +75,4 @@ tools/render_missing_ipa_review_queue.py
 tools/report-project-progress.py
 tools/rotate-release-files.py
 tools/run-python-tests-sharded.py
+tools/run-release-acceptance.py
