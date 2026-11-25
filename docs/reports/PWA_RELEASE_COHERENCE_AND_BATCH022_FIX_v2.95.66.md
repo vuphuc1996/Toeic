@@ -18,13 +18,17 @@ The v2.95.65 Service Worker used cache-first lookup for same-origin non-data ass
 - Keep the Service Worker registration URL stable at ./sw.js and retain updateViaCache: 'none', allowing the browser to update the script in the existing scope without creating URL churn. The versioned CSS/JS requests, not a changing worker URL, isolate app-shell cache keys.
 - Before bindEvents(), require the HTML release marker to match APP_RELEASE_VERSION. On mismatch, log a specific release-coherence error, display the existing update banner with a reload action, and stop initialization rather than producing a misleading null-listener failure.
 - Fix Batch 022's CI test to validate the actual unittest discover selector with glob semantics.
-- Update PWA readiness to strip query parameters from local asset paths.
+- Update PWA readiness and validate-data.py SW001/SW002 checks to resolve physical files from URL paths while preserving query-bearing URLs as distinct cache keys. Regression tests verify that versioned existing files pass and versioned missing files still fail.
 - Add release-asset-coherence.mjs and register it in GitHub Actions.
 
 ## Data / UX boundary
 
 No learner data, IndexedDB schema, question/answer data, vocabulary/glossary content, Mock eligibility or UI layout was changed. The change affects static asset identity, startup mismatch handling, CI assertions and release documentation only.
 
-## Test status
+## Hosted test status
 
-Hosted Actions and physical PWA/device acceptance are pending. See the v2.95.66 Test Report and Command Log Index; no skipped or pending checks are represented as passing.
+GitHub Actions run `45589650195`, commit `9fdfc39`: **130/130 workflow steps PASS**, 0 failed, 0 skipped. Full Python discovery: **762/762 PASS**; Node regression scripts: **44/44 PASS**. Data validator: 1,141 records, 0 errors, 0 new warnings, zero IDs added/removed. Learning content validator: 0 errors / 0 warnings. Release asset coherence, Service Worker update, PWA readiness, Design System and version sync all pass.
+
+## Remaining acceptance gates
+
+FullSource/Patch generation, detached checksums/CRC/replay, GitHub Pages deployment after merge, and an already-installed v2.95.65 PWA updating to v2.95.66 on physical browsers/devices remain pending. No skipped or pending check is represented as passed.
