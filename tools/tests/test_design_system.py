@@ -22,9 +22,14 @@ class DesignSystemTests(unittest.TestCase):
         self.assertNotIn("display: none", compact.group(1))
 
     def test_design_system_stylesheet_is_linked_after_feature_styles(self):
-        self.assertIn('href="./assets/css/app.css"', HTML)
-        self.assertIn('href="./assets/css/design-system.css"', HTML)
-        self.assertLess(HTML.index('href="./assets/css/app.css"'), HTML.index('href="./assets/css/design-system.css"'))
+        app_stylesheet = re.search(r'href="(\\./assets/css/app\\.css(?:\\?[^"]*)?)"', HTML)
+        design_stylesheet = re.search(r'href="(\\./assets/css/design-system\\.css(?:\\?[^"]*)?)"', HTML)
+        self.assertIsNotNone(app_stylesheet, "Feature stylesheet must be linked")
+        self.assertIsNotNone(design_stylesheet, "Design-system stylesheet must be linked")
+        self.assertLess(app_stylesheet.start(), design_stylesheet.start())
+        # Version query parameters are required for release cache coherence.
+        self.assertIn("?v=", app_stylesheet.group(1))
+        self.assertIn("?v=", design_stylesheet.group(1))
 
     def test_shared_type_scale_and_system_font_stack_are_defined(self):
         self.assertIn("--ds-text:", CSS)
