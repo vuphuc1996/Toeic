@@ -263,7 +263,7 @@ img, svg, video, canvas { max-width: 100%; }
   .nav-item { width: 100%; min-height: 48px; justify-content: center; padding: 10px 0; }
   .nav-icon { width: 24px; margin: 0; }
   .main-area { margin-left: 76px; }
-  .mobile-bottom-nav { display: none !important; }
+  .mobile-bottom-nav { display: none; }
   .topbar { min-height: 64px; height: 64px; padding-inline: clamp(14px, 2.4vw, 22px); }
   .page { padding: 22px clamp(18px, 2.5vw, 26px); }
   .page-heading { gap: 14px; }
@@ -278,7 +278,7 @@ img, svg, video, canvas { max-width: 100%; }
 @media (min-width: 851px) and (max-width: 1199px) {
   .sidebar { width: 216px; }
   .main-area { margin-left: 216px; }
-  .mobile-bottom-nav { display: none !important; }
+  .mobile-bottom-nav { display: none; }
   .topbar { gap: 10px; padding-inline: clamp(18px, 2.2vw, 28px); }
   .breadcrumb { min-width: 0; flex: 1 1 auto; }
   .topbar-actions { min-width: 0; flex: 0 1 auto; gap: 8px; }
@@ -1868,4 +1868,81 @@ body :where(.mock-exam-brand strong, .mock-exam-timer span,
 }
 @media (prefers-reduced-motion: reduce) {
   .assessment-result-confetti i { animation: none; opacity: 0; }
+}
+
+
+/* v2.95.53 — iPad/tablet portrait uses the proven phone navigation model.
+   iPad Pro 11-inch (M1) CSS viewport: approximately 834px portrait / 1194px landscape.
+   This is orientation + available-width based; landscape remains the desktop sidebar. */
+@media screen and (orientation: portrait) and (min-width: 641px) and (max-width: 850px) {
+  .sidebar { display: none; }
+  .main-area {
+    margin-left: 0;
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+    min-width: 0;
+  }
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    min-height: 62px;
+    height: 62px;
+    gap: 10px;
+    padding-inline: clamp(12px, 2.4vw, 24px);
+  }
+  .breadcrumb { min-width: 0; flex: 1 1 auto; gap: 7px; font-size: var(--ds-font-caption); }
+  .breadcrumb strong { min-width: 0; max-width: 22vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .topbar-actions { min-width: 0; flex: 0 1 auto; gap: 8px; }
+  .global-search { width: clamp(132px, 22vw, 220px); min-width: 0; }
+  .global-search kbd { display: none; }
+  .device-greeting { gap: 6px; padding: 4px 6px; }
+  .device-greeting-icon { width: 30px; height: 30px; flex-basis: 30px; }
+  .device-greeting-copy em { display: none; }
+  .page { padding: 22px clamp(16px, 3vw, 26px) 26px; }
+  .page-heading { align-items: flex-start; gap: 12px; margin-bottom: 20px; }
+  .page-heading h1 { font-size: var(--ds-font-page-title); }
+  .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .metric-card { min-width: 0; padding: 14px; gap: 10px; }
+  .dashboard-grid { grid-template-columns: 1fr; gap: 12px; }
+  .toeic-progress-columns { grid-template-columns: 1fr; gap: 16px; }
+  .practice-layout { grid-template-columns: minmax(0, 1fr); }
+  .filter-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mobile-bottom-nav {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    inset: auto 0 0;
+    height: calc(66px + env(safe-area-inset-bottom));
+    padding: 5px 8px calc(5px + env(safe-area-inset-bottom));
+    background: rgba(255,255,255,.97);
+    border-top: 1px solid var(--ds-border);
+    box-shadow: var(--ds-shadow-card);
+    backdrop-filter: blur(14px) saturate(1.2);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    z-index: 40;
+  }
+  .mobile-bottom-nav button {
+    min-width: 0;
+    min-height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    padding: 3px 2px;
+    border: 0;
+    background: transparent;
+    color: var(--ds-color-muted);
+    line-height: 1.2;
+  }
+  .mobile-bottom-nav button span { display: grid; place-items: center; height: 22px; font-size: var(--ds-font-support); }
+  .mobile-bottom-nav .ui-icon { width: 21px; height: 21px; }
+  .mobile-bottom-nav button small { font-size: var(--ds-font-caption); line-height: 1.2; white-space: nowrap; }
+  .mobile-bottom-nav button.active { color: var(--ds-color-brand); font-weight: 700; }
+  .app-footer { position: static; display: flex; gap: 10px; padding: 12px 18px calc(16px + env(safe-area-inset-bottom)); }
+  .quick-help { right: 12px; bottom: calc(78px + env(safe-area-inset-bottom)); }
+  .quick-help-panel { width: min(400px, calc(100vw - 24px)); max-height: min(68dvh, 620px); }
+  .robot-idle-nudge { bottom: 72px; right: 0; }
+  .modal-backdrop { padding: 12px 12px calc(12px + env(safe-area-inset-bottom)); }
+  .modal { max-height: calc(92dvh - env(safe-area-inset-top)); overflow: auto; }
 }

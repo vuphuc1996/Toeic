@@ -1,5 +1,6 @@
 """Security and determinism tests for release/test fingerprint scopes."""
 from __future__ import annotations
+import json
 import os
 import sys
 import tempfile
@@ -16,7 +17,41 @@ class TestFingerprintsTests(unittest.TestCase):
         root = Path(directory)
         (root / "tools").mkdir()
         (root / "tools/source-fingerprint-policy.json").write_text(
-            '{"schemaVersion":1,"exclude_directories":["__pycache__"],"exclude_directory_prefixes":[],"exclude_paths":["logs"],"exclude_patterns":["docs/reports/TEST_REPORT_*.md"],"exclude_suffixes":[".log",".pyc"],"include_file_metadata":["relative_path","kind","size","mode","content_sha256"],"timestamps_in_fingerprint":false,"owner_metadata_in_fingerprint":false,"symlink_policy":"reject_outside"}',
+            json.dumps({
+                "schemaVersion": 1,
+                "exclude_directories": ["__pycache__"],
+                "exclude_directory_prefixes": [],
+                "exclude_paths": ["logs"],
+                "exclude_patterns": [
+                    "docs/reports/TEST_REPORT_*.md",
+                    "docs/reports/TOEIC_LISTENING_READINESS_v*.md",
+                    "docs/reports/TOEIC_EDITORIAL_EVIDENCE_AUDIT_v*.md",
+                    "docs/reports/TOEIC_DISTRACTOR_AUDIT_v*.md",
+                    "docs/reports/TOEIC_INDEPENDENT_REVIEW_QUEUE_v*.md",
+                    "docs/reports/TOEIC_CONTENT_COVERAGE_v*.md",
+                    "docs/reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v*.md",
+                    "docs/reports/MAJOR_RELEASE_QUALITY_AUDIT_v*.md",
+                    "docs/reports/LEARNING_OUTCOME_EVIDENCE_MATRIX_v*.md",
+                    "docs/reports/major-release-quality-audit-v*.json",
+                    "docs/reports/GITHUB_ACTIONS_SHELL_REPLAY_v*.md",
+                    "docs/reports/RELATED_GLOSSARY_BACKLOG.md",
+                    "docs/reports/related-glossary-backlog.json",
+                    "docs/reports/PYTHON_TEST_SHARDS_v*.md",
+                    "docs/reports/PYTHON_TEST_SHARDS_v*.json",
+                    "docs/reports/CROSS_MODULE_AUDIT_v*.md",
+                    "docs/reports/IPAD_RESPONSIVE_ACCEPTANCE_v*.md",
+                    "docs/reports/RELATED_GLOSSARY_QUALITY_v*.md",
+                    "docs/reports/RELATED_GLOSSARY_CANDIDATES_v*.md",
+                    "docs/reports/RELATED_GLOSSARY_ENRICHMENT_QUEUE_v*.md",
+                    "docs/reports/RELATED_GLOSSARY_ENRICHMENT_QUEUE_v*.json",
+                    "docs/reports/visual-evidence/v*/*",
+                ],
+                "exclude_suffixes": [".log", ".pyc"],
+                "include_file_metadata": ["relative_path", "kind", "size", "mode", "content_sha256"],
+                "timestamps_in_fingerprint": False,
+                "owner_metadata_in_fingerprint": False,
+                "symlink_policy": "reject_outside",
+            }),
             encoding="utf-8",
         )
         (root / "tools/a.py").write_text("one", encoding="utf-8")
@@ -107,7 +142,47 @@ class TestFingerprintsTests(unittest.TestCase):
             reports = root / "docs/reports"
             reports.mkdir(parents=True)
             before = source_release_fingerprint(root)["fingerprint"]
-            (reports / "TEST_REPORT_v2.95.46.md").write_text("generated evidence", encoding="utf-8")
+            generated = [
+                "TEST_REPORT_v2.95.46.md",
+                "TOEIC_LISTENING_READINESS_v2.95.46.md",
+                "TOEIC_EDITORIAL_EVIDENCE_AUDIT_v2.95.46.md",
+                "TOEIC_DISTRACTOR_AUDIT_v2.95.46.md",
+                "TOEIC_INDEPENDENT_REVIEW_QUEUE_v2.95.46.md",
+                "TOEIC_CONTENT_COVERAGE_v2.95.46.md",
+                "FOUNDATION_A2_ASSESSMENT_QUALITY_v2.95.46.md",
+                "MAJOR_RELEASE_QUALITY_AUDIT_v2.95.46.md",
+                "LEARNING_OUTCOME_EVIDENCE_MATRIX_v2.95.46.md",
+                "major-release-quality-audit-v2.95.46.json",
+                "RELATED_GLOSSARY_BACKLOG.md",
+                "GITHUB_ACTIONS_SHELL_REPLAY_v2.95.46.md",
+                "related-glossary-backlog.json",
+            ]
+            for name in generated:
+                (reports / name).write_text("generated evidence", encoding="utf-8")
+            self.assertEqual(before, source_release_fingerprint(root)["fingerprint"])
+            (reports / "EDITORIAL_POLICY.md").write_text("governance source", encoding="utf-8")
+            self.assertNotEqual(before, source_release_fingerprint(root)["fingerprint"])
+
+    def test_python_shard_and_rendered_visual_evidence_are_excluded(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = self.make_root(directory)
+            reports = root / "docs/reports"
+            visuals = reports / "visual-evidence/v2.95.46"
+            visuals.mkdir(parents=True)
+            before = source_release_fingerprint(root)["fingerprint"]
+            generated = {
+                "PYTHON_TEST_SHARDS_v2.95.46.md": "generated shard report",
+                "PYTHON_TEST_SHARDS_v2.95.46.json": "generated shard json",
+                "CROSS_MODULE_AUDIT_v2.95.46.md": "cross-module evidence",
+                "IPAD_RESPONSIVE_ACCEPTANCE_v2.95.46.md": "viewport evidence",
+                "RELATED_GLOSSARY_QUALITY_v2.95.46.md": "quality evidence",
+                "RELATED_GLOSSARY_CANDIDATES_v2.95.46.md": "candidate evidence",
+                "RELATED_GLOSSARY_ENRICHMENT_QUEUE_v2.95.46.md": "queue evidence",
+                "RELATED_GLOSSARY_ENRICHMENT_QUEUE_v2.95.46.json": "queue json",
+            }
+            for name, content in generated.items():
+                (reports / name).write_text(content, encoding="utf-8")
+            (visuals / "ipad-portrait.jpg").write_bytes(b"rendered screenshot evidence")
             self.assertEqual(before, source_release_fingerprint(root)["fingerprint"])
             (reports / "EDITORIAL_POLICY.md").write_text("governance source", encoding="utf-8")
             self.assertNotEqual(before, source_release_fingerprint(root)["fingerprint"])

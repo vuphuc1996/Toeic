@@ -36,8 +36,14 @@ class DesignSystemTests(unittest.TestCase):
         self.assertRegex(CSS, r"@media \(max-width: 640px\)[\s\S]*?env\(safe-area-inset-bottom\)")
         self.assertRegex(CSS, r"grid-template-columns: repeat\(5, minmax\(0, 1fr\)\)")
 
-    def test_tablet_does_not_use_phone_bottom_navigation(self):
-        self.assertRegex(CSS, r"@media \(min-width: 641px\) and \(max-width: 850px\)[\s\S]*?\.mobile-bottom-nav \{ display: none !important")
+    def test_tablet_landscape_uses_sidebar_while_portrait_uses_phone_navigation(self):
+        self.assertRegex(CSS, r"@media \(min-width: 641px\) and \(max-width: 850px\)[\s\S]*?\.mobile-bottom-nav \{ display: none")
+        portrait = re.search(r"@media screen and \(orientation: portrait\) and \(min-width: 641px\) and \(max-width: 850px\) \{([\s\S]*?)\n\}", CSS)
+        self.assertIsNotNone(portrait)
+        self.assertIn(".sidebar { display: none; }", portrait.group(1))
+        self.assertIn(".mobile-bottom-nav {", portrait.group(1))
+        self.assertIn("display: grid;", portrait.group(1))
+        self.assertIn("grid-template-columns: repeat(5, minmax(0, 1fr));", portrait.group(1))
 
     def test_compact_tablet_rail_hides_wordmark_and_centers_icon_controls(self):
         self.assertRegex(CSS, r"@media \(min-width: 641px\) and \(max-width: 850px\)[\s\S]*?\.brand-copy,[\s\S]*?display: none !important")

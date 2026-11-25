@@ -1,0 +1,199 @@
+{
+  "batch": "041",
+  "release": "2.95.52",
+  "title": "Cambridge-sourced, relation-context-aligned enrichment of eleven existing high-priority glossary targets",
+  "count": 11,
+  "editorialStatus": "Cambridge Dictionary entries checked 2026-11-24; definitions paraphrased and aligned against existing relation anchors; independent editorial review remains pending.",
+  "sourcePolicy": "Only existing relation-target rows are updated. Meaning_vi and term identity are preserved. Every update is guarded by exact old values and the source file SHA-256. No canonical headwords or relation edges are created.",
+  "baseRelatedTermsSha256": "bb7138a6c8d73d9f575f635be56fc49b3a9564601e56f8ebf06993a704f1f4f3",
+  "records": [
+    {
+      "term": "present",
+      "previousPos": null,
+      "pos": "adj/v",
+      "meaning_vi_preserved": "trình bày; hiện tại; có mặt",
+      "previousDefinition": null,
+      "definition_en": "to be in a particular place or to exist at the current time; or to give, show or introduce information or someone to an audience",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/present"
+      ],
+      "senseAlignment": "The adjective senses (being in a place/current) and verb senses (showing or introducing) are selected for the existing current, introduce and submit relation anchors; the noun “gift” sense is excluded.",
+      "relationAnchors": [
+        "current",
+        "introduce",
+        "submit"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "associate",
+      "previousPos": "",
+      "pos": "n",
+      "meaning_vi_preserved": "cộng sự",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "a person who is connected with another person as a companion, colleague or business partner",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/associate"
+      ],
+      "senseAlignment": "Noun sense for a person connected through work or business, aligned with colleague and partner; the verb “connect mentally” sense is not selected.",
+      "relationAnchors": [
+        "colleague",
+        "partner"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "contender",
+      "previousPos": "",
+      "pos": "n",
+      "meaning_vi_preserved": "đối thủ; ứng viên cạnh tranh",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "a person or organization competing with others to win something or gain a particular position",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/contender"
+      ],
+      "senseAlignment": "Competitive person/organization noun sense aligned with candidate and competitor.",
+      "relationAnchors": [
+        "candidate",
+        "competitor"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "daily",
+      "previousPos": null,
+      "pos": "adj/adv",
+      "meaning_vi_preserved": "hằng ngày",
+      "previousDefinition": null,
+      "definition_en": "happening every day or relating to something that is done each day",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/daily"
+      ],
+      "senseAlignment": "Frequency adjective/adverb sense aligned with monthly and weekly; newspaper noun sense is excluded.",
+      "relationAnchors": [
+        "monthly",
+        "weekly"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "deal",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi_preserved": "thỏa thuận; giao dịch",
+      "previousDefinition": null,
+      "definition_en": "an agreement or arrangement, especially one made in business or between people or organizations",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/deal"
+      ],
+      "senseAlignment": "Business/agreement noun sense aligned with contract and transaction; verb senses are not selected.",
+      "relationAnchors": [
+        "contract",
+        "transaction"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "deny",
+      "previousPos": null,
+      "pos": "v",
+      "meaning_vi_preserved": "phủ nhận; từ chối",
+      "previousDefinition": null,
+      "definition_en": "to say that something is not true, or to refuse to allow someone to have or do something",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/deny"
+      ],
+      "senseAlignment": "Verb senses “say a claim is untrue” and “refuse/withhold” aligned with claim and confirm; the exact relation context should be reviewed.",
+      "relationAnchors": [
+        "claim",
+        "confirm"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "direction",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi_preserved": "hướng; chỉ dẫn",
+      "previousDefinition": null,
+      "definition_en": "the way or position in which someone or something moves; or instructions about how to reach a place or what to do",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/direction"
+      ],
+      "senseAlignment": "Position/orientation and instruction noun senses aligned with guidance and instruction.",
+      "relationAnchors": [
+        "guidance",
+        "instruction"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "endpoint",
+      "previousPos": "",
+      "pos": "n",
+      "meaning_vi_preserved": "điểm cuối",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "the end point of a process or activity, or a result that marks its completion",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/endpoint"
+      ],
+      "senseAlignment": "End/result noun sense aligned with destination and terminal; technical mathematical meanings are not selected.",
+      "relationAnchors": [
+        "destination",
+        "terminal"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "fee",
+      "previousPos": "",
+      "pos": "n",
+      "meaning_vi_preserved": "khoản phí",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "an amount of money paid for a particular service, piece of work or right",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/fee"
+      ],
+      "senseAlignment": "Payment noun sense aligned with charge and payment.",
+      "relationAnchors": [
+        "charge",
+        "payment"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "legitimate",
+      "previousPos": "",
+      "pos": "adj",
+      "meaning_vi_preserved": "hợp pháp; chính đáng",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "allowed by law or rules, or reasonable and acceptable in the circumstances",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/legitimate"
+      ],
+      "senseAlignment": "Adjective senses “lawful” and “reasonable/acceptable” aligned with legal and valid.",
+      "relationAnchors": [
+        "legal",
+        "valid"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "occupation",
+      "previousPos": "",
+      "pos": "n",
+      "meaning_vi_preserved": "nghề nghiệp",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "a person’s job or the type of work they do",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/occupation"
+      ],
+      "senseAlignment": "Job/profession noun sense aligned with career and employment; property/territorial occupation senses are excluded.",
+      "relationAnchors": [
+        "career",
+        "employment"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    }
+  ]
+}

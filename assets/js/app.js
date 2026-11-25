@@ -13,9 +13,11 @@ import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionL
 import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js';
 import { createRobotBuddy } from './robot-buddy.js';
 import { renderAdditionalFlashSenses } from './flashcard-senses.js';
+import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js';
+import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.46';
+const APP_RELEASE_VERSION = '2.95.60';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -163,7 +165,10 @@ async function dbDelete(key) {
   } catch { localStorage.removeItem(`toeic:${key}`); }
 }
 function toast(message, type='success') {
-  const el=document.createElement('div'); el.className=`toast ${type==='error'?'error':''}`; el.textContent=message; $('#toastRegion').append(el); setTimeout(()=>el.remove(),3400);
+  const el=document.createElement('div'); el.className=`toast ${type==='error'?'error':''}`; el.setAttribute('role',type==='error'?'alert':'status');
+  const text=document.createElement('span'); text.className='toast-message'; text.textContent=message;
+  const close=document.createElement('button'); close.className='toast-close'; close.type='button'; close.setAttribute('aria-label','Đóng thông báo'); close.title='Đóng thông báo'; close.textContent='×'; close.addEventListener('click',()=>el.remove());
+  el.append(text,close); $('#toastRegion').append(el); setTimeout(()=>el.remove(),5000);
 }
 function normalizeText(value='') { return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/đ/g,'d').trim(); }
 function escapeHtml(value='') { return String(value).replace(/[&<>\"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[ch])); }
@@ -720,6 +725,43 @@ async function deleteWord(id){
 }
 function closeModal(){ if(state.practiceReviewPending||state.autoAdvanceWaiting||state.pendingPracticeBatch||state.pendingFoundationAssessment||state.pendingSinglePractice||state.pendingFlashQuizResult||state.pendingPlacementResult||state.pendingMockResult)return;stopSpeech();$('#modalBackdrop').classList.remove('is-practice-review','is-learning-detail');delete $('#modalBackdrop').dataset.modalType;$('#closeModal').hidden=false;$('#modalBackdrop').hidden=true;$('#modalContent').innerHTML=''; }
 function downloadFile(name,content,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+async function collectLearnerStorageSnapshot(){
+  const db=await openDB();if(!db)throw new Error('IndexedDB không khả dụng; không thể tạo bản sao lưu đầy đủ.');
+  try{
+    const indexedDBEntries=await new Promise((resolve,reject)=>{const tx=db.transaction(DB_STORE,'readonly');const store=tx.objectStore(DB_STORE);const entries=[];const request=store.openCursor();request.onsuccess=()=>{const cursor=request.result;if(cursor){if(typeof cursor.key!=='string')return reject(new Error('Phát hiện khóa IndexedDB không phải chuỗi; dừng để tránh mất dữ liệu.'));entries.push({key:cursor.key,value:cursor.value});cursor.continue();}else resolve(entries);};request.onerror=()=>reject(request.error);tx.onerror=()=>reject(tx.error);});
+    const localStorageEntries=[];for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(key?.startsWith('toeic:'))localStorageEntries.push({key,value:localStorage.getItem(key)});}localStorageEntries.sort((a,b)=>a.key.localeCompare(b.key));
+    return {indexedDBEntries,localStorageEntries};
+  }finally{db.close();}
+}
+async function buildFullLearnerBackup(){
+  let storagePersistence={supported:!!navigator.storage?.persist,requested:false,granted:null};
+  if(navigator.storage?.persist){storagePersistence.requested=true;try{storagePersistence.granted=await navigator.storage.persist();}catch(error){storagePersistence.error=String(error?.message||error);}}
+  const snapshot=await collectLearnerStorageSnapshot();return createLearnerBackup({...snapshot,storagePersistence});
+}
+async function exportLearnerBackup(){
+  const button=$('#exportLearnerBackupButton');if(button)button.disabled=true;
+  try{const backup=await buildFullLearnerBackup();const json=JSON.stringify(backup,null,2);downloadFile(`toeic-learner-backup-${new Date().toISOString().replace(/[:.]/g,'-')}.json`,json,'application/json;charset=utf-8');const status=$('#learnerBackupStatus');if(status)status.textContent=`Đã tạo bản sao lưu: ${backup.storage.indexedDB.entries.length} khóa IndexedDB và ${backup.storage.localStorage.entries.length} khóa localStorage. SHA-256 đã được đính kèm.`;toast('Đã tạo bản sao lưu toàn bộ dữ liệu học tập.');}
+  catch(error){toast(`Sao lưu thất bại: ${error.message}`,'error');}finally{if(button)button.disabled=false;}
+}
+async function restoreLearnerBackupFile(file){
+  const parsed=JSON.parse(await file.text());const validated=await validateLearnerBackup(parsed);
+  const summary=`Bản sao lưu ngày ${parsed.exportedAt||'không rõ'} gồm ${validated.indexedDBEntries.length} khóa IndexedDB và ${validated.localStorageEntries.length} khóa localStorage.\n\nKhôi phục sẽ ghi đè các khóa trùng tên, giữ nguyên khóa hiện có không có trong tệp. Ứng dụng sẽ tải lại sau khi hoàn tất. Tiếp tục?`;
+  if(!confirm(summary))return;
+  const current=await buildFullLearnerBackup();downloadFile(`toeic-learner-backup-before-restore-${new Date().toISOString().replace(/[:.]/g,'-')}.json`,JSON.stringify(current,null,2),'application/json;charset=utf-8');
+  const db=await openDB();if(!db)throw new Error('IndexedDB không khả dụng; không thể khôi phục an toàn.');
+  const oldLocal=[];for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(key?.startsWith('toeic:'))oldLocal.push([key,localStorage.getItem(key)]);}const importedKeys=new Set(validated.localStorageEntries.map(x=>x.key));
+  try{
+    await new Promise((resolve,reject)=>{const tx=db.transaction(DB_STORE,'readwrite');const store=tx.objectStore(DB_STORE);for(const entry of validated.indexedDBEntries)store.put(entry.value,entry.key);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error||new Error('Giao dịch IndexedDB thất bại.'));tx.onabort=()=>reject(tx.error||new Error('Giao dịch IndexedDB bị hủy.'));});
+    for(const entry of validated.localStorageEntries)localStorage.setItem(entry.key,entry.value);
+  }catch(error){
+    for(const entry of oldLocal){try{localStorage.setItem(entry[0],entry[1]);}catch{}}
+    for(const entry of validated.localStorageEntries){if(!oldLocal.some(x=>x[0]===entry.key)){try{localStorage.removeItem(entry.key);}catch{}}}
+    try{await new Promise((resolve,reject)=>{const tx=db.transaction(DB_STORE,'readwrite');const store=tx.objectStore(DB_STORE);store.clear();for(const entry of current.storage.indexedDB.entries)store.put(entry.value,entry.key);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});}catch(rollbackError){console.error('Learner backup rollback failed:',rollbackError);}
+    throw new Error(`Khôi phục chưa hoàn tất. Bản sao lưu hiện trạng đã được tải xuống. Chi tiết: ${error.message}`);
+  }finally{db.close();}
+  toast('Khôi phục dữ liệu hoàn tất. Đang tải lại ứng dụng…');setTimeout(()=>location.reload(),900);
+}
+
 function personalExportRecords(){return sortWords([...state.personalVocabulary.additions,...Object.values(state.personalVocabulary.overrides)]);}
 function exportJSON(){const payload={schemaVersion:3,exportedAt:new Date().toISOString(),type:'TOEIC_PERSONAL_VOCABULARY',note:'Chỉ chứa thay đổi cá nhân; không bao gồm dữ liệu từ điển gốc của GitHub.',personalVocabulary:state.personalVocabulary,words:personalExportRecords()};downloadFile('toeic-personal-vocabulary.json',JSON.stringify(payload,null,2),'application/json;charset=utf-8');toast('Đã xuất dữ liệu từ vựng cá nhân.');}
 function csvEscape(v){const s=String(v??'');return /[",\r\n]/.test(s)?`"${s.replace(/"/g,'""')}"`:s;}
@@ -989,7 +1031,8 @@ function getChoiceExplanation(q, choice, isCorrect) {
     // presented as evidence for a synonym (or vice versa).
     const refs=findRelatedSources(choice,relationKey);
     if(alias) {
-      const details=[alias.pos?`Loại từ: ${alias.pos}`:'',alias.definition_en?`English: ${alias.definition_en}`:''].filter(Boolean).join(' · ');
+      const learnerDefinition=getLearnerFacingRelatedGlossaryDefinition(alias.definition_en);
+      const details=[alias.pos?`Loại từ: ${alias.pos}`:'',learnerDefinition?`English: ${learnerDefinition}`:''].filter(Boolean).join(' · ');
       const context=refs.length?` Có liên hệ ${relationKey==='synonyms'?'đồng nghĩa':'trái nghĩa'} trong dữ liệu với: ${refs.map(w=>`${displayWord(w.word)} (${getPrimarySense(w).meaning_vi})`).join('; ')}.`:'';
       return `Nghĩa tiếng Việt: ${alias.meaning_vi}.${details?` ${details}.`:''} Đây là phương án ${relation} ${displayWord(q.word)} trong câu hỏi hiện tại.${context}`;
     }
@@ -1637,7 +1680,10 @@ function renderToeicScoreReadiness(){
     return;
   }
   const trend=value=>value>5?'Tăng':value< -5?'Giảm':'Ổn định';
-  host.innerHTML=`<div class="score-readiness-heading"><div><p class="eyebrow">TOEIC SCORE READINESS · EVIDENCE TRACKER</p><h3>Xu hướng qua 3 bài Full Mock gần nhất</h3></div><span class="score-readiness-status">Đủ dữ liệu xu hướng</span></div><div class="score-readiness-metrics"><div><small>Listening · trung bình</small><strong>${snapshot.listeningAverage}%</strong><span>${trend(snapshot.listeningChange)} ${snapshot.listeningChange>0?'+':''}${snapshot.listeningChange} điểm %</span></div><div><small>Reading · trung bình</small><strong>${snapshot.readingAverage}%</strong><span>${trend(snapshot.readingChange)} ${snapshot.readingChange>0?'+':''}${snapshot.readingChange} điểm %</span></div></div><p>Đây là tỷ lệ đúng trung bình của 3 bài Full Mock gần nhất, dùng để theo dõi tiến bộ và chọn nội dung cần luyện. Không phải điểm TOEIC /495 hoặc /990, không dự báo chắc chắn khả năng đạt 500+ hay 850+.</p><small>Điểm ETS cần được hiệu chuẩn theo đề thi tương đương và phương pháp quy đổi của ETS. Kết quả học tập cá nhân vẫn cần đối chiếu với bài thi chính thức.</small>`;
+  const listeningMetric=snapshot.listeningTrendEnough
+    ? `<div><small>Listening · trung bình (${snapshot.listeningDistinctForms} bộ câu hỏi)</small><strong>${snapshot.listeningAverage}%</strong><span>${trend(snapshot.listeningChange)} ${snapshot.listeningChange>0?'+':''}${snapshot.listeningChange} điểm %</span>${snapshot.listeningWarning?`<small class="score-readiness-caveat">${escapeHtml(snapshot.listeningWarning)}</small>`:''}</div>`
+    : `<div><small>Listening · xu hướng tạm ẩn</small><strong>Chưa đủ bộ đề độc lập</strong><span>${snapshot.listeningDistinctForms} bộ câu hỏi khác nhau được nhận diện</span><small class="score-readiness-caveat">${escapeHtml(snapshot.listeningWarning)}</small></div>`;
+  host.innerHTML=`<div class="score-readiness-heading"><div><p class="eyebrow">TOEIC SCORE READINESS · EVIDENCE TRACKER</p><h3>Xu hướng qua 3 bài Full Mock gần nhất</h3></div><span class="score-readiness-status">Đủ dữ liệu bài thi</span></div><div class="score-readiness-metrics">${listeningMetric}<div><small>Reading · trung bình</small><strong>${snapshot.readingAverage}%</strong><span>${trend(snapshot.readingChange)} ${snapshot.readingChange>0?'+':''}${snapshot.readingChange} điểm %</span></div></div><p>Đây là tỷ lệ đúng trung bình của 3 bài Full Mock gần nhất. Listening chỉ mở xu hướng khi xác nhận ít nhất hai bộ câu hỏi khác nhau; độ trùng lặp cao vẫn được cảnh báo. Không phải điểm TOEIC /495 hoặc /990, không dự báo chắc chắn khả năng đạt 500+ hay 850+.</p><small>Điểm ETS cần được hiệu chuẩn theo đề thi tương đương và phương pháp quy đổi của ETS. Kết quả học tập cá nhân vẫn cần đối chiếu với bài thi chính thức.</small>`;
 }
 
 function renderMockHistory(){
@@ -2010,6 +2056,7 @@ function bindEvents(){
   $('#importButton').addEventListener('click',()=>$('#importFile').click());
   $('#importFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{await importFile(file);}catch(err){toast(`Import thất bại: ${err.message}`,'error');}finally{e.target.value='';}});
   $('#exportJsonButton').addEventListener('click',exportJSON);$('#exportCsvButton').addEventListener('click',exportCSV);$('#resetLocalButton').addEventListener('click',resetWorkspace);
+  $('#exportLearnerBackupButton')?.addEventListener('click',exportLearnerBackup);$('#restoreLearnerBackupButton')?.addEventListener('click',()=>$('#learnerBackupFile')?.click());$('#learnerBackupFile')?.addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{await restoreLearnerBackupFile(file);}catch(error){toast(`Khôi phục thất bại: ${error.message}`,'error');}finally{e.target.value='';}});
   $('#closeModal').addEventListener('click',()=>{if(state.practiceReviewPending||state.pendingPracticeBatch||state.pendingFoundationAssessment||state.pendingSinglePractice||state.pendingFlashQuizResult||state.pendingPlacementResult||state.pendingMockResult)return;closeModal();});
   $('#learningFocusClose')?.addEventListener('click',closeLearningFocus);
   $('#foundationLessonList')?.addEventListener('click',e=>{const b=e.target.closest('[data-foundation-open]');if(b)openFoundationLesson(b.dataset.foundationOpen);});

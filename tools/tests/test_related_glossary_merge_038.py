@@ -4,6 +4,7 @@ import hashlib
 import json
 import unittest
 from pathlib import Path
+from glossary_test_helpers import composite_sha_reversing_vocabulary_patch
 
 ROOT = Path(__file__).resolve().parents[2]
 EXPECTED = {
@@ -82,8 +83,49 @@ class RelatedGlossaryMerge038Tests(unittest.TestCase):
             self.assertEqual(ledger[term]["anchor"], anchor, term)
             self.assertIn("sense", ledger[term]["reason"].lower(), term)
 
+    def _restore_batch039(self, glossary):
+        # Current source includes Batch 041, Batch 040 and Batch 039. Reverse all three batches
+        # in descending order before reconstructing the historical Batch 038 base.
+        by = {row["term"].casefold(): row for row in glossary["terms"]}
+        batch_041 = read_json("patches-related-terms/v2.95.52/related-terms-041.json")
+        for op in batch_041["operations"]:
+            row = by[op["term"].casefold()]
+            for field, value in op["expect"].items():
+                if field == "term":
+                    continue
+                if value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = value
+        batch_040 = read_json("patches-related-terms/v2.95.51/related-terms-040.json")
+        for op in batch_040["operations"]:
+            row = by[op["term"].casefold()]
+            for field, value in op["expect"].items():
+                if field == "term":
+                    continue
+                if value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = value
+        patch = json.loads((ROOT / "patches-related-terms/v2.95.50/related-terms-039.json").read_text(encoding="utf-8"))
+        by = {row["term"].casefold(): row for row in glossary["terms"]}
+        for op in patch["operations"]:
+            row = by[op["term"].casefold()]
+            for field, value in op["expect"].items():
+                if field == "term":
+                    continue
+                if value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = value
+            for field in op["set"]:
+                if field not in op["expect"]:
+                    row.pop(field, None)
+        return glossary
+
     def test_correction_patch_is_exact_guarded_and_base_hash_is_reconstructable(self):
         glossary = json.loads((ROOT / "data/related-terms.json").read_text(encoding="utf-8"))
+        glossary = self._restore_batch039(glossary)
         # Reverse additions first, then reverse only the guarded fields for the three corrections.
         glossary["terms"] = [row for row in glossary["terms"] if row["term"].casefold() not in EXPECTED]
         by = {row["term"].casefold(): row for row in glossary["terms"]}
@@ -97,6 +139,7 @@ class RelatedGlossaryMerge038Tests(unittest.TestCase):
 
     def test_addition_patch_base_hash_follows_corrected_glossary(self):
         glossary = json.loads((ROOT / "data/related-terms.json").read_text(encoding="utf-8"))
+        glossary = self._restore_batch039(glossary)
         glossary["terms"] = [row for row in glossary["terms"] if row["term"].casefold() not in EXPECTED]
         payload = (json.dumps(glossary, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
         self.assertEqual(hashlib.sha256(payload).hexdigest(), self.add_patch["baseFileSha256"])
@@ -104,7 +147,7 @@ class RelatedGlossaryMerge038Tests(unittest.TestCase):
     def test_canonical_and_learning_banks_match_protected_hashes(self):
         vocabulary = list((ROOT / "data/vocabulary").glob("[A-Z].json"))
         protected = [ROOT / "data/grammar/lessons.json", ROOT / "data/listening/listening-library.json", ROOT / "data/readings/reading-library.json", ROOT / "data/practice/part5-sentence-completion.json"]
-        self.assertEqual(composite_sha(vocabulary), self.ledger["canonicalVocabularySha256"])
+        self.assertEqual(composite_sha_reversing_vocabulary_patch(vocabulary, ROOT, "patches/v2.95.54/independent-audit-stage-1-data.json"), self.ledger["canonicalVocabularySha256"])
         self.assertEqual(composite_sha(protected), self.ledger["protectedLearningBankSha256"])
 
     def test_glossary_identity_is_unique(self):

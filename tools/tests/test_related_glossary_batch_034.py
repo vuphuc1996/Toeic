@@ -6,6 +6,7 @@ import importlib.util
 import json
 import unittest
 from pathlib import Path
+from glossary_test_helpers import restore_batch_039
 
 ROOT = Path(__file__).resolve().parents[2]
 PATCH_PATH = ROOT / 'patches-related-terms/v2.95.40/related-terms-034.json'
@@ -55,11 +56,11 @@ class RelatedGlossaryBatch034Tests(unittest.TestCase):
         # Reconstruct the v2.95.40 baseline without any later additive glossary
         # batches before reversing this guarded correction. Historical patch hashes
         # remain replayable as new batch ledgers are added.
-        current = json.loads(DATA_PATH.read_text(encoding='utf-8'))
+        current = restore_batch_039(json.loads(DATA_PATH.read_text(encoding='utf-8')), ROOT)
         later_terms = set()
         for ledger_path in (ROOT / 'patches-related-terms').glob('**/batch-*-glossary-ledger.json'):
             later = read_json(ledger_path)
-            if int(later.get('batch', 0)) > 34:
+            if 34 < int(later.get('batch', 0)) < 39:
                 later_terms.update(r['term'].casefold() for r in later.get('records', []))
         current['terms'] = [r for r in current['terms'] if r['term'].casefold() not in later_terms]
         raw = (json.dumps(current, ensure_ascii=False, indent=2) + '\n').encode('utf-8')

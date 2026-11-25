@@ -16,7 +16,7 @@ class RelatedGlossaryCandidateAuditTests(unittest.TestCase):
   self.assertTrue(all((x['preview'] is None) == (not x['canonical']) for x in d['missing']))
  def test_definition_categories_reconcile(self):
   d=MODULE.collect(); c=d['definition_category_counts']
-  self.assertEqual(sum(c.values()),d['glossary_count']); self.assertEqual(c['missing'],150); self.assertEqual(c['placeholder'],73); self.assertEqual(c['present'],344)
+  self.assertEqual(sum(c.values()),d['glossary_count']); self.assertEqual(c['missing'],131); self.assertEqual(c['placeholder'],63); self.assertEqual(c['present'],373)
  def test_audit_is_read_only_and_deterministic(self):
   a=MODULE.collect(); b=MODULE.collect(); self.assertEqual(a,b); report=MODULE.render(a)
   self.assertIn('Audit-only',report); self.assertIn('Review tier',report); self.assertIn('Definition audit',report)

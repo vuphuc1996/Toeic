@@ -5163,13 +5163,7 @@
         "office appliance",
         "household appliance"
       ],
-      "verb_forms": {
-        "v1": "",
-        "vs_es": "",
-        "v2": "",
-        "v3": "",
-        "ving": ""
-      }
+      "verb_forms": null
     },
     {
       "id": "assemble-v",

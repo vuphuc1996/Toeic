@@ -4,6 +4,7 @@ import hashlib
 import json
 import unittest
 from pathlib import Path
+from glossary_test_helpers import restore_batch_039, composite_sha_reversing_vocabulary_patch
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -43,16 +44,17 @@ class RelatedGlossaryBatch036Tests(unittest.TestCase):
         self.assertTrue(all(op["expect"] == {"absent": True} for op in self.patch["operations"]))
 
     def test_patch_base_hash_reconstructs_pre_batch_glossary(self):
+        restored = restore_batch_039(self.data, ROOT)
         added = {r["term"].casefold() for r in self.ledger["records"]}
         # Remove this and all later additive glossary batches before reconstructing
         # the original v2.95.43 baseline. Historical patch hashes remain stable as
         # new releases append further records.
         for ledger_path in (ROOT / "patches-related-terms").glob("**/batch-*-glossary-ledger.json"):
             later = json.loads(ledger_path.read_text(encoding="utf-8"))
-            if int(later.get("batch", 0)) > 36:
+            if 36 < int(later.get("batch", 0)) < 39:
                 added.update(record["term"].casefold() for record in later.get("records", []))
-        baseline = dict(self.data)
-        baseline["terms"] = [r for r in self.data["terms"] if r["term"].casefold() not in added]
+        baseline = dict(restored)
+        baseline["terms"] = [r for r in restored["terms"] if r["term"].casefold() not in added]
         # Later exact-guarded sense corrections must be reversed as well when
         # reconstructing the pre-Batch-036 file. Terms added by Batch 036 are
         # already absent here; corrections to older Batch 035 rows (e.g. article) remain.
@@ -116,7 +118,7 @@ class RelatedGlossaryBatch036Tests(unittest.TestCase):
             ROOT / "data/readings/reading-library.json",
             ROOT / "data/practice/part5-sentence-completion.json",
         ]
-        self.assertEqual(composite_sha(vocabulary), self.ledger["canonicalVocabularySha256"])
+        self.assertEqual(composite_sha_reversing_vocabulary_patch(vocabulary, ROOT, "patches/v2.95.54/independent-audit-stage-1-data.json"), self.ledger["canonicalVocabularySha256"])
         self.assertEqual(composite_sha(protected), self.ledger["protectedLearningBankSha256"])
 
 

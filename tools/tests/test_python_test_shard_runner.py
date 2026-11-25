@@ -104,6 +104,14 @@ class PythonTestShardRunnerTests(unittest.TestCase):
         self.assertEqual(stats["discovered_test_cases"], 3)
         self.assertEqual(stats["timed_out_modules"], 1)
 
+    def test_resume_toggle_does_not_change_checkpoint_execution_identity(self):
+        inventory_delta = {"baseline_status": "COMPARED", "added": [], "removed": []}
+        first_run = runner.build_execution_config(180, ["tools/tests/test_a.py"], False, inventory_delta)
+        resumed_run = runner.build_execution_config(180, ["tools/tests/test_a.py"], False, inventory_delta)
+        self.assertEqual(first_run, resumed_run)
+        self.assertNotIn("resume", first_run)
+        self.assertNotIn("exact_runner_arguments", first_run)
+
     def test_checkpoint_persists_partial_results_and_pending_modules(self):
         with tempfile.TemporaryDirectory() as directory:
             modules = ["test_a.py", "test_b.py"]

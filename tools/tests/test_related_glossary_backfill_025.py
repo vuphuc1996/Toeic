@@ -25,7 +25,7 @@ class GlossaryBackfill025Tests(unittest.TestCase):
     def test_current_source_has_expected_remaining_placeholder_and_backfill_counts(self):
         placeholders=[r for r in self.current if mod.PLACEHOLDER in r.get('definition_en','').casefold()]
         backfilled=[r for r in self.current if r.get('source')==mod.SOURCE]
-        self.assertEqual(len(placeholders),73)
+        self.assertEqual(len(placeholders),63)
         self.assertEqual(len(backfilled),205)
     def test_baseline_audit_identifies_exact_candidates(self):
         baseline=[dict(r) for r in self.current]
@@ -35,9 +35,9 @@ class GlossaryBackfill025Tests(unittest.TestCase):
                 row.pop('source',None); row.pop('sourceHeadword',None); row.pop('sourceRelease',None)
         placeholders=[r for r in baseline if mod.PLACEHOLDER in r.get('definition_en','').casefold()]
         candidates=[r for r in placeholders if mod.eligible(r,self.vocabulary)]
-        self.assertEqual(len(placeholders),278)
+        self.assertEqual(len(placeholders),268)
         self.assertEqual(len(candidates),205)
-        self.assertEqual(mod.audit(baseline,self.vocabulary,write_report=False),(278,205))
+        self.assertEqual(mod.audit(baseline,self.vocabulary,write_report=False),(268,205))
     def test_candidate_replacement_uses_canonical_bilingual_sense_and_provenance(self):
         row={'term':'accept','meaning_vi':'chấp nhận','definition_en':mod.PLACEHOLDER}
         word,senses=mod.eligible(row,self.vocabulary)

@@ -1,0 +1,207 @@
+[
+  {
+    "viewport": {
+      "width": 834,
+      "height": 1194
+    },
+    "orientation": "portrait",
+    "sidebarDisplay": "none",
+    "sidebarWidth": 0,
+    "mainMarginLeft": "0px",
+    "bottomNavDisplay": "grid",
+    "bottomNavPosition": "fixed",
+    "bottomNavColumns": "163.594px 163.594px 163.609px 163.594px 163.609px",
+    "bottomNavRect": {
+      "x": 0,
+      "y": 1128,
+      "width": 834,
+      "height": 66
+    },
+    "topbarRect": {
+      "x": 0,
+      "y": 0,
+      "width": 834,
+      "height": 62
+    },
+    "pageRect": {
+      "x": 0,
+      "y": 68,
+      "width": 834,
+      "height": 2717
+    },
+    "bodyScrollWidth": 834,
+    "documentScrollWidth": 834,
+    "viewportWidth": 834,
+    "quickHelpRect": {
+      "x": 756,
+      "y": 1050,
+      "width": 66,
+      "height": 66
+    },
+    "name": "ipad_pro_11_portrait"
+  },
+  {
+    "viewport": {
+      "width": 1194,
+      "height": 834
+    },
+    "orientation": "landscape",
+    "sidebarDisplay": "flex",
+    "sidebarWidth": 216,
+    "mainMarginLeft": "216px",
+    "bottomNavDisplay": "none",
+    "bottomNavPosition": "static",
+    "bottomNavColumns": "repeat(6, minmax(0px, 1fr))",
+    "bottomNavRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "topbarRect": {
+      "x": 216,
+      "y": 0,
+      "width": 978,
+      "height": 76
+    },
+    "pageRect": {
+      "x": 216,
+      "y": 78,
+      "width": 978,
+      "height": 2455
+    },
+    "bodyScrollWidth": 1194,
+    "documentScrollWidth": 1194,
+    "viewportWidth": 1194,
+    "quickHelpRect": {
+      "x": 1106,
+      "y": 746,
+      "width": 66,
+      "height": 66
+    },
+    "name": "ipad_pro_11_landscape"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "orientation": "portrait",
+    "sidebarDisplay": "none",
+    "sidebarWidth": 0,
+    "mainMarginLeft": "0px",
+    "bottomNavDisplay": "grid",
+    "bottomNavPosition": "fixed",
+    "bottomNavColumns": "76.3906px 76.4062px 76.3906px 76.4062px 76.4062px",
+    "bottomNavRect": {
+      "x": 0,
+      "y": 778,
+      "width": 390,
+      "height": 66
+    },
+    "topbarRect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 58
+    },
+    "pageRect": {
+      "x": 0,
+      "y": 61,
+      "width": 390,
+      "height": 3338
+    },
+    "bodyScrollWidth": 405,
+    "documentScrollWidth": 390,
+    "viewportWidth": 390,
+    "quickHelpRect": {
+      "x": 322,
+      "y": 711,
+      "width": 58,
+      "height": 58
+    },
+    "name": "iphone_mobile"
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "orientation": "landscape",
+    "sidebarDisplay": "flex",
+    "sidebarWidth": 264,
+    "mainMarginLeft": "264px",
+    "bottomNavDisplay": "none",
+    "bottomNavPosition": "static",
+    "bottomNavColumns": "repeat(6, minmax(0px, 1fr))",
+    "bottomNavRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "topbarRect": {
+      "x": 264,
+      "y": 0,
+      "width": 1176,
+      "height": 76
+    },
+    "pageRect": {
+      "x": 264,
+      "y": 80,
+      "width": 1176,
+      "height": 2335
+    },
+    "bodyScrollWidth": 1440,
+    "documentScrollWidth": 1440,
+    "viewportWidth": 1440,
+    "quickHelpRect": {
+      "x": 1352,
+      "y": 812,
+      "width": 66,
+      "height": 66
+    },
+    "name": "desktop"
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "orientation": "portrait",
+    "sidebarDisplay": "none",
+    "sidebarWidth": 0,
+    "mainMarginLeft": "0px",
+    "bottomNavDisplay": "grid",
+    "bottomNavPosition": "fixed",
+    "bottomNavColumns": "150.391px 150.406px 150.391px 150.406px 150.391px",
+    "bottomNavRect": {
+      "x": 0,
+      "y": 958,
+      "width": 768,
+      "height": 66
+    },
+    "topbarRect": {
+      "x": 0,
+      "y": 0,
+      "width": 768,
+      "height": 62
+    },
+    "pageRect": {
+      "x": 0,
+      "y": 65,
+      "width": 768,
+      "height": 2737
+    },
+    "bodyScrollWidth": 768,
+    "documentScrollWidth": 768,
+    "viewportWidth": 768,
+    "quickHelpRect": {
+      "x": 698,
+      "y": 888,
+      "width": 58,
+      "height": 58
+    },
+    "name": "ipad_split_portrait"
+  }
+]

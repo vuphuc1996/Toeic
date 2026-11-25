@@ -343,3 +343,17 @@ Every new user prompt is a task request inside this Master contract, not a new a
 ---
 
 **Ownership rule:** this file is the single master development contract. Update this file when the owner explicitly approves a policy change; do not create parallel master prompts, competing roadmaps or multiple “final” instruction files.
+
+
+## 16. TABLET ORIENTATION RESPONSIVE CONTRACT (OWNER-APPROVED EXCEPTION)
+
+The owner explicitly approved a narrow responsive correction for tablet orientation. This is an exception to the otherwise frozen UI layout, not permission for a broad redesign.
+
+1. iPad Pro 11-inch M1 standard portrait viewport (834 CSS px wide) must use the existing phone-style navigation: hide the left sidebar, show the five-item bottom navigation, and use the mobile content flow.
+2. In landscape (approximately 1194 CSS px wide), preserve the web/tablet layout with the full left sidebar and hide the phone bottom navigation.
+3. Use CSS viewport width and orientation, not physical device-inch sniffing. The current compact portrait rule covers 641–850 CSS px; narrow split-view widths continue to use existing phone rules.
+4. Reuse the actual existing navigation DOM, menu-sheet behavior, typography, color, spacing and design tokens. Do not create a separate visual mockup or a second navigation implementation.
+5. Any future UI proposal must be accompanied by the exact source implementation and a browser-rendered screenshot from that implementation. Label simulated/static rendering separately from hydrated runtime or physical-device acceptance.
+6. Validate portrait, landscape, phone, desktop and all page sections for horizontal overflow. Preserve safe-area insets and keep Robot Buddy above the bottom navigation.
+7. Do not alter learning content, canonical IDs, answer keys, IndexedDB or learner records as part of responsive changes.
+

@@ -1,6 +1,6 @@
 # TOEIC Content Coverage — v2.95.46
 
-Generated: 2026-11-23
+Generated: 2026-11-24
 
 > TOEIC Listening & Reading only. IELTS and other exam-specific content are intentionally excluded until TOEIC acceptance gates are met.
 

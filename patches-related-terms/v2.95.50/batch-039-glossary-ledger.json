@@ -1,0 +1,167 @@
+{
+  "batch": "039",
+  "release": "2.95.50",
+  "title": "Cambridge-sourced, sense-aligned enrichment of twelve existing high-frequency relation targets",
+  "count": 12,
+  "editorialStatus": "Cambridge Dictionary entries checked 2026-11-24; definitions paraphrased and aligned against existing relation anchors; independent editorial review remains pending.",
+  "sourcePolicy": "Only existing synonym/antonym targets are enriched. No new vocabulary headwords or relation edges are created. Every definition carries a Cambridge Dictionary URL and an explicit sense-alignment note.",
+  "baseRelatedTermsSha256": "54acaabcb49cb19e4588a23691e93dc19fad23bcddb15f014f3e3bdc2f59d29c",
+  "records": [
+    {
+      "term": "plan",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi": "kế hoạch; dự định",
+      "previousDefinition": null,
+      "definition_en": "a set of decisions or actions intended to achieve something in the future",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/plan"
+      ],
+      "senseAlignment": "noun (decision/arrangement sense) selected for the existing relation targets agenda, proposal and strategy",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "neglect",
+      "previousPos": null,
+      "pos": "v",
+      "meaning_vi": "bỏ bê; sao nhãng",
+      "previousDefinition": null,
+      "definition_en": "to fail to give someone or something the care or attention they need",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/neglect"
+      ],
+      "senseAlignment": "verb sense selected for existing antonym relations with handle, maintain, oversee, perform and prepare",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "amount",
+      "previousPos": "",
+      "pos": "n",
+      "meaning_vi": "lượng; số tiền",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "how much there is of something, especially a quantity of money, time or material",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/amount"
+      ],
+      "senseAlignment": "noun sense; existing relation targets quantity, supply and volume",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "bill",
+      "previousPos": "n/v",
+      "pos": "n/v",
+      "meaning_vi": "hóa đơn; dự luật",
+      "previousDefinition": null,
+      "definition_en": "a request or document for payment; a proposed law considered by a legislature; or to send someone a request for payment",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/bill"
+      ],
+      "senseAlignment": "payment and proposed-law noun senses plus payment verb sense; aligned to the existing Vietnamese gloss and relation targets charge and invoice",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "customer",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi": "khách hàng",
+      "previousDefinition": null,
+      "definition_en": "a person or organization that buys goods or services",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/customer"
+      ],
+      "senseAlignment": "business noun sense selected for existing buyer and client relation targets",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "division",
+      "previousPos": "",
+      "pos": "n",
+      "meaning_vi": "bộ phận; sự phân chia",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "a separate part of a large organization, or the act of separating something into parts",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/division"
+      ],
+      "senseAlignment": "organization-part and separation noun senses selected for existing branch, department and section relation targets",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "essential",
+      "previousPos": null,
+      "pos": "adj",
+      "meaning_vi": "thiết yếu; cần thiết",
+      "previousDefinition": null,
+      "definition_en": "necessary or extremely important for a particular purpose",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/essential"
+      ],
+      "senseAlignment": "adjective necessary-sense selected for existing indispensable, key and necessary relation targets",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "file",
+      "previousPos": null,
+      "pos": "n/v",
+      "meaning_vi": "tệp; hồ sơ; nộp hồ sơ",
+      "previousDefinition": null,
+      "definition_en": "a collection of information or documents kept together; or to submit a document to an official body or store information in an organized way",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/file"
+      ],
+      "senseAlignment": "document/computer noun and submit/store verb senses selected for existing document, record and submit relation targets",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "gain",
+      "previousPos": null,
+      "pos": "n/v",
+      "meaning_vi": "thu được; lợi ích; khoản tăng",
+      "previousDefinition": null,
+      "definition_en": "to obtain something useful or valuable; a benefit obtained or an increase in an amount or level",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/gain"
+      ],
+      "senseAlignment": "obtain verb and benefit/increase noun senses selected for existing benefit and profit relation targets",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "loss",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi": "sự mất mát; khoản lỗ",
+      "previousDefinition": null,
+      "definition_en": "the fact of no longer having something, or a reduction in value, amount or money",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/loss"
+      ],
+      "senseAlignment": "noun sense selected for existing antonym relation targets profit, retention and revenue",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "meeting",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi": "cuộc họp",
+      "previousDefinition": null,
+      "definition_en": "an arranged event in which people come together to discuss something or make decisions",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/meeting"
+      ],
+      "senseAlignment": "planned discussion noun sense selected for existing appointment, interview and minute relation targets",
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "refuse",
+      "previousPos": null,
+      "pos": "v",
+      "meaning_vi": "từ chối",
+      "previousDefinition": null,
+      "definition_en": "to say that you will not do, accept or allow something",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/refuse"
+      ],
+      "senseAlignment": "verb say-no sense selected for existing accept, offer and reject relation targets",
+      "editorialStatus": "source checked; independent editorial review pending"
+    }
+  ]
+}

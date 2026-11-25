@@ -1,0 +1,367 @@
+{
+  "version": "2.95.49",
+  "vocabulary": {
+    "headwords": 1141,
+    "ipa_us": 1062,
+    "word_family": 276,
+    "verb_forms": 329,
+    "collocations": 971,
+    "synonyms": 405,
+    "antonyms": 210
+  },
+  "vocabularyFieldCoverage": {
+    "ipa_us": {
+      "count": 1062,
+      "percent": 93.1
+    },
+    "word_family": {
+      "count": 276,
+      "percent": 24.2
+    },
+    "verb_forms": {
+      "count": 329,
+      "percent": 28.8
+    },
+    "collocations": {
+      "count": 971,
+      "percent": 85.1
+    },
+    "synonyms": {
+      "count": 405,
+      "percent": 35.5
+    },
+    "antonyms": {
+      "count": 210,
+      "percent": 18.4
+    }
+  },
+  "relatedGlossary": {
+    "entries": 567,
+    "uniqueEntries": 567,
+    "duplicateEntries": 0,
+    "referencedUniqueTerms": 804,
+    "coveredUniqueTerms": 556,
+    "coveragePercent": 69.2,
+    "unglossedUniqueTerms": 248,
+    "unglossedReferenceOccurrences": 249,
+    "placeholderEnglishDefinitions": 73,
+    "canonicalVocabularySourceEntries": 205
+  },
+  "contentInventory": {
+    "grammarLessons": 58,
+    "listeningResources": 145,
+    "readingResources": 73,
+    "part5PracticeQuestions": 80
+  },
+  "learningOutcomes": {
+    "objectives": 11,
+    "criteria": 33,
+    "instrumentedCriteria": 6,
+    "instrumentedPercent": 18.2,
+    "statusCounts": {
+      "instrumented_practice_evidence": 2,
+      "instrumented_learner_self_report": 2,
+      "instrumented_delayed_recall": 2,
+      "criteria_defined_not_yet_instrumented": 27
+    },
+    "criteriaDetail": [
+      {
+        "objectiveId": "foundation-pre-a1-a1",
+        "outcomeId": "foundation-pre-a1-a1-recognition",
+        "title": "Nhận biết từ/cấu trúc nền tảng trong ngữ cảnh quen thuộc",
+        "status": "instrumented_practice_evidence",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "foundation-pre-a1-a1",
+        "outcomeId": "foundation-pre-a1-a1-production",
+        "title": "Tạo câu ngắn đúng mẫu đã học",
+        "status": "instrumented_learner_self_report",
+        "evidenceMetric": "rubric_score",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "foundation-pre-a1-a1",
+        "outcomeId": "foundation-pre-a1-a1-retention",
+        "title": "Nhớ lại nội dung ở lần ôn cách quãng",
+        "status": "instrumented_delayed_recall",
+        "evidenceMetric": "delayed_correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "foundation-a2",
+        "outcomeId": "foundation-a2-recognition",
+        "title": "Nhận biết và hiểu cấu trúc A2 trong ngữ cảnh công việc quen thuộc",
+        "status": "instrumented_practice_evidence",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "foundation-a2",
+        "outcomeId": "foundation-a2-application",
+        "title": "Vận dụng cấu trúc A2 vào tình huống giao tiếp ngắn",
+        "status": "instrumented_learner_self_report",
+        "evidenceMetric": "rubric_score",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "foundation-a2",
+        "outcomeId": "foundation-a2-retention",
+        "title": "Nhớ lại nội dung A2 qua ôn tập cách quãng",
+        "status": "instrumented_delayed_recall",
+        "evidenceMetric": "delayed_correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "grammar-core",
+        "outcomeId": "grammar-core-form-recognition",
+        "title": "Nhận diện cấu trúc ngữ pháp phù hợp trong câu",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "grammar-core",
+        "outcomeId": "grammar-core-contextual-choice",
+        "title": "Chọn đáp án đúng theo cấu trúc và ngữ cảnh TOEIC",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "grammar-core",
+        "outcomeId": "grammar-core-error-explanation",
+        "title": "Giải thích được lý do chọn đáp án và loại phương án nhiễu",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "explanation_rubric",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-1",
+        "outcomeId": "listening-part-1-visual-audio-match",
+        "title": "Ghép mô tả nghe được với hành động/vị trí trong ảnh",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-1",
+        "outcomeId": "listening-part-1-paraphrase-recognition",
+        "title": "Nhận diện cách diễn đạt tương đương trong audio",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-1",
+        "outcomeId": "listening-part-1-detail-retention",
+        "title": "Nhớ chi tiết chính sau khi nghe một lần",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "delayed_correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-2",
+        "outcomeId": "listening-part-2-response-intent",
+        "title": "Nhận diện loại câu hỏi và ý định giao tiếp",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-2",
+        "outcomeId": "listening-part-2-natural-response",
+        "title": "Chọn phản hồi tự nhiên, đúng ngữ cảnh",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-2",
+        "outcomeId": "listening-part-2-distractor-resistance",
+        "title": "Tránh bẫy lặp từ và đáp án nghe có vẻ liên quan",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-3",
+        "outcomeId": "listening-part-3-conversation-purpose",
+        "title": "Xác định mục đích cuộc hội thoại",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-3",
+        "outcomeId": "listening-part-3-detail-inference",
+        "title": "Tìm chi tiết và suy luận từ hội thoại",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-3",
+        "outcomeId": "listening-part-3-speaker-linking",
+        "title": "Liên kết người nói, vai trò và hành động",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-4",
+        "outcomeId": "listening-part-4-talk-purpose",
+        "title": "Xác định mục đích thông báo/bài nói",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-4",
+        "outcomeId": "listening-part-4-detail-tracking",
+        "title": "Theo dõi thời gian, địa điểm, con số và hành động",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "listening-part-4",
+        "outcomeId": "listening-part-4-inference-action",
+        "title": "Suy luận bước tiếp theo hoặc đối tượng nghe",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "reading-part-5",
+        "outcomeId": "reading-part-5-sentence-completion",
+        "title": "Hoàn thành câu dựa trên ngữ pháp và từ vựng",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "reading-part-5",
+        "outcomeId": "reading-part-5-word-form-selection",
+        "title": "Chọn đúng dạng từ và kết hợp từ",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "reading-part-5",
+        "outcomeId": "reading-part-5-distractor-explanation",
+        "title": "Giải thích được khác biệt giữa đáp án đúng và nhiễu",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "explanation_rubric",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "reading-part-6",
+        "outcomeId": "reading-part-6-text-cohesion",
+        "title": "Chọn câu/từ/cụm từ bảo đảm mạch văn",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "reading-part-6",
+        "outcomeId": "reading-part-6-context-completion",
+        "title": "Hoàn thành chỗ trống theo ngữ cảnh toàn đoạn",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "reading-part-6",
+        "outcomeId": "reading-part-6-discourse-purpose",
+        "title": "Nhận diện mục đích và liên kết thông tin trong văn bản",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "reading-part-7",
+        "outcomeId": "reading-part-7-information-location",
+        "title": "Tìm đúng thông tin trong một hoặc nhiều văn bản",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "reading-part-7",
+        "outcomeId": "reading-part-7-paraphrase-inference",
+        "title": "Nhận diện diễn đạt lại và suy luận có căn cứ",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "reading-part-7",
+        "outcomeId": "reading-part-7-cross-document-link",
+        "title": "Kết nối chi tiết giữa các văn bản đơn/kép/ba",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "part5-sentence-completion",
+        "outcomeId": "part5-sentence-completion-accuracy",
+        "title": "Chọn đáp án đúng trong câu Part 5",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "correct_rate",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "part5-sentence-completion",
+        "outcomeId": "part5-sentence-completion-time-management",
+        "title": "Hoàn thành câu trong giới hạn thời gian mục tiêu",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "timed_accuracy",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      },
+      {
+        "objectiveId": "part5-sentence-completion",
+        "outcomeId": "part5-sentence-completion-error-review",
+        "title": "Phân loại lỗi và giải thích đáp án sau luyện tập",
+        "status": "criteria_defined_not_yet_instrumented",
+        "evidenceMetric": "explanation_rubric",
+        "masteryThreshold": 0.8,
+        "minimumUniqueItems": 10
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 """Contract tests for the read-only glossary quality flag audit."""
-import importlib.util, unittest
+import importlib.util, json, unittest
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SPEC = importlib.util.spec_from_file_location('glossary_quality_audit', ROOT/'tools/audit-related-glossary-quality.py')
@@ -68,3 +68,82 @@ class RelatedGlossaryQualityAuditTests(unittest.TestCase):
         self.assertEqual(data['flagged'][0]['issues'], ['malformed-entry'])
         self.assertEqual(data['entries'], 1)
 if __name__ == '__main__': unittest.main()
+
+class RelatedGlossaryEnrichmentQueueTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        path = ROOT / 'tools/build-related-glossary-enrichment-queue.py'
+        spec = importlib.util.spec_from_file_location('related_glossary_enrichment_queue', path)
+        cls.queue_module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.queue_module)
+
+    def test_queue_ranks_relation_frequency_before_alphabetical_order(self):
+        rows = [
+            {'term': 'alpha', 'definition_en': '', 'meaning_vi': 'a', 'pos': 'n', 'source': ''},
+            {'term': 'zeta', 'definition_en': '', 'meaning_vi': 'z', 'pos': 'n', 'source': ''},
+        ]
+        data = self.queue_module.build(rows, {'alpha': 1, 'zeta': 4}, {'alpha': {'one'}, 'zeta': {'one', 'two'}})
+        self.assertEqual([row['term'] for row in data['entries']], ['zeta', 'alpha'])
+        self.assertEqual(data['entries'][0]['relationReferences'], 4)
+        self.assertEqual(data['entries'][0]['distinctSourceHeadwords'], 2)
+
+    def test_queue_tiers_separate_definition_blockers_from_metadata(self):
+        rows = [
+            {'term': 'missing', 'definition_en': '', 'meaning_vi': 'thiếu', 'pos': 'n', 'source': 'source'},
+            {'term': 'pos-gap', 'definition_en': 'A complete definition with enough words.', 'meaning_vi': 'thiếu từ loại', 'pos': '', 'source': 'source'},
+            {'term': 'short', 'definition_en': 'brief', 'meaning_vi': 'ngắn', 'pos': 'adj', 'source': 'source'},
+        ]
+        data = self.queue_module.build(rows, {}, {})
+        tiers = {row['term']: row['tier'] for row in data['entries']}
+        self.assertEqual(tiers['missing'], 'definition-blocker')
+        self.assertEqual(tiers['pos-gap'], 'metadata-review')
+        self.assertEqual(tiers['short'], 'editorial-review')
+
+    def test_queue_is_read_only_and_render_explains_no_auto_import(self):
+        rows = [{'term': 'x', 'definition_en': '', 'meaning_vi': 'x', 'pos': '', 'source': ''}]
+        before = json.dumps(rows, ensure_ascii=False)
+        data = self.queue_module.build(rows, {'x': 2}, {'x': {'headword'}})
+        self.assertEqual(json.dumps(rows, ensure_ascii=False), before)
+        self.assertTrue(data['readOnly'])
+        self.assertIn('does not establish a definition', self.queue_module.render(data))
+
+    def test_batch_040_guarded_patch_updates_only_existing_glossary_fields(self):
+        import hashlib
+        patch_path = ROOT / 'patches-related-terms/v2.95.51/related-terms-040.json'
+        patch = json.loads(patch_path.read_text(encoding='utf-8'))
+        glossary = json.loads((ROOT / 'data/related-terms.json').read_text(encoding='utf-8'))
+        self.assertEqual(patch['batchId'], 'related-glossary-040-v2.95.51')
+        restored = json.loads(json.dumps(glossary, ensure_ascii=False))
+        by_key = {row['term'].casefold(): row for row in restored['terms']}
+        # Reverse the later Batch 041 first so this historical test reconstructs
+        # the exact pre-040 snapshot rather than hashing today's enriched data.
+        batch_041_path = ROOT / 'patches-related-terms/v2.95.52/related-terms-041.json'
+        batch_041 = json.loads(batch_041_path.read_text(encoding='utf-8'))
+        for operation in batch_041['operations']:
+            row = by_key[operation['term'].casefold()]
+            for field, old_value in operation['expect'].items():
+                if field == 'term':
+                    continue
+                if old_value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = old_value
+        for operation in patch['operations']:
+            row = by_key[operation['term'].casefold()]
+            for field, old_value in operation['expect'].items():
+                if field == 'term':
+                    continue
+                if old_value is None:
+                    row.pop(field, None)
+                else:
+                    row[field] = old_value
+        payload = (json.dumps(restored, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+        self.assertEqual(hashlib.sha256(payload).hexdigest(), patch['baseFileSha256'])
+        self.assertEqual(len(patch['operations']), 6)
+        self.assertEqual(len({op['term'].casefold() for op in patch['operations']}), 6)
+        self.assertTrue(all(set(op['set']) == {'pos', 'definition_en', 'source', 'sourceUrls', 'sourceRelease'} for op in patch['operations']))
+        self.assertTrue(all(op['expect'].get('term') == op['term'] for op in patch['operations']))
+        self.assertEqual(len(glossary['terms']), 567)
+        self.assertTrue(all(next(row for row in glossary['terms'] if row['term'] == op['term'])['sourceRelease'] == '2.95.51' for op in patch['operations']))
+        self.assertTrue(all(op['set']['sourceUrls'][0].startswith('https://dictionary.cambridge.org/dictionary/english/') for op in patch['operations']))

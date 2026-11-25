@@ -73,6 +73,32 @@ def discover_modules(root: Path) -> list[str]:
     return sorted(found, key=lambda item: item.encode("utf-8"))
 
 
+def build_execution_config(
+    timeout_per_module: int,
+    selected_modules: list[str],
+    split_large_modules: bool,
+    inventory_delta: dict,
+) -> dict:
+    """Build checkpoint identity from test semantics, not resume mechanics.
+
+    The --resume flag only controls whether a compatible checkpoint is loaded;
+    it does not change the tests, environment, timeout, or command being tested.
+    Including it here would make a first run (without --resume) impossible to
+    continue on a later invocation (with --resume).
+    """
+    return {
+        "timeout_per_module": max(1, timeout_per_module),
+        "selected_modules": selected_modules,
+        "split_large_modules": bool(split_large_modules),
+        "split_threshold": 25,
+        "group_size": 4,
+        "python_executable_name": Path(sys.executable).name,
+        "python_executable_path": Path(sys.executable).resolve().as_posix(),
+        "command_template": [sys.executable, "-m", "unittest", "discover", "-s", "<module-parent>", "-p", "<module-pattern>", "-v"],
+        "inventory_delta": inventory_delta,
+    }
+
+
 def load_test_policy(root: Path) -> dict:
     path = root / "tools" / "test-inventory-policy.json"
     if not path.exists():
@@ -593,18 +619,9 @@ def main() -> int:
         return 1
     version = args.version or manifest.get("version", "unknown")
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    execution_config = {
-        "timeout_per_module": max(1, args.timeout_per_module),
-        "selected_modules": selected,
-        "split_large_modules": bool(args.split_large_modules),
-        "split_threshold": 25,
-        "group_size": 4,
-        "python_executable_name": Path(sys.executable).name,
-        "python_executable_path": Path(sys.executable).resolve().as_posix(),
-        "command_template": [sys.executable, "-m", "unittest", "discover", "-s", "<module-parent>", "-p", "<module-pattern>", "-v"],
-        "exact_runner_arguments": {"timeout_per_module": max(1, args.timeout_per_module), "resume": bool(args.resume), "split_large_modules": bool(args.split_large_modules)},
-        "inventory_delta": inventory_delta,
-    }
+    execution_config = build_execution_config(
+        args.timeout_per_module, selected, args.split_large_modules, inventory_delta
+    )
     fingerprints = test_input_fingerprint(root, modules, execution_config)
     fingerprints["inventory_fingerprint"] = __import__("hashlib").sha256(
         json.dumps(modules, ensure_ascii=False, separators=(",", ":")).encode("utf-8")

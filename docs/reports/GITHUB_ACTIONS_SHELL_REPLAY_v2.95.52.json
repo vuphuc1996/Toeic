@@ -1,0 +1,1142 @@
+{
+  "workflow": "/mnt/data/toeic_v29552_work/Toeic_Dictionary_v2.95.51/.github/workflows/validate-data.yml",
+  "run_steps_discovered": 113,
+  "run_steps_executed": 113,
+  "passed": 113,
+  "failed": 0,
+  "timed_out": 0,
+  "errored": 0,
+  "pending": 0,
+  "records": [
+    {
+      "index": 4,
+      "name": "Repository integrity preflight",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.859,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-repository-integrity.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/004_Repository_integrity_preflight.log"
+    },
+    {
+      "index": 5,
+      "name": "Python syntax check",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.892,
+      "timeout_seconds": 1200,
+      "command": "python -m py_compile tools/validate-data.py tools/validate-learning-content.py tools/audit-toeic-coverage.py tools/audit-question-evidence.py tools/audit-distractors.py tools/sync-version.py tools/refresh-photo-source-fingerprints.py tools/refresh-part1-svg-fallback-fingerprints.py tools/patch-data.py tools/patch-related-terms.py tools/update-related-terms.py tools/build-related-glossary-enrichment-queue.py tools/tests/test_related_glossary_backfill_025.py tools/tests/test_related_glossary_batch_034.py tools/tests/test_related_glossary_batch_035.py tools/tests/test_related_glossary_batch_036.py tools/tests/test_related_glossary_batch_037.py tools/tests/test_patch_related_terms.py tools/tests/test_vocabulary_detail_examples.py tools/tests/test_related_glossary_batch_021.py tools/tests/test_related_glossary_batch_022.py tools/tests/test_related_glossary_batch_023.py tools/tests/test_related_glossary_batch_026.py tools/tests/test_related_glossary_batch_027.py tools/tests/test_related_glossary_batch_028.py tools/tests/test_ipa_backfill_batch_024.py tools/package_source.py tools/tests/test_package_source.py tools/cmudict_ipa.py tools/tests/test_cmudict_ipa_backfill.py tools/tests/test_vocabulary_batch_012.py tools/tests/test_legacy_collocation_cleanup.py tools/tests/test_editorial_review.py tools/tests/test_ci_coverage.py tools/validate-part1-photo-assets.py tools/tests/test_part1_photo_assets.py tools/tests/test_tts_readiness.py tools/tests/test_repository_integrity.py tools/tests/test_grammar_examples_quality.py tools/tests/test_grammar_expansion.py tools/tests/test_reading_expansion.py tools/tests/test_listening_expansion.py tools/tests/test_pwa_readiness.py tools/audit-listening-readiness.py tools/rotate-release-files.py tools/tests/test_release_rotation.py tools/tests/test_foundation_pathway.py tools/tests/test_foundation_reading.py tools/tests/test_foundation_reading_extended.py tools/tests/test_foundation_listening.py tools/tests/test_foundation_listening_extended.py tools/tests/test_foundation_a2_assessment_quality.py tools/tests/test_foundation_a2_production.py tools/tests/test_foundation_production_revision.py tools/tests/test_alphabet_sound_lab.py tools/tests/test_visual_composition.py tools/tests/test_learning_start_level.py tools/tests/test_placement_diagnostic.py tools/tests/test_responsive_layout.py tools/tests/test_learning_surface_consistency.py tools/audit-learning-outcomes.py tools/audit-foundation-a2-assessment.py tools/tests/test_learning_outcomes.py tools/tests/test_learning_outcome_progress.py tools/tests/test_foundation_outcome_evidence.py tools/report-project-progress.py tools/build-editorial-review-queue.py tools/build-related-glossary-backlog.py tools/tests/test_related_glossary_backlog.py tools/sync-design-profile.py tools/tests/test_content_batch_025.py tools/audit-related-glossary-quality.py tools/tests/test_related_glossary_quality_audit.py tools/audit-vocabulary-relationship-graph.py tools/tests/test_vocabulary_relationship_graph_audit.py tools/enrich-related-glossary-from-canonical.py tools/tests/test_related_glossary_canonical_enrichment_029.py tools/tests/test_related_glossary_batch_030.py tools/tests/test_related_glossary_batch_032.py tools/tests/test_related_glossary_batch_033.py tools/tests/test_practice_mode_fallback.py tools/tests/test_related_term_explanation_context.py tools/run-python-tests-sharded.py tools/test_fingerprints.py tools/run-release-acceptance.py tools/tests/test_python_test_shard_runner.py tools/tests/test_release_acceptance_runner.py tools/tests/test_related_glossary_merge_038.py tools/tests/glossary_test_helpers.py tools/tests/test_related_glossary_batch_039.py tools/tests/test_related_glossary_batch_041.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/005_Python_syntax_check.log"
+    },
+    {
+      "index": 6,
+      "name": "Unit tests \u2014 baseline_ids",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 20.423,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_baseline_ids.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/006_Unit_tests_baseline_ids.log"
+    },
+    {
+      "index": 7,
+      "name": "Unit tests \u2014 patch_data",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 16.322,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_patch_data.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/007_Unit_tests_patch_data.log"
+    },
+    {
+      "index": 8,
+      "name": "Unit tests \u2014 patch_related_terms",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 10.058,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_patch_related_terms.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/008_Unit_tests_patch_related_terms.log"
+    },
+    {
+      "index": 9,
+      "name": "Unit tests \u2014 source package contract",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.748,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_package_source.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/009_Unit_tests_source_package_contract.log"
+    },
+    {
+      "index": 10,
+      "name": "Unit tests \u2014 related glossary batch 021",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.755,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_021.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/010_Unit_tests_related_glossary_batch_021.log"
+    },
+    {
+      "index": 11,
+      "name": "Unit tests \u2014 US IPA backfill batch 024",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.775,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_ipa_backfill_batch_024.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/011_Unit_tests_US_IPA_backfill_batch_024.log"
+    },
+    {
+      "index": 12,
+      "name": "Unit tests \u2014 related glossary batch 022",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.687,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_022.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/012_Unit_tests_related_glossary_batch_022.log"
+    },
+    {
+      "index": 13,
+      "name": "Unit tests \u2014 related glossary batch 023",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.744,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_023.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/013_Unit_tests_related_glossary_batch_023.log"
+    },
+    {
+      "index": 14,
+      "name": "Unit tests \u2014 related glossary batch 026",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.761,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_026.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/014_Unit_tests_related_glossary_batch_026.log"
+    },
+    {
+      "index": 15,
+      "name": "Unit tests \u2014 related glossary batch 027",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.707,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_027.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/015_Unit_tests_related_glossary_batch_027.log"
+    },
+    {
+      "index": 16,
+      "name": "Unit tests \u2014 related glossary batch 028",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.71,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_028.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/016_Unit_tests_related_glossary_batch_028.log"
+    },
+    {
+      "index": 17,
+      "name": "Unit tests \u2014 canonical related-glossary enrichment v2.95.29",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.672,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_canonical_enrichment_029.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/017_Unit_tests_canonical_related-glossary_enrichment_v2.95.29.log"
+    },
+    {
+      "index": 18,
+      "name": "Related glossary canonical batch 030",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.694,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_030.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/018_Related_glossary_canonical_batch_030.log"
+    },
+    {
+      "index": 19,
+      "name": "Related glossary batch 032",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.7,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_032.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/019_Related_glossary_batch_032.log"
+    },
+    {
+      "index": 20,
+      "name": "Related glossary batch 033",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.686,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_033.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/020_Related_glossary_batch_033.log"
+    },
+    {
+      "index": 21,
+      "name": "Related glossary batch 034 \u2014 guarded canonical correction",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.769,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_034.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/021_Related_glossary_batch_034_guarded_canonical_correction.log"
+    },
+    {
+      "index": 22,
+      "name": "Related glossary batch 035 \u2014 Cambridge relation-target coverage",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.67,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_035.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/022_Related_glossary_batch_035_Cambridge_relation-target_coverag.log"
+    },
+    {
+      "index": 23,
+      "name": "Related glossary batch 036 \u2014 Cambridge relation-target coverage",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.674,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_036.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/023_Related_glossary_batch_036_Cambridge_relation-target_coverag.log"
+    },
+    {
+      "index": 24,
+      "name": "Unit tests \u2014 related glossary batch 037",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.682,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_037.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/024_Unit_tests_related_glossary_batch_037.log"
+    },
+    {
+      "index": 25,
+      "name": "Unit tests \u2014 related glossary batch 041 (Cambridge-sourced guarded enrichment)",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.71,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_041.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/025_Unit_tests_related_glossary_batch_041_Cambridge-sourced_guar.log"
+    },
+    {
+      "index": 26,
+      "name": "Unit tests \u2014 exact canonical glossary enrichment v2.95.35",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.691,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_exact_match_enrichment_035.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/026_Unit_tests_exact_canonical_glossary_enrichment_v2.95.35.log"
+    },
+    {
+      "index": 27,
+      "name": "Audit canonical related-glossary enrichment candidates",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.685,
+      "timeout_seconds": 1200,
+      "command": "python tools/enrich-related-glossary-from-canonical.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/027_Audit_canonical_related-glossary_enrichment_candidates.log"
+    },
+    {
+      "index": 28,
+      "name": "Unit tests \u2014 related glossary candidate audit (read-only)",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.784,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_candidate_audit.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/028_Unit_tests_related_glossary_candidate_audit_read-only_.log"
+    },
+    {
+      "index": 29,
+      "name": "Unit tests \u2014 related glossary quality flags and enrichment queue (read-only)",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.737,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_quality_audit.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/029_Unit_tests_related_glossary_quality_flags_and_enrichment_que.log"
+    },
+    {
+      "index": 30,
+      "name": "Build relation-frequency glossary enrichment queue (read-only)",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.678,
+      "timeout_seconds": 1200,
+      "command": "python tools/build-related-glossary-enrichment-queue.py --json-output docs/reports/RELATED_GLOSSARY_ENRICHMENT_QUEUE_CI.json --output docs/reports/RELATED_GLOSSARY_ENRICHMENT_QUEUE_CI.md",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/030_Build_relation-frequency_glossary_enrichment_queue_read-only.log"
+    },
+    {
+      "index": 31,
+      "name": "Unit tests \u2014 vocabulary relationship graph audit (read-only)",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.765,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_vocabulary_relationship_graph_audit.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/031_Unit_tests_vocabulary_relationship_graph_audit_read-only_.log"
+    },
+    {
+      "index": 32,
+      "name": "Audit vocabulary relationship graph",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.753,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-vocabulary-relationship-graph.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/032_Audit_vocabulary_relationship_graph.log"
+    },
+    {
+      "index": 33,
+      "name": "Unit tests \u2014 related glossary backlog report",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.186,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_backlog.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/033_Unit_tests_related_glossary_backlog_report.log"
+    },
+    {
+      "index": 34,
+      "name": "Unit tests \u2014 glossary canonical-sense backfill v2.95.25",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.846,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_backfill_025.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/034_Unit_tests_glossary_canonical-sense_backfill_v2.95.25.log"
+    },
+    {
+      "index": 35,
+      "name": "Unit tests \u2014 major release quality audit / glossary metrics",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.705,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_major_release_quality_audit_025.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/035_Unit_tests_major_release_quality_audit_glossary_metrics.log"
+    },
+    {
+      "index": 36,
+      "name": "Unit tests \u2014 missing US IPA review queue",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.663,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_missing_ipa_review_queue.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/036_Unit_tests_missing_US_IPA_review_queue.log"
+    },
+    {
+      "index": 37,
+      "name": "Unit tests \u2014 sync_version",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 10.485,
+      "timeout_seconds": 900,
+      "command": "python -m unittest discover -s tools/tests -p 'test_sync_version.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/037_Unit_tests_sync_version.log"
+    },
+    {
+      "index": 38,
+      "name": "Unit tests \u2014 validator",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 55.108,
+      "timeout_seconds": 900,
+      "command": "python -m unittest discover -s tools/tests -p 'test_validator.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/038_Unit_tests_validator.log"
+    },
+    {
+      "index": 39,
+      "name": "Unit tests \u2014 learning_content",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.923,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_learning_content.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/039_Unit_tests_learning_content.log"
+    },
+    {
+      "index": 40,
+      "name": "Unit tests \u2014 reading_expansion",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.686,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_reading_expansion.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/040_Unit_tests_reading_expansion.log"
+    },
+    {
+      "index": 41,
+      "name": "Unit tests \u2014 listening_expansion",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.699,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_listening_expansion.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/041_Unit_tests_listening_expansion.log"
+    },
+    {
+      "index": 42,
+      "name": "Unit tests \u2014 TTS readiness and reading aloud",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.714,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_tts_readiness.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/042_Unit_tests_TTS_readiness_and_reading_aloud.log"
+    },
+    {
+      "index": 43,
+      "name": "Unit tests \u2014 pwa_readiness",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.729,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_pwa_readiness.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/043_Unit_tests_pwa_readiness.log"
+    },
+    {
+      "index": 44,
+      "name": "Unit tests \u2014 grammar_expansion",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.733,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_grammar_expansion.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/044_Unit_tests_grammar_expansion.log"
+    },
+    {
+      "index": 45,
+      "name": "Unit tests \u2014 content batch 024",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.733,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_content_batch_024.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/045_Unit_tests_content_batch_024.log"
+    },
+    {
+      "index": 46,
+      "name": "Unit tests \u2014 content batch 025",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.68,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_content_batch_025.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/046_Unit_tests_content_batch_025.log"
+    },
+    {
+      "index": 47,
+      "name": "Unit tests \u2014 content batch 026",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.734,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_content_batch_026.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/047_Unit_tests_content_batch_026.log"
+    },
+    {
+      "index": 48,
+      "name": "Unit tests \u2014 Listening content batch 027",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.713,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_content_batch_027.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/048_Unit_tests_Listening_content_batch_027.log"
+    },
+    {
+      "index": 49,
+      "name": "Unit tests \u2014 TOEIC score readiness",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.104,
+      "timeout_seconds": 1200,
+      "command": "node --check assets/js/mock-score-readiness.js\nnode --check assets/js/app.js\nnode --check sw.js\nnode tools/tests/mock-score-readiness.mjs\n",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/049_Unit_tests_TOEIC_score_readiness.log"
+    },
+    {
+      "index": 50,
+      "name": "Unit tests \u2014 dashboard_layout",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.71,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_dashboard_layout.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/050_Unit_tests_dashboard_layout.log"
+    },
+    {
+      "index": 51,
+      "name": "Unit tests \u2014 design_system",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.834,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_design_system.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/051_Unit_tests_design_system.log"
+    },
+    {
+      "index": 52,
+      "name": "Unit tests and ratchet audit \u2014 CSS design tokens",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.693,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_audit_design_tokens.py' -v\npython tools/audit-design-tokens.py\n",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/052_Unit_tests_and_ratchet_audit_CSS_design_tokens.log"
+    },
+    {
+      "index": 53,
+      "name": "Validate canonical design profile",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.133,
+      "timeout_seconds": 1200,
+      "command": "python tools/sync-design-profile.py --check\npython -m unittest discover -s tools/tests -p 'test_design_profile.py' -v\n",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/053_Validate_canonical_design_profile.log"
+    },
+    {
+      "index": 54,
+      "name": "Unit tests \u2014 question_evidence",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.467,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_question_evidence.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/054_Unit_tests_question_evidence.log"
+    },
+    {
+      "index": 55,
+      "name": "Unit tests \u2014 repository integrity",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.467,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_repository_integrity.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/055_Unit_tests_repository_integrity.log"
+    },
+    {
+      "index": 56,
+      "name": "Unit tests \u2014 grammar examples quality",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.709,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_grammar_examples_quality.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/056_Unit_tests_grammar_examples_quality.log"
+    },
+    {
+      "index": 57,
+      "name": "Unit tests \u2014 distractor_quality",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.798,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_distractor_quality.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/057_Unit_tests_distractor_quality.log"
+    },
+    {
+      "index": 58,
+      "name": "Audit distractor structural integrity",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.656,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-distractors.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/058_Audit_distractor_structural_integrity.log"
+    },
+    {
+      "index": 59,
+      "name": "Unit tests \u2014 choice_history",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.703,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_choice_history.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/059_Unit_tests_choice_history.log"
+    },
+    {
+      "index": 60,
+      "name": "Unit tests \u2014 learning_detail_scope",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.693,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_learning_detail_scope.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/060_Unit_tests_learning_detail_scope.log"
+    },
+    {
+      "index": 61,
+      "name": "Unit tests \u2014 choice_identity",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.752,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_choice_identity.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/061_Unit_tests_choice_identity.log"
+    },
+    {
+      "index": 62,
+      "name": "Unit tests \u2014 answer_position_balance",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.805,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_answer_position_balance.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/062_Unit_tests_answer_position_balance.log"
+    },
+    {
+      "index": 63,
+      "name": "Unit tests \u2014 remaining_content_review",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.739,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_remaining_content_review.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/063_Unit_tests_remaining_content_review.log"
+    },
+    {
+      "index": 64,
+      "name": "Unit tests \u2014 editorial_review",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.687,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_editorial_review.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/064_Unit_tests_editorial_review.log"
+    },
+    {
+      "index": 65,
+      "name": "Unit tests \u2014 editorial review queue",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.454,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_editorial_review_queue.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/065_Unit_tests_editorial_review_queue.log"
+    },
+    {
+      "index": 66,
+      "name": "Unit tests \u2014 practice mode fallback and flashcard result layering",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.725,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_practice_mode_fallback.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/066_Unit_tests_practice_mode_fallback_and_flashcard_result_layer.log"
+    },
+    {
+      "index": 67,
+      "name": "Unit tests \u2014 CI coverage",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.752,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_ci_coverage.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/067_Unit_tests_CI_coverage.log"
+    },
+    {
+      "index": 68,
+      "name": "Unit tests \u2014 Python test shard runner",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.753,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_python_test_shard_runner.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/068_Unit_tests_Python_test_shard_runner.log"
+    },
+    {
+      "index": 69,
+      "name": "Unit tests \u2014 deterministic test fingerprints",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.798,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_test_fingerprints.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/069_Unit_tests_deterministic_test_fingerprints.log"
+    },
+    {
+      "index": 70,
+      "name": "Unit tests \u2014 release acceptance runner",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.732,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_release_acceptance_runner.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/070_Unit_tests_release_acceptance_runner.log"
+    },
+    {
+      "index": 71,
+      "name": "Unit tests \u2014 related glossary merge batch 038",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.755,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_merge_038.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/071_Unit_tests_related_glossary_merge_batch_038.log"
+    },
+    {
+      "index": 72,
+      "name": "Unit tests \u2014 Cambridge related glossary batch 039",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.676,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_039.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/072_Unit_tests_Cambridge_related_glossary_batch_039.log"
+    },
+    {
+      "index": 73,
+      "name": "Unit tests \u2014 release_rotation",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 7.377,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_release_rotation.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/073_Unit_tests_release_rotation.log"
+    },
+    {
+      "index": 74,
+      "name": "Unit tests \u2014 foundation outcome evidence",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.701,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_foundation_outcome_evidence.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/074_Unit_tests_foundation_outcome_evidence.log"
+    },
+    {
+      "index": 75,
+      "name": "Unit tests \u2014 foundation_pathway",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.697,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_foundation_pathway.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/075_Unit_tests_foundation_pathway.log"
+    },
+    {
+      "index": 76,
+      "name": "Unit tests \u2014 foundation_reading",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.716,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_foundation_reading.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/076_Unit_tests_foundation_reading.log"
+    },
+    {
+      "index": 77,
+      "name": "Unit tests \u2014 foundation extended Reading",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.716,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_foundation_reading_extended.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/077_Unit_tests_foundation_extended_Reading.log"
+    },
+    {
+      "index": 78,
+      "name": "Unit tests \u2014 foundation_listening",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.693,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_foundation_listening.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/078_Unit_tests_foundation_listening.log"
+    },
+    {
+      "index": 79,
+      "name": "Unit tests \u2014 foundation extended Listening",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.682,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_foundation_listening_extended.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/079_Unit_tests_foundation_extended_Listening.log"
+    },
+    {
+      "index": 80,
+      "name": "Unit tests \u2014 foundation A2 assessment quality",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.351,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_foundation_a2_assessment_quality.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/080_Unit_tests_foundation_A2_assessment_quality.log"
+    },
+    {
+      "index": 81,
+      "name": "Unit tests \u2014 foundation A2 contextual production",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.719,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_foundation_a2_production.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/081_Unit_tests_foundation_A2_contextual_production.log"
+    },
+    {
+      "index": 82,
+      "name": "Unit tests \u2014 foundation guided production revision",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.789,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_foundation_production_revision.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/082_Unit_tests_foundation_guided_production_revision.log"
+    },
+    {
+      "index": 83,
+      "name": "Audit Foundation A2 assessment integrity and source evidence",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.602,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-foundation-a2-assessment.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/083_Audit_Foundation_A2_assessment_integrity_and_source_evidence.log"
+    },
+    {
+      "index": 84,
+      "name": "Unit tests \u2014 alphabet sound lab",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.759,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_alphabet_sound_lab.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/084_Unit_tests_alphabet_sound_lab.log"
+    },
+    {
+      "index": 85,
+      "name": "Unit tests \u2014 visual composition",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.746,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_visual_composition.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/085_Unit_tests_visual_composition.log"
+    },
+    {
+      "index": 86,
+      "name": "Unit tests \u2014 learning_start_level",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.733,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_learning_start_level.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/086_Unit_tests_learning_start_level.log"
+    },
+    {
+      "index": 87,
+      "name": "Unit tests \u2014 objective resource map",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.844,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_objective_resource_map.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/087_Unit_tests_objective_resource_map.log"
+    },
+    {
+      "index": 88,
+      "name": "Unit tests \u2014 project progress",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 4.149,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_project_progress.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/088_Unit_tests_project_progress.log"
+    },
+    {
+      "index": 89,
+      "name": "Validate learning outcome criteria",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.426,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_learning_outcomes.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/089_Validate_learning_outcome_criteria.log"
+    },
+    {
+      "index": 90,
+      "name": "Unit tests \u2014 learning outcome progress",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.934,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_learning_outcome_progress.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/090_Unit_tests_learning_outcome_progress.log"
+    },
+    {
+      "index": 91,
+      "name": "Audit objective resource links",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.703,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-objective-resources.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/091_Audit_objective_resource_links.log"
+    },
+    {
+      "index": 92,
+      "name": "Audit learning outcome criteria",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.729,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-learning-outcomes.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/092_Audit_learning_outcome_criteria.log"
+    },
+    {
+      "index": 93,
+      "name": "Validate placement diagnostic",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.788,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_placement_diagnostic.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/093_Validate_placement_diagnostic.log"
+    },
+    {
+      "index": 94,
+      "name": "Unit tests \u2014 responsive layout",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.718,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_responsive_layout.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/094_Unit_tests_responsive_layout.log"
+    },
+    {
+      "index": 95,
+      "name": "Unit tests \u2014 learning surface consistency",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.819,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_learning_surface_consistency.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/095_Unit_tests_learning_surface_consistency.log"
+    },
+    {
+      "index": 96,
+      "name": "Unit tests \u2014 part1_photo_assets",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.695,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_part1_photo_assets.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/096_Unit_tests_part1_photo_assets.log"
+    },
+    {
+      "index": 97,
+      "name": "Unit tests \u2014 vocabulary_detail_examples",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.835,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_vocabulary_detail_examples.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/097_Unit_tests_vocabulary_detail_examples.log"
+    },
+    {
+      "index": 98,
+      "name": "Unit tests \u2014 related glossary batch 021",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.684,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_021.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/098_Unit_tests_related_glossary_batch_021.log"
+    },
+    {
+      "index": 99,
+      "name": "Unit tests \u2014 legacy_collocation_cleanup",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.697,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_legacy_collocation_cleanup.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/099_Unit_tests_legacy_collocation_cleanup.log"
+    },
+    {
+      "index": 100,
+      "name": "Unit tests \u2014 vocabulary_family_links",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.701,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_vocabulary_family_links.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/100_Unit_tests_vocabulary_family_links.log"
+    },
+    {
+      "index": 101,
+      "name": "Unit tests \u2014 vocabulary_batch_012",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.683,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_vocabulary_batch_012.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/101_Unit_tests_vocabulary_batch_012.log"
+    },
+    {
+      "index": 102,
+      "name": "Validate CMUdict US IPA backfill",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.415,
+      "timeout_seconds": 1200,
+      "command": "python tools/cmudict_ipa.py --check\npython -m unittest discover -s tools/tests -p 'test_cmudict_ipa_backfill.py' -v\n",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/102_Validate_CMUdict_US_IPA_backfill.log"
+    },
+    {
+      "index": 103,
+      "name": "Safe missing IPA backfill regression",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.344,
+      "timeout_seconds": 1200,
+      "command": "python -m py_compile tools/backfill_missing_ipa_from_cmudict.py\npython -m unittest discover -s tools/tests -p 'test_missing_ipa_safe_backfill.py' -v\n",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/103_Safe_missing_IPA_backfill_regression.log"
+    },
+    {
+      "index": 104,
+      "name": "Validate safe missing IPA backfill pipeline",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.357,
+      "timeout_seconds": 1200,
+      "command": "python -m py_compile tools/backfill_missing_ipa_from_cmudict.py tools/tests/test_missing_ipa_safe_backfill.py\npython -m unittest discover -s tools/tests -p 'test_missing_ipa_safe_backfill.py' -v\n",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/104_Validate_safe_missing_IPA_backfill_pipeline.log"
+    },
+    {
+      "index": 105,
+      "name": "Unit tests \u2014 sentence_completion",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.705,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_sentence_completion.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/105_Unit_tests_sentence_completion.log"
+    },
+    {
+      "index": 106,
+      "name": "Validate vocabulary data (structure, ID integrity, APP_SHELL, ratchet baseline)",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.004,
+      "timeout_seconds": 1200,
+      "command": "python tools/validate-data.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/106_Validate_vocabulary_data_structure_ID_integrity_APP_SHELL_ra.log"
+    },
+    {
+      "index": 107,
+      "name": "Validate TOEIC learning content (Listening/Reading/Grammar)",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.659,
+      "timeout_seconds": 1200,
+      "command": "python tools/validate-learning-content.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/107_Validate_TOEIC_learning_content_Listening_Reading_Grammar_.log"
+    },
+    {
+      "index": 108,
+      "name": "Validate Part 1 photo binaries and mixed-source attribution",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.675,
+      "timeout_seconds": 1200,
+      "command": "python tools/validate-part1-photo-assets.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/108_Validate_Part_1_photo_binaries_and_mixed-source_attribution.log"
+    },
+    {
+      "index": 109,
+      "name": "Generate target-based project progress report",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.786,
+      "timeout_seconds": 1200,
+      "command": "python tools/report-project-progress.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/109_Generate_target-based_project_progress_report.log"
+    },
+    {
+      "index": 110,
+      "name": "Generate TOEIC coverage report",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.775,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-toeic-coverage.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/110_Generate_TOEIC_coverage_report.log"
+    },
+    {
+      "index": 111,
+      "name": "Generate Listening readiness report",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.763,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-listening-readiness.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/111_Generate_Listening_readiness_report.log"
+    },
+    {
+      "index": 112,
+      "name": "Generate answer-to-source evidence audit",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.775,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-question-evidence.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/112_Generate_answer-to-source_evidence_audit.log"
+    },
+    {
+      "index": 113,
+      "name": "Audit distractor plausibility and answer-index safety",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.689,
+      "timeout_seconds": 1200,
+      "command": "python tools/audit-distractors.py",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/113_Audit_distractor_plausibility_and_answer-index_safety.log"
+    },
+    {
+      "index": 114,
+      "name": "Version sync check",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.697,
+      "timeout_seconds": 1200,
+      "command": "python tools/sync-version.py --check",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/114_Version_sync_check.log"
+    },
+    {
+      "index": 115,
+      "name": "JavaScript syntax check",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.258,
+      "timeout_seconds": 1200,
+      "command": "node --check sw.js\nfor f in assets/js/*.js; do cp \"$f\" \"/tmp/$(basename \"$f\" .js).mjs\"; node --check \"/tmp/$(basename \"$f\" .js).mjs\"; done\nnode tools/tests/runtime-render-smoke.mjs\nnode tools/tests/listening-tts-regression.mjs\nnode tools/tests/mock-exam-engine.mjs\nnode tools/tests/mock-guided-flow.mjs\nnode tools/tests/mock-ui-integrity.mjs\nnode tools/tests/learning-focus-workspace.mjs\nnode tools/tests/practice-progress.mjs\nnode tools/tests/assessment-deferred-workflow.mjs\nnode tools/tests/flashcard-image-policy.mjs\nnode tools/tests/sentence-completion.mjs\nnode tools/tests/learning-outcome-progress.mjs\nnode tools/tests/related-glossary-quality.mjs\nnode tools/tests/objective-recall-timing.mjs\nnode tools/tests/part5-timing-integration.mjs\nnode tools/tests/explanation-rubric-self-report.mjs\nnode tools/tests/recall-queue.mjs\nnode tools/tests/foundation-evidence.mjs\nnode tools/tests/foundation-outcome-evidence.mjs\nnode tools/tests/foundation-application-evidence.mjs\nnode tools/tests/foundation-a2-production.mjs\nnode tools/tests/foundation-production-revision.mjs\nnode tools/tests/foundation-production-export.mjs\nnode tools/tests/foundation-reading-evidence.mjs\nnode tools/tests/foundation-reading-extended-evidence.mjs\nnode tools/tests/foundation-listening-evidence.mjs\nnode tools/tests/alphabet-sound-progress.mjs\nnode tools/tests/vocabulary-release-integrity.mjs\nnode tools/tests/mock-score-readiness.mjs\nnode tools/tests/quick-help.mjs\nnode tools/tests/learning-assistant.mjs\nnode tools/tests/robot-buddy.mjs\nnode tools/tests/robot-buddy-streaming.mjs\nnode tools/tests/flashcard-fixed-batch.mjs\nnode tools/tests/flashcard-senses.mjs\nnode tools/tests/service-worker-update.mjs\nnode tools/tests/robot-buddy-layout.mjs\nnode tools/tests/robot-learning-insights.mjs\nnode tools/tests/robot-buddy-data-boundary.mjs\nnode tools/tests/robot-progress-dashboard.mjs\nnode tools/tests/legacy-google-ai.mjs\n",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/115_JavaScript_syntax_check.log"
+    },
+    {
+      "index": 116,
+      "name": "Unit tests \u2014 related term explanation context",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.671,
+      "timeout_seconds": 1200,
+      "command": "python -m unittest discover -s tools/tests -p 'test_related_term_explanation_context.py' -v",
+      "log_file": "/mnt/data/toeic_v29552_github_ci_verification/116_Unit_tests_related_term_explanation_context.log"
+    }
+  ]
+}

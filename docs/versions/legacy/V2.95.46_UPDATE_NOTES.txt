@@ -1,0 +1,36 @@
+TOEIC Dictionary v2.95.46 — Optimized Source / Local Acceptance
+Date: 2026-11-24
+Development base: user-supplied TOEIC_Dictionary_v2.95.46_FullSource_Candidate(1).zip
+
+Source comparison:
+- The user's optimized candidate is the canonical development base for this batch.
+- The previous assistant-generated v2.95.46 ZIP was comparison-only and was not used to overwrite the user's source.
+- The candidate ZIP contained 111 generated .pyc files under __pycache__; these are excluded from the clean FullSource release.
+
+Completed in this batch:
+- Fixed checkpoint resume fingerprint drift: the operational --resume toggle no longer changes test execution identity.
+- Extended fingerprint policy to exclude deterministic generated audit reports from test-input fingerprints while retaining them in FullSource and the archive SHA-256.
+- Replaced Toast close-control CSS literals with existing design-system tokens; no layout or navigation redesign.
+- Added regression tests for resume identity, generated report scope and Toast token compliance.
+- Replayed all 110 GitHub Actions workflow run steps locally: 110 PASS, 0 FAIL, 0 TIMEOUT, 0 ERROR, 0 NOT RUN.
+- Local CSS design-token audit: 0 new violations; 2,778 pre-existing legacy findings remain warnings.
+
+Strict local verification:
+- Python: 89 modules / 692 cases / 691 PASS / 1 accepted environment-only SKIP / 0 FAIL / 0 ERROR / 0 TIMEOUT / 0 NOT RUN.
+- Release Acceptance: all 12 gates PASS; aggregate state PASS WITH SKIPS due the single accepted Git-metadata skip when running from an extracted ZIP.
+- Data validator: 1,141 canonical records; 0 new/lost IDs; 0 errors and 0 warnings.
+- Learning content validator: 0 errors / 0 warnings.
+- Part 1 photo assets: 9/9 valid.
+- Version synchronization: PASS.
+- Repository integrity: 420 references/data files, 0 errors, 0 optional warnings.
+
+Preservation:
+- No canonical vocabulary IDs/headwords/relations, question IDs, choice IDs, answer keys or Mock eligibility were changed.
+- No IndexedDB schema, learner progress, review or Mock history migration was performed.
+- No Cloudflare/backend/GAS/iframe integration was added. GitHub Pages static PWA architecture remains unchanged.
+
+Release status:
+- Local Source Release Acceptance: PASS WITH SKIPS (one explicitly accepted environment skip).
+- FullSource and candidate-based Patch: package CRC, clean extraction and exact replay are verified; checksums are in adjacent .sha256 sidecars.
+- The candidate-based Patch applies only to the exact user-supplied candidate ZIP; it is not a v2.95.45-to-v2.95.46 patch.
+- Remote GitHub Actions, GitHub Pages deployment/cache propagation, browser/PWA/offline and physical-device acceptance remain UNVERIFIED.

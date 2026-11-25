@@ -1,6 +1,6 @@
 # Related Glossary Canonical Enrichment — v2.95.29
 
-- Existing glossary entries: **519**
+- Existing glossary entries: **567**
 - Exact canonical bilingual additions eligible: **0**
 - Eligibility: referenced by synonym/antonym, exact NFKC/casefold headword, every canonical sense has Vietnamese and English, not already present.
 - Applied fields are copied from canonical senses; multi-sense entries are joined with ` / `, not newly authored.

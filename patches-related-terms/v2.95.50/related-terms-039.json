@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-039-v2.95.50",
+  "baseFileSha256": "54acaabcb49cb19e4588a23691e93dc19fad23bcddb15f014f3e3bdc2f59d29c",
+  "operations": [
+    {
+      "term": "plan",
+      "expect": {
+        "term": "plan",
+        "meaning_vi": "kế hoạch; dự định",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a set of decisions or actions intended to achieve something in the future",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; noun (decision/arrangement sense) selected for the existing relation targets agenda, proposal and strategy.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/plan"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "neglect",
+      "expect": {
+        "term": "neglect",
+        "meaning_vi": "bỏ bê; sao nhãng",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to fail to give someone or something the care or attention they need",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; verb sense selected for existing antonym relations with handle, maintain, oversee, perform and prepare.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/neglect"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "amount",
+      "expect": {
+        "term": "amount",
+        "meaning_vi": "lượng; số tiền",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "how much there is of something, especially a quantity of money, time or material",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; noun sense; existing relation targets quantity, supply and volume.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/amount"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "bill",
+      "expect": {
+        "term": "bill",
+        "meaning_vi": "hóa đơn; dự luật",
+        "pos": "n/v",
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": "2.95.34",
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "n/v",
+        "definition_en": "a request or document for payment; a proposed law considered by a legislature; or to send someone a request for payment",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; payment and proposed-law noun senses plus payment verb sense; aligned to the existing Vietnamese gloss and relation targets charge and invoice.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/bill"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "customer",
+      "expect": {
+        "term": "customer",
+        "meaning_vi": "khách hàng",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a person or organization that buys goods or services",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; business noun sense selected for existing buyer and client relation targets.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/customer"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "division",
+      "expect": {
+        "term": "division",
+        "meaning_vi": "bộ phận; sự phân chia",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a separate part of a large organization, or the act of separating something into parts",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; organization-part and separation noun senses selected for existing branch, department and section relation targets.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/division"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "essential",
+      "expect": {
+        "term": "essential",
+        "meaning_vi": "thiết yếu; cần thiết",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "necessary or extremely important for a particular purpose",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; adjective necessary-sense selected for existing indispensable, key and necessary relation targets.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/essential"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "file",
+      "expect": {
+        "term": "file",
+        "meaning_vi": "tệp; hồ sơ; nộp hồ sơ",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "n/v",
+        "definition_en": "a collection of information or documents kept together; or to submit a document to an official body or store information in an organized way",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; document/computer noun and submit/store verb senses selected for existing document, record and submit relation targets.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/file"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "gain",
+      "expect": {
+        "term": "gain",
+        "meaning_vi": "thu được; lợi ích; khoản tăng",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "n/v",
+        "definition_en": "to obtain something useful or valuable; a benefit obtained or an increase in an amount or level",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; obtain verb and benefit/increase noun senses selected for existing benefit and profit relation targets.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/gain"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "loss",
+      "expect": {
+        "term": "loss",
+        "meaning_vi": "sự mất mát; khoản lỗ",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the fact of no longer having something, or a reduction in value, amount or money",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; noun sense selected for existing antonym relation targets profit, retention and revenue.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/loss"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "meeting",
+      "expect": {
+        "term": "meeting",
+        "meaning_vi": "cuộc họp",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an arranged event in which people come together to discuss something or make decisions",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; planned discussion noun sense selected for existing appointment, interview and minute relation targets.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/meeting"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    },
+    {
+      "term": "refuse",
+      "expect": {
+        "term": "refuse",
+        "meaning_vi": "từ chối",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceRelease": null,
+        "sourceUrls": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to say that you will not do, accept or allow something",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; verb say-no sense selected for existing accept, offer and reject relation targets.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/refuse"
+        ],
+        "sourceRelease": "2.95.50"
+      }
+    }
+  ]
+}

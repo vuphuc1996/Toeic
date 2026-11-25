@@ -1,17 +1,18 @@
-# TOEIC Dictionary v2.95.46 — Project Documentation
+# TOEIC Dictionary v2.95.60 — Project Documentation
 
-## Current candidate — v2.95.46
+## Current source — v2.95.59 (transparent item-complexity review queue)
 
-- **Baseline:** official v2.95.45 FullSource, 698 files, SHA-256 `2d4f1f58aa355c8515b311d11fe01852f80d8c4dea57f5fff8631e955a6f112e`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.46.md`.
-  Generated evidence is excluded from source-input fingerprints by explicit policy and remains covered by the FullSource ZIP SHA-256.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.46.md`.
-  Generated evidence is excluded from source-input fingerprints by explicit policy and remains covered by the FullSource ZIP SHA-256.
-- **Current Master contract:** `MASTER_DEVELOPMENT_PROMPT.md` (Sections 1–15; the single development policy for all future prompts).
-- **Test inventory policy:** `../tools/test-inventory-policy.json` (approved roots, exclusions, baseline inventory and accepted environment skip rules).
-- **Fingerprint scope policy:** `../tools/source-fingerprint-policy.json` (deterministic metadata, generated-output exclusions and symlink/path safety).
-- This candidate consolidates project governance/docs, updates the manual acceptance checklist, applies safe historical-report retention, and makes Editorial Review Queue counts source-derived. It does not redesign the UI or change learner storage, canonical vocabulary identities, learning question/choice IDs or answer keys.
-- Source Release / Production Deployment acceptance states are reported separately. A candidate ZIP is not proof of remote deployment or device acceptance.
+- **Exact predecessor:** v2.95.55 FullSource; learner backup/restore from that release remains intact.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.60.md`.
+- Answer leakage diagnostic: `reports/TOEIC_ANSWER_LEAKAGE_DIAGNOSTIC_v2.95.57.md`.
+- Item complexity review queue: `reports/TOEIC_ITEM_COMPLEXITY_REVIEW_v2.95.59.md`.
+- Listening form-diversity report: `reports/MOCK_LISTENING_FORM_DIVERSITY_v2.95.56.md`.
+- Package verification: `reports/PACKAGE_VERIFICATION_v2.95.59.md`; release acceptance: `reports/RELEASE_ACCEPTANCE_v2.95.57.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.60.md`.
+- Learner backup/restore contract: `reports/LEARNER_DATA_BACKUP_v2.95.55.md`.
+- Item complexity audit and focused tests are recorded in the v2.95.59 report.
+- Data validator and version sync: PASS; 1,141 records, 0 errors / 0 warnings. No question or vocabulary content was changed.
+- Hosted GitHub Actions/Pages and physical-device/browser-storage acceptance remain unverified.
 
 ## Single source of truth
 

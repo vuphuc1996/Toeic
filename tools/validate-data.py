@@ -53,6 +53,7 @@ RULES = {
     "DQ006": ("STRUCT", "related-terms.json hợp lệ"),
     "VF001": ("STRUCT", "Mọi bản ghi có sense động từ phải có verb_forms"),
     "VF002": ("STRUCT", "verb_forms.v1 phải khớp headword"),
+    "VF003": ("STRUCT", "verb_forms không được chứa chuỗi rỗng hoặc chỉ có khoảng trắng"),
     "FD003": ("STRUCT", "Mọi bản ghi có sense động từ phải có ít nhất một collocation"),
     "EX001": ("STRUCT", "Mỗi từ có ít nhất một ví dụ"),
     "EX002": ("STRUCT", "Ví dụ có en và vi không rỗng"),
@@ -62,6 +63,7 @@ RULES = {
     "DF001": ("STRUCT", "definition_en và meaning_vi không rỗng"),
     "IP002": ("STRUCT", "IPA chỉ chứa ký tự trong bảng cho phép"),
     "CE001": ("STRUCT", "CEFR thuộc A1–C1"),
+    "CE004": ("STRUCT", "CEFR cấp từ phải bằng cấp cao nhất trong các sense (A1 < A2 < B1 < B2 < C1)"),
     "TP001": ("STRUCT", "Topic tồn tại và mỗi từ có ít nhất một topic"),
     "SW001": ("STRUCT", "Mọi đường dẫn trong danh sách cache của sw.js tồn tại"),
     "SW003": ("STRUCT", "Tên cache có tiền tố toeic-vocab- và khớp phiên bản manifest"),
@@ -83,7 +85,7 @@ RULES = {
     "DF006": ("INFO", "Định nghĩa trùng giữa các từ khác nhau"),
     "IP006": ("INFO", "Từ chưa có IPA"),
     "FD002": ("INFO", "Từ đồng/trái nghĩa chưa có nghĩa trong related-terms"),
-    "CE002": ("INFO", "CEFR cấp từ khác CEFR cấp sense"),
+    "CE002": ("INFO", "Các sense có CEFR thấp hơn cấp tổng hợp của headword (thống kê đa nghĩa; không phải lỗi nếu headword bằng mức cao nhất)"),
     "CE003": ("INFO", "Từ C1 và nguồn xếp mức"),
 }
 RULE_PARAMS = {
@@ -295,6 +297,8 @@ def check_schema(ctx: Context) -> None:
         if "verb_forms" in r and vf is not None:
             if not (isinstance(vf, dict) and all(isinstance(vf.get(k), str) for k in VERB_FORM_KEYS)):
                 ctx.add("DQ004", rid, "/verb_forms", "verb_forms phải là null hoặc object đủ v1, vs_es, v2, v3, ving")
+            elif any(not vf[k].strip() for k in VERB_FORM_KEYS):
+                ctx.add("VF003", rid, "/verb_forms", "verb_forms không được chứa chuỗi rỗng hoặc chỉ có khoảng trắng; dùng null nếu không áp dụng")
         senses = r.get("senses")
         if not isinstance(senses, list) or not senses:
             ctx.add("DQ004", rid, "/senses", "senses phải là mảng không rỗng")
@@ -341,6 +345,11 @@ def check_struct_content(ctx: Context) -> None:
         lvl = r.get("cefr_level")
         if isinstance(lvl, str) and lvl not in CEFR_LEVELS:
             ctx.add("CE001", rid, "/cefr_level", f"CEFR không hợp lệ: {lvl}")
+        sense_levels = [s.get("cefr_level") for s in senses]
+        if sense_levels and all(isinstance(value, str) and value in CEFR_LEVELS for value in sense_levels):
+            expected_word_level = max(sense_levels, key=CEFR_LEVELS.index)
+            if lvl in CEFR_LEVELS and lvl != expected_word_level:
+                ctx.add("CE004", rid, "/cefr_level", f"CEFR cấp từ phải là {expected_word_level} (mức cao nhất trong các sense), hiện là {lvl}")
         topics = r.get("topics")
         if isinstance(topics, list):
             if not topics:
@@ -782,7 +791,7 @@ def print_report(ctx: Context, result: dict, verbose: bool, baseline_present: bo
         print(f"INFO: ví dụ <5 từ={ctx.info.get('short_examples')}, định nghĩa trùng giữa các từ="
               f"{ctx.info.get('duplicate_definitions_across_records')}, IPA thiếu={cov.get('ipa_missing', 0)}, "
               f"syn/ant chưa có nghĩa={ctx.info.get('syn_ant_without_gloss')}/{ctx.info.get('syn_ant_terms')}, "
-              f"CEFR từ≠sense={cov.get('cefr_word_sense_mismatch', 0)}, C1={cov.get('c1', 0)}, "
+              f"CEFR sense-level spread={cov.get('cefr_word_sense_mismatch', 0)}, C1={cov.get('c1', 0)}, "
               f"tham chiếu asset đã kiểm={ctx.info.get('asset_references_checked', 0)}")
     if errors:
         print(f"RESULT: FAILED — {errors} ERROR")

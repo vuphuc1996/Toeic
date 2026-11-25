@@ -81,11 +81,13 @@
       641,
       768,
       820,
+      834,
       1024,
       1280,
       1440,
       1920
-    ]
+    ],
+    "tabletPortraitMaxPx": 850
   },
   "componentRules": {
     "pageTitle": "--ds-font-page-title",

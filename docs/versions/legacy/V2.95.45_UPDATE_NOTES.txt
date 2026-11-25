@@ -1,0 +1,17 @@
+TOEIC Dictionary v2.95.45 — Release Notes
+
+Source basis: released v2.95.44 FullSource. The owner-uploaded alternate v2.95.44 source was compared path-by-path and selectively merged; it was not used as a wholesale replacement.
+
+Merged engineering improvements:
+- Python test sharding: isolated module execution, process-group timeout cleanup, per-module checkpoints, resume only for proven PASS modules, diagnostic output retained.
+- Release Acceptance runner: ordered local validation gates, timeout/status report, and manifest-derived version rather than a stale hard-coded default.
+
+Related Glossary Batch 038:
+- Added: ask for, change, comments, communicate with, connection.
+- Corrected by exact-guarded updates: caller (visitor sense), article (object/item sense), assume (responsibility/control sense).
+- Cambridge source URLs retained; independent editorial review pending.
+- Glossary 567 rows, 0 normalized duplicates; coverage 556/804 (69.2%); 248 unique terms / 249 occurrences remain.
+
+Preservation: no canonical headword/ID, synonym/antonym relationship array, question/choice ID, answer key, IndexedDB schema/learner progress, Mock eligibility, Robot Buddy boundary, UI redesign, Cloudflare or backend changes.
+
+See docs/reports for test, command, comparison, package and acceptance reports. External GitHub/Pages/device checks are not claimed unless explicitly recorded as run.

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "batchId": "v2.95.54-independent-audit-stage-1-data-corrections",
+  "baseDataVersion": "2.95.53",
+  "targetDataVersion": "2.95.54",
+  "idSetSha256": "adccbdb4c98872207d2bede7bdc530e1c079bbd8b3679e7e4f6288054c7e404b",
+  "allowedPaths": [
+    "/cefr_level",
+    "/verb_forms"
+  ],
+  "description": "Independent audit Stage 1 guarded data corrections. CEFR headword level is defined as the highest CEFR level among its senses. No IDs, words, topics, meanings, or relations are changed.",
+  "editorialStatus": "Mechanical consistency correction based on existing sense-level CEFR labels; level labels remain editorial estimates and require independent pedagogical review.",
+  "operations": [
+    {
+      "id": "appliance-n",
+      "path": "/verb_forms",
+      "expect": {
+        "old": {
+          "v1": "",
+          "vs_es": "",
+          "v2": "",
+          "v3": "",
+          "ving": ""
+        }
+      },
+      "new": null
+    },
+    {
+      "id": "host-v",
+      "path": "/cefr_level",
+      "expect": {
+        "old": "A2"
+      },
+      "new": "B2"
+    },
+    {
+      "id": "supply-v",
+      "path": "/cefr_level",
+      "expect": {
+        "old": "A2"
+      },
+      "new": "B2"
+    },
+    {
+      "id": "bill-v",
+      "path": "/cefr_level",
+      "expect": {
+        "old": "A1"
+      },
+      "new": "A2"
+    },
+    {
+      "id": "document-v",
+      "path": "/cefr_level",
+      "expect": {
+        "old": "A2"
+      },
+      "new": "B1"
+    },
+    {
+      "id": "experience-v",
+      "path": "/cefr_level",
+      "expect": {
+        "old": "A2"
+      },
+      "new": "B1"
+    },
+    {
+      "id": "minute-n",
+      "path": "/cefr_level",
+      "expect": {
+        "old": "A1"
+      },
+      "new": "B2"
+    },
+    {
+      "id": "offer-v",
+      "path": "/cefr_level",
+      "expect": {
+        "old": "A1"
+      },
+      "new": "B1"
+    },
+    {
+      "id": "value-v",
+      "path": "/cefr_level",
+      "expect": {
+        "old": "A2"
+      },
+      "new": "B2"
+    }
+  ],
+  "cefrPolicy": {
+    "wordLevel": "max(sense.cefr_level)",
+    "order": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ]
+  }
+}

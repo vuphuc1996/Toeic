@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-041-v2.95.52",
+  "baseFileSha256": "bb7138a6c8d73d9f575f635be56fc49b3a9564601e56f8ebf06993a704f1f4f3",
+  "operations": [
+    {
+      "term": "present",
+      "expect": {
+        "term": "present",
+        "meaning_vi": "trình bày; hiện tại; có mặt",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj/v",
+        "definition_en": "to be in a particular place or to exist at the current time; or to give, show or introduce information or someone to an audience",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; The adjective senses (being in a place/current) and verb senses (showing or introducing) are selected for the existing current, introduce and submit relation anchors; the noun “gift” sense is excluded.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/present"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "associate",
+      "expect": {
+        "term": "associate",
+        "meaning_vi": "cộng sự",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a person who is connected with another person as a companion, colleague or business partner",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Noun sense for a person connected through work or business, aligned with colleague and partner; the verb “connect mentally” sense is not selected.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/associate"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "contender",
+      "expect": {
+        "term": "contender",
+        "meaning_vi": "đối thủ; ứng viên cạnh tranh",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a person or organization competing with others to win something or gain a particular position",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Competitive person/organization noun sense aligned with candidate and competitor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/contender"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "daily",
+      "expect": {
+        "term": "daily",
+        "meaning_vi": "hằng ngày",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj/adv",
+        "definition_en": "happening every day or relating to something that is done each day",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Frequency adjective/adverb sense aligned with monthly and weekly; newspaper noun sense is excluded.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/daily"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "deal",
+      "expect": {
+        "term": "deal",
+        "meaning_vi": "thỏa thuận; giao dịch",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an agreement or arrangement, especially one made in business or between people or organizations",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Business/agreement noun sense aligned with contract and transaction; verb senses are not selected.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/deal"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "deny",
+      "expect": {
+        "term": "deny",
+        "meaning_vi": "phủ nhận; từ chối",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to say that something is not true, or to refuse to allow someone to have or do something",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Verb senses “say a claim is untrue” and “refuse/withhold” aligned with claim and confirm; the exact relation context should be reviewed.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/deny"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "direction",
+      "expect": {
+        "term": "direction",
+        "meaning_vi": "hướng; chỉ dẫn",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the way or position in which someone or something moves; or instructions about how to reach a place or what to do",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Position/orientation and instruction noun senses aligned with guidance and instruction.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/direction"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "endpoint",
+      "expect": {
+        "term": "endpoint",
+        "meaning_vi": "điểm cuối",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the end point of a process or activity, or a result that marks its completion",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; End/result noun sense aligned with destination and terminal; technical mathematical meanings are not selected.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/endpoint"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "fee",
+      "expect": {
+        "term": "fee",
+        "meaning_vi": "khoản phí",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an amount of money paid for a particular service, piece of work or right",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Payment noun sense aligned with charge and payment.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/fee"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "legitimate",
+      "expect": {
+        "term": "legitimate",
+        "meaning_vi": "hợp pháp; chính đáng",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "allowed by law or rules, or reasonable and acceptable in the circumstances",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Adjective senses “lawful” and “reasonable/acceptable” aligned with legal and valid.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/legitimate"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    },
+    {
+      "term": "occupation",
+      "expect": {
+        "term": "occupation",
+        "meaning_vi": "nghề nghiệp",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a person’s job or the type of work they do",
+        "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Job/profession noun sense aligned with career and employment; property/territorial occupation senses are excluded.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/occupation"
+        ],
+        "sourceRelease": "2.95.52"
+      }
+    }
+  ]
+}

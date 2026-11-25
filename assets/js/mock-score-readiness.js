@@ -1,8 +1,20 @@
 /**
  * Evidence-only TOEIC L&R readiness summary.
- * It reports repeated full-mock practice accuracy, never converts raw accuracy
- * into an ETS scaled score or claims a guaranteed 500+/850+ result.
+ * Listening trend is gated on distinct question-ID forms, not attempt count alone.
+ * Raw accuracy is never converted into an ETS scaled score.
  */
+function listeningIds(row) {
+  return [...new Set((Array.isArray(row?.questionIds) ? row.questionIds : [])
+    .filter(id => typeof id === 'string' && id.startsWith('listening:')))].sort();
+}
+function formKey(ids) { return ids.length ? ids.join('\u001f') : ''; }
+function overlapPercent(a, b) {
+  if (!a.length || !b.length) return null;
+  const right = new Set(b);
+  const shared = a.reduce((count, id) => count + Number(right.has(id)), 0);
+  return Math.round(shared / Math.min(a.length, b.length) * 100);
+}
+
 export function buildMockScoreReadiness(history = []) {
   const completed = (Array.isArray(history) ? history : [])
     .filter(row => row && row.status === 'completed' && row.modeId === 'full'
@@ -12,17 +24,47 @@ export function buildMockScoreReadiness(history = []) {
       && Number.isFinite(Number(row.completedAt)))
     .sort((a, b) => Number(a.completedAt) - Number(b.completedAt));
   const recent = completed.slice(-3);
-  if (!recent.length) return { count: 0, required: 3, enough: false, recent: [], listeningAverage: null, readingAverage: null, listeningChange: null, readingChange: null };
+  const base = {
+    count: completed.length, required: 3, enough: recent.length >= 3, recent,
+    listeningAverage: null, readingAverage: null,
+    listeningChange: null, readingChange: null,
+    listeningTrendEnough: false, listeningDistinctForms: 0,
+    listeningDistinctQuestionCount: 0, listeningOverlapPercent: null,
+    listeningWarning: 'Chưa có đủ dữ liệu định danh câu hỏi Listening để xác nhận hai bộ đề khác nhau.'
+  };
+  if (!recent.length) return base;
+
   const average = key => Math.round(recent.reduce((sum, row) => sum + Number(row[key]), 0) / recent.length);
-  const first = recent[0], last = recent[recent.length - 1];
+  const forms = recent.map(row => ({ row, ids: listeningIds(row) })).filter(form => form.ids.length);
+  const distinct = new Map();
+  // Keep the latest attempt for each exact Listening form.
+  for (const form of forms) distinct.set(formKey(form.ids), form);
+  const distinctForms = [...distinct.values()].sort((a, b) => Number(a.row.completedAt) - Number(b.row.completedAt));
+  const distinctAttempts = distinctForms.map(form => form.row);
+  const union = new Set(distinctForms.flatMap(form => form.ids));
+  const overlap = distinctForms.length >= 2
+    ? overlapPercent(distinctForms[distinctForms.length - 2].ids, distinctForms[distinctForms.length - 1].ids)
+    : null;
+  const listeningTrendEnough = distinctAttempts.length >= 2;
+  const listeningAverage = listeningTrendEnough
+    ? Math.round(distinctAttempts.reduce((sum, row) => sum + Number(row.listeningAccuracy), 0) / distinctAttempts.length)
+    : null;
+  const firstDistinct = distinctAttempts[0], lastDistinct = distinctAttempts[distinctAttempts.length - 1];
+
   return {
-    count: completed.length,
-    required: 3,
-    enough: recent.length >= 3,
-    recent,
-    listeningAverage: average('listeningAccuracy'),
+    ...base,
+    listeningAverage,
     readingAverage: average('readingAccuracy'),
-    listeningChange: recent.length >= 2 ? Math.round(Number(last.listeningAccuracy) - Number(first.listeningAccuracy)) : null,
-    readingChange: recent.length >= 2 ? Math.round(Number(last.readingAccuracy) - Number(first.readingAccuracy)) : null
+    listeningChange: listeningTrendEnough ? Math.round(Number(lastDistinct.listeningAccuracy) - Number(firstDistinct.listeningAccuracy)) : null,
+    readingChange: recent.length >= 2 ? Math.round(Number(recent[recent.length - 1].readingAccuracy) - Number(recent[0].readingAccuracy)) : null,
+    listeningTrendEnough,
+    listeningDistinctForms: distinctForms.length,
+    listeningDistinctQuestionCount: union.size,
+    listeningOverlapPercent: overlap,
+    listeningWarning: !listeningTrendEnough
+      ? 'Tạm ẩn xu hướng Listening: cần ít nhất hai bộ câu hỏi Listening khác nhau; số lượt thi không thay thế được số bộ đề độc lập.'
+      : overlap !== null && overlap >= 90
+        ? `Hai bộ Listening gần nhất trùng ${overlap}% câu hỏi. Xu hướng chỉ mang tính tham khảo, chưa đại diện cho hai lần đo độc lập.`
+        : ''
   };
 }

@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 CSS=(ROOT/'assets/css/app.css').read_text(encoding='utf-8')
+DESIGN_CSS=(ROOT/'assets/css/design-system.css').read_text(encoding='utf-8')
 HTML=(ROOT/'index.html').read_text(encoding='utf-8')
 class ResponsiveLayoutTests(unittest.TestCase):
  def test_viewport_meta_and_no_device_inch_assumptions(self):
@@ -16,6 +17,18 @@ class ResponsiveLayoutTests(unittest.TestCase):
  def test_tablet_compact_navigation_and_safe_areas(self):
   self.assertRegex(CSS,r'@media\(max-width:820px\)\{[\s\S]*?\.sidebar\{display:none\}[\s\S]*?\.mobile-bottom-nav\{display:grid')
   self.assertIn('env(safe-area-inset-bottom)',CSS)
+ def test_ipad_portrait_uses_phone_navigation_and_landscape_keeps_desktop_sidebar(self):
+  self.assertIn('v2.95.53 — iPad/tablet portrait uses the proven phone navigation model',DESIGN_CSS)
+  self.assertRegex(DESIGN_CSS,r'@media screen and \(orientation: portrait\) and \(min-width: 641px\) and \(max-width: 850px\)')
+  self.assertRegex(DESIGN_CSS,r'@media screen and \(orientation: portrait\) and \(min-width: 641px\) and \(max-width: 850px\) \{[\s\S]*?\.sidebar \{ display: none; \}[\s\S]*?\.main-area \{[\s\S]*?margin-left: 0;[\s\S]*?\.mobile-bottom-nav \{[\s\S]*?display: grid;[\s\S]*?grid-template-columns: repeat\(5, minmax\(0, 1fr\)\)')
+  self.assertIn('border: 0;',DESIGN_CSS[DESIGN_CSS.index('v2.95.53 — iPad/tablet portrait'):])
+  self.assertIn('background: transparent;',DESIGN_CSS[DESIGN_CSS.index('v2.95.53 — iPad/tablet portrait'):])
+  self.assertIn('env(safe-area-inset-bottom)',DESIGN_CSS)
+  self.assertIn('iPad Pro 11-inch (M1) CSS viewport: approximately 834px portrait / 1194px landscape',DESIGN_CSS)
+  # The portrait-only query must not match the 1194px landscape viewport.
+  self.assertIn('orientation: portrait',DESIGN_CSS)
+  self.assertIn('@media (min-width: 851px) and (max-width: 1199px)',DESIGN_CSS)
+
  def test_small_width_and_short_landscape_fallbacks(self):
   self.assertIn('@media(max-width:560px)',CSS)
   self.assertIn('@media(max-width:360px)',CSS)

@@ -4,6 +4,7 @@ import hashlib
 import json
 import unittest
 from pathlib import Path
+from glossary_test_helpers import restore_batch_039, composite_sha_reversing_vocabulary_patch
 
 ROOT = Path(__file__).resolve().parents[2]
 EXPECTED = {
@@ -70,13 +71,14 @@ class RelatedGlossaryBatch037Tests(unittest.TestCase):
         self.assertTrue(all(op["expect"] == {"absent": True} for op in self.patch["operations"]))
 
     def test_patch_base_hash_reconstructs_pre_batch_glossary(self):
+        restored = restore_batch_039(self.glossary, ROOT)
         later_terms = set()
         for path in (ROOT / "patches-related-terms").glob("**/batch-*-glossary-ledger.json"):
             batch = json.loads(path.read_text(encoding="utf-8"))
-            if int(batch.get("batch", 0)) >= 37:
+            if 37 <= int(batch.get("batch", 0)) < 39:
                 later_terms.update(row["term"].casefold() for row in batch.get("records", []))
-        baseline = dict(self.glossary)
-        baseline["terms"] = [row for row in self.glossary["terms"] if row["term"].casefold() not in later_terms]
+        baseline = dict(restored)
+        baseline["terms"] = [row for row in restored["terms"] if row["term"].casefold() not in later_terms]
         # Reverse only post-Batch-037 exact-guarded glossary corrections.
         for correction_path in (ROOT / "patches-related-terms").glob("**/glossary-corrections-*.json"):
             correction = json.loads(correction_path.read_text(encoding="utf-8"))
@@ -124,7 +126,7 @@ class RelatedGlossaryBatch037Tests(unittest.TestCase):
             ROOT / "data/readings/reading-library.json",
             ROOT / "data/practice/part5-sentence-completion.json",
         ]
-        self.assertEqual(composite_sha(vocabulary), self.ledger["canonicalVocabularySha256"])
+        self.assertEqual(composite_sha_reversing_vocabulary_patch(vocabulary, ROOT, "patches/v2.95.54/independent-audit-stage-1-data.json"), self.ledger["canonicalVocabularySha256"])
         self.assertEqual(composite_sha(protected), self.ledger["protectedLearningBankSha256"])
 
     def test_glossary_has_no_duplicate_casefolded_identities(self):

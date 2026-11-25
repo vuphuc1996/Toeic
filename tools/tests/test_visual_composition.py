@@ -56,6 +56,18 @@ class VisualCompositionTests(unittest.TestCase):
         self.assertIn(".practice-mode-tile {", CSS)
         self.assertIn("min-height: 96px;", CSS)
 
+    def test_success_and_error_toasts_are_dismissible_and_accessible(self):
+        self.assertIn("toast-close", APP)
+        self.assertIn("setAttribute('aria-label','Đóng thông báo')", APP)
+        self.assertIn("setAttribute('role',type==='error'?'alert':'status')", APP)
+        self.assertIn("addEventListener('click',()=>el.remove())", APP)
+        self.assertIn("setTimeout(()=>el.remove(),5000)", APP)
+        self.assertIn(".toast-close:focus-visible", APP_CSS)
+        self.assertIn(".toast-message", APP_CSS)
+        self.assertIn("border-radius:var(--ds-radius-control)", APP_CSS)
+        self.assertIn("font-size:var(--ds-font-button)", APP_CSS)
+        self.assertIn("color-mix(in srgb,var(--ds-color-surface) 12%,transparent)", APP_CSS)
+
     def test_responsive_rules_cover_desktop_tablet_and_phone_layouts(self):
         self.assertIn("grid-template-columns: repeat(4, minmax(0, 1fr));", CSS)
         self.assertIn("@media (min-width: 641px) and (max-width: 1100px)", CSS)

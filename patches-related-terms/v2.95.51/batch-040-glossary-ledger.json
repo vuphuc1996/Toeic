@@ -1,0 +1,119 @@
+{
+  "batch": "040",
+  "release": "2.95.51",
+  "title": "Cambridge-sourced, sense-aligned enrichment of six existing high-reference glossary targets",
+  "count": 6,
+  "editorialStatus": "Cambridge Dictionary entries checked 2026-11-24; definitions paraphrased and aligned against existing relation anchors; independent editorial review remains pending.",
+  "sourcePolicy": "Only existing relation targets are enriched. No new vocabulary identities or relation edges are created. Every record includes a Cambridge Dictionary URL and sense-alignment note.",
+  "baseRelatedTermsSha256": "4c30f2ab573a294f65c37b29bafac09b4b54d2554e8ded6ba22e63fcec4c7fa9",
+  "records": [
+    {
+      "term": "charge",
+      "previousPos": "n/v",
+      "pos": "n/v",
+      "meaning_vi": "tính phí; khoản phí; phụ trách",
+      "previousDefinition": null,
+      "definition_en": "to ask someone to pay an amount for a service or activity; or an amount of money that must be paid, especially for a service",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/charge"
+      ],
+      "senseAlignment": "Payment verb sense and fee noun sense selected for existing invoice, rate and refund relation targets.",
+      "relationAnchors": [
+        "bill",
+        "invoice",
+        "rate",
+        "refund"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "move",
+      "previousPos": null,
+      "pos": "v/n",
+      "meaning_vi": "di chuyển; chuyển động",
+      "previousDefinition": null,
+      "definition_en": "to change position or go to a different place; or an action taken by a person or organization to achieve something",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/move"
+      ],
+      "senseAlignment": "Change-position/change-place verb and action/relocation noun senses selected for existing relocation, transfer and transport relation targets.",
+      "relationAnchors": [
+        "relocation",
+        "transfer",
+        "transport"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "leave",
+      "previousPos": null,
+      "pos": "v/n",
+      "meaning_vi": "rời đi; nghỉ phép",
+      "previousDefinition": null,
+      "definition_en": "to go away from a place or person; to allow something to remain; or time officially allowed away from work",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/leave"
+      ],
+      "senseAlignment": "Departure verb, remain/leave-behind verb and work-absence noun senses selected for existing depart, join and remain relation targets; distinct senses require independent editorial review.",
+      "relationAnchors": [
+        "depart",
+        "join",
+        "remain"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "opening",
+      "previousPos": null,
+      "pos": "n",
+      "meaning_vi": "lễ khai trương; vị trí còn trống; phần mở đầu",
+      "previousDefinition": null,
+      "definition_en": "an event at which a place or business is officially opened; an available job or opportunity; or something happening at the beginning of an event",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/opening"
+      ],
+      "senseAlignment": "Opening-event, job-vacancy/opportunity and beginning noun senses aligned with the existing Vietnamese gloss and launch, opportunity and vacancy relation targets.",
+      "relationAnchors": [
+        "launch",
+        "opportunity",
+        "vacancy"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "suggestion",
+      "previousPos": "",
+      "pos": "n",
+      "meaning_vi": "gợi ý; đề xuất",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "an idea, plan or action put forward for other people to consider, or the act of suggesting it",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/suggestion"
+      ],
+      "senseAlignment": "Idea/proposal noun sense selected for existing advice, offer and proposal relation targets.",
+      "relationAnchors": [
+        "advice",
+        "offer",
+        "proposal"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    },
+    {
+      "term": "location",
+      "previousPos": "",
+      "pos": "n",
+      "meaning_vi": "địa điểm; vị trí",
+      "previousDefinition": "Reference gloss for practice distractors.",
+      "definition_en": "a particular place or position where something is or where an event happens",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/location"
+      ],
+      "senseAlignment": "Place/position noun sense selected for existing address and destination relation targets.",
+      "relationAnchors": [
+        "address",
+        "destination"
+      ],
+      "editorialStatus": "source checked; independent editorial review pending"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 """Build a source-linked, non-mutating CMUdict IPA review queue for missing US IPA."""
 from __future__ import annotations
 import argparse, json, sys
+from importlib.metadata import PackageNotFoundError, version as package_version
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
@@ -39,7 +40,11 @@ def main():
     records,_=load_records(); queue=collect(records,cmudict.dict())
     counts={}
     for row in queue: counts[row['status']]=counts.get(row['status'],0)+1
-    payload={'schemaVersion':1,'source':'CMUdict via cmudict package; ARPABET retained for human review','canonicalMissingUsIpaCount':len(queue),'statusCounts':counts,'policy':'No IPA values are applied. Exact headwords only; all unique pronunciation variants are retained. Review before use.','records':queue}
+    try:
+        cmudict_version=package_version('cmudict')
+    except PackageNotFoundError:
+        cmudict_version='unknown'
+    payload={'schemaVersion':1,'source':'CMU Pronouncing Dictionary via cmudict package; ARPABET retained for human review','sourcePackage':'cmudict','sourcePackageVersion':cmudict_version,'canonicalMissingUsIpaCount':len(queue),'statusCounts':counts,'policy':'No IPA values are applied. Exact headwords only; all unique pronunciation variants are retained. Review before use.','records':queue}
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f"Queue written: {args.output} ({len(queue)} missing IPA records; {counts})")

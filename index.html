@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.95.46 – Robot Buddy Progressive Replies</title>
+  <title>TOEIC Dictionary v2.95.60 – Robot Buddy Progressive Replies</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/app.css">
@@ -80,7 +80,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.95.46 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.95.60 · GitHub-only</div>
       </div>
     </aside>
 
@@ -176,7 +176,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.95.46:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy kết hợp thư viện hội thoại, quy tắc và ngữ cảnh hiện tại để phản hồi từng phần; có thể phân tích tiến độ học trên thiết bị theo chế độ chỉ đọc khi người dùng bật tính năng. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.95.60:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy kết hợp thư viện hội thoại, quy tắc và ngữ cảnh hiện tại để phản hồi từng phần; có thể phân tích tiến độ học trên thiết bị theo chế độ chỉ đọc khi người dùng bật tính năng. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
@@ -425,6 +425,7 @@
       <section class="page" id="page-data">
         <div class="page-heading compact-heading"><div><p class="eyebrow">DATA WORKSPACE</p><h1>Quản lý dữ liệu</h1><p class="muted">Quản lý từ vựng cá nhân trên thiết bị. Kho gốc trên GitHub luôn được bảo vệ, chỉ đọc.</p></div><button class="primary-button" id="addWordButton"><svg class="ui-icon button-icon"><use href="#icon-plus"></use></svg> Thêm từ mới</button></div>
         <div class="data-warning"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>Kho từ vựng gốc</strong> được đọc từ GitHub và không thể sửa/xóa. Mọi từ bạn thêm, sửa hoặc ẩn chỉ tác động đến <strong>Từ vựng cá nhân</strong> trên thiết bị này. F5 không làm mất dữ liệu; hãy Export để sao lưu hoặc chuyển sang thiết bị khác.</p></div>
+        <section class="panel data-backup-panel" aria-labelledby="learnerBackupTitle"><div class="panel-heading"><div><h2 id="learnerBackupTitle">Sao lưu toàn bộ dữ liệu học tập</h2><p class="muted">Bao gồm tiến độ, lịch sử, bài thi thử, cấu hình và từ vựng cá nhân đang lưu trên thiết bị.</p></div><div class="toolbar-actions"><button class="secondary-button" id="restoreLearnerBackupButton" type="button">Khôi phục bản sao lưu</button><button class="primary-button" id="exportLearnerBackupButton" type="button">Sao lưu toàn bộ</button><input id="learnerBackupFile" type="file" accept=".json,application/json" hidden></div></div><p class="muted" id="learnerBackupStatus" role="status">Bản sao lưu toàn bộ khác với Export từ vựng JSON/CSV ở bên dưới.</p></section>
         <div class="stale-override-note" id="staleOverrideNote" hidden></div>
         <section class="panel data-panel">
           <div class="data-toolbar">
@@ -445,7 +446,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.95.46</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.95.60</span></footer>
     </main>
   </div>
 

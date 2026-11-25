@@ -1,3 +1,123 @@
+## v2.95.60 — consolidated IPA and Related Glossary review queues (2026-11-24)
+
+- Consolidated a deterministic, read-only missing-US-IPA queue from exact-headword CMUdict matching. The queue records 79 missing-IPA entries: 5 single-pronunciation candidates, 49 multiple-variant review cases and 25 with no exact dictionary key. No IPA was converted, approved or applied automatically.
+- Added a Markdown renderer for the IPA queue, preserving ARPABET variants and clearly distinguishing candidate evidence from editorial approval.
+- Regenerated the Related Glossary quality audit and enrichment queue: 567 entries scanned, 198 flagged, 0 duplicate normalized-term groups; the queue prioritizes definition blockers using existing relation frequency and source-headword references.
+- Reconciled the candidate audit, missing-IPA report and glossary reports as versioned artifacts. All tools are read-only with respect to canonical learning content.
+- Added regression coverage for IPA queue rendering, variant retention, count reconciliation and no-auto-apply policy.
+- No vocabulary definitions, IPA, POS, translations, provenance, IDs, relations, questions, answer keys, learner data, IndexedDB schema, Mock eligibility, UI or deployment architecture changed.
+
+## v2.95.59 — transparent item-complexity review queue (2026-11-24)
+
+- Added a deterministic, read-only inventory of observable Listening/Reading item features: source length, prompt length, answer-option length spread, inference/purpose wording and multi-document indicators.
+- The report is explicitly non-calibrated: it does not assign CEFR/ETS difficulty, estimate psychometric parameters, certify answer keys or approve Mock eligibility. Existing `level` labels are displayed as supplied and are not reinterpreted.
+- Every current Listening/Reading question is indexed once; reserve-pending items are explicitly labelled not Mock eligible. No content, question IDs, choice IDs/order, answer keys, reserve state, learner records or IndexedDB schema changed.
+- Added regression coverage and GitHub Actions syntax/test/report-generation steps. This work completes the structural triage component of Stage 2 item 9; independent review and psychometric calibration remain open.
+
+## v2.95.58 — first-attempt learning outcome evidence (2026-11-24)
+
+- Added separate first-attempt accuracy metrics to the read-only learning-outcome summary, alongside the existing latest-attempt metric. The first-attempt denominator includes only unique items with a valid recorded first attempt; retry attempts never overwrite that initial result.
+- Added `firstAttemptItems`, `firstAttemptCorrect`, `firstAttemptAccuracy` and `firstAttemptAccuracyPercent` to the summary API. No new storage fields or IndexedDB schema changes are required because the existing attempt history is the source.
+- Legacy or malformed item records without a usable attempt history are excluded from first-attempt calculations rather than having the latest result misrepresented as an initial result.
+- Added runtime regressions proving first-attempt and latest-attempt accuracy can diverge after a retry and that repeated attempts do not inflate the unique-item denominator.
+- Reconfirmed that answer-position shuffle certificates and stable choice identity already exist in the v2.95.57 baseline; no duplicate reorder or answer-key mutation was performed.
+- No UI redesign, learner data migration, vocabulary/question content, IDs, answer keys, Mock eligibility, reserve status or Robot Buddy access changes.
+
+## v2.95.57 — answer leakage and distractor-overlap diagnostics (2026-11-24)
+
+- Added a deterministic, read-only diagnostic for question-stem lexical cueing, correct-answer/distractor token overlap, and keyed-answer length imbalance across 177 Mock-eligible Listening Part 3/4 and Reading Part 7 questions; both Listening and Reading reserve queues are excluded.
+- Current triage flags 6/177 questions: 2 Part 3, 1 Part 4 and 3 Part 7. These are review signals only; long answers and lexical overlap can be legitimate.
+- Added six focused Python tests and dedicated GitHub Actions steps for syntax, tests and report generation.
+- No question text, answer keys, choice order/IDs, source evidence, Mock eligibility, reserve status, learner data/schema, UI or Robot Buddy scope changed. Listening reserve questions remain excluded.
+- The audit is lexical/length triage only; it cannot prove semantic uniqueness, identify paraphrase errors or provide psychometric/ETS calibration.
+
+## v2.95.56 — Listening Mock form-diversity gate (2026-11-24)
+
+- Listening trend readiness now verifies distinct Listening question-ID sets across the three most recent completed Full Mock attempts; repeated attempts using the same Listening form no longer unlock a Listening trend.
+- Reading trend calculation remains independent and unchanged. Listening history without question IDs fails closed rather than being assumed to represent an independent form.
+- Distinct forms disclose their question overlap; overlap of 90% or more triggers an explicit caution so a nominally different form is not presented as strong independent evidence.
+- Existing attempt question IDs are reused as evidence. No new learner-history schema, vocabulary/question content, answer key, choice order, Mock eligibility or IndexedDB change.
+- Added regression cases for repeated forms, two distinct forms with 98% overlap, legacy records, Reading independence and Full Mock filtering.
+
+## v2.95.55 — complete learner data backup and restore (2026-11-24)
+
+- Added a separate full learner-data backup alongside the existing vocabulary-only JSON/CSV export. It enumerates every record in the existing IndexedDB `workspace` store and every `toeic:` localStorage key, including future/legacy app keys.
+- Added SHA-256 integrity verification and strict backup type/schema/storage validation before restore. Unsupported versions, malformed records, duplicate keys, out-of-namespace localStorage keys and modified payloads are rejected before any write.
+- Restore merges matching keys without clearing keys absent from the backup, downloads a pre-restore snapshot first, writes IndexedDB in one transaction, rolls back localStorage and attempts an IndexedDB rollback if cross-store restore fails, then reloads the app to hydrate runtime state.
+- Requests `navigator.storage.persist()` when supported and records whether the browser granted persistent storage; this remains a browser-managed best-effort request.
+- Added focused runtime and integration tests and registered both in GitHub Actions. Existing IndexedDB database/store/version and vocabulary-only import/export remain unchanged.
+- No vocabulary/question content, IDs, answer keys, Mock eligibility or Robot Buddy data access changed. Physical Safari/iOS, browser quota behavior and hosted GitHub Actions remain unverified.
+
+
+
+## v2.95.54 — independent audit Stage 1 remediation (2026-11-24)
+
+- Applied guarded patch corrections: `appliance-n.verb_forms` is now `null`; eight inconsistent headword-level CEFR values now equal the highest CEFR level among their senses. The ninth reviewed item (`package-nv`) already followed this rule and was preserved.
+- Added structural validator rule VF003 to reject empty/whitespace-only verb-form strings and CE004 to enforce the aggregate CEFR policy (A1 < A2 < B1 < B2 < C1). Added regression tests; existing rules and baselines were not relaxed.
+- Confirmed the Listening reserve queue check is already data-driven in the v2.95.53 baseline and passes against 193 reserve questions; no duplicate change was made.
+- Moved the two root-level v2.95.45/v2.95.46 update-note files into `docs/versions/legacy/`; added a full Python `unittest discover` step to CI.
+- No IDs, headwords, topics, Vietnamese meanings, relations, question IDs, answer keys, Mock eligibility, UI features or Robot Buddy features changed.
+- Independent audit remediation logs and test results are recorded in `docs/reports/INDEPENDENT_AUDIT_STAGE_1_v2.95.54.md`.
+
+## v2.95.53 — iPad portrait responsive navigation + cross-module audit (2026-11-24)
+
+- Fixed iPad/tablet portrait navigation: portrait tablet viewports from 641–850 CSS px now use the existing phone-style bottom navigation and mobile content flow; the sidebar is hidden.
+- Preserved desktop navigation for landscape iPad Pro 11-inch M1 (approximately 1194 CSS px wide) and larger desktop/tablet landscape viewports.
+- Added safe-area-aware bottom navigation, Robot Buddy positioning, modal sizing, and regression coverage for portrait/landscape breakpoint behavior.
+- Corrected source/test fingerprint scope for generated Python shard, cross-module/iPad, glossary audit/queue and rendered visual evidence; generated evidence remains packaged and archive-hashed, while governance documents remain fingerprinted.
+- No learner data, IndexedDB schema, vocabulary IDs, relation arrays, question IDs, answer keys, or Mock eligibility changed.
+- Full cross-module audit and package evidence are recorded in the v2.95.53 release reports.
+
+## v2.95.52 — Related Glossary Batch 041 and research-priority refresh (2026-11-24)
+
+- Enriched eleven existing relation-target rows (`present`, `associate`, `contender`, `daily`, `deal`, `deny`, `direction`, `endpoint`, `fee`, `legitimate`, `occupation`) with Cambridge Dictionary-sourced paraphrases, POS and sense-alignment notes. Exact old-value guards and source-file SHA-256 protect every update.
+- Preserved Vietnamese meanings, term identities and relation arrays. No canonical headwords, vocabulary IDs, question/answer content, learner records, IndexedDB, Mock eligibility, UI layout or hosting architecture changed.
+- Updated the read-only quality audit and frequency-ranked research queue. Independent editorial review remains pending; no automatic definition invention or missing-term import was performed.
+- Local full-suite, workflow replay, data validation and package acceptance results are recorded in the v2.95.52 reports. Hosted Actions, Pages, PWA cache/offline and physical-device acceptance remain unverified.
+
+## v2.95.51 — Related Glossary Batch 040 and frequency-ranked enrichment queue (2026-11-24)
+
+- Enriched six existing relation-target glossary entries (`charge`, `move`, `leave`, `opening`, `suggestion`, `location`) with Cambridge Dictionary-sourced paraphrases, POS and explicit sense-alignment/provenance notes. All changes use exact old-value guards and are independently review-pending.
+- Added a deterministic, read-only enrichment queue ranking incomplete glossary entries by relation-reference frequency, distinct source headwords and quality priority. The report does not infer definitions or authorize automatic imports.
+- Added queue contract tests and registered the queue audit in GitHub Actions syntax/test/replay workflow.
+- No new glossary identities, vocabulary IDs/headwords/relations, question IDs/choices/answer keys, IndexedDB schema, learner records, Mock eligibility, UI layout or hosting architecture changed.
+- Local focused tests and data/package checks are recorded in the v2.95.51 test and release-acceptance reports; hosted Actions, Pages and physical-device acceptance remain unverified.
+
+## v2.95.49 — related glossary display safety (2026-11-24)
+
+- Added a shared display-safety filter for related-glossary English definitions. Known editorial placeholders (including “Reference gloss for practice distractors.”) are no longer rendered as real English meanings in learner answer explanations.
+- Valid definitions remain visible; Vietnamese gloss and part-of-speech metadata are preserved. This is a presentation guard only: it does not rewrite or delete glossary records.
+- Added Node runtime coverage for placeholder families, valid definitions, empty/malformed values and application integration; registered the check in GitHub Actions.
+- Re-audited Related Glossary: 567 entries; 227 flagged for review (223 high, 2 medium, 2 low); 150 missing definitions and 73 placeholder definitions. Coverage remains 556/804 references, with 248 unique missing terms. Missing terms are not auto-created because they lack canonical headwords and require sourced editorial review.
+- No vocabulary IDs/headwords/relations, question IDs/choices/answer keys, IndexedDB schema, learner progress, Mock eligibility, UI layout or deployment architecture changed.
+- Local validation and full-suite status are recorded in the v2.95.49 test report; hosted GitHub Actions, Pages and physical-device acceptance remain unverified.
+
+## v2.95.48 — defensive learner evidence ledger (2026-11-24)
+
+- Hardened objective resource indexing and read-only summaries against malformed resource maps, null records, invalid nested containers and malformed attempt/rubric history. Invalid nested branches are ignored by summaries and remain visible to the explicit integrity audit.
+- Write paths now reject negative/non-finite timestamps and deduplicate objective IDs before storing attempts or explanation rubrics.
+- The integrity audit reports latest-attempt/current-summary disagreement as a warning; it never repairs learner history. Recall-check and rubric timestamps are checked for non-negative finite values.
+- Added runtime regression coverage for malformed ledgers, safe summaries, invalid timestamp rejection, duplicate objective IDs and latest-attempt mismatch reporting.
+- No vocabulary/question content, learner history, IndexedDB schema, answer keys, Mock eligibility, UI layout or hosting architecture changed.
+- Focused verification: Node runtime PASS; 83 Python cases PASS across 8 focused modules; real-source data validator PASS (1,141 records; 0 errors / 0 warnings). Full 89-module strict suite and hosted GitHub Actions remain unverified.
+
+## v2.95.47 — read-only learner evidence queries (2026-11-24)
+
+- Removed unintended write-side initialization from objective summaries and due-recall listing. These read paths now consume a safe empty view for absent/malformed containers and never add `schemaVersion` or `objectives` to learner data.
+- Added frozen-ledger and empty-ledger regression coverage for objective summaries, aggregate summaries and due-recall queries.
+- Explicit write operations retain their existing initializer; no IndexedDB schema, learner history migration, vocabulary/question content, answer keys, UI, or deployment changes.
+
+## v2.95.46 — optimized-source CI and release hardening (2026-11-24)
+
+- Continued from the user-supplied optimized v2.95.46 candidate; the prior assistant-generated ZIP was comparison-only and did not replace the user's source.
+- Fixed checkpoint resume fingerprint drift by removing the operational `--resume` toggle from execution identity; added regression coverage.
+- Added explicit generated-audit report patterns to the fingerprint policy so pre-test audits do not invalidate a compatible test checkpoint. Generated reports remain packaged and covered by FullSource SHA-256; governance docs remain fingerprinted.
+- Replaced four Toast close-control CSS literals with existing design-system tokens; CSS token ratchet now reports 0 new violations. No UI redesign.
+- Added regression coverage for fingerprint scope and Toast token compliance.
+- Strict Python suite: 89 modules / 692 cases / 691 PASS / 1 accepted environment SKIP / 0 FAIL / 0 ERROR / 0 TIMEOUT / 0 NOT RUN.
+- Exact local replay of `.github/workflows/validate-data.yml`: 110/110 shell run steps PASS. Local runtime (Python 3.13.5 / Node 22.16.0) differs from the workflow target (Python 3.12 / Node 24); hosted GitHub Actions and Pages remain unverified.
+- All 12 local Release Acceptance gates PASS. Production deployment, browser/PWA/offline/cache and physical-device acceptance remain unverified.
+
 ## v2.95.46 — Governance consolidation and source-derived editorial inventory (candidate)
 
 - Established `docs/MASTER_DEVELOPMENT_PROMPT.md` as the single Sections 1–15 development contract, including source-of-truth/version governance, data preservation, large-batch priorities, provenance, dynamic test inventory, deterministic fingerprints, separate Source/Production acceptance and non-destructive production testing.
@@ -831,3 +951,15 @@
 - Added Cambridge-sourced, paraphrased definitions and POS for six existing related-glossary terms: account, acknowledgment, acquire, adaptable, advance, advantage.
 - Preserved all six Vietnamese meanings, term identities, glossary ordering, and vocabulary/question/progress data.
 - Added Batch 032 ledger and regression tests. Independent review of these definitions remains pending; source excerpts/pages were inspected during preparation.
+
+### v2.95.46 — Toast / CI diagnostic candidate (2026-11-24)
+- Success/error toast notifications can now be dismissed manually; accessible roles, focus styling and text wrapping added.
+- Toast regression test added. Local targeted checks pass; full test suite timed out, so this remains a candidate and is not production-accepted.
+
+## v2.95.50 — Related Glossary sourced enrichment batch 039
+
+- Enriched 12 existing relation-target glossary rows (`plan`, `neglect`, `amount`, `bill`, `customer`, `division`, `essential`, `file`, `gain`, `loss`, `meeting`, `refuse`) with Cambridge Dictionary-backed paraphrased definitions and reviewed POS labels.
+- Each row now carries a Cambridge Dictionary source URL and source release provenance; sense-alignment notes are preserved in `patches-related-terms/v2.95.50/batch-039-glossary-ledger.json`.
+- Updates use exact old-value guards and a base-file SHA-256. The regression reconstructs the original glossary byte representation and verifies the patch base hash.
+- No vocabulary headwords, sense identities, synonym/antonym edges, questions, answer keys, Mock eligibility, learner records, IndexedDB schema, UI layout or hosting architecture changed.
+- Independent editorial review remains pending; source lookup is not a substitute for final human approval.

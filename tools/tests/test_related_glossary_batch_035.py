@@ -5,6 +5,7 @@ import json
 import hashlib
 import unittest
 from pathlib import Path
+from glossary_test_helpers import restore_batch_039
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -32,15 +33,16 @@ class RelatedGlossaryBatch035Tests(unittest.TestCase):
         self.assertTrue(all(op["expect"] == {"absent": True} for op in self.patch["operations"]))
 
     def test_patch_base_hash_reconstructs_pre_batch_file(self):
+        restored = restore_batch_039(self.data, ROOT)
         added = {record["term"].casefold() for record in self.ledger["records"]}
         # Later additive batches are removed dynamically when reconstructing the
         # historical pre-035 baseline. This keeps the test valid in v2.95.42 too.
         for ledger_path in (ROOT / "patches-related-terms").glob("**/batch-*-glossary-ledger.json"):
             later = json.loads(ledger_path.read_text(encoding="utf-8"))
-            if int(later.get("batch", 0)) > 35:
+            if 35 < int(later.get("batch", 0)) < 39:
                 added.update(record["term"].casefold() for record in later.get("records", []))
-        baseline = dict(self.data)
-        baseline["terms"] = [row for row in self.data["terms"] if row["term"].casefold() not in added]
+        baseline = dict(restored)
+        baseline["terms"] = [row for row in restored["terms"] if row["term"].casefold() not in added]
         payload = (json.dumps(baseline, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
         self.assertEqual(hashlib.sha256(payload).hexdigest(), self.patch["baseFileSha256"])
 

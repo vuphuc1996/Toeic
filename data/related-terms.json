@@ -361,8 +361,13 @@
     {
       "term": "amount",
       "meaning_vi": "lượng; số tiền",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "how much there is of something, especially a quantity of money, time or material",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; noun sense; existing relation targets quantity, supply and volume.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/amount"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "announce",
@@ -642,8 +647,13 @@
     {
       "term": "associate",
       "meaning_vi": "cộng sự",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a person who is connected with another person as a companion, colleague or business partner",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Noun sense for a person connected through work or business, aligned with colleague and partner; the verb “connect mentally” sense is not selected.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/associate"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "assume",
@@ -778,10 +788,14 @@
     {
       "term": "bill",
       "meaning_vi": "hóa đơn; dự luật",
-      "source": "curated-related-glossary",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; payment and proposed-law noun senses plus payment verb sense; aligned to the existing Vietnamese gloss and relation targets charge and invoice.",
       "pos": "n/v",
       "sourceHeadword": "bill",
-      "sourceRelease": "2.95.34"
+      "sourceRelease": "2.95.50",
+      "definition_en": "a request or document for payment; a proposed law considered by a legislature; or to send someone a request for payment",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/bill"
+      ]
     },
     {
       "term": "book",
@@ -1035,10 +1049,14 @@
     {
       "term": "charge",
       "meaning_vi": "tính phí; khoản phí; phụ trách",
-      "source": "curated-related-glossary",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; payment verb and fee noun senses selected for the existing invoice, rate and refund relation targets.",
       "pos": "n/v",
       "sourceHeadword": "charge",
-      "sourceRelease": "2.95.34"
+      "sourceRelease": "2.95.51",
+      "definition_en": "to ask someone to pay an amount for a service or activity; or an amount of money that must be paid, especially for a service",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/charge"
+      ]
     },
     {
       "term": "check",
@@ -1325,8 +1343,13 @@
     {
       "term": "contender",
       "meaning_vi": "đối thủ; ứng viên cạnh tranh",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a person or organization competing with others to win something or gain a particular position",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Competitive person/organization noun sense aligned with candidate and competitor.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/contender"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "continually",
@@ -1456,12 +1479,24 @@
     {
       "term": "customer",
       "meaning_vi": "khách hàng",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; business noun sense selected for existing buyer and client relation targets.",
+      "pos": "n",
+      "definition_en": "a person or organization that buys goods or services",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/customer"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "daily",
       "meaning_vi": "hằng ngày",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Frequency adjective/adverb sense aligned with monthly and weekly; newspaper noun sense is excluded.",
+      "pos": "adj/adv",
+      "definition_en": "happening every day or relating to something that is done each day",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/daily"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "danger",
@@ -1482,7 +1517,13 @@
     {
       "term": "deal",
       "meaning_vi": "thỏa thuận; giao dịch",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Business/agreement noun sense aligned with contract and transaction; verb senses are not selected.",
+      "pos": "n",
+      "definition_en": "an agreement or arrangement, especially one made in business or between people or organizations",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/deal"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "deal with",
@@ -1550,7 +1591,13 @@
     {
       "term": "deny",
       "meaning_vi": "phủ nhận; từ chối",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Verb senses “say a claim is untrue” and “refuse/withhold” aligned with claim and confirm; the exact relation context should be reviewed.",
+      "pos": "v",
+      "definition_en": "to say that something is not true, or to refuse to allow someone to have or do something",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/deny"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "deposit",
@@ -1621,7 +1668,13 @@
     {
       "term": "direction",
       "meaning_vi": "hướng; chỉ dẫn",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Position/orientation and instruction noun senses aligned with guidance and instruction.",
+      "pos": "n",
+      "definition_en": "the way or position in which someone or something moves; or instructions about how to reach a place or what to do",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/direction"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "directive",
@@ -1739,8 +1792,13 @@
     {
       "term": "division",
       "meaning_vi": "bộ phận; sự phân chia",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a separate part of a large organization, or the act of separating something into parts",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; organization-part and separation noun senses selected for existing branch, department and section relation targets.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/division"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "document",
@@ -1890,8 +1948,13 @@
     {
       "term": "endpoint",
       "meaning_vi": "điểm cuối",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the end point of a process or activity, or a result that marks its completion",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; End/result noun sense aligned with destination and terminal; technical mathematical meanings are not selected.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/endpoint"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "enforce",
@@ -1992,7 +2055,13 @@
     {
       "term": "essential",
       "meaning_vi": "thiết yếu; cần thiết",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; adjective necessary-sense selected for existing indispensable, key and necessary relation targets.",
+      "pos": "adj",
+      "definition_en": "necessary or extremely important for a particular purpose",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/essential"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "establish",
@@ -2121,13 +2190,24 @@
     {
       "term": "fee",
       "meaning_vi": "khoản phí",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "an amount of money paid for a particular service, piece of work or right",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Payment noun sense aligned with charge and payment.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/fee"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "file",
       "meaning_vi": "tệp; hồ sơ; nộp hồ sơ",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; document/computer noun and submit/store verb senses selected for existing document, record and submit relation targets.",
+      "pos": "n/v",
+      "definition_en": "a collection of information or documents kept together; or to submit a document to an official body or store information in an organized way",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/file"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "financial institution",
@@ -2191,7 +2271,13 @@
     {
       "term": "gain",
       "meaning_vi": "thu được; lợi ích; khoản tăng",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; obtain verb and benefit/increase noun senses selected for existing benefit and profit relation targets.",
+      "pos": "n/v",
+      "definition_en": "to obtain something useful or valuable; a benefit obtained or an increase in an amount or level",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/gain"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "gather",
@@ -2640,13 +2726,24 @@
     {
       "term": "leave",
       "meaning_vi": "rời đi; nghỉ phép",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; departure, remaining and work-absence senses selected for the existing depart, join and remain relation targets; sense breadth requires independent editorial review.",
+      "pos": "v/n",
+      "definition_en": "to go away from a place or person; to allow something to remain; or time officially allowed away from work",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/leave"
+      ],
+      "sourceRelease": "2.95.51"
     },
     {
       "term": "legitimate",
       "meaning_vi": "hợp pháp; chính đáng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "adj",
+      "definition_en": "allowed by law or rules, or reasonable and acceptable in the circumstances",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Adjective senses “lawful” and “reasonable/acceptable” aligned with legal and valid.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/legitimate"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "lend",
@@ -2691,8 +2788,13 @@
     {
       "term": "location",
       "meaning_vi": "địa điểm; vị trí",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a particular place or position where something is or where an event happens",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; place/position noun sense selected for the existing address and destination relation targets.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/location"
+      ],
+      "sourceRelease": "2.95.51"
     },
     {
       "term": "lodging",
@@ -2712,7 +2814,13 @@
     {
       "term": "loss",
       "meaning_vi": "sự mất mát; khoản lỗ",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; noun sense selected for existing antonym relation targets profit, retention and revenue.",
+      "pos": "n",
+      "definition_en": "the fact of no longer having something, or a reduction in value, amount or money",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/loss"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "lot",
@@ -2850,7 +2958,13 @@
     {
       "term": "meeting",
       "meaning_vi": "cuộc họp",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; planned discussion noun sense selected for existing appointment, interview and minute relation targets.",
+      "pos": "n",
+      "definition_en": "an arranged event in which people come together to discuss something or make decisions",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/meeting"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "meeting record",
@@ -2927,12 +3041,24 @@
     {
       "term": "move",
       "meaning_vi": "di chuyển; chuyển động",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; movement/transfer verb and action noun senses selected for the existing relocation, transfer and transport relation targets.",
+      "pos": "v/n",
+      "definition_en": "to change position or go to a different place; or an action taken by a person or organization to achieve something",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/move"
+      ],
+      "sourceRelease": "2.95.51"
     },
     {
       "term": "neglect",
       "meaning_vi": "bỏ bê; sao nhãng",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; verb sense selected for existing antonym relations with handle, maintain, oversee, perform and prepare.",
+      "pos": "v",
+      "definition_en": "to fail to give someone or something the care or attention they need",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/neglect"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "network",
@@ -3037,8 +3163,13 @@
     {
       "term": "occupation",
       "meaning_vi": "nghề nghiệp",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a person’s job or the type of work they do",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; Job/profession noun sense aligned with career and employment; property/territorial occupation senses are excluded.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/occupation"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "offer",
@@ -3068,7 +3199,13 @@
     {
       "term": "opening",
       "meaning_vi": "lễ khai trương; vị trí còn trống; phần mở đầu",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; opening-event, vacancy/opportunity and beginning senses aligned with the existing Vietnamese gloss and launch, opportunity and vacancy relation targets.",
+      "pos": "n",
+      "definition_en": "an event at which a place or business is officially opened; an available job or opportunity; or something happening at the beginning of an event",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/opening"
+      ],
+      "sourceRelease": "2.95.51"
     },
     {
       "term": "oppose",
@@ -3245,7 +3382,13 @@
     {
       "term": "plan",
       "meaning_vi": "kế hoạch; dự định",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; noun (decision/arrangement sense) selected for the existing relation targets agenda, proposal and strategy.",
+      "pos": "n",
+      "definition_en": "a set of decisions or actions intended to achieve something in the future",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/plan"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "position",
@@ -3325,7 +3468,13 @@
     {
       "term": "present",
       "meaning_vi": "trình bày; hiện tại; có mặt",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; The adjective senses (being in a place/current) and verb senses (showing or introducing) are selected for the existing current, introduce and submit relation anchors; the noun “gift” sense is excluded.",
+      "pos": "adj/v",
+      "definition_en": "to be in a particular place or to exist at the current time; or to give, show or introduce information or someone to an audience",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/present"
+      ],
+      "sourceRelease": "2.95.52"
     },
     {
       "term": "preserve",
@@ -3714,7 +3863,13 @@
     {
       "term": "refuse",
       "meaning_vi": "từ chối",
-      "source": "curated-related-glossary"
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; verb say-no sense selected for existing accept, offer and reject relation targets.",
+      "pos": "v",
+      "definition_en": "to say that you will not do, accept or allow something",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/refuse"
+      ],
+      "sourceRelease": "2.95.50"
     },
     {
       "term": "region",
@@ -4305,8 +4460,13 @@
     {
       "term": "suggestion",
       "meaning_vi": "gợi ý; đề xuất",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "an idea, plan or action put forward for other people to consider, or the act of suggesting it",
+      "source": "Cambridge Dictionary; accessed 2026-11-24; paraphrased definition; independent editorial review pending; idea/proposal noun sense selected for the existing advice, offer and proposal relation targets.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/suggestion"
+      ],
+      "sourceRelease": "2.95.51"
     },
     {
       "term": "summit",

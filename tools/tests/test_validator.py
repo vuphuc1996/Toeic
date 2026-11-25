@@ -126,6 +126,22 @@ class ValidatorTests(unittest.TestCase):
         self.assertEqual(code, 1, out)
         self.assertIn("VF002", out)
 
+    def test_verb_forms_reject_empty_strings(self):
+        self.clean_with_baseline()
+        self.repo.words["A"][0]["verb_forms"] = {"v1":"", "vs_es":"", "v2":"", "v3":"", "ving":""}
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1, out)
+        self.assertIn("VF003", out)
+
+    def test_verb_forms_reject_whitespace_only_values(self):
+        self.clean_with_baseline()
+        self.repo.words["A"][0]["verb_forms"] = {"v1":"alpha", "vs_es":" ", "v2":"alphaed", "v3":"alphaed", "ving":"alphaing"}
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1, out)
+        self.assertIn("VF003", out)
+
     def test_verb_sense_requires_collocations(self):
         self.clean_with_baseline()
         self.repo.words["A"][0]["senses"][0]["pos"] = "v"
@@ -159,6 +175,32 @@ class ValidatorTests(unittest.TestCase):
         code, out = self.repo.run()
         self.assertEqual(code, 1)
         self.assertIn("CE001", out)
+
+    def test_word_cefr_must_equal_highest_sense_level(self):
+        self.clean_with_baseline()
+        self.repo.words["A"][0]["senses"].append({
+            "pos": "n", "meaning_vi": "một nghĩa nâng cao", "definition_en": "An additional advanced meaning used for validation.",
+            "synonyms": [], "antonyms": [], "cefr_level": "B2",
+        })
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1, out)
+        self.assertIn("CE004", out)
+
+    def test_word_cefr_highest_sense_level_is_accepted(self):
+        self.clean_with_baseline()
+        self.repo.words["A"][0]["senses"].append({
+            "pos": "n", "meaning_vi": "một nghĩa nâng cao", "definition_en": "An additional advanced meaning used for validation.",
+            "synonyms": [], "antonyms": [], "cefr_level": "B2",
+        })
+        self.repo.words["A"][0]["examples"].append({
+            "en": "The alpha additional advanced meaning is used in this example.",
+            "vi": "Nghĩa nâng cao bổ sung được dùng trong ví dụ này.", "sense_index": 1,
+        })
+        self.repo.words["A"][0]["cefr_level"] = "B2"
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 0, out)
 
     def test_unknown_topic(self):
         self.clean_with_baseline()

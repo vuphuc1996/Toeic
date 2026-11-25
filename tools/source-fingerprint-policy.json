@@ -37,7 +37,28 @@
     "docs/reports/PACKAGE_VERIFICATION_*.md",
     "docs/reports/PROJECT_PROGRESS_SNAPSHOT_*.md",
     "docs/reports/RELEASE_ACCEPTANCE_*.md",
-    "docs/reports/RELEASE_ACCEPTANCE_*.json"
+    "docs/reports/RELEASE_ACCEPTANCE_*.json",
+    "docs/reports/TOEIC_LISTENING_READINESS_v*.md",
+    "docs/reports/TOEIC_EDITORIAL_EVIDENCE_AUDIT_v*.md",
+    "docs/reports/TOEIC_DISTRACTOR_AUDIT_v*.md",
+    "docs/reports/TOEIC_INDEPENDENT_REVIEW_QUEUE_v*.md",
+    "docs/reports/TOEIC_CONTENT_COVERAGE_v*.md",
+    "docs/reports/FOUNDATION_A2_ASSESSMENT_QUALITY_v*.md",
+    "docs/reports/MAJOR_RELEASE_QUALITY_AUDIT_v*.md",
+    "docs/reports/LEARNING_OUTCOME_EVIDENCE_MATRIX_v*.md",
+    "docs/reports/major-release-quality-audit-v*.json",
+    "docs/reports/RELATED_GLOSSARY_BACKLOG.md",
+    "docs/reports/related-glossary-backlog.json",
+    "docs/reports/GITHUB_ACTIONS_SHELL_REPLAY_v*.md",
+    "docs/reports/PYTHON_TEST_SHARDS_v*.md",
+    "docs/reports/PYTHON_TEST_SHARDS_v*.json",
+    "docs/reports/CROSS_MODULE_AUDIT_v*.md",
+    "docs/reports/IPAD_RESPONSIVE_ACCEPTANCE_v*.md",
+    "docs/reports/RELATED_GLOSSARY_QUALITY_v*.md",
+    "docs/reports/RELATED_GLOSSARY_CANDIDATES_v*.md",
+    "docs/reports/RELATED_GLOSSARY_ENRICHMENT_QUEUE_v*.md",
+    "docs/reports/RELATED_GLOSSARY_ENRICHMENT_QUEUE_v*.json",
+    "docs/reports/visual-evidence/v*/*"
   ],
-  "fingerprint_note": "Generated release evidence documents matched by exclude_patterns remain included in the FullSource ZIP and are covered by ZIP CRC and archive SHA-256; they are excluded only from source/test input fingerprints to prevent self-referential evidence updates."
+  "fingerprint_note": "Generated release evidence documents matched by exclude_patterns remain included in the FullSource ZIP and are covered by ZIP CRC and archive SHA-256; they are excluded only from source/test input fingerprints to prevent self-referential evidence updates. Generated audit snapshots (Listening readiness, question evidence, distractors, editorial queue, content coverage, Foundation A2, major release/outcomes and glossary backlog) are also excluded from test-input fingerprints because their deterministic audit commands rewrite them before release tests; they remain included in FullSource and covered by the archive SHA-256. The GitHub Actions shell replay summary is generated evidence and is excluded from test-input fingerprints while remaining included in FullSource and its archive hash. Python test-shard reports, cross-module/iPad acceptance reports, glossary quality/candidate/queue snapshots and rendered viewport evidence are generated release evidence; they are excluded from the source/test-input fingerprint to prevent self-referential checkpoints, but remain in FullSource and are protected by archive CRC and SHA-256."
 }
