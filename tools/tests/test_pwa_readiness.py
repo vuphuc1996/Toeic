@@ -20,7 +20,7 @@ class PWAReadinessTests(unittest.TestCase):
         required = self.array("REQUIRED")
         shell = self.array("APP_SHELL")
         self.assertTrue(set(required).issubset(set(shell)))
-        missing = [p for p in shell if p != "./" and not (ROOT / p.removeprefix("./")).is_file()]
+        missing = [p for p in shell if p != "./" and not (ROOT / p.split("?", 1)[0].removeprefix("./")).is_file()]
         self.assertEqual(missing, [])
         self.assertIn("./data/listening/listening-library.json", required)
         self.assertIn("./assets/js/mock-engine.js", required)

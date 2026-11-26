@@ -1,18 +1,17 @@
-# TOEIC Dictionary v2.95.65 — Project Documentation
+# TOEIC Dictionary v2.95.67 — Project Documentation
 
-## Current source — v2.95.65 (Batch 035 and shared modal overlay repair)
+## Current source — v2.95.67 (Word Family graph integrity and sourced enrichment)
 
-- **Exact predecessor:** `TOEIC_Dictionary_v2.95.64_FullSource.zip`; SHA-256 `03ec4c80e88bc76e435cfc0782e933474be882a4f271318a23375a35e9242673`. This exact complete FullSource was verified before editing; no older source or Patch was used as the baseline.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.65.md`.
-- Current implementation report: `reports/GITHUB_CAMBRIDGE_AND_MODAL_OVERLAY_FIX_v2.95.65.md`.
-- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.65.md`.
-- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.65.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.65.md`.
-- The Batch 035 split Cambridge test is included in source and selected by the wildcard discovery step; historical rows, corrections, relation anchors and base hash are reconstructed instead of using stale fixed values.
-- `learningFocusBackdrop` is the only screen-wide dimming/blur layer; `modalLayer` contains only the modal panel. Both ordinary and focused-session modals use the same root.
-- GitHub Actions now runs a dedicated single-overlay contract test in addition to all Node modal and full Python discovery tests.
-- No vocabulary/question/answer data, stable IDs, learner IndexedDB records/schema, PWA storage contract, UI layout or hosting architecture changed.
-- Hosted GitHub Actions, GitHub Pages deployment, PWA cache/offline behavior and physical-device acceptance remain unverified until directly tested.
+- **Exact predecessor:** `TOEIC_Dictionary_v2.95.66_FullSource.zip`; SHA-256 `30236500cfa2d8702a25cdca9c99f0eca58eaaa047928a6b12ce88b1b2a373c3`. This archive is the sole baseline for v2.95.67.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.67.md`.
+- Current Python test ledger: `reports/PYTHON_TEST_SHARDS_v2.95.67.md` and machine-readable JSON ledger; it distinguishes focused PASS evidence from the incomplete full inventory.
+- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.67.md`.
+- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.67.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.67.md`.
+- Batch 025 adds six reciprocal, sense-matched Word Family links across three existing canonical headword pairs. No headwords or IDs are added.
+- `tools/audit-word-family-graph.py` provides read-only structural and sense-anchor checks. Missing targets, POS mismatches, Vietnamese gloss mismatches and non-reciprocal links remain explicit review findings; the tool never rewrites canonical records.
+- No vocabulary meanings/examples/IPA/verb forms, synonym/antonym arrays, TOEIC question data, choice IDs, answer keys or Mock eligibility changed. Six Word Family relationship links were added; learner IndexedDB data/schema, Robot Buddy privacy boundary, UI layout and hosting architecture are unchanged.
+- Hosted GitHub Actions/Pages for this release, installed-PWA cache propagation and physical-device acceptance remain unverified until a real push/deploy and device check.
 
 ## Single source of truth
 

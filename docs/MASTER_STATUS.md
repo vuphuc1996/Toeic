@@ -1,19 +1,29 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.65
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.67
 
-**Current source:** v2.95.65 — Batch 035 Cambridge test-history repair and single shared modal overlay. Learning content is unchanged.
+**Current source:** v2.95.67 — sourced reciprocal Word Family enrichment, read-only graph audit and corrected release-keyed PWA resource URLs; UI and learner storage unchanged.
 
 ## Current release
 
-- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.64_FullSource.zip`; SHA-256 `03ec4c80e88bc76e435cfc0782e933474be882a4f271318a23375a35e9242673`. This exact complete archive and checksum were verified before editing; no older release or Patch was used as a source baseline.
-- FullSource: `TOEIC_Dictionary_v2.95.65_FullSource.zip` (779 files; ZIP CRC and exact Git-tree bytes PASS); output SHA-256 is in its detached sidecar and details are in `reports/PACKAGE_VERIFICATION_v2.95.65.md`.
-- Patch: `TOEIC_Dictionary_v2.95.65_Patch_From_v2.95.64.zip`; bound to the exact v2.95.64 predecessor; clean-extraction replay matched 779/779 files byte-for-byte (0 missing/extra/changed).
-- Replaced the stale Cambridge Batch 035 split test at its exact filename with a historical reconstruction test. It validates eight Batch 035 records, ledger/provenance, canonical relationship anchors and reconstructed pre-batch hash after reversing later batches/corrections; it no longer asserts obsolete current row count 553 or stale `article` content.
-- Removed the duplicate modal backdrop element and class. `learningFocusBackdrop` is the only full-screen dimming/blur surface; `modalLayer` is a nested, transparent panel layer shared by ordinary modals and focused learning. Added state/ARIA/body-scroll handling and a dedicated CI contract test.
-- Design-token audit: zero new violations after selector identity reconciliation; the duplicate old backdrop-background identity was retired because the shared learning-focus root already owns the dimming surface.
-- Existing UI composition is unchanged. No vocabulary/Related Glossary content, canonical IDs/headwords/relations, question/choice IDs, answer keys, Mock eligibility, learner IndexedDB records/schema, Robot Buddy boundary or hosting architecture changed.
-- Local release commit and post-commit Git audit pass (779 paths, 0 errors/0 warnings, clean worktree). Local results and limitations are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.65.md` and `reports/PACKAGE_VERIFICATION_v2.95.65.md`. Hosted GitHub Actions/Pages, deployed PWA cache/offline and physical devices remain unverified until deployed.
+- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.66_FullSource.zip`; SHA-256 `30236500cfa2d8702a25cdca9c99f0eca58eaaa047928a6b12ce88b1b2a373c3`. This exact archive is the only v2.95.67 baseline.
+- Batch 025 adds six reciprocal Word Family links across apologize/apology, subscribe/subscription and transport/transportation. It adds zero canonical headwords and preserves all existing canonical IDs.
+- Added a read-only Word Family Graph Audit. Its missing-target, POS, Vietnamese sense-anchor and non-reciprocity findings are review signals; no automatic repair is performed.
+- Corrected the version bump on every `__release=2.95.66` URL in the Service Worker precache and local module imports to `2.95.67`; all 43 Node regression scripts pass after this fix.
+- Current test report, package verification, change manifest and command log are recorded under `docs/reports/*v2.95.67*`.
+- UI, Robot Buddy, TOEIC question banks, answer keys, Mock eligibility, IndexedDB records/schema and GitHub-only hosting constraints remain unchanged.
+- Hosted GitHub Actions, Pages deployment and physical-device acceptance remain **UNVERIFIED**.
+
+- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.65_FullSource.zip`; SHA-256 `a1b95e807e08052bfa599a08ff88bc3237ae086688557ce3ae77b78e814814fb`. This exact v2.95.65 archive is the only baseline for this release.
+- FullSource and Patch artifacts are generated from the final v2.95.66 commit. Their detached checksums, archive inventory, ZIP CRC and clean-predecessor Patch replay are recorded in `reports/PACKAGE_VERIFICATION_v2.95.66.md`.
+- Test details and source-root cause are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.66.md`, `reports/PYTHON_TEST_SHARDS_v2.95.66.md` (plus JSON ledger), and `reports/RUNTIME_SHELL_COHERENCE_AND_CI_FIX_v2.95.66.md`.
+- Fixed Batch 022's stale CI assertion: it now checks the exact `python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_022.py' -v` command used by the workflow. Focused Batch 022 regression: 9/9 PASS.
+- Fixed the PWA mixed-release cache path. HTML entry resources and every local app ES-module dependency use the v2.95.66 release key. `releaseDataUrl` includes a second shell key that legacy workers do not strip. Root navigation served by an active worker returns its own cached index while a new worker is waiting for explicit user approval.
+- Added an HTML/JavaScript release-marker check before `bindEvents`, guarded the `#modalLayer` listener, and added regression coverage for all required static DOM targets, duplicate IDs, release shell resource keys and the waiting-worker navigation case.
+- Focused verification: Batch 022 9/9, release-shell coherence 6/6, bindEvents DOM contract 4/4, CI coverage 8/8, PWA readiness 3/3, design system 19/19, service-worker update simulation PASS and 43/43 Node scripts PASS. Full Python discovery is separately tracked in the sharded test report; it must not be marked PASS until every discovered module reaches an accepted terminal result.
+- Six read-only Markdown quality/review snapshots and one JSON audit snapshot were regenerated under `docs/reports/*v2.95.66*`. They describe current audit inventory and review queues; they do not mean independent editorial approval or that their underlying content was added in this release.
+- No vocabulary/Related Glossary content, canonical IDs/headwords/relations, question/choice/answer-key data, Mock eligibility, learner IndexedDB records/schema or Robot Buddy privacy boundary changed. Only `data/manifest.json`'s release marker changed under `data/`. UI layout/navigation remain frozen; no backend was added.
+- Hosted GitHub Actions, deployed Pages, active-worker update acceptance, installed-PWA/offline behavior and physical-device tests remain **UNVERIFIED** until the branch is pushed, Actions completes and a device acceptance is performed.
 
 ## Stage 2 progress
 
@@ -31,13 +41,20 @@ Stage 2: **6/6 workstreams implemented (100%)**; item 9 is structurally instrume
 ## Non-negotiable data boundaries
 
 - The 193 Listening reserve questions and 87 Reading reserve questions remain excluded from Mock until independent approval.
-- Across v2.95.61–v2.95.65, no canonical vocabulary IDs/headwords/meanings/relations, question IDs/choices/answer keys, Mock eligibility, learner-history schema, or Robot Buddy access boundary changed. v2.95.65 modifies only Batch 035 historical test coverage, shared modal shell mechanics, CI registration, design-token selector identity and release documentation; learner IndexedDB stores/schema and records are untouched.
+- Across v2.95.61–v2.95.66, no canonical vocabulary IDs/headwords/meanings/relations, question IDs/choices/answer keys, Mock eligibility, learner-history schema, or Robot Buddy access boundary changed. v2.95.66 modifies only runtime release-shell cache coherence, startup/DOM guards, CI test contracts, regression tests and release documentation; learner IndexedDB stores/schema and records are untouched.
 - The v2.95.55 complete learner-data backup and guarded restore remains intact. Existing attempt-history records are read without migration.
 - UI layout and navigation were not redesigned.
 
-## Acceptance boundary
+## Acceptance boundary — v2.95.66 historical
 
-For v2.95.65, 111/111 focused Python cases across 13 modules and 43/43 Node regression scripts pass. The full 97-module Python suite was not run to completion in this batch; no full-suite PASS is claimed. Repository integrity (363 inspected references, 0 errors/0 warnings), data (1,141 records, 0 errors/0 warnings), learning-content validation, Part 1 assets, version synchronization and design-token audit (0 new violations) pass. Hosted GitHub Actions, GitHub Pages deployment, installed-PWA cache propagation and physical iOS/iPadOS/Android behavior remain **UNVERIFIED**.
+For v2.95.66, focused regression cases and all 43 Node scripts listed in the current test report pass. The 100-module Python shard excluding the heavy validator module is PASS: 727/727 collected test cases, with zero fail/skip/error. `test_validator.py` (44 methods) did not complete as a whole within the execution window: its first 21 tests completed PASS before the next test exceeded the window; the two new release-query validator cases pass separately (2/2), and the production data validator CLI passes. Therefore the overall 101-module Python inventory remains INCOMPLETE, not full-suite PASS. Hosted GitHub Actions and GitHub Pages deployment for v2.95.66, active-worker update acceptance, installed-PWA/offline propagation and physical iOS/iPadOS/Android behavior remain **UNVERIFIED**.
+
+## Acceptance boundary — v2.95.67
+
+- Source state: **candidate with focused local verification**. The full Python test inventory has not been completed for this release. Current discovery finds 102 Python test modules; 17 selected modules completed 161/161 cases PASS. Two additional targeted `test_validator.py` release-key cases pass separately. The full 44-method validator module did not complete in the available execution window, and the remaining full-suite inventory is not claimed as passed.
+- Node regression: 43/43 scripts PASS. Data validator: 1,141 canonical records, 0 errors / 0 warnings, IDs +0/-0. Learning-content validator: 0 errors / 0 warnings. Part 1 assets 9/9. Version markers 18/18. JavaScript syntax and Python compileall PASS. Repository integrity: 407 references/data files, 0 errors / 0 optional warnings. Design-token audit: 0 new violations; 2,773 legacy warnings.
+- Batch 025 adds six reciprocal word-family links and zero canonical headwords/IDs. No question/choice/answer-key data, Mock eligibility, learner IndexedDB schema/records, UI layout or Robot Buddy privacy boundary changed.
+- GitHub-hosted Actions, Pages deployment, installed-PWA cache propagation and physical-device acceptance remain **UNVERIFIED**. The candidate has not been pushed to the live branch.
 
 ## Previous completed work
 
@@ -51,6 +68,16 @@ For v2.95.65, 111/111 focused Python cases across 13 modules and 43/43 Node regr
 - Added read-only complexity triage for the full Listening/Reading question inventory. Observable signals include source length, prompt length, answer-option length spread, inference/purpose wording and multi-document indicators.
 - Does not infer difficulty or CEFR, does not use learner response statistics, and does not modify question content or Mock eligibility.
 - Reserve-pending items remain excluded from Mock. Independent review, pilot response data and psychometric calibration remain open.
+
+## v2.95.66 — runtime shell coherence and CI regression hardening (2026-11-25)
+
+- Exact baseline: `TOEIC_Dictionary_v2.95.65_FullSource.zip`; SHA-256 `a1b95e807e08052bfa599a08ff88bc3237ae086688557ce3ae77b78e814814fb`.
+- Corrected the Batch 022 CI contract to validate the actual `unittest discover` command. The focused Batch 022 suite passes 9/9.
+- Version-keyed the HTML manifest, stylesheets, app module, every local app import and data requests. Added a second `__shell` key so older active Service Workers do not normalize v2.95.66 resource URLs to old cache entries.
+- Kept root navigation on the currently active worker's cached HTML while an updated worker is waiting for user approval, preventing a fresh HTML shell from being paired with old cache-first assets.
+- Added the startup HTML/JavaScript release consistency guard, optional DOM binding for `#modalLayer`, a complete required listener-target contract test and service-worker mixed-release regression.
+- Focused test results and the full Python-shard completion status are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.66.md` and `reports/PYTHON_TEST_SHARDS_v2.95.66.md`.
+- No learning-bank/vocabulary content, IDs, answer keys, eligibility, learner storage or Robot Buddy privacy rules were changed.
 
 ## v2.95.65 — Batch 035 Cambridge history and single shared modal overlay (2026-11-25)
 
@@ -105,3 +132,11 @@ For v2.95.65, 111/111 focused Python cases across 13 modules and 43/43 Node regr
 - The v2.95.59 non-calibrated complexity inventory remains part of the baseline: 582 questions; 280 reserve-pending (193 Listening, 87 Reading); all reserve remain excluded from Mock.
 - No canonical vocabulary fields, IDs, headwords, relation arrays, question content/IDs/choices/answer keys, learner data, IndexedDB schema, Mock eligibility, UI layout or hosting architecture changed. This release adds reports/tooling/tests and synchronized release markers only.
 - Full hosted Actions, Pages deployment, cache propagation and physical-device acceptance remain unverified.
+
+## v2.95.67 — Word Family graph integrity and sourced reciprocal enrichment (2026-11-26)
+
+- Baseline: exact `TOEIC_Dictionary_v2.95.66_FullSource.zip`; SHA-256 `30236500cfa2d8702a25cdca9c99f0eca58eaaa047928a6b12ce88b1b2a373c3`.
+- Added six reciprocal, sense-matched `word_family` links across apologize/apology, subscribe/subscription and transport/transportation. Zero headwords or canonical IDs added; Vietnamese meanings are copied from target senses already present in the dictionary.
+- Added a Cambridge-source ledger, dedicated family-link regression tests and a read-only graph audit for missing targets, POS mismatches, sense-anchor mismatches, duplicate/malformed links and non-reciprocity. Review flags are not automatically fixed.
+- No learner progress, IndexedDB schema, question/choice/answer-key data, Mock eligibility, UI, Robot Buddy behavior or hosting architecture changed.
+- Local evidence and known limits are in `docs/reports/*v2.95.67*`; remote Pages/Actions and physical-device checks remain unverified.

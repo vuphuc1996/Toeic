@@ -22,9 +22,9 @@ class DesignSystemTests(unittest.TestCase):
         self.assertNotIn("display: none", compact.group(1))
 
     def test_design_system_stylesheet_is_linked_after_feature_styles(self):
-        self.assertIn('href="./assets/css/app.css"', HTML)
-        self.assertIn('href="./assets/css/design-system.css"', HTML)
-        self.assertLess(HTML.index('href="./assets/css/app.css"'), HTML.index('href="./assets/css/design-system.css"'))
+        self.assertRegex(HTML, r'href="\./assets/css/app\.css\?__release=\d+\.\d+\.\d+"')
+        self.assertRegex(HTML, r'href="\./assets/css/design-system\.css\?__release=\d+\.\d+\.\d+"')
+        self.assertLess(HTML.index('./assets/css/app.css?'), HTML.index('./assets/css/design-system.css?'))
 
     def test_shared_type_scale_and_system_font_stack_are_defined(self):
         self.assertIn("--ds-text:", CSS)

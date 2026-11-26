@@ -1349,7 +1349,13 @@
         "TRANSPORT",
         "SHIPPING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "transportation",
+          "pos": "n",
+          "meaning_vi": "sự vận chuyển; phương tiện giao thông"
+        }
+      ],
       "verb_forms": {
         "v1": "transport",
         "vs_es": "transports",
@@ -1390,7 +1396,13 @@
         "TRANSPORT",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "transport",
+          "pos": "v",
+          "meaning_vi": "vận chuyển; phương tiện"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "batch": "025",
+  "release": "2.95.67",
+  "title": "Reciprocal, dictionary-cross-checked Word Family links for 3 existing TOEIC headword pairs",
+  "editorialStatus": "Cambridge entry cross-reference and POS checked; separate independent editorial review remains recommended.",
+  "sourcePolicy": "No new headwords, definitions, IPA, examples or meanings were created. Each reciprocal link copies the target headword spelling, POS and Vietnamese sense from the existing canonical record. Links are added only where Cambridge Dictionary entry evidence supports the word-family relationship.",
+  "headwordsAdded": 0,
+  "linksAdded": 6,
+  "pairs": [
+    {
+      "source": "apologize",
+      "target": "apology",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/apologize",
+      "targetUrl": "https://dictionary.cambridge.org/dictionary/english/apology",
+      "evidence": "Cambridge identifies apologize as a verb meaning to say one is sorry and apology as the noun for the act of saying sorry."
+    },
+    {
+      "source": "subscribe",
+      "target": "subscription",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/subscribe",
+      "targetUrl": "https://dictionary.cambridge.org/dictionary/english/subscription",
+      "evidence": "Cambridge lists subscription as the noun related to subscribe; both definitions align to recurring receipt/payment for a service or publication."
+    },
+    {
+      "source": "transport",
+      "target": "transportation",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/transport",
+      "targetUrl": "https://dictionary.cambridge.org/dictionary/english/transportation",
+      "evidence": "Cambridge explicitly notes transportation as the US equivalent of transport in the relevant noun usage and defines transportation as movement of people or goods."
+    }
+  ],
+  "records": [
+    {
+      "id": "apologize-v",
+      "word": "apologize",
+      "file": "data/vocabulary/A.json",
+      "before": [],
+      "after": [
+        {
+          "word": "apology",
+          "pos": "n",
+          "meaning_vi": "lời xin lỗi"
+        }
+      ]
+    },
+    {
+      "id": "apology-n",
+      "word": "apology",
+      "file": "data/vocabulary/A.json",
+      "before": [],
+      "after": [
+        {
+          "word": "apologize",
+          "pos": "v",
+          "meaning_vi": "xin lỗi"
+        }
+      ]
+    },
+    {
+      "id": "subscribe-v",
+      "word": "subscribe",
+      "file": "data/vocabulary/S.json",
+      "before": [],
+      "after": [
+        {
+          "word": "subscription",
+          "pos": "n",
+          "meaning_vi": "thuê bao; gói đăng ký định kỳ"
+        }
+      ]
+    },
+    {
+      "id": "subscription-n",
+      "word": "subscription",
+      "file": "data/vocabulary/S.json",
+      "before": [],
+      "after": [
+        {
+          "word": "subscribe",
+          "pos": "v",
+          "meaning_vi": "đăng ký thuê bao; đặt mua định kỳ"
+        }
+      ]
+    },
+    {
+      "id": "transport-v",
+      "word": "transport",
+      "file": "data/vocabulary/T.json",
+      "before": [],
+      "after": [
+        {
+          "word": "transportation",
+          "pos": "n",
+          "meaning_vi": "sự vận chuyển; phương tiện giao thông"
+        }
+      ]
+    },
+    {
+      "id": "transportation-n",
+      "word": "transportation",
+      "file": "data/vocabulary/T.json",
+      "before": [],
+      "after": [
+        {
+          "word": "transport",
+          "pos": "v",
+          "meaning_vi": "vận chuyển; phương tiện"
+        }
+      ]
+    }
+  ],
+  "preservation": "Canonical headword IDs and spellings, senses, meanings, examples, IPA, verb forms, synonyms, antonyms, topic tags, question banks, Mock eligibility and learner storage remain unchanged. Only six directed word_family links are added."
+}

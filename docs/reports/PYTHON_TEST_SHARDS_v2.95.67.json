@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "version": "2.95.67",
+  "overallStatus": "INCOMPLETE — focused selection only; full 102-module inventory not completed",
+  "inventory": {
+    "dynamicallyDiscoveredModules": 102,
+    "fullyExecutedFocusedModules": 17,
+    "unselectedModules": "NOT RUN; no pass/fail inferred"
+  },
+  "focusedExecution": {
+    "modules": [
+      {
+        "module": "test_vocabulary_family_batch_025.py",
+        "collected": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_vocabulary_family_links.py",
+        "collected": 6,
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_vocabulary_relationship_graph_audit.py",
+        "collected": 8,
+        "passed": 8,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_ci_coverage.py",
+        "collected": 8,
+        "passed": 8,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_sync_version.py",
+        "collected": 12,
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_project_progress.py",
+        "collected": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_repository_integrity.py",
+        "collected": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_package_source.py",
+        "collected": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_test_fingerprints.py",
+        "collected": 10,
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_git_commit_readiness.py",
+        "collected": 10,
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_release_acceptance_runner.py",
+        "collected": 10,
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_learning_content.py",
+        "collected": 34,
+        "passed": 34,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_question_evidence.py",
+        "collected": 7,
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_answer_position_balance.py",
+        "collected": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_baseline_ids.py",
+        "collected": 13,
+        "passed": 13,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_related_glossary_backfill_025.py",
+        "collected": 6,
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      },
+      {
+        "module": "test_vocabulary_detail_examples.py",
+        "collected": 19,
+        "passed": 19,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0,
+        "status": "PASS"
+      }
+    ],
+    "collected": 161,
+    "passed": 161,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0
+  },
+  "targetedValidatorMethods": {
+    "module": "tools/tests/test_validator.py",
+    "methods": [
+      "test_release_keyed_appshell_url_resolves_to_real_file",
+      "test_release_keyed_appshell_url_still_rejects_missing_file"
+    ],
+    "collected": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "status": "PASS — targeted methods only; not whole-module completion"
+  },
+  "incompleteModules": [
+    {
+      "module": "tools/tests/test_validator.py",
+      "discoveredMethods": 44,
+      "status": "INCOMPLETE",
+      "reason": "The full module did not complete within the available execution window and produced no final unittest summary."
+    }
+  ],
+  "policy": "A module is PASS only after a complete unittest summary with exit code 0; targeted method runs do not promote the full module to PASS."
+}

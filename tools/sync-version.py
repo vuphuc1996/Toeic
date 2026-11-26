@@ -43,6 +43,11 @@ MARKERS: tuple[Marker, ...] = (
         rf"CACHE_NAME = 'toeic-vocab-github-only-v({SEMVER})';",         # v2.9.7 layout
     )),
     Marker("index.html <title>", "index.html", (rf"<title>TOEIC Dictionary v({SEMVER}) ",)),
+    Marker("index.html application release meta", "index.html", (rf'<meta name="app-release" content="({SEMVER})">',)),
+    Marker("index.html app CSS cache key", "index.html", (rf'href="\./assets/css/app\.css\?__release=({SEMVER})"',)),
+    Marker("index.html design-system CSS cache key", "index.html", (rf'href="\./assets/css/design-system\.css\?__release=({SEMVER})"',)),
+    Marker("index.html app module cache key", "index.html", (rf'src="\./assets/js/app\.js\?__release=({SEMVER})"',)),
+    Marker("index.html manifest cache key", "index.html", (rf'href="\./manifest\.webmanifest\?__release=({SEMVER})"',)),
     Marker("index.html sidebar", "index.html", (rf'<div class="sidebar-version">Phase 5 · v({SEMVER}) · GitHub-only</div>',)),
     Marker("index.html phase-note", "index.html", (rf"<strong>TOEIC Dictionary · GitHub Pages product v({SEMVER}):</strong>",)),
     Marker("index.html footer", "index.html", (rf"<span>GitHub Pages product · v({SEMVER})</span>",)),

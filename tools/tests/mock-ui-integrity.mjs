@@ -13,7 +13,7 @@ for (const id of ['page-mock','mockLanding','mockPoolStats','mockResumePanel','m
   assert.ok(ids.includes(id), `missing required Mock UI node #${id}`);
 }
 for (const mode of ['quick','half','full']) assert.ok(html.includes(`data-mock-start="${mode}"`), `missing ${mode} mode card`);
-assert.match(app, /from ['"]\.\/mock-engine\.js['"]/);
+assert.match(app, /from ['"]\.\/mock-engine\.js\?__release=\d+\.\d+\.\d+['"]/);
 assert.match(app, /toeic:mock-usage:v1/, 'lifetime question rotation must have its own LocalStorage key');
 assert.match(app, /mockUsageCounts/);
 assert.match(app, /mock-score-dial/);

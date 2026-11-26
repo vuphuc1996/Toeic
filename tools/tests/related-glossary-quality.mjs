@@ -31,6 +31,6 @@ assert.equal(placeholderRows.length, 50, 'the current canonical glossary placeho
 assert.ok(placeholderRows.every(row => getLearnerFacingRelatedGlossaryDefinition(row.definition_en) === ''), 'no canonical placeholder row may leak into learner-facing English text');
 
 const app = await readFile(new URL('../../assets/js/app.js', import.meta.url), 'utf8');
-assert.match(app, /import \{ getLearnerFacingRelatedGlossaryDefinition \} from '\.\/related-glossary-quality\.js';/);
+assert.match(app, /import \{ getLearnerFacingRelatedGlossaryDefinition \} from '\.\/related-glossary-quality\.js\?__release=\d+\.\d+\.\d+';/);
 assert.match(app, /const learnerDefinition=getLearnerFacingRelatedGlossaryDefinition\(alias\.definition_en\);/);
 console.log('PASS: related glossary placeholders are suppressed from learner-facing English definitions; valid definitions remain visible.');

@@ -11,7 +11,14 @@ const appSource = read('assets/js/app.js');
 const html = read('index.html');
 const css = read('assets/css/app.css');
 
-assert.equal((swSource.match(/\.\/assets\/js\/flashcard-senses\.js/g) || []).length, 2, 'multi-sense Flashcard helper must be precached as required and app-shell assets');
+const requiredAssets = JSON.parse(swSource.match(/const REQUIRED = (\[.*?\]);/s)[1]);
+const appShellAssets = JSON.parse(swSource.match(/const APP_SHELL = (\[.*?\]);/s)[1]);
+const releaseVersion = swSource.match(/const VERSION = '([^']+)'/)[1];
+for (const assets of [requiredAssets, appShellAssets]) {
+  assert.ok(assets.includes('./assets/js/flashcard-senses.js'), 'legacy module path remains covered');
+  assert.ok(assets.includes(`./assets/js/flashcard-senses.js?__release=${releaseVersion}`), 'release-keyed module URL must be precached');
+}
+
 
 function createWorker({ active = false, failRequired = false, failOptional = false } = {}) {
   const listeners = new Map();
@@ -20,6 +27,7 @@ function createWorker({ active = false, failRequired = false, failOptional = fal
   let skipWaitingCalls = 0;
   let claimCalls = 0;
   let navigationResponse = null;
+  const fetchCalls = [];
 
   const keyOf = value => value instanceof URL ? value.href : (value?.url || String(value));
   const cacheStorage = {
@@ -61,6 +69,7 @@ function createWorker({ active = false, failRequired = false, failOptional = fal
 
   const fetchMock = async request => {
     const url = keyOf(request);
+    fetchCalls.push(url);
     if (navigationResponse && request?.mode === 'navigate') return navigationResponse.clone();
     if (failRequired && url.endsWith('/index.html')) return new Response('required failed', { status: 503 });
     if (failOptional && url.endsWith('/assets/icons/icon.svg')) return new Response('optional failed', { status: 404 });
@@ -84,6 +93,7 @@ function createWorker({ active = false, failRequired = false, failOptional = fal
     listeners,
     cacheStore,
     deleted,
+    fetchCalls,
     registration,
     get skipWaitingCalls() { return skipWaitingCalls; },
     get claimCalls() { return claimCalls; },
@@ -111,6 +121,15 @@ function createWorker({ active = false, failRequired = false, failOptional = fal
       handler({ request, respondWith(promise) { pending = Promise.resolve(promise); } });
       assert.ok(pending, 'Navigation request must be handled');
       return pending;
+    },
+    async dispatchFetch(url) {
+      let pending;
+      const handler = listeners.get('fetch');
+      assert.ok(handler, 'Service Worker fetch handler should exist');
+      const request = new Request(url, { method: 'GET' });
+      handler({ request, respondWith(promise) { pending = Promise.resolve(promise); } });
+      assert.ok(pending, 'Same-origin asset request must be handled');
+      return pending;
     }
   };
 }
@@ -124,6 +143,14 @@ function createWorker({ active = false, failRequired = false, failOptional = fal
   assert.ok(currentCache, 'the complete release cache should be created');
   const entries = worker.cacheStore.get(currentCache);
   assert.equal(entries.has('https://example.test/Toeic/assets/icons/icon.svg'), false, 'optional HTTP errors must not be cached');
+
+  // Release-keyed data requests must reuse this release's canonical precache.
+  const dataKey = 'https://example.test/Toeic/data/manifest.json';
+  assert.equal(entries.has(dataKey), true, 'canonical data manifest should be precached');
+  const callsBefore = worker.fetchCalls.length;
+  const keyedData = await worker.dispatchFetch(`${dataKey}?__release=${releaseVersion}&__shell=${releaseVersion}`);
+  assert.equal(await keyedData.clone().text(), `cached:${dataKey}`, 'new worker should normalize both release keys to its canonical data cache entry');
+  assert.equal(worker.fetchCalls.length, callsBefore, 'release-keyed data hit must not refetch an already precached canonical file');
 }
 
 // Update: preserve the active cache and wait until a real user action sends SKIP_WAITING.
@@ -143,11 +170,17 @@ function createWorker({ active = false, failRequired = false, failOptional = fal
   assert.equal(worker.cacheStore.has('toeic-vocab-github-only-v2.95.8'), false, 'old TOEIC cache should be removed after activation');
   assert.equal(worker.cacheStore.has('unrelated-application-cache'), true, 'unrelated cache should never be removed');
 
-  // A 404 navigation may fall back to cached index, but it must never replace index.html.
+  // While a new worker waits for user approval, never serve fresh root HTML with old cached modules.
   const currentCache = [...worker.cacheStore.keys()].find(key => key.startsWith('toeic-vocab-github-only-v'));
   const indexKey = 'https://example.test/Toeic/index.html';
   const cache = worker.cacheStore.get(currentCache);
   const before = await cache.get(indexKey).clone().text();
+  worker.setNavigationResponse(new Response('fresh next-release index', { status: 200 }));
+  const rootResponse = await worker.dispatchNavigate('https://example.test/Toeic/');
+  assert.equal(await rootResponse.clone().text(), before, 'root navigation must keep the active worker app shell until consent');
+  assert.equal(await cache.get(indexKey).clone().text(), before, 'waiting release must not overwrite the active cached index');
+
+  // A 404 deep-link navigation may fall back to cached index, but must never replace index.html.
   worker.setNavigationResponse(new Response('404 page', { status: 404 }));
   const response = await worker.dispatchNavigate('https://example.test/Toeic/not-found');
   assert.equal(response.status, 200, 'cached app shell should be used as a safe navigation fallback');
@@ -173,4 +206,4 @@ assert.match(appSource, /pending\.postMessage\(\{type:'SKIP_WAITING'\}\)/);
 assert.match(appSource, /addEventListener\('controllerchange',reloadAfterWorkerSwap/);
 assert.match(css, /\.app-update-banner/);
 
-console.log('PASS: Service Worker update lifecycle simulation — first install auto-activates; updates wait for user consent; failed required install preserves old cache; optional asset failures do not block; cache cleanup is scoped; 404 does not replace index; update banner is wired.');
+console.log('PASS: Service Worker release lifecycle — release-keyed data hits the canonical precache; first install activates; updates wait for consent; failures preserve the active cache; optional assets do not block; root shell stays coherent; 404 does not replace index; update banner is wired.');

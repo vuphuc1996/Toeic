@@ -1,26 +1,28 @@
-import { LocalNotificationProvider } from './notification-provider.js';
-import { buildRobotLearningInsights } from './robot-learning-insights.js';
-import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js';
-import { buildMockScoreReadiness } from './mock-score-readiness.js';
-import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js';
-import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js';
-import { buildObjectiveResourceIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, listDueRecallItems } from './learning-outcome-progress.js';
-import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js';
-import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js';
-import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js';
-import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js';
-import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js';
-import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js';
-import { createRobotBuddy } from './robot-buddy.js';
-import { renderAdditionalFlashSenses } from './flashcard-senses.js';
-import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js';
-import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js';
+import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.67';
+import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.67';
+import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js?__release=2.95.67';
+import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.67';
+import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.67';
+import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.67';
+import { buildObjectiveResourceIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.67';
+import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.67';
+import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.67';
+import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.67';
+import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.67';
+import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.67';
+import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.67';
+import { createRobotBuddy } from './robot-buddy.js?__release=2.95.67';
+import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.67';
+import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.67';
+import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.67';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.65';
+const APP_RELEASE_VERSION = '2.95.67';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
+  // Legacy workers strip __release but preserve __shell, forcing a fresh release-specific cache key.
+  url.searchParams.set('__shell', version);
   return url.toString();
 }
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -2154,7 +2156,7 @@ function bindEvents(){
   document.addEventListener('click',e=>{const answer=e.target.closest('[data-placement-answer]');if(answer){answerPlacementQuestion(answer);return;}if(e.target.closest('[data-placement-next]')){if(state.placementState){state.placementState.index++;renderPlacementQuestion();}return;}const apply=e.target.closest('[data-placement-apply]');if(apply){applyPlacementLevel(apply.dataset.placementApply);return;}if(e.target.closest('[data-placement-retry]')){startPlacementDiagnostic();}});
   $('#foundationStartLevel')?.addEventListener('change',e=>{const level=e.target.value;state.foundationStartLevel=['ALL','PRE-A1','A1','A2','B1','B2','C1'].includes(level)?level:'ALL';try{localStorage.setItem('toeic:learning-start-level:v1',state.foundationStartLevel);}catch{}renderFoundationPath();});
   $('#learningFocusBackdrop')?.addEventListener('click',e=>{if(e.target.id==='learningFocusBackdrop')return;});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&learningFocusState.active&&$('#modalLayer')?.hidden!==false)closeLearningFocus();});$('#modalLayer').addEventListener('click',e=>{if(e.target.id==='modalLayer'&&(state.practiceReviewPending||state.autoAdvanceWaiting||state.pendingPracticeBatch||state.pendingFoundationAssessment||state.pendingSinglePractice||state.pendingFlashQuizResult||state.pendingPlacementResult||state.pendingMockResult))return;if(e.target.id==='modalLayer')closeModal();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&learningFocusState.active&&$('#modalLayer')?.hidden!==false)closeLearningFocus();});$('#modalLayer')?.addEventListener('click',e=>{if(e.target.id==='modalLayer'&&(state.practiceReviewPending||state.autoAdvanceWaiting||state.pendingPracticeBatch||state.pendingFoundationAssessment||state.pendingSinglePractice||state.pendingFlashQuizResult||state.pendingPlacementResult||state.pendingMockResult))return;if(e.target.id==='modalLayer')closeModal();});
   $('#closeGoogleSearch').addEventListener('click',closeGoogleSearchPanel);
   $('#googleSearchBackdrop').addEventListener('click',e=>{if(e.target.id==='googleSearchBackdrop')closeGoogleSearchPanel();});
   $('#runGoogleAIButton').addEventListener('click',openGoogleSearch);
@@ -3882,5 +3884,5 @@ async function registerSW(){
     return null;
   }
 }
-async function init(){bindEvents();updateDate();renderDeviceGreeting();try{await loadData();await initializePractice();loadMockState();if(state.pendingMockResult&&!state.pendingSinglePractice)showPendingMockResult();await initializeRobotCompanion();}catch(err){console.error(err);$('#metricWords').textContent='!';const status=$('#metricWordsStatus');if(status){status.textContent=`DỮ LIỆU CHƯA ĐỒNG BỘ · ${err.message}`;status.dataset.integrity='mismatch';}toast(`Không tải được dữ liệu: ${err.message}`,'error');$('#resultCount').textContent='Không tải được dữ liệu';}await registerSW();initializeInstallInvite();}
+async function init(){try{const shellRelease=document.querySelector('meta[name="app-release"]')?.content;if(shellRelease!==APP_RELEASE_VERSION)throw new Error(`HTML/JavaScript release mismatch: HTML ${shellRelease||'missing'} · JS ${APP_RELEASE_VERSION}`);bindEvents();updateDate();renderDeviceGreeting();await loadData();await initializePractice();loadMockState();if(state.pendingMockResult&&!state.pendingSinglePractice)showPendingMockResult();await initializeRobotCompanion();}catch(err){console.error('TOEIC startup aborted:',err);const metric=$('#metricWords');if(metric)metric.textContent='!';const status=$('#metricWordsStatus');if(status){status.textContent=`KHỞI TẠO CHƯA HOÀN TẤT · ${err.message}`;status.dataset.integrity='mismatch';}const resultCount=$('#resultCount');if(resultCount)resultCount.textContent='Không thể khởi tạo ứng dụng';const updateBanner=$('#appUpdateBanner');if(updateBanner){updateBanner.hidden=false;const copy=updateBanner.querySelector('.app-update-copy small');if(copy)copy.textContent='Bản ứng dụng chưa đồng bộ. Hãy tải lại để nhận cùng một phiên bản.';}toast(`Không khởi tạo được ứng dụng: ${err.message}`,'error');}await registerSW();initializeInstallInvite();}
 init();

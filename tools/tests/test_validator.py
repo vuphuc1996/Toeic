@@ -287,6 +287,23 @@ class ValidatorTests(unittest.TestCase):
         self.assertEqual(code, 0, out)
         self.assertIn("RESULT: PASS", out)
 
+    def test_release_keyed_appshell_url_resolves_to_real_file(self):
+        self.clean_with_baseline()
+        self.repo.sw_extra_paths = ["./assets/js/app.js?__release=2.95.66"]
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 0, out)
+        self.assertIn("RESULT: PASS", out)
+
+    def test_release_keyed_appshell_url_still_rejects_missing_file(self):
+        self.clean_with_baseline()
+        self.repo.sw_extra_paths = ["./assets/js/missing.js?__release=2.95.66"]
+        self.repo.save()
+        code, out = self.repo.run()
+        self.assertEqual(code, 1, out)
+        self.assertIn("SW001", out)
+        self.assertIn("missing.js?__release=2.95.66", out)
+
     def test_unlisted_asset_is_new_error(self):
         self.clean_with_baseline()
         self.repo.extra_assets = ["assets/topics/office.webp"]

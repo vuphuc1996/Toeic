@@ -2546,7 +2546,13 @@
       "topics": [
         "TECHNOLOGY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "subscription",
+          "pos": "n",
+          "meaning_vi": "thuê bao; gói đăng ký định kỳ"
+        }
+      ],
       "verb_forms": {
         "v1": "subscribe",
         "vs_es": "subscribes",
@@ -2587,7 +2593,13 @@
       "topics": [
         "TECHNOLOGY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "subscribe",
+          "pos": "v",
+          "meaning_vi": "đăng ký thuê bao; đặt mua định kỳ"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

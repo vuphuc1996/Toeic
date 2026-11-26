@@ -2927,7 +2927,13 @@
       "topics": [
         "CUSTOMER"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "apology",
+          "pos": "n",
+          "meaning_vi": "lời xin lỗi"
+        }
+      ],
       "verb_forms": {
         "v1": "apologize",
         "vs_es": "apologizes",
@@ -2969,7 +2975,13 @@
         "CUSTOMER",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "apologize",
+          "pos": "v",
+          "meaning_vi": "xin lỗi"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

@@ -26,7 +26,7 @@ class RelatedTermExplanationContextTests(unittest.TestCase):
         self.assertIn('alias.meaning_vi',body)
 
     def test_placeholder_glossary_definitions_are_filtered_before_display(self):
-        self.assertIn("import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js';", self.app)
+        self.assertRegex(self.app, r"import \{ getLearnerFacingRelatedGlossaryDefinition \} from '\./related-glossary-quality\.js\?__release=\d+\.\d+\.\d+';")
         self.assertIn('const learnerDefinition=getLearnerFacingRelatedGlossaryDefinition(alias.definition_en);', self.app)
 
     def test_related_source_context_label_is_relation_specific(self):

@@ -1,3 +1,21 @@
+## v2.95.67 — Word Family graph integrity and sourced reciprocal enrichment (2026-11-26)
+
+- Added six reciprocal, sense-matched Word Family links across three existing headword pairs: apologize/apology, subscribe/subscription and transport/transportation. All target spellings, POS labels and Vietnamese sense anchors come from existing canonical records; Cambridge Dictionary entries were checked for the relationships.
+- Added a source ledger (`data/vocabulary/batch-025.json`) and regression coverage. No new headwords or IDs were introduced, and no existing sense, definition, IPA, example, verb form, synonym, antonym, question, choice, answer key or Mock eligibility changed.
+- Added a read-only Word Family Graph Audit covering missing canonical targets, target POS mismatches, Vietnamese sense-anchor mismatches, non-reciprocal relationships, duplicates and malformed data. Review flags are not auto-repaired.
+- Re-keyed every remaining v2.95.66 `__release` URL in `sw.js`, `assets/js/app.js` and `assets/js/mock-engine.js` to v2.95.67. The Service Worker update regression now derives the expected key from the worker's release marker; this catches stale precache URLs on future bumps.
+- Kept the PWA UI and Robot Buddy behavior unchanged. Learner IndexedDB schema/records and privacy boundary are unchanged.
+- Safe CMUdict preview still finds no auto-apply candidates among the 79 missing US IPA entries; no pronunciation was invented or automatically applied. Related Glossary definition placeholders are not rewritten without source/sense evidence.
+- Local structural/content validation, focused tests and package replay are recorded in the v2.95.67 release reports. Hosted GitHub Actions, Pages deployment and physical-device acceptance remain unverified.
+
+## v2.95.66 — Runtime shell coherence and CI regression hardening (2026-11-25)
+
+- Fixed the Batch 022 CI contract: its regression now verifies the actual `unittest discover` invocation rather than looking for a source-file path that GitHub Actions does not contain.
+- Prevented mixed-release PWA startup. Entry HTML now uses release-keyed manifest, CSS and module URLs; app.js and its local ES-module dependencies carry the same release key; data URLs retain a second release key that older Service Workers do not normalize away.
+- Changed root navigation to serve the active Service Worker's cached index until a waiting update is explicitly accepted. This keeps the HTML shell and cache-first assets on one release while the new worker waits.
+- Added startup HTML/JavaScript release alignment validation, a required bindEvents DOM-target contract, release-shell/offline-precache tests and a Service Worker regression for fresh HTML arriving while an old worker is active.
+- No vocabulary content, Related Glossary terms, canonical IDs/relations, question/choice/answer-key data, Mock eligibility, learner IndexedDB schema/data or Robot Buddy privacy boundary changed. No UI redesign or backend was introduced.
+
 ## v2.95.65 — Batch 035 Cambridge historical tests and single modal overlay (2026-11-25)
 
 - Replaced the stale split Cambridge Batch 035 test module that was present in the GitHub runner but absent from v2.95.64 FullSource. The compatibility suite now reconstructs the historical Batch 035 state from the current 567-row Related Glossary by reversing later additions/corrections and validates the original eight records, their exact source ledger, relation anchors and pre-batch file hash. It does not freeze the current glossary at 553 rows or compare the corrected `article` row with an obsolete pre-correction value.

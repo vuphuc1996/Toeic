@@ -151,9 +151,14 @@ class FoundationListeningTests(unittest.TestCase):
     def test_service_worker_precaches_required_and_app_shell_resources(self):
         required = self.sw.split("const REQUIRED = ", 1)[1].split(";", 1)[0]
         shell = self.sw.split("const APP_SHELL = ", 1)[1].split(";", 1)[0]
-        for path in ("./assets/js/foundation-listening-evidence.js", "./data/learning-path/foundation-listening.json"):
-            self.assertEqual(required.count(path), 1)
-            self.assertEqual(shell.count(path), 1)
+        version = json.loads((ROOT / "data/manifest.json").read_text(encoding="utf-8"))["version"]
+        arrays = [json.loads(required), json.loads(shell)]
+        path = "./assets/js/foundation-listening-evidence.js"
+        data_path = "./data/learning-path/foundation-listening.json"
+        for resources in arrays:
+            self.assertIn(path, resources)
+            self.assertIn(f"{path}?__release={version}", resources)
+            self.assertIn(data_path, resources)
 
 
 if __name__ == "__main__":

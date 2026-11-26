@@ -97,7 +97,8 @@ class RelatedGlossaryBatch023Tests(unittest.TestCase):
 
     def test_ci_registers_the_batch_test(self):
         workflow = (ROOT / ".github/workflows/validate-data.yml").read_text(encoding="utf-8")
-        self.assertIn("tools/tests/test_related_glossary_batch_023.py", workflow)
+        expected_command = "python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_023.py' -v"
+        self.assertIn(expected_command, workflow)
         self.assertIn("Unit tests — related glossary batch 023", workflow)
 
 

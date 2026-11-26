@@ -4,7 +4,7 @@ const app = await readFile(new URL('../../assets/js/app.js', import.meta.url), '
 const html = await readFile(new URL('../../index.html', import.meta.url), 'utf8');
 const backup = await readFile(new URL('../../assets/js/learner-data-backup.js', import.meta.url), 'utf8');
 const sw = await readFile(new URL('../../sw.js', import.meta.url), 'utf8');
-assert.match(app, /import \{ createLearnerBackup, validateLearnerBackup \} from '\.\/learner-data-backup\.js'/);
+assert.match(app, /import \{ createLearnerBackup, validateLearnerBackup \} from '\.\/learner-data-backup\.js\?__release=\d+\.\d+\.\d+'/);
 assert.match(app, /store\.openCursor\(\)/, 'backup enumerates all current keys in the existing object store');
 assert.match(app, /key\?\.startsWith\('toeic:'\)/, 'backup captures application localStorage namespace, including future and legacy keys');
 assert.match(app, /navigator\.storage\.persist\(\)/, 'backup flow requests persistent browser storage when supported');

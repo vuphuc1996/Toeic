@@ -514,10 +514,14 @@ def check_service_worker(ctx: Context) -> None:
     listed: set[str] = set()
     for name, paths in lists.items():
         for p in paths:
-            listed.add(p.replace("./", "", 1) if p.startswith("./") else p)
-            if p in ("./", "/"):
+            # Cache keys may carry release query parameters. The URL identity stays
+            # versioned in Service Worker code, while filesystem validation checks
+            # only the underlying repository path.
+            filesystem_path = p.split("?", 1)[0].split("#", 1)[0]
+            listed.add(filesystem_path.replace("./", "", 1) if filesystem_path.startswith("./") else filesystem_path)
+            if filesystem_path in ("./", "/"):
                 continue
-            if not rel(ctx, p).exists():
+            if not rel(ctx, filesystem_path).exists():
                 # OPTIONAL resources may legitimately be absent from a source snapshot.
                 # Required app-shell resources remain hard errors; Part 1 photo binaries
                 # are additionally enforced by the strict photo release validator in CI.

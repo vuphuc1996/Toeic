@@ -21,7 +21,7 @@ assert.match(app, /allWrong\.slice\(0,10\)/);
 assert.match(app, /flashPickBatch\(topic,Math\.max\(0,10-ids\.length\),ids\)/);
 assert.match(workflow, /node tools\/tests\/flashcard-fixed-batch\.mjs/);
 assert.match(app, /renderAdditionalFlashSenses\(w,posDisplayLabel\)/);
-assert.match(app, /from '\.\/flashcard-senses\.js'/);
+assert.match(app, /from '\.\/flashcard-senses\.js\?__release=\d+\.\d+\.\d+'/);
 assert.match(workflow, /node tools\/tests\/flashcard-senses\.mjs/);
 assert.match(read('assets/css/app.css'), /\.flash-additional-senses[\s\S]*?var\(--ds-color-border\)/);
 assert.match(read('assets/css/app.css'), /\.flash-additional-sense>strong[\s\S]*?var\(--ds-font-support\)/);

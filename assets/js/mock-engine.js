@@ -1,4 +1,4 @@
-import { buildMockQuestionSchedule } from './mock-flow.js';
+import { buildMockQuestionSchedule } from './mock-flow.js?__release=2.95.67';
 
 /**
  * TOEIC Mock Test engine.

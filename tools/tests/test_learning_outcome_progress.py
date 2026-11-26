@@ -1,5 +1,6 @@
 import subprocess
 import unittest
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -26,7 +27,12 @@ class LearningOutcomeProgressTests(unittest.TestCase):
         html = (ROOT / 'index.html').read_text(encoding='utf-8')
         sw = (ROOT / 'sw.js').read_text(encoding='utf-8')
         self.assertIn('id="learningObjectiveProgress"', html)
-        self.assertEqual(sw.count('./assets/js/learning-outcome-progress.js'), 2)
+        required = json.loads(sw.split("const REQUIRED = ", 1)[1].split(";", 1)[0])
+        shell = json.loads(sw.split("const APP_SHELL = ", 1)[1].split(";", 1)[0])
+        version = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf-8'))['version']
+        for resources in (required, shell):
+            self.assertIn('./assets/js/learning-outcome-progress.js', resources)
+            self.assertIn(f'./assets/js/learning-outcome-progress.js?__release={version}', resources)
 
 if __name__ == '__main__':
     unittest.main()
