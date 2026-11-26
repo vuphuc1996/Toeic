@@ -1,23 +1,23 @@
-import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.67';
-import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.67';
-import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js?__release=2.95.67';
-import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.67';
-import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.67';
-import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.67';
-import { buildObjectiveResourceIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.67';
-import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.67';
-import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.67';
-import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.67';
-import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.67';
-import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.67';
-import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.67';
-import { createRobotBuddy } from './robot-buddy.js?__release=2.95.67';
-import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.67';
-import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.67';
-import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.67';
+import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.68';
+import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.68';
+import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js?__release=2.95.68';
+import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.68';
+import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.68';
+import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.68';
+import { buildObjectiveResourceIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.68';
+import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.68';
+import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.68';
+import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.68';
+import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.68';
+import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.68';
+import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.68';
+import { createRobotBuddy } from './robot-buddy.js?__release=2.95.68';
+import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.68';
+import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.68';
+import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.68';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.67';
+const APP_RELEASE_VERSION = '2.95.68';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -30,6 +30,7 @@ const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const icon = (name, cls='ui-icon') => `<svg class="${cls}" aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
 
 let learningFocusState = { active:false, kind:'', nodes:[] };
+let assessmentResultFocusState = null;
 function setLearningFocusHeader(title,subtitle='',eyebrow='FOCUSED LEARNING'){
   const titleNode=$('#learningFocusTitle'),subNode=$('#learningFocusSubtitle'),eyeNode=$('#learningFocusEyebrow');
   if(titleNode)titleNode.textContent=title||'Không gian học tập';
@@ -83,6 +84,7 @@ function openLearningDetail({kind='learning-detail',title,subtitle='Học theo c
   openLearningFocus({kind,title,subtitle,eyebrow,elements:[node]});
 }
 function closeLearningFocus(){
+  if(assessmentResultFocusState){void confirmPendingAssessmentResult({openReviewForSingle:false});return;}
   if($('#modalLayer')&&!$('#modalLayer').hidden){closeModal();return;}
   if(state.practiceReviewPending||state.autoAdvanceWaiting||state.pendingPracticeBatch||state.pendingFoundationAssessment||state.pendingSinglePractice||state.pendingFlashQuizResult||state.pendingPlacementResult||state.pendingMockResult){toast('Hãy hoàn tất hoặc đóng an toàn bước kết quả hiện tại trước khi rời phần đang làm.','error');return;}
   if(!learningFocusState.active)return;
@@ -2067,6 +2069,19 @@ async function confirmFlashQuizResult(){
  renderFlashHome();
 }
 
+async function handleAssessmentResultSurfaceAction(e){
+  const confirmAssessment=e.target.closest?.('[data-assessment-confirm]');
+  if(confirmAssessment){await confirmPendingAssessmentResult({openReviewForSingle:true});return true;}
+  const returnAssessment=e.target.closest?.('[data-assessment-return]');
+  if(returnAssessment){
+    if(state.pendingPracticeBatch)returnToPracticeBatch();
+    else if(state.pendingFoundationAssessment)returnToFoundationAssessment();
+    else if(state.pendingPlacementResult){state.pendingPlacementResult=false;closeAssessmentResultModal();renderPlacementQuestion();}
+    return true;
+  }
+  return false;
+}
+
 function bindEvents(){
   bindPracticeEvents();
   $('#quickHelpLauncher')?.addEventListener('click',toggleQuickHelp);
@@ -2151,6 +2166,7 @@ function bindEvents(){
   $('#exportLearnerBackupButton')?.addEventListener('click',exportLearnerBackup);$('#restoreLearnerBackupButton')?.addEventListener('click',()=>$('#learnerBackupFile')?.click());$('#learnerBackupFile')?.addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{await restoreLearnerBackupFile(file);}catch(error){toast(`Khôi phục thất bại: ${error.message}`,'error');}finally{e.target.value='';}});
   $('#closeModal').addEventListener('click',closeModal);
   $('#learningFocusClose')?.addEventListener('click',closeLearningFocus);
+  $('#learningFocusContent')?.addEventListener('click',handleAssessmentResultSurfaceAction);
   $('#foundationLessonList')?.addEventListener('click',e=>{const b=e.target.closest('[data-foundation-open]');if(b)openFoundationLesson(b.dataset.foundationOpen);});
   $('#startPlacementDiagnostic')?.addEventListener('click',startPlacementDiagnostic);
   document.addEventListener('click',e=>{const answer=e.target.closest('[data-placement-answer]');if(answer){answerPlacementQuestion(answer);return;}if(e.target.closest('[data-placement-next]')){if(state.placementState){state.placementState.index++;renderPlacementQuestion();}return;}const apply=e.target.closest('[data-placement-apply]');if(apply){applyPlacementLevel(apply.dataset.placementApply);return;}if(e.target.closest('[data-placement-retry]')){startPlacementDiagnostic();}});
@@ -2161,7 +2177,7 @@ function bindEvents(){
   $('#googleSearchBackdrop').addEventListener('click',e=>{if(e.target.id==='googleSearchBackdrop')closeGoogleSearchPanel();});
   $('#runGoogleAIButton').addEventListener('click',openGoogleSearch);
   $('#modalContent').addEventListener('click',e=>{if(e.target.closest('[data-foundation-production-export]'))exportFoundationProductionPortfolio();});
-  $('#modalContent').addEventListener('click',async e=>{const confirmAssessment=e.target.closest('[data-assessment-confirm]');if(confirmAssessment){await confirmPendingAssessmentResult({openReviewForSingle:true});return;}const returnAssessment=e.target.closest('[data-assessment-return]');if(returnAssessment){if(state.pendingPracticeBatch)returnToPracticeBatch();else if(state.pendingFoundationAssessment)returnToFoundationAssessment();else if(state.pendingPlacementResult){state.pendingPlacementResult=false;closeAssessmentResultModal();renderPlacementQuestion();}return;}const practiceBatchResult=e.target.closest('[data-practice-batch-result]');if(practiceBatchResult){maybeShowPracticeBatchResult(practiceBatchResult.dataset.practiceBatchResult,practiceBatchResult.dataset.resourceId);return;}const foundationBatchResult=e.target.closest('[data-foundation-batch-result]');if(foundationBatchResult){const kind=foundationBatchResult.dataset.foundationBatchResult,lessonId=foundationBatchResult.dataset.lessonId,scopeId=foundationBatchResult.dataset.foundationScope||'';const questions=kind==='foundation-recognition'?(state.foundationLessons.find(x=>x.id===lessonId)?.questionBank||[]):kind==='foundation-application'?[{...state.foundationLessons.find(x=>x.id===lessonId)?.applicationTask,id:state.foundationLessons.find(x=>x.id===lessonId)?.applicationTask?.id}]:kind==='foundation-reading'?(scopeId==='reading2'?state.foundationReadingExtendedPassages:state.foundationReadingPassages).find(x=>x.lessonId===lessonId)?.questions||[]:(state.foundationListeningClips.find(x=>x.lessonId===lessonId&&(scopeId==='listening2'?x.evidenceScope==='listening2':!x.supplementary))?.questions||[]);showFoundationAssessmentResult(kind,lessonId,questions,scopeId);return;}const alphabetPlay=e.target.closest('[data-alphabet-play]');if(alphabetPlay){playAlphabetSound(alphabetPlay);return;}const foundationListening=e.target.closest('[data-foundation-listening-answer]');if(foundationListening){answerFoundationListening(foundationListening);return;}const foundationListenPlay=e.target.closest('[data-foundation-listening-play]');if(foundationListenPlay){playFoundationListening(foundationListenPlay.dataset.foundationListeningPlay);return;}const foundationListenStop=e.target.closest('[data-foundation-listening-stop]');if(foundationListenStop){stopSpeech();return;}const foundationTranscriptToggle=e.target.closest('[data-foundation-listening-transcript-toggle]');if(foundationTranscriptToggle){const transcript=foundationTranscriptToggle.closest('[data-foundation-listening]')?.querySelector('[data-foundation-listening-transcript]');if(transcript){transcript.hidden=!transcript.hidden;foundationTranscriptToggle.textContent=transcript.hidden?'Hiện transcript':'Ẩn transcript';}return;}const foundationReading=e.target.closest('[data-foundation-reading-answer]');if(foundationReading){answerFoundationReading(foundationReading);return;}const foundationApplication=e.target.closest('[data-foundation-application-answer]');if(foundationApplication){answerFoundationApplication(foundationApplication);return;}const foundationRecall=e.target.closest('[data-foundation-recall-answer]');if(foundationRecall){answerFoundationRecall(foundationRecall);return;}const foundationProduction=e.target.closest('[data-foundation-production-save]');if(foundationProduction){saveFoundationProduction(foundationProduction);return;}const foundationProductionRevision=e.target.closest('[data-foundation-production-revision-save]');if(foundationProductionRevision){saveFoundationProductionRevision(foundationProductionRevision);return;}const foundationAnswer=e.target.closest('[data-foundation-answer]');if(foundationAnswer){answerFoundationQuestion(foundationAnswer);return;}const edit=e.target.closest('[data-edit]');const ai=e.target.closest('[data-ai-word]');const grammarAI=e.target.closest('[data-ai-lesson]');const readingAI=e.target.closest('[data-ai-reading]');const listeningAI=e.target.closest('[data-ai-listening]');const reviewAI=e.target.closest('[data-practice-review-ai]');const grammarChoice=e.target.closest('[data-grammar-choice]');const readingChoice=e.target.closest('[data-reading-choice]');const readingSpeak=e.target.closest('[data-reading-speak]');const lookup=e.target.closest('[data-lookup-term]');const listeningChoice=e.target.closest('[data-listening-choice]');const speak=e.target.closest('[data-speak-word]');const stop=e.target.closest('[data-stop-speech]');const play=e.target.closest('[data-listening-play]');const stopListening=e.target.closest('[data-listening-stop]');const vocabPlay=e.target.closest('[data-listening-vocab-play]');const reviewOk=e.target.closest('[data-practice-review-ok]');const saveRubric=e.target.closest('[data-save-explanation-rubric]');const retry=e.target.closest('[data-practice-retry]');const retryAll=e.target.closest('[data-practice-retry-all]');const waitCancel=e.target.closest('[data-auto-advance-cancel]');if(retry){retryPracticeQuestion(retry);return;}if(retryAll){retryAllPracticeQuestions(retryAll);return;}if(waitCancel){cancelAutoAdvanceWait();return;}if(reviewOk){acknowledgePracticeReview();return;}if(saveRubric){const keys=['clue','fit','distractor'];const ratings=keys.map(key=>{const selected=$(`#modalContent [data-explanation-rubric="${key}"]:checked`);return selected?selected.value==='yes':null;});if(ratings.some(value=>value===null)){toast('Hãy tự đánh giá đủ cả 3 tiêu chí trước khi lưu.','error');return;}const q=state.currentQuestion;const objectiveIds=state.objectiveResourceIndex?.[q?.id]||[];state.objectiveProgress=recordExplanationRubric(state.objectiveProgress,objectiveIds,q?.id,ratings,Date.now());await saveObjectivePractice();const score=ratings.filter(Boolean).length;const status=$('#modalContent [data-explanation-rubric-status]');if(status)status.textContent=`Đã lưu tự đánh giá ${score}/3. Đây là tự báo cáo, không phải điểm mastery.`;saveRubric.disabled=true;saveRubric.textContent=`Đã lưu · ${score}/3`;return;}if(reviewAI){showAIPromptModal(buildPracticeAIPrompt(),'Phân tích câu trả lời ôn tập hiện tại');return;}if(edit)openEditor(edit.dataset.edit);if(ai){const w=state.words.find(x=>x.id===ai.dataset.aiWord);if(w)showAIPromptModal(buildWordAIPrompt(w),`Giải thích từ ${displayWord(w.word)} theo ngữ cảnh TOEIC`);}if(grammarChoice)answerGrammarExercise(grammarChoice);if(readingChoice)answerReadingQuestion(readingChoice);if(readingSpeak){playReadingText(readingSpeak.dataset.readingSpeak);return;}if(lookup)openLookupTerm(lookup.dataset.lookupTerm);if(grammarAI){const lesson=state.grammarLessons.find(x=>x.id===grammarAI.dataset.aiLesson);if(lesson)showAIPromptModal(buildGrammarAIPrompt(lesson),`Phân tích ngữ pháp ${lesson.title}`);}if(readingAI){const reading=state.readings.find(x=>x.id===readingAI.dataset.aiReading);if(reading)showAIPromptModal(buildReadingAIPrompt(reading),`Phân tích bài đọc TOEIC ${reading.title}`);}if(listeningChoice)answerListeningQuestion(listeningChoice);if(listeningAI){const item=state.listening.find(x=>x.id===listeningAI.dataset.aiListening);if(item)showAIPromptModal(buildListeningAIPrompt(item),`Phân tích bài nghe TOEIC ${item.title}`);}if(speak)speakText(speak.dataset.speakWord,speak.dataset.accent||null,'',state.settings.tts?.defaultGender||'female');if(stop)stopSpeech();if(play)playListeningAudio(play.dataset.listeningPlay);if(vocabPlay)playListeningVocabulary(vocabPlay.dataset.listeningVocabPlay);if(stopListening)stopSpeech();});
+  $('#modalContent').addEventListener('click',async e=>{if(await handleAssessmentResultSurfaceAction(e))return;const practiceBatchResult=e.target.closest('[data-practice-batch-result]');if(practiceBatchResult){maybeShowPracticeBatchResult(practiceBatchResult.dataset.practiceBatchResult,practiceBatchResult.dataset.resourceId);return;}const foundationBatchResult=e.target.closest('[data-foundation-batch-result]');if(foundationBatchResult){const kind=foundationBatchResult.dataset.foundationBatchResult,lessonId=foundationBatchResult.dataset.lessonId,scopeId=foundationBatchResult.dataset.foundationScope||'';const questions=kind==='foundation-recognition'?(state.foundationLessons.find(x=>x.id===lessonId)?.questionBank||[]):kind==='foundation-application'?[{...state.foundationLessons.find(x=>x.id===lessonId)?.applicationTask,id:state.foundationLessons.find(x=>x.id===lessonId)?.applicationTask?.id}]:kind==='foundation-reading'?(scopeId==='reading2'?state.foundationReadingExtendedPassages:state.foundationReadingPassages).find(x=>x.lessonId===lessonId)?.questions||[]:(state.foundationListeningClips.find(x=>x.lessonId===lessonId&&(scopeId==='listening2'?x.evidenceScope==='listening2':!x.supplementary))?.questions||[]);showFoundationAssessmentResult(kind,lessonId,questions,scopeId);return;}const alphabetPlay=e.target.closest('[data-alphabet-play]');if(alphabetPlay){playAlphabetSound(alphabetPlay);return;}const foundationListening=e.target.closest('[data-foundation-listening-answer]');if(foundationListening){answerFoundationListening(foundationListening);return;}const foundationListenPlay=e.target.closest('[data-foundation-listening-play]');if(foundationListenPlay){playFoundationListening(foundationListenPlay.dataset.foundationListeningPlay);return;}const foundationListenStop=e.target.closest('[data-foundation-listening-stop]');if(foundationListenStop){stopSpeech();return;}const foundationTranscriptToggle=e.target.closest('[data-foundation-listening-transcript-toggle]');if(foundationTranscriptToggle){const transcript=foundationTranscriptToggle.closest('[data-foundation-listening]')?.querySelector('[data-foundation-listening-transcript]');if(transcript){transcript.hidden=!transcript.hidden;foundationTranscriptToggle.textContent=transcript.hidden?'Hiện transcript':'Ẩn transcript';}return;}const foundationReading=e.target.closest('[data-foundation-reading-answer]');if(foundationReading){answerFoundationReading(foundationReading);return;}const foundationApplication=e.target.closest('[data-foundation-application-answer]');if(foundationApplication){answerFoundationApplication(foundationApplication);return;}const foundationRecall=e.target.closest('[data-foundation-recall-answer]');if(foundationRecall){answerFoundationRecall(foundationRecall);return;}const foundationProduction=e.target.closest('[data-foundation-production-save]');if(foundationProduction){saveFoundationProduction(foundationProduction);return;}const foundationProductionRevision=e.target.closest('[data-foundation-production-revision-save]');if(foundationProductionRevision){saveFoundationProductionRevision(foundationProductionRevision);return;}const foundationAnswer=e.target.closest('[data-foundation-answer]');if(foundationAnswer){answerFoundationQuestion(foundationAnswer);return;}const edit=e.target.closest('[data-edit]');const ai=e.target.closest('[data-ai-word]');const grammarAI=e.target.closest('[data-ai-lesson]');const readingAI=e.target.closest('[data-ai-reading]');const listeningAI=e.target.closest('[data-ai-listening]');const reviewAI=e.target.closest('[data-practice-review-ai]');const grammarChoice=e.target.closest('[data-grammar-choice]');const readingChoice=e.target.closest('[data-reading-choice]');const readingSpeak=e.target.closest('[data-reading-speak]');const lookup=e.target.closest('[data-lookup-term]');const listeningChoice=e.target.closest('[data-listening-choice]');const speak=e.target.closest('[data-speak-word]');const stop=e.target.closest('[data-stop-speech]');const play=e.target.closest('[data-listening-play]');const stopListening=e.target.closest('[data-listening-stop]');const vocabPlay=e.target.closest('[data-listening-vocab-play]');const reviewOk=e.target.closest('[data-practice-review-ok]');const saveRubric=e.target.closest('[data-save-explanation-rubric]');const retry=e.target.closest('[data-practice-retry]');const retryAll=e.target.closest('[data-practice-retry-all]');const waitCancel=e.target.closest('[data-auto-advance-cancel]');if(retry){retryPracticeQuestion(retry);return;}if(retryAll){retryAllPracticeQuestions(retryAll);return;}if(waitCancel){cancelAutoAdvanceWait();return;}if(reviewOk){acknowledgePracticeReview();return;}if(saveRubric){const keys=['clue','fit','distractor'];const ratings=keys.map(key=>{const selected=$(`#modalContent [data-explanation-rubric="${key}"]:checked`);return selected?selected.value==='yes':null;});if(ratings.some(value=>value===null)){toast('Hãy tự đánh giá đủ cả 3 tiêu chí trước khi lưu.','error');return;}const q=state.currentQuestion;const objectiveIds=state.objectiveResourceIndex?.[q?.id]||[];state.objectiveProgress=recordExplanationRubric(state.objectiveProgress,objectiveIds,q?.id,ratings,Date.now());await saveObjectivePractice();const score=ratings.filter(Boolean).length;const status=$('#modalContent [data-explanation-rubric-status]');if(status)status.textContent=`Đã lưu tự đánh giá ${score}/3. Đây là tự báo cáo, không phải điểm mastery.`;saveRubric.disabled=true;saveRubric.textContent=`Đã lưu · ${score}/3`;return;}if(reviewAI){showAIPromptModal(buildPracticeAIPrompt(),'Phân tích câu trả lời ôn tập hiện tại');return;}if(edit)openEditor(edit.dataset.edit);if(ai){const w=state.words.find(x=>x.id===ai.dataset.aiWord);if(w)showAIPromptModal(buildWordAIPrompt(w),`Giải thích từ ${displayWord(w.word)} theo ngữ cảnh TOEIC`);}if(grammarChoice)answerGrammarExercise(grammarChoice);if(readingChoice)answerReadingQuestion(readingChoice);if(readingSpeak){playReadingText(readingSpeak.dataset.readingSpeak);return;}if(lookup)openLookupTerm(lookup.dataset.lookupTerm);if(grammarAI){const lesson=state.grammarLessons.find(x=>x.id===grammarAI.dataset.aiLesson);if(lesson)showAIPromptModal(buildGrammarAIPrompt(lesson),`Phân tích ngữ pháp ${lesson.title}`);}if(readingAI){const reading=state.readings.find(x=>x.id===readingAI.dataset.aiReading);if(reading)showAIPromptModal(buildReadingAIPrompt(reading),`Phân tích bài đọc TOEIC ${reading.title}`);}if(listeningChoice)answerListeningQuestion(listeningChoice);if(listeningAI){const item=state.listening.find(x=>x.id===listeningAI.dataset.aiListening);if(item)showAIPromptModal(buildListeningAIPrompt(item),`Phân tích bài nghe TOEIC ${item.title}`);}if(speak)speakText(speak.dataset.speakWord,speak.dataset.accent||null,'',state.settings.tts?.defaultGender||'female');if(stop)stopSpeech();if(play)playListeningAudio(play.dataset.listeningPlay);if(vocabPlay)playListeningVocabulary(vocabPlay.dataset.listeningVocabPlay);if(stopListening)stopSpeech();});
   $('#globalSearch').addEventListener('keydown',e=>{if(e.key==='Enter'){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
   $('#modalContent').addEventListener('input',e=>{const field=e.target.closest('[data-foundation-production-text],[data-foundation-revision-text]');if(!field)return;const panel=field.closest('[data-foundation-production]'),revision=field.hasAttribute('data-foundation-revision-text'),counter=panel?.querySelector(revision?'[data-foundation-revision-count]':'[data-foundation-production-count]');if(!counter)return;const count=field.value.trim().split(/\s+/).filter(Boolean).length,minimum=Number(panel.dataset.minimumWords)||3;counter.textContent=`${count}/${minimum} từ tối thiểu${count>=minimum?' · Đủ độ dài':''}`;counter.classList.toggle('is-ready',count>=minimum);});
   $('#globalSearch').addEventListener('input',e=>{if(e.target.value.length>=2){navigate('dictionary');$('#dictionarySearch').value=e.target.value;renderDictionary();}});
@@ -2646,17 +2662,68 @@ const ASSESSMENT_DRAFT_STORAGE_KEY = 'toeic:foundation-assessment-drafts:v1';
 function assessmentConfettiMarkup(){
   return `<div class="assessment-result-confetti" aria-hidden="true">${Array.from({length:22},(_,i)=>`<i style="--confetti-index:${i};--confetti-x:${(i*37)%100}%;--confetti-delay:${(i%7)*.08}s;--confetti-rotation:${(i*41)%360}deg"></i>`).join('')}</div>`;
 }
+function assessmentResultBodyMarkup({correct=0,incorrect=0,total=0,description='Bạn đã trả lời hết câu hỏi trong lượt này.',allowReturn=true}={}){
+  return `${assessmentConfettiMarkup()}<p>${escapeHtml(description)}</p><div class="assessment-result-stats"><article><strong>${correct}</strong><span>Đúng</span></article><article><strong>${incorrect}</strong><span>Chưa đúng</span></article><article><strong>${total}</strong><span>Tổng câu</span></article></div><p class="assessment-result-note">Đáp án và phần giải thích sẽ chỉ hiển thị sau khi bạn xác nhận.</p><div class="assessment-result-actions">${allowReturn?'<button type="button" class="secondary-button" data-assessment-return>Quay lại kiểm tra</button>':''}<button type="button" class="primary-button" data-assessment-confirm>Xác nhận &amp; xem đáp án</button></div>`;
+}
+function showAssessmentResultInLearningFocus({eyebrow,title,bodyMarkup}={}){
+  const backdrop=$('#learningFocusBackdrop'),dialog=$('#learningFocusDialog'),host=$('#learningFocusContent'),close=$('#learningFocusClose');
+  if(!learningFocusState.active||!backdrop||backdrop.hidden||!dialog||!host)return false;
+  hideModalLayer();
+  if(!assessmentResultFocusState){
+    const titleNode=$('#learningFocusTitle'),subtitleNode=$('#learningFocusSubtitle'),eyebrowNode=$('#learningFocusEyebrow');
+    assessmentResultFocusState={
+      header:{title:titleNode?.textContent||'Không gian học tập',subtitle:subtitleNode?.textContent||'Tập trung vào nội dung đang học.',eyebrow:eyebrowNode?.textContent||'FOCUSED LEARNING'},
+      close:{ariaLabel:close?.getAttribute('aria-label'),title:close?.getAttribute('title')},
+      children:[...host.children].map(node=>({node,hidden:node.hidden,inert:node.inert,ariaHidden:node.getAttribute('aria-hidden')})),
+      panel:null,
+    };
+    for(const entry of assessmentResultFocusState.children){entry.node.hidden=true;entry.node.inert=true;entry.node.setAttribute('aria-hidden','true');}
+  }else assessmentResultFocusState.panel?.remove();
+  const panel=document.createElement('section');
+  panel.className='assessment-result-modal assessment-result-inline';
+  panel.innerHTML=bodyMarkup;
+  host.append(panel);
+  assessmentResultFocusState.panel=panel;
+  setLearningFocusHeader(title,'Kết quả đã sẵn sàng. Xác nhận để xem đáp án và phần giải thích.',eyebrow);
+  close?.setAttribute('aria-label','Xác nhận kết quả');
+  close?.removeAttribute('title');
+  dialog.setAttribute('aria-hidden','false');
+  host.scrollTop=0;
+  panel.querySelector('[data-assessment-confirm]')?.focus();
+  return true;
+}
+function restoreAssessmentResultLearningFocus(){
+  const snapshot=assessmentResultFocusState;if(!snapshot)return false;
+  snapshot.panel?.remove();
+  for(const entry of snapshot.children){
+    entry.node.hidden=entry.hidden;
+    entry.node.inert=entry.inert;
+    if(entry.ariaHidden===null)entry.node.removeAttribute('aria-hidden');
+    else entry.node.setAttribute('aria-hidden',entry.ariaHidden);
+  }
+  setLearningFocusHeader(snapshot.header.title,snapshot.header.subtitle,snapshot.header.eyebrow);
+  const close=$('#learningFocusClose');
+  if(close){
+    if(snapshot.close.ariaLabel===null)close.removeAttribute('aria-label');else close.setAttribute('aria-label',snapshot.close.ariaLabel);
+    if(snapshot.close.title===null)close.removeAttribute('title');else close.setAttribute('title',snapshot.close.title);
+  }
+  assessmentResultFocusState=null;
+  return true;
+}
 function showAssessmentResultModal({eyebrow='SESSION COMPLETE',title='Bạn đã hoàn thành',correct=0,incorrect=0,total=0,description='Bạn đã trả lời hết câu hỏi trong lượt này.',allowReturn=true}={}){
+  const bodyMarkup=assessmentResultBodyMarkup({correct,incorrect,total,description,allowReturn});
+  if(showAssessmentResultInLearningFocus({eyebrow,title,bodyMarkup}))return;
   $('#modalEyebrow').textContent=eyebrow;
   $('#modalTitle').textContent=title;
   $('#modalLayer').classList.remove('is-practice-review','is-auto-advance-wait','is-learning-detail');
   $('#closeModal').hidden=false;
   $('#modalLayer').dataset.modalType='assessment-result';
-  $('#modalContent').innerHTML=`<section class="assessment-result-modal">${assessmentConfettiMarkup()}<p>${escapeHtml(description)}</p><div class="assessment-result-stats"><article><strong>${correct}</strong><span>Đúng</span></article><article><strong>${incorrect}</strong><span>Chưa đúng</span></article><article><strong>${total}</strong><span>Tổng câu</span></article></div><p class="assessment-result-note">Đáp án và phần giải thích sẽ chỉ hiển thị sau khi bạn xác nhận.</p><div class="assessment-result-actions">${allowReturn?'<button type="button" class="secondary-button" data-assessment-return>Quay lại kiểm tra</button>':''}<button type="button" class="primary-button" data-assessment-confirm>Xác nhận &amp; xem đáp án</button></div></section>`;
+  $('#modalContent').innerHTML=`<section class="assessment-result-modal">${bodyMarkup}</section>`;
   showModalLayer();
   $('#closeModal').focus();
 }
 function closeAssessmentResultModal(){
+  if(restoreAssessmentResultLearningFocus())return;
   resetModalLayer();
 }
 function getPracticeBatch(kind,id){

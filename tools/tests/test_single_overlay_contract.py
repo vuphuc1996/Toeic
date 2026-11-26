@@ -27,6 +27,15 @@ class SingleOverlayContractTests(unittest.TestCase):
         self.assertIn("function hideModalLayer()", app)
         self.assertIn("body.has-modal-overlay{overflow:hidden}", css)
 
+    def test_assessment_result_reuses_active_learning_focus_and_confetti_last_longer(self):
+        app = (ROOT / "assets/js/app.js").read_text(encoding="utf-8")
+        design = (ROOT / "assets/css/design-system.css").read_text(encoding="utf-8")
+        self.assertIn("function showAssessmentResultInLearningFocus", app)
+        self.assertIn("$('#learningFocusContent')?.addEventListener('click',handleAssessmentResultSurfaceAction)", app)
+        self.assertIn("function restoreAssessmentResultLearningFocus()", app)
+        self.assertIn("animation: assessment-confetti-rise 2.4s", design)
+        self.assertIn(".assessment-result-inline", design)
+
 
 if __name__ == "__main__":
     unittest.main()

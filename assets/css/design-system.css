@@ -1832,6 +1832,7 @@ body :where(.mock-exam-brand strong, .mock-exam-timer span,
   background: var(--color-surface, #fff);
 }
 .assessment-result-modal > :not(.assessment-result-confetti) { position: relative; z-index: 1; }
+.assessment-result-inline { width: 100%; max-width: 760px; margin: 0 auto; }
 .assessment-result-modal > p:first-of-type { max-width: 58ch; margin: 0 0 16px; color: var(--color-text-secondary, #60738a); font-size: var(--font-body, 15px); line-height: 1.6; }
 .assessment-result-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 16px 0; }
 .assessment-result-stats article { display: grid; gap: 3px; min-width: 0; padding: 14px 10px; border: 1px solid var(--color-border, #dfe7ef); border-radius: var(--radius-md, 12px); background: var(--color-surface-soft, #f5f8fb); text-align: center; }
@@ -1840,7 +1841,7 @@ body :where(.mock-exam-brand strong, .mock-exam-timer span,
 .assessment-result-note { margin: 12px 0 18px; color: var(--color-text-secondary, #60738a); font-size: 13px; line-height: 1.55; }
 .assessment-result-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
 .assessment-result-confetti { position: absolute; z-index: 0; inset: 0; overflow: hidden; pointer-events: none; }
-.assessment-result-confetti i { position: absolute; left: var(--confetti-x); bottom: -16px; width: 7px; height: 12px; border-radius: 3px; opacity: 0; background: #2f78ae; transform: rotate(var(--confetti-rotation)); animation: assessment-confetti-rise 1.65s cubic-bezier(.16,.72,.28,1) var(--confetti-delay) both; }
+.assessment-result-confetti i { position: absolute; left: var(--confetti-x); bottom: -16px; width: 7px; height: 12px; border-radius: 3px; opacity: 0; background: #2f78ae; transform: rotate(var(--confetti-rotation)); animation: assessment-confetti-rise 2.4s cubic-bezier(.16,.72,.28,1) var(--confetti-delay) both; }
 .assessment-result-confetti i:nth-child(3n) { background: #16876c; }
 .assessment-result-confetti i:nth-child(3n + 1) { background: #e4ad4c; }
 .assessment-result-confetti i:nth-child(4n) { width: 5px; height: 5px; border-radius: 50%; }

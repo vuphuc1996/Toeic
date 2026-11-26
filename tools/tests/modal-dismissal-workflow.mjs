@@ -31,6 +31,7 @@ function $(selector) {
 }
 const context = {
   learningFocusState: { active: false, kind: '', nodes: [] },
+  assessmentResultFocusState: null,
   document: { body: { classList: { add() {}, remove() {}, contains() { return false; } } } },
   state: {
     modalActionInProgress: false,
@@ -93,6 +94,8 @@ expose('dismissPracticeReviewModal', 'function closeModal');
 expose('closeModal', 'function downloadFile');
 expose('closeAutoAdvanceWaitModal', 'function showAutoAdvanceWaitModal');
 expose('cancelAutoAdvanceWait', 'async function acknowledgePracticeReview');
+expose('assessmentResultBodyMarkup', 'function showAssessmentResultInLearningFocus');
+expose('showAssessmentResultInLearningFocus', 'function restoreAssessmentResultLearningFocus');
 expose('showAssessmentResultModal', 'function closeAssessmentResultModal');
 expose('maybeShowPracticeBatchResult', 'async function stagePracticeBatchAnswer');
 expose('confirmSinglePracticeResult', 'async function nextQuestion');

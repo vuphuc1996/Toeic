@@ -118,7 +118,7 @@ jobs:
       - name: Audit vocabulary relationship graph
         run: python tools/audit-vocabulary-relationship-graph.py
       - name: Audit Word Family graph (read-only)
-        run: python tools/audit-word-family-graph.py --output docs/reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.67.md --json-output docs/reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.67.json
+        run: python tools/audit-word-family-graph.py --output docs/reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.68.md --json-output docs/reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.68.json
       - name: Unit tests — related glossary backlog report
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_backlog.py' -v
       - name: Unit tests — glossary canonical-sense backfill v2.95.25
@@ -326,6 +326,7 @@ jobs:
           node tools/tests/practice-progress.mjs
           node tools/tests/assessment-deferred-workflow.mjs
           node tools/tests/modal-dismissal-workflow.mjs
+          node tools/tests/assessment-result-focus-workflow.mjs
           node tools/tests/flashcard-image-policy.mjs
           node tools/tests/sentence-completion.mjs
           node tools/tests/learning-outcome-progress.mjs

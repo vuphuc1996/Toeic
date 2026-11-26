@@ -1,17 +1,18 @@
-# TOEIC Dictionary v2.95.67 — Project Documentation
+# TOEIC Dictionary v2.95.68 — Project Documentation
 
-## Current source — v2.95.67 (Word Family graph integrity and sourced enrichment)
+## Current source — v2.95.68 (single-surface assessment results and regression repair)
 
-- **Exact predecessor:** `TOEIC_Dictionary_v2.95.66_FullSource.zip`; SHA-256 `30236500cfa2d8702a25cdca9c99f0eca58eaaa047928a6b12ce88b1b2a373c3`. This archive is the sole baseline for v2.95.67.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.67.md`.
-- Current Python test ledger: `reports/PYTHON_TEST_SHARDS_v2.95.67.md` and machine-readable JSON ledger; it distinguishes focused PASS evidence from the incomplete full inventory.
-- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.67.md`.
-- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.67.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.67.md`.
-- Batch 025 adds six reciprocal, sense-matched Word Family links across three existing canonical headword pairs. No headwords or IDs are added.
-- `tools/audit-word-family-graph.py` provides read-only structural and sense-anchor checks. Missing targets, POS mismatches, Vietnamese gloss mismatches and non-reciprocal links remain explicit review findings; the tool never rewrites canonical records.
-- No vocabulary meanings/examples/IPA/verb forms, synonym/antonym arrays, TOEIC question data, choice IDs, answer keys or Mock eligibility changed. Six Word Family relationship links were added; learner IndexedDB data/schema, Robot Buddy privacy boundary, UI layout and hosting architecture are unchanged.
-- Hosted GitHub Actions/Pages for this release, installed-PWA cache propagation and physical-device acceptance remain unverified until a real push/deploy and device check.
+- **Exact predecessor:** `TOEIC_Dictionary_v2.95.67_FullSource(1).zip`; SHA-256 `1f262ac4d67d8d244facf397b9ea1d179c6a741f50e561b3d3e9805efef31754`. This is the sole baseline for v2.95.68.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.68.md`.
+- Current data comparison: `reports/DATA_DIFF_v2.95.68.md`.
+- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.68.md`.
+- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.68.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.68.md`.
+- Active Learning Focus results reuse the existing dialog; the extra result modal is not opened during a focused session. Existing modal fallback remains for other workflows.
+- Confetti now runs for 2.4 seconds plus stagger, while reduced-motion users continue to receive the existing static/reduced behavior.
+- Batch 036's historical vocabulary reconstruction now reverses Batch 025's six explicitly ledgered Word Family additions before reversing v2.95.54; this restores the expected historical hash without changing canonical data or the ledger.
+- No UI redesign, vocabulary or assessment data change, learner IndexedDB migration, backend, Cloudflare or non-GitHub hosting is included.
+- Full Python discovery was attempted but did not complete; only actual focused/local verification is marked PASS. Hosted Actions, Pages deployment and physical-device acceptance remain unverified.
 
 ## Single source of truth
 

@@ -86,11 +86,13 @@ def load_source(root: Path):
     for item in manifest.get('letters', []):
         path = root / item['file'].replace('./', '', 1)
         inputs.append((path.name, json.loads(path.read_text(encoding='utf-8'))))
-    return audit_data(inputs)
+    report = audit_data(inputs)
+    report['version'] = manifest.get('version', 'unknown')
+    return report
 
 def render(report):
     lines = [
-        '# Word Family Graph Audit — v2.95.67', '',
+        f"# Word Family Graph Audit — v{report.get('version', 'unknown')}", '',
         f"- Canonical headwords: **{report['headwords']}**",
         f"- Headwords with at least one family link: **{report['headwords_with_family']}**",
         f"- Directed family links: **{report['link_count']}**",

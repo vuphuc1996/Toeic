@@ -90,6 +90,21 @@ def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) 
         documents[path] = document
         for record in document.get("words", []):
             id_to_path[record["id"]] = path
+    # Restore later canonical vocabulary changes before asserting historical
+    # glossary ledgers. v2.95.67 added six reciprocal Word Family links only;
+    # each row's before snapshot is an explicitly empty array.
+    later_family_ledger = root / "data/vocabulary/batch-025.json"
+    if later_family_ledger.exists():
+        family_batch = json.loads(later_family_ledger.read_text(encoding="utf-8"))
+        for entry in family_batch.get("records", []):
+            path = (root / entry["file"]).resolve()
+            document = documents.get(path)
+            if document is None:
+                raise AssertionError(f"Word Family batch references an untracked vocabulary file: {entry['file']}")
+            record = next((row for row in document.get("words", []) if row.get("id") == entry["id"]), None)
+            if record is None:
+                raise AssertionError(f"Word Family batch references missing canonical ID: {entry['id']}")
+            record["word_family"] = copy.deepcopy(entry.get("before", []))
     for operation in patch.get("operations", []):
         path = id_to_path[operation["id"]]
         record = next(row for row in documents[path]["words"] if row["id"] == operation["id"])

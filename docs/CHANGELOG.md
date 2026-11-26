@@ -1,3 +1,13 @@
+## v2.95.68 — single-surface assessment results, longer completion confetti and historical checksum repair (2026-11-26)
+
+- Assessment results raised while a Learning Focus session is active now render inside the existing `learningFocusDialog` content area. Any previously open shared modal is closed first, and the result flow no longer opens a second `modalLayer` over the existing session; the shared modal layer remains available for modal-only workflows and nested review dialogs.
+- The previous focused-learning content is temporarily hidden and made inert, not destroyed; its visibility, ARIA state, header and close-button attributes are restored after the result is confirmed. The existing result commit, safe X/Escape close and return-to-check logic are reused. No answer is revealed before confirmation.
+- Extended completion confetti from 1.65 seconds to 2.4 seconds, with the existing stagger (up to 0.48 seconds), giving a maximum visual window of about 2.88 seconds. The reduced-motion rule remains in effect.
+- Repaired the historical Batch 036 checksum reconstruction helper. It now restores the six Batch 025 Word Family fields to their explicit `before: []` snapshots before reversing the v2.95.54 vocabulary patch. The expected historical checksum is reproduced; the historical ledger and canonical data are not rewritten.
+- Added an active-Learning-Focus assessment-result workflow test and registered it in GitHub Actions. Also corrected the current Word Family audit output paths to the new release key.
+- No canonical vocabulary IDs/headwords/relations, TOEIC question/choice IDs, answer keys, Mock eligibility, learning-bank JSON, learner IndexedDB schema/records, Robot Buddy behavior or UI layout were changed. GitHub Pages/GitHub-only hosting remains; no backend or Cloudflare service was added.
+- Local verification and limitations are recorded in `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.68.md`. Full Python discovery did not finish in the available execution window; hosted Actions, deployment and physical-device acceptance remain unverified.
+
 ## v2.95.67 — Word Family graph integrity and sourced reciprocal enrichment (2026-11-26)
 
 - Added six reciprocal, sense-matched Word Family links across three existing headword pairs: apologize/apology, subscribe/subscription and transport/transportation. All target spellings, POS labels and Vietnamese sense anchors come from existing canonical records; Cambridge Dictionary entries were checked for the relationships.

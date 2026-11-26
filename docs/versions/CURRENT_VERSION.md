@@ -1,14 +1,15 @@
-# Current Version — TOEIC Dictionary v2.95.67
+# Current Version — TOEIC Dictionary v2.95.68
 
-- Current source: **v2.95.67** — Word Family graph audit, three source-checked reciprocal family pairs and corrected release-keyed PWA module/precache URLs.
-- Exact predecessor: `TOEIC_Dictionary_v2.95.66_FullSource.zip` (SHA-256 `30236500cfa2d8702a25cdca9c99f0eca58eaaa047928a6b12ce88b1b2a373c3`). This archive is the sole baseline used for the release.
-- Release package: `TOEIC_Dictionary_v2.95.67_FullSource.zip`.
-- Patch: `TOEIC_Dictionary_v2.95.67_Patch_From_v2.95.66.zip`; generated only from the exact v2.95.66 predecessor and replay-verified.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.67.md`.
-- Python test ledger: `reports/PYTHON_TEST_SHARDS_v2.95.67.md` and JSON ledger (focused tests pass; full inventory incomplete).
-- Word Family graph audit: `reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.67.md` and JSON.
-- Change manifest: `reports/CHANGE_MANIFEST_v2.95.67.md`.
-- Package verification: `reports/PACKAGE_VERIFICATION_v2.95.67.md`.
-- Command log: `reports/COMMAND_LOG_INDEX_v2.95.67.md`.
-- No new canonical headwords/IDs or learner data schema changes. UI and Robot Buddy behavior remain unchanged.
-- Source release status: candidate with focused local evidence; full Python inventory incomplete. Hosted Actions, Pages deployment and device acceptance remain unverified.
+- Current source: **v2.95.68** — assessment-result reuse of the active Learning Focus dialog, 2.4-second confetti animation, historical Batch 036 checksum reconstruction correction, and regression coverage.
+- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.67_FullSource(1).zip`; SHA-256 `1f262ac4d67d8d244facf397b9ea1d179c6a741f50e561b3d3e9805efef31754`. This uploaded, complete archive is the sole v2.95.68 baseline (807 files; ZIP CRC verified).
+- Release package: `TOEIC_Dictionary_v2.95.68_FullSource.zip`.
+- Patch: `TOEIC_Dictionary_v2.95.68_Patch_From_v2.95.67.zip`; generated only from the exact predecessor and replay-verified before acceptance.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.68.md`.
+- Data comparison: `reports/DATA_DIFF_v2.95.68.md`.
+- Word Family graph audit: `reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.68.md` and JSON.
+- Change manifest: `reports/CHANGE_MANIFEST_v2.95.68.md`.
+- Package verification: `reports/PACKAGE_VERIFICATION_v2.95.68.md`.
+- Command log: `reports/COMMAND_LOG_INDEX_v2.95.68.md`.
+- Batch 036 historical check now reconstructs the pre-Batch-036 vocabulary snapshot correctly: actual reconstructed SHA-256 equals the existing ledger SHA-256 `8c35a6fce159d056832f1e7c6ab395a5dd1d1b34d94e371cb464d6ae1bef11a2`. The ledger is unchanged.
+- Source-level data remains unchanged except `data/manifest.json` release marker. The canonical vocabulary identity remains 1,141/1,141 baseline IDs; the four protected learning-bank files retain their ledger composite SHA-256.
+- Source release status: candidate with focused local verification; complete Python discovery was attempted but did not finish. Hosted Actions, GitHub Pages deployment, installed-PWA propagation and physical-device acceptance remain unverified.
