@@ -103,6 +103,8 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_042.py' -v
       - name: Unit tests — related glossary batch 043 (21 sourced relation targets)
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_043.py' -v
+      - name: Unit tests — related glossary batch 044 (15 Cambridge-sourced existing targets)
+        run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_044.py' -v
       - name: Unit tests — exact canonical glossary enrichment v2.95.35
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_exact_match_enrichment_035.py' -v
       - name: Audit canonical related-glossary enrichment candidates

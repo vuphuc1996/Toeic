@@ -118,6 +118,36 @@ class SyncVersionTests(unittest.TestCase):
         code, out = self.tool("--apply")
         self.assertEqual(code, 2, out)
 
+    def test_apply_updates_all_service_worker_precache_release_keys(self):
+        sw = (
+            "const VERSION = '1.2.3';\n"
+            'const REQUIRED = ["./assets/js/app.js?__release=1.0.0"];\n'
+            'const APP_SHELL = ["./assets/css/app.css?__release=1.0.0", "./assets/js/app.js?__release=1.0.0"];\n'
+        )
+        self.build("1.2.3", sw=sw)
+        app_path = self.root / "assets" / "js" / "app.js"
+        app_path.write_text(
+            "const APP_RELEASE_VERSION = '1.2.3';\n"
+            "import { A } from './a.js?__release=1.0.0';\n"
+            "import { B } from './b.js?__release=1.0.0';\n",
+            encoding="utf-8",
+        )
+        sw_path = self.root / "sw.js"
+        sw_path.write_text(sw, encoding="utf-8")
+        code, out = self.tool("--check")
+        self.assertEqual(code, 1, out)
+        self.assertIn("app.js local module import cache keys", out)
+        self.assertIn("sw.js release-keyed precache URLs", out)
+        code, out = self.tool("--apply")
+        self.assertEqual(code, 0, out)
+        updated = sw_path.read_text(encoding="utf-8")
+        self.assertEqual(updated.count("?__release=1.2.3"), 3)
+        self.assertNotIn("?__release=1.0.0", updated)
+        app_updated = app_path.read_text(encoding="utf-8")
+        self.assertEqual(app_updated.count("?__release=1.2.3"), 2)
+        self.assertNotIn("?__release=1.0.0", app_updated)
+        self.assertEqual(self.tool("--check")[0], 0)
+
     def test_legacy_service_worker_layout_is_accepted(self):
         self.build("1.2.3", sw="const CACHE_NAME = 'toeic-vocab-github-only-v1.2.3';\n")
         self.assertEqual(self.tool("--check")[0], 0)

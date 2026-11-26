@@ -115,6 +115,26 @@ def survey(root: Path, expected: str) -> tuple[list[dict], dict[str, str]]:
     for marker in MARKERS:
         _, m = locate(root, marker, texts)
         rows.append({"marker": marker, "found": m.group(1), "span": m.span(1), "ok": m.group(1) == expected})
+
+    # Cache-busted module imports and Service Worker precache URLs are
+    # intentionally repeated. Treat each file as a multi-match marker.
+    for cache_file, marker_name in (
+        ("assets/js/app.js", "app.js local module import cache keys"),
+        ("sw.js", "sw.js release-keyed precache URLs"),
+    ):
+        cache_text = texts.get(cache_file)
+        if cache_text is None:
+            cache_text = read_raw(root / cache_file)
+            texts[cache_file] = cache_text
+        cache_key_matches = list(re.finditer(rf"__release=({SEMVER})", cache_text))
+        cache_key_versions = sorted({match.group(1) for match in cache_key_matches})
+        cache_key_marker = Marker(marker_name, cache_file, ())
+        rows.append({
+            "marker": cache_key_marker,
+            "found": f"{len(cache_key_matches)} cache keys ({', '.join(cache_key_versions) if cache_key_versions else 'none'})",
+            "spans": [match.span(1) for match in cache_key_matches],
+            "ok": all(match.group(1) == expected for match in cache_key_matches),
+        })
     return rows, texts
 
 
@@ -209,6 +229,13 @@ def run(argv: list[str]) -> int:
     edits: dict[str, list[tuple[int, int, str]]] = {}
     for row in rows:
         if row["ok"]:
+            continue
+        if "spans" in row:
+            text = texts[row["marker"].file]
+            for s, e in row["spans"]:
+                old = text[s:e]
+                if old != expected:
+                    edits.setdefault(row["marker"].file, []).append((s, e, old))
             continue
         s, e = row["span"]
         edits.setdefault(row["marker"].file, []).append((s, e, row["found"]))

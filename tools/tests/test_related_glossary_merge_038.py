@@ -4,7 +4,7 @@ import hashlib
 import json
 import unittest
 from pathlib import Path
-from glossary_test_helpers import composite_sha_reversing_vocabulary_patch
+from glossary_test_helpers import composite_sha_reversing_vocabulary_patch, restore_batch_044
 
 ROOT = Path(__file__).resolve().parents[2]
 EXPECTED = {
@@ -84,8 +84,9 @@ class RelatedGlossaryMerge038Tests(unittest.TestCase):
             self.assertIn("sense", ledger[term]["reason"].lower(), term)
 
     def _restore_batch039(self, glossary):
-        # Current source includes Batch 042, Batch 041, Batch 040 and Batch 039.
-        # Reverse them in descending order before reconstructing the Batch 038 base.
+        # Reverse Batch 044 first, then later batches in descending order before
+        # reconstructing the historical Batch 038 base.
+        glossary = restore_batch_044(glossary, ROOT)
         by = {row["term"].casefold(): row for row in glossary["terms"]}
         # Reverse Batch 043 before Batch 042 when rebuilding the historical Batch 038 base.
         batch_043 = read_json("patches-related-terms/v2.95.62/related-terms-043.json")

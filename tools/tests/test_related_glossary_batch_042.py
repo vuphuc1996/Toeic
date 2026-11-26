@@ -4,6 +4,7 @@ import copy
 import hashlib
 import json
 import unittest
+from glossary_test_helpers import restore_batch_044
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -90,7 +91,7 @@ class RelatedGlossaryBatch042Tests(unittest.TestCase):
                 self.assertEqual(row['sourceUrls'], [f'https://dictionary.cambridge.org/dictionary/english/{term.replace(" ", "-")}'])
 
     def test_patch_guards_reconstruct_exact_pre_batch_glossary(self):
-        restored = copy.deepcopy(self.glossary)
+        restored = restore_batch_044(self.glossary, ROOT)
         by = {row['term'].casefold(): row for row in restored['terms']}
         # Reverse the newer Batch 043 first to restore the exact Batch 042 output.
         batch_043_path = ROOT / 'patches-related-terms/v2.95.62/related-terms-043.json'

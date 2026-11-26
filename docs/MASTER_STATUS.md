@@ -1,20 +1,23 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.68
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.69
 
-**Current source:** v2.95.68 — single-surface assessment results inside the active Learning Focus dialog, extended completion confetti, and corrected Batch 036 historical checksum reconstruction. UI layout and learner storage remain unchanged.
+**Current source candidate:** v2.95.69 — Related Glossary Batch 044 (15 sourced existing targets), historical test reconstruction, release cache-key coherence and complete local regression evidence. UI is frozen; learner storage and canonical/assessment identities are preserved.
 
-## Current release
+## Current release — v2.95.69
 
-- Exact predecessor FullSource: `TOEIC_Dictionary_v2.95.67_FullSource(1).zip`; SHA-256 `1f262ac4d67d8d244facf397b9ea1d179c6a741f50e561b3d3e9805efef31754`. This exact 807-file archive is the sole v2.95.68 baseline.
-- When an assessment finishes inside an active Learning Focus session, its result summary is rendered inside the existing `learningFocusDialog`; it no longer opens a duplicate result panel in `modalLayer`. Other modal-only workflows still use the shared modal layer.
-- The Learning Focus content is hidden/inert temporarily and restored after confirmation; existing answer-save/review/return paths and confirmation gate remain. X/Escape route to the same safe confirmation path.
-- Completion confetti duration is 2.4 seconds plus the existing maximum 0.48-second stagger (approximately 2.88 seconds total); reduced-motion styling remains.
-- Batch 036 historical checksum reconstruction now restores Batch 025's six `word_family` fields to their exact empty `before` snapshots before reversing the v2.95.54 patch. The historical hash now matches its ledger; no ledger/data hash was rewritten to hide the defect.
-- Current test report, data-diff report, package verification, change manifest and command log are recorded under `docs/reports/*v2.95.68*`.
-- Current canonical identity: 1,141 records; baseline IDs added 0 / removed 0; duplicate headwords 0. The four protected learning-bank files match their historical composite checksum. Source-vs-baseline data comparison confirms only the `data/manifest.json` release-version marker changes in this batch.
-- No learner IndexedDB schema/records, question/choice IDs, answer keys, Mock eligibility, Robot Buddy privacy boundary, or UI layout/navigation changes. GitHub-only static hosting retained; no backend/Cloudflare.
-- Full Python unittest discovery was attempted but did not complete in the available execution window; this remains INCOMPLETE. Hosted Actions, Pages deployment and physical-device acceptance are UNVERIFIED.
+- **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.68_FullSource.zip`; SHA-256 `2313f612e536c618b91fa1462611dffba7c9539f9e1a019a9b3ac4de79941c2a` (816 files; ZIP CRC verified). No older archive, alternate source or Patch was used as an input.
+- **Batch 044:** 15 existing Related Glossary rows enriched only in `pos`, `definition_en`, `source`, `sourceUrls` and `sourceRelease`. All 567 term identities, Vietnamese meanings and relation arrays remain unchanged.
+- **Glossary quality:** 567 rows; 142 flagged, down from 157. Missing definitions 92, placeholders 46, missing POS 138, missing provenance 48; duplicate normalized-term groups 0. Remaining rows stay in a review queue, not auto-applied.
+- **Release cache coherence:** `tools/sync-version.py` now checks/updates cache-busting keys across `assets/js/app.js` and `sw.js`. The release has 17/17 app imports and 42/42 Service Worker URLs keyed to manifest `2.95.69`; corresponding regression tests cover discovery, apply and check.
+- **Historical/test integrity:** earlier glossary snapshot tests reverse Batch 044 in chronology. The flashcard/Robot Buddy test expectations now require the active Learning Focus dialog to be reused, with a modal fallback only outside active focus; no UI/CSS redesign was made.
+- **Python inventory:** 104/104 modules completed; 785 cases, 784 PASS, 0 FAIL, 1 accepted skip, 0 error/timeout/incomplete. One skip requires `.git` metadata unavailable in a FullSource ZIP; its other 19 cases passed. The aggregate joins disjoint completed module evidence; it is not represented as one uninterrupted invocation.
+- **Node regression:** 44/44 scripts PASS. Data validator: 1,141 canonical records, IDs +0/-0, 0 new errors/warnings. Learning-content validation 0 errors/warnings; Part 1 assets 9/9; repository integrity 408 inspected/0 errors; version sync 18 standard markers plus 17 app imports + 42 SW cache keys; JavaScript syntax PASS.
+- **Design tokens:** 0 new violations; 2,773 historical legacy warnings remain. **Word Family audit** remains read-only with review flags (90 missing targets, 1 POS mismatch, 72 Vietnamese sense-anchor mismatches, 10 non-reciprocal links); no graph repairs were auto-applied.
+- **Data protection:** only `data/manifest.json` release marker and the 15 approved existing glossary metadata rows changed under `data/`. Canonical vocabulary IDs/headwords/relations, all protected learning-bank files, question/choice IDs, answer keys, eligibility and IndexedDB schema/records were not changed.
+- **Reports:** see `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.95.69.md`, Python/Node reports, `DATA_DIFF_v2.95.69.md`, `WORD_FAMILY_GRAPH_AUDIT_v2.95.69.md`, `CHANGE_MANIFEST_v2.95.69.md`, package verification and command-log index.
+- **Package evidence:** FullSource has 847 files. The Patch contains 31 added, 28 modified and 0 deleted paths; clean replay from the exact `.68` archive reproduces all 847 target files with 0 extra, 0 missing and 0 byte differences.
+- **Acceptance boundary:** local source tests, validators and exact Patch replay are documented. Hosted GitHub Actions, live Pages deployment, installed-PWA cache/offline propagation and physical-device acceptance remain **UNVERIFIED**. This is a locally validated source candidate, not a production-deployment acceptance.
 
 ## Non-negotiable data boundaries
 

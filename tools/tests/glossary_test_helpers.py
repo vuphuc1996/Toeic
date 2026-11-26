@@ -5,11 +5,30 @@ import json
 from pathlib import Path
 
 
+
+def restore_batch_044(glossary: dict, root: Path) -> dict:
+    """Return a copy of the glossary as it existed immediately before Batch 044."""
+    restored = copy.deepcopy(glossary)
+    patch_path = root / 'patches-related-terms/v2.95.69/related-terms-044.json'
+    patch = json.loads(patch_path.read_text(encoding='utf-8'))
+    by_key = {row['term'].casefold(): row for row in restored['terms']}
+    for operation in patch['operations']:
+        row = by_key[operation['term'].casefold()]
+        for field, old_value in operation['expect'].items():
+            if field == 'term':
+                continue
+            if old_value is None:
+                row.pop(field, None)
+            else:
+                row[field] = copy.deepcopy(old_value)
+    return restored
+
+
 def restore_batch_039(glossary: dict, root: Path) -> dict:
     """Return a copy of the glossary as it existed immediately before batch 039."""
-    restored = copy.deepcopy(glossary)
+    restored = restore_batch_044(glossary, root)
     by_key = {row['term'].casefold(): row for row in restored['terms']}
-    # Reverse later batches in descending order before Batch 039. This keeps
+    # Reverse Batch 044 first, then later batches in descending order before Batch 039. This keeps
     # historical reconstruction deterministic as the source advances.
     batch_043_path = root / 'patches-related-terms/v2.95.62/related-terms-043.json'
     batch_043 = json.loads(batch_043_path.read_text(encoding='utf-8'))

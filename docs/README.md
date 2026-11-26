@@ -1,18 +1,21 @@
-# TOEIC Dictionary v2.95.68 — Project Documentation
+# TOEIC Dictionary v2.95.69 — Project Documentation
 
-## Current source — v2.95.68 (single-surface assessment results and regression repair)
+## Current source — v2.95.69 (Glossary Batch 044 and release cache coherence)
 
-- **Exact predecessor:** `TOEIC_Dictionary_v2.95.67_FullSource(1).zip`; SHA-256 `1f262ac4d67d8d244facf397b9ea1d179c6a741f50e561b3d3e9805efef31754`. This is the sole baseline for v2.95.68.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.68.md`.
-- Current data comparison: `reports/DATA_DIFF_v2.95.68.md`.
-- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.68.md`.
-- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.68.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.68.md`.
-- Active Learning Focus results reuse the existing dialog; the extra result modal is not opened during a focused session. Existing modal fallback remains for other workflows.
-- Confetti now runs for 2.4 seconds plus stagger, while reduced-motion users continue to receive the existing static/reduced behavior.
-- Batch 036's historical vocabulary reconstruction now reverses Batch 025's six explicitly ledgered Word Family additions before reversing v2.95.54; this restores the expected historical hash without changing canonical data or the ledger.
-- No UI redesign, vocabulary or assessment data change, learner IndexedDB migration, backend, Cloudflare or non-GitHub hosting is included.
-- Full Python discovery was attempted but did not complete; only actual focused/local verification is marked PASS. Hosted Actions, Pages deployment and physical-device acceptance remain unverified.
+- **Exact predecessor:** `TOEIC_Dictionary_v2.95.68_FullSource.zip`; SHA-256 `2313f612e536c618b91fa1462611dffba7c9539f9e1a019a9b3ac4de79941c2a`. This is the sole baseline for v2.95.69.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.69.md`.
+- Python inventory: `reports/PYTHON_TEST_SHARDS_v2.95.69.md/.json` (104 modules, 785 cases, 784 PASS, 1 accepted SKIP, 0 FAIL).
+- Node regression: `reports/NODE_TEST_REPORT_v2.95.69.md` (44/44 PASS).
+- Current data comparison: `reports/DATA_DIFF_v2.95.69.md`.
+- Current Word Family read-only audit: `reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.69.md/.json`.
+- Current package verification: `reports/PACKAGE_VERIFICATION_v2.95.69.md`.
+- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.69.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.69.md`.
+- Batch 044 enriches 15 existing Related Glossary rows using paraphrased Cambridge-derived definitions, POS and source provenance. Quality flags decline 157→142; independent editorial review remains pending.
+- Release cache consistency is enforced across 17 local `app.js` imports and 42 Service Worker cache URLs. `tools/sync-version.py --check` validates these against the manifest and future `--apply` updates them.
+- The test suite also corrects a stale Robot Buddy layout assertion to require a single Learning Focus result surface, not a stacked modal.
+- No canonical vocabulary ID/headword/relation, question/choice ID, answer key, Mock eligibility, protected learning-bank content or learner IndexedDB schema/record changed. UI layout is frozen; GitHub Pages/GitHub-only architecture remains.
+- Local candidate verification is complete within the report's scope. Hosted Actions, Pages deployment, installed-PWA cache/offline migration and physical-device acceptance remain **UNVERIFIED**. Do not treat this candidate as production-deployed.
 
 ## Single source of truth
 

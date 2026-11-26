@@ -2,6 +2,7 @@
 from __future__ import annotations
 import importlib.util, json, unittest
 from pathlib import Path
+from glossary_test_helpers import restore_batch_044
 ROOT = Path(__file__).resolve().parents[2]
 SCRIPT = ROOT / 'tools/backfill-related-glossary-from-vocabulary.py'
 spec = importlib.util.spec_from_file_location('glossary_backfill_025', SCRIPT)
@@ -25,10 +26,10 @@ class GlossaryBackfill025Tests(unittest.TestCase):
     def test_current_source_has_expected_remaining_placeholder_and_backfill_counts(self):
         placeholders=[r for r in self.current if mod.PLACEHOLDER in r.get('definition_en','').casefold()]
         backfilled=[r for r in self.current if r.get('source')==mod.SOURCE]
-        self.assertEqual(len(placeholders),50)
+        self.assertEqual(len(placeholders),46)
         self.assertEqual(len(backfilled),205)
     def test_baseline_audit_identifies_exact_candidates(self):
-        baseline=[dict(r) for r in self.current]
+        baseline=restore_batch_044({'terms':[dict(r) for r in self.current]}, ROOT)['terms']
         # Restore Batch 043's predecessor values before reconstructing the
         # historical Batch 025 input; otherwise later Cambridge repairs hide
         # placeholders that were present in that old snapshot.

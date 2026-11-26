@@ -4,6 +4,7 @@ import copy
 import hashlib
 import json
 import unittest
+from glossary_test_helpers import restore_batch_044
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -63,7 +64,7 @@ class RelatedGlossaryBatch041Tests(unittest.TestCase):
             self.assertNotRegex(row['definition_en'], r'(?i)placeholder|reference gloss|todo|tbd|definition pending')
 
     def test_patch_guards_reconstruct_exact_pre_batch_glossary(self):
-        restored = copy.deepcopy(self.glossary)
+        restored = restore_batch_044(self.glossary, ROOT)
         by = {r['term'].casefold(): r for r in restored['terms']}
         # Reverse later Batch 043 first, then Batch 042, to reconstruct the Batch 041 base.
         batch_043 = read_json(ROOT / 'patches-related-terms/v2.95.62/related-terms-043.json')

@@ -4,6 +4,7 @@ import copy
 import hashlib
 import json
 import unittest
+from glossary_test_helpers import restore_batch_044
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -66,7 +67,7 @@ class RelatedGlossaryBatch039Tests(unittest.TestCase):
 
     def test_patch_has_exact_guards_and_reconstructs_original_glossary_hash(self):
         self.assertEqual(self.patch['batchId'], 'related-glossary-039-v2.95.50')
-        restored = copy.deepcopy(self.glossary)
+        restored = restore_batch_044(self.glossary, ROOT)
         by = {row['term'].casefold(): row for row in restored['terms']}
         # Reverse Batch 042 first, then Batch 041 and Batch 040, before
         # reconstructing the Batch 039 base snapshot.

@@ -1,5 +1,6 @@
 """Release-aware Word Family graph audit report contract."""
 from __future__ import annotations
+import json
 import subprocess
 import sys
 import tempfile
@@ -21,7 +22,8 @@ class WordFamilyGraphAuditTests(unittest.TestCase):
                 text=True,
             )
             heading = output.read_text(encoding="utf-8").splitlines()[0]
-            self.assertEqual(heading, "# Word Family Graph Audit — v2.95.68")
+            version = json.loads((ROOT / "data/manifest.json").read_text(encoding="utf-8"))["version"]
+            self.assertEqual(heading, f"# Word Family Graph Audit — v{version}")
 
 
 if __name__ == "__main__":

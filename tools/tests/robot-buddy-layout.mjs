@@ -62,7 +62,13 @@ assert.match(insightSend, /else streamRobotMessage\(reply\.text,reply\.actions\|
 assert.match(app, /function appendRobotProgressDashboard\(insights,anchor=null,actions=\[\]\)/);
 assert.match(app, /className='robot-progress-actions'/);
 assert.match(app, /button\.dataset\.robotPage=action\.page/);
-// Flashcard assessment confirmation must render above its focused learning backdrop (z-index 62).
-const assessmentOverlayRules = rules('.modal-layer[data-modal-type="assessment-result"]');
-assert.ok(assessmentOverlayRules.some(rule => Number((rule.match(/z-index\s*:\s*(\d+)/)||[])[1]) > 62), 'Flashcard result confirmation must stay above learning-focus-backdrop');
-console.log('PASS: Robot Buddy page actions navigate; progress analysis renders one dashboard with routes; flashcard assessment modal stacks above focused learning.');
+// A completed assessment inside Learning Focus must reuse its current dialog, not stack a second modal.
+const focusResult = app.slice(app.indexOf('function showAssessmentResultInLearningFocus('), app.indexOf('function restoreAssessmentResultLearningFocus('));
+assert.match(focusResult, /if\(!learningFocusState\.active\|\|[\s\S]*?return false/);
+assert.match(focusResult, /hideModalLayer\(\)/);
+assert.match(focusResult, /assessment-result-inline/);
+assert.match(focusResult, /host\.append\(panel\)/);
+const resultDispatch = app.slice(app.indexOf('function showAssessmentResultModal('), app.indexOf('function closeAssessmentResultModal('));
+assert.match(resultDispatch, /if\(showAssessmentResultInLearningFocus\(\{eyebrow,title,bodyMarkup\}\)\)return/);
+assert.match(resultDispatch, /dataset\.modalType='assessment-result'/, 'Modal fallback must remain available outside active Learning Focus.');
+console.log('PASS: Robot Buddy page actions navigate; progress analysis renders one dashboard with routes; assessment results reuse Learning Focus without a duplicate modal.');

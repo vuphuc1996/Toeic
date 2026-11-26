@@ -71,21 +71,25 @@ class PracticeModeFallbackTests(unittest.TestCase):
         self.assertIn("const actualMode=state.currentQuestion?.mode||mode", block)
         self.assertIn("updatePracticeFocusHeader(actualMode)", block)
 
-    def test_flashcard_confirmation_modal_is_explicitly_stacked_above_learning_focus(self):
-        backdrop = self.app[self.app.index("function showAssessmentResultModal("):self.app.index("function getPracticeBatch(")]
-        self.assertIn("dataset.modalType='assessment-result'", backdrop)
-        self.assertIn("dataset.modalType", backdrop)
-        self.assertIn("data-assessment-confirm", backdrop)
-        rule = re.search(r"\.modal-layer\[data-modal-type=\"assessment-result\"\]\s*\{([^}]*)\}", CSS)
-        focus = re.search(r"\.learning-focus-backdrop\s*\{([^}]*)\}", CSS)
-        self.assertIsNotNone(rule, "Flashcard assessment result stacking rule is required")
-        self.assertIsNotNone(focus, "Learning focus overlay rule is required")
-        result_z = int(re.search(r"z-index\s*:\s*(\d+)", rule.group(1)).group(1))
-        focus_z = int(re.search(r"z-index\s*:\s*(\d+)", focus.group(1)).group(1))
-        self.assertGreater(result_z, focus_z)
+    def test_flashcard_confirmation_reuses_learning_focus_without_duplicate_modal(self):
+        body = self.app[self.app.index("function assessmentResultBodyMarkup("):self.app.index("function showAssessmentResultInLearningFocus(")]
+        self.assertIn("data-assessment-confirm", body)
+        focus_surface = self.app[self.app.index("function showAssessmentResultInLearningFocus("):self.app.index("function restoreAssessmentResultLearningFocus(")]
+        self.assertIn("if(!learningFocusState.active", focus_surface)
+        self.assertIn("hideModalLayer()", focus_surface)
+        self.assertIn("assessment-result-inline", focus_surface)
+        self.assertIn("host.append(panel)", focus_surface)
+        self.assertIn("panel.querySelector('[data-assessment-confirm]')?.focus()", focus_surface)
+        result_dispatch = self.app[self.app.index("function showAssessmentResultModal("):self.app.index("function closeAssessmentResultModal(")]
+        self.assertIn("if(showAssessmentResultInLearningFocus({eyebrow,title,bodyMarkup}))return", result_dispatch)
+        self.assertIn("dataset.modalType='assessment-result'", result_dispatch, "Non-Learning-Focus flows retain the modal fallback")
         finish = self.app[self.app.index("async function finishFlashQuiz("):self.app.index("async function confirmFlashQuizResult(")]
         self.assertIn("showAssessmentResultModal", finish)
         self.assertIn("state.flashQuizAnswers.length!==ss.quiz.length", finish)
+        confirm = self.app[self.app.index("async function confirmFlashQuizResult("):self.app.index("async function handleAssessmentResultSurfaceAction(")]
+        self.assertIn("await dbSet('flashProgress',state.flashProgress)", confirm)
+        self.assertIn("closeAssessmentResultModal()", confirm)
+        self.assertLess(confirm.index("await dbSet('flashProgress'"), confirm.index("closeAssessmentResultModal()"))
 
 
 if __name__ == "__main__":

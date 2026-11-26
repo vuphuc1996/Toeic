@@ -2,6 +2,7 @@
 import importlib.util, json, unittest
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
+from glossary_test_helpers import restore_batch_044
 SPEC = importlib.util.spec_from_file_location('glossary_quality_audit', ROOT/'tools/audit-related-glossary-quality.py')
 MODULE = importlib.util.module_from_spec(SPEC); SPEC.loader.exec_module(MODULE)
 
@@ -114,11 +115,10 @@ class RelatedGlossaryEnrichmentQueueTests(unittest.TestCase):
         patch = json.loads(patch_path.read_text(encoding='utf-8'))
         glossary = json.loads((ROOT / 'data/related-terms.json').read_text(encoding='utf-8'))
         self.assertEqual(patch['batchId'], 'related-glossary-040-v2.95.51')
-        restored = json.loads(json.dumps(glossary, ensure_ascii=False))
+        # Reverse Batch 044 first, then the later historical batches, before
+        # reconstructing the exact pre-040 snapshot.
+        restored = restore_batch_044(glossary, ROOT)
         by_key = {row['term'].casefold(): row for row in restored['terms']}
-        # Reverse later Batch 042 and Batch 041 in descending order so this
-        # historical test reconstructs the exact pre-040 snapshot.
-        # Reverse Batch 043 before Batch 042 and Batch 041 for the Batch 040 base.
         batch_043_path = ROOT / 'patches-related-terms/v2.95.62/related-terms-043.json'
         batch_043 = json.loads(batch_043_path.read_text(encoding='utf-8'))
         for operation in batch_043['operations']:

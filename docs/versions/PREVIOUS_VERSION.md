@@ -1,5 +1,5 @@
-# Previous Version — TOEIC Dictionary v2.95.67
+# Previous Version — TOEIC Dictionary v2.95.68
 
-- Previous official FullSource: `TOEIC_Dictionary_v2.95.67_FullSource(1).zip`.
-- SHA-256: `1f262ac4d67d8d244facf397b9ea1d179c6a741f50e561b3d3e9805efef31754`.
-- This exact uploaded v2.95.67 archive is the only permitted predecessor for v2.95.68. Do not substitute an older release, a patch, a stale extracted folder, an alternate branch or an unverified build.
+- Previous final FullSource: `TOEIC_Dictionary_v2.95.68_FullSource.zip`.
+- SHA-256: `2313f612e536c618b91fa1462611dffba7c9539f9e1a019a9b3ac4de79941c2a`.
+- This exact 816-file v2.95.68 FullSource is the sole permitted predecessor for v2.95.69. Do not substitute an older release, a patch, a stale extracted folder, an alternate branch or an unverified build.

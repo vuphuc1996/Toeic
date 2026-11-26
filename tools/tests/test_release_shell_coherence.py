@@ -51,6 +51,12 @@ class ReleaseShellCoherenceTests(unittest.TestCase):
             self.assertIn(versioned, shell, f"not in offline app shell: {versioned}")
             self.assertTrue((ROOT / asset_path.removeprefix("./")).is_file(), asset_path)
 
+    def test_all_service_worker_precache_release_keys_match_manifest(self):
+        version = MANIFEST["version"]
+        keys = re.findall(r"__release=([0-9.]+)", SW)
+        self.assertGreaterEqual(len(keys), 30, "expected versioned REQUIRED/APP_SHELL URLs")
+        self.assertEqual(set(keys), {version}, "stale or mixed Service Worker precache cache keys")
+
     def test_versioned_core_assets_are_required_and_offline_available(self):
         version = MANIFEST["version"]
         required = set(read_array("REQUIRED"))

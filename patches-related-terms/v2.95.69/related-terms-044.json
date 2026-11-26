@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-044-v2.95.69",
+  "baseFileSha256": "6876eced56f4a8feb8b658ca9112215ab964eedadf7d7917a3ef18308ae570ac",
+  "operations": [
+    {
+      "term": "products",
+      "expect": {
+        "term": "products",
+        "meaning_vi": "sản phẩm",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "goods that are made or grown to be sold, commonly through manufacturing or farming.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; The glossary surface form is plural; the Cambridge entry is cited under its singular lemma. The meaning is limited to saleable goods to match the existing goods/merchandise relation anchors.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/product"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "get",
+      "expect": {
+        "term": "get",
+        "meaning_vi": "nhận; lấy; đạt được",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to obtain, receive, buy, or earn something.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; The definition combines the obtain/buy/earn and receive senses shown in Cambridge Business English, matching the preserved Vietnamese gloss “nhận; lấy; đạt được”.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/get"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "area",
+      "expect": {
+        "term": "area",
+        "meaning_vi": "khu vực; lĩnh vực",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a particular part of a place, piece of land, or country; also, a subject, activity, or field of expertise.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Includes the place and subject/activity senses to preserve both “khu vực” and “lĩnh vực” in the existing Vietnamese gloss.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/area"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "attentive",
+      "expect": {
+        "term": "attentive",
+        "meaning_vi": "chú ý; cẩn thận",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "paying close attention by listening or watching carefully and showing interest.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Learner-dictionary sense: careful listening or watching with interest; aligned with the existing careful synonym relation.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/attentive"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "alternative",
+      "expect": {
+        "term": "alternative",
+        "meaning_vi": "phương án thay thế",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a different possibility or choice that can be used instead of something else, especially when the usual option is not preferred.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Noun sense only; aligned with the existing option synonym. The unrelated adjective sense is not added.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/alternative"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "connect",
+      "expect": {
+        "term": "connect",
+        "meaning_vi": "kết nối; liên kết",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to join two or more things or places together, or to show that people or things are related.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Join/link senses only; aligned with the existing join synonym.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/connect"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "constantly",
+      "expect": {
+        "term": "constantly",
+        "meaning_vi": "liên tục; thường xuyên",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adv",
+        "definition_en": "all the time or often.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Frequency sense aligned with always; retains the Cambridge distinction that constantly can mean all the time or often.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/constantly"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "continually",
+      "expect": {
+        "term": "continually",
+        "meaning_vi": "liên tục; không ngừng",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adv",
+        "definition_en": "in a way that happens repeatedly, again and again.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Repeated-occurrence sense aligned with always; definition is kept distinct from constantly, which Cambridge glosses as all the time or often.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/continually"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "conveyance",
+      "expect": {
+        "term": "conveyance",
+        "meaning_vi": "phương tiện vận chuyển",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a vehicle or method of transport, especially in Indian English or older usage; also, the formal process of moving someone or something from one place to another.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; The vehicle/method sense is marked Indian English or old-fashioned by Cambridge and matches the existing vehicle synonym; formal transport-process sense is also noted. The dated/regional label is retained explicitly.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/conveyance"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "courtyard",
+      "expect": {
+        "term": "courtyard",
+        "meaning_vi": "sân trong",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an outdoor area of level ground that is partly or completely surrounded by the walls of a building.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Enclosed outdoor-ground sense, aligned with the existing yard synonym.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/courtyard"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "depot",
+      "expect": {
+        "term": "depot",
+        "meaning_vi": "kho; trạm trung chuyển",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a building or place where supplies, goods, or vehicles are kept; it may also serve as a bus or train station.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Storage-place sense aligned with warehouse; transport-facility sense retained to match the Vietnamese gloss “trạm trung chuyển”.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/depot"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "diary",
+      "expect": {
+        "term": "diary",
+        "meaning_vi": "nhật ký; sổ lịch",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a book or software tool used to record daily events or thoughts, or to organize future appointments and meetings.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Personal-record and workplace scheduling senses are both represented, matching “nhật ký; sổ lịch” and the journal synonym relation.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/diary"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "check",
+      "expect": {
+        "term": "check",
+        "meaning_vi": "kiểm tra; tấm séc",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n/v",
+        "definition_en": "to examine something to make sure it is correct, safe, or suitable; as a noun, an examination or a printed bank-payment form (US; UK cheque).",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Preserves both senses in the Vietnamese gloss: inspect/check as a verb and bank cheque as a noun (US spelling check; UK spelling cheque). The source also supports examination as a noun.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/check"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "disadvantage",
+      "expect": {
+        "term": "disadvantage",
+        "meaning_vi": "bất lợi; nhược điểm",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a condition or situation that causes problems or makes someone or something less likely to succeed.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Noun sense aligned with the existing benefit antonym; the verb sense is excluded.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/disadvantage"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    },
+    {
+      "term": "notification",
+      "expect": {
+        "term": "notification",
+        "meaning_vi": "thông báo",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an official act or document that informs someone about something; also, a message automatically sent to a phone or computer.",
+        "source": "Cambridge Dictionary; indexed dictionary entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Official-information and automated-message senses; aligned with the existing notice synonym.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/notification"
+        ],
+        "sourceRelease": "2.95.69"
+      }
+    }
+  ]
+}
