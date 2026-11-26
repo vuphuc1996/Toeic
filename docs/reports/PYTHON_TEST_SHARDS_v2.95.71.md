@@ -64,7 +64,7 @@
 | `tools/tests/test_package_source.py` | DISCOVERED | COLLECTED | COMPLETED | PASS | 3 | 3 | 0 | 0 | 0 | 0 | 0.758 |
 | `tools/tests/test_part1_photo_assets.py` | DISCOVERED | COLLECTED | COMPLETED | PASS | 6 | 6 | 0 | 0 | 0 | 0 | 0.723 |
 | `tools/tests/test_patch_data.py` | DISCOVERED | COLLECTED | COMPLETED | PASS WITH SKIPS | 20 | 19 | 0 | 1 | 0 | 0 | 15.975 |
-  - Skip policy: **ACCEPTED** 
+  - Skip policy: **ACCEPTED**
   - SKIP `test_repository_gitignore_excludes_audit_logs (test_patch_data.PatchDataTests.test_repository_gitignore_excludes_audit_logs)`: source archive has no Git metadata; gitignore assertion requires a clone
 | `tools/tests/test_patch_related_terms.py` | DISCOVERED | COLLECTED | COMPLETED | PASS | 11 | 11 | 0 | 0 | 0 | 0 | 10.006 |
 | `tools/tests/test_placement_diagnostic.py` | DISCOVERED | COLLECTED | COMPLETED | PASS | 6 | 6 | 0 | 0 | 0 | 0 | 0.713 |
@@ -124,4 +124,3 @@
 | `tools/tests/test_word_family_graph_audit.py` | DISCOVERED | COLLECTED | COMPLETED | PASS | 1 | 1 | 0 | 0 | 0 | 0 | 1.335 |
 
 Policy: every dynamically discovered module is accounted for. A module PASS requires exit code 0 and a valid unittest summary with at least one collected case. PASS WITH SKIPS is distinct from PASS. Overall success requires all discovered modules to reach an accepted terminal state; pending modules are never hidden.
-
