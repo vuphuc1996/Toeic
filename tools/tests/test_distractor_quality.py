@@ -114,7 +114,7 @@ class DistractorQualityTests(unittest.TestCase):
         app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')
         progress = (ROOT / 'assets/js/practice-progress.js').read_text(encoding='utf-8')
         stage = app[app.index('async function stagePracticeBatchAnswer('):app.index('async function confirmPracticeBatchResult(', app.index('async function stagePracticeBatchAnswer('))]
-        confirm = app[app.index('async function confirmPracticeBatchResult('):app.index('function returnToPracticeBatch(', app.index('async function confirmPracticeBatchResult('))]
+        confirm = app[app.index('async function confirmPracticeBatchResult('):app.index('function saveFoundationAssessmentDrafts(', app.index('async function confirmPracticeBatchResult('))]
         self.assertIn('stagePracticeChoice(batch.progress,index,choiceIndex,now,startedAt)', stage)
         self.assertNotIn('recordPracticeAnswer(', stage, 'answer selection must stay a draft until the complete set is confirmed')
         self.assertIn('commitPracticeDraftSet(batch.progress,batch.questions', confirm)

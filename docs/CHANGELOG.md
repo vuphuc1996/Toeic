@@ -1,3 +1,11 @@
+## v2.95.70 — one-way assessment confirmation and safe Foundation persistence (2026-11-26)
+
+- Removed the post-completion “Quay lại kiểm tra” action from every shared assessment-result surface. The result prompt now exposes exactly one explicit action: “Xác nhận & xem đáp án”. The Learning Focus X/Escape affordance remains wired to the same confirmation handler; it is not a separate return path.
+- Removed the legacy practice/Foundation return handlers and the “Các lựa chọn tạm đã được lưu…” toast. Drafts remain persisted while questions are being answered; the change does not clear or migrate draft data when the summary opens.
+- Hardened Foundation result persistence: updated progress is computed into a separate next-state object, persisted to the appropriate localStorage key first, and only then assigned to in-memory committed progress and allowed to reveal review. A storage failure throws through the existing result error handler and preserves the pending result and staged selections for retry.
+- Added behavioral and source-contract regression tests for the single-action result surface, absence of return routes, and both successful/failed Foundation persistence. Updated old practice-history test boundaries and registered the new Node regression in GitHub Actions.
+- No UI layout redesign, vocabulary/question/choice IDs, answer keys, learning-bank content, Mock eligibility, learner IndexedDB schema or stored draft format changed. GitHub Pages/GitHub-only architecture remains unchanged. Hosted Actions, live Pages deployment, installed-PWA/offline propagation and physical-device acceptance require separate verification.
+
 ## v2.95.69 — Related Glossary Batch 044 and historical regression alignment (2026-11-26)
 
 - Closed a release-shell defect found by full regression: `sw.js` had a `.69` cache namespace while 42 `REQUIRED`/`APP_SHELL` URLs and 17 `app.js` local module imports still used `.68`. `tools/sync-version.py` now scans and synchronizes both complete URL sets; tests verify stale-key detection, apply and clean check. Current `.69` counts are 17/17 and 42/42.

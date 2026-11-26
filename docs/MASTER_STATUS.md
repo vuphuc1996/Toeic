@@ -1,10 +1,22 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.69
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.70
 
-**Current source candidate:** v2.95.69 — Related Glossary Batch 044 (15 sourced existing targets), historical test reconstruction, release cache-key coherence and complete local regression evidence. UI is frozen; learner storage and canonical/assessment identities are preserved.
+**Current source candidate:** v2.95.70 — one-way assessment completion, removal of post-completion return controls, and fail-safe Foundation result persistence. UI is frozen; learner storage and canonical/assessment identities are preserved.
 
-## Current release — v2.95.69
+## Current release — v2.95.70
+
+- **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.69_FullSource.zip`; SHA-256 `4ec559a2117a1b1b38ef95d4a0d6955431b46e701cf208bd939bd38db232e853` (847 files; ZIP CRC verified). No older archive, alternate source or Patch was used as input.
+- **One-way completion contract:** every shared assessment-result summary exposes exactly one explicit action, `Xác nhận & xem đáp án`. The post-completion return/recheck action, its event handler, practice/Foundation return helpers and obsolete saved-draft toast were removed. Draft data remains staged until the confirmation commit.
+- **Foundation reliability:** Foundation progress is built as a separate next-state object and persisted before in-memory committed progress, pending state or answer review is advanced. A localStorage failure leaves the old progress, pending summary and draft choices intact so the existing confirmation handler can report the error and allow retry.
+- **Regression coverage:** Node behavioral test covers one-action markup, absence of legacy return routes, Foundation write failure and successful persist-before-reveal. Focused suites also cover Learning Focus result reuse, deferred assessment commit, choice history and distractor quality.
+- **Data protection:** no vocabulary IDs/headwords/relations, question IDs, choice IDs, answer keys, protected learning-bank JSON, Mock eligibility, IndexedDB schema or Foundation draft schema changed. No UI layout redesign or new backend/service was introduced.
+- **Local verification:** Python 105/105 modules terminal (789 cases: 788 PASS, 0 FAIL, 1 accepted Git-metadata SKIP); Node 45/45 PASS. Data validator 1,141 IDs +0/-0, 0 errors/warnings; learning content 0 errors/warnings; repository integrity 409 inspected/0 errors/0 optional warnings; Part 1 assets 9/9; design tokens 0 new violations; release marker/app import/SW cache synchronization and design profile sync PASS.
+- **Data comparison:** all 68 `data/` files retain the same paths; only `data/manifest.json` differs, with `version` `.69`→`.70`. All other data files are byte-identical. No learner IndexedDB migration, canonical vocabulary or question/choice/answer changes were made.
+- **Reports:** `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.95.70.md`, `PYTHON_TEST_SHARDS_v2.95.70.md/.json`, `NODE_TEST_REPORT_v2.95.70.md`, `DATA_DIFF_v2.95.70.md`, `CHANGE_MANIFEST_v2.95.70.md`, `PACKAGE_VERIFICATION_v2.95.70.md` and `COMMAND_LOG_INDEX_v2.95.70.md`.
+- **Acceptance boundary:** hosted GitHub Actions, live Pages deployment, installed-PWA cache/offline behavior and physical-device checks remain unverified. No Git push or production deployment is claimed.
+
+## Previous release — v2.95.69
 
 - **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.68_FullSource.zip`; SHA-256 `2313f612e536c618b91fa1462611dffba7c9539f9e1a019a9b3ac4de79941c2a` (816 files; ZIP CRC verified). No older archive, alternate source or Patch was used as an input.
 - **Batch 044:** 15 existing Related Glossary rows enriched only in `pos`, `definition_en`, `source`, `sourceUrls` and `sourceRelease`. All 567 term identities, Vietnamese meanings and relation arrays remain unchanged.

@@ -1,13 +1,16 @@
-# Current Version — TOEIC Dictionary v2.95.69
+# Current Version — TOEIC Dictionary v2.95.70
 
-- Current source: **v2.95.69** — locally verified source candidate; Related Glossary Batch 044 (15 existing targets), historical test reconstruction alignment, complete Service Worker/app import release-key coherence and dynamic version synchronizer coverage.
-- Sole predecessor FullSource: `TOEIC_Dictionary_v2.95.68_FullSource.zip`; SHA-256 `2313f612e536c618b91fa1462611dffba7c9539f9e1a019a9b3ac4de79941c2a` (816 files; CRC verified). No other source or patch was used as an input.
-- Release package: `TOEIC_Dictionary_v2.95.69_FullSource.zip`.
-- Patch: `TOEIC_Dictionary_v2.95.69_Patch_From_v2.95.68.zip`; 59 changed paths (31 added, 28 modified, 0 deleted), generated from the exact predecessor and verified by clean replay. FullSource contains 847 files. Output ZIP SHA-256 values are supplied in adjacent `.sha256` sidecars, not embedded in this source tree.
-- Batch 044 patch/ledger: `patches-related-terms/v2.95.69/related-terms-044.json` and `batch-044-glossary-ledger.json`.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.69.md`.
-- Supplementary test reports: `reports/PYTHON_TEST_SHARDS_v2.95.69.md/.json` and `reports/NODE_TEST_REPORT_v2.95.69.md`.
-- Data/graph/package evidence: `reports/DATA_DIFF_v2.95.69.md`, `reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.69.md/.json`, `reports/CHANGE_MANIFEST_v2.95.69.md`, `reports/PACKAGE_VERIFICATION_v2.95.69.md` and `reports/COMMAND_LOG_INDEX_v2.95.69.md`.
-- Python result: 104/104 modules, 785 cases, 784 passed, 0 failed, 1 accepted Git-metadata-dependent skip. Node: 44/44 scripts PASS. All listed local validators passed within their stated scopes.
-- Data identity remains 1,141 canonical IDs, no added/lost IDs, no question/choice/answer-key or protected learning-bank changes. Related Glossary remains 567 entries, with 15 existing rows enriched and Vietnamese meanings/relations preserved.
-- Word Family graph review flags remain read-only; glossary definitions need independent editorial review. Hosted Actions, GitHub Pages deployment, installed-PWA cache/offline migration and physical-device acceptance remain unverified. This release is a locally verified candidate, not production deployment acceptance.
+- Current source: **v2.95.70** — one-way assessment confirmation and safe Foundation persistence. The completed-result surface now contains only `Xác nhận & xem đáp án`; all post-completion return/recheck controls and the obsolete draft-saved toast are removed. Selection drafts remain staged until confirmation.
+- **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.69_FullSource.zip`; SHA-256 `4ec559a2117a1b1b38ef95d4a0d6955431b46e701cf208bd939bd38db232e853` (847 ZIP entries; CRC verified before editing). No other source, older release, Patch or alternate branch was used as input.
+- Release package: `TOEIC_Dictionary_v2.95.70_FullSource.zip`.
+- Package inventory and SHA-256 are recorded in the external delivery sidecars and `reports/PACKAGE_VERIFICATION_v2.95.70.md`.
+- **Patch:** `TOEIC_Dictionary_v2.95.70_Patch_From_v2.95.69.zip`; derived only from the exact `.69` predecessor and intended to reproduce the final `.70` FullSource byte-for-byte. Clean replay evidence is recorded in `reports/PACKAGE_VERIFICATION_v2.95.70.md`.
+- **Assessment contract:** Exactly one explicit result action, `Xác nhận & xem đáp án`. Draft records remain selection-only before confirmation. After the completion summary is shown, no return-to-edit/recheck action remains. Confirm is the commit point for progress/evidence and answer reveal.
+- **Foundation reliability:** Build `nextProgress`, persist it to the appropriate localStorage key, then commit in-memory progress and reveal review. On persistence failure, retain the pending result and staged choices and do not advance committed progress.
+- **Python test report:** `reports/PYTHON_TEST_SHARDS_v2.95.70.md/.json` — 105/105 modules terminal; 789 cases, 788 PASS, 0 FAIL, 1 accepted Git-metadata-dependent SKIP.
+- **Node test report:** `reports/NODE_TEST_REPORT_v2.95.70.md` — 45/45 scripts PASS.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.70.md`.
+- Test and data reports: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.70.md`, `reports/DATA_DIFF_v2.95.70.md`, `reports/CHANGE_MANIFEST_v2.95.70.md`, `reports/PACKAGE_VERIFICATION_v2.95.70.md` and `reports/COMMAND_LOG_INDEX_v2.95.70.md`.
+- **Data identity:** 1,141 canonical vocabulary IDs; validator additions 0/removals 0. The 68 files in `data/` remain byte-identical except `data/manifest.json` changing only `version` from `2.95.69` to `2.95.70`. No question/choice/answer-key or learning-bank data changed; no learner IndexedDB schema migration was introduced.
+- **Local validators:** data validation 0 errors/0 warnings; learning-content 0 errors/0 warnings; repository integrity 409 inspected/0 errors/0 optional warnings; Part 1 assets 9/9 valid; design-token audit 0 new violations (2,773 known legacy warnings); version sync 18 release markers + 17 app imports + 42 Service Worker URLs; design profile sync 54 tokens + 406 legacy selector groups.
+- **Acceptance boundary:** local suites, validators, data comparison and package replay are documented. Hosted GitHub Actions, live GitHub Pages deployment, installed-PWA cache/offline propagation and physical-device checks remain **UNVERIFIED**. No Git push or production deployment is claimed. This is a locally verified source candidate, not production deployment acceptance.

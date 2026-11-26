@@ -1,23 +1,23 @@
-import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.69';
-import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.69';
-import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js?__release=2.95.69';
-import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.69';
-import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.69';
-import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.69';
-import { buildObjectiveResourceIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.69';
-import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.69';
-import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.69';
-import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.69';
-import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.69';
-import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.69';
-import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.69';
-import { createRobotBuddy } from './robot-buddy.js?__release=2.95.69';
-import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.69';
-import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.69';
-import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.69';
+import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.70';
+import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.70';
+import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js?__release=2.95.70';
+import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.70';
+import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.70';
+import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.70';
+import { buildObjectiveResourceIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.70';
+import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.70';
+import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.70';
+import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.70';
+import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.70';
+import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.70';
+import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.70';
+import { createRobotBuddy } from './robot-buddy.js?__release=2.95.70';
+import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.70';
+import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.70';
+import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.70';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.69';
+const APP_RELEASE_VERSION = '2.95.70';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -1303,7 +1303,7 @@ async function submitAnswer(value) {
 }
 function showSinglePracticeResult(){
   const pending=state.pendingSinglePractice;if(!pending)return;
-  showAssessmentResultModal({eyebrow:pending.mode==='sentence-completion'?'TOEIC PART 5 · COMPLETE':'SMART REVIEW · COMPLETE',title:'Bạn đã hoàn thành câu hỏi',correct:pending.correct?1:0,incorrect:pending.correct?0:1,total:1,description:'Lựa chọn đã được ghi nhận. Hãy xác nhận để lưu kết quả học tập và mở phần giải thích.' ,allowReturn:false});
+  showAssessmentResultModal({eyebrow:pending.mode==='sentence-completion'?'TOEIC PART 5 · COMPLETE':'SMART REVIEW · COMPLETE',title:'Bạn đã hoàn thành câu hỏi',correct:pending.correct?1:0,incorrect:pending.correct?0:1,total:1,description:'Lựa chọn đã được ghi nhận. Hãy xác nhận để lưu kết quả học tập và mở phần giải thích.'});
 }
 async function confirmSinglePracticeResult({openReview=true}={}){
   const pending=state.pendingSinglePractice,q=state.currentQuestion;if(!pending||!q)return;
@@ -1945,7 +1945,7 @@ function finishMockExam(timedOut=false){
 function showPendingMockResult(){
  const pending=state.pendingMockResult;if(!pending)return;
  const {score,exam}=pending;
- showAssessmentResultModal({eyebrow:'MOCK EXAM · COMPLETED',title:'Bạn đã hoàn thành bài thi',correct:score.total.correct,incorrect:score.total.questions-score.total.correct,total:score.total.questions,description:`${exam.modeLabel||'Bài thi TOEIC'} · ${exam.timedOut?'Đã hết thời gian.':'Đã nộp bài.'} Kết quả tổng hợp đã sẵn sàng; transcript, đáp án và giải thích chỉ mở sau khi xác nhận.`,allowReturn:false});
+ showAssessmentResultModal({eyebrow:'MOCK EXAM · COMPLETED',title:'Bạn đã hoàn thành bài thi',correct:score.total.correct,incorrect:score.total.questions-score.total.correct,total:score.total.questions,description:`${exam.modeLabel||'Bài thi TOEIC'} · ${exam.timedOut?'Đã hết thời gian.':'Đã nộp bài.'} Kết quả tổng hợp đã sẵn sàng; transcript, đáp án và giải thích chỉ mở sau khi xác nhận.`});
 }
 function confirmMockExamResult(){
  const pending=state.pendingMockResult;if(!pending)return;
@@ -2052,7 +2052,7 @@ async function finishFlashQuiz(){
  const answers=state.flashQuizAnswers.map(item=>({...item}));
  const correct=answers.filter(item=>item.correct).length;
  state.pendingFlashQuizResult={answers,total:ss.quiz.length,completedAt:Date.now()};
- showAssessmentResultModal({eyebrow:'FLASH QUIZ · SESSION COMPLETE',title:'Bạn đã hoàn thành lượt kiểm tra',correct,incorrect:answers.length-correct,total:answers.length,description:'Toàn bộ lựa chọn đã được ghi nhận. Xác nhận để cập nhật lịch ôn và xem đáp án từng câu.',allowReturn:false});
+ showAssessmentResultModal({eyebrow:'FLASH QUIZ · SESSION COMPLETE',title:'Bạn đã hoàn thành lượt kiểm tra',correct,incorrect:answers.length-correct,total:answers.length,description:'Toàn bộ lựa chọn đã được ghi nhận. Xác nhận để cập nhật lịch ôn và xem đáp án từng câu.'});
 }
 async function confirmFlashQuizResult(){
  const pending=state.pendingFlashQuizResult,ss=state.flashSession;if(!pending||!ss)return;
@@ -2072,13 +2072,6 @@ async function confirmFlashQuizResult(){
 async function handleAssessmentResultSurfaceAction(e){
   const confirmAssessment=e.target.closest?.('[data-assessment-confirm]');
   if(confirmAssessment){await confirmPendingAssessmentResult({openReviewForSingle:true});return true;}
-  const returnAssessment=e.target.closest?.('[data-assessment-return]');
-  if(returnAssessment){
-    if(state.pendingPracticeBatch)returnToPracticeBatch();
-    else if(state.pendingFoundationAssessment)returnToFoundationAssessment();
-    else if(state.pendingPlacementResult){state.pendingPlacementResult=false;closeAssessmentResultModal();renderPlacementQuestion();}
-    return true;
-  }
   return false;
 }
 
@@ -2272,7 +2265,7 @@ function finishPlacementDiagnostic(){
  const counts={};for(const lv of PLACEMENT_LEVELS)counts[lv]={correct:0,total:0};
  qs.forEach(q=>{counts[q.level].total++;if(s.answers[q.id]===q.answerIndex)counts[q.level].correct++;});
  const correctTotal=qs.filter(q=>s.answers[q.id]===q.answerIndex).length;state.pendingPlacementResult=true;
- showAssessmentResultModal({eyebrow:'PLACEMENT CHECK · COMPLETE',title:'Bạn đã hoàn thành bài đánh giá',correct:correctTotal,incorrect:qs.length-correctTotal,total:qs.length,description:'Đã nhận đủ câu trả lời. Xác nhận để xem phân tích điểm bắt đầu và từng câu đã làm.',allowReturn:false});return;
+ showAssessmentResultModal({eyebrow:'PLACEMENT CHECK · COMPLETE',title:'Bạn đã hoàn thành bài đánh giá',correct:correctTotal,incorrect:qs.length-correctTotal,total:qs.length,description:'Đã nhận đủ câu trả lời. Xác nhận để xem phân tích điểm bắt đầu và từng câu đã làm.'});return;
 }
 function finalizePlacementDiagnostic(){
  const s=state.placementState,qs=state.placementQuestions||[];if(!s)return;
@@ -2662,8 +2655,8 @@ const ASSESSMENT_DRAFT_STORAGE_KEY = 'toeic:foundation-assessment-drafts:v1';
 function assessmentConfettiMarkup(){
   return `<div class="assessment-result-confetti" aria-hidden="true">${Array.from({length:22},(_,i)=>`<i style="--confetti-index:${i};--confetti-x:${(i*37)%100}%;--confetti-delay:${(i%7)*.08}s;--confetti-rotation:${(i*41)%360}deg"></i>`).join('')}</div>`;
 }
-function assessmentResultBodyMarkup({correct=0,incorrect=0,total=0,description='Bạn đã trả lời hết câu hỏi trong lượt này.',allowReturn=true}={}){
-  return `${assessmentConfettiMarkup()}<p>${escapeHtml(description)}</p><div class="assessment-result-stats"><article><strong>${correct}</strong><span>Đúng</span></article><article><strong>${incorrect}</strong><span>Chưa đúng</span></article><article><strong>${total}</strong><span>Tổng câu</span></article></div><p class="assessment-result-note">Đáp án và phần giải thích sẽ chỉ hiển thị sau khi bạn xác nhận.</p><div class="assessment-result-actions">${allowReturn?'<button type="button" class="secondary-button" data-assessment-return>Quay lại kiểm tra</button>':''}<button type="button" class="primary-button" data-assessment-confirm>Xác nhận &amp; xem đáp án</button></div>`;
+function assessmentResultBodyMarkup({correct=0,incorrect=0,total=0,description='Bạn đã trả lời hết câu hỏi trong lượt này.'}={}){
+  return `${assessmentConfettiMarkup()}<p>${escapeHtml(description)}</p><div class="assessment-result-stats"><article><strong>${correct}</strong><span>Đúng</span></article><article><strong>${incorrect}</strong><span>Chưa đúng</span></article><article><strong>${total}</strong><span>Tổng câu</span></article></div><p class="assessment-result-note">Đáp án và phần giải thích chỉ mở sau khi bạn xác nhận.</p><div class="assessment-result-actions"><button type="button" class="primary-button" data-assessment-confirm>Xác nhận &amp; xem đáp án</button></div>`;
 }
 function showAssessmentResultInLearningFocus({eyebrow,title,bodyMarkup}={}){
   const backdrop=$('#learningFocusBackdrop'),dialog=$('#learningFocusDialog'),host=$('#learningFocusContent'),close=$('#learningFocusClose');
@@ -2710,8 +2703,8 @@ function restoreAssessmentResultLearningFocus(){
   assessmentResultFocusState=null;
   return true;
 }
-function showAssessmentResultModal({eyebrow='SESSION COMPLETE',title='Bạn đã hoàn thành',correct=0,incorrect=0,total=0,description='Bạn đã trả lời hết câu hỏi trong lượt này.',allowReturn=true}={}){
-  const bodyMarkup=assessmentResultBodyMarkup({correct,incorrect,total,description,allowReturn});
+function showAssessmentResultModal({eyebrow='SESSION COMPLETE',title='Bạn đã hoàn thành',correct=0,incorrect=0,total=0,description='Bạn đã trả lời hết câu hỏi trong lượt này.'}={}){
+  const bodyMarkup=assessmentResultBodyMarkup({correct,incorrect,total,description});
   if(showAssessmentResultInLearningFocus({eyebrow,title,bodyMarkup}))return;
   $('#modalEyebrow').textContent=eyebrow;
   $('#modalTitle').textContent=title;
@@ -2781,9 +2774,6 @@ async function confirmPracticeBatchResult(){
   const correct=result.records.filter(row=>row.correct).length,accuracy=Math.round(correct/Math.max(1,result.records.length)*100);
   toast(`Đã chấm ${result.committed} câu. Đáp án và giải thích đã mở.`);
 }
-function returnToPracticeBatch(){
-  if(!state.pendingPracticeBatch)return;const {kind,id}=state.pendingPracticeBatch;state.pendingPracticeBatch=null;closeAssessmentResultModal();refreshPracticeDetail(kind,id);toast('Các lựa chọn tạm đã được lưu. Bạn có thể kiểm tra lại trước khi xác nhận.');
-}
 function saveFoundationAssessmentDrafts(){try{localStorage.setItem(ASSESSMENT_DRAFT_STORAGE_KEY,JSON.stringify(state.foundationAssessmentDrafts||{}));}catch(error){console.warn('Không lưu được lựa chọn Foundation tạm:',error);toast('Không thể lưu lựa chọn tạm trên thiết bị này.','error');}}
 function foundationDraftToolbar(kind,lessonId,questions,scopeId=''){
  const key=foundationDraftKey(kind,lessonId,scopeId),answers=state.foundationAssessmentDrafts[key]?.answers||{};const count=(questions||[]).filter(q=>Number.isInteger(answers[q.id])).length;if(!count)return '';
@@ -2809,24 +2799,30 @@ function confirmFoundationAssessmentResult(){
   const pending=state.pendingFoundationAssessment;if(!pending)return;
   const {kind,lessonId,questions,key,scopeId=''}=pending,draft=state.foundationAssessmentDrafts[key]?.answers||{};
   if(!questions.every(q=>Number.isInteger(draft[q.id]))){toast('Chưa hoàn thành tất cả câu hỏi.','error');return;}
-  for(const q of questions){const correct=draft[q.id]===Number(q.answerIndex),at=Number(state.foundationAssessmentDrafts[key]?.answeredAt?.[q.id])||Date.now();
-    if(kind==='foundation-recognition')state.foundationProgress=recordFoundationAttempt(state.foundationProgress,lessonId,q.id,correct,at);
-    else if(kind==='foundation-application')state.foundationProgress=recordFoundationApplicationAttempt(state.foundationProgress,lessonId,q.id,correct,at);
-    else if(kind==='foundation-reading')state.foundationReadingProgress=recordFoundationReadingAttempt(state.foundationReadingProgress,scopeId?`${lessonId}::${scopeId}`:lessonId,q.id,correct,at);
-    else if(kind==='foundation-listening')state.foundationListeningProgress=recordFoundationListeningAttempt(state.foundationListeningProgress,scopeId?`${lessonId}::${scopeId}`:lessonId,q.id,correct,at);
+  const isListening=kind==='foundation-listening',isReading=kind==='foundation-reading';
+  const isFoundation=kind==='foundation-recognition'||kind==='foundation-application';
+  if(!isListening&&!isReading&&!isFoundation)throw new Error(`Foundation assessment type không hợp lệ: ${kind}`);
+  const progressKey=isListening?'foundationListeningProgress':isReading?'foundationReadingProgress':'foundationProgress';
+  const storageKey=isListening?'toeic:foundation-listening-progress:v1':isReading?'toeic:foundation-reading-progress:v1':'toeic:foundation-progress:v1';
+  const progressId=scopeId?`${lessonId}::${scopeId}`:lessonId;
+  let nextProgress=state[progressKey];
+  for(const q of questions){
+    const correct=draft[q.id]===Number(q.answerIndex),at=Number(state.foundationAssessmentDrafts[key]?.answeredAt?.[q.id])||Date.now();
+    if(kind==='foundation-recognition')nextProgress=recordFoundationAttempt(nextProgress,lessonId,q.id,correct,at);
+    else if(kind==='foundation-application')nextProgress=recordFoundationApplicationAttempt(nextProgress,lessonId,q.id,correct,at);
+    else if(isReading)nextProgress=recordFoundationReadingAttempt(nextProgress,progressId,q.id,correct,at);
+    else nextProgress=recordFoundationListeningAttempt(nextProgress,progressId,q.id,correct,at);
   }
-  try{
-    if(kind==='foundation-listening')localStorage.setItem('toeic:foundation-listening-progress:v1',JSON.stringify(state.foundationListeningProgress));
-    else if(kind==='foundation-reading')localStorage.setItem('toeic:foundation-reading-progress:v1',JSON.stringify(state.foundationReadingProgress));
-    else localStorage.setItem('toeic:foundation-progress:v1',JSON.stringify(state.foundationProgress));
-  }catch(error){console.warn('Không thể lưu kết quả Foundation:',error);}
-  const correctCount=questions.filter(q=>draft[q.id]===Number(q.answerIndex)).length,accuracy=Math.round(correctCount/Math.max(1,questions.length)*100);
+  try{localStorage.setItem(storageKey,JSON.stringify(nextProgress));}
+  catch(error){
+    console.warn('Không thể lưu kết quả Foundation:',error);
+    throw new Error('Không thể lưu kết quả Foundation trên thiết bị. Lựa chọn tạm vẫn được giữ; hãy thử xác nhận lại.');
+  }
+  state[progressKey]=nextProgress;
   delete state.foundationAssessmentDrafts[key];saveFoundationAssessmentDrafts();state.pendingFoundationAssessment=null;closeAssessmentResultModal();openFoundationLesson(lessonId);renderFoundationPath();
   toast('Đã lưu kết quả Foundation và mở phần xem lại.');
 }
-function returnToFoundationAssessment(){
-  const pending=state.pendingFoundationAssessment;if(!pending)return;const {kind,lessonId}=pending;state.pendingFoundationAssessment=null;closeAssessmentResultModal();openFoundationLesson(lessonId);toast('Các lựa chọn Foundation tạm đã được lưu.');
-}
+
 function renderLearningObjectiveProgress() {
   const host = $('#learningObjectiveProgress');
   if (!host || !state.objectiveResourceMap) return;

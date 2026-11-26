@@ -68,7 +68,7 @@ class ChoiceHistoryTests(unittest.TestCase):
         self.assertIn('stagePracticeChoice(', stage_body)
         self.assertNotIn('correctChoiceText:', stage_body, 'staged answers must not contain answer text')
         confirm_start = self.app.index('async function confirmPracticeBatchResult(')
-        confirm_end = self.app.index('function returnToPracticeBatch(', confirm_start)
+        confirm_end = self.app.index('function saveFoundationAssessmentDrafts(', confirm_start)
         confirm_body = self.app[confirm_start:confirm_end]
         self.assertIn('commitPracticeDraftSet(', confirm_body)
         self.assertIn('choiceText:question.choices[choiceIndex]', confirm_body)

@@ -5,9 +5,9 @@ All formative assessments follow the same two-phase interaction: **answer first 
 
 ## 2. Draft and commit
 - Multi-question Grammar, Reading, Listening and Foundation sets write selection-only drafts. Draft records must not contain `correct`, `answerIndex`, answer text, or explanations.
-- Draft choices may persist locally so a refresh does not discard work. Draft persistence does not count as learning evidence.
-- `isPracticeDraftSetComplete()` (or the equivalent Foundation set check) must pass before the summary is displayed.
-- Only the confirmation action may call the existing record/progress/evidence functions and reveal answer explanations.
+- Draft choices may persist locally so a refresh does not discard work. Draft persistence does not count as learning evidence. Removing the post-completion return action does not delete or migrate existing draft records.
+- `isPracticeDraftSetComplete()` (or the equivalent Foundation set check) must pass before the summary is displayed. Once the summary is displayed, it is a one-way confirmation step; there is no secondary return-to-check action.
+- Only the single **Xác nhận & xem đáp án** action may call the existing record/progress/evidence functions and reveal answer explanations. The completed-result surface has no return-to-edit/recheck action; learners can change a draft only while they are still answering, before the completion summary is opened. The Learning Focus X/Escape close affordance routes through the same confirmation handler rather than creating a second outcome.
 - Existing committed attempt history remains intact; retries archive it using the existing attempt-history mechanism.
 
 ## 3. One-question practice

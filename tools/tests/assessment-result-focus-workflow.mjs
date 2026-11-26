@@ -82,8 +82,6 @@ const context = {
     context.confirmed = true;
     context.confirmationOptions = [...(context.confirmationOptions || []), options];
   },
-  returnToPracticeBatch() { context.returnedToPractice = true; },
-  returnToFoundationAssessment() { context.returnedToFoundation = true; },
   renderPlacementQuestion() { context.renderedPlacement = true; },
 };
 vm.createContext(context);
@@ -144,6 +142,8 @@ assert.equal($('#learningFocusContent').children.length, 2);
 const resultPanel = $('#learningFocusContent').children[1];
 assert.match(resultPanel.className, /assessment-result-inline/);
 assert.match(resultPanel.innerHTML, /data-assessment-confirm/);
+assert.doesNotMatch(resultPanel.innerHTML, /data-assessment-return|Quay lại kiểm tra/);
+assert.equal((resultPanel.innerHTML.match(/<button\b/g) || []).length, 1, 'completed result exposes exactly one explicit action');
 assert.equal($('#learningFocusClose').attributes['aria-label'], 'Xác nhận kết quả');
 assert.equal(resultPanel.confirmButton.focused, true, 'keyboard focus moves to the primary confirmation action');
 
@@ -172,4 +172,4 @@ function assessmentStateIsCleared() {
   return context.assessmentResultFocusState === null;
 }
 
-console.log('Assessment result focus workflow PASS: active sessions reuse learningFocusDialog; prior modal is hidden; X/confirm actions use the existing safe confirmation path; previous content is restored.');
+console.log('Assessment result focus workflow PASS: active sessions reuse learningFocusDialog; prior modal is hidden; only confirmation is offered; X/confirm actions use the existing safe confirmation path; previous content is restored.');
