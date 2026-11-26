@@ -26,7 +26,7 @@ class GlossaryBackfill025Tests(unittest.TestCase):
     def test_current_source_has_expected_remaining_placeholder_and_backfill_counts(self):
         placeholders=[r for r in self.current if mod.PLACEHOLDER in r.get('definition_en','').casefold()]
         backfilled=[r for r in self.current if r.get('source')==mod.SOURCE]
-        self.assertEqual(len(placeholders),46)
+        self.assertEqual(len(placeholders),37)
         self.assertEqual(len(backfilled),205)
     def test_baseline_audit_identifies_exact_candidates(self):
         baseline=restore_batch_044({'terms':[dict(r) for r in self.current]}, ROOT)['terms']

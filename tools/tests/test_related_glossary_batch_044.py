@@ -6,6 +6,7 @@ import json
 import re
 import unittest
 from pathlib import Path
+from glossary_test_helpers import restore_batch_045
 
 ROOT = Path(__file__).resolve().parents[2]
 PATCH_PATH = ROOT / "patches-related-terms/v2.95.69/related-terms-044.json"
@@ -77,7 +78,7 @@ class RelatedGlossaryBatch044Tests(unittest.TestCase):
             self.assertIn("independent editorial review pending", row["source"].lower())
 
     def test_patch_guards_reconstruct_exact_predecessor_glossary(self):
-        restored = copy.deepcopy(self.glossary)
+        restored = restore_batch_045(self.glossary, ROOT)
         by = {row["term"].casefold(): row for row in restored["terms"]}
         for operation in self.patch["operations"]:
             row = by[operation["term"].casefold()]

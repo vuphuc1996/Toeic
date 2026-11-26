@@ -1,10 +1,23 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.70
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.71
 
-**Current source candidate:** v2.95.70 — one-way assessment completion, removal of post-completion return controls, and fail-safe Foundation result persistence. UI is frozen; learner storage and canonical/assessment identities are preserved.
+**Current source candidate:** v2.95.71 — Batch 045 sourced Related Glossary enrichment and an evidence-based weighted progress dashboard. UI is frozen; learner storage and canonical/assessment identities are preserved.
 
-## Current release — v2.95.70
+## Current release — v2.95.71
+
+- **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.70_FullSource.zip`; SHA-256 `1a0df44d309d127df3d3fb5012e7a6654c93a450c591f1f67575f4d15822e672` (864 files; ZIP CRC verified). No older archive, alternate source or Patch was used as input.
+- **Batch 045:** 23 existing Related Glossary rows receive POS, English definitions, Cambridge Dictionary provenance and exact URLs. All 567 glossary terms, Vietnamese meanings and relation arrays are preserved; no canonical headword/ID or graph edge is added.
+- **Quality screening:** 119/567 glossary rows remain flagged, down from 142 (−23). Missing definitions 78, placeholders 37, missing POS 115, missing provenance 39; duplicate normalized groups 0. These are automated flags, not editorial approval.
+- **Progress dashboard:** transparent weighted measurable curriculum-build index **54.47%**, based on seven published workstreams/weights. It is provisional and excludes all unmeasured or externally gated areas; it must not be represented as overall production completion or learner mastery. See `docs/reports/PROJECT_PROGRESS_v2.95.71.md` and `tools/project-progress-plan-v2.95.71.json`.
+- **Pronunciation guard:** 79 missing US IPA entries were reviewed through the CMUdict preview; 0 met safe auto-apply conditions. No uncertain IPA was guessed or inserted.
+- **Protection:** no vocabulary canonical IDs/headwords/senses/relations, question/choice IDs, answer keys, learning banks, Mock eligibility, learner IndexedDB schema/records or UI layout changed. No backend/Cloudflare architecture added.
+- **Final local test evidence:** Python 107/107 modules, 799 cases (798 PASS, 1 accepted Git-metadata SKIP, 0 FAIL/timeout/error/unrun); Node 45/45 PASS; validator 1,141 IDs +0/−0, 0 errors/0 legacy warnings; learning content 0 errors/0 warnings; repository integrity 409 checked/0 errors; Part 1 assets 9/9; version sync 18 release markers +17 app imports +42 Service Worker URLs; design profile 54 tokens/406 typography groups; design-token audit 0 new violations with 2,773 legacy warnings.
+- **Read-only graph debt:** Word Family audit retains 90 missing targets, 1 POS mismatch, 72 Vietnamese sense-anchor mismatches and 10 non-reciprocal links; no links were auto-repaired.
+- **Reports:** `TEST_REPORT_TOEIC_Dictionary_v2.95.71.md`, `PYTHON_TEST_SHARDS_v2.95.71.md/.json`, `NODE_TEST_REPORT_v2.95.71.md`, `DATA_DIFF_v2.95.71.md`, `RELATED_GLOSSARY_BATCH_045_v2.95.71.md`, `PROJECT_PROGRESS_v2.95.71.md/.json`, `WORD_FAMILY_GRAPH_AUDIT_v2.95.71.md/.json`, `CHANGE_MANIFEST_v2.95.71.md`, `PACKAGE_VERIFICATION_v2.95.71.md` and `COMMAND_LOG_INDEX_v2.95.71.md`.
+- **Acceptance boundary:** hosted GitHub Actions, live Pages deployment, installed-PWA cache/offline behavior and physical-device tests remain unverified. This is a locally verified source candidate, not production deployment acceptance.
+
+## Previous release — v2.95.70
 
 - **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.69_FullSource.zip`; SHA-256 `4ec559a2117a1b1b38ef95d4a0d6955431b46e701cf208bd939bd38db232e853` (847 files; ZIP CRC verified). No older archive, alternate source or Patch was used as input.
 - **One-way completion contract:** every shared assessment-result summary exposes exactly one explicit action, `Xác nhận & xem đáp án`. The post-completion return/recheck action, its event handler, practice/Foundation return helpers and obsolete saved-draft toast were removed. Draft data remains staged until the confirmation commit.

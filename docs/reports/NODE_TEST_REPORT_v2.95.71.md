@@ -1,0 +1,56 @@
+# Node Regression Report — v2.95.71
+
+- Node regression scripts discovered: **45**
+- Executed: **45/45**
+- Failures: **0**
+- The runner completed with terminal marker `NODE_SUITE_PASS`.
+- Additional syntax checks: `node --check assets/js/app.js` and `node --check sw.js` — PASS.
+- Python tool/test compile: `python -m compileall -q tools` — PASS.
+
+## Script inventory
+
+- `alphabet-sound-progress.mjs` — PASS
+- `assessment-deferred-workflow.mjs` — PASS
+- `assessment-one-way-confirmation.mjs` — PASS
+- `assessment-result-focus-workflow.mjs` — PASS
+- `explanation-rubric-self-report.mjs` — PASS
+- `flashcard-fixed-batch.mjs` — PASS
+- `flashcard-image-policy.mjs` — PASS
+- `flashcard-senses.mjs` — PASS
+- `foundation-a2-production.mjs` — PASS
+- `foundation-application-evidence.mjs` — PASS
+- `foundation-evidence.mjs` — PASS
+- `foundation-listening-evidence.mjs` — PASS
+- `foundation-outcome-evidence.mjs` — PASS
+- `foundation-production-export.mjs` — PASS
+- `foundation-production-revision.mjs` — PASS
+- `foundation-reading-evidence.mjs` — PASS
+- `foundation-reading-extended-evidence.mjs` — PASS
+- `learner-data-backup-integration.mjs` — PASS
+- `learner-data-backup.mjs` — PASS
+- `learning-assistant.mjs` — PASS
+- `learning-focus-workspace.mjs` — PASS
+- `learning-outcome-progress.mjs` — PASS
+- `legacy-google-ai.mjs` — PASS
+- `listening-tts-regression.mjs` — PASS
+- `mock-exam-engine.mjs` — PASS
+- `mock-guided-flow.mjs` — PASS
+- `mock-score-readiness.mjs` — PASS
+- `mock-ui-integrity.mjs` — PASS
+- `modal-dismissal-workflow.mjs` — PASS
+- `objective-recall-timing.mjs` — PASS
+- `part5-timing-integration.mjs` — PASS
+- `practice-progress.mjs` — PASS
+- `quick-help.mjs` — PASS
+- `recall-queue.mjs` — PASS
+- `related-glossary-quality.mjs` — PASS
+- `robot-buddy-data-boundary.mjs` — PASS
+- `robot-buddy-layout.mjs` — PASS
+- `robot-buddy-streaming.mjs` — PASS
+- `robot-buddy.mjs` — PASS
+- `robot-learning-insights.mjs` — PASS
+- `robot-progress-dashboard.mjs` — PASS
+- `runtime-render-smoke.mjs` — PASS
+- `sentence-completion.mjs` — PASS
+- `service-worker-update.mjs` — PASS
+- `vocabulary-release-integrity.mjs` — PASS

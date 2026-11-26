@@ -1,16 +1,12 @@
-# Current Version — TOEIC Dictionary v2.95.70
+# Current Version — TOEIC Dictionary v2.95.71
 
-- Current source: **v2.95.70** — one-way assessment confirmation and safe Foundation persistence. The completed-result surface now contains only `Xác nhận & xem đáp án`; all post-completion return/recheck controls and the obsolete draft-saved toast are removed. Selection drafts remain staged until confirmation.
-- **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.69_FullSource.zip`; SHA-256 `4ec559a2117a1b1b38ef95d4a0d6955431b46e701cf208bd939bd38db232e853` (847 ZIP entries; CRC verified before editing). No other source, older release, Patch or alternate branch was used as input.
-- Release package: `TOEIC_Dictionary_v2.95.70_FullSource.zip`.
-- Package inventory and SHA-256 are recorded in the external delivery sidecars and `reports/PACKAGE_VERIFICATION_v2.95.70.md`.
-- **Patch:** `TOEIC_Dictionary_v2.95.70_Patch_From_v2.95.69.zip`; derived only from the exact `.69` predecessor and intended to reproduce the final `.70` FullSource byte-for-byte. Clean replay evidence is recorded in `reports/PACKAGE_VERIFICATION_v2.95.70.md`.
-- **Assessment contract:** Exactly one explicit result action, `Xác nhận & xem đáp án`. Draft records remain selection-only before confirmation. After the completion summary is shown, no return-to-edit/recheck action remains. Confirm is the commit point for progress/evidence and answer reveal.
-- **Foundation reliability:** Build `nextProgress`, persist it to the appropriate localStorage key, then commit in-memory progress and reveal review. On persistence failure, retain the pending result and staged choices and do not advance committed progress.
-- **Python test report:** `reports/PYTHON_TEST_SHARDS_v2.95.70.md/.json` — 105/105 modules terminal; 789 cases, 788 PASS, 0 FAIL, 1 accepted Git-metadata-dependent SKIP.
-- **Node test report:** `reports/NODE_TEST_REPORT_v2.95.70.md` — 45/45 scripts PASS.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.70.md`.
-- Test and data reports: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.70.md`, `reports/DATA_DIFF_v2.95.70.md`, `reports/CHANGE_MANIFEST_v2.95.70.md`, `reports/PACKAGE_VERIFICATION_v2.95.70.md` and `reports/COMMAND_LOG_INDEX_v2.95.70.md`.
-- **Data identity:** 1,141 canonical vocabulary IDs; validator additions 0/removals 0. The 68 files in `data/` remain byte-identical except `data/manifest.json` changing only `version` from `2.95.69` to `2.95.70`. No question/choice/answer-key or learning-bank data changed; no learner IndexedDB schema migration was introduced.
-- **Local validators:** data validation 0 errors/0 warnings; learning-content 0 errors/0 warnings; repository integrity 409 inspected/0 errors/0 optional warnings; Part 1 assets 9/9 valid; design-token audit 0 new violations (2,773 known legacy warnings); version sync 18 release markers + 17 app imports + 42 Service Worker URLs; design profile sync 54 tokens + 406 legacy selector groups.
-- **Acceptance boundary:** local suites, validators, data comparison and package replay are documented. Hosted GitHub Actions, live GitHub Pages deployment, installed-PWA cache/offline propagation and physical-device checks remain **UNVERIFIED**. No Git push or production deployment is claimed. This is a locally verified source candidate, not production deployment acceptance.
+- Current source: **v2.95.71** — Related Glossary Batch 045 and a reproducible, provisional weighted project-progress dashboard.
+- Release package: `TOEIC_Dictionary_v2.95.71_FullSource.zip`.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.71.md`.
+- **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.70_FullSource.zip`; SHA-256 `1a0df44d309d127df3d3fb5012e7a6654c93a450c591f1f67575f4d15822e672` (864 files; ZIP CRC verified before editing).
+- Batch 045 updated metadata only on 23 existing relation-target glossary entries. Vietnamese meanings and relation arrays are protected; no headword/ID or relation edge is added. Independent editorial review remains pending.
+- Quality audit: 119/567 flagged records, down from 142. Missing definitions 78, placeholders 37, missing POS 115, missing source provenance 39; zero duplicate-normalized groups.
+- Weighted measurable curriculum-build index: 54.47%, provisional transparent model across 7 defined workstreams/weights. This is not official total-system completion, production acceptance, learner mastery or TOEIC readiness.
+- Final local test inventory: Python 107/107 modules; 799 cases (798 PASS, 1 accepted Git-metadata SKIP, 0 FAIL); Node 45/45 PASS. Validator, learning content, repository integrity, Part 1 assets, version/design synchronization and package replay evidence are recorded in `docs/reports/`.
+- Patch: `TOEIC_Dictionary_v2.95.71_Patch_From_v2.95.70.zip`; its SHA-256 is supplied in the external `.sha256` sidecar and exact replay evidence is in `PACKAGE_VERIFICATION_v2.95.71.md`.
+- **Acceptance boundary:** no Git push or Pages deployment is claimed. Hosted GitHub Actions, installed-PWA/offline propagation and physical-device acceptance remain unverified.

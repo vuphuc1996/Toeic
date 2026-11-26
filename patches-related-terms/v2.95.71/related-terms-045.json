@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-045-v2.95.71",
+  "baseFileSha256": "6aa3781759fcf000e066ec1a650a1c1d3255ceba71632b7b03a626b06152cbe6",
+  "operations": [
+    {
+      "term": "drawback",
+      "expect": {
+        "term": "drawback",
+        "meaning_vi": "nhược điểm; bất lợi",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a disadvantage or negative feature of a situation, product, or plan.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; The noun sense means a disadvantage; it matches the existing antonym link to benefit.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/drawback"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "due date",
+      "expect": {
+        "term": "due date",
+        "meaning_vi": "ngày đến hạn",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the date by which something is expected to be completed or a payment must be made.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; The selected sense is the completion/payment deadline, not the expected date of childbirth; it matches deadline.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/due-date"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "employ",
+      "expect": {
+        "term": "employ",
+        "meaning_vi": "thuê; tuyển dụng; sử dụng",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to give someone paid work; also, to use a method or resource for a particular purpose.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Both paid-work and use senses are represented to preserve the existing Vietnamese meanings “thuê; tuyển dụng; sử dụng”.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/employ"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "housing",
+      "expect": {
+        "term": "housing",
+        "meaning_vi": "nhà ở; chỗ ở",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "buildings or other places provided for people to live in.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; The homes/property sense is selected to match the existing accommodation synonym and Vietnamese meaning.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/housing"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "installation",
+      "expect": {
+        "term": "installation",
+        "meaning_vi": "sự lắp đặt; thiết bị được lắp đặt",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the process of putting equipment in position and preparing it for use; also, equipment or a system that has been installed.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Includes the installation process and installed equipment/system senses to reflect the preserved Vietnamese gloss.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/installation"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "leaflet",
+      "expect": {
+        "term": "leaflet",
+        "meaning_vi": "tờ rơi; tờ thông tin",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a small printed sheet or folded paper that provides information or advertises something.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Printed information/advertising sense; aligned with the existing brochure synonym.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/leaflet"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "output",
+      "expect": {
+        "term": "output",
+        "meaning_vi": "đầu ra; sản lượng",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the amount produced by a person, machine, company, or economy; also, something produced.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Production/output sense aligns with the existing yield synonym and Vietnamese meanings.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/output"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "permanent",
+      "expect": {
+        "term": "permanent",
+        "meaning_vi": "lâu dài; vĩnh viễn",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "lasting for a long time or indefinitely, rather than being temporary.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; The lasting/not-temporary adjective sense matches the existing antonym temporary.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/permanent"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "purchaser",
+      "expect": {
+        "term": "purchaser",
+        "meaning_vi": "người mua",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a person or company that buys goods, services, or property.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Buyer/purchaser noun sense; Cambridge Business English explicitly allows a person or company.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/purchaser"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "progress report",
+      "expect": {
+        "term": "progress report",
+        "meaning_vi": "báo cáo tiến độ",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a written document describing how much progress has been made on planned work.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Workplace management document sense; the existing update relation is retained without claiming full synonymy in every context.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/progress-report"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "funds",
+      "expect": {
+        "term": "funds",
+        "meaning_vi": "nguồn vốn; quỹ tiền",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n pl",
+        "definition_en": "money available or needed for a particular purpose or activity.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Plural noun sense means financial resources available to spend; matches the existing budget relation.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/funds"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "objection",
+      "expect": {
+        "term": "objection",
+        "meaning_vi": "sự phản đối",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an expression or feeling of opposition, disagreement, or disapproval.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Noun sense of expressing opposition/disapproval; related to the existing complaint anchor.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/objection"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "distinction",
+      "expect": {
+        "term": "distinction",
+        "meaning_vi": "sự phân biệt",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a difference between two similar things or the recognition of such a difference.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Difference sense only; excludes unrelated senses such as excellence or an academic award.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/distinction"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "modify",
+      "expect": {
+        "term": "modify",
+        "meaning_vi": "điều chỉnh",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to make a limited change to something, often to improve it or make it more suitable.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Change/revision sense, not the specialized grammatical use; matches the existing revise relation.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/modify"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "global",
+      "expect": {
+        "term": "global",
+        "meaning_vi": "toàn cầu",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "relating to the whole world or to all parts of a situation.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; The world-wide adjective sense matches the existing worldwide synonym.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/global"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "inflexible",
+      "expect": {
+        "term": "inflexible",
+        "meaning_vi": "không linh hoạt; cứng nhắc",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "fixed and unable or unwilling to change when circumstances or needs change.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; The non-adaptable adjective sense matches the existing antonym flexible.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/inflexible"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "incapable",
+      "expect": {
+        "term": "incapable",
+        "meaning_vi": "không có khả năng",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "not having the ability to do something.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Unable-to-do sense, consistent with the existing unable relation and Vietnamese gloss.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/incapable"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "specialist",
+      "expect": {
+        "term": "specialist",
+        "meaning_vi": "chuyên gia",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a person with extensive knowledge, experience, or skill in a particular subject.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Person-with-specialist-knowledge noun sense; relation anchor technician is retained as a context-limited related term.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/specialist"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "tendency",
+      "expect": {
+        "term": "tendency",
+        "meaning_vi": "xu hướng",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a likelihood or usual pattern of behaving in a particular way or of something happening.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Noun sense of a prevailing inclination or pattern; matches the existing trend relation.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/tendency"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "nonurgent",
+      "expect": {
+        "term": "nonurgent",
+        "meaning_vi": "không khẩn cấp",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "not needing to be done or dealt with immediately.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Cambridge lists nonurgent as an alternative spelling of non-urgent; source URL uses the dictionary headword form.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/non-urgent"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "dismiss",
+      "expect": {
+        "term": "dismiss",
+        "meaning_vi": "bác bỏ; cho thôi việc",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to reject an idea or claim as unimportant, or to remove someone from their job.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Combines the reject and employment-termination senses to preserve the existing Vietnamese gloss; antonym anchor applies to the employment sense.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/dismiss"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "equilibrium",
+      "expect": {
+        "term": "equilibrium",
+        "meaning_vi": "trạng thái cân bằng",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a state of balance between different forces, conditions, or parts.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; General state-of-balance sense; avoids over-specializing to the chemistry meaning.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/equilibrium"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    },
+    {
+      "term": "initiate",
+      "expect": {
+        "term": "initiate",
+        "meaning_vi": "khởi xướng; bắt đầu",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to cause a process, action, or series of events to begin.",
+        "source": "Cambridge Dictionary; indexed entry excerpts reviewed 2026-11-26; paraphrased definition; independent editorial review pending; Start/launch sense; aligned with the existing launch relation and Vietnamese meaning.",
+        "sourceUrls": [
+          "https://dictionary.cambridge.org/dictionary/english/initiate"
+        ],
+        "sourceRelease": "2.95.71"
+      }
+    }
+  ]
+}

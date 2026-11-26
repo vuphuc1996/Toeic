@@ -105,6 +105,10 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_043.py' -v
       - name: Unit tests — related glossary batch 044 (15 Cambridge-sourced existing targets)
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_044.py' -v
+      - name: Unit tests — related glossary batch 045 (23 Cambridge-sourced existing targets)
+        run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_045.py' -v
+      - name: Unit tests — transparent project progress index
+        run: python -m unittest discover -s tools/tests -p 'test_project_progress_index.py' -v
       - name: Unit tests — exact canonical glossary enrichment v2.95.35
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_exact_match_enrichment_035.py' -v
       - name: Audit canonical related-glossary enrichment candidates
@@ -119,8 +123,21 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_vocabulary_relationship_graph_audit.py' -v
       - name: Audit vocabulary relationship graph
         run: python tools/audit-vocabulary-relationship-graph.py
-      - name: Audit Word Family graph (read-only)
-        run: python tools/audit-word-family-graph.py --output docs/reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.68.md --json-output docs/reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.68.json
+      - name: Audit Word Family graph (read-only, release-keyed report)
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+          version = json.loads(Path("data/manifest.json").read_text(encoding="utf-8"))["version"]
+          subprocess.run([
+              sys.executable,
+              "tools/audit-word-family-graph.py",
+              "--output", f"docs/reports/WORD_FAMILY_GRAPH_AUDIT_v{version}.md",
+              "--json-output", f"docs/reports/WORD_FAMILY_GRAPH_AUDIT_v{version}.json",
+          ], check=True)
+          PY
       - name: Unit tests — related glossary backlog report
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_backlog.py' -v
       - name: Unit tests — glossary canonical-sense backfill v2.95.25

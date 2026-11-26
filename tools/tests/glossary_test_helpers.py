@@ -6,9 +6,30 @@ from pathlib import Path
 
 
 
-def restore_batch_044(glossary: dict, root: Path) -> dict:
-    """Return a copy of the glossary as it existed immediately before Batch 044."""
+def restore_batch_045(glossary: dict, root: Path) -> dict:
+    """Reverse Batch 045, restoring the Related Glossary to its v2.95.70 state."""
     restored = copy.deepcopy(glossary)
+    patch_path = root / 'patches-related-terms/v2.95.71/related-terms-045.json'
+    patch = json.loads(patch_path.read_text(encoding='utf-8'))
+    by_key = {row['term'].casefold(): row for row in restored['terms']}
+    for operation in patch['operations']:
+        row = by_key[operation['term'].casefold()]
+        for field, old_value in operation['expect'].items():
+            if field == 'term':
+                continue
+            if old_value is None:
+                row.pop(field, None)
+            else:
+                row[field] = copy.deepcopy(old_value)
+    return restored
+
+
+def restore_batch_044(glossary: dict, root: Path) -> dict:
+    """Return a copy of the glossary as it existed immediately before Batch 044.
+
+    The current release includes Batch 045, so reverse it before reversing Batch 044.
+    """
+    restored = restore_batch_045(glossary, root)
     patch_path = root / 'patches-related-terms/v2.95.69/related-terms-044.json'
     patch = json.loads(patch_path.read_text(encoding='utf-8'))
     by_key = {row['term'].casefold(): row for row in restored['terms']}

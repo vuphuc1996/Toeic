@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "modelId": "toeic-dictionary-measurable-build-index-v1",
+  "release": "2.95.71",
+  "title": "Weighted measurable curriculum-build index",
+  "status": "provisional-transparent-model-not-an-official-acceptance-score",
+  "description": "A transparent weighted index across measurable system-building workstreams. It does not claim complete product readiness, learner mastery, CEFR/ETS certification or deployment acceptance.",
+  "weights": {
+    "vocabulary_headwords_minimum": 20,
+    "related_glossary_join_coverage": 10,
+    "related_glossary_unflagged_records": 10,
+    "guided_pathway_stage_presence": 15,
+    "objective_resource_id_mapping": 10,
+    "outcome_evidence_instrumentation": 25,
+    "foundation_core_content_coverage": 10
+  },
+  "denominators": {
+    "vocabulary_target": 3000,
+    "related_glossary_join": "distinct canonical relation target terms in current source",
+    "related_glossary_quality": "all existing Related Glossary records; zero automated quality flags",
+    "guided_pathway_stages": ["PRE-A1", "A1", "A2", "B1", "B2", "C1"],
+    "objective_resource_mapping": "all resource IDs in canonical objective map",
+    "outcome_evidence": "all defined outcome criteria in objective-outcomes registry",
+    "foundation_core": ["Foundation Reading passages", "Foundation Listening core scripts", "A-Z sound records"]
+  },
+  "exclusions": [
+    "unmeasured Grammar/Listening/Reading total targets",
+    "independent editorial approval and psychometric calibration",
+    "Mock exam approval and full 200-question coverage quality",
+    "Speaking and Writing completion",
+    "IELTS expansion",
+    "remote GitHub Actions and Pages deployment acceptance",
+    "installed-PWA/offline propagation and physical-device QA",
+    "learner mastery and TOEIC score readiness"
+  ],
+  "rules": [
+    "Do not change denominators silently between releases.",
+    "Do not treat content inventory as evidence of accuracy or learning mastery.",
+    "Do not award coverage to unverified or review-pending content as editorially approved.",
+    "If a defensible denominator is unavailable, report the workstream as unmeasured and exclude it from this provisional index."
+  ]
+}

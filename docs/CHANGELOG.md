@@ -1,3 +1,15 @@
+## v2.95.71 — Related Glossary Batch 045 and measurable progress dashboard (2026-11-26)
+
+- Enriched 23 existing Related Glossary relation targets with POS, concise English definitions paraphrased from Cambridge Dictionary indexed entry excerpts, exact source URLs and release provenance. Selection required an existing canonical synonym/antonym anchor; no new glossary rows or canonical headwords were added.
+- Preserved all 567 term identities, Vietnamese meanings and relation arrays. Only `pos`, `definition_en`, `source`, `sourceUrls` and `sourceRelease` were updated on the 23 pre-existing rows. Independent editorial review remains pending because direct source-page fetch was not consistently available; the ledger records the indexed-excerpt evidence basis.
+- Quality screening changed from 142 to 119 flagged glossary rows (−23): missing definitions 92→78, placeholders 46→37, missing POS 138→115, missing provenance 48→39. Duplicate normalized-term groups remain zero. The audit is a screening tool, not editorial approval.
+- Added a reproducible, explicitly provisional weighted progress index with published denominators and weights. Current value is 54.47%; it is not an official total-system completion or production-readiness score. Unmeasured Grammar/Listening/Reading targets, S&W, Mock acceptance, external review/calibration, deployment/device verification and learner mastery are excluded.
+- Added regression coverage for Batch 045 and the progress formula; updated historical snapshot reconstruction so earlier glossary tests reverse Batch 045 before older batches. Updated the Node placeholder assertion and CI discovery steps. The Word Family CI report path is now derived from `data/manifest.json` instead of remaining hard-coded to `.68`.
+- The CMUdict missing-IPA review still produced no safe automatic candidates (79 reviewed; 49 ambiguous multi-pronunciation records, 25 no exact key, 5 conversion failures). No IPA was invented or automatically inserted.
+- No canonical vocabulary IDs/headwords/senses/relations, question/choice IDs, answer keys, learning-bank records, Mock eligibility, learner IndexedDB schema/records, UI layout or hosting architecture were changed.
+- Local verification, exact predecessor comparison, Python/Node results, package replay and checksums are recorded in `docs/reports/*v2.95.71*`. Hosted GitHub Actions, live Pages deployment, installed-PWA offline/update behavior and physical-device acceptance remain unverified.
+
+
 ## v2.95.70 — one-way assessment confirmation and safe Foundation persistence (2026-11-26)
 
 - Removed the post-completion “Quay lại kiểm tra” action from every shared assessment-result surface. The result prompt now exposes exactly one explicit action: “Xác nhận & xem đáp án”. The Learning Focus X/Escape affordance remains wired to the same confirmation handler; it is not a separate return path.

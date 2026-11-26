@@ -63,6 +63,13 @@ class ContinuousIntegrationCoverageTests(unittest.TestCase):
         missing = [path.name for path in files if f"node tools/tests/{path.name}" not in self.workflow]
         self.assertEqual(missing, [], f"JavaScript regression suites missing from CI: {missing}")
 
+    def test_word_family_report_path_uses_manifest_release_dynamically(self):
+        self.assertIn('release-keyed report', self.workflow)
+        self.assertIn('Path("data/manifest.json")', self.workflow)
+        self.assertIn('WORD_FAMILY_GRAPH_AUDIT_v{version}.md', self.workflow)
+        self.assertIn('WORD_FAMILY_GRAPH_AUDIT_v{version}.json', self.workflow)
+        self.assertNotIn('WORD_FAMILY_GRAPH_AUDIT_v2.95.68', self.workflow)
+
     def test_editorial_review_has_one_explicit_ci_execution_step(self):
         command = "python -m unittest discover -s tools/tests -p 'test_editorial_review.py' -v"
         matches = [line.strip() for line in self.workflow.splitlines() if command in line]
