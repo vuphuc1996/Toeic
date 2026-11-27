@@ -77,6 +77,24 @@ class ContinuousIntegrationCoverageTests(unittest.TestCase):
         self.assertIn('"tools/**"', self.workflow)
         self.assertIn(".github/workflows/validate-data.yml", self.workflow)
 
+    def test_candidate_branch_is_in_push_validation_trigger(self):
+        self.assertIn("branches: [main, master, candidate]", self.workflow)
+
+    def test_root_runtime_and_project_files_are_in_path_filters(self):
+        required_paths = [".env.example", "README.md", "metadata.json", "package.json", "server.js"]
+        for path in required_paths:
+            with self.subTest(path=path):
+                self.assertGreaterEqual(self.workflow.count(f'"{path}"'), 2,
+                                        f"{path} must trigger validation on push and pull request")
+
+    def test_preview_server_serves_only_public_runtime_directories(self):
+        server = (ROOT / "server.js").read_text(encoding="utf-8")
+        self.assertIn('express.static(path.join(__dirname, "assets")', server)
+        self.assertIn('express.static(path.join(__dirname, "data")', server)
+        self.assertNotIn("express.static(__dirname", server)
+        self.assertIn('app.get(["/", "/index.html"]', server)
+        self.assertIn("app.use((req, res) => res.status(404).end())", server)
+
 
 if __name__ == "__main__":
     unittest.main()

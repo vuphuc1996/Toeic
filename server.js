@@ -10,54 +10,55 @@ const port = Number(process.env.PORT) || 3000;
 
 app.disable('x-powered-by');
 
-const BLOCKED_ROOT_FILES = new Set([
-  '/server.js',
-  '/package.json',
-  '/package-lock.json',
-  '/metadata.json',
-  '/.env',
-  '/.env.example'
-]);
+function sendNoCache(res) {
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+}
 
-app.use((req, res, next) => {
-  const reqPath = req.path;
-  if (
-    BLOCKED_ROOT_FILES.has(reqPath) ||
-    reqPath.startsWith('/.') ||
-    reqPath.startsWith('/docs/') ||
-    reqPath.startsWith('/design/')
-  ) {
-    res.status(404).end();
-    return;
-  }
-  if (reqPath === '/' || reqPath === '/index.html' || reqPath === '/sw.js' || reqPath === '/manifest.webmanifest') {
-    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-  }
-  next();
-});
+function sendIndex(req, res) {
+  sendNoCache(res);
+  res.sendFile(path.join(__dirname, 'index.html'));
+}
 
+// Serve only the runtime assets and application data required by the PWA.
+// Repository tooling, tests, patches, documentation, and configuration stay private
+// to the local/preview runtime instead of being exposed through the static root.
 app.use(
-  express.static(__dirname, {
+  '/assets',
+  express.static(path.join(__dirname, 'assets'), {
     dotfiles: 'ignore',
-    index: 'index.html',
+    index: false,
     setHeaders(res, filePath) {
       if (filePath.endsWith('.js') || filePath.endsWith('.mjs')) {
         res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
-      } else if (filePath.endsWith('.webmanifest')) {
-        res.setHeader('Content-Type', 'application/manifest+json; charset=utf-8');
       }
     }
   })
 );
 
-app.get('*', (req, res, next) => {
-  if (req.method !== 'GET' || path.extname(req.path)) {
-    next();
-    return;
-  }
-  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-  res.sendFile(path.join(__dirname, 'index.html'));
+app.use(
+  '/data',
+  express.static(path.join(__dirname, 'data'), {
+    dotfiles: 'ignore',
+    index: false
+  })
+);
+
+app.get(['/', '/index.html'], sendIndex);
+
+app.get('/sw.js', (req, res) => {
+  sendNoCache(res);
+  res.sendFile(path.join(__dirname, 'sw.js'));
 });
+
+app.get('/manifest.webmanifest', (req, res) => {
+  sendNoCache(res);
+  res.type('application/manifest+json');
+  res.sendFile(path.join(__dirname, 'manifest.webmanifest'));
+});
+
+// There are no path-based client routes; unknown paths must not fall back to
+// index.html because that can disguise missing resources as successful responses.
+app.use((req, res) => res.status(404).end());
 
 app.listen(port, '0.0.0.0', () => {
   console.log(`TOEIC Dictionary server listening on http://0.0.0.0:${port}`);

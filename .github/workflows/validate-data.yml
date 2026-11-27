@@ -2,7 +2,7 @@ name: Validate TOEIC dictionary
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, candidate]
     paths:
       - "data/**"
       - "design/**"
@@ -16,6 +16,11 @@ on:
       - "docs/**"
       - ".gitignore"
       - ".gitattributes"
+      - "server.js"
+      - "package.json"
+      - "metadata.json"
+      - "README.md"
+      - ".env.example"
       - ".github/workflows/validate-data.yml"
   pull_request:
     paths:
@@ -31,6 +36,11 @@ on:
       - "docs/**"
       - ".gitignore"
       - ".gitattributes"
+      - "server.js"
+      - "package.json"
+      - "metadata.json"
+      - "README.md"
+      - ".env.example"
       - ".github/workflows/validate-data.yml"
   workflow_dispatch:
 
