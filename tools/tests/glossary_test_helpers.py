@@ -301,3 +301,39 @@ def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) 
         digest.update(hashlib.sha256(payload).digest())
         digest.update(b"\n")
     return digest.hexdigest()
+
+
+def composite_sha_reversing_listening_translations(paths, root: Path) -> str:
+    """Restore the v2.95.75 Listening resource before hashing approved learning-bank changes."""
+    import hashlib
+
+    added_ids = {
+        "batch026-part3-vendor-call",
+        "batch026-part3-training-room",
+        "batch026-part3-invoice-correction",
+        "batch026-part3-access-card",
+        "batch026-part4-building-notice",
+        "batch026-part4-travel-update",
+        "batch026-part4-product-launch",
+        "batch026-part4-policy-reminder",
+    }
+    digest = hashlib.sha256()
+    seen: set[str] = set()
+    for path in sorted(paths):
+        data = path.read_bytes()
+        if path.name == "listening-library.json":
+            document = json.loads(data.decode("utf-8"))
+            for unit in document["listening"]:
+                if unit.get("id") in added_ids:
+                    if not unit.get("transcriptTranslation", "").strip():
+                        raise AssertionError(f"Missing v2.95.76 transcript translation: {unit.get('id')}")
+                    seen.add(unit["id"])
+                    del unit["transcriptTranslation"]
+            if seen != added_ids:
+                raise AssertionError(f"Listening remediation IDs differ: {sorted(seen ^ added_ids)}")
+            data = json.dumps(document, ensure_ascii=False, indent=2).encode("utf-8") + b"\n"
+        digest.update(path.relative_to(root).as_posix().encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(hashlib.sha256(data).digest())
+        digest.update(b"\n")
+    return digest.hexdigest()

@@ -4,7 +4,7 @@ import hashlib
 import json
 import unittest
 from pathlib import Path
-from glossary_test_helpers import composite_sha_reversing_vocabulary_patch, restore_batch_044
+from glossary_test_helpers import composite_sha_reversing_vocabulary_patch, composite_sha_reversing_listening_translations, restore_batch_044
 
 ROOT = Path(__file__).resolve().parents[2]
 EXPECTED = {
@@ -170,7 +170,7 @@ class RelatedGlossaryMerge038Tests(unittest.TestCase):
         vocabulary = list((ROOT / "data/vocabulary").glob("[A-Z].json"))
         protected = [ROOT / "data/grammar/lessons.json", ROOT / "data/listening/listening-library.json", ROOT / "data/readings/reading-library.json", ROOT / "data/practice/part5-sentence-completion.json"]
         self.assertEqual(composite_sha_reversing_vocabulary_patch(vocabulary, ROOT, "patches/v2.95.54/independent-audit-stage-1-data.json"), self.ledger["canonicalVocabularySha256"])
-        self.assertEqual(composite_sha(protected), self.ledger["protectedLearningBankSha256"])
+        self.assertEqual(composite_sha_reversing_listening_translations(protected, ROOT), self.ledger["protectedLearningBankSha256"])
 
     def test_glossary_identity_is_unique(self):
         keys = [row["term"].strip().casefold() for row in self.glossary["terms"]]
