@@ -14,7 +14,22 @@ class ContentBatch027Tests(unittest.TestCase):
   self.assertEqual(self.batch['batch'],'027'); self.assertEqual(self.batch['version'],'2.95.37')
   self.assertEqual(len(self.batch['listening']),16)
   self.assertEqual(self.batch['counts'],{'listeningUnits':16,'listeningQuestions':32,'part2Units':8,'part3Units':4,'part4Units':4})
-  self.assertEqual(self.batch['listening_sha256'],hashlib.sha256((ROOT/'data/listening/listening-library.json').read_bytes()).hexdigest())
+  document=read('data/listening/listening-library.json')
+  remediation_ids={
+   'batch026-part3-vendor-call','batch026-part3-training-room',
+   'batch026-part3-invoice-correction','batch026-part3-access-card',
+   'batch026-part4-building-notice','batch026-part4-travel-update',
+   'batch026-part4-product-launch','batch026-part4-policy-reminder',
+  }
+  present=set()
+  for unit in document['listening']:
+   if unit.get('id') in remediation_ids:
+    self.assertTrue(unit.get('transcriptTranslation','').strip(),unit['id'])
+    present.add(unit['id'])
+    del unit['transcriptTranslation']
+  self.assertEqual(present,remediation_ids)
+  historical=(json.dumps(document,ensure_ascii=False,indent=2)+'\\n').encode('utf-8')
+  self.assertEqual(self.batch['listening_sha256'],hashlib.sha256(historical).hexdigest())
   self.assertEqual(len(set(self.batch['listening'])),16)
  def test_all_batch_units_exist_and_are_review_gated(self):
   for unit_id in self.batch['listening']:
