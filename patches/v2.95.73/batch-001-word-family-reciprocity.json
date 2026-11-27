@@ -96,7 +96,8 @@
       "target": "hire",
       "pos": "n",
       "meaning_vi": "sự thuê mướn (ít dùng)",
-      "reason": "self-referential; canonical headword has only a verb sense"
+      "reason": "self-referential; canonical headword has only a verb sense",
+      "index": 0
     },
     {
       "letter": "U",
@@ -105,7 +106,8 @@
       "target": "utilization",
       "pos": "n",
       "meaning_vi": "việc sử dụng",
-      "reason": "self-referential duplicate of the owner headword"
+      "reason": "self-referential duplicate of the owner headword",
+      "index": 1
     }
   ],
   "invariants": {

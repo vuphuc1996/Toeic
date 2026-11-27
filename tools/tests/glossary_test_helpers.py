@@ -202,7 +202,11 @@ def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) 
             owner = next((row for row in documents[owner_path]["words"] if row.get("id") == owner_id), None)
             if owner is None:
                 raise AssertionError(f"Word Family self-link owner not found in reconstructed data: {owner_id}")
-            owner.setdefault("word_family", []).append({
+            family = owner.setdefault("word_family", [])
+            index = change.get("index", len(family))
+            if not isinstance(index, int) or index < 0 or index > len(family):
+                raise AssertionError(f"Invalid original Word Family index for {owner_id}: {index}")
+            family.insert(index, {
                 "word": change["target"], "pos": change["pos"], "meaning_vi": change["meaning_vi"]
             })
     for operation in patch.get("operations", []):
