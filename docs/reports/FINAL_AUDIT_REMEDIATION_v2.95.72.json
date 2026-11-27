@@ -1,0 +1,36 @@
+{
+  "version": "2.95.72",
+  "status": "DEVELOPMENT CANDIDATE",
+  "independentAuditRemediation": "PASSED",
+  "timestamp": "2026-11-27T02:43:00Z",
+  "repository": "vuphuc1996/Toeic",
+  "branch": "main",
+  "baselineCommit": "256ca21461e78a7685bed773ddd622a64050e33a",
+  "canonicalVocabularyCount": 1181,
+  "baselineVocabularyCount": 1141,
+  "batch026Additions": 40,
+  "relatedTermsTotal": 567,
+  "relatedTermsFlaggedRemaining": 54,
+  "wordFamilyMissingTargetsRemaining": 50,
+  "pythonTests": {
+    "discoveredModules": 109,
+    "executedModules": 109,
+    "passedModules": 108,
+    "passedWithSkipsModules": 1,
+    "failedModules": 0,
+    "erroredModules": 0,
+    "totalCases": 808,
+    "passedCases": 807,
+    "skippedCases": 1,
+    "failedCases": 0,
+    "erroredCases": 0
+  },
+  "p0Reconciliation": {
+    "p0aTestInventory": "Reconciled 109 modules, 108 PASS + 1 PASS WITH SKIPS, 0 FAIL",
+    "p0bGlossaryBatch046": "Remediated 65 entries, missing definitions 78->51, placeholders 37->1, missing POS 115->52, missing provenance 39->1",
+    "p0cCanonicalVocabulary": "1,141 baseline IDs 100% preserved, 40 new entries added, SHA-256 verified",
+    "p0dApplicationAndFrozenUI": "Runtime files updated for v2.95.72 sync; UI, IndexedDB, and question keys strictly preserved",
+    "p0eBatchAndManifestIntegrity": "A-Z counts sum to 1,181, no double counting, version markers synchronized",
+    "p0fFinalValidation": "All validators and test runners passed with exit code 0"
+  }
+}

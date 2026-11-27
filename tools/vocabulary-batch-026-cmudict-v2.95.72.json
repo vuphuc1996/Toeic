@@ -1,0 +1,636 @@
+{
+  "source": "CMU Pronouncing Dictionary (cmudict.dict); exact single pronunciation only via tools/cmudict_ipa.py",
+  "release": "2.95.72",
+  "batch": "026",
+  "recordCount": 40,
+  "records": [
+    {
+      "id": "accumulation-n",
+      "word": "accumulation",
+      "arpabet": [
+        "AH0",
+        "K",
+        "Y",
+        "UW2",
+        "M",
+        "Y",
+        "AH0",
+        "L",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ək.ˌjum.jə.ˈleɪ.ʃən/"
+    },
+    {
+      "id": "acknowledgment-n",
+      "word": "acknowledgment",
+      "arpabet": [
+        "AE0",
+        "K",
+        "N",
+        "AA1",
+        "L",
+        "IH0",
+        "JH",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/æk.ˈnɑ.lɪdʒ.mənt/"
+    },
+    {
+      "id": "adaptable-adj",
+      "word": "adaptable",
+      "arpabet": [
+        "AH0",
+        "D",
+        "AE1",
+        "P",
+        "T",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ə.ˈdæp.tə.bəl/"
+    },
+    {
+      "id": "adaptation-n",
+      "word": "adaptation",
+      "arpabet": [
+        "AE2",
+        "D",
+        "AH0",
+        "P",
+        "T",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌæ.dəp.ˈteɪ.ʃən/"
+    },
+    {
+      "id": "assignment-n",
+      "word": "assignment",
+      "arpabet": [
+        "AH0",
+        "S",
+        "AY1",
+        "N",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ə.ˈsaɪn.mənt/"
+    },
+    {
+      "id": "authentication-n",
+      "word": "authentication",
+      "arpabet": [
+        "AO0",
+        "TH",
+        "EH2",
+        "N",
+        "T",
+        "AH0",
+        "K",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ɔ.ˌθen.tə.ˈkeɪ.ʃən/"
+    },
+    {
+      "id": "biased-adj",
+      "word": "biased",
+      "arpabet": [
+        "B",
+        "AY1",
+        "AH0",
+        "S",
+        "T"
+      ],
+      "phoneticUs": "/ˈbaɪ.əst/"
+    },
+    {
+      "id": "budgetary-adj",
+      "word": "budgetary",
+      "arpabet": [
+        "B",
+        "AH1",
+        "JH",
+        "IH0",
+        "T",
+        "EH2",
+        "R",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈbʌ.dʒɪ.ˌte.ri/"
+    },
+    {
+      "id": "challenging-adj",
+      "word": "challenging",
+      "arpabet": [
+        "CH",
+        "AE1",
+        "L",
+        "AH0",
+        "N",
+        "JH",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈtʃæ.lən.dʒɪŋ/"
+    },
+    {
+      "id": "coincidence-n",
+      "word": "coincidence",
+      "arpabet": [
+        "K",
+        "OW0",
+        "IH1",
+        "N",
+        "S",
+        "IH0",
+        "D",
+        "AH0",
+        "N",
+        "S"
+      ],
+      "phoneticUs": "/koʊ.ˈɪn.sɪ.dəns/"
+    },
+    {
+      "id": "commencement-n",
+      "word": "commencement",
+      "arpabet": [
+        "K",
+        "AH0",
+        "M",
+        "EH1",
+        "N",
+        "S",
+        "M",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/kə.ˈmen.smənt/"
+    },
+    {
+      "id": "commuter-n",
+      "word": "commuter",
+      "arpabet": [
+        "K",
+        "AH0",
+        "M",
+        "Y",
+        "UW1",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/kəm.ˈju.tɚ/"
+    },
+    {
+      "id": "concept-n",
+      "word": "concept",
+      "arpabet": [
+        "K",
+        "AA1",
+        "N",
+        "S",
+        "EH0",
+        "P",
+        "T"
+      ],
+      "phoneticUs": "/ˈkɑn.sept/"
+    },
+    {
+      "id": "confirmed-adj",
+      "word": "confirmed",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "F",
+        "ER1",
+        "M",
+        "D"
+      ],
+      "phoneticUs": "/kən.ˈfɝmd/"
+    },
+    {
+      "id": "considerably-adv",
+      "word": "considerably",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "IH1",
+        "D",
+        "ER0",
+        "AH0",
+        "B",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/kən.ˈsɪ.dɚ.ə.bli/"
+    },
+    {
+      "id": "constraint-n",
+      "word": "constraint",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "S",
+        "T",
+        "R",
+        "EY1",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/kən.ˈstreɪnt/"
+    },
+    {
+      "id": "contradiction-n",
+      "word": "contradiction",
+      "arpabet": [
+        "K",
+        "AA2",
+        "N",
+        "T",
+        "R",
+        "AH0",
+        "D",
+        "IH1",
+        "K",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌkɑn.trə.ˈdɪk.ʃən/"
+    },
+    {
+      "id": "conversion-n",
+      "word": "conversion",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "V",
+        "ER1",
+        "ZH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/kən.ˈvɝ.ʒən/"
+    },
+    {
+      "id": "convertible-adj",
+      "word": "convertible",
+      "arpabet": [
+        "K",
+        "AH0",
+        "N",
+        "V",
+        "ER1",
+        "T",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/kən.ˈvɝ.tə.bəl/"
+    },
+    {
+      "id": "demonstration-n",
+      "word": "demonstration",
+      "arpabet": [
+        "D",
+        "EH2",
+        "M",
+        "AH0",
+        "N",
+        "S",
+        "T",
+        "R",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ˌde.mən.ˈstreɪ.ʃən/"
+    },
+    {
+      "id": "discrimination-n",
+      "word": "discrimination",
+      "arpabet": [
+        "D",
+        "IH0",
+        "S",
+        "K",
+        "R",
+        "IH2",
+        "M",
+        "AH0",
+        "N",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/dɪ.ˌskrɪ.mə.ˈneɪ.ʃən/"
+    },
+    {
+      "id": "elimination-n",
+      "word": "elimination",
+      "arpabet": [
+        "IH0",
+        "L",
+        "IH2",
+        "M",
+        "AH0",
+        "N",
+        "EY1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/ɪ.ˌlɪ.mə.ˈneɪ.ʃən/"
+    },
+    {
+      "id": "expensive-adj",
+      "word": "expensive",
+      "arpabet": [
+        "IH0",
+        "K",
+        "S",
+        "P",
+        "EH1",
+        "N",
+        "S",
+        "IH0",
+        "V"
+      ],
+      "phoneticUs": "/ɪk.ˈspen.sɪv/"
+    },
+    {
+      "id": "flexibly-adv",
+      "word": "flexibly",
+      "arpabet": [
+        "F",
+        "L",
+        "EH1",
+        "K",
+        "S",
+        "AH0",
+        "B",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈflek.sə.bli/"
+    },
+    {
+      "id": "hiring-n",
+      "word": "hiring",
+      "arpabet": [
+        "HH",
+        "AY1",
+        "R",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈhaɪ.rɪŋ/"
+    },
+    {
+      "id": "knowledgeable-adj",
+      "word": "knowledgeable",
+      "arpabet": [
+        "N",
+        "AA1",
+        "L",
+        "AH0",
+        "JH",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈnɑ.lə.dʒə.bəl/"
+    },
+    {
+      "id": "necessarily-adv",
+      "word": "necessarily",
+      "arpabet": [
+        "N",
+        "EH2",
+        "S",
+        "AH0",
+        "S",
+        "EH1",
+        "R",
+        "AH0",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌne.sə.ˈse.rə.li/"
+    },
+    {
+      "id": "operational-adj",
+      "word": "operational",
+      "arpabet": [
+        "AA2",
+        "P",
+        "ER0",
+        "EY1",
+        "SH",
+        "AH0",
+        "N",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˌɑ.pɚ.ˈeɪ.ʃə.nəl/"
+    },
+    {
+      "id": "operator-n",
+      "word": "operator",
+      "arpabet": [
+        "AA1",
+        "P",
+        "ER0",
+        "EY2",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/ˈɑ.pɚ.ˌeɪ.tɚ/"
+    },
+    {
+      "id": "purchasing-n",
+      "word": "purchasing",
+      "arpabet": [
+        "P",
+        "ER1",
+        "CH",
+        "AH0",
+        "S",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈpɝ.tʃə.sɪŋ/"
+    },
+    {
+      "id": "recruiter-n",
+      "word": "recruiter",
+      "arpabet": [
+        "R",
+        "IH0",
+        "K",
+        "R",
+        "UW1",
+        "T",
+        "ER0"
+      ],
+      "phoneticUs": "/rɪ.ˈkru.tɚ/"
+    },
+    {
+      "id": "shipping-n",
+      "word": "shipping",
+      "arpabet": [
+        "SH",
+        "IH1",
+        "P",
+        "IH0",
+        "NG"
+      ],
+      "phoneticUs": "/ˈʃɪ.pɪŋ/"
+    },
+    {
+      "id": "submission-n",
+      "word": "submission",
+      "arpabet": [
+        "S",
+        "AH0",
+        "B",
+        "M",
+        "IH1",
+        "SH",
+        "AH0",
+        "N"
+      ],
+      "phoneticUs": "/səb.ˈmɪ.ʃən/"
+    },
+    {
+      "id": "temporarily-adv",
+      "word": "temporarily",
+      "arpabet": [
+        "T",
+        "EH2",
+        "M",
+        "P",
+        "ER0",
+        "EH1",
+        "R",
+        "AH0",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/ˌtem.pɚ.ˈe.rə.li/"
+    },
+    {
+      "id": "transferable-adj",
+      "word": "transferable",
+      "arpabet": [
+        "T",
+        "R",
+        "AE0",
+        "N",
+        "S",
+        "F",
+        "ER1",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/træns.ˈfɝ.ə.bəl/"
+    },
+    {
+      "id": "unbiased-adj",
+      "word": "unbiased",
+      "arpabet": [
+        "AH2",
+        "N",
+        "B",
+        "AY1",
+        "AH0",
+        "S",
+        "T"
+      ],
+      "phoneticUs": "/ˌʌn.ˈbaɪ.əst/"
+    },
+    {
+      "id": "urgency-n",
+      "word": "urgency",
+      "arpabet": [
+        "ER1",
+        "JH",
+        "AH0",
+        "N",
+        "S",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈɝ.dʒən.si/"
+    },
+    {
+      "id": "urgently-adv",
+      "word": "urgently",
+      "arpabet": [
+        "ER1",
+        "JH",
+        "AH0",
+        "N",
+        "T",
+        "L",
+        "IY0"
+      ],
+      "phoneticUs": "/ˈɝ.dʒənt.li/"
+    },
+    {
+      "id": "vacant-adj",
+      "word": "vacant",
+      "arpabet": [
+        "V",
+        "EY1",
+        "K",
+        "AH0",
+        "N",
+        "T"
+      ],
+      "phoneticUs": "/ˈveɪ.kənt/"
+    },
+    {
+      "id": "verifiable-adj",
+      "word": "verifiable",
+      "arpabet": [
+        "V",
+        "EH1",
+        "R",
+        "AH0",
+        "F",
+        "AY2",
+        "AH0",
+        "B",
+        "AH0",
+        "L"
+      ],
+      "phoneticUs": "/ˈve.rə.ˌfaɪ.ə.bəl/"
+    }
+  ]
+}

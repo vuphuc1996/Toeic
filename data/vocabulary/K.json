@@ -166,6 +166,49 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "knowledgeable-adj",
+      "word": "knowledgeable",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈnɑ.lə.dʒə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "am hiểu",
+          "definition_en": "well informed and having solid practical understanding of a subject or field",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "knowledge",
+          "pos": "n",
+          "meaning_vi": "kiến thức; sự hiểu biết"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers praised the knowledgeable pharmacist for explaining dosage guidelines clearly.",
+          "vi": "Khách hàng khen ngợi dược sĩ am hiểu đã giải thích rõ ràng hướng dẫn liều dùng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "knowledgeable staff",
+        "knowledgeable advisor",
+        "highly knowledgeable"
+      ]
     }
   ]
 }

@@ -51,12 +51,12 @@ class VocabularyBatch012Tests(unittest.TestCase):
                 self.assertIn(row['id'], self.ledger_ids, row['word'])
 
     def test_release_delta_and_migration_profile_are_exact(self):
-        self.assertEqual(self.manifest['totalWords'], 1141)
-        self.assertEqual(self.manifest['previousReleaseTotalWords'], 1137)
-        self.assertEqual(self.manifest['releaseAdditionIds'], [row['id'] for row in json.loads((ROOT / 'data/vocabulary/batch-013.json').read_text(encoding='utf-8'))['words']])
+        self.assertEqual(self.manifest['totalWords'], 1181)
+        self.assertEqual(self.manifest['previousReleaseTotalWords'], 1141)
+        self.assertEqual(self.manifest['releaseAdditionIds'], [row['id'] for row in json.loads((ROOT / 'data/vocabulary/batch-026.json').read_text(encoding='utf-8'))['words']])
         profile = next(x for x in self.manifest['releaseRepairProfiles'] if x['previousTotalWords'] == 1100)
         self.assertEqual(profile['releaseAdditionIds'][:37], [row['id'] for row in self.batch['words']])
-        self.assertEqual(len(profile['releaseAdditionIds']), 41, 'legacy 1100-word snapshots also restore the four v2.93.0 additions')
+        self.assertEqual(len(profile['releaseAdditionIds']), 81, 'legacy 1100-word snapshots restore Batch 012, 013, and 026 additions')
 
 
 if __name__ == '__main__':

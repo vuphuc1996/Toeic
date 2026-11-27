@@ -2794,6 +2794,92 @@
       "collocations": [],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "elimination-n",
+      "word": "elimination",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ɪ.ˌlɪ.mə.ˈneɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự loại bỏ",
+          "definition_en": "the complete removal or exclusion of unnecessary steps, errors, or items",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "eliminate",
+          "pos": "v",
+          "meaning_vi": "loại bỏ; loại trừ; khử"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The elimination of duplicate paper forms cut invoice processing times in half.",
+          "vi": "Việc loại bỏ các biểu mẫu giấy trùng lặp đã giúp giảm một nửa thời gian xử lý hóa đơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "elimination of waste",
+        "error elimination",
+        "gradual elimination"
+      ]
+    },
+    {
+      "id": "expensive-adj",
+      "word": "expensive",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ɪk.ˈspen.sɪv/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "đắt đỏ",
+          "definition_en": "costing a large amount of money relative to typical alternatives or budgets",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "SHOPPING"
+      ],
+      "word_family": [
+        {
+          "word": "expense",
+          "pos": "n",
+          "meaning_vi": "chi phí; khoản tiêu dùng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Overnight air freight is too expensive for heavy bulk furniture.",
+          "vi": "Vận tải hàng không qua đêm quá đắt đỏ đối với đồ nội thất cồng kềnh.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "expensive equipment",
+        "too expensive",
+        "prohibitively expensive"
+      ]
     }
   ]
 }

@@ -1570,6 +1570,92 @@
         "potential buyer",
         "buyer information"
       ]
+    },
+    {
+      "id": "biased-adj",
+      "word": "biased",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈbaɪ.əst/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "thiên vị; thiên lệch",
+          "definition_en": "unfairly favoring or opposing one person, group, or option instead of judging neutrally",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "bias",
+          "pos": "n/v",
+          "meaning_vi": "thiên kiến; sự thiên vị; làm thiên lệch"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Evaluation panels must reject biased scoring sheets during candidate interviews.",
+          "vi": "Hội đồng đánh giá phải loại bỏ các bảng điểm thiên lệch trong quá trình phỏng vấn ứng viên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "biased evaluation",
+        "biased sample",
+        "politically biased"
+      ]
+    },
+    {
+      "id": "budgetary-adj",
+      "word": "budgetary",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈbʌ.dʒɪ.ˌte.ri/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "thuộc ngân sách",
+          "definition_en": "relating to a financial plan for expected income and controlled spending",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "budget",
+          "pos": "n",
+          "meaning_vi": "ngân sách"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Strict budgetary limits delayed the warehouse expansion until next quarter.",
+          "vi": "Những giới hạn ngân sách nghiêm ngặt đã làm hoãn việc mở rộng kho đến quý sau.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "budgetary control",
+        "budgetary constraints",
+        "budgetary approval"
+      ]
     }
   ]
 }

@@ -3826,6 +3826,49 @@
         "for this purpose",
         "main purpose"
       ]
+    },
+    {
+      "id": "purchasing-n",
+      "word": "purchasing",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈpɝ.tʃə.sɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "việc mua hàng",
+          "definition_en": "the organized business activity of buying supplies, services, or goods for a company",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "purchase",
+          "pos": "v",
+          "meaning_vi": "mua; sắm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Centralized purchasing helped the hotel chain negotiate better linen discounts.",
+          "vi": "Hoạt động mua hàng tập trung giúp chuỗi khách sạn thương lượng mức chiết khấu vải tốt hơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "purchasing department",
+        "purchasing power",
+        "centralized purchasing"
+      ]
     }
   ]
 }

@@ -6,9 +6,27 @@ from pathlib import Path
 
 
 
-def restore_batch_045(glossary: dict, root: Path) -> dict:
-    """Reverse Batch 045, restoring the Related Glossary to its v2.95.70 state."""
+def restore_batch_046(glossary: dict, root: Path) -> dict:
+    """Reverse Batch 046, restoring the Related Glossary to its v2.95.71 state."""
     restored = copy.deepcopy(glossary)
+    patch_path = root / 'patches-related-terms/v2.95.72/related-terms-046.json'
+    patch = json.loads(patch_path.read_text(encoding='utf-8'))
+    by_key = {row['term'].casefold(): row for row in restored['terms']}
+    for operation in patch['operations']:
+        row = by_key[operation['term'].casefold()]
+        for field, old_value in operation['expect'].items():
+            if field == 'term':
+                continue
+            if old_value is None:
+                row.pop(field, None)
+            else:
+                row[field] = copy.deepcopy(old_value)
+    return restored
+
+
+def restore_batch_045(glossary: dict, root: Path) -> dict:
+    """Reverse Batch 045 after reversing Batch 046, restoring the v2.95.70 state."""
+    restored = restore_batch_046(glossary, root)
     patch_path = root / 'patches-related-terms/v2.95.71/related-terms-045.json'
     patch = json.loads(patch_path.read_text(encoding='utf-8'))
     by_key = {row['term'].casefold(): row for row in restored['terms']}
@@ -124,9 +142,17 @@ def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) 
     manifest = json.loads((root / "data/manifest.json").read_text(encoding="utf-8"))
     id_to_path = {}
     documents = {}
+    batch_026_path = root / "data/vocabulary/batch-026.json"
+    batch_026_ids = set()
+    if batch_026_path.exists():
+        batch_026_data = json.loads(batch_026_path.read_text(encoding="utf-8"))
+        batch_026_ids = {w["id"] for w in batch_026_data.get("words", [])}
+
     for entry in manifest.get("letters", []):
         path = (root / entry["file"].removeprefix("./")).resolve()
         document = json.loads(path.read_text(encoding="utf-8"))
+        if batch_026_ids:
+            document["words"] = [w for w in document.get("words", []) if w["id"] not in batch_026_ids]
         documents[path] = document
         for record in document.get("words", []):
             id_to_path[record["id"]] = path

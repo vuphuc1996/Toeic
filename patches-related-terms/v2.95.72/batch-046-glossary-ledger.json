@@ -1,0 +1,1216 @@
+{
+  "schemaVersion": 1,
+  "batch": "046",
+  "release": "2.95.72",
+  "predecessorRelease": "2.95.71",
+  "baseRelatedTermsSha256": "bea165a05129d2089a85202cd36c45f8a201c69adad7e0db56bcb18a6b8b8681",
+  "count": 65,
+  "sourceMethod": "Wiktionary REST / Free Dictionary API entries and Cambridge Dictionary entry excerpts reviewed on 2026-11-27. Definitions are concise original paraphrases matched to existing Vietnamese meanings and canonical relation anchors. Independent editorial review remains pending; unsupported compound/multi-word phrases and once-a-year remain flagged.",
+  "records": [
+    {
+      "term": "aide",
+      "pos": "n",
+      "definition_en": "a person employed to assist an executive, official, or more senior colleague.",
+      "meaning_vi_preserved": "trợ lý",
+      "relationAnchors": [
+        {
+          "headword": "assistant",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/aide",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun assistant sense matches assistant synonym and meaning 'trợ lý'.",
+      "originalTermPreserved": "aide"
+    },
+    {
+      "term": "assertion",
+      "pos": "n",
+      "definition_en": "a confident statement or formal declaration claiming that something is true.",
+      "meaning_vi_preserved": "lời khẳng định",
+      "relationAnchors": [],
+      "sourceUrl": "https://en.wiktionary.org/wiki/assertion",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun declaration sense matches meaning 'lời khẳng định'.",
+      "originalTermPreserved": "assertion"
+    },
+    {
+      "term": "call off",
+      "pos": "v",
+      "definition_en": "to cancel a planned meeting, event, or scheduled arrangement.",
+      "meaning_vi_preserved": "hủy bỏ",
+      "relationAnchors": [
+        {
+          "headword": "cancel",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/call_off",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Phrasal verb cancel sense matches meaning 'hủy bỏ'.",
+      "originalTermPreserved": "call off"
+    },
+    {
+      "term": "component",
+      "pos": "n",
+      "definition_en": "an individual part or element that forms part of a larger machine or system.",
+      "meaning_vi_preserved": "thành phần; linh kiện",
+      "relationAnchors": [],
+      "sourceUrl": "https://en.wiktionary.org/wiki/component",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun part-of-system sense matches meaning 'thành phần; linh kiện'.",
+      "originalTermPreserved": "component"
+    },
+    {
+      "term": "course",
+      "pos": "n",
+      "definition_en": "a planned route, direction, or ordered sequence of steps toward a goal.",
+      "meaning_vi_preserved": "lộ trình",
+      "relationAnchors": [
+        {
+          "headword": "route",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/course",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun route/sequence sense matches meaning 'lộ trình'.",
+      "originalTermPreserved": "course"
+    },
+    {
+      "term": "direct",
+      "pos": "v/adj",
+      "definition_en": "to guide or manage toward a goal, or proceeding straight without deviation.",
+      "meaning_vi_preserved": "hướng dẫn; trực tiếp",
+      "relationAnchors": [
+        {
+          "headword": "guide",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/direct",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Combined verb/adjective senses match 'hướng dẫn; trực tiếp'.",
+      "originalTermPreserved": "direct"
+    },
+    {
+      "term": "execute",
+      "pos": "v",
+      "definition_en": "to carry out or put a plan, order, or formal agreement into effect.",
+      "meaning_vi_preserved": "thực hiện",
+      "relationAnchors": [
+        {
+          "headword": "perform",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/execute",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb carry-out sense matches meaning 'thực hiện'.",
+      "originalTermPreserved": "execute"
+    },
+    {
+      "term": "functioning",
+      "pos": "n",
+      "definition_en": "the way or ongoing process in which a system, device, or organization operates.",
+      "meaning_vi_preserved": "sự hoạt động",
+      "relationAnchors": [
+        {
+          "headword": "operation",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/functioning",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun operational process sense matches meaning 'sự hoạt động'.",
+      "originalTermPreserved": "functioning"
+    },
+    {
+      "term": "helper",
+      "pos": "n",
+      "definition_en": "a person or tool that assists someone in completing work or tasks.",
+      "meaning_vi_preserved": "người hỗ trợ",
+      "relationAnchors": [
+        {
+          "headword": "assistant",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/helper",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun assistant sense matches meaning 'người hỗ trợ'.",
+      "originalTermPreserved": "helper"
+    },
+    {
+      "term": "holder",
+      "pos": "n",
+      "definition_en": "a person or party that officially possesses or retains a document, right, or asset.",
+      "meaning_vi_preserved": "người nắm giữ",
+      "relationAnchors": [
+        {
+          "headword": "owner",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/holder",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun possessor sense matches owner synonym and 'người nắm giữ'.",
+      "originalTermPreserved": "holder"
+    },
+    {
+      "term": "honor",
+      "pos": "v",
+      "definition_en": "to show formal respect, public recognition, or esteem for someone's achievement.",
+      "meaning_vi_preserved": "vinh danh",
+      "relationAnchors": [
+        {
+          "headword": "award",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/honor",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb pay-tribute sense aligns with award synonym and 'vinh danh'.",
+      "originalTermPreserved": "honor"
+    },
+    {
+      "term": "imbalance",
+      "pos": "n",
+      "definition_en": "a condition in which connected amounts, forces, or factors are unequal or out of proportion.",
+      "meaning_vi_preserved": "sự mất cân bằng",
+      "relationAnchors": [
+        {
+          "headword": "balance",
+          "type": "antonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/imbalance",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun inequality sense matches balance antonym and 'sự mất cân bằng'.",
+      "originalTermPreserved": "imbalance"
+    },
+    {
+      "term": "international",
+      "pos": "adj",
+      "definition_en": "involving, operating across, or connecting two or more countries.",
+      "meaning_vi_preserved": "quốc tế",
+      "relationAnchors": [
+        {
+          "headword": "worldwide",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/international",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Adjective cross-border sense aligns with worldwide synonym and 'quốc tế'.",
+      "originalTermPreserved": "international"
+    },
+    {
+      "term": "lot",
+      "pos": "n",
+      "definition_en": "a measured plot of land or a grouped set of goods offered together.",
+      "meaning_vi_preserved": "khu đất; lô",
+      "relationAnchors": [
+        {
+          "headword": "yard",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/lot",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun plot/portion sense aligns with yard synonym and 'khu đất; lô'.",
+      "originalTermPreserved": "lot"
+    },
+    {
+      "term": "machinery",
+      "pos": "n",
+      "definition_en": "machines or mechanical apparatus considered collectively as operating equipment.",
+      "meaning_vi_preserved": "máy móc",
+      "relationAnchors": [],
+      "sourceUrl": "https://en.wiktionary.org/wiki/machinery",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun collective machines sense matches meaning 'máy móc'.",
+      "originalTermPreserved": "machinery"
+    },
+    {
+      "term": "manual",
+      "pos": "n/adj",
+      "definition_en": "a handbook providing operating instructions, or work performed directly by hand.",
+      "meaning_vi_preserved": "sổ tay; thủ công",
+      "relationAnchors": [
+        {
+          "headword": "guide",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/manual",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun/adjective handbook and by-hand senses align with guide synonym and 'sổ tay; thủ công'.",
+      "originalTermPreserved": "manual"
+    },
+    {
+      "term": "mention",
+      "pos": "v/n",
+      "definition_en": "to refer briefly to something in speech or writing, or a brief remark made.",
+      "meaning_vi_preserved": "đề cập",
+      "relationAnchors": [],
+      "sourceUrl": "https://en.wiktionary.org/wiki/mention",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb/noun brief-reference senses match meaning 'đề cập'.",
+      "originalTermPreserved": "mention"
+    },
+    {
+      "term": "observation",
+      "pos": "n",
+      "definition_en": "the act of watching closely or a noted remark based on careful inspection.",
+      "meaning_vi_preserved": "sự quan sát",
+      "relationAnchors": [],
+      "sourceUrl": "https://en.wiktionary.org/wiki/observation",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun watching/noting sense matches meaning 'sự quan sát'.",
+      "originalTermPreserved": "observation"
+    },
+    {
+      "term": "path",
+      "pos": "n",
+      "definition_en": "a trail, route, or course along which people or processes move forward.",
+      "meaning_vi_preserved": "con đường",
+      "relationAnchors": [
+        {
+          "headword": "route",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/path",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun route sense matches route synonym and 'con đường'.",
+      "originalTermPreserved": "path"
+    },
+    {
+      "term": "pattern",
+      "pos": "n",
+      "definition_en": "a repeated model, arrangement, or regular trend observed across data or events.",
+      "meaning_vi_preserved": "mô hình; quy luật",
+      "relationAnchors": [
+        {
+          "headword": "trend",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/pattern",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun model/trend sense aligns with trend synonym and 'mô hình; quy luật'.",
+      "originalTermPreserved": "pattern"
+    },
+    {
+      "term": "post",
+      "pos": "n",
+      "definition_en": "a specific job or appointed position within a company or organization.",
+      "meaning_vi_preserved": "vị trí công việc",
+      "relationAnchors": [
+        {
+          "headword": "position",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/post",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "Cambridge University Press REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun job-position sense aligns with position synonym and 'vị trí công việc'.",
+      "originalTermPreserved": "post"
+    },
+    {
+      "term": "precious",
+      "pos": "adj",
+      "definition_en": "having very high value, scarcity, or great importance.",
+      "meaning_vi_preserved": "quý giá",
+      "relationAnchors": [
+        {
+          "headword": "valuable",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/precious",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Adjective high-value sense aligns with valuable synonym and 'quý giá'.",
+      "originalTermPreserved": "precious"
+    },
+    {
+      "term": "prediction",
+      "pos": "n",
+      "definition_en": "a statement or estimate about an event or outcome expected in the future.",
+      "meaning_vi_preserved": "sự dự đoán",
+      "relationAnchors": [
+        {
+          "headword": "forecast",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/prediction",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun future-estimate sense matches forecast synonym and 'sự dự đoán'.",
+      "originalTermPreserved": "prediction"
+    },
+    {
+      "term": "prize",
+      "pos": "n",
+      "definition_en": "an award or reward given to recognize the winner of a competition or achievement.",
+      "meaning_vi_preserved": "phần thưởng",
+      "relationAnchors": [
+        {
+          "headword": "award",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/prize",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun competition-reward sense matches award synonym and 'phần thưởng'.",
+      "originalTermPreserved": "prize"
+    },
+    {
+      "term": "profession",
+      "pos": "n",
+      "definition_en": "a paid occupation or career requiring specialized training or formal qualifications.",
+      "meaning_vi_preserved": "nghề nghiệp",
+      "relationAnchors": [
+        {
+          "headword": "career",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/profession",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun occupation sense matches career synonym and 'nghề nghiệp'.",
+      "originalTermPreserved": "profession"
+    },
+    {
+      "term": "protection",
+      "pos": "n",
+      "definition_en": "the act or state of keeping someone or something safe from harm, damage, or loss.",
+      "meaning_vi_preserved": "sự bảo vệ",
+      "relationAnchors": [
+        {
+          "headword": "insurance",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/protection",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun safeguard sense aligns with insurance synonym and 'sự bảo vệ'.",
+      "originalTermPreserved": "protection"
+    },
+    {
+      "term": "questionnaire",
+      "pos": "n",
+      "definition_en": "a structured written or digital form of questions used to gather survey data.",
+      "meaning_vi_preserved": "bảng câu hỏi",
+      "relationAnchors": [
+        {
+          "headword": "survey",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/questionnaire",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun survey-form sense matches survey synonym and 'bảng câu hỏi'.",
+      "originalTermPreserved": "questionnaire"
+    },
+    {
+      "term": "ratio",
+      "pos": "n",
+      "definition_en": "a quantitative comparison expressing the relative magnitude or proportion of two values.",
+      "meaning_vi_preserved": "tỷ lệ",
+      "relationAnchors": [
+        {
+          "headword": "rate",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/ratio",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun proportional-comparison sense matches rate synonym and 'tỷ lệ'.",
+      "originalTermPreserved": "ratio"
+    },
+    {
+      "term": "reason",
+      "pos": "n",
+      "definition_en": "a cause, motive, or explanation that accounts for an event or decision.",
+      "meaning_vi_preserved": "lý do; nguyên nhân",
+      "relationAnchors": [
+        {
+          "headword": "cause",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/reason",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun cause/explanation sense matches cause synonym and 'lý do; nguyên nhân'.",
+      "originalTermPreserved": "reason"
+    },
+    {
+      "term": "retract",
+      "pos": "v",
+      "definition_en": "to take back or formally withdraw a previous statement, claim, or offer.",
+      "meaning_vi_preserved": "rút lại",
+      "relationAnchors": [],
+      "sourceUrl": "https://en.wiktionary.org/wiki/retract",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb withdraw-statement sense matches meaning 'rút lại'.",
+      "originalTermPreserved": "retract"
+    },
+    {
+      "term": "scope",
+      "pos": "n",
+      "definition_en": "the full range, extent, or boundaries of a project, subject, or agreement.",
+      "meaning_vi_preserved": "phạm vi",
+      "relationAnchors": [
+        {
+          "headword": "range",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/scope",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun extent/domain sense matches range synonym and 'phạm vi'.",
+      "originalTermPreserved": "scope"
+    },
+    {
+      "term": "standardized",
+      "pos": "adj",
+      "definition_en": "brought into conformity with an established uniform rule, format, or specification.",
+      "meaning_vi_preserved": "được tiêu chuẩn hóa",
+      "relationAnchors": [
+        {
+          "headword": "uniform",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/standardized",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Adjective uniform-standard sense matches uniform synonym and 'được tiêu chuẩn hóa'.",
+      "originalTermPreserved": "standardized"
+    },
+    {
+      "term": "take part",
+      "pos": "v",
+      "definition_en": "to join in or actively participate in an activity, meeting, or event.",
+      "meaning_vi_preserved": "tham gia",
+      "relationAnchors": [
+        {
+          "headword": "participate",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/take_part",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Phrasal verb participate sense matches participate synonym and 'tham gia'.",
+      "originalTermPreserved": "take part"
+    },
+    {
+      "term": "teller",
+      "pos": "n",
+      "definition_en": "a bank clerk employed to receive deposits and pay out cash to customers.",
+      "meaning_vi_preserved": "giao dịch viên ngân hàng",
+      "relationAnchors": [
+        {
+          "headword": "cashier",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/teller",
+      "sourcePublisher": "Cambridge University Press",
+      "sourceMethod": "Cambridge University Press REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun bank-clerk sense aligns with cashier synonym and 'giao dịch viên ngân hàng'.",
+      "originalTermPreserved": "teller"
+    },
+    {
+      "term": "trigger",
+      "pos": "v/n",
+      "definition_en": "to cause a reaction or initiate a process, or an event that sets something off.",
+      "meaning_vi_preserved": "kích hoạt; nguyên nhân khởi phát",
+      "relationAnchors": [
+        {
+          "headword": "cause",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/trigger",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb/noun cause/initiator senses match cause synonym and 'kích hoạt; nguyên nhân khởi phát'.",
+      "originalTermPreserved": "trigger"
+    },
+    {
+      "term": "variation",
+      "pos": "n",
+      "definition_en": "a partial change or noticeable difference in form, amount, level, or state.",
+      "meaning_vi_preserved": "sự biến đổi",
+      "relationAnchors": [
+        {
+          "headword": "difference",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/variation",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun difference/change sense matches difference synonym and 'sự biến đổi'.",
+      "originalTermPreserved": "variation"
+    },
+    {
+      "term": "challenger",
+      "pos": "n",
+      "definition_en": "a person or organization that competes against another",
+      "meaning_vi_preserved": "người thách thức; đối thủ cạnh tranh",
+      "relationAnchors": [
+        {
+          "headword": "competitor",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/challenger",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Existing noun definition aligns with competitor synonym and 'người thách thức; đối thủ cạnh tranh'.",
+      "originalTermPreserved": "challenger"
+    },
+    {
+      "term": "rival",
+      "pos": "n",
+      "definition_en": "a person or organization competing with another",
+      "meaning_vi_preserved": "đối thủ; đối thủ cạnh tranh",
+      "relationAnchors": [
+        {
+          "headword": "competitor",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/rival",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Existing noun definition aligns with competitor synonym and 'đối thủ; đối thủ cạnh tranh'.",
+      "originalTermPreserved": "rival"
+    },
+    {
+      "term": "critical",
+      "pos": "adj",
+      "definition_en": "extremely important, decisive for an outcome, or finding fault with something.",
+      "meaning_vi_preserved": "quan trọng; mang tính quyết định; nghiêm trọng",
+      "relationAnchors": [
+        {
+          "headword": "urgent",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/critical",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Adjective vital/serious senses match 'quan trọng; mang tính quyết định; nghiêm trọng'.",
+      "originalTermPreserved": "critical"
+    },
+    {
+      "term": "discuss",
+      "pos": "v",
+      "definition_en": "to talk about or examine a subject with others in order to exchange views or decide.",
+      "meaning_vi_preserved": "thảo luận",
+      "relationAnchors": [
+        {
+          "headword": "negotiate",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/discuss",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb talk-over sense matches 'thảo luận'.",
+      "originalTermPreserved": "discuss"
+    },
+    {
+      "term": "disperse",
+      "pos": "v",
+      "definition_en": "to scatter or distribute people, items, or groups over a wider area.",
+      "meaning_vi_preserved": "phân tán; giải tán",
+      "relationAnchors": [
+        {
+          "headword": "gather",
+          "type": "antonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/disperse",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb scatter sense aligns with 'phân tán; giải tán'.",
+      "originalTermPreserved": "disperse"
+    },
+    {
+      "term": "disprove",
+      "pos": "v",
+      "definition_en": "to show through evidence or reasoning that a statement or claim is false.",
+      "meaning_vi_preserved": "chứng minh là sai; bác bỏ",
+      "relationAnchors": [
+        {
+          "headword": "confirm",
+          "type": "antonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/disprove",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb refute sense aligns with 'chứng minh là sai; bác bỏ'.",
+      "originalTermPreserved": "disprove"
+    },
+    {
+      "term": "engagement",
+      "pos": "n",
+      "definition_en": "a formal arrangement to meet or perform, a firm commitment, or active involvement.",
+      "meaning_vi_preserved": "cam kết; cuộc hẹn; sự tham gia",
+      "relationAnchors": [
+        {
+          "headword": "appointment",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/engagement",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun commitment/appointment senses match 'cam kết; cuộc hẹn; sự tham gia'.",
+      "originalTermPreserved": "engagement"
+    },
+    {
+      "term": "enlist",
+      "pos": "v",
+      "definition_en": "to recruit someone's help or support, or to enroll formally in an organization.",
+      "meaning_vi_preserved": "tuyển mộ; đăng ký tham gia",
+      "relationAnchors": [
+        {
+          "headword": "recruit",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/enlist",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb enroll/recruit sense matches 'tuyển mộ; đăng ký tham gia'.",
+      "originalTermPreserved": "enlist"
+    },
+    {
+      "term": "entry",
+      "pos": "n",
+      "definition_en": "an item recorded in a list or ledger, the act of entering, or permission to join.",
+      "meaning_vi_preserved": "mục nhập; lối vào; sự tham gia",
+      "relationAnchors": [
+        {
+          "headword": "access",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/entry",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun record/access/participation senses match 'mục nhập; lối vào; sự tham gia'.",
+      "originalTermPreserved": "entry"
+    },
+    {
+      "term": "falsify",
+      "pos": "v",
+      "definition_en": "to alter records, figures, or statements intentionally so that they are untrue.",
+      "meaning_vi_preserved": "làm giả; xuyên tạc",
+      "relationAnchors": [
+        {
+          "headword": "verify",
+          "type": "antonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/falsify",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb alter-falsely sense aligns with 'làm giả; xuyên tạc'.",
+      "originalTermPreserved": "falsify"
+    },
+    {
+      "term": "fire",
+      "pos": "v/n",
+      "definition_en": "to dismiss a worker from employment, or an outbreak of destructive burning flames.",
+      "meaning_vi_preserved": "sa thải; hỏa hoạn",
+      "relationAnchors": [
+        {
+          "headword": "hire",
+          "type": "antonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/fire",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Combined dismiss-verb and fire-noun senses match 'sa thải; hỏa hoạn'.",
+      "originalTermPreserved": "fire"
+    },
+    {
+      "term": "gear",
+      "pos": "n",
+      "definition_en": "equipment or tools prepared for a particular activity, or a toothed mechanical wheel.",
+      "meaning_vi_preserved": "thiết bị; bánh răng",
+      "relationAnchors": [
+        {
+          "headword": "equipment",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/gear",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun equipment/cog senses align with 'thiết bị; bánh răng'.",
+      "originalTermPreserved": "gear"
+    },
+    {
+      "term": "grade",
+      "pos": "n/v",
+      "definition_en": "a level of rank or quality, an exam score, or to classify items by standard.",
+      "meaning_vi_preserved": "cấp bậc; điểm số; xếp loại",
+      "relationAnchors": [
+        {
+          "headword": "quality",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/grade",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Combined rank/score/classify senses match 'cấp bậc; điểm số; xếp loại'.",
+      "originalTermPreserved": "grade"
+    },
+    {
+      "term": "ignorance",
+      "pos": "n",
+      "definition_en": "a lack of knowledge, awareness, or accurate information about a subject.",
+      "meaning_vi_preserved": "sự thiếu hiểu biết",
+      "relationAnchors": [
+        {
+          "headword": "knowledge",
+          "type": "antonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/ignorance",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun lack-of-knowledge sense aligns with knowledge antonym and 'sự thiếu hiểu biết'.",
+      "originalTermPreserved": "ignorance"
+    },
+    {
+      "term": "keep",
+      "pos": "v",
+      "definition_en": "to retain possession of something, or to maintain a condition or routine over time.",
+      "meaning_vi_preserved": "giữ; duy trì",
+      "relationAnchors": [
+        {
+          "headword": "maintain",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/keep",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb maintain sense matches maintain synonym and 'giữ; duy trì'.",
+      "originalTermPreserved": "keep"
+    },
+    {
+      "term": "lodging",
+      "pos": "n",
+      "definition_en": "temporary living quarters or rented accommodation where travelers or guests stay.",
+      "meaning_vi_preserved": "chỗ ở; nơi lưu trú",
+      "relationAnchors": [
+        {
+          "headword": "accommodation",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/lodging",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun accommodation sense matches accommodation synonym and 'chỗ ở; nơi lưu trú'.",
+      "originalTermPreserved": "lodging"
+    },
+    {
+      "term": "magazine",
+      "pos": "n",
+      "definition_en": "a periodical publication containing articles, features, and illustrations issued regularly.",
+      "meaning_vi_preserved": "tạp chí",
+      "relationAnchors": [
+        {
+          "headword": "journal",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/magazine",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun periodical sense aligns with journal synonym and 'tạp chí'.",
+      "originalTermPreserved": "magazine"
+    },
+    {
+      "term": "markdown",
+      "pos": "n",
+      "definition_en": "a planned reduction from an item's original selling price to encourage purchases.",
+      "meaning_vi_preserved": "mức giảm giá; sự giảm giá",
+      "relationAnchors": [
+        {
+          "headword": "discount",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/markdown",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun price-cut sense aligns with discount synonym and 'mức giảm giá; sự giảm giá'.",
+      "originalTermPreserved": "markdown"
+    },
+    {
+      "term": "market",
+      "pos": "n/v",
+      "definition_en": "a commercial arena for buying and selling goods, or to promote products to buyers.",
+      "meaning_vi_preserved": "thị trường; tiếp thị",
+      "relationAnchors": [
+        {
+          "headword": "merchandise",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/market",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Combined marketplace and promote senses align with merchandise synonym and 'thị trường; tiếp thị'.",
+      "originalTermPreserved": "market"
+    },
+    {
+      "term": "moment",
+      "pos": "n",
+      "definition_en": "a very brief period of time or a specific point when something happens.",
+      "meaning_vi_preserved": "khoảnh khắc; thời điểm",
+      "relationAnchors": [
+        {
+          "headword": "time",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/moment",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun instant/point-in-time sense matches time synonym and 'khoảnh khắc; thời điểm'.",
+      "originalTermPreserved": "moment"
+    },
+    {
+      "term": "never",
+      "pos": "adv",
+      "definition_en": "at no time, on no occasion, and under no circumstances.",
+      "meaning_vi_preserved": "không bao giờ",
+      "relationAnchors": [
+        {
+          "headword": "always",
+          "type": "antonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/never",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Adverbial frequency sense aligns with always antonym and 'không bao giờ'.",
+      "originalTermPreserved": "never"
+    },
+    {
+      "term": "night",
+      "pos": "n",
+      "definition_en": "the dark period between sunset and sunrise when daytime business typically pauses.",
+      "meaning_vi_preserved": "ban đêm; buổi tối",
+      "relationAnchors": [
+        {
+          "headword": "day",
+          "type": "antonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/night",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun darkness period aligns with day antonym and 'ban đêm; buổi tối'.",
+      "originalTermPreserved": "night"
+    },
+    {
+      "term": "nil",
+      "pos": "n",
+      "definition_en": "nothing at all or a numerical score or amount of zero.",
+      "meaning_vi_preserved": "số không; không có",
+      "relationAnchors": [
+        {
+          "headword": "zero",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/nil",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun zero sense matches zero synonym and 'số không; không có'.",
+      "originalTermPreserved": "nil"
+    },
+    {
+      "term": "none",
+      "pos": "pron",
+      "definition_en": "not any of a specified group or quantity, or no person or thing.",
+      "meaning_vi_preserved": "không có gì; không ai",
+      "relationAnchors": [
+        {
+          "headword": "zero",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/none",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Pronoun nothing/no-one sense aligns with zero synonym and 'không có gì; không ai'.",
+      "originalTermPreserved": "none"
+    },
+    {
+      "term": "nought",
+      "pos": "n",
+      "definition_en": "the numerical figure zero, or nothing of value or amount.",
+      "meaning_vi_preserved": "số không",
+      "relationAnchors": [
+        {
+          "headword": "zero",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/nought",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun zero sense matches zero synonym and 'số không'.",
+      "originalTermPreserved": "nought"
+    },
+    {
+      "term": "reduction",
+      "pos": "n",
+      "definition_en": "the act or amount of making something smaller in price, size, or quantity.",
+      "meaning_vi_preserved": "sự giảm; mức cắt giảm",
+      "relationAnchors": [
+        {
+          "headword": "discount",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/reduction",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun decrease/discount sense aligns with discount synonym and 'sự giảm; mức cắt giảm'.",
+      "originalTermPreserved": "reduction"
+    },
+    {
+      "term": "refresh",
+      "pos": "v",
+      "definition_en": "to renew, update, or restore energy and current information.",
+      "meaning_vi_preserved": "làm mới; cập nhật",
+      "relationAnchors": [
+        {
+          "headword": "update",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/refresh",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Verb renew/update sense aligns with update synonym and 'làm mới; cập nhật'.",
+      "originalTermPreserved": "refresh"
+    },
+    {
+      "term": "region",
+      "pos": "n",
+      "definition_en": "a distinct geographical area, zone, or administrative territory.",
+      "meaning_vi_preserved": "khu vực; vùng",
+      "relationAnchors": [
+        {
+          "headword": "zone",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/region",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Noun geographic-area sense aligns with zone synonym and 'khu vực; vùng'.",
+      "originalTermPreserved": "region"
+    },
+    {
+      "term": "required",
+      "pos": "adj",
+      "definition_en": "officially necessary, mandatory, or expected according to a rule or condition.",
+      "meaning_vi_preserved": "được yêu cầu; bắt buộc",
+      "relationAnchors": [
+        {
+          "headword": "necessary",
+          "type": "synonym"
+        }
+      ],
+      "sourceUrl": "https://en.wiktionary.org/wiki/required",
+      "sourcePublisher": "Wiktionary",
+      "sourceMethod": "Wiktionary REST/entry definitions reviewed on 2026-11-27; concise paraphrase where newly written; no example sentence copied",
+      "reviewedDate": "2026-11-27",
+      "editorialStatus": "independent-editorial-review-pending",
+      "senseAlignmentNote": "Adjective mandatory sense aligns with necessary synonym and 'được yêu cầu; bắt buộc'.",
+      "originalTermPreserved": "required"
+    }
+  ]
+}

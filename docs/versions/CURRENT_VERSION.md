@@ -1,8 +1,8 @@
 # Current Version — TOEIC Dictionary v2.95.71
 
-- Current source: **v2.95.71** — Related Glossary Batch 045 and a reproducible, provisional weighted project-progress dashboard.
-- Release package: `TOEIC_Dictionary_v2.95.71_FullSource.zip`.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.71.md`.
+- Current source: **v2.95.72** — Related Glossary Batch 045 and a reproducible, provisional weighted project-progress dashboard.
+- Release package: `TOEIC_Dictionary_v2.95.72_FullSource.zip`.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.72.md`.
 - **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.70_FullSource.zip`; SHA-256 `1a0df44d309d127df3d3fb5012e7a6654c93a450c591f1f67575f4d15822e672` (864 files; ZIP CRC verified before editing).
 - Batch 045 updated metadata only on 23 existing relation-target glossary entries. Vietnamese meanings and relation arrays are protected; no headword/ID or relation edge is added. Independent editorial review remains pending.
 - Quality audit: 119/567 flagged records, down from 142. Missing definitions 78, placeholders 37, missing POS 115, missing source provenance 39; zero duplicate-normalized groups.

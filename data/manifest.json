@@ -1,36 +1,36 @@
 {
   "schemaVersion": 1,
-  "version": "2.95.71",
+  "version": "2.95.72",
   "letters": [
     {
       "letter": "A",
       "file": "./data/vocabulary/A.json",
-      "count": 125
+      "count": 131
     },
     {
       "letter": "B",
       "file": "./data/vocabulary/B.json",
-      "count": 40
+      "count": 42
     },
     {
       "letter": "C",
       "file": "./data/vocabulary/C.json",
-      "count": 152
+      "count": 163
     },
     {
       "letter": "D",
       "file": "./data/vocabulary/D.json",
-      "count": 77
+      "count": 79
     },
     {
       "letter": "E",
       "file": "./data/vocabulary/E.json",
-      "count": 67
+      "count": 69
     },
     {
       "letter": "F",
       "file": "./data/vocabulary/F.json",
-      "count": 42
+      "count": 43
     },
     {
       "letter": "G",
@@ -40,7 +40,7 @@
     {
       "letter": "H",
       "file": "./data/vocabulary/H.json",
-      "count": 14
+      "count": 15
     },
     {
       "letter": "I",
@@ -55,7 +55,7 @@
     {
       "letter": "K",
       "file": "./data/vocabulary/K.json",
-      "count": 4
+      "count": 5
     },
     {
       "letter": "L",
@@ -70,17 +70,17 @@
     {
       "letter": "N",
       "file": "./data/vocabulary/N.json",
-      "count": 13
+      "count": 14
     },
     {
       "letter": "O",
       "file": "./data/vocabulary/O.json",
-      "count": 38
+      "count": 40
     },
     {
       "letter": "P",
       "file": "./data/vocabulary/P.json",
-      "count": 96
+      "count": 97
     },
     {
       "letter": "Q",
@@ -90,27 +90,27 @@
     {
       "letter": "R",
       "file": "./data/vocabulary/R.json",
-      "count": 97
+      "count": 98
     },
     {
       "letter": "S",
       "file": "./data/vocabulary/S.json",
-      "count": 91
+      "count": 93
     },
     {
       "letter": "T",
       "file": "./data/vocabulary/T.json",
-      "count": 42
+      "count": 44
     },
     {
       "letter": "U",
       "file": "./data/vocabulary/U.json",
-      "count": 17
+      "count": 20
     },
     {
       "letter": "V",
       "file": "./data/vocabulary/V.json",
-      "count": 24
+      "count": 26
     },
     {
       "letter": "W",
@@ -134,22 +134,58 @@
     }
   ],
   "categories": "./data/categories.json",
-  "totalWords": 1141,
+  "totalWords": 1181,
   "cefrLevels": {
     "A1": 61,
-    "A2": 234,
-    "B1": 322,
-    "B2": 402,
+    "A2": 237,
+    "B1": 337,
+    "B2": 424,
     "C1": 122
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
   "totalTopics": 32,
-  "previousReleaseTotalWords": 1137,
+  "previousReleaseTotalWords": 1141,
   "releaseAdditionIds": [
-    "appliance-n",
-    "assemble-v",
-    "collaborate-v",
-    "dedicate-v"
+    "accumulation-n",
+    "acknowledgment-n",
+    "adaptable-adj",
+    "adaptation-n",
+    "assignment-n",
+    "authentication-n",
+    "biased-adj",
+    "budgetary-adj",
+    "challenging-adj",
+    "coincidence-n",
+    "commencement-n",
+    "commuter-n",
+    "concept-n",
+    "confirmed-adj",
+    "considerably-adv",
+    "constraint-n",
+    "contradiction-n",
+    "conversion-n",
+    "convertible-adj",
+    "demonstration-n",
+    "discrimination-n",
+    "elimination-n",
+    "expensive-adj",
+    "flexibly-adv",
+    "hiring-n",
+    "knowledgeable-adj",
+    "necessarily-adv",
+    "operational-adj",
+    "operator-n",
+    "purchasing-n",
+    "recruiter-n",
+    "shipping-n",
+    "submission-n",
+    "temporarily-adv",
+    "transferable-adj",
+    "unbiased-adj",
+    "urgency-n",
+    "urgently-adv",
+    "vacant-adj",
+    "verifiable-adj"
   ],
   "releaseRepairProfiles": [
     {
@@ -316,7 +352,47 @@
         "appliance-n",
         "assemble-v",
         "collaborate-v",
-        "dedicate-v"
+        "dedicate-v",
+        "accumulation-n",
+        "acknowledgment-n",
+        "adaptable-adj",
+        "adaptation-n",
+        "assignment-n",
+        "authentication-n",
+        "biased-adj",
+        "budgetary-adj",
+        "challenging-adj",
+        "coincidence-n",
+        "commencement-n",
+        "commuter-n",
+        "concept-n",
+        "confirmed-adj",
+        "considerably-adv",
+        "constraint-n",
+        "contradiction-n",
+        "conversion-n",
+        "convertible-adj",
+        "demonstration-n",
+        "discrimination-n",
+        "elimination-n",
+        "expensive-adj",
+        "flexibly-adv",
+        "hiring-n",
+        "knowledgeable-adj",
+        "necessarily-adv",
+        "operational-adj",
+        "operator-n",
+        "purchasing-n",
+        "recruiter-n",
+        "shipping-n",
+        "submission-n",
+        "temporarily-adv",
+        "transferable-adj",
+        "unbiased-adj",
+        "urgency-n",
+        "urgently-adv",
+        "vacant-adj",
+        "verifiable-adj"
       ]
     },
     {
@@ -470,7 +546,47 @@
         "appliance-n",
         "assemble-v",
         "collaborate-v",
-        "dedicate-v"
+        "dedicate-v",
+        "accumulation-n",
+        "acknowledgment-n",
+        "adaptable-adj",
+        "adaptation-n",
+        "assignment-n",
+        "authentication-n",
+        "biased-adj",
+        "budgetary-adj",
+        "challenging-adj",
+        "coincidence-n",
+        "commencement-n",
+        "commuter-n",
+        "concept-n",
+        "confirmed-adj",
+        "considerably-adv",
+        "constraint-n",
+        "contradiction-n",
+        "conversion-n",
+        "convertible-adj",
+        "demonstration-n",
+        "discrimination-n",
+        "elimination-n",
+        "expensive-adj",
+        "flexibly-adv",
+        "hiring-n",
+        "knowledgeable-adj",
+        "necessarily-adv",
+        "operational-adj",
+        "operator-n",
+        "purchasing-n",
+        "recruiter-n",
+        "shipping-n",
+        "submission-n",
+        "temporarily-adv",
+        "transferable-adj",
+        "unbiased-adj",
+        "urgency-n",
+        "urgently-adv",
+        "vacant-adj",
+        "verifiable-adj"
       ]
     },
     {
@@ -590,7 +706,47 @@
         "appliance-n",
         "assemble-v",
         "collaborate-v",
-        "dedicate-v"
+        "dedicate-v",
+        "accumulation-n",
+        "acknowledgment-n",
+        "adaptable-adj",
+        "adaptation-n",
+        "assignment-n",
+        "authentication-n",
+        "biased-adj",
+        "budgetary-adj",
+        "challenging-adj",
+        "coincidence-n",
+        "commencement-n",
+        "commuter-n",
+        "concept-n",
+        "confirmed-adj",
+        "considerably-adv",
+        "constraint-n",
+        "contradiction-n",
+        "conversion-n",
+        "convertible-adj",
+        "demonstration-n",
+        "discrimination-n",
+        "elimination-n",
+        "expensive-adj",
+        "flexibly-adv",
+        "hiring-n",
+        "knowledgeable-adj",
+        "necessarily-adv",
+        "operational-adj",
+        "operator-n",
+        "purchasing-n",
+        "recruiter-n",
+        "shipping-n",
+        "submission-n",
+        "temporarily-adv",
+        "transferable-adj",
+        "unbiased-adj",
+        "urgency-n",
+        "urgently-adv",
+        "vacant-adj",
+        "verifiable-adj"
       ]
     },
     {
@@ -673,7 +829,47 @@
         "appliance-n",
         "assemble-v",
         "collaborate-v",
-        "dedicate-v"
+        "dedicate-v",
+        "accumulation-n",
+        "acknowledgment-n",
+        "adaptable-adj",
+        "adaptation-n",
+        "assignment-n",
+        "authentication-n",
+        "biased-adj",
+        "budgetary-adj",
+        "challenging-adj",
+        "coincidence-n",
+        "commencement-n",
+        "commuter-n",
+        "concept-n",
+        "confirmed-adj",
+        "considerably-adv",
+        "constraint-n",
+        "contradiction-n",
+        "conversion-n",
+        "convertible-adj",
+        "demonstration-n",
+        "discrimination-n",
+        "elimination-n",
+        "expensive-adj",
+        "flexibly-adv",
+        "hiring-n",
+        "knowledgeable-adj",
+        "necessarily-adv",
+        "operational-adj",
+        "operator-n",
+        "purchasing-n",
+        "recruiter-n",
+        "shipping-n",
+        "submission-n",
+        "temporarily-adv",
+        "transferable-adj",
+        "unbiased-adj",
+        "urgency-n",
+        "urgently-adv",
+        "vacant-adj",
+        "verifiable-adj"
       ]
     },
     {
@@ -719,7 +915,47 @@
         "appliance-n",
         "assemble-v",
         "collaborate-v",
-        "dedicate-v"
+        "dedicate-v",
+        "accumulation-n",
+        "acknowledgment-n",
+        "adaptable-adj",
+        "adaptation-n",
+        "assignment-n",
+        "authentication-n",
+        "biased-adj",
+        "budgetary-adj",
+        "challenging-adj",
+        "coincidence-n",
+        "commencement-n",
+        "commuter-n",
+        "concept-n",
+        "confirmed-adj",
+        "considerably-adv",
+        "constraint-n",
+        "contradiction-n",
+        "conversion-n",
+        "convertible-adj",
+        "demonstration-n",
+        "discrimination-n",
+        "elimination-n",
+        "expensive-adj",
+        "flexibly-adv",
+        "hiring-n",
+        "knowledgeable-adj",
+        "necessarily-adv",
+        "operational-adj",
+        "operator-n",
+        "purchasing-n",
+        "recruiter-n",
+        "shipping-n",
+        "submission-n",
+        "temporarily-adv",
+        "transferable-adj",
+        "unbiased-adj",
+        "urgency-n",
+        "urgently-adv",
+        "vacant-adj",
+        "verifiable-adj"
       ]
     },
     {
@@ -728,7 +964,92 @@
         "appliance-n",
         "assemble-v",
         "collaborate-v",
-        "dedicate-v"
+        "dedicate-v",
+        "accumulation-n",
+        "acknowledgment-n",
+        "adaptable-adj",
+        "adaptation-n",
+        "assignment-n",
+        "authentication-n",
+        "biased-adj",
+        "budgetary-adj",
+        "challenging-adj",
+        "coincidence-n",
+        "commencement-n",
+        "commuter-n",
+        "concept-n",
+        "confirmed-adj",
+        "considerably-adv",
+        "constraint-n",
+        "contradiction-n",
+        "conversion-n",
+        "convertible-adj",
+        "demonstration-n",
+        "discrimination-n",
+        "elimination-n",
+        "expensive-adj",
+        "flexibly-adv",
+        "hiring-n",
+        "knowledgeable-adj",
+        "necessarily-adv",
+        "operational-adj",
+        "operator-n",
+        "purchasing-n",
+        "recruiter-n",
+        "shipping-n",
+        "submission-n",
+        "temporarily-adv",
+        "transferable-adj",
+        "unbiased-adj",
+        "urgency-n",
+        "urgently-adv",
+        "vacant-adj",
+        "verifiable-adj"
+      ]
+    },
+    {
+      "previousTotalWords": 1141,
+      "releaseAdditionIds": [
+        "accumulation-n",
+        "acknowledgment-n",
+        "adaptable-adj",
+        "adaptation-n",
+        "assignment-n",
+        "authentication-n",
+        "biased-adj",
+        "budgetary-adj",
+        "challenging-adj",
+        "coincidence-n",
+        "commencement-n",
+        "commuter-n",
+        "concept-n",
+        "confirmed-adj",
+        "considerably-adv",
+        "constraint-n",
+        "contradiction-n",
+        "conversion-n",
+        "convertible-adj",
+        "demonstration-n",
+        "discrimination-n",
+        "elimination-n",
+        "expensive-adj",
+        "flexibly-adv",
+        "hiring-n",
+        "knowledgeable-adj",
+        "necessarily-adv",
+        "operational-adj",
+        "operator-n",
+        "purchasing-n",
+        "recruiter-n",
+        "shipping-n",
+        "submission-n",
+        "temporarily-adv",
+        "transferable-adj",
+        "unbiased-adj",
+        "urgency-n",
+        "urgently-adv",
+        "vacant-adj",
+        "verifiable-adj"
       ]
     }
   ]

@@ -6179,6 +6179,481 @@
         "v3": "collaborated",
         "ving": "collaborateing"
       }
+    },
+    {
+      "id": "challenging-adj",
+      "word": "challenging",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈtʃæ.lən.dʒɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "đầy thử thách",
+          "definition_en": "demanding significant effort, skill, or focus because a task is difficult",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CAREER",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "challenge",
+          "pos": "n/v",
+          "meaning_vi": "thách thức; đặt nghi vấn; thách thức ai"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Negotiating multi-year shipping rates proved challenging for our newest buyer.",
+          "vi": "Việc đàm phán giá vận chuyển nhiều năm tỏ ra đầy thử thách với nhân viên thu mua mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "challenging role",
+        "challenging target",
+        "economically challenging"
+      ]
+    },
+    {
+      "id": "coincidence-n",
+      "word": "coincidence",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/koʊ.ˈɪn.sɪ.dəns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự trùng hợp",
+          "definition_en": "an unplanned occurrence of two events happening together without a direct causal link",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "coincide",
+          "pos": "v",
+          "meaning_vi": "trùng hợp; xảy ra đồng thời"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "By pure coincidence, both regional directors booked flights on the same morning.",
+          "vi": "Thật trùng hợp ngẫu nhiên, cả hai giám đốc khu vực đều đặt vé bay cùng buổi sáng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "pure coincidence",
+        "mere coincidence",
+        "by coincidence"
+      ]
+    },
+    {
+      "id": "commencement-n",
+      "word": "commencement",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kə.ˈmen.smənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự bắt đầu; lễ tốt nghiệp",
+          "definition_en": "the formal start of an activity or project, or an academic graduation ceremony",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "CONSTRUCTION",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "commence",
+          "pos": "v",
+          "meaning_vi": "bắt đầu; khởi công"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Site inspectors met prior to the commencement of foundation work downtown.",
+          "vi": "Thanh tra công trường đã họp trước khi khởi công phần móng tại khu trung tâm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "project commencement",
+        "commencement date",
+        "commencement ceremony"
+      ]
+    },
+    {
+      "id": "commuter-n",
+      "word": "commuter",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kəm.ˈju.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "người đi làm hằng ngày",
+          "definition_en": "a person who travels regularly between home and a workplace, often by train or bus",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRANSPORT",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "commute",
+          "pos": "v",
+          "meaning_vi": "đi lại thường xuyên giữa nhà và nơi làm việc"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Express rail passes save daily commuters money on morning peak fares.",
+          "vi": "Vé tàu nhanh giúp người đi làm hằng ngày tiết kiệm chi phí vào giờ cao điểm sáng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "daily commuter",
+        "commuter rail",
+        "commuter pass"
+      ]
+    },
+    {
+      "id": "concept-n",
+      "word": "concept",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈkɑn.sept/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "khái niệm",
+          "definition_en": "a general abstract idea or foundational principle behind a product, plan, or system",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "conceive",
+          "pos": "v",
+          "meaning_vi": "hình thành ý tưởng; tưởng tượng; thụ thai"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Designers presented an early store concept to executive stakeholders yesterday.",
+          "vi": "Nhóm thiết kế đã trình bày ý tưởng cửa hàng ban đầu cho các bên liên quan hôm qua.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "core concept",
+        "design concept",
+        "proof of concept"
+      ]
+    },
+    {
+      "id": "confirmed-adj",
+      "word": "confirmed",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈfɝmd/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "đã xác nhận",
+          "definition_en": "officially verified, settled, or established as definite after checking details",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TRAVEL",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "confirm",
+          "pos": "v",
+          "meaning_vi": "xác nhận; chứng thực"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Only guests holding confirmed reservations may board the early airport shuttle.",
+          "vi": "Chỉ những khách có đặt chỗ đã xác nhận mới được lên xe trung chuyển sân bay sớm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "confirmed reservation",
+        "confirmed booking",
+        "confirmed attendance"
+      ]
+    },
+    {
+      "id": "considerably-adv",
+      "word": "considerably",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈsɪ.dɚ.ə.bli/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B2",
+          "meaning_vi": "đáng kể",
+          "definition_en": "to a noticeably large degree or extent that warrants attention",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "considerable",
+          "pos": "adj",
+          "meaning_vi": "đáng kể; khá lớn"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Energy bills fell considerably after old lighting fixtures were replaced.",
+          "vi": "Hóa đơn tiền điện đã giảm đáng kể sau khi toàn bộ đèn cũ được thay mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "vary considerably",
+        "improve considerably",
+        "considerably lower"
+      ]
+    },
+    {
+      "id": "constraint-n",
+      "word": "constraint",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈstreɪnt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự hạn chế; ràng buộc",
+          "definition_en": "a limiting factor, rule, or restriction that controls what someone or something can do",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "constrain",
+          "pos": "v",
+          "meaning_vi": "hạn chế; ràng buộc; kìm hãm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Because of one major staffing constraint, the clinic shortened weekend hours.",
+          "vi": "Do một ràng buộc lớn về nhân sự, phòng khám đã rút ngắn giờ làm cuối tuần.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "time constraint",
+        "budget constraint",
+        "capacity constraint"
+      ]
+    },
+    {
+      "id": "contradiction-n",
+      "word": "contradiction",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌkɑn.trə.ˈdɪk.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự mâu thuẫn",
+          "definition_en": "a direct conflict or logical inconsistency between two statements, claims, or facts",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "contradict",
+          "pos": "v",
+          "meaning_vi": "mâu thuẫn; phủ nhận; nói trái lại"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Auditors spotted a clear contradiction between the receipt and the expense log.",
+          "vi": "Kiểm toán viên phát hiện sự mâu thuẫn rõ ràng giữa hóa đơn và sổ chi phí.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "direct contradiction",
+        "apparent contradiction",
+        "contradiction in terms"
+      ]
+    },
+    {
+      "id": "conversion-n",
+      "word": "conversion",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈvɝ.ʒən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "sự chuyển đổi",
+          "definition_en": "the act of changing something from one form, currency, unit, or system into another",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [
+        {
+          "word": "convert",
+          "pos": "v",
+          "meaning_vi": "chuyển đổi; cải tạo; đổi sang"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Bank fees apply automatically during currency conversion at international branches.",
+          "vi": "Phí ngân hàng được áp dụng tự động trong quá trình quy đổi ngoại tệ tại chi nhánh quốc tế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "currency conversion",
+        "data conversion",
+        "conversion rate"
+      ]
+    },
+    {
+      "id": "convertible-adj",
+      "word": "convertible",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈvɝ.tə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "có thể chuyển đổi",
+          "definition_en": "capable of being exchanged, adapted, or transformed into another form or use",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [
+        {
+          "word": "convert",
+          "pos": "v",
+          "meaning_vi": "chuyển đổi; cải tạo; đổi sang"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Holders can trade convertible bonds for company shares next year.",
+          "vi": "Người nắm giữ có thể đổi trái phiếu chuyển đổi lấy cổ phiếu công ty vào năm tới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "convertible bond",
+        "convertible currency",
+        "convertible space"
+      ]
     }
   ]
 }

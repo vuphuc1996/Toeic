@@ -580,6 +580,49 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "hiring-n",
+      "word": "hiring",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈhaɪ.rɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "việc tuyển dụng",
+          "definition_en": "the process or activity of recruiting and employing new workers for an organization",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "CAREER"
+      ],
+      "word_family": [
+        {
+          "word": "hire",
+          "pos": "v",
+          "meaning_vi": "thuê; tuyển dụng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Seasonal hiring begins in September across all downtown retail stores.",
+          "vi": "Hoạt động tuyển dụng theo mùa bắt đầu vào tháng Chín tại tất cả cửa hàng trung tâm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "seasonal hiring",
+        "hiring freeze",
+        "hiring manager"
+      ]
     }
   ]
 }

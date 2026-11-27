@@ -269,8 +269,13 @@
     {
       "term": "aide",
       "meaning_vi": "trợ lý",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a person employed to assist an executive, official, or more senior colleague.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun assistant sense matches assistant synonym and meaning 'trợ lý'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/aide"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "aim",
@@ -610,8 +615,13 @@
     {
       "term": "assertion",
       "meaning_vi": "lời khẳng định",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a confident statement or formal declaration claiming that something is true.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun declaration sense matches meaning 'lời khẳng định'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/assertion"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "assess",
@@ -963,8 +973,13 @@
     {
       "term": "call off",
       "meaning_vi": "hủy bỏ",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to cancel a planned meeting, event, or scheduled arrangement.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Phrasal verb cancel sense matches meaning 'hủy bỏ'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/call_off"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "caller",
@@ -1087,7 +1102,12 @@
       "term": "challenger",
       "meaning_vi": "người thách thức; đối thủ cạnh tranh",
       "pos": "n",
-      "definition_en": "a person or organization that competes against another"
+      "definition_en": "a person or organization that competes against another",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; existing definition retained; independent editorial review pending; Existing noun definition aligns with competitor synonym and 'người thách thức; đối thủ cạnh tranh'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/challenger"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "chance",
@@ -1309,8 +1329,13 @@
     {
       "term": "component",
       "meaning_vi": "thành phần; linh kiện",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "an individual part or element that forms part of a larger machine or system.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun part-of-system sense matches meaning 'thành phần; linh kiện'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/component"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "comprise",
@@ -1534,8 +1559,13 @@
     {
       "term": "course",
       "meaning_vi": "lộ trình",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a planned route, direction, or ordered sequence of steps toward a goal.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun route/sequence sense matches meaning 'lộ trình'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/course"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "courtyard",
@@ -1603,7 +1633,13 @@
     {
       "term": "critical",
       "meaning_vi": "quan trọng; mang tính quyết định; nghiêm trọng",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Adjective vital/serious senses match 'quan trọng; mang tính quyết định; nghiêm trọng'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/critical"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "adj",
+      "definition_en": "extremely important, decisive for an outcome, or finding fault with something."
     },
     {
       "term": "currency",
@@ -1818,8 +1854,13 @@
     {
       "term": "direct",
       "meaning_vi": "hướng dẫn; trực tiếp",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v/adj",
+      "definition_en": "to guide or manage toward a goal, or proceeding straight without deviation.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Combined verb/adjective senses match 'hướng dẫn; trực tiếp'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/direct"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "direction",
@@ -1866,7 +1907,13 @@
     {
       "term": "discuss",
       "meaning_vi": "thảo luận",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb talk-over sense matches 'thảo luận'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/discuss"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "v",
+      "definition_en": "to talk about or examine a subject with others in order to exchange views or decide."
     },
     {
       "term": "dismiss",
@@ -1892,12 +1939,24 @@
     {
       "term": "disperse",
       "meaning_vi": "phân tán; giải tán",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb scatter sense aligns with 'phân tán; giải tán'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/disperse"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "v",
+      "definition_en": "to scatter or distribute people, items, or groups over a wider area."
     },
     {
       "term": "disprove",
       "meaning_vi": "chứng minh là sai; bác bỏ",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb refute sense aligns with 'chứng minh là sai; bác bỏ'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/disprove"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "v",
+      "definition_en": "to show through evidence or reasoning that a statement or claim is false."
     },
     {
       "term": "dispute",
@@ -2175,7 +2234,13 @@
     {
       "term": "engagement",
       "meaning_vi": "cam kết; cuộc hẹn; sự tham gia",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun commitment/appointment senses match 'cam kết; cuộc hẹn; sự tham gia'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/engagement"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "a formal arrangement to meet or perform, a firm commitment, or active involvement."
     },
     {
       "term": "enhance",
@@ -2190,7 +2255,13 @@
     {
       "term": "enlist",
       "meaning_vi": "tuyển mộ; đăng ký tham gia",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb enroll/recruit sense matches 'tuyển mộ; đăng ký tham gia'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/enlist"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "v",
+      "definition_en": "to recruit someone's help or support, or to enroll formally in an organization."
     },
     {
       "term": "enroll",
@@ -2236,7 +2307,13 @@
     {
       "term": "entry",
       "meaning_vi": "mục nhập; lối vào; sự tham gia",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun record/access/participation senses match 'mục nhập; lối vào; sự tham gia'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/entry"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "an item recorded in a list or ledger, the act of entering, or permission to join."
     },
     {
       "term": "equilibrium",
@@ -2357,8 +2434,13 @@
     {
       "term": "execute",
       "meaning_vi": "thực hiện",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to carry out or put a plan, order, or formal agreement into effect.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb carry-out sense matches meaning 'thực hiện'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/execute"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "exemption",
@@ -2403,7 +2485,13 @@
     {
       "term": "falsify",
       "meaning_vi": "làm giả; xuyên tạc",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb alter-falsely sense aligns with 'làm giả; xuyên tạc'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/falsify"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "v",
+      "definition_en": "to alter records, figures, or statements intentionally so that they are untrue."
     },
     {
       "term": "feasible",
@@ -2451,7 +2539,13 @@
     {
       "term": "fire",
       "meaning_vi": "sa thải; hỏa hoạn",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Combined dismiss-verb and fire-noun senses match 'sa thải; hỏa hoạn'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/fire"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "v/n",
+      "definition_en": "to dismiss a worker from employment, or an outbreak of destructive burning flames."
     },
     {
       "term": "former",
@@ -2483,8 +2577,13 @@
     {
       "term": "functioning",
       "meaning_vi": "sự hoạt động",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the way or ongoing process in which a system, device, or organization operates.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun operational process sense matches meaning 'sự hoạt động'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/functioning"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "funding",
@@ -2531,7 +2630,13 @@
     {
       "term": "gear",
       "meaning_vi": "thiết bị; bánh răng",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun equipment/cog senses align with 'thiết bị; bánh răng'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/gear"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "equipment or tools prepared for a particular activity, or a toothed mechanical wheel."
     },
     {
       "term": "generate",
@@ -2591,7 +2696,13 @@
     {
       "term": "grade",
       "meaning_vi": "cấp bậc; điểm số; xếp loại",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Combined rank/score/classify senses match 'cấp bậc; điểm số; xếp loại'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/grade"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n/v",
+      "definition_en": "a level of rank or quality, an exam score, or to classify items by standard."
     },
     {
       "term": "grievance",
@@ -2696,8 +2807,13 @@
     {
       "term": "helper",
       "meaning_vi": "người hỗ trợ",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a person or tool that assists someone in completing work or tasks.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun assistant sense matches meaning 'người hỗ trợ'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/helper"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "hire",
@@ -2712,14 +2828,24 @@
     {
       "term": "holder",
       "meaning_vi": "người nắm giữ",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a person or party that officially possesses or retains a document, right, or asset.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun possessor sense matches owner synonym and 'người nắm giữ'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/holder"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "honor",
       "meaning_vi": "vinh danh",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to show formal respect, public recognition, or esteem for someone's achievement.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb pay-tribute sense aligns with award synonym and 'vinh danh'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/honor"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "housing",
@@ -2745,7 +2871,13 @@
     {
       "term": "ignorance",
       "meaning_vi": "sự thiếu hiểu biết",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun lack-of-knowledge sense aligns with knowledge antonym and 'sự thiếu hiểu biết'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/ignorance"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "a lack of knowledge, awareness, or accurate information about a subject."
     },
     {
       "term": "ignore",
@@ -2760,8 +2892,13 @@
     {
       "term": "imbalance",
       "meaning_vi": "sự mất cân bằng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a condition in which connected amounts, forces, or factors are unequal or out of proportion.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun inequality sense matches balance antonym and 'sự mất cân bằng'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/imbalance"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "improve",
@@ -2923,8 +3060,13 @@
     {
       "term": "international",
       "meaning_vi": "quốc tế",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "adj",
+      "definition_en": "involving, operating across, or connecting two or more countries.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Adjective cross-border sense aligns with worldwide synonym and 'quốc tế'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/international"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "introduce",
@@ -2984,7 +3126,13 @@
     {
       "term": "keep",
       "meaning_vi": "giữ; duy trì",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb maintain sense matches maintain synonym and 'giữ; duy trì'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/keep"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "v",
+      "definition_en": "to retain possession of something, or to maintain a condition or routine over time."
     },
     {
       "term": "launch",
@@ -3085,7 +3233,13 @@
     {
       "term": "lodging",
       "meaning_vi": "chỗ ở; nơi lưu trú",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun accommodation sense matches accommodation synonym and 'chỗ ở; nơi lưu trú'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/lodging"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "temporary living quarters or rented accommodation where travelers or guests stay."
     },
     {
       "term": "log",
@@ -3111,19 +3265,35 @@
     {
       "term": "lot",
       "meaning_vi": "khu đất; lô",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a measured plot of land or a grouped set of goods offered together.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun plot/portion sense aligns with yard synonym and 'khu đất; lô'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/lot"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "machinery",
       "meaning_vi": "máy móc",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "machines or mechanical apparatus considered collectively as operating equipment.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun collective machines sense matches meaning 'máy móc'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/machinery"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "magazine",
       "meaning_vi": "tạp chí",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun periodical sense aligns with journal synonym and 'tạp chí'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/magazine"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "a periodical publication containing articles, features, and illustrations issued regularly."
     },
     {
       "term": "main address",
@@ -3178,8 +3348,13 @@
     {
       "term": "manual",
       "meaning_vi": "sổ tay; thủ công",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n/adj",
+      "definition_en": "a handbook providing operating instructions, or work performed directly by hand.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun/adjective handbook and by-hand senses align with guide synonym and 'sổ tay; thủ công'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/manual"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "manufacture",
@@ -3210,12 +3385,24 @@
     {
       "term": "markdown",
       "meaning_vi": "mức giảm giá; sự giảm giá",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun price-cut sense aligns with discount synonym and 'mức giảm giá; sự giảm giá'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/markdown"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "a planned reduction from an item's original selling price to encourage purchases."
     },
     {
       "term": "market",
       "meaning_vi": "thị trường; tiếp thị",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Combined marketplace and promote senses align with merchandise synonym and 'thị trường; tiếp thị'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/market"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n/v",
+      "definition_en": "a commercial arena for buying and selling goods, or to promote products to buyers."
     },
     {
       "term": "matter",
@@ -3266,8 +3453,13 @@
     {
       "term": "mention",
       "meaning_vi": "đề cập",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v/n",
+      "definition_en": "to refer briefly to something in speech or writing, or a brief remark made.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb/noun brief-reference senses match meaning 'đề cập'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/mention"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "merchandise",
@@ -3315,7 +3507,13 @@
     {
       "term": "moment",
       "meaning_vi": "khoảnh khắc; thời điểm",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun instant/point-in-time sense matches time synonym and 'khoảnh khắc; thời điểm'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/moment"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "a very brief period of time or a specific point when something happens."
     },
     {
       "term": "monthly",
@@ -3371,22 +3569,46 @@
     {
       "term": "never",
       "meaning_vi": "không bao giờ",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Adverbial frequency sense aligns with always antonym and 'không bao giờ'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/never"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "adv",
+      "definition_en": "at no time, on no occasion, and under no circumstances."
     },
     {
       "term": "night",
       "meaning_vi": "ban đêm; buổi tối",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun darkness period aligns with day antonym and 'ban đêm; buổi tối'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/night"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "the dark period between sunset and sunrise when daytime business typically pauses."
     },
     {
       "term": "nil",
       "meaning_vi": "số không; không có",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun zero sense matches zero synonym and 'số không; không có'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/nil"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "nothing at all or a numerical score or amount of zero."
     },
     {
       "term": "none",
       "meaning_vi": "không có gì; không ai",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Pronoun nothing/no-one sense aligns with zero synonym and 'không có gì; không ai'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/none"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "pron",
+      "definition_en": "not any of a specified group or quantity, or no person or thing."
     },
     {
       "term": "nonurgent",
@@ -3413,7 +3635,13 @@
     {
       "term": "nought",
       "meaning_vi": "số không",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun zero sense matches zero synonym and 'số không'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/nought"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "the numerical figure zero, or nothing of value or amount."
     },
     {
       "term": "objection",
@@ -3452,8 +3680,13 @@
     {
       "term": "observation",
       "meaning_vi": "sự quan sát",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the act of watching closely or a noted remark based on careful inspection.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun watching/noting sense matches meaning 'sự quan sát'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/observation"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "observe",
@@ -3644,14 +3877,24 @@
     {
       "term": "path",
       "meaning_vi": "con đường",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a trail, route, or course along which people or processes move forward.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun route sense matches route synonym and 'con đường'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/path"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "pattern",
       "meaning_vi": "mô hình; quy luật",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a repeated model, arrangement, or regular trend observed across data or events.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun model/trend sense aligns with trend synonym and 'mô hình; quy luật'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/pattern"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "pay",
@@ -3763,8 +4006,13 @@
     {
       "term": "post",
       "meaning_vi": "vị trí công việc",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a specific job or appointed position within a company or organization.",
+      "source": "Cambridge University Press entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun job-position sense aligns with position synonym and 'vị trí công việc'.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/post"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "postal code",
@@ -3784,14 +4032,24 @@
     {
       "term": "precious",
       "meaning_vi": "quý giá",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "adj",
+      "definition_en": "having very high value, scarcity, or great importance.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Adjective high-value sense aligns with valuable synonym and 'quý giá'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/precious"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "prediction",
       "meaning_vi": "sự dự đoán",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a statement or estimate about an event or outcome expected in the future.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun future-estimate sense matches forecast synonym and 'sự dự đoán'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/prediction"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "preliminary version",
@@ -3855,8 +4113,13 @@
     {
       "term": "prize",
       "meaning_vi": "phần thưởng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "an award or reward given to recognize the winner of a competition or achievement.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun competition-reward sense matches award synonym and 'phần thưởng'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/prize"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "problem",
@@ -3932,8 +4195,13 @@
     {
       "term": "profession",
       "meaning_vi": "nghề nghiệp",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a paid occupation or career requiring specialized training or formal qualifications.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun occupation sense matches career synonym and 'nghề nghiệp'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/profession"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "profit",
@@ -4014,8 +4282,13 @@
     {
       "term": "protection",
       "meaning_vi": "sự bảo vệ",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the act or state of keeping someone or something safe from harm, damage, or loss.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun safeguard sense aligns with insurance synonym and 'sự bảo vệ'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/protection"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "provide",
@@ -4111,8 +4384,13 @@
     {
       "term": "questionnaire",
       "meaning_vi": "bảng câu hỏi",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a structured written or digital form of questions used to gather survey data.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun survey-form sense matches survey synonym and 'bảng câu hỏi'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/questionnaire"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "quotation",
@@ -4142,8 +4420,13 @@
     {
       "term": "ratio",
       "meaning_vi": "tỷ lệ",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a quantitative comparison expressing the relative magnitude or proportion of two values.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun proportional-comparison sense matches rate synonym and 'tỷ lệ'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/ratio"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "reach",
@@ -4159,8 +4442,13 @@
     {
       "term": "reason",
       "meaning_vi": "lý do; nguyên nhân",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a cause, motive, or explanation that accounts for an event or decision.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun cause/explanation sense matches cause synonym and 'lý do; nguyên nhân'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/reason"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "receive",
@@ -4214,12 +4502,24 @@
     {
       "term": "reduction",
       "meaning_vi": "sự giảm; mức cắt giảm",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun decrease/discount sense aligns with discount synonym and 'sự giảm; mức cắt giảm'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/reduction"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "the act or amount of making something smaller in price, size, or quantity."
     },
     {
       "term": "refresh",
       "meaning_vi": "làm mới; cập nhật",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb renew/update sense aligns with update synonym and 'làm mới; cập nhật'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/refresh"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "v",
+      "definition_en": "to renew, update, or restore energy and current information."
     },
     {
       "term": "refund",
@@ -4248,7 +4548,13 @@
     {
       "term": "region",
       "meaning_vi": "khu vực; vùng",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun geographic-area sense aligns with zone synonym and 'khu vực; vùng'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/region"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "n",
+      "definition_en": "a distinct geographical area, zone, or administrative territory."
     },
     {
       "term": "regular",
@@ -4362,7 +4668,13 @@
     {
       "term": "required",
       "meaning_vi": "được yêu cầu; bắt buộc",
-      "source": "curated-related-glossary"
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Adjective mandatory sense aligns with necessary synonym and 'được yêu cầu; bắt buộc'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/required"
+      ],
+      "sourceRelease": "2.95.72",
+      "pos": "adj",
+      "definition_en": "officially necessary, mandatory, or expected according to a rule or condition."
     },
     {
       "term": "requirement",
@@ -4447,8 +4759,13 @@
     {
       "term": "retract",
       "meaning_vi": "rút lại",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to take back or formally withdraw a previous statement, claim, or offer.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb withdraw-statement sense matches meaning 'rút lại'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/retract"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "retreat",
@@ -4515,7 +4832,12 @@
       "term": "rival",
       "meaning_vi": "đối thủ; đối thủ cạnh tranh",
       "pos": "n",
-      "definition_en": "a person or organization competing with another"
+      "definition_en": "a person or organization competing with another",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; existing definition retained; independent editorial review pending; Existing noun definition aligns with competitor synonym and 'đối thủ; đối thủ cạnh tranh'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/rival"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "role",
@@ -4578,8 +4900,13 @@
     {
       "term": "scope",
       "meaning_vi": "phạm vi",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "the full range, extent, or boundaries of a project, subject, or agreement.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun extent/domain sense matches range synonym and 'phạm vi'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/scope"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "see",
@@ -4775,8 +5102,13 @@
     {
       "term": "standardized",
       "meaning_vi": "được tiêu chuẩn hóa",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "adj",
+      "definition_en": "brought into conformity with an established uniform rule, format, or specification.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Adjective uniform-standard sense matches uniform synonym and 'được tiêu chuẩn hóa'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/standardized"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "standing",
@@ -4964,8 +5296,13 @@
     {
       "term": "take part",
       "meaning_vi": "tham gia",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v",
+      "definition_en": "to join in or actively participate in an activity, meeting, or event.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Phrasal verb participate sense matches participate synonym and 'tham gia'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/take_part"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "target",
@@ -4990,8 +5327,13 @@
     {
       "term": "teller",
       "meaning_vi": "giao dịch viên ngân hàng",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a bank clerk employed to receive deposits and pay out cash to customers.",
+      "source": "Cambridge University Press entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun bank-clerk sense aligns with cashier synonym and 'giao dịch viên ngân hàng'.",
+      "sourceUrls": [
+        "https://dictionary.cambridge.org/dictionary/english/teller"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "tenant",
@@ -5056,8 +5398,13 @@
     {
       "term": "trigger",
       "meaning_vi": "kích hoạt; nguyên nhân khởi phát",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "v/n",
+      "definition_en": "to cause a reaction or initiate a process, or an event that sets something off.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Verb/noun cause/initiator senses match cause synonym and 'kích hoạt; nguyên nhân khởi phát'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/trigger"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "twelve months",
@@ -5123,8 +5470,13 @@
     {
       "term": "variation",
       "meaning_vi": "sự biến đổi",
-      "pos": "",
-      "definition_en": "Reference gloss for practice distractors."
+      "pos": "n",
+      "definition_en": "a partial change or noticeable difference in form, amount, level, or state.",
+      "source": "Wiktionary entry excerpts reviewed 2026-11-27; paraphrased definition; independent editorial review pending; Noun difference/change sense matches difference synonym and 'sự biến đổi'.",
+      "sourceUrls": [
+        "https://en.wiktionary.org/wiki/variation"
+      ],
+      "sourceRelease": "2.95.72"
     },
     {
       "term": "vendor",

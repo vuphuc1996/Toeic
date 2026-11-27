@@ -71,7 +71,8 @@ def audit(rows, vocabulary, write_report=True):
         word, senses = eligible(row, vocabulary)
         defs = ' / '.join(dict.fromkeys(s['definition_en'] for s in senses))
         pos = '/'.join(dict.fromkeys(s.get('pos','') for s in senses if s.get('pos')))
-        report.append(f"| {row['term']} | {pos} | {row.get('meaning_vi','')} | {defs.replace('|','\\|')} |")
+        defs_escaped = defs.replace('|', '\\|')
+        report.append(f"| {row['term']} | {pos} | {row.get('meaning_vi','')} | {defs_escaped} |")
     report.extend(['', '## Not eligible', '', 'Entries without exact canonical headword matches or complete bilingual senses remain for editorial review. No automatic rewrite was applied to those entries.', ''])
     if write_report:
         REPORT.parent.mkdir(parents=True, exist_ok=True)

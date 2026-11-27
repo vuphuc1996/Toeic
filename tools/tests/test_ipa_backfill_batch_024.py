@@ -65,8 +65,8 @@ class UsIpaBackfillBatch024Tests(unittest.TestCase):
             self.assertEqual(source["url"], ledger[rid]["sourceUrl"])
 
     def test_canonical_inventory_identity_is_preserved(self):
-        self.assertEqual(len(self.records), 1141)
-        self.assertEqual(len(self.ids), 1141)
+        self.assertEqual(len(self.records), 1181)
+        self.assertEqual(len(self.ids), 1181)
 
     def test_ci_registers_this_batch_test(self):
         workflow = (ROOT / ".github/workflows/validate-data.yml").read_text(encoding="utf-8")

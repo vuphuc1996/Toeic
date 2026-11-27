@@ -5219,6 +5219,264 @@
         "v3": "assembled",
         "ving": "assembleing"
       }
+    },
+    {
+      "id": "accumulation-n",
+      "word": "accumulation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ək.ˌjum.jə.ˈleɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự tích lũy",
+          "definition_en": "the gradual gathering or buildup of something over a period of time",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "accumulate",
+          "pos": "v",
+          "meaning_vi": "tích lũy; tích tụ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Monthly reserve transfers allowed a steady accumulation of emergency funds.",
+          "vi": "Việc chuyển tiền dự phòng hằng tháng giúp tích lũy đều đặn quỹ khẩn cấp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "steady accumulation",
+        "capital accumulation",
+        "accumulation of data"
+      ]
+    },
+    {
+      "id": "acknowledgment-n",
+      "word": "acknowledgment",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/æk.ˈnɑ.lɪdʒ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự công nhận; xác nhận",
+          "definition_en": "a formal recognition or written confirmation that something has been received or accepted",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "acknowledge",
+          "pos": "v",
+          "meaning_vi": "thừa nhận; công nhận; xác nhận đã nhận"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please reply with a brief acknowledgment once the signed contract arrives.",
+          "vi": "Vui lòng phản hồi kèm xác nhận ngắn gọn khi hợp đồng đã ký được gửi đến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "written acknowledgment",
+        "acknowledgment receipt",
+        "formal acknowledgment"
+      ]
+    },
+    {
+      "id": "adaptable-adj",
+      "word": "adaptable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ə.ˈdæp.tə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "có khả năng thích nghi",
+          "definition_en": "able to change behavior or methods smoothly to fit new conditions or demands",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CAREER",
+        "HR"
+      ],
+      "word_family": [
+        {
+          "word": "adapt",
+          "pos": "v",
+          "meaning_vi": "thích nghi; điều chỉnh cho phù hợp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Regional managers prefer adaptable staff who handle shifting schedules calmly.",
+          "vi": "Các quản lý khu vực ưu tiên nhân sự có khả năng thích nghi với lịch làm việc thay đổi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "highly adaptable",
+        "adaptable workflow",
+        "adaptable team"
+      ]
+    },
+    {
+      "id": "adaptation-n",
+      "word": "adaptation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌæ.dəp.ˈteɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự thích nghi; sự điều chỉnh",
+          "definition_en": "the process of adjusting a plan, design, or approach to suit different circumstances",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "adapt",
+          "pos": "v",
+          "meaning_vi": "thích nghi; điều chỉnh cho phù hợp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Our training manual underwent an adaptation before the overseas rollout.",
+          "vi": "Tài liệu đào tạo của chúng tôi đã trải qua một đợt điều chỉnh trước khi triển khai ở nước ngoài.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "quick adaptation",
+        "software adaptation",
+        "adaptation process"
+      ]
+    },
+    {
+      "id": "assignment-n",
+      "word": "assignment",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ə.ˈsaɪn.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "nhiệm vụ; bài tập",
+          "definition_en": "a specific piece of work, task, or project allocated to someone as part of a job or course",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "assign",
+          "pos": "v",
+          "meaning_vi": "giao; phân công; chỉ định"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each junior analyst received a clear assignment for Tuesday's audit.",
+          "vi": "Mỗi chuyên viên phân tích trẻ nhận một nhiệm vụ cụ thể cho đợt kiểm toán thứ Ba.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "work assignment",
+        "project assignment",
+        "complete an assignment"
+      ]
+    },
+    {
+      "id": "authentication-n",
+      "word": "authentication",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ɔ.ˌθen.tə.ˈkeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự xác thực",
+          "definition_en": "the process of verifying the identity of a user, document, or digital record",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "QUALITY"
+      ],
+      "word_family": [
+        {
+          "word": "authentic",
+          "pos": "adj",
+          "meaning_vi": "xác thực; chân thực; đáng tin là thật"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Two-factor authentication protects every payroll portal against unauthorized access.",
+          "vi": "Cơ chế xác thực hai lớp bảo vệ toàn bộ cổng lương khỏi truy cập trái phép.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "user authentication",
+        "two-factor authentication",
+        "authentication check"
+      ]
     }
   ]
 }

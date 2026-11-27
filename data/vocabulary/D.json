@@ -3289,6 +3289,92 @@
         "v3": "dedicated",
         "ving": "dedicateing"
       }
+    },
+    {
+      "id": "demonstration-n",
+      "word": "demonstration",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌde.mən.ˈstreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "sự trình diễn; minh chứng",
+          "definition_en": "a practical explanation or live display showing how a product, process, or idea works",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [
+        {
+          "word": "demonstrate",
+          "pos": "v",
+          "meaning_vi": "chứng minh; trình bày; thể hiện"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Technicians ran a live product demonstration for thirty visiting distributors.",
+          "vi": "Kỹ thuật viên đã thực hiện phần trình diễn sản phẩm trực tiếp cho ba mươi nhà phân phối tham quan.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "product demonstration",
+        "live demonstration",
+        "clear demonstration"
+      ]
+    },
+    {
+      "id": "discrimination-n",
+      "word": "discrimination",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/dɪ.ˌskrɪ.mə.ˈneɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự phân biệt đối xử",
+          "definition_en": "unfair treatment of individuals or groups based on personal traits rather than merit",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "discriminate",
+          "pos": "v",
+          "meaning_vi": "phân biệt; đối xử phân biệt"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Company policy bans workplace discrimination in hiring, pay, and promotions.",
+          "vi": "Chính sách công ty nghiêm cấm phân biệt đối xử tại nơi làm việc trong tuyển dụng, trả lương và thăng tiến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "workplace discrimination",
+        "age discrimination",
+        "prevent discrimination"
+      ]
     }
   ]
 }

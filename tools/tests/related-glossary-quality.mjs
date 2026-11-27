@@ -27,7 +27,7 @@ assert.equal(getLearnerFacingRelatedGlossaryDefinition('   '), '');
 
 const glossary = JSON.parse(await readFile(new URL('../../data/related-terms.json', import.meta.url), 'utf8'));
 const placeholderRows = (glossary.terms || []).filter(row => isPlaceholderRelatedGlossaryDefinition(row.definition_en));
-assert.equal(placeholderRows.length, 37, 'the v2.95.71 canonical glossary placeholder count must be explicit and reviewable');
+assert.equal(placeholderRows.length, 1, 'the v2.95.72 canonical glossary leaves only the unsupported compound placeholder (once-a-year) flagged for editorial review');
 assert.ok(placeholderRows.every(row => getLearnerFacingRelatedGlossaryDefinition(row.definition_en) === ''), 'no canonical placeholder row may leak into learner-facing English text');
 
 const app = await readFile(new URL('../../assets/js/app.js', import.meta.url), 'utf8');

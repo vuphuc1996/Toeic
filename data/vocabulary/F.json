@@ -1645,6 +1645,49 @@
         "main function",
         "function properly"
       ]
+    },
+    {
+      "id": "flexibly-adv",
+      "word": "flexibly",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈflek.sə.bli/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B2",
+          "meaning_vi": "một cách linh hoạt",
+          "definition_en": "in an adaptable way that adjusts easily to changing circumstances or schedules",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "flexible",
+          "pos": "adj",
+          "meaning_vi": "linh hoạt; mềm dẻo"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Support agents work flexibly across evening shifts during seasonal sales.",
+          "vi": "Nhân viên hỗ trợ làm việc linh hoạt theo các ca tối trong mùa khuyến mãi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "respond flexibly",
+        "schedule flexibly",
+        "operate flexibly"
+      ]
     }
   ]
 }

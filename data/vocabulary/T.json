@@ -1719,6 +1719,92 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "temporarily-adv",
+      "word": "temporarily",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌtem.pɚ.ˈe.rə.li/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B1",
+          "meaning_vi": "tạm thời",
+          "definition_en": "for a limited period only, rather than permanently",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "FACILITY"
+      ],
+      "word_family": [
+        {
+          "word": "temporary",
+          "pos": "adj",
+          "meaning_vi": "tạm thời; có thời hạn"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Bridge repairs temporarily diverted delivery trucks onto the coastal highway.",
+          "vi": "Việc sửa chữa cầu tạm thời điều hướng xe tải giao hàng sang tuyến đường ven biển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "temporarily closed",
+        "temporarily suspended",
+        "temporarily assigned"
+      ]
+    },
+    {
+      "id": "transferable-adj",
+      "word": "transferable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/træns.ˈfɝ.ə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "có thể chuyển nhượng",
+          "definition_en": "capable of being passed, moved, or legally assigned from one person, role, or account to another",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "HR"
+      ],
+      "word_family": [
+        {
+          "word": "transfer",
+          "pos": "v",
+          "meaning_vi": "chuyển; điều chuyển; chuyển khoản"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Unused training credits are not transferable to another employee's profile.",
+          "vi": "Tín chỉ đào tạo chưa sử dụng không thể chuyển nhượng sang hồ sơ của nhân viên khác.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "transferable skills",
+        "non-transferable ticket",
+        "transferable balance"
+      ]
     }
   ]
 }

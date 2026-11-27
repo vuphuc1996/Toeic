@@ -3725,6 +3725,92 @@
         "computer system",
         "payment system"
       ]
+    },
+    {
+      "id": "shipping-n",
+      "word": "shipping",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈʃɪ.pɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "hoạt động vận chuyển",
+          "definition_en": "the commercial transport and delivery of goods from a seller or warehouse to a buyer",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "TRANSPORT"
+      ],
+      "word_family": [
+        {
+          "word": "shipment",
+          "pos": "n",
+          "meaning_vi": "lô hàng; việc vận chuyển hàng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Orders placed before noon qualify for free ground shipping nationwide.",
+          "vi": "Các đơn đặt hàng trước buổi trưa đủ điều kiện được miễn phí vận chuyển đường bộ toàn quốc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "free shipping",
+        "shipping address",
+        "express shipping"
+      ]
+    },
+    {
+      "id": "submission-n",
+      "word": "submission",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/səb.ˈmɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "sự đệ trình; bài nộp",
+          "definition_en": "the act of handing in a document, bid, or report for review, or the item handed in",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "submit",
+          "pos": "v",
+          "meaning_vi": "nộp; trình; đệ trình"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Online grant submission closes promptly at five o'clock this Friday.",
+          "vi": "Cổng nộp hồ sơ tài trợ trực tuyến sẽ đóng đúng năm giờ chiều thứ Sáu tuần này.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "proposal submission",
+        "timely submission",
+        "submission deadline"
+      ]
     }
   ]
 }

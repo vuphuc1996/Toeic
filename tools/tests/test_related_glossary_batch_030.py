@@ -30,7 +30,7 @@ class RelatedGlossaryBatch030Tests(unittest.TestCase):
 
     def test_lookup_uses_canonical_manifest_inventory(self):
         self.assertEqual(len(self.vocabulary), self.canonical_word_count)
-        self.assertEqual(self.canonical_word_count, 1141)
+        self.assertEqual(self.canonical_word_count, 1181)
 
     def test_batch_is_exactly_73_canonical_single_sense_records(self):
         self.assertEqual(self.batch['count'], 73)

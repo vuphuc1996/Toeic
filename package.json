@@ -1,0 +1,16 @@
+{
+  "name": "toeic-dictionary",
+  "version": "2.95.72",
+  "private": true,
+  "type": "module",
+  "description": "Offline-first TOEIC vocabulary dictionary, flashcards, grammar, reading, listening, and mock exam workspace.",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node --check server.js && node --check sw.js",
+    "lint": "node --check server.js && node --check sw.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

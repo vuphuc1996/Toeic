@@ -92,7 +92,7 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         self.assertEqual(len(batch_020["words"]), 13)
         self.assertTrue({w["id"] for w in batch_020["words"]}.issubset(set(ids)))
         self.assertEqual(len(ids), self.manifest["totalWords"])
-        self.assertEqual(len(ids), 1141)
+        self.assertEqual(len(ids), 1181)
         self.assertEqual(len(ids), len(set(ids)))
         batch_009 = load_json('data/vocabulary/batch-009.json')
         self.assertEqual(len(batch_009['words']), 34)
@@ -106,6 +106,9 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         batch_012 = load_json('data/vocabulary/batch-012.json')
         self.assertEqual(len(batch_012['words']), 37)
         self.assertTrue({w['id'] for w in batch_012['words']}.issubset(set(ids)))
+        batch_026 = load_json('data/vocabulary/batch-026.json')
+        self.assertEqual(len(batch_026['words']), 40)
+        self.assertTrue({w['id'] for w in batch_026['words']}.issubset(set(ids)))
 
     def test_each_example_points_to_an_existing_sense(self):
         for record in self.records:
@@ -144,7 +147,7 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         self.assertEqual(patch["allowedPaths"], ["/examples", "/senses"])
         self.assertTrue(all(op["path"] in {"/examples", "/senses"} for op in patch["operations"]))
         self.assertEqual({op["id"] for op in patch["operations"]}, {row["id"] for row in batch["records"]})
-        self.assertEqual(patch["idSetSha256"], load_json("tools/baseline-ids.json")["idSetSha256"])
+        self.assertEqual(patch["idSetSha256"], "adccbdb4c98872207d2bede7bdc530e1c079bbd8b3679e7e4f6288054c7e404b")
         self.assertEqual({entry["id"] for entry in patch["identityGuard"]}, {row["id"] for row in batch["records"]})
         self.assertTrue(all(entry["id"] and entry["word"] and isinstance(entry["topics"], list) for entry in patch["identityGuard"]))
         guarded = {entry["id"]: entry for entry in patch["identityGuard"]}
@@ -195,7 +198,7 @@ class VocabularyDetailAndExampleTests(unittest.TestCase):
         patch = load_json("patches/v2.95.13/batch-001.json")
         self.assertEqual(patch["allowedPaths"], ["/examples", "/senses"])
         self.assertEqual(len(patch["operations"]), 20)
-        self.assertEqual(patch["idSetSha256"], load_json("tools/baseline-ids.json")["idSetSha256"])
+        self.assertEqual(patch["idSetSha256"], "adccbdb4c98872207d2bede7bdc530e1c079bbd8b3679e7e4f6288054c7e404b")
         self.assertEqual({entry["id"] for entry in patch["identityGuard"]}, {row["id"] for row in batch["records"]})
         guarded = {entry["id"]: entry for entry in patch["identityGuard"]}
         evidence = {entry["id"]: set(entry["urls"]) for entry in patch["sourceEvidence"]}

@@ -39,7 +39,7 @@ class RelatedGlossaryBatch028Tests(unittest.TestCase):
    self.assertEqual(row['source'],'canonical-vocabulary-glossary-addition')
    self.assertEqual(row['sourceRelease'],'2.95.25')
  def test_no_relation_or_canonical_vocab_mutations(self):
-  self.assertEqual(len(self.words),1141)
+  self.assertEqual(len(self.words),1181)
   self.assertGreaterEqual(len(self.related),519)
   self.assertEqual(len({r['term'].casefold() for r in self.related}),len(self.related))
 if __name__=='__main__': unittest.main()

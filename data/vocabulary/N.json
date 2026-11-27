@@ -590,6 +590,49 @@
         "notify customers",
         "notify in advance"
       ]
+    },
+    {
+      "id": "necessarily-adv",
+      "word": "necessarily",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌne.sə.ˈse.rə.li/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B1",
+          "meaning_vi": "tất yếu",
+          "definition_en": "as a fixed, unavoidable, or guaranteed result in every situation",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "necessary",
+          "pos": "adj",
+          "meaning_vi": "cần thiết; thiết yếu"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Lower unit prices do not necessarily reduce total annual maintenance spending.",
+          "vi": "Đơn giá thấp hơn không tất yếu làm giảm tổng chi phí bảo trì hằng năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "not necessarily",
+        "necessarily mean",
+        "necessarily require"
+      ]
     }
   ]
 }

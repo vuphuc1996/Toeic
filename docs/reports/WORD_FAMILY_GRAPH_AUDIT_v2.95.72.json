@@ -1,0 +1,1038 @@
+{
+  "headwords": 1181,
+  "duplicate_headwords": [],
+  "link_count": 420,
+  "headwords_with_family": 322,
+  "missing_targets": [
+    {
+      "source": "abstract",
+      "target": "abstractly",
+      "pos": "adv",
+      "file": "A.json"
+    },
+    {
+      "source": "accept",
+      "target": "acceptable",
+      "pos": "adj",
+      "file": "A.json"
+    },
+    {
+      "source": "accept",
+      "target": "acceptance",
+      "pos": "n",
+      "file": "A.json"
+    },
+    {
+      "source": "ambiguous",
+      "target": "ambiguity",
+      "pos": "n",
+      "file": "A.json"
+    },
+    {
+      "source": "ambiguous",
+      "target": "unambiguous",
+      "pos": "adj",
+      "file": "A.json"
+    },
+    {
+      "source": "arbitrary",
+      "target": "arbitrarily",
+      "pos": "adv",
+      "file": "A.json"
+    },
+    {
+      "source": "assign",
+      "target": "assignee",
+      "pos": "n",
+      "file": "A.json"
+    },
+    {
+      "source": "attribute",
+      "target": "attribution",
+      "pos": "n",
+      "file": "A.json"
+    },
+    {
+      "source": "channel",
+      "target": "channeling",
+      "pos": "n",
+      "file": "C.json"
+    },
+    {
+      "source": "coincide",
+      "target": "coincidental",
+      "pos": "adj",
+      "file": "C.json"
+    },
+    {
+      "source": "compensate",
+      "target": "compensatory",
+      "pos": "adj",
+      "file": "C.json"
+    },
+    {
+      "source": "complement",
+      "target": "complementary",
+      "pos": "adj",
+      "file": "C.json"
+    },
+    {
+      "source": "comprise",
+      "target": "comprising",
+      "pos": "prep",
+      "file": "C.json"
+    },
+    {
+      "source": "conceive",
+      "target": "conception",
+      "pos": "n",
+      "file": "C.json"
+    },
+    {
+      "source": "confer",
+      "target": "conferral",
+      "pos": "n",
+      "file": "C.json"
+    },
+    {
+      "source": "constrain",
+      "target": "constrained",
+      "pos": "adj",
+      "file": "C.json"
+    },
+    {
+      "source": "contemporary",
+      "target": "contemporarily",
+      "pos": "adv",
+      "file": "C.json"
+    },
+    {
+      "source": "contradict",
+      "target": "contradictory",
+      "pos": "adj",
+      "file": "C.json"
+    },
+    {
+      "source": "conventional",
+      "target": "convention",
+      "pos": "n",
+      "file": "C.json"
+    },
+    {
+      "source": "conventional",
+      "target": "conventionally",
+      "pos": "adv",
+      "file": "C.json"
+    },
+    {
+      "source": "crucial",
+      "target": "crucially",
+      "pos": "adv",
+      "file": "C.json"
+    },
+    {
+      "source": "cumulative",
+      "target": "cumulatively",
+      "pos": "adv",
+      "file": "C.json"
+    },
+    {
+      "source": "debate",
+      "target": "debatable",
+      "pos": "adj",
+      "file": "D.json"
+    },
+    {
+      "source": "debate",
+      "target": "debater",
+      "pos": "n",
+      "file": "D.json"
+    },
+    {
+      "source": "demonstrate",
+      "target": "demonstrative",
+      "pos": "adj",
+      "file": "D.json"
+    },
+    {
+      "source": "denote",
+      "target": "denotation",
+      "pos": "n",
+      "file": "D.json"
+    },
+    {
+      "source": "denote",
+      "target": "denotative",
+      "pos": "adj",
+      "file": "D.json"
+    },
+    {
+      "source": "diminish",
+      "target": "diminution",
+      "pos": "n",
+      "file": "D.json"
+    },
+    {
+      "source": "diminish",
+      "target": "diminished",
+      "pos": "adj",
+      "file": "D.json"
+    },
+    {
+      "source": "discriminate",
+      "target": "discriminatory",
+      "pos": "adj",
+      "file": "D.json"
+    },
+    {
+      "source": "distort",
+      "target": "distortion",
+      "pos": "n",
+      "file": "D.json"
+    },
+    {
+      "source": "distort",
+      "target": "distorted",
+      "pos": "adj",
+      "file": "D.json"
+    },
+    {
+      "source": "eliminate",
+      "target": "eliminator",
+      "pos": "n",
+      "file": "E.json"
+    },
+    {
+      "source": "empirical",
+      "target": "empirically",
+      "pos": "adv",
+      "file": "E.json"
+    },
+    {
+      "source": "employee",
+      "target": "employ",
+      "pos": "v",
+      "file": "E.json"
+    },
+    {
+      "source": "encounter",
+      "target": "encountered",
+      "pos": "adj",
+      "file": "E.json"
+    },
+    {
+      "source": "knowledge",
+      "target": "know",
+      "pos": "v",
+      "file": "K.json"
+    },
+    {
+      "source": "maintain",
+      "target": "maintainable",
+      "pos": "adj",
+      "file": "M.json"
+    },
+    {
+      "source": "necessary",
+      "target": "necessity",
+      "pos": "n",
+      "file": "N.json"
+    },
+    {
+      "source": "opportunity",
+      "target": "opportune",
+      "pos": "adj",
+      "file": "O.json"
+    },
+    {
+      "source": "purchase",
+      "target": "purchaser",
+      "pos": "n",
+      "file": "P.json"
+    },
+    {
+      "source": "reservation",
+      "target": "reserved",
+      "pos": "adj",
+      "file": "R.json"
+    },
+    {
+      "source": "schedule",
+      "target": "scheduled",
+      "pos": "adj",
+      "file": "S.json"
+    },
+    {
+      "source": "schedule",
+      "target": "scheduling",
+      "pos": "n",
+      "file": "S.json"
+    },
+    {
+      "source": "shipment",
+      "target": "ship",
+      "pos": "v/n",
+      "file": "S.json"
+    },
+    {
+      "source": "supplier",
+      "target": "supplies",
+      "pos": "n",
+      "file": "S.json"
+    },
+    {
+      "source": "temporary",
+      "target": "temporary worker",
+      "pos": "n phrase",
+      "file": "T.json"
+    },
+    {
+      "source": "transaction",
+      "target": "transactional",
+      "pos": "adj",
+      "file": "T.json"
+    },
+    {
+      "source": "update",
+      "target": "updated",
+      "pos": "adj",
+      "file": "U.json"
+    },
+    {
+      "source": "update",
+      "target": "up-to-date",
+      "pos": "adj",
+      "file": "U.json"
+    }
+  ],
+  "pos_mismatches": [
+    {
+      "source": "hire",
+      "target": "hire",
+      "pos": "n",
+      "file": "H.json",
+      "target_pos": [
+        "v"
+      ]
+    }
+  ],
+  "meaning_mismatches": [
+    {
+      "source": "access",
+      "target": "accessible",
+      "meaning_vi": "có thể tiếp cận",
+      "file": "A.json",
+      "target_meanings": [
+        "có thể tiếp cận; dễ sử dụng"
+      ]
+    },
+    {
+      "source": "accommodate",
+      "target": "accommodation",
+      "meaning_vi": "chỗ ở; nơi lưu trú; sự điều chỉnh hoặc thu xếp",
+      "file": "A.json",
+      "target_meanings": [
+        "chỗ ở; nơi lưu trú"
+      ]
+    },
+    {
+      "source": "accommodation",
+      "target": "accommodate",
+      "meaning_vi": "cung cấp chỗ ở; đáp ứng hoặc điều chỉnh để phù hợp",
+      "file": "A.json",
+      "target_meanings": [
+        "đáp ứng; cung cấp chỗ ở"
+      ]
+    },
+    {
+      "source": "accountant",
+      "target": "accounting",
+      "meaning_vi": "kế toán; công việc ghi chép và xử lý tài chính",
+      "file": "A.json",
+      "target_meanings": [
+        "kế toán"
+      ]
+    },
+    {
+      "source": "accumulate",
+      "target": "cumulative",
+      "meaning_vi": "tích lũy dần",
+      "file": "A.json",
+      "target_meanings": [
+        "tích lũy; tăng dần qua các giai đoạn"
+      ]
+    },
+    {
+      "source": "annual",
+      "target": "annually",
+      "meaning_vi": "hằng năm; mỗi năm",
+      "file": "A.json",
+      "target_meanings": [
+        "hằng năm"
+      ]
+    },
+    {
+      "source": "applicable",
+      "target": "apply",
+      "meaning_vi": "áp dụng; nộp đơn",
+      "file": "A.json",
+      "target_meanings": [
+        "nộp đơn; áp dụng"
+      ]
+    },
+    {
+      "source": "applicable",
+      "target": "applicant",
+      "meaning_vi": "người nộp đơn; ứng viên",
+      "file": "A.json",
+      "target_meanings": [
+        "người ứng tuyển"
+      ]
+    },
+    {
+      "source": "applicable",
+      "target": "application",
+      "meaning_vi": "đơn ứng tuyển; ứng dụng; việc áp dụng",
+      "file": "A.json",
+      "target_meanings": [
+        "đơn; hồ sơ xin việc hoặc xin cấp phép",
+        "ứng dụng phần mềm"
+      ]
+    },
+    {
+      "source": "applicant",
+      "target": "apply",
+      "meaning_vi": "áp dụng; nộp đơn",
+      "file": "A.json",
+      "target_meanings": [
+        "nộp đơn; áp dụng"
+      ]
+    },
+    {
+      "source": "applicant",
+      "target": "application",
+      "meaning_vi": "đơn ứng tuyển; ứng dụng; việc áp dụng",
+      "file": "A.json",
+      "target_meanings": [
+        "đơn; hồ sơ xin việc hoặc xin cấp phép",
+        "ứng dụng phần mềm"
+      ]
+    },
+    {
+      "source": "application",
+      "target": "apply",
+      "meaning_vi": "áp dụng; nộp đơn",
+      "file": "A.json",
+      "target_meanings": [
+        "nộp đơn; áp dụng"
+      ]
+    },
+    {
+      "source": "application",
+      "target": "applicant",
+      "meaning_vi": "người nộp đơn; ứng viên",
+      "file": "A.json",
+      "target_meanings": [
+        "người ứng tuyển"
+      ]
+    },
+    {
+      "source": "apply",
+      "target": "applicant",
+      "meaning_vi": "người nộp đơn; ứng viên",
+      "file": "A.json",
+      "target_meanings": [
+        "người ứng tuyển"
+      ]
+    },
+    {
+      "source": "apply",
+      "target": "application",
+      "meaning_vi": "đơn ứng tuyển; ứng dụng; việc áp dụng",
+      "file": "A.json",
+      "target_meanings": [
+        "đơn; hồ sơ xin việc hoặc xin cấp phép",
+        "ứng dụng phần mềm"
+      ]
+    },
+    {
+      "source": "approval",
+      "target": "approve",
+      "meaning_vi": "phê duyệt",
+      "file": "A.json",
+      "target_meanings": [
+        "phê duyệt; chấp thuận"
+      ]
+    },
+    {
+      "source": "approve",
+      "target": "approval",
+      "meaning_vi": "sự phê duyệt",
+      "file": "A.json",
+      "target_meanings": [
+        "sự chấp thuận"
+      ]
+    },
+    {
+      "source": "authentic",
+      "target": "authenticate",
+      "meaning_vi": "xác thực",
+      "file": "A.json",
+      "target_meanings": [
+        "xác thực; chứng minh tính xác thực"
+      ]
+    },
+    {
+      "source": "authorization",
+      "target": "authorize",
+      "meaning_vi": "ủy quyền; cho phép",
+      "file": "A.json",
+      "target_meanings": [
+        "ủy quyền; cho phép chính thức"
+      ]
+    },
+    {
+      "source": "authorize",
+      "target": "authorization",
+      "meaning_vi": "sự ủy quyền; sự cho phép",
+      "file": "A.json",
+      "target_meanings": [
+        "sự ủy quyền; giấy phép"
+      ]
+    },
+    {
+      "source": "beneficial",
+      "target": "benefit",
+      "meaning_vi": "lợi ích; có lợi",
+      "file": "B.json",
+      "target_meanings": [
+        "lợi ích; phúc lợi",
+        "hưởng lợi; có lợi"
+      ]
+    },
+    {
+      "source": "beneficiary",
+      "target": "benefit",
+      "meaning_vi": "lợi ích; có lợi",
+      "file": "B.json",
+      "target_meanings": [
+        "lợi ích; phúc lợi",
+        "hưởng lợi; có lợi"
+      ]
+    },
+    {
+      "source": "beneficiary",
+      "target": "beneficial",
+      "meaning_vi": "có lợi",
+      "file": "B.json",
+      "target_meanings": [
+        "có lợi; hữu ích"
+      ]
+    },
+    {
+      "source": "benefit",
+      "target": "beneficial",
+      "meaning_vi": "có lợi",
+      "file": "B.json",
+      "target_meanings": [
+        "có lợi; hữu ích"
+      ]
+    },
+    {
+      "source": "certificate",
+      "target": "certification",
+      "meaning_vi": "sự chứng nhận",
+      "file": "C.json",
+      "target_meanings": [
+        "chứng nhận; giấy chứng nhận"
+      ]
+    },
+    {
+      "source": "certification",
+      "target": "certificate",
+      "meaning_vi": "giấy chứng nhận",
+      "file": "C.json",
+      "target_meanings": [
+        "chứng chỉ; giấy chứng nhận"
+      ]
+    },
+    {
+      "source": "certify",
+      "target": "certification",
+      "meaning_vi": "sự chứng nhận",
+      "file": "C.json",
+      "target_meanings": [
+        "chứng nhận; giấy chứng nhận"
+      ]
+    },
+    {
+      "source": "certify",
+      "target": "certificate",
+      "meaning_vi": "giấy chứng nhận",
+      "file": "C.json",
+      "target_meanings": [
+        "chứng chỉ; giấy chứng nhận"
+      ]
+    },
+    {
+      "source": "compensate",
+      "target": "compensation",
+      "meaning_vi": "sự bồi thường; tiền thù lao",
+      "file": "C.json",
+      "target_meanings": [
+        "tiền bồi thường; chế độ đãi ngộ"
+      ]
+    },
+    {
+      "source": "compensation",
+      "target": "compensate",
+      "meaning_vi": "bồi thường; đền bù",
+      "file": "C.json",
+      "target_meanings": [
+        "bồi thường; đền bù; bù đắp"
+      ]
+    },
+    {
+      "source": "confer",
+      "target": "conference",
+      "meaning_vi": "hội nghị",
+      "file": "C.json",
+      "target_meanings": [
+        "hội nghị; hội thảo"
+      ]
+    },
+    {
+      "source": "confirmation",
+      "target": "confirm",
+      "meaning_vi": "xác nhận",
+      "file": "C.json",
+      "target_meanings": [
+        "xác nhận; chứng thực"
+      ]
+    },
+    {
+      "source": "consultancy",
+      "target": "consultation",
+      "meaning_vi": "sự tư vấn; buổi tham vấn",
+      "file": "C.json",
+      "target_meanings": [
+        "sự tham vấn; buổi tư vấn"
+      ]
+    },
+    {
+      "source": "consultant",
+      "target": "consultation",
+      "meaning_vi": "sự tư vấn; buổi tham vấn",
+      "file": "C.json",
+      "target_meanings": [
+        "sự tham vấn; buổi tư vấn"
+      ]
+    },
+    {
+      "source": "consume",
+      "target": "consumption",
+      "meaning_vi": "sự tiêu thụ",
+      "file": "C.json",
+      "target_meanings": [
+        "sự tiêu thụ; mức tiêu thụ"
+      ]
+    },
+    {
+      "source": "coordinator",
+      "target": "coordinate",
+      "meaning_vi": "phối hợp; điều phối",
+      "file": "C.json",
+      "target_meanings": [
+        "điều phối; phối hợp"
+      ]
+    },
+    {
+      "source": "cumulative",
+      "target": "accumulate",
+      "meaning_vi": "tích lũy",
+      "file": "C.json",
+      "target_meanings": [
+        "tích lũy; tích tụ"
+      ]
+    },
+    {
+      "source": "deliver",
+      "target": "deliverable",
+      "meaning_vi": "sản phẩm bàn giao",
+      "file": "D.json",
+      "target_meanings": [
+        "sản phẩm/kết quả cần bàn giao"
+      ]
+    },
+    {
+      "source": "deliver",
+      "target": "delivery",
+      "meaning_vi": "sự giao hàng; việc giao",
+      "file": "D.json",
+      "target_meanings": [
+        "sự giao hàng; việc chuyển phát"
+      ]
+    },
+    {
+      "source": "deliverable",
+      "target": "deliver",
+      "meaning_vi": "giao; chuyển; trình bày",
+      "file": "D.json",
+      "target_meanings": [
+        "giao; chuyển phát"
+      ]
+    },
+    {
+      "source": "deliverable",
+      "target": "delivery",
+      "meaning_vi": "sự giao hàng; việc giao",
+      "file": "D.json",
+      "target_meanings": [
+        "sự giao hàng; việc chuyển phát"
+      ]
+    },
+    {
+      "source": "delivery",
+      "target": "deliver",
+      "meaning_vi": "giao; chuyển",
+      "file": "D.json",
+      "target_meanings": [
+        "giao; chuyển phát"
+      ]
+    },
+    {
+      "source": "delivery",
+      "target": "deliverable",
+      "meaning_vi": "sản phẩm bàn giao",
+      "file": "D.json",
+      "target_meanings": [
+        "sản phẩm/kết quả cần bàn giao"
+      ]
+    },
+    {
+      "source": "employee",
+      "target": "employer",
+      "meaning_vi": "người sử dụng lao động",
+      "file": "E.json",
+      "target_meanings": [
+        "người sử dụng lao động; nhà tuyển dụng"
+      ]
+    },
+    {
+      "source": "employee",
+      "target": "employment",
+      "meaning_vi": "việc làm",
+      "file": "E.json",
+      "target_meanings": [
+        "việc làm; sự tuyển dụng"
+      ]
+    },
+    {
+      "source": "employer",
+      "target": "employee",
+      "meaning_vi": "người lao động; nhân viên",
+      "file": "E.json",
+      "target_meanings": [
+        "nhân viên; người lao động"
+      ]
+    },
+    {
+      "source": "employment",
+      "target": "employee",
+      "meaning_vi": "người lao động; nhân viên",
+      "file": "E.json",
+      "target_meanings": [
+        "nhân viên; người lao động"
+      ]
+    },
+    {
+      "source": "employment",
+      "target": "employer",
+      "meaning_vi": "người sử dụng lao động",
+      "file": "E.json",
+      "target_meanings": [
+        "người sử dụng lao động; nhà tuyển dụng"
+      ]
+    },
+    {
+      "source": "flexible",
+      "target": "flexibility",
+      "meaning_vi": "sự linh hoạt",
+      "file": "F.json",
+      "target_meanings": [
+        "tính linh hoạt"
+      ]
+    },
+    {
+      "source": "guidance",
+      "target": "guide",
+      "meaning_vi": "hướng dẫn; người hướng dẫn",
+      "file": "G.json",
+      "target_meanings": [
+        "hướng dẫn; hướng dẫn viên"
+      ]
+    },
+    {
+      "source": "guidance",
+      "target": "guideline",
+      "meaning_vi": "nguyên tắc hướng dẫn",
+      "file": "G.json",
+      "target_meanings": [
+        "hướng dẫn; nguyên tắc chỉ đạo"
+      ]
+    },
+    {
+      "source": "hire",
+      "target": "hire",
+      "meaning_vi": "sự thuê mướn (ít dùng)",
+      "file": "H.json",
+      "target_meanings": []
+    },
+    {
+      "source": "inspect",
+      "target": "inspection",
+      "meaning_vi": "sự kiểm tra",
+      "file": "I.json",
+      "target_meanings": [
+        "sự kiểm tra; đợt thanh tra"
+      ]
+    },
+    {
+      "source": "inspect",
+      "target": "inspector",
+      "meaning_vi": "thanh tra viên",
+      "file": "I.json",
+      "target_meanings": [
+        "thanh tra viên; người kiểm định"
+      ]
+    },
+    {
+      "source": "inspection",
+      "target": "inspector",
+      "meaning_vi": "thanh tra viên; nhân viên kiểm định",
+      "file": "I.json",
+      "target_meanings": [
+        "thanh tra viên; người kiểm định"
+      ]
+    },
+    {
+      "source": "inspector",
+      "target": "inspection",
+      "meaning_vi": "sự kiểm tra; cuộc thanh tra",
+      "file": "I.json",
+      "target_meanings": [
+        "sự kiểm tra; đợt thanh tra"
+      ]
+    },
+    {
+      "source": "manage",
+      "target": "manager",
+      "meaning_vi": "người quản lý",
+      "file": "M.json",
+      "target_meanings": [
+        "quản lý; người điều hành"
+      ]
+    },
+    {
+      "source": "manager",
+      "target": "manage",
+      "meaning_vi": "quản lý; điều hành",
+      "file": "M.json",
+      "target_meanings": [
+        "quản lý; xoay xở"
+      ]
+    },
+    {
+      "source": "negotiate",
+      "target": "negotiation",
+      "meaning_vi": "cuộc đàm phán",
+      "file": "N.json",
+      "target_meanings": [
+        "cuộc đàm phán; sự thương lượng"
+      ]
+    },
+    {
+      "source": "negotiate",
+      "target": "negotiator",
+      "meaning_vi": "người đàm phán",
+      "file": "N.json",
+      "target_meanings": [
+        "nhà đàm phán"
+      ]
+    },
+    {
+      "source": "negotiation",
+      "target": "negotiate",
+      "meaning_vi": "đàm phán",
+      "file": "N.json",
+      "target_meanings": [
+        "đàm phán; thương lượng"
+      ]
+    },
+    {
+      "source": "negotiation",
+      "target": "negotiator",
+      "meaning_vi": "người đàm phán",
+      "file": "N.json",
+      "target_meanings": [
+        "nhà đàm phán"
+      ]
+    },
+    {
+      "source": "negotiator",
+      "target": "negotiate",
+      "meaning_vi": "đàm phán",
+      "file": "N.json",
+      "target_meanings": [
+        "đàm phán; thương lượng"
+      ]
+    },
+    {
+      "source": "negotiator",
+      "target": "negotiation",
+      "meaning_vi": "cuộc đàm phán",
+      "file": "N.json",
+      "target_meanings": [
+        "cuộc đàm phán; sự thương lượng"
+      ]
+    },
+    {
+      "source": "recruit",
+      "target": "recruitment",
+      "meaning_vi": "sự tuyển dụng",
+      "file": "R.json",
+      "target_meanings": [
+        "việc tuyển dụng"
+      ]
+    },
+    {
+      "source": "recruitment",
+      "target": "recruit",
+      "meaning_vi": "tuyển dụng",
+      "file": "R.json",
+      "target_meanings": [
+        "tuyển dụng; chiêu mộ"
+      ]
+    },
+    {
+      "source": "respond",
+      "target": "response",
+      "meaning_vi": "phản hồi; sự đáp ứng",
+      "file": "R.json",
+      "target_meanings": [
+        "phản hồi; câu trả lời"
+      ]
+    },
+    {
+      "source": "response",
+      "target": "respond",
+      "meaning_vi": "phản hồi; đáp lại",
+      "file": "R.json",
+      "target_meanings": [
+        "phản hồi; trả lời"
+      ]
+    },
+    {
+      "source": "supervise",
+      "target": "supervisor",
+      "meaning_vi": "người giám sát",
+      "file": "S.json",
+      "target_meanings": [
+        "người giám sát; quản lý trực tiếp"
+      ]
+    },
+    {
+      "source": "supervision",
+      "target": "supervisor",
+      "meaning_vi": "người giám sát",
+      "file": "S.json",
+      "target_meanings": [
+        "người giám sát; quản lý trực tiếp"
+      ]
+    },
+    {
+      "source": "supplier",
+      "target": "supply",
+      "meaning_vi": "nguồn cung; cung cấp",
+      "file": "S.json",
+      "target_meanings": [
+        "nguồn cung; lượng hàng hóa hoặc vật liệu sẵn có để sử dụng",
+        "cung cấp; giao hoặc đáp ứng thứ đang cần"
+      ]
+    },
+    {
+      "source": "utilization",
+      "target": "utilization",
+      "meaning_vi": "việc sử dụng",
+      "file": "U.json",
+      "target_meanings": [
+        "việc sử dụng; mức độ tận dụng"
+      ]
+    }
+  ],
+  "nonreciprocal_links": [
+    {
+      "source": "access",
+      "target": "accessible",
+      "pos": "adj",
+      "file": "A.json"
+    },
+    {
+      "source": "authentic",
+      "target": "authenticate",
+      "pos": "v",
+      "file": "A.json"
+    },
+    {
+      "source": "confer",
+      "target": "conference",
+      "pos": "n",
+      "file": "C.json"
+    },
+    {
+      "source": "consume",
+      "target": "consumer",
+      "pos": "n",
+      "file": "C.json"
+    },
+    {
+      "source": "consume",
+      "target": "consumption",
+      "pos": "n",
+      "file": "C.json"
+    },
+    {
+      "source": "flexible",
+      "target": "flexibility",
+      "pos": "n",
+      "file": "F.json"
+    },
+    {
+      "source": "guidance",
+      "target": "guide",
+      "pos": "v/n",
+      "file": "G.json"
+    },
+    {
+      "source": "guidance",
+      "target": "guideline",
+      "pos": "n",
+      "file": "G.json"
+    },
+    {
+      "source": "monthly",
+      "target": "month",
+      "pos": "n",
+      "file": "M.json"
+    },
+    {
+      "source": "utilization",
+      "target": "utilize",
+      "pos": "v",
+      "file": "U.json"
+    }
+  ],
+  "duplicate_links": [],
+  "malformed": [],
+  "version": "2.95.72"
+}

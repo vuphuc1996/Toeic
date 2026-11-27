@@ -1007,6 +1007,92 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "vacant-adj",
+      "word": "vacant",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈveɪ.kənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "còn trống",
+          "definition_en": "empty, unoccupied, or available to be filled by a new tenant or worker",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "vacancy",
+          "pos": "n",
+          "meaning_vi": "vị trí tuyển dụng; chỗ trống"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Several corner offices remained vacant on the fourth floor after relocation.",
+          "vi": "Một số văn phòng góc ở tầng bốn vẫn còn trống sau đợt chuyển trụ sở.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "vacant position",
+        "vacant suite",
+        "remain vacant"
+      ]
+    },
+    {
+      "id": "verifiable-adj",
+      "word": "verifiable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈve.rə.ˌfaɪ.ə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "có thể xác minh",
+          "definition_en": "able to be checked and proven true through independent records or evidence",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "QUALITY"
+      ],
+      "word_family": [
+        {
+          "word": "verify",
+          "pos": "v",
+          "meaning_vi": "xác minh; kiểm chứng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Expense claims must include verifiable receipts dated within the travel window.",
+          "vi": "Hồ sơ đề nghị thanh toán công tác phí phải kèm hóa đơn có thể xác minh trong thời gian đi công tác.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "verifiable evidence",
+        "verifiable data",
+        "publicly verifiable"
+      ]
     }
   ]
 }

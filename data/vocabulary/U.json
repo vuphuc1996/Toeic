@@ -778,6 +778,135 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "unbiased-adj",
+      "word": "unbiased",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌʌn.ˈbaɪ.əst/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "khách quan; không thiên lệch",
+          "definition_en": "fair, neutral, and free from personal prejudice when evaluating facts or people",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "QUALITY"
+      ],
+      "word_family": [
+        {
+          "word": "bias",
+          "pos": "n/v",
+          "meaning_vi": "thiên kiến; sự thiên vị; làm thiên lệch"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "External consultants provided an unbiased review of our safety procedures.",
+          "vi": "Các chuyên gia tư vấn độc lập đã đưa ra đánh giá khách quan về quy trình an toàn của chúng tôi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "unbiased review",
+        "unbiased feedback",
+        "remain unbiased"
+      ]
+    },
+    {
+      "id": "urgency-n",
+      "word": "urgency",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈɝ.dʒən.si/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "tính cấp bách",
+          "definition_en": "the quality of needing immediate action or prompt attention",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TIME"
+      ],
+      "word_family": [
+        {
+          "word": "urgent",
+          "pos": "adj",
+          "meaning_vi": "khẩn cấp; cấp bách"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customer complaints flagged for high urgency go straight to senior supervisors.",
+          "vi": "Khiếu nại của khách hàng được gắn mức độ cấp bách cao sẽ chuyển thẳng tới giám sát viên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sense of urgency",
+        "matter of urgency",
+        "high urgency"
+      ]
+    },
+    {
+      "id": "urgently-adv",
+      "word": "urgently",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈɝ.dʒənt.li/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B1",
+          "meaning_vi": "một cách khẩn cấp",
+          "definition_en": "quickly and with immediate attention because a delay could cause serious problems",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TIME"
+      ],
+      "word_family": [
+        {
+          "word": "urgent",
+          "pos": "adj",
+          "meaning_vi": "khẩn cấp; cấp bách"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Warehouse teams urgently need replacement scanners before inventory counts begin.",
+          "vi": "Đội ngũ kho đang cần gấp máy quét thay thế trước khi đợt kiểm kê bắt đầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "urgently needed",
+        "act urgently",
+        "urgently requested"
+      ]
     }
   ]
 }

@@ -1,0 +1,1756 @@
+{
+  "schemaVersion": 1,
+  "batch": "026",
+  "version": "2.95.72",
+  "focus": "TOEIC high-frequency derivational vocabulary expansion resolving 40 Word Family graph missing canonical targets with CMUdict single-pronunciation US IPA and reciprocal sense-matched links",
+  "count": 40,
+  "editorialStatus": "original editorial draft; structural validation pending; independent lexical review pending; CEFR levels are editorial estimates by sense",
+  "sourcePolicy": "Definitions are concise project paraphrases informed by verified Wiktionary/Free Dictionary API entries (sourceUrls recorded in the Batch 026 provenance ledger); Vietnamese meanings match the canonical Word Family link anchors; examples and collocations are project-authored in TOEIC contexts. US IPA is populated strictly from exact single-pronunciation CMUdict entries converted via tools/cmudict_ipa.py.",
+  "sources": [
+    {
+      "name": "Wiktionary / Free Dictionary API",
+      "url": "https://en.wiktionary.org/",
+      "use": "Lexical sense verification for the 40 Batch 026 headwords; paraphrased definitions only."
+    },
+    {
+      "name": "CMU Pronouncing Dictionary (cmudict)",
+      "url": "https://raw.githubusercontent.com/cmusphinx/cmudict/master/cmudict.dict",
+      "use": "Single-pronunciation ARPABET entries converted deterministically via tools/cmudict_ipa.py."
+    }
+  ],
+  "ipaSummary": {
+    "populated": 40,
+    "leftBlank": 0,
+    "blankWords": []
+  },
+  "reciprocalLinksSummary": {
+    "addedReciprocalLinks": 40,
+    "modifiedExistingRecords": 0,
+    "note": "Reciprocal word_family links are stored on the 40 newly added canonical records targeting the existing source headwords' senses[0]."
+  },
+  "words": [
+    {
+      "id": "accumulation-n",
+      "word": "accumulation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ək.ˌjum.jə.ˈleɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự tích lũy",
+          "definition_en": "the gradual gathering or buildup of something over a period of time",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "accumulate",
+          "pos": "v",
+          "meaning_vi": "tích lũy; tích tụ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Monthly reserve transfers allowed a steady accumulation of emergency funds.",
+          "vi": "Việc chuyển tiền dự phòng hằng tháng giúp tích lũy đều đặn quỹ khẩn cấp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "steady accumulation",
+        "capital accumulation",
+        "accumulation of data"
+      ]
+    },
+    {
+      "id": "acknowledgment-n",
+      "word": "acknowledgment",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/æk.ˈnɑ.lɪdʒ.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự công nhận; xác nhận",
+          "definition_en": "a formal recognition or written confirmation that something has been received or accepted",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "acknowledge",
+          "pos": "v",
+          "meaning_vi": "thừa nhận; công nhận; xác nhận đã nhận"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please reply with a brief acknowledgment once the signed contract arrives.",
+          "vi": "Vui lòng phản hồi kèm xác nhận ngắn gọn khi hợp đồng đã ký được gửi đến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "written acknowledgment",
+        "acknowledgment receipt",
+        "formal acknowledgment"
+      ]
+    },
+    {
+      "id": "adaptable-adj",
+      "word": "adaptable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ə.ˈdæp.tə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "có khả năng thích nghi",
+          "definition_en": "able to change behavior or methods smoothly to fit new conditions or demands",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CAREER",
+        "HR"
+      ],
+      "word_family": [
+        {
+          "word": "adapt",
+          "pos": "v",
+          "meaning_vi": "thích nghi; điều chỉnh cho phù hợp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Regional managers prefer adaptable staff who handle shifting schedules calmly.",
+          "vi": "Các quản lý khu vực ưu tiên nhân sự có khả năng thích nghi với lịch làm việc thay đổi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "highly adaptable",
+        "adaptable workflow",
+        "adaptable team"
+      ]
+    },
+    {
+      "id": "adaptation-n",
+      "word": "adaptation",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌæ.dəp.ˈteɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự thích nghi; sự điều chỉnh",
+          "definition_en": "the process of adjusting a plan, design, or approach to suit different circumstances",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "adapt",
+          "pos": "v",
+          "meaning_vi": "thích nghi; điều chỉnh cho phù hợp"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Our training manual underwent an adaptation before the overseas rollout.",
+          "vi": "Tài liệu đào tạo của chúng tôi đã trải qua một đợt điều chỉnh trước khi triển khai ở nước ngoài.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "quick adaptation",
+        "software adaptation",
+        "adaptation process"
+      ]
+    },
+    {
+      "id": "assignment-n",
+      "word": "assignment",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ə.ˈsaɪn.mənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "nhiệm vụ; bài tập",
+          "definition_en": "a specific piece of work, task, or project allocated to someone as part of a job or course",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [
+        {
+          "word": "assign",
+          "pos": "v",
+          "meaning_vi": "giao; phân công; chỉ định"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Each junior analyst received a clear assignment for Tuesday's audit.",
+          "vi": "Mỗi chuyên viên phân tích trẻ nhận một nhiệm vụ cụ thể cho đợt kiểm toán thứ Ba.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "work assignment",
+        "project assignment",
+        "complete an assignment"
+      ]
+    },
+    {
+      "id": "authentication-n",
+      "word": "authentication",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ɔ.ˌθen.tə.ˈkeɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự xác thực",
+          "definition_en": "the process of verifying the identity of a user, document, or digital record",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "QUALITY"
+      ],
+      "word_family": [
+        {
+          "word": "authentic",
+          "pos": "adj",
+          "meaning_vi": "xác thực; chân thực; đáng tin là thật"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Two-factor authentication protects every payroll portal against unauthorized access.",
+          "vi": "Cơ chế xác thực hai lớp bảo vệ toàn bộ cổng lương khỏi truy cập trái phép.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "user authentication",
+        "two-factor authentication",
+        "authentication check"
+      ]
+    },
+    {
+      "id": "biased-adj",
+      "word": "biased",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈbaɪ.əst/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "thiên vị; thiên lệch",
+          "definition_en": "unfairly favoring or opposing one person, group, or option instead of judging neutrally",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "bias",
+          "pos": "n/v",
+          "meaning_vi": "thiên kiến; sự thiên vị; làm thiên lệch"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Evaluation panels must reject biased scoring sheets during candidate interviews.",
+          "vi": "Hội đồng đánh giá phải loại bỏ các bảng điểm thiên lệch trong quá trình phỏng vấn ứng viên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "biased evaluation",
+        "biased sample",
+        "politically biased"
+      ]
+    },
+    {
+      "id": "budgetary-adj",
+      "word": "budgetary",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈbʌ.dʒɪ.ˌte.ri/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "thuộc ngân sách",
+          "definition_en": "relating to a financial plan for expected income and controlled spending",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "budget",
+          "pos": "n",
+          "meaning_vi": "ngân sách"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Strict budgetary limits delayed the warehouse expansion until next quarter.",
+          "vi": "Những giới hạn ngân sách nghiêm ngặt đã làm hoãn việc mở rộng kho đến quý sau.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "budgetary control",
+        "budgetary constraints",
+        "budgetary approval"
+      ]
+    },
+    {
+      "id": "challenging-adj",
+      "word": "challenging",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈtʃæ.lən.dʒɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "đầy thử thách",
+          "definition_en": "demanding significant effort, skill, or focus because a task is difficult",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "CAREER",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "challenge",
+          "pos": "n/v",
+          "meaning_vi": "thách thức; đặt nghi vấn; thách thức ai"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Negotiating multi-year shipping rates proved challenging for our newest buyer.",
+          "vi": "Việc đàm phán giá vận chuyển nhiều năm tỏ ra đầy thử thách với nhân viên thu mua mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "challenging role",
+        "challenging target",
+        "economically challenging"
+      ]
+    },
+    {
+      "id": "coincidence-n",
+      "word": "coincidence",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/koʊ.ˈɪn.sɪ.dəns/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự trùng hợp",
+          "definition_en": "an unplanned occurrence of two events happening together without a direct causal link",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "coincide",
+          "pos": "v",
+          "meaning_vi": "trùng hợp; xảy ra đồng thời"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "By pure coincidence, both regional directors booked flights on the same morning.",
+          "vi": "Thật trùng hợp ngẫu nhiên, cả hai giám đốc khu vực đều đặt vé bay cùng buổi sáng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "pure coincidence",
+        "mere coincidence",
+        "by coincidence"
+      ]
+    },
+    {
+      "id": "commencement-n",
+      "word": "commencement",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kə.ˈmen.smənt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự bắt đầu; lễ tốt nghiệp",
+          "definition_en": "the formal start of an activity or project, or an academic graduation ceremony",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TIME",
+        "CONSTRUCTION",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "commence",
+          "pos": "v",
+          "meaning_vi": "bắt đầu; khởi công"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Site inspectors met prior to the commencement of foundation work downtown.",
+          "vi": "Thanh tra công trường đã họp trước khi khởi công phần móng tại khu trung tâm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "project commencement",
+        "commencement date",
+        "commencement ceremony"
+      ]
+    },
+    {
+      "id": "commuter-n",
+      "word": "commuter",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kəm.ˈju.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "người đi làm hằng ngày",
+          "definition_en": "a person who travels regularly between home and a workplace, often by train or bus",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TRANSPORT",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "commute",
+          "pos": "v",
+          "meaning_vi": "đi lại thường xuyên giữa nhà và nơi làm việc"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Express rail passes save daily commuters money on morning peak fares.",
+          "vi": "Vé tàu nhanh giúp người đi làm hằng ngày tiết kiệm chi phí vào giờ cao điểm sáng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "daily commuter",
+        "commuter rail",
+        "commuter pass"
+      ]
+    },
+    {
+      "id": "concept-n",
+      "word": "concept",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈkɑn.sept/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "khái niệm",
+          "definition_en": "a general abstract idea or foundational principle behind a product, plan, or system",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "EDUCATION"
+      ],
+      "word_family": [
+        {
+          "word": "conceive",
+          "pos": "v",
+          "meaning_vi": "hình thành ý tưởng; tưởng tượng; thụ thai"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Designers presented an early store concept to executive stakeholders yesterday.",
+          "vi": "Nhóm thiết kế đã trình bày ý tưởng cửa hàng ban đầu cho các bên liên quan hôm qua.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "core concept",
+        "design concept",
+        "proof of concept"
+      ]
+    },
+    {
+      "id": "confirmed-adj",
+      "word": "confirmed",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈfɝmd/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "đã xác nhận",
+          "definition_en": "officially verified, settled, or established as definite after checking details",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TRAVEL",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "confirm",
+          "pos": "v",
+          "meaning_vi": "xác nhận; chứng thực"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Only guests holding confirmed reservations may board the early airport shuttle.",
+          "vi": "Chỉ những khách có đặt chỗ đã xác nhận mới được lên xe trung chuyển sân bay sớm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "confirmed reservation",
+        "confirmed booking",
+        "confirmed attendance"
+      ]
+    },
+    {
+      "id": "considerably-adv",
+      "word": "considerably",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈsɪ.dɚ.ə.bli/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B2",
+          "meaning_vi": "đáng kể",
+          "definition_en": "to a noticeably large degree or extent that warrants attention",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "considerable",
+          "pos": "adj",
+          "meaning_vi": "đáng kể; khá lớn"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Energy bills fell considerably after old lighting fixtures were replaced.",
+          "vi": "Hóa đơn tiền điện đã giảm đáng kể sau khi toàn bộ đèn cũ được thay mới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "vary considerably",
+        "improve considerably",
+        "considerably lower"
+      ]
+    },
+    {
+      "id": "constraint-n",
+      "word": "constraint",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈstreɪnt/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự hạn chế; ràng buộc",
+          "definition_en": "a limiting factor, rule, or restriction that controls what someone or something can do",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "constrain",
+          "pos": "v",
+          "meaning_vi": "hạn chế; ràng buộc; kìm hãm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Because of one major staffing constraint, the clinic shortened weekend hours.",
+          "vi": "Do một ràng buộc lớn về nhân sự, phòng khám đã rút ngắn giờ làm cuối tuần.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "time constraint",
+        "budget constraint",
+        "capacity constraint"
+      ]
+    },
+    {
+      "id": "contradiction-n",
+      "word": "contradiction",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌkɑn.trə.ˈdɪk.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự mâu thuẫn",
+          "definition_en": "a direct conflict or logical inconsistency between two statements, claims, or facts",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "COMMUNICATION",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "contradict",
+          "pos": "v",
+          "meaning_vi": "mâu thuẫn; phủ nhận; nói trái lại"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Auditors spotted a clear contradiction between the receipt and the expense log.",
+          "vi": "Kiểm toán viên phát hiện sự mâu thuẫn rõ ràng giữa hóa đơn và sổ chi phí.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "direct contradiction",
+        "apparent contradiction",
+        "contradiction in terms"
+      ]
+    },
+    {
+      "id": "conversion-n",
+      "word": "conversion",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈvɝ.ʒən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "sự chuyển đổi",
+          "definition_en": "the act of changing something from one form, currency, unit, or system into another",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [
+        {
+          "word": "convert",
+          "pos": "v",
+          "meaning_vi": "chuyển đổi; cải tạo; đổi sang"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Bank fees apply automatically during currency conversion at international branches.",
+          "vi": "Phí ngân hàng được áp dụng tự động trong quá trình quy đổi ngoại tệ tại chi nhánh quốc tế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "currency conversion",
+        "data conversion",
+        "conversion rate"
+      ]
+    },
+    {
+      "id": "convertible-adj",
+      "word": "convertible",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/kən.ˈvɝ.tə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "có thể chuyển đổi",
+          "definition_en": "capable of being exchanged, adapted, or transformed into another form or use",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [
+        {
+          "word": "convert",
+          "pos": "v",
+          "meaning_vi": "chuyển đổi; cải tạo; đổi sang"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Holders can trade convertible bonds for company shares next year.",
+          "vi": "Người nắm giữ có thể đổi trái phiếu chuyển đổi lấy cổ phiếu công ty vào năm tới.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "convertible bond",
+        "convertible currency",
+        "convertible space"
+      ]
+    },
+    {
+      "id": "demonstration-n",
+      "word": "demonstration",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌde.mən.ˈstreɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "sự trình diễn; minh chứng",
+          "definition_en": "a practical explanation or live display showing how a product, process, or idea works",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "MARKETING"
+      ],
+      "word_family": [
+        {
+          "word": "demonstrate",
+          "pos": "v",
+          "meaning_vi": "chứng minh; trình bày; thể hiện"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Technicians ran a live product demonstration for thirty visiting distributors.",
+          "vi": "Kỹ thuật viên đã thực hiện phần trình diễn sản phẩm trực tiếp cho ba mươi nhà phân phối tham quan.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "product demonstration",
+        "live demonstration",
+        "clear demonstration"
+      ]
+    },
+    {
+      "id": "discrimination-n",
+      "word": "discrimination",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/dɪ.ˌskrɪ.mə.ˈneɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự phân biệt đối xử",
+          "definition_en": "unfair treatment of individuals or groups based on personal traits rather than merit",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "LEGAL"
+      ],
+      "word_family": [
+        {
+          "word": "discriminate",
+          "pos": "v",
+          "meaning_vi": "phân biệt; đối xử phân biệt"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Company policy bans workplace discrimination in hiring, pay, and promotions.",
+          "vi": "Chính sách công ty nghiêm cấm phân biệt đối xử tại nơi làm việc trong tuyển dụng, trả lương và thăng tiến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "workplace discrimination",
+        "age discrimination",
+        "prevent discrimination"
+      ]
+    },
+    {
+      "id": "elimination-n",
+      "word": "elimination",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ɪ.ˌlɪ.mə.ˈneɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "sự loại bỏ",
+          "definition_en": "the complete removal or exclusion of unnecessary steps, errors, or items",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "eliminate",
+          "pos": "v",
+          "meaning_vi": "loại bỏ; loại trừ; khử"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The elimination of duplicate paper forms cut invoice processing times in half.",
+          "vi": "Việc loại bỏ các biểu mẫu giấy trùng lặp đã giúp giảm một nửa thời gian xử lý hóa đơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "elimination of waste",
+        "error elimination",
+        "gradual elimination"
+      ]
+    },
+    {
+      "id": "expensive-adj",
+      "word": "expensive",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ɪk.ˈspen.sɪv/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "A2",
+          "meaning_vi": "đắt đỏ",
+          "definition_en": "costing a large amount of money relative to typical alternatives or budgets",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "SHOPPING"
+      ],
+      "word_family": [
+        {
+          "word": "expense",
+          "pos": "n",
+          "meaning_vi": "chi phí; khoản tiêu dùng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Overnight air freight is too expensive for heavy bulk furniture.",
+          "vi": "Vận tải hàng không qua đêm quá đắt đỏ đối với đồ nội thất cồng kềnh.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "expensive equipment",
+        "too expensive",
+        "prohibitively expensive"
+      ]
+    },
+    {
+      "id": "flexibly-adv",
+      "word": "flexibly",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈflek.sə.bli/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B2",
+          "meaning_vi": "một cách linh hoạt",
+          "definition_en": "in an adaptable way that adjusts easily to changing circumstances or schedules",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "flexible",
+          "pos": "adj",
+          "meaning_vi": "linh hoạt; mềm dẻo"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Support agents work flexibly across evening shifts during seasonal sales.",
+          "vi": "Nhân viên hỗ trợ làm việc linh hoạt theo các ca tối trong mùa khuyến mãi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "respond flexibly",
+        "schedule flexibly",
+        "operate flexibly"
+      ]
+    },
+    {
+      "id": "hiring-n",
+      "word": "hiring",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈhaɪ.rɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "việc tuyển dụng",
+          "definition_en": "the process or activity of recruiting and employing new workers for an organization",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "CAREER"
+      ],
+      "word_family": [
+        {
+          "word": "hire",
+          "pos": "v",
+          "meaning_vi": "thuê; tuyển dụng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Seasonal hiring begins in September across all downtown retail stores.",
+          "vi": "Hoạt động tuyển dụng theo mùa bắt đầu vào tháng Chín tại tất cả cửa hàng trung tâm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "seasonal hiring",
+        "hiring freeze",
+        "hiring manager"
+      ]
+    },
+    {
+      "id": "knowledgeable-adj",
+      "word": "knowledgeable",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈnɑ.lə.dʒə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "am hiểu",
+          "definition_en": "well informed and having solid practical understanding of a subject or field",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "CUSTOMER"
+      ],
+      "word_family": [
+        {
+          "word": "knowledge",
+          "pos": "n",
+          "meaning_vi": "kiến thức; sự hiểu biết"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers praised the knowledgeable pharmacist for explaining dosage guidelines clearly.",
+          "vi": "Khách hàng khen ngợi dược sĩ am hiểu đã giải thích rõ ràng hướng dẫn liều dùng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "knowledgeable staff",
+        "knowledgeable advisor",
+        "highly knowledgeable"
+      ]
+    },
+    {
+      "id": "necessarily-adv",
+      "word": "necessarily",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌne.sə.ˈse.rə.li/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B1",
+          "meaning_vi": "tất yếu",
+          "definition_en": "as a fixed, unavoidable, or guaranteed result in every situation",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "DAILY"
+      ],
+      "word_family": [
+        {
+          "word": "necessary",
+          "pos": "adj",
+          "meaning_vi": "cần thiết; thiết yếu"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Lower unit prices do not necessarily reduce total annual maintenance spending.",
+          "vi": "Đơn giá thấp hơn không tất yếu làm giảm tổng chi phí bảo trì hằng năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "not necessarily",
+        "necessarily mean",
+        "necessarily require"
+      ]
+    },
+    {
+      "id": "operational-adj",
+      "word": "operational",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌɑ.pɚ.ˈeɪ.ʃə.nəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "thuộc vận hành",
+          "definition_en": "related to day-to-day business functioning or ready for active service",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [
+        {
+          "word": "operate",
+          "pos": "v",
+          "meaning_vi": "vận hành; hoạt động; điều hành"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The modernized sorting hub becomes fully operational early Monday morning.",
+          "vi": "Trung tâm phân loại hiện đại hóa sẽ chính thức vận hành hoàn chỉnh vào sáng sớm thứ Hai.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "fully operational",
+        "operational costs",
+        "operational efficiency"
+      ]
+    },
+    {
+      "id": "operator-n",
+      "word": "operator",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈɑ.pɚ.ˌeɪ.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "người vận hành",
+          "definition_en": "a worker or specialist who controls a machine, vehicle, telephone switchboard, or system",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [
+        {
+          "word": "operate",
+          "pos": "v",
+          "meaning_vi": "vận hành; hoạt động; điều hành"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Every crane operator must hold a renewed safety license on site.",
+          "vi": "Mỗi người vận hành cần cẩu phải mang theo chứng chỉ an toàn còn hiệu lực tại công trường.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "machine operator",
+        "system operator",
+        "certified operator"
+      ]
+    },
+    {
+      "id": "purchasing-n",
+      "word": "purchasing",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈpɝ.tʃə.sɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "việc mua hàng",
+          "definition_en": "the organized business activity of buying supplies, services, or goods for a company",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "FINANCE"
+      ],
+      "word_family": [
+        {
+          "word": "purchase",
+          "pos": "v",
+          "meaning_vi": "mua; sắm"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Centralized purchasing helped the hotel chain negotiate better linen discounts.",
+          "vi": "Hoạt động mua hàng tập trung giúp chuỗi khách sạn thương lượng mức chiết khấu vải tốt hơn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "purchasing department",
+        "purchasing power",
+        "centralized purchasing"
+      ]
+    },
+    {
+      "id": "recruiter-n",
+      "word": "recruiter",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/rɪ.ˈkru.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "nhà tuyển dụng",
+          "definition_en": "a human resources specialist responsible for finding and screening qualified job applicants",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "CAREER"
+      ],
+      "word_family": [
+        {
+          "word": "recruit",
+          "pos": "v",
+          "meaning_vi": "tuyển dụng; chiêu mộ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A senior recruiter called three shortlisted engineers after the career fair.",
+          "vi": "Một nhà tuyển dụng cấp cao đã gọi cho ba kỹ sư vào vòng trong sau ngày hội việc làm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "corporate recruiter",
+        "lead recruiter",
+        "technical recruiter"
+      ]
+    },
+    {
+      "id": "shipping-n",
+      "word": "shipping",
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈʃɪ.pɪŋ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "A2",
+          "meaning_vi": "hoạt động vận chuyển",
+          "definition_en": "the commercial transport and delivery of goods from a seller or warehouse to a buyer",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "TRANSPORT"
+      ],
+      "word_family": [
+        {
+          "word": "shipment",
+          "pos": "n",
+          "meaning_vi": "lô hàng; việc vận chuyển hàng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Orders placed before noon qualify for free ground shipping nationwide.",
+          "vi": "Các đơn đặt hàng trước buổi trưa đủ điều kiện được miễn phí vận chuyển đường bộ toàn quốc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "free shipping",
+        "shipping address",
+        "express shipping"
+      ]
+    },
+    {
+      "id": "submission-n",
+      "word": "submission",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/səb.ˈmɪ.ʃən/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "sự đệ trình; bài nộp",
+          "definition_en": "the act of handing in a document, bid, or report for review, or the item handed in",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "BUSINESS"
+      ],
+      "word_family": [
+        {
+          "word": "submit",
+          "pos": "v",
+          "meaning_vi": "nộp; trình; đệ trình"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Online grant submission closes promptly at five o'clock this Friday.",
+          "vi": "Cổng nộp hồ sơ tài trợ trực tuyến sẽ đóng đúng năm giờ chiều thứ Sáu tuần này.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "proposal submission",
+        "timely submission",
+        "submission deadline"
+      ]
+    },
+    {
+      "id": "temporarily-adv",
+      "word": "temporarily",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌtem.pɚ.ˈe.rə.li/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B1",
+          "meaning_vi": "tạm thời",
+          "definition_en": "for a limited period only, rather than permanently",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "FACILITY"
+      ],
+      "word_family": [
+        {
+          "word": "temporary",
+          "pos": "adj",
+          "meaning_vi": "tạm thời; có thời hạn"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Bridge repairs temporarily diverted delivery trucks onto the coastal highway.",
+          "vi": "Việc sửa chữa cầu tạm thời điều hướng xe tải giao hàng sang tuyến đường ven biển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "temporarily closed",
+        "temporarily suspended",
+        "temporarily assigned"
+      ]
+    },
+    {
+      "id": "transferable-adj",
+      "word": "transferable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/træns.ˈfɝ.ə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "có thể chuyển nhượng",
+          "definition_en": "capable of being passed, moved, or legally assigned from one person, role, or account to another",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "HR"
+      ],
+      "word_family": [
+        {
+          "word": "transfer",
+          "pos": "v",
+          "meaning_vi": "chuyển; điều chuyển; chuyển khoản"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Unused training credits are not transferable to another employee's profile.",
+          "vi": "Tín chỉ đào tạo chưa sử dụng không thể chuyển nhượng sang hồ sơ của nhân viên khác.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "transferable skills",
+        "non-transferable ticket",
+        "transferable balance"
+      ]
+    },
+    {
+      "id": "unbiased-adj",
+      "word": "unbiased",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌʌn.ˈbaɪ.əst/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "khách quan; không thiên lệch",
+          "definition_en": "fair, neutral, and free from personal prejudice when evaluating facts or people",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "QUALITY"
+      ],
+      "word_family": [
+        {
+          "word": "bias",
+          "pos": "n/v",
+          "meaning_vi": "thiên kiến; sự thiên vị; làm thiên lệch"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "External consultants provided an unbiased review of our safety procedures.",
+          "vi": "Các chuyên gia tư vấn độc lập đã đưa ra đánh giá khách quan về quy trình an toàn của chúng tôi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "unbiased review",
+        "unbiased feedback",
+        "remain unbiased"
+      ]
+    },
+    {
+      "id": "urgency-n",
+      "word": "urgency",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈɝ.dʒən.si/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B2",
+          "meaning_vi": "tính cấp bách",
+          "definition_en": "the quality of needing immediate action or prompt attention",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TIME"
+      ],
+      "word_family": [
+        {
+          "word": "urgent",
+          "pos": "adj",
+          "meaning_vi": "khẩn cấp; cấp bách"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customer complaints flagged for high urgency go straight to senior supervisors.",
+          "vi": "Khiếu nại của khách hàng được gắn mức độ cấp bách cao sẽ chuyển thẳng tới giám sát viên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sense of urgency",
+        "matter of urgency",
+        "high urgency"
+      ]
+    },
+    {
+      "id": "urgently-adv",
+      "word": "urgently",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈɝ.dʒənt.li/"
+      },
+      "senses": [
+        {
+          "pos": "adv",
+          "cefr_level": "B1",
+          "meaning_vi": "một cách khẩn cấp",
+          "definition_en": "quickly and with immediate attention because a delay could cause serious problems",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TIME"
+      ],
+      "word_family": [
+        {
+          "word": "urgent",
+          "pos": "adj",
+          "meaning_vi": "khẩn cấp; cấp bách"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Warehouse teams urgently need replacement scanners before inventory counts begin.",
+          "vi": "Đội ngũ kho đang cần gấp máy quét thay thế trước khi đợt kiểm kê bắt đầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "urgently needed",
+        "act urgently",
+        "urgently requested"
+      ]
+    },
+    {
+      "id": "vacant-adj",
+      "word": "vacant",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈveɪ.kənt/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B1",
+          "meaning_vi": "còn trống",
+          "definition_en": "empty, unoccupied, or available to be filled by a new tenant or worker",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "REAL_ESTATE"
+      ],
+      "word_family": [
+        {
+          "word": "vacancy",
+          "pos": "n",
+          "meaning_vi": "vị trí tuyển dụng; chỗ trống"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Several corner offices remained vacant on the fourth floor after relocation.",
+          "vi": "Một số văn phòng góc ở tầng bốn vẫn còn trống sau đợt chuyển trụ sở.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "vacant position",
+        "vacant suite",
+        "remain vacant"
+      ]
+    },
+    {
+      "id": "verifiable-adj",
+      "word": "verifiable",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈve.rə.ˌfaɪ.ə.bəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "có thể xác minh",
+          "definition_en": "able to be checked and proven true through independent records or evidence",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "QUALITY"
+      ],
+      "word_family": [
+        {
+          "word": "verify",
+          "pos": "v",
+          "meaning_vi": "xác minh; kiểm chứng"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Expense claims must include verifiable receipts dated within the travel window.",
+          "vi": "Hồ sơ đề nghị thanh toán công tác phí phải kèm hóa đơn có thể xác minh trong thời gian đi công tác.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "verifiable evidence",
+        "verifiable data",
+        "publicly verifiable"
+      ]
+    }
+  ]
+}

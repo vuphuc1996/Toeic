@@ -4059,6 +4059,49 @@
         }
       ],
       "collocations": []
+    },
+    {
+      "id": "recruiter-n",
+      "word": "recruiter",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/rɪ.ˈkru.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "nhà tuyển dụng",
+          "definition_en": "a human resources specialist responsible for finding and screening qualified job applicants",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "HR",
+        "CAREER"
+      ],
+      "word_family": [
+        {
+          "word": "recruit",
+          "pos": "v",
+          "meaning_vi": "tuyển dụng; chiêu mộ"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A senior recruiter called three shortlisted engineers after the career fair.",
+          "vi": "Một nhà tuyển dụng cấp cao đã gọi cho ba kỹ sư vào vòng trong sau ngày hội việc làm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "corporate recruiter",
+        "lead recruiter",
+        "technical recruiter"
+      ]
     }
   ]
 }

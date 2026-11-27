@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "batch": "026",
+  "baseDataVersion": "2.95.71",
+  "targetDataVersion": "2.95.72",
+  "count": 40,
+  "records": [
+    {
+      "id": "accumulation-n",
+      "word": "accumulation",
+      "letter": "A",
+      "sourceHeadwordId": "accumulate-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/accumulation"
+    },
+    {
+      "id": "acknowledgment-n",
+      "word": "acknowledgment",
+      "letter": "A",
+      "sourceHeadwordId": "acknowledge-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/acknowledgment"
+    },
+    {
+      "id": "adaptable-adj",
+      "word": "adaptable",
+      "letter": "A",
+      "sourceHeadwordId": "adapt-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/adaptable"
+    },
+    {
+      "id": "adaptation-n",
+      "word": "adaptation",
+      "letter": "A",
+      "sourceHeadwordId": "adapt-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/adaptation"
+    },
+    {
+      "id": "assignment-n",
+      "word": "assignment",
+      "letter": "A",
+      "sourceHeadwordId": "assign-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/assignment"
+    },
+    {
+      "id": "authentication-n",
+      "word": "authentication",
+      "letter": "A",
+      "sourceHeadwordId": "authentic-adj",
+      "sourceUrl": "https://en.wiktionary.org/wiki/authentication"
+    },
+    {
+      "id": "biased-adj",
+      "word": "biased",
+      "letter": "B",
+      "sourceHeadwordId": "bias-nv",
+      "sourceUrl": "https://en.wiktionary.org/wiki/biased"
+    },
+    {
+      "id": "budgetary-adj",
+      "word": "budgetary",
+      "letter": "B",
+      "sourceHeadwordId": "budget-nv",
+      "sourceUrl": "https://en.wiktionary.org/wiki/budgetary"
+    },
+    {
+      "id": "challenging-adj",
+      "word": "challenging",
+      "letter": "C",
+      "sourceHeadwordId": "challenge-nv",
+      "sourceUrl": "https://en.wiktionary.org/wiki/challenging"
+    },
+    {
+      "id": "coincidence-n",
+      "word": "coincidence",
+      "letter": "C",
+      "sourceHeadwordId": "coincide-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/coincidence"
+    },
+    {
+      "id": "commencement-n",
+      "word": "commencement",
+      "letter": "C",
+      "sourceHeadwordId": "commence-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/commencement"
+    },
+    {
+      "id": "commuter-n",
+      "word": "commuter",
+      "letter": "C",
+      "sourceHeadwordId": "commute-vn",
+      "sourceUrl": "https://en.wiktionary.org/wiki/commuter"
+    },
+    {
+      "id": "concept-n",
+      "word": "concept",
+      "letter": "C",
+      "sourceHeadwordId": "conceive-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/concept"
+    },
+    {
+      "id": "confirmed-adj",
+      "word": "confirmed",
+      "letter": "C",
+      "sourceHeadwordId": "confirm-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/confirmed"
+    },
+    {
+      "id": "considerably-adv",
+      "word": "considerably",
+      "letter": "C",
+      "sourceHeadwordId": "considerable-adj",
+      "sourceUrl": "https://en.wiktionary.org/wiki/considerably"
+    },
+    {
+      "id": "constraint-n",
+      "word": "constraint",
+      "letter": "C",
+      "sourceHeadwordId": "constrain-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/constraint"
+    },
+    {
+      "id": "contradiction-n",
+      "word": "contradiction",
+      "letter": "C",
+      "sourceHeadwordId": "contradict-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/contradiction"
+    },
+    {
+      "id": "conversion-n",
+      "word": "conversion",
+      "letter": "C",
+      "sourceHeadwordId": "convert-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/conversion"
+    },
+    {
+      "id": "convertible-adj",
+      "word": "convertible",
+      "letter": "C",
+      "sourceHeadwordId": "convert-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/convertible"
+    },
+    {
+      "id": "demonstration-n",
+      "word": "demonstration",
+      "letter": "D",
+      "sourceHeadwordId": "demonstrate-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/demonstration"
+    },
+    {
+      "id": "discrimination-n",
+      "word": "discrimination",
+      "letter": "D",
+      "sourceHeadwordId": "discriminate-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/discrimination"
+    },
+    {
+      "id": "elimination-n",
+      "word": "elimination",
+      "letter": "E",
+      "sourceHeadwordId": "eliminate-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/elimination"
+    },
+    {
+      "id": "expensive-adj",
+      "word": "expensive",
+      "letter": "E",
+      "sourceHeadwordId": "expense-n",
+      "sourceUrl": "https://en.wiktionary.org/wiki/expensive"
+    },
+    {
+      "id": "flexibly-adv",
+      "word": "flexibly",
+      "letter": "F",
+      "sourceHeadwordId": "flexible-adj",
+      "sourceUrl": "https://en.wiktionary.org/wiki/flexibly"
+    },
+    {
+      "id": "hiring-n",
+      "word": "hiring",
+      "letter": "H",
+      "sourceHeadwordId": "hire-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/hiring"
+    },
+    {
+      "id": "knowledgeable-adj",
+      "word": "knowledgeable",
+      "letter": "K",
+      "sourceHeadwordId": "knowledge-n",
+      "sourceUrl": "https://en.wiktionary.org/wiki/knowledgeable"
+    },
+    {
+      "id": "necessarily-adv",
+      "word": "necessarily",
+      "letter": "N",
+      "sourceHeadwordId": "necessary-adj",
+      "sourceUrl": "https://en.wiktionary.org/wiki/necessarily"
+    },
+    {
+      "id": "operational-adj",
+      "word": "operational",
+      "letter": "O",
+      "sourceHeadwordId": "operate-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/operational"
+    },
+    {
+      "id": "operator-n",
+      "word": "operator",
+      "letter": "O",
+      "sourceHeadwordId": "operate-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/operator"
+    },
+    {
+      "id": "purchasing-n",
+      "word": "purchasing",
+      "letter": "P",
+      "sourceHeadwordId": "purchase-nv",
+      "sourceUrl": "https://en.wiktionary.org/wiki/purchasing"
+    },
+    {
+      "id": "recruiter-n",
+      "word": "recruiter",
+      "letter": "R",
+      "sourceHeadwordId": "recruit-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/recruiter"
+    },
+    {
+      "id": "shipping-n",
+      "word": "shipping",
+      "letter": "S",
+      "sourceHeadwordId": "shipment-n",
+      "sourceUrl": "https://en.wiktionary.org/wiki/shipping"
+    },
+    {
+      "id": "submission-n",
+      "word": "submission",
+      "letter": "S",
+      "sourceHeadwordId": "submit-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/submission"
+    },
+    {
+      "id": "temporarily-adv",
+      "word": "temporarily",
+      "letter": "T",
+      "sourceHeadwordId": "temporary-adj",
+      "sourceUrl": "https://en.wiktionary.org/wiki/temporarily"
+    },
+    {
+      "id": "transferable-adj",
+      "word": "transferable",
+      "letter": "T",
+      "sourceHeadwordId": "transfer-nv",
+      "sourceUrl": "https://en.wiktionary.org/wiki/transferable"
+    },
+    {
+      "id": "unbiased-adj",
+      "word": "unbiased",
+      "letter": "U",
+      "sourceHeadwordId": "bias-nv",
+      "sourceUrl": "https://en.wiktionary.org/wiki/unbiased"
+    },
+    {
+      "id": "urgency-n",
+      "word": "urgency",
+      "letter": "U",
+      "sourceHeadwordId": "urgent-adj",
+      "sourceUrl": "https://en.wiktionary.org/wiki/urgency"
+    },
+    {
+      "id": "urgently-adv",
+      "word": "urgently",
+      "letter": "U",
+      "sourceHeadwordId": "urgent-adj",
+      "sourceUrl": "https://en.wiktionary.org/wiki/urgently"
+    },
+    {
+      "id": "vacant-adj",
+      "word": "vacant",
+      "letter": "V",
+      "sourceHeadwordId": "vacancy-n",
+      "sourceUrl": "https://en.wiktionary.org/wiki/vacant"
+    },
+    {
+      "id": "verifiable-adj",
+      "word": "verifiable",
+      "letter": "V",
+      "sourceHeadwordId": "verify-v",
+      "sourceUrl": "https://en.wiktionary.org/wiki/verifiable"
+    }
+  ]
+}

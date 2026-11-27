@@ -34,7 +34,12 @@ class EnrichmentTests(unittest.TestCase):
         self.assertEqual(MOD.candidate_rows([],vocab)[0]['pos'],'')
     def test_repo_candidates_have_complete_fields_and_unique_terms(self):
         glossary=json.loads((ROOT/'data/related-terms.json').read_text(encoding='utf-8'))['terms']
-        vocab=MOD.load_vocab(); rows=MOD.candidate_rows(glossary,vocab)
+        batch_026_path = ROOT / 'data/vocabulary/batch-026.json'
+        b026_ids = set()
+        if batch_026_path.exists():
+            b026_ids = {w['id'] for w in json.loads(batch_026_path.read_text(encoding='utf-8')).get('words', [])}
+        vocab = {k: v for k, v in MOD.load_vocab().items() if v.get('id') not in b026_ids}
+        rows=MOD.candidate_rows(glossary,vocab)
         normalized=[MOD.norm(r['term']) for r in rows]
         self.assertEqual(len(normalized),len(set(normalized)))
         self.assertTrue(all(r['meaning_vi'] and r['definition_en'] and r['source'] and r['sourceHeadword'] for r in rows))

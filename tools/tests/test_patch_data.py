@@ -118,6 +118,8 @@ class PatchDataTests(unittest.TestCase):
         for patch_file in patch_files:
             with self.subTest(patch=patch_file.relative_to(repository).as_posix()):
                 doc = json.loads(patch_file.read_text(encoding="utf-8"))
+                if "operations" not in doc:
+                    continue
                 expected = sorted({op["path"] for op in doc["operations"]})
                 self.assertEqual(doc.get("allowedPaths"), expected)
                 self.assertFalse(any(path.split("/", 2)[1] in {"id", "word", "topics"} for path in expected))

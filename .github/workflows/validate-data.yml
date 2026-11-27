@@ -107,6 +107,8 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_044.py' -v
       - name: Unit tests — related glossary batch 045 (23 Cambridge-sourced existing targets)
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_045.py' -v
+      - name: Unit tests — related glossary batch 046 (65 remediated glossary entries)
+        run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_046.py' -v
       - name: Unit tests — transparent project progress index
         run: python -m unittest discover -s tools/tests -p 'test_project_progress_index.py' -v
       - name: Unit tests — exact canonical glossary enrichment v2.95.35
@@ -302,6 +304,8 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_vocabulary_family_batch_025.py' -v
       - name: Unit tests — vocabulary_batch_012
         run: python -m unittest discover -s tools/tests -p 'test_vocabulary_batch_012.py' -v
+      - name: Unit tests — vocabulary batch 026 (40 canonical Word Family headwords)
+        run: python -m unittest discover -s tools/tests -p 'test_vocabulary_batch_026.py' -v
       - name: Validate CMUdict US IPA backfill
         run: |
           python tools/cmudict_ipa.py --check

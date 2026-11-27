@@ -1584,6 +1584,93 @@
         "business owner",
         "property owner"
       ]
+    },
+    {
+      "id": "operational-adj",
+      "word": "operational",
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˌɑ.pɚ.ˈeɪ.ʃə.nəl/"
+      },
+      "senses": [
+        {
+          "pos": "adj",
+          "cefr_level": "B2",
+          "meaning_vi": "thuộc vận hành",
+          "definition_en": "related to day-to-day business functioning or ready for active service",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [
+        {
+          "word": "operate",
+          "pos": "v",
+          "meaning_vi": "vận hành; hoạt động; điều hành"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The modernized sorting hub becomes fully operational early Monday morning.",
+          "vi": "Trung tâm phân loại hiện đại hóa sẽ chính thức vận hành hoàn chỉnh vào sáng sớm thứ Hai.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "fully operational",
+        "operational costs",
+        "operational efficiency"
+      ]
+    },
+    {
+      "id": "operator-n",
+      "word": "operator",
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense",
+      "phonetic": {
+        "us": "/ˈɑ.pɚ.ˌeɪ.tɚ/"
+      },
+      "senses": [
+        {
+          "pos": "n",
+          "cefr_level": "B1",
+          "meaning_vi": "người vận hành",
+          "definition_en": "a worker or specialist who controls a machine, vehicle, telephone switchboard, or system",
+          "synonyms": [],
+          "antonyms": []
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "FACILITY"
+      ],
+      "word_family": [
+        {
+          "word": "operate",
+          "pos": "v",
+          "meaning_vi": "vận hành; hoạt động; điều hành"
+        }
+      ],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Every crane operator must hold a renewed safety license on site.",
+          "vi": "Mỗi người vận hành cần cẩu phải mang theo chứng chỉ an toàn còn hiệu lực tại công trường.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "machine operator",
+        "system operator",
+        "certified operator"
+      ]
     }
   ]
 }

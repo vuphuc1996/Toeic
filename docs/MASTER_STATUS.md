@@ -1,6 +1,6 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.71
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.72
 
 **Current source candidate:** v2.95.71 — Batch 045 sourced Related Glossary enrichment and an evidence-based weighted progress dashboard. UI is frozen; learner storage and canonical/assessment identities are preserved.
 

@@ -81,9 +81,11 @@ def main() -> int:
       '- All reserve-pending items remain reserve-pending and excluded from Mock; this report never changes source content or eligibility.','',
       '## Inventory', '', '| Library | Part | Questions |','|---|---|---:|']
     for (kind,part),n in sorted(part_counts.items()): lines.append(f'| {kind} | {part} | {n} |')
+    listening_reserve = sum(len(x.get('questions', [])) for x in libs[0][1] if x.get('editorialStatus') == 'reserve-pending-independent-review')
+    reading_reserve = sum(len(x.get('questions', [])) for x in libs[1][1] if x.get('editorialStatus') == 'reserve-pending-independent-review')
     lines += ['',f'- Total questions indexed: **{len(rows)}**',f'- Reserve-pending across both libraries: **{status_counts["reserve"]}**',
-      f'- Listening reserve-pending: **{sum(len(x.get('questions', [])) for x in libs[0][1] if x.get('editorialStatus') == 'reserve-pending-independent-review')}**',
-      f'- Reading reserve-pending: **{sum(len(x.get('questions', [])) for x in libs[1][1] if x.get('editorialStatus') == 'reserve-pending-independent-review')}**',f'- Other editorial states: **{status_counts["non_reserve"]}**',f'- Questions with one or more structural review signals: **{cue_n}/{len(rows)}**','', '## Signal counts','', '| Signal | Questions |','|---|---:|']
+      f'- Listening reserve-pending: **{listening_reserve}**',
+      f'- Reading reserve-pending: **{reading_reserve}**',f'- Other editorial states: **{status_counts["non_reserve"]}**',f'- Questions with one or more structural review signals: **{cue_n}/{len(rows)}**','', '## Signal counts','', '| Signal | Questions |','|---|---:|']
     labels={'long_source_250_plus':'Source text >=250 words','long_question_18_plus':'Question prompt >=18 words','option_length_spread_8_plus':'Choice word-count spread >=8','inference_or_purpose_wording':'Inference / purpose wording','multi_document_language_cue':'Multi-document language cue (e.g. both / first / second document)'}
     for key,label in labels.items(): lines.append(f'| {label} | {flags[key]} |')
     lines += ['', '## Question-level review queue', '', '| Library / Part / ID / Q | Supplied level | Source words | Prompt words | Option spread | Question form | Review signals | Eligibility note |','|---|---|---:|---:|---:|---|---|---|']

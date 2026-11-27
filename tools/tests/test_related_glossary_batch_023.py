@@ -89,7 +89,7 @@ class RelatedGlossaryBatch023Tests(unittest.TestCase):
         self.assertGreaterEqual(len(self.related_doc["terms"]), 396)
 
     def test_canonical_vocabulary_headword_and_relationship_counts_are_preserved(self):
-        self.assertEqual(len(self.words), 1141)
+        self.assertEqual(len(self.words), 1181)
         for word in self.words:
             for sense in word.get("senses", []):
                 for field in ("synonyms", "antonyms"):
