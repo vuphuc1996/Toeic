@@ -89,10 +89,10 @@ class ContinuousIntegrationCoverageTests(unittest.TestCase):
 
     def test_preview_server_serves_only_public_runtime_directories(self):
         server = (ROOT / "server.js").read_text(encoding="utf-8")
-        self.assertIn('express.static(path.join(__dirname, "assets")', server)
-        self.assertIn('express.static(path.join(__dirname, "data")', server)
+        self.assertIn("express.static(path.join(__dirname, 'assets')", server)
+        self.assertIn("express.static(path.join(__dirname, 'data')", server)
         self.assertNotIn("express.static(__dirname", server)
-        self.assertIn('app.get(["/", "/index.html"]', server)
+        self.assertIn("app.get(['/', '/index.html']", server)
         self.assertIn("app.use((req, res) => res.status(404).end())", server)
 
 
