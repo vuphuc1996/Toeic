@@ -19,7 +19,7 @@ class WordFamilyBatch027Tests(unittest.TestCase):
         cls.report = audit_mod.load_source(ROOT)
 
     def test_canonical_headword_and_graph_counts(self):
-        self.assertEqual(self.report["headwords"], 1181)
+        self.assertEqual(self.report["headwords"], 1221)
         self.assertEqual(self.report["headwords_with_family"], 331)
         self.assertEqual(self.report["link_count"], 428)
         self.assertEqual(len(self.report["missing_targets"]), 50)
