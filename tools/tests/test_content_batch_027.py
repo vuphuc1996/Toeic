@@ -28,7 +28,7 @@ class ContentBatch027Tests(unittest.TestCase):
     present.add(unit['id'])
     del unit['transcriptTranslation']
   self.assertEqual(present,remediation_ids)
-  historical=(json.dumps(document,ensure_ascii=False,indent=2)+'\\n').encode('utf-8')
+  historical=json.dumps(document,ensure_ascii=False,indent=2).encode('utf-8') + bytes([10])
   self.assertEqual(self.batch['listening_sha256'],hashlib.sha256(historical).hexdigest())
   self.assertEqual(len(set(self.batch['listening'])),16)
  def test_all_batch_units_exist_and_are_review_gated(self):
