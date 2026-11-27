@@ -190,17 +190,18 @@ def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) 
     manifest = json.loads((root / "data/manifest.json").read_text(encoding="utf-8"))
     id_to_path = {}
     documents = {}
-    batch_026_path = root / "data/vocabulary/batch-026.json"
-    batch_026_ids = set()
-    if batch_026_path.exists():
-        batch_026_data = json.loads(batch_026_path.read_text(encoding="utf-8"))
-        batch_026_ids = {w["id"] for w in batch_026_data.get("words", [])}
+    later_addition_ids: set[str] = set()
+    for batch_name in ("batch-026.json", "batch-028.json"):
+        batch_path = root / "data/vocabulary" / batch_name
+        if batch_path.exists():
+            batch_data = json.loads(batch_path.read_text(encoding="utf-8"))
+            later_addition_ids.update(w["id"] for w in batch_data.get("words", []))
 
     for entry in manifest.get("letters", []):
         path = (root / entry["file"].removeprefix("./")).resolve()
         document = json.loads(path.read_text(encoding="utf-8"))
-        if batch_026_ids:
-            document["words"] = [w for w in document.get("words", []) if w["id"] not in batch_026_ids]
+        if later_addition_ids:
+            document["words"] = [w for w in document.get("words", []) if w["id"] not in later_addition_ids]
         documents[path] = document
         for record in document.get("words", []):
             id_to_path[record["id"]] = path
