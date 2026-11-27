@@ -39,7 +39,12 @@ class RelatedGlossaryBatch028Tests(unittest.TestCase):
    self.assertEqual(row['source'],'canonical-vocabulary-glossary-addition')
    self.assertEqual(row['sourceRelease'],'2.95.25')
  def test_no_relation_or_canonical_vocab_mutations(self):
-  self.assertEqual(len(self.words),1181)
+  baseline=read('tools/baseline-ids.json')
+  current_ids={row['id'] for row in self.words.values()}
+  baseline_ids=set(baseline['ids'])
+  self.assertEqual(len(baseline_ids),baseline['count'])
+  self.assertTrue(baseline_ids.issubset(current_ids),'A protected canonical vocabulary ID is missing')
+  self.assertEqual(len(current_ids),len(self.words))
   self.assertGreaterEqual(len(self.related),519)
   self.assertEqual(len({r['term'].casefold() for r in self.related}),len(self.related))
 if __name__=='__main__': unittest.main()
