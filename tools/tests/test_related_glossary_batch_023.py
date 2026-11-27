@@ -88,8 +88,13 @@ class RelatedGlossaryBatch023Tests(unittest.TestCase):
         self.assertEqual(len(keys), len(set(keys)))
         self.assertGreaterEqual(len(self.related_doc["terms"]), 396)
 
-    def test_canonical_vocabulary_headword_and_relationship_counts_are_preserved(self):
-        self.assertEqual(len(self.words), 1181)
+    def test_canonical_vocabulary_baseline_ids_and_relationship_fields_are_preserved(self):
+        baseline = read_json("tools/baseline-ids.json")
+        baseline_ids = set(baseline["ids"])
+        current_ids = {word["id"] for word in self.words}
+        self.assertEqual(len(baseline_ids), baseline["count"])
+        self.assertTrue(baseline_ids.issubset(current_ids), "A protected baseline headword ID is missing")
+        self.assertEqual(len(current_ids), len(self.words))
         for word in self.words:
             for sense in word.get("senses", []):
                 for field in ("synonyms", "antonyms"):
