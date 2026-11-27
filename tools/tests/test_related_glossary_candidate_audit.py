@@ -6,7 +6,7 @@ SPEC=importlib.util.spec_from_file_location('glossary_candidate_audit',ROOT/'too
 MODULE=importlib.util.module_from_spec(SPEC); SPEC.loader.exec_module(MODULE)
 class RelatedGlossaryCandidateAuditTests(unittest.TestCase):
  def test_counts_reconcile(self):
-  d=MODULE.collect(); self.assertEqual(d['vocabulary_count'],1181); self.assertEqual(d['glossary_count'],567); self.assertEqual(d['referenced_distinct'],804)
+  d=MODULE.collect(); manifest=MODULE.read('data/manifest.json'); self.assertEqual(d['vocabulary_count'],manifest['totalWords']); self.assertEqual(d['glossary_count'],567); self.assertEqual(d['referenced_distinct'],804)
   self.assertEqual(d['covered']+d['missing_distinct'],d['referenced_distinct']); self.assertEqual(d['missing_occurrences'],249); self.assertEqual(d['missing_distinct'],248); self.assertEqual(d['canonical_candidates'],2)
  def test_missing_candidates_ranked_unique_and_tiered(self):
   d=MODULE.collect(); terms=[x['term'] for x in d['missing']]
