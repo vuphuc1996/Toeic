@@ -42,6 +42,40 @@ def composite_sha(paths):
     return digest.hexdigest()
 
 
+def composite_sha_reversing_listening_translations(paths):
+    """Reconstruct the v2.95.44 protected-bank hash excluding only eight later transcript additions."""
+    added_ids = {
+        "batch026-part3-vendor-call",
+        "batch026-part3-training-room",
+        "batch026-part3-invoice-correction",
+        "batch026-part3-access-card",
+        "batch026-part4-building-notice",
+        "batch026-part4-travel-update",
+        "batch026-part4-product-launch",
+        "batch026-part4-policy-reminder",
+    }
+    digest = hashlib.sha256()
+    seen = set()
+    for path in sorted(paths):
+        data = path.read_bytes()
+        if path.name == "listening-library.json":
+            document = json.loads(data.decode("utf-8"))
+            for unit in document["listening"]:
+                if unit.get("id") in added_ids:
+                    if not unit.get("transcriptTranslation", "").strip():
+                        raise AssertionError(f"Missing v2.95.76 transcript translation: {unit.get('id')}")
+                    seen.add(unit["id"])
+                    del unit["transcriptTranslation"]
+            if seen != added_ids:
+                raise AssertionError(f"Listening remediation IDs differ: {sorted(seen ^ added_ids)}")
+            data = (json.dumps(document, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+        digest.update(path.relative_to(ROOT).as_posix().encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(hashlib.sha256(data).digest())
+        digest.update(b"\n")
+    return digest.hexdigest()
+
+
 class RelatedGlossaryBatch037Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -118,7 +152,7 @@ class RelatedGlossaryBatch037Tests(unittest.TestCase):
             self.assertEqual(row["pos"], pos, term)
             self.assertIn(anchor, self.targets[term], term)
 
-    def test_canonical_vocabulary_and_learning_banks_match_protected_hashes(self):
+    def test_canonical_vocabulary_and_learning_banks_match_hashes_outside_eight_listening_translations(self):
         vocabulary = list((ROOT / "data/vocabulary").glob("[A-Z].json"))
         protected = [
             ROOT / "data/grammar/lessons.json",
@@ -127,7 +161,7 @@ class RelatedGlossaryBatch037Tests(unittest.TestCase):
             ROOT / "data/practice/part5-sentence-completion.json",
         ]
         self.assertEqual(composite_sha_reversing_vocabulary_patch(vocabulary, ROOT, "patches/v2.95.54/independent-audit-stage-1-data.json"), self.ledger["canonicalVocabularySha256"])
-        self.assertEqual(composite_sha(protected), self.ledger["protectedLearningBankSha256"])
+        self.assertEqual(composite_sha_reversing_listening_translations(protected), self.ledger["protectedLearningBankSha256"])
 
     def test_glossary_has_no_duplicate_casefolded_identities(self):
         keys = [row["term"].strip().casefold() for row in self.glossary["terms"]]
