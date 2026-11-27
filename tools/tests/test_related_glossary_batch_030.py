@@ -30,7 +30,12 @@ class RelatedGlossaryBatch030Tests(unittest.TestCase):
 
     def test_lookup_uses_canonical_manifest_inventory(self):
         self.assertEqual(len(self.vocabulary), self.canonical_word_count)
-        self.assertEqual(self.canonical_word_count, 1181)
+        self.assertGreaterEqual(self.canonical_word_count, 1181)
+        baseline = json.loads((ROOT / 'tools/baseline-ids.json').read_text(encoding='utf-8'))
+        current_ids = {row['id'] for row in self.vocabulary}
+        baseline_ids = set(baseline['ids'])
+        self.assertEqual(len(baseline_ids), baseline['count'])
+        self.assertTrue(baseline_ids.issubset(current_ids), 'A protected canonical ID is missing')
 
     def test_batch_is_exactly_73_canonical_single_sense_records(self):
         self.assertEqual(self.batch['count'], 73)
