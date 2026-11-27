@@ -64,7 +64,12 @@ class RelatedGlossaryBatch027Tests(unittest.TestCase):
     def test_relationship_graph_is_unchanged_and_terms_are_referenced(self):
         for row in self.batch["records"]:
             self.assertEqual(self.frequency[row["term"].casefold()], 2, row["term"])
-        self.assertEqual(len(self.words), 1181)
+        baseline = read_json("tools/baseline-ids.json")
+        baseline_ids = set(baseline["ids"])
+        current_ids = {word["id"] for word in self.words}
+        self.assertEqual(len(baseline_ids), baseline["count"])
+        self.assertTrue(baseline_ids.issubset(current_ids), "A protected canonical vocabulary ID is missing")
+        self.assertEqual(len(current_ids), len(self.words))
 
     def test_glossary_and_exact_reference_coverage(self):
         keys = [row["term"].casefold() for row in self.related["terms"]]
