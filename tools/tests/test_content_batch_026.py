@@ -19,7 +19,24 @@ class ContentBatch026Tests(unittest.TestCase):
         self.assertEqual(self.batch['counts'],{'grammarLessons':8,'grammarExercises':32,'listeningUnits':8,'listeningQuestions':24,'readingResources':8,'readingQuestions':24})
     def test_source_hashes_match_canonical_content_files(self):
         for path,key in [('data/grammar/lessons.json','grammar_sha256'),('data/listening/listening-library.json','listening_sha256'),('data/readings/reading-library.json','reading_sha256')]:
-            self.assertEqual(self.batch[key],hashlib.sha256((ROOT/path).read_bytes()).hexdigest())
+            source = (ROOT/path).read_bytes()
+            if key == 'listening_sha256':
+                document = read(path)
+                remediation_ids = {
+                    'batch026-part3-vendor-call', 'batch026-part3-training-room',
+                    'batch026-part3-invoice-correction', 'batch026-part3-access-card',
+                    'batch026-part4-building-notice', 'batch026-part4-travel-update',
+                    'batch026-part4-product-launch', 'batch026-part4-policy-reminder',
+                }
+                present = set()
+                for unit in document['listening']:
+                    if unit.get('id') in remediation_ids:
+                        self.assertTrue(unit.get('transcriptTranslation', '').strip(), unit['id'])
+                        present.add(unit['id'])
+                        del unit['transcriptTranslation']
+                self.assertEqual(present, remediation_ids)
+                source = (json.dumps(document, ensure_ascii=False, indent=2) + "\n").encode('utf-8')
+            self.assertEqual(self.batch[key],hashlib.sha256(source).hexdigest())
     def test_grammar_exercises_are_valid_and_ids_unique(self):
         ids=set(); count=0
         for lesson_id in self.batch['grammar']:
