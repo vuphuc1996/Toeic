@@ -65,8 +65,13 @@ class UsIpaBackfillBatch024Tests(unittest.TestCase):
             self.assertEqual(source["url"], ledger[rid]["sourceUrl"])
 
     def test_canonical_inventory_identity_is_preserved(self):
-        self.assertEqual(len(self.records), 1181)
-        self.assertEqual(len(self.ids), 1181)
+        baseline = read_json("tools/baseline-ids.json")
+        baseline_ids = set(baseline["ids"])
+        self.assertEqual(len(baseline_ids), baseline["count"])
+        self.assertTrue(baseline_ids.issubset(self.ids), "A protected canonical ID from the release baseline is missing")
+        self.assertEqual(self.ids, set(self.records))
+        batch_028_ids = {row["id"] for row in read_json("data/vocabulary/batch-028.json")["words"]}
+        self.assertTrue(batch_028_ids.issubset(self.ids), "Batch 028 additions must be present without replacing historical IDs")
 
     def test_ci_registers_this_batch_test(self):
         workflow = (ROOT / ".github/workflows/validate-data.yml").read_text(encoding="utf-8")
