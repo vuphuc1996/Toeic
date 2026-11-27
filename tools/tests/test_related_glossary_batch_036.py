@@ -51,11 +51,11 @@ def composite_sha_reversing_listening_translations(paths):
                     del unit["transcriptTranslation"]
             if seen != added_ids:
                 raise AssertionError(f"Listening remediation IDs differ: {sorted(seen ^ added_ids)}")
-            data = (json.dumps(document, ensure_ascii=False, indent=2) + "\\n").encode("utf-8")
+            data = (json.dumps(document, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
         h.update(path.relative_to(ROOT).as_posix().encode())
-        h.update(b"\\0")
+        h.update(b"\0")
         h.update(hashlib.sha256(data).digest())
-        h.update(b"\\n")
+        h.update(b"\n")
     return h.hexdigest()
 
 
