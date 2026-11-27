@@ -1,7 +1,7 @@
 # Change Manifest — TOEIC Dictionary v2.95.76
 
-**Base branch:** `candidate`  
-**Base commit:** `d5648916cf62b3f07b1ffb9b98425c48ff3e63fe`  
+**Base branch:** `candidate`
+**Base commit:** `d5648916cf62b3f07b1ffb9b98425c48ff3e63fe`
 **Target source version:** `2.95.76`
 
 ## Content changes

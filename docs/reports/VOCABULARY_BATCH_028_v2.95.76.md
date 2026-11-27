@@ -1,6 +1,6 @@
 # Vocabulary Batch 028 — v2.95.76
 
-**Baseline:** v2.95.75 · commit `d5648916cf62b3f07b1ffb9b98425c48ff3e63fe`  
+**Baseline:** v2.95.75 · commit `d5648916cf62b3f07b1ffb9b98425c48ff3e63fe`
 **Delta:** +40 canonical headwords · 0 removed IDs · 0 changed existing headwords or senses.
 
 ## Scope

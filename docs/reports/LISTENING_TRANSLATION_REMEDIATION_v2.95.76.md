@@ -1,6 +1,6 @@
 # Listening Translation Remediation — v2.95.76
 
-**Baseline:** v2.95.75 · commit `d5648916cf62b3f07b1ffb9b98425c48ff3e63fe`  
+**Baseline:** v2.95.75 · commit `d5648916cf62b3f07b1ffb9b98425c48ff3e63fe`
 **Change:** added Vietnamese transcript translations to 8 existing Listening units (4 Part 3 conversations and 4 Part 4 talks).
 
 ## Remediated resources
