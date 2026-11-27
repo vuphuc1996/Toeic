@@ -24,9 +24,12 @@ class VocabularyBatch026Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.manifest = read_json("data/manifest.json")
+        cls.pkg = read_json("package.json")
         cls.batch = read_json("data/vocabulary/batch-026.json")
         cls.cmu_ledger = read_json("tools/vocabulary-batch-026-cmudict-v2.95.72.json")
         cls.patch = read_json("patches/v2.95.72/batch-001-word-family-expansion.json")
+        cls.patch_027 = read_json("patches/v2.95.73/batch-001-word-family-reciprocity.json")
+        cls.v72_audit = read_json("docs/reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.72.json")
         cls.records = {}
         cls.by_word = {}
         for item in cls.manifest["letters"]:
@@ -40,11 +43,17 @@ class VocabularyBatch026Tests(unittest.TestCase):
         self.assertEqual(self.batch["version"], "2.95.72")
         self.assertEqual(self.batch["count"], 40)
         self.assertEqual(len(self.batch["words"]), 40)
-        self.assertEqual(self.manifest["version"], "2.95.73")
+        self.assertEqual(self.patch["batch"], "026")
+        self.assertEqual(self.patch["baseDataVersion"], "2.95.71")
+        self.assertEqual(self.patch["targetDataVersion"], "2.95.72")
+        self.assertEqual(self.manifest["version"], self.pkg["version"])
+        version = self.manifest["version"]
+        for marker_rel in ("index.html", "assets/js/app.js", "sw.js", "docs/versions/CURRENT_VERSION.md"):
+            self.assertIn(version, (ROOT / marker_rel).read_text(encoding="utf-8"), marker_rel)
         self.assertEqual(self.manifest["totalWords"], 1181)
-        self.assertEqual(self.manifest["previousReleaseTotalWords"], 1181)
+        self.assertEqual(self.manifest["previousReleaseTotalWords"], 1141)
         batch_ids = [w["id"] for w in self.batch["words"]]
-        self.assertEqual(self.manifest["releaseAdditionIds"], [])
+        self.assertEqual(self.manifest["releaseAdditionIds"], batch_ids)
         self.assertEqual(self.patch["count"], 40)
         self.assertEqual([r["id"] for r in self.patch["records"]], batch_ids)
         profile_1141 = next(p for p in self.manifest["releaseRepairProfiles"] if p["previousTotalWords"] == 1141)
@@ -74,27 +83,52 @@ class VocabularyBatch026Tests(unittest.TestCase):
             self.assertEqual(computed, row["phoneticUs"], rid)
             self.assertEqual(self.records[rid]["phonetic"]["us"], computed, rid)
 
-    def test_word_family_graph_improvement_and_zero_new_mismatches(self):
+    def _reconstruct_v29572_audit(self):
         from glossary_test_helpers import reverse_batch_027_word_family
         documents = {
             (ROOT / item["file"].removeprefix("./")).resolve(): read_json(item["file"].removeprefix("./"))
             for item in self.manifest["letters"]
         }
-        reverse_batch_027_word_family(documents, ROOT)
-        report = wf_mod.audit_data([(path.name, doc) for path, doc in documents.items()])
+        restored = reverse_batch_027_word_family(documents, ROOT)
+        self.assertEqual(len(restored), 12)
+        return wf_mod.audit_data([(path.name, doc) for path, doc in documents.items()])
+
+    def test_word_family_graph_improvement_and_zero_new_mismatches(self):
+        report = self._reconstruct_v29572_audit()
         self.assertEqual(report["headwords"], 1181)
-        self.assertEqual(report["headwords_with_family"], 331)
-        self.assertEqual(report["link_count"], 428)
+        self.assertEqual(report["headwords_with_family"], 322)
+        self.assertEqual(report["link_count"], 420)
         self.assertEqual(len(report["missing_targets"]), 50)
-        self.assertEqual(len(report["pos_mismatches"]), 0)
-        self.assertEqual(len(report["meaning_mismatches"]), 70)
-        self.assertEqual(len(report["nonreciprocal_links"]), 0)
+        self.assertEqual(len(report["pos_mismatches"]), 1)
+        self.assertEqual(len(report["meaning_mismatches"]), 72)
+        self.assertEqual(len(report["nonreciprocal_links"]), 10)
         self.assertEqual(len(report["duplicate_links"]), 0)
         self.assertEqual(len(report["duplicate_headwords"]), 0)
-        self.assertEqual(len(report.get("self_references", [])), 0)
         self.assertEqual(len(report["malformed"]), 0)
+        if "self_references" in report:
+            removed_pairs = {(item["owner"], item["target"]) for item in self.patch_027["removedSelfLinks"]}
+            reconstructed_self = {(item["source"], item["target"]) for item in report["self_references"]}
+            self.assertEqual(len(report["self_references"]), len(self.patch_027["removedSelfLinks"]))
+            self.assertEqual(reconstructed_self, removed_pairs)
         for excluded in ("convention", "purchaser", "employ"):
             self.assertNotIn(excluded, self.by_word)
+
+    def test_reconstructed_graph_matches_historical_v2_95_72_audit_json(self):
+        report = self._reconstruct_v29572_audit()
+        self.assertEqual(self.v72_audit["version"], "2.95.72")
+        for key in (
+            "headwords",
+            "duplicate_headwords",
+            "link_count",
+            "headwords_with_family",
+            "missing_targets",
+            "pos_mismatches",
+            "meaning_mismatches",
+            "nonreciprocal_links",
+            "duplicate_links",
+            "malformed",
+        ):
+            self.assertEqual(report[key], self.v72_audit[key], f"Mismatch in historical .72 field {key}")
 
     def test_ci_registers_this_batch_test(self):
         workflow = (ROOT / ".github/workflows/validate-data.yml").read_text(encoding="utf-8")

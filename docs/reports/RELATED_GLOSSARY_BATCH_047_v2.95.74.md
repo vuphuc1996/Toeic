@@ -2,7 +2,7 @@
 
 - Release: **v2.95.74**
 - Predecessor Release: **v2.95.72**
-- Base File SHA-256: 
+- Base File SHA-256: Not recorded in this ledger.
 - Entries Remediated: **52**
 - Source Method: Wiktionary entry excerpts reviewed on 2026-11-27. Definitions are concise paraphrases matching existing Vietnamese meanings and relation anchors. Independent editorial review remains pending.
 

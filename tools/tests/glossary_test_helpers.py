@@ -150,21 +150,33 @@ def restore_batch_039(glossary: dict, root: Path) -> dict:
     return restored
 
 
-def reverse_batch_027_word_family(documents: dict[Path, dict], root: Path) -> None:
+def reverse_batch_027_word_family(
+    documents: dict[Path, dict],
+    root: Path,
+    restored_ids: set[str] | None = None,
+) -> set[str]:
     """Restore the 12 word_family arrays edited by Batch 027 (v2.95.74) in memory."""
     ledger_path = root / "patches/v2.95.74/word-family-audit-ledger.json"
     if not ledger_path.exists():
-        return
+        return set()
+    seen = restored_ids if restored_ids is not None else set()
+    batch_restored: set[str] = set()
     ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
     for entry in ledger.get("reconciliationRecords", []):
+        entry_id = entry["id"]
+        if entry_id in seen:
+            raise AssertionError(f"Duplicate Word Family reversal detected for canonical ID: {entry_id}")
         path = (root / entry["file"]).resolve()
         document = documents.get(path)
         if document is None:
             raise AssertionError(f"Word Family Batch 027 ledger references untracked file: {entry['file']}")
-        record = next((row for row in document.get("words", []) if row.get("id") == entry["id"]), None)
+        record = next((row for row in document.get("words", []) if row.get("id") == entry_id), None)
         if record is None:
-            raise AssertionError(f"Word Family Batch 027 ledger references missing canonical ID: {entry['id']}")
+            raise AssertionError(f"Word Family Batch 027 ledger references missing canonical ID: {entry_id}")
         record["word_family"] = copy.deepcopy(entry.get("before", []))
+        seen.add(entry_id)
+        batch_restored.add(entry_id)
+    return batch_restored
 
 
 def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) -> str:
@@ -193,58 +205,79 @@ def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) 
         for record in document.get("words", []):
             id_to_path[record["id"]] = path
     # Restore later canonical vocabulary changes in reverse chronological order:
-    # Batch 027 (v2.95.74) word_family reconciliations, then Batch 025 (v2.95.67).
-    reverse_batch_027_word_family(documents, root)
+    # Batch 027 (v2.95.74) whole-array word_family reconciliations, then Batch 025 (v2.95.67).
+    restored_word_family_ids: set[str] = set()
+    restored_027_ids = reverse_batch_027_word_family(documents, root, restored_ids=restored_word_family_ids)
+    # Prove that v2.95.74 reconciliationRecords cover the exact 12 owner IDs from the
+    # v2.95.73 reciprocity patch so those 12 whole arrays are never reversed twice.
+    family_repair_path = root / "patches/v2.95.73/batch-001-word-family-reciprocity.json"
+    if family_repair_path.exists():
+        family_repair = json.loads(family_repair_path.read_text(encoding="utf-8"))
+        patch_027_owner_ids = (
+            {c["ownerId"] for c in family_repair.get("addedLinks", [])}
+            | {c["ownerId"] for c in family_repair.get("removedSelfLinks", [])}
+        )
+        if restored_027_ids:
+            if patch_027_owner_ids != restored_027_ids:
+                raise AssertionError(
+                    f"v2.95.74 ledger IDs ({len(restored_027_ids)}) do not match v2.95.73 patch owner IDs ({len(patch_027_owner_ids)})"
+                )
+        else:
+            # Fallback only if the v2.95.74 whole-array ledger is absent.
+            for change in family_repair.get("addedLinks", []):
+                owner_id = change["ownerId"]
+                if owner_id in restored_word_family_ids:
+                    raise AssertionError(f"Duplicate Word Family reversal detected for canonical ID: {owner_id}")
+                owner_path = id_to_path.get(owner_id)
+                if owner_path is None:
+                    raise AssertionError(f"Word Family repair references missing owner ID: {owner_id}")
+                owner = next((row for row in documents[owner_path]["words"] if row.get("id") == owner_id), None)
+                if owner is None:
+                    raise AssertionError(f"Word Family repair owner not found in reconstructed data: {owner_id}")
+                family = owner.get("word_family") or []
+                matches = [i for i, row in enumerate(family)
+                           if str(row.get("word", "")).casefold() == change["target"].casefold()]
+                if len(matches) != 1:
+                    raise AssertionError(
+                        f"Expected one current Batch 027 link {change['owner']} -> {change['target']}; found {len(matches)}"
+                    )
+                family.pop(matches[0])
+                owner["word_family"] = family
+                restored_word_family_ids.add(owner_id)
+            for change in family_repair.get("removedSelfLinks", []):
+                owner_id = change["ownerId"]
+                if owner_id in restored_word_family_ids:
+                    raise AssertionError(f"Duplicate Word Family reversal detected for canonical ID: {owner_id}")
+                owner_path = id_to_path.get(owner_id)
+                if owner_path is None:
+                    raise AssertionError(f"Word Family self-link repair references missing owner ID: {owner_id}")
+                owner = next((row for row in documents[owner_path]["words"] if row.get("id") == owner_id), None)
+                if owner is None:
+                    raise AssertionError(f"Word Family self-link owner not found in reconstructed data: {owner_id}")
+                family = owner.setdefault("word_family", [])
+                index = change.get("index", len(family))
+                if not isinstance(index, int) or index < 0 or index > len(family):
+                    raise AssertionError(f"Invalid original Word Family index for {owner_id}: {index}")
+                family.insert(index, {
+                    "word": change["target"], "pos": change["pos"], "meaning_vi": change["meaning_vi"]
+                })
+                restored_word_family_ids.add(owner_id)
     later_family_ledger = root / "data/vocabulary/batch-025.json"
     if later_family_ledger.exists():
         family_batch = json.loads(later_family_ledger.read_text(encoding="utf-8"))
         for entry in family_batch.get("records", []):
+            entry_id = entry["id"]
+            if entry_id in restored_word_family_ids:
+                raise AssertionError(f"Duplicate Word Family reversal detected for canonical ID: {entry_id}")
             path = (root / entry["file"]).resolve()
             document = documents.get(path)
             if document is None:
                 raise AssertionError(f"Word Family batch references an untracked vocabulary file: {entry['file']}")
-            record = next((row for row in document.get("words", []) if row.get("id") == entry["id"]), None)
+            record = next((row for row in document.get("words", []) if row.get("id") == entry_id), None)
             if record is None:
-                raise AssertionError(f"Word Family batch references missing canonical ID: {entry['id']}")
+                raise AssertionError(f"Word Family batch references missing canonical ID: {entry_id}")
             record["word_family"] = copy.deepcopy(entry.get("before", []))
-    # Reverse later reciprocal Word Family-only repairs before reconstructing
-    # historical glossary snapshots. These changes are intentionally present in the
-    # current canonical data, but must not contaminate an older batch's frozen hash.
-    family_repair_path = root / "patches/v2.95.73/batch-001-word-family-reciprocity.json"
-    if family_repair_path.exists():
-        family_repair = json.loads(family_repair_path.read_text(encoding="utf-8"))
-        for change in family_repair.get("addedLinks", []):
-            owner_id = change["ownerId"]
-            owner_path = id_to_path.get(owner_id)
-            if owner_path is None:
-                raise AssertionError(f"Word Family repair references missing owner ID: {owner_id}")
-            owner = next((row for row in documents[owner_path]["words"] if row.get("id") == owner_id), None)
-            if owner is None:
-                raise AssertionError(f"Word Family repair owner not found in reconstructed data: {owner_id}")
-            family = owner.get("word_family") or []
-            matches = [i for i, row in enumerate(family)
-                       if str(row.get("word", "")).casefold() == change["target"].casefold()]
-            if len(matches) != 1:
-                raise AssertionError(
-                    f"Expected one current Batch 027 link {change['owner']} -> {change['target']}; found {len(matches)}"
-                )
-            family.pop(matches[0])
-            owner["word_family"] = family
-        for change in family_repair.get("removedSelfLinks", []):
-            owner_id = change["ownerId"]
-            owner_path = id_to_path.get(owner_id)
-            if owner_path is None:
-                raise AssertionError(f"Word Family self-link repair references missing owner ID: {owner_id}")
-            owner = next((row for row in documents[owner_path]["words"] if row.get("id") == owner_id), None)
-            if owner is None:
-                raise AssertionError(f"Word Family self-link owner not found in reconstructed data: {owner_id}")
-            family = owner.setdefault("word_family", [])
-            index = change.get("index", len(family))
-            if not isinstance(index, int) or index < 0 or index > len(family):
-                raise AssertionError(f"Invalid original Word Family index for {owner_id}: {index}")
-            family.insert(index, {
-                "word": change["target"], "pos": change["pos"], "meaning_vi": change["meaning_vi"]
-            })
+            restored_word_family_ids.add(entry_id)
     for operation in patch.get("operations", []):
         path = id_to_path[operation["id"]]
         record = next(row for row in documents[path]["words"] if row["id"] == operation["id"])

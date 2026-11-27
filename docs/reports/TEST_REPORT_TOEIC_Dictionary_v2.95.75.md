@@ -16,8 +16,9 @@
 ## Sharded Python test suite
 
 - Runner: `python3 tools/run-python-tests-sharded.py --timeout-per-module 180`
-- Modules executed: **113 / 113** (`112` PASS, `1` PASS WITH SKIPS, `0` FAIL, `0` TIMEOUT, `0` INCOMPLETE, `0` ERROR, `0` NOT RUN)
-- Test cases: **828** collected (`827` passed, `0` failed, `1` skipped, `0` errored, `0` unapproved skips)
+- Full discovery check: `python3 -m unittest discover -s tools/tests -v` (`838` tests, `OK (skipped=1)`)
+- Modules executed: **114 / 114** (`113` PASS, `1` PASS WITH SKIPS, `0` FAIL, `0` TIMEOUT, `0` INCOMPLETE, `0` ERROR, `0` NOT RUN)
+- Test cases: **838** collected (`837` passed, `0` failed, `1` skipped, `0` errored, `0` unapproved skips, `0` deselected)
 - Accepted skip detail: `tools/tests/test_patch_data.py::PatchDataTests.test_repository_gitignore_excludes_audit_logs` — `source archive has no Git metadata; gitignore assertion requires a clone` (approved in `tools/test-inventory-policy.json`).
 - Acceptance wrapper (`python3 tools/run-release-acceptance.py`): **12/12** checks PASS.
 
@@ -25,6 +26,7 @@
 
 | Check | Result |
 |---|---|
+| `git diff --check` & `tools/audit-git-commit-readiness.py --require-clean` | PASS (verified in temporary clone of `candidate` `c7a2f445` with Phase A fixes committed; `0` errors, `0` warnings) |
 | `tools/validate-data.py` | PASS; `1,181` records; IDs `+0/−0`; `0` errors, `0` legacy warnings |
 | `tools/validate-learning-content.py` | PASS; `295` Listening + `287` Reading + `169` Grammar + `80` Separate Part 5 (`0` errors/warnings) |
 | `tools/validate-part1-photo-assets.py` | PASS; `9/9` local Part 1 photos valid; `0` warnings |
@@ -48,12 +50,13 @@
 3. **Learner Evidence & Storage Hardening (Workstream D):** Fixed `completedMocks.length > 0` in `robot-learning-insights.js`, added finite-number/bounds/deduplication hardening across `robot-learning-insights.js`, `mock-score-readiness.js`, and `learning-outcome-progress.js`, and wrapped `app.js` practice/rubric writes in `try/catch` error-toast recovery.
 4. **Independent Review Queue & Full-Mock Readiness Consolidation (Workstreams E & F):** Enriched all `360` reserve items with structured editorial decision metadata and documented exact Full (`200Q`), Half (`100Q`), Quick (`25Q`), and Part readiness including the Part 1 (`8+1=9/12`) Listening bottleneck.
 5. **Release Shell, Test & CI Coherence (Workstream G):** Synchronized `mock-engine.js` `__release` keys, updated `.github/workflows/validate-data.yml`, updated `test_project_progress_index.py` / `test_sync_version.py` / `test_release_shell_coherence.py`, and produced all `v2.95.75` audit & release documentation.
+6. **Phase A Historical Test Reconciliation & CI Recovery (post-`c7a2f445`):** Removed trailing whitespace on line 5 of `docs/reports/RELATED_GLOSSARY_BATCH_047_v2.95.74.md` (`- Base File SHA-256: Not recorded in this ledger.`), reconciled `test_vocabulary_batch_026.py` and `test_vocabulary_batch_027.py` against `v2.95.75` markers and `v2.95.72`/`v2.95.73` historical Word Family snapshots, and eliminated Batch 027 double-reversal in `glossary_test_helpers.py` with explicit 12-ID coverage verification.
 
 ## Acceptance boundary — Source Release Accepted vs Production Deployment Accepted
 
-- **Source Release Accepted (local workspace):** Verified across all `113` Python test modules, `45` Node regression scripts, data/content/asset/design/version/repository validators, build/lint checks, and clean ZIP packaging.
+- **Source Release Accepted (local workspace):** Verified across all `114` Python test modules (`838` cases: `837` passed, `1` accepted Git-metadata skip), `45` Node regression scripts, data/content/asset/design/version/repository validators, build/lint checks, and clean ZIP packaging.
 - **Production Deployment Accepted (UNVERIFIED / NOT CLAIMED):**
   - Git push to `candidate` was not executed (`main` remains untouched).
-  - Hosted GitHub Actions workflow execution was not triggered or observed.
+  - Hosted GitHub Actions workflow execution on the Phase A fixes was not triggered or observed (prior `c7a2f445` Validate run failed preflight).
   - Live GitHub Pages deployment, installed-PWA cache/update propagation, and physical iOS/iPadOS/Android device QA were not performed.
   - Zero ETS scaled score conversion and zero CEFR/ETS certification claims are made.

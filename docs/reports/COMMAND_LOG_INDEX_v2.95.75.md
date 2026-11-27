@@ -19,8 +19,10 @@
 | `python3 tools/audit-design-tokens.py` & `sync-design-profile.py --check` | PASS; `0` new violations (`2,773` legacy warnings), `54` tokens / `406` typography groups synced | Test report |
 | `python3 tools/cmudict_ipa.py --check` & `python3 -m compileall -q tools` | PASS; `334` source-linked CMUdict records, all `tools/` bytecode clean | Test report |
 | `node --check server.js`, `sw.js`, `assets/js/*.js` + `tools/tests/*.mjs` | PASS; all JS syntax valid, **45/45** Node regression scripts PASS (`NODE_SUITE_PASS`) | Test report |
-| `python3 tools/run-python-tests-sharded.py --timeout-per-module 180` | PASS WITH SKIPS; **113/113** modules (`112` PASS, `1` PASS WITH SKIPS), **828** cases (`827` passed, `0` failed, `1` accepted Git-metadata skip) | `logs/test-shards/PYTHON_TEST_SHARDS_v2.95.75.md/.json` & Test report |
+| `python3 tools/run-python-tests-sharded.py --timeout-per-module 180` | PASS WITH SKIPS; **114/114** modules (`113` PASS, `1` PASS WITH SKIPS), **838** cases (`837` passed, `0` failed, `1` accepted Git-metadata skip) | `logs/test-shards/PYTHON_TEST_SHARDS_v2.95.75.md/.json` & Test report |
+| `python3 -m unittest discover -s tools/tests -v` | PASS WITH SKIPS; `Ran 838 tests` (`OK (skipped=1)`) | Test report |
 | `python3 tools/run-release-acceptance.py` | PASS; **12/12** acceptance checks PASS | `logs/release-acceptance/RELEASE_ACCEPTANCE_v2.95.75.md/.json` |
+| `git diff --check HEAD^ HEAD` & `python3 tools/audit-git-commit-readiness.py --require-clean` | PASS; verified in clean clone of `candidate` `c7a2f445` with Phase A fixes committed (`0` errors, `0` warnings) | Phase A CI recovery |
 | Clean source packaging & `compile_applet` + `lint_applet` | PASS; `/tmp/TOEIC_Dictionary_v2.95.75_FullSource.zip` CRC & clean extraction verified; build & lint PASS | `PACKAGE_VERIFICATION_v2.95.75.md` |
 
 No hosted GitHub Actions run, remote `candidate` push, live GitHub Pages deployment, installed-PWA cache/device verification, or `main` modification was performed.
