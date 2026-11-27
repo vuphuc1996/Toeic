@@ -1,0 +1,1463 @@
+{
+  "schemaVersion": 1,
+  "batch": "028",
+  "version": "2.95.76",
+  "focus": "TOEIC workplace Contracts / Legal Administration and Facilities / Property Maintenance vocabulary",
+  "count": 40,
+  "editorialStatus": "original editorial draft; independent lexical review pending; CEFR levels are editorial estimates by sense",
+  "sourcePolicy": "Definitions, Vietnamese meanings, TOEIC workplace examples and collocations are project-authored editorial content. No US IPA is supplied in this batch because pronunciation entries were not independently source-verified. No Word Family links are added without an exact, sense-matched canonical relationship. CEFR labels are editorial estimates, not official alignment.",
+  "sources": [],
+  "ipaSummary": {
+    "populated": 0,
+    "leftBlank": 40,
+    "blankWords": [
+      "asbestos",
+      "access badge",
+      "access panel",
+      "air duct",
+      "air quality",
+      "boiler",
+      "boiler room",
+      "building code",
+      "building permit",
+      "building inspection",
+      "building maintenance",
+      "building manager",
+      "drainage",
+      "ductwork",
+      "drywall",
+      "deficiency",
+      "groundskeeping",
+      "gutter",
+      "handrail",
+      "insulation",
+      "installation",
+      "inspection report",
+      "maintenance log",
+      "maintenance schedule",
+      "masonry",
+      "mold",
+      "moisture",
+      "non-disclosure agreement",
+      "notice to vacate",
+      "occupancy permit",
+      "roof leak",
+      "roof inspection",
+      "repair estimate",
+      "safety inspection",
+      "service charge",
+      "service request",
+      "site inspection",
+      "smoke detector",
+      "sprinkler",
+      "structural damage"
+    ]
+  },
+  "reciprocalLinksSummary": {
+    "addedReciprocalLinks": 0,
+    "modifiedExistingRecords": 0,
+    "note": "All 40 new records have empty word_family arrays. No relationship was inferred from topic similarity or surface spelling."
+  },
+  "words": [
+    {
+      "id": "asbestos-n",
+      "word": "asbestos",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "amiăng; vật liệu chứa amiăng",
+          "definition_en": "a fibrous mineral material formerly used in some building products because it resists heat, but whose fibres can seriously harm health",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor must arrange an asbestos inspection before renovating the older office wing.",
+          "vi": "Nhà thầu phải bố trí kiểm tra amiăng trước khi cải tạo khu văn phòng cũ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "asbestos removal",
+        "asbestos inspection",
+        "asbestos-containing material"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "access-badge-n",
+      "word": "access badge",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thẻ ra vào; thẻ kiểm soát truy cập",
+          "definition_en": "a card or credential used to identify a person and permit entry to specified areas",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees must display their access badge when entering the equipment room.",
+          "vi": "Nhân viên phải xuất trình thẻ ra vào khi vào phòng thiết bị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "display an access badge",
+        "renew an access badge",
+        "access badge reader"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "access-panel-n",
+      "word": "access panel",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nắp/cửa thăm kỹ thuật; tấm che lối tiếp cận",
+          "definition_en": "a removable cover or small door that allows technicians to reach equipment or services inside a wall, ceiling, or enclosure",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The technician opened the access panel to inspect the ventilation controls.",
+          "vi": "Kỹ thuật viên mở nắp thăm kỹ thuật để kiểm tra bộ điều khiển thông gió.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "open the access panel",
+        "access panel cover",
+        "electrical access panel"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "air-duct-n",
+      "word": "air duct",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ống dẫn khí; ống thông gió",
+          "definition_en": "a passage or channel that carries heated, cooled, or ventilated air through a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Maintenance staff will clean each air duct during the weekend shutdown.",
+          "vi": "Nhân viên bảo trì sẽ vệ sinh từng ống dẫn khí trong đợt tạm ngừng hoạt động cuối tuần.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "air duct cleaning",
+        "clean an air duct",
+        "air duct inspection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "air-quality-n",
+      "word": "air quality",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chất lượng không khí",
+          "definition_en": "the condition of the air in an indoor or outdoor environment, especially in relation to pollutants and particles",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The building manager ordered an air quality test after several employees reported headaches.",
+          "vi": "Quản lý tòa nhà yêu cầu kiểm tra chất lượng không khí sau khi một số nhân viên bị đau đầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "indoor air quality",
+        "air quality test",
+        "air quality monitoring"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "boiler-n",
+      "word": "boiler",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nồi hơi; lò đun nước",
+          "definition_en": "a closed vessel or unit that heats water or produces steam for a heating system or industrial process",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The boiler will be inspected before the heating system is switched on.",
+          "vi": "Nồi hơi sẽ được kiểm tra trước khi hệ thống sưởi được bật.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "boiler inspection",
+        "boiler maintenance",
+        "central heating boiler"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "boiler-room-n",
+      "word": "boiler room",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phòng đặt nồi hơi",
+          "definition_en": "a dedicated room in a building where a boiler and related heating equipment are installed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Only authorized technicians may enter the boiler room.",
+          "vi": "Chỉ kỹ thuật viên được ủy quyền mới được vào phòng đặt nồi hơi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "enter the boiler room",
+        "boiler room access",
+        "boiler room ventilation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-code-n",
+      "word": "building code",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy chuẩn xây dựng; bộ quy định xây dựng",
+          "definition_en": "a set of legal requirements governing the design, construction, alteration, and occupancy of buildings",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The renovation plan must comply with the local building code.",
+          "vi": "Kế hoạch cải tạo phải tuân thủ quy chuẩn xây dựng tại địa phương.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "comply with the building code",
+        "local building code",
+        "building code requirement"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-permit-n",
+      "word": "building permit",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giấy phép xây dựng",
+          "definition_en": "official authorization from a local authority to carry out specified construction or alteration work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor submitted a building permit application before construction began.",
+          "vi": "Nhà thầu đã nộp đơn xin giấy phép xây dựng trước khi công trình khởi công.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "obtain a building permit",
+        "building permit application",
+        "building permit approval"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-inspection-n",
+      "word": "building inspection",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc kiểm tra công trình/tòa nhà",
+          "definition_en": "an examination of a building to assess its condition and check whether specified requirements have been met",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A building inspection is scheduled for Friday morning.",
+          "vi": "Buổi kiểm tra tòa nhà được lên lịch vào sáng thứ Sáu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "pass a building inspection",
+        "schedule a building inspection",
+        "building inspection report"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-maintenance-n",
+      "word": "building maintenance",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "công tác bảo trì tòa nhà",
+          "definition_en": "the ongoing work of operating, cleaning, inspecting, and repairing a building and its systems",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The property manager coordinates building maintenance throughout the year.",
+          "vi": "Quản lý bất động sản điều phối công tác bảo trì tòa nhà trong suốt năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "routine building maintenance",
+        "building maintenance contract",
+        "building maintenance team"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-manager-n",
+      "word": "building manager",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quản lý tòa nhà",
+          "definition_en": "a person responsible for coordinating a building's daily operations, maintenance, and services for occupants",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please contact the building manager if the elevator stops working.",
+          "vi": "Vui lòng liên hệ quản lý tòa nhà nếu thang máy ngừng hoạt động.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contact the building manager",
+        "building manager's office",
+        "building manager approval"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "drainage-n",
+      "word": "drainage",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống thoát nước; việc tiêu thoát nước",
+          "definition_en": "the system or process used to collect and carry excess water away from an area",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new drainage system directs rainwater away from the loading area.",
+          "vi": "Hệ thống thoát nước mới dẫn nước mưa ra khỏi khu vực bốc dỡ hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "drainage system",
+        "drainage maintenance",
+        "stormwater drainage"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "ductwork-n",
+      "word": "ductwork",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống ống dẫn khí",
+          "definition_en": "the network of ducts that distributes heated, cooled, or ventilated air through a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The engineers replaced damaged ductwork above the conference rooms.",
+          "vi": "Các kỹ sư đã thay thế hệ thống ống dẫn khí bị hư hỏng phía trên các phòng hội nghị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "inspect the ductwork",
+        "damaged ductwork",
+        "ductwork installation"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "drywall-n",
+      "word": "drywall",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tấm thạch cao; vách thạch cao",
+          "definition_en": "a building material made from gypsum board and used to form interior walls and ceilings",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The workers repaired the drywall after the electrical installation was completed.",
+          "vi": "Công nhân sửa vách thạch cao sau khi hoàn tất việc lắp đặt hệ thống điện.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "repair drywall",
+        "drywall installation",
+        "drywall partition"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deficiency-n",
+      "word": "deficiency",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thiếu hụt; thiếu sót; khiếm khuyết",
+          "definition_en": "a shortcoming or failure to meet a required standard, amount, or condition",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspection report identified a safety deficiency near the rear exit.",
+          "vi": "Báo cáo kiểm tra xác định một thiếu sót về an toàn gần lối thoát phía sau.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "identify a deficiency",
+        "safety deficiency",
+        "correct a deficiency"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "groundskeeping-n",
+      "word": "groundskeeping",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "công tác chăm sóc khuôn viên",
+          "definition_en": "the work of maintaining lawns, trees, shrubs, paths, and other outdoor areas around a property",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The groundskeeping team will trim the hedges before the site visit.",
+          "vi": "Đội chăm sóc khuôn viên sẽ cắt tỉa hàng rào cây trước chuyến kiểm tra địa điểm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "groundskeeping services",
+        "groundskeeping team",
+        "groundskeeping contract"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "gutter-n",
+      "word": "gutter",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "máng xối; máng thoát nước mái nhà",
+          "definition_en": "a channel fixed along the edge of a roof to collect and carry rainwater away from a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A maintenance worker cleared leaves from the roof gutter.",
+          "vi": "Một nhân viên bảo trì đã dọn lá khỏi máng xối trên mái nhà.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "clean a gutter",
+        "roof gutter",
+        "gutter maintenance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "handrail-n",
+      "word": "handrail",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tay vịn; lan can vịn",
+          "definition_en": "a rail fixed beside stairs or a ramp to provide support for people moving along it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A handrail will be installed along the steps leading to the reception area.",
+          "vi": "Tay vịn sẽ được lắp dọc theo các bậc thang dẫn đến khu vực lễ tân.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "install a handrail",
+        "handrail inspection",
+        "stair handrail"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "insulation-n",
+      "word": "insulation",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vật liệu/cách nhiệt; sự cách âm",
+          "definition_en": "material installed in a building or piece of equipment to reduce heat transfer or sound transmission",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Additional insulation will reduce heat loss from the storage building.",
+          "vi": "Lớp cách nhiệt bổ sung sẽ giảm thất thoát nhiệt từ tòa nhà kho.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "install insulation",
+        "thermal insulation",
+        "insulation material"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "installation-n",
+      "word": "installation",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc lắp đặt; thiết bị được lắp đặt",
+          "definition_en": "the process of putting equipment, systems, or components in place and making them ready for use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The installation of new security cameras will begin after business hours.",
+          "vi": "Việc lắp đặt camera an ninh mới sẽ bắt đầu sau giờ làm việc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "complete an installation",
+        "installation work",
+        "equipment installation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "inspection-report-n",
+      "word": "inspection report",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "báo cáo kiểm tra; biên bản kiểm định",
+          "definition_en": "a written record of findings from a formal examination of a building, system, or process",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspection report lists the repairs required before the facility reopens.",
+          "vi": "Báo cáo kiểm tra liệt kê những hạng mục sửa chữa cần hoàn tất trước khi cơ sở mở cửa trở lại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "issue an inspection report",
+        "inspection report findings",
+        "review an inspection report"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "maintenance-log-n",
+      "word": "maintenance log",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhật ký bảo trì",
+          "definition_en": "a record used to document inspections, repairs, service dates, and other maintenance work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Technicians must enter each repair in the maintenance log.",
+          "vi": "Kỹ thuật viên phải ghi lại từng lần sửa chữa vào nhật ký bảo trì.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "update the maintenance log",
+        "maintenance log entry",
+        "equipment maintenance log"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "maintenance-schedule-n",
+      "word": "maintenance schedule",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lịch bảo trì; kế hoạch bảo dưỡng",
+          "definition_en": "a planned timetable for routine inspections, servicing, and repairs",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The maintenance schedule includes monthly checks of the fire alarm system.",
+          "vi": "Lịch bảo trì bao gồm việc kiểm tra hệ thống báo cháy hằng tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "follow the maintenance schedule",
+        "maintenance schedule update",
+        "preventive maintenance schedule"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "masonry-n",
+      "word": "masonry",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "công việc xây gạch/đá; nghề xây nề",
+          "definition_en": "the craft or work of building with materials such as brick, stone, or concrete blocks",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor specializes in masonry repairs on historic office buildings.",
+          "vi": "Nhà thầu chuyên sửa chữa phần xây gạch đá tại các tòa nhà văn phòng lịch sử.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "masonry work",
+        "masonry contractor",
+        "masonry repair"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "mold-n",
+      "word": "mold",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nấm mốc",
+          "definition_en": "a type of fungus that can grow on damp building materials, surfaces, and stored products",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The property team hired a specialist to remove mold from the basement.",
+          "vi": "Đội quản lý bất động sản thuê chuyên gia loại bỏ nấm mốc khỏi tầng hầm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "remove mold",
+        "mold inspection",
+        "mold damage"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "moisture-n",
+      "word": "moisture",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "độ ẩm; hơi ẩm",
+          "definition_en": "the amount of water present in a material, surface, or surrounding environment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The sensor measures moisture behind the wall panels.",
+          "vi": "Cảm biến đo độ ẩm phía sau các tấm ốp tường.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "moisture level",
+        "measure moisture",
+        "moisture sensor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "non-disclosure-agreement-n",
+      "word": "non-disclosure agreement",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thỏa thuận bảo mật; cam kết không tiết lộ thông tin",
+          "definition_en": "a legal contract requiring one or more parties to keep specified information confidential and not disclose it to others",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All consultants must sign a non-disclosure agreement before reviewing the acquisition documents.",
+          "vi": "Tất cả chuyên gia tư vấn phải ký thỏa thuận bảo mật trước khi xem xét hồ sơ mua lại doanh nghiệp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sign a non-disclosure agreement",
+        "breach a non-disclosure agreement",
+        "non-disclosure agreement clause"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "notice-to-vacate-n",
+      "word": "notice to vacate",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thông báo yêu cầu rời khỏi mặt bằng/nhà thuê",
+          "definition_en": "a written communication requiring a tenant to leave rented premises by a stated date; applicable legal requirements vary by jurisdiction",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The tenant received a notice to vacate before the lease renewal date.",
+          "vi": "Người thuê nhận được thông báo yêu cầu rời khỏi mặt bằng trước ngày gia hạn hợp đồng thuê.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "issue a notice to vacate",
+        "notice to vacate period",
+        "receive a notice to vacate"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "occupancy-permit-n",
+      "word": "occupancy permit",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giấy phép đưa công trình vào sử dụng",
+          "definition_en": "an official document issued by a local authority confirming that a building may be occupied for an approved use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The occupancy permit was issued after the final safety inspection.",
+          "vi": "Giấy phép đưa công trình vào sử dụng được cấp sau đợt kiểm tra an toàn cuối cùng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "obtain an occupancy permit",
+        "occupancy permit application",
+        "occupancy permit inspection"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "roof-leak-n",
+      "word": "roof leak",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chỗ dột mái; hiện tượng mái nhà bị rò nước",
+          "definition_en": "a place on a roof where water enters through a damaged or poorly sealed area",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The maintenance team sealed a roof leak above the shipping office.",
+          "vi": "Đội bảo trì đã trám kín chỗ dột mái phía trên văn phòng vận chuyển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "repair a roof leak",
+        "report a roof leak",
+        "roof leak inspection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "roof-inspection-n",
+      "word": "roof inspection",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc kiểm tra mái nhà",
+          "definition_en": "an examination of a roof's condition, covering, drainage, and associated components",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The roof inspection will take place after the storm has passed.",
+          "vi": "Việc kiểm tra mái nhà sẽ được tiến hành sau khi cơn bão đi qua.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "schedule a roof inspection",
+        "roof inspection report",
+        "roof inspection service"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "repair-estimate-n",
+      "word": "repair estimate",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "báo giá sửa chữa; dự toán chi phí sửa chữa",
+          "definition_en": "a document estimating the expected cost of repairing damaged equipment or property",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier sent a repair estimate before ordering replacement parts.",
+          "vi": "Nhà cung cấp gửi báo giá sửa chữa trước khi đặt mua linh kiện thay thế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "provide a repair estimate",
+        "approve a repair estimate",
+        "repair estimate request"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "safety-inspection-n",
+      "word": "safety inspection",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc kiểm tra an toàn",
+          "definition_en": "a formal check of a workplace, building, or operation to identify hazards and assess compliance with safety requirements",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HEALTH",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A safety inspection is required before the workshop can reopen.",
+          "vi": "Cần kiểm tra an toàn trước khi xưởng có thể mở cửa trở lại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "conduct a safety inspection",
+        "safety inspection checklist",
+        "pass a safety inspection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "service-charge-n",
+      "word": "service charge",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phí dịch vụ; khoản phí phục vụ",
+          "definition_en": "an additional fee for a service or shared facility, often charged regularly or under an agreement",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BUSINESS",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The monthly service charge covers cleaning of the shared reception area.",
+          "vi": "Phí dịch vụ hằng tháng bao gồm chi phí vệ sinh khu vực lễ tân dùng chung.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "monthly service charge",
+        "service charge notice",
+        "pay a service charge"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "service-request-n",
+      "word": "service request",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "yêu cầu hỗ trợ/yêu cầu dịch vụ",
+          "definition_en": "a recorded request asking a service or maintenance team to address a problem or provide assistance",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Submit a service request if the conference room projector stops working.",
+          "vi": "Hãy gửi yêu cầu hỗ trợ nếu máy chiếu trong phòng hội nghị ngừng hoạt động.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "submit a service request",
+        "service request form",
+        "track a service request"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "site-inspection-n",
+      "word": "site inspection",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc kiểm tra hiện trường/công trường",
+          "definition_en": "an examination of a particular property or construction location to check progress, quality, or compliance",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The project manager will conduct a site inspection before approving the next payment.",
+          "vi": "Quản lý dự án sẽ kiểm tra hiện trường trước khi phê duyệt khoản thanh toán tiếp theo.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "conduct a site inspection",
+        "site inspection report",
+        "schedule a site inspection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "smoke-detector-n",
+      "word": "smoke detector",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thiết bị/cảm biến phát hiện khói",
+          "definition_en": "a device that detects smoke and provides an audible or visual warning of a possible fire",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A smoke detector must be tested during the quarterly safety check.",
+          "vi": "Thiết bị phát hiện khói phải được kiểm tra trong đợt kiểm tra an toàn hằng quý.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "test a smoke detector",
+        "smoke detector alarm",
+        "install a smoke detector"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "sprinkler-n",
+      "word": "sprinkler",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đầu phun nước; vòi phun tự động",
+          "definition_en": "a device or system that sprays water through one or more heads, commonly for landscape irrigation or automatic fire suppression",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The building's sprinkler system will be tested after the office closes.",
+          "vi": "Hệ thống phun nước chữa cháy của tòa nhà sẽ được kiểm tra sau khi văn phòng đóng cửa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sprinkler system",
+        "sprinkler inspection",
+        "sprinkler maintenance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "structural-damage-n",
+      "word": "structural damage",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hư hại kết cấu công trình",
+          "definition_en": "physical harm or deformation affecting a building's load-bearing elements or other structural components",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Engineers found structural damage in a support beam near the loading bay.",
+          "vi": "Các kỹ sư phát hiện hư hại kết cấu tại một dầm chịu lực gần khu vực bốc dỡ hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "assess structural damage",
+        "structural damage report",
+        "repair structural damage"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    }
+  ]
+}

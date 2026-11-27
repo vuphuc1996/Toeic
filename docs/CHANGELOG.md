@@ -1,3 +1,13 @@
+## v2.95.76 — TOEIC Vocabulary Batch 028 & Listening Translation Completion (2026-11-27)
+
+- **Vocabulary expansion:** Added 40 original project-authored canonical headwords for Contracts / Legal Administration and Facilities / Property Maintenance. The dictionary grows from 1,181 to 1,221 records. Existing canonical IDs/headwords/senses are preserved; Batch 028 IPA is left blank pending exact source verification, no Word Family links are inferred, and CEFR remains an editorial estimate.
+- **Listening translation completion:** Added Vietnamese transcript translations to 8 existing Part 3/Part 4 resources whose unit-level translations were missing. All 295 Listening units now expose a Vietnamese transcript translation. No segment transcript, question/choice ID, answer key or editorial status changed.
+- **Progress measurement:** Recomputed the existing provisional weighted measurable build index to 57.07% using the unchanged weights/denominators. This is not overall system completion, learner mastery or TOEIC readiness.
+- **Assessment protection:** The 831 existing seven-part/support records remain unchanged; 302 Mock-eligible questions and 360 reserve items retain their current boundaries. No reserve is promoted by automated validation or translation work.
+- **Historical tests and CI:** Added Batch 028-specific tests; updated Batch 026/027 historical snapshot reconstruction to remove later Batch 028 additions before asserting historical graph states; registered explicit test steps in GitHub Actions.
+- **Release shell:** Updated manifest/package/app/HTML/Service Worker/mock-engine release cache keys and documentation to v2.95.76. UI, IndexedDB v1, Robot Buddy privacy boundary and GitHub Pages-only hosting architecture remain unchanged.
+- **Acceptance boundary:** Candidate CI, Pages deployment, installed-PWA propagation and physical-device acceptance require evidence on the exact v2.95.76 commit; no deployment acceptance is implied by this changelog.
+
 ## v2.95.75 — TOEIC 7-Part Assessment Quality, Learning Outcome Evidence & Readiness Consolidation (2026-11-27)
 
 - **7-Part Authoritative Inventory & Quality Audit (Workstreams A & B):** Added `tools/audit-seven-part-content.py` and updated `tools/editorial_inventory.py` + `tools/audit-toeic-coverage.py` to separate `APPROVED_FOR_MOCK` (`102` Listening + `200` Reading = `302Q`), `HUMAN_REVIEW_REQUIRED` (`193` Listening + `87` Reading Part 7 + `80` Separate Part 5 = `360Q`), and `PRACTICE_SUPPORT` (`169` Grammar exercises across `58` lessons) totaling `831` questions across all TOEIC & Support banks (`0` structural errors, `0` duplicate stems, explicit `AI_TRIAGE / STRUCTURAL` signals without promoting reserve items).

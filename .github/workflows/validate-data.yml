@@ -194,6 +194,12 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_content_batch_026.py' -v
       - name: Unit tests — Listening content batch 027
         run: python -m unittest discover -s tools/tests -p 'test_content_batch_027.py' -v
+      - name: Unit tests — vocabulary Batch 026 historical reconstruction
+        run: python -m unittest discover -s tools/tests -p 'test_vocabulary_batch_026.py' -v
+      - name: Unit tests — vocabulary Batch 027 historical reconstruction
+        run: python -m unittest discover -s tools/tests -p 'test_vocabulary_batch_027.py' -v
+      - name: Unit tests — vocabulary Batch 028
+        run: python -m unittest discover -s tools/tests -p 'test_vocabulary_batch_028.py' -v
       - name: Unit tests — TOEIC score readiness
         run: |
           node --check assets/js/mock-score-readiness.js

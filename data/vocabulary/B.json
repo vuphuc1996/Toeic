@@ -1656,6 +1656,251 @@
         "budgetary constraints",
         "budgetary approval"
       ]
+    },
+    {
+      "id": "boiler-n",
+      "word": "boiler",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nồi hơi; lò đun nước",
+          "definition_en": "a closed vessel or unit that heats water or produces steam for a heating system or industrial process",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The boiler will be inspected before the heating system is switched on.",
+          "vi": "Nồi hơi sẽ được kiểm tra trước khi hệ thống sưởi được bật.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "boiler inspection",
+        "boiler maintenance",
+        "central heating boiler"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "boiler-room-n",
+      "word": "boiler room",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phòng đặt nồi hơi",
+          "definition_en": "a dedicated room in a building where a boiler and related heating equipment are installed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Only authorized technicians may enter the boiler room.",
+          "vi": "Chỉ kỹ thuật viên được ủy quyền mới được vào phòng đặt nồi hơi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "enter the boiler room",
+        "boiler room access",
+        "boiler room ventilation"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-code-n",
+      "word": "building code",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy chuẩn xây dựng; bộ quy định xây dựng",
+          "definition_en": "a set of legal requirements governing the design, construction, alteration, and occupancy of buildings",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The renovation plan must comply with the local building code.",
+          "vi": "Kế hoạch cải tạo phải tuân thủ quy chuẩn xây dựng tại địa phương.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "comply with the building code",
+        "local building code",
+        "building code requirement"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-permit-n",
+      "word": "building permit",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giấy phép xây dựng",
+          "definition_en": "official authorization from a local authority to carry out specified construction or alteration work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor submitted a building permit application before construction began.",
+          "vi": "Nhà thầu đã nộp đơn xin giấy phép xây dựng trước khi công trình khởi công.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "obtain a building permit",
+        "building permit application",
+        "building permit approval"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-inspection-n",
+      "word": "building inspection",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc kiểm tra công trình/tòa nhà",
+          "definition_en": "an examination of a building to assess its condition and check whether specified requirements have been met",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A building inspection is scheduled for Friday morning.",
+          "vi": "Buổi kiểm tra tòa nhà được lên lịch vào sáng thứ Sáu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "pass a building inspection",
+        "schedule a building inspection",
+        "building inspection report"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-maintenance-n",
+      "word": "building maintenance",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "công tác bảo trì tòa nhà",
+          "definition_en": "the ongoing work of operating, cleaning, inspecting, and repairing a building and its systems",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The property manager coordinates building maintenance throughout the year.",
+          "vi": "Quản lý bất động sản điều phối công tác bảo trì tòa nhà trong suốt năm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "routine building maintenance",
+        "building maintenance contract",
+        "building maintenance team"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "building-manager-n",
+      "word": "building manager",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quản lý tòa nhà",
+          "definition_en": "a person responsible for coordinating a building's daily operations, maintenance, and services for occupants",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "REAL_ESTATE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please contact the building manager if the elevator stops working.",
+          "vi": "Vui lòng liên hệ quản lý tòa nhà nếu thang máy ngừng hoạt động.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "contact the building manager",
+        "building manager's office",
+        "building manager approval"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

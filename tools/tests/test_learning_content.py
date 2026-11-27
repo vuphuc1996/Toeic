@@ -340,5 +340,21 @@ class LearningContentTests(unittest.TestCase):
                 self.assertIn(q.get('answerIndex'), range(4))
                 self.assertTrue(q.get('explanation', '').strip())
 
+    def test_all_listening_units_have_vietnamese_transcript_translation(self):
+        expected_remediation = {
+            'batch026-part3-vendor-call',
+            'batch026-part3-training-room',
+            'batch026-part3-invoice-correction',
+            'batch026-part3-access-card',
+            'batch026-part4-building-notice',
+            'batch026-part4-travel-update',
+            'batch026-part4-product-launch',
+            'batch026-part4-policy-reminder',
+        }
+        for item in self.listening:
+            self.assertTrue(item.get('transcriptTranslation', '').strip(), item.get('id'))
+        actual = {item.get('id') for item in self.listening if item.get('id') in expected_remediation}
+        self.assertEqual(actual, expected_remediation)
+
 if __name__ == '__main__':
     unittest.main()

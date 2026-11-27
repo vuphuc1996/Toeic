@@ -1,4 +1,4 @@
-"""Word Family reciprocal-link and self-reference remediation tests across historical v2.95.73 and current v2.95.75."""
+"""Word Family reciprocal-link and self-reference remediation tests across historical v2.95.73 and current v2.95.76."""
 from __future__ import annotations
 import copy
 import importlib.util
@@ -51,9 +51,13 @@ class VocabularyBatch027Tests(unittest.TestCase):
         cls.pkg = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
         cls.patch = json.loads((ROOT / "patches/v2.95.73/batch-001-word-family-reciprocity.json").read_text(encoding="utf-8"))
         cls.ledger_74 = json.loads((ROOT / "patches/v2.95.74/word-family-audit-ledger.json").read_text(encoding="utf-8"))
+        cls.batch_028 = json.loads((ROOT / "data/vocabulary/batch-028.json").read_text(encoding="utf-8"))
 
     def _build_v29573_snapshot(self):
         documents = copy.deepcopy(self.documents)
+        later_ids = {row["id"] for row in self.batch_028["words"]}
+        for document in documents.values():
+            document["words"] = [row for row in document["words"] if row["id"] not in later_ids]
         restored_ids = reverse_batch_027_word_family(documents, ROOT)
         self.assertEqual(len(restored_ids), 12)
         by_id = {}
@@ -85,11 +89,11 @@ class VocabularyBatch027Tests(unittest.TestCase):
 
     def test_release_and_patch_metadata(self):
         self.assertEqual(self.manifest["version"], self.pkg["version"])
-        self.assertEqual(self.manifest["version"], "2.95.75")
+        self.assertEqual(self.manifest["version"], "2.95.76")
         version = self.manifest["version"]
         for marker_rel in ("index.html", "assets/js/app.js", "sw.js", "docs/versions/CURRENT_VERSION.md"):
             self.assertIn(version, (ROOT / marker_rel).read_text(encoding="utf-8"), marker_rel)
-        self.assertEqual(self.manifest["totalWords"], 1181)
+        self.assertEqual(self.manifest["totalWords"], 1221)
         self.assertEqual(self.patch["baseDataVersion"], "2.95.72")
         self.assertEqual(self.patch["targetDataVersion"], "2.95.73")
         self.assertEqual(self.patch["canonicalHeadwordCount"], 1181)
@@ -125,7 +129,7 @@ class VocabularyBatch027Tests(unittest.TestCase):
                     self.assertFalse(any(row.get("word", "").casefold() == owner_word
                                          for row in owner.get("word_family", [])))
 
-    def test_current_v29575_accessible_to_access_uses_verb_sense_and_zero_structural_defects(self):
+    def test_current_v29576_accessible_to_access_uses_verb_sense_and_zero_structural_defects(self):
         accessible = self.records["accessible"]
         access = self.records["access"]
         access_links = [row for row in accessible.get("word_family", [])
@@ -138,7 +142,7 @@ class VocabularyBatch027Tests(unittest.TestCase):
         self.assertIn("truy cập; tiếp cận", [s.get("meaning_vi") for s in verb_senses])
 
         report = AUDIT.load_source(ROOT)
-        self.assertEqual(report["headwords"], 1181)
+        self.assertEqual(report["headwords"], 1221)
         self.assertEqual(report["headwords_with_family"], 331)
         self.assertEqual(report["link_count"], 428)
         self.assertEqual(len(report["missing_targets"]), 50)

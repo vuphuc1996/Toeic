@@ -1,24 +1,31 @@
-# TOEIC Dictionary v2.95.75 — Project Documentation
+# TOEIC Dictionary v2.95.76 — Project Documentation
 
-This documentation describes the current locally verified source candidate. It does not imply that the candidate has been pushed or deployed.
+This documentation describes the current TOEIC-first GitHub Pages candidate. Source changes and release evidence are tracked separately from hosted CI, Pages deployment, installed-PWA behavior and physical-device acceptance.
 
-- Current release: `2.95.75`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.75.md`.
-- 7-Part content & answer-evidence audit: `reports/TOEIC_SEVEN_PART_CONTENT_AUDIT_v2.95.75.md` (`831` total questions: `302` `APPROVED_FOR_MOCK`, `360` `HUMAN_REVIEW_REQUIRED`, `169` `PRACTICE_SUPPORT`, `0` structural errors).
-- Learning outcome evidence & reconciliation: `reports/TOEIC_LEARNING_OUTCOME_EVIDENCE_v2.95.75.md` (`11` objectives / `33` criteria; `6/33` criterion-level Foundation instrumented, `11/11` objective groups wired).
-- Full-Mock readiness consolidation: `reports/TOEIC_MOCK_READINESS_v2.95.75.md` (Reading `200Q` supports 2 disjoint Full forms; Listening `102Q` supports 1 Full form / `98%` 2nd-form overlap; Part 1 = `8 + 1 = 9 < 12` hard bottleneck).
-- Independent editorial review queue: `reports/TOEIC_INDEPENDENT_REVIEW_QUEUE_v2.95.75.md` (`360` reserve items protected).
-- Data comparison: `reports/DATA_DIFF_v2.95.75.md`.
-- Change manifest: `reports/CHANGE_MANIFEST_v2.95.75.md`.
-- Package verification: `reports/PACKAGE_VERIFICATION_v2.95.75.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.75.md`.
+- Current release: `2.95.76`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.76.md`.
+- Vocabulary Batch 028: `reports/VOCABULARY_BATCH_028_v2.95.76.md` — 40 original TOEIC workplace headwords across Contracts / Legal Administration and Facilities / Property Maintenance.
+- Listening translation remediation: `reports/LISTENING_TRANSLATION_REMEDIATION_v2.95.76.md` — 8 existing Part 3/4 units receive Vietnamese transcript translations.
+- TOEIC content coverage: `reports/TOEIC_CONTENT_COVERAGE_v2.95.76.md` — vocabulary inventory 1,221; Listening transcript translations 295/295.
+- Project progress dashboard: `reports/PROJECT_PROGRESS_v2.95.76.md` — provisional weighted build index 57.07%; not a system completion or learner mastery score.
+- Major release quality audit: `reports/MAJOR_RELEASE_QUALITY_AUDIT_v2.95.76.md`.
+- Change manifest: `reports/CHANGE_MANIFEST_v2.95.76.md`.
+- Package verification: `reports/PACKAGE_VERIFICATION_v2.95.76.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.76.md`.
 - Current version ledger: `versions/CURRENT_VERSION.md`.
-- Word Family graph audit: `reports/WORD_FAMILY_GRAPH_AUDIT_v2.95.75.md/.json` (read-only review flags; no automatic graph mutation).
-- Project progress dashboard: `reports/PROJECT_PROGRESS_v2.95.75.md` (provisional weighted measurable build index `56.80%`; denominators/weights documented).
+- Prior 7-Part assessment and Mock-readiness baseline: `reports/TOEIC_SEVEN_PART_CONTENT_AUDIT_v2.95.75.md`, `reports/TOEIC_MOCK_READINESS_v2.95.75.md`; their assessment-bank inventory and eligibility are unchanged in v2.95.76.
 - Master project status: `MASTER_STATUS.md`.
 - Assessment completion and draft/commit semantics: `ASSESSMENT_FLOW.md`.
 - Changelog: `CHANGELOG.md`.
 
-## Hosting and data boundaries
+## Content and learner-data boundaries
 
-The project remains a static GitHub Pages PWA on port 3000 (`server.js`). No Cloudflare Worker, API server, Firebase, or LLM backend was added. LocalStorage/IndexedDB v1 schema and learner records remain intact. Hosted GitHub Actions, remote `candidate` push, live Pages deployment, installed-PWA update/offline propagation, and physical-device acceptance remain unverified.
+- The 40 new headwords are original editorial additions. IPA is left blank pending source verification; CEFR labels are editorial estimates; no Word Family links are inferred.
+- The 8 Listening changes add only unit-level `transcriptTranslation`. Existing transcript segments, resource/question/choice IDs, answer keys and editorial status remain unchanged.
+- Listening reserve (193), Reading Part 7 reserve (87) and Separate Part 5 reserve (80) remain excluded from Mock.
+- Existing canonical vocabulary IDs/headwords/senses, learner IndexedDB v1 schema and learner records are preserved; 40 new canonical IDs are appended.
+- UI/UX layout, navigation, Robot Buddy access boundary and GitHub Pages-only/offline architecture remain unchanged. No backend or Cloudflare service was introduced.
+
+## Acceptance boundary
+
+Source release, candidate CI, Pages deployment, installed-PWA cache/offline propagation and physical-device QA are separate acceptance gates. Do not infer one from another.

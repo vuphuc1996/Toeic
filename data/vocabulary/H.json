@@ -618,6 +618,41 @@
         "hiring freeze",
         "hiring manager"
       ]
+    },
+    {
+      "id": "handrail-n",
+      "word": "handrail",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tay vịn; lan can vịn",
+          "definition_en": "a rail fixed beside stairs or a ramp to provide support for people moving along it",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A handrail will be installed along the steps leading to the reception area.",
+          "vi": "Tay vịn sẽ được lắp dọc theo các bậc thang dẫn đến khu vực lễ tân.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "install a handrail",
+        "handrail inspection",
+        "stair handrail"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

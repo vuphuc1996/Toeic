@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "sourceVersion": "2.95.76",
+  "modelId": "toeic-dictionary-measurable-build-index-v1",
+  "status": "provisional-transparent-model-not-an-official-acceptance-score",
+  "weightedIndexPercent": 57.07,
+  "totalWeight": 100,
+  "metrics": [
+    {
+      "name": "Vocabulary headwords vs 3,000 minimum",
+      "numerator": 1221,
+      "denominator": 3000,
+      "percent": 40.7,
+      "weight": 20,
+      "contributionPoints": 8.14,
+      "interpretation": "Inventory coverage only; editorial quality separate. New Batch 028 records await independent lexical review."
+    },
+    {
+      "name": "Related glossary exact-join coverage",
+      "numerator": 556,
+      "denominator": 804,
+      "percent": 69.15,
+      "weight": 10,
+      "contributionPoints": 6.92,
+      "interpretation": "Exact case-insensitive relation-target join; no sense-quality claim."
+    },
+    {
+      "name": "Related glossary records without automated flags",
+      "numerator": 565,
+      "denominator": 567,
+      "percent": 99.65,
+      "weight": 10,
+      "contributionPoints": 9.96,
+      "interpretation": "Automated screening only; not independent editorial approval."
+    },
+    {
+      "name": "Guided pathway stage presence",
+      "numerator": 3,
+      "denominator": 6,
+      "percent": 50,
+      "weight": 15,
+      "contributionPoints": 7.5,
+      "interpretation": "Stage presence, not full-stage or lesson completion."
+    },
+    {
+      "name": "Canonical objective-resource mapping",
+      "numerator": 379,
+      "denominator": 379,
+      "percent": 100,
+      "weight": 10,
+      "contributionPoints": 10,
+      "interpretation": "Stable resource-ID mapping only; not mastery."
+    },
+    {
+      "name": "Outcome criteria with evidence instrumentation",
+      "numerator": 6,
+      "denominator": 33,
+      "percent": 18.18,
+      "weight": 25,
+      "contributionPoints": 4.55,
+      "interpretation": "Evidence collection path; not learner attainment."
+    },
+    {
+      "name": "Foundation core content coverage (3 equally weighted banks)",
+      "numerator": 10000,
+      "denominator": 10000,
+      "percent": 100,
+      "weight": 10,
+      "contributionPoints": 10,
+      "interpretation": "Reading passages, core Listening scripts and A–Z records; within existing Foundation scope only."
+    }
+  ],
+  "glossaryAudit": {
+    "entries": 567,
+    "flagged": 2,
+    "unflagged": 565,
+    "priorityCounts": {
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "issueCounts": {
+      "short-definition-review": 2
+    },
+    "duplicateGroups": 0
+  },
+  "explicitExclusions": [
+    "unmeasured Grammar/Listening/Reading total targets",
+    "independent editorial approval and psychometric calibration",
+    "Mock exam approval and full 200-question coverage quality",
+    "Speaking and Writing completion",
+    "IELTS expansion",
+    "remote GitHub Actions and Pages deployment acceptance",
+    "installed-PWA/offline propagation and physical-device QA",
+    "learner mastery and TOEIC score readiness"
+  ],
+  "warning": "This is a transparent provisional index of selected measurable build areas, not an official total-system completion, production acceptance, learner mastery or TOEIC readiness score."
+}

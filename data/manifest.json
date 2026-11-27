@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "version": "2.95.75",
+  "version": "2.95.76",
   "letters": [
     {
       "letter": "A",
       "file": "./data/vocabulary/A.json",
-      "count": 131
+      "count": 136
     },
     {
       "letter": "B",
       "file": "./data/vocabulary/B.json",
-      "count": 42
+      "count": 49
     },
     {
       "letter": "C",
@@ -20,7 +20,7 @@
     {
       "letter": "D",
       "file": "./data/vocabulary/D.json",
-      "count": 79
+      "count": 83
     },
     {
       "letter": "E",
@@ -35,17 +35,17 @@
     {
       "letter": "G",
       "file": "./data/vocabulary/G.json",
-      "count": 12
+      "count": 14
     },
     {
       "letter": "H",
       "file": "./data/vocabulary/H.json",
-      "count": 15
+      "count": 16
     },
     {
       "letter": "I",
       "file": "./data/vocabulary/I.json",
-      "count": 60
+      "count": 63
     },
     {
       "letter": "J",
@@ -65,17 +65,17 @@
     {
       "letter": "M",
       "file": "./data/vocabulary/M.json",
-      "count": 34
+      "count": 39
     },
     {
       "letter": "N",
       "file": "./data/vocabulary/N.json",
-      "count": 14
+      "count": 16
     },
     {
       "letter": "O",
       "file": "./data/vocabulary/O.json",
-      "count": 40
+      "count": 41
     },
     {
       "letter": "P",
@@ -90,12 +90,12 @@
     {
       "letter": "R",
       "file": "./data/vocabulary/R.json",
-      "count": 98
+      "count": 101
     },
     {
       "letter": "S",
       "file": "./data/vocabulary/S.json",
-      "count": 93
+      "count": 100
     },
     {
       "letter": "T",
@@ -134,58 +134,58 @@
     }
   ],
   "categories": "./data/categories.json",
-  "totalWords": 1181,
+  "totalWords": 1221,
   "cefrLevels": {
     "A1": 61,
     "A2": 237,
-    "B1": 337,
-    "B2": 424,
-    "C1": 122
+    "B1": 341,
+    "B2": 452,
+    "C1": 130
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
   "totalTopics": 32,
-  "previousReleaseTotalWords": 1141,
+  "previousReleaseTotalWords": 1181,
   "releaseAdditionIds": [
-    "accumulation-n",
-    "acknowledgment-n",
-    "adaptable-adj",
-    "adaptation-n",
-    "assignment-n",
-    "authentication-n",
-    "biased-adj",
-    "budgetary-adj",
-    "challenging-adj",
-    "coincidence-n",
-    "commencement-n",
-    "commuter-n",
-    "concept-n",
-    "confirmed-adj",
-    "considerably-adv",
-    "constraint-n",
-    "contradiction-n",
-    "conversion-n",
-    "convertible-adj",
-    "demonstration-n",
-    "discrimination-n",
-    "elimination-n",
-    "expensive-adj",
-    "flexibly-adv",
-    "hiring-n",
-    "knowledgeable-adj",
-    "necessarily-adv",
-    "operational-adj",
-    "operator-n",
-    "purchasing-n",
-    "recruiter-n",
-    "shipping-n",
-    "submission-n",
-    "temporarily-adv",
-    "transferable-adj",
-    "unbiased-adj",
-    "urgency-n",
-    "urgently-adv",
-    "vacant-adj",
-    "verifiable-adj"
+    "asbestos-n",
+    "access-badge-n",
+    "access-panel-n",
+    "air-duct-n",
+    "air-quality-n",
+    "boiler-n",
+    "boiler-room-n",
+    "building-code-n",
+    "building-permit-n",
+    "building-inspection-n",
+    "building-maintenance-n",
+    "building-manager-n",
+    "drainage-n",
+    "ductwork-n",
+    "drywall-n",
+    "deficiency-n",
+    "groundskeeping-n",
+    "gutter-n",
+    "handrail-n",
+    "insulation-n",
+    "installation-n",
+    "inspection-report-n",
+    "maintenance-log-n",
+    "maintenance-schedule-n",
+    "masonry-n",
+    "mold-n",
+    "moisture-n",
+    "non-disclosure-agreement-n",
+    "notice-to-vacate-n",
+    "occupancy-permit-n",
+    "roof-leak-n",
+    "roof-inspection-n",
+    "repair-estimate-n",
+    "safety-inspection-n",
+    "service-charge-n",
+    "service-request-n",
+    "site-inspection-n",
+    "smoke-detector-n",
+    "sprinkler-n",
+    "structural-damage-n"
   ],
   "releaseRepairProfiles": [
     {

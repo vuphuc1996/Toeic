@@ -2431,6 +2431,111 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "insulation-n",
+      "word": "insulation",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vật liệu/cách nhiệt; sự cách âm",
+          "definition_en": "material installed in a building or piece of equipment to reduce heat transfer or sound transmission",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Additional insulation will reduce heat loss from the storage building.",
+          "vi": "Lớp cách nhiệt bổ sung sẽ giảm thất thoát nhiệt từ tòa nhà kho.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "install insulation",
+        "thermal insulation",
+        "insulation material"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "installation-n",
+      "word": "installation",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc lắp đặt; thiết bị được lắp đặt",
+          "definition_en": "the process of putting equipment, systems, or components in place and making them ready for use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The installation of new security cameras will begin after business hours.",
+          "vi": "Việc lắp đặt camera an ninh mới sẽ bắt đầu sau giờ làm việc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "complete an installation",
+        "installation work",
+        "equipment installation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "inspection-report-n",
+      "word": "inspection report",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "báo cáo kiểm tra; biên bản kiểm định",
+          "definition_en": "a written record of findings from a formal examination of a building, system, or process",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspection report lists the repairs required before the facility reopens.",
+          "vi": "Báo cáo kiểm tra liệt kê những hạng mục sửa chữa cần hoàn tất trước khi cơ sở mở cửa trở lại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "issue an inspection report",
+        "inspection report findings",
+        "review an inspection report"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

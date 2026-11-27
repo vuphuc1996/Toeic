@@ -1460,6 +1460,181 @@
         "motivate a team",
         "highly motivated"
       ]
+    },
+    {
+      "id": "maintenance-log-n",
+      "word": "maintenance log",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhật ký bảo trì",
+          "definition_en": "a record used to document inspections, repairs, service dates, and other maintenance work",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Technicians must enter each repair in the maintenance log.",
+          "vi": "Kỹ thuật viên phải ghi lại từng lần sửa chữa vào nhật ký bảo trì.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "update the maintenance log",
+        "maintenance log entry",
+        "equipment maintenance log"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "maintenance-schedule-n",
+      "word": "maintenance schedule",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lịch bảo trì; kế hoạch bảo dưỡng",
+          "definition_en": "a planned timetable for routine inspections, servicing, and repairs",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The maintenance schedule includes monthly checks of the fire alarm system.",
+          "vi": "Lịch bảo trì bao gồm việc kiểm tra hệ thống báo cháy hằng tháng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "follow the maintenance schedule",
+        "maintenance schedule update",
+        "preventive maintenance schedule"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "masonry-n",
+      "word": "masonry",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "công việc xây gạch/đá; nghề xây nề",
+          "definition_en": "the craft or work of building with materials such as brick, stone, or concrete blocks",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor specializes in masonry repairs on historic office buildings.",
+          "vi": "Nhà thầu chuyên sửa chữa phần xây gạch đá tại các tòa nhà văn phòng lịch sử.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "masonry work",
+        "masonry contractor",
+        "masonry repair"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "mold-n",
+      "word": "mold",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nấm mốc",
+          "definition_en": "a type of fungus that can grow on damp building materials, surfaces, and stored products",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The property team hired a specialist to remove mold from the basement.",
+          "vi": "Đội quản lý bất động sản thuê chuyên gia loại bỏ nấm mốc khỏi tầng hầm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "remove mold",
+        "mold inspection",
+        "mold damage"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "moisture-n",
+      "word": "moisture",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "độ ẩm; hơi ẩm",
+          "definition_en": "the amount of water present in a material, surface, or surrounding environment",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The sensor measures moisture behind the wall panels.",
+          "vi": "Cảm biến đo độ ẩm phía sau các tấm ốp tường.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "moisture level",
+        "measure moisture",
+        "moisture sensor"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

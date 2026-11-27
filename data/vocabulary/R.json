@@ -4102,6 +4102,111 @@
         "lead recruiter",
         "technical recruiter"
       ]
+    },
+    {
+      "id": "roof-leak-n",
+      "word": "roof leak",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chỗ dột mái; hiện tượng mái nhà bị rò nước",
+          "definition_en": "a place on a roof where water enters through a damaged or poorly sealed area",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The maintenance team sealed a roof leak above the shipping office.",
+          "vi": "Đội bảo trì đã trám kín chỗ dột mái phía trên văn phòng vận chuyển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "repair a roof leak",
+        "report a roof leak",
+        "roof leak inspection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "roof-inspection-n",
+      "word": "roof inspection",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "việc kiểm tra mái nhà",
+          "definition_en": "an examination of a roof's condition, covering, drainage, and associated components",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The roof inspection will take place after the storm has passed.",
+          "vi": "Việc kiểm tra mái nhà sẽ được tiến hành sau khi cơn bão đi qua.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "schedule a roof inspection",
+        "roof inspection report",
+        "roof inspection service"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "repair-estimate-n",
+      "word": "repair estimate",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "báo giá sửa chữa; dự toán chi phí sửa chữa",
+          "definition_en": "a document estimating the expected cost of repairing damaged equipment or property",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier sent a repair estimate before ordering replacement parts.",
+          "vi": "Nhà cung cấp gửi báo giá sửa chữa trước khi đặt mua linh kiện thay thế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "provide a repair estimate",
+        "approve a repair estimate",
+        "repair estimate request"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

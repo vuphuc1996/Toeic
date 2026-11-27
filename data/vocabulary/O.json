@@ -1671,6 +1671,41 @@
         "system operator",
         "certified operator"
       ]
+    },
+    {
+      "id": "occupancy-permit-n",
+      "word": "occupancy permit",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "giấy phép đưa công trình vào sử dụng",
+          "definition_en": "an official document issued by a local authority confirming that a building may be occupied for an approved use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The occupancy permit was issued after the final safety inspection.",
+          "vi": "Giấy phép đưa công trình vào sử dụng được cấp sau đợt kiểm tra an toàn cuối cùng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "obtain an occupancy permit",
+        "occupancy permit application",
+        "occupancy permit inspection"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

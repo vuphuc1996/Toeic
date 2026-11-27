@@ -5488,6 +5488,181 @@
         "two-factor authentication",
         "authentication check"
       ]
+    },
+    {
+      "id": "asbestos-n",
+      "word": "asbestos",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "amiăng; vật liệu chứa amiăng",
+          "definition_en": "a fibrous mineral material formerly used in some building products because it resists heat, but whose fibres can seriously harm health",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The contractor must arrange an asbestos inspection before renovating the older office wing.",
+          "vi": "Nhà thầu phải bố trí kiểm tra amiăng trước khi cải tạo khu văn phòng cũ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "asbestos removal",
+        "asbestos inspection",
+        "asbestos-containing material"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "access-badge-n",
+      "word": "access badge",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thẻ ra vào; thẻ kiểm soát truy cập",
+          "definition_en": "a card or credential used to identify a person and permit entry to specified areas",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Employees must display their access badge when entering the equipment room.",
+          "vi": "Nhân viên phải xuất trình thẻ ra vào khi vào phòng thiết bị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "display an access badge",
+        "renew an access badge",
+        "access badge reader"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "access-panel-n",
+      "word": "access panel",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nắp/cửa thăm kỹ thuật; tấm che lối tiếp cận",
+          "definition_en": "a removable cover or small door that allows technicians to reach equipment or services inside a wall, ceiling, or enclosure",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The technician opened the access panel to inspect the ventilation controls.",
+          "vi": "Kỹ thuật viên mở nắp thăm kỹ thuật để kiểm tra bộ điều khiển thông gió.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "open the access panel",
+        "access panel cover",
+        "electrical access panel"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "air-duct-n",
+      "word": "air duct",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ống dẫn khí; ống thông gió",
+          "definition_en": "a passage or channel that carries heated, cooled, or ventilated air through a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Maintenance staff will clean each air duct during the weekend shutdown.",
+          "vi": "Nhân viên bảo trì sẽ vệ sinh từng ống dẫn khí trong đợt tạm ngừng hoạt động cuối tuần.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "air duct cleaning",
+        "clean an air duct",
+        "air duct inspection"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "air-quality-n",
+      "word": "air quality",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chất lượng không khí",
+          "definition_en": "the condition of the air in an indoor or outdoor environment, especially in relation to pollutants and particles",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "ENVIRONMENT",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The building manager ordered an air quality test after several employees reported headaches.",
+          "vi": "Quản lý tòa nhà yêu cầu kiểm tra chất lượng không khí sau khi một số nhân viên bị đau đầu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "indoor air quality",
+        "air quality test",
+        "air quality monitoring"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

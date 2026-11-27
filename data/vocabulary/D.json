@@ -3375,6 +3375,146 @@
         "age discrimination",
         "prevent discrimination"
       ]
+    },
+    {
+      "id": "drainage-n",
+      "word": "drainage",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống thoát nước; việc tiêu thoát nước",
+          "definition_en": "the system or process used to collect and carry excess water away from an area",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "ENVIRONMENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The new drainage system directs rainwater away from the loading area.",
+          "vi": "Hệ thống thoát nước mới dẫn nước mưa ra khỏi khu vực bốc dỡ hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "drainage system",
+        "drainage maintenance",
+        "stormwater drainage"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "ductwork-n",
+      "word": "ductwork",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hệ thống ống dẫn khí",
+          "definition_en": "the network of ducts that distributes heated, cooled, or ventilated air through a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The engineers replaced damaged ductwork above the conference rooms.",
+          "vi": "Các kỹ sư đã thay thế hệ thống ống dẫn khí bị hư hỏng phía trên các phòng hội nghị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "inspect the ductwork",
+        "damaged ductwork",
+        "ductwork installation"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "drywall-n",
+      "word": "drywall",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "tấm thạch cao; vách thạch cao",
+          "definition_en": "a building material made from gypsum board and used to form interior walls and ceilings",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The workers repaired the drywall after the electrical installation was completed.",
+          "vi": "Công nhân sửa vách thạch cao sau khi hoàn tất việc lắp đặt hệ thống điện.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "repair drywall",
+        "drywall installation",
+        "drywall partition"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "deficiency-n",
+      "word": "deficiency",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "sự thiếu hụt; thiếu sót; khiếm khuyết",
+          "definition_en": "a shortcoming or failure to meet a required standard, amount, or condition",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The inspection report identified a safety deficiency near the rear exit.",
+          "vi": "Báo cáo kiểm tra xác định một thiếu sót về an toàn gần lối thoát phía sau.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "identify a deficiency",
+        "safety deficiency",
+        "correct a deficiency"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

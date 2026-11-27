@@ -26,6 +26,7 @@ class VocabularyBatch026Tests(unittest.TestCase):
         cls.manifest = read_json("data/manifest.json")
         cls.pkg = read_json("package.json")
         cls.batch = read_json("data/vocabulary/batch-026.json")
+        cls.batch_028 = read_json("data/vocabulary/batch-028.json")
         cls.cmu_ledger = read_json("tools/vocabulary-batch-026-cmudict-v2.95.72.json")
         cls.patch = read_json("patches/v2.95.72/batch-001-word-family-expansion.json")
         cls.patch_027 = read_json("patches/v2.95.73/batch-001-word-family-reciprocity.json")
@@ -50,10 +51,10 @@ class VocabularyBatch026Tests(unittest.TestCase):
         version = self.manifest["version"]
         for marker_rel in ("index.html", "assets/js/app.js", "sw.js", "docs/versions/CURRENT_VERSION.md"):
             self.assertIn(version, (ROOT / marker_rel).read_text(encoding="utf-8"), marker_rel)
-        self.assertEqual(self.manifest["totalWords"], 1181)
-        self.assertEqual(self.manifest["previousReleaseTotalWords"], 1141)
+        self.assertEqual(self.manifest["totalWords"], 1221)
+        self.assertEqual(self.manifest["previousReleaseTotalWords"], 1181)
         batch_ids = [w["id"] for w in self.batch["words"]]
-        self.assertEqual(self.manifest["releaseAdditionIds"], batch_ids)
+        self.assertEqual(self.manifest["releaseAdditionIds"], [w["id"] for w in self.batch_028["words"]])
         self.assertEqual(self.patch["count"], 40)
         self.assertEqual([r["id"] for r in self.patch["records"]], batch_ids)
         profile_1141 = next(p for p in self.manifest["releaseRepairProfiles"] if p["previousTotalWords"] == 1141)
@@ -89,6 +90,9 @@ class VocabularyBatch026Tests(unittest.TestCase):
             (ROOT / item["file"].removeprefix("./")).resolve(): read_json(item["file"].removeprefix("./"))
             for item in self.manifest["letters"]
         }
+        batch_028_ids = {row["id"] for row in read_json("data/vocabulary/batch-028.json")["words"]}
+        for document in documents.values():
+            document["words"] = [row for row in document["words"] if row["id"] not in batch_028_ids]
         restored = reverse_batch_027_word_family(documents, ROOT)
         self.assertEqual(len(restored), 12)
         return wf_mod.audit_data([(path.name, doc) for path, doc in documents.items()])

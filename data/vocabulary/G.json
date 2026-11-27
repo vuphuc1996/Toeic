@@ -513,6 +513,76 @@
       "collocations": [],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "groundskeeping-n",
+      "word": "groundskeeping",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "công tác chăm sóc khuôn viên",
+          "definition_en": "the work of maintaining lawns, trees, shrubs, paths, and other outdoor areas around a property",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The groundskeeping team will trim the hedges before the site visit.",
+          "vi": "Đội chăm sóc khuôn viên sẽ cắt tỉa hàng rào cây trước chuyến kiểm tra địa điểm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "groundskeeping services",
+        "groundskeeping team",
+        "groundskeeping contract"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "gutter-n",
+      "word": "gutter",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "máng xối; máng thoát nước mái nhà",
+          "definition_en": "a channel fixed along the edge of a roof to collect and carry rainwater away from a building",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CONSTRUCTION",
+        "FACILITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "A maintenance worker cleared leaves from the roof gutter.",
+          "vi": "Một nhân viên bảo trì đã dọn lá khỏi máng xối trên mái nhà.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "clean a gutter",
+        "roof gutter",
+        "gutter maintenance"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

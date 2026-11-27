@@ -1,10 +1,20 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.75
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.76
 
-**Current source candidate:** v2.95.75 — TOEIC 7-Part Assessment Quality, Learning Outcome Evidence & Readiness Consolidation. UI/UX layout, IndexedDB v1 schema, canonical vocabulary IDs/headwords, question/choice IDs, answer keys, and reserve gates remain intact and protected.
+**Current source candidate:** v2.95.76 — TOEIC Batch 028 Vocabulary Expansion & Listening Translation Completion. UI/UX layout, IndexedDB v1 schema, canonical vocabulary IDs/headwords, question/choice IDs, answer keys, and reserve gates remain intact and protected.
 
-## Current release — v2.95.75
+## Current release — v2.95.76
+
+- **Sole source baseline:** v2.95.75 candidate commit `d5648916cf62b3f07b1ffb9b98425c48ff3e63fe`; this is the only predecessor for this release.
+- **Vocabulary Batch 028:** +40 canonical headwords across the existing A–Z files, focused on Contracts / Legal Administration and Facilities / Property Maintenance. Inventory increases from 1,181 to **1,221**; 0 existing canonical IDs/headwords/senses are removed or rewritten. New records include English definition, Vietnamese meaning, original bilingual example and collocations; IPA is blank pending source verification, Word Family arrays remain empty, and CEFR levels are editorial estimates.
+- **Listening translation completion:** added Vietnamese `transcriptTranslation` to 8 existing units (4 Part 3, 4 Part 4). Listening question inventory remains 295 and all units now have a translation; question/choice IDs, keys, audio transcript segments and editorial statuses remain unchanged.
+- **7-Part and Mock boundary:** existing 831 question/exercise records are unchanged; 302 questions remain Mock-eligible and 360 reserve items remain human-review-required. No reserve content was promoted.
+- **Progress index:** **57.07%** provisional weighted measurable build index; not overall product completion, CEFR/ETS certification, learner mastery or TOEIC readiness.
+- **Protection:** existing question/choice IDs, answer keys, learner IndexedDB v1 schema/records, UI/UX layout, navigation, Robot Buddy access policy and GitHub Pages-only architecture are preserved. No Cloudflare/backend added.
+- **Acceptance boundary:** v2.95.76 is a source candidate. Candidate CI/Validate, GitHub Pages deployment, installed-PWA cache/offline propagation and physical-device QA remain **UNVERIFIED** until exact-commit evidence is recorded.
+
+## Previous release — v2.95.75
 
 - **Baseline source:** Local completed `v2.95.74` baseline preserved untouched against older GitHub `candidate` (`cfae6ce`, `v2.95.73`). `main` branch never modified.
 - **7-Part Authoritative Inventory & Audit (`TOEIC_SEVEN_PART_CONTENT_AUDIT_v2.95.75.md`):** `831` total questions (`102` Listening + `200` Reading = `302` `APPROVED_FOR_MOCK`; `193` Listening + `87` Part 7 + `80` Separate Part 5 = `360` `HUMAN_REVIEW_REQUIRED`; `58` lessons / `169` exercises `PRACTICE_SUPPORT` Grammar). Zero structural errors, zero duplicate stems, strict separation of `AI_TRIAGE / STRUCTURAL` signals from human approval.

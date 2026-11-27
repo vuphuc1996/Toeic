@@ -26,7 +26,7 @@ class ProjectProgressIndexTests(unittest.TestCase):
 
     def test_core_denominators_and_quality_counts_are_live(self):
         metrics = {x["name"]: x for x in self.report["metrics"]}
-        self.assertEqual(metrics["Vocabulary headwords vs 3,000 minimum"]["numerator"], 1181)
+        self.assertEqual(metrics["Vocabulary headwords vs 3,000 minimum"]["numerator"], 1221)
         self.assertEqual(metrics["Vocabulary headwords vs 3,000 minimum"]["denominator"], 3000)
         self.assertEqual(metrics["Guided pathway stage presence"]["numerator"], 3)
         self.assertEqual(metrics["Guided pathway stage presence"]["denominator"], 6)
@@ -37,9 +37,9 @@ class ProjectProgressIndexTests(unittest.TestCase):
         self.assertEqual(self.report["glossaryAudit"]["duplicateGroups"], 0)
 
     def test_weighted_index_is_reproducible_and_caveated(self):
-        self.assertAlmostEqual(self.report["weightedIndexPercent"], 56.8, places=2)
+        self.assertAlmostEqual(self.report["weightedIndexPercent"], 57.07, places=2)
         output = module.render(self.report)
-        self.assertIn("56.80%", output)
+        self.assertIn("57.07%", output)
         self.assertIn("not an official total-system completion", output)
         self.assertIn("Mock exam approval", output)
 

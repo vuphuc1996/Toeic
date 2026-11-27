@@ -633,6 +633,76 @@
         "necessarily mean",
         "necessarily require"
       ]
+    },
+    {
+      "id": "non-disclosure-agreement-n",
+      "word": "non-disclosure agreement",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thỏa thuận bảo mật; cam kết không tiết lộ thông tin",
+          "definition_en": "a legal contract requiring one or more parties to keep specified information confidential and not disclose it to others",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "LEGAL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All consultants must sign a non-disclosure agreement before reviewing the acquisition documents.",
+          "vi": "Tất cả chuyên gia tư vấn phải ký thỏa thuận bảo mật trước khi xem xét hồ sơ mua lại doanh nghiệp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "sign a non-disclosure agreement",
+        "breach a non-disclosure agreement",
+        "non-disclosure agreement clause"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "notice-to-vacate-n",
+      "word": "notice to vacate",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thông báo yêu cầu rời khỏi mặt bằng/nhà thuê",
+          "definition_en": "a written communication requiring a tenant to leave rented premises by a stated date; applicable legal requirements vary by jurisdiction",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "REAL_ESTATE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The tenant received a notice to vacate before the lease renewal date.",
+          "vi": "Người thuê nhận được thông báo yêu cầu rời khỏi mặt bằng trước ngày gia hạn hợp đồng thuê.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "issue a notice to vacate",
+        "notice to vacate period",
+        "receive a notice to vacate"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }
