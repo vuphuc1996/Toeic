@@ -1,3 +1,11 @@
+## v2.95.73 — Word Family Batch 027 reciprocity and self-reference repair (2026-11-27)
+
+- Added 10 reverse Word Family links where the existing canonical base/derived relationship was already present in the opposite direction. Each reverse link uses the exact POS and Vietnamese sense recorded on the linked canonical headword.
+- Removed two self-referential links from `hire` and `utilization`; retained their valid links to other canonical family members.
+- Extended `audit-word-family-graph.py` with explicit self-reference reporting and added release regression coverage for reciprocal POS/sense anchors.
+- Graph: 1,181 canonical headwords unchanged; 428 links; 331 linked headwords; zero POS mismatches, non-reciprocal links, or self-references. 50 missing targets and 70 Vietnamese sense-anchor flags remain open.
+- No canonical IDs/headwords, definitions, IPA, TOEIC item IDs, answer keys, Mock eligibility, learner storage, or UI layout changed. Candidate-only; current hosted validation/deployment must complete before acceptance.
+
 ## v2.95.72 — Vocabulary Batch 026, Related Glossary Batch 046, and measurable progress update (2026-11-26)
 
 - Reconciled workspace baseline cleanly from GitHub `vuphuc1996/Toeic` `main` commit `256ca21461e78a7685bed773ddd622a64050e33a` (`v2.95.71`: 1,141 canonical headwords, 567 Related Glossary entries), resolving the initial `.70`/`.71` shell mismatch.

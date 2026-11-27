@@ -52,8 +52,10 @@ def audit_data(inputs):
                           'target_key': target_key, 'pos': str(item['pos']).strip(),
                           'meaning_vi': str(item['meaning_vi']).strip(), 'file': source['__file__'], 'index': index})
 
-    missing_targets, pos_mismatches, meaning_mismatches, nonreciprocal = [], [], [], []
+    missing_targets, pos_mismatches, meaning_mismatches, nonreciprocal, self_references = [], [], [], [], []
     for link in links:
+        if link['source_key'] == link['target_key']:
+            self_references.append({k: link[k] for k in ('source', 'target', 'pos', 'file')})
         target = records.get(link['target_key'])
         if target is None:
             missing_targets.append({k: link[k] for k in ('source', 'target', 'pos', 'file')})
@@ -77,7 +79,7 @@ def audit_data(inputs):
         'link_count': len(links), 'headwords_with_family': len({x['source_key'] for x in links}),
         'missing_targets': missing_targets, 'pos_mismatches': pos_mismatches,
         'meaning_mismatches': meaning_mismatches, 'nonreciprocal_links': nonreciprocal,
-        'duplicate_links': duplicate_links, 'malformed': malformed,
+        'self_references': self_references, 'duplicate_links': duplicate_links, 'malformed': malformed,
     }
 
 def load_source(root: Path):
@@ -100,6 +102,7 @@ def render(report):
         f"- Target POS mismatches: **{len(report['pos_mismatches'])}**",
         f"- Vietnamese sense-anchor mismatches: **{len(report['meaning_mismatches'])}**",
         f"- Non-reciprocal links: **{len(report['nonreciprocal_links'])}**",
+        f"- Self-referential links: **{len(report['self_references'])}**",
         f"- Duplicate links: **{len(report['duplicate_links'])}**",
         f"- Duplicate headwords: **{len(report['duplicate_headwords'])}**",
         f"- Malformed records/links: **{len(report['malformed'])}**", '',
@@ -110,6 +113,7 @@ def render(report):
         ('pos_mismatches','Target POS mismatches',('source','target','pos','target_pos','file')),
         ('meaning_mismatches','Vietnamese sense-anchor mismatches',('source','target','meaning_vi','target_meanings')),
         ('nonreciprocal_links','Non-reciprocal links — review only',('source','target','pos','file')),
+        ('self_references','Self-referential links',('source','target','pos','file')),
     ]:
         lines += [f'## {title}', '', '| ' + ' | '.join(columns) + ' |', '|' + '|'.join(['---']*len(columns)) + '|']
         for row in report[key][:200]:

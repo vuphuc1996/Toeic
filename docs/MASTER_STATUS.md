@@ -1,21 +1,29 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.72
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.73
 
-**Current source candidate:** v2.95.71 — Batch 045 sourced Related Glossary enrichment and an evidence-based weighted progress dashboard. UI is frozen; learner storage and canonical/assessment identities are preserved.
+**Current source candidate:** v2.95.73 — Batch 027 Word Family reciprocity and self-reference repair. The active development branch is `candidate`; production `main` remains v2.95.71 until explicit acceptance and promotion. UI remains frozen; learner storage and canonical/assessment identities are protected.
 
-## Current release — v2.95.71
+## Current release — v2.95.73
 
-- **Sole predecessor FullSource:** `TOEIC_Dictionary_v2.95.70_FullSource.zip`; SHA-256 `1a0df44d309d127df3d3fb5012e7a6654c93a450c591f1f67575f4d15822e672` (864 files; ZIP CRC verified). No older archive, alternate source or Patch was used as input.
-- **Batch 045:** 23 existing Related Glossary rows receive POS, English definitions, Cambridge Dictionary provenance and exact URLs. All 567 glossary terms, Vietnamese meanings and relation arrays are preserved; no canonical headword/ID or graph edge is added.
-- **Quality screening:** 119/567 glossary rows remain flagged, down from 142 (−23). Missing definitions 78, placeholders 37, missing POS 115, missing provenance 39; duplicate normalized groups 0. These are automated flags, not editorial approval.
-- **Progress dashboard:** transparent weighted measurable curriculum-build index **54.47%**, based on seven published workstreams/weights. It is provisional and excludes all unmeasured or externally gated areas; it must not be represented as overall production completion or learner mastery. See `docs/reports/PROJECT_PROGRESS_v2.95.71.md` and `tools/project-progress-plan-v2.95.71.json`.
-- **Pronunciation guard:** 79 missing US IPA entries were reviewed through the CMUdict preview; 0 met safe auto-apply conditions. No uncertain IPA was guessed or inserted.
-- **Protection:** no vocabulary canonical IDs/headwords/senses/relations, question/choice IDs, answer keys, learning banks, Mock eligibility, learner IndexedDB schema/records or UI layout changed. No backend/Cloudflare architecture added.
-- **Final local test evidence:** Python 107/107 modules, 799 cases (798 PASS, 1 accepted Git-metadata SKIP, 0 FAIL/timeout/error/unrun); Node 45/45 PASS; validator 1,141 IDs +0/−0, 0 errors/0 legacy warnings; learning content 0 errors/0 warnings; repository integrity 409 checked/0 errors; Part 1 assets 9/9; version sync 18 release markers +17 app imports +42 Service Worker URLs; design profile 54 tokens/406 typography groups; design-token audit 0 new violations with 2,773 legacy warnings.
-- **Read-only graph debt:** Word Family audit retains 90 missing targets, 1 POS mismatch, 72 Vietnamese sense-anchor mismatches and 10 non-reciprocal links; no links were auto-repaired.
-- **Reports:** `TEST_REPORT_TOEIC_Dictionary_v2.95.71.md`, `PYTHON_TEST_SHARDS_v2.95.71.md/.json`, `NODE_TEST_REPORT_v2.95.71.md`, `DATA_DIFF_v2.95.71.md`, `RELATED_GLOSSARY_BATCH_045_v2.95.71.md`, `PROJECT_PROGRESS_v2.95.71.md/.json`, `WORD_FAMILY_GRAPH_AUDIT_v2.95.71.md/.json`, `CHANGE_MANIFEST_v2.95.71.md`, `PACKAGE_VERIFICATION_v2.95.71.md` and `COMMAND_LOG_INDEX_v2.95.71.md`.
-- **Acceptance boundary:** hosted GitHub Actions, live Pages deployment, installed-PWA cache/offline behavior and physical-device tests remain unverified. This is a locally verified source candidate, not production deployment acceptance.
+- **Sole development baseline:** GitHub `vuphuc1996/Toeic` `candidate` commit `d068526864ccaf1ef4e3f3fca33466239890b387` (v2.95.72, 1,181 canonical headwords). This batch is based on that candidate head, not an alternate workspace or older source.
+- **Batch 027:** added 10 reciprocal Word Family links on existing canonical entries and removed 2 self-referential links (`hire → hire`, `utilization → utilization`). No headword or canonical ID was added, deleted, or renamed.
+- **Graph result:** 1,181 headwords; 331 headwords with family links; 428 directed links; 0 target-POS mismatches; 0 non-reciprocal links; 0 self-references; 0 duplicate links/headwords; 0 malformed records. 50 missing canonical targets and 70 Vietnamese sense-anchor flags remain explicitly open for review.
+- **Vocabulary inventory:** unchanged at 1,181 (40 additions from v2.95.72 preserved). Manifest current-release additions are empty because Batch 027 is a relation repair, not a vocabulary expansion.
+- **Regression guard:** the Word Family audit now reports self-references explicitly. Batch 027 tests validate every reverse link against the canonical target POS and Vietnamese sense.
+- **Boundaries:** no IPA/definition/topic changes, question or choice IDs, answer keys, Mock eligibility, learner IndexedDB schema/records, Robot Buddy behavior, UI layout, or hosting architecture changes.
+- **Verification status:** GitHub Actions and Pages for this commit are pending. Do not label this release accepted until the current commit's workflow and deployment complete. Physical-device and installed-PWA offline acceptance remain separate gates.
+- **Reports:** `docs/reports/WORD_FAMILY_BATCH_027_v2.95.73.md`, `docs/reports/TEST_REPORT_TOEIC_Dictionary_v2.95.73.md`, and the generated release-keyed graph audit.
+- **Source boundary:** candidate-only development. Do not update `main` as part of this batch.
+
+## Previous release — v2.95.72
+
+- **Vocabulary Batch 026:** added 40 canonical TOEIC headwords, increasing the inventory from 1,141 to 1,181. The original 1,141 IDs/headwords were preserved.
+- **Related Glossary Batch 046:** remediated 65 existing glossary rows while retaining all 567 glossary identities, Vietnamese meanings and relation arrays.
+- **Pre-repair Word Family audit:** 322 headwords with family links; 420 directed links; 50 missing targets; 1 target-POS mismatch; 72 Vietnamese sense-anchor flags; 10 non-reciprocal links.
+- **Provisional progress index:** 55.88%, calculated from the v2.95.72 published workstream model. It is not overall production completion, learner mastery, official ETS alignment, or readiness certification.
+- **Baseline candidate commit:** `3dff60cd9da392bc7085a3f016a8e1ad3250edbd`. Later candidate-only CI and preview-server commits are documented in Git history.
+- **Acceptance:** this source is separate from production `main`; promotion requires independent QA and explicit release approval.
 
 ## Previous release — v2.95.70
 

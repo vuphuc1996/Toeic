@@ -854,7 +854,13 @@
       "topics": [
         "HR"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "flexible",
+          "pos": "adj",
+          "meaning_vi": "linh hoạt; mềm dẻo"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

@@ -450,7 +450,13 @@
         "TRAVEL",
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "guidance",
+          "pos": "n",
+          "meaning_vi": "sự hướng dẫn; chỉ dẫn"
+        }
+      ],
       "verb_forms": {
         "v1": "guide",
         "vs_es": "guides",
@@ -489,7 +495,13 @@
       "topics": [
         "OFFICE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "guidance",
+          "pos": "n",
+          "meaning_vi": "sự hướng dẫn; chỉ dẫn"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

@@ -3325,7 +3325,13 @@
         "MEETING",
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "confer",
+          "pos": "v",
+          "meaning_vi": "trao; cấp; hội ý; bàn bạc"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -4223,7 +4229,13 @@
         "BUSINESS",
         "MARKETING"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "consume",
+          "pos": "v",
+          "meaning_vi": "tiêu thụ; sử dụng hết; tiêu hao"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
@@ -4259,7 +4271,13 @@
       "topics": [
         "ENVIRONMENT"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "consume",
+          "pos": "v",
+          "meaning_vi": "tiêu thụ; sử dụng hết; tiêu hao"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {

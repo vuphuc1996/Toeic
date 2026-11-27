@@ -347,6 +347,11 @@
           "word": "accessibility",
           "pos": "n",
           "meaning_vi": "khả năng tiếp cận; mức độ dễ sử dụng"
+        },
+        {
+          "word": "access",
+          "pos": "n",
+          "meaning_vi": "quyền truy cập; lối vào"
         }
       ],
       "verb_forms": null,
@@ -4768,7 +4773,13 @@
       "topics": [
         "TECHNOLOGY"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "authentic",
+          "pos": "adj",
+          "meaning_vi": "xác thực; chân thực; đáng tin là thật"
+        }
+      ],
       "verb_forms": {
         "v1": "authenticate",
         "vs_es": "authenticates",

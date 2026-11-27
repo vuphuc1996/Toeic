@@ -716,11 +716,6 @@
           "word": "utilize",
           "pos": "v",
           "meaning_vi": "sử dụng; tận dụng"
-        },
-        {
-          "word": "utilization",
-          "pos": "n",
-          "meaning_vi": "việc sử dụng"
         }
       ],
       "verb_forms": null,
@@ -757,7 +752,13 @@
       "topics": [
         "BUSINESS"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "utilization",
+          "pos": "n",
+          "meaning_vi": "việc sử dụng; mức độ tận dụng"
+        }
+      ],
       "verb_forms": {
         "v1": "utilize",
         "vs_es": "utilizes",

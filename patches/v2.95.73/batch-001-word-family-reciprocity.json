@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "batch": "027",
+  "baseDataVersion": "2.95.72",
+  "targetDataVersion": "2.95.73",
+  "changeType": "word-family-reciprocity-and-self-reference-repair",
+  "canonicalHeadwordCount": 1181,
+  "changedRecordCount": 12,
+  "addedLinks": [
+    {
+      "letter": "A",
+      "owner": "accessible",
+      "ownerId": "accessible-adj",
+      "target": "access",
+      "pos": "n",
+      "meaning_vi": "quyền truy cập; lối vào"
+    },
+    {
+      "letter": "A",
+      "owner": "authenticate",
+      "ownerId": "authenticate-v",
+      "target": "authentic",
+      "pos": "adj",
+      "meaning_vi": "xác thực; chân thực; đáng tin là thật"
+    },
+    {
+      "letter": "C",
+      "owner": "conference",
+      "ownerId": "conference-n",
+      "target": "confer",
+      "pos": "v",
+      "meaning_vi": "trao; cấp; hội ý; bàn bạc"
+    },
+    {
+      "letter": "C",
+      "owner": "consumer",
+      "ownerId": "consumer-n",
+      "target": "consume",
+      "pos": "v",
+      "meaning_vi": "tiêu thụ; sử dụng hết; tiêu hao"
+    },
+    {
+      "letter": "C",
+      "owner": "consumption",
+      "ownerId": "consumption-n",
+      "target": "consume",
+      "pos": "v",
+      "meaning_vi": "tiêu thụ; sử dụng hết; tiêu hao"
+    },
+    {
+      "letter": "F",
+      "owner": "flexibility",
+      "ownerId": "flexibility-n",
+      "target": "flexible",
+      "pos": "adj",
+      "meaning_vi": "linh hoạt; mềm dẻo"
+    },
+    {
+      "letter": "G",
+      "owner": "guide",
+      "ownerId": "guide-v",
+      "target": "guidance",
+      "pos": "n",
+      "meaning_vi": "sự hướng dẫn; chỉ dẫn"
+    },
+    {
+      "letter": "G",
+      "owner": "guideline",
+      "ownerId": "guideline-n",
+      "target": "guidance",
+      "pos": "n",
+      "meaning_vi": "sự hướng dẫn; chỉ dẫn"
+    },
+    {
+      "letter": "M",
+      "owner": "month",
+      "ownerId": "month-n",
+      "target": "monthly",
+      "pos": "adj",
+      "meaning_vi": "hằng tháng"
+    },
+    {
+      "letter": "U",
+      "owner": "utilize",
+      "ownerId": "utilize-v",
+      "target": "utilization",
+      "pos": "n",
+      "meaning_vi": "việc sử dụng; mức độ tận dụng"
+    }
+  ],
+  "removedSelfLinks": [
+    {
+      "letter": "H",
+      "owner": "hire",
+      "ownerId": "hire-v",
+      "target": "hire",
+      "pos": "n",
+      "meaning_vi": "sự thuê mướn (ít dùng)",
+      "reason": "self-referential; canonical headword has only a verb sense"
+    },
+    {
+      "letter": "U",
+      "owner": "utilization",
+      "ownerId": "utilization-n",
+      "target": "utilization",
+      "pos": "n",
+      "meaning_vi": "việc sử dụng",
+      "reason": "self-referential duplicate of the owner headword"
+    }
+  ],
+  "invariants": {
+    "canonicalHeadwordCountUnchanged": true,
+    "canonicalIdsUnchanged": true,
+    "canonicalMeaningsUnchanged": true,
+    "questionChoiceAnswerIdsUnchanged": true,
+    "indexedDbSchemaAndRecordsUnchanged": true,
+    "mockEligibilityUnchanged": true,
+    "uiLayoutUnchanged": true
+  }
+}

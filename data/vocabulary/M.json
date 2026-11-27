@@ -1261,7 +1261,13 @@
         "DAILY",
         "FINANCE"
       ],
-      "word_family": [],
+      "word_family": [
+        {
+          "word": "monthly",
+          "pos": "adj",
+          "meaning_vi": "hằng tháng"
+        }
+      ],
       "verb_forms": null,
       "examples": [
         {
