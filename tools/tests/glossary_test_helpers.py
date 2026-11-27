@@ -171,6 +171,40 @@ def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) 
             if record is None:
                 raise AssertionError(f"Word Family batch references missing canonical ID: {entry['id']}")
             record["word_family"] = copy.deepcopy(entry.get("before", []))
+    # Reverse later reciprocal Word Family-only repairs before reconstructing
+    # historical glossary snapshots. These changes are intentionally present in the
+    # current canonical data, but must not contaminate an older batch's frozen hash.
+    family_repair_path = root / "patches/v2.95.73/batch-001-word-family-reciprocity.json"
+    if family_repair_path.exists():
+        family_repair = json.loads(family_repair_path.read_text(encoding="utf-8"))
+        for change in family_repair.get("addedLinks", []):
+            owner_id = change["ownerId"]
+            owner_path = id_to_path.get(owner_id)
+            if owner_path is None:
+                raise AssertionError(f"Word Family repair references missing owner ID: {owner_id}")
+            owner = next((row for row in documents[owner_path]["words"] if row.get("id") == owner_id), None)
+            if owner is None:
+                raise AssertionError(f"Word Family repair owner not found in reconstructed data: {owner_id}")
+            family = owner.get("word_family") or []
+            matches = [i for i, row in enumerate(family)
+                       if str(row.get("word", "")).casefold() == change["target"].casefold()]
+            if len(matches) != 1:
+                raise AssertionError(
+                    f"Expected one current Batch 027 link {change['owner']} -> {change['target']}; found {len(matches)}"
+                )
+            family.pop(matches[0])
+            owner["word_family"] = family
+        for change in family_repair.get("removedSelfLinks", []):
+            owner_id = change["ownerId"]
+            owner_path = id_to_path.get(owner_id)
+            if owner_path is None:
+                raise AssertionError(f"Word Family self-link repair references missing owner ID: {owner_id}")
+            owner = next((row for row in documents[owner_path]["words"] if row.get("id") == owner_id), None)
+            if owner is None:
+                raise AssertionError(f"Word Family self-link owner not found in reconstructed data: {owner_id}")
+            owner.setdefault("word_family", []).append({
+                "word": change["target"], "pos": change["pos"], "meaning_vi": change["meaning_vi"]
+            })
     for operation in patch.get("operations", []):
         path = id_to_path[operation["id"]]
         record = next(row for row in documents[path]["words"] if row["id"] == operation["id"])
