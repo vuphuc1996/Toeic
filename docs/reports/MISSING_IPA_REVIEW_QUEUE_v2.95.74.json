@@ -1,0 +1,1762 @@
+{
+  "schemaVersion": 1,
+  "source": "CMU Pronouncing Dictionary via cmudict package; ARPABET retained for human review",
+  "sourcePackage": "cmudict",
+  "sourcePackageVersion": "1.1.3",
+  "canonicalMissingUsIpaCount": 79,
+  "statusCounts": {
+    "multiple_pronunciations_review": 49,
+    "no_exact_dictionary_entry": 25,
+    "single_pronunciation_candidate": 5
+  },
+  "policy": "No IPA values are applied. Exact headwords only; all unique pronunciation variants are retained. Review before use.",
+  "records": [
+    {
+      "id": "advocate-vn",
+      "word": "advocate",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "AE1",
+          "D",
+          "V",
+          "AH0",
+          "K",
+          "AH0",
+          "T"
+        ],
+        [
+          "AE1",
+          "D",
+          "V",
+          "AH0",
+          "K",
+          "EY2",
+          "T"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "affiliate-n",
+      "word": "affiliate",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "AH0",
+          "F",
+          "IH1",
+          "L",
+          "IY0",
+          "EY2",
+          "T"
+        ],
+        [
+          "AH0",
+          "F",
+          "IH1",
+          "L",
+          "IY0",
+          "AH0",
+          "T"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "apprentice-n",
+      "word": "apprentice",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "AH0",
+          "P",
+          "R",
+          "EH1",
+          "N",
+          "T",
+          "AH0",
+          "S"
+        ],
+        [
+          "AH0",
+          "P",
+          "R",
+          "EH1",
+          "N",
+          "T",
+          "IH0",
+          "S"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "approximate-adjv",
+      "word": "approximate",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "AH0",
+          "P",
+          "R",
+          "AA1",
+          "K",
+          "S",
+          "AH0",
+          "M",
+          "AH0",
+          "T"
+        ],
+        [
+          "AH0",
+          "P",
+          "R",
+          "AA1",
+          "K",
+          "S",
+          "AH0",
+          "M",
+          "EY2",
+          "T"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "backorder-n",
+      "word": "backorder",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "bargain-n",
+      "word": "bargain",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "B",
+          "AA1",
+          "R",
+          "G",
+          "AH0",
+          "N"
+        ],
+        [
+          "B",
+          "AA1",
+          "R",
+          "G",
+          "IH0",
+          "N"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "clerical-adj",
+      "word": "clerical",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "K",
+          "L",
+          "EH1",
+          "R",
+          "AH0",
+          "K",
+          "AH0",
+          "L"
+        ],
+        [
+          "K",
+          "L",
+          "EH1",
+          "R",
+          "IH0",
+          "K",
+          "AH0",
+          "L"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "consignor-n",
+      "word": "consignor",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "consumption-n",
+      "word": "consumption",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "K",
+          "AH0",
+          "N",
+          "S",
+          "AH1",
+          "M",
+          "P",
+          "SH",
+          "AH0",
+          "N"
+        ],
+        [
+          "K",
+          "AH0",
+          "N",
+          "S",
+          "AH1",
+          "M",
+          "SH",
+          "AH0",
+          "N"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "coordinate-v",
+      "word": "coordinate",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "K",
+          "OW0",
+          "AO1",
+          "R",
+          "D",
+          "AH0",
+          "N",
+          "AH0",
+          "T"
+        ],
+        [
+          "K",
+          "OW0",
+          "AO1",
+          "R",
+          "D",
+          "AH0",
+          "N",
+          "EY2",
+          "T"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "coverage-n",
+      "word": "coverage",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "K",
+          "AH1",
+          "V",
+          "ER0",
+          "AH0",
+          "JH"
+        ],
+        [
+          "K",
+          "AH1",
+          "V",
+          "ER0",
+          "IH0",
+          "JH"
+        ],
+        [
+          "K",
+          "AH1",
+          "V",
+          "R",
+          "IH0",
+          "JH"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "delegate-v",
+      "word": "delegate",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "D",
+          "EH1",
+          "L",
+          "AH0",
+          "G",
+          "EY2",
+          "T"
+        ],
+        [
+          "D",
+          "EH1",
+          "L",
+          "AH0",
+          "G",
+          "AH0",
+          "T"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "deliberately-adv",
+      "word": "deliberately",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "D",
+          "IH0",
+          "L",
+          "IH1",
+          "B",
+          "ER0",
+          "AH0",
+          "T",
+          "L",
+          "IY0"
+        ],
+        [
+          "D",
+          "IH0",
+          "L",
+          "IH1",
+          "B",
+          "R",
+          "AH0",
+          "T",
+          "L",
+          "IY0"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "deliverable-n",
+      "word": "deliverable",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "D",
+          "IH0",
+          "L",
+          "IH1",
+          "V",
+          "ER0",
+          "AH0",
+          "B",
+          "AH0",
+          "L"
+        ],
+        [
+          "D",
+          "IH0",
+          "L",
+          "IH1",
+          "V",
+          "R",
+          "AH0",
+          "B",
+          "AH0",
+          "L"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "designate-v",
+      "word": "designate",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "D",
+          "EH1",
+          "Z",
+          "AH0",
+          "G",
+          "N",
+          "EY2",
+          "T"
+        ],
+        [
+          "D",
+          "EH1",
+          "Z",
+          "IH0",
+          "G",
+          "N",
+          "EY2",
+          "T"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "diverse-adj",
+      "word": "diverse",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "D",
+          "AY0",
+          "V",
+          "ER1",
+          "S"
+        ],
+        [
+          "D",
+          "IH0",
+          "V",
+          "ER1",
+          "S"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "duplicate-adj",
+      "word": "duplicate",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "D",
+          "UW1",
+          "P",
+          "L",
+          "AH0",
+          "K",
+          "AH0",
+          "T"
+        ],
+        [
+          "D",
+          "UW1",
+          "P",
+          "L",
+          "AH0",
+          "K",
+          "EY2",
+          "T"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "financing-n",
+      "word": "financing",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "F",
+          "AH0",
+          "N",
+          "AE1",
+          "N",
+          "S",
+          "IH0",
+          "NG"
+        ],
+        [
+          "F",
+          "IH0",
+          "N",
+          "AE1",
+          "N",
+          "S",
+          "IH0",
+          "NG"
+        ],
+        [
+          "F",
+          "AY0",
+          "N",
+          "AE1",
+          "N",
+          "S",
+          "IH0",
+          "NG"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "fiscal-year-n",
+      "word": "fiscal year",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "franchisee-n",
+      "word": "franchisee",
+      "status": "single_pronunciation_candidate",
+      "arpabet_variants": [
+        [
+          "F",
+          "R",
+          "AE1",
+          "N",
+          "CH",
+          "AY2",
+          "Z",
+          "IY1"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "franchisor-n",
+      "word": "franchisor",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "grievance-procedure-n",
+      "word": "grievance procedure",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "handling-n",
+      "word": "handling",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "HH",
+          "AE1",
+          "N",
+          "D",
+          "L",
+          "IH0",
+          "NG"
+        ],
+        [
+          "HH",
+          "AE1",
+          "N",
+          "D",
+          "AH0",
+          "L",
+          "IH0",
+          "NG"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "incentive-n",
+      "word": "incentive",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "IH2",
+          "N",
+          "S",
+          "EH1",
+          "N",
+          "T",
+          "IH0",
+          "V"
+        ],
+        [
+          "IH2",
+          "N",
+          "S",
+          "EH1",
+          "N",
+          "IH0",
+          "V"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "incentivize-v",
+      "word": "incentivize",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "incurrence-n",
+      "word": "incurrence",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "indemnity-n",
+      "word": "indemnity",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "IH2",
+          "N",
+          "D",
+          "EH1",
+          "M",
+          "N",
+          "AH0",
+          "T",
+          "IY0"
+        ],
+        [
+          "IH2",
+          "N",
+          "D",
+          "EH1",
+          "M",
+          "N",
+          "IH0",
+          "T",
+          "IY0"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "inquiry-n",
+      "word": "inquiry",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "IH2",
+          "N",
+          "K",
+          "W",
+          "AY1",
+          "R",
+          "IY2"
+        ],
+        [
+          "IH0",
+          "N",
+          "K",
+          "W",
+          "ER0",
+          "R",
+          "IY0"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "interim-adj",
+      "word": "interim",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "IH1",
+          "N",
+          "T",
+          "ER0",
+          "AH0",
+          "M"
+        ],
+        [
+          "IH1",
+          "N",
+          "T",
+          "R",
+          "AH0",
+          "M"
+        ],
+        [
+          "IH1",
+          "N",
+          "ER0",
+          "AH0",
+          "M"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "inventory-control-n",
+      "word": "inventory control",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "invoiceable-adj",
+      "word": "invoiceable",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "jurisdiction-n",
+      "word": "jurisdiction",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "JH",
+          "UH2",
+          "R",
+          "AH0",
+          "S",
+          "D",
+          "IH1",
+          "K",
+          "SH",
+          "AH0",
+          "N"
+        ],
+        [
+          "JH",
+          "UH2",
+          "R",
+          "IH0",
+          "S",
+          "D",
+          "IH1",
+          "K",
+          "SH",
+          "AH0",
+          "N"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "labor-intensive-adj",
+      "word": "labor-intensive",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "maintenance-n",
+      "word": "maintenance",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "M",
+          "EY1",
+          "N",
+          "T",
+          "AH0",
+          "N",
+          "AH0",
+          "N",
+          "S"
+        ],
+        [
+          "M",
+          "EY1",
+          "N",
+          "T",
+          "N",
+          "AH0",
+          "N",
+          "S"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "mobilization-n",
+      "word": "mobilization",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "M",
+          "OW2",
+          "B",
+          "AH0",
+          "L",
+          "AH0",
+          "Z",
+          "EY1",
+          "SH",
+          "AH0",
+          "N"
+        ],
+        [
+          "M",
+          "OW2",
+          "B",
+          "AH0",
+          "L",
+          "IH0",
+          "Z",
+          "EY1",
+          "SH",
+          "AH0",
+          "N"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "negligence-n",
+      "word": "negligence",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "N",
+          "EH1",
+          "G",
+          "L",
+          "AH0",
+          "JH",
+          "AH0",
+          "N",
+          "S"
+        ],
+        [
+          "N",
+          "EH1",
+          "G",
+          "L",
+          "IH0",
+          "JH",
+          "AH0",
+          "N",
+          "S"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "negotiator-n",
+      "word": "negotiator",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "N",
+          "AH0",
+          "G",
+          "OW1",
+          "SH",
+          "IY0",
+          "EY2",
+          "T",
+          "ER0"
+        ],
+        [
+          "N",
+          "IH0",
+          "G",
+          "OW1",
+          "SH",
+          "IY0",
+          "EY2",
+          "T",
+          "ER0"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "noncompliant-adj",
+      "word": "noncompliant",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "notarize-v",
+      "word": "notarize",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "notarized-adj",
+      "word": "notarized",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "occupational-safety-n",
+      "word": "occupational safety",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "outage-n",
+      "word": "outage",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "AW1",
+          "T",
+          "AH0",
+          "JH"
+        ],
+        [
+          "AW1",
+          "T",
+          "IH0",
+          "JH"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "overdue-adj",
+      "word": "overdue",
+      "status": "single_pronunciation_candidate",
+      "arpabet_variants": [
+        [
+          "OW1",
+          "V",
+          "ER0",
+          "D",
+          "UW1"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "overhead-n",
+      "word": "overhead",
+      "status": "single_pronunciation_candidate",
+      "arpabet_variants": [
+        [
+          "OW1",
+          "V",
+          "ER0",
+          "HH",
+          "EH1",
+          "D"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "overhead-cost-n",
+      "word": "overhead cost",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "payroll-deduction-n",
+      "word": "payroll deduction",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "per-diem-n",
+      "word": "per diem",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "personnel-file-n",
+      "word": "personnel file",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "personnel-manager-n",
+      "word": "personnel manager",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "postage-n",
+      "word": "postage",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "P",
+          "OW1",
+          "S",
+          "T",
+          "AH0",
+          "JH"
+        ],
+        [
+          "P",
+          "OW1",
+          "S",
+          "T",
+          "IH0",
+          "JH"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "postponement-n",
+      "word": "postponement",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "P",
+          "OW0",
+          "S",
+          "T",
+          "P",
+          "OW1",
+          "N",
+          "M",
+          "AH0",
+          "N",
+          "T"
+        ],
+        [
+          "P",
+          "OW0",
+          "S",
+          "P",
+          "OW1",
+          "N",
+          "M",
+          "AH0",
+          "N",
+          "T"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "prescribe-v",
+      "word": "prescribe",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "P",
+          "R",
+          "AH0",
+          "S",
+          "K",
+          "R",
+          "AY1",
+          "B"
+        ],
+        [
+          "P",
+          "R",
+          "IY0",
+          "S",
+          "K",
+          "R",
+          "AY1",
+          "B"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "proceeds-n",
+      "word": "proceeds",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "P",
+          "R",
+          "AH0",
+          "S",
+          "IY1",
+          "D",
+          "Z"
+        ],
+        [
+          "P",
+          "R",
+          "OW0",
+          "S",
+          "IY1",
+          "D",
+          "Z"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "productivity-n",
+      "word": "productivity",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "P",
+          "R",
+          "OW2",
+          "D",
+          "AH0",
+          "K",
+          "T",
+          "IH1",
+          "V",
+          "AH0",
+          "T",
+          "IY0"
+        ],
+        [
+          "P",
+          "R",
+          "OW2",
+          "D",
+          "AH0",
+          "K",
+          "T",
+          "IH1",
+          "V",
+          "IH0",
+          "T",
+          "IY0"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "promptly-adv",
+      "word": "promptly",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "P",
+          "R",
+          "AA1",
+          "M",
+          "P",
+          "T",
+          "L",
+          "IY0"
+        ],
+        [
+          "P",
+          "R",
+          "AA1",
+          "M",
+          "P",
+          "L",
+          "IY0"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "provisionally-adv",
+      "word": "provisionally",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "P",
+          "R",
+          "AH0",
+          "V",
+          "IH1",
+          "ZH",
+          "AH0",
+          "N",
+          "AH0",
+          "L",
+          "IY0"
+        ],
+        [
+          "P",
+          "R",
+          "AH0",
+          "V",
+          "IH1",
+          "ZH",
+          "N",
+          "AH0",
+          "L",
+          "IY0"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "recurring-adj",
+      "word": "recurring",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "R",
+          "IH0",
+          "K",
+          "ER1",
+          "IH0",
+          "NG"
+        ],
+        [
+          "R",
+          "IY0",
+          "K",
+          "ER1",
+          "IH0",
+          "NG"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "reliable-adj",
+      "word": "reliable",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "R",
+          "IH0",
+          "L",
+          "AY1",
+          "AH0",
+          "B",
+          "AH0",
+          "L"
+        ],
+        [
+          "R",
+          "IY0",
+          "L",
+          "AY1",
+          "AH0",
+          "B",
+          "AH0",
+          "L"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "remittance-n",
+      "word": "remittance",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "R",
+          "IY0",
+          "M",
+          "IH1",
+          "T",
+          "AH0",
+          "N",
+          "S"
+        ],
+        [
+          "R",
+          "AH0",
+          "M",
+          "IH1",
+          "T",
+          "AH0",
+          "N",
+          "S"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "rescind-v",
+      "word": "rescind",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "R",
+          "IH0",
+          "S",
+          "IH1",
+          "N",
+          "D"
+        ],
+        [
+          "R",
+          "IY0",
+          "S",
+          "IH1",
+          "N",
+          "D"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "resign-v",
+      "word": "resign",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "R",
+          "IH0",
+          "Z",
+          "AY1",
+          "N"
+        ],
+        [
+          "R",
+          "IY0",
+          "Z",
+          "AY1",
+          "N"
+        ],
+        [
+          "R",
+          "IY0",
+          "S",
+          "AY1",
+          "N"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "resignation-n",
+      "word": "resignation",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "R",
+          "EH2",
+          "Z",
+          "AH0",
+          "G",
+          "N",
+          "EY1",
+          "SH",
+          "AH0",
+          "N"
+        ],
+        [
+          "R",
+          "EH2",
+          "Z",
+          "IH0",
+          "G",
+          "N",
+          "EY1",
+          "SH",
+          "AH0",
+          "N"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "retain-v",
+      "word": "retain",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "R",
+          "IH0",
+          "T",
+          "EY1",
+          "N"
+        ],
+        [
+          "R",
+          "IY0",
+          "T",
+          "EY1",
+          "N"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "retainer-n",
+      "word": "retainer",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "R",
+          "IH0",
+          "T",
+          "EY1",
+          "N",
+          "ER0"
+        ],
+        [
+          "R",
+          "IY0",
+          "T",
+          "EY1",
+          "N",
+          "ER0"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "retiree-n",
+      "word": "retiree",
+      "status": "single_pronunciation_candidate",
+      "arpabet_variants": [
+        [
+          "R",
+          "IY0",
+          "T",
+          "AY1",
+          "R",
+          "IY1"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "retirement-n",
+      "word": "retirement",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "R",
+          "IY0",
+          "T",
+          "AY1",
+          "ER0",
+          "M",
+          "AH0",
+          "N",
+          "T"
+        ],
+        [
+          "R",
+          "IH0",
+          "T",
+          "AY1",
+          "ER0",
+          "M",
+          "AH0",
+          "N",
+          "T"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "revenue-stream-n",
+      "word": "revenue stream",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "severance-n",
+      "word": "severance",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "S",
+          "EH1",
+          "V",
+          "ER2",
+          "AH0",
+          "N",
+          "S"
+        ],
+        [
+          "S",
+          "EH1",
+          "V",
+          "R",
+          "AH0",
+          "N",
+          "S"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "severance-pay-n",
+      "word": "severance pay",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "shortage-n",
+      "word": "shortage",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "SH",
+          "AO1",
+          "R",
+          "T",
+          "AH0",
+          "JH"
+        ],
+        [
+          "SH",
+          "AO1",
+          "R",
+          "T",
+          "IH0",
+          "JH"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "surcharge-n",
+      "word": "surcharge",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "S",
+          "ER0",
+          "CH",
+          "AA1",
+          "R",
+          "JH"
+        ],
+        [
+          "S",
+          "ER1",
+          "CH",
+          "AA2",
+          "R",
+          "JH"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "underwriting-n",
+      "word": "underwriting",
+      "status": "single_pronunciation_candidate",
+      "arpabet_variants": [
+        [
+          "AH1",
+          "N",
+          "D",
+          "ER0",
+          "R",
+          "AY1",
+          "T",
+          "IH0",
+          "NG"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "validity-n",
+      "word": "validity",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "V",
+          "AH0",
+          "L",
+          "IH1",
+          "D",
+          "AH0",
+          "T",
+          "IY0"
+        ],
+        [
+          "V",
+          "AH0",
+          "L",
+          "IH1",
+          "D",
+          "IH0",
+          "T",
+          "IY0"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "ventilation-n",
+      "word": "ventilation",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "V",
+          "EH2",
+          "N",
+          "T",
+          "AH0",
+          "L",
+          "EY1",
+          "SH",
+          "AH0",
+          "N"
+        ],
+        [
+          "V",
+          "EH2",
+          "N",
+          "AH0",
+          "L",
+          "EY1",
+          "SH",
+          "AH0",
+          "N"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "warehouseman-n",
+      "word": "warehouseman",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "withdrawal-n",
+      "word": "withdrawal",
+      "status": "multiple_pronunciations_review",
+      "arpabet_variants": [
+        [
+          "W",
+          "IH0",
+          "DH",
+          "D",
+          "R",
+          "AO1",
+          "AH0",
+          "L"
+        ],
+        [
+          "W",
+          "IH0",
+          "TH",
+          "D",
+          "R",
+          "AO1",
+          "AH0",
+          "L"
+        ]
+      ],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "workplace-safety-n",
+      "word": "workplace safety",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "year-end-n",
+      "word": "year-end",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    },
+    {
+      "id": "zero-based-budgeting-n",
+      "word": "zero-based budgeting",
+      "status": "no_exact_dictionary_entry",
+      "arpabet_variants": [],
+      "source": "CMUdict (cmudict package)",
+      "decision": "review_only_no_auto_apply"
+    }
+  ],
+  "release": "2.95.74",
+  "triageTaxonomy": {
+    "partOfSpeechHeteronymsAndVariants": {
+      "count": 49,
+      "description": "Headwords with multiple CMUdict pronunciations (e.g. noun/verb stress shifts like advocate, attribute, contract, duplicate, import, record). Requires linguistic sense-disambiguation."
+    },
+    "compoundAndMultiWordPhrases": {
+      "count": 15,
+      "description": "Compound phrases without single-token CMUdict entry (e.g. fiscal year, grievance procedure, inventory control, workplace safety, zero-based budgeting). Requires multi-token compound stress assignment."
+    },
+    "specializedDerivativesAndAffixes": {
+      "count": 10,
+      "description": "Business-specialized derivatives with affixes (e.g. consignor, franchisor, incentivize, incurrence, invoiceable, noncompliant, notarize, warehouseman)."
+    },
+    "candidatesWithStressDiscrepancy": {
+      "count": 5,
+      "description": "Single CMUdict match with multiple primary ARPABET stress markers (franchisee, overdue, overhead, retiree, underwriting). Rejected by automated IPA converter to prevent false stress assignment."
+    }
+  }
+}

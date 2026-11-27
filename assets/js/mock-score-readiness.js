@@ -15,13 +15,42 @@ function overlapPercent(a, b) {
   return Math.round(shared / Math.min(a.length, b.length) * 100);
 }
 
+function strictFiniteNumber(value) {
+  if (typeof value === 'number') return Number.isFinite(value) ? value : null;
+  if (typeof value === 'string' && value.trim() !== '') {
+    const parsed = Number(value);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+  return null;
+}
+
 export function buildMockScoreReadiness(history = []) {
-  const completed = (Array.isArray(history) ? history : [])
-    .filter(row => row && row.status === 'completed' && row.modeId === 'full'
-      && Number(row.questions) === 200
-      && Number.isFinite(Number(row.listeningAccuracy))
-      && Number.isFinite(Number(row.readingAccuracy))
-      && Number.isFinite(Number(row.completedAt)))
+  const validRows = (Array.isArray(history) ? history : [])
+    .filter(row => {
+      if (!row || typeof row !== 'object' || row.status !== 'completed' || row.modeId !== 'full') return false;
+      const questions = strictFiniteNumber(row.questions);
+      const listening = strictFiniteNumber(row.listeningAccuracy);
+      const reading = strictFiniteNumber(row.readingAccuracy);
+      const completedAt = strictFiniteNumber(row.completedAt);
+      return questions === 200
+        && listening !== null && listening >= 0 && listening <= 100
+        && reading !== null && reading >= 0 && reading <= 100
+        && completedAt !== null && completedAt >= 0;
+    });
+  const byAttemptId = new Map();
+  const anonymousRows = [];
+  for (const row of validRows) {
+    const attemptId = typeof row.attemptId === 'string' ? row.attemptId.trim() : '';
+    if (!attemptId) {
+      anonymousRows.push(row);
+      continue;
+    }
+    const prev = byAttemptId.get(attemptId);
+    if (!prev || Number(row.completedAt) >= Number(prev.completedAt)) {
+      byAttemptId.set(attemptId, row);
+    }
+  }
+  const completed = [...anonymousRows, ...byAttemptId.values()]
     .sort((a, b) => Number(a.completedAt) - Number(b.completedAt));
   const recent = completed.slice(-3);
   const base = {

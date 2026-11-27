@@ -179,6 +179,17 @@ class SyncVersionTests(unittest.TestCase):
                                b"- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v1.2.3.md`.\r\n"
                                b"- Current command-log index: `reports/COMMAND_LOG_INDEX_v1.2.3.md`.\r\n")
 
+    def test_apply_updates_mock_engine_cache_key_when_present(self):
+        mock_engine = self.root / "assets" / "js" / "mock-engine.js"
+        mock_engine.write_text("import { buildMockQuestionSchedule } from './mock-flow.js?__release=1.0.0';\n", encoding="utf-8")
+        code, out = self.tool("--check")
+        self.assertEqual(code, 1, out)
+        self.assertIn("mock-engine.js local module import cache keys", out)
+        code, out = self.tool("--apply")
+        self.assertEqual(code, 0, out)
+        self.assertIn("mock-flow.js?__release=1.2.3", mock_engine.read_text(encoding="utf-8"))
+        self.assertEqual(self.tool("--check")[0], 0)
+
 
 if __name__ == "__main__":
     unittest.main()

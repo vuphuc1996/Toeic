@@ -63,6 +63,9 @@ ELQ = question_counts([item for item in listening if is_mock_eligible(item)])
 PENDING = [item for item in listening if item.get("editorialStatus") == "reserve-pending-independent-review"]
 PQ = question_counts(PENDING)
 RQ = question_counts(readings)
+ERQ = question_counts([item for item in readings if is_mock_eligible(item)])
+RPENDING = [item for item in readings if item.get("editorialStatus") == "reserve-pending-independent-review"]
+PRQ = question_counts(RPENDING)
 reading_words = sum(
     word_count(item.get("passage", "")) if not item.get("documents")
     else sum(word_count(doc.get("content", "")) for doc in item["documents"])
@@ -119,6 +122,7 @@ for part in READ_TARGET:
 lines += [
     f"| **Total** | **{len(readings)}** | **{sum(RQ.values())}** |", "",
     f"- Reading text word count (current passages/documents): {reading_words}.",
+    f"- Mock-eligible Reading pool: {sum(ERQ.values())} questions (Part 5: {ERQ.get('Part 5', 0)}, Part 6: {ERQ.get('Part 6', 0)}, Part 7: {ERQ.get('Part 7', 0)}); pending independent review: {sum(PRQ.values())} Part 7 questions across {len(RPENDING)} resources.",
     f"- Part 7 question mix: {p7_single_questions} single-passage questions / {p7_multiple_questions} multiple-passage questions.",
     f"- Structured Part 7 multi-document resources: {p7_structured_multi_items}/{len(p7_multiple_items)} double/triple passages.",
     f"- Complete five-question Part 7 multiple-passage blocks: {p7_complete_multi_blocks}/{len(p7_multiple_items)}; single-passage blocks with 2–4 questions: {sum(1 for item in p7_single_items if 2 <= len(item.get('questions', [])) <= 4)}/{len(p7_single_items)}.", "",
@@ -150,9 +154,9 @@ for part, target in LISTEN_TARGET.items():
     lines.append(f"| {part} | {current} eligible | {target} | {current / target * 100:.1f}% |")
 lines.append(f"| **Listening eligible total** | **{sum(ELQ.values())}** | **100** | **{sum(ELQ.values())}%** |")
 for part, target in READ_TARGET.items():
-    current = RQ.get(part, 0)
-    lines.append(f"| {part} | {current} | {target} | {current / target * 100:.1f}% |")
-lines.append(f"| **Reading total** | **{sum(RQ.values())}** | **100** | **{sum(RQ.values())}%** |")
+    current = ERQ.get(part, 0)
+    lines.append(f"| {part} | {current} eligible | {target} | {current / target * 100:.1f}% |")
+lines.append(f"| **Reading eligible total** | **{sum(ERQ.values())}** | **100** | **{sum(ERQ.values())}%** |")
 lines += [
     "", "These ratios compare the current practice pool with the public distribution for one test form. They do not mean the app already contains a complete, validated mock test. Part 1 Mock-eligible and total pools are tracked separately; each record has a source-specific attribution row and a JPG-only `photo` path; no SVG fallback is part of the active contract.", "",
     "## Answer-key balance (A/B/C/D counts)", "", "| Part | A | B | C | D |", "|---|---:|---:|---:|---:|"
@@ -165,7 +169,7 @@ lines += [
     "", "## Interpretation and gaps", "",
     f"- Listening learning inventory has {sum(LQ.values())} questions ({len(listening)} source units); currently {sum(ELQ.values())} are Mock-eligible and {sum(PQ.values())} remain pending independent review. The eligible pool supports one full 100-question form; at 102 eligible questions the next Full Listening form reuses 98 questions.",
     f"- If all pending Listening questions were independently approved, projected per-Part inventory would be P1={ELQ.get('Part 1',0)+PQ.get('Part 1',0)}, P2={ELQ.get('Part 2',0)+PQ.get('Part 2',0)}, P3={ELQ.get('Part 3',0)+PQ.get('Part 3',0)}, P4={ELQ.get('Part 4',0)+PQ.get('Part 4',0)}. It would still be short by {max(0, 12 - (ELQ.get('Part 1',0)+PQ.get('Part 1',0)))} Part 1 items for two entirely non-repeating Full forms.",
-    f"- Reading pool has {sum(RQ.values())} questions; Part 7 includes {p7_single_questions} single-passage and {p7_multiple_questions} multiple-passage questions. The v2.33 Mock regression verifies two consecutive 100-question Reading forms with zero reused question IDs.",
+    f"- Reading pool has {sum(RQ.values())} total questions ({sum(ERQ.values())} Mock-eligible across {len(readings) - len(RPENDING)} resources + {sum(PRQ.values())} Part 7 reserve-pending across {len(RPENDING)} resources); Part 7 includes {p7_single_questions} single-passage and {p7_multiple_questions} multiple-passage questions total. The Mock regression verifies two consecutive 100-question Reading forms from the {sum(ERQ.values())}-question eligible pool with zero reused question IDs.",
     f"- Structured Part 7 double/triple passage resources: {p7_structured_multi_items}/{len(p7_multiple_items)}.",
     "- V2.25.0 includes a timed 15/60/120-minute mock engine, answer review and local score analysis; it is an internal practice tool, not an officially equated TOEIC test. Independent editorial review remains pending for reserve content.",
     f"- Vocabulary is {len(vocab)} headwords, below the 3,000–5,000 internal TOEIC planning target. That target is not an official ETS list.",

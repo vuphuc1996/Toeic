@@ -89,6 +89,11 @@ class ReleaseShellCoherenceTests(unittest.TestCase):
         init = APP[init_start:init_end]
         self.assertLess(init.index("shellRelease!==APP_RELEASE_VERSION"), init.index("bindEvents()"))
 
+    def test_mock_engine_module_import_is_release_keyed(self):
+        version = MANIFEST["version"]
+        mock_engine = (ROOT / "assets/js/mock-engine.js").read_text(encoding="utf-8")
+        self.assertIn(f"./mock-flow.js?__release={version}", mock_engine)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

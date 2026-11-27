@@ -119,6 +119,8 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_045.py' -v
       - name: Unit tests — related glossary batch 046 (65 remediated glossary entries)
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_046.py' -v
+      - name: Unit tests — related glossary batch 047 (52 remediated glossary entries)
+        run: python -m unittest discover -s tools/tests -p 'test_related_glossary_batch_047.py' -v
       - name: Unit tests — transparent project progress index
         run: python -m unittest discover -s tools/tests -p 'test_project_progress_index.py' -v
       - name: Unit tests — exact canonical glossary enrichment v2.95.35
@@ -150,6 +152,8 @@ jobs:
               "--json-output", f"docs/reports/WORD_FAMILY_GRAPH_AUDIT_v{version}.json",
           ], check=True)
           PY
+      - name: Unit tests — word family reconciliation batch 027
+        run: python -m unittest discover -s tools/tests -p 'test_word_family_batch_027.py' -v
       - name: Unit tests — related glossary backlog report
         run: python -m unittest discover -s tools/tests -p 'test_related_glossary_backlog.py' -v
       - name: Unit tests — glossary canonical-sense backfill v2.95.25
@@ -343,6 +347,16 @@ jobs:
         run: python tools/audit-listening-readiness.py
       - name: Generate answer-to-source evidence audit
         run: python tools/audit-question-evidence.py
+      - name: Unit tests — 7-part TOEIC content & evidence audit
+        run: python -m unittest discover -s tools/tests -p 'test_seven_part_content_audit.py' -v
+      - name: Audit 7-part TOEIC content & evidence quality
+        run: python tools/audit-seven-part-content.py
+      - name: Generate 33-criterion learning-outcome evidence mapping
+        run: python tools/audit-learning-outcome-evidence.py
+      - name: Unit tests — Full-Mock readiness consolidation
+        run: python -m unittest discover -s tools/tests -p 'test_mock_readiness_audit.py' -v
+      - name: Audit Full-Mock readiness & Listening overlap bottleneck
+        run: python tools/audit-mock-readiness.py
       - name: Audit distractor plausibility and answer-index safety
         run: python tools/audit-distractors.py
       - name: Version sync check

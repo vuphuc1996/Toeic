@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2.95.73",
+  "version": "2.95.75",
   "letters": [
     {
       "letter": "A",
@@ -144,8 +144,49 @@
   },
   "levelClassification": "editorial-estimate; review by sense before claiming official CEFR alignment",
   "totalTopics": 32,
-  "previousReleaseTotalWords": 1181,
-  "releaseAdditionIds": [],
+  "previousReleaseTotalWords": 1141,
+  "releaseAdditionIds": [
+    "accumulation-n",
+    "acknowledgment-n",
+    "adaptable-adj",
+    "adaptation-n",
+    "assignment-n",
+    "authentication-n",
+    "biased-adj",
+    "budgetary-adj",
+    "challenging-adj",
+    "coincidence-n",
+    "commencement-n",
+    "commuter-n",
+    "concept-n",
+    "confirmed-adj",
+    "considerably-adv",
+    "constraint-n",
+    "contradiction-n",
+    "conversion-n",
+    "convertible-adj",
+    "demonstration-n",
+    "discrimination-n",
+    "elimination-n",
+    "expensive-adj",
+    "flexibly-adv",
+    "hiring-n",
+    "knowledgeable-adj",
+    "necessarily-adv",
+    "operational-adj",
+    "operator-n",
+    "purchasing-n",
+    "recruiter-n",
+    "shipping-n",
+    "submission-n",
+    "temporarily-adv",
+    "transferable-adj",
+    "unbiased-adj",
+    "urgency-n",
+    "urgently-adv",
+    "vacant-adj",
+    "verifiable-adj"
+  ],
   "releaseRepairProfiles": [
     {
       "previousTotalWords": 979,
@@ -1010,10 +1051,6 @@
         "vacant-adj",
         "verifiable-adj"
       ]
-    },
-    {
-      "previousTotalWords": 1181,
-      "releaseAdditionIds": []
     }
   ]
 }

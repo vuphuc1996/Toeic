@@ -350,8 +350,8 @@
         },
         {
           "word": "access",
-          "pos": "n",
-          "meaning_vi": "quyền truy cập; lối vào"
+          "pos": "v",
+          "meaning_vi": "truy cập; tiếp cận"
         }
       ],
       "verb_forms": null,

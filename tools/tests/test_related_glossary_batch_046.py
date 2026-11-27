@@ -6,7 +6,7 @@ import json
 import re
 import unittest
 from pathlib import Path
-from glossary_test_helpers import restore_batch_046
+from glossary_test_helpers import restore_batch_046, restore_batch_047
 
 ROOT = Path(__file__).resolve().parents[2]
 PATCH_PATH = ROOT / "patches-related-terms/v2.95.72/related-terms-046.json"
@@ -68,7 +68,7 @@ class RelatedGlossaryBatch046Tests(unittest.TestCase):
         self.assertEqual(reconstructed, self.ledger["baseRelatedTermsSha256"])
 
     def test_quality_audit_reflects_batch_046_and_keeps_unsupported_entries_flagged(self):
-        audit = qa_mod.audit(self.glossary["terms"])
+        audit = qa_mod.audit(restore_batch_047(self.glossary, ROOT)["terms"])
         self.assertEqual(audit["entries"], 567)
         self.assertEqual(audit["flagged_entries"], 54)
         self.assertEqual(audit["issue_counts"]["placeholder-definition"], 1)

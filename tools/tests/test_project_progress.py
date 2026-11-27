@@ -1,18 +1,31 @@
-import subprocess, sys, unittest
+import json, subprocess, sys, unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
+
+def pct(n, d): return f"{(n/d*100):.1f}%" if d else "Chưa đo được"
+
 class ProjectProgressTests(unittest.TestCase):
     def test_report_uses_explicit_targets_and_marks_unknown_targets(self):
         result=subprocess.run([sys.executable,'tools/report-project-progress.py'],cwd=ROOT,text=True,capture_output=True,check=True)
         out=result.stdout
-        self.assertIn('1,181 | 3,000 minimum | **39.4%**',out)
-        self.assertIn('1,181 | 5,000 planning ceiling | **23.6%**',out)
+        manifest = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf-8'))
+        vocab_files = [ROOT / x['file'].replace('./', '', 1) for x in manifest['letters']]
+        vocab_records = []
+        for p in vocab_files:
+            vocab_records.extend(json.loads(p.read_text(encoding='utf-8')).get('words', []))
+        total_vocab = len(vocab_records)
+        us_ipa_count = sum(bool((x.get('phonetic') or {}).get('us')) for x in vocab_records)
+        wf_headwords = sum(bool(x.get('word_family')) for x in vocab_records)
+        wf_links = sum(len(x.get('word_family') or []) for x in vocab_records)
+
+        self.assertIn(f'{total_vocab:,} | 3,000 minimum | **{pct(total_vocab, 3000)}**', out)
+        self.assertIn(f'{total_vocab:,} | 5,000 planning ceiling | **{pct(total_vocab, 5000)}**', out)
         self.assertIn('16/16 | All diagnostic questions | **100.0%**',out)
         self.assertIn('Chưa đo được',out)
         self.assertIn('not editorial approval',out)
-        self.assertIn('US IPA | 1,102/1,181 | **93.3%**',out)
-        self.assertIn('Word family | 322/1,181 | **27.3%**',out)
-        self.assertIn('Word-family directed links | 420 links',out)
+        self.assertIn(f'US IPA | {us_ipa_count:,}/{total_vocab:,} | **{pct(us_ipa_count, total_vocab)}**', out)
+        self.assertIn(f'Word family | {wf_headwords:,}/{total_vocab:,} | **{pct(wf_headwords, total_vocab)}**', out)
+        self.assertIn(f'Word-family directed links | {wf_links:,} links', out)
         self.assertIn('Related-term glossary exact reference join | 556/804 | **69.2%** | 248 distinct terms / 249 occurrences remain unglossed',out)
         self.assertIn('| Guided pathway stages represented | 3/6 | Pre-A1, A1, A2, B1, B2, C1 | **50.0%** |',out)
         self.assertIn('| Canonical objective-resource links | 379/379 |',out)

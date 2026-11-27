@@ -1,0 +1,36 @@
+{
+  "entries": 567,
+  "flagged_entries": 2,
+  "container_issue": null,
+  "issue_counts": {
+    "short-definition-review": 2
+  },
+  "duplicates": [],
+  "priority_counts": {
+    "high": 0,
+    "medium": 0,
+    "low": 2
+  },
+  "flagged": [
+    {
+      "index": 41,
+      "term": "annually",
+      "issues": [
+        "short-definition-review"
+      ],
+      "definition_en": "once every year",
+      "meaning_vi": "hằng năm",
+      "priority": "low"
+    },
+    {
+      "index": 183,
+      "term": "directive",
+      "issues": [
+        "short-definition-review"
+      ],
+      "definition_en": "an official instruction",
+      "meaning_vi": "chỉ thị chính thức",
+      "priority": "low"
+    }
+  ]
+}

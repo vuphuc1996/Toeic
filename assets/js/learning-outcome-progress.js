@@ -91,6 +91,10 @@ export function recordExplanationRubric(progress, objectiveIds, itemId, ratings,
 
 
 export function listDueRecallItems(progress, resourceMap = {}, now = Date.now(), limit = 100) {
+  const evaluationTime = typeof now === 'number' && Number.isFinite(now) ? now : Date.now();
+  const parsedLimit = limit !== null && typeof limit !== 'boolean' && limit !== '' && Number.isFinite(Number(limit))
+    ? Math.max(0, Math.floor(Number(limit)))
+    : 100;
   const objectives = readObjectiveProgress(progress);
   const resourceObjectives = Array.isArray(resourceMap?.objectives) ? resourceMap.objectives : [];
   const objectiveById = new Map(resourceObjectives.filter(objective => objective && typeof objective === 'object' && typeof objective.id === 'string').map(objective => [objective.id, objective]));
@@ -102,7 +106,7 @@ export function listDueRecallItems(progress, resourceMap = {}, now = Date.now(),
     for (const [itemId, item] of Object.entries(itemRecords)) {
       if (!item || typeof item !== 'object' || Array.isArray(item)) continue;
       const dueAt = Number(item?.recallDueAt) || 0;
-      if (!dueAt || dueAt > now) continue;
+      if (!dueAt || dueAt > evaluationTime) continue;
       due.push({
         objectiveId, objectiveTitle: objective.title || objectiveId, kind: objective.kind || '',
         part: objective.part || '', itemId, dueAt, latestCorrect: item.latestCorrect === true,
@@ -112,18 +116,21 @@ export function listDueRecallItems(progress, resourceMap = {}, now = Date.now(),
       });
     }
   }
-  return due.sort((a, b) => a.dueAt - b.dueAt || a.objectiveTitle.localeCompare(b.objectiveTitle) || a.itemId.localeCompare(b.itemId)).slice(0, Math.max(0, Number(limit) || 0));
+  return due.sort((a, b) => a.dueAt - b.dueAt || a.objectiveTitle.localeCompare(b.objectiveTitle) || a.itemId.localeCompare(b.itemId)).slice(0, parsedLimit);
 }
 
 export function summarizeObjectiveProgress(progress, objectiveId, policy = {}, now = Date.now()) {
+  const safePolicy = policy && typeof policy === 'object' && !Array.isArray(policy) ? policy : {};
   const objectives = readObjectiveProgress(progress);
   const objective = objectives[objectiveId];
   const itemRecords = objective?.items && typeof objective.items === 'object' && !Array.isArray(objective.items) ? objective.items : {};
   const items = Object.values(itemRecords).filter(item => item && typeof item === 'object' && !Array.isArray(item));
   const uniqueItems = items.length;
   const correct = items.filter(item => item.latestCorrect === true).length;
-  const threshold = Number(policy.defaultThreshold) > 0 ? Number(policy.defaultThreshold) : 0.8;
-  const minimumUniqueItems = Number(policy.minimumUniqueItems) > 0 ? Number(policy.minimumUniqueItems) : 10;
+  const rawThreshold = safePolicy.defaultThreshold;
+  const threshold = typeof rawThreshold === 'number' && Number.isFinite(rawThreshold) && rawThreshold > 0 && rawThreshold <= 1 ? rawThreshold : 0.8;
+  const rawMinimum = safePolicy.minimumUniqueItems;
+  const minimumUniqueItems = typeof rawMinimum === 'number' && Number.isFinite(rawMinimum) && rawMinimum >= 1 ? Math.floor(rawMinimum) : 10;
   const accuracy = uniqueItems ? correct / uniqueItems : null;
   // First-attempt performance is reported independently from the latest-attempt
   // view. It uses only explicit attempt history; legacy/malformed records with
@@ -140,7 +147,7 @@ export function summarizeObjectiveProgress(progress, objectiveId, policy = {}, n
   const explanationScores = explanationRubrics.map(item => Number(item.latestScore)).filter(score => Number.isFinite(score) && score >= 0 && score <= 3);
   const recallChecks = items.flatMap(item => Array.isArray(item.recallChecks) ? item.recallChecks.filter(check => check && typeof check === 'object') : []);
   const recallCorrect = recallChecks.filter(check => check.correct === true).length;
-  const evaluationTime = Number.isFinite(now) ? now : Date.now();
+  const evaluationTime = typeof now === 'number' && Number.isFinite(now) ? now : Date.now();
   const dueRecallItems = items.filter(item => Number(item.recallDueAt) > 0 && Number(item.recallDueAt) <= evaluationTime).length;
   const eligible = uniqueItems >= minimumUniqueItems;
   return {

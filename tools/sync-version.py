@@ -118,13 +118,20 @@ def survey(root: Path, expected: str) -> tuple[list[dict], dict[str, str]]:
 
     # Cache-busted module imports and Service Worker precache URLs are
     # intentionally repeated. Treat each file as a multi-match marker.
-    for cache_file, marker_name in (
-        ("assets/js/app.js", "app.js local module import cache keys"),
-        ("sw.js", "sw.js release-keyed precache URLs"),
-    ):
+    cache_targets = [
+        ("assets/js/app.js", "app.js local module import cache keys", True),
+        ("sw.js", "sw.js release-keyed precache URLs", True),
+        ("assets/js/mock-engine.js", "mock-engine.js local module import cache keys", False),
+    ]
+    for cache_file, marker_name, required in cache_targets:
+        cache_path = root / cache_file
+        if not cache_path.exists():
+            if required:
+                raise StructureError(f"{marker_name}: không có file {cache_file}")
+            continue
         cache_text = texts.get(cache_file)
         if cache_text is None:
-            cache_text = read_raw(root / cache_file)
+            cache_text = read_raw(cache_path)
             texts[cache_file] = cache_text
         cache_key_matches = list(re.finditer(rf"__release=({SEMVER})", cache_text))
         cache_key_versions = sorted({match.group(1) for match in cache_key_matches})

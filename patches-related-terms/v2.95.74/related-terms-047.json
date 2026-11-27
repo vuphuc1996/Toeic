@@ -1,0 +1,1100 @@
+{
+  "schemaVersion": 1,
+  "batchId": "related-glossary-047-v2.95.74",
+  "baseFileSha256": "82fafb5f28750f05039c5e7d723e03069b77662d31a258d7fd1231b744049342",
+  "count": 52,
+  "operations": [
+    {
+      "op": "update",
+      "term": "24-hour period",
+      "expect": {
+        "term": "24-hour period",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a continuous span of time lasting twenty-four consecutive hours.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/24-hour"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "calendar date",
+      "expect": {
+        "term": "calendar date",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a specific day, month, and year indicated on an official calendar.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/calendar_date"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "central office",
+      "expect": {
+        "term": "central office",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the principal administrative headquarters or main operating facility of an organization.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/central_office"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "central theme",
+      "expect": {
+        "term": "central theme",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the primary subject, idea, or underlying message around which a work revolves.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/theme"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "every three months",
+      "expect": {
+        "term": "every three months",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adv",
+        "definition_en": "occurring at three-month intervals or on a regular quarterly basis.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/quarterly"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "every week",
+      "expect": {
+        "term": "every week",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adv",
+        "definition_en": "occurring once each week or on a regular recurring seven-day schedule.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/weekly"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "four times a year",
+      "expect": {
+        "term": "four times a year",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adv",
+        "definition_en": "occurring at four evenly spaced quarterly intervals throughout the year.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/quarterly"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "guest service",
+      "expect": {
+        "term": "guest service",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "assistance and amenities provided to visitors or patrons in hospitality and retail.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/guest_service"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "job opening",
+      "expect": {
+        "term": "job opening",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an available employment position that an organization seeks to fill.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/job_opening"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "main address",
+      "expect": {
+        "term": "main address",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the primary physical or postal location where an entity receives correspondence.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/address"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "main office",
+      "expect": {
+        "term": "main office",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the headquarters or primary central facility from which an enterprise is directed.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/main_office"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "mark down",
+      "expect": {
+        "term": "mark down",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to reduce the retail price of merchandise or record an item in writing.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/mark_down"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "meeting record",
+      "expect": {
+        "term": "meeting record",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an official written summary documenting discussions and decisions taken during a meeting.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/minutes"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "once a month",
+      "expect": {
+        "term": "once a month",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adv",
+        "definition_en": "occurring on a single occasion during each successive calendar month.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/monthly"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "once a week",
+      "expect": {
+        "term": "once a week",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adv",
+        "definition_en": "occurring on a single occasion during each successive seven-day period.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/weekly"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "once-a-year",
+      "expect": {
+        "term": "once-a-year",
+        "pos": "",
+        "definition_en": "Reference gloss for practice distractors.",
+        "source": null,
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj/adv",
+        "definition_en": "happening or scheduled exactly once during each successive calendar year.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/annual"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "pamphlet",
+      "expect": {
+        "term": "pamphlet",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a small unbound booklet containing promotional or explanatory information about a subject.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/pamphlet"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "per-month",
+      "expect": {
+        "term": "per-month",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adv",
+        "definition_en": "calculated, billed, or occurring for each calendar month on a regular basis.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/monthly"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "postal code",
+      "expect": {
+        "term": "postal code",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a series of digits or letters appended to a postal address to sort mail.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/postal_code"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "pressing",
+      "expect": {
+        "term": "pressing",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "requiring immediate attention or decisive action because of urgent importance.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/pressing"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "proof of payment",
+      "expect": {
+        "term": "proof of payment",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a formal receipt or bank voucher verifying that a financial obligation was paid.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/receipt"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "provider",
+      "expect": {
+        "term": "provider",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a business, organization, or person that supplies goods, facilities, or professional services.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/provider"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "put off",
+      "expect": {
+        "term": "put off",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to postpone or delay an appointment, event, or task until a later date.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/put_off"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "question",
+      "expect": {
+        "term": "question",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a spoken or written inquiry seeking information, clarification, or resolution of an issue.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/question"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "radiograph",
+      "expect": {
+        "term": "radiograph",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an image produced on a sensitive plate or digital detector by X-ray radiation.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/radiograph"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "rental agreement",
+      "expect": {
+        "term": "rental agreement",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a legally binding contract specifying terms and payments for leasing property.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/rental_agreement"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "retreat",
+      "expect": {
+        "term": "retreat",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n/v",
+        "definition_en": "a secluded facility for corporate planning or contemplation, or the act of withdrawing.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/retreat"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "rigid",
+      "expect": {
+        "term": "rigid",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "inflexible in structure or strictly unyielding regarding standards and established rules.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/rigid"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "run",
+      "expect": {
+        "term": "run",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to operate, manage, supervise, or oversee the ongoing activity of a business or system.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/run"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "saturday and sunday",
+      "expect": {
+        "term": "saturday and sunday",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the two consecutive calendar days comprising the standard business weekend.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/weekend"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "scatter",
+      "expect": {
+        "term": "scatter",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to disperse or spread things or people irregularly over a wide physical area.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/scatter"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "see",
+      "expect": {
+        "term": "see",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to observe visually, meet with a colleague, or understand an explanation.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/see"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "sell",
+      "expect": {
+        "term": "sell",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to exchange products, merchandise, or commercial services for money or credit.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/sell"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "separate",
+      "expect": {
+        "term": "separate",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj/v",
+        "definition_en": "set apart from others as an independent unit, or to divide into distinct components.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/separate"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "set off",
+      "expect": {
+        "term": "set off",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v",
+        "definition_en": "to begin a journey or intentionally trigger an alarm, device, or sequence of actions.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/set_off"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "short-term",
+      "expect": {
+        "term": "short-term",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "occurring over or relating to a brief period or immediate future planning horizon.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/short-term"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "sixty minutes",
+      "expect": {
+        "term": "sixty minutes",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a continuous duration of time exactly equal to one standard sixty-minute hour.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/hour"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "staff member",
+      "expect": {
+        "term": "staff member",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an individual employed as part of the operating workforce of an enterprise.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/staff_member"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "storage facility",
+      "expect": {
+        "term": "storage facility",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a specialized commercial building or depot used for securely holding inventory or records.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/storage_facility"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "summit",
+      "expect": {
+        "term": "summit",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a high-level conference between government or corporate leaders, or the peak of a mountain.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/summit"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "time limit",
+      "expect": {
+        "term": "time limit",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a predetermined deadline or maximum allowable interval for completing an assigned task.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/time_limit"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "timetable",
+      "expect": {
+        "term": "timetable",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a structured schedule setting out the exact times at which activities or departures occur.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/timetable"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "travel plan",
+      "expect": {
+        "term": "travel plan",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a comprehensive itinerary detailing transportation, lodging, and schedule for a journey.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/itinerary"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "travel to work",
+      "expect": {
+        "term": "travel to work",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v phr",
+        "definition_en": "to make a regular recurring journey from one home to a place of employment.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/commute"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "twelve months",
+      "expect": {
+        "term": "twelve months",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "a continuous time duration lasting twelve consecutive calendar months or one full year.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/year"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "understanding",
+      "expect": {
+        "term": "understanding",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an informal mutual agreement between parties, or clear comprehension of a topic.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/understanding"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "unnecessary",
+      "expect": {
+        "term": "unnecessary",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "not needed, essential, or justified in a given context or operation.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/unnecessary"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "usefulness",
+      "expect": {
+        "term": "usefulness",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "the practical quality or benefit of serving a functional and valuable purpose.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/usefulness"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "versatile",
+      "expect": {
+        "term": "versatile",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "adj",
+        "definition_en": "capable of doing many different tasks or adapted for varied commercial applications.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/versatile"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "warrant",
+      "expect": {
+        "term": "warrant",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v/n",
+        "definition_en": "to justify or officially guarantee an action, or a written legal authorization.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/warrant"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "welcome",
+      "expect": {
+        "term": "welcome",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "v/n",
+        "definition_en": "to receive guests cordially with hospitality, or an expression of cordial greeting.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/welcome"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    },
+    {
+      "op": "update",
+      "term": "worker",
+      "expect": {
+        "term": "worker",
+        "pos": null,
+        "definition_en": null,
+        "source": "curated-related-glossary",
+        "sourceUrls": null,
+        "sourceRelease": null
+      },
+      "set": {
+        "pos": "n",
+        "definition_en": "an employed individual who performs manual, administrative, or technical labor.",
+        "source": "Wiktionary entry excerpts reviewed on 2026-11-27; independent editorial review pending",
+        "sourceUrls": [
+          "https://en.wiktionary.org/wiki/worker"
+        ],
+        "sourceRelease": "2.95.74"
+      }
+    }
+  ]
+}

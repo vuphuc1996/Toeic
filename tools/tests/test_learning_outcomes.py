@@ -15,6 +15,19 @@ class LearningOutcomeTests(unittest.TestCase):
   foundation=[o for x in registry['objectives'] if x['objectiveId'].startswith('foundation-') for o in x['outcomes']]
   self.assertEqual(len(foundation),6)
   self.assertTrue(all(o['status'].startswith('instrumented_') for o in foundation))
+  self.assertTrue(all(isinstance(x.get('runtimeWiring'), dict) for x in registry['objectives']))
+ def test_evidence_report_maps_all_33_criteria_reproducibly(self):
+  import tempfile
+  with tempfile.TemporaryDirectory() as tmp:
+   out=Path(tmp)/'evidence.md'
+   r=subprocess.run([sys.executable,str(ROOT/'tools/audit-learning-outcome-evidence.py'),'--markdown-output',str(out)],capture_output=True,text=True)
+   self.assertEqual(r.returncode,0,r.stdout+r.stderr)
+   text=out.read_text(encoding='utf-8')
+   self.assertIn('6/33 (18.2%)',text)
+   self.assertIn('11/11',text)
+   for obj in json.loads((ROOT/'data/learning-path/objective-outcomes.json').read_text())['objectives']:
+    for o in obj['outcomes']:
+     self.assertIn(o['id'],text)
  def test_outcome_registry_is_precached(self):
   sw=(ROOT/'sw.js').read_text()
   self.assertEqual(sw.count('./data/learning-path/objective-outcomes.json'),2)

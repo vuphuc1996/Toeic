@@ -44,4 +44,19 @@ assert.match(formatRobotLearningInsights(empty), /Cần học/);
 // Snapshot aggregation is pure: caller-owned stores are not mutated.
 const snapshot={words:[{id:'x'}],vocabularyProgress:{x:{reviewCount:0}},foundationItems:[{id:'f',questionBank:[{}]}],foundationProgressMap:{f:{evidence:{q:{latestCorrect:true,recallDueAt:now-1}}}}};
 const before=JSON.stringify(snapshot); buildRobotLearningInsights(snapshot,now); assert.equal(JSON.stringify(snapshot),before);
-console.log('PASS: Robot learning insights classify learn/practice/review, calculate per-module studied-unit coverage, enforce evidence thresholds and do not mutate snapshots.');
+// Mock-only completed history must establish hasEvidence === true (regression for array > 0 bug).
+const mockOnly = buildRobotLearningInsights({ mockHistory: [{ status: 'completed', accuracy: 82, questions: 200 }] }, now);
+assert.equal(mockOnly.hasEvidence, true);
+assert.equal(mockOnly.sections.find(x => x.name === 'Thi thử').evidence, 1);
+// Corrupted, null, or abandoned inputs must never crash or coerce null/empty accuracy into 0.
+const corrupted = buildRobotLearningInsights({
+  words: [null, {}, { id: 'ok' }],
+  vocabularyProgress: null,
+  grammarItems: [null, { id: 'g0' }],
+  grammarProgress: null,
+  foundationItems: null,
+  mockHistory: [null, { status: 'abandoned', accuracy: 0 }, { status: 'completed', accuracy: null }, { status: 'completed', accuracy: '' }, { status: 'completed', accuracy: 120 }]
+}, null);
+assert.equal(corrupted.hasEvidence, false);
+assert.equal(corrupted.sections.find(x => x.name === 'Thi thử').evidence, 0);
+console.log('PASS: Robot learning insights classify learn/practice/review, calculate per-module studied-unit coverage, enforce evidence thresholds, handle mock-only/corrupted snapshots and do not mutate snapshots.');

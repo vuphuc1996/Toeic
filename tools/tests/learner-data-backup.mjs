@@ -40,5 +40,10 @@ await assert.rejects(() => validateLearnerBackup(duplicate), /bị trùng/);
 
 const outsideNamespace = await createLearnerBackup({ indexedDBEntries: [], localStorageEntries: [{ key: 'other-app:data', value: 'x' }] });
 await assert.rejects(() => validateLearnerBackup(outsideNamespace), /namespace toeic/);
+await assert.rejects(() => validateLearnerBackup(null), /JSON object/);
+await assert.rejects(() => validateLearnerBackup({ type: 'WRONG' }), /Sai loại tệp/);
+const wrongDb = structuredClone(backup);
+wrongDb.storage.indexedDB.database = 'other-db';
+await assert.rejects(() => validateLearnerBackup(wrongDb), /cấu trúc IndexedDB/);
 assert.equal(stableBackupStringify({ b: 1, a: { z: 2, y: 3 } }), stableBackupStringify({ a: { y: 3, z: 2 }, b: 1 }));
-console.log('PASS: full learner backup envelope, SHA-256 integrity, schema validation, duplicate-key rejection, namespace isolation and exact data round-trip.');
+console.log('PASS: full learner backup envelope, SHA-256 integrity, schema validation, malformed/wrong-DB rejection, duplicate-key rejection, namespace isolation and exact data round-trip.');

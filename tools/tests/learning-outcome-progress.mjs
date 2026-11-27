@@ -161,4 +161,9 @@ const mismatchLedger = recordObjectiveAttempt({}, ['grammar-core'], 'mismatch-q'
 mismatchLedger.objectives['grammar-core'].items['mismatch-q'].latestCorrect = false;
 const mismatchAudit = auditObjectiveProgress(mismatchLedger, map);
 assert.ok(mismatchAudit.issues.some(issue => issue.code === 'latest_attempt_mismatch' && issue.severity === 'warning'));
-console.log('PASS: malformed ledger branches are safely read, invalid write timestamps are rejected, and duplicate objective IDs are deduplicated.');
+assert.doesNotThrow(() => summarizeObjectiveProgress(cleanLedger, 'grammar-core', null, null));
+const fallbackSummary = summarizeObjectiveProgress(cleanLedger, 'grammar-core', { defaultThreshold: 2, minimumUniqueItems: -5 }, null);
+assert.equal(fallbackSummary.threshold, 0.8);
+assert.equal(fallbackSummary.minimumUniqueItems, 10);
+assert.equal(listDueRecallItems(recallLedger, map, null, null).length >= 0, true);
+console.log('PASS: malformed ledger branches, null policies, invalid write timestamps and duplicate objective IDs are safely handled.');

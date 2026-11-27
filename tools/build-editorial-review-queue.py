@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Generate a compact, source-grounded second-review packet for TOEIC reserve items."""
+"""Generate an enhanced, source-grounded second-review packet for TOEIC reserve items."""
 from __future__ import annotations
+
+import importlib.util
 import json
 from pathlib import Path
 from editorial_inventory import collect_editorial_inventory
@@ -9,14 +11,38 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf-8'))['version']
 OUT = ROOT / 'docs' / 'reports' / f'TOEIC_INDEPENDENT_REVIEW_QUEUE_v{VERSION}.md'
 
+_SEVEN_SPEC = importlib.util.spec_from_file_location(
+    'audit_seven_part_content', ROOT / 'tools/audit-seven-part-content.py'
+)
+assert _SEVEN_SPEC and _SEVEN_SPEC.loader
+_SEVEN_MOD = importlib.util.module_from_spec(_SEVEN_SPEC)
+_SEVEN_SPEC.loader.exec_module(_SEVEN_MOD)
+
+
 def read(path: str):
     return json.loads((ROOT / path).read_text(encoding='utf-8'))
+
 
 def md(value) -> str:
     return str(value or '').replace('|', '\\|').replace('\r', ' ').replace('\n', ' ').strip()
 
+
 def options(choices, answer_index):
-    return '<br>'.join(f"{'**' if i == answer_index else ''}{'ABCD'[i]}. {md(choice)}{'**' if i == answer_index else ''}" for i, choice in enumerate(choices))
+    return '<br>'.join(
+        f"{'**' if i == answer_index else ''}{'ABCD'[i]}. {md(choice)}{'**' if i == answer_index else ''}"
+        for i, choice in enumerate(choices)
+    )
+
+
+def listening_review_scope(part: str) -> str:
+    if part == 'Part 1':
+        return 'Listening Part 1 photograph-audio alignment, spoken A-D mapping, and unique true description'
+    if part == 'Part 2':
+        return 'Listening Part 2 speech act, polarity, indirect response naturalness, and distractor uniqueness'
+    if part == 'Part 3':
+        return 'Listening Part 3 multi-speaker dialogue evidence, inference grounding, and distractors'
+    return 'Listening Part 4 monologue talk evidence, detail tracking, and next-step inference'
+
 
 def main() -> int:
     listening = read('data/listening/listening-library.json')['listening']
@@ -38,16 +64,22 @@ def main() -> int:
     if p5_count != len([q for q in p5['questions'] if q.get('editorialStatus', p5.get('editorialStatus')) == 'reserve-pending-independent-review']):
         raise ValueError('Shared Part 5 metrics do not match queue question selection')
 
+    # Cross-link deterministic AI_TRIAGE / STRUCTURAL signals without auto-promoting anything.
+    seven_report = _SEVEN_MOD.audit_all(ROOT)
+    triage_by_key: dict[tuple[str, int], list[str]] = {}
+    for row in seven_report.get('triageFlags', []):
+        triage_by_key[(str(row.get('id')), int(row.get('qn', 0)))] = list(row.get('flags', []))
+
     lines = [
         f'# TOEIC Independent Editorial Review Queue — v{VERSION}', '',
         '> Mục đích: chuyển nội dung reserve cho người rà soát độc lập. Đây là phiếu làm việc, không phải chứng nhận đã duyệt. Không đổi `editorialStatus` sang `approved-for-mock` cho đến khi reviewer ghi quyết định và ngày rà soát.', '',
         '## Queue summary', '',
-        '| Bank | Items pending | Resources | Required review |',
-        '|---|---:|---:|---|',
-        f'| Listening Parts 1–4 | {listen_count} | {len(listen_rows)} units | Source/key fit, response fit, distractor uniqueness; P1 photo/action match |',
-        f'| Reading Part 7 | {p7_count} | {len(p7_rows)} resources | Document evidence, inference, cross-document links, one-best-answer uniqueness |',
-        f'| Separate Part 5 sentence completion | {p5_count} | 1 bank | Grammar, naturalness, distractors, translation and one-answer uniqueness |',
-        f'| **Total** | **{listen_count + p7_count + p5_count}** | **{len(listen_rows) + len(p7_rows) + 1}** | **Independent review required** |', '',
+        '| Bank | Items pending | Resources | Structured Packet Fields | Required review |',
+        '|---|---:|---:|---|---|',
+        f'| Listening Parts 1–4 | {listen_count} | {len(listen_rows)} units | `editorialStatus`, `reviewScope`, `certaintyLevel`, `rationale`, `proposedCorrection`, AI triage cross-ref | Source/key fit, response fit, distractor uniqueness; P1 photo/action match |',
+        f'| Reading Part 7 | {p7_count} | {len(p7_rows)} resources | `editorialStatus`, `reviewScope`, `certaintyLevel`, `rationale`, `proposedCorrection`, AI triage cross-ref | Document evidence, inference, cross-document links, one-best-answer uniqueness |',
+        f'| Separate Part 5 sentence completion | {p5_count} | 1 bank | `editorialStatus`, `reviewScope`, `certaintyLevel`, `rationale`, `proposedCorrection`, AI triage cross-ref | Grammar, naturalness, distractors, translation and one-answer uniqueness |',
+        f'| **Total** | **{listen_count + p7_count + p5_count}** | **{len(listen_rows) + len(p7_rows) + 1}** | **All 360 items protected** | **Independent review required** |', '',
         '## Protected inventory metrics', '',
         f"- Listening: **{listen_eligible_count} eligible + {listen_count} reserve = {listen_total_count} total**.",
         f"- Part 7 reserve: **{p7_count} questions**; remains separate from Listening and Part 5.",
@@ -58,39 +90,59 @@ def main() -> int:
         '- Review method / reference material: ________________________',
         '- Decision key: `APPROVE` / `REVISE` / `REJECT` (record per item; do not approve a whole batch by default).',
         '- For approval: confirm one defensible key, all distractors are wrong in context, source evidence supports the key, and explanation/translation are accurate.',
-        '- For revision: record the exact field and proposed correction; keep the item out of Mock until the correction is retested.',
+        '- For revision: record the exact field and `proposedCorrection`; keep the item out of Mock until the correction is retested.',
         '',
         '## A. Listening reserve', '',
         'For Part 2, assess speech act, polarity, indirect response and naturalness. For Parts 3–4, assess transcript support and distractor plausibility. For Part 1, inspect the photo itself as well as the spoken statements.', '',
     ]
     for unit in listen_rows:
         source = ' '.join(seg.get('text', '') for seg in unit.get('segments', []))
-        lines += [f"### {md(unit.get('part'))} · `{md(unit['id'])}` · {md(unit.get('title'))}", '',
-                  f"- Batch: `{md(unit.get('editorialBatch', 'legacy'))}` · Status: `{md(unit.get('editorialStatus'))}`",
-                  f'- Transcript: {md(source)}']
+        part = unit.get('part', '')
+        lines += [
+            f"### {md(part)} · `{md(unit['id'])}` · {md(unit.get('title'))}", '',
+            f"- Batch: `{md(unit.get('editorialBatch', 'legacy'))}` · Status (`editorialStatus`): `{md(unit.get('editorialStatus'))}`",
+            f"- Review scope (`reviewScope`): {listening_review_scope(part)}",
+            f'- Transcript: {md(source)}',
+        ]
         if unit.get('transcriptTranslation'):
-            label = 'Spoken-statement translation / A–D mapping' if unit.get('part') == 'Part 1' else 'Transcript translation'
+            label = 'Spoken-statement translation / A–D mapping' if part == 'Part 1' else 'Transcript translation'
             lines.append(f"- {label}: {md(unit.get('transcriptTranslation'))}")
-        if unit.get('part') == 'Part 1':
+        if part == 'Part 1':
             lines.append(f"- Photo: `{md(unit.get('photo'))}` · Alt: {md(unit.get('imageAlt'))}")
             lines.append(f"- Internal visual note (not independent approval): {md(unit.get('visualEvidenceNote'))}")
         for qn, q in enumerate(unit.get('questions', []), 1):
             key = q.get('answerIndex', -1)
             choices = q.get('choices', [])
             keyed = choices[key] if isinstance(key, int) and 0 <= key < len(choices) else '[INVALID KEY]'
-            lines += ['', f"**Q{qn}. {md(q.get('question'))}**", '',
-                      f"- Choices: {options(choices, key)}",
-                      f'- Current keyed answer: **{"ABCD"[key] if isinstance(key, int) and 0 <= key < min(4, len(choices)) else "?"}. {md(keyed)}**',
-                      f'- Source pointer: {md(q.get("evidenceText"))}',
-                      f'- Current explanation: {md(q.get("explanation"))}',
-                      '- Reviewer: [ ] source supports key  [ ] response/action fits  [ ] distractors are clearly wrong  [ ] only one defensible answer',
-                      '- Decision: `________` · Correction / notes: __________________________________________']
+            triage = triage_by_key.get((str(unit['id']), qn), [])
+            rationale_parts = [md(q.get('evidenceText')) or 'See transcript/visual pointer', md(q.get('explanation'))]
+            lines += [
+                '', f"**Q{qn}. {md(q.get('question'))}**", '',
+                f"- Choices: {options(choices, key)}",
+                f'- Current keyed answer: **{"ABCD"[key] if isinstance(key, int) and 0 <= key < min(4, len(choices)) else "?"}. {md(keyed)}**',
+                f'- Editorial status (`editorialStatus`): `{md(unit.get("editorialStatus"))}`',
+                f'- Review scope (`reviewScope`): {listening_review_scope(part)}',
+                f'- Certainty level (`certaintyLevel`): `unreviewed-reserve` (structural audit passed; AI triage: {", ".join(triage) if triage else "none"})',
+                f'- Rationale (`rationale`): {" — ".join(p for p in rationale_parts if p)}',
+                '- Proposed correction (`proposedCorrection`): `None pending human review — record exact edit if REVISE`',
+                f'- Source pointer: {md(q.get("evidenceText"))}',
+                f'- Current explanation: {md(q.get("explanation"))}',
+                '- Reviewer: [ ] source supports key  [ ] response/action fits  [ ] distractors are clearly wrong  [ ] only one defensible answer',
+                '- Decision: `________` · Correction / notes: __________________________________________',
+            ]
         lines.append('')
 
-    lines += ['## B. Reading Part 7 reserve', '', 'Review source text and all documents together. Confirm that each selected answer is supported by the cited document(s), that the question does not require outside assumptions, and that no other option is also defensible.', '']
+    lines += [
+        '## B. Reading Part 7 reserve', '',
+        'Review source text and all documents together. Confirm that each selected answer is supported by the cited document(s), that the question does not require outside assumptions, and that no other option is also defensible.', '',
+    ]
     for unit in p7_rows:
-        lines += [f"### `{md(unit['id'])}` · {md(unit.get('title'))}", '',
-                  f"- Document type: {md(unit.get('documentType'))} · Status: `{md(unit.get('editorialStatus'))}`"]
+        p7_scope = f"Reading Part 7 ({md(unit.get('documentType'))}) passage grounding, cross-document inference, and distractor exclusion"
+        lines += [
+            f"### `{md(unit['id'])}` · {md(unit.get('title'))}", '',
+            f"- Document type: {md(unit.get('documentType'))} · Status (`editorialStatus`): `{md(unit.get('editorialStatus'))}`",
+            f"- Review scope (`reviewScope`): {p7_scope}",
+        ]
         if unit.get('passage'):
             lines.append(f"- Passage: {md(unit['passage'])}")
         for doc in unit.get('documents', []):
@@ -101,41 +153,67 @@ def main() -> int:
             keyed = choices[key] if isinstance(key, int) and 0 <= key < len(choices) else '[INVALID KEY]'
             evidence = q.get('evidence', {})
             refs = '; '.join(f"{md(label)} — {' / '.join(md(x) for x in evidence.get('quotes', []))}" for label in evidence.get('sourceLabels', []))
-            lines += ['', f"**Q{qn}. {md(q.get('question'))}**", '',
-                      f'- Choices: {options(choices, key)}',
-                      f'- Current keyed answer: **{"ABCD"[key] if isinstance(key, int) and 0 <= key < min(4, len(choices)) else "?"}. {md(keyed)}**',
-                      f'- Evidence reference: {refs}',
-                      f'- Current explanation: {md(q.get("explanation"))}',
-                      '- Reviewer: [ ] citation supports key  [ ] cross-document reasoning valid  [ ] distractors wrong  [ ] one defensible answer',
-                      '- Decision: `________` · Correction / notes: __________________________________________']
+            triage = triage_by_key.get((str(unit['id']), qn), [])
+            rationale_parts = [refs or 'See cited passage evidence', md(q.get('explanation'))]
+            lines += [
+                '', f"**Q{qn}. {md(q.get('question'))}**", '',
+                f'- Choices: {options(choices, key)}',
+                f'- Current keyed answer: **{"ABCD"[key] if isinstance(key, int) and 0 <= key < min(4, len(choices)) else "?"}. {md(keyed)}**',
+                f'- Editorial status (`editorialStatus`): `{md(unit.get("editorialStatus"))}`',
+                f'- Review scope (`reviewScope`): {p7_scope}',
+                f'- Certainty level (`certaintyLevel`): `unreviewed-reserve` (structural audit passed; AI triage: {", ".join(triage) if triage else "none"})',
+                f'- Rationale (`rationale`): {" — ".join(p for p in rationale_parts if p)}',
+                '- Proposed correction (`proposedCorrection`): `None pending human review — record exact edit if REVISE`',
+                f'- Evidence reference: {refs}',
+                f'- Current explanation: {md(q.get("explanation"))}',
+                '- Reviewer: [ ] citation supports key  [ ] cross-document reasoning valid  [ ] distractors wrong  [ ] one defensible answer',
+                '- Decision: `________` · Correction / notes: __________________________________________',
+            ]
         lines.append('')
 
-    lines += ['## C. Separate TOEIC Part 5 sentence-completion reserve', '', f"This {inventory['part5']['total_questions']}-question bank is separate from Reading Part 5 and must not be counted as Mock-eligible. Check the complete sentence, grammar focus, distractors, translation and every option explanation.", '']
-    for q in p5_rows:
+    lines += [
+        '## C. Separate TOEIC Part 5 sentence-completion reserve', '',
+        f"This {inventory['part5']['total_questions']}-question bank is separate from Reading Part 5 and must not be counted as Mock-eligible. Check the complete sentence, grammar focus, distractors, translation and every option explanation.", '',
+    ]
+    for qn, q in enumerate(p5_rows, 1):
         key = q.get('answerIndex', -1)
         choices = q.get('choices', [])
         keyed = choices[key] if isinstance(key, int) and 0 <= key < len(choices) else '[INVALID KEY]'
         sentence = str(q.get('sentence', '')).replace('_____', '__________')
-        lines += [f"### `{md(q.get('id'))}` · {md(q.get('grammarCategory'))}", '',
-                  f'- Sentence: {md(sentence)}',
-                  f'- Choices: {options(choices, key)}',
-                  f'- Current keyed answer: **{"ABCD"[key] if isinstance(key, int) and 0 <= key < min(4, len(choices)) else "?"}. {md(keyed)}**',
-                  f'- Grammar point: {md(q.get("grammarPoint"))}',
-                  f'- Single-answer rationale: {md(q.get("singleAnswerReason"))}',
-                  f'- Vietnamese translation: {md(q.get("translationVi"))}',
-                  '- Reviewer: [ ] grammar correct  [ ] sentence natural  [ ] distractors wrong  [ ] translation/explanations accurate  [ ] one defensible answer',
-                  '- Decision: `________` · Correction / notes: __________________________________________', '']
+        item_status = q.get('editorialStatus', p5.get('editorialStatus'))
+        triage = triage_by_key.get((str(q.get('id')), qn), [])
+        p5_scope = f"Separate Part 5 practice-only sentence completion ({md(q.get('grammarCategory'))}): grammar point, single-answer uniqueness, and option explanations"
+        rationale_parts = [md(q.get('singleAnswerReason')), md(q.get('grammarPoint'))]
+        lines += [
+            f"### `{md(q.get('id'))}` · {md(q.get('grammarCategory'))}", '',
+            f'- Sentence: {md(sentence)}',
+            f'- Choices: {options(choices, key)}',
+            f'- Current keyed answer: **{"ABCD"[key] if isinstance(key, int) and 0 <= key < min(4, len(choices)) else "?"}. {md(keyed)}**',
+            f'- Editorial status (`editorialStatus`): `{md(item_status)}`',
+            f'- Review scope (`reviewScope`): {p5_scope}',
+            f'- Certainty level (`certaintyLevel`): `unreviewed-reserve` (structural audit passed; AI triage: {", ".join(triage) if triage else "none"})',
+            f'- Rationale (`rationale`): {" — ".join(p for p in rationale_parts if p)}',
+            '- Proposed correction (`proposedCorrection`): `None pending human review — record exact edit if REVISE`',
+            f'- Grammar point: {md(q.get("grammarPoint"))}',
+            f'- Single-answer rationale: {md(q.get("singleAnswerReason"))}',
+            f'- Vietnamese translation: {md(q.get("translationVi"))}',
+            '- Reviewer: [ ] grammar correct  [ ] sentence natural  [ ] distractors wrong  [ ] translation/explanations accurate  [ ] one defensible answer',
+            '- Decision: `________` · Correction / notes: __________________________________________', '',
+        ]
 
-    lines += ['## Release rule', '',
-              f"- The current {listen_eligible_count} eligible Listening questions remain the only approved Listening pool; the {listen_count} reserve questions are not promoted by this packet.",
-              f"- The {p7_count} Part 7 reserve questions remain excluded from Mock approval until item-level independent review is recorded.",
-              f"- The separate Part 5 practice-only bank contains {inventory['part5']['total_questions']} questions and remains outside Mock eligibility; any review-status change requires item-level sign-off.",
-              '- A structural pass, traceable evidence quote or AI-assisted audit is not a substitute for the independent reviewer decision.', '']
+    lines += [
+        '## Release rule', '',
+        f"- The current {listen_eligible_count} eligible Listening questions remain the only approved Listening pool; the {listen_count} reserve questions are not promoted by this packet.",
+        f"- The {p7_count} Part 7 reserve questions remain excluded from Mock approval until item-level independent review is recorded.",
+        f"- The separate Part 5 practice-only bank contains {inventory['part5']['total_questions']} questions and remains outside Mock eligibility; any review-status change requires item-level sign-off.",
+        '- A structural pass, traceable evidence quote or AI-assisted audit is not a substitute for the independent reviewer decision.', '',
+    ]
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text('\n'.join(lines), encoding='utf-8')
     print(f'Wrote {OUT.relative_to(ROOT)}')
     print(f'Listening eligible={listen_eligible_count}, reserve={listen_count}, total={listen_total_count}; Part7 reserve={p7_count}; separate Part5 practice-only={inventory["part5"]["total_questions"]} (review-pending={p5_count})')
     return 0
+
 
 if __name__ == '__main__':
     raise SystemExit(main())

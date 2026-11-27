@@ -69,9 +69,25 @@ def collect_editorial_inventory(root: Path = ROOT) -> dict[str, Any]:
     if overlap:
         raise ValueError(f"Listening eligible/reserve question IDs overlap: {overlap[:10]}")
 
+    READING_ELIGIBLE_STATUSES = {None, "approved-for-mock", "internal-editorial-reviewed"}
+
+    reading_eligible_units: list[dict[str, Any]] = []
+    reading_reserve_units: list[dict[str, Any]] = []
+    reading_unknown_statuses: Counter[str] = Counter()
+    for unit in readings:
+        status = unit.get("editorialStatus")
+        if status in READING_ELIGIBLE_STATUSES:
+            reading_eligible_units.append(unit)
+        elif status == RESERVE_STATUS:
+            reading_reserve_units.append(unit)
+        else:
+            reading_unknown_statuses[str(status)] += len(unit.get("questions", []))
+    if reading_unknown_statuses:
+        raise ValueError(f"Unclassified Reading editorial statuses: {dict(reading_unknown_statuses)}")
+
     part7_units = [
-        unit for unit in readings
-        if unit.get("part") == "Part 7" and unit.get("editorialStatus") == RESERVE_STATUS
+        unit for unit in reading_reserve_units
+        if unit.get("part") == "Part 7"
     ]
     p5_questions = part5_bank.get("questions", [])
     p5_pending = [
@@ -91,6 +107,15 @@ def collect_editorial_inventory(root: Path = ROOT) -> dict[str, Any]:
             "reserve_by_part": _part_counts(reserve_units),
             "eligible_question_ids": sorted(eligible_ids),
             "reserve_question_ids": sorted(reserve_ids),
+        },
+        "reading": {
+            "eligible_resources": len(reading_eligible_units),
+            "reserve_resources": len(reading_reserve_units),
+            "eligible_questions": _question_count(reading_eligible_units),
+            "reserve_questions": _question_count(reading_reserve_units),
+            "total_questions": _question_count(readings),
+            "eligible_by_part": _part_counts(reading_eligible_units),
+            "reserve_by_part": _part_counts(reading_reserve_units),
         },
         "part7": {
             "reserve_resources": len(part7_units),

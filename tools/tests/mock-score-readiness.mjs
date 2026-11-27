@@ -34,4 +34,18 @@ assert.equal(distinctReadingOnly.listeningTrendEnough,false);
 const filtered = buildMockScoreReadiness([row(1,70,60,first),row(2,75,65,second),row(3,80,75,second),{...row(4,99,99,ids('x')) ,modeId:'quick'}, {...row(5,99,99,ids('y')),questions:100}]);
 assert.equal(filtered.count,3);
 assert.equal(filtered.listeningTrendEnough,true);
-console.log('mock-score-readiness: PASS (same-form gating, distinct-form detection, overlap disclosure, legacy fail-closed, Reading independence, full-mock filtering)');
+// Malformed, abandoned, null/empty accuracy, and duplicate attemptId rows must not corrupt readiness.
+const edge = buildMockScoreReadiness([
+  null,
+  { status: 'abandoned', modeId: 'full', questions: 200, completedAt: 1, listeningAccuracy: 100, readingAccuracy: 100 },
+  { status: 'completed', modeId: 'full', questions: 200, completedAt: 2, listeningAccuracy: null, readingAccuracy: 80 },
+  { status: 'completed', modeId: 'full', questions: 200, completedAt: 3, listeningAccuracy: '', readingAccuracy: 80 },
+  { status: 'completed', modeId: 'full', questions: 200, completedAt: 4, listeningAccuracy: 105, readingAccuracy: 80 },
+  row(10, 60, 70, first, { attemptId: 'att-1' }),
+  row(11, 80, 90, first, { attemptId: 'att-1' }),
+  row(12, 70, 80, second, { attemptId: 'att-2' })
+]);
+assert.equal(edge.count, 2, 'duplicate attemptId must deduplicate and malformed rows must be ignored');
+assert.equal(edge.readingAverage, 85, 'deduplicated att-1 keeps latest score 90 paired with att-2 score 80');
+assert.equal(edge.listeningTrendEnough, true);
+console.log('mock-score-readiness: PASS (same-form gating, distinct-form detection, overlap disclosure, legacy fail-closed, malformed/duplicate-attempt hardening, Reading independence, full-mock filtering)');

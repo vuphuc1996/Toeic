@@ -33,13 +33,13 @@ class ProjectProgressIndexTests(unittest.TestCase):
         self.assertEqual(metrics["Outcome criteria with evidence instrumentation"]["numerator"], 6)
         self.assertEqual(metrics["Outcome criteria with evidence instrumentation"]["denominator"], 33)
         self.assertEqual(self.report["glossaryAudit"]["entries"], 567)
-        self.assertEqual(self.report["glossaryAudit"]["flagged"], 54)
+        self.assertEqual(self.report["glossaryAudit"]["flagged"], 2)
         self.assertEqual(self.report["glossaryAudit"]["duplicateGroups"], 0)
 
     def test_weighted_index_is_reproducible_and_caveated(self):
-        self.assertAlmostEqual(self.report["weightedIndexPercent"], 55.88, places=2)
+        self.assertAlmostEqual(self.report["weightedIndexPercent"], 56.8, places=2)
         output = module.render(self.report)
-        self.assertIn("55.88%", output)
+        self.assertIn("56.80%", output)
         self.assertIn("not an official total-system completion", output)
         self.assertIn("Mock exam approval", output)
 

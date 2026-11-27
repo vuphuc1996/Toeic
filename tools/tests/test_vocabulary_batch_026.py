@@ -75,7 +75,13 @@ class VocabularyBatch026Tests(unittest.TestCase):
             self.assertEqual(self.records[rid]["phonetic"]["us"], computed, rid)
 
     def test_word_family_graph_improvement_and_zero_new_mismatches(self):
-        report = wf_mod.load_source(ROOT)
+        from glossary_test_helpers import reverse_batch_027_word_family
+        documents = {
+            (ROOT / item["file"].removeprefix("./")).resolve(): read_json(item["file"].removeprefix("./"))
+            for item in self.manifest["letters"]
+        }
+        reverse_batch_027_word_family(documents, ROOT)
+        report = wf_mod.audit_data([(path.name, doc) for path, doc in documents.items()])
         self.assertEqual(report["headwords"], 1181)
         self.assertEqual(report["headwords_with_family"], 331)
         self.assertEqual(report["link_count"], 428)

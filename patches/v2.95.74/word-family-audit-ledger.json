@@ -1,0 +1,598 @@
+{
+  "schemaVersion": 1,
+  "release": "2.95.74",
+  "auditDate": "2026-11-27",
+  "scope": "Canonical derivational word family graph audit and missing targets taxonomy",
+  "metrics": {
+    "totalHeadwords": 1181,
+    "headwordsWithFamily": 331,
+    "directedLinks": 428,
+    "missingTargets": 50,
+    "targetPosMismatches": 0,
+    "vietnameseSenseAnchorMismatches": 70,
+    "nonreciprocalLinks": 0,
+    "duplicateLinks": 0,
+    "duplicateHeadwords": 0,
+    "malformedRecords": 0
+  },
+  "taxonomySummary": {
+    "validDerivedFormsBacklog": 38,
+    "inflectedParticipialForms": 11,
+    "multiWordPhrases": 1,
+    "resolvedSelfLinksAndMismatches": 2
+  },
+  "records": [
+    {
+      "source": "abstract",
+      "target": "abstractly",
+      "pos": "adv",
+      "sourceFile": "A.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Productive adverbial derivation via -ly suffix. Valid derivative requiring dedicated canonical backlog review.",
+      "recommendedAction": "Maintain in word family link; queue for future vocabulary expansion if canonical scope expands beyond 1,181."
+    },
+    {
+      "source": "accept",
+      "target": "acceptable",
+      "pos": "adj",
+      "sourceFile": "A.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "High-frequency deverbal adjective via -able suffix. Crucial TOEIC business context derivative.",
+      "recommendedAction": "Maintain in word family link; candidate for future canonical inclusion."
+    },
+    {
+      "source": "accept",
+      "target": "acceptance",
+      "pos": "n",
+      "sourceFile": "A.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "High-frequency action/state noun via -ance suffix. Core business contracting concept.",
+      "recommendedAction": "Maintain in word family link; candidate for future canonical inclusion."
+    },
+    {
+      "source": "ambiguous",
+      "target": "ambiguity",
+      "pos": "n",
+      "sourceFile": "A.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Abstract noun derivative via -ity suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "ambiguous",
+      "target": "unambiguous",
+      "pos": "adj",
+      "sourceFile": "A.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Antonymic derivative via negative un- prefix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "arbitrary",
+      "target": "arbitrarily",
+      "pos": "adv",
+      "sourceFile": "A.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adverbial derivation via -ly suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "assign",
+      "target": "assignee",
+      "pos": "n",
+      "sourceFile": "A.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Agent/patient noun via -ee suffix in legal and project management contexts.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "attribute",
+      "target": "attribution",
+      "pos": "n",
+      "sourceFile": "A.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Action noun via -ion suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "channel",
+      "target": "channeling",
+      "pos": "n",
+      "sourceFile": "C.json",
+      "category": "inflected-participial-form",
+      "rationale": "Gerundial nominalization (-ing) of channel. Functions as process noun.",
+      "recommendedAction": "Editorial review: consider whether base verb channel suffices or if process noun should be retained."
+    },
+    {
+      "source": "coincide",
+      "target": "coincidental",
+      "pos": "adj",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "De-nominal/deverbal adjective via -al suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "compensate",
+      "target": "compensatory",
+      "pos": "adj",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adjectival derivation via -ory suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "complement",
+      "target": "complementary",
+      "pos": "adj",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adjectival derivation via -ary suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "comprise",
+      "target": "comprising",
+      "pos": "prep",
+      "sourceFile": "C.json",
+      "category": "inflected-participial-form",
+      "rationale": "Present participle behaving prepositionally.",
+      "recommendedAction": "Editorial review: consider replacing with nominal derivative or annotating as participial preposition."
+    },
+    {
+      "source": "conceive",
+      "target": "conception",
+      "pos": "n",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Suppletive Latinate nominalization via -tion.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "confer",
+      "target": "conferral",
+      "pos": "n",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Action noun via -al suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "constrain",
+      "target": "constrained",
+      "pos": "adj",
+      "sourceFile": "C.json",
+      "category": "inflected-participial-form",
+      "rationale": "Past participial adjective (-ed) from transitive verb constrain.",
+      "recommendedAction": "Candidate for lemma normalization to constraint (noun) which is already established or retention as participial adj."
+    },
+    {
+      "source": "contemporary",
+      "target": "contemporarily",
+      "pos": "adv",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adverbial derivation via -ly suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "contradict",
+      "target": "contradictory",
+      "pos": "adj",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adjectival derivation via -ory suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "conventional",
+      "target": "convention",
+      "pos": "n",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Root noun for adjective conventional.",
+      "recommendedAction": "Maintain in word family link; candidate for future canonical entry."
+    },
+    {
+      "source": "conventional",
+      "target": "conventionally",
+      "pos": "adv",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adverbial derivation via -ly suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "crucial",
+      "target": "crucially",
+      "pos": "adv",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adverbial derivation via -ly suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "cumulative",
+      "target": "cumulatively",
+      "pos": "adv",
+      "sourceFile": "C.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adverbial derivation via -ly suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "debate",
+      "target": "debatable",
+      "pos": "adj",
+      "sourceFile": "D.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adjective derivation via -able suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "debate",
+      "target": "debater",
+      "pos": "n",
+      "sourceFile": "D.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Agent noun via -er suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "demonstrate",
+      "target": "demonstrative",
+      "pos": "adj",
+      "sourceFile": "D.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adjective derivation via -ive suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "denote",
+      "target": "denotation",
+      "pos": "n",
+      "sourceFile": "D.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Nominalization via -tion suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "denote",
+      "target": "denotative",
+      "pos": "adj",
+      "sourceFile": "D.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adjectival derivation via -ive suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "diminish",
+      "target": "diminution",
+      "pos": "n",
+      "sourceFile": "D.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Latinate noun derivation via -tion.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "diminish",
+      "target": "diminished",
+      "pos": "adj",
+      "sourceFile": "D.json",
+      "category": "inflected-participial-form",
+      "rationale": "Past participial adjective (-ed).",
+      "recommendedAction": "Editorial review: evaluate retention as participial modifier."
+    },
+    {
+      "source": "discriminate",
+      "target": "discriminatory",
+      "pos": "adj",
+      "sourceFile": "D.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adjectival derivation via -ory suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "distort",
+      "target": "distortion",
+      "pos": "n",
+      "sourceFile": "D.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Action noun via -ion suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "distort",
+      "target": "distorted",
+      "pos": "adj",
+      "sourceFile": "D.json",
+      "category": "inflected-participial-form",
+      "rationale": "Past participial adjective (-ed).",
+      "recommendedAction": "Editorial review: evaluate retention as participial modifier."
+    },
+    {
+      "source": "eliminate",
+      "target": "eliminator",
+      "pos": "n",
+      "sourceFile": "E.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Agent/instrument noun via -or suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "empirical",
+      "target": "empirically",
+      "pos": "adv",
+      "sourceFile": "E.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adverbial derivation via -ly suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "employee",
+      "target": "employ",
+      "pos": "v",
+      "sourceFile": "E.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Base verb employ is a primary morphological root, not currently in canonical 1,181 list.",
+      "recommendedAction": "Maintain derivational link; prime candidate for future canonical vocabulary expansion."
+    },
+    {
+      "source": "encounter",
+      "target": "encountered",
+      "pos": "adj",
+      "sourceFile": "E.json",
+      "category": "inflected-participial-form",
+      "rationale": "Past participial form functioning attributively.",
+      "recommendedAction": "Editorial review: consider whether encounter as verb/noun is sufficient."
+    },
+    {
+      "source": "knowledge",
+      "target": "know",
+      "pos": "v",
+      "sourceFile": "K.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Primary Germanic root verb know; foundational vocabulary item.",
+      "recommendedAction": "Maintain in word family link; prime candidate for future canonical vocabulary."
+    },
+    {
+      "source": "maintain",
+      "target": "maintainable",
+      "pos": "adj",
+      "sourceFile": "M.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adjective derivation via -able suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "necessary",
+      "target": "necessity",
+      "pos": "n",
+      "sourceFile": "N.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "State noun derivation via -ity suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "opportunity",
+      "target": "opportune",
+      "pos": "adj",
+      "sourceFile": "O.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Base Latinate adjective opportune.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "purchase",
+      "target": "purchaser",
+      "pos": "n",
+      "sourceFile": "P.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Agent noun via -er suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "reservation",
+      "target": "reserved",
+      "pos": "adj",
+      "sourceFile": "R.json",
+      "category": "inflected-participial-form",
+      "rationale": "Participial adjective (-ed) with specialized business meaning (booked/set aside).",
+      "recommendedAction": "Editorial review: evaluate whether base verb reserve or participial adj is preferred target."
+    },
+    {
+      "source": "schedule",
+      "target": "scheduled",
+      "pos": "adj",
+      "sourceFile": "S.json",
+      "category": "inflected-participial-form",
+      "rationale": "Participial adjective (-ed) (e.g. scheduled flight).",
+      "recommendedAction": "Editorial review: consider retention as lexicalized participial adjective."
+    },
+    {
+      "source": "schedule",
+      "target": "scheduling",
+      "pos": "n",
+      "sourceFile": "S.json",
+      "category": "inflected-participial-form",
+      "rationale": "Gerund process noun (-ing) (e.g. scheduling conflict).",
+      "recommendedAction": "Editorial review: maintain as process noun or rely on base noun schedule."
+    },
+    {
+      "source": "shipment",
+      "target": "ship",
+      "pos": "v/n",
+      "sourceFile": "S.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Base verb/noun ship is the morphological root for shipment.",
+      "recommendedAction": "Maintain in word family link; prime candidate for future canonical vocabulary expansion."
+    },
+    {
+      "source": "supplier",
+      "target": "supplies",
+      "pos": "n",
+      "sourceFile": "S.json",
+      "category": "inflected-participial-form",
+      "rationale": "Pluralized noun form of supply (supplies = materials/provisions).",
+      "recommendedAction": "Editorial review: normalize target to lemma supply (noun) or note lexicalized plural."
+    },
+    {
+      "source": "temporary",
+      "target": "temporary worker",
+      "pos": "n phrase",
+      "sourceFile": "T.json",
+      "category": "multi-word-phrase",
+      "rationale": "Multi-word compound phrase (noun phrase) rather than single morphological lemma.",
+      "recommendedAction": "Classify in related phrases / collocations backlog rather than forcing into single-word headword entry."
+    },
+    {
+      "source": "transaction",
+      "target": "transactional",
+      "pos": "adj",
+      "sourceFile": "T.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Adjectival derivation via -al suffix.",
+      "recommendedAction": "Maintain in word family link."
+    },
+    {
+      "source": "update",
+      "target": "updated",
+      "pos": "adj",
+      "sourceFile": "U.json",
+      "category": "inflected-participial-form",
+      "rationale": "Past participial adjective (-ed).",
+      "recommendedAction": "Editorial review: evaluate retention as participial modifier."
+    },
+    {
+      "source": "update",
+      "target": "up-to-date",
+      "pos": "adj",
+      "sourceFile": "U.json",
+      "category": "valid-derived-form-backlog",
+      "rationale": "Hyphenated compound adjective semantically related to update.",
+      "recommendedAction": "Maintain in word family link or classify in compound lexical items backlog."
+    }
+  ],
+  "resolvedDefects": [
+    {
+      "defect": "self-referential-link",
+      "source": "hire",
+      "target": "hire",
+      "file": "H.json",
+      "action": "Removed redundant self-referential link; resolved target POS mismatch."
+    },
+    {
+      "defect": "self-referential-link",
+      "source": "utilization",
+      "target": "utilization",
+      "file": "U.json",
+      "action": "Removed redundant self-referential link; added reciprocal link to canonical utilize."
+    },
+    {
+      "defect": "non-reciprocal-links",
+      "pairs": [
+        {"source": "access", "target": "accessible", "action": "Added reciprocal link accessible -> access"},
+        {"source": "authentic", "target": "authenticate", "action": "Added reciprocal link authenticate -> authentic"},
+        {"source": "confer", "target": "conference", "action": "Added reciprocal link conference -> confer"},
+        {"source": "consume", "target": "consumer", "action": "Added reciprocal link consumer -> consume"},
+        {"source": "consume", "target": "consumption", "action": "Added reciprocal link consumption -> consume"},
+        {"source": "flexible", "target": "flexibility", "action": "Added reciprocal link flexibility -> flexible"},
+        {"source": "guidance", "target": "guide", "action": "Added reciprocal link guide -> guidance"},
+        {"source": "guidance", "target": "guideline", "action": "Added reciprocal link guideline -> guidance"},
+        {"source": "monthly", "target": "month", "action": "Added reciprocal link month -> monthly"},
+        {"source": "utilize", "target": "utilization", "action": "Added reciprocal link utilize -> utilization"}
+      ],
+      "action": "All non-reciprocal links resolved to 0 defects."
+    }
+  ],
+  "reconciliationRecords": [
+    {
+      "id": "accessible-adj",
+      "file": "data/vocabulary/A.json",
+      "before": [
+        {
+          "word": "accessibility",
+          "pos": "n",
+          "meaning_vi": "khả năng tiếp cận; mức độ dễ sử dụng"
+        }
+      ]
+    },
+    {
+      "id": "authenticate-v",
+      "file": "data/vocabulary/A.json",
+      "before": []
+    },
+    {
+      "id": "conference-n",
+      "file": "data/vocabulary/C.json",
+      "before": []
+    },
+    {
+      "id": "consumer-n",
+      "file": "data/vocabulary/C.json",
+      "before": []
+    },
+    {
+      "id": "consumption-n",
+      "file": "data/vocabulary/C.json",
+      "before": []
+    },
+    {
+      "id": "flexibility-n",
+      "file": "data/vocabulary/F.json",
+      "before": []
+    },
+    {
+      "id": "guide-v",
+      "file": "data/vocabulary/G.json",
+      "before": []
+    },
+    {
+      "id": "guideline-n",
+      "file": "data/vocabulary/G.json",
+      "before": []
+    },
+    {
+      "id": "hire-v",
+      "file": "data/vocabulary/H.json",
+      "before": [
+        {
+          "word": "hire",
+          "pos": "n",
+          "meaning_vi": "sự thuê mướn (ít dùng)"
+        },
+        {
+          "word": "hiring",
+          "pos": "n",
+          "meaning_vi": "việc tuyển dụng"
+        }
+      ]
+    },
+    {
+      "id": "month-n",
+      "file": "data/vocabulary/M.json",
+      "before": []
+    },
+    {
+      "id": "utilization-n",
+      "file": "data/vocabulary/U.json",
+      "before": [
+        {
+          "word": "utilize",
+          "pos": "v",
+          "meaning_vi": "sử dụng; tận dụng"
+        },
+        {
+          "word": "utilization",
+          "pos": "n",
+          "meaning_vi": "việc sử dụng"
+        }
+      ]
+    },
+    {
+      "id": "utilize-v",
+      "file": "data/vocabulary/U.json",
+      "before": []
+    }
+  ]
+}

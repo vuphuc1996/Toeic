@@ -5,15 +5,30 @@
  * This is an opt-in snapshot summary, not background tracking or an AI diagnosis.
  */
 const asObject = value => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+const strictFiniteNumber = value => {
+  if (typeof value === 'number') return Number.isFinite(value) ? value : null;
+  if (typeof value === 'string' && value.trim() !== '') {
+    const parsed = Number(value);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+  return null;
+};
+const safeNow = value => (typeof value === 'number' && Number.isFinite(value) ? value : Date.now());
 function getDueObjectiveRecallItems(progress = {}, resourceMap = {}, now = Date.now()) {
-  const objectiveById = new Map((resourceMap?.objectives || []).map(item => [item.id, item]));
+  const evalNow = safeNow(now);
+  const resourceObjectives = Array.isArray(resourceMap?.objectives) ? resourceMap.objectives : [];
+  const objectiveById = new Map(
+    resourceObjectives
+      .filter(item => item && typeof item === 'object' && typeof item.id === 'string')
+      .map(item => [item.id, item])
+  );
   const due = [];
   for (const [objectiveId, objectiveState] of Object.entries(asObject(progress?.objectives))) {
     const objective = objectiveById.get(objectiveId);
     if (!objective) continue;
     for (const [itemId, item] of Object.entries(asObject(objectiveState?.items))) {
-      const dueAt = Number(item?.recallDueAt) || 0;
-      if (dueAt > 0 && dueAt <= now) due.push({area:objective.title || 'Ôn nhớ lại', title:itemId, dueAt});
+      const dueAt = strictFiniteNumber(item?.recallDueAt) ?? 0;
+      if (dueAt > 0 && dueAt <= evalNow) due.push({area:objective.title || 'Ôn nhớ lại', title:itemId, dueAt});
     }
   }
   return due.sort((a,b)=>a.dueAt-b.dueAt);
@@ -27,15 +42,18 @@ const latestAnswer = (progress, index) => {
 };
 
 function summarizePracticeMap(items = [], progressMap = {}) {
+  const safeItems = Array.isArray(items) ? items : [];
+  const safeProgressMap = asObject(progressMap);
   let learn = 0, practice = 0, attempted = 0, questions = 0, correct = 0, studiedUnits = 0, totalUnits = 0;
   const weak = [], learnItems = [], practiceItems = [];
-  for (const item of items) {
-    const qs = item.questions || item.exercises || [];
+  for (const item of safeItems) {
+    if (!item || typeof item !== 'object') continue;
+    const rawQs = item.questions || item.exercises;
+    const qs = Array.isArray(rawQs) ? rawQs : [];
     if (!qs.length) continue;
     questions += qs.length;
     totalUnits += 1;
-    const progress = asObject(progressMap[item.id]);
-    const answers = asObject(progress.answers);
+    const progress = asObject(safeProgressMap[item.id]);
     let seen = 0, right = 0;
     for (let i = 0; i < qs.length; i += 1) {
       const answer = latestAnswer(progress, i);
@@ -50,15 +68,20 @@ function summarizePracticeMap(items = [], progressMap = {}) {
 }
 
 function summarizeFoundationEvidence(groups = [], now = Date.now()) {
+  const evalNow = safeNow(now);
+  const safeGroups = Array.isArray(groups) ? groups : [];
   let learn = 0, practice = 0, review = 0, attempted = 0, questions = 0, correct = 0, studiedUnits = 0, totalUnits = 0;
   const learnItems = [], practiceItems = [], reviewItems = [];
-  for (const group of groups) {
+  for (const group of safeGroups) {
+    if (!group || typeof group !== 'object') continue;
     const items = Array.isArray(group.items) ? group.items : [];
     const progressMap = asObject(group.progress);
     for (const item of items) {
+      if (!item || typeof item !== 'object') continue;
       const record = asObject(progressMap[item.id]);
-      const evidence = values(record.evidence);
-      const itemQuestions = item.questionBank || item.questions || [];
+      const evidence = values(record.evidence).filter(entry => entry && typeof entry === 'object' && !Array.isArray(entry));
+      const rawQuestions = item.questionBank || item.questions;
+      const itemQuestions = Array.isArray(rawQuestions) ? rawQuestions : [];
       if (!itemQuestions.length) continue;
       questions += itemQuestions.length;
       totalUnits += 1;
@@ -67,7 +90,10 @@ function summarizeFoundationEvidence(groups = [], now = Date.now()) {
       attempted += evidence.length;
       const itemCorrect = evidence.filter(entry => entry.latestCorrect === true).length;
       correct += itemCorrect;
-      const dueEntries=evidence.filter(entry => Number(entry.recallDueAt) > 0 && Number(entry.recallDueAt) <= now);
+      const dueEntries=evidence.filter(entry => {
+        const dueAt = strictFiniteNumber(entry.recallDueAt) ?? 0;
+        return dueAt > 0 && dueAt <= evalNow;
+      });
       review += dueEntries.length; if(dueEntries.length)reviewItems.push({area:'Foundation',title:item.title || item.id,count:dueEntries.length});
       if (evidence.length >= 3 && itemCorrect / evidence.length < 0.8) { practice += 1; practiceItems.push({area:'Foundation',title:item.title || item.id,accuracy:Math.round(itemCorrect/evidence.length*100),attempted:evidence.length}); }
     }
@@ -76,57 +102,67 @@ function summarizeFoundationEvidence(groups = [], now = Date.now()) {
 }
 
 export function buildRobotLearningInsights(snapshot = {}, now = Date.now()) {
-  const words = Array.isArray(snapshot.words) ? snapshot.words : [];
-  const vocab = asObject(snapshot.vocabularyProgress);
-  const flash = asObject(snapshot.flashProgress);
+  const evalNow = safeNow(now);
+  const safeSnapshot = asObject(snapshot);
+  const words = Array.isArray(safeSnapshot.words) ? safeSnapshot.words.filter(word => word && typeof word === 'object' && typeof word.id === 'string' && word.id) : [];
+  const vocab = asObject(safeSnapshot.vocabularyProgress);
+  const flash = asObject(safeSnapshot.flashProgress);
   let vocabularyLearn = 0, vocabularyPractice = 0, vocabularyReview = 0, vocabularyStudied = 0;
   const learnItems=[], practiceItems=[], reviewItems=[];
   for (const word of words) {
     const p = asObject(vocab[word.id]);
-    const reviews = Number(p.reviewCount) || 0;
+    const reviews = strictFiniteNumber(p.reviewCount) ?? 0;
     if (!reviews) { vocabularyLearn += 1; learnItems.push({area:'Từ vựng',title:word.word || word.id}); continue; }
     vocabularyStudied += 1;
-    const correct = Number(p.correctCount) || 0, wrong = Number(p.wrongCount) || 0;
-    if (Number(p.dueAt) > 0 && Number(p.dueAt) <= now) { vocabularyReview += 1; reviewItems.push({area:'Từ vựng',title:word.word || word.id}); }
+    const correct = strictFiniteNumber(p.correctCount) ?? 0, wrong = strictFiniteNumber(p.wrongCount) ?? 0;
+    const dueAt = strictFiniteNumber(p.dueAt) ?? 0;
+    if (dueAt > 0 && dueAt <= evalNow) { vocabularyReview += 1; reviewItems.push({area:'Từ vựng',title:word.word || word.id}); }
     else if (reviews >= 3 && (wrong > correct || correct / reviews < 0.7)) { vocabularyPractice += 1; practiceItems.push({area:'Từ vựng',title:word.word || word.id,accuracy:Math.round(correct/reviews*100),attempted:reviews}); }
   }
   let flashLearn = 0, flashPractice = 0, flashReview = 0, flashStudied = 0;
   for (const word of words) {
     const p = asObject(flash[word.id]);
-    const reps = Number(p.reps) || 0;
+    const reps = strictFiniteNumber(p.reps) ?? 0;
     if (!reps) { flashLearn += 1; learnItems.push({area:'Flashcard',title:word.word || word.id}); continue; }
     flashStudied += 1;
-    if (Number(p.dueAt) > 0 && Number(p.dueAt) <= now) { flashReview += 1; reviewItems.push({area:'Flashcard',title:word.word || word.id}); }
-    else { const quizAttempts=(Number(p.lapses)||0)+(Number(p.correct)||0); if(quizAttempts>=3&&((Number(p.lapses)||0)>(Number(p.correct)||0)||(Number(p.correct)||0)/quizAttempts<0.7)){flashPractice += 1;practiceItems.push({area:'Flashcard',title:word.word || word.id,accuracy:Math.round((Number(p.correct)||0)/quizAttempts*100),attempted:quizAttempts});} }
+    const dueAt = strictFiniteNumber(p.dueAt) ?? 0;
+    if (dueAt > 0 && dueAt <= evalNow) { flashReview += 1; reviewItems.push({area:'Flashcard',title:word.word || word.id}); }
+    else { const lapses = strictFiniteNumber(p.lapses) ?? 0, flashCorrect = strictFiniteNumber(p.correct) ?? 0, quizAttempts = lapses + flashCorrect; if(quizAttempts>=3&&(lapses>flashCorrect||flashCorrect/quizAttempts<0.7)){flashPractice += 1;practiceItems.push({area:'Flashcard',title:word.word || word.id,accuracy:Math.round(flashCorrect/quizAttempts*100),attempted:quizAttempts});} }
   }
 
-  const grammar = summarizePracticeMap(snapshot.grammarItems, snapshot.grammarProgress);
-  const reading = summarizePracticeMap(snapshot.readingItems, snapshot.readingProgress);
-  const listening = summarizePracticeMap(snapshot.listeningItems, snapshot.listeningProgress);
+  const grammar = summarizePracticeMap(safeSnapshot.grammarItems, safeSnapshot.grammarProgress);
+  const reading = summarizePracticeMap(safeSnapshot.readingItems, safeSnapshot.readingProgress);
+  const listening = summarizePracticeMap(safeSnapshot.listeningItems, safeSnapshot.listeningProgress);
   const foundation = summarizeFoundationEvidence([
-    {items:snapshot.foundationItems,progress:snapshot.foundationProgressMap},
-    {items:snapshot.foundationReadingItems,progress:snapshot.foundationReadingProgress},
-    {items:snapshot.foundationListeningItems,progress:snapshot.foundationListeningProgress}
-  ], now);
+    {items:safeSnapshot.foundationItems,progress:safeSnapshot.foundationProgressMap},
+    {items:safeSnapshot.foundationReadingItems,progress:safeSnapshot.foundationReadingProgress},
+    {items:safeSnapshot.foundationListeningItems,progress:safeSnapshot.foundationListeningProgress}
+  ], evalNow);
 
   learnItems.push(...grammar.learnItems.map(item=>({...item,area:'Ngữ pháp'})),...reading.learnItems.map(item=>({...item,area:'Đọc hiểu'})),...listening.learnItems.map(item=>({...item,area:'Nghe hiểu'})),...foundation.learnItems);
   practiceItems.push(...grammar.practiceItems.map(item=>({...item,area:'Ngữ pháp'})),...reading.practiceItems.map(item=>({...item,area:'Đọc hiểu'})),...listening.practiceItems.map(item=>({...item,area:'Nghe hiểu'})),...foundation.practiceItems);
   reviewItems.push(...foundation.reviewItems);
-  const objectiveDueItems = Array.isArray(snapshot.dueRecallItems) ? snapshot.dueRecallItems.map(item=>({area:item.objectiveTitle || 'Ôn nhớ lại',title:item.itemId || item.title || 'Mục tiêu đến hạn'})) : getDueObjectiveRecallItems(snapshot.objectiveProgress, snapshot.objectiveResourceMap, now);
+  const objectiveDueItems = Array.isArray(safeSnapshot.dueRecallItems)
+    ? safeSnapshot.dueRecallItems.filter(item => item && typeof item === 'object').map(item=>({area:item.objectiveTitle || 'Ôn nhớ lại',title:item.itemId || item.title || 'Mục tiêu đến hạn'}))
+    : getDueObjectiveRecallItems(safeSnapshot.objectiveProgress, safeSnapshot.objectiveResourceMap, evalNow);
   reviewItems.push(...objectiveDueItems);
   const objectiveDueRecall = objectiveDueItems.length;
   const dueRecall = objectiveDueRecall + foundation.review;
-  const mockHistory = Array.isArray(snapshot.mockHistory) ? snapshot.mockHistory : [];
-  const completedMocks = mockHistory.filter(item => item?.status === 'completed' && Number.isFinite(Number(item.accuracy)));
-  const weakMockRows = completedMocks.filter(item => Number(item.accuracy) < 75);
+  const mockHistory = Array.isArray(safeSnapshot.mockHistory) ? safeSnapshot.mockHistory : [];
+  const completedMocks = mockHistory.filter(item => {
+    if (!item || typeof item !== 'object' || item.status !== 'completed') return false;
+    const acc = strictFiniteNumber(item.accuracy);
+    return acc !== null && acc >= 0 && acc <= 100;
+  });
+  const weakMockRows = completedMocks.filter(item => strictFiniteNumber(item.accuracy) < 75);
   const weakMocks = weakMockRows.length;
-  practiceItems.push(...weakMockRows.map(item=>({area:'Thi thử',title:item.modeLabel || item.mode || 'Bài thi thử',accuracy:Number(item.accuracy),attempted:Number(item.questions)||0}))); 
+  practiceItems.push(...weakMockRows.map(item=>({area:'Thi thử',title:item.modeLabel || item.mode || 'Bài thi thử',accuracy:strictFiniteNumber(item.accuracy),attempted:strictFiniteNumber(item.questions)||0})));
   const attemptedModules = [grammar, reading, listening, foundation].filter(item => item.attempted > 0).length;
   const totalLearn = vocabularyLearn + flashLearn + grammar.learn + reading.learn + listening.learn + foundation.learn;
   const totalPractice = vocabularyPractice + flashPractice + grammar.practice + reading.practice + listening.practice + foundation.practice + weakMocks;
   const totalReview = vocabularyReview + flashReview + dueRecall;
 
-  const hasEvidence = vocabularyStudied > 0 || flashStudied > 0 || attemptedModules > 0 || completedMocks > 0 || dueRecall > 0;
+  const hasEvidence = vocabularyStudied > 0 || flashStudied > 0 || attemptedModules > 0 || completedMocks.length > 0 || dueRecall > 0;
   const sections = [
     { name: 'Từ vựng', learn: vocabularyLearn, practice: vocabularyPractice, review: vocabularyReview, evidence: vocabularyStudied, studiedUnits: vocabularyStudied, totalUnits: words.length },
     { name: 'Flashcard', learn: flashLearn, practice: flashPractice, review: flashReview, evidence: flashStudied, studiedUnits: flashStudied, totalUnits: words.length },
@@ -134,10 +170,10 @@ export function buildRobotLearningInsights(snapshot = {}, now = Date.now()) {
     { name: 'Đọc hiểu', ...reading, evidence: reading.attempted, review: 0 },
     { name: 'Nghe hiểu', ...listening, evidence: listening.attempted, review: 0 },
     { name: 'Foundation', ...foundation, evidence: foundation.attempted },
-    { name: 'Thi thử', learn: 0, practice: weakMocks, review: 0, evidence: completedMocks.length, studiedUnits: completedMocks.length, totalUnits: null, attempted: completedMocks.reduce((sum,item)=>sum+(Number(item.questions)||0),0), accuracy: completedMocks.length ? Math.round(completedMocks.reduce((sum,item)=>sum+Number(item.accuracy),0)/completedMocks.length) : null }
+    { name: 'Thi thử', learn: 0, practice: weakMocks, review: 0, evidence: completedMocks.length, studiedUnits: completedMocks.length, totalUnits: null, attempted: completedMocks.reduce((sum,item)=>sum+(strictFiniteNumber(item.questions)||0),0), accuracy: completedMocks.length ? Math.round(completedMocks.reduce((sum,item)=>sum+(strictFiniteNumber(item.accuracy)||0),0)/completedMocks.length) : null }
   ];
   return {
-    hasEvidence, generatedAt: now,
+    hasEvidence, generatedAt: evalNow,
     totals: { learn: totalLearn, practice: totalPractice, review: totalReview },
     dueRecall, vocabularyStudied, vocabularyTotal: words.length,
     sections: sections.map(({ name, learn = 0, practice = 0, review = 0, evidence = 0, accuracy = null, attempted = 0, studiedUnits = 0, totalUnits = null, coveragePercent = null }) => ({ name, learn, practice, review, evidence, accuracy, attempted, studiedUnits, totalUnits, coveragePercent:coveragePercent ?? (Number.isFinite(totalUnits) && totalUnits > 0 ? Math.round(studiedUnits / totalUnits * 100) : null) })),

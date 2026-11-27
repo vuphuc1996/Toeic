@@ -6,9 +6,28 @@ from pathlib import Path
 
 
 
-def restore_batch_046(glossary: dict, root: Path) -> dict:
-    """Reverse Batch 046, restoring the Related Glossary to its v2.95.71 state."""
+def restore_batch_047(glossary: dict, root: Path) -> dict:
+    """Reverse Batch 047, restoring the Related Glossary to its v2.95.72 state."""
     restored = copy.deepcopy(glossary)
+    patch_path = root / 'patches-related-terms/v2.95.74/related-terms-047.json'
+    patch = json.loads(patch_path.read_text(encoding='utf-8'))
+    by_key = {row['term'].casefold(): row for row in restored['terms']}
+    for operation in patch['operations']:
+        row = by_key[operation['term'].casefold()]
+        for field, old_value in operation['expect'].items():
+            if field == 'term':
+                continue
+            if old_value is None:
+                row.pop(field, None)
+            else:
+                row[field] = copy.deepcopy(old_value)
+    return restored
+
+
+
+def restore_batch_046(glossary: dict, root: Path) -> dict:
+    """Reverse Batch 046 after reversing Batch 047, restoring the Related Glossary to its v2.95.71 state."""
+    restored = restore_batch_047(glossary, root)
     patch_path = root / 'patches-related-terms/v2.95.72/related-terms-046.json'
     patch = json.loads(patch_path.read_text(encoding='utf-8'))
     by_key = {row['term'].casefold(): row for row in restored['terms']}
@@ -131,6 +150,23 @@ def restore_batch_039(glossary: dict, root: Path) -> dict:
     return restored
 
 
+def reverse_batch_027_word_family(documents: dict[Path, dict], root: Path) -> None:
+    """Restore the 12 word_family arrays edited by Batch 027 (v2.95.74) in memory."""
+    ledger_path = root / "patches/v2.95.74/word-family-audit-ledger.json"
+    if not ledger_path.exists():
+        return
+    ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+    for entry in ledger.get("reconciliationRecords", []):
+        path = (root / entry["file"]).resolve()
+        document = documents.get(path)
+        if document is None:
+            raise AssertionError(f"Word Family Batch 027 ledger references untracked file: {entry['file']}")
+        record = next((row for row in document.get("words", []) if row.get("id") == entry["id"]), None)
+        if record is None:
+            raise AssertionError(f"Word Family Batch 027 ledger references missing canonical ID: {entry['id']}")
+        record["word_family"] = copy.deepcopy(entry.get("before", []))
+
+
 def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) -> str:
     """Hash a historical vocabulary snapshot after reversing later guarded patch ops in memory.
 
@@ -156,9 +192,9 @@ def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) 
         documents[path] = document
         for record in document.get("words", []):
             id_to_path[record["id"]] = path
-    # Restore later canonical vocabulary changes before asserting historical
-    # glossary ledgers. v2.95.67 added six reciprocal Word Family links only;
-    # each row's before snapshot is an explicitly empty array.
+    # Restore later canonical vocabulary changes in reverse chronological order:
+    # Batch 027 (v2.95.74) word_family reconciliations, then Batch 025 (v2.95.67).
+    reverse_batch_027_word_family(documents, root)
     later_family_ledger = root / "data/vocabulary/batch-025.json"
     if later_family_ledger.exists():
         family_batch = json.loads(later_family_ledger.read_text(encoding="utf-8"))
