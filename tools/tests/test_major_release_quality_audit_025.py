@@ -8,7 +8,7 @@ class MajorReleaseQualityAudit025(unittest.TestCase):
     @classmethod
     def setUpClass(cls): cls.audit=mod.audit()
     def test_vocabulary_coverage_metrics_are_bounded(self):
-        v=self.audit['vocabulary']; self.assertEqual(v['headwords'],1181)
+        v=self.audit['vocabulary']; self.assertEqual(v['headwords'],mod.read('data/manifest.json')['totalWords'])
         for key,value in self.audit['vocabularyFieldCoverage'].items():
             self.assertGreaterEqual(value['count'],0); self.assertLessEqual(value['count'],v['headwords'])
             self.assertGreaterEqual(value['percent'],0); self.assertLessEqual(value['percent'],100)
