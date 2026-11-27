@@ -31,11 +31,16 @@ class RelatedGlossaryBatch045Tests(unittest.TestCase):
         cls.ledger = read_json(LEDGER_PATH)
         cls.glossary = read_json(ROOT / "data/related-terms.json")
         cls.rows = {row["term"].casefold(): row for row in cls.glossary["terms"]}
+        # Reconstruct the v2.95.71 canonical headword set: Batch 028 was added
+        # later and must not retroactively invalidate Batch 045 relation-target status.
+        batch_028 = read_json(ROOT / "data/vocabulary/batch-028.json")
+        later_headwords = {row["word"].casefold() for row in batch_028["words"]}
         cls.headwords = set()
         cls.targets = {}
         for path in sorted((ROOT / "data/vocabulary").glob("[A-Z].json")):
             for word in read_json(path)["words"]:
-                cls.headwords.add(word["word"].casefold())
+                if word["word"].casefold() not in later_headwords:
+                    cls.headwords.add(word["word"].casefold())
                 for sense in word.get("senses", []):
                     for field in ("synonyms", "antonyms"):
                         for target in sense.get(field, []) or []:
