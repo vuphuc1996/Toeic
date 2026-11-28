@@ -65,9 +65,13 @@ class ContentBatch027Tests(unittest.TestCase):
    'part1-construction-plans','part1-laboratory-bench','part1-supermarket-shelf',
   }
   part1_seen=set()
-  document['listening']=[unit for unit in document['listening'] if not (
-   unit.get('id') in part1_batch_018_ids and not part1_seen.add(unit.get('id'))
-  )]
+  restored=[]
+  for unit in document['listening']:
+   if unit.get('id') in part1_batch_018_ids:
+    part1_seen.add(unit.get('id'))
+   else:
+    restored.append(unit)
+  document['listening']=restored
   self.assertEqual(part1_seen,part1_batch_018_ids)
 
  def test_v29583_part4_practice_additions_are_exact_and_mock_excluded(self):
