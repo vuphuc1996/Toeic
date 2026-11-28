@@ -86,7 +86,7 @@ class ContentBatch018Tests(unittest.TestCase):
             self.assertEqual(len(unit["segments"]), 4)
             self.assertEqual(len(unit["questions"]), 1)
             question = unit["questions"][0]
-            self.assertIs(question.get("mockEligible"), False)
+            self.assertNotIn("mockEligible", question)
             self.assertEqual(len(question["choices"]), 4)
             self.assertEqual(question["choices"], ["Option A", "Option B", "Option C", "Option D"])
             self.assertEqual(len(question["choiceIds"]), 4)
