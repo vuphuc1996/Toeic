@@ -41,7 +41,7 @@ class MajorReleaseQualityAudit025(unittest.TestCase):
         self.assertEqual(len(o['criteriaDetail']),o['criteria'])
         self.assertEqual(sum(o['statusCounts'].values()),o['criteria'])
         self.assertEqual(o['statusCounts']['criteria_defined_not_yet_instrumented'],4)
-        self.assertEqual(o['statusCounts']['instrumented_practice_evidence'],20)
+        self.assertEqual(o['statusCounts']['instrumented_practice_evidence'],21)
         self.assertEqual(o['statusCounts']['instrumented_learner_self_report'],5)
         self.assertEqual(o['statusCounts']['instrumented_delayed_recall'],3)
         self.assertEqual(sum(o['statusCounts'].values()),33)
