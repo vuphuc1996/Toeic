@@ -68,6 +68,33 @@ def composite_sha_reversing_listening_translations(paths):
                     del unit["transcriptTranslation"]
             if seen != added_ids:
                 raise AssertionError(f"Listening remediation IDs differ: {sorted(seen ^ added_ids)}")
+
+            # v2.95.83 appends one practice-only Part 4 question to each of
+            # ten allowlisted, pre-existing non-reserve talks. Strip only
+            # those rows when reconstructing the historical v2.95.44 hash.
+            practice_only_part4_ids = {
+                "part4-office-announcement",
+                "part4-conference-update",
+                "part4-safety-announcement",
+                "part4-product-launch",
+                "part4-quarterly-town-hall",
+                "part4-customer-voicemail",
+                "part4-warehouse-safety-briefing",
+                "part4-training-registration",
+                "part4-travel-service-update",
+                "part4-quarterly-inventory-report",
+            }
+            practice_only_seen = set()
+            for unit in document["listening"]:
+                if unit.get("id") not in practice_only_part4_ids:
+                    continue
+                questions = unit.get("questions") or []
+                if len(questions) != 4 or questions[3].get("mockEligible") is not False:
+                    raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit.get('id')}")
+                practice_only_seen.add(unit["id"])
+                unit["questions"] = questions[:3]
+            if practice_only_seen != practice_only_part4_ids:
+                raise AssertionError(f"Part 4 practice-only IDs differ: {sorted(practice_only_seen ^ practice_only_part4_ids)}")
             data = (json.dumps(document, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
         digest.update(path.relative_to(ROOT).as_posix().encode("utf-8"))
         digest.update(b"\0")
@@ -151,6 +178,26 @@ class RelatedGlossaryBatch037Tests(unittest.TestCase):
             row = self.rows[term]
             self.assertEqual(row["pos"], pos, term)
             self.assertIn(anchor, self.targets[term], term)
+
+
+    def test_part4_question_level_practice_additions_are_exactly_expected(self):
+        listening = read_json("data/listening/listening-library.json")["listening"]
+        expected_ids = {
+            "part4-office-announcement", "part4-conference-update",
+            "part4-safety-announcement", "part4-product-launch",
+            "part4-quarterly-town-hall", "part4-customer-voicemail",
+            "part4-warehouse-safety-briefing", "part4-training-registration",
+            "part4-travel-service-update", "part4-quarterly-inventory-report",
+        }
+        resources = {item["id"]: item for item in listening}
+        self.assertTrue(expected_ids.issubset(resources))
+        for resource_id in expected_ids:
+            resource = resources[resource_id]
+            self.assertEqual(len(resource["questions"]), 4, resource_id)
+            added = resource["questions"][3]
+            self.assertIs(added.get("mockEligible"), False, resource_id)
+            self.assertEqual(len(added["choices"]), 4, resource_id)
+            self.assertEqual(added["choiceIds"], [f"listening:{resource_id}:4:choice:{i}" for i in range(1, 5)])
 
     def test_canonical_vocabulary_and_learning_banks_match_hashes_outside_eight_listening_translations(self):
         vocabulary = list((ROOT / "data/vocabulary").glob("[A-Z].json"))
