@@ -3,7 +3,8 @@
 - Current source: **v2.95.78** — Criterion-level TOEIC Learning Outcome Evidence.
 - Release package: `TOEIC_Dictionary_v2.95.78_FullSource.zip`.
 - Package status: **NOT GENERATED OR VERIFIED in this source-candidate commit**; do not treat the package filename as evidence of a ZIP artifact.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.78.md` (pre-CI scope; no pass claim).
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.78.md`.
+- Test report scope: pre-CI candidate plan; no test pass is claimed by the report.
 - Candidate predecessor baseline: `c1f9702579633aeb6cd372b29e17b143cb2868a1` (v2.95.77).
 - Outcome instrumentation: 28/33 criteria total; 22/27 TOEIC criteria; five intentionally uninstrumented.
 - Stable question map: 1,082 links across 638 unique question IDs.
