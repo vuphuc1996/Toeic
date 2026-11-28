@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "batch": "018",
+  "version": "2.95.86",
+  "title": "TOEIC Listening Part 1 — AI-generated Photo Practice Reserve",
+  "purpose": "Add three distinct Part 1 practice photo resources to expand the review queue. These are not independently reviewed and are excluded from Mock.",
+  "counts": {
+    "listeningResources": 3,
+    "listeningQuestions": 3,
+    "part1Resources": 3,
+    "approvedForMock": 0,
+    "reservePendingIndependentReview": 3
+  },
+  "sourcePolicy": "Project-generated with Google Imagen in Google AI Studio. Not Pexels photography. No human photographer is claimed.",
+  "reservePolicy": "All resources and questions remain reserve-pending-independent-review with question-level mockEligible=false. Do not map to learning-outcome criteria or promote until an independent reviewer verifies the photograph, each spoken statement, the unique answer and distractors.",
+  "listening": [
+    {
+      "id": "part1-construction-plans",
+      "photo": "./assets/listening/part1-construction-plans.jpg",
+      "questionKey": "listening:part1-construction-plans:1",
+      "choiceIds": [
+        "listening:part1-construction-plans:1:choice:1",
+        "listening:part1-construction-plans:1:choice:2",
+        "listening:part1-construction-plans:1:choice:3",
+        "listening:part1-construction-plans:1:choice:4"
+      ],
+      "answerIndex": 0,
+      "correctEvidence": "A site engineer is reviewing a set of building plans.",
+      "editorialStatus": "reserve-pending-independent-review"
+    },
+    {
+      "id": "part1-laboratory-bench",
+      "photo": "./assets/listening/part1-laboratory-bench.jpg",
+      "questionKey": "listening:part1-laboratory-bench:1",
+      "choiceIds": [
+        "listening:part1-laboratory-bench:1:choice:1",
+        "listening:part1-laboratory-bench:1:choice:2",
+        "listening:part1-laboratory-bench:1:choice:3",
+        "listening:part1-laboratory-bench:1:choice:4"
+      ],
+      "answerIndex": 1,
+      "correctEvidence": "A laboratory technician is looking through a microscope.",
+      "editorialStatus": "reserve-pending-independent-review"
+    },
+    {
+      "id": "part1-supermarket-shelf",
+      "photo": "./assets/listening/part1-supermarket-shelf.jpg",
+      "questionKey": "listening:part1-supermarket-shelf:1",
+      "choiceIds": [
+        "listening:part1-supermarket-shelf:1:choice:1",
+        "listening:part1-supermarket-shelf:1:choice:2",
+        "listening:part1-supermarket-shelf:1:choice:3",
+        "listening:part1-supermarket-shelf:1:choice:4"
+      ],
+      "answerIndex": 2,
+      "correctEvidence": "A store employee is checking a canned product on a supermarket shelf.",
+      "editorialStatus": "reserve-pending-independent-review"
+    }
+  ]
+}
