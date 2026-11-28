@@ -97,8 +97,9 @@ class ContentBatch018Tests(unittest.TestCase):
     def test_resource_registration_does_not_instrument_or_promote_outcomes(self):
         p1 = next(row for row in self.resource_map["objectives"] if row["id"] == "listening-part-1")
         self.assertTrue(EXPECTED_IDS.issubset(set(p1["resourceIds"])))
-        mapped_ids = {row.get("resourceId") for row in self.criterion_map["mappings"]}
-        self.assertFalse(EXPECTED_IDS & mapped_ids)
+        self.assertEqual(sum(row["part"] == "Part 1" for row in self.library), 12)
+        serialized_criterion_map = json.dumps(self.criterion_map, ensure_ascii=False)
+        self.assertTrue(all(ident not in serialized_criterion_map for ident in EXPECTED_IDS))
         self.assertEqual(self.criterion_map["mappingCountsByCriterion"]["listening-part-1-visual-audio-match"], 8)
         self.assertEqual(self.criterion_map["mappingCountsByCriterion"]["listening-part-1-detail-retention"], 8)
         self.assertNotIn("listening-part-1-paraphrase-recognition", self.criterion_map["mappingCountsByCriterion"])
