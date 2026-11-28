@@ -6,7 +6,8 @@
 - Added Batch 018 manifest, photo provenance rows, reserve/Mock regression coverage and historical content fingerprint reconciliation.
 - Synced release/cache markers to v2.95.86 and added current Full-Mock readiness, Part 1 review handoff, quality audit, progress, change manifest and test-status reports.
 - Preserved existing question/choice/answer IDs, criterion mappings, IndexedDB v1 learner data, UI/layout, Robot Buddy and GitHub Pages-only hosting. `main` was not changed.
-- v2.95.85's owner-confirmed 865/865 test/build/lint result is predecessor evidence only. v2.95.86 awaits exact-SHA test and hosted deployment validation.
+- Exact-SHA candidate acceptance: GitHub Validate [run 46137090655](https://github.com/vuphuc1996/Toeic/actions/runs/46137090655) **PASS** on `d5cefa69610bc381a802127d5f9f000d88e48df8` (152/152 workflow steps; **871 Python tests PASS**, JavaScript syntax and version sync PASS). GitHub Pages [run 46137089787](https://github.com/vuphuc1996/Toeic/actions/runs/46137089787) **PASS** (Jekyll build, artifact upload and deployment).
+- FullSource ZIP/replay verification, installed-PWA offline propagation and physical-device QA remain pending; `main` was not changed.
 
 ## v2.95.85 — Documentation Reconciliation (2026-11-28)
 

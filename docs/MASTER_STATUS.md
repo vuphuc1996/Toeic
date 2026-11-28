@@ -13,7 +13,7 @@
 - **Outcome protection:** Part 1 visual/audio and delayed-retention mappings remain **8** each. `listening-part-1-paraphrase-recognition` remains deliberately uninstrumented. New photo resources are not added to the criterion map.
 - **Project progress:** provisional weighted measurable curriculum-build index remains **77.16%**; stable objective-resource mapping increases from **379/379** to **382/382**. This is an inventory/build indicator, not learner mastery.
 - **Protected boundaries:** canonical vocabulary IDs, existing question/choice IDs and answer keys, IndexedDB v1 learner data, UI/layout/navigation and Robot Buddy remain unchanged. Candidate only; `main` remains the protected production backup.
-- **Acceptance:** the v2.95.86 complete test suite, exact-SHA GitHub Actions, Pages deployment, FullSource ZIP and device/offline checks remain pending until separately verified.
+- **Acceptance:** candidate Validate run [46137090655](https://github.com/vuphuc1996/Toeic/actions/runs/46137090655) **PASS, 152/152 steps** on source SHA `d5cefa69610bc381a802127d5f9f000d88e48df8`; full Python discovery **871 tests PASS**, JavaScript syntax and version sync PASS. Candidate Pages run [46137089787](https://github.com/vuphuc1996/Toeic/actions/runs/46137089787) **PASS** (Jekyll build, artifact upload, deploy and status report). FullSource ZIP/replay, installed-PWA offline propagation and physical-device QA remain pending. This is candidate acceptance only; `main` remains untouched.
 
 ## Previous release — v2.95.85
 

@@ -1,32 +1,45 @@
 # Test Report — TOEIC Dictionary v2.95.86
 
 **Branch:** `candidate`  
-**Baseline:** v2.95.85 `7b8d80f1eef1523b5c2f31f0361a51c90011da7e`  
-**Current candidate scope:** Batch 018 Part 1 reserve expansion, reserve-count regression updates, release shell synchronization and documentation repair.
+**Validated application/source SHA:** `d5cefa69610bc381a802127d5f9f000d88e48df8`  
+**Baseline:** v2.95.85 `7b8d80f1eef1523b5c2f31f0361a51c90011da7e`
 
-## Evidence status
+## Exact-SHA acceptance evidence
 
-**Status: AWAITING EXACT-SHA VALIDATION**
+<badge color="green">PASS</badge> **GitHub Actions Validate — run 46137090655**
 
-The user confirmed that v2.95.85 passed **865/865 unit tests**, compilation/build checks and syntax lint. Those results apply only to v2.95.85 and are not attributed to v2.95.86.
+- Exact SHA: `d5cefa69610bc381a802127d5f9f000d88e48df8`
+- Overall workflow: **SUCCESS, 152/152 steps**
+- Full Python test discovery: **871 tests PASS** in **14.759 seconds** (`python -m unittest discover -s tools/tests`)
+- JavaScript syntax check: **PASS**
+- `tools/sync-version.py --check`: **PASS**
+- Data validators, Part 1 photo/attribution validator, Listening/Reading/Grammar validators, objective-resource mapping, learning-outcome criteria, Mock-readiness and content/evidence audits: **PASS**.
 
-The v2.95.86 source changes are committed to `candidate`; this report does not yet record an end-to-end test result. The repository workflow `.github/workflows/validate-data.yml` is configured to run on candidate pushes. The complete test suite must finish on the final v2.95.86 SHA before this report can record PASS.
+<badge color="green">PASS</badge> **GitHub Pages — run 46137089787**
 
-## Added/updated validation
+- Exact SHA: `d5cefa69610bc381a802127d5f9f000d88e48df8`
+- Build with Jekyll: **SUCCESS**
+- Upload artifact: **SUCCESS**
+- Deploy to GitHub Pages: **SUCCESS**
+- Build-status reporting: **SUCCESS**
 
-- Python: `tools/tests/test_content_batch_018.py` checks exact batch inventory, image provenance, local JPG files, answer evidence, stable IDs, independent-review status, absence of outcome-map promotion, and unchanged Mock-approved count.
-- Python: `tools/tests/test_listening_expansion.py` updated pending total to 196 and projected Part 1 inventory to 12.
-- Python: `tools/tests/test_content_batch_027.py` removes the Batch 018 additions when reconstructing its historical Listening-library fingerprint.
-- Python: `tools/tests/test_mock_readiness_audit.py` updated Part 1 post-review ceiling to 12 and the partwise post-review Listening count ceiling to two forms.
-- JavaScript: `tools/tests/mock-exam-engine.mjs` confirms 196 reserve questions remain excluded while approved Listening Mock count remains 102.
-- CI validator: `tools/validate-part1-photo-assets.py` checks local JPG dimensions, 4:3 ratio, file-size limits and attribution/source-type consistency.
-- Full workflow also runs Python discovery, Python compilation, JavaScript syntax checks, Mock engine regressions, listening TTS checks, content audits and `tools/sync-version.py --check`.
+These results apply to the exact v2.95.86 source/code SHA above. A subsequent documentation-only candidate commit updates the release ledger; it does not change the application source validated at this SHA.
 
-## Not yet verified
+## Focused Batch 018 coverage
 
-- v2.95.86 complete Python/JavaScript test results and exact test count.
-- GitHub Actions Validate and GitHub Pages jobs on the final candidate SHA.
-- FullSource ZIP generation.
-- Installed-PWA/offline cache propagation and physical-device QA.
+- `tools/tests/test_content_batch_018.py` checks the three new photo units, local JPG binaries, provenance, four statements, evidence/answer IDs, resource-level reserve status, no criterion-map promotion and unchanged Mock-approved count.
+- Listening reserve regression: **196**, with Part 1 **4** pending review; approved Mock Listening remains **102**.
+- Editorial queue tests distinguish resource-level reserve from question-level Part 4 practice-only status.
+- Historical Batch 026/027/036/037/038 fingerprints remain protected using exact Batch 018 allowlist reconstruction; expected historical hashes were not loosened.
+- Full seven-part inventory audit: **0 structural errors**, Listening **148 resources / 311 questions**, review queue **363**.
 
-Do not merge `candidate` into `main` or mark production accepted on the basis of the v2.95.85 baseline result.
+## Still not independently verified
+
+- FullSource ZIP generation, CRC/SHA and replay verification.
+- Installed-PWA cache propagation and a real offline relaunch after deployment.
+- Physical-device QA on iPad, phones and desktop/laptop viewports.
+- Independent second-person editorial approval for the four Part 1 reserve questions.
+
+## Release boundary
+
+This is **candidate source acceptance**, not production acceptance. No merge to `main` or production promotion is authorized by this report. The v2.95.85 owner-supplied 865-test result remains predecessor evidence only and is not substituted for the v2.95.86 GitHub Actions evidence above.

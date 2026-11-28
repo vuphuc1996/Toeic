@@ -20,4 +20,10 @@ This index records the candidate-only work leading from the owner-confirmed v2.9
 | `0a76354d75c1eaa6366acf6138051ba64d965424` | Update Full-Mock post-review ceiling expectations |
 | `d582b13a1cdcd85cb5ba31f7b4eda43ece1db1b0` | Add Batch 018 photo, ID, evidence and eligibility tests |
 
-Release-shell synchronization and documentation commits follow these changes; consult the final candidate branch head to identify the exact SHA awaiting validation. Check the live branch log for the final SHA; this report is not a substitute for GitHub Actions or Pages verification.
+## Exact-SHA CI and Pages closeout
+
+- Validated application/source SHA: `d5cefa69610bc381a802127d5f9f000d88e48df8`.
+- GitHub Validate: [run 46137090655](https://github.com/vuphuc1996/Toeic/actions/runs/46137090655) — **SUCCESS, 152/152 workflow steps; 871 Python tests PASS in 14.759s; JavaScript syntax PASS**.
+- GitHub Pages: [run 46137089787](https://github.com/vuphuc1996/Toeic/actions/runs/46137089787) — **SUCCESS** for Jekyll build, artifact upload, deployment and build-status reporting.
+- FullSource ZIP/replay verification, installed-PWA offline propagation and physical-device QA remain unverified.
+- A documentation-only closeout commit follows this validated application/source SHA; no application code or learner data is changed by that closeout.

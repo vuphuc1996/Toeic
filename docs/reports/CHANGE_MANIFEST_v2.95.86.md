@@ -35,4 +35,4 @@
 
 ## Acceptance boundary
 
-The v2.95.85 owner-confirmed **865/865** test result applies only to that earlier exact source SHA. It is not carried forward as a v2.95.86 test result. The v2.95.86 full test suite and hosted GitHub Actions/Pages results must be checked against the final v2.95.86 candidate HEAD. No merge to `main` or production deployment is authorized.
+The v2.95.85 owner-confirmed **865/865** test result applies only to that earlier exact source SHA. v2.95.86 application/source SHA `d5cefa69610bc381a802127d5f9f000d88e48df8` passed GitHub Validate [run 46137090655](https://github.com/vuphuc1996/Toeic/actions/runs/46137090655): **152/152 workflow steps**, **871 Python tests**, JavaScript syntax and version synchronization. GitHub Pages [run 46137089787](https://github.com/vuphuc1996/Toeic/actions/runs/46137089787) also passed build, artifact upload and deployment. FullSource ZIP/replay verification, installed-PWA offline propagation and physical-device QA remain unverified. No merge to `main` or production deployment is authorized.

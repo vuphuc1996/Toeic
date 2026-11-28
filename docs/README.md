@@ -3,7 +3,7 @@
 This documentation describes the current TOEIC-first GitHub Pages candidate. Source changes and release evidence are tracked separately from hosted CI, Pages deployment, installed-PWA behavior and physical-device acceptance.
 
 - Current release: `2.95.86`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.86.md`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.86.md` — exact app/source SHA `d5cefa69610bc381a802127d5f9f000d88e48df8`, GitHub Validate **152/152 PASS**, full Python discovery **871 tests PASS**.
 - Current project progress: `reports/PROJECT_PROGRESS_v2.95.86.md` — provisional weighted measurable curriculum-build index **77.16%**, not learner mastery or TOEIC score readiness.
 - Current change manifest: `reports/CHANGE_MANIFEST_v2.95.86.md`.
 - Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.86.md`.
@@ -16,7 +16,7 @@ This documentation describes the current TOEIC-first GitHub Pages candidate. Sou
 - The new photo resources are registered in the canonical objective-resource map but are not added to the learning-outcome criterion map. Part 1 visual/detail mappings remain 8 each; `listening-part-1-paraphrase-recognition` remains deliberately uninstrumented.
 - v2.95.85 source acceptance record: `reports/RELEASE_ACCEPTANCE_v2.95.85.md` — the project owner confirmed **865/865** tests, build/compilation and syntax-lint PASS for exact source HEAD `7b8d80f1eef1523b5c2f31f0361a51c90011da7e`. This earlier result is not transferred to v2.95.86.
 - Learning outcome evidence: `reports/TOEIC_LEARNING_OUTCOME_EVIDENCE_v2.95.85.md` — 26/27 TOEIC criteria instrumented across 1,163 stable question-to-criterion links and 651 unique stable question IDs; one criterion remains deliberately uninstrumented.
-- Historical GitHub Validate / Pages evidence applies only to the exact historical commit SHAs recorded in the v2.95.85 acceptance documentation. It must not be generalized to v2.95.86.
+- v2.95.86 exact-SHA hosted evidence: GitHub Validate [run 46137090655](https://github.com/vuphuc1996/Toeic/actions/runs/46137090655) **PASS, 152/152 steps; 871 Python tests PASS** and GitHub Pages [run 46137089787](https://github.com/vuphuc1996/Toeic/actions/runs/46137089787) **PASS** on source SHA `d5cefa69610bc381a802127d5f9f000d88e48df8`. This is candidate-branch acceptance, not a merge/deploy from `main`.
 - Current version ledger: `versions/CURRENT_VERSION.md`.
 - Master project status: `MASTER_STATUS.md`.
 - Assessment completion and draft/commit semantics: `ASSESSMENT_FLOW.md`.
@@ -33,4 +33,4 @@ This documentation describes the current TOEIC-first GitHub Pages candidate. Sou
 
 ## Acceptance boundary
 
-Source release, candidate CI, Pages deployment, installed-PWA cache/offline propagation and physical-device QA are separate acceptance gates. The 865-test result belongs to v2.95.85 only. v2.95.86 remains pending exact-SHA CI and Pages evidence; no merge to `main` or production deployment is authorized.
+Candidate source CI and Pages build/deployment are PASS for exact app/source SHA `d5cefa69610bc381a802127d5f9f000d88e48df8` (Validate 152/152; 871 Python tests; Pages build/upload/deploy PASS). FullSource ZIP/replay, installed-PWA cache/offline propagation and physical-device QA are still separate unverified gates. No merge to `main` or production promotion is authorized.
