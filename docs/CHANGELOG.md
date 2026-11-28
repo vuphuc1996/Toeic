@@ -1,3 +1,13 @@
+## v2.95.83 — Part 4 Inference / Part 6 Discourse Evidence Batch (2026-11-28)
+
+- Added 10 Part 4 next-step/action questions across ten existing non-reserve original-editorial talks; each includes exact transcript evidence, inference type, rationale and new stable choice IDs.
+- All ten Part 4 additions are practice-only (`mockEligible: false`). Mock engine and readiness audits now filter question-level eligibility. Part 4 remains 30 Mock-eligible questions and all audio blocks remain three questions.
+- Added 10 Part 6 discourse-purpose mappings to existing questions in four internally reviewed resources. No question, option or answer key is edited.
+- Added fail-closed Part 4 transcript and Part 6 reviewed-passage validators with positive/negative regression tests.
+- Mapping inventory advances to **1,139 links / 648 stable question IDs**; TOEIC outcome wiring advances to **25/27** and overall to **31/33** (Foundation 6/6).
+- Part 1 visual/provenance review and Part 7 independent second-review handoff are recorded. Neither remaining criterion is promoted. Listening reserve 193, Reading Part 7 reserve 87 and separate Part 5 review-only 80 remain excluded.
+- No learner IndexedDB schema/data, vocabulary IDs, UI/layout/navigation, Robot Buddy or hosting architecture changes. `main` remains unchanged.
+
 ## v2.95.82 — Part 2 Lexical Distractor Evidence Instrumentation (2026-11-28)
 
 - Added 16 stable question-to-criterion links for the existing Listening Part 2 bank under listening-part-2-distractor-resistance.

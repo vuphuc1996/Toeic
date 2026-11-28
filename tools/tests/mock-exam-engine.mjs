@@ -43,6 +43,15 @@ assert.equal(isMockEligible({ id: 'v233-reviewed-item', editorialStatus: 'intern
 assert.equal(isMockEligible({ id: 'pending-item', editorialStatus: 'reserve-pending-independent-review' }), false);
 assert.equal(isMockEligible({ id: 'unknown-item', editorialStatus: 'editorial-review-pending' }), false, 'unknown editorial statuses must fail closed');
 
+// New Part 4 inference questions are available for practice but deliberately Mock-excluded.
+const part4PracticeOnly = listening.flatMap(unit =>
+  unit.part === 'Part 4'
+    ? unit.questions.map((question, index) => ({ unitId: unit.id, question, index }))
+    : []
+).filter(item => item.question.mockEligible === false);
+assert.equal(part4PracticeOnly.length, 10, 'all ten new Part 4 inference items must stay practice-only');
+const part4PracticeOnlyIds = new Set(part4PracticeOnly.map(item => `listening:${item.unitId}:${item.index + 1}`));
+
 // Quick practice: 12 Listening + 13 Reading and exactly 25 unique IDs.
 const quick = make('quick');
 const quickL = getExamQuestions(quick.sections.listening);
@@ -86,6 +95,12 @@ assert.ok(fullP7.filter(group => !isMulti(group)).every(group => group.questions
 assert.ok(fullP7.filter(isMulti).every(group => group.questions.length === 5), 'double/triple passages must remain complete 5-question blocks');
 assert.equal(new Set(full.questionIds).size, 200);
 assert.ok(full.sections.listening.groups.every(group => !reservedUnitIds.has(group.unitId)), 'all reserve units must remain outside Mock Exam until independent review');
+assert.ok(full.questionIds.every(id => !part4PracticeOnlyIds.has(id)), 'practice-only Part 4 questions must never enter Full Mock');
+assert.ok([...quickL, ...halfL, ...fullL].every(question => !part4PracticeOnlyIds.has(question.id)), 'practice-only Part 4 questions must stay excluded from every Mock mode');
+for (const mode of [quick, half, full]) {
+  const section = mode.sections.listening;
+  assert.ok(section.groups.filter(group => group.part === 'Part 4').every(group => group.questions.length === 3), 'Part 4 Mock blocks must remain three-question talks');
+}
 assert.equal(full.questionIds.length, 200);
 assert.ok(fullR.every(question => !reservedReadingUnits.some(item => item.id === question.unitId)), 'pending Reading reserve resources must never enter a Full Mock form');
 

@@ -105,11 +105,11 @@ class ListeningExpansionTests(unittest.TestCase):
     def test_listening_inventory_separates_eligible_and_pending(self):
         pending = [u for u in self.units if u.get("editorialStatus") == "reserve-pending-independent-review"]
         eligible = [u for u in self.units if not u.get("editorialStatus") or u.get("editorialStatus") == "approved-for-mock"]
-        self.assertEqual(sum(len(u["questions"]) for u in eligible), 102)
+        self.assertEqual(sum(sum(1 for q in u["questions"] if q.get("mockEligible") is not False) for u in eligible), 102)
         self.assertEqual(sum(len(u["questions"]) for u in pending), 193)
         projected = Counter()
         for unit in eligible + pending:
-            projected[unit["part"]] += len(unit["questions"])
+            projected[unit["part"]] += sum(1 for q in unit["questions"] if q.get("mockEligible") is not False)
         self.assertEqual(projected, Counter({"Part 1": 9, "Part 2": 61, "Part 3": 123, "Part 4": 102}))
 
 if __name__ == "__main__":

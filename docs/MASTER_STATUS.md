@@ -1,21 +1,21 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.82
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.83
 
-**Current source release candidate:** v2.95.82 — Part 2 Lexical Distractor Evidence Instrumentation. Sole predecessor baseline: candidate HEAD `4d1eead800e3378cf91b5b83ddb14bc3c8fb8737` (v2.95.81). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
+**Current source release candidate:** v2.95.83 — Part 4 Inference / Part 6 Discourse Evidence Batch. Sole predecessor baseline: candidate HEAD `5eb3b736c3252a38702438efbbbc75e74864189a` (v2.95.82). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
-## Current release — v2.95.82
+## Current release — v2.95.83
 
-- **Scope:** criterion-level evidence instrumentation for Listening Part 2 lexical distractor resistance; audit and regression hardening; version/cache shell synchronization. No learner-facing content, application UI or layout change.
-- **New evidence links:** 16 non-reserve Part 2 question mappings. Each records the canonical audio prompt, incorrect choice index and exact choice text, repeated whole-word cue, and the question-response mismatch rationale.
-- **Criterion inventory:** 1,119 question-to-criterion links across the same 638 stable question IDs; TOEIC criteria instrumented **23/27**; Foundation **6/6**; total **29/33**. Four TOEIC criteria remain deliberately uninstrumented.
-- **Runtime/storage:** existing criterion index supports multiple criterion IDs for one questionKey; writes reuse the existing learner-local objectiveProgress ledger. No IndexedDB v1 schema migration or data reset.
-- **Fail-closed audit:** the Part 2 criterion requires at least 10 links and validates prompt text against canonical segments, distractorChoiceIndex against canonical choices (not the answer key), exact distractor text, repeated cue and response-mismatch evidence.
-- **Protected boundaries:** no bank question, transcript, segment, choice ID, answer key, canonical vocabulary ID, Mock eligibility, Listening reserve, Reading Part 7/Separate Part 5 review gate, learner record/schema, UI, navigation or Robot Buddy behavior is changed.
-- **Progress:** provisional weighted measurable curriculum-build index recalculates from 73.73% to **74.49%** due to one additional criterion evidence path. It is not learner mastery, TOEIC score readiness or total system completion.
-- **Acceptance:** Exact candidate source/test HEAD `ad6401282fdb6cf86e2321339ee4181d2fc2fb21`: GitHub Validate [run 46120842790](https://github.com/vuphuc1996/Toeic/actions/runs/46120842790) **PASS** (151/151 steps, 0 failed, 0 skipped; 855 Python tests PASS). Part 2 evidence regressions, canonical mapping audit, outcome/project-progress tests and version synchronization all pass. GitHub Pages [run 46120842377](https://github.com/vuphuc1996/Toeic/actions/runs/46120842377) **PASS** (build, status-report and deploy jobs); environment URL: https://vuphuc1996.github.io/Toeic/. `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`; candidate deployment does not merge or modify `main`.
-- **Deployment boundary:** `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`; candidate branch only. FullSource ZIP generation, installed-PWA/offline propagation and physical-device QA remain **UNVERIFIED**.
+- **Scope:** add ten new Part 4 next-step/action practice items, ten Part 6 discourse-purpose mappings, question-level Mock exclusion and human-review handoff. No UI redesign or learner-data migration.
+- **Mapping inventory:** **1,139 links / 648 unique stable question IDs**; TOEIC criteria **25/27**; Foundation **6/6**; total **31/33**. Two criteria remain uninstrumented.
+- **Part 4:** ten questions appended to ten existing non-reserve talks. All ten use `mockEligible: false`; the Mock engine filters question-level eligibility when selecting, counting and building groups. Part 4 Mock remains 30 questions and all talk blocks remain three questions.
+- **Part 6:** ten mappings reference existing questions from four internally reviewed resources; no source question, option or answer key is changed.
+- **Review handoff:** Part 1 photo visual verification and Part 7 independent second review are queued. Neither criterion is promoted; reserve/review boundaries remain active.
+- **Progress:** provisional weighted measurable curriculum-build index **76.00%**; not learner mastery or total-system completion.
+- **Acceptance:** exact-commit mapping audit, Mock engine regressions, full tests, version synchronization and Pages deployment pending.
+- **Protected boundaries:** no `main` change, no IndexedDB migration, no UI/layout/navigation or Robot Buddy change; Listening reserve 193, Reading Part 7 reserve 87 and Separate Part 5 review-only 80 remain excluded.
 
+## Previous release — v2.95.82
 ## Previous release — v2.95.81
 
 

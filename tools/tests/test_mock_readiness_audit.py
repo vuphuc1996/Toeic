@@ -23,6 +23,7 @@ class MockReadinessAuditTests(unittest.TestCase):
 
     def test_approved_only_pools_and_two_disjoint_reading_forms(self):
         self.assertEqual(self.report["listeningApprovedTotal"], 102)
+        self.assertEqual(self.report["approvedPools"]["Listening Part 4"], 30)
         self.assertEqual(self.report["listeningReserveTotal"], 193)
         self.assertEqual(self.report["readingApprovedTotal"], 200)
         self.assertEqual(self.report["readingReserveTotal"], 87)

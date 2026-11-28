@@ -189,6 +189,108 @@ def validate_part2_distractor_evidence(resource: dict, question: dict, row: dict
                 errors.append("Part 2 evidenceBasis must include the responseMismatch explanation")
     return errors
 
+
+def _normalized_source_text(value: str) -> str:
+    return " ".join(value.split()).casefold()
+
+
+def validate_part4_inference_evidence(resource: dict, question: dict, row: dict) -> list[str]:
+    """Require a non-reserve Part 4 item with exact audio evidence and action-inference rationale."""
+    errors: list[str] = []
+    if not all(isinstance(value, dict) for value in (resource, question, row)):
+        return ["Part 4 inference evidence requires resource, question and mapping objects"]
+    if resource.get("part") != "Part 4":
+        errors.append("Part 4 inference evidence must belong to a Part 4 resource")
+    if resource.get("editorialStatus") == "reserve-pending-independent-review":
+        errors.append("Part 4 inference evidence must not use a reserve resource")
+    prompt = listening_prompt_text(resource)
+    quote = row.get("evidenceQuote")
+    if not isinstance(quote, str) or not quote.strip():
+        errors.append("Part 4 inference mapping requires a non-empty evidenceQuote")
+    elif _normalized_source_text(quote) not in _normalized_source_text(prompt):
+        errors.append("Part 4 evidenceQuote does not match the canonical audio segments")
+    stem = question.get("question")
+    if not isinstance(stem, str) or not re.search(r"\b(most likely|should .* next|what .* do next|need to)\b", stem, re.I):
+        errors.append("Part 4 inference mapping must ask a next-step or likely-action question")
+    allowed_types = {"sequence", "location_after_change", "access_precondition", "prelaunch_action", "post_event_action", "caller_next_step", "safety_response", "expected_follow_up", "schedule_adaptation", "procedure_exception"}
+    inference_type = row.get("inferenceType")
+    if inference_type not in allowed_types:
+        errors.append("Part 4 inferenceType is missing or unsupported")
+    rationale = row.get("inferenceRationale")
+    if not isinstance(rationale, str) or not rationale.strip():
+        errors.append("Part 4 inference mapping requires an inferenceRationale")
+    choices = question.get("choices")
+    answer_index = question.get("answerIndex")
+    if not isinstance(choices, list) or not all(isinstance(choice, str) for choice in choices):
+        errors.append("Part 4 inference question must have string choices")
+    elif not isinstance(answer_index, int) or isinstance(answer_index, bool) or answer_index < 0 or answer_index >= len(choices):
+        errors.append("Part 4 inference answerIndex is outside the canonical choices")
+    else:
+        answer_quote = row.get("answerQuote")
+        if answer_quote != choices[answer_index]:
+            errors.append("Part 4 answerQuote does not match the canonical answer choice")
+        basis = row.get("evidenceBasis")
+        if not isinstance(basis, str) or not basis.strip():
+            errors.append("Part 4 inference mapping requires an evidenceBasis")
+        else:
+            if isinstance(quote, str) and quote not in basis:
+                errors.append("Part 4 evidenceBasis must reproduce the exact audio evidenceQuote")
+            if isinstance(answer_quote, str) and answer_quote not in basis:
+                errors.append("Part 4 evidenceBasis must identify the canonical answer choice")
+            if isinstance(rationale, str) and rationale and rationale not in basis:
+                errors.append("Part 4 evidenceBasis must include the inferenceRationale")
+    return errors
+
+
+def validate_part6_discourse_evidence(resource: dict, question: dict, row: dict) -> list[str]:
+    """Require exact passage evidence from an internally reviewed Part 6 resource."""
+    errors: list[str] = []
+    if not all(isinstance(value, dict) for value in (resource, question, row)):
+        return ["Part 6 discourse evidence requires resource, question and mapping objects"]
+    if resource.get("editorialStatus") != "internal-editorial-reviewed":
+        errors.append("Part 6 discourse mapping requires an internal-editorial-reviewed resource")
+    passage = resource.get("passage")
+    quote = row.get("evidenceQuote")
+    if not isinstance(passage, str) or not passage.strip():
+        errors.append("Part 6 discourse resource requires a non-empty passage")
+    elif not isinstance(quote, str) or not quote.strip():
+        errors.append("Part 6 discourse mapping requires a non-empty evidenceQuote")
+    elif _normalized_source_text(quote) not in _normalized_source_text(passage):
+        errors.append("Part 6 evidenceQuote does not match the canonical passage")
+    stem = question.get("question")
+    if not isinstance(stem, str) or not re.search(r"\bblank\s*\(\d+\)", stem, re.I):
+        errors.append("Part 6 discourse mapping must reference a canonical blank question")
+    allowed_functions = {"temporal-sequence", "paragraph-continuation", "additive-link", "contrast", "referential-link", "sentence-continuation", "deadline-sequence"}
+    function = row.get("discourseFunction")
+    if function not in allowed_functions:
+        errors.append("Part 6 discourseFunction is missing or unsupported")
+    rationale = row.get("discourseRationale")
+    if not isinstance(rationale, str) or not rationale.strip():
+        errors.append("Part 6 discourse mapping requires a discourseRationale")
+    choices = question.get("choices")
+    answer_index = question.get("answerIndex")
+    if not isinstance(choices, list) or not all(isinstance(choice, str) for choice in choices):
+        errors.append("Part 6 discourse question must have string choices")
+    elif not isinstance(answer_index, int) or isinstance(answer_index, bool) or answer_index < 0 or answer_index >= len(choices):
+        errors.append("Part 6 discourse answerIndex is outside the canonical choices")
+    else:
+        correct_quote = row.get("correctChoiceQuote")
+        if correct_quote != choices[answer_index]:
+            errors.append("Part 6 correctChoiceQuote does not match the canonical answer choice")
+        basis = row.get("evidenceBasis")
+        if not isinstance(basis, str) or not basis.strip():
+            errors.append("Part 6 discourse mapping requires an evidenceBasis")
+        else:
+            if isinstance(quote, str) and quote not in basis:
+                errors.append("Part 6 evidenceBasis must reproduce the exact passage evidenceQuote")
+            if isinstance(correct_quote, str) and correct_quote not in basis:
+                errors.append("Part 6 evidenceBasis must identify the canonical answer choice")
+            if isinstance(function, str) and function not in basis:
+                errors.append("Part 6 evidenceBasis must name the discourseFunction")
+            if isinstance(rationale, str) and rationale and rationale not in basis:
+                errors.append("Part 6 evidenceBasis must include the discourseRationale")
+    return errors
+
 def main() -> int:
     mapping_doc = load(MAP_PATH)
     registry = load(REGISTRY_PATH)
@@ -208,6 +310,8 @@ def main() -> int:
     listening_reserve_mappings = 0
     cross_document_verified = 0
     part2_lexical_trap_verified = 0
+    part4_inference_verified = 0
+    part6_discourse_verified = 0
 
     source_cache = {}
     for index, row in enumerate(rows):
@@ -294,6 +398,18 @@ def main() -> int:
                     errors.extend(f"{label}: {error}" for error in lexical_errors)
                     continue
                 part2_lexical_trap_verified += 1
+            if criterion_id == "listening-part-4-inference-action":
+                inference_errors = validate_part4_inference_evidence(resource, question, row)
+                if inference_errors:
+                    errors.extend(f"{label}: {error}" for error in inference_errors)
+                    continue
+                part4_inference_verified += 1
+            if criterion_id == "reading-part-6-discourse-purpose":
+                discourse_errors = validate_part6_discourse_evidence(resource, question, row)
+                if discourse_errors:
+                    errors.extend(f"{label}: {error}" for error in discourse_errors)
+                    continue
+                part6_discourse_verified += 1
             if objective_id.startswith("listening-") and resource.get("editorialStatus") == "reserve-pending-independent-review":
                 listening_reserve_mappings += 1
                 errors.append(f"{label}: Listening reserve item {resource_id} is mapped")
@@ -326,16 +442,24 @@ def main() -> int:
     }
     if mapped_criteria & uninstrumented_toeic:
         errors.append("an uninstrumented criterion has question mappings")
-    if len(instrumented_toeic) != 23:
-        errors.append(f"expected 23 TOEIC criteria with a mapping; found {len(instrumented_toeic)}")
-    if len(uninstrumented_toeic) != 4:
-        errors.append(f"expected 4 TOEIC criteria to remain uninstrumented; found {len(uninstrumented_toeic)}")
+    if len(instrumented_toeic) != 25:
+        errors.append(f"expected 25 TOEIC criteria with a mapping; found {len(instrumented_toeic)}")
+    if len(uninstrumented_toeic) != 2:
+        errors.append(f"expected 2 TOEIC criteria to remain uninstrumented; found {len(uninstrumented_toeic)}")
     if listening_reserve_mappings:
         errors.append(f"{listening_reserve_mappings} Listening reserve mappings were detected")
     if counts.get("listening-part-2-distractor-resistance", 0) < 10:
         errors.append("Part 2 distractor-resistance criterion must retain at least 10 unique mapped questions")
     if part2_lexical_trap_verified != counts.get("listening-part-2-distractor-resistance", 0):
         errors.append("every Part 2 distractor-resistance mapping must pass exact audio/distractor evidence validation")
+    if counts.get("listening-part-4-inference-action", 0) < 10:
+        errors.append("Part 4 inference/action criterion must retain at least 10 unique mapped questions")
+    if part4_inference_verified != counts.get("listening-part-4-inference-action", 0):
+        errors.append("every Part 4 inference/action mapping must pass exact audio evidence validation")
+    if counts.get("reading-part-6-discourse-purpose", 0) < 10:
+        errors.append("Part 6 discourse-purpose criterion must retain at least 10 unique mapped questions")
+    if part6_discourse_verified != counts.get("reading-part-6-discourse-purpose", 0):
+        errors.append("every Part 6 discourse-purpose mapping must pass reviewed passage evidence validation")
 
     part7 = next((row for row in resource_doc["objectives"] if row["id"] == "reading-part-7"), {})
     part5 = next((row for row in resource_doc["objectives"] if row["id"] == "part5-sentence-completion"), {})
@@ -362,6 +486,8 @@ def main() -> int:
     )
     print(f"PASS: {cross_document_verified} Part 7 cross-document mappings have internally reviewed, two-source quote evidence.")
     print(f"PASS: {part2_lexical_trap_verified} Part 2 lexical-trap mappings have exact audio, wrong-choice, repeated-cue and mismatch evidence.")
+    print(f"PASS: {part4_inference_verified} Part 4 next-step/action mappings have exact audio quote and inference rationale evidence.")
+    print(f"PASS: {part6_discourse_verified} Part 6 discourse mappings have internally reviewed passage quote, correct-choice and relation evidence.")
     print("PASS: Part 7 second-review gate and Separate Part 5 independent-review gate remain active.")
     print("NOTE: Mapping inventory is not learner practice evidence, editorial approval, CEFR/ETS mastery or TOEIC score readiness.")
     return 0

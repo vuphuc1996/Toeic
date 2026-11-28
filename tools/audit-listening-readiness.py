@@ -10,7 +10,8 @@ eligible=[u for u in data if not u.get("editorialStatus") or u.get("editorialSta
 pending=[u for u in data if u.get("editorialStatus")=="reserve-pending-independent-review"]
 def tally(items):
     c=collections.Counter()
-    for u in items: c[u.get("part","Unknown")]+=len(u.get("questions",[]))
+    for u in items:
+        c[u.get("part","Unknown")]+=sum(1 for q in u.get("questions",[]) if q.get("mockEligible") is not False)
     return c
 e=tally(eligible); p=tally(pending); total=tally(data)
 batches=collections.defaultdict(lambda: collections.Counter())

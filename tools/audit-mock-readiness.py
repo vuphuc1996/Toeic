@@ -45,6 +45,11 @@ def is_approved(item: dict[str, Any]) -> bool:
     return item.get("editorialStatus") in APPROVED_STATUSES
 
 
+def mock_question_count(item: dict[str, Any]) -> int:
+    """Count only questions explicitly eligible for Mock selection."""
+    return sum(1 for question in (item.get("questions") or []) if question.get("mockEligible") is not False)
+
+
 def is_multiple_passage(unit: dict[str, Any]) -> bool:
     docs = unit.get("documents") or []
     doc_type = str(unit.get("documentType") or "").lower()
@@ -95,14 +100,14 @@ def build_report(root: Path = ROOT) -> dict[str, Any]:
     r_app_p7_multi = [u for u in r_app_p7 if is_multiple_passage(u)]
 
     approved_pools = {
-        "Listening Part 1": sum(len(u.get("questions") or []) for u in l_app["Part 1"]),
-        "Listening Part 2": sum(len(u.get("questions") or []) for u in l_app["Part 2"]),
-        "Listening Part 3": sum(len(u.get("questions") or []) for u in l_app["Part 3"]),
-        "Listening Part 4": sum(len(u.get("questions") or []) for u in l_app["Part 4"]),
-        "Reading Part 5": sum(len(u.get("questions") or []) for u in r_app_p5),
-        "Reading Part 6": sum(len(u.get("questions") or []) for u in r_app_p6),
-        "Reading Part 7 Single": sum(len(u.get("questions") or []) for u in r_app_p7_single),
-        "Reading Part 7 Multiple": sum(len(u.get("questions") or []) for u in r_app_p7_multi),
+        "Listening Part 1": sum(mock_question_count(u) for u in l_app["Part 1"]),
+        "Listening Part 2": sum(mock_question_count(u) for u in l_app["Part 2"]),
+        "Listening Part 3": sum(mock_question_count(u) for u in l_app["Part 3"]),
+        "Listening Part 4": sum(mock_question_count(u) for u in l_app["Part 4"]),
+        "Reading Part 5": sum(mock_question_count(u) for u in r_app_p5),
+        "Reading Part 6": sum(mock_question_count(u) for u in r_app_p6),
+        "Reading Part 7 Single": sum(mock_question_count(u) for u in r_app_p7_single),
+        "Reading Part 7 Multiple": sum(mock_question_count(u) for u in r_app_p7_multi),
     }
     reserve_pools = {
         "Listening Part 1": sum(len(u.get("questions") or []) for u in l_res["Part 1"]),

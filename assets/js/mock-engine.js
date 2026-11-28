@@ -1,4 +1,4 @@
-import { buildMockQuestionSchedule } from './mock-flow.js?__release=2.95.82';
+import { buildMockQuestionSchedule } from './mock-flow.js?__release=2.95.83';
 
 /**
  * TOEIC Mock Test engine.
@@ -67,10 +67,16 @@ function pickFresh(items, count, historyCounts, idOf, random = Math.random) {
   return shuffle(chosen, random);
 }
 
+function isQuestionMockEligible(question) {
+  return question?.mockEligible !== false;
+}
+
 function pickQuestions(units, count, area, historyCounts, random) {
   const pool = [];
   for (const unit of units) {
-    (unit.questions || []).forEach((question, index) => pool.push({ unit, question, index, id: questionId(area, unit, index) }));
+    (unit.questions || []).forEach((question, index) => {
+      if (isQuestionMockEligible(question)) pool.push({ unit, question, index, id: questionId(area, unit, index) });
+    });
   }
   return pickFresh(pool, count, historyCounts, item => item.id, random);
 }
@@ -86,6 +92,7 @@ function groupQuestionPicks(picks, area, part) {
 
 function makeGroup(area, part, unit, picks = null) {
   const questions = (picks || (unit.questions || []).map((question, index) => ({ unit, question, index, id: questionId(area, unit, index) })))
+    .filter(({ question }) => isQuestionMockEligible(question))
     .map(({ question, index, id }) => ({
       id: id || questionId(area, unit, index),
       sourceUnitId: unit.id,
@@ -128,7 +135,7 @@ function pickBlocksExact(units, target, historyCounts, area, random) {
   const ordered = orderByFreshness(units, historyCounts, unit => questionId(area, unit, 0), random);
   const dp = new Map([[0, []]]);
   for (const unit of ordered) {
-    const count = (unit.questions || []).length;
+    const count = (unit.questions || []).filter(isQuestionMockEligible).length;
     if (!count) continue;
     const existing = [...dp.entries()].sort((a, b) => b[0] - a[0]);
     for (const [sum, chosen] of existing) {
@@ -138,14 +145,15 @@ function pickBlocksExact(units, target, historyCounts, area, random) {
     }
   }
   if (!dp.has(target)) {
-    const available = ordered.reduce((sum, unit) => sum + (unit.questions || []).length, 0);
+    const available = ordered.reduce((sum, unit) => sum + (unit.questions || []).filter(isQuestionMockEligible).length, 0);
     throw new Error(`Không thể ghép nguyên cụm đoạn đọc thành đúng ${target} câu (ngân hàng hiện có ${available} câu).`);
   }
   return shuffle(dp.get(target), random);
 }
 
 function countPool(list, part) {
-  return list.filter(item => item.part === part && isMockEligible(item)).reduce((sum, item) => sum + (item.questions || []).length, 0);
+  return list.filter(item => item.part === part && isMockEligible(item))
+    .reduce((sum, item) => sum + (item.questions || []).filter(isQuestionMockEligible).length, 0);
 }
 
 // Legacy status-less source and the established v2.33 internal-editorial-reviewed state

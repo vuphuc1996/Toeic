@@ -842,6 +842,24 @@
             "listening:part4-office-announcement:3:choice:3",
             "listening:part4-office-announcement:3:choice:4"
           ]
+        },
+        {
+          "question": "What will most likely happen after employees finish packing their belongings?",
+          "choices": [
+            "The technology team will transfer the computer equipment over the weekend.",
+            "Employees will move their desks to the fourth floor on Friday morning.",
+            "The facilities office will replace all of the office computers.",
+            "The customer service department will remain on its current floor."
+          ],
+          "answerIndex": 0,
+          "explanation": "Việc đóng gói hoàn tất trước chiều thứ Sáu; tiếp theo đội công nghệ sẽ chuyển thiết bị vào cuối tuần.",
+          "choiceIds": [
+            "listening:part4-office-announcement:4:choice:1",
+            "listening:part4-office-announcement:4:choice:2",
+            "listening:part4-office-announcement:4:choice:3",
+            "listening:part4-office-announcement:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Thông báo cho biết bộ phận chăm sóc khách hàng sẽ chuyển lên tầng bốn từ thứ Hai tuần tới. Nhân viên đóng gói đồ cá nhân trước chiều thứ Sáu; đội công nghệ chuyển thiết bị vào cuối tuần.",
@@ -944,6 +962,24 @@
           ],
           "choiceOrderRevision": "2.17.0",
           "previousAnswerIndex": 1
+        },
+        {
+          "question": "What should participants most likely do before attending the afternoon workshop?",
+          "choices": [
+            "Register again at the information desk.",
+            "Go to Room 310 rather than Room 204.",
+            "Arrive before the opening presentation at eight thirty.",
+            "Collect refreshments from the main lobby."
+          ],
+          "answerIndex": 1,
+          "explanation": "Người tham dự cần đến phòng 310 vì workshop buổi chiều đã được chuyển khỏi phòng 204.",
+          "choiceIds": [
+            "listening:part4-conference-update:4:choice:1",
+            "listening:part4-conference-update:4:choice:2",
+            "listening:part4-conference-update:4:choice:3",
+            "listening:part4-conference-update:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Người thuyết trình cập nhật lịch hội nghị kinh doanh ngày mai: đăng ký tại sảnh chính lúc 8:30, phần mở đầu lúc 9 giờ. Workshop buổi chiều chuyển sang phòng 310. Lịch mới được phát tại quầy thông tin.",
@@ -1337,6 +1373,24 @@
             "listening:part4-safety-announcement:3:choice:3",
             "listening:part4-safety-announcement:3:choice:4"
           ]
+        },
+        {
+          "question": "What will a visitor most likely need before entering the inspection zone?",
+          "choices": [
+            "A copy of the inspection schedule.",
+            "A delivery receipt from the warehouse.",
+            "A facility supervisor to accompany them.",
+            "A key from the technology team."
+          ],
+          "answerIndex": 2,
+          "explanation": "Khách chỉ được vào khu vực kiểm tra khi có giám sát viên cơ sở đi cùng.",
+          "choiceIds": [
+            "listening:part4-safety-announcement:4:choice:1",
+            "listening:part4-safety-announcement:4:choice:2",
+            "listening:part4-safety-announcement:4:choice:3",
+            "listening:part4-safety-announcement:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Hội thoại/thông báo tiếng Anh trong bối cảnh công việc.",
@@ -1427,6 +1481,24 @@
             "listening:part4-product-launch:3:choice:3",
             "listening:part4-product-launch:3:choice:4"
           ]
+        },
+        {
+          "question": "Which task will team leaders most likely need to complete before the platform is released?",
+          "choices": [
+            "Prepare a customer survey about the old platform.",
+            "Change the scheduled release date.",
+            "Contact the general help desk for routine training.",
+            "Complete the online training module and submit the department readiness checklist."
+          ],
+          "answerIndex": 3,
+          "explanation": "Trước ngày ra mắt, trưởng nhóm phải hoàn thành khóa đào tạo trực tuyến và nộp checklist sẵn sàng của bộ phận.",
+          "choiceIds": [
+            "listening:part4-product-launch:4:choice:1",
+            "listening:part4-product-launch:4:choice:2",
+            "listening:part4-product-launch:4:choice:3",
+            "listening:part4-product-launch:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Hội thoại/thông báo tiếng Anh trong bối cảnh công việc.",
@@ -3338,6 +3410,24 @@
           ],
           "choiceOrderRevision": "2.17.0",
           "previousAnswerIndex": 0
+        },
+        {
+          "question": "What can an employee who cannot attend the town hall most likely do afterward?",
+          "choices": [
+            "Watch the recording on the staff portal.",
+            "Request a printed copy from the reception desk.",
+            "Arrange a separate meeting with the chief operating officer.",
+            "Submit questions after the next quarterly meeting."
+          ],
+          "answerIndex": 0,
+          "explanation": "Nhân viên không thể tham dự có thể xem bản ghi cuộc họp được đăng trên cổng thông tin nhân viên.",
+          "choiceIds": [
+            "listening:part4-quarterly-town-hall:4:choice:1",
+            "listening:part4-quarterly-town-hall:4:choice:2",
+            "listening:part4-quarterly-town-hall:4:choice:3",
+            "listening:part4-quarterly-town-hall:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Cuộc họp toàn thể hằng quý diễn ra lúc 10 giờ sáng thứ Sáu tại hội trường chính. Giám đốc vận hành sẽ điểm lại kết quả kinh doanh và ưu tiên quý tới. Nhân viên làm từ xa có thể tham gia qua liên kết trong lịch; câu hỏi gửi bằng biểu mẫu trực tuyến trước chiều thứ Năm.",
@@ -3422,6 +3512,24 @@
             "listening:part4-customer-voicemail:3:choice:3",
             "listening:part4-customer-voicemail:3:choice:4"
           ]
+        },
+        {
+          "question": "What does Natalie most likely expect the company to do first?",
+          "choices": [
+            "Deliver the lamps after the new employees start work.",
+            "Call her before 4 p.m. to confirm the delivery address.",
+            "Issue a replacement purchase order for the desks.",
+            "Collect the missing lamps from the employees."
+          ],
+          "answerIndex": 1,
+          "explanation": "Bước tiếp theo được yêu cầu là gọi cho Natalie trước 16 giờ để xác nhận địa chỉ giao hàng.",
+          "choiceIds": [
+            "listening:part4-customer-voicemail:4:choice:1",
+            "listening:part4-customer-voicemail:4:choice:2",
+            "listening:part4-customer-voicemail:4:choice:3",
+            "listening:part4-customer-voicemail:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Natalie Brooks gọi về đơn hàng G-2084. Bàn làm việc đã được giao nhưng thiếu hai đèn bàn. Cô đề nghị giao bổ sung trước thứ Tư vì nhân viên mới bắt đầu làm vào thứ Năm, đồng thời yêu cầu gọi lại trước 16 giờ để xác nhận địa chỉ.",
@@ -3506,6 +3614,24 @@
             "listening:part4-warehouse-safety-briefing:3:choice:3",
             "listening:part4-warehouse-safety-briefing:3:choice:4"
           ]
+        },
+        {
+          "question": "What should an employee do next after noticing a blocked walkway?",
+          "choices": [
+            "Move empty pallets beside an emergency exit.",
+            "Wait for the next scheduled inspection.",
+            "Report the problem to the shift supervisor immediately.",
+            "Use the forklift lane until the barrier is repaired."
+          ],
+          "answerIndex": 2,
+          "explanation": "Nhân viên phải báo ngay rào chắn hỏng hoặc lối đi bị chặn cho quản lý ca.",
+          "choiceIds": [
+            "listening:part4-warehouse-safety-briefing:4:choice:1",
+            "listening:part4-warehouse-safety-briefing:4:choice:2",
+            "listening:part4-warehouse-safety-briefing:4:choice:3",
+            "listening:part4-warehouse-safety-briefing:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Quản lý nhắc nhân viên về quy định giao thông mới trong kho. Từ thứ Hai, xe nâng đi theo làn đánh dấu dọc tường phía Tây, người đi bộ sử dụng lối màu vàng. Không để pallet gần cửa thoát hiểm; mọi vật cản hoặc rào chắn hư hỏng phải được báo ngay.",
@@ -3602,6 +3728,24 @@
             "listening:part4-training-registration:3:choice:3",
             "listening:part4-training-registration:3:choice:4"
           ]
+        },
+        {
+          "question": "What will applicants most likely receive after the registration deadline?",
+          "choices": [
+            "A bill for the workshop fee.",
+            "A revised workshop location.",
+            "A second nomination form.",
+            "A confirmation email within two business days."
+          ],
+          "answerIndex": 3,
+          "explanation": "Email xác nhận sẽ được gửi trong vòng hai ngày làm việc sau khi hết hạn đăng ký.",
+          "choiceIds": [
+            "listening:part4-training-registration:4:choice:1",
+            "listening:part4-training-registration:4:choice:2",
+            "listening:part4-training-registration:4:choice:3",
+            "listening:part4-training-registration:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Đăng ký mở cho hội thảo giao tiếp khách hàng ngày 8 tháng 10. Hội thảo nửa ngày dành cho nhân viên thường xử lý yêu cầu qua điện thoại hoặc email. Mỗi phòng ban được đề cử tối đa bốn người; biểu mẫu cần hoàn thành trước ngày 25 tháng 9.",
@@ -3686,6 +3830,24 @@
             "listening:part4-travel-service-update:3:choice:3",
             "listening:part4-travel-service-update:3:choice:4"
           ]
+        },
+        {
+          "question": "What should a passenger do next to avoid missing tomorrow's airport shuttle?",
+          "choices": [
+            "Use the north entrance and arrive at least ten minutes early.",
+            "Wait in the main lobby until the driver calls.",
+            "Arrive at the terminal ten minutes after the scheduled departure.",
+            "Use the usual hourly timetable without checking the new directions."
+          ],
+          "answerIndex": 0,
+          "explanation": "Hành khách cần đến cổng phía Bắc và có mặt sớm ít nhất mười phút.",
+          "choiceIds": [
+            "listening:part4-travel-service-update:4:choice:1",
+            "listening:part4-travel-service-update:4:choice:2",
+            "listening:part4-travel-service-update:4:choice:3",
+            "listening:part4-travel-service-update:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Dịch vụ xe đưa đón sân bay ngày mai đổi điểm khởi hành sang cổng phía Bắc do thi công đường gần nhà ga. Chuyến đầu vẫn chạy lúc 5:45; các chuyến sau theo lịch mỗi giờ. Hành khách cần đến sớm mười phút và xuất trình thẻ nhân viên.",
@@ -3770,6 +3932,24 @@
             "listening:part4-quarterly-inventory-report:3:choice:3",
             "listening:part4-quarterly-inventory-report:3:choice:4"
           ]
+        },
+        {
+          "question": "What should a branch employee do next if a product code is missing from the system?",
+          "choices": [
+            "Create a temporary code and send it to the central office.",
+            "Add a note in the comments column instead of creating a new code.",
+            "Remove the item from the inventory count.",
+            "Wait until the monthly management meeting to report it."
+          ],
+          "answerIndex": 1,
+          "explanation": "Khi mã không xuất hiện trong hệ thống, nhân viên không được tạo mã mới mà phải ghi chú vào cột comments.",
+          "choiceIds": [
+            "listening:part4-quarterly-inventory-report:4:choice:1",
+            "listening:part4-quarterly-inventory-report:4:choice:2",
+            "listening:part4-quarterly-inventory-report:4:choice:3",
+            "listening:part4-quarterly-inventory-report:4:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Đợt kiểm kê quý bắt đầu ngày 3 tháng 11; các chi nhánh gửi phiếu đã hoàn tất cho bộ phận vận hành trung tâm trước ngày 6 tháng 11. Hàng hư hỏng phải ghi riêng với hàng hết kho. Nếu thiếu mã sản phẩm, không tự tạo mã mới mà ghi chú ở cột nhận xét.",

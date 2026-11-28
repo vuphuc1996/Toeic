@@ -6,7 +6,7 @@
     "minimumUniqueItems": 10,
     "defaultThreshold": 0.8,
     "retestPolicy": "A later attempt may update mastery; retain attempt history.",
-    "scopeWarning": "Across all 33 criteria, Foundation retains 6/6 criterion-level local evidence paths. The TOEIC objectives now have explicit stable-question mappings for 23/27 sub-skill criteria; four criteria remain defined but deliberately uninstrumented until stronger item-level evidence or a suitable assessment design exists. Evidence is stored learner-locally under the existing objectiveProgress record without an IndexedDB schema migration. The map covers 1,119 criterion/question links across 638 unique stable question IDs; links are inventory coverage, not learner mastery. Every criterion still requires at least its declared minimum of unique observed items and its declared threshold. Optional Grammar and Reading Part 5 explanation rubrics are learner self-reports. Separate Part 5 timed_accuracy uses a 30-second internal practice target only. Listening reserve remains excluded; Reading Part 7 and Separate Part 5 editorial gates remain active. No CEFR/ETS certification is implied.",
+    "scopeWarning": "Across all 33 criteria, Foundation retains 6/6 criterion-level local evidence paths. The TOEIC objectives now have explicit stable-question mappings for 25/27 sub-skill criteria; two criteria remain defined but deliberately uninstrumented until stronger item-level evidence or a suitable assessment design exists. Evidence is stored learner-locally under the existing objectiveProgress record without an IndexedDB schema migration. The map covers 1,139 criterion/question links across 648 unique stable question IDs; links are inventory coverage, not learner mastery. Every criterion still requires at least its declared minimum of unique observed items and its declared threshold. Optional Grammar and Reading Part 5 explanation rubrics are learner self-reports. Separate Part 5 timed_accuracy uses a 30-second internal practice target only. Listening reserve remains excluded; Reading Part 7 and Separate Part 5 editorial gates remain active. No CEFR/ETS certification is implied.",
     "scoreTypes": [
       "correct_rate",
       "delayed_correct_rate",
@@ -297,9 +297,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
-          "measurementRule": ">= 10 unique Part 4 next-step/audience inference questions at >= 80% accuracy.",
-          "runtimeStatusNote": "No sufficiently grounded question-level tag is assigned yet; this criterion remains visible but collects no criterion-specific score."
+          "status": "instrumented_practice_evidence",
+          "measurementRule": ">= 10 unique Part 4 next-step, precondition or audience-action inference questions at >= 80% latest accuracy.",
+          "runtimeStatusNote": "10 new question-level mappings are attached to existing non-reserve original-editorial Part 4 scripts. Each item has a transcript quote, inference type and reasoning note. Evidence is counted only after a completed response; script-level editorial review remains distinct from learner mastery."
         }
       ]
     },
@@ -379,9 +379,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
-          "measurementRule": ">= 10 unique Part 6 discourse-purpose items at >= 80% accuracy.",
-          "runtimeStatusNote": "No sufficiently grounded question-level tag is assigned yet; this criterion remains visible but collects no criterion-specific score."
+          "status": "instrumented_practice_evidence",
+          "measurementRule": ">= 10 unique Part 6 questions measuring temporal sequence, additive/contrast links, reference or sentence-level discourse continuation at >= 80% latest accuracy.",
+          "runtimeStatusNote": "10 existing questions from four internal-editorial-reviewed Part 6 resources are mapped to temporal, additive, contrast, referential and sentence-continuation functions. Each row records a supporting passage excerpt, canonical correct choice and discourse rationale; evidence is counted only after a completed response."
         }
       ]
     },

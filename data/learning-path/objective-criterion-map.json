@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Bản đồ câu hỏi–tiêu chí kết quả học tập",
-  "sourcePolicy": "Only exact stable question identities already present in canonical banks are mapped. Keys are derived from choiceIds with only the trailing :choice:N suffix removed. Part 7 cross-document mappings require an internally reviewed unit, at least two distinct declared sourceLabels, and a matching source quote for each label. No content, answer key, or choice ID is generated or rewritten.",
+  "sourcePolicy": "Only exact stable question identities already present in canonical banks are mapped. Keys are derived from choiceIds with only the trailing :choice:N suffix removed. Part 7 cross-document mappings require an internally reviewed unit, at least two distinct declared sourceLabels, and a matching source quote for each label. No content, answer key, or choice ID is generated or rewritten. Part 4 inference/action mappings require a non-reserve source, exact audio-segment quote, declared inference type and rationale. Part 6 discourse-purpose mappings require an internal-editorial-reviewed resource, exact passage quote, declared discourse function and canonical correct choice.",
   "runtimePolicy": "Evidence is collected only after a completed learner response. Mapping counts are inventory coverage, not learner mastery. Every criterion retains its own minimum unique-item count and threshold. Editorial gates continue to override practice status.",
   "mappings": [
     {
@@ -7533,6 +7533,126 @@
       "questionIndex": 3
     },
     {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-supplier-service-bulletin",
+      "questionKey": "reading:part6-supplier-service-bulletin:2",
+      "questionIndex": 1,
+      "evidenceQuote": "Buyers should check the listed quantities carefully [2] approving the confirmation.",
+      "discourseFunction": "temporal-sequence",
+      "correctChoiceQuote": "before",
+      "discourseRationale": "before places the quantity check earlier than approval in the supplier confirmation procedure.",
+      "evidenceBasis": "Part 6 discourse-link evidence (temporal-sequence). Passage evidence: \"Buyers should check the listed quantities carefully [2] approving the confirmation.\" Correct choice: \"before\". Explanation: before places the quantity check earlier than approval in the supplier confirmation procedure."
+    },
+    {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-supplier-service-bulletin",
+      "questionKey": "reading:part6-supplier-service-bulletin:4",
+      "questionIndex": 3,
+      "evidenceQuote": "If an item is temporarily unavailable, [3] is displayed beside its product code. [4]. Please contact Supplier Relations if a confirmation does not appear within one business day.",
+      "discourseFunction": "sentence-continuation",
+      "correctChoiceQuote": "Confirmed orders can still be tracked in the Order History section.",
+      "discourseRationale": "the selected sentence continues the order-status and tracking topic before the reader is given the follow-up contact instruction.",
+      "evidenceBasis": "Part 6 discourse-link evidence (sentence-continuation). Passage evidence: \"If an item is temporarily unavailable, [3] is displayed beside its product code. [4]. Please contact Supplier Relations if a confirmation does not appear within one business day.\" Correct choice: \"Confirmed orders can still be tracked in the Order History section.\". Explanation: the selected sentence continues the order-status and tracking topic before the reader is given the follow-up contact instruction."
+    },
+    {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-quarterly-billing-update",
+      "questionKey": "reading:part6-quarterly-billing-update:3",
+      "questionIndex": 2,
+      "evidenceQuote": "Customers who have recently changed their billing address should update their details [2] the online account center. [3], paper statements will continue to be mailed to customers who have not selected electronic delivery.",
+      "discourseFunction": "additive-link",
+      "correctChoiceQuote": "In addition",
+      "discourseRationale": "In addition introduces a second statement-delivery arrangement that supplements the online account information.",
+      "evidenceBasis": "Part 6 discourse-link evidence (additive-link). Passage evidence: \"Customers who have recently changed their billing address should update their details [2] the online account center. [3], paper statements will continue to be mailed to customers who have not selected electronic delivery.\" Correct choice: \"In addition\". Explanation: In addition introduces a second statement-delivery arrangement that supplements the online account information."
+    },
+    {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-quarterly-billing-update",
+      "questionKey": "reading:part6-quarterly-billing-update:4",
+      "questionIndex": 3,
+      "evidenceQuote": "Please review the account balance and notify Billing of any discrepancy. [4].",
+      "discourseFunction": "sentence-continuation",
+      "correctChoiceQuote": "Please submit questions about the statement balance before October 7.",
+      "discourseRationale": "the selected sentence completes the billing notice with a directly related deadline for balance questions.",
+      "evidenceBasis": "Part 6 discourse-link evidence (sentence-continuation). Passage evidence: \"Please review the account balance and notify Billing of any discrepancy. [4].\" Correct choice: \"Please submit questions about the statement balance before October 7.\". Explanation: the selected sentence completes the billing notice with a directly related deadline for balance questions."
+    },
+    {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-staff-development-newsletter",
+      "questionKey": "reading:part6-staff-development-newsletter:2",
+      "questionIndex": 1,
+      "evidenceQuote": "Employees may register for more than one session, [2] each workshop has a separate attendance limit.",
+      "discourseFunction": "contrast",
+      "correctChoiceQuote": "but",
+      "discourseRationale": "but connects the option to register for multiple sessions with the limiting condition for each workshop.",
+      "evidenceBasis": "Part 6 discourse-link evidence (contrast). Passage evidence: \"Employees may register for more than one session, [2] each workshop has a separate attendance limit.\" Correct choice: \"but\". Explanation: but connects the option to register for multiple sessions with the limiting condition for each workshop."
+    },
+    {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-staff-development-newsletter",
+      "questionKey": "reading:part6-staff-development-newsletter:3",
+      "questionIndex": 2,
+      "evidenceQuote": "[3] wish to attend should complete the online form by November 10.",
+      "discourseFunction": "referential-link",
+      "correctChoiceQuote": "Those who",
+      "discourseRationale": "Those who refers back to employees who wish to attend and supplies the subject for the registration instruction.",
+      "evidenceBasis": "Part 6 discourse-link evidence (referential-link). Passage evidence: \"[3] wish to attend should complete the online form by November 10.\" Correct choice: \"Those who\". Explanation: Those who refers back to employees who wish to attend and supplies the subject for the registration instruction."
+    },
+    {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-staff-development-newsletter",
+      "questionKey": "reading:part6-staff-development-newsletter:4",
+      "questionIndex": 3,
+      "evidenceQuote": "[3] wish to attend should complete the online form by November 10. [4]. A confirmation message will be sent after the registration has been recorded.",
+      "discourseFunction": "sentence-continuation",
+      "correctChoiceQuote": "A detailed timetable will be sent to registered employees.",
+      "discourseRationale": "the selected sentence continues the registration process by telling registered employees what information they will receive.",
+      "evidenceBasis": "Part 6 discourse-link evidence (sentence-continuation). Passage evidence: \"[3] wish to attend should complete the online form by November 10. [4]. A confirmation message will be sent after the registration has been recorded.\" Correct choice: \"A detailed timetable will be sent to registered employees.\". Explanation: the selected sentence continues the registration process by telling registered employees what information they will receive."
+    },
+    {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-facility-service-notice",
+      "questionKey": "reading:part6-facility-service-notice:2",
+      "questionIndex": 1,
+      "evidenceQuote": "Visitors should use the west entrance and follow the signs to the temporary reception desk. [2], the delivery entrance on the south side will remain available for scheduled shipments.",
+      "discourseFunction": "contrast",
+      "correctChoiceQuote": "However",
+      "discourseRationale": "However signals the exception that the south delivery entrance remains available while visitors are redirected from the main lobby.",
+      "evidenceBasis": "Part 6 discourse-link evidence (contrast). Passage evidence: \"Visitors should use the west entrance and follow the signs to the temporary reception desk. [2], the delivery entrance on the south side will remain available for scheduled shipments.\" Correct choice: \"However\". Explanation: However signals the exception that the south delivery entrance remains available while visitors are redirected from the main lobby."
+    },
+    {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-facility-service-notice",
+      "questionKey": "reading:part6-facility-service-notice:3",
+      "questionIndex": 2,
+      "evidenceQuote": "Tenants expecting large deliveries should notify the property office [3] the end of the day on Friday.",
+      "discourseFunction": "deadline-sequence",
+      "correctChoiceQuote": "by",
+      "discourseRationale": "by establishes the latest notification time in the maintenance and delivery procedure.",
+      "evidenceBasis": "Part 6 discourse-link evidence (deadline-sequence). Passage evidence: \"Tenants expecting large deliveries should notify the property office [3] the end of the day on Friday.\" Correct choice: \"by\". Explanation: by establishes the latest notification time in the maintenance and delivery procedure."
+    },
+    {
+      "objectiveId": "reading-part-6",
+      "criterionId": "reading-part-6-discourse-purpose",
+      "resourceId": "part6-facility-service-notice",
+      "questionKey": "reading:part6-facility-service-notice:4",
+      "questionIndex": 3,
+      "evidenceQuote": "Tenants expecting large deliveries should notify the property office [3] the end of the day on Friday. [4]. We appreciate your cooperation while the work is completed.",
+      "discourseFunction": "sentence-continuation",
+      "correctChoiceQuote": "The maintenance is expected to be completed by 2 p.m.",
+      "discourseRationale": "the selected sentence supplies a completion estimate as the notice concludes, linking the maintenance schedule to the closing statement.",
+      "evidenceBasis": "Part 6 discourse-link evidence (sentence-continuation). Passage evidence: \"Tenants expecting large deliveries should notify the property office [3] the end of the day on Friday. [4]. We appreciate your cooperation while the work is completed.\" Correct choice: \"The maintenance is expected to be completed by 2 p.m.\". Explanation: the selected sentence supplies a completion estimate as the notice concludes, linking the maintenance schedule to the closing statement."
+    },
+    {
       "objectiveId": "reading-part-7",
       "criterionId": "reading-part-7-cross-document-link",
       "resourceId": "part7-triple-conference-exhibitor-logistics",
@@ -9335,6 +9455,126 @@
       "questionKey": "listening:part4-quarterly-town-hall:2",
       "evidenceBasis": "Asks for the central subject of the chief operating officer's talk.",
       "questionIndex": 1
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-office-announcement",
+      "questionKey": "listening:part4-office-announcement:4",
+      "questionIndex": 3,
+      "evidenceQuote": "Computer equipment will be transferred by the technology team over the weekend.",
+      "inferenceType": "sequence",
+      "inferenceRationale": "The packing deadline comes before the weekend transfer, so the technology team is the next group scheduled to move the equipment.",
+      "answerQuote": "The technology team will transfer the computer equipment over the weekend.",
+      "evidenceBasis": "Part 4 next-step/action inference (sequence). Audio evidence: \"Computer equipment will be transferred by the technology team over the weekend.\" Correct response: \"The technology team will transfer the computer equipment over the weekend.\". Reasoning: The packing deadline comes before the weekend transfer, so the technology team is the next group scheduled to move the equipment."
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-conference-update",
+      "questionKey": "listening:part4-conference-update:4",
+      "questionIndex": 3,
+      "evidenceQuote": "the afternoon workshop has been moved from Room 204 to Room 310.",
+      "inferenceType": "location_after_change",
+      "inferenceRationale": "The announced room change means participants should use the new room rather than the previously scheduled one.",
+      "answerQuote": "Go to Room 310 rather than Room 204.",
+      "evidenceBasis": "Part 4 next-step/action inference (location_after_change). Audio evidence: \"the afternoon workshop has been moved from Room 204 to Room 310.\" Correct response: \"Go to Room 310 rather than Room 204.\". Reasoning: The announced room change means participants should use the new room rather than the previously scheduled one."
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-safety-announcement",
+      "questionKey": "listening:part4-safety-announcement:4",
+      "questionIndex": 3,
+      "evidenceQuote": "do not enter the inspection zone unless accompanied by a facility supervisor.",
+      "inferenceType": "access_precondition",
+      "inferenceRationale": "The restriction makes supervisor accompaniment a condition that must be met before entry.",
+      "answerQuote": "A facility supervisor to accompany them.",
+      "evidenceBasis": "Part 4 next-step/action inference (access_precondition). Audio evidence: \"do not enter the inspection zone unless accompanied by a facility supervisor.\" Correct response: \"A facility supervisor to accompany them.\". Reasoning: The restriction makes supervisor accompaniment a condition that must be met before entry."
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-product-launch",
+      "questionKey": "listening:part4-product-launch:4",
+      "questionIndex": 3,
+      "evidenceQuote": "all team leaders must complete the online training module and submit their department readiness checklist.",
+      "inferenceType": "prelaunch_action",
+      "inferenceRationale": "The speaker explicitly places both tasks before the launch, identifying the required preparation step.",
+      "answerQuote": "Complete the online training module and submit the department readiness checklist.",
+      "evidenceBasis": "Part 4 next-step/action inference (prelaunch_action). Audio evidence: \"all team leaders must complete the online training module and submit their department readiness checklist.\" Correct response: \"Complete the online training module and submit the department readiness checklist.\". Reasoning: The speaker explicitly places both tasks before the launch, identifying the required preparation step."
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-quarterly-town-hall",
+      "questionKey": "listening:part4-quarterly-town-hall:4",
+      "questionIndex": 3,
+      "evidenceQuote": "A recording will be posted on the staff portal for anyone who cannot attend.",
+      "inferenceType": "post_event_action",
+      "inferenceRationale": "The recording is provided specifically for employees who cannot attend, so the portal is the stated follow-up route.",
+      "answerQuote": "Watch the recording on the staff portal.",
+      "evidenceBasis": "Part 4 next-step/action inference (post_event_action). Audio evidence: \"A recording will be posted on the staff portal for anyone who cannot attend.\" Correct response: \"Watch the recording on the staff portal.\". Reasoning: The recording is provided specifically for employees who cannot attend, so the portal is the stated follow-up route."
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-customer-voicemail",
+      "questionKey": "listening:part4-customer-voicemail:4",
+      "questionIndex": 3,
+      "evidenceQuote": "Please call me before 4 p.m. today so that we can confirm the delivery address.",
+      "inferenceType": "caller_next_step",
+      "inferenceRationale": "The requested call is the immediate action needed before the missing items can be sent to the correct address.",
+      "answerQuote": "Call her before 4 p.m. to confirm the delivery address.",
+      "evidenceBasis": "Part 4 next-step/action inference (caller_next_step). Audio evidence: \"Please call me before 4 p.m. today so that we can confirm the delivery address.\" Correct response: \"Call her before 4 p.m. to confirm the delivery address.\". Reasoning: The requested call is the immediate action needed before the missing items can be sent to the correct address."
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-warehouse-safety-briefing",
+      "questionKey": "listening:part4-warehouse-safety-briefing:4",
+      "questionIndex": 3,
+      "evidenceQuote": "If you notice a damaged barrier or a blocked walkway, report it to your shift supervisor immediately.",
+      "inferenceType": "safety_response",
+      "inferenceRationale": "The briefing specifies immediate reporting as the required response to a damaged barrier or blocked walkway.",
+      "answerQuote": "Report the problem to the shift supervisor immediately.",
+      "evidenceBasis": "Part 4 next-step/action inference (safety_response). Audio evidence: \"If you notice a damaged barrier or a blocked walkway, report it to your shift supervisor immediately.\" Correct response: \"Report the problem to the shift supervisor immediately.\". Reasoning: The briefing specifies immediate reporting as the required response to a damaged barrier or blocked walkway."
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-training-registration",
+      "questionKey": "listening:part4-training-registration:4",
+      "questionIndex": 3,
+      "evidenceQuote": "Confirmation emails will be sent within two business days after the deadline.",
+      "inferenceType": "expected_follow_up",
+      "inferenceRationale": "The stated post-deadline step is delivery of a confirmation email within the specified period.",
+      "answerQuote": "A confirmation email within two business days.",
+      "evidenceBasis": "Part 4 next-step/action inference (expected_follow_up). Audio evidence: \"Confirmation emails will be sent within two business days after the deadline.\" Correct response: \"A confirmation email within two business days.\". Reasoning: The stated post-deadline step is delivery of a confirmation email within the specified period."
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-travel-service-update",
+      "questionKey": "listening:part4-travel-service-update:4",
+      "questionIndex": 3,
+      "evidenceQuote": "the shuttle will depart from the north entrance rather than the main lobby. The first departure remains at 5:45 a.m., and all later departures will operate on the usual hourly schedule. Please arrive at least ten minutes early and show your employee identification to the driver.",
+      "inferenceType": "schedule_adaptation",
+      "inferenceRationale": "The pickup point has changed and passengers are told to arrive early, so following both instructions avoids waiting at the former location.",
+      "answerQuote": "Use the north entrance and arrive at least ten minutes early.",
+      "evidenceBasis": "Part 4 next-step/action inference (schedule_adaptation). Audio evidence: \"the shuttle will depart from the north entrance rather than the main lobby. The first departure remains at 5:45 a.m., and all later departures will operate on the usual hourly schedule. Please arrive at least ten minutes early and show your employee identification to the driver.\" Correct response: \"Use the north entrance and arrive at least ten minutes early.\". Reasoning: The pickup point has changed and passengers are told to arrive early, so following both instructions avoids waiting at the former location."
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-inference-action",
+      "resourceId": "part4-quarterly-inventory-report",
+      "questionKey": "listening:part4-quarterly-inventory-report:4",
+      "questionIndex": 3,
+      "evidenceQuote": "If a product code does not appear in the system, do not create a new code; instead, add a note in the comments column.",
+      "inferenceType": "procedure_exception",
+      "inferenceRationale": "The instruction gives an exception-handling action: record a note rather than inventing a code.",
+      "answerQuote": "Add a note in the comments column instead of creating a new code.",
+      "evidenceBasis": "Part 4 next-step/action inference (procedure_exception). Audio evidence: \"If a product code does not appear in the system, do not create a new code; instead, add a note in the comments column.\" Correct response: \"Add a note in the comments column instead of creating a new code.\". Reasoning: The instruction gives an exception-handling action: record a note rather than inventing a code."
     }
   ],
   "mappingCountsByCriterion": {
@@ -9350,6 +9590,7 @@
     "listening-part-3-detail-inference": 33,
     "listening-part-3-speaker-linking": 10,
     "listening-part-4-detail-tracking": 29,
+    "listening-part-4-inference-action": 10,
     "listening-part-4-talk-purpose": 2,
     "part5-sentence-completion-accuracy": 80,
     "part5-sentence-completion-error-review": 80,
@@ -9358,9 +9599,10 @@
     "reading-part-5-sentence-completion": 60,
     "reading-part-5-word-form-selection": 14,
     "reading-part-6-context-completion": 32,
+    "reading-part-6-discourse-purpose": 10,
     "reading-part-6-text-cohesion": 10,
     "reading-part-7-cross-document-link": 2,
     "reading-part-7-information-location": 195
   },
-  "uniqueQuestionCount": 638
+  "uniqueQuestionCount": 648
 }

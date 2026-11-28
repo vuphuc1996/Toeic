@@ -18,9 +18,9 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             cwd=ROOT, capture_output=True, text=True
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn("1119 question-to-criterion links", result.stdout)
-        self.assertIn("638 unique stable question IDs", result.stdout)
-        self.assertIn("23/27 TOEIC criteria mapped", result.stdout)
+        self.assertIn("1139 question-to-criterion links", result.stdout)
+        self.assertIn("648 unique stable question IDs", result.stdout)
+        self.assertIn("25/27 TOEIC criteria mapped", result.stdout)
         self.assertIn("0 Listening reserve items mapped", result.stdout)
 
     def test_subminimum_criteria_are_not_misreported_as_mastered(self):
@@ -33,7 +33,9 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
         self.assertEqual(counts["reading-part-7-cross-document-link"], 2)
         self.assertEqual(counts["listening-part-1-visual-audio-match"], 8)
         self.assertEqual(counts["listening-part-1-detail-retention"], 8)
-        self.assertEqual(mapping["uniqueQuestionCount"], 638)
+        self.assertEqual(counts["listening-part-4-inference-action"], 10)
+        self.assertEqual(counts["reading-part-6-discourse-purpose"], 10)
+        self.assertEqual(mapping["uniqueQuestionCount"], 648)
 
     def test_part7_cross_document_evidence_requires_reviewed_two_source_quotes(self):
         resource = {"editorialStatus": "internal-editorial-reviewed", "documents": [
@@ -62,10 +64,10 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             self.assertEqual(outcomes[row["criterionId"]][0], row["objectiveId"])
         self.assertEqual(counts, mapping["mappingCountsByCriterion"])
         self.assertEqual(len({row["questionKey"] for row in mapping["mappings"]}), mapping["uniqueQuestionCount"])
-        self.assertEqual(len(counts), 23)
+        self.assertEqual(len(counts), 25)
         toeic = [outcome for group in registry["objectives"] if not group["objectiveId"].startswith("foundation-") for outcome in group["outcomes"]]
-        self.assertEqual(sum(outcome["status"].startswith("instrumented_") for outcome in toeic), 23)
-        self.assertEqual(sum(outcome["status"] == "criteria_defined_not_yet_instrumented" for outcome in toeic), 4)
+        self.assertEqual(sum(outcome["status"].startswith("instrumented_") for outcome in toeic), 25)
+        self.assertEqual(sum(outcome["status"] == "criteria_defined_not_yet_instrumented" for outcome in toeic), 2)
 
 
     def test_part7_evidence_rejects_ambiguous_duplicate_document_and_source_labels(self):
