@@ -92,7 +92,7 @@ class ListeningExpansionTests(unittest.TestCase):
             if unit.get('part') == 'Part 1':
                 self.assertTrue(unit.get('visualEvidenceNote', '').strip(), unit['id'])
                 self.assertTrue(unit.get('photo') and unit.get('imageAlt'), unit['id'])
-        self.assertEqual(checked, 193)
+        self.assertEqual(checked, 196)
         self.assertTrue(all(u.get('editorialStatus') == 'reserve-pending-independent-review' for u in pending))
 
     def test_batch_027_reserve_is_fail_closed_and_has_traceable_evidence(self):
@@ -110,7 +110,7 @@ class ListeningExpansionTests(unittest.TestCase):
         projected = Counter()
         for unit in eligible + pending:
             projected[unit["part"]] += sum(1 for q in unit["questions"] if q.get("mockEligible") is not False)
-        self.assertEqual(projected, Counter({"Part 1": 9, "Part 2": 61, "Part 3": 123, "Part 4": 102}))
+        self.assertEqual(projected, Counter({"Part 1": 12, "Part 2": 61, "Part 3": 123, "Part 4": 102}))
 
 if __name__ == "__main__":
     unittest.main()
