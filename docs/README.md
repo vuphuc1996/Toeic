@@ -8,6 +8,7 @@ This documentation describes the current TOEIC-first GitHub Pages candidate. Sou
 - Current change manifest: `reports/CHANGE_MANIFEST_v2.95.86.md`.
 - Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.86.md`.
 - Current Full-Mock readiness: `reports/TOEIC_MOCK_READINESS_v2.95.86.md` — Listening approved 102 / reserve 196; Reading approved 200 / Part 7 reserve 87; Separate Part 5 review-only 80.
+- Current Listening pool readiness: `reports/TOEIC_LISTENING_READINESS_v2.95.86.md` — approved/reserve counts by part and the conditional two-form ceiling after independent review.
 - Current Part 1 independent-review queue: `reports/PART1_PHOTO_BATCH_018_REVIEW_HANDOFF_v2.95.86.md`.
 - Current major release quality audit: `reports/MAJOR_RELEASE_QUALITY_AUDIT_v2.95.86.md`.
 - v2.95.86 Batch 018 adds three Part 1 photo-description practice resources (construction plans, laboratory microscope and supermarket shelf) using existing repository JPG assets. Part 1 now has 12 resources/questions: 8 currently eligible and 4 pending independent review. The new three resources and questions are fail-closed and excluded from Mock.
