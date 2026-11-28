@@ -4,6 +4,8 @@
 - Validated application/source SHA: `d5cefa69610bc381a802127d5f9f000d88e48df8` (`candidate`).
 - Predecessor: `v2.95.85` (`7b8d80f1eef1523b5c2f31f0361a51c90011da7e` on `candidate`).
 - Target branch: `candidate`; `main` baseline remains `256ca21461e78a7685bed773ddd622a64050e33a`.
+- Release package: `TOEIC_Dictionary_v2.95.86_FullSource.zip`.
+- FullSource ZIP generation, CRC/SHA and replay verification: **PENDING / NOT GENERATED**.
 - Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.86.md`.
 - GitHub Validate: [run 46137090655](https://github.com/vuphuc1996/Toeic/actions/runs/46137090655) — **PASS, 152/152 steps; full Python discovery 871 tests PASS; JavaScript syntax PASS**.
 - GitHub Pages: [run 46137089787](https://github.com/vuphuc1996/Toeic/actions/runs/46137089787) — **PASS** (Jekyll build, artifact upload, deployment and status reporting).
