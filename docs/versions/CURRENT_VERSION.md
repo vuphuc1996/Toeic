@@ -10,7 +10,7 @@
 - Listening readiness report: `reports/TOEIC_LISTENING_READINESS_v2.95.86.md`.
 - Part 1 review handoff: `reports/PART1_PHOTO_BATCH_018_REVIEW_HANDOFF_v2.95.86.md`.
 - Part 1: **12** resources/questions, **8** currently eligible and **4** reserve-pending independent review. Batch 018 adds three photo-description resources using existing local JPG assets and records Google Imagen provenance.
-- Listening inventory: **148** resources / **311** questions. Mock-approved Listening remains **102**; Listening reserve increases **193 → 196**. The three new questions have `mockEligible: false` and all new resources remain reserve-pending.
+- Listening inventory: **148** resources / **311** questions. Mock-approved Listening remains **102**; Listening reserve increases **193 → 196**. The three new resources remain `reserve-pending-independent-review`; the resource-level status is the Mock exclusion gate. Their questions do not use the practice-only `mockEligible: false` flag.
 - Part 1 outcome evidence is not inflated: visual/audio and delayed-retention mappings remain **8** each; `listening-part-1-paraphrase-recognition` remains deliberately uninstrumented. Batch 018 is not added to the criterion map.
 - Other pool boundaries: **200** Reading Mock-eligible, **87** Part 7 reserve, **80** Separate Part 5 review-only, **13** Part 4 practice-only.
 - Learning outcome inventory remains **1,163 links / 651 unique stable question IDs**; TOEIC **26/27**, Foundation **6/6**, total **32/33**.
