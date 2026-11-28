@@ -34,7 +34,7 @@ class ProjectProgressIndexTests(unittest.TestCase):
         self.assertEqual(metrics["Outcome criteria with evidence instrumentation"]["denominator"], 33)
         self.assertEqual(self.report["outcomeEvidenceDetail"]["toeicInstrumented"], 22)
         self.assertEqual(self.report["outcomeEvidenceDetail"]["toeicTotal"], 27)
-        self.assertEqual(self.report["outcomeEvidenceDetail"]["questionCriterionLinks"], 1082)
+        self.assertEqual(self.report["outcomeEvidenceDetail"]["questionCriterionLinks"], 1103)
         self.assertEqual(self.report["outcomeEvidenceDetail"]["uniqueQuestionIds"], 638)
         self.assertEqual(self.report["glossaryAudit"]["entries"], 567)
         self.assertEqual(self.report["glossaryAudit"]["flagged"], 2)
