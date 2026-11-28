@@ -1,7 +1,7 @@
 # Change Manifest — TOEIC Dictionary v2.95.78
 
-**Predecessor:** latest candidate HEAD `c1f9702579633aeb6cd372b29e17b143cb2868a1` (v2.95.77).  
-**Target:** v2.95.78 — Criterion-level TOEIC Learning Outcome Evidence.  
+**Predecessor:** latest candidate HEAD `c1f9702579633aeb6cd372b29e17b143cb2868a1` (v2.95.77).
+**Target:** v2.95.78 — Criterion-level TOEIC Learning Outcome Evidence.
 **Target branch:** `candidate`; `main` is not modified.
 
 ## Source and runtime
