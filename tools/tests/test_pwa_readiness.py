@@ -34,7 +34,7 @@ class PWAReadinessTests(unittest.TestCase):
         shell = self.array("APP_SHELL")
         optional = self.array("OPTIONAL")
         part1 = [item for item in json.loads((ROOT / "data/listening/listening-library.json").read_text(encoding="utf-8"))["listening"] if item.get("part") == "Part 1"]
-        self.assertEqual(len(part1), 9)
+        self.assertEqual(len(part1), 12)
         photo_paths = {item.get("photo") for item in part1}
         self.assertEqual(len(photo_paths), len(part1))
         self.assertTrue(all(path and path.startswith("./assets/listening/") and path.endswith(".jpg") for path in photo_paths))
