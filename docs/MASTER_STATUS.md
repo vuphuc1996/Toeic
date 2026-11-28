@@ -1,19 +1,23 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.85
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.86
 
 **Source-level acceptance evidence:** The owner confirmed that candidate source baseline `7b8d80f1eef1523b5c2f31f0361a51c90011da7e` passed **865/865 unit tests**, build/compilation checks and syntax/lint checks. See `reports/RELEASE_ACCEPTANCE_v2.95.85.md`. This is owner-supplied evidence; do not label it as a newly reproduced local run or as GitHub Actions/Pages acceptance.
 
-## Current release — v2.95.85
+## Current release — v2.95.86
 
-- **Scope:** expand canonical vocabulary via Batch 029 (`+60` headwords), lift `listening-part-4-talk-purpose` to 10 via 3 practice-only Part 4 Q5 items (`mockEligible: false`), instrument `reading-part-7-paraphrase-inference` with 12 verified non-reserve items, and surface deterministic read-only criterion revision priorities in runtime UI.
-- **Vocabulary & migrations:** **1,221 → 1,281** canonical headwords (**42.7%** of 3,000 minimum) via `data/vocabulary/batch-029.json`; `1221` repair profile added and all historical repair profiles updated with Batch 029 IDs; blank `phonetic: {}` (no fabricated IPA), empty `word_family: []`, and all 1,221 prior records preserved.
-- **Listening & Reading instrumentation:** `listening-part-4-talk-purpose` **7 → 10** (`mockEligible: false` Q5 items; Mock Listening pool remains **102** / Part 4 **30**); `reading-part-7-paraphrase-inference` **0 → 12** verified non-reserve items with fail-closed `validate_part7_paraphrase_evidence`. Total map: **1,163 links / 651 unique stable question IDs**; TOEIC criteria **26/27**; Foundation **6/6**; total **32/33** (`listening-part-1-paraphrase-recognition` remains uninstrumented).
-- **Runtime revision guidance:** pure `summarizeCriterionWeaknesses(criterionRows, progress, now)` exported from `assets/js/learning-outcome-progress.js` and surfaced as a lightweight `data-criterion-revision-summary="true"` note in `renderLearningOutcomeCriteria()` (`assets/js/app.js`).
-- **Progress:** provisional weighted measurable curriculum-build index **77.16%**; not learner mastery or total-system completion.
-- **Protected boundaries:** no `main` change, no IndexedDB schema/data migration, no UI/layout/navigation redesign, no Robot Buddy change, no existing canonical vocabulary or question/answer key edit; Listening reserve 193, Reading Part 7 reserve 87, Separate Part 5 review-only 80, and Part 4 practice-only 13 remain excluded from Mock.
+- **Baseline:** v2.95.85 exact source HEAD `7b8d80f1eef1523b5c2f31f0361a51c90011da7e`; the owner confirmed 865/865 tests, build and syntax/lint PASS for that predecessor only.
+- **Part 1 Batch 018:** three photo-description practice resources added using existing repository JPGs: construction plans, laboratory microscope and supermarket shelf. Their Google Imagen provenance is recorded in `assets/listening/ATTRIBUTION.csv`.
+- **Listening inventory:** resources **145 → 148**, questions **308 → 311**. Part 1 has **12** resources/questions: **8** currently eligible and **4** pending independent review.
+- **Mock protection:** all three new resources remain `reserve-pending-independent-review` and their questions set `mockEligible: false`; approved Listening stays **102** and reserve becomes **196**. Reading approved remains **200**, Part 7 reserve **87**, separate Part 5 review-only **80**, and Part 4 practice-only **13**.
+- **Outcome protection:** Part 1 visual/audio and delayed-retention mappings remain **8** each. `listening-part-1-paraphrase-recognition` remains deliberately uninstrumented. New photo resources are not added to the criterion map.
+- **Project progress:** provisional weighted measurable curriculum-build index remains **77.16%**; stable objective-resource mapping increases from **379/379** to **382/382**. This is an inventory/build indicator, not learner mastery.
+- **Protected boundaries:** canonical vocabulary IDs, existing question/choice IDs and answer keys, IndexedDB v1 learner data, UI/layout/navigation and Robot Buddy remain unchanged. Candidate only; `main` remains the protected production backup.
+- **Acceptance:** the v2.95.86 complete test suite, exact-SHA GitHub Actions, Pages deployment, FullSource ZIP and device/offline checks remain pending until separately verified.
 
-## Previous release — v2.95.84
+## Previous release — v2.95.85
+
+
 
 - **Scope:** align Mock Exam UI pool/readiness counters (`mockPoolCount` and `eligibleByPart` in `assets/js/app.js`) with `mock-engine.js` (`countMockPool` / `isQuestionMockEligible`), and deepen Part 3/Part 4 purpose criterion coverage using existing non-reserve items with verbatim audio quotes.
 - **Mock UI pool fix:** Mock landing and Part 4 readiness stats exclude the practice-only Part 4 questions (`mockEligible: false`), reporting **102** Listening available (**30** Part 4), **200** Reading available, and **295** projected Listening questions (102 approved + 193 reserve pending).
