@@ -2,7 +2,7 @@
 
 **Phiên bản mã nguồn đang kiểm kê:** v2.95.77
 
-**Current source candidate:** v2.95.77 — Migration Compatibility & CI Recovery. UI/UX layout, IndexedDB v1 schema, canonical vocabulary IDs/headwords, question/choice IDs, answer keys, and reserve gates remain intact and protected.
+**Current source candidate:** v2.95.77 — Migration Compatibility & CI Recovery. Latest verified candidate HEAD: `c9e1149352624a729e6c0881905a8d8384f0993e`. UI/UX layout, IndexedDB v1 schema, canonical vocabulary IDs/headwords, question/choice IDs, answer keys, and reserve gates remain intact and protected.
 
 ## Current release — v2.95.77
 
@@ -11,7 +11,9 @@
 - **CI Recovery & Integrity Fix:** Resolved the vocabulary release integrity test failure (`1221 !== 1181` in `vocabulary-release-integrity.mjs`), ensuring full test compatibility with the 1,221-word inventory (`v2.95.76` / `v2.95.77`).
 - **Version Synchronization:** Synchronized release version markers, application cache keys (`__release=2.95.77`), and Service Worker precache URLs across all 7 synchronized files via `tools/sync-version.py`.
 - **Protection:** Maintained all 1,221 canonical words, all 831 question/support items, Mock eligibility rules, learner IndexedDB schema, and UI/UX layout unchanged. `main` branch remains untouched.
-- **Acceptance boundary:** v2.95.77 is a source candidate. Candidate CI/Validate, GitHub Pages deployment, installed-PWA cache/offline propagation and physical-device QA remain **UNVERIFIED** until exact-commit evidence is recorded.
+- **CI remediation commits (2026-11-28):** Updated historical Batch 027 and Batch 028 tests to distinguish immutable batch metadata from the current manifest version; restored the release acceptance runner's safe `--resume` flag; reconciled the 1,141-word migration profile expectation to the exact ordered 80-ID union (40 Batch 026 + 40 Batch 028). No vocabulary records or migration data were changed by these four test/runner-only commits.
+- **Hosted verification on exact candidate HEAD `c9e1149352624a729e6c0881905a8d8384f0993e`:** GitHub Validate **PASS** ([run 46095139242](https://github.com/vuphuc1996/Toeic/actions/runs/46095139242)); GitHub Pages build and deployment **PASS** ([run 46095138907](https://github.com/vuphuc1996/Toeic/actions/runs/46095138907)). Both runs report the same exact HEAD SHA.
+- **Acceptance boundary:** Source Release Accepted; Candidate CI Verified; Pages Deployment Verified. Installed-PWA cache/offline propagation and physical-device QA remain **UNVERIFIED**. Production Deployment Accepted on `main` remains **UNVERIFIED**; `main` is unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
 
 ## Previous release — v2.95.75

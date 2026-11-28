@@ -8,4 +8,7 @@
 - **Migration Profiles Reconciled:** Extended all 7 existing historical migration repair profiles (`979`, `992`, `1026`, `1063`, `1100`, `1137`, `1141`) with the 40 Batch 028 IDs, and added a new exact profile for the 1,181-word v2.95.75 snapshot (`1181`).
 - **CI Recovery & Integrity:** Resolved the vocabulary release integrity test failure (`1221 !== 1181`), ensuring full compatibility with the 1,221-word inventory.
 - **Protected Boundaries:** Maintained all 1,221 canonical words, all 831 question/support items, Mock eligibility rules, learner IndexedDB schema, and UI/UX layout unchanged. `main` branch remains untouched.
-- **Acceptance boundary:** Source Release Accepted (local workspace). Candidate CI, Pages deployment, installed-PWA propagation, and physical-device QA remain unverified.
+- **Candidate HEAD:** `c9e1149352624a729e6c0881905a8d8384f0993e` (v2.95.77; five commits ahead of the v2.95.76 predecessor baseline).
+- **Hosted CI:** GitHub Validate **PASS** on the exact candidate HEAD — [run 46095139242](https://github.com/vuphuc1996/Toeic/actions/runs/46095139242).
+- **GitHub Pages:** Build and deployment **PASS** on the same exact candidate HEAD — [run 46095138907](https://github.com/vuphuc1996/Toeic/actions/runs/46095138907).
+- **Acceptance boundary:** Source Release Accepted; Candidate CI Verified; Pages Deployment Verified. Installed-PWA cache/offline propagation and physical-device QA remain unverified. Production Deployment Accepted on `main` is not granted; `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.

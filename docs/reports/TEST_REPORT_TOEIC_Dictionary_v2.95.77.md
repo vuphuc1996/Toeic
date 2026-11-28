@@ -52,8 +52,9 @@
 ## Acceptance boundary
 
 - **Source Release Accepted (local workspace):** Verified across all `114` Python test modules (`838` cases), `45` Node regression scripts, `vocabulary-release-integrity.mjs`, all domain validators, build/lint checks, and clean ZIP packaging.
-- **Candidate CI Verified:** Pending GitHub Actions run on commit to `candidate`.
-- **Pages Deployment Verified:** Pending GitHub Pages deployment on commit to `candidate`.
-- **Installed-PWA / Offline Propagation Verified:** Unverified.
+- **Candidate CI Verified:** **PASS** on exact candidate HEAD `c9e1149352624a729e6c0881905a8d8384f0993e`; [GitHub Validate run 46095139242](https://github.com/vuphuc1996/Toeic/actions/runs/46095139242).
+- **Pages Deployment Verified:** **PASS** on the same exact candidate HEAD; [GitHub Pages run 46095138907](https://github.com/vuphuc1996/Toeic/actions/runs/46095138907).
+- **CI remediation evidence:** The hosted run passed the repaired historical Batch 026/027/028 assertions and the release acceptance runner test with safe checkpoint resume enabled.
+- **Installed-PWA / Offline Propagation Verified:** Unverified; no installed-device cache migration or offline propagation test is claimed.
 - **Physical-Device QA Verified:** Unverified.
-- **Production Deployment Accepted (`main`):** Unverified (`main` untouched).
+- **Production Deployment Accepted (`main`):** Not granted. `main` remains untouched at `256ca21461e78a7685bed773ddd622a64050e33a`.

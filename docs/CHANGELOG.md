@@ -4,6 +4,7 @@
 - **CI Recovery & Integrity Fix:** Resolved the vocabulary release integrity test failure (`1221 !== 1181` in `vocabulary-release-integrity.mjs`), updating all assertions, snapshot restoration checks, and test feedback for the 1,221-word inventory (`v2.95.76` / `v2.95.77`).
 - **Version Synchronization:** Synchronized release version markers, application cache keys (`__release=2.95.77`), and Service Worker precache URLs across all 7 synchronized files via `tools/sync-version.py`.
 - **Preserved Boundaries:** Maintained all 1,221 canonical words, all 831 question/support items, Mock eligibility rules, learner IndexedDB schema, and UI/UX layout unchanged. `main` branch remains untouched.
+- **Hosted CI recovery (2026-11-28):** Four candidate-only hotfix commits completed the v2.95.77 CI recovery: historical Batch 027 and Batch 028 tests now read the current manifest version without rewriting their historical batch metadata; the release acceptance runner invokes the sharded test suite with safe `--resume`; and Batch 026's 1,141-word migration-profile test now asserts the exact cumulative 80 IDs from Batch 026 plus Batch 028. GitHub Validate and GitHub Pages build/deployment both passed on candidate HEAD `c9e1149352624a729e6c0881905a8d8384f0993e`. Installed-PWA/offline and physical-device QA remain unverified; `main` was not changed.
 
 ## v2.95.76 — TOEIC Vocabulary Batch 028 & Listening Translation Completion (2026-11-27)
 
