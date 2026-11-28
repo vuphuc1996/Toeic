@@ -1,6 +1,7 @@
 # Current Version — TOEIC Dictionary v2.95.86
 
-- Current application release: **v2.95.86** — Batch 018 Part 1 Photo Reserve Expansion, release-marker synchronization and evidence reconciliation.
+- Current source: **v2.95.86** — Batch 018 Part 1 Photo Reserve Expansion, release-marker synchronization and evidence reconciliation.
+- Latest candidate branch HEAD: `bce0448b90979424a0ded4dfc4042ef0612ab37f` (Word Family graph audit regression tests; application release unchanged).
 - Latest candidate branch HEAD: `cf00856a9aea6dce4bcce2ad1b8498fc9b3efb6d` (documentation-only README correction; does not change the application/source snapshot).
 - Validated application/source SHA: `d5cefa69610bc381a802127d5f9f000d88e48df8` (`candidate`).
 - Predecessor: `v2.95.85` (`7b8d80f1eef1523b5c2f31f0361a51c90011da7e` on `candidate`).
