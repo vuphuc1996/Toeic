@@ -38,7 +38,7 @@ class Part1PhotoAssetTests(unittest.TestCase):
     def test_part1_runtime_is_jpg_only_without_svg_fallbacks(self):
         data = json.loads((ROOT / 'data/listening/listening-library.json').read_text(encoding='utf-8'))
         p1 = [item for item in data['listening'] if item.get('part') == 'Part 1']
-        self.assertEqual(len(p1), 9)
+        self.assertEqual(len(p1), 12)
         self.assertTrue(all(item.get('photo', '').endswith('.jpg') for item in p1))
         self.assertTrue(all('image' not in item for item in p1))
         app = (ROOT / 'assets/js/app.js').read_text(encoding='utf-8')
