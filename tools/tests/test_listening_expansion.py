@@ -106,7 +106,7 @@ class ListeningExpansionTests(unittest.TestCase):
         pending = [u for u in self.units if u.get("editorialStatus") == "reserve-pending-independent-review"]
         eligible = [u for u in self.units if not u.get("editorialStatus") or u.get("editorialStatus") == "approved-for-mock"]
         self.assertEqual(sum(sum(1 for q in u["questions"] if q.get("mockEligible") is not False) for u in eligible), 102)
-        self.assertEqual(sum(len(u["questions"]) for u in pending), 193)
+        self.assertEqual(sum(len(u["questions"]) for u in pending), 196)
         projected = Counter()
         for unit in eligible + pending:
             projected[unit["part"]] += sum(1 for q in unit["questions"] if q.get("mockEligible") is not False)
