@@ -1,3 +1,10 @@
+## v2.95.85 — Documentation Reconciliation (2026-11-28)
+
+- Corrected the documentation README's stale current-release marker and removed references to non-existent v2.95.85 test-report, change-manifest, project-progress and command-log files.
+- Added `reports/RELEASE_ACCEPTANCE_v2.95.85.md` as the single traceable record for owner-confirmed source-level acceptance, inventory metrics and unverified hosted/device gates.
+- Updated `versions/CURRENT_VERSION.md` and `MASTER_STATUS.md` to identify exact source SHA `7b8d80f1eef1523b5c2f31f0361a51c90011da7e` and distinguish owner-supplied test evidence from GitHub Actions/Pages evidence.
+- Documentation-only reconciliation; no application source, learner data, IDs, answers, Mock eligibility, review gate, UI or hosting behavior changed. Candidate only; `main` was not targeted.
+
 ## v2.95.85 — Vocabulary Batch 029, Part 4/Part 7 Criterion Instrumentation & Revision Priority Summary (2026-11-28)
 
 - **Vocabulary Batch 029 (`data/vocabulary/batch-029.json`):** added 60 curated TOEIC workplace headwords across `data/vocabulary/[A-Z].json` and `data/manifest.json`, expanding canonical headword inventory from **1,221 → 1,281** (**42.7%** of 3,000 minimum). Added the `1221` migration repair profile and appended the 60 Batch 029 IDs across all historical repair profiles (`979`, `992`, `1026`, `1063`, `1100`, `1137`, `1141`, `1181`, `1221`). Blank `phonetic: {}` (no fabricated IPA), empty `word_family: []`, and all 1,221 existing canonical vocabulary IDs/records preserved untouched.
