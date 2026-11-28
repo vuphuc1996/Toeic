@@ -51,7 +51,7 @@ const part4PracticeOnly = listening.flatMap(unit =>
     ? unit.questions.map((question, index) => ({ unitId: unit.id, question, index }))
     : []
 ).filter(item => item.question.mockEligible === false);
-assert.equal(part4PracticeOnly.length, 10, 'all ten new Part 4 inference items must stay practice-only');
+assert.equal(part4PracticeOnly.length, 13, 'all 13 practice-only Part 4 inference and talk-purpose items must stay practice-only');
 const part4PracticeOnlyIds = new Set(part4PracticeOnly.map(item => `listening:${item.unitId}:${item.index + 1}`));
 assert.equal(isQuestionMockEligible({ question: 'Mock eligible' }), true);
 assert.equal(isQuestionMockEligible({ question: 'Practice only', mockEligible: false }), false);

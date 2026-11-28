@@ -1093,6 +1093,41 @@
         "verifiable data",
         "publicly verifiable"
       ]
+    },
+    {
+      "id": "vendor-list-n",
+      "word": "vendor list",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "danh sách nhà cung cấp được phê duyệt",
+          "definition_en": "a maintained directory of external suppliers approved to provide goods or services to an organization",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please select a catering company from the approved vendor list on the intranet.",
+          "vi": "Vui lòng chọn một công ty cung cấp tiệc từ danh sách nhà cung cấp được phê duyệt trên mạng nội bộ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "approved vendor list",
+        "update the vendor list",
+        "preferred vendor list"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

@@ -127,6 +127,10 @@ class RemainingContentReviewTests(unittest.TestCase):
                 "part4-travel-service-update",
                 "part4-quarterly-inventory-report",
             }
+        } | {
+            "part4-safety-announcement#Q5",
+            "part4-product-launch#Q5",
+            "part4-quarterly-inventory-report#Q5",
         }
         practice_only_seen = set()
         for _, unit, number, question in selected_items():

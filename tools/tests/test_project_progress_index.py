@@ -26,24 +26,24 @@ class ProjectProgressIndexTests(unittest.TestCase):
 
     def test_core_denominators_and_quality_counts_are_live(self):
         metrics = {x["name"]: x for x in self.report["metrics"]}
-        self.assertEqual(metrics["Vocabulary headwords vs 3,000 minimum"]["numerator"], 1221)
+        self.assertEqual(metrics["Vocabulary headwords vs 3,000 minimum"]["numerator"], 1281)
         self.assertEqual(metrics["Vocabulary headwords vs 3,000 minimum"]["denominator"], 3000)
         self.assertEqual(metrics["Guided pathway stage presence"]["numerator"], 3)
         self.assertEqual(metrics["Guided pathway stage presence"]["denominator"], 6)
-        self.assertEqual(metrics["Outcome criteria with evidence instrumentation"]["numerator"], 31)
+        self.assertEqual(metrics["Outcome criteria with evidence instrumentation"]["numerator"], 32)
         self.assertEqual(metrics["Outcome criteria with evidence instrumentation"]["denominator"], 33)
-        self.assertEqual(self.report["outcomeEvidenceDetail"]["toeicInstrumented"], 25)
+        self.assertEqual(self.report["outcomeEvidenceDetail"]["toeicInstrumented"], 26)
         self.assertEqual(self.report["outcomeEvidenceDetail"]["toeicTotal"], 27)
-        self.assertEqual(self.report["outcomeEvidenceDetail"]["questionCriterionLinks"], 1148)
-        self.assertEqual(self.report["outcomeEvidenceDetail"]["uniqueQuestionIds"], 648)
+        self.assertEqual(self.report["outcomeEvidenceDetail"]["questionCriterionLinks"], 1163)
+        self.assertEqual(self.report["outcomeEvidenceDetail"]["uniqueQuestionIds"], 651)
         self.assertEqual(self.report["glossaryAudit"]["entries"], 567)
         self.assertEqual(self.report["glossaryAudit"]["flagged"], 2)
         self.assertEqual(self.report["glossaryAudit"]["duplicateGroups"], 0)
 
     def test_weighted_index_is_reproducible_and_caveated(self):
-        self.assertAlmostEqual(self.report["weightedIndexPercent"], 76.00, places=2)
+        self.assertAlmostEqual(self.report["weightedIndexPercent"], 77.16, places=2)
         output = module.render(self.report)
-        self.assertIn("76.00%", output)
+        self.assertIn("77.16%", output)
         self.assertIn("not an official total-system completion", output)
         self.assertIn("Mock exam approval", output)
 

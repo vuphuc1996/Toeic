@@ -6672,6 +6672,321 @@
         "convertible currency",
         "convertible space"
       ]
+    },
+    {
+      "id": "cash-flow-n",
+      "word": "cash flow",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dòng tiền",
+          "definition_en": "the total movement of money entering and leaving a business during a given operating period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Faster invoice collection significantly improved cash flow at the regional office.",
+          "vi": "Việc thu hồi hóa đơn nhanh hơn đã cải thiện đáng kể dòng tiền tại văn phòng khu vực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cash flow projection",
+        "positive cash flow",
+        "manage cash flow"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cost-overrun-n",
+      "word": "cost overrun",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chi phí vượt dự toán; đội vốn",
+          "definition_en": "an unexpected increase in actual project expenses beyond the originally approved budget",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "CONSTRUCTION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Strict weekly budget tracking helps prevent a major cost overrun during renovations.",
+          "vi": "Theo dõi ngân sách chặt chẽ hằng tuần giúp ngăn ngừa chi phí vượt dự toán lớn trong quá trình cải tạo.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "budget cost overrun",
+        "prevent cost overrun",
+        "explain a cost overrun"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "credit-memo-n",
+      "word": "credit memo",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiếu ghi có; thông báo điều chỉnh giảm công nợ",
+          "definition_en": "a commercial document issued by a seller reducing the amount a buyer owes on a previous invoice",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "PURCHASING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Accounts receivable issued a credit memo for the three returned printers.",
+          "vi": "Bộ phận công nợ phải thu đã phát hành phiếu ghi có cho ba chiếc máy in được trả lại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "issue a credit memo",
+        "credit memo number",
+        "apply a credit memo"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cargo-manifest-n",
+      "word": "cargo manifest",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảng kê khai hàng hóa vận chuyển",
+          "definition_en": "a detailed inventory document listing all freight items carried on a ship, aircraft, or truck",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "TRANSPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The customs officer compared the pallet labels against the updated cargo manifest.",
+          "vi": "Nhân viên hải quan đã đối chiếu nhãn kiện hàng với bảng kê khai hàng hóa đã cập nhật.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "submit a cargo manifest",
+        "electronic cargo manifest",
+        "check the cargo manifest"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "customs-clearance-n",
+      "word": "customs clearance",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thủ tục thông quan",
+          "definition_en": "official authorization from customs authorities allowing imported or exported goods to enter or leave a country",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Incomplete commercial invoices delayed customs clearance at the port by two days.",
+          "vi": "Hóa đơn thương mại thiếu thông tin đã làm chậm thủ tục thông quan tại cảng mất hai ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "customs clearance delay",
+        "expedite customs clearance",
+        "customs clearance fee"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "compensation-package-n",
+      "word": "compensation package",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "gói lương thưởng và phúc lợi",
+          "definition_en": "the total combination of salary, bonuses, health insurance, and other benefits offered to an employee",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The revised compensation package includes annual performance bonuses and transit stipends.",
+          "vi": "Gói lương thưởng và phúc lợi điều chỉnh bao gồm tiền thưởng hiệu suất hằng năm và phụ cấp đi lại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "competitive compensation package",
+        "negotiate a compensation package",
+        "executive compensation package"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cold-call-n",
+      "word": "cold call",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cuộc gọi chào hàng trực tiếp chưa hẹn trước",
+          "definition_en": "an unsolicited telephone call or visit made by a salesperson to a prospective customer",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "COMMUNICATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Sales trainees practiced opening scripts before making their first cold call to prospects.",
+          "vi": "Thực tập sinh bán hàng đã luyện kịch bản mở đầu trước khi thực hiện cuộc gọi chào hàng đầu tiên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "cold call script",
+        "make a cold call",
+        "outbound cold call"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "conference-badge-n",
+      "word": "conference badge",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thẻ đeo đại biểu hội nghị",
+          "definition_en": "an identification card worn by event participants for admission to halls and sessions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "EVENT",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please pick up your printed conference badge at the east lobby check-in desk.",
+          "vi": "Vui lòng nhận thẻ đeo hội nghị đã in của bạn tại quầy đăng ký sảnh phía đông.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "wear a conference badge",
+        "conference badge pickup",
+        "lanyard conference badge"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "connecting-flight-n",
+      "word": "connecting flight",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyến bay nối chuyến",
+          "definition_en": "a subsequent flight a traveler boards at an intermediate airport to reach a final destination",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "AIRPORT",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Fog in Chicago caused several sales representatives to miss their connecting flight to Boston.",
+          "vi": "Sương mù tại Chicago khiến nhiều đại diện bán hàng lỡ chuyến bay nối chuyến đi Boston.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "miss a connecting flight",
+        "connecting flight gate",
+        "catch a connecting flight"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

@@ -52,10 +52,11 @@ class VocabularyBatch027Tests(unittest.TestCase):
         cls.patch = json.loads((ROOT / "patches/v2.95.73/batch-001-word-family-reciprocity.json").read_text(encoding="utf-8"))
         cls.ledger_74 = json.loads((ROOT / "patches/v2.95.74/word-family-audit-ledger.json").read_text(encoding="utf-8"))
         cls.batch_028 = json.loads((ROOT / "data/vocabulary/batch-028.json").read_text(encoding="utf-8"))
+        cls.batch_029 = json.loads((ROOT / "data/vocabulary/batch-029.json").read_text(encoding="utf-8"))
 
     def _build_v29573_snapshot(self):
         documents = copy.deepcopy(self.documents)
-        later_ids = {row["id"] for row in self.batch_028["words"]}
+        later_ids = {row["id"] for row in self.batch_028["words"]} | {row["id"] for row in self.batch_029["words"]}
         for document in documents.values():
             document["words"] = [row for row in document["words"] if row["id"] not in later_ids]
         restored_ids = reverse_batch_027_word_family(documents, ROOT)
@@ -92,7 +93,7 @@ class VocabularyBatch027Tests(unittest.TestCase):
         version = self.manifest["version"]
         for marker_rel in ("index.html", "assets/js/app.js", "sw.js", "docs/versions/CURRENT_VERSION.md"):
             self.assertIn(version, (ROOT / marker_rel).read_text(encoding="utf-8"), marker_rel)
-        self.assertEqual(self.manifest["totalWords"], 1221)
+        self.assertEqual(self.manifest["totalWords"], 1281)
         self.assertEqual(self.patch["baseDataVersion"], "2.95.72")
         self.assertEqual(self.patch["targetDataVersion"], "2.95.73")
         self.assertEqual(self.patch["canonicalHeadwordCount"], 1181)
@@ -141,7 +142,7 @@ class VocabularyBatch027Tests(unittest.TestCase):
         self.assertIn("truy cập; tiếp cận", [s.get("meaning_vi") for s in verb_senses])
 
         report = AUDIT.load_source(ROOT)
-        self.assertEqual(report["headwords"], 1221)
+        self.assertEqual(report["headwords"], 1281)
         self.assertEqual(report["headwords_with_family"], 331)
         self.assertEqual(report["link_count"], 428)
         self.assertEqual(len(report["missing_targets"]), 50)

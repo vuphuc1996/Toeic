@@ -24,6 +24,7 @@ const batch022 = JSON.parse(await readFile(new URL('../../data/vocabulary/batch-
 const batch023 = JSON.parse(await readFile(new URL('../../data/vocabulary/batch-023.json', import.meta.url), 'utf8'));
 const batch024 = JSON.parse(await readFile(new URL('../../data/vocabulary/batch-024.json', import.meta.url), 'utf8'));
 const batch028 = JSON.parse(await readFile(new URL('../../data/vocabulary/batch-028.json', import.meta.url), 'utf8'));
+const batch029 = JSON.parse(await readFile(new URL('../../data/vocabulary/batch-029.json', import.meta.url), 'utf8'));
 const ipaPatch024 = JSON.parse(await readFile(new URL('../../patches/v2.95.18/batch-001-ipa.json', import.meta.url), 'utf8'));
 const relatedPatch021 = JSON.parse(await readFile(new URL('../../patches-related-terms/v2.95.14/related-terms-001.json', import.meta.url), 'utf8'));
 const relatedPatch022 = JSON.parse(await readFile(new URL('../../patches-related-terms/v2.95.15/related-terms-001.json', import.meta.url), 'utf8'));
@@ -39,10 +40,10 @@ assert.deepEqual(glossaryBatch027.records.map(entry => entry.term).sort(), ['act
 
 assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
 assert.equal(manifest.version, JSON.parse(await readFile(new URL('../../data/manifest.json', import.meta.url), 'utf8')).version, 'release manifest matches current candidate');
-assert.equal(manifest.totalWords, 1221);
-assert.equal(manifest.previousReleaseTotalWords, 1181);
-assert.equal(manifest.releaseAdditionIds.length, 40);
-assert.deepEqual(manifest.releaseAdditionIds, batch028.words.map(word => word.id), 'release delta IDs match Batch 028');
+assert.equal(manifest.totalWords, 1281);
+assert.equal(manifest.previousReleaseTotalWords, 1221);
+assert.equal(manifest.releaseAdditionIds.length, 60);
+assert.deepEqual(manifest.releaseAdditionIds, batch029.words.map(word => word.id), 'release delta IDs match Batch 029');
 assert.equal(manifest.letters.length, 26);
 let total = 0;
 const ids = new Set();
@@ -62,7 +63,7 @@ for (const entry of manifest.letters) {
   }
 }
 assert.equal(total, manifest.totalWords);
-assert.equal(ids.size, 1221);
+assert.equal(ids.size, 1281);
 assert.equal(batch009.words.length, 34);
 assert.ok(batch009.words.every(word => ids.has(word.id)));
 assert.equal(batch010.words.length, 37);
@@ -80,6 +81,10 @@ assert.equal(batch028.words.length, 40);
 assert.equal(batch028.ipaSummary.populated, 0);
 assert.equal(batch028.ipaSummary.leftBlank, 40);
 assert.ok(batch028.words.every(word => ids.has(word.id)));
+assert.equal(batch029.words.length, 60);
+assert.equal(batch029.ipaSummary.populated, 0);
+assert.equal(batch029.ipaSummary.leftBlank, 60);
+assert.ok(batch029.words.every(word => ids.has(word.id)));
 assert.equal(batch014.release, '2.95.12');
 assert.equal(batch014.count, 9);
 assert.ok(batch014.records.every(word => ids.has(word.id)));
@@ -137,41 +142,48 @@ assert.deepEqual(orderEntry.senses[0].synonyms, ['purchase order']);
 const claimantEntry = baseWords.find(row => row.id === 'claimant-n');
 assert.equal(claimantEntry.word_family.find(row => row.word === 'claim').pos, 'n');
 
+const repair1221 = manifest.releaseRepairProfiles.find(profile => profile.previousTotalWords === 1221);
+assert.ok(repair1221);
+assert.equal(repair1221.releaseAdditionIds.length, 60);
+
 const repair1181 = manifest.releaseRepairProfiles.find(profile => profile.previousTotalWords === 1181);
 assert.ok(repair1181);
-assert.equal(repair1181.releaseAdditionIds.length, 40);
+assert.equal(repair1181.releaseAdditionIds.length, 100);
 
 const repair1141 = manifest.releaseRepairProfiles.find(profile => profile.previousTotalWords === 1141);
 assert.ok(repair1141);
-assert.equal(repair1141.releaseAdditionIds.length, 80);
+assert.equal(repair1141.releaseAdditionIds.length, 140);
 
 const repair1137 = manifest.releaseRepairProfiles.find(profile => profile.previousTotalWords === 1137);
 assert.ok(repair1137);
-assert.equal(repair1137.releaseAdditionIds.length, 84);
+assert.equal(repair1137.releaseAdditionIds.length, 144);
 
 const repair979 = manifest.releaseRepairProfiles.find(profile => profile.previousTotalWords === 979);
 const repair992 = manifest.releaseRepairProfiles.find(profile => profile.previousTotalWords === 992);
 const repair1026 = manifest.releaseRepairProfiles.find(profile => profile.previousTotalWords === 1026);
 assert.ok(repair979 && repair992 && repair1026, 'all known legacy workspace profiles are registered');
-assert.equal(repair979.releaseAdditionIds.length, 242, '979-word snapshots restore all cumulative additions through Batch 028');
-assert.equal(repair992.releaseAdditionIds.length, 229, '992-word snapshots restore Batch 009 through Batch 028 additions');
-assert.equal(repair1026.releaseAdditionIds.length, 195, '1026-word snapshots restore Batch 010 through Batch 028 additions');
+assert.equal(repair979.releaseAdditionIds.length, 302, '979-word snapshots restore all cumulative additions through Batch 029');
+assert.equal(repair992.releaseAdditionIds.length, 289, '992-word snapshots restore Batch 009 through Batch 029 additions');
+assert.equal(repair1026.releaseAdditionIds.length, 255, '1026-word snapshots restore Batch 010 through Batch 029 additions');
 
 const repair1063 = manifest.releaseRepairProfiles.find(profile => profile.previousTotalWords === 1063);
 const repair1100 = manifest.releaseRepairProfiles.find(profile => profile.previousTotalWords === 1100);
 assert.ok(repair1063, 'the immediate v2.69.0 workspace profile is registered');
-assert.equal(repair1063.releaseAdditionIds.length, 158, '1063-word snapshots restore Batch 011 through Batch 028');
+assert.equal(repair1063.releaseAdditionIds.length, 218, '1063-word snapshots restore Batch 011 through Batch 029');
 assert.ok(repair1100, 'the immediate v2.70.0 workspace profile is registered');
-assert.equal(repair1100.releaseAdditionIds.length, 121, '1100-word snapshots restore Batch 012 through Batch 028');
+assert.equal(repair1100.releaseAdditionIds.length, 181, '1100-word snapshots restore Batch 012 through Batch 029');
+
+const additionRepair1221 = detectLegacyReleaseAdditionRepair({deletedBaseIds:repair1221.releaseAdditionIds,legacyRecords:baseWords.filter(word => !repair1221.releaseAdditionIds.includes(word.id)),baseWords,releaseAdditionIds:manifest.releaseAdditionIds,previousTotalWords:manifest.previousReleaseTotalWords,releaseRepairProfiles:manifest.releaseRepairProfiles,currentTotalWords:manifest.totalWords});
+assert.equal(additionRepair1221.length,60,'the exact 1221-word snapshot restores Batch 029');
 
 const additionRepair1181 = detectLegacyReleaseAdditionRepair({deletedBaseIds:repair1181.releaseAdditionIds,legacyRecords:baseWords.filter(word => !repair1181.releaseAdditionIds.includes(word.id)),baseWords,releaseAdditionIds:manifest.releaseAdditionIds,previousTotalWords:manifest.previousReleaseTotalWords,releaseRepairProfiles:manifest.releaseRepairProfiles,currentTotalWords:manifest.totalWords});
-assert.equal(additionRepair1181.length,40,'the exact 1181-word snapshot restores Batch 028');
+assert.equal(additionRepair1181.length,100,'the exact 1181-word snapshot restores Batch 028 and 029');
 
 const additionRepair1141 = detectLegacyReleaseAdditionRepair({deletedBaseIds:repair1141.releaseAdditionIds,legacyRecords:baseWords.filter(word => !repair1141.releaseAdditionIds.includes(word.id)),baseWords,releaseAdditionIds:manifest.releaseAdditionIds,previousTotalWords:manifest.previousReleaseTotalWords,releaseRepairProfiles:manifest.releaseRepairProfiles,currentTotalWords:manifest.totalWords});
-assert.equal(additionRepair1141.length,80,'the exact 1141-word snapshot restores Batch 026 and 028');
+assert.equal(additionRepair1141.length,140,'the exact 1141-word snapshot restores Batch 026, 028 and 029');
 
 const additionRepair1137 = detectLegacyReleaseAdditionRepair({deletedBaseIds:repair1137.releaseAdditionIds,legacyRecords:baseWords.filter(word => !repair1137.releaseAdditionIds.includes(word.id)),baseWords,releaseAdditionIds:manifest.releaseAdditionIds,previousTotalWords:manifest.previousReleaseTotalWords,releaseRepairProfiles:manifest.releaseRepairProfiles,currentTotalWords:manifest.totalWords});
-assert.equal(additionRepair1137.length,84,'the exact 1137-word snapshot restores Batch 013, 026 and 028');
+assert.equal(additionRepair1137.length,144,'the exact 1137-word snapshot restores Batch 013, 026, 028 and 029');
 
 const additionRepair979 = detectLegacyReleaseAdditionRepair({
   deletedBaseIds: repair979.releaseAdditionIds,
@@ -182,7 +194,7 @@ const additionRepair979 = detectLegacyReleaseAdditionRepair({
   releaseRepairProfiles: manifest.releaseRepairProfiles,
   currentTotalWords: manifest.totalWords
 });
-assert.equal(additionRepair979.length, 242, 'the exact legacy 979-word snapshot restores all additions through Batch 028');
+assert.equal(additionRepair979.length, 302, 'the exact legacy 979-word snapshot restores all additions through Batch 029');
 
 const additionRepair992 = detectLegacyReleaseAdditionRepair({
   deletedBaseIds: repair992.releaseAdditionIds,
@@ -191,21 +203,21 @@ const additionRepair992 = detectLegacyReleaseAdditionRepair({
   releaseRepairProfiles: manifest.releaseRepairProfiles,
   currentTotalWords: manifest.totalWords
 });
-assert.equal(additionRepair992.length, 229, 'the exact 992-word snapshot restores Batch 009–028 additions');
+assert.equal(additionRepair992.length, 289, 'the exact 992-word snapshot restores Batch 009–029 additions');
 
 const additionRepair1026 = detectLegacyReleaseAdditionRepair({
   deletedBaseIds: repair1026.releaseAdditionIds,
   legacyRecords: baseWords.filter(word => !repair1026.releaseAdditionIds.includes(word.id)),
   baseWords, releaseRepairProfiles: manifest.releaseRepairProfiles, currentTotalWords: manifest.totalWords
 });
-assert.equal(additionRepair1026.length, 195, 'the exact 1026-word snapshot restores Batch 010–028');
+assert.equal(additionRepair1026.length, 255, 'the exact 1026-word snapshot restores Batch 010–029');
 
 const additionRepair1063 = detectLegacyReleaseAdditionRepair({
   deletedBaseIds: repair1063.releaseAdditionIds,
   legacyRecords: baseWords.filter(word => !repair1063.releaseAdditionIds.includes(word.id)),
   baseWords, releaseRepairProfiles: manifest.releaseRepairProfiles, currentTotalWords: manifest.totalWords
 });
-assert.equal(additionRepair1063.length, 158, 'the exact 1063-word snapshot restores Batch 011–028');
+assert.equal(additionRepair1063.length, 218, 'the exact 1063-word snapshot restores Batch 011–029');
 
 const additionRepair1100 = detectLegacyReleaseAdditionRepair({
   deletedBaseIds: repair1100.releaseAdditionIds,
@@ -214,7 +226,7 @@ const additionRepair1100 = detectLegacyReleaseAdditionRepair({
   releaseRepairProfiles: manifest.releaseRepairProfiles,
   currentTotalWords: manifest.totalWords
 });
-assert.equal(additionRepair1100.length, 121, 'the exact 1100-word snapshot restores Batch 012, 013 and 028');
+assert.equal(additionRepair1100.length, 181, 'the exact 1100-word snapshot restores Batch 012–029');
 
 assert.deepEqual(detectLegacyReleaseAdditionRepair({
   deletedBaseIds: repair992.releaseAdditionIds.slice(1),
@@ -240,4 +252,4 @@ assert.match(app, /registration\.update\(\)/);
 assert.ok(sw.includes(`const VERSION = '${manifest.version}'`));
 assert.match(sw, /cacheUrl\.searchParams\.delete\('__release'\)/);
 assert.match(html, /id="metricWordsStatus"/);
-console.log('Vocabulary release integrity: PASS (26 files, 1,221 records, 979/992/1026/1063/1100/1137/1141/1181 legacy migration repair profiles, Batch 028 release additions, unique IDs/headwords, cache-bust and PWA update guards).');
+console.log('Vocabulary release integrity: PASS (26 files, 1,281 records, 979/992/1026/1063/1100/1137/1141/1181/1221 legacy migration repair profiles, Batch 029 release additions, unique IDs/headwords, cache-bust and PWA update guards).');

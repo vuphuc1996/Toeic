@@ -9665,6 +9665,180 @@
       "evidenceQuote": "Due to road construction near the terminal, the shuttle will depart from the north entrance rather than the main lobby.",
       "answerQuote": "Road construction is taking place near the terminal",
       "evidenceBasis": "Part 4 talk purpose/reason. Question asks \"Why has the shuttle departure point changed?\" Audio evidence: \"Due to road construction near the terminal, the shuttle will depart from the north entrance rather than the main lobby.\" Correct response: \"Road construction is taking place near the terminal\""
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-talk-purpose",
+      "resourceId": "part4-safety-announcement",
+      "questionKey": "listening:part4-safety-announcement:5",
+      "questionIndex": 4,
+      "evidenceQuote": "A routine safety inspection is currently taking place in the eastern storage area. For your safety, please use the marked pedestrian walkway and do not enter the inspection zone unless accompanied by a facility supervisor.",
+      "answerQuote": "To inform visitors about safety rules during a storage inspection",
+      "evidenceBasis": "Part 4 talk purpose/main announcement. Question asks \"What is the main purpose of the announcement?\" Audio evidence: \"A routine safety inspection is currently taking place in the eastern storage area. For your safety, please use the marked pedestrian walkway and do not enter the inspection zone unless accompanied by a facility supervisor.\" Correct response: \"To inform visitors about safety rules during a storage inspection\""
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-talk-purpose",
+      "resourceId": "part4-product-launch",
+      "questionKey": "listening:part4-product-launch:5",
+      "questionIndex": 4,
+      "evidenceQuote": "Our new customer service platform is scheduled for release on the first Monday of next month.",
+      "answerQuote": "The upcoming launch and preparation steps for a new service platform",
+      "evidenceBasis": "Part 4 talk purpose/central topic. Question asks \"What is the speaker mainly discussing?\" Audio evidence: \"Our new customer service platform is scheduled for release on the first Monday of next month.\" Correct response: \"The upcoming launch and preparation steps for a new service platform\""
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-talk-purpose",
+      "resourceId": "part4-quarterly-inventory-report",
+      "questionKey": "listening:part4-quarterly-inventory-report:5",
+      "questionIndex": 4,
+      "evidenceQuote": "The quarterly inventory count will begin on November 3. Each branch must submit its completed count sheet to the central operations team by November 6.",
+      "answerQuote": "To explain procedures and deadlines for the quarterly inventory count",
+      "evidenceBasis": "Part 4 talk purpose/instructions. Question asks \"What is the main purpose of the manager’s instructions?\" Audio evidence: \"The quarterly inventory count will begin on November 3. Each branch must submit its completed count sheet to the central operations team by November 6.\" Correct response: \"To explain procedures and deadlines for the quarterly inventory count\""
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-single-vendor-delivery-calendar",
+      "questionKey": "reading:part7-single-vendor-delivery-calendar:4",
+      "questionIndex": 3,
+      "evidenceQuote": "Coordinators should ensure that a staff member is available to sign for large packages.",
+      "answerQuote": "Make sure someone can sign for large packages",
+      "paraphraseMechanism": "lexical_paraphrase",
+      "paraphraseRationale": "Paraphrases \"ensure that a staff member is available\" as \"Make sure someone can\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (lexical_paraphrase). Passage evidence: \"Coordinators should ensure that a staff member is available to sign for large packages.\" Canonical answer: \"Make sure someone can sign for large packages\". Paraphrases \"ensure that a staff member is available\" as \"Make sure someone can\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-single-contract-renewal-notice",
+      "questionKey": "reading:part7-single-contract-renewal-notice:1",
+      "questionIndex": 0,
+      "evidenceQuote": "We would like to renew the agreement for another twelve months, beginning March 1.",
+      "answerQuote": "Renew the cleaning agreement for twelve months",
+      "paraphraseMechanism": "lexical_paraphrase",
+      "paraphraseRationale": "Paraphrases \"would like to renew the agreement for another twelve months\" as \"Renew the cleaning agreement for twelve months\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (lexical_paraphrase). Passage evidence: \"We would like to renew the agreement for another twelve months, beginning March 1.\" Canonical answer: \"Renew the cleaning agreement for twelve months\". Paraphrases \"would like to renew the agreement for another twelve months\" as \"Renew the cleaning agreement for twelve months\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-double-vendor-credit",
+      "questionKey": "reading:part7-double-vendor-credit:1",
+      "questionIndex": 0,
+      "evidenceQuote": "Our office returned six conference chairs under return authorization RA-640 on May 6 because the fabric color did not match the approved sample.",
+      "answerQuote": "The fabric color differed from the approved sample",
+      "paraphraseMechanism": "synonym_negation_paraphrase",
+      "paraphraseRationale": "Paraphrases \"did not match the approved sample\" as \"differed from the approved sample\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (synonym_negation_paraphrase). Passage evidence: \"Our office returned six conference chairs under return authorization RA-640 on May 6 because the fabric color did not match the approved sample.\" Canonical answer: \"The fabric color differed from the approved sample\". Paraphrases \"did not match the approved sample\" as \"differed from the approved sample\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-double-vendor-credit",
+      "questionKey": "reading:part7-double-vendor-credit:5",
+      "questionIndex": 4,
+      "evidenceQuote": "The original delivery charge is not included in the credit because the order was delivered as scheduled.",
+      "answerQuote": "The order was delivered according to schedule",
+      "paraphraseMechanism": "lexical_paraphrase",
+      "paraphraseRationale": "Maps stem \"excluded from\" to \"not included in\" and paraphrases \"as scheduled\" as \"according to schedule\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (lexical_paraphrase). Passage evidence: \"The original delivery charge is not included in the credit because the order was delivered as scheduled.\" Canonical answer: \"The order was delivered according to schedule\". Maps stem \"excluded from\" to \"not included in\" and paraphrases \"as scheduled\" as \"according to schedule\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-triple-conference-exhibitor-logistics",
+      "questionKey": "reading:part7-triple-conference-exhibitor-logistics:1",
+      "questionIndex": 0,
+      "evidenceQuote": "Our team will exhibit at the Supplier Forum on October 21. We plan to send two display panels and one demonstration unit to the venue the previous afternoon.",
+      "answerQuote": "During the afternoon of October 20",
+      "paraphraseMechanism": "temporal_inference",
+      "paraphraseRationale": "Infers \"October 20\" from \"on October 21\" combined with \"the previous afternoon\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (temporal_inference). Passage evidence: \"Our team will exhibit at the Supplier Forum on October 21. We plan to send two display panels and one demonstration unit to the venue the previous afternoon.\" Canonical answer: \"During the afternoon of October 20\". Infers \"October 20\" from \"on October 21\" combined with \"the previous afternoon\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-triple-conference-exhibitor-logistics",
+      "questionKey": "reading:part7-triple-conference-exhibitor-logistics:5",
+      "questionIndex": 4,
+      "evidenceQuote": "7:30 a.m. Exhibitor access begins 8:15 a.m. Final booth inspection",
+      "answerQuote": "45 minutes",
+      "paraphraseMechanism": "numeric_time_inference",
+      "paraphraseRationale": "Computes the 45-minute interval between \"7:30 a.m.\" and \"8:15 a.m.\" rather than lifting a stated number.",
+      "evidenceBasis": "Part 7 paraphrase/inference (numeric_time_inference). Passage evidence: \"7:30 a.m. Exhibitor access begins 8:15 a.m. Final booth inspection\" Canonical answer: \"45 minutes\". Computes the 45-minute interval between \"7:30 a.m.\" and \"8:15 a.m.\" rather than lifting a stated number."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-single-equipment-memo",
+      "questionKey": "reading:part7-single-equipment-memo:3",
+      "questionIndex": 2,
+      "evidenceQuote": "Supervisors are asked to ensure that printers, projectors, and conference-room displays are accessible during the visit.",
+      "answerQuote": "Make shared equipment accessible",
+      "paraphraseMechanism": "category_generalization",
+      "paraphraseRationale": "Generalizes the item list \"printers, projectors, and conference-room displays\" into \"shared equipment\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (category_generalization). Passage evidence: \"Supervisors are asked to ensure that printers, projectors, and conference-room displays are accessible during the visit.\" Canonical answer: \"Make shared equipment accessible\". Generalizes the item list \"printers, projectors, and conference-room displays\" into \"shared equipment\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-single-training-email",
+      "questionKey": "reading:part7-single-training-email:3",
+      "questionIndex": 2,
+      "evidenceQuote": "Because the room can accommodate only 24 people, registration will close when all places have been filled.",
+      "answerQuote": "The room has limited capacity",
+      "paraphraseMechanism": "cause_paraphrase",
+      "paraphraseRationale": "Paraphrases \"the room can accommodate only 24 people\" as \"The room has limited capacity\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (cause_paraphrase). Passage evidence: \"Because the room can accommodate only 24 people, registration will close when all places have been filled.\" Canonical answer: \"The room has limited capacity\". Paraphrases \"the room can accommodate only 24 people\" as \"The room has limited capacity\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-double-order-delay",
+      "questionKey": "reading:part7-double-order-delay:4",
+      "questionIndex": 3,
+      "evidenceQuote": "Please reply by 3:00 p.m. today if you would like us to split the shipment.",
+      "answerQuote": "Confirm whether she wants a split shipment",
+      "paraphraseMechanism": "action_paraphrase",
+      "paraphraseRationale": "Paraphrases \"reply ... if you would like us to split the shipment\" as \"Confirm whether she wants a split shipment\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (action_paraphrase). Passage evidence: \"Please reply by 3:00 p.m. today if you would like us to split the shipment.\" Canonical answer: \"Confirm whether she wants a split shipment\". Paraphrases \"reply ... if you would like us to split the shipment\" as \"Confirm whether she wants a split shipment\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "part7-double-equipment-order",
+      "questionKey": "reading:part7-double-equipment-order:4",
+      "questionIndex": 3,
+      "evidenceQuote": "Please reply by 2 p.m. tomorrow if you would like us to split the delivery.",
+      "answerQuote": "Confirm whether she wants separate deliveries",
+      "paraphraseMechanism": "action_paraphrase",
+      "paraphraseRationale": "Paraphrases \"split the delivery\" as \"separate deliveries\" and \"reply ... if you would like\" as \"Confirm whether she wants\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (action_paraphrase). Passage evidence: \"Please reply by 2 p.m. tomorrow if you would like us to split the delivery.\" Canonical answer: \"Confirm whether she wants separate deliveries\". Paraphrases \"split the delivery\" as \"separate deliveries\" and \"reply ... if you would like\" as \"Confirm whether she wants\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "double-passage-order",
+      "questionKey": "reading:double-passage-order:5",
+      "questionIndex": 4,
+      "evidenceQuote": "The items are required for a product launch next week.",
+      "answerQuote": "A product launch is scheduled for the following week",
+      "paraphraseMechanism": "lexical_paraphrase",
+      "paraphraseRationale": "Paraphrases \"required for a product launch next week\" as \"A product launch is scheduled for the following week\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (lexical_paraphrase). Passage evidence: \"The items are required for a product launch next week.\" Canonical answer: \"A product launch is scheduled for the following week\". Paraphrases \"required for a product launch next week\" as \"A product launch is scheduled for the following week\"."
+    },
+    {
+      "objectiveId": "reading-part-7",
+      "criterionId": "reading-part-7-paraphrase-inference",
+      "resourceId": "supplier-invoice-followup",
+      "questionKey": "reading:supplier-invoice-followup:1",
+      "questionIndex": 0,
+      "evidenceQuote": "The purchase order lists 24 desks, whereas the invoice indicates 26. Before we schedule payment, please confirm whether the additional two units were approved by the purchasing manager.",
+      "answerQuote": "The invoice quantity needs verification",
+      "paraphraseMechanism": "cause_inference",
+      "paraphraseRationale": "Synthesizes the 24-vs-26 count discrepancy and approval check as \"The invoice quantity needs verification\".",
+      "evidenceBasis": "Part 7 paraphrase/inference (cause_inference). Passage evidence: \"The purchase order lists 24 desks, whereas the invoice indicates 26. Before we schedule payment, please confirm whether the additional two units were approved by the purchasing manager.\" Canonical answer: \"The invoice quantity needs verification\". Synthesizes the 24-vs-26 count discrepancy and approval check as \"The invoice quantity needs verification\"."
     }
   ],
   "mappingCountsByCriterion": {
@@ -9681,7 +9855,7 @@
     "listening-part-3-speaker-linking": 10,
     "listening-part-4-detail-tracking": 29,
     "listening-part-4-inference-action": 10,
-    "listening-part-4-talk-purpose": 7,
+    "listening-part-4-talk-purpose": 10,
     "part5-sentence-completion-accuracy": 80,
     "part5-sentence-completion-error-review": 80,
     "part5-sentence-completion-time-management": 80,
@@ -9692,7 +9866,8 @@
     "reading-part-6-discourse-purpose": 10,
     "reading-part-6-text-cohesion": 10,
     "reading-part-7-cross-document-link": 2,
-    "reading-part-7-information-location": 195
+    "reading-part-7-information-location": 195,
+    "reading-part-7-paraphrase-inference": 12
   },
-  "uniqueQuestionCount": 648
+  "uniqueQuestionCount": 651
 }

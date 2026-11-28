@@ -2536,6 +2536,41 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "itinerary-change-n",
+      "word": "itinerary change",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thay đổi lịch trình chuyến đi",
+          "definition_en": "a modification to previously booked flights, hotel nights, or business travel times",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Notify the corporate travel desk immediately regarding any last-minute itinerary change.",
+          "vi": "Hãy thông báo ngay cho bộ phận công tác của công ty về bất kỳ thay đổi lịch trình phút chót nào.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "report an itinerary change",
+        "travel itinerary change",
+        "approve an itinerary change"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

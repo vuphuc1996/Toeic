@@ -46,14 +46,20 @@ class ContentBatch026Tests(unittest.TestCase):
                     'part4-warehouse-safety-briefing', 'part4-training-registration',
                     'part4-travel-service-update', 'part4-quarterly-inventory-report',
                 }
+                practice_only_part4_q5_ids = {
+                    'part4-safety-announcement', 'part4-product-launch',
+                    'part4-quarterly-inventory-report',
+                }
                 practice_seen = set()
                 for unit in document['listening']:
-                    if unit.get('id') not in practice_only_part4_ids:
+                    unit_id = unit.get('id')
+                    if unit_id not in practice_only_part4_ids:
                         continue
                     questions = unit.get('questions') or []
-                    if len(questions) != 4 or questions[3].get('mockEligible') is not False:
-                        raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit.get('id')}")
-                    practice_seen.add(unit['id'])
+                    expected_len = 5 if unit_id in practice_only_part4_q5_ids else 4
+                    if len(questions) != expected_len or any(q.get('mockEligible') is not False for q in questions[3:]):
+                        raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit_id}")
+                    practice_seen.add(unit_id)
                     unit['questions'] = questions[:3]
                 self.assertEqual(practice_seen, practice_only_part4_ids)
                 source = (json.dumps(document, ensure_ascii=False, indent=2) + "\n").encode('utf-8')
@@ -99,11 +105,17 @@ class ContentBatch026Tests(unittest.TestCase):
             'part4-warehouse-safety-briefing', 'part4-training-registration',
             'part4-travel-service-update', 'part4-quarterly-inventory-report',
         }
+        q5_ids = {
+            'part4-safety-announcement', 'part4-product-launch',
+            'part4-quarterly-inventory-report',
+        }
         for unit_id in expected_ids:
             unit = self.l[unit_id]
-            self.assertEqual(len(unit['questions']), 4, unit_id)
-            added = unit['questions'][3]
-            self.assertIs(added.get('mockEligible'), False, unit_id)
-            self.assertEqual(added['choiceIds'], [f'listening:{unit_id}:4:choice:{i}' for i in range(1, 5)])
+            expected_len = 5 if unit_id in q5_ids else 4
+            self.assertEqual(len(unit['questions']), expected_len, unit_id)
+            for q_num in range(4, expected_len + 1):
+                added = unit['questions'][q_num - 1]
+                self.assertIs(added.get('mockEligible'), False, unit_id)
+                self.assertEqual(added['choiceIds'], [f'listening:{unit_id}:{q_num}:choice:{i}' for i in range(1, 5)])
 
 if __name__=='__main__': unittest.main()

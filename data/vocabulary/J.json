@@ -331,6 +331,41 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "job-shadowing-n",
+      "word": "job shadowing",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quan sát công việc thực tế cùng nhân viên giàu kinh nghiệm",
+          "definition_en": "a workplace training method in which a trainee observes an experienced staff member during daily tasks",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "New support agents spend two mornings in job shadowing before handling live calls.",
+          "vi": "Nhân viên hỗ trợ mới dành hai buổi sáng quan sát công việc thực tế trước khi tự tiếp nhận cuộc gọi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "job shadowing program",
+        "arrange job shadowing",
+        "job shadowing session"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

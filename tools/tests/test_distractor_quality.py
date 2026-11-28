@@ -29,7 +29,7 @@ class DistractorQualityTests(unittest.TestCase):
         self.assertEqual(sum(len(x.get('questions', [])) for x in p7), 195)
         self.assertEqual(sum(len(x.get('questions', [])) for x in p3) + len(p4_mock_eligible) + sum(len(x.get('questions', [])) for x in p7), 264)
         practice_only = [(unit, q) for unit in p4 for q in unit.get('questions', []) if q.get('mockEligible') is False]
-        self.assertEqual(len(practice_only), 10)
+        self.assertEqual(len(practice_only), 13)
         self.assertTrue(all(unit.get('id', '').startswith('part4-') for unit, _ in practice_only))
 
     def test_reviewed_questions_have_four_unique_choices_and_valid_keys(self):

@@ -1805,6 +1805,111 @@
         "non-transferable ticket",
         "transferable balance"
       ]
+    },
+    {
+      "id": "tax-exemption-n",
+      "word": "tax exemption",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "miễn thuế",
+          "definition_en": "a legal reduction or removal of tax liability granted to qualified organizations, goods, or transactions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Nonprofit buyers must attach a valid tax exemption certificate at checkout.",
+          "vi": "Người mua là tổ chức phi lợi nhuận phải đính kèm giấy chứng nhận miễn thuế hợp lệ khi thanh toán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "tax exemption certificate",
+        "qualify for tax exemption",
+        "claim a tax exemption"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "tuition-reimbursement-n",
+      "word": "tuition reimbursement",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chính sách hoàn trả học phí",
+          "definition_en": "an employer benefit that repays approved course fees after an employee completes relevant training",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "EDUCATION"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Staff seeking tuition reimbursement must obtain supervisor approval before enrollment.",
+          "vi": "Nhân viên muốn được hoàn trả học phí phải xin phê duyệt của cấp trên trước khi đăng ký học.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "apply for tuition reimbursement",
+        "tuition reimbursement policy",
+        "eligible for tuition reimbursement"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "time-zone-n",
+      "word": "time zone",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "múi giờ",
+          "definition_en": "a geographic region that observes a uniform standard clock time for commercial and daily use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TIME",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Remember to specify the recipient's local time zone on international call invitations.",
+          "vi": "Hãy nhớ ghi rõ múi giờ địa phương của người nhận trên thư mời cuộc gọi quốc tế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "different time zone",
+        "local time zone",
+        "time zone conversion"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

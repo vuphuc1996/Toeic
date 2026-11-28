@@ -144,10 +144,10 @@ def main():
             if ident in PRACTICE_ONLY_PART4_TALK_IDS:
                 if editorial_status == 'reserve-pending-independent-review':
                     ERRORS.append(f"Listening {ident}: practice-only Part 4 talk must not be a reserve item")
-                elif len(questions)!=4 or any(q.get('mockEligible') is False for q in questions[:3]) or questions[3].get('mockEligible') is not False:
-                    ERRORS.append(f"Listening {ident}: allowlisted practice-only Part 4 set must have 3 Mock-eligible Q1-Q3 and Q4 mockEligible=false")
+                elif len(questions) < 4 or len(questions) > 5 or any(q.get('mockEligible') is False for q in questions[:3]) or any(q.get('mockEligible') is not False for q in questions[3:]):
+                    ERRORS.append(f"Listening {ident}: allowlisted practice-only Part 4 set must have 3 Mock-eligible Q1-Q3 and mockEligible=false on Q4+")
                 else:
-                    practice_only_p4_count+=1
+                    practice_only_p4_count += len(questions) - 3
             elif len(questions)!=3 or any(q.get('mockEligible') is False for q in questions):
                 ERRORS.append(f"Listening {ident}: {part} set must contain exactly three questions")
         if part not in ('Part 3','Part 4') and any(q.get('mockEligible') is False for q in questions):

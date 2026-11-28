@@ -1391,6 +1391,24 @@
             "listening:part4-safety-announcement:4:choice:4"
           ],
           "mockEligible": false
+        },
+        {
+          "question": "What is the main purpose of the announcement?",
+          "choices": [
+            "To announce the hiring of a new facility supervisor",
+            "To schedule equipment deliveries at the reception desk",
+            "To inform visitors about safety rules during a storage inspection",
+            "To report that the eastern storage area will close permanently"
+          ],
+          "answerIndex": 2,
+          "explanation": "Thông báo nhằm nhắc khách tham quan và nhà thầu tuân thủ lối đi an toàn và hạn chế ra vào khu vực kho phía đông trong thời gian kiểm tra an toàn định kỳ.",
+          "choiceIds": [
+            "listening:part4-safety-announcement:5:choice:1",
+            "listening:part4-safety-announcement:5:choice:2",
+            "listening:part4-safety-announcement:5:choice:3",
+            "listening:part4-safety-announcement:5:choice:4"
+          ],
+          "mockEligible": false
         }
       ],
       "transcriptTranslation": "Hội thoại/thông báo tiếng Anh trong bối cảnh công việc.",
@@ -1497,6 +1515,24 @@
             "listening:part4-product-launch:4:choice:2",
             "listening:part4-product-launch:4:choice:3",
             "listening:part4-product-launch:4:choice:4"
+          ],
+          "mockEligible": false
+        },
+        {
+          "question": "What is the speaker mainly discussing?",
+          "choices": [
+            "A change in the general help desk’s operating hours",
+            "Results from a recent customer satisfaction survey",
+            "A merger between the email and telephone support teams",
+            "The upcoming launch and preparation steps for a new service platform"
+          ],
+          "answerIndex": 3,
+          "explanation": "Người nói giới thiệu nền tảng dịch vụ khách hàng mới sắp ra mắt vào đầu tháng tới cùng các yêu cầu đào tạo và nộp danh sách sẵn sàng trước khi triển khai.",
+          "choiceIds": [
+            "listening:part4-product-launch:5:choice:1",
+            "listening:part4-product-launch:5:choice:2",
+            "listening:part4-product-launch:5:choice:3",
+            "listening:part4-product-launch:5:choice:4"
           ],
           "mockEligible": false
         }
@@ -3948,6 +3984,24 @@
             "listening:part4-quarterly-inventory-report:4:choice:2",
             "listening:part4-quarterly-inventory-report:4:choice:3",
             "listening:part4-quarterly-inventory-report:4:choice:4"
+          ],
+          "mockEligible": false
+        },
+        {
+          "question": "What is the main purpose of the manager’s instructions?",
+          "choices": [
+            "To explain procedures and deadlines for the quarterly inventory count",
+            "To announce new product codes added to the company catalog",
+            "To reschedule the monthly management meeting to November 6",
+            "To instruct branches to dispose of damaged goods immediately"
+          ],
+          "answerIndex": 0,
+          "explanation": "Người quản lý hướng dẫn quy trình kiểm kê hàng quý, thời hạn nộp phiếu ngày 6/11 và cách ghi nhận hàng hư hỏng hoặc thiếu mã sản phẩm.",
+          "choiceIds": [
+            "listening:part4-quarterly-inventory-report:5:choice:1",
+            "listening:part4-quarterly-inventory-report:5:choice:2",
+            "listening:part4-quarterly-inventory-report:5:choice:3",
+            "listening:part4-quarterly-inventory-report:5:choice:4"
           ],
           "mockEligible": false
         }

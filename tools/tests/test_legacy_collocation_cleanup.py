@@ -61,6 +61,11 @@ class LegacyCollocationCleanupTests(unittest.TestCase):
         batch_028_ids = {row["id"] for row in batch_028["words"]}
         self.assertTrue(batch_028_ids.issubset(ids))
         expected_ids.update(batch_028_ids)
+        batch_029 = json.loads((ROOT / "data/vocabulary/batch-029.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(batch_029["words"]), 60)
+        batch_029_ids = {row["id"] for row in batch_029["words"]}
+        self.assertTrue(batch_029_ids.issubset(ids))
+        expected_ids.update(batch_029_ids)
         self.assertEqual(ids, expected_ids)
         self.assertEqual(len(ids), len(expected_ids))
 

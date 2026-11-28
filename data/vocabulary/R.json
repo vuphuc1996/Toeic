@@ -4207,6 +4207,181 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "restocking-fee-n",
+      "word": "restocking fee",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phí nhập lại kho khi trả hàng",
+          "definition_en": "a handling charge deducted by a seller when non-defective merchandise is returned for a refund",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers are not charged a restocking fee when an item arrives damaged in transit.",
+          "vi": "Khách hàng không bị tính phí nhập lại kho khi sản phẩm bị hư hỏng trong quá trình vận chuyển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "waive the restocking fee",
+        "restocking fee policy",
+        "charge a restocking fee"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "return-policy-n",
+      "word": "return policy",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chính sách đổi trả hàng",
+          "definition_en": "the published rules specifying when and how customers may send back purchases for exchange or refund",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Under our store return policy, unopened electronics may be exchanged within thirty days.",
+          "vi": "Theo chính sách đổi trả của cửa hàng, đồ điện tử chưa mở hộp có thể được đổi trong vòng ba mươi ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "thirty-day return policy",
+        "store return policy",
+        "review the return policy"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "reimbursement-form-n",
+      "word": "reimbursement form",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "biểu mẫu đề nghị hoàn tiền chi phí",
+          "definition_en": "a standardized claim sheet used by staff to request repayment for authorized out-of-pocket expenses",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please upload the completed reimbursement form along with scanned toll receipts.",
+          "vi": "Vui lòng tải lên biểu mẫu hoàn tiền đã điền đầy đủ cùng bản quét biên lai phí cầu đường.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "complete a reimbursement form",
+        "mileage reimbursement form",
+        "submit a reimbursement form"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "room-upgrade-n",
+      "word": "room upgrade",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nâng hạng phòng",
+          "definition_en": "a move to a larger or higher-category hotel room than originally reserved",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "HOTEL",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The front desk offered a complimentary room upgrade because the standard floor was under maintenance.",
+          "vi": "Quầy lễ tân đã tặng nâng hạng phòng miễn phí vì tầng phòng tiêu chuẩn đang được bảo trì.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "complimentary room upgrade",
+        "request a room upgrade",
+        "hotel room upgrade"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "round-trip-adj",
+      "word": "round-trip",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "khứ hồi",
+          "definition_en": "covering travel from a point of departure to a destination and back to the original starting point",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRAVEL",
+        "AIRPORT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The agency booked a discounted round-trip ticket for the two-day client visit.",
+          "vi": "Đại lý đã đặt vé khứ hồi giảm giá cho chuyến thăm khách hàng kéo dài hai ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "round-trip ticket",
+        "round-trip airfare",
+        "round-trip shuttle"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

@@ -1369,6 +1369,41 @@
       ],
       "cefr_level": "A2",
       "level_basis": "editorial-estimate"
+    },
+    {
+      "id": "loyalty-program-n",
+      "word": "loyalty program",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chương trình khách hàng thân thiết",
+          "definition_en": "a rewards system offering points, discounts, or perks to repeat buyers or frequent travelers",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Members of the hotel loyalty program receive complimentary breakfast and late checkout.",
+          "vi": "Thành viên chương trình khách hàng thân thiết của khách sạn được miễn phí bữa sáng và trả phòng muộn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "join a loyalty program",
+        "customer loyalty program",
+        "loyalty program rewards"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

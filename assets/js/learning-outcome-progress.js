@@ -364,6 +364,82 @@ export function summarizeOutcomeCriteria(progress, registry = {}, resourceMap = 
 }
 
 /**
+ * Derive deterministic revision priorities from summarized TOEIC outcome criteria
+ * and learner-local recall/accuracy signals without mutating any state.
+ */
+export function summarizeCriterionWeaknesses(criterionRows = [], progress = {}, now = Date.now()) {
+  const safeRows = Array.isArray(criterionRows) ? criterionRows : [];
+  const evaluationTime = typeof now === 'number' && Number.isFinite(now) ? now : Date.now();
+  const ledger = readObjectiveProgress(progress);
+  const weaknesses = [];
+  let evaluatedCount = 0;
+  let dueRecallTotal = 0;
+
+  for (const row of safeRows) {
+    if (!row || typeof row !== 'object' || typeof row.outcomeId !== 'string' || !row.outcomeId) continue;
+    if (row.status === 'not_instrumented' || (Number(row.mappingCount) || 0) < 1) continue;
+    evaluatedCount += 1;
+
+    const observedItemCount = Number(row.observedItemCount) || 0;
+    const minimumUniqueItems = Number.isInteger(row.minimumUniqueItems) && row.minimumUniqueItems > 0 ? row.minimumUniqueItems : 10;
+    const thresholdPercent = Math.round((typeof row.threshold === 'number' && Number.isFinite(row.threshold) && row.threshold > 0 && row.threshold <= 1 ? row.threshold : 0.8) * 100);
+    const observedPercent = Number.isFinite(row.observedPercent) ? row.observedPercent : null;
+
+    const state = ledger[row.outcomeId];
+    const itemRecords = state?.items && typeof state.items === 'object' && !Array.isArray(state.items) ? state.items : {};
+    const items = Object.values(itemRecords).filter(item => item && typeof item === 'object' && !Array.isArray(item));
+    const dueRecallCount = items.filter(item => Number(item.recallDueAt) > 0 && Number(item.recallDueAt) <= evaluationTime).length;
+    const incorrectItemCount = items.filter(item => item.latestCorrect === false).length;
+    dueRecallTotal += dueRecallCount;
+
+    let reason = '';
+    let reasonLabel = '';
+    let priority = 0;
+
+    if (observedItemCount > 0 && observedPercent !== null && observedPercent < thresholdPercent) {
+      reason = 'below_threshold';
+      reasonLabel = `Dưới ngưỡng mục tiêu (${observedPercent}% < ${thresholdPercent}%)`;
+      priority = (thresholdPercent - observedPercent) + dueRecallCount * 5 + (observedItemCount >= minimumUniqueItems ? 25 : 5);
+    } else if (dueRecallCount > 0) {
+      reason = 'recall_due';
+      reasonLabel = `${dueRecallCount} câu đến hạn ôn nhớ lại`;
+      priority = dueRecallCount * 10;
+    } else if (observedItemCount > 0 && observedItemCount < minimumUniqueItems && row.status !== 'content_review_pending') {
+      reason = 'low_evidence_coverage';
+      reasonLabel = `Cần thêm dữ liệu (${observedItemCount}/${minimumUniqueItems} câu độc lập)`;
+      priority = minimumUniqueItems - observedItemCount;
+    }
+
+    if (!reason) continue;
+    weaknesses.push({
+      outcomeId: row.outcomeId,
+      objectiveId: row.objectiveId || '',
+      objectiveTitle: row.objectiveTitle || row.objectiveId || '',
+      title: row.title || row.outcomeId,
+      status: row.status || '',
+      reason,
+      reasonLabel,
+      observedItemCount,
+      minimumUniqueItems,
+      observedPercent,
+      thresholdPercent,
+      dueRecallCount,
+      incorrectItemCount,
+      priority
+    });
+  }
+
+  weaknesses.sort((a, b) => b.priority - a.priority || a.outcomeId.localeCompare(b.outcomeId));
+  return {
+    evaluatedCount,
+    weaknessCount: weaknesses.length,
+    dueRecallTotal,
+    weaknesses,
+    topRecommendation: weaknesses[0] || null
+  };
+}
+
+/**
  * Read-only integrity audit for the learner-local objective evidence ledger.
  * It reports malformed or orphaned records but never repairs, deletes, or
  * rewrites learner data. Callers may safely run it before displaying evidence.

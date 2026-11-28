@@ -3515,6 +3515,41 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "direct-deposit-n",
+      "word": "direct deposit",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyển khoản lương hoặc tiền trực tiếp vào tài khoản",
+          "definition_en": "the electronic transfer of wages or reimbursements directly into a recipient's bank account",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "BANKING",
+        "HR"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "New employees may enroll in direct deposit through the secure payroll portal.",
+          "vi": "Nhân viên mới có thể đăng ký nhận lương chuyển khoản trực tiếp qua cổng bảng lương bảo mật.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "direct deposit authorization",
+        "enroll in direct deposit",
+        "receive payment by direct deposit"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

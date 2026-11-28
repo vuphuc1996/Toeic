@@ -209,6 +209,41 @@
         "knowledgeable advisor",
         "highly knowledgeable"
       ]
+    },
+    {
+      "id": "keynote-speaker-n",
+      "word": "keynote speaker",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "diễn giả chính của hội nghị",
+          "definition_en": "the featured presenter who delivers the main opening or thematic address at an event",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EVENT",
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Our keynote speaker will open the annual logistics summit at nine o'clock.",
+          "vi": "Diễn giả chính của chúng ta sẽ khai mạc hội nghị thượng đỉnh hậu cần thường niên lúc chín giờ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "introduce the keynote speaker",
+        "featured keynote speaker",
+        "conference keynote speaker"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

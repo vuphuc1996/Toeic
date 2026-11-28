@@ -89,7 +89,7 @@ def composite_sha_reversing_listening_translations(paths):
                 if unit.get("id") not in practice_only_part4_ids:
                     continue
                 questions = unit.get("questions") or []
-                if len(questions) != 4 or questions[3].get("mockEligible") is not False:
+                if len(questions) < 4 or any(q.get("mockEligible") is False for q in questions[:3]) or any(q.get("mockEligible") is not False for q in questions[3:]):
                     raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit.get('id')}")
                 practice_only_seen.add(unit["id"])
                 unit["questions"] = questions[:3]
@@ -193,7 +193,8 @@ class RelatedGlossaryBatch037Tests(unittest.TestCase):
         self.assertTrue(expected_ids.issubset(resources))
         for resource_id in expected_ids:
             resource = resources[resource_id]
-            self.assertEqual(len(resource["questions"]), 4, resource_id)
+            self.assertGreaterEqual(len(resource["questions"]), 4, resource_id)
+            self.assertTrue(all(q.get("mockEligible") is False for q in resource["questions"][3:]), resource_id)
             added = resource["questions"][3]
             self.assertIs(added.get("mockEligible"), False, resource_id)
             self.assertEqual(len(added["choices"]), 4, resource_id)

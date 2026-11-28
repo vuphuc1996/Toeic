@@ -1203,6 +1203,146 @@
         "worldwide sales",
         "worldwide network"
       ]
+    },
+    {
+      "id": "working-capital-n",
+      "word": "working capital",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vốn lưu động",
+          "definition_en": "the funds available to meet a company's short-term operational obligations, calculated as current assets minus current liabilities",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manufacturer secured a short-term loan to strengthen seasonal working capital.",
+          "vi": "Nhà sản xuất đã thu xếp một khoản vay ngắn hạn để củng cố vốn lưu động theo mùa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "working capital requirement",
+        "sufficient working capital",
+        "working capital loan"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "workforce-planning-n",
+      "word": "workforce planning",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hoạch định nguồn nhân lực",
+          "definition_en": "the systematic process of forecasting staffing needs and aligning talent supply with business goals",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "HR",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Department heads met with recruitment specialists for quarterly workforce planning.",
+          "vi": "Trưởng các bộ phận đã họp với chuyên viên tuyển dụng để hoạch định nguồn nhân lực theo quý.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "strategic workforce planning",
+        "workforce planning model",
+        "quarterly workforce planning"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "warranty-claim-n",
+      "word": "warranty claim",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "yêu cầu bảo hành",
+          "definition_en": "a formal customer request for repair, replacement, or service covered under a product guarantee",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "CUSTOMER",
+        "QUALITY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Include the product serial number and receipt when submitting an online warranty claim.",
+          "vi": "Hãy đính kèm số sê-ri sản phẩm và hóa đơn khi gửi yêu cầu bảo hành trực tuyến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "file a warranty claim",
+        "process a warranty claim",
+        "valid warranty claim"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "workflow-n",
+      "word": "workflow",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy trình làm việc",
+          "definition_en": "the structured sequence of operational steps through which a piece of work passes from initiation to completion",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "OFFICE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Standardizing invoice templates improved approval workflow across regional offices.",
+          "vi": "Chuẩn hóa mẫu hóa đơn đã cải thiện quy trình phê duyệt giữa các văn phòng khu vực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "approval workflow",
+        "streamline workflow",
+        "automated workflow"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

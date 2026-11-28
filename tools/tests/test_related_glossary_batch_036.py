@@ -67,14 +67,21 @@ def composite_sha_reversing_listening_translations(paths):
                 "part4-travel-service-update",
                 "part4-quarterly-inventory-report",
             }
+            practice_only_part4_q5_ids = {
+                "part4-safety-announcement",
+                "part4-product-launch",
+                "part4-quarterly-inventory-report",
+            }
             practice_only_seen = set()
             for unit in document["listening"]:
-                if unit.get("id") not in practice_only_part4_ids:
+                unit_id = unit.get("id")
+                if unit_id not in practice_only_part4_ids:
                     continue
                 questions = unit.get("questions") or []
-                if len(questions) != 4 or questions[3].get("mockEligible") is not False:
-                    raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit.get('id')}")
-                practice_only_seen.add(unit["id"])
+                expected_len = 5 if unit_id in practice_only_part4_q5_ids else 4
+                if len(questions) != expected_len or any(q.get("mockEligible") is not False for q in questions[3:]):
+                    raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit_id}")
+                practice_only_seen.add(unit_id)
                 unit["questions"] = questions[:3]
             if practice_only_seen != practice_only_part4_ids:
                 raise AssertionError(f"Part 4 practice-only IDs differ: {sorted(practice_only_seen ^ practice_only_part4_ids)}")
@@ -181,15 +188,22 @@ class RelatedGlossaryBatch036Tests(unittest.TestCase):
             "part4-warehouse-safety-briefing", "part4-training-registration",
             "part4-travel-service-update", "part4-quarterly-inventory-report",
         }
+        q5_ids = {
+            "part4-safety-announcement",
+            "part4-product-launch",
+            "part4-quarterly-inventory-report",
+        }
         resources = {item["id"]: item for item in listening}
         self.assertEqual({resource_id for resource_id in expected_ids if resource_id in resources}, expected_ids)
         for resource_id in expected_ids:
             resource = resources[resource_id]
-            self.assertEqual(len(resource["questions"]), 4, resource_id)
-            added = resource["questions"][3]
-            self.assertIs(added.get("mockEligible"), False, resource_id)
-            self.assertEqual(len(added["choices"]), 4, resource_id)
-            self.assertEqual(added["choiceIds"], [f"listening:{resource_id}:4:choice:{i}" for i in range(1, 5)])
+            expected_len = 5 if resource_id in q5_ids else 4
+            self.assertEqual(len(resource["questions"]), expected_len, resource_id)
+            for q_num in range(4, expected_len + 1):
+                added = resource["questions"][q_num - 1]
+                self.assertIs(added.get("mockEligible"), False, resource_id)
+                self.assertEqual(len(added["choices"]), 4, resource_id)
+                self.assertEqual(added["choiceIds"], [f"listening:{resource_id}:{q_num}:choice:{i}" for i in range(1, 5)])
     def test_canonical_vocabulary_and_learning_banks_are_unchanged_outside_eight_listening_translations(self):
         vocabulary = list((ROOT / "data/vocabulary").glob("[A-Z].json"))
         protected = [

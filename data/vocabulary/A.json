@@ -5663,6 +5663,146 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "accrued-interest-n",
+      "word": "accrued interest",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lãi dồn tích; tiền lãi phát sinh chưa thanh toán",
+          "definition_en": "interest accumulated on a loan or investment since the previous payment date that has not yet been paid or received",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BANKING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The quarterly statement includes accrued interest on the corporate credit line.",
+          "vi": "Báo cáo quý bao gồm tiền lãi dồn tích trên hạn mức tín dụng doanh nghiệp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "accrued interest calculation",
+        "accrued interest payable",
+        "record accrued interest"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "audit-trail-n",
+      "word": "audit trail",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dấu vết kiểm toán; hồ sơ truy vết giao dịch",
+          "definition_en": "a chronological set of records that documents the sequence of financial or system actions for verification",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Every expense approval generates a clear audit trail in the accounting software.",
+          "vi": "Mỗi lần phê duyệt chi phí đều tạo ra một hồ sơ truy vết kiểm toán rõ ràng trong phần mềm kế toán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "complete audit trail",
+        "digital audit trail",
+        "maintain an audit trail"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "applicant-pool-n",
+      "word": "applicant pool",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nguồn ứng viên dự tuyển",
+          "definition_en": "the group of qualified individuals who have submitted applications for a job opening",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Extending the posting deadline helped widen the applicant pool for the analyst role.",
+          "vi": "Gia hạn thời gian đăng tuyển đã giúp mở rộng nguồn ứng viên cho vị trí chuyên viên phân tích.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "diverse applicant pool",
+        "expand the applicant pool",
+        "screen the applicant pool"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "agenda-item-n",
+      "word": "agenda item",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mục trong chương trình nghị sự",
+          "definition_en": "an individual topic or task scheduled for discussion at a formal meeting",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The final agenda item concerns parking permits for the downtown annex.",
+          "vi": "Mục cuối cùng trong chương trình nghị sự liên quan đến thẻ đỗ xe cho tòa nhà phụ ở trung tâm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "first agenda item",
+        "add an agenda item",
+        "prioritize an agenda item"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

@@ -1635,6 +1635,41 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "market-share-n",
+      "word": "market share",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thị phần",
+          "definition_en": "the percentage of total industry sales or revenue captured by a particular company or brand",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Strong online distribution helped the beverage maker expand its domestic market share.",
+          "vi": "Hệ thống phân phối trực tuyến mạnh đã giúp hãng đồ uống mở rộng thị phần trong nước.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "gain market share",
+        "domestic market share",
+        "market share growth"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

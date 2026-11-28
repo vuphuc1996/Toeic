@@ -4056,6 +4056,146 @@
       ],
       "cefr_level": "C1",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "sales-forecast-n",
+      "word": "sales forecast",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dự báo doanh số bán hàng",
+          "definition_en": "an analytical projection of expected revenue or unit volume over a future selling period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Strong pre-orders prompted management to raise the fourth-quarter sales forecast.",
+          "vi": "Lượng đặt trước cao đã thúc đẩy ban giám đốc nâng mức dự báo doanh số quý bốn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "quarterly sales forecast",
+        "revise the sales forecast",
+        "sales forecast accuracy"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "seat-assignment-n",
+      "word": "seat assignment",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "số ghế được chỉ định",
+          "definition_en": "the designated seat number allocated to a passenger on a flight, train, or conference hall",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "AIRPORT",
+        "EVENT"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Passengers can view or change their seat assignment twenty-four hours prior to departure.",
+          "vi": "Hành khách có thể xem hoặc đổi số ghế được chỉ định hai mươi bốn giờ trước giờ khởi hành.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "confirm seat assignment",
+        "boarding pass seat assignment",
+        "change seat assignment"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "shuttle-bus-n",
+      "word": "shuttle bus",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "xe buýt trung chuyển",
+          "definition_en": "a scheduled vehicle operating frequent short-distance trips between hubs such as stations, hotels, and campuses",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": [
+        "TRANSPORT",
+        "HOTEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "An electric shuttle bus leaves the main office entrance every fifteen minutes.",
+          "vi": "Một xe buýt trung chuyển chạy điện rời cổng văn phòng chính mỗi mười lăm phút.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "airport shuttle bus",
+        "complimentary shuttle bus",
+        "shuttle bus stop"
+      ],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "system-backup-n",
+      "word": "system backup",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bản sao lưu hệ thống",
+          "definition_en": "an encrypted copy of server files and databases preserved for disaster recovery",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Network administrators run an automated system backup every night at midnight.",
+          "vi": "Quản trị viên mạng chạy sao lưu hệ thống tự động mỗi đêm vào lúc nửa đêm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "automated system backup",
+        "verify the system backup",
+        "offsite system backup"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

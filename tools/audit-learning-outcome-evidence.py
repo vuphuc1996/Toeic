@@ -132,7 +132,7 @@ def render_markdown(report: dict[str, Any]) -> str:
         "- Explanation rubrics are optional learner self-reports; they are not automatically graded or externally verified.",
         "- Separate Part 5 timed accuracy uses a **30-second internal practice target**, not an ETS timing or score standard.",
         "- Listening reserve items are excluded from the criterion map. Reading Part 7 retains its second-review gate; Separate Part 5 retains its independent-review gate.",
-        "- The two uninstrumented TOEIC criteria remain visible but receive no criterion-specific score until suitable evidence exists.",
+        f"- Uninstrumented TOEIC criteria ({report['toeicUninstrumentedCount']}) remain visible but receive no criterion-specific score until suitable evidence exists.",
         "- These local practice signals do not certify CEFR level, ETS mastery, official TOEIC score or production readiness.",
         "",
         "### TOEIC criteria still awaiting a defensible measurement path",

@@ -1,23 +1,23 @@
-import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.84';
-import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.84';
-import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam, countMockPool, isQuestionMockEligible } from './mock-engine.js?__release=2.95.84';
-import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.84';
-import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.84';
-import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.84';
-import { buildObjectiveResourceIndex, buildObjectiveCriterionIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, summarizeOutcomeCriteria, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.84';
-import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.84';
-import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.84';
-import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.84';
-import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.84';
-import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.84';
-import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.84';
-import { createRobotBuddy } from './robot-buddy.js?__release=2.95.84';
-import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.84';
-import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.84';
-import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.84';
+import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.85';
+import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.85';
+import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam, countMockPool, isQuestionMockEligible } from './mock-engine.js?__release=2.95.85';
+import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.85';
+import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.85';
+import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.85';
+import { buildObjectiveResourceIndex, buildObjectiveCriterionIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, summarizeOutcomeCriteria, summarizeCriterionWeaknesses, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.85';
+import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.85';
+import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.85';
+import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.85';
+import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.85';
+import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.85';
+import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.85';
+import { createRobotBuddy } from './robot-buddy.js?__release=2.95.85';
+import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.85';
+import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.85';
+import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.85';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.84';
+const APP_RELEASE_VERSION = '2.95.85';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -2917,7 +2917,11 @@ function renderLearningOutcomeCriteria() {
     in_progress: 'Đang củng cố',
     practice_threshold_met: 'Đạt ngưỡng luyện tập'
   };
-  host.innerHTML = groups.map(group => {
+  const weaknessSummary = summarizeCriterionWeaknesses(rows, state.objectiveProgress, Date.now());
+  const priorityHtml = weaknessSummary.weaknessCount
+    ? `<div class="objective-criterion-note" data-criterion-revision-summary="true"><span><strong>Ưu tiên ôn tập theo tiêu chí (${weaknessSummary.weaknessCount}):</strong> ${weaknessSummary.weaknesses.slice(0, 2).map(item => `${escapeHtml(item.title)} — ${escapeHtml(item.reasonLabel)}`).join(' · ')}</span></div>`
+    : '';
+  host.innerHTML = priorityHtml + groups.map(group => {
     const groupRows = rows.filter(row => row.objectiveId === group.objectiveId);
     if (!groupRows.length) return '';
     const mapped = groupRows.filter(row => row.mappingCount > 0).length;

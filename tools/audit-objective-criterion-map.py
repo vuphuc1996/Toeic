@@ -314,6 +314,78 @@ def validate_listening_purpose_evidence(resource: dict, question: dict, row: dic
             errors.append("Listening purpose answerQuote does not match canonical answer choice")
     return errors
 
+
+def reading_passage_text(resource: dict) -> str:
+    """Return canonical passage text across single or multi-document Part 7 records."""
+    parts: list[str] = []
+    passage = resource.get("passage")
+    if isinstance(passage, str) and passage.strip():
+        parts.append(passage)
+    documents = resource.get("documents")
+    if isinstance(documents, list):
+        for document in documents:
+            if isinstance(document, dict) and isinstance(document.get("content"), str) and document["content"].strip():
+                parts.append(document["content"])
+    return " ".join(parts)
+
+
+def validate_part7_paraphrase_evidence(resource: dict, question: dict, row: dict) -> list[str]:
+    """Require non-reserve Part 7 resource with passage excerpt, canonical answer, mechanism and rationale."""
+    errors: list[str] = []
+    if not all(isinstance(value, dict) for value in (resource, question, row)):
+        return ["Part 7 paraphrase evidence requires resource, question and mapping objects"]
+    if resource.get("part") != "Part 7":
+        errors.append("Part 7 paraphrase mapping must belong to a Part 7 resource")
+    if resource.get("editorialStatus") == "reserve-pending-independent-review":
+        errors.append("Part 7 paraphrase mapping must not use a reserve resource")
+    passage_text = reading_passage_text(resource)
+    quote = row.get("evidenceQuote")
+    if not passage_text.strip():
+        errors.append("Part 7 paraphrase resource requires non-empty passage/document text")
+    elif not isinstance(quote, str) or not quote.strip():
+        errors.append("Part 7 paraphrase mapping requires a non-empty evidenceQuote")
+    elif _normalized_source_text(quote) not in _normalized_source_text(passage_text):
+        errors.append("Part 7 paraphrase evidenceQuote does not match canonical passage text")
+    allowed_mechanisms = {
+        "lexical_paraphrase",
+        "synonym_negation_paraphrase",
+        "temporal_inference",
+        "numeric_time_inference",
+        "category_generalization",
+        "cause_paraphrase",
+        "action_paraphrase",
+        "cause_inference",
+    }
+    mechanism = row.get("paraphraseMechanism")
+    if mechanism not in allowed_mechanisms:
+        errors.append("Part 7 paraphraseMechanism is missing or unsupported")
+    rationale = row.get("paraphraseRationale")
+    if not isinstance(rationale, str) or not rationale.strip():
+        errors.append("Part 7 paraphrase mapping requires a paraphraseRationale")
+    choices = question.get("choices")
+    answer_index = question.get("answerIndex")
+    if not isinstance(choices, list) or not all(isinstance(choice, str) for choice in choices):
+        errors.append("Part 7 paraphrase question must have string choices")
+    elif not isinstance(answer_index, int) or isinstance(answer_index, bool) or answer_index < 0 or answer_index >= len(choices):
+        errors.append("Part 7 paraphrase answerIndex is outside the canonical choices")
+    else:
+        answer_quote = row.get("answerQuote")
+        if answer_quote != choices[answer_index]:
+            errors.append("Part 7 paraphrase answerQuote does not match canonical answer choice")
+        basis = row.get("evidenceBasis")
+        if not isinstance(basis, str) or not basis.strip():
+            errors.append("Part 7 paraphrase mapping requires an evidenceBasis")
+        else:
+            if isinstance(quote, str) and quote not in basis:
+                errors.append("Part 7 paraphrase evidenceBasis must reproduce the exact passage evidenceQuote")
+            if isinstance(answer_quote, str) and answer_quote not in basis:
+                errors.append("Part 7 paraphrase evidenceBasis must identify the canonical answer choice")
+            if isinstance(mechanism, str) and mechanism not in basis:
+                errors.append("Part 7 paraphrase evidenceBasis must name the paraphraseMechanism")
+            if isinstance(rationale, str) and rationale and rationale not in basis:
+                errors.append("Part 7 paraphrase evidenceBasis must include the paraphraseRationale")
+    return errors
+
 def main() -> int:
     mapping_doc = load(MAP_PATH)
     registry = load(REGISTRY_PATH)
@@ -335,6 +407,7 @@ def main() -> int:
     part2_lexical_trap_verified = 0
     part4_inference_verified = 0
     part6_discourse_verified = 0
+    part7_paraphrase_verified = 0
 
     source_cache = {}
     for index, row in enumerate(rows):
@@ -433,6 +506,12 @@ def main() -> int:
                     errors.extend(f"{label}: {error}" for error in discourse_errors)
                     continue
                 part6_discourse_verified += 1
+            if criterion_id == "reading-part-7-paraphrase-inference":
+                paraphrase_errors = validate_part7_paraphrase_evidence(resource, question, row)
+                if paraphrase_errors:
+                    errors.extend(f"{label}: {error}" for error in paraphrase_errors)
+                    continue
+                part7_paraphrase_verified += 1
             if criterion_id in ("listening-part-3-conversation-purpose", "listening-part-4-talk-purpose"):
                 purpose_errors = validate_listening_purpose_evidence(resource, question, row)
                 if purpose_errors:
@@ -470,16 +549,18 @@ def main() -> int:
     }
     if mapped_criteria & uninstrumented_toeic:
         errors.append("an uninstrumented criterion has question mappings")
-    if len(instrumented_toeic) != 25:
-        errors.append(f"expected 25 TOEIC criteria with a mapping; found {len(instrumented_toeic)}")
-    if len(uninstrumented_toeic) != 2:
-        errors.append(f"expected 2 TOEIC criteria to remain uninstrumented; found {len(uninstrumented_toeic)}")
+    if len(instrumented_toeic) != 26:
+        errors.append(f"expected 26 TOEIC criteria with a mapping; found {len(instrumented_toeic)}")
+    if len(uninstrumented_toeic) != 1:
+        errors.append(f"expected 1 TOEIC criterion to remain uninstrumented; found {len(uninstrumented_toeic)}")
     if listening_reserve_mappings:
         errors.append(f"{listening_reserve_mappings} Listening reserve mappings were detected")
     if counts.get("listening-part-2-distractor-resistance", 0) < 10:
         errors.append("Part 2 distractor-resistance criterion must retain at least 10 unique mapped questions")
     if part2_lexical_trap_verified != counts.get("listening-part-2-distractor-resistance", 0):
         errors.append("every Part 2 distractor-resistance mapping must pass exact audio/distractor evidence validation")
+    if counts.get("listening-part-4-talk-purpose", 0) < 10:
+        errors.append("Part 4 talk-purpose criterion must retain at least 10 unique mapped questions")
     if counts.get("listening-part-4-inference-action", 0) < 10:
         errors.append("Part 4 inference/action criterion must retain at least 10 unique mapped questions")
     if part4_inference_verified != counts.get("listening-part-4-inference-action", 0):
@@ -488,6 +569,10 @@ def main() -> int:
         errors.append("Part 6 discourse-purpose criterion must retain at least 10 unique mapped questions")
     if part6_discourse_verified != counts.get("reading-part-6-discourse-purpose", 0):
         errors.append("every Part 6 discourse-purpose mapping must pass reviewed passage evidence validation")
+    if counts.get("reading-part-7-paraphrase-inference", 0) < 10:
+        errors.append("Part 7 paraphrase/inference criterion must retain at least 10 unique mapped questions")
+    if part7_paraphrase_verified != counts.get("reading-part-7-paraphrase-inference", 0):
+        errors.append("every Part 7 paraphrase/inference mapping must pass non-reserve passage evidence validation")
     if counts.get("listening-part-3-conversation-purpose", 0) < 10:
         errors.append("Part 3 conversation-purpose criterion must retain at least 10 unique mapped questions")
 
@@ -518,6 +603,7 @@ def main() -> int:
     print(f"PASS: {part2_lexical_trap_verified} Part 2 lexical-trap mappings have exact audio, wrong-choice, repeated-cue and mismatch evidence.")
     print(f"PASS: {part4_inference_verified} Part 4 next-step/action mappings have exact audio quote and inference rationale evidence.")
     print(f"PASS: {part6_discourse_verified} Part 6 discourse mappings have internally reviewed passage quote, correct-choice and relation evidence.")
+    print(f"PASS: {part7_paraphrase_verified} Part 7 paraphrase/inference mappings have non-reserve passage quote, canonical answer, mechanism and rationale evidence.")
     print("PASS: Part 7 second-review gate and Separate Part 5 independent-review gate remain active.")
     print("NOTE: Mapping inventory is not learner practice evidence, editorial approval, CEFR/ETS mastery or TOEIC score readiness.")
     return 0

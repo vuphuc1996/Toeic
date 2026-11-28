@@ -1694,6 +1694,111 @@
         "schedule flexibly",
         "operate flexibly"
       ]
+    },
+    {
+      "id": "freight-charge-n",
+      "word": "freight charge",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cước phí vận chuyển hàng hóa",
+          "definition_en": "the fee billed by a carrier for transporting commercial goods from an origin to a destination",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier agreed to waive the freight charge on expedited replacement shipments.",
+          "vi": "Nhà cung cấp đồng ý miễn cước phí vận chuyển đối với các lô hàng thay thế chuyển nhanh.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "prepaid freight charge",
+        "standard freight charge",
+        "waive the freight charge"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "focus-group-n",
+      "word": "focus group",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhóm thảo luận khảo sát thị trường",
+          "definition_en": "a small, demographically diverse panel gathered to give guided feedback on a product or campaign",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Feedback from a consumer focus group led designers to simplify the bottle cap.",
+          "vi": "Phản hồi từ nhóm thảo luận khảo sát người tiêu dùng đã giúp đội thiết kế đơn giản hóa nắp chai.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "conduct a focus group",
+        "focus group study",
+        "focus group participant"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "fire-drill-n",
+      "word": "fire drill",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "diễn tập phòng cháy và thoát hiểm",
+          "definition_en": "a scheduled practice evacuation to test emergency exits and staff readiness in case of fire",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "FACILITY",
+        "HEALTH"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All office personnel evacuated smoothly during Tuesday's morning fire drill.",
+          "vi": "Toàn thể nhân viên văn phòng đã sơ tán trật tự trong buổi diễn tập thoát hiểm sáng thứ Ba.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "scheduled fire drill",
+        "conduct a fire drill",
+        "participate in a fire drill"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

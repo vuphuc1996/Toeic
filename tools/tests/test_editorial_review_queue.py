@@ -67,7 +67,7 @@ class EditorialReviewQueueTests(unittest.TestCase):
     def test_live_metrics_match_the_reviewed_baseline_snapshot(self):
         self.assertEqual(self.metrics['listening']['eligible_questions'], self.baseline['listening']['eligibleQuestions'])
         self.assertEqual(self.metrics['listening']['reserve_questions'], self.baseline['listening']['reserveQuestions'])
-        self.assertEqual(self.metrics['listening']['practice_only_questions'], 10)
+        self.assertEqual(self.metrics['listening']['practice_only_questions'], 13)
         self.assertEqual(
             self.metrics['listening']['eligible_questions'] + self.metrics['listening']['reserve_questions'],
             self.baseline['listening']['totalQuestions'],

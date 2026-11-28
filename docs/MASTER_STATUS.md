@@ -1,16 +1,24 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.84
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.85
 
-**Current source release candidate:** v2.95.84 — Mock Pool Count Reconciliation & Listening Purpose Evidence Depth. Predecessor: candidate HEAD `d99d039` (stabilized v2.95.83 on `137160f08cd1ef2b2b505a8af1c9e7ba829b4297`). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
+**Current source release candidate:** v2.95.85 — Vocabulary Batch 029, Part 4/Part 7 Criterion Instrumentation & Revision Priority Summary. Predecessor: `v2.95.84` (`19171e45f98ba55b0098b2ed3691e2672a59c5c0` on `candidate`). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
-## Current release — v2.95.84
+## Current release — v2.95.85
+
+- **Scope:** expand canonical vocabulary via Batch 029 (`+60` headwords), lift `listening-part-4-talk-purpose` to 10 via 3 practice-only Part 4 Q5 items (`mockEligible: false`), instrument `reading-part-7-paraphrase-inference` with 12 verified non-reserve items, and surface deterministic read-only criterion revision priorities in runtime UI.
+- **Vocabulary & migrations:** **1,221 → 1,281** canonical headwords (**42.7%** of 3,000 minimum) via `data/vocabulary/batch-029.json`; `1221` repair profile added and all historical repair profiles updated with Batch 029 IDs; blank `phonetic: {}` (no fabricated IPA), empty `word_family: []`, and all 1,221 prior records preserved.
+- **Listening & Reading instrumentation:** `listening-part-4-talk-purpose` **7 → 10** (`mockEligible: false` Q5 items; Mock Listening pool remains **102** / Part 4 **30**); `reading-part-7-paraphrase-inference` **0 → 12** verified non-reserve items with fail-closed `validate_part7_paraphrase_evidence`. Total map: **1,163 links / 651 unique stable question IDs**; TOEIC criteria **26/27**; Foundation **6/6**; total **32/33** (`listening-part-1-paraphrase-recognition` remains uninstrumented).
+- **Runtime revision guidance:** pure `summarizeCriterionWeaknesses(criterionRows, progress, now)` exported from `assets/js/learning-outcome-progress.js` and surfaced as a lightweight `data-criterion-revision-summary="true"` note in `renderLearningOutcomeCriteria()` (`assets/js/app.js`).
+- **Progress:** provisional weighted measurable curriculum-build index **77.16%**; not learner mastery or total-system completion.
+- **Protected boundaries:** no `main` change, no IndexedDB schema/data migration, no UI/layout/navigation redesign, no Robot Buddy change, no existing canonical vocabulary or question/answer key edit; Listening reserve 193, Reading Part 7 reserve 87, Separate Part 5 review-only 80, and Part 4 practice-only 13 remain excluded from Mock.
+
+## Previous release — v2.95.84
 
 - **Scope:** align Mock Exam UI pool/readiness counters (`mockPoolCount` and `eligibleByPart` in `assets/js/app.js`) with `mock-engine.js` (`countMockPool` / `isQuestionMockEligible`), and deepen Part 3/Part 4 purpose criterion coverage using existing non-reserve items with verbatim audio quotes.
-- **Mock UI pool fix:** Mock landing and Part 4 readiness stats now exclude the 10 practice-only Part 4 questions (`mockEligible: false`), reporting **102** Listening available (**30** Part 4), **200** Reading available, and **295** projected Listening questions (102 approved + 193 reserve pending).
-- **Mapping inventory:** **1,148 links / 648 unique stable question IDs** (+4 `listening-part-3-conversation-purpose` 7 → 11; +5 `listening-part-4-talk-purpose` 2 → 7, still honestly below 10); TOEIC criteria **25/27**; Foundation **6/6**; total **31/33**.
-- **Progress:** provisional weighted measurable curriculum-build index **76.00%**; not learner mastery or total-system completion.
-- **Protected boundaries:** no `main` change, no IndexedDB migration, no UI/layout/navigation redesign, no Robot Buddy change, no canonical question/answer key edit; Listening reserve 193, Reading Part 7 reserve 87 and Separate Part 5 review-only 80 remain excluded.
+- **Mock UI pool fix:** Mock landing and Part 4 readiness stats exclude the practice-only Part 4 questions (`mockEligible: false`), reporting **102** Listening available (**30** Part 4), **200** Reading available, and **295** projected Listening questions (102 approved + 193 reserve pending).
+- **Mapping inventory (v2.95.84):** **1,148 links / 648 unique stable question IDs** (+4 `listening-part-3-conversation-purpose` 7 → 11; +5 `listening-part-4-talk-purpose` 2 → 7); TOEIC criteria **25/27**; Foundation **6/6**; total **31/33**.
+- **Progress (v2.95.84):** provisional weighted measurable curriculum-build index **76.00%**; not learner mastery or total-system completion.
 
 ## Previous release — v2.95.83
 

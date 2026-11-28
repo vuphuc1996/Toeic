@@ -1901,6 +1901,251 @@
       ],
       "cefr_level": "B1",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "balance-sheet-n",
+      "word": "balance sheet",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảng cân đối kế toán",
+          "definition_en": "a financial statement summarizing a company's assets, liabilities, and shareholders' equity at a specific date",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The controller reviewed the year-end balance sheet before the board meeting.",
+          "vi": "Kiểm soát viên tài chính đã rà soát bảng cân đối kế toán cuối năm trước cuộc họp hội đồng quản trị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "consolidated balance sheet",
+        "prepare a balance sheet",
+        "balance sheet summary"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "bill-of-lading-n",
+      "word": "bill of lading",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vận đơn",
+          "definition_en": "an official carrier receipt listing the goods accepted for transport and specifying delivery terms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Verify the container weight on the bill of lading before signing for release.",
+          "vi": "Hãy kiểm tra trọng lượng container trên vận đơn trước khi ký nhận giải phóng hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "signed bill of lading",
+        "original bill of lading",
+        "issue a bill of lading"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "bulk-discount-n",
+      "word": "bulk discount",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chiết khấu mua số lượng lớn",
+          "definition_en": "a reduced unit price offered when a buyer purchases a large quantity of items in a single order",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Ordering at least fifty cartons qualifies our branch for a ten-percent bulk discount.",
+          "vi": "Đặt mua tối thiểu năm mươi thùng giúp chi nhánh chúng ta đủ điều kiện hưởng chiết khấu mua số lượng lớn mười phần trăm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "offer a bulk discount",
+        "corporate bulk discount",
+        "qualify for a bulk discount"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "background-check-n",
+      "word": "background check",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "xác minh lý lịch và quá trình công tác",
+          "definition_en": "the formal verification of a job candidate's employment history, credentials, and references prior to hiring",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All final job offers are conditional upon completing a standard background check.",
+          "vi": "Mọi thư mời nhận việc chính thức đều phụ thuộc vào việc hoàn tất kiểm tra lý lịch tiêu chuẩn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "complete a background check",
+        "employment background check",
+        "consent to a background check"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "brand-awareness-n",
+      "word": "brand awareness",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mức độ nhận diện thương hiệu",
+          "definition_en": "the extent to which target customers recognize and recall a company's name or products",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Sponsoring the regional trade expo boosted brand awareness among hospitality buyers.",
+          "vi": "Việc tài trợ hội chợ thương mại khu vực đã nâng cao mức độ nhận diện thương hiệu với khách hàng ngành khách sạn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "increase brand awareness",
+        "build brand awareness",
+        "brand awareness campaign"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "boardroom-n",
+      "word": "boardroom",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phòng họp ban lãnh đạo",
+          "definition_en": "a formal meeting room equipped for executive leadership or a board of directors",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "MEETING",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Video equipment in the executive boardroom was tested thirty minutes before the briefing.",
+          "vi": "Thiết bị trình chiếu trong phòng họp ban lãnh đạo đã được kiểm tra trước buổi họp ba mươi phút.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "executive boardroom",
+        "main boardroom",
+        "boardroom reservation"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "breakout-session-n",
+      "word": "breakout session",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiên thảo luận nhóm chuyên đề",
+          "definition_en": "a smaller workshop or focused discussion held separately from the main conference gathering",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "EVENT",
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Attendees may sign up for one afternoon breakout session on data security.",
+          "vi": "Người tham dự có thể đăng ký một phiên thảo luận nhóm chuyên đề buổi chiều về bảo mật dữ liệu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "afternoon breakout session",
+        "lead a breakout session",
+        "breakout session room"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

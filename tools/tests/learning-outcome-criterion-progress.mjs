@@ -5,6 +5,7 @@ import {
   recordExplanationRubric,
   listDueRecallItems,
   summarizeOutcomeCriteria,
+  summarizeCriterionWeaknesses,
   auditObjectiveProgress
 } from '../../assets/js/learning-outcome-progress.js';
 
@@ -93,10 +94,26 @@ assert.equal(criterionDue.mappedResourceId, 'grammar-lesson-a');
 assert.equal(criterionDue.questionKey, 'grammar:lesson-a:1');
 console.log('PASS: criterion-level delayed recall is present in the existing queue and retains its source resource.');
 
+const weaknessBeforeDue = summarizeCriterionWeaknesses(resultRows, ledger, 5000);
+assert.equal(weaknessBeforeDue.evaluatedCount, 4);
+assert.equal(weaknessBeforeDue.topRecommendation.outcomeId, 'part5-sentence-completion-time-management');
+assert.equal(weaknessBeforeDue.topRecommendation.reason, 'below_threshold');
+
+const weaknessAtDue = summarizeCriterionWeaknesses(resultRows, ledger, dueAt + 2000);
+assert.equal(weaknessAtDue.dueRecallTotal > 0, true);
+assert.equal(weaknessAtDue.weaknesses.some(w => w.outcomeId === 'grammar-core-contextual-choice' && w.reason === 'recall_due'), true);
+
+const emptyRows = summarizeOutcomeCriteria({}, registry, resourceMap, criterionMap, 5000);
+const emptyWeaknesses = summarizeCriterionWeaknesses(emptyRows, {}, 5000);
+assert.equal(emptyWeaknesses.weaknessCount, 0);
+assert.equal(emptyWeaknesses.topRecommendation, null);
+
 const cleanAudit = auditObjectiveProgress(ledger, resourceMap, registry);
 assert.equal(cleanAudit.valid, true, 'criterion IDs are recognized when the outcome registry is supplied to the read-only audit');
 const frozen = Object.freeze({ schemaVersion: 1, objectives: Object.freeze({ 'grammar-core-contextual-choice': Object.freeze({ items: Object.freeze({ q: Object.freeze({ latestCorrect: true, latestAnsweredAt: 1, attempts: Object.freeze([Object.freeze({ correct: true, answeredAt: 1 })]), recallDueAt: 0, recallChecks: Object.freeze([]) }) }) }) }) });
 const snapshot = JSON.stringify(frozen);
-assert.equal(summarizeOutcomeCriteria(frozen, registry, resourceMap, criterionMap).length, 5);
+const frozenRows = summarizeOutcomeCriteria(frozen, registry, resourceMap, criterionMap);
+assert.equal(frozenRows.length, 5);
+assert.equal(summarizeCriterionWeaknesses(frozenRows, frozen, 5000).evaluatedCount, 4);
 assert.equal(JSON.stringify(frozen), snapshot, 'criterion summaries are read-only');
-console.log('PASS: criterion ledger integrity and read-only dashboard summary.');
+console.log('PASS: criterion ledger integrity, weakness detection and read-only dashboard summary.');

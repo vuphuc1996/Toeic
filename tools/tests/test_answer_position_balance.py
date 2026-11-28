@@ -123,9 +123,9 @@ class AnswerPositionBalanceTests(unittest.TestCase):
             for question in item.get('questions', [])
             if question.get('mockEligible') is False
         ]
-        self.assertEqual(len(practice_only), 10)
+        self.assertEqual(len(practice_only), 13)
         self.assertTrue(all(item.get('part') == 'Part 4' for item, _ in practice_only))
-        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 305)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 308)
         self.assertEqual(sum(len(x.get('questions', [])) for x in self.reading), 287)
 
         # Batch 027 added 32 questions in 16 reserve resources. All must remain

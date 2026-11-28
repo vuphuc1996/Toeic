@@ -10,7 +10,7 @@ class VocabularyBatch012Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.batch = json.loads((ROOT / 'data/vocabulary/batch-012.json').read_text(encoding='utf-8'))
-        cls.current_batch = json.loads((ROOT / 'data/vocabulary/batch-028.json').read_text(encoding='utf-8'))
+        cls.current_batch = json.loads((ROOT / 'data/vocabulary/batch-029.json').read_text(encoding='utf-8'))
         cls.manifest = json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf-8'))
         cls.records = {}
         for entry in cls.manifest['letters']:
@@ -52,12 +52,12 @@ class VocabularyBatch012Tests(unittest.TestCase):
                 self.assertIn(row['id'], self.ledger_ids, row['word'])
 
     def test_release_delta_and_migration_profile_are_exact(self):
-        self.assertEqual(self.manifest['totalWords'], 1221)
-        self.assertEqual(self.manifest['previousReleaseTotalWords'], 1181)
+        self.assertEqual(self.manifest['totalWords'], 1281)
+        self.assertEqual(self.manifest['previousReleaseTotalWords'], 1221)
         self.assertEqual(self.manifest['releaseAdditionIds'], [row['id'] for row in self.current_batch['words']])
         profile = next(x for x in self.manifest['releaseRepairProfiles'] if x['previousTotalWords'] == 1100)
         self.assertEqual(profile['releaseAdditionIds'][:37], [row['id'] for row in self.batch['words']])
-        self.assertEqual(len(profile['releaseAdditionIds']), 121, 'legacy 1100-word snapshots restore Batch 012, 013, 026, 027 and 028 additions')
+        self.assertEqual(len(profile['releaseAdditionIds']), 181, 'legacy 1100-word snapshots restore Batch 012, 013, 026, 027, 028 and 029 additions')
 
 
 if __name__ == '__main__':

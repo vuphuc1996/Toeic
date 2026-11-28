@@ -1,0 +1,1763 @@
+{
+  "schemaVersion": 1,
+  "batch": "029",
+  "version": "2.95.85",
+  "focus": "TOEIC workplace Finance & Accounting, Procurement & Logistics, Human Resources, Marketing & Customer Service, and Corporate Events & IT Operations vocabulary",
+  "count": 60,
+  "editorialStatus": "original editorial draft; independent lexical review pending; CEFR levels are editorial estimates by sense",
+  "sourcePolicy": "Definitions, Vietnamese meanings, TOEIC workplace examples and collocations are project-authored editorial content. No US IPA is supplied in this batch because pronunciation entries were not independently source-verified. No Word Family links are added without an exact, sense-matched canonical relationship. CEFR labels are editorial estimates, not official alignment.",
+  "sources": [],
+  "ipaSummary": {
+    "populated": 0,
+    "leftBlank": 60,
+    "blankWords": [
+      "accrued interest",
+      "audit trail",
+      "balance sheet",
+      "cash flow",
+      "cost overrun",
+      "credit memo",
+      "gross margin",
+      "petty cash",
+      "tax exemption",
+      "working capital",
+      "bill of lading",
+      "bulk discount",
+      "cargo manifest",
+      "customs clearance",
+      "freight charge",
+      "order fulfillment",
+      "price quote",
+      "restocking fee",
+      "unit cost",
+      "vendor list",
+      "applicant pool",
+      "background check",
+      "compensation package",
+      "exit interview",
+      "job shadowing",
+      "onboarding process",
+      "performance appraisal",
+      "probationary period",
+      "tuition reimbursement",
+      "workforce planning",
+      "brand awareness",
+      "cold call",
+      "focus group",
+      "market share",
+      "point of sale",
+      "product recall",
+      "promotional offer",
+      "return policy",
+      "sales forecast",
+      "warranty claim",
+      "agenda item",
+      "boardroom",
+      "breakout session",
+      "conference badge",
+      "connecting flight",
+      "direct deposit",
+      "expense voucher",
+      "fire drill",
+      "itinerary change",
+      "keynote speaker",
+      "loyalty program",
+      "password reset",
+      "reimbursement form",
+      "room upgrade",
+      "round-trip",
+      "seat assignment",
+      "shuttle bus",
+      "system backup",
+      "time zone",
+      "workflow"
+    ]
+  },
+  "reciprocalLinksSummary": {
+    "addedReciprocalLinks": 0,
+    "modifiedExistingRecords": 0,
+    "note": "All 60 new records have empty word_family arrays. No relationship was inferred from topic similarity or surface spelling."
+  },
+  "words": [
+    {
+      "id": "accrued-interest-n",
+      "word": "accrued interest",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "lãi dồn tích; tiền lãi phát sinh chưa thanh toán",
+          "definition_en": "interest accumulated on a loan or investment since the previous payment date that has not yet been paid or received",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": ["FINANCE", "BANKING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The quarterly statement includes accrued interest on the corporate credit line.",
+          "vi": "Báo cáo quý bao gồm tiền lãi dồn tích trên hạn mức tín dụng doanh nghiệp.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["accrued interest calculation", "accrued interest payable", "record accrued interest"],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "audit-trail-n",
+      "word": "audit trail",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dấu vết kiểm toán; hồ sơ truy vết giao dịch",
+          "definition_en": "a chronological set of records that documents the sequence of financial or system actions for verification",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["FINANCE", "TECHNOLOGY"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Every expense approval generates a clear audit trail in the accounting software.",
+          "vi": "Mỗi lần phê duyệt chi phí đều tạo ra một hồ sơ truy vết kiểm toán rõ ràng trong phần mềm kế toán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["complete audit trail", "digital audit trail", "maintain an audit trail"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "balance-sheet-n",
+      "word": "balance sheet",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảng cân đối kế toán",
+          "definition_en": "a financial statement summarizing a company's assets, liabilities, and shareholders' equity at a specific date",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["FINANCE", "BUSINESS"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The controller reviewed the year-end balance sheet before the board meeting.",
+          "vi": "Kiểm soát viên tài chính đã rà soát bảng cân đối kế toán cuối năm trước cuộc họp hội đồng quản trị.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["consolidated balance sheet", "prepare a balance sheet", "balance sheet summary"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cash-flow-n",
+      "word": "cash flow",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dòng tiền",
+          "definition_en": "the total movement of money entering and leaving a business during a given operating period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["FINANCE", "BUSINESS"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Faster invoice collection significantly improved cash flow at the regional office.",
+          "vi": "Việc thu hồi hóa đơn nhanh hơn đã cải thiện đáng kể dòng tiền tại văn phòng khu vực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["cash flow projection", "positive cash flow", "manage cash flow"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cost-overrun-n",
+      "word": "cost overrun",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chi phí vượt dự toán; đội vốn",
+          "definition_en": "an unexpected increase in actual project expenses beyond the originally approved budget",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["FINANCE", "CONSTRUCTION"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Strict weekly budget tracking helps prevent a major cost overrun during renovations.",
+          "vi": "Theo dõi ngân sách chặt chẽ hằng tuần giúp ngăn ngừa chi phí vượt dự toán lớn trong quá trình cải tạo.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["budget cost overrun", "prevent cost overrun", "explain a cost overrun"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "credit-memo-n",
+      "word": "credit memo",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiếu ghi có; thông báo điều chỉnh giảm công nợ",
+          "definition_en": "a commercial document issued by a seller reducing the amount a buyer owes on a previous invoice",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["FINANCE", "PURCHASING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Accounts receivable issued a credit memo for the three returned printers.",
+          "vi": "Bộ phận công nợ phải thu đã phát hành phiếu ghi có cho ba chiếc máy in được trả lại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["issue a credit memo", "credit memo number", "apply a credit memo"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "gross-margin-n",
+      "word": "gross margin",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "biên lợi nhuận gộp",
+          "definition_en": "the difference between net sales revenue and direct production costs, often expressed as a percentage",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": ["FINANCE", "MARKETING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Lower packaging material prices lifted the division's gross margin by two percent.",
+          "vi": "Giá vật liệu đóng gói giảm đã nâng biên lợi nhuận gộp của bộ phận lên hai phần trăm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["gross margin percentage", "improve gross margin", "quarterly gross margin"],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "petty-cash-n",
+      "word": "petty cash",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quỹ tiền mặt chi tiêu vặt",
+          "definition_en": "a small fund of cash kept on office premises to pay for minor day-to-day workplace expenses",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["FINANCE", "OFFICE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Submit a signed receipt before withdrawing postage money from petty cash.",
+          "vi": "Hãy nộp biên lai có chữ ký trước khi rút tiền bưu phí từ quỹ tiền mặt chi tiêu vặt.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["petty cash box", "petty cash voucher", "replenish petty cash"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "tax-exemption-n",
+      "word": "tax exemption",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "miễn thuế",
+          "definition_en": "a legal reduction or removal of tax liability granted to qualified organizations, goods, or transactions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["FINANCE", "LEGAL"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Nonprofit buyers must attach a valid tax exemption certificate at checkout.",
+          "vi": "Người mua là tổ chức phi lợi nhuận phải đính kèm giấy chứng nhận miễn thuế hợp lệ khi thanh toán.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["tax exemption certificate", "qualify for tax exemption", "claim a tax exemption"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "working-capital-n",
+      "word": "working capital",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vốn lưu động",
+          "definition_en": "the funds available to meet a company's short-term operational obligations, calculated as current assets minus current liabilities",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": ["FINANCE", "BANKING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The manufacturer secured a short-term loan to strengthen seasonal working capital.",
+          "vi": "Nhà sản xuất đã thu xếp một khoản vay ngắn hạn để củng cố vốn lưu động theo mùa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["working capital requirement", "sufficient working capital", "working capital loan"],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "bill-of-lading-n",
+      "word": "bill of lading",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "vận đơn",
+          "definition_en": "an official carrier receipt listing the goods accepted for transport and specifying delivery terms",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": ["SHIPPING", "LEGAL"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Verify the container weight on the bill of lading before signing for release.",
+          "vi": "Hãy kiểm tra trọng lượng container trên vận đơn trước khi ký nhận giải phóng hàng.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["signed bill of lading", "original bill of lading", "issue a bill of lading"],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "bulk-discount-n",
+      "word": "bulk discount",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chiết khấu mua số lượng lớn",
+          "definition_en": "a reduced unit price offered when a buyer purchases a large quantity of items in a single order",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["PURCHASING", "SHOPPING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Ordering at least fifty cartons qualifies our branch for a ten-percent bulk discount.",
+          "vi": "Đặt mua tối thiểu năm mươi thùng giúp chi nhánh chúng ta đủ điều kiện hưởng chiết khấu mua số lượng lớn mười phần trăm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["offer a bulk discount", "corporate bulk discount", "qualify for a bulk discount"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cargo-manifest-n",
+      "word": "cargo manifest",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảng kê khai hàng hóa vận chuyển",
+          "definition_en": "a detailed inventory document listing all freight items carried on a ship, aircraft, or truck",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["SHIPPING", "TRANSPORT"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The customs officer compared the pallet labels against the updated cargo manifest.",
+          "vi": "Nhân viên hải quan đã đối chiếu nhãn kiện hàng với bảng kê khai hàng hóa đã cập nhật.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["submit a cargo manifest", "electronic cargo manifest", "check the cargo manifest"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "customs-clearance-n",
+      "word": "customs clearance",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thủ tục thông quan",
+          "definition_en": "official authorization from customs authorities allowing imported or exported goods to enter or leave a country",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["SHIPPING", "AIRPORT"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Incomplete commercial invoices delayed customs clearance at the port by two days.",
+          "vi": "Hóa đơn thương mại thiếu thông tin đã làm chậm thủ tục thông quan tại cảng mất hai ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["customs clearance delay", "expedite customs clearance", "customs clearance fee"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "freight-charge-n",
+      "word": "freight charge",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cước phí vận chuyển hàng hóa",
+          "definition_en": "the fee billed by a carrier for transporting commercial goods from an origin to a destination",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["SHIPPING", "FINANCE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The supplier agreed to waive the freight charge on expedited replacement shipments.",
+          "vi": "Nhà cung cấp đồng ý miễn cước phí vận chuyển đối với các lô hàng thay thế chuyển nhanh.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["prepaid freight charge", "standard freight charge", "waive the freight charge"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "order-fulfillment-n",
+      "word": "order fulfillment",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy trình xử lý và giao hoàn tất đơn hàng",
+          "definition_en": "the complete process of receiving, picking, packing, and shipping customer orders accurately",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["SHIPPING", "CUSTOMER"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Automating barcode scans cut average order fulfillment time to under four hours.",
+          "vi": "Tự động hóa quét mã vạch đã rút ngắn thời gian xử lý và giao hoàn tất đơn hàng xuống dưới bốn giờ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["order fulfillment center", "order fulfillment rate", "streamline order fulfillment"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "price-quote-n",
+      "word": "price quote",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảng báo giá",
+          "definition_en": "a formal written statement telling a prospective buyer the exact cost for specified products or services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["PURCHASING", "BUSINESS"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Purchasing requested a revised price quote from three certified printing vendors.",
+          "vi": "Phòng mua hàng đã yêu cầu bảng báo giá cập nhật từ ba nhà cung cấp in ấn được chứng nhận.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["request a price quote", "written price quote", "valid price quote"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "restocking-fee-n",
+      "word": "restocking fee",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phí nhập lại kho khi trả hàng",
+          "definition_en": "a handling charge deducted by a seller when non-defective merchandise is returned for a refund",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["CUSTOMER", "SHOPPING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Customers are not charged a restocking fee when an item arrives damaged in transit.",
+          "vi": "Khách hàng không bị tính phí nhập lại kho khi sản phẩm bị hư hỏng trong quá trình vận chuyển.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["waive the restocking fee", "restocking fee policy", "charge a restocking fee"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "unit-cost-n",
+      "word": "unit cost",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đơn giá; chi phí trên một đơn vị sản phẩm",
+          "definition_en": "the total expenditure incurred to produce, store, or buy a single unit of a product or service",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["PURCHASING", "FINANCE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Higher production volume reduced the unit cost of each aluminum casing.",
+          "vi": "Sản lượng sản xuất cao hơn đã làm giảm chi phí trên một đơn vị vỏ nhôm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["lower the unit cost", "unit cost breakdown", "average unit cost"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "vendor-list-n",
+      "word": "vendor list",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "danh sách nhà cung cấp được phê duyệt",
+          "definition_en": "a maintained directory of external suppliers approved to provide goods or services to an organization",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["PURCHASING", "OFFICE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please select a catering company from the approved vendor list on the intranet.",
+          "vi": "Vui lòng chọn một công ty cung cấp tiệc từ danh sách nhà cung cấp được phê duyệt trên mạng nội bộ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["approved vendor list", "update the vendor list", "preferred vendor list"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "applicant-pool-n",
+      "word": "applicant pool",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nguồn ứng viên dự tuyển",
+          "definition_en": "the group of qualified individuals who have submitted applications for a job opening",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["HR", "CAREER"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Extending the posting deadline helped widen the applicant pool for the analyst role.",
+          "vi": "Gia hạn thời gian đăng tuyển đã giúp mở rộng nguồn ứng viên cho vị trí chuyên viên phân tích.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["diverse applicant pool", "expand the applicant pool", "screen the applicant pool"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "background-check-n",
+      "word": "background check",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "xác minh lý lịch và quá trình công tác",
+          "definition_en": "the formal verification of a job candidate's employment history, credentials, and references prior to hiring",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["HR", "LEGAL"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All final job offers are conditional upon completing a standard background check.",
+          "vi": "Mọi thư mời nhận việc chính thức đều phụ thuộc vào việc hoàn tất kiểm tra lý lịch tiêu chuẩn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["complete a background check", "employment background check", "consent to a background check"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "compensation-package-n",
+      "word": "compensation package",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "gói lương thưởng và phúc lợi",
+          "definition_en": "the total combination of salary, bonuses, health insurance, and other benefits offered to an employee",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["HR", "FINANCE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The revised compensation package includes annual performance bonuses and transit stipends.",
+          "vi": "Gói lương thưởng và phúc lợi điều chỉnh bao gồm tiền thưởng hiệu suất hằng năm và phụ cấp đi lại.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["competitive compensation package", "negotiate a compensation package", "executive compensation package"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "exit-interview-n",
+      "word": "exit interview",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "buổi phỏng vấn nghỉ việc",
+          "definition_en": "a structured discussion held between human resources and a departing employee to gather feedback",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["HR", "MEETING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Human resources schedules a confidential exit interview during an employee's final week.",
+          "vi": "Phòng nhân sự sắp xếp một buổi phỏng vấn nghỉ việc bảo mật trong tuần làm việc cuối của nhân viên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["conduct an exit interview", "exit interview feedback", "schedule an exit interview"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "job-shadowing-n",
+      "word": "job shadowing",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quan sát công việc thực tế cùng nhân viên giàu kinh nghiệm",
+          "definition_en": "a workplace training method in which a trainee observes an experienced staff member during daily tasks",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["HR", "EDUCATION"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "New support agents spend two mornings in job shadowing before handling live calls.",
+          "vi": "Nhân viên hỗ trợ mới dành hai buổi sáng quan sát công việc thực tế trước khi tự tiếp nhận cuộc gọi.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["job shadowing program", "arrange job shadowing", "job shadowing session"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "onboarding-process-n",
+      "word": "onboarding process",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy trình hội nhập nhân viên mới",
+          "definition_en": "the series of administrative, technical, and training steps used to integrate new hires into a company",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["HR", "OFFICE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "An updated checklist streamlined the onboarding process for remote engineers.",
+          "vi": "Danh mục kiểm tra cập nhật đã tinh gọn quy trình hội nhập cho các kỹ sư làm việc từ xa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["smooth onboarding process", "complete the onboarding process", "employee onboarding process"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "performance-appraisal-n",
+      "word": "performance appraisal",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đánh giá hiệu suất làm việc",
+          "definition_en": "a periodic formal review in which a manager evaluates an employee's achievements and development goals",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["HR", "CAREER"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Annual salary adjustments are determined after each manager submits a performance appraisal.",
+          "vi": "Mức điều chỉnh lương hằng năm được xác định sau khi mỗi quản lý nộp bản đánh giá hiệu suất.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["annual performance appraisal", "performance appraisal form", "conduct a performance appraisal"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "probationary-period-n",
+      "word": "probationary period",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian thử việc",
+          "definition_en": "an initial trial phase at the start of employment during which performance and suitability are evaluated",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["HR", "LEGAL"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Full medical coverage takes effect once a new hire finishes the ninety-day probationary period.",
+          "vi": "Bảo hiểm y tế đầy đủ có hiệu lực sau khi nhân viên mới hoàn thành thời gian thử việc chín mươi ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["ninety-day probationary period", "complete the probationary period", "extend a probationary period"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "tuition-reimbursement-n",
+      "word": "tuition reimbursement",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chính sách hoàn trả học phí",
+          "definition_en": "an employer benefit that repays approved course fees after an employee completes relevant training",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["HR", "EDUCATION"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Staff seeking tuition reimbursement must obtain supervisor approval before enrollment.",
+          "vi": "Nhân viên muốn được hoàn trả học phí phải xin phê duyệt của cấp trên trước khi đăng ký học.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["apply for tuition reimbursement", "tuition reimbursement policy", "eligible for tuition reimbursement"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "workforce-planning-n",
+      "word": "workforce planning",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "hoạch định nguồn nhân lực",
+          "definition_en": "the systematic process of forecasting staffing needs and aligning talent supply with business goals",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": ["HR", "BUSINESS"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Department heads met with recruitment specialists for quarterly workforce planning.",
+          "vi": "Trưởng các bộ phận đã họp với chuyên viên tuyển dụng để hoạch định nguồn nhân lực theo quý.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["strategic workforce planning", "workforce planning model", "quarterly workforce planning"],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "brand-awareness-n",
+      "word": "brand awareness",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mức độ nhận diện thương hiệu",
+          "definition_en": "the extent to which target customers recognize and recall a company's name or products",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["MARKETING", "BUSINESS"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Sponsoring the regional trade expo boosted brand awareness among hospitality buyers.",
+          "vi": "Việc tài trợ hội chợ thương mại khu vực đã nâng cao mức độ nhận diện thương hiệu với khách hàng ngành khách sạn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["increase brand awareness", "build brand awareness", "brand awareness campaign"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "cold-call-n",
+      "word": "cold call",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "cuộc gọi chào hàng trực tiếp chưa hẹn trước",
+          "definition_en": "an unsolicited telephone call or visit made by a salesperson to a prospective customer",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["MARKETING", "COMMUNICATION"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Sales trainees practiced opening scripts before making their first cold call to prospects.",
+          "vi": "Thực tập sinh bán hàng đã luyện kịch bản mở đầu trước khi thực hiện cuộc gọi chào hàng đầu tiên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["cold call script", "make a cold call", "outbound cold call"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "focus-group-n",
+      "word": "focus group",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nhóm thảo luận khảo sát thị trường",
+          "definition_en": "a small, demographically diverse panel gathered to give guided feedback on a product or campaign",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["MARKETING", "MEETING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Feedback from a consumer focus group led designers to simplify the bottle cap.",
+          "vi": "Phản hồi từ nhóm thảo luận khảo sát người tiêu dùng đã giúp đội thiết kế đơn giản hóa nắp chai.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["conduct a focus group", "focus group study", "focus group participant"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "market-share-n",
+      "word": "market share",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thị phần",
+          "definition_en": "the percentage of total industry sales or revenue captured by a particular company or brand",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["MARKETING", "FINANCE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Strong online distribution helped the beverage maker expand its domestic market share.",
+          "vi": "Hệ thống phân phối trực tuyến mạnh đã giúp hãng đồ uống mở rộng thị phần trong nước.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["gain market share", "domestic market share", "market share growth"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "point-of-sale-n",
+      "word": "point of sale",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điểm bán hàng; quầy thanh toán",
+          "definition_en": "the physical location or checkout terminal where a retail transaction is completed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["SHOPPING", "TECHNOLOGY"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All retail branches upgraded their point of sale terminals to accept contactless cards.",
+          "vi": "Tất cả chi nhánh bán lẻ đã nâng cấp thiết bị tại điểm bán hàng để chấp nhận thẻ không tiếp xúc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["point of sale terminal", "point of sale display", "point of sale system"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "product-recall-n",
+      "word": "product recall",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thu hồi sản phẩm lỗi",
+          "definition_en": "an official request to return or replace manufactured items found to contain a safety or quality defect",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["QUALITY", "CUSTOMER"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The appliance firm announced a voluntary product recall for heaters built in April.",
+          "vi": "Hãng thiết bị gia dụng đã công bố thu hồi tự nguyện đối với các máy sưởi sản xuất trong tháng Tư.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["voluntary product recall", "product recall notice", "issue a product recall"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "promotional-offer-n",
+      "word": "promotional offer",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ưu đãi khuyến mãi",
+          "definition_en": "a temporary discount, bonus, or special package designed to attract buyers and boost sales",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["MARKETING", "SHOPPING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "This seasonal promotional offer expires at midnight on Sunday.",
+          "vi": "Ưu đãi khuyến mãi theo mùa này sẽ hết hạn vào nửa đêm Chủ nhật.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["seasonal promotional offer", "redeem a promotional offer", "limited-time promotional offer"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "return-policy-n",
+      "word": "return policy",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chính sách đổi trả hàng",
+          "definition_en": "the published rules specifying when and how customers may send back purchases for exchange or refund",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["CUSTOMER", "SHOPPING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Under our store return policy, unopened electronics may be exchanged within thirty days.",
+          "vi": "Theo chính sách đổi trả của cửa hàng, đồ điện tử chưa mở hộp có thể được đổi trong vòng ba mươi ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["thirty-day return policy", "store return policy", "review the return policy"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "sales-forecast-n",
+      "word": "sales forecast",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "dự báo doanh số bán hàng",
+          "definition_en": "an analytical projection of expected revenue or unit volume over a future selling period",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["MARKETING", "FINANCE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Strong pre-orders prompted management to raise the fourth-quarter sales forecast.",
+          "vi": "Lượng đặt trước cao đã thúc đẩy ban giám đốc nâng mức dự báo doanh số quý bốn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["quarterly sales forecast", "revise the sales forecast", "sales forecast accuracy"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "warranty-claim-n",
+      "word": "warranty claim",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "yêu cầu bảo hành",
+          "definition_en": "a formal customer request for repair, replacement, or service covered under a product guarantee",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["CUSTOMER", "QUALITY"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Include the product serial number and receipt when submitting an online warranty claim.",
+          "vi": "Hãy đính kèm số sê-ri sản phẩm và hóa đơn khi gửi yêu cầu bảo hành trực tuyến.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["file a warranty claim", "process a warranty claim", "valid warranty claim"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "agenda-item-n",
+      "word": "agenda item",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "mục trong chương trình nghị sự",
+          "definition_en": "an individual topic or task scheduled for discussion at a formal meeting",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["MEETING", "OFFICE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The final agenda item concerns parking permits for the downtown annex.",
+          "vi": "Mục cuối cùng trong chương trình nghị sự liên quan đến thẻ đỗ xe cho tòa nhà phụ ở trung tâm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["first agenda item", "add an agenda item", "prioritize an agenda item"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "boardroom-n",
+      "word": "boardroom",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phòng họp ban lãnh đạo",
+          "definition_en": "a formal meeting room equipped for executive leadership or a board of directors",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["MEETING", "OFFICE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Video equipment in the executive boardroom was tested thirty minutes before the briefing.",
+          "vi": "Thiết bị trình chiếu trong phòng họp ban lãnh đạo đã được kiểm tra trước buổi họp ba mươi phút.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["executive boardroom", "main boardroom", "boardroom reservation"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "breakout-session-n",
+      "word": "breakout session",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "phiên thảo luận nhóm chuyên đề",
+          "definition_en": "a smaller workshop or focused discussion held separately from the main conference gathering",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["EVENT", "MEETING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Attendees may sign up for one afternoon breakout session on data security.",
+          "vi": "Người tham dự có thể đăng ký một phiên thảo luận nhóm chuyên đề buổi chiều về bảo mật dữ liệu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["afternoon breakout session", "lead a breakout session", "breakout session room"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "conference-badge-n",
+      "word": "conference badge",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thẻ đeo đại biểu hội nghị",
+          "definition_en": "an identification card worn by event participants for admission to halls and sessions",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["EVENT", "BUSINESS"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please pick up your printed conference badge at the east lobby check-in desk.",
+          "vi": "Vui lòng nhận thẻ đeo hội nghị đã in của bạn tại quầy đăng ký sảnh phía đông.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["wear a conference badge", "conference badge pickup", "lanyard conference badge"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "connecting-flight-n",
+      "word": "connecting flight",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyến bay nối chuyến",
+          "definition_en": "a subsequent flight a traveler boards at an intermediate airport to reach a final destination",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["AIRPORT", "TRAVEL"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Fog in Chicago caused several sales representatives to miss their connecting flight to Boston.",
+          "vi": "Sương mù tại Chicago khiến nhiều đại diện bán hàng lỡ chuyến bay nối chuyến đi Boston.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["miss a connecting flight", "connecting flight gate", "catch a connecting flight"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "direct-deposit-n",
+      "word": "direct deposit",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chuyển khoản lương hoặc tiền trực tiếp vào tài khoản",
+          "definition_en": "the electronic transfer of wages or reimbursements directly into a recipient's bank account",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["BANKING", "HR"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "New employees may enroll in direct deposit through the secure payroll portal.",
+          "vi": "Nhân viên mới có thể đăng ký nhận lương chuyển khoản trực tiếp qua cổng bảng lương bảo mật.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["direct deposit authorization", "enroll in direct deposit", "receive payment by direct deposit"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "expense-voucher-n",
+      "word": "expense voucher",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chứng từ thanh toán chi phí",
+          "definition_en": "an accounting form submitted with receipts to authorize payment or reimbursement for business expenses",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["FINANCE", "TRAVEL"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Attach itemized hotel receipts to your travel expense voucher before Friday.",
+          "vi": "Hãy đính kèm hóa đơn khách sạn chi tiết vào chứng từ chi phí công tác trước thứ Sáu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["submit an expense voucher", "travel expense voucher", "approve an expense voucher"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "fire-drill-n",
+      "word": "fire drill",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "diễn tập phòng cháy và thoát hiểm",
+          "definition_en": "a scheduled practice evacuation to test emergency exits and staff readiness in case of fire",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["FACILITY", "HEALTH"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All office personnel evacuated smoothly during Tuesday's morning fire drill.",
+          "vi": "Toàn thể nhân viên văn phòng đã sơ tán trật tự trong buổi diễn tập thoát hiểm sáng thứ Ba.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["scheduled fire drill", "conduct a fire drill", "participate in a fire drill"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "itinerary-change-n",
+      "word": "itinerary change",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thay đổi lịch trình chuyến đi",
+          "definition_en": "a modification to previously booked flights, hotel nights, or business travel times",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["TRAVEL", "BUSINESS"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Notify the corporate travel desk immediately regarding any last-minute itinerary change.",
+          "vi": "Hãy thông báo ngay cho bộ phận công tác của công ty về bất kỳ thay đổi lịch trình phút chót nào.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["report an itinerary change", "travel itinerary change", "approve an itinerary change"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "keynote-speaker-n",
+      "word": "keynote speaker",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "diễn giả chính của hội nghị",
+          "definition_en": "the featured presenter who delivers the main opening or thematic address at an event",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["EVENT", "MEETING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Our keynote speaker will open the annual logistics summit at nine o'clock.",
+          "vi": "Diễn giả chính của chúng ta sẽ khai mạc hội nghị thượng đỉnh hậu cần thường niên lúc chín giờ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["introduce the keynote speaker", "featured keynote speaker", "conference keynote speaker"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "loyalty-program-n",
+      "word": "loyalty program",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chương trình khách hàng thân thiết",
+          "definition_en": "a rewards system offering points, discounts, or perks to repeat buyers or frequent travelers",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["CUSTOMER", "MARKETING"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Members of the hotel loyalty program receive complimentary breakfast and late checkout.",
+          "vi": "Thành viên chương trình khách hàng thân thiết của khách sạn được miễn phí bữa sáng và trả phòng muộn.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["join a loyalty program", "customer loyalty program", "loyalty program rewards"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "password-reset-n",
+      "word": "password reset",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đặt lại mật khẩu",
+          "definition_en": "the security procedure for clearing an old access credential and setting a new login password",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["TECHNOLOGY", "OFFICE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Contact the IT help desk if your password reset link expires before activation.",
+          "vi": "Hãy liên hệ bộ phận hỗ trợ công nghệ thông tin nếu liên kết đặt lại mật khẩu hết hạn trước khi kích hoạt.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["request a password reset", "password reset link", "mandatory password reset"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "reimbursement-form-n",
+      "word": "reimbursement form",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "biểu mẫu đề nghị hoàn tiền chi phí",
+          "definition_en": "a standardized claim sheet used by staff to request repayment for authorized out-of-pocket expenses",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["FINANCE", "OFFICE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Please upload the completed reimbursement form along with scanned toll receipts.",
+          "vi": "Vui lòng tải lên biểu mẫu hoàn tiền đã điền đầy đủ cùng bản quét biên lai phí cầu đường.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["complete a reimbursement form", "mileage reimbursement form", "submit a reimbursement form"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "room-upgrade-n",
+      "word": "room upgrade",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "nâng hạng phòng",
+          "definition_en": "a move to a larger or higher-category hotel room than originally reserved",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["HOTEL", "TRAVEL"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The front desk offered a complimentary room upgrade because the standard floor was under maintenance.",
+          "vi": "Quầy lễ tân đã tặng nâng hạng phòng miễn phí vì tầng phòng tiêu chuẩn đang được bảo trì.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["complimentary room upgrade", "request a room upgrade", "hotel room upgrade"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "round-trip-adj",
+      "word": "round-trip",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "adj",
+          "meaning_vi": "khứ hồi",
+          "definition_en": "covering travel from a point of departure to a destination and back to the original starting point",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": ["TRAVEL", "AIRPORT"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The agency booked a discounted round-trip ticket for the two-day client visit.",
+          "vi": "Đại lý đã đặt vé khứ hồi giảm giá cho chuyến thăm khách hàng kéo dài hai ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["round-trip ticket", "round-trip airfare", "round-trip shuttle"],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "seat-assignment-n",
+      "word": "seat assignment",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "số ghế được chỉ định",
+          "definition_en": "the designated seat number allocated to a passenger on a flight, train, or conference hall",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": ["AIRPORT", "EVENT"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Passengers can view or change their seat assignment twenty-four hours prior to departure.",
+          "vi": "Hành khách có thể xem hoặc đổi số ghế được chỉ định hai mươi bốn giờ trước giờ khởi hành.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["confirm seat assignment", "boarding pass seat assignment", "change seat assignment"],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "shuttle-bus-n",
+      "word": "shuttle bus",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "xe buýt trung chuyển",
+          "definition_en": "a scheduled vehicle operating frequent short-distance trips between hubs such as stations, hotels, and campuses",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": ["TRANSPORT", "HOTEL"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "An electric shuttle bus leaves the main office entrance every fifteen minutes.",
+          "vi": "Một xe buýt trung chuyển chạy điện rời cổng văn phòng chính mỗi mười lăm phút.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["airport shuttle bus", "complimentary shuttle bus", "shuttle bus stop"],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "system-backup-n",
+      "word": "system backup",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bản sao lưu hệ thống",
+          "definition_en": "an encrypted copy of server files and databases preserved for disaster recovery",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["TECHNOLOGY", "OFFICE"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Network administrators run an automated system backup every night at midnight.",
+          "vi": "Quản trị viên mạng chạy sao lưu hệ thống tự động mỗi đêm vào lúc nửa đêm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["automated system backup", "verify the system backup", "offsite system backup"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "time-zone-n",
+      "word": "time zone",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "múi giờ",
+          "definition_en": "a geographic region that observes a uniform standard clock time for commercial and daily use",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "A2"
+        }
+      ],
+      "topics": ["TIME", "TRAVEL"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Remember to specify the recipient's local time zone on international call invitations.",
+          "vi": "Hãy nhớ ghi rõ múi giờ địa phương của người nhận trên thư mời cuộc gọi quốc tế.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["different time zone", "local time zone", "time zone conversion"],
+      "cefr_level": "A2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "workflow-n",
+      "word": "workflow",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy trình làm việc",
+          "definition_en": "the structured sequence of operational steps through which a piece of work passes from initiation to completion",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": ["OFFICE", "TECHNOLOGY"],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Standardizing invoice templates improved approval workflow across regional offices.",
+          "vi": "Chuẩn hóa mẫu hóa đơn đã cải thiện quy trình phê duyệt giữa các văn phòng khu vực.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": ["approval workflow", "streamline workflow", "automated workflow"],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    }
+  ]
+}

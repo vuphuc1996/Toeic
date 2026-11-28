@@ -191,7 +191,7 @@ def composite_sha_reversing_vocabulary_patch(paths, root: Path, patch_rel: str) 
     id_to_path = {}
     documents = {}
     later_addition_ids: set[str] = set()
-    for batch_name in ("batch-026.json", "batch-028.json"):
+    for batch_name in ("batch-026.json", "batch-028.json", "batch-029.json"):
         batch_path = root / "data/vocabulary" / batch_name
         if batch_path.exists():
             batch_data = json.loads(batch_path.read_text(encoding="utf-8"))
@@ -344,7 +344,7 @@ def composite_sha_reversing_listening_translations(paths, root: Path) -> str:
                     del unit["transcriptTranslation"]
                 if unit.get("id") in practice_only_part4_ids:
                     questions = unit.get("questions") or []
-                    if len(questions) != 4 or questions[3].get("mockEligible") is not False:
+                    if len(questions) < 4 or any(q.get("mockEligible") is False for q in questions[:3]) or any(q.get("mockEligible") is not False for q in questions[3:]):
                         raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit.get('id')}")
                     practice_only_seen.add(unit["id"])
                     unit["questions"] = questions[:3]

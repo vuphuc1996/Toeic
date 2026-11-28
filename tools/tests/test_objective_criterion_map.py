@@ -18,9 +18,9 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             cwd=ROOT, capture_output=True, text=True
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn("1148 question-to-criterion links", result.stdout)
-        self.assertIn("648 unique stable question IDs", result.stdout)
-        self.assertIn("25/27 TOEIC criteria mapped", result.stdout)
+        self.assertIn("1163 question-to-criterion links", result.stdout)
+        self.assertIn("651 unique stable question IDs", result.stdout)
+        self.assertIn("26/27 TOEIC criteria mapped", result.stdout)
         self.assertIn("0 Listening reserve items mapped", result.stdout)
 
     def test_subminimum_criteria_are_not_misreported_as_mastered(self):
@@ -29,13 +29,14 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
         self.assertEqual(counts["grammar-core-form-recognition"], 10)
         self.assertEqual(counts["listening-part-3-speaker-linking"], 10)
         self.assertEqual(counts["listening-part-3-conversation-purpose"], 11)
-        self.assertEqual(counts["listening-part-4-talk-purpose"], 7)
+        self.assertEqual(counts["listening-part-4-talk-purpose"], 10)
+        self.assertEqual(counts["reading-part-7-paraphrase-inference"], 12)
         self.assertEqual(counts["reading-part-7-cross-document-link"], 2)
         self.assertEqual(counts["listening-part-1-visual-audio-match"], 8)
         self.assertEqual(counts["listening-part-1-detail-retention"], 8)
         self.assertEqual(counts["listening-part-4-inference-action"], 10)
         self.assertEqual(counts["reading-part-6-discourse-purpose"], 10)
-        self.assertEqual(mapping["uniqueQuestionCount"], 648)
+        self.assertEqual(mapping["uniqueQuestionCount"], 651)
 
     def test_part7_cross_document_evidence_requires_reviewed_two_source_quotes(self):
         resource = {"editorialStatus": "internal-editorial-reviewed", "documents": [
@@ -64,10 +65,10 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             self.assertEqual(outcomes[row["criterionId"]][0], row["objectiveId"])
         self.assertEqual(counts, mapping["mappingCountsByCriterion"])
         self.assertEqual(len({row["questionKey"] for row in mapping["mappings"]}), mapping["uniqueQuestionCount"])
-        self.assertEqual(len(counts), 25)
+        self.assertEqual(len(counts), 26)
         toeic = [outcome for group in registry["objectives"] if not group["objectiveId"].startswith("foundation-") for outcome in group["outcomes"]]
-        self.assertEqual(sum(outcome["status"].startswith("instrumented_") for outcome in toeic), 25)
-        self.assertEqual(sum(outcome["status"] == "criteria_defined_not_yet_instrumented" for outcome in toeic), 2)
+        self.assertEqual(sum(outcome["status"].startswith("instrumented_") for outcome in toeic), 26)
+        self.assertEqual(sum(outcome["status"] == "criteria_defined_not_yet_instrumented" for outcome in toeic), 1)
 
 
     def test_part7_evidence_rejects_ambiguous_duplicate_document_and_source_labels(self):
@@ -180,6 +181,27 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             resource = resources[quote_backed[0]["resourceId"]]
             question = resource["questions"][quote_backed[0]["questionIndex"]]
             self.assertTrue(any("does not match canonical audio segments" in err for err in AUDIT.validate_listening_purpose_evidence(resource, question, bad)))
+
+    def test_part7_paraphrase_inference_mappings_require_non_reserve_passage_evidence(self):
+        mapping = json.loads((ROOT / "data/learning-path/objective-criterion-map.json").read_text(encoding="utf-8"))
+        library = json.loads((ROOT / "data/readings/reading-library.json").read_text(encoding="utf-8"))
+        resources = {item["id"]: item for item in library["readings"]}
+        rows = [row for row in mapping["mappings"] if row["criterionId"] == "reading-part-7-paraphrase-inference"]
+        self.assertEqual(len(rows), 12)
+        self.assertEqual(len({row["questionKey"] for row in rows}), 12)
+        for row in rows:
+            resource = resources[row["resourceId"]]
+            question = resource["questions"][row["questionIndex"]]
+            self.assertNotEqual(resource.get("editorialStatus"), "reserve-pending-independent-review")
+            self.assertEqual(AUDIT.validate_part7_paraphrase_evidence(resource, question, row), [])
+
+        sample = rows[0]
+        resource = resources[sample["resourceId"]]
+        question = resource["questions"][sample["questionIndex"]]
+        self.assertTrue(any("reserve" in err for err in AUDIT.validate_part7_paraphrase_evidence(dict(resource, editorialStatus="reserve-pending-independent-review"), question, sample)))
+        self.assertTrue(any("evidenceQuote" in err for err in AUDIT.validate_part7_paraphrase_evidence(resource, question, dict(sample, evidenceQuote="Not present in this passage."))))
+        self.assertTrue(any("paraphraseMechanism" in err for err in AUDIT.validate_part7_paraphrase_evidence(resource, question, dict(sample, paraphraseMechanism="unsupported"))))
+        self.assertTrue(any("answerQuote" in err for err in AUDIT.validate_part7_paraphrase_evidence(resource, question, dict(sample, answerQuote="Wrong answer"))))
 
 if __name__ == "__main__":
     unittest.main()

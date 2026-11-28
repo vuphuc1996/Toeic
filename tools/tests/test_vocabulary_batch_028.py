@@ -31,9 +31,10 @@ class VocabularyBatch028Tests(unittest.TestCase):
         self.assertEqual(len(self.batch["words"]), 40)
         ids = [row["id"] for row in self.batch["words"]]
         self.assertEqual(len(ids), len(set(ids)))
-        self.assertEqual(self.manifest["totalWords"], 1221)
-        self.assertEqual(self.manifest["previousReleaseTotalWords"], 1181)
-        self.assertEqual(self.manifest["releaseAdditionIds"], ids)
+        self.assertEqual(self.manifest["totalWords"], 1281)
+        self.assertEqual(self.manifest["previousReleaseTotalWords"], 1221)
+        profile_1181 = next(p for p in self.manifest["releaseRepairProfiles"] if p["previousTotalWords"] == 1181)
+        self.assertEqual(profile_1181["releaseAdditionIds"][:40], ids)
         self.assertEqual(set(self.batch["ipaSummary"]["blankWords"]), {row["word"] for row in self.batch["words"]})
         self.assertEqual(self.batch["ipaSummary"]["populated"], 0)
         self.assertEqual(self.batch["ipaSummary"]["leftBlank"], 40)

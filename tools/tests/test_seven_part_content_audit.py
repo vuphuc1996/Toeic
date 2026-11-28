@@ -28,10 +28,10 @@ class SevenPartContentAuditTests(unittest.TestCase):
     def test_authoritative_inventory_counts_across_all_banks(self):
         t = self.report["totals"]
         self.assertEqual(t["listeningUnits"], 145)
-        self.assertEqual(t["listeningQuestions"], 305)
+        self.assertEqual(t["listeningQuestions"], 308)
         self.assertEqual(t["listeningApprovedForMock"], 102)
         self.assertEqual(t["listeningHumanReviewRequired"], 193)
-        self.assertEqual(t["listeningPracticeSupport"], 10)
+        self.assertEqual(t["listeningPracticeSupport"], 13)
         self.assertEqual(t["readingUnits"], 73)
         self.assertEqual(t["readingQuestions"], 287)
         self.assertEqual(t["readingApprovedForMock"], 200)
@@ -39,9 +39,9 @@ class SevenPartContentAuditTests(unittest.TestCase):
         self.assertEqual(t["separatePart5Questions"], 80)
         self.assertEqual(t["grammarLessons"], 58)
         self.assertEqual(t["grammarExercises"], 169)
-        self.assertEqual(t["totalQuestionsAllBanks"], 841)
+        self.assertEqual(t["totalQuestionsAllBanks"], 844)
         self.assertEqual(t["totalHumanReviewRequired"], 360)
-        self.assertEqual(t["totalPracticeSupport"], 179)
+        self.assertEqual(t["totalPracticeSupport"], 182)
 
     def test_zero_structural_errors_and_apostrophe_normalization(self):
         self.assertEqual(self.report["structuralErrors"], [])
@@ -60,7 +60,7 @@ class SevenPartContentAuditTests(unittest.TestCase):
         self.assertEqual(parts["Listening Part 3"]["human_review_required_questions"], 84)
         self.assertEqual(parts["Listening Part 4"]["approved_for_mock_questions"], 30)
         self.assertEqual(parts["Listening Part 4"]["human_review_required_questions"], 72)
-        self.assertEqual(parts["Listening Part 4"]["practice_support_questions"], 10)
+        self.assertEqual(parts["Listening Part 4"]["practice_support_questions"], 13)
         self.assertEqual(parts["Reading Part 5"]["approved_for_mock_questions"], 60)
         self.assertEqual(parts["Reading Part 6"]["approved_for_mock_questions"], 32)
         self.assertEqual(parts["Reading Part 7"]["approved_for_mock_questions"], 108)

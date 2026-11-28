@@ -908,6 +908,41 @@
         "act urgently",
         "urgently requested"
       ]
+    },
+    {
+      "id": "unit-cost-n",
+      "word": "unit cost",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đơn giá; chi phí trên một đơn vị sản phẩm",
+          "definition_en": "the total expenditure incurred to produce, store, or buy a single unit of a product or service",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "FINANCE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Higher production volume reduced the unit cost of each aluminum casing.",
+          "vi": "Sản lượng sản xuất cao hơn đã làm giảm chi phí trên một đơn vị vỏ nhôm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "lower the unit cost",
+        "unit cost breakdown",
+        "average unit cost"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

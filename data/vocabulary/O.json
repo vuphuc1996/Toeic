@@ -1706,6 +1706,76 @@
       ],
       "cefr_level": "C1",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "order-fulfillment-n",
+      "word": "order fulfillment",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy trình xử lý và giao hoàn tất đơn hàng",
+          "definition_en": "the complete process of receiving, picking, packing, and shipping customer orders accurately",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHIPPING",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Automating barcode scans cut average order fulfillment time to under four hours.",
+          "vi": "Tự động hóa quét mã vạch đã rút ngắn thời gian xử lý và giao hoàn tất đơn hàng xuống dưới bốn giờ.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "order fulfillment center",
+        "order fulfillment rate",
+        "streamline order fulfillment"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "onboarding-process-n",
+      "word": "onboarding process",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quy trình hội nhập nhân viên mới",
+          "definition_en": "the series of administrative, technical, and training steps used to integrate new hires into a company",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "An updated checklist streamlined the onboarding process for remote engineers.",
+          "vi": "Danh mục kiểm tra cập nhật đã tinh gọn quy trình hội nhập cho các kỹ sư làm việc từ xa.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "smooth onboarding process",
+        "complete the onboarding process",
+        "employee onboarding process"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

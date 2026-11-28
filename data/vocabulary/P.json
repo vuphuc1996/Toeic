@@ -3869,6 +3869,286 @@
         "purchasing power",
         "centralized purchasing"
       ]
+    },
+    {
+      "id": "petty-cash-n",
+      "word": "petty cash",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "quỹ tiền mặt chi tiêu vặt",
+          "definition_en": "a small fund of cash kept on office premises to pay for minor day-to-day workplace expenses",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Submit a signed receipt before withdrawing postage money from petty cash.",
+          "vi": "Hãy nộp biên lai có chữ ký trước khi rút tiền bưu phí từ quỹ tiền mặt chi tiêu vặt.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "petty cash box",
+        "petty cash voucher",
+        "replenish petty cash"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "price-quote-n",
+      "word": "price quote",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "bảng báo giá",
+          "definition_en": "a formal written statement telling a prospective buyer the exact cost for specified products or services",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "PURCHASING",
+        "BUSINESS"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Purchasing requested a revised price quote from three certified printing vendors.",
+          "vi": "Phòng mua hàng đã yêu cầu bảng báo giá cập nhật từ ba nhà cung cấp in ấn được chứng nhận.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "request a price quote",
+        "written price quote",
+        "valid price quote"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "performance-appraisal-n",
+      "word": "performance appraisal",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đánh giá hiệu suất làm việc",
+          "definition_en": "a periodic formal review in which a manager evaluates an employee's achievements and development goals",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "CAREER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Annual salary adjustments are determined after each manager submits a performance appraisal.",
+          "vi": "Mức điều chỉnh lương hằng năm được xác định sau khi mỗi quản lý nộp bản đánh giá hiệu suất.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "annual performance appraisal",
+        "performance appraisal form",
+        "conduct a performance appraisal"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "probationary-period-n",
+      "word": "probationary period",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thời gian thử việc",
+          "definition_en": "an initial trial phase at the start of employment during which performance and suitability are evaluated",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "LEGAL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Full medical coverage takes effect once a new hire finishes the ninety-day probationary period.",
+          "vi": "Bảo hiểm y tế đầy đủ có hiệu lực sau khi nhân viên mới hoàn thành thời gian thử việc chín mươi ngày.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "ninety-day probationary period",
+        "complete the probationary period",
+        "extend a probationary period"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "point-of-sale-n",
+      "word": "point of sale",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "điểm bán hàng; quầy thanh toán",
+          "definition_en": "the physical location or checkout terminal where a retail transaction is completed",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "SHOPPING",
+        "TECHNOLOGY"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "All retail branches upgraded their point of sale terminals to accept contactless cards.",
+          "vi": "Tất cả chi nhánh bán lẻ đã nâng cấp thiết bị tại điểm bán hàng để chấp nhận thẻ không tiếp xúc.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "point of sale terminal",
+        "point of sale display",
+        "point of sale system"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "product-recall-n",
+      "word": "product recall",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "thu hồi sản phẩm lỗi",
+          "definition_en": "an official request to return or replace manufactured items found to contain a safety or quality defect",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "QUALITY",
+        "CUSTOMER"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "The appliance firm announced a voluntary product recall for heaters built in April.",
+          "vi": "Hãng thiết bị gia dụng đã công bố thu hồi tự nguyện đối với các máy sưởi sản xuất trong tháng Tư.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "voluntary product recall",
+        "product recall notice",
+        "issue a product recall"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "promotional-offer-n",
+      "word": "promotional offer",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "ưu đãi khuyến mãi",
+          "definition_en": "a temporary discount, bonus, or special package designed to attract buyers and boost sales",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "MARKETING",
+        "SHOPPING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "This seasonal promotional offer expires at midnight on Sunday.",
+          "vi": "Ưu đãi khuyến mãi theo mùa này sẽ hết hạn vào nửa đêm Chủ nhật.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "seasonal promotional offer",
+        "redeem a promotional offer",
+        "limited-time promotional offer"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "password-reset-n",
+      "word": "password reset",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "đặt lại mật khẩu",
+          "definition_en": "the security procedure for clearing an old access credential and setting a new login password",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B1"
+        }
+      ],
+      "topics": [
+        "TECHNOLOGY",
+        "OFFICE"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Contact the IT help desk if your password reset link expires before activation.",
+          "vi": "Hãy liên hệ bộ phận hỗ trợ công nghệ thông tin nếu liên kết đặt lại mật khẩu hết hạn trước khi kích hoạt.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "request a password reset",
+        "password reset link",
+        "mandatory password reset"
+      ],
+      "cefr_level": "B1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

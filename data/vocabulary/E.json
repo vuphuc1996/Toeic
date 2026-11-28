@@ -2880,6 +2880,76 @@
         "too expensive",
         "prohibitively expensive"
       ]
+    },
+    {
+      "id": "exit-interview-n",
+      "word": "exit interview",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "buổi phỏng vấn nghỉ việc",
+          "definition_en": "a structured discussion held between human resources and a departing employee to gather feedback",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "HR",
+        "MEETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Human resources schedules a confidential exit interview during an employee's final week.",
+          "vi": "Phòng nhân sự sắp xếp một buổi phỏng vấn nghỉ việc bảo mật trong tuần làm việc cuối của nhân viên.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "conduct an exit interview",
+        "exit interview feedback",
+        "schedule an exit interview"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "expense-voucher-n",
+      "word": "expense voucher",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "chứng từ thanh toán chi phí",
+          "definition_en": "an accounting form submitted with receipts to authorize payment or reimbursement for business expenses",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "B2"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "TRAVEL"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Attach itemized hotel receipts to your travel expense voucher before Friday.",
+          "vi": "Hãy đính kèm hóa đơn khách sạn chi tiết vào chứng từ chi phí công tác trước thứ Sáu.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "submit an expense voucher",
+        "travel expense voucher",
+        "approve an expense voucher"
+      ],
+      "cefr_level": "B2",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

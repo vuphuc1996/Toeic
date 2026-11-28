@@ -6,7 +6,7 @@
     "minimumUniqueItems": 10,
     "defaultThreshold": 0.8,
     "retestPolicy": "A later attempt may update mastery; retain attempt history.",
-    "scopeWarning": "Across all 33 criteria, Foundation retains 6/6 criterion-level local evidence paths. The TOEIC objectives now have explicit stable-question mappings for 25/27 sub-skill criteria; two criteria remain defined but deliberately uninstrumented until stronger item-level evidence or a suitable assessment design exists. Evidence is stored learner-locally under the existing objectiveProgress record without an IndexedDB schema migration. The map covers 1,148 criterion/question links across 648 unique stable question IDs; links are inventory coverage, not learner mastery. Every criterion still requires at least its declared minimum of unique observed items and its declared threshold. Optional Grammar and Reading Part 5 explanation rubrics are learner self-reports. Separate Part 5 timed_accuracy uses a 30-second internal practice target only. Listening reserve remains excluded; Reading Part 7 and Separate Part 5 editorial gates remain active. No CEFR/ETS certification is implied.",
+    "scopeWarning": "Across all 33 criteria, Foundation retains 6/6 criterion-level local evidence paths. The TOEIC objectives now have explicit stable-question mappings for 26/27 sub-skill criteria; one criterion (listening-part-1-paraphrase-recognition) remains defined but deliberately uninstrumented because the approved Part 1 bank holds 8 items (below the 10-item minimum) and the 1 reserve photo remains pending independent review. Evidence is stored learner-locally under the existing objectiveProgress record without an IndexedDB schema migration. The map covers 1,163 criterion/question links across 651 unique stable question IDs; links are inventory coverage, not learner mastery. Every criterion still requires at least its declared minimum of unique observed items and its declared threshold. Optional Grammar and Reading Part 5 explanation rubrics are learner self-reports. Separate Part 5 timed_accuracy uses a 30-second internal practice target only. Listening reserve remains excluded; Reading Part 7 and Separate Part 5 editorial gates remain active. No CEFR/ETS certification is implied.",
     "scoreTypes": [
       "correct_rate",
       "delayed_correct_rate",
@@ -279,7 +279,7 @@
           "minimumUniqueItems": 10,
           "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 4 talk-purpose questions at >= 80% accuracy.",
-          "runtimeStatusNote": "Question-level mapping: 7 stable question ID(s) across non-reserve Part 4 talks, still below the 10-item minimum. Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
+          "runtimeStatusNote": "Question-level mapping: 10 stable question ID(s) across all non-reserve Part 4 talks (clears the 10-item minimum). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-4-detail-tracking",
@@ -410,9 +410,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 7 paraphrase/inference items at >= 80% accuracy after editorial clearance.",
-          "runtimeStatusNote": "No sufficiently grounded question-level tag is assigned yet; this criterion remains visible but collects no criterion-specific score."
+          "runtimeStatusNote": "12 existing questions from non-reserve Part 7 passages/documents are mapped with passage excerpt, canonical answer choice, paraphrase mechanism and inference rationale. All 87 reserve Part 7 items remain excluded and the second-review gate remains active; evidence is collected only after completed practice."
         },
         {
           "id": "reading-part-7-cross-document-link",

@@ -583,6 +583,41 @@
       ],
       "cefr_level": "B2",
       "level_basis": "editorial-estimate; verify by sense"
+    },
+    {
+      "id": "gross-margin-n",
+      "word": "gross margin",
+      "phonetic": {},
+      "senses": [
+        {
+          "pos": "n",
+          "meaning_vi": "biên lợi nhuận gộp",
+          "definition_en": "the difference between net sales revenue and direct production costs, often expressed as a percentage",
+          "synonyms": [],
+          "antonyms": [],
+          "cefr_level": "C1"
+        }
+      ],
+      "topics": [
+        "FINANCE",
+        "MARKETING"
+      ],
+      "word_family": [],
+      "verb_forms": null,
+      "examples": [
+        {
+          "en": "Lower packaging material prices lifted the division's gross margin by two percent.",
+          "vi": "Giá vật liệu đóng gói giảm đã nâng biên lợi nhuận gộp của bộ phận lên hai phần trăm.",
+          "sense_index": 0
+        }
+      ],
+      "collocations": [
+        "gross margin percentage",
+        "improve gross margin",
+        "quarterly gross margin"
+      ],
+      "cefr_level": "C1",
+      "level_basis": "editorial-estimate; verify by sense"
     }
   ]
 }

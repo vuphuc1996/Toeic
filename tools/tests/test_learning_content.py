@@ -141,7 +141,7 @@ class LearningContentTests(unittest.TestCase):
             self.assertEqual(len(eligible), 3, item.get('id'))
             self.assertEqual(len(questions) - len(eligible), sum(q.get('mockEligible') is False for q in questions), item.get('id'))
             practice_only.extend((item, q) for q in questions if q.get('mockEligible') is False)
-        self.assertEqual(len(practice_only), 10)
+        self.assertEqual(len(practice_only), 13)
         self.assertTrue(all(item.get('part') == 'Part 4' for item, _ in practice_only))
         self.assertTrue(all(question.get('mockEligible') is False for _, question in practice_only))
 
