@@ -86,7 +86,8 @@ def main() -> int:
         items = source_cache[rel]
         if objective_id == "part5-sentence-completion":
             question = next((item for item in items if item.get("id") == resource_id), None)
-            if question is None or question.get("id") != row.get("questionId") or question_key != f"part5:{resource_id}" or row.get("questionIndex") != 0:
+            actual_index = items.index(question) if question is not None else -1
+            if question is None or question.get("id") != row.get("questionId") or question_key != f"part5:{resource_id}" or row.get("questionIndex") != actual_index:
                 errors.append(f"{label}: Separate Part 5 stable question identity/index does not match {resource_id}")
                 continue
         else:
