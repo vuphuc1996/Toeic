@@ -19,11 +19,21 @@ class VocabularyQualityDashboardTests(unittest.TestCase):
         self.assertEqual(first['glossary']['flaggedEntries'], len(first['priorityQueue']))
         self.assertGreaterEqual(first['relationshipGraph']['headwords'], first['relationshipGraph']['uniqueHeadwords'])
 
+    def test_relationship_graph_metrics_reconcile_exactly(self):
+        data = MODULE.build(ROOT)
+        graph = data['relationshipGraph']
+        self.assertEqual(graph['relations'], graph['synonyms'] + graph['antonyms'])
+        self.assertEqual(graph['dangling'], graph['glossaryCovered'] + graph['unresolved'])
+        self.assertEqual(len(data['missingGlossaryCandidates']), graph['unresolvedUniqueTerms'])
+        self.assertLessEqual(graph['unresolvedUniqueTerms'], graph['unresolved'])
+        self.assertLessEqual(graph['uniqueHeadwords'], graph['headwords'])
+
     def test_summary_is_compact_reconciled_and_preserves_guardrails(self):
         data = MODULE.build(ROOT)
         summary = MODULE.summarize(data)
         self.assertEqual(summary['release'], data['release'])
         self.assertEqual(summary['priorityQueueCount'], len(data['priorityQueue']))
+        self.assertEqual(summary['relationshipGraph']['unresolvedUniqueTerms'], len(data['missingGlossaryCandidates']))
         self.assertEqual(summary['missingGlossaryCandidateCount'], len(data['missingGlossaryCandidates']))
         self.assertEqual(summary['guardrails'], data['guardrails'])
         self.assertNotIn('priorityQueue', summary)

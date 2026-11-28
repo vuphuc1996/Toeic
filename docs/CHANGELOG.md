@@ -1,3 +1,9 @@
+## Candidate quality-tooling follow-up (2026-11-29; no application version bump)
+
+- Exposed the unique unresolved synonym/antonym target count in the consolidated Vocabulary & Glossary Quality Dashboard.
+- Added exact reconciliation checks: relation references = synonym + antonym references; dangling references = glossary-covered + unresolved references; unique unresolved terms = missing glossary candidate groups.
+- Kept the audit read-only; no vocabulary, glossary, question-bank, learner-storage, UI or production branch changes.
+
 ## v2.95.86 — Part 1 Photo Reserve Expansion & Candidate Release Reconciliation (2026-11-28)
 
 - Added three Part 1 photo-description practice resources (construction plans, laboratory microscope and supermarket shelf) using existing local JPG assets and Google Imagen provenance.
