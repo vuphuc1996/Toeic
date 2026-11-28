@@ -1,21 +1,21 @@
-# TOEIC Dictionary v2.95.85 — Project Documentation
+# TOEIC Dictionary v2.95.86 — Project Documentation
 
 This documentation describes the current TOEIC-first GitHub Pages candidate. Source changes and release evidence are tracked separately from hosted CI, Pages deployment, installed-PWA behavior and physical-device acceptance.
 
-- Current release: `2.95.85`.
-- Owner-confirmed source acceptance: `reports/RELEASE_ACCEPTANCE_v2.95.85.md` — records the exact source baseline SHA, 865/865 unit-test result, build/syntax-lint result, source inventory and acceptance boundaries. The 865-test result is owner-supplied evidence; it is not presented as an independently rerun test log.
-- Learning outcome evidence: `reports/TOEIC_LEARNING_OUTCOME_EVIDENCE_v2.95.85.md` — 26/27 TOEIC criteria instrumented across 1,163 stable question-to-criterion links and 651 unique stable question IDs; one criterion (`listening-part-1-paraphrase-recognition`) remains deliberately uninstrumented.
-- Major release data-quality audit: `reports/MAJOR_RELEASE_QUALITY_AUDIT_v2.95.85.md` — vocabulary enrichment, morphology, glossary and resource coverage inventory. These measurements are not editorial approval or learner mastery.
-- Outstanding human review: `reports/OUTSTANDING_REVIEW_HANDOFF_v2.95.83.md` — Part 1 photo verification and Part 7 independent second-review queue.
-- v2.95.85 expands canonical vocabulary via Batch 029 (`+60` headwords → **1,281** total; `1221` migration repair profile added and all historical profiles updated), adds 3 `mockEligible: false` Part 4 talk-purpose items (`listening-part-4-talk-purpose` **7 → 10**, Mock Listening remains **102** / Part 4 **30**), instruments `reading-part-7-paraphrase-inference` with **12** verified non-reserve items (**1,163** links across **651** unique question IDs; **26/27** TOEIC and **32/33** overall criteria instrumented), and surfaces read-only criterion revision priorities in `assets/js/learning-outcome-progress.js` and `assets/js/app.js`.
-- v2.95.84 fixed Mock UI pool/part counting (`mockPoolCount` and `eligibleByPart` in `assets/js/app.js` via `countMockPool` / `isQuestionMockEligible` in `assets/js/mock-engine.js`) so practice-only Part 4 questions (`mockEligible: false`) stay excluded from displayed Mock counts (102 Listening / 30 Part 4), and added 9 verbatim audio-backed purpose mappings (`listening-part-3-conversation-purpose` 7 → 11; `listening-part-4-talk-purpose` 2 → 7).
-- Part 4/6 evidence batch (v2.95.83): `reports/PART4_PART6_EVIDENCE_BATCH_v2.95.83.md` — 10 new practice-only Part 4 questions and 10 reviewed Part 6 discourse mappings.
-- Historical GitHub Validate / Pages evidence is listed below for its exact historical commit SHAs only. It must not be generalized to the v2.95.85 source SHA or subsequent commits:
-  - Exact candidate source/test HEAD `ad6401282fdb6cf86e2321339ee4181d2fc2fb21`: GitHub Validate [run 46120842790](https://github.com/vuphuc1996/Toeic/actions/runs/46120842790) **PASS** (151/151 steps; 855 Python tests PASS); GitHub Pages [run 46120842377](https://github.com/vuphuc1996/Toeic/actions/runs/46120842377) **PASS**.
-  - Exact candidate source/test HEAD `047781760d0c34788e9153cc402efdec605c3d5f`: GitHub Validate [run 46118675768](https://github.com/vuphuc1996/Toeic/actions/runs/46118675768) **PASS** (151/151 steps; 853 Python tests PASS); GitHub Pages [run 46118675714](https://github.com/vuphuc1996/Toeic/actions/runs/46118675714) **PASS**.
-- Criterion map audit: `../tools/audit-objective-criterion-map.py` — checks exact question IDs, question indices, Listening reserve exclusion, Part 7 multi-document source quotes and review gates.
-- Criterion mapping remediation: `reports/CRITERION_MAPPING_REMEDIATION_v2.95.80.md` — 21 additional links; explains why below-minimum criteria remain below 10.
-- Project progress history v2.95.76: `reports/PROJECT_PROGRESS_v2.95.76.md` — prior weighted build index 57.07%.
+- Current release: `2.95.86`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.86.md`.
+- Current project progress: `reports/PROJECT_PROGRESS_v2.95.86.md` — provisional weighted measurable curriculum-build index **77.16%**, not learner mastery or TOEIC score readiness.
+- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.86.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.86.md`.
+- Current Full-Mock readiness: `reports/TOEIC_MOCK_READINESS_v2.95.86.md` — Listening approved 102 / reserve 196; Reading approved 200 / Part 7 reserve 87; Separate Part 5 review-only 80.
+- Current Part 1 independent-review queue: `reports/PART1_PHOTO_BATCH_018_REVIEW_HANDOFF_v2.95.86.md`.
+- Current major release quality audit: `reports/MAJOR_RELEASE_QUALITY_AUDIT_v2.95.86.md`.
+- v2.95.86 Batch 018 adds three Part 1 photo-description practice resources (construction plans, laboratory microscope and supermarket shelf) using existing repository JPG assets. Part 1 now has 12 resources/questions: 8 currently eligible and 4 pending independent review. The new three resources and questions are fail-closed and excluded from Mock.
+- Listening resource inventory advances 145 → 148; Listening questions 308 → 311; Listening reserve 193 → 196. The approved Mock Listening pool remains **102**. No existing question, choice or answer IDs were changed.
+- The new photo resources are registered in the canonical objective-resource map but are not added to the learning-outcome criterion map. Part 1 visual/detail mappings remain 8 each; `listening-part-1-paraphrase-recognition` remains deliberately uninstrumented.
+- v2.95.85 source acceptance record: `reports/RELEASE_ACCEPTANCE_v2.95.85.md` — the project owner confirmed **865/865** tests, build/compilation and syntax-lint PASS for exact source HEAD `7b8d80f1eef1523b5c2f31f0361a51c90011da7e`. This earlier result is not transferred to v2.95.86.
+- Learning outcome evidence: `reports/TOEIC_LEARNING_OUTCOME_EVIDENCE_v2.95.85.md` — 26/27 TOEIC criteria instrumented across 1,163 stable question-to-criterion links and 651 unique stable question IDs; one criterion remains deliberately uninstrumented.
+- Historical GitHub Validate / Pages evidence applies only to the exact historical commit SHAs recorded in the v2.95.85 acceptance documentation. It must not be generalized to v2.95.86.
 - Current version ledger: `versions/CURRENT_VERSION.md`.
 - Master project status: `MASTER_STATUS.md`.
 - Assessment completion and draft/commit semantics: `ASSESSMENT_FLOW.md`.
@@ -23,13 +23,13 @@ This documentation describes the current TOEIC-first GitHub Pages candidate. Sou
 
 ## Content and learner-data boundaries
 
-- Batch 029's 60 new headwords are original editorial additions. IPA is left blank pending source verification; CEFR labels are editorial estimates; no Word Family links are inferred.
-- Listening source, question and choice IDs, answer keys and question eligibility must remain stable unless a separately reviewed content change explicitly authorizes an update.
-- Listening reserve (193), Reading Part 7 reserve (87) and Separate Part 5 review-only (80) remain excluded from Mock.
-- Existing canonical vocabulary IDs/headwords/senses and learner IndexedDB v1 schema/records must be preserved.
+- Existing canonical vocabulary IDs/headwords/senses and question/choice IDs/answer keys are preserved.
+- All new Batch 018 Part 1 items remain `reserve-pending-independent-review`; each question also has `mockEligible: false`. No new item is treated as an independently reviewed question or approved Mock inventory.
+- Listening reserve (196), Reading Part 7 reserve (87) and Separate Part 5 review-only (80) remain excluded from Mock.
+- Learner IndexedDB v1 schema and local records are unchanged; no migration is introduced.
 - UI/UX layout, navigation, Robot Buddy access boundary and GitHub Pages-only/offline architecture remain unchanged. No backend or Cloudflare service is introduced.
-- Criterion evidence is recorded in the existing learner-local `objectiveProgress` ledger without an IndexedDB schema migration. Grammar and Reading Part 5 explanation rubrics are optional learner self-reports.
+- Criterion evidence remains in the learner-local `objectiveProgress` ledger; Batch 018 adds no new criterion mapping.
 
 ## Acceptance boundary
 
-Source release, candidate CI, Pages deployment, installed-PWA cache/offline propagation and physical-device QA are separate acceptance gates. Do not infer one from another. The v2.95.85 report records owner-supplied source-level verification; hosted CI and Pages results must be checked against the exact current commit SHA.
+Source release, candidate CI, Pages deployment, installed-PWA cache/offline propagation and physical-device QA are separate acceptance gates. The 865-test result belongs to v2.95.85 only. v2.95.86 remains pending exact-SHA CI and Pages evidence; no merge to `main` or production deployment is authorized.
