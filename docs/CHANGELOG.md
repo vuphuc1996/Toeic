@@ -2,7 +2,7 @@
 
 - Added three Part 1 photo-description practice resources (construction plans, laboratory microscope and supermarket shelf) using existing local JPG assets and Google Imagen provenance.
 - Added exact question/choice IDs, four audio statements, answer evidence, Vietnamese explanations and resource registration for all three units.
-- All three resources remain `reserve-pending-independent-review`; their questions set `mockEligible: false`. Part 1 totals **12** resources/questions (**8** currently eligible, **4** pending); Listening reserve totals **196**; approved Mock Listening stays **102**.
+- All three resources remain `reserve-pending-independent-review`, which gates them out of Mock at resource level; their question records do not use the separate practice-only `mockEligible: false` flag. Part 1 totals **12** resources/questions (**8** currently eligible, **4** pending); Listening reserve totals **196**; approved Mock Listening stays **102**.
 - Added Batch 018 manifest, photo provenance rows, reserve/Mock regression coverage and historical content fingerprint reconciliation.
 - Synced release/cache markers to v2.95.86 and added current Full-Mock readiness, Part 1 review handoff, quality audit, progress, change manifest and test-status reports.
 - Preserved existing question/choice/answer IDs, criterion mappings, IndexedDB v1 learner data, UI/layout, Robot Buddy and GitHub Pages-only hosting. `main` was not changed.
