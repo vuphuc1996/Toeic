@@ -112,15 +112,37 @@ class RemainingContentReviewTests(unittest.TestCase):
             self.assertEqual(unit.get("photoSourceType"), "licensed-stock")
             self.assertNotIn("image", unit)
 
-    def test_unreviewed_questions_must_be_marked_reserve_pending(self):
+    def test_unreviewed_questions_must_be_marked_reserve_pending_or_explicit_practice_only(self):
         reviewed = {row["key"] for row in REGISTRY["items"]}
-        for _, unit, number, _question in selected_items():
+        expected_practice_only = {
+            f"{resource_id}#Q4" for resource_id in {
+                "part4-office-announcement",
+                "part4-conference-update",
+                "part4-safety-announcement",
+                "part4-product-launch",
+                "part4-quarterly-town-hall",
+                "part4-customer-voicemail",
+                "part4-warehouse-safety-briefing",
+                "part4-training-registration",
+                "part4-travel-service-update",
+                "part4-quarterly-inventory-report",
+            }
+        }
+        practice_only_seen = set()
+        for _, unit, number, question in selected_items():
             key = f"{unit['id']}#Q{number}"
+            if question.get("mockEligible") is False:
+                self.assertIn(key, expected_practice_only, key)
+                self.assertEqual(unit.get("part"), "Part 4", key)
+                self.assertNotEqual(unit.get("editorialStatus"), "reserve-pending-independent-review", key)
+                practice_only_seen.add(key)
+                continue
             if key not in reviewed:
                 if unit["id"] in V233_INTERNAL_REVIEWED_READING_UNITS:
                     self.assertEqual(unit.get("editorialStatus"), "internal-editorial-reviewed", key)
                 else:
                     self.assertEqual(unit.get("editorialStatus"), "reserve-pending-independent-review", key)
+        self.assertEqual(practice_only_seen, expected_practice_only)
 
     def test_v233_reading_additions_are_internal_review_not_independent_certification(self):
         by_id = {unit["id"]: unit for unit in READINGS}
