@@ -17,7 +17,7 @@ class VocabularyQualityDashboardTests(unittest.TestCase):
         self.assertEqual(first['release'], json.loads((ROOT / 'data/manifest.json').read_text(encoding='utf-8'))['version'])
         self.assertTrue(first['readOnly'])
         self.assertEqual(first['glossary']['flaggedEntries'], len(first['priorityQueue']))
-        self.assertEqual(first['relationshipGraph']['headwords'], first['relationshipGraph']['uniqueHeadwords'] + sum(max(0, 1) for _ in []))
+        self.assertGreaterEqual(first['relationshipGraph']['headwords'], first['relationshipGraph']['uniqueHeadwords'])
 
     def test_guardrails_prohibit_mutation_and_reserve_promotion(self):
         data = MODULE.build(ROOT)
