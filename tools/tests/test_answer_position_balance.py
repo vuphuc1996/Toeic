@@ -7,13 +7,13 @@ from helpers import PART7_BASELINE_QUESTION_COUNTS_V232
 
 ROOT = Path(__file__).resolve().parents[2]
 
-# Current canonical Listening inventory after v2.95.37 Batch 027.
-# Batch 027 added 32 reserve questions; they must remain excluded from Mock.
+# Current canonical Listening inventory after v2.95.86 Part 1 reserve expansion.
+# Batch 018 added three reserve questions; they remain excluded from Mock.
 EXPECTED_LISTENING_ELIGIBLE_BY_PART = {
     'Part 1': 8, 'Part 2': 25, 'Part 3': 39, 'Part 4': 30,
 }
 EXPECTED_LISTENING_RESERVE_BY_PART = {
-    'Part 1': 1, 'Part 2': 36, 'Part 3': 84, 'Part 4': 72,
+    'Part 1': 4, 'Part 2': 36, 'Part 3': 84, 'Part 4': 72,
 }
 EXPECTED_LISTENING_BATCH_027_BY_PART = {
     'Part 2': 8, 'Part 3': 12, 'Part 4': 12,
@@ -112,20 +112,26 @@ class AnswerPositionBalanceTests(unittest.TestCase):
             return counts
 
         eligible_counts = part_counts(eligible_listening)
-        reserve_counts = part_counts(reserve_listening)
+        reserve_counts = Counter({
+            part: sum(len(item.get('questions', [])) for item in reserve_listening if item['part'] == part)
+            for part in {item['part'] for item in reserve_listening}
+        })
         self.assertEqual(dict(eligible_counts), EXPECTED_LISTENING_ELIGIBLE_BY_PART)
         self.assertEqual(dict(reserve_counts), EXPECTED_LISTENING_RESERVE_BY_PART)
         self.assertEqual(sum(eligible_counts.values()), 102)
-        self.assertEqual(sum(reserve_counts.values()), 193)
+        self.assertEqual(sum(reserve_counts.values()), 196)
+        # Question-level mockEligible=false in approved resources denotes the
+        # 13 Part 4 practice-only items. Reserve questions also carry this
+        # fail-closed flag, but are not part of the practice-only certificate.
         practice_only = [
             (item, question)
-            for item in self.listening
+            for item in eligible_listening
             for question in item.get('questions', [])
             if question.get('mockEligible') is False
         ]
         self.assertEqual(len(practice_only), 13)
         self.assertTrue(all(item.get('part') == 'Part 4' for item, _ in practice_only))
-        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 308)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 311)
         self.assertEqual(sum(len(x.get('questions', [])) for x in self.reading), 287)
 
         # Batch 027 added 32 questions in 16 reserve resources. All must remain
