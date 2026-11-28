@@ -108,8 +108,13 @@ class ListeningExpansionTests(unittest.TestCase):
         self.assertEqual(sum(sum(1 for q in u["questions"] if q.get("mockEligible") is not False) for u in eligible), 102)
         self.assertEqual(sum(len(u["questions"]) for u in pending), 196)
         projected = Counter()
-        for unit in eligible + pending:
+        # Approved resources retain question-level Mock eligibility flags.
+        for unit in eligible:
             projected[unit["part"]] += sum(1 for q in unit["questions"] if q.get("mockEligible") is not False)
+        # Pending resources are a post-review ceiling: their questions remain
+        # fail-closed today, but may only enter Mock after explicit approval.
+        for unit in pending:
+            projected[unit["part"]] += len(unit["questions"])
         self.assertEqual(projected, Counter({"Part 1": 12, "Part 2": 61, "Part 3": 123, "Part 4": 102}))
 
 if __name__ == "__main__":
