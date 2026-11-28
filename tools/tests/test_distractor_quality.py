@@ -24,9 +24,13 @@ class DistractorQualityTests(unittest.TestCase):
         p4 = [x for x in self.listening if x.get('part') == 'Part 4' and x.get('editorialStatus') != 'reserve-pending-independent-review']
         p7 = [x for x in self.reading if x.get('part') == 'Part 7']
         self.assertEqual(sum(len(x.get('questions', [])) for x in p3), 39)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in p4), 30)
+        p4_mock_eligible = [q for unit in p4 for q in unit.get('questions', []) if q.get('mockEligible') is not False]
+        self.assertEqual(len(p4_mock_eligible), 30)
         self.assertEqual(sum(len(x.get('questions', [])) for x in p7), 195)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in p3 + p4 + p7), 264)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in p3) + len(p4_mock_eligible) + sum(len(x.get('questions', [])) for x in p7), 264)
+        practice_only = [(unit, q) for unit in p4 for q in unit.get('questions', []) if q.get('mockEligible') is False]
+        self.assertEqual(len(practice_only), 10)
+        self.assertTrue(all(unit.get('id', '').startswith('part4-') for unit, _ in practice_only))
 
     def test_reviewed_questions_have_four_unique_choices_and_valid_keys(self):
         scope = [x for x in self.listening if x.get('part') in ('Part 3', 'Part 4')]
@@ -76,6 +80,8 @@ class DistractorQualityTests(unittest.TestCase):
                 # Historical answer-position balance applies to the original 63 questions only.
                 questions = questions[:PART7_BASELINE_QUESTION_COUNTS_V232.get(item.get('id'), 0)]
             for question in questions:
+                if question.get('mockEligible') is False:
+                    continue
                 actual[(item['part'], question['answerIndex'])] += 1
         for part, distribution in expected.items():
             for index in range(4):
