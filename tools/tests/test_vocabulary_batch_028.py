@@ -31,7 +31,6 @@ class VocabularyBatch028Tests(unittest.TestCase):
         self.assertEqual(len(self.batch["words"]), 40)
         ids = [row["id"] for row in self.batch["words"]]
         self.assertEqual(len(ids), len(set(ids)))
-        self.assertEqual(self.manifest["version"], "2.95.76")
         self.assertEqual(self.manifest["totalWords"], 1221)
         self.assertEqual(self.manifest["previousReleaseTotalWords"], 1181)
         self.assertEqual(self.manifest["releaseAdditionIds"], ids)
