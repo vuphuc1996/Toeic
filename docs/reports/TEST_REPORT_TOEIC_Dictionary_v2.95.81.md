@@ -1,7 +1,7 @@
 # Test & Acceptance Report — TOEIC Dictionary v2.95.81
 
-**Target branch:** `candidate`  
-**Predecessor baseline:** `a16a3e4a51917e687b92e404ab1c785a393dfb0f` (v2.95.80)  
+**Target branch:** `candidate`
+**Predecessor baseline:** `a16a3e4a51917e687b92e404ab1c785a393dfb0f` (v2.95.80)
 **Scope:** Part 7 evidence validator hardening; no learner-facing feature or bank content changes.
 
 ## Expected checks

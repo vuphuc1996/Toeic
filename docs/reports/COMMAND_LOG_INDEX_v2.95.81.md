@@ -1,7 +1,7 @@
 # Command Log Index — TOEIC Dictionary v2.95.81
 
-**Branch:** `candidate`  
-**Predecessor baseline:** `a16a3e4a51917e687b92e404ab1c785a393dfb0f`  
+**Branch:** `candidate`
+**Predecessor baseline:** `a16a3e4a51917e687b92e404ab1c785a393dfb0f`
 **Release scope:** validator hardening and regression tests; UI and learning-bank data frozen.
 
 | Order | Command | Purpose | Evidence status |

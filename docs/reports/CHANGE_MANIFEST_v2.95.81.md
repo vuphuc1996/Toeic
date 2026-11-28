@@ -1,7 +1,7 @@
 # Change Manifest — TOEIC Dictionary v2.95.81
 
-**Branch:** `candidate`  
-**Sole predecessor:** `a16a3e4a51917e687b92e404ab1c785a393dfb0f` (v2.95.80)  
+**Branch:** `candidate`
+**Sole predecessor:** `a16a3e4a51917e687b92e404ab1c785a393dfb0f` (v2.95.80)
 **Target:** Part 7 cross-document evidence guard hardening
 
 ## Changes
