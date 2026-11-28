@@ -33,7 +33,7 @@ class MajorReleaseQualityAudit025(unittest.TestCase):
         self.assertIn('cumulative inventory; not this release delta', report)
         self.assertNotIn('Canonical headword sense backfills in this release', report)
     def test_content_inventory_is_nonempty_and_known(self):
-        c=self.audit['contentInventory']; self.assertEqual(c,{'grammarLessons':58,'listeningResources':145,'readingResources':73,'part5PracticeQuestions':80})
+        c=self.audit['contentInventory']; self.assertEqual(c,{'grammarLessons':58,'listeningResources':148,'readingResources':73,'part5PracticeQuestions':80})
     def test_outcome_instrumentation_is_not_claimed_complete(self):
         o=self.audit['learningOutcomes']; self.assertEqual(o['criteria'],33); self.assertEqual(o['instrumentedCriteria'],32); self.assertEqual(o['instrumentedPercent'],97.0); self.assertLess(o['instrumentedPercent'],100)
     def test_outcome_status_distribution_matches_detail_rows(self):
