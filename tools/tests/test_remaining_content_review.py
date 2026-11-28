@@ -135,6 +135,12 @@ class RemainingContentReviewTests(unittest.TestCase):
         practice_only_seen = set()
         for _, unit, number, question in selected_items():
             key = f"{unit['id']}#Q{number}"
+            if question.get("mockEligible") is False and unit.get("editorialStatus") == "reserve-pending-independent-review":
+                # Reserve questions are fail-closed while awaiting independent
+                # review; this flag does not reclassify them as practice-only.
+                self.assertNotIn(key, reviewed, key)
+                self.assertNotIn(key, expected_practice_only, key)
+                continue
             if question.get("mockEligible") is False:
                 self.assertIn(key, expected_practice_only, key)
                 self.assertEqual(unit.get("part"), "Part 4", key)
