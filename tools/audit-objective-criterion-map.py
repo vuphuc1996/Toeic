@@ -20,7 +20,7 @@ def stable_question_key(question: dict) -> str | None:
     ids = question.get("choiceIds")
     if not isinstance(ids, list) or not ids or not isinstance(ids[0], str):
         return None
-    return re.sub(r":choice:\\d+$", "", ids[0])
+    return re.sub(r":choice:\d+$", "", ids[0])
 
 
 def main() -> int:
