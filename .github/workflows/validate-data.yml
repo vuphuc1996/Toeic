@@ -425,5 +425,9 @@ jobs:
 
       - name: Unit tests — related term explanation context
         run: python -m unittest discover -s tools/tests -p 'test_related_term_explanation_context.py' -v
+      - name: Unit tests — consolidated Vocabulary & Glossary Quality Dashboard
+        run: python -m unittest discover -s tools/tests -p 'test_vocabulary_quality_dashboard.py' -v
+      - name: Vocabulary & Glossary Quality Dashboard CI summary (read-only)
+        run: python tools/build-vocabulary-quality-dashboard.py --summary-json
       - name: Full Python test discovery (all test modules)
         run: python -m unittest discover -s tools/tests -v

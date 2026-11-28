@@ -70,6 +70,20 @@ def build(root=ROOT):
                      'reservePromotion': False, 'uiChanged': False, 'productionBranchChanged': False}
     }
 
+def summarize(data):
+    """Return compact machine-readable counts for CI and release evidence."""
+    return {
+        'schemaVersion': data['schemaVersion'],
+        'release': data['release'],
+        'readOnly': data['readOnly'],
+        'glossary': data['glossary'],
+        'relationshipGraph': data['relationshipGraph'],
+        'wordFamilyGraph': data['wordFamilyGraph'],
+        'missingGlossaryCandidateCount': len(data['missingGlossaryCandidates']),
+        'priorityQueueCount': len(data['priorityQueue']),
+        'guardrails': data['guardrails'],
+    }
+
 def render(data):
     g, r, w = data['glossary'], data['relationshipGraph'], data['wordFamilyGraph']
     lines = ['# Vocabulary & Glossary Quality Dashboard — v' + str(data['release']), '',
@@ -96,8 +110,12 @@ def render(data):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path); parser.add_argument('--json-output', type=Path)
+    parser.add_argument('--summary-json', action='store_true', help='print compact machine-readable CI summary')
     args = parser.parse_args(); data = build(); report = render(data)
     if args.output: args.output.parent.mkdir(parents=True, exist_ok=True); args.output.write_text(report, encoding='utf-8')
     if args.json_output: args.json_output.parent.mkdir(parents=True, exist_ok=True); args.json_output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(report)
+    if args.summary_json:
+        print(json.dumps(summarize(data), ensure_ascii=False, sort_keys=True))
+    else:
+        print(report)
 if __name__ == '__main__': main()

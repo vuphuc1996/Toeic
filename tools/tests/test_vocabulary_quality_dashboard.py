@@ -19,6 +19,16 @@ class VocabularyQualityDashboardTests(unittest.TestCase):
         self.assertEqual(first['glossary']['flaggedEntries'], len(first['priorityQueue']))
         self.assertGreaterEqual(first['relationshipGraph']['headwords'], first['relationshipGraph']['uniqueHeadwords'])
 
+    def test_summary_is_compact_reconciled_and_preserves_guardrails(self):
+        data = MODULE.build(ROOT)
+        summary = MODULE.summarize(data)
+        self.assertEqual(summary['release'], data['release'])
+        self.assertEqual(summary['priorityQueueCount'], len(data['priorityQueue']))
+        self.assertEqual(summary['missingGlossaryCandidateCount'], len(data['missingGlossaryCandidates']))
+        self.assertEqual(summary['guardrails'], data['guardrails'])
+        self.assertNotIn('priorityQueue', summary)
+        self.assertNotIn('missingGlossaryCandidates', summary)
+
     def test_guardrails_prohibit_mutation_and_reserve_promotion(self):
         data = MODULE.build(ROOT)
         self.assertTrue(all(value is False for value in data['guardrails'].values()))
