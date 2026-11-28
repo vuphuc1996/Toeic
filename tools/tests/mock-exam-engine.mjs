@@ -25,7 +25,7 @@ assert.equal(MOCK_MODES.full.listeningSeconds + MOCK_MODES.full.readingSeconds, 
 // Reserve-pending questions stay out of mock exams until independent review.
 const reservedUnits = listening.filter(item => item.editorialStatus === 'reserve-pending-independent-review');
 const reservedUnitIds = new Set(reservedUnits.map(item => item.id));
-assert.equal(reservedUnits.reduce((n,item) => n + item.questions.length,0), 193);
+assert.equal(reservedUnits.reduce((n,item) => n + item.questions.length,0), 196);
 assert.equal(reservedUnits.filter(item => item.editorialBatch === '027').reduce((n,item) => n + item.questions.length,0), 32);
 assert.equal(reservedUnits.filter(item => item.editorialBatch === '026').reduce((n,item) => n + item.questions.length,0), 24);
 assert.equal(reservedUnits.filter(item => item.editorialBatch === '014').reduce((n,item) => n + item.questions.length,0), 17);
@@ -157,4 +157,4 @@ assert.ok(result.listening.target75 >= 0);
 assert.ok(result.reading.target75 >= 0);
 assert.ok(result.parts['Part 1']);
 
-console.log('Mock exam engine PASS: quick 15m (25Q), half 60m (100Q), full 120m (200Q), exact Part blueprint, indivisible blocks, 193 Listening + 87 Reading reserve questions excluded, unknown editorial states fail closed, no in-form duplicates, usage rotation, timer boundaries and scoring.');
+console.log('Mock exam engine PASS: quick 15m (25Q), half 60m (100Q), full 120m (200Q), exact Part blueprint, indivisible blocks, 196 Listening + 87 Reading reserve questions excluded, unknown editorial states fail closed, no in-form duplicates, usage rotation, timer boundaries and scoring.');
