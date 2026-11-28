@@ -13,7 +13,7 @@
 
 ## Protected inventory metrics
 
-- Listening: **102 eligible + 193 reserve + 16 practice-only = 311 total**.
+- Listening: **102 eligible + 193 reserve + 13 practice-only = 308 total**.
 - Part 7 reserve: **87 questions**; remains separate from Listening and Part 5.
 - Separate Part 5 practice-only bank: **80 questions**; 80 are review-pending.
 
