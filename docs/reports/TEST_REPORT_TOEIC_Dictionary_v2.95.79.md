@@ -3,6 +3,9 @@
 **Target branch:** `candidate`
 **Predecessor baseline:** `9a174778bcdfea7adca98f0abb1b17d3a050388e` (v2.95.78)
 **Main baseline:** `256ca21461e78a7685bed773ddd622a64050e33a` (unchanged)
+**Verified source commit:** `76ca52457929493a2a587f7673367bc29eeace49`
+**Validate run:** [46105814708](https://github.com/vuphuc1996/Toeic/actions/runs/46105814708) — PASS
+**Pages run:** [46105814298](https://github.com/vuphuc1996/Toeic/actions/runs/46105814298) — PASS
 
 ## Release scope
 
@@ -17,13 +20,13 @@ This is a source-maintenance release for release-version integrity. It does not 
 
 | Gate | Status | Evidence |
 |---|---|---|
-| Package-version mismatch regression | **PENDING CI** | Added to `test_sync_version.py` |
-| Missing/duplicate marker safety regression | **PENDING CI** | Added to `test_sync_version.py` |
-| Version sync check | **PENDING CI** | `python tools/sync-version.py --check` |
-| Full Python discovery | **PENDING CI** | Validate workflow on the exact new candidate commit |
-| Vocabulary / learning-content validation | **PENDING CI** | Validate workflow on the exact new candidate commit |
-| GitHub Pages build/deploy | **PENDING** | Must be inspected separately on the exact new commit |
-| Installed-PWA/offline propagation | **UNVERIFIED** | Requires installed-device verification |
+| Package-version mismatch regression | **PASS** | `test_sync_version.py` — 16/16 tests passed, including package drift/apply case |
+| Missing/duplicate marker safety regression | **PASS** | Missing and duplicate package markers stop before writes |
+| Version sync check | **PASS** | 19 release markers; 17 app, 42 SW, 1 mock-engine cache keys synchronized |
+| Full Python discovery | **PASS** | 848 tests; `Ran 848 tests in 10.732s; OK` |
+| Vocabulary / learning-content validation | **PASS** | Vocabulary release integrity: 26 files, 1,221 records |
+| GitHub Validate | **PASS** | 151/151 steps successful; 0 failed, 0 skipped on the exact verified source commit |
+| GitHub Pages build/deploy | **PASS** | Build, upload, deploy and status-report jobs all succeeded on the same exact SHA |\n| Installed-PWA/offline propagation | **UNVERIFIED** | Requires installed-device verification |
 | Physical-device layout QA | **UNVERIFIED** | iPhone/iPad portrait & landscape and laptop widths |
 | FullSource ZIP generation / CRC verification | **NOT DONE** | No ZIP artifact is claimed |
 
@@ -41,8 +44,8 @@ No vocabulary headword/ID/sense/relationship, Listening/Reading/Grammar content,
 
 ## Known Pages warning boundary
 
-The previously observed GitHub-managed Pages dynamic workflow emitted Node.js 20 deprecation and dependency warnings while completing successfully. This batch does not modify hosting settings or replace the managed Pages workflow, so those warnings are **not claimed fixed**. A successful Pages run, when observed for v2.95.79, is recorded separately from production approval.
+The successful v2.95.79 Pages run still emitted the GitHub-managed Node.js 20 deprecation warning plus dependency warnings `DEP0040` (`punycode`) and `DEP0169` (`url.parse()`). They did not fail the deploy. This batch does not alter hosting settings or the managed Pages workflow; those warnings are **not fixed or claimed fixed**.
 
 ## Production boundary
 
-This is a candidate-only source release. `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`. No merge, main deployment or Production Deployment Accepted decision is included.
+This is a candidate-only source release. The acceptance evidence above applies to source commit `76ca52457929493a2a587f7673367bc29eeace49`; the evidence-ledger follow-up changes documentation only and does not change app/runtime/data files. `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`. No merge, main deployment or Production Deployment Accepted decision is included.

@@ -5,7 +5,7 @@
 - **Regression coverage:** add mismatch detection, dry-run immutability, successful package synchronization, and missing/duplicate marker safety tests.
 - **Release shell:** bump synchronized source and cache keys to v2.95.79; update the current version ledger and release reports.
 - **Protected boundaries:** no learner-facing UI, vocabulary/content records, question/choice/answer keys, eligibility flags, IndexedDB schema/data, Robot Buddy behavior or hosting configuration are changed. `main` remains untouched.
-- **Acceptance:** this entry records source scope only. Candidate CI and Pages acceptance must be verified on the new exact commit; predecessor evidence is not substituted.
+- **Acceptance (2026-11-28):** v2.95.79 source commit `76ca52457929493a2a587f7673367bc29eeace49` passed GitHub Validate [run 46105814708](https://github.com/vuphuc1996/Toeic/actions/runs/46105814708) and Pages build/deploy [run 46105814298](https://github.com/vuphuc1996/Toeic/actions/runs/46105814298) on the same exact SHA. Validate completed 151/151 steps; full Python suite 848 tests PASS; version synchronizer 19 markers PASS. FullSource ZIP, installed-PWA/offline propagation and physical-device QA remain unverified; `main` is unchanged.
 
 ## v2.95.78 — Criterion-level TOEIC Learning Outcome Evidence (2026-11-28)
 

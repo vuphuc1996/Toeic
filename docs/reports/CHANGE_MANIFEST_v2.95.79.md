@@ -16,7 +16,7 @@
 
 The synchronizer must identify exactly one top-level package version marker. A version mismatch is a normal drift state (exit 1 on `--check`); a missing or duplicate marker is a structure error (exit 2) and must not write any file. `--dry-run` must remain read-only, and `--apply` must update only registered markers before the post-apply check.
 
-Hosted CI status for the new exact candidate commit is pending; predecessor run evidence is not reused as current acceptance.
+**Exact source commit accepted:** `76ca52457929493a2a587f7673367bc29eeace49`. GitHub Validate [run 46105814708](https://github.com/vuphuc1996/Toeic/actions/runs/46105814708) PASS (151/151 steps, 848 Python tests); GitHub Pages [run 46105814298](https://github.com/vuphuc1996/Toeic/actions/runs/46105814298) PASS on the same exact SHA. Predecessor evidence is not substituted.
 
 ## Protected boundaries
 

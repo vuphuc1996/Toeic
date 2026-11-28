@@ -4,7 +4,7 @@ This documentation describes the current TOEIC-first GitHub Pages candidate. Sou
 
 - Current release: `2.95.79`.
 - Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.79.md`.
-- Predecessor evidence only: v2.95.78 candidate HEAD `9a174778bcdfea7adca98f0abb1b17d3a050388e` passed Validate [run 46100602552](https://github.com/vuphuc1996/Toeic/actions/runs/46100602552) and Pages build/deploy [run 46100602152](https://github.com/vuphuc1996/Toeic/actions/runs/46100602152). v2.95.79 must be checked on its own exact commit.
+- v2.95.79 source acceptance: exact candidate source commit `76ca52457929493a2a587f7673367bc29eeace49` passed GitHub Validate [run 46105814708](https://github.com/vuphuc1996/Toeic/actions/runs/46105814708) and Pages build/deploy [run 46105814298](https://github.com/vuphuc1996/Toeic/actions/runs/46105814298); 848 Python tests PASS. v2.95.78 predecessor evidence remains in its historical release report.
 - Learning outcome evidence matrix: `reports/TOEIC_LEARNING_OUTCOME_EVIDENCE_v2.95.78.md` — 22/27 TOEIC criteria mapped to 1,082 stable question links; five criteria intentionally remain uninstrumented.
 - Criterion map audit: `../tools/audit-objective-criterion-map.py` — checks exact question IDs, question indices, reserve exclusion and review gates.
 - Candidate change manifest: `reports/CHANGE_MANIFEST_v2.95.79.md`.
