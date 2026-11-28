@@ -10889,6 +10889,213 @@
         "Regular hours will resume on the following Monday.",
         "The online support team will remain available until six p.m. for urgent inquiries."
       ]
+    },
+    {
+      "id": "part1-construction-plans",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Reviewing building plans at a construction site",
+      "topic": "Construction & Facilities",
+      "level": "A2–B1",
+      "imageAlt": "A site engineer wearing a white hard hat and a high-visibility safety vest is holding and reviewing a large set of building plans at an active construction site.",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "A site engineer is reviewing a set of building plans.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A worker is painting the exterior wall of a building.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Several workers are installing glass panels in the building.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A delivery truck is unloading construction materials.",
+          "voice": "female",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 0,
+          "explanation": "Đáp án A: Nhân viên công trường đang cầm và xem bản vẽ công trình. Câu B nói về sơn tường; câu C nói về lắp kính; câu D nói về dỡ vật liệu từ xe tải — những hành động này không được thể hiện trong ảnh.",
+          "choiceIds": [
+            "listening:part1-construction-plans:1:choice:1",
+            "listening:part1-construction-plans:1:choice:2",
+            "listening:part1-construction-plans:1:choice:3",
+            "listening:part1-construction-plans:1:choice:4"
+          ],
+          "evidenceText": "A site engineer is reviewing a set of building plans.",
+          "mockEligible": false
+        }
+      ],
+      "transcriptTranslation": "A. Một kỹ sư công trường đang xem bộ bản vẽ xây dựng. B. Một công nhân đang sơn mặt ngoài của tòa nhà. C. Một số công nhân đang lắp các tấm kính vào tòa nhà. D. Một xe tải giao hàng đang dỡ vật liệu xây dựng.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "AI-generated photograph created with Google Imagen in Google AI Studio for the TOEIC Dictionary project. Asset origin and usage notes are recorded in assets/listening/ATTRIBUTION.csv. Practice material is original editorial content and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-construction-plans.jpg",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "018",
+      "contentBatch": "batch-018-part1-ai-generated-photo-expansion",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "photoSourceType": "ai-generated",
+      "visualEvidenceNote": "Preliminary visual check: a site engineer in a hard hat and high-visibility vest is visibly holding and reviewing a large blueprint. The other three described actions are not shown. This is an internal author check only; independent second-person review remains pending."
+    },
+    {
+      "id": "part1-laboratory-bench",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Examining a sample under a microscope",
+      "topic": "Science & Quality Control",
+      "level": "A2–B1",
+      "imageAlt": "A laboratory technician wearing a white lab coat and protective eyewear is looking through a binocular microscope at a laboratory bench.",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "A technician is repairing an electronic control panel.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A laboratory technician is looking through a microscope.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A researcher is labeling bottles on a storage shelf.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Some laboratory equipment is being packed into a box.",
+          "voice": "female",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 1,
+          "explanation": "Đáp án B: Kỹ thuật viên phòng thí nghiệm đang nhìn qua kính hiển vi. Các câu A, C và D lần lượt mô tả sửa bảng điều khiển, dán nhãn chai lọ và đóng gói thiết bị — không phải hành động chính trong ảnh.",
+          "choiceIds": [
+            "listening:part1-laboratory-bench:1:choice:1",
+            "listening:part1-laboratory-bench:1:choice:2",
+            "listening:part1-laboratory-bench:1:choice:3",
+            "listening:part1-laboratory-bench:1:choice:4"
+          ],
+          "evidenceText": "A laboratory technician is looking through a microscope.",
+          "mockEligible": false
+        }
+      ],
+      "transcriptTranslation": "A. Một kỹ thuật viên đang sửa bảng điều khiển điện tử. B. Một kỹ thuật viên phòng thí nghiệm đang nhìn qua kính hiển vi. C. Một nhà nghiên cứu đang dán nhãn các chai trên kệ lưu trữ. D. Một số thiết bị phòng thí nghiệm đang được đóng vào hộp.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "AI-generated photograph created with Google Imagen in Google AI Studio for the TOEIC Dictionary project. Asset origin and usage notes are recorded in assets/listening/ATTRIBUTION.csv. Practice material is original editorial content and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-laboratory-bench.jpg",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "018",
+      "contentBatch": "batch-018-part1-ai-generated-photo-expansion",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "photoSourceType": "ai-generated",
+      "visualEvidenceNote": "Preliminary visual check: the main subject is wearing a lab coat and protective eyewear and is visibly looking through a binocular microscope. The other three described actions are not shown. This is an internal author check only; independent second-person review remains pending."
+    },
+    {
+      "id": "part1-supermarket-shelf",
+      "part": "Part 1",
+      "type": "photograph",
+      "title": "Checking products in a supermarket aisle",
+      "topic": "Retail & Merchandising",
+      "level": "A2–B1",
+      "imageAlt": "A supermarket employee wearing an apron is checking a canned product on a shelf in a grocery aisle.",
+      "segments": [
+        {
+          "speaker": "Narrator",
+          "text": "A customer is paying for groceries at a checkout counter.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A shopper is weighing fresh vegetables at a produce counter.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A store employee is checking a canned product on a supermarket shelf.",
+          "voice": "female",
+          "accent": "en-US"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "A delivery worker is unloading boxes from a trolley.",
+          "voice": "female",
+          "accent": "en-US"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Listen to the four statements and select the one that best describes the photograph.",
+          "choices": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answerIndex": 2,
+          "explanation": "Đáp án C: Nhân viên cửa hàng đang kiểm tra một sản phẩm đóng hộp trên kệ siêu thị. Ảnh không cho thấy khách thanh toán ở quầy thu ngân, cân rau củ hoặc dỡ thùng hàng từ xe đẩy.",
+          "choiceIds": [
+            "listening:part1-supermarket-shelf:1:choice:1",
+            "listening:part1-supermarket-shelf:1:choice:2",
+            "listening:part1-supermarket-shelf:1:choice:3",
+            "listening:part1-supermarket-shelf:1:choice:4"
+          ],
+          "evidenceText": "A store employee is checking a canned product on a supermarket shelf.",
+          "mockEligible": false
+        }
+      ],
+      "transcriptTranslation": "A. Một khách hàng đang thanh toán hàng hóa tại quầy thu ngân. B. Một người mua hàng đang cân rau tươi tại quầy thực phẩm. C. Một nhân viên cửa hàng đang kiểm tra một sản phẩm đóng hộp trên kệ siêu thị. D. Một nhân viên giao hàng đang dỡ các thùng hàng khỏi xe đẩy.",
+      "vocabulary": [],
+      "contentSource": "original-editorial",
+      "sourceNote": "AI-generated photograph created with Google Imagen in Google AI Studio for the TOEIC Dictionary project. Asset origin and usage notes are recorded in assets/listening/ATTRIBUTION.csv. Practice material is original editorial content and is not official ETS material.",
+      "visualType": "photograph",
+      "photo": "./assets/listening/part1-supermarket-shelf.jpg",
+      "editorialStatus": "reserve-pending-independent-review",
+      "editorialBatch": "018",
+      "contentBatch": "batch-018-part1-ai-generated-photo-expansion",
+      "mockExamEligibility": "excluded-until-independent-review",
+      "reviewNote": "internal-author-check; independent-second-review-pending",
+      "photoSourceType": "ai-generated",
+      "visualEvidenceNote": "Preliminary visual check: a store employee in an apron is visibly reaching toward and checking a canned product on the supermarket shelf. No checkout, produce scale or trolley unloading is shown. This is an internal author check only; independent second-person review remains pending."
     }
   ]
 }
