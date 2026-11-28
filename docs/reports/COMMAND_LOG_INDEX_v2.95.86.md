@@ -20,4 +20,4 @@ This index records the candidate-only work leading from the owner-confirmed v2.9
 | `0a76354d75c1eaa6366acf6138051ba64d965424` | Update Full-Mock post-review ceiling expectations |
 | `d582b13a1cdcd85cb5ba31f7b4eda43ece1db1b0` | Add Batch 018 photo, ID, evidence and eligibility tests |
 
-Version synchronization and documentation commits follow these changes. Check the live branch log for the final SHA; this report is not a substitute for GitHub Actions or Pages verification.
+Release-shell synchronization and documentation commits follow these changes; consult the final candidate branch head to identify the exact SHA awaiting validation. Check the live branch log for the final SHA; this report is not a substitute for GitHub Actions or Pages verification.
