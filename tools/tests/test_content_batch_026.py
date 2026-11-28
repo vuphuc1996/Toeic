@@ -35,6 +35,27 @@ class ContentBatch026Tests(unittest.TestCase):
                         present.add(unit['id'])
                         del unit['transcriptTranslation']
                 self.assertEqual(present, remediation_ids)
+
+                # v2.95.83 adds one practice-only inference item to each
+                # allowlisted pre-existing Part 4 talk. Strip only these
+                # exact items when rebuilding the historical bank fingerprint.
+                practice_only_part4_ids = {
+                    'part4-office-announcement', 'part4-conference-update',
+                    'part4-safety-announcement', 'part4-product-launch',
+                    'part4-quarterly-town-hall', 'part4-customer-voicemail',
+                    'part4-warehouse-safety-briefing', 'part4-training-registration',
+                    'part4-travel-service-update', 'part4-quarterly-inventory-report',
+                }
+                practice_seen = set()
+                for unit in document['listening']:
+                    if unit.get('id') not in practice_only_part4_ids:
+                        continue
+                    questions = unit.get('questions') or []
+                    if len(questions) != 4 or questions[3].get('mockEligible') is not False:
+                        raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit.get('id')}")
+                    practice_seen.add(unit['id'])
+                    unit['questions'] = questions[:3]
+                self.assertEqual(practice_seen, practice_only_part4_ids)
                 source = (json.dumps(document, ensure_ascii=False, indent=2) + "\n").encode('utf-8')
             self.assertEqual(self.batch[key],hashlib.sha256(source).hexdigest())
     def test_grammar_exercises_are_valid_and_ids_unique(self):
@@ -69,4 +90,20 @@ class ContentBatch026Tests(unittest.TestCase):
                 count+=1; self.assertIn(q['evidenceText'],item['passage']); self.assertEqual(len(q['choices']),4); self.assertIn(q['answerIndex'],range(4))
                 for cid in q['choiceIds']: self.assertNotIn(cid,ids); ids.add(cid)
         self.assertEqual(count,24)
+
+    def test_v29583_part4_practice_additions_are_exact_and_mock_excluded(self):
+        expected_ids = {
+            'part4-office-announcement', 'part4-conference-update',
+            'part4-safety-announcement', 'part4-product-launch',
+            'part4-quarterly-town-hall', 'part4-customer-voicemail',
+            'part4-warehouse-safety-briefing', 'part4-training-registration',
+            'part4-travel-service-update', 'part4-quarterly-inventory-report',
+        }
+        for unit_id in expected_ids:
+            unit = self.l[unit_id]
+            self.assertEqual(len(unit['questions']), 4, unit_id)
+            added = unit['questions'][3]
+            self.assertIs(added.get('mockEligible'), False, unit_id)
+            self.assertEqual(added['choiceIds'], [f'listening:{unit_id}:4:choice:{i}' for i in range(1, 5)])
+
 if __name__=='__main__': unittest.main()
