@@ -24,7 +24,7 @@ class MockReadinessAuditTests(unittest.TestCase):
     def test_approved_only_pools_and_two_disjoint_reading_forms(self):
         self.assertEqual(self.report["listeningApprovedTotal"], 102)
         self.assertEqual(self.report["approvedPools"]["Listening Part 4"], 30)
-        self.assertEqual(self.report["listeningReserveTotal"], 193)
+        self.assertEqual(self.report["listeningReserveTotal"], 196)
         self.assertEqual(self.report["readingApprovedTotal"], 200)
         self.assertEqual(self.report["readingReserveTotal"], 87)
         self.assertEqual(self.report["separatePart5PracticeOnly"], 80)
@@ -33,8 +33,8 @@ class MockReadinessAuditTests(unittest.TestCase):
     def test_listening_bottleneck_and_overlap_disclosure(self):
         self.assertEqual(self.report["listeningSecondFullFormMinOverlap"], 98)
         self.assertEqual(self.report["listeningSecondFullFormMaxNew"], 2)
-        self.assertEqual(self.report["listeningPostReviewByPart"]["Part 1"], 9)
-        self.assertEqual(self.report["listeningPostReviewDisjointFullForms"], 1)
+        self.assertEqual(self.report["listeningPostReviewByPart"]["Part 1"], 12)
+        self.assertEqual(self.report["listeningPostReviewDisjointFullForms"], 2)
         self.assertTrue(self.report["modes"]["full"]["singleFormSupported"])
         self.assertEqual(self.report["modes"]["full"]["disjointListeningForms"], 1)
         self.assertEqual(self.report["modes"]["full"]["disjointReadingForms"], 2)
