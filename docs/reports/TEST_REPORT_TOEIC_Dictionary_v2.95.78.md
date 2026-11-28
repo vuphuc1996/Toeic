@@ -1,34 +1,42 @@
-# Candidate Test Report — TOEIC Dictionary v2.95.78
+# Test & Hosted Acceptance Report — TOEIC Dictionary v2.95.78
 
-**Status: PRE-CI SOURCE CANDIDATE — hosted verification pending.**
+**Verified candidate HEAD:** `0187b446123fca1a8708b496e971e18b19a46c57`
+**Target branch:** `candidate`
+**Main branch:** unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
-This report documents the intended verification scope for the v2.95.78 source change. It does not claim that local tests, GitHub Actions, Pages deployment, installed-PWA behavior or physical-device tests have already passed.
+## Hosted verification
+
+| Gate | Result | Evidence |
+|---|---|---|
+| GitHub Validate | **PASS** | [Run 46100106836](https://github.com/vuphuc1996/Toeic/actions/runs/46100106836) on the exact SHA above |
+| GitHub Pages build and deploy | **PASS** | [Run 46100106757](https://github.com/vuphuc1996/Toeic/actions/runs/46100106757) on the same exact SHA |
+| Validate workflow | **151 successful steps / 0 failed / 0 skipped** | Validate job completed successfully |
+| Full Python test discovery | **846 tests PASS** | Final discovery output: `Ran 846 tests in 10.776s`; `OK` |
+| Stable question-to-criterion map | **PASS** | 1,082 links verified; 638 unique stable question IDs; zero Listening reserve mappings |
+| Criterion-level runtime tests | **PASS** | Accuracy, timed accuracy, optional self-report rubric, delayed recall, read-only summary and editorial review gates |
+| CSS design-token ratchet | **PASS** | New criterion CSS uses canonical design-system tokens |
+| Version synchronization | **PASS** | app.js, mock-engine.js, index.html, sw.js, docs and manifest at v2.95.78 |
 
 ## Source change under test
 
-- Candidate predecessor: `c1f9702579633aeb6cd372b29e17b143cb2868a1` (v2.95.77).
-- Release target: `v2.95.78`.
-- Main branch is outside scope and remains unchanged.
-- Added stable question-to-criterion map: 1,082 links / 638 unique IDs / 22 of 27 TOEIC criteria.
-- Added criterion ledger functions, optional self-report explanation rubrics, a criterion progress dashboard, and criterion-level due-recall routing.
-- Existing `objectiveProgress` record, IndexedDB v1 schema, content banks, question/choice IDs, answer keys and Mock gates are protected.
+- Added `data/learning-path/objective-criterion-map.json`: 1,082 stable question-to-criterion links across 638 unique IDs.
+- **22/27 TOEIC criteria** have explicit item-level evidence paths; **five remain uninstrumented** until suitable item-level evidence or rubric design exists.
+- Six Foundation criteria retain their separate, existing evidence paths; **28/33 total criteria** have a local evidence-collection path.
+- Criterion accuracy, timed accuracy, optional self-report explanation rubrics, delayed recall and exact source-question reopening use the existing `objectiveProgress` ledger.
+- Grammar and Reading Part 5 explanation rubrics are learner self-reports, not automatic or independent grading.
+- Separate Part 5 uses a 30-second internal practice target only; it is not an ETS timing standard or score conversion.
 
-## Verification gates
+## Protected boundaries
 
-| Gate | Evidence expected | Status in this source report |
-|---|---|---|
-| Source integrity | Git tree diff and preserved canonical banks / IDs | Pending candidate commit review |
-| Data mapping audit | 1,082 mapped links resolve exactly; zero Listening reserve mappings | Automated audit added; not yet run here |
-| Learning outcome tests | 33 criteria, 22/27 TOEIC mapped, five intentionally uninstrumented | Regression tests added; not yet run here |
-| Criterion runtime | Accuracy, timed accuracy, delayed recall, rubric, read-only audit | Node regression added; not yet run here |
-| Python test suite | Full discovered test inventory, counts and skips | Pending GitHub Actions |
-| Version / Service Worker | Manifest, app, HTML, package, cache keys and both precache lists at v2.95.78 | Source changes staged in this candidate |
-| GitHub Validate | Must pass on the exact candidate commit | Pending |
-| GitHub Pages | Build and deployment must pass on the same exact candidate commit | Pending |
-| Installed PWA / offline | Cache update and offline reload on installed PWA | Unverified |
-| Physical-device QA | iPhone/iPad portrait and landscape, common laptop widths | Unverified |
-| Production on main | Separate approval and verification required | Not approved; main unchanged |
+- 1,221 vocabulary records and the 831-item assessment/support inventory are retained.
+- Existing question/choice IDs, answer keys, Mock eligibility and editorial reserve gates remain unchanged.
+- Listening reserve remains excluded from the criterion map.
+- Reading Part 7 second-review and Separate Part 5 independent-review gates remain active.
+- Existing IndexedDB v1 schema and learner-local data are preserved; no data reset or schema migration is introduced.
+- UI layout, navigation, Robot Buddy access boundary and GitHub Pages-only architecture are retained.
 
 ## Acceptance boundary
 
-A passing mapping audit does not constitute learner mastery or editorial approval. A passing source test does not prove hosted deployment, installed-PWA cache propagation or physical-device behavior. Production acceptance on `main` is explicitly excluded from this candidate.
+**Source Release Accepted; Candidate CI Verified; Pages Deployment Verified.**
+
+Installed-PWA cache/offline propagation and physical-device QA (iPhone/iPad portrait and landscape, laptop widths) remain **UNVERIFIED**. The v2.95.78 FullSource ZIP was not generated or CRC/byte-verified in this candidate. Production deployment to `main` is not approved; `main` remains unchanged.

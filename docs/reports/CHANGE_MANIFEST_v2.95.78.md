@@ -28,4 +28,4 @@
 
 ## Verification
 
-GitHub Actions and Pages acceptance are pending the exact candidate commit. This manifest does not claim a completed ZIP package, offline-installed-PWA verification or physical-device QA.
+Hosted acceptance verified on exact candidate HEAD `0187b446123fca1a8708b496e971e18b19a46c57`: GitHub Validate PASS (run 46100106836; 846 Python tests PASS) and GitHub Pages build/deploy PASS (run 46100106757). FullSource ZIP generation, installed-PWA/offline verification and physical-device QA remain unverified.

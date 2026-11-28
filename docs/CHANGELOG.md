@@ -7,7 +7,7 @@
 - **Review protections:** Listening reserve remains excluded from mapping; Reading Part 7 second-review and Separate Part 5 independent-review gates remain in force. Five criteria without a defensible tag/rubric are not scored.
 - **Progress reporting:** The provisional weighted measurable curriculum-build index recalculates to 73.73% because criterion-level evidence collection is now instrumented; this is not learner mastery, official TOEIC readiness or total system completion.
 - **Preserved data:** Canonical vocabulary, all 831 assessment/support records, question/choice IDs, answer keys, Mock eligibility, learner IndexedDB schema and GitHub Pages-only architecture remain unchanged.
-- **Acceptance boundary:** GitHub Validate and Pages deployment must pass on the exact candidate commit. Installed-PWA/offline and physical-device QA remain unverified; `main` was not changed.
+- **Hosted acceptance (2026-11-28):** GitHub Validate PASS ([run 46100106836](https://github.com/vuphuc1996/Toeic/actions/runs/46100106836); 846 Python tests PASS) and GitHub Pages build/deployment PASS ([run 46100106757]) on exact candidate HEAD `0187b446123fca1a8708b496e971e18b19a46c57`. Installed-PWA/offline, physical-device QA and FullSource ZIP package verification remain unverified; `main` was not changed.
 
 ## v2.95.77 — Migration Compatibility & CI Recovery (2026-11-27)
 

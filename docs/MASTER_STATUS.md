@@ -2,7 +2,7 @@
 
 **Phiên bản mã nguồn đang kiểm kê:** v2.95.78
 
-**Current source candidate:** v2.95.78 — Criterion-level TOEIC Learning Outcome Evidence. The sole predecessor is candidate HEAD `c1f9702579633aeb6cd372b29e17b143cb2868a1` (v2.95.77). Candidate changes are intended for `candidate` only; `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
+**Current source release candidate:** v2.95.78 — Criterion-level TOEIC Learning Outcome Evidence. Sole predecessor: candidate HEAD `c1f9702579633aeb6cd372b29e17b143cb2868a1` (v2.95.77). Latest verified candidate HEAD: `0187b446123fca1a8708b496e971e18b19a46c57`. `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
 ## Current release — v2.95.78
 
@@ -15,7 +15,8 @@
 - **Editorial gates:** All Listening reserve items remain unmapped. Reading Part 7 retains its second-review gate; Separate Part 5 retains its independent-review gate. Mapping availability does not confer Mock approval.
 - **Timing / self-report:** Separate Part 5 uses a 30-second internal practice target only. Grammar and Reading Part 5 explanation rubrics are optional learner self-reports, not automatic or independent grading.
 - **Project progress:** The provisional weighted measurable build index becomes **73.73%** because more criterion-level software evidence paths exist. It is not learner progress, TOEIC readiness or total system completion.
-- **Acceptance boundary:** Source candidate changes prepared; GitHub Validate and Pages results are **PENDING** on the exact v2.95.78 commit. Installed-PWA/offline propagation and physical-device QA remain unverified. Production deployment to `main` is not approved.
+- **Hosted verification on exact candidate HEAD `0187b446123fca1a8708b496e971e18b19a46c57`:** GitHub Validate **PASS** ([run 46100106836](https://github.com/vuphuc1996/Toeic/actions/runs/46100106836)); 151 steps, 0 failures, 0 skipped, including Full Python test discovery **846 tests PASS**. GitHub Pages build and deployment **PASS** ([run 46100106757](https://github.com/vuphuc1996/Toeic/actions/runs/46100106757)). Both workflows report the same exact SHA.
+- **Acceptance boundary:** Source Release Accepted; Candidate CI Verified; Pages Deployment Verified. Installed-PWA cache/offline propagation and physical-device QA remain **UNVERIFIED**. FullSource ZIP generation/package verification remains **NOT DONE**. Production Deployment Accepted on `main` is not granted; `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
 ## Previous release — v2.95.77
 
