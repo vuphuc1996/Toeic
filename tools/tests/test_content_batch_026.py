@@ -83,7 +83,7 @@ class ContentBatch026Tests(unittest.TestCase):
                         or unit.get('editorialBatch') != '018'
                         or unit.get('editorialStatus') != 'reserve-pending-independent-review'
                         or len(questions) != 1
-                        or questions[0].get('mockEligible') is not False
+                        or 'mockEligible' in questions[0]
                     ):
                         raise AssertionError(f"Unexpected Batch 018 Part 1 reserve record: {unit.get('id')}")
                     batch_018_seen.add(unit['id'])
