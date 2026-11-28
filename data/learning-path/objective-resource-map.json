@@ -133,7 +133,10 @@
         "part1-presentation-room",
         "part1-reception-plant",
         "part1-restaurant-setting",
-        "part1-photocopier"
+        "part1-photocopier",
+        "part1-construction-plans",
+        "part1-laboratory-bench",
+        "part1-supermarket-shelf"
       ],
       "availability": "available",
       "reviewState": "mixed_or_pending_review_check_item_level"
