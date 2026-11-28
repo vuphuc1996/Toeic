@@ -12,7 +12,7 @@
     "reservePendingIndependentReview": 3
   },
   "sourcePolicy": "Project-generated with Google Imagen in Google AI Studio. Not Pexels photography. No human photographer is claimed.",
-  "reservePolicy": "All resources and questions remain reserve-pending-independent-review with question-level mockEligible=false. Do not map to learning-outcome criteria or promote until an independent reviewer verifies the photograph, each spoken statement, the unique answer and distractors.",
+  "reservePolicy": "All three resources remain reserve-pending-independent-review; this resource-level status gates Mock eligibility. Do not add question-level mockEligible=false, which is reserved for practice-only questions. Do not map to learning-outcome criteria or promote until an independent reviewer verifies the photograph, each spoken statement, the unique answer and distractors.",
   "listening": [
     {
       "id": "part1-construction-plans",
