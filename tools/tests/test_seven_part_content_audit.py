@@ -27,10 +27,10 @@ class SevenPartContentAuditTests(unittest.TestCase):
 
     def test_authoritative_inventory_counts_across_all_banks(self):
         t = self.report["totals"]
-        self.assertEqual(t["listeningUnits"], 145)
-        self.assertEqual(t["listeningQuestions"], 308)
+        self.assertEqual(t["listeningUnits"], 148)
+        self.assertEqual(t["listeningQuestions"], 311)
         self.assertEqual(t["listeningApprovedForMock"], 102)
-        self.assertEqual(t["listeningHumanReviewRequired"], 193)
+        self.assertEqual(t["listeningHumanReviewRequired"], 196)
         self.assertEqual(t["listeningPracticeSupport"], 13)
         self.assertEqual(t["readingUnits"], 73)
         self.assertEqual(t["readingQuestions"], 287)
@@ -39,8 +39,8 @@ class SevenPartContentAuditTests(unittest.TestCase):
         self.assertEqual(t["separatePart5Questions"], 80)
         self.assertEqual(t["grammarLessons"], 58)
         self.assertEqual(t["grammarExercises"], 169)
-        self.assertEqual(t["totalQuestionsAllBanks"], 844)
-        self.assertEqual(t["totalHumanReviewRequired"], 360)
+        self.assertEqual(t["totalQuestionsAllBanks"], 847)
+        self.assertEqual(t["totalHumanReviewRequired"], 363)
         self.assertEqual(t["totalPracticeSupport"], 182)
 
     def test_zero_structural_errors_and_apostrophe_normalization(self):
@@ -53,7 +53,7 @@ class SevenPartContentAuditTests(unittest.TestCase):
     def test_epistemic_separation_and_part_breakdown(self):
         parts = self.report["parts"]
         self.assertEqual(parts["Listening Part 1"]["approved_for_mock_questions"], 8)
-        self.assertEqual(parts["Listening Part 1"]["human_review_required_questions"], 1)
+        self.assertEqual(parts["Listening Part 1"]["human_review_required_questions"], 4)
         self.assertEqual(parts["Listening Part 2"]["approved_for_mock_questions"], 25)
         self.assertEqual(parts["Listening Part 2"]["human_review_required_questions"], 36)
         self.assertEqual(parts["Listening Part 3"]["approved_for_mock_questions"], 39)
