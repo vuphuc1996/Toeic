@@ -62,6 +62,33 @@ class ContentBatch026Tests(unittest.TestCase):
                     practice_seen.add(unit_id)
                     unit['questions'] = questions[:3]
                 self.assertEqual(practice_seen, practice_only_part4_ids)
+
+                # v2.95.86 adds three new Part 1 reserve resources. Validate
+                # their exact reserve-only contract, then remove only these
+                # allowlisted rows to reconstruct the historical Batch 026 bank.
+                batch_018_part1_ids = {
+                    'part1-construction-plans',
+                    'part1-laboratory-bench',
+                    'part1-supermarket-shelf',
+                }
+                batch_018_seen = set()
+                restored_units = []
+                for unit in document['listening']:
+                    if unit.get('id') not in batch_018_part1_ids:
+                        restored_units.append(unit)
+                        continue
+                    questions = unit.get('questions') or []
+                    if (
+                        unit.get('part') != 'Part 1'
+                        or unit.get('editorialBatch') != '018'
+                        or unit.get('editorialStatus') != 'reserve-pending-independent-review'
+                        or len(questions) != 1
+                        or questions[0].get('mockEligible') is not False
+                    ):
+                        raise AssertionError(f"Unexpected Batch 018 Part 1 reserve record: {unit.get('id')}")
+                    batch_018_seen.add(unit['id'])
+                self.assertEqual(batch_018_seen, batch_018_part1_ids)
+                document['listening'] = restored_units
                 source = (json.dumps(document, ensure_ascii=False, indent=2) + "\n").encode('utf-8')
             self.assertEqual(self.batch[key],hashlib.sha256(source).hexdigest())
     def test_grammar_exercises_are_valid_and_ids_unique(self):
