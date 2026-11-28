@@ -35,7 +35,7 @@ COMMANDS = [
     ("major_release_audit", [sys.executable, "tools/audit-major-release.py"]),
     ("related_glossary_backlog", [sys.executable, "tools/build-related-glossary-backlog.py"]),
     ("editorial_review_queue", [sys.executable, "tools/build-editorial-review-queue.py"]),
-    ("full_python_suite", [sys.executable, "tools/run-python-tests-sharded.py", "--timeout-per-module", "180"]),
+    ("full_python_suite", [sys.executable, "tools/run-python-tests-sharded.py", "--timeout-per-module", "180", "--resume"]),
 ]
 
 
