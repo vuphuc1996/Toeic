@@ -8,8 +8,8 @@ class ObjectiveResourceMapTests(unittest.TestCase):
         objectives,rows,total,mapped=mod.audit()
         self.assertEqual(len(objectives),11)
         self.assertEqual(len(rows),11)
-        self.assertEqual(mapped,379)
-        self.assertEqual(total,379)
+        self.assertEqual(mapped,382)
+        self.assertEqual(total,382)
         self.assertGreater(total,0)
     def test_review_status_is_not_confused_with_availability(self):
         objectives,_,_,_=mod.audit()
