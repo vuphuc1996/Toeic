@@ -4,7 +4,7 @@ This documentation describes the current TOEIC-first GitHub Pages candidate. Sou
 
 - Current release: `2.95.80`.
 - Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.80.md`.
-- Predecessor v2.95.79 acceptance: candidate source commit `76ca52457929493a2a587f7673367bc29eeace49` passed Validate [run 46105814708](https://github.com/vuphuc1996/Toeic/actions/runs/46105814708) and Pages [run 46105814298](https://github.com/vuphuc1996/Toeic/actions/runs/46105814298). v2.95.80 hosted acceptance is pending its own exact-commit runs.
+- v2.95.80 source acceptance: exact candidate HEAD `84a6b55b53c5d07a6f127c06234605efc0098edd` passed GitHub Validate [run 46107947688](https://github.com/vuphuc1996/Toeic/actions/runs/46107947688) and Pages build/deploy [run 46107947573](https://github.com/vuphuc1996/Toeic/actions/runs/46107947573); 151/151 Validate steps and 850 Python tests PASS. Installed-PWA/offline and physical-device QA remain separate unverified gates.
 - Learning outcome evidence matrix: `reports/TOEIC_LEARNING_OUTCOME_EVIDENCE_v2.95.80.md` — 22/27 TOEIC criteria mapped to 1,103 stable question-to-criterion links across 638 unique stable question IDs; five criteria remain deliberately uninstrumented.
 - Criterion map audit: `../tools/audit-objective-criterion-map.py` — checks exact question IDs, question indices, Listening reserve exclusion, Part 7 multi-document source quotes and review gates.
 - Criterion mapping remediation: `reports/CRITERION_MAPPING_REMEDIATION_v2.95.80.md` — 21 additional links; explains why below-minimum criteria remain below 10.

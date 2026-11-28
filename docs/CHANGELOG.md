@@ -6,7 +6,7 @@
 - **No threshold inflation:** Part 1 criteria remain 8 each, Part 3 purpose 7, Part 4 purpose 2, and Part 7 cross-document 2. Five unsupported TOEIC criteria stay uninstrumented; reserve gates remain unchanged.
 - **Outcome totals:** still 22/27 TOEIC criteria and 28/33 total Foundation + TOEIC criteria instrumented. The provisional weighted build index remains 73.73%.
 - **Protected boundaries:** no UI, learner progress, IndexedDB v1, vocabulary, item bank text, answer keys, Mock eligibility, reserve state or Robot Buddy behavior changed.
-- **Acceptance:** exact-commit Validate and Pages evidence is pending for v2.95.80. `main` remains `256ca21461e78a7685bed773ddd622a64050e33a`.
+- **Acceptance (2026-11-28):** exact candidate source/test HEAD `84a6b55b53c5d07a6f127c06234605efc0098edd` passed GitHub Validate [run 46107947688](https://github.com/vuphuc1996/Toeic/actions/runs/46107947688) and Pages build/deploy [run 46107947573](https://github.com/vuphuc1996/Toeic/actions/runs/46107947573). Validate completed 151/151 steps; full Python discovery 850 tests PASS; mapping audit 1,103/1,103 and version synchronization PASS. FullSource ZIP, installed-PWA/offline propagation and physical-device QA remain unverified; `main` is unchanged.
 
 ## v2.95.79 — Package Metadata Synchronization & Version Guard Hardening (2026-11-28)
 

@@ -14,7 +14,13 @@
 - **Outcome totals:** still **22/27** TOEIC criteria instrumented; Foundation **6/6**; total **28/33**. Five unsupported criteria remain uninstrumented.
 - **Progress:** provisional weighted measurable curriculum-build index remains **73.73%**. Mapping depth does not increase the instrumented-criterion count.
 - **Protected data:** no question content, choice/answer, stable IDs, vocabulary, Mock eligibility, reserve status, learner IndexedDB records/schema, UI, navigation or Robot Buddy logic is changed.
-- **Acceptance:** v2.95.80 exact-commit mapping audit, tests, full Python suite and Pages build/deploy remain **PENDING**. Candidate-only; no production approval.
+- **Exact candidate acceptance:** source/test HEAD `84a6b55b53c5d07a6f127c06234605efc0098edd` — GitHub Validate **PASS** ([run 46107947688](https://github.com/vuphuc1996/Toeic/actions/runs/46107947688)); 151/151 steps, 0 failed, 0 skipped; Full Python discovery **850 tests PASS**.
+- **Mapping audit:** **PASS** — 1,103/1,103 canonical links match bank IDs; 638 unique stable question IDs; 22/27 TOEIC criteria mapped; 28/33 total instrumented; 5 deliberately uninstrumented; 0 Listening reserve mapped; 2 Part 7 cross-document mappings pass the internally reviewed two-source quote check.
+- **Focused tests:** mapping guard 4/4, learning outcomes 5/5, project progress tests 4/4 and weighted progress index tests 3/3 all pass.
+- **Version synchronization:** **PASS** — 19 release markers, 17 app cache keys, 42 Service Worker cache keys and 1 mock-engine cache key synchronized to v2.95.80.
+- **GitHub Pages build/deployment:** **PASS** ([run 46107947573](https://github.com/vuphuc1996/Toeic/actions/runs/46107947573)); build 7/7, status-report 3/3, deploy 3/3.
+- **Acceptance boundary:** Source Release Accepted; Candidate CI Verified; Pages Deployment Verified for the v2.95.80 candidate source snapshot. FullSource ZIP generation, installed-PWA/offline propagation and physical-device QA remain **UNVERIFIED**. Production Deployment Accepted on `main` is not granted; `main` remains at `256ca21461e78a7685bed773ddd622a64050e33a`.
+- **Test expectation follow-ups:** two narrowly scoped test-only commits refreshed stale 1,082 mapping expectations to the canonical 1,103 links; no application logic or inventory thresholds were relaxed.
 
 ## Previous release — v2.95.79
 

@@ -22,7 +22,7 @@ Part 7 cross-document remains at two eligible questions: only those two current 
 
 ## Verification strategy
 
-Run the stable mapping audit, outcome report tests, full Python discovery, version synchronization and Pages build/deploy on the exact new candidate commit. Hosted acceptance is pending until those runs complete.
+**Accepted exact source/test HEAD:** `84a6b55b53c5d07a6f127c06234605efc0098edd`. GitHub Validate [run 46107947688](https://github.com/vuphuc1996/Toeic/actions/runs/46107947688) PASS (151/151 steps; 850 Python tests); GitHub Pages [run 46107947573](https://github.com/vuphuc1996/Toeic/actions/runs/46107947573) PASS (build 7/7, report 3/3, deploy 3/3). The stable map audit confirms 1,103/1,103 links, 638 unique keys, 0 Listening reserve links and 2/2 Part 7 cross-document evidence links.
 
 ## Protected boundaries
 
