@@ -26,6 +26,11 @@ def main():
     foundation_objectives=[x for x in objective_map if x.get('kind')=='learning_path']
     outcome_registry=load('data/learning-path/objective-outcomes.json')
     outcome_objectives=outcome_registry['objectives']
+    criterion_map=load('data/learning-path/objective-criterion-map.json')
+    criterion_mapping_count=len(criterion_map.get('mappings', []))
+    criterion_unique_questions=criterion_map.get('uniqueQuestionCount', 0)
+    toeic_outcomes=[outcome for group in outcome_objectives if not str(group.get('objectiveId','')).startswith('foundation-') for outcome in group.get('outcomes', [])]
+    toeic_instrumented=sum(1 for outcome in toeic_outcomes if str(outcome.get('status','')).startswith('instrumented_'))
     outcome_total=sum(len(x.get('outcomes',[])) for x in outcome_objectives)
     outcome_instrumented=sum(1 for x in outcome_objectives for o in x.get('outcomes',[]) if str(o.get('status','')).startswith('instrumented_'))
     foundation_outcome_total=sum(len(x.get('outcomes',[])) for x in outcome_objectives if str(x.get('objectiveId','')).startswith('foundation-'))
@@ -93,6 +98,8 @@ def main():
       f'| Foundation A–Z letter records | {len(alphabet_sounds)}/26 | **{pct(len(alphabet_sounds),26)}** | Complete letter-data coverage only; not pronunciation accuracy or learner mastery |',
       f'| Outcome criteria defined | {outcome_total}/{outcome_total} | {pct(outcome_total,outcome_total)} | Framework definition coverage; not learner mastery |',
       f'| Outcomes with evidence instrumentation | {outcome_instrumented}/{outcome_total} | {pct(outcome_instrumented,outcome_total)} | Collection path only; no learner completion inferred |',
+      f'| TOEIC sub-skill criteria with item-level mapping | {toeic_instrumented}/{len(toeic_outcomes)} | {pct(toeic_instrumented,len(toeic_outcomes))} | Stable question IDs; five criteria remain deliberately unmapped |',
+      f'| Question-to-criterion links | {criterion_mapping_count:,} links / {criterion_unique_questions:,} unique questions | — | Mapping inventory, not learner practice or mastery |',
       f'| TOEIC objective practice evidence wired | {len(wired_toeic)}/{len(wired_toeic)} | {pct(len(wired_toeic),len(wired_toeic))} | Latest result per unique question; practice threshold only, not learner mastery |',
       f'| Foundation outcome evidence wired | {foundation_outcome_instrumented}/{foundation_outcome_total} | {pct(foundation_outcome_instrumented,foundation_outcome_total)} | Recognition, learner self-report for explanation/production, and 1/3-day delayed recall; wiring is not mastery |',
       f'| Delayed-recall scheduling across wired TOEIC groups | {len(wired_toeic)}/{len(wired_toeic)} | {pct(len(wired_toeic),len(wired_toeic))} | 1/3-day scheduling rule; not a retention guarantee |',
@@ -114,9 +121,11 @@ def main():
       '', 'These ratios show whether a field is populated, not whether its content is accurate, natural or complete. Relationship counts are reported separately from headword counts.',
       '', '## Quality / verification status',
       '', '- Content counts do not equal completed learning outcomes.',
-      f'- Outcome framework: {outcome_total}/{outcome_total} criteria defined; {outcome_instrumented}/{outcome_total} have an evidence-collection path. Neither count measures learner mastery.',
+      f'- Outcome framework: {outcome_total}/{outcome_total} criteria defined; {outcome_instrumented}/{outcome_total} have an evidence-collection path, including Foundation {foundation_outcome_instrumented}/{foundation_outcome_total} and TOEIC {toeic_instrumented}/{len(toeic_outcomes)}. Neither count measures learner mastery.',
       '- TOEIC objective tracker: aggregates latest answer per stable unique question; minimum 10 unique items and 80% accuracy. A passing label is a practice threshold only, not CEFR/ETS certification or proof of every outcome.',
-      '- Objective evidence is connected for Grammar, Listening Parts 1–4, Reading Parts 5–7 and separate Part 5 practice. Reserve Listening items are excluded until editorial review; Reading Part 7 remains second-review-gated; the separate 80-item Part 5 practice pool is review-pending and cannot earn a threshold status.',
+      f'- Question-to-criterion map: {criterion_mapping_count:,} explicit stable-ID links across {criterion_unique_questions:,} unique question IDs. Optional Grammar and Reading Part 5 explanation rubrics are learner self-reports; only mapped questions contribute to the corresponding sub-skill criterion.',
+      '- Objective evidence is connected for Grammar, Listening Parts 1–4, Reading Parts 5–7 and separate Part 5 practice. Listening reserve items are excluded; Reading Part 7 remains second-review-gated; Separate Part 5 remains independently review-pending and cannot earn a threshold status.',
+      '- Five TOEIC criteria remain visible without criterion-level scoring because the available items do not yet support a defensible tag or rubric: Part 1 paraphrase recognition, Part 2 distractor resistance, Part 4 inference/action, Part 6 discourse purpose and Part 7 paraphrase/inference.',
       '- Listening Part 1 currently has 8 eligible unique questions (one additional mapped item is reserve-pending), below the 10-item minimum; at least 2 more unique, reviewed questions are needed before it can reach the practice threshold.',
       '- Foundation outcome evidence now records recognition, a learner-authored sentence with three self-report explanation/production ratings, and delayed recall. Self-report is not auto-graded; delayed recall is scheduled 1/3 days and is not a retention guarantee.',
       '- Foundation Listening stores attempts under a separate localStorage key; its bank coverage does not imply the learner has completed the questions or met the local practice threshold.',

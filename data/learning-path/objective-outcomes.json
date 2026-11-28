@@ -6,7 +6,7 @@
     "minimumUniqueItems": 10,
     "defaultThreshold": 0.8,
     "retestPolicy": "A later attempt may update mastery; retain attempt history.",
-    "scopeWarning": "Criteria are defined across all 11 objectives (33 criteria). Foundation (Pre-A1/A1, A2: 6/6 criteria) has criterion-aligned local evidence instrumentation (recognition, learner self-report production, delayed recall). All 9 TOEIC objectives (Grammar, Listening P1-4, Reading P5-7, Separate Part 5) have group-level runtime tracking in objectiveProgress (accuracy, durationMs, 24h/1d/3d recallDueAt), with explanation_rubric wired only on Separate Part 5 and Listening reserve items excluded; however, individual TOEIC sub-skill criteria (27/33) remain criteria_defined_not_yet_instrumented because answers are not tagged by sub-skill criterion ID and timed_accuracy does not enforce a cutoff. Instrumentation never implies CEFR/ETS certification or independent mastery.",
+    "scopeWarning": "Across all 33 criteria, Foundation retains 6/6 criterion-level local evidence paths. The TOEIC objectives now have explicit stable-question mappings for 22/27 sub-skill criteria; five criteria remain defined but deliberately uninstrumented until stronger item-level evidence or a suitable assessment design exists. Evidence is stored learner-locally under the existing objectiveProgress record without an IndexedDB schema migration. The map covers 1,082 criterion/question links across 638 unique stable question IDs; links are inventory coverage, not learner mastery. Every criterion still requires at least its declared minimum of unique observed items and its declared threshold. Optional Grammar and Reading Part 5 explanation rubrics are learner self-reports. Separate Part 5 timed_accuracy uses a 30-second internal practice target only. Listening reserve remains excluded; Reading Part 7 and Separate Part 5 editorial gates remain active. No CEFR/ETS certification is implied.",
     "scoreTypes": [
       "correct_rate",
       "delayed_correct_rate",
@@ -102,9 +102,9 @@
       "objectiveId": "grammar-core",
       "runtimeWiring": {
         "groupLevelWired": true,
-        "criterionLevelWired": false,
-        "evidenceSource": "assets/js/app.js confirmPracticeBatchResult() -> trackObjectivePractice() -> IDB objectiveProgress (58 lessons / 169 exercises)",
-        "limitations": "Tracks group-level accuracy, firstAttemptAccuracy, durationMs, and recallDueAt; individual exercises are not tagged by form-recognition vs contextual-choice, and explanation_rubric UI is not wired for grammar modals."
+        "criterionLevelWired": true,
+        "evidenceSource": "assets/js/app.js delegated outcome rubric -> assets/js/learning-outcome-progress.js recordExplanationRubric() -> learner-local objectiveProgress",
+        "limitations": "Rubric is an optional three-item learner self-report attached only to mapped practice questions. It is not an external or automated judgement and does not certify CEFR/ETS mastery."
       },
       "outcomes": [
         {
@@ -113,9 +113,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique grammar form-recognition items at >= 80% latest accuracy (target criterion).",
-          "runtimeStatusNote": "Group-level correct_rate is wired via trackObjectivePractice('grammar-core'); sub-skill tag split not yet instrumented."
+          "runtimeStatusNote": "Question-level mapping: 1 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "grammar-core-contextual-choice",
@@ -123,9 +123,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique contextual grammar items at >= 80% latest accuracy (target criterion).",
-          "runtimeStatusNote": "Group-level correct_rate is wired via trackObjectivePractice('grammar-core'); sub-skill tag split not yet instrumented."
+          "runtimeStatusNote": "Question-level mapping: 168 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "grammar-core-error-explanation",
@@ -133,9 +133,9 @@
           "evidenceMetric": "explanation_rubric",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
-          "measurementRule": ">= 10 unique grammar items with >= 80% self-reported 3-point explanation rubric.",
-          "runtimeStatusNote": "Not yet wired in UI: [data-save-explanation-rubric] only appears in openPracticeReviewModal() for Separate Part 5."
+          "status": "instrumented_learner_self_report",
+          "measurementRule": "At least 10 unique mapped questions with an average of at least 80% on the optional three-item learner self-report explanation rubric.",
+          "runtimeStatusNote": "Question-level map: 169 stable question IDs; after each completed mapped item, the learner can optionally save a 0–3 explanation rubric. Self-report only."
         }
       ]
     },
@@ -143,9 +143,9 @@
       "objectiveId": "listening-part-1",
       "runtimeWiring": {
         "groupLevelWired": true,
-        "criterionLevelWired": false,
-        "evidenceSource": "assets/js/app.js confirmPracticeBatchResult() -> trackObjectivePractice() -> IDB objectiveProgress (8 eligible units/questions; 1 reserve excluded)",
-        "limitations": "Reserve units (1/9) are skipped in trackObjectivePractice(), leaving only 8 eligible Part 1 items — below minimumUniqueItems=10 so practice_threshold_met cannot unlock even with 100% accuracy."
+        "criterionLevelWired": true,
+        "evidenceSource": "assets/js/app.js -> stable questionKey -> data/learning-path/objective-criterion-map.json -> learner-local objectiveProgress",
+        "limitations": "Only explicitly mapped question IDs collect criterion-level evidence. Mapped counts below minimumUniqueItems remain insufficient; editorial-review gates remain active; rubrics are learner self-reports; thresholds are local practice signals, not CEFR/ETS certification."
       },
       "outcomes": [
         {
@@ -154,9 +154,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique approved Part 1 visual-audio items at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level wired for 8 eligible items (1 reserve excluded); blocked below 10-item minimum and no sub-skill split."
+          "runtimeStatusNote": "Question-level mapping: 8 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-1-paraphrase-recognition",
@@ -166,7 +166,7 @@
           "minimumUniqueItems": 10,
           "status": "criteria_defined_not_yet_instrumented",
           "measurementRule": ">= 10 unique Part 1 paraphrase items at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level wired only; no sub-skill tag split and only 8 eligible Part 1 items exist."
+          "runtimeStatusNote": "No sufficiently grounded question-level tag is assigned yet; this criterion remains visible but collects no criterion-specific score."
         },
         {
           "id": "listening-part-1-detail-retention",
@@ -174,9 +174,9 @@
           "evidenceMetric": "delayed_correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_delayed_recall",
           "measurementRule": ">= 10 unique Part 1 delayed recall checks >= 80%.",
-          "runtimeStatusNote": "recallDueAt and recallChecks are recorded at group level in objectiveProgress, but eligible Part 1 pool has only 8 items."
+          "runtimeStatusNote": "Question-level mapping: 8 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         }
       ]
     },
@@ -184,9 +184,9 @@
       "objectiveId": "listening-part-2",
       "runtimeWiring": {
         "groupLevelWired": true,
-        "criterionLevelWired": false,
-        "evidenceSource": "assets/js/app.js confirmPracticeBatchResult() -> trackObjectivePractice() -> IDB objectiveProgress (25 eligible units/questions; 36 reserve excluded)",
-        "limitations": "Tracks Part 2 group-level accuracy and recall checks on 25 approved items (36 reserve items excluded); questions are not tagged into the 3 Part 2 sub-skill criteria."
+        "criterionLevelWired": true,
+        "evidenceSource": "assets/js/app.js -> stable questionKey -> data/learning-path/objective-criterion-map.json -> learner-local objectiveProgress",
+        "limitations": "Only explicitly mapped question IDs collect criterion-level evidence. Mapped counts below minimumUniqueItems remain insufficient; editorial-review gates remain active; rubrics are learner self-reports; thresholds are local practice signals, not CEFR/ETS certification."
       },
       "outcomes": [
         {
@@ -195,9 +195,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 2 question-intent items at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 25 eligible items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 21 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-2-natural-response",
@@ -205,9 +205,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 2 natural-response items at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 25 eligible items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 25 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-2-distractor-resistance",
@@ -217,7 +217,7 @@
           "minimumUniqueItems": 10,
           "status": "criteria_defined_not_yet_instrumented",
           "measurementRule": ">= 10 unique Part 2 lexical-trap items at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 25 eligible items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "No sufficiently grounded question-level tag is assigned yet; this criterion remains visible but collects no criterion-specific score."
         }
       ]
     },
@@ -225,9 +225,9 @@
       "objectiveId": "listening-part-3",
       "runtimeWiring": {
         "groupLevelWired": true,
-        "criterionLevelWired": false,
-        "evidenceSource": "assets/js/app.js confirmPracticeBatchResult() -> trackObjectivePractice() -> IDB objectiveProgress (13 eligible units / 39Q; 28 reserve / 84Q excluded)",
-        "limitations": "Tracks Part 3 group-level accuracy across 39 eligible questions; reserve items (84Q) excluded; sub-skill tags (purpose/detail/speaker) are not recorded per question."
+        "criterionLevelWired": true,
+        "evidenceSource": "assets/js/app.js -> stable questionKey -> data/learning-path/objective-criterion-map.json -> learner-local objectiveProgress",
+        "limitations": "Only explicitly mapped question IDs collect criterion-level evidence. Mapped counts below minimumUniqueItems remain insufficient; editorial-review gates remain active; rubrics are learner self-reports; thresholds are local practice signals, not CEFR/ETS certification."
       },
       "outcomes": [
         {
@@ -236,9 +236,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 3 conversation-purpose questions at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 39 eligible items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 5 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-3-detail-inference",
@@ -246,9 +246,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 3 detail/inference questions at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 39 eligible items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 33 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-3-speaker-linking",
@@ -256,9 +256,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 3 speaker/action linking questions at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 39 eligible items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 1 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         }
       ]
     },
@@ -266,9 +266,9 @@
       "objectiveId": "listening-part-4",
       "runtimeWiring": {
         "groupLevelWired": true,
-        "criterionLevelWired": false,
-        "evidenceSource": "assets/js/app.js confirmPracticeBatchResult() -> trackObjectivePractice() -> IDB objectiveProgress (10 eligible units / 30Q; 24 reserve / 72Q excluded)",
-        "limitations": "Tracks Part 4 group-level accuracy across 30 eligible questions; reserve items (72Q) excluded; sub-skill tags (purpose/detail/inference) are not recorded per question."
+        "criterionLevelWired": true,
+        "evidenceSource": "assets/js/app.js -> stable questionKey -> data/learning-path/objective-criterion-map.json -> learner-local objectiveProgress",
+        "limitations": "Only explicitly mapped question IDs collect criterion-level evidence. Mapped counts below minimumUniqueItems remain insufficient; editorial-review gates remain active; rubrics are learner self-reports; thresholds are local practice signals, not CEFR/ETS certification."
       },
       "outcomes": [
         {
@@ -277,9 +277,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 4 talk-purpose questions at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 30 eligible items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 1 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-4-detail-tracking",
@@ -287,9 +287,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 4 detail-tracking questions at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 30 eligible items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 29 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-4-inference-action",
@@ -299,7 +299,7 @@
           "minimumUniqueItems": 10,
           "status": "criteria_defined_not_yet_instrumented",
           "measurementRule": ">= 10 unique Part 4 next-step/audience inference questions at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 30 eligible items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "No sufficiently grounded question-level tag is assigned yet; this criterion remains visible but collects no criterion-specific score."
         }
       ]
     },
@@ -307,9 +307,9 @@
       "objectiveId": "reading-part-5",
       "runtimeWiring": {
         "groupLevelWired": true,
-        "criterionLevelWired": false,
-        "evidenceSource": "assets/js/app.js confirmPracticeBatchResult() -> trackObjectivePractice() -> IDB objectiveProgress (13 units / 60 eligible questions)",
-        "limitations": "Tracks Reading Part 5 group-level accuracy across 60 questions; does not split sentence-completion vs word-form tags, and explanation_rubric UI is only wired on Separate Part 5."
+        "criterionLevelWired": true,
+        "evidenceSource": "assets/js/app.js delegated outcome rubric -> assets/js/learning-outcome-progress.js recordExplanationRubric() -> learner-local objectiveProgress",
+        "limitations": "Rubric is an optional three-item learner self-report attached only to mapped practice questions. It is not an external or automated judgement and does not certify CEFR/ETS mastery."
       },
       "outcomes": [
         {
@@ -318,9 +318,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Reading Part 5 sentence-completion items at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 60 items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 60 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "reading-part-5-word-form-selection",
@@ -328,9 +328,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Reading Part 5 word-form/collocation items at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 60 items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 14 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "reading-part-5-distractor-explanation",
@@ -338,9 +338,9 @@
           "evidenceMetric": "explanation_rubric",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
-          "measurementRule": ">= 10 unique Reading Part 5 items with >= 80% self-reported 3-point explanation rubric.",
-          "runtimeStatusNote": "Not yet wired in Reading Part 5 detail view; rubric UI currently exists only in openPracticeReviewModal()."
+          "status": "instrumented_learner_self_report",
+          "measurementRule": "At least 10 unique mapped questions with an average of at least 80% on the optional three-item learner self-report explanation rubric.",
+          "runtimeStatusNote": "Question-level map: 60 stable question IDs; after each completed mapped item, the learner can optionally save a 0–3 explanation rubric. Self-report only."
         }
       ]
     },
@@ -348,9 +348,9 @@
       "objectiveId": "reading-part-6",
       "runtimeWiring": {
         "groupLevelWired": true,
-        "criterionLevelWired": false,
-        "evidenceSource": "assets/js/app.js confirmPracticeBatchResult() -> trackObjectivePractice() -> IDB objectiveProgress (8 units / 32 eligible questions)",
-        "limitations": "Tracks Part 6 group-level accuracy across 32 questions; sub-skill tags (text cohesion vs context completion vs discourse purpose) are not tracked separately."
+        "criterionLevelWired": true,
+        "evidenceSource": "assets/js/app.js -> stable questionKey -> data/learning-path/objective-criterion-map.json -> learner-local objectiveProgress",
+        "limitations": "Only explicitly mapped question IDs collect criterion-level evidence. Mapped counts below minimumUniqueItems remain insufficient; editorial-review gates remain active; rubrics are learner self-reports; thresholds are local practice signals, not CEFR/ETS certification."
       },
       "outcomes": [
         {
@@ -359,9 +359,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 6 text-cohesion blanks at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 32 items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 10 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "reading-part-6-context-completion",
@@ -369,9 +369,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 6 whole-passage completion items at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 32 items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "Question-level mapping: 32 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "reading-part-6-discourse-purpose",
@@ -381,7 +381,7 @@
           "minimumUniqueItems": 10,
           "status": "criteria_defined_not_yet_instrumented",
           "measurementRule": ">= 10 unique Part 6 discourse-purpose items at >= 80% accuracy.",
-          "runtimeStatusNote": "Group-level accuracy wired on 32 items; sub-skill tag split not instrumented."
+          "runtimeStatusNote": "No sufficiently grounded question-level tag is assigned yet; this criterion remains visible but collects no criterion-specific score."
         }
       ]
     },
@@ -389,9 +389,9 @@
       "objectiveId": "reading-part-7",
       "runtimeWiring": {
         "groupLevelWired": true,
-        "criterionLevelWired": false,
-        "evidenceSource": "assets/js/app.js confirmPracticeBatchResult() -> trackObjectivePractice() -> IDB objectiveProgress (52 units / 195Q; capped content_review_pending)",
-        "limitations": "Group-level tracking runs in objectiveProgress, but summarizeAllObjectives() forces status='content_review_pending' because reviewState='part7_expansion_requires_second_review' (22/52 units / 87Q reserve pending)."
+        "criterionLevelWired": true,
+        "evidenceSource": "assets/js/app.js -> stable questionKey -> data/learning-path/objective-criterion-map.json -> learner-local objectiveProgress",
+        "limitations": "Only explicitly mapped question IDs collect criterion-level evidence. Mapped counts below minimumUniqueItems remain insufficient; editorial-review gates remain active; rubrics are learner self-reports; thresholds are local practice signals, not CEFR/ETS certification."
       },
       "outcomes": [
         {
@@ -400,9 +400,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 7 locate-information items at >= 80% accuracy after editorial clearance.",
-          "runtimeStatusNote": "Group-level accuracy collected, gated behind content_review_pending and lacks sub-skill split."
+          "runtimeStatusNote": "Question-level mapping: 195 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "reading-part-7-paraphrase-inference",
@@ -412,7 +412,7 @@
           "minimumUniqueItems": 10,
           "status": "criteria_defined_not_yet_instrumented",
           "measurementRule": ">= 10 unique Part 7 paraphrase/inference items at >= 80% accuracy after editorial clearance.",
-          "runtimeStatusNote": "Group-level accuracy collected, gated behind content_review_pending and lacks sub-skill split."
+          "runtimeStatusNote": "No sufficiently grounded question-level tag is assigned yet; this criterion remains visible but collects no criterion-specific score."
         },
         {
           "id": "reading-part-7-cross-document-link",
@@ -420,9 +420,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 7 multi-passage cross-link items at >= 80% accuracy after editorial clearance.",
-          "runtimeStatusNote": "Group-level accuracy collected, gated behind content_review_pending and lacks sub-skill split."
+          "runtimeStatusNote": "Question-level mapping: 2 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         }
       ]
     },
@@ -430,9 +430,9 @@
       "objectiveId": "part5-sentence-completion",
       "runtimeWiring": {
         "groupLevelWired": true,
-        "criterionLevelWired": false,
-        "evidenceSource": "assets/js/app.js confirmSinglePracticeResult() + [data-save-explanation-rubric] -> IDB objectiveProgress (80 practice-only questions; capped content_review_pending)",
-        "limitations": "Tracks group-level accuracy, attempt durationMs (averageResponseTimeMs), and 3-point self-report explanationRubrics on all 80 items; gated to content_review_pending until independent review and lacks timed_accuracy cutoff enforcement."
+        "criterionLevelWired": true,
+        "evidenceSource": "assets/js/app.js -> stable questionKey -> data/learning-path/objective-criterion-map.json -> learner-local objectiveProgress",
+        "limitations": "Only explicitly mapped question IDs collect criterion-level evidence. Mapped counts below minimumUniqueItems remain insufficient; editorial-review gates remain active; rubrics are learner self-reports; thresholds are local practice signals, not CEFR/ETS certification."
       },
       "outcomes": [
         {
@@ -441,9 +441,9 @@
           "evidenceMetric": "correct_rate",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Separate Part 5 items at >= 80% accuracy (gated by independent review).",
-          "runtimeStatusNote": "Group-level wired via confirmSinglePracticeResult(), gated behind content_review_pending."
+          "runtimeStatusNote": "Question-level mapping: 80 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "part5-sentence-completion-time-management",
@@ -451,9 +451,11 @@
           "evidenceMetric": "timed_accuracy",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
-          "measurementRule": ">= 10 unique Separate Part 5 items answered accurately within target response time cutoff.",
-          "runtimeStatusNote": "durationMs and averageResponseTimeMs are recorded, but no time-limit threshold is evaluated against accuracy."
+          "status": "instrumented_practice_evidence",
+          "measurementRule": "At least 10 unique Separate Part 5 items answered correctly within 30 seconds each (internal practice target only), evaluated on the latest timed attempt per item.",
+          "runtimeStatusNote": "Question-level mapping: 80 stable Separate Part 5 IDs. Latest timed attempt must be correct and within 30,000 ms; this is an internal practice target, not an ETS timing standard.",
+          "timeTargetMs": 30000,
+          "timeTargetNote": "Internal practice target only; not an ETS timing standard or score conversion."
         },
         {
           "id": "part5-sentence-completion-error-review",
@@ -461,9 +463,9 @@
           "evidenceMetric": "explanation_rubric",
           "masteryThreshold": 0.8,
           "minimumUniqueItems": 10,
-          "status": "criteria_defined_not_yet_instrumented",
+          "status": "instrumented_learner_self_report",
           "measurementRule": ">= 10 unique Separate Part 5 items with >= 80% self-reported 3-point explanation rubric.",
-          "runtimeStatusNote": "Self-report rubric is wired in openPracticeReviewModal(), but mastery remains gated behind content_review_pending."
+          "runtimeStatusNote": "Question-level mapping: 80 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         }
       ]
     }

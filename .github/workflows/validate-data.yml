@@ -305,6 +305,10 @@ jobs:
         run: python tools/audit-objective-resources.py
       - name: Audit learning outcome criteria
         run: python tools/audit-learning-outcomes.py
+      - name: Unit tests — stable question-to-outcome criteria
+        run: python -m unittest discover -s tools/tests -p 'test_objective_criterion_map.py' -v
+      - name: Audit stable question-to-outcome map
+        run: python tools/audit-objective-criterion-map.py
       - name: Validate placement diagnostic
         run: python -m unittest discover -s tools/tests -p 'test_placement_diagnostic.py' -v
       - name: Unit tests — responsive layout

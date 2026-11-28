@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#153c70">
   <meta name="application-name" content="TOEIC Dictionary">
-  <meta name="app-release" content="2.95.77">
+  <meta name="app-release" content="2.95.78">
   <meta name="description" content="Từ điển TOEIC A–Z, Smart Practice, Grammar, Reading, Listening và phát âm – vận hành trên GitHub Pages.">
-  <title>TOEIC Dictionary v2.95.77 – Robot Buddy Progressive Replies</title>
-  <link rel="manifest" href="./manifest.webmanifest?__release=2.95.77">
+  <title>TOEIC Dictionary v2.95.78 – Robot Buddy Progressive Replies</title>
+  <link rel="manifest" href="./manifest.webmanifest?__release=2.95.78">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./assets/css/app.css?__release=2.95.77">
-  <link rel="stylesheet" href="./assets/css/design-system.css?__release=2.95.77">
+  <link rel="stylesheet" href="./assets/css/app.css?__release=2.95.78">
+  <link rel="stylesheet" href="./assets/css/design-system.css?__release=2.95.78">
 </head>
 <body>
   <div class="app-update-banner" id="appUpdateBanner" role="status" aria-live="polite" hidden>
@@ -81,7 +81,7 @@
       </nav>
       <div class="sidebar-bottom">
         <div class="local-state"><span class="status-dot"></span><span><strong>Dữ liệu cục bộ</strong><small>Lưu riêng trên thiết bị</small></span></div>
-        <div class="sidebar-version">Phase 5 · v2.95.77 · GitHub-only</div>
+        <div class="sidebar-version">Phase 5 · v2.95.78 · GitHub-only</div>
       </div>
     </aside>
 
@@ -137,6 +137,10 @@
         <section class="panel objective-progress-panel" aria-label="Tiến độ theo mục tiêu học tập">
           <header class="objective-progress-header"><div><p class="eyebrow">LEARNING OUTCOME TRACKER</p><h2>Theo dõi mục tiêu học tập</h2><p class="muted">Đánh giá theo câu hỏi độc lập đã làm: tối thiểu 10 câu và từ 80% đúng. Đây là ngưỡng luyện tập nội bộ, chưa thay thế đánh giá từng kỹ năng chuyên sâu.</p></div></header>
           <div class="objective-progress-grid" id="learningObjectiveProgress"><p class="muted">Đang tải dữ liệu mục tiêu học tập…</p></div>
+          <details class="objective-criteria-details">
+            <summary><span><strong>Tiến độ theo 27 tiêu chí TOEIC</strong><small>Ánh xạ câu hỏi, số câu bạn đã làm, độ chính xác và cổng duyệt nội dung.</small></span><span class="objective-criteria-count" id="learningOutcomeCriterionCount">Đang tải…</span></summary>
+            <div class="objective-criteria-groups" id="learningOutcomeCriteria"><p class="muted">Đang tải tiêu chí kỹ năng…</p></div>
+          </details>
         </section>
         <section class="panel recall-queue-panel" aria-label="Hàng đợi ôn nhớ lại">
           <header class="panel-header recall-queue-header">
@@ -177,7 +181,7 @@
           <div class="panel-header"><div><h3>Khám phá theo chữ cái</h3><p class="muted">Chọn một chữ cái để xem danh sách từ.</p></div><button class="text-button" data-go="dictionary">Xem tất cả <svg class="ui-icon inline-icon"><use href="#icon-arrow-right"></use></svg></button></div>
           <div class="alphabet-grid" id="dashboardAlphabet"></div>
         </section>
-        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.95.77:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy kết hợp thư viện hội thoại, quy tắc và ngữ cảnh hiện tại để phản hồi từng phần; có thể phân tích tiến độ học trên thiết bị theo chế độ chỉ đọc khi người dùng bật tính năng. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
+        <div class="phase-note"><span><svg class="ui-icon"><use href="#icon-info"></use></svg></span><p><strong>TOEIC Dictionary · GitHub Pages product v2.95.78:</strong> Từ điển gốc chỉ đọc; từ cá nhân, tiến độ và cấu hình lưu riêng trên thiết bị. Robot Buddy kết hợp thư viện hội thoại, quy tắc và ngữ cảnh hiện tại để phản hồi từng phần; có thể phân tích tiến độ học trên thiết bị theo chế độ chỉ đọc khi người dùng bật tính năng. Các nút Google AI phân tích theo từng bài học cũ vẫn được giữ và chỉ mở khi bạn chủ động chọn. Thông báo cục bộ không bảo đảm khi đóng hoàn toàn ứng dụng.</p></div>
       </section>
 
 
@@ -447,7 +451,7 @@
         <div class="data-footer-actions"><button class="text-button danger-text" id="resetLocalButton">Xóa dữ liệu từ vựng cá nhân</button><span class="muted">Tổng dữ liệu hiển thị: <strong id="totalDataFooter">—</strong></span></div>
       </section>
 
-      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.95.77</span></footer>
+      <footer class="app-footer"><span>TOEIC Dictionary · Personal Learning Workspace<br><strong>Phát triển bởi Vũ Nguyễn Hoàng Phúc</strong></span><span>GitHub Pages product · v2.95.78</span></footer>
     </main>
   </div>
 
@@ -569,6 +573,6 @@
     </section>
   </div>
   <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
-  <script type="module" src="./assets/js/app.js?__release=2.95.77"></script>
+  <script type="module" src="./assets/js/app.js?__release=2.95.78"></script>
 </body>
 </html>

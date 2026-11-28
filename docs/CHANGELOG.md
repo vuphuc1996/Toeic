@@ -1,3 +1,14 @@
+## v2.95.78 — Criterion-level TOEIC Learning Outcome Evidence (2026-11-28)
+
+- **Question-to-criterion map:** Adds 1,082 stable question-to-outcome links across 638 unique question IDs. 22/27 TOEIC criteria now have explicit criterion-level evidence paths; five remain visible but intentionally uninstrumented.
+- **Runtime evidence:** Extends the existing local `objectiveProgress` ledger to record criterion-specific correctness, attempt timing, delayed recall and optional explanation self-reports. No IndexedDB v1 schema migration or learner data reset is introduced.
+- **Rubric support:** Grammar and Reading Part 5 expose optional three-point explanation self-reports after completed questions. These are learner self-reports, not automated or independent grading.
+- **Progress dashboard:** Adds an expandable 27-criterion TOEIC matrix and criterion-specific recall cards under the existing Learning Outcome dashboard. Existing layout and navigation are preserved.
+- **Review protections:** Listening reserve remains excluded from mapping; Reading Part 7 second-review and Separate Part 5 independent-review gates remain in force. Five criteria without a defensible tag/rubric are not scored.
+- **Progress reporting:** The provisional weighted measurable curriculum-build index recalculates to 73.73% because criterion-level evidence collection is now instrumented; this is not learner mastery, official TOEIC readiness or total system completion.
+- **Preserved data:** Canonical vocabulary, all 831 assessment/support records, question/choice IDs, answer keys, Mock eligibility, learner IndexedDB schema and GitHub Pages-only architecture remain unchanged.
+- **Acceptance boundary:** GitHub Validate and Pages deployment must pass on the exact candidate commit. Installed-PWA/offline and physical-device QA remain unverified; `main` was not changed.
+
 ## v2.95.77 — Migration Compatibility & CI Recovery (2026-11-27)
 
 - **Migration Profile Compatibility:** Extended all 7 existing legacy migration repair profiles (`979`, `992`, `1026`, `1063`, `1100`, `1137`, `1141`) in `manifest.json` with the exact 40 canonical IDs from Batch 028, and added a new exact profile for the 1,181-word v2.95.75 snapshot (`1181`) with those 40 Batch 028 IDs.

@@ -60,6 +60,12 @@ def build():
     registry = load("data/learning-path/objective-outcomes.json")["objectives"]
     outcome_total = sum(len(x.get("outcomes", [])) for x in registry)
     outcome_instrumented = sum(1 for x in registry for outcome in x.get("outcomes", []) if str(outcome.get("status", "")).startswith("instrumented_"))
+    foundation_outcome_total = sum(len(x.get("outcomes", [])) for x in registry if str(x.get("objectiveId", "")).startswith("foundation-"))
+    foundation_outcome_instrumented = sum(1 for x in registry if str(x.get("objectiveId", "")).startswith("foundation-") for outcome in x.get("outcomes", []) if str(outcome.get("status", "")).startswith("instrumented_"))
+    toeic_outcomes = [outcome for x in registry if not str(x.get("objectiveId", "")).startswith("foundation-") for outcome in x.get("outcomes", [])]
+    toeic_outcome_total = len(toeic_outcomes)
+    toeic_outcome_instrumented = sum(1 for outcome in toeic_outcomes if str(outcome.get("status", "")).startswith("instrumented_"))
+    criterion_map = load("data/learning-path/objective-criterion-map.json")
 
     foundation_reading = load("data/learning-path/foundation-reading.json")["passages"]
     foundation_listening = [x for x in load("data/learning-path/foundation-listening.json")["clips"] if not x.get("supplementary")]
@@ -93,6 +99,15 @@ def build():
             {"name": name, "numerator": numerator, "denominator": denominator, "percent": round(value * 100, 2), "weight": weight, "contributionPoints": round(value * weight, 2), "interpretation": interpretation}
             for name, numerator, denominator, value, weight, interpretation in definitions
         ],
+        "outcomeEvidenceDetail": {
+            "foundationInstrumented": foundation_outcome_instrumented,
+            "foundationTotal": foundation_outcome_total,
+            "toeicInstrumented": toeic_outcome_instrumented,
+            "toeicTotal": toeic_outcome_total,
+            "questionCriterionLinks": len(criterion_map.get("mappings", [])),
+            "uniqueQuestionIds": criterion_map.get("uniqueQuestionCount", 0),
+            "uninstrumentedToeicCriteria": [outcome["id"] for outcome in toeic_outcomes if not str(outcome.get("status", "")).startswith("instrumented_")]
+        },
         "glossaryAudit": {
             "entries": glossary_records,
             "flagged": glossary_audit["flagged_entries"],
@@ -122,6 +137,16 @@ def render(report: dict) -> str:
         numerator = f"{n / 10000:.2f}" if d == 10000 else f"{n:,}"
         denominator = "1.00" if d == 10000 else f"{d:,}"
         lines.append(f"| {item['name']} | {numerator}/{denominator} | **{item['percent']:.1f}%** | {item['weight']}% | {item['contributionPoints']:.2f} pts | {item['interpretation']} |")
+    evidence = report["outcomeEvidenceDetail"]
+    lines += [
+        "",
+        "## Learning outcome evidence instrumentation (not learner attainment)",
+        "",
+        f"- Criterion-level evidence paths: {report['metrics'][5]['numerator']}/{report['metrics'][5]['denominator']} total criteria; Foundation {evidence['foundationInstrumented']}/{evidence['foundationTotal']}; TOEIC {evidence['toeicInstrumented']}/{evidence['toeicTotal']}.",
+        f"- Question-level map: {evidence['questionCriterionLinks']:,} criterion/question links across {evidence['uniqueQuestionIds']:,} unique question IDs.",
+        "- Remaining TOEIC criteria without a defensible item-level mapping: " + (", ".join("`" + x + "`" for x in evidence["uninstrumentedToeicCriteria"]) or "none") + ".",
+        "- Mapping availability and local instrumentation are not observed learner attainment or editorial approval.",
+    ]
     qa = report["glossaryAudit"]
     lines += [
         "",

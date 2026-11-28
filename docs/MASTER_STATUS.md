@@ -1,10 +1,25 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.77
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.78
 
-**Current source candidate:** v2.95.77 — Migration Compatibility & CI Recovery. Latest verified candidate HEAD: `c9e1149352624a729e6c0881905a8d8384f0993e`. UI/UX layout, IndexedDB v1 schema, canonical vocabulary IDs/headwords, question/choice IDs, answer keys, and reserve gates remain intact and protected.
+**Current source candidate:** v2.95.78 — Criterion-level TOEIC Learning Outcome Evidence. The sole predecessor is candidate HEAD `c1f9702579633aeb6cd372b29e17b143cb2868a1` (v2.95.77). Candidate changes are intended for `candidate` only; `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
-## Current release — v2.95.77
+## Current release — v2.95.78
+
+- **Outcome instrumentation:** 22/27 TOEIC sub-skill criteria now have an explicit stable question-to-criterion mapping. With the six existing Foundation criteria, 28/33 total criteria have a local evidence-collection path.
+- **Question map:** 1,082 question-to-criterion links across 638 unique stable question IDs. Exact canonical resource and question identities are preserved; no bank question, choice ID or answer key is rewritten.
+- **Uninstrumented criteria:** Five remain deliberately without separate scoring until a defensible question tag or response rubric exists: Listening Part 1 paraphrase recognition; Listening Part 2 distractor resistance; Listening Part 4 inference/action; Reading Part 6 discourse purpose; Reading Part 7 paraphrase/inference.
+- **Runtime:** Criterion-specific correctness, latest-answer tracking, timed accuracy, optional self-report explanation rubrics, delayed recall and source-question reopen are added to the existing learner-local `objectiveProgress` ledger.
+- **Progress display:** The dashboard now has an expandable skill-level matrix under the existing Learning Outcome section. It does not redesign the page layout or navigation.
+- **Storage protection:** Existing IndexedDB v1 schema, learner workspace, vocabulary records, all 831 assessment/support items, question/choice IDs, answer keys and Mock eligibility remain unchanged. No reset or data migration is introduced.
+- **Editorial gates:** All Listening reserve items remain unmapped. Reading Part 7 retains its second-review gate; Separate Part 5 retains its independent-review gate. Mapping availability does not confer Mock approval.
+- **Timing / self-report:** Separate Part 5 uses a 30-second internal practice target only. Grammar and Reading Part 5 explanation rubrics are optional learner self-reports, not automatic or independent grading.
+- **Project progress:** The provisional weighted measurable build index becomes **73.73%** because more criterion-level software evidence paths exist. It is not learner progress, TOEIC readiness or total system completion.
+- **Acceptance boundary:** Source candidate changes prepared; GitHub Validate and Pages results are **PENDING** on the exact v2.95.78 commit. Installed-PWA/offline propagation and physical-device QA remain unverified. Production deployment to `main` is not approved.
+
+## Previous release — v2.95.77
+
+
 
 - **Sole source baseline:** v2.95.76 candidate commit `035dd6e2001b3b049407f71acd21f9c33f33e776`; this is the only predecessor for this release.
 - **Migration Profile Reconciliation:** Extended all 7 existing historical migration repair profiles (`979`, `992`, `1026`, `1063`, `1100`, `1137`, `1141`) in `manifest.json` with the exact 40 canonical IDs from Batch 028, and added a new exact profile for the 1,181-word v2.95.75 snapshot (`1181`) with those 40 Batch 028 IDs.

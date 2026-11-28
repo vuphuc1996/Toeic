@@ -20,6 +20,20 @@ export function buildObjectiveResourceIndex(resourceMap = {}) {
   return index;
 }
 
+export function buildObjectiveCriterionIndex(criterionMap = {}) {
+  const index = {};
+  const mappings = Array.isArray(criterionMap?.mappings) ? criterionMap.mappings : [];
+  for (const row of mappings) {
+    if (!row || typeof row !== 'object' || typeof row.criterionId !== 'string' || !row.criterionId.trim()) continue;
+    const keys = [row.questionKey, row.questionId].filter(value => typeof value === 'string' && value.trim());
+    for (const key of keys) {
+      if (!index[key]) index[key] = [];
+      if (!index[key].includes(row.criterionId)) index[key].push(row.criterionId);
+    }
+  }
+  return index;
+}
+
 export function ensureObjectiveProgress(progress = {}) {
   if (!progress || typeof progress !== 'object' || Array.isArray(progress)) progress = {};
   if (!progress.schemaVersion) progress.schemaVersion = 1;
@@ -90,7 +104,7 @@ export function recordExplanationRubric(progress, objectiveIds, itemId, ratings,
 }
 
 
-export function listDueRecallItems(progress, resourceMap = {}, now = Date.now(), limit = 100) {
+export function listDueRecallItems(progress, resourceMap = {}, now = Date.now(), limit = 100, outcomeRegistry = {}, criterionMap = {}) {
   const evaluationTime = typeof now === 'number' && Number.isFinite(now) ? now : Date.now();
   const parsedLimit = limit !== null && typeof limit !== 'boolean' && limit !== '' && Number.isFinite(Number(limit))
     ? Math.max(0, Math.floor(Number(limit)))
@@ -98,22 +112,70 @@ export function listDueRecallItems(progress, resourceMap = {}, now = Date.now(),
   const objectives = readObjectiveProgress(progress);
   const resourceObjectives = Array.isArray(resourceMap?.objectives) ? resourceMap.objectives : [];
   const objectiveById = new Map(resourceObjectives.filter(objective => objective && typeof objective === 'object' && typeof objective.id === 'string').map(objective => [objective.id, objective]));
+  const criterionById = new Map();
+  for (const group of (Array.isArray(outcomeRegistry?.objectives) ? outcomeRegistry.objectives : [])) {
+    if (!group || String(group.objectiveId || '').startsWith('foundation-')) continue;
+    const parent = objectiveById.get(group.objectiveId);
+    for (const outcome of (Array.isArray(group.outcomes) ? group.outcomes : [])) {
+      if (outcome?.id) criterionById.set(outcome.id, {
+        id: outcome.id, title: outcome.title || outcome.id, kind: 'outcome_criterion',
+        part: parent?.part || '', resourceIds: parent?.resourceIds || [], parentObjectiveId: group.objectiveId
+      });
+    }
+  }
+  const mappingByCriterionAndItem = new Map();
+  const mappingsByGroup = new Map();
+  for (const mapping of (Array.isArray(criterionMap?.mappings) ? criterionMap.mappings : [])) {
+    if (!mapping || typeof mapping.criterionId !== 'string' || typeof mapping.questionKey !== 'string') continue;
+    mappingByCriterionAndItem.set(`${mapping.criterionId}::${mapping.questionKey}`, mapping);
+    if (!mappingsByGroup.has(mapping.objectiveId)) mappingsByGroup.set(mapping.objectiveId, []);
+    mappingsByGroup.get(mapping.objectiveId).push(mapping);
+  }
   const due = [];
+  const criterionQuestionIndex = new Map();
   for (const [objectiveId, objectiveState] of Object.entries(objectives)) {
-    const objective = objectiveById.get(objectiveId);
+    const criterion = criterionById.get(objectiveId);
+    const objective = objectiveById.get(objectiveId) || criterion;
     if (!objective || !objectiveState || typeof objectiveState !== 'object' || Array.isArray(objectiveState)) continue;
     const itemRecords = objectiveState.items && typeof objectiveState.items === 'object' && !Array.isArray(objectiveState.items) ? objectiveState.items : {};
     for (const [itemId, item] of Object.entries(itemRecords)) {
       if (!item || typeof item !== 'object' || Array.isArray(item)) continue;
       const dueAt = Number(item?.recallDueAt) || 0;
       if (!dueAt || dueAt > evaluationTime) continue;
-      due.push({
+      const mapping = criterion ? mappingByCriterionAndItem.get(`${objectiveId}::${itemId}`) : null;
+      if (!criterion) {
+        // When a mapped criterion already owns the same question, show the
+        // criterion-level recall card rather than a duplicate Part-level card.
+        const candidates = mappingsByGroup.get(objectiveId) || [];
+        const covered = candidates.some(candidate => {
+          const byQuestionId = typeof candidate.questionId === 'string' && itemId === candidate.questionId;
+          const byIndex = Number.isInteger(candidate.questionIndex)
+            && itemId.startsWith(`${candidate.resourceId}::index:${candidate.questionIndex}::`);
+          if (!byQuestionId && !byIndex) return false;
+          const criterionItem = objectives[candidate.criterionId]?.items?.[candidate.questionKey];
+          return criterionItem && typeof criterionItem === 'object';
+        });
+        if (covered) continue;
+      }
+      if (criterion && mapping) {
+        const key = `${mapping.resourceId}::${mapping.questionKey}`;
+        const existing = criterionQuestionIndex.get(key);
+        if (existing) {
+          existing.relatedOutcomeIds.push(objectiveId);
+          continue;
+        }
+      }
+      const dueItem = {
         objectiveId, objectiveTitle: objective.title || objectiveId, kind: objective.kind || '',
         part: objective.part || '', itemId, dueAt, latestCorrect: item.latestCorrect === true,
         attempts: Array.isArray(item.attempts) ? item.attempts.length : 0,
         recallChecks: Array.isArray(item.recallChecks) ? item.recallChecks.length : 0,
-        resourceIds: Array.isArray(objective.resourceIds) ? objective.resourceIds.slice() : []
-      });
+        resourceIds: Array.isArray(objective.resourceIds) ? objective.resourceIds.slice() : [],
+        ...(criterion ? { isOutcomeCriterion: true, parentObjectiveId: criterion.parentObjectiveId } : {}),
+        ...(mapping ? { mappedResourceId: mapping.resourceId, mappedQuestionId: mapping.questionId || '', questionKey: mapping.questionKey, relatedOutcomeIds: [objectiveId] } : {})
+      };
+      due.push(dueItem);
+      if (criterion && mapping) criterionQuestionIndex.set(`${mapping.resourceId}::${mapping.questionKey}`, dueItem);
     }
   }
   return due.sort((a, b) => a.dueAt - b.dueAt || a.objectiveTitle.localeCompare(b.objectiveTitle) || a.itemId.localeCompare(b.itemId)).slice(0, parsedLimit);
@@ -196,11 +258,117 @@ export function summarizeAllObjectives(progress, resourceMap = {}, policy = {}, 
 }
 
 /**
+ * Summarize evidence against the 33 stable learning-outcome criteria.
+ * All reads are non-mutating. Mapping counts describe available inventory,
+ * while observed counts come only from this learner's own completed attempts.
+ */
+export function summarizeOutcomeCriteria(progress, registry = {}, resourceMap = {}, criterionMap = {}, now = Date.now()) {
+  const outcomes = Array.isArray(registry?.objectives) ? registry.objectives : [];
+  const objectives = Array.isArray(resourceMap?.objectives) ? resourceMap.objectives : [];
+  const objectiveById = new Map(objectives.filter(row => row && typeof row.id === 'string').map(row => [row.id, row]));
+  const mappings = Array.isArray(criterionMap?.mappings) ? criterionMap.mappings : [];
+  const measuredCounts = {};
+  for (const row of mappings) {
+    if (row && typeof row.criterionId === 'string') measuredCounts[row.criterionId] = (measuredCounts[row.criterionId] || 0) + 1;
+  }
+  const declaredCounts = criterionMap?.mappingCountsByCriterion && typeof criterionMap.mappingCountsByCriterion === 'object'
+    ? criterionMap.mappingCountsByCriterion
+    : measuredCounts;
+  const ledger = readObjectiveProgress(progress);
+  const rows = [];
+  for (const group of outcomes) {
+    // Foundation evidence is intentionally maintained by foundation-evidence.js,
+    // foundation-reading-evidence.js and foundation-listening-evidence.js.
+    // This summary is limited to the 27 TOEIC criteria in objectiveProgress.
+    if (String(group?.objectiveId || '').startsWith('foundation-')) continue;
+    const parent = objectiveById.get(group?.objectiveId);
+    const reviewState = String(parent?.reviewState || '');
+    const reviewPending = reviewState.includes('pending_independent_review') || reviewState.includes('requires_second_review');
+    for (const outcome of Array.isArray(group?.outcomes) ? group.outcomes : []) {
+      const criterionId = outcome?.id;
+      if (typeof criterionId !== 'string' || !criterionId) continue;
+      const state = ledger[criterionId];
+      const itemRecords = state?.items && typeof state.items === 'object' && !Array.isArray(state.items) ? state.items : {};
+      const items = Object.values(itemRecords).filter(item => item && typeof item === 'object' && !Array.isArray(item));
+      const rawMetric = outcome.evidenceMetric;
+      let observedItemCount = 0;
+      let observedCorrectCount = 0;
+      let observedPercent = null;
+      let timeTargetMs = Number.isFinite(outcome.timeTargetMs) && outcome.timeTargetMs > 0 ? outcome.timeTargetMs : null;
+
+      if (rawMetric === 'correct_rate') {
+        observedItemCount = items.length;
+        observedCorrectCount = items.filter(item => item.latestCorrect === true).length;
+        observedPercent = observedItemCount ? Math.round(observedCorrectCount / observedItemCount * 100) : null;
+      } else if (rawMetric === 'delayed_correct_rate') {
+        const recalls = items.map(item => {
+          const checks = Array.isArray(item.recallChecks) ? item.recallChecks.filter(check => check && typeof check === 'object' && typeof check.correct === 'boolean') : [];
+          return checks.length ? checks[checks.length - 1] : null;
+        }).filter(Boolean);
+        observedItemCount = recalls.length;
+        observedCorrectCount = recalls.filter(check => check.correct === true).length;
+        observedPercent = observedItemCount ? Math.round(observedCorrectCount / observedItemCount * 100) : null;
+      } else if (rawMetric === 'timed_accuracy') {
+        if (!timeTargetMs) timeTargetMs = 30000;
+        const latestTimed = items.map(item => {
+          const attempts = Array.isArray(item.attempts) ? item.attempts.filter(attempt => attempt && typeof attempt === 'object') : [];
+          const latest = attempts.length ? attempts[attempts.length - 1] : null;
+          return latest && Number.isFinite(latest.durationMs) && latest.durationMs >= 0 ? latest : null;
+        }).filter(Boolean);
+        observedItemCount = latestTimed.length;
+        observedCorrectCount = latestTimed.filter(attempt => attempt.correct === true && attempt.durationMs <= timeTargetMs).length;
+        observedPercent = observedItemCount ? Math.round(observedCorrectCount / observedItemCount * 100) : null;
+      } else if (rawMetric === 'explanation_rubric') {
+        const rubrics = state?.explanationRubrics && typeof state.explanationRubrics === 'object' && !Array.isArray(state.explanationRubrics)
+          ? Object.values(state.explanationRubrics).filter(item => item && typeof item === 'object' && !Array.isArray(item))
+          : [];
+        const scores = rubrics.map(item => Number(item.latestScore)).filter(score => Number.isFinite(score) && score >= 0 && score <= 3);
+        observedItemCount = scores.length;
+        observedCorrectCount = scores.filter(score => score >= 2.4).length;
+        observedPercent = observedItemCount ? Math.round(scores.reduce((sum, score) => sum + score / 3 * 100, 0) / observedItemCount) : null;
+      }
+
+      const minimumUniqueItems = Number.isInteger(outcome.minimumUniqueItems) && outcome.minimumUniqueItems > 0 ? outcome.minimumUniqueItems : 10;
+      const threshold = typeof outcome.masteryThreshold === 'number' && Number.isFinite(outcome.masteryThreshold) && outcome.masteryThreshold > 0 && outcome.masteryThreshold <= 1
+        ? outcome.masteryThreshold
+        : 0.8;
+      const mappingCount = Number.isInteger(declaredCounts[criterionId]) ? declaredCounts[criterionId] : measuredCounts[criterionId] || 0;
+      let status = 'not_instrumented';
+      if (reviewPending) status = 'content_review_pending';
+      else if (outcome.status === 'criteria_defined_not_yet_instrumented' || mappingCount < 1) status = 'not_instrumented';
+      else if (observedItemCount < minimumUniqueItems) status = 'insufficient_evidence';
+      else status = observedPercent !== null && observedPercent / 100 >= threshold ? 'practice_threshold_met' : 'in_progress';
+
+      rows.push({
+        objectiveId: group.objectiveId,
+        objectiveTitle: parent?.title || group.objectiveId,
+        objectiveKind: parent?.kind || '',
+        outcomeId: criterionId,
+        title: outcome.title || criterionId,
+        evidenceMetric: rawMetric,
+        mappingCount,
+        observedItemCount,
+        observedCorrectCount,
+        observedPercent,
+        minimumUniqueItems,
+        evidenceCoveragePercent: Math.min(100, Math.round(observedItemCount / minimumUniqueItems * 100)),
+        threshold,
+        timeTargetMs,
+        reviewState,
+        status,
+        runtimeStatusNote: outcome.runtimeStatusNote || ''
+      });
+    }
+  }
+  return rows;
+}
+
+/**
  * Read-only integrity audit for the learner-local objective evidence ledger.
  * It reports malformed or orphaned records but never repairs, deletes, or
  * rewrites learner data. Callers may safely run it before displaying evidence.
  */
-export function auditObjectiveProgress(progress, resourceMap = {}) {
+export function auditObjectiveProgress(progress, resourceMap = {}, outcomeRegistry = {}) {
   const issues = [];
   const add = (code, path, severity = 'warning') => issues.push({ code, path, severity });
   if (!progress || typeof progress !== 'object' || Array.isArray(progress)) {
@@ -217,11 +385,13 @@ export function auditObjectiveProgress(progress, resourceMap = {}) {
 
   const resourceObjectives = Array.isArray(resourceMap?.objectives) ? resourceMap.objectives : [];
   const knownObjectiveIds = new Set(resourceObjectives.filter(objective => objective && typeof objective === 'object' && typeof objective.id === 'string').map(objective => objective.id));
+  const knownOutcomeIds = new Set((Array.isArray(outcomeRegistry?.objectives) ? outcomeRegistry.objectives : [])
+    .flatMap(group => Array.isArray(group?.outcomes) ? group.outcomes.map(outcome => outcome?.id).filter(id => typeof id === 'string') : []));
   let itemCount = 0;
   let attemptCount = 0;
   for (const [objectiveId, objective] of Object.entries(progress.objectives)) {
     const objectivePath = `objectives.${objectiveId}`;
-    if (!knownObjectiveIds.has(objectiveId)) add('orphan_objective', objectivePath);
+    if (!knownObjectiveIds.has(objectiveId) && !knownOutcomeIds.has(objectiveId)) add('orphan_objective', objectivePath);
     if (!objective || typeof objective !== 'object' || Array.isArray(objective)) {
       add('invalid_objective_record', objectivePath, 'error');
       continue;

@@ -23,7 +23,10 @@ class LearningOutcomeTests(unittest.TestCase):
    r=subprocess.run([sys.executable,str(ROOT/'tools/audit-learning-outcome-evidence.py'),'--markdown-output',str(out)],capture_output=True,text=True)
    self.assertEqual(r.returncode,0,r.stdout+r.stderr)
    text=out.read_text(encoding='utf-8')
-   self.assertIn('6/33 (18.2%)',text)
+   self.assertIn('28/33 (84.8%)',text)
+   self.assertIn('22/27',text)
+   self.assertIn('1,082',text)
+   self.assertIn('638 unique question IDs',text)
    self.assertIn('11/11',text)
    for obj in json.loads((ROOT/'data/learning-path/objective-outcomes.json').read_text())['objectives']:
     for o in obj['outcomes']:
@@ -31,4 +34,13 @@ class LearningOutcomeTests(unittest.TestCase):
  def test_outcome_registry_is_precached(self):
   sw=(ROOT/'sw.js').read_text()
   self.assertEqual(sw.count('./data/learning-path/objective-outcomes.json'),2)
+  self.assertEqual(sw.count('./data/learning-path/objective-criterion-map.json'),2)
+ def test_criterion_statuses_match_the_question_map(self):
+  mapping=json.loads((ROOT/'data/learning-path/objective-criterion-map.json').read_text())
+  registry=json.loads((ROOT/'data/learning-path/objective-outcomes.json').read_text())
+  mapped={row['criterionId'] for row in mapping['mappings']}
+  toeic=[o for group in registry['objectives'] if not group['objectiveId'].startswith('foundation-') for o in group['outcomes']]
+  self.assertEqual(mapped,{o['id'] for o in toeic if o['status'].startswith('instrumented_')})
+  self.assertEqual(sum(o['status'].startswith('instrumented_') for o in toeic),22)
+  self.assertEqual(sum(o['status']=='criteria_defined_not_yet_instrumented' for o in toeic),5)
 if __name__=='__main__': unittest.main()
