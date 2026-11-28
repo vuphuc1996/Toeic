@@ -3,7 +3,8 @@
 This documentation describes the current TOEIC-first GitHub Pages candidate. Source changes and release evidence are tracked separately from hosted CI, Pages deployment, installed-PWA behavior and physical-device acceptance.
 
 - Current release: `2.95.86`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.86.md` — exact app/source SHA `d5cefa69610bc381a802127d5f9f000d88e48df8`, GitHub Validate **152/152 PASS**, full Python discovery **871 tests PASS**.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.86.md`.
+- Exact-SHA acceptance: app/source `d5cefa69610bc381a802127d5f9f000d88e48df8`; Validate **152/152 PASS**, Python discovery **871 tests PASS**, Pages build/deploy **PASS**.
 - Current project progress: `reports/PROJECT_PROGRESS_v2.95.86.md` — provisional weighted measurable curriculum-build index **77.16%**, not learner mastery or TOEIC score readiness.
 - Current change manifest: `reports/CHANGE_MANIFEST_v2.95.86.md`.
 - Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.86.md`.
