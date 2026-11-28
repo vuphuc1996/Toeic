@@ -12,7 +12,7 @@
 - **Protected gates:** five unsupported TOEIC criteria remain uninstrumented; Listening reserve remains excluded; Part 7 second-review and Separate Part 5 independent-review gates remain active.
 - **Protected data/UI:** no question text, choices, answers, vocabulary IDs, learner IndexedDB schema/records, Mock eligibility, layout, navigation or Robot Buddy behavior changed.
 - **Release shell:** app, Service Worker and mock-engine version/cache markers advance to v2.95.81 for coherent PWA assets.
-- **Acceptance:** exact candidate CI, full Python discovery, mapping audit, version-sync and Pages build/deploy are **PENDING** for this commit. No production approval; `main` remains unchanged.
+- **Acceptance:** Exact candidate source/test HEAD `047781760d0c34788e9153cc402efdec605c3d5f`: GitHub Validate [run 46118675768](https://github.com/vuphuc1996/Toeic/actions/runs/46118675768) **PASS** (151/151 steps, 0 failed, 0 skipped; 853 Python tests PASS). The Part 7 validator regression suite, canonical mapping audit and version synchronization all pass. GitHub Pages [run 46118675714](https://github.com/vuphuc1996/Toeic/actions/runs/46118675714) **PASS** (build, deploy and status-report jobs); environment URL: https://vuphuc1996.github.io/Toeic/. `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`; this is a candidate-branch deployment, not a merge to `main`.
 - **Offline/device boundary:** installed-PWA/offline propagation and physical-device QA remain **UNVERIFIED**.
 
 ## Previous release — v2.95.80

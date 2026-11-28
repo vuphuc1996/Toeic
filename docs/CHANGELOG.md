@@ -6,7 +6,7 @@
 - Added regression tests for duplicate document labels, repeated source labels, non-string labels/quotes and partial-label matches.
 - Preserved 1,103 mapping links / 638 stable question IDs; 22/27 TOEIC criteria and 28/33 total instrumented criteria. No reserve item is promoted.
 - No canonical vocabulary or question identities, answer keys, Mock eligibility, learner IndexedDB schema/data, UI, navigation, Robot Buddy behavior or hosting architecture changed. Version/cache markers are synchronized for this release.
-- Exact candidate CI, mapping audit, version-sync and Pages acceptance are pending for this commit. Candidate-only; `main` remains unchanged.
+- Exact source/test HEAD `047781760d0c34788e9153cc402efdec605c3d5f` passed GitHub Validate [run 46118675768](https://github.com/vuphuc1996/Toeic/actions/runs/46118675768) (151/151 steps; 853 Python tests) and GitHub Pages build/deploy [run 46118675714](https://github.com/vuphuc1996/Toeic/actions/runs/46118675714). Candidate-only; `main` remains unchanged.
 
 ## v2.95.80 — Criterion Mapping Coverage & Source Evidence Hardening (2026-11-28)
 

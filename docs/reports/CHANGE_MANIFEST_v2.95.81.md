@@ -27,4 +27,4 @@
 
 ## Acceptance
 
-New exact-commit Python/Validate/mapping/version-sync/Pages results are pending. Do not treat this manifest as proof of acceptance or package generation.
+Exact source/test HEAD `047781760d0c34788e9153cc402efdec605c3d5f` passed GitHub Validate [run 46118675768](https://github.com/vuphuc1996/Toeic/actions/runs/46118675768) (151/151 steps; 853 Python tests) and GitHub Pages [run 46118675714](https://github.com/vuphuc1996/Toeic/actions/runs/46118675714) (build, deploy and status-report jobs). The FullSource ZIP is still not generated or verified.

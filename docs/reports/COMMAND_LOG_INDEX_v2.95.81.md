@@ -6,11 +6,11 @@
 
 | Order | Command | Purpose | Evidence status |
 |---:|---|---|---|
-| 1 | `python -m unittest discover -s tools/tests -p 'test_objective_criterion_map.py' -v` | Mapping and Part 7 evidence regressions | **PENDING CI** |
-| 2 | `python tools/audit-objective-criterion-map.py` | Reconcile canonical mapping IDs, source quotes and reserve gates | **PENDING CI** |
-| 3 | `python tools/sync-version.py --check` | Verify all single-instance markers and release-keyed app/SW/mock imports | **PENDING CI** |
-| 4 | `python -m unittest discover -s tools/tests -v` | Full discovered Python test inventory | **PENDING CI** |
-| 5 | GitHub Validate | Exact candidate source/test acceptance | **PENDING** |
-| 6 | GitHub Pages build/deploy | Exact candidate Pages acceptance | **PENDING** |
+| 1 | `python -m unittest discover -s tools/tests -p 'test_objective_criterion_map.py' -v` | Mapping and Part 7 evidence regressions | **PASS** |
+| 2 | `python tools/audit-objective-criterion-map.py` | Reconcile canonical mapping IDs, source quotes and reserve gates | **PASS** |
+| 3 | `python tools/sync-version.py --check` | Verify all single-instance markers and release-keyed app/SW/mock imports | **PASS** |
+| 4 | `python -m unittest discover -s tools/tests -v` | Full discovered Python test inventory | **PASS** |
+| 5 | GitHub Validate | Exact candidate source/test acceptance | **PASS** |
+| 6 | GitHub Pages build/deploy | Exact candidate Pages acceptance | **PASS** |
 
-No local test execution is represented as completed in this index. Hosted CI is the source of acceptance evidence for this candidate commit.
+Exact candidate source/test HEAD `047781760d0c34788e9153cc402efdec605c3d5f`: GitHub Validate [run 46118675768](https://github.com/vuphuc1996/Toeic/actions/runs/46118675768) PASS (151/151 steps; 853 Python tests); GitHub Pages [run 46118675714](https://github.com/vuphuc1996/Toeic/actions/runs/46118675714) PASS (build, deploy and status-report). The specific Part 7 test module, mapping audit and version synchronization also passed. No local test execution is claimed.
