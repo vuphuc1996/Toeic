@@ -11,7 +11,7 @@
 | Part 1 photo resources | 12 | Present in the Listening library |
 | Current Mock-eligible Part 1 questions | 8 | Existing approved/legacy pool |
 | Pending Part 1 reserve questions | 4 | Excluded until independent review |
-| New Batch 018 additions | 3 | Reserve-pending; question-level `mockEligible: false` |
+| New Batch 018 additions | 3 | Reserve-pending at resource level; no question-level practice-only flag |
 
 The 3 new entries use images already present in the repository. Their attribution is recorded as Google Imagen generated assets, not Pexels or third-party stock photography.
 
