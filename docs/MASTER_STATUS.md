@@ -1,10 +1,18 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.83
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.84
 
-**Current source release candidate:** v2.95.83 — Part 4 Inference / Part 6 Discourse Evidence Batch. Sole predecessor baseline: candidate HEAD `5eb3b736c3252a38702438efbbbc75e74864189a` (v2.95.82). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
+**Current source release candidate:** v2.95.84 — Mock Pool Count Reconciliation & Listening Purpose Evidence Depth. Predecessor: candidate HEAD `d99d039` (stabilized v2.95.83 on `137160f08cd1ef2b2b505a8af1c9e7ba829b4297`). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
-## Current release — v2.95.83
+## Current release — v2.95.84
+
+- **Scope:** align Mock Exam UI pool/readiness counters (`mockPoolCount` and `eligibleByPart` in `assets/js/app.js`) with `mock-engine.js` (`countMockPool` / `isQuestionMockEligible`), and deepen Part 3/Part 4 purpose criterion coverage using existing non-reserve items with verbatim audio quotes.
+- **Mock UI pool fix:** Mock landing and Part 4 readiness stats now exclude the 10 practice-only Part 4 questions (`mockEligible: false`), reporting **102** Listening available (**30** Part 4), **200** Reading available, and **295** projected Listening questions (102 approved + 193 reserve pending).
+- **Mapping inventory:** **1,148 links / 648 unique stable question IDs** (+4 `listening-part-3-conversation-purpose` 7 → 11; +5 `listening-part-4-talk-purpose` 2 → 7, still honestly below 10); TOEIC criteria **25/27**; Foundation **6/6**; total **31/33**.
+- **Progress:** provisional weighted measurable curriculum-build index **76.00%**; not learner mastery or total-system completion.
+- **Protected boundaries:** no `main` change, no IndexedDB migration, no UI/layout/navigation redesign, no Robot Buddy change, no canonical question/answer key edit; Listening reserve 193, Reading Part 7 reserve 87 and Separate Part 5 review-only 80 remain excluded.
+
+## Previous release — v2.95.83
 
 - **Scope:** add ten new Part 4 next-step/action practice items, ten Part 6 discourse-purpose mappings, question-level Mock exclusion and human-review handoff. No UI redesign or learner-data migration.
 - **Mapping inventory:** **1,139 links / 648 unique stable question IDs**; TOEIC criteria **25/27**; Foundation **6/6**; total **31/33**. Two criteria remain uninstrumented.

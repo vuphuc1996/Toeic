@@ -20,6 +20,8 @@ assert.match(app, /mock-score-dial/);
 assert.match(app, /equating theo từng đề/);
 assert.match(engine, /new Set\(questionIds\)\.size !== questionIds\.length/);
 assert.match(engine, /usageCounts = null/);
+assert.match(app, /countMockPool\s*\(\s*rows\s*,\s*parts\s*\)/, 'mockPoolCount must delegate to countMockPool');
+assert.match(app, /\.filter\(isQuestionMockEligible\)\.length/, 'eligibleByPart must filter question-level mockEligible flags');
 assert.match(css, /\.mock-score-dial/);
 assert.match(sw, /"\.\/assets\/js\/mock-engine\.js"/);
 assert.doesNotMatch(app, /dbSet\(['"]mock-/i, 'mock state must not be written into IndexedDB');

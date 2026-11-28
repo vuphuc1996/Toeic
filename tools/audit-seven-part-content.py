@@ -267,10 +267,15 @@ def audit_all(root: Path = ROOT) -> dict[str, Any]:
 
         for qn, q in enumerate(qs, 1):
             stats["questions"] += 1
-            if bucket == "APPROVED_FOR_MOCK":
-                stats["approved_for_mock_questions"] += 1
-            elif bucket == "HUMAN_REVIEW_REQUIRED":
-                stats["human_review_required_questions"] += 1
+            if bucket == "APPROVED_FOR_MOCK" and q.get("mockEligible") is False:
+                q_bucket = "PRACTICE_SUPPORT"
+                stats["practice_support_questions"] += 1
+            else:
+                q_bucket = bucket
+                if q_bucket == "APPROVED_FOR_MOCK":
+                    stats["approved_for_mock_questions"] += 1
+                elif q_bucket == "HUMAN_REVIEW_REQUIRED":
+                    stats["human_review_required_questions"] += 1
 
             choices = q.get("choices", [])
             ai = q.get("answerIndex")
@@ -293,7 +298,7 @@ def audit_all(root: Path = ROOT) -> dict[str, Any]:
                 stats["structural_errors"] += 1
                 continue
 
-            record_answer_dist(label, bucket, ai, expected_choices)
+            record_answer_dist(label, q_bucket, ai, expected_choices)
 
             stem_sig = (label, norm(f"{source_text if part in ('Part 1','Part 2') else ''} {q.get('question','')} {'|'.join(sorted(choices))}"))
             if stem_sig in seen_stems:
@@ -340,7 +345,7 @@ def audit_all(root: Path = ROOT) -> dict[str, Any]:
                     "scope": label,
                     "id": item["id"],
                     "qn": qn,
-                    "bucket": bucket,
+                    "bucket": q_bucket,
                     "flags": item_flags,
                     "detail": q.get("question", "")[:90],
                 })
@@ -577,6 +582,23 @@ def audit_all(root: Path = ROOT) -> dict[str, Any]:
         copy_v["part_specific"] = dict(v["part_specific"])
         serializable_parts[k] = copy_v
 
+    listening_approved_total = sum(
+        p["approved_for_mock_questions"] for name, p in serializable_parts.items() if name.startswith("Listening ")
+    )
+    listening_human_review_total = sum(
+        p["human_review_required_questions"] for name, p in serializable_parts.items() if name.startswith("Listening ")
+    )
+    listening_practice_support_total = sum(
+        p["practice_support_questions"] for name, p in serializable_parts.items() if name.startswith("Listening ")
+    )
+    reading_approved_total = sum(
+        p["approved_for_mock_questions"] for name, p in serializable_parts.items() if name.startswith("Reading ")
+    )
+    reading_human_review_total = sum(
+        p["human_review_required_questions"] for name, p in serializable_parts.items() if name.startswith("Reading ")
+    )
+    grammar_exercises_total = sum(len(x.get("exercises", [])) for x in grammar)
+
     return {
         "version": VERSION,
         "generatedOn": datetime.date.today().isoformat(),
@@ -589,24 +611,26 @@ def audit_all(root: Path = ROOT) -> dict[str, Any]:
         "totals": {
             "listeningUnits": len(listening),
             "listeningQuestions": sum(len(u.get("questions", [])) for u in listening),
-            "listeningApprovedForMock": sum(len(u.get("questions", [])) for u in listening if is_mock_eligible(u)),
-            "listeningHumanReviewRequired": sum(len(u.get("questions", [])) for u in listening if not is_mock_eligible(u)),
+            "listeningApprovedForMock": listening_approved_total,
+            "listeningHumanReviewRequired": listening_human_review_total,
+            "listeningPracticeSupport": listening_practice_support_total,
             "readingUnits": len(readings),
             "readingQuestions": sum(len(u.get("questions", [])) for u in readings),
-            "readingApprovedForMock": sum(len(u.get("questions", [])) for u in readings if is_mock_eligible(u)),
-            "readingHumanReviewRequired": sum(len(u.get("questions", [])) for u in readings if not is_mock_eligible(u)),
+            "readingApprovedForMock": reading_approved_total,
+            "readingHumanReviewRequired": reading_human_review_total,
             "separatePart5Questions": len(p5_qs),
             "grammarLessons": len(grammar),
-            "grammarExercises": sum(len(x.get("exercises", [])) for x in grammar),
+            "grammarExercises": grammar_exercises_total,
+            "totalPracticeSupport": listening_practice_support_total + grammar_exercises_total,
             "totalQuestionsAllBanks": (
                 sum(len(u.get("questions", [])) for u in listening)
                 + sum(len(u.get("questions", [])) for u in readings)
                 + len(p5_qs)
-                + sum(len(x.get("exercises", [])) for x in grammar)
+                + grammar_exercises_total
             ),
             "totalHumanReviewRequired": (
-                sum(len(u.get("questions", [])) for u in listening if not is_mock_eligible(u))
-                + sum(len(u.get("questions", [])) for u in readings if not is_mock_eligible(u))
+                listening_human_review_total
+                + reading_human_review_total
                 + len(p5_qs)
             ),
         },
@@ -639,7 +663,7 @@ def render_markdown(report: dict[str, Any]) -> str:
         "- **`HUMAN_REVIEW_REQUIRED` (`reserve-pending-independent-review`)**: "
         f"**{t['listeningHumanReviewRequired']} Listening** + **{t['readingHumanReviewRequired']} Reading Part 7** + **{t['separatePart5Questions']} Separate Part 5** = **{t['totalHumanReviewRequired']} questions**. "
         "Explicitly excluded from Mock; automated structural passes never promote reserve items.",
-        f"- **`PRACTICE_SUPPORT` (Grammar)**: **{t['grammarLessons']} lessons / {t['grammarExercises']} exercises** supporting Parts 5 & 6 learning only.",
+        f"- **`PRACTICE_SUPPORT` (Practice-only Listening & Grammar)**: **{t['listeningPracticeSupport']} practice-only Listening Part 4** + **{t['grammarLessons']} Grammar lessons / {t['grammarExercises']} exercises** = **{t['totalPracticeSupport']} practice-support questions** (excluded from Mock).",
         "- **`AI_TRIAGE / STRUCTURAL`**: Automated lexical, length, cross-question overlap, and Part-alignment flags are review heuristics, **not** proof of a wrong key or semantic validity.",
         "",
         "## 2. Authoritative 7-Part & Support Inventory",
@@ -657,7 +681,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             f"{p['structural_errors']} | {p['triage_flagged_questions']} |"
         )
     lines += [
-        f"| **Total across all TOEIC & Support banks** | **{t['listeningUnits'] + t['readingUnits'] + 1 + t['grammarLessons']}** | **{t['totalQuestionsAllBanks']}** | **{t['listeningApprovedForMock'] + t['readingApprovedForMock']}** | **{t['totalHumanReviewRequired']}** | **{t['grammarExercises']}** | — | — | — | **{len(report['structuralErrors'])}** | **{len(report['triageFlags'])}** |",
+        f"| **Total across all TOEIC & Support banks** | **{t['listeningUnits'] + t['readingUnits'] + 1 + t['grammarLessons']}** | **{t['totalQuestionsAllBanks']}** | **{t['listeningApprovedForMock'] + t['readingApprovedForMock']}** | **{t['totalHumanReviewRequired']}** | **{t['totalPracticeSupport']}** | — | — | — | **{len(report['structuralErrors'])}** | **{len(report['triageFlags'])}** |",
         "",
         "## 3. Answer-Key Distribution by Part & Eligibility Bucket",
         "",

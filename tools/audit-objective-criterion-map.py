@@ -291,6 +291,29 @@ def validate_part6_discourse_evidence(resource: dict, question: dict, row: dict)
                 errors.append("Part 6 evidenceBasis must include the discourseRationale")
     return errors
 
+
+def validate_listening_purpose_evidence(resource: dict, question: dict, row: dict) -> list[str]:
+    """Validate optional verbatim audio/answer quotes on Part 3/4 purpose mappings."""
+    errors: list[str] = []
+    if resource.get("editorialStatus") == "reserve-pending-independent-review":
+        errors.append("Listening purpose mapping must not use a reserve resource")
+    quote = row.get("evidenceQuote")
+    if quote is not None:
+        prompt = listening_prompt_text(resource)
+        if not isinstance(quote, str) or not quote.strip():
+            errors.append("Listening purpose evidenceQuote must be a non-empty string")
+        elif _normalized_source_text(quote) not in _normalized_source_text(prompt):
+            errors.append("Listening purpose evidenceQuote does not match canonical audio segments")
+    answer_quote = row.get("answerQuote")
+    if answer_quote is not None:
+        choices = question.get("choices")
+        answer_index = question.get("answerIndex")
+        if not isinstance(choices, list) or not isinstance(answer_index, int) or isinstance(answer_index, bool) or answer_index < 0 or answer_index >= len(choices):
+            errors.append("Listening purpose question has invalid canonical answer index")
+        elif answer_quote != choices[answer_index]:
+            errors.append("Listening purpose answerQuote does not match canonical answer choice")
+    return errors
+
 def main() -> int:
     mapping_doc = load(MAP_PATH)
     registry = load(REGISTRY_PATH)
@@ -410,6 +433,11 @@ def main() -> int:
                     errors.extend(f"{label}: {error}" for error in discourse_errors)
                     continue
                 part6_discourse_verified += 1
+            if criterion_id in ("listening-part-3-conversation-purpose", "listening-part-4-talk-purpose"):
+                purpose_errors = validate_listening_purpose_evidence(resource, question, row)
+                if purpose_errors:
+                    errors.extend(f"{label}: {error}" for error in purpose_errors)
+                    continue
             if objective_id.startswith("listening-") and resource.get("editorialStatus") == "reserve-pending-independent-review":
                 listening_reserve_mappings += 1
                 errors.append(f"{label}: Listening reserve item {resource_id} is mapped")
@@ -460,6 +488,8 @@ def main() -> int:
         errors.append("Part 6 discourse-purpose criterion must retain at least 10 unique mapped questions")
     if part6_discourse_verified != counts.get("reading-part-6-discourse-purpose", 0):
         errors.append("every Part 6 discourse-purpose mapping must pass reviewed passage evidence validation")
+    if counts.get("listening-part-3-conversation-purpose", 0) < 10:
+        errors.append("Part 3 conversation-purpose criterion must retain at least 10 unique mapped questions")
 
     part7 = next((row for row in resource_doc["objectives"] if row["id"] == "reading-part-7"), {})
     part5 = next((row for row in resource_doc["objectives"] if row["id"] == "part5-sentence-completion"), {})

@@ -25,7 +25,7 @@ class LearningOutcomeTests(unittest.TestCase):
    text=out.read_text(encoding='utf-8')
    self.assertIn('31/33 (93.9%)',text)
    self.assertIn('25/27',text)
-   self.assertIn('1,139',text)
+   self.assertIn('1,148',text)
    self.assertIn('648 unique question IDs',text)
    self.assertIn('11/11',text)
    for obj in json.loads((ROOT/'data/learning-path/objective-outcomes.json').read_text())['objectives']:

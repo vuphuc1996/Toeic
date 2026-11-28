@@ -9575,6 +9575,96 @@
       "inferenceRationale": "The instruction gives an exception-handling action: record a note rather than inventing a code.",
       "answerQuote": "Add a note in the comments column instead of creating a new code.",
       "evidenceBasis": "Part 4 next-step/action inference (procedure_exception). Audio evidence: \"If a product code does not appear in the system, do not create a new code; instead, add a note in the comments column.\" Correct response: \"Add a note in the comments column instead of creating a new code.\". Reasoning: The instruction gives an exception-handling action: record a note rather than inventing a code."
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-conversation-purpose",
+      "resourceId": "part3-invoice-error",
+      "questionKey": "listening:part3-invoice-error:1",
+      "questionIndex": 0,
+      "evidenceQuote": "It looks like the delivery fee was added twice.",
+      "answerQuote": "The delivery fee was added twice.",
+      "evidenceBasis": "Part 3 conversation purpose/problem. Question asks \"What is wrong with the invoice?\" Audio evidence: \"It looks like the delivery fee was added twice.\" Correct response: \"The delivery fee was added twice.\""
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-conversation-purpose",
+      "resourceId": "part3-interview-schedule",
+      "questionKey": "listening:part3-interview-schedule:2",
+      "questionIndex": 1,
+      "evidenceQuote": "The hiring manager has to attend an urgent client meeting.",
+      "answerQuote": "The hiring manager has another meeting.",
+      "evidenceBasis": "Part 3 conversation purpose/reason. Question asks \"Why must the interview be rescheduled?\" Audio evidence: \"The hiring manager has to attend an urgent client meeting.\" Correct response: \"The hiring manager has another meeting.\""
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-conversation-purpose",
+      "resourceId": "part3-procurement-quotation",
+      "questionKey": "listening:part3-procurement-quotation:1",
+      "questionIndex": 0,
+      "evidenceQuote": "The supplier has sent the quotation for the replacement monitors.",
+      "answerQuote": "Replacement monitors",
+      "evidenceBasis": "Part 3 conversation purpose/topic. Question asks \"What product are the speakers discussing?\" Audio evidence: \"The supplier has sent the quotation for the replacement monitors.\" Correct response: \"Replacement monitors\""
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-conversation-purpose",
+      "resourceId": "part3-elevator-maintenance",
+      "questionKey": "listening:part3-elevator-maintenance:1",
+      "questionIndex": 0,
+      "evidenceQuote": "The building manager has approved the elevator inspection.",
+      "answerQuote": "An elevator inspection",
+      "evidenceBasis": "Part 3 conversation purpose/topic. Question asks \"What work has been approved?\" Audio evidence: \"The building manager has approved the elevator inspection.\" Correct response: \"An elevator inspection\""
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-talk-purpose",
+      "resourceId": "part4-office-announcement",
+      "questionKey": "listening:part4-office-announcement:1",
+      "questionIndex": 0,
+      "evidenceQuote": "The customer service department will move to the fourth floor beginning next Monday.",
+      "answerQuote": "Customer service",
+      "evidenceBasis": "Part 4 talk purpose/topic. Question asks \"What department is moving?\" Audio evidence: \"The customer service department will move to the fourth floor beginning next Monday.\" Correct response: \"Customer service\""
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-talk-purpose",
+      "resourceId": "part4-conference-update",
+      "questionKey": "listening:part4-conference-update:2",
+      "questionIndex": 1,
+      "evidenceQuote": "Please note that the afternoon workshop has been moved from Room 204 to Room 310.",
+      "answerQuote": "The afternoon workshop room",
+      "evidenceBasis": "Part 4 talk purpose/update. Question asks \"What has changed?\" Audio evidence: \"Please note that the afternoon workshop has been moved from Room 204 to Room 310.\" Correct response: \"The afternoon workshop room\""
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-talk-purpose",
+      "resourceId": "part4-warehouse-safety-briefing",
+      "questionKey": "listening:part4-warehouse-safety-briefing:1",
+      "questionIndex": 0,
+      "evidenceQuote": "From Monday, forklifts will use the marked lanes along the west wall",
+      "answerQuote": "Forklifts will use marked lanes along the west wall",
+      "evidenceBasis": "Part 4 talk purpose/main announcement. Question asks \"What change will take effect on Monday?\" Audio evidence: \"From Monday, forklifts will use the marked lanes along the west wall\" Correct response: \"Forklifts will use marked lanes along the west wall\""
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-talk-purpose",
+      "resourceId": "part4-training-registration",
+      "questionKey": "listening:part4-training-registration:1",
+      "questionIndex": 0,
+      "evidenceQuote": "The half-day workshop is designed for employees who regularly respond to customer inquiries by telephone or email.",
+      "answerQuote": "Employees who respond to customer inquiries",
+      "evidenceBasis": "Part 4 talk purpose/intended audience. Question asks \"Who is the workshop intended for?\" Audio evidence: \"The half-day workshop is designed for employees who regularly respond to customer inquiries by telephone or email.\" Correct response: \"Employees who respond to customer inquiries\""
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-talk-purpose",
+      "resourceId": "part4-travel-service-update",
+      "questionKey": "listening:part4-travel-service-update:1",
+      "questionIndex": 0,
+      "evidenceQuote": "Due to road construction near the terminal, the shuttle will depart from the north entrance rather than the main lobby.",
+      "answerQuote": "Road construction is taking place near the terminal",
+      "evidenceBasis": "Part 4 talk purpose/reason. Question asks \"Why has the shuttle departure point changed?\" Audio evidence: \"Due to road construction near the terminal, the shuttle will depart from the north entrance rather than the main lobby.\" Correct response: \"Road construction is taking place near the terminal\""
     }
   ],
   "mappingCountsByCriterion": {
@@ -9586,12 +9676,12 @@
     "listening-part-2-distractor-resistance": 16,
     "listening-part-2-natural-response": 25,
     "listening-part-2-response-intent": 21,
-    "listening-part-3-conversation-purpose": 7,
+    "listening-part-3-conversation-purpose": 11,
     "listening-part-3-detail-inference": 33,
     "listening-part-3-speaker-linking": 10,
     "listening-part-4-detail-tracking": 29,
     "listening-part-4-inference-action": 10,
-    "listening-part-4-talk-purpose": 2,
+    "listening-part-4-talk-purpose": 7,
     "part5-sentence-completion-accuracy": 80,
     "part5-sentence-completion-error-review": 80,
     "part5-sentence-completion-time-management": 80,

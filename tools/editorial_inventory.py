@@ -47,17 +47,35 @@ def collect_editorial_inventory(root: Path = ROOT) -> dict[str, Any]:
     unknown_statuses: Counter[str] = Counter()
     eligible_ids: list[str] = []
     reserve_ids: list[str] = []
+    practice_only_ids: list[str] = []
+    eligible_by_part: Counter[str] = Counter()
+    reserve_by_part: Counter[str] = Counter()
+    practice_only_by_part: Counter[str] = Counter()
 
     for unit in listening:
         status = unit.get("editorialStatus")
+        part = str(unit.get("part") or "Unclassified")
+        unit_id = unit.get("id", "unknown")
+        questions = unit.get("questions", [])
         if status in ELIGIBLE_STATUSES:
             eligible_units.append(unit)
-            eligible_ids.extend(f"{unit.get('id', 'unknown')}#Q{index}" for index, _question in enumerate(unit.get("questions", []), 1))
+            for index, question in enumerate(questions, 1):
+                qid = f"{unit_id}#Q{index}"
+                if question.get("mockEligible") is False:
+                    practice_only_ids.append(qid)
+                    practice_only_by_part[part] += 1
+                else:
+                    eligible_ids.append(qid)
+                    eligible_by_part[part] += 1
         elif status == RESERVE_STATUS:
             reserve_units.append(unit)
-            reserve_ids.extend(f"{unit.get('id', 'unknown')}#Q{index}" for index, _question in enumerate(unit.get("questions", []), 1))
+            for index, question in enumerate(questions, 1):
+                if question.get("mockEligible") is False:
+                    raise ValueError(f"Reserve Listening unit contains unexpected mockEligible=false question: {unit_id}#Q{index}")
+                reserve_ids.append(f"{unit_id}#Q{index}")
+                reserve_by_part[part] += 1
         else:
-            unknown_statuses[str(status)] += len(unit.get("questions", []))
+            unknown_statuses[str(status)] += len(questions)
 
     if unknown_statuses:
         raise ValueError(f"Unclassified Listening editorial statuses: {dict(unknown_statuses)}")
@@ -65,9 +83,11 @@ def collect_editorial_inventory(root: Path = ROOT) -> dict[str, Any]:
         raise ValueError("Duplicate question IDs detected in Listening eligible pool")
     if len(reserve_ids) != len(set(reserve_ids)):
         raise ValueError("Duplicate question IDs detected in Listening reserve pool")
-    overlap = sorted(set(eligible_ids) & set(reserve_ids))
+    if len(practice_only_ids) != len(set(practice_only_ids)):
+        raise ValueError("Duplicate question IDs detected in Listening practice-only pool")
+    overlap = sorted((set(eligible_ids) & set(reserve_ids)) | (set(eligible_ids) & set(practice_only_ids)) | (set(reserve_ids) & set(practice_only_ids)))
     if overlap:
-        raise ValueError(f"Listening eligible/reserve question IDs overlap: {overlap[:10]}")
+        raise ValueError(f"Listening eligible/reserve/practice-only question IDs overlap: {overlap[:10]}")
 
     READING_ELIGIBLE_STATUSES = {None, "approved-for-mock", "internal-editorial-reviewed"}
 
@@ -100,13 +120,16 @@ def collect_editorial_inventory(root: Path = ROOT) -> dict[str, Any]:
         "listening": {
             "eligible_resources": len(eligible_units),
             "reserve_resources": len(reserve_units),
-            "eligible_questions": _question_count(eligible_units),
-            "reserve_questions": _question_count(reserve_units),
+            "eligible_questions": len(eligible_ids),
+            "reserve_questions": len(reserve_ids),
+            "practice_only_questions": len(practice_only_ids),
             "total_questions": _question_count(listening),
-            "eligible_by_part": _part_counts(eligible_units),
-            "reserve_by_part": _part_counts(reserve_units),
+            "eligible_by_part": dict(sorted(eligible_by_part.items())),
+            "reserve_by_part": dict(sorted(reserve_by_part.items())),
+            "practice_only_by_part": dict(sorted(practice_only_by_part.items())),
             "eligible_question_ids": sorted(eligible_ids),
             "reserve_question_ids": sorted(reserve_ids),
+            "practice_only_question_ids": sorted(practice_only_ids),
         },
         "reading": {
             "eligible_resources": len(reading_eligible_units),

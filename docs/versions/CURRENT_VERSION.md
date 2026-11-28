@@ -1,17 +1,14 @@
-# Current Version — TOEIC Dictionary v2.95.83
+# Current Version — TOEIC Dictionary v2.95.84
 
-- Current source: **v2.95.83** — Part 4 Inference / Part 6 Discourse Evidence Batch.
-- Sole predecessor: `5eb3b736c3252a38702438efbbbc75e74864189a` (v2.95.82).
+- Current source: **v2.95.84** — Mock Pool Count Reconciliation & Listening Purpose Evidence Depth.
+- Predecessor: stabilized v2.95.83 (`137160f08cd1ef2b2b505a8af1c9e7ba829b4297` + CI stabilization commit).
 - Target branch: `candidate`; `main` remains `256ca21461e78a7685bed773ddd622a64050e33a`.
-- Release package target: `TOEIC_Dictionary_v2.95.83_FullSource.zip` (not generated or verified).
-- Change manifest: `reports/CHANGE_MANIFEST_v2.95.83.md`.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.83.md`.
-- Criterion map: **1,139 links / 648 unique stable question IDs**. TOEIC **25/27**; Foundation **6/6**; total **31/33**. Two remain uninstrumented.
-- Part 4: 10 new practice-only questions with exact transcript and inference rationale. `mockEligible: false` excludes them from all Mock modes.
-- Part 6: 10 mappings to existing questions in four internal-editorial-reviewed resources; no content or answer keys changed.
-- Mock preservation: approved Part 4 pool remains 30; approved Listening pool remains 102; all Mock sizes and three-question blocks remain exact.
-- Part 1 photo visual review and Part 7 independent second-review handoff are recorded without promotion.
+- Release package: `TOEIC_Dictionary_v2.95.84_FullSource.zip`. (Not generated or verified in this candidate snapshot.)
+- Change manifest: `reports/CHANGE_MANIFEST_v2.95.84.md`.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.84.md`.
+- Criterion map: **1,148 links / 648 unique stable question IDs**. TOEIC **25/27**; Foundation **6/6**; total **31/33**. Two remain uninstrumented; `listening-part-3-conversation-purpose` advances **7 → 11** and `listening-part-4-talk-purpose` advances **2 → 7** (below 10-item minimum).
+- Mock UI & Engine alignment: `assets/js/app.js` reuses `countMockPool` and `isQuestionMockEligible` from `assets/js/mock-engine.js`; displayed Mock pool stays at **102** Listening (**30** Part 4) and **200** Reading, excluding the 10 practice-only Part 4 questions (`mockEligible: false`).
+- Part 1 photo visual review and Part 7 independent second-review handoff remain queued without promotion.
 - Weighted measurable curriculum-build index: **76.00%** (provisional; not learner mastery or TOEIC score readiness).
-- GitHub Validate, full Python discovery, version sync and Pages deployment: **PENDING**.
+- GitHub Validate, Pages deployment, FullSource ZIP, installed-PWA/offline propagation and physical-device QA: **PENDING / UNVERIFIED**.
 - Candidate only; no merge to main or Production Deployment Accepted decision.
-- FullSource ZIP, installed-PWA/offline propagation and physical-device QA: **UNVERIFIED**.

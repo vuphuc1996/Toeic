@@ -57,11 +57,18 @@ def main() -> int:
     rows: list[tuple[str, str, int, str, list[str], str]] = []
     item_rows: list[tuple[str, str, int]] = []
 
+    practice_only_questions: list[tuple[str, int, dict]] = []
     for library, part, items in scopes:
         distribution = Counter()
         for item in items:
-            item_rows.append((library, item['id'], len(item.get('questions', []))))
+            mock_questions = []
             for qn, q in enumerate(item.get('questions', []), 1):
+                if q.get('mockEligible') is False:
+                    practice_only_questions.append((item['id'], qn, q))
+                else:
+                    mock_questions.append((qn, q))
+            item_rows.append((library, item['id'], len(mock_questions)))
+            for qn, q in mock_questions:
                 choices = q.get('choices', [])
                 expected = 3 if part == 'Part 2' else 4
                 if len(choices) != expected:
@@ -80,6 +87,18 @@ def main() -> int:
                              [c for i, c in enumerate(choices) if i != answer_index],
                              q.get('question', '')))
         distributions[part] = distribution
+
+    for item_id, qn, q in practice_only_questions:
+        choices = q.get('choices', [])
+        if len(choices) != 4:
+            errors.append(f"{item_id} Q{qn}: practice-only item expected 4 choices, got {len(choices)}")
+            continue
+        normalized = [norm(c) for c in choices]
+        if len(normalized) != len(set(normalized)):
+            errors.append(f"{item_id} Q{qn}: practice-only item has duplicate normalized choices")
+        answer_index = q.get('answerIndex')
+        if not isinstance(answer_index, int) or not 0 <= answer_index < len(choices):
+            errors.append(f"{item_id} Q{qn}: practice-only item has invalid answerIndex {answer_index!r}")
 
     # Reserve items are structurally checked but excluded from the historic answer-position balance
     # until they receive an independent editorial/distractor review.
@@ -144,7 +163,7 @@ def main() -> int:
         '', '## Quality decision and remaining limitations',
         '- The 12 revised groups now use distractors closer to the same document purpose, role, travel record, service request, business action or visitor-access context. The correct answer text and `answerIndex` were kept unchanged for every revised question.',
         '- Historical reviewed groups were retained where the three alternatives are distinct and the transcript/passage supports one clear key. For the new v2.92.0 and v2.93.0 Part 7 groups, close dates/times, locations, delivery steps and document-purpose alternatives were authored to be plausible, but an independent reviewer must confirm that exactly one option is defensible.',
-        f'- Listening reserve total: {sum(len(x.get("questions", [])) for x in reserve_all)} questions across {len(reserve_all)} units. This script structurally checks Part 3/4 reserve blocks; Part 2 response-fit is tracked separately. Structural checks never approve a reserve for Mock.',
+        f'- Listening reserve total: {sum(len(x.get("questions", [])) for x in reserve_all)} questions across {len(reserve_all)} units; practice-only Part 4 additions (`mockEligible: false`): {len(practice_only_questions)} questions. Both remain excluded from Mock-eligible balance.',
         '- This is editorial review of original-authored content. It is not official ETS content, two-person independent review, statistical item analysis, difficulty calibration or proof of score equivalence.',
         '- Part 1 uses source-tracked licensed Pexels and AI-generated photographs with a JPG-only runtime contract; Listening audio remains browser SpeechSynthesis. Physical-device audio/voice review is still pending.',
         ''
@@ -152,7 +171,7 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text('\n'.join(lines), encoding='utf-8')
     print(f'Wrote {OUT.relative_to(ROOT)}')
-    print(f'Questions in audit scope: {total}; reserve structural checks: {sum(len(x.get("questions", [])) for x in reserve)}; revisions: {len(REVISIONS)}')
+    print(f'Questions in audit scope: {total}; practice-only structural checks: {len(practice_only_questions)}; reserve structural checks: {sum(len(x.get("questions", [])) for x in reserve)}; revisions: {len(REVISIONS)}')
     for part in ('Part 3', 'Part 4', 'Part 7'):
         d = distributions[part]
         print(f"{part}: A={d[0]}, B={d[1]}, C={d[2]}, D={d[3]}")

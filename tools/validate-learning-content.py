@@ -14,6 +14,18 @@ SENTENCE_GRAMMAR_CATEGORIES = {
     'Passive Voice', 'Prepositions and Collocations', 'Subject–Verb Agreement',
     'Verb Tense and Aspect', 'Word Forms and Nouns'
 }
+PRACTICE_ONLY_PART4_TALK_IDS = {
+    'part4-office-announcement',
+    'part4-conference-update',
+    'part4-safety-announcement',
+    'part4-product-launch',
+    'part4-quarterly-town-hall',
+    'part4-customer-voicemail',
+    'part4-warehouse-safety-briefing',
+    'part4-training-registration',
+    'part4-travel-service-update',
+    'part4-quarterly-inventory-report',
+}
 
 def read_json(rel: str):
     path = ROOT / rel
@@ -106,6 +118,8 @@ def main():
 
     listen_counts={f'Part {i}':0 for i in range(1,5)}
     listen_questions={f'Part {i}':0 for i in range(1,5)}
+    listen_mock_questions={f'Part {i}':0 for i in range(1,5)}
+    practice_only_p4_count=0
     part1_correct=[]
     for item in listening:
         ident=item.get('id','?'); part=item.get('part')
@@ -116,13 +130,30 @@ def main():
         segments=item.get('segments') or []
         questions=item.get('questions') or []
         listen_questions[part]+=len(questions)
+        listen_mock_questions[part]+=sum(1 for q in questions if q.get('mockEligible') is not False)
+        editorial_status=item.get('editorialStatus')
         if part=='Part 2' and len(questions)!=1:
             ERRORS.append(f"Listening {ident}: Part 2 item must contain exactly one question")
-        if part in ('Part 3','Part 4') and len(questions)!=3:
-            ERRORS.append(f"Listening {ident}: {part} set must contain exactly three questions")
+        if part=='Part 3':
+            if len(questions)!=3 or any(q.get('mockEligible') is False for q in questions):
+                ERRORS.append(f"Listening {ident}: Part 3 set must contain exactly three Mock-eligible questions")
+        if part=='Part 4':
+            mock_qs=[q for q in questions if q.get('mockEligible') is not False]
+            if len(mock_qs)!=3:
+                ERRORS.append(f"Listening {ident}: Part 4 set must preserve exactly three Mock-eligible questions")
+            if ident in PRACTICE_ONLY_PART4_TALK_IDS:
+                if editorial_status == 'reserve-pending-independent-review':
+                    ERRORS.append(f"Listening {ident}: practice-only Part 4 talk must not be a reserve item")
+                elif len(questions)!=4 or any(q.get('mockEligible') is False for q in questions[:3]) or questions[3].get('mockEligible') is not False:
+                    ERRORS.append(f"Listening {ident}: allowlisted practice-only Part 4 set must have 3 Mock-eligible Q1-Q3 and Q4 mockEligible=false")
+                else:
+                    practice_only_p4_count+=1
+            elif len(questions)!=3 or any(q.get('mockEligible') is False for q in questions):
+                ERRORS.append(f"Listening {ident}: {part} set must contain exactly three questions")
+        if part not in ('Part 3','Part 4') and any(q.get('mockEligible') is False for q in questions):
+            ERRORS.append(f"Listening {ident}: unexpected mockEligible=false on {part}")
         if item.get('contentSource') not in ('original-editorial','licensed','official-permission'):
             WARNINGS.append(f"Listening {ident}: contentSource is not explicitly tagged")
-        editorial_status=item.get('editorialStatus')
         if editorial_status and editorial_status not in ('reserve-pending-independent-review','approved-for-mock'):
             ERRORS.append(f"Listening {ident}: unsupported editorialStatus {editorial_status!r}")
         if item.get('editorialBatch') == '015':
@@ -250,8 +281,8 @@ def main():
     listening_targets={'Part 1':6,'Part 2':25,'Part 3':39,'Part 4':30}
     reading_targets={'Part 5':30,'Part 6':16}
     for part,target in listening_targets.items():
-        if listen_questions[part] < target:
-            ERRORS.append(f"Question pool below blueprint: {part} has {listen_questions[part]}, needs at least {target}")
+        if listen_mock_questions[part] < target:
+            ERRORS.append(f"Question pool below blueprint: {part} has {listen_mock_questions[part]}, needs at least {target}")
     for part,target in reading_targets.items():
         if read_questions[part] < target:
             ERRORS.append(f"Question pool below blueprint: {part} has {read_questions[part]}, needs at least {target}")
@@ -261,8 +292,8 @@ def main():
         ERRORS.append(f"Part 7 multiple-passage pool has {p7_multiple_questions}, needs at least 25 questions")
 
     print('TOEIC learning content validation')
-    print(f'Listening: {len(listening)} units / {sum(listen_questions.values())} questions')
-    for p in listen_counts: print(f'  {p}: {listen_counts[p]} units / {listen_questions[p]} questions')
+    print(f'Listening: {len(listening)} units / {sum(listen_questions.values())} questions ({practice_only_p4_count} Part 4 practice-only)')
+    for p in listen_counts: print(f'  {p}: {listen_counts[p]} units / {listen_questions[p]} questions ({listen_mock_questions[p]} non-practice-only)')
     print(f'Reading: {len(reading)} units / {sum(read_questions.values())} questions')
     for p in read_counts: print(f'  {p}: {read_counts[p]} units / {read_questions[p]} questions')
     print(f'Part 7 passage mix: {p7_single_questions} single-passage / {p7_multiple_questions} multiple-passage questions')

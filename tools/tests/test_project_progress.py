@@ -32,7 +32,7 @@ class ProjectProgressTests(unittest.TestCase):
         self.assertIn('| Foundation outcome evidence wired | 6/6 | 100.0% |',out)
         self.assertIn('| Outcomes with evidence instrumentation | 31/33 | 93.9% |',out)
         self.assertIn('| TOEIC sub-skill criteria with item-level mapping | 25/27 | 92.6% |',out)
-        self.assertIn('1,139 explicit stable-ID links across 648 unique question IDs',out)
+        self.assertIn('1,148 explicit stable-ID links across 648 unique question IDs',out)
         self.assertIn('2 TOEIC criteria remain visible without criterion-level scoring',out)
         self.assertIn('Foundation outcome evidence now records recognition',out)
         self.assertIn('Independent-review handoff queue: 193 Listening questions across 89 units + 87 Reading Part 7 questions across 22 resources + 80 separate Part 5 questions = 360 item-level decisions',out)

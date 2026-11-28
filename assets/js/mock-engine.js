@@ -1,4 +1,4 @@
-import { buildMockQuestionSchedule } from './mock-flow.js?__release=2.95.83';
+import { buildMockQuestionSchedule } from './mock-flow.js?__release=2.95.84';
 
 /**
  * TOEIC Mock Test engine.
@@ -67,7 +67,7 @@ function pickFresh(items, count, historyCounts, idOf, random = Math.random) {
   return shuffle(chosen, random);
 }
 
-function isQuestionMockEligible(question) {
+export function isQuestionMockEligible(question) {
   return question?.mockEligible !== false;
 }
 
@@ -161,6 +161,13 @@ function countPool(list, part) {
 // reserve-pending-independent-review is never sampled until explicitly approved.
 export function isMockEligible(item) {
   return !item?.editorialStatus || ['approved-for-mock', 'internal-editorial-reviewed'].includes(item.editorialStatus);
+}
+
+export function countMockPool(list, parts) {
+  const allowedParts = Array.isArray(parts) ? parts : [parts];
+  return (list || [])
+    .filter(item => allowedParts.includes(item.part) && isMockEligible(item))
+    .reduce((sum, item) => sum + (item.questions || []).filter(isQuestionMockEligible).length, 0);
 }
 
 function addSelectedUsage(groups, counts) {

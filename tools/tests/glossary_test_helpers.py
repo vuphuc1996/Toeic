@@ -317,8 +317,21 @@ def composite_sha_reversing_listening_translations(paths, root: Path) -> str:
         "batch026-part4-product-launch",
         "batch026-part4-policy-reminder",
     }
+    practice_only_part4_ids = {
+        "part4-office-announcement",
+        "part4-conference-update",
+        "part4-safety-announcement",
+        "part4-product-launch",
+        "part4-quarterly-town-hall",
+        "part4-customer-voicemail",
+        "part4-warehouse-safety-briefing",
+        "part4-training-registration",
+        "part4-travel-service-update",
+        "part4-quarterly-inventory-report",
+    }
     digest = hashlib.sha256()
     seen: set[str] = set()
+    practice_only_seen: set[str] = set()
     for path in sorted(paths):
         data = path.read_bytes()
         if path.name == "listening-library.json":
@@ -329,8 +342,16 @@ def composite_sha_reversing_listening_translations(paths, root: Path) -> str:
                         raise AssertionError(f"Missing v2.95.76 transcript translation: {unit.get('id')}")
                     seen.add(unit["id"])
                     del unit["transcriptTranslation"]
+                if unit.get("id") in practice_only_part4_ids:
+                    questions = unit.get("questions") or []
+                    if len(questions) != 4 or questions[3].get("mockEligible") is not False:
+                        raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit.get('id')}")
+                    practice_only_seen.add(unit["id"])
+                    unit["questions"] = questions[:3]
             if seen != added_ids:
                 raise AssertionError(f"Listening remediation IDs differ: {sorted(seen ^ added_ids)}")
+            if practice_only_seen != practice_only_part4_ids:
+                raise AssertionError(f"Part 4 practice-only IDs differ: {sorted(practice_only_seen ^ practice_only_part4_ids)}")
             data = json.dumps(document, ensure_ascii=False, indent=2).encode("utf-8") + b"\n"
         digest.update(path.relative_to(root).as_posix().encode("utf-8"))
         digest.update(b"\0")

@@ -6,7 +6,7 @@
     "minimumUniqueItems": 10,
     "defaultThreshold": 0.8,
     "retestPolicy": "A later attempt may update mastery; retain attempt history.",
-    "scopeWarning": "Across all 33 criteria, Foundation retains 6/6 criterion-level local evidence paths. The TOEIC objectives now have explicit stable-question mappings for 25/27 sub-skill criteria; two criteria remain defined but deliberately uninstrumented until stronger item-level evidence or a suitable assessment design exists. Evidence is stored learner-locally under the existing objectiveProgress record without an IndexedDB schema migration. The map covers 1,139 criterion/question links across 648 unique stable question IDs; links are inventory coverage, not learner mastery. Every criterion still requires at least its declared minimum of unique observed items and its declared threshold. Optional Grammar and Reading Part 5 explanation rubrics are learner self-reports. Separate Part 5 timed_accuracy uses a 30-second internal practice target only. Listening reserve remains excluded; Reading Part 7 and Separate Part 5 editorial gates remain active. No CEFR/ETS certification is implied.",
+    "scopeWarning": "Across all 33 criteria, Foundation retains 6/6 criterion-level local evidence paths. The TOEIC objectives now have explicit stable-question mappings for 25/27 sub-skill criteria; two criteria remain defined but deliberately uninstrumented until stronger item-level evidence or a suitable assessment design exists. Evidence is stored learner-locally under the existing objectiveProgress record without an IndexedDB schema migration. The map covers 1,148 criterion/question links across 648 unique stable question IDs; links are inventory coverage, not learner mastery. Every criterion still requires at least its declared minimum of unique observed items and its declared threshold. Optional Grammar and Reading Part 5 explanation rubrics are learner self-reports. Separate Part 5 timed_accuracy uses a 30-second internal practice target only. Listening reserve remains excluded; Reading Part 7 and Separate Part 5 editorial gates remain active. No CEFR/ETS certification is implied.",
     "scoreTypes": [
       "correct_rate",
       "delayed_correct_rate",
@@ -238,7 +238,7 @@
           "minimumUniqueItems": 10,
           "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 3 conversation-purpose questions at >= 80% accuracy.",
-          "runtimeStatusNote": "Question-level mapping: 7 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
+          "runtimeStatusNote": "Question-level mapping: 11 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-3-detail-inference",
@@ -279,7 +279,7 @@
           "minimumUniqueItems": 10,
           "status": "instrumented_practice_evidence",
           "measurementRule": ">= 10 unique Part 4 talk-purpose questions at >= 80% accuracy.",
-          "runtimeStatusNote": "Question-level mapping: 2 stable question ID(s). Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
+          "runtimeStatusNote": "Question-level mapping: 7 stable question ID(s) across non-reserve Part 4 talks, still below the 10-item minimum. Evidence is collected only after completed practice; mastery still requires 10 unique items and the declared threshold."
         },
         {
           "id": "listening-part-4-detail-tracking",

@@ -1,18 +1,19 @@
-# TOEIC Dictionary v2.95.83 — Project Documentation
+# TOEIC Dictionary v2.95.84 — Project Documentation
 
 This documentation describes the current TOEIC-first GitHub Pages candidate. Source changes and release evidence are tracked separately from hosted CI, Pages deployment, installed-PWA behavior and physical-device acceptance.
 
-- Current release: `2.95.83`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.83.md`.
-- Current project progress: `reports/PROJECT_PROGRESS_v2.95.83.md` — provisional weighted measurable curriculum-build index 76.00%; not learner mastery or total-system completion.
-- Part 4/6 evidence batch: `reports/PART4_PART6_EVIDENCE_BATCH_v2.95.83.md` — 10 new practice-only Part 4 questions and 10 reviewed Part 6 discourse mappings.
+- Current release: `2.95.84`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.84.md`.
+- Current project progress: `reports/PROJECT_PROGRESS_v2.95.84.md` — provisional weighted measurable curriculum-build index 76.00%; not learner mastery or total-system completion.
+- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.84.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.84.md`.
+- v2.95.84 fixes Mock UI pool/part counting (`mockPoolCount` and `eligibleByPart` in `assets/js/app.js` via `countMockPool` / `isQuestionMockEligible` in `assets/js/mock-engine.js`) so practice-only Part 4 questions (`mockEligible: false`) stay excluded from displayed Mock counts (102 Listening / 30 Part 4), and adds 9 verbatim audio-backed purpose mappings (`listening-part-3-conversation-purpose` 7 → 11; `listening-part-4-talk-purpose` 2 → 7, still below 10). Inventory becomes 1,148 links across 648 stable question IDs; TOEIC criteria remain 25/27 instrumented.
+- Part 4/6 evidence batch (v2.95.83): `reports/PART4_PART6_EVIDENCE_BATCH_v2.95.83.md` — 10 new practice-only Part 4 questions and 10 reviewed Part 6 discourse mappings.
 - Outstanding human review: `reports/OUTSTANDING_REVIEW_HANDOFF_v2.95.83.md` — Part 1 photo verification and Part 7 independent second-review queue.
-- Current change manifest: `reports/CHANGE_MANIFEST_v2.95.82.md`.
-- v2.95.83 adds 10 Part 4 inference/action practice questions (all Mock-excluded) and 10 mappings to existing internally reviewed Part 6 questions. Inventory becomes 1,139 links across 648 stable question IDs; 25/27 TOEIC criteria are instrumented. No UI redesign or learner-data migration.
 - Exact candidate source/test HEAD `ad6401282fdb6cf86e2321339ee4181d2fc2fb21`: GitHub Validate [run 46120842790](https://github.com/vuphuc1996/Toeic/actions/runs/46120842790) **PASS** (151/151 steps, 0 failed, 0 skipped; 855 Python tests PASS). Part 2 evidence regressions, canonical mapping audit, outcome/project-progress tests and version synchronization all pass. GitHub Pages [run 46120842377](https://github.com/vuphuc1996/Toeic/actions/runs/46120842377) **PASS** (build, status-report and deploy jobs); environment URL: https://vuphuc1996.github.io/Toeic/.
 - Exact candidate source/test HEAD `047781760d0c34788e9153cc402efdec605c3d5f`: GitHub Validate [run 46118675768](https://github.com/vuphuc1996/Toeic/actions/runs/46118675768) **PASS** (151/151 steps, 0 failed, 0 skipped; 853 Python tests PASS). The Part 7 validator regression suite, canonical mapping audit and version synchronization all pass. GitHub Pages [run 46118675714](https://github.com/vuphuc1996/Toeic/actions/runs/46118675714) **PASS** (build, deploy and status-report jobs); environment URL: https://vuphuc1996.github.io/Toeic/.
 - v2.95.80 source acceptance: exact candidate HEAD `84a6b55b53c5d07a6f127c06234605efc0098edd` passed GitHub Validate [run 46107947688](https://github.com/vuphuc1996/Toeic/actions/runs/46107947688) and Pages build/deploy [run 46107947573](https://github.com/vuphuc1996/Toeic/actions/runs/46107947573); 151/151 Validate steps and 850 Python tests PASS. Installed-PWA/offline and physical-device QA remain separate unverified gates.
-- Learning outcome evidence matrix: `reports/TOEIC_LEARNING_OUTCOME_EVIDENCE_v2.95.83.md` — 25/27 TOEIC criteria instrumented across 1,139 stable question-to-criterion links and 648 unique stable question IDs; two remain deliberately uninstrumented.
+- Learning outcome evidence matrix: `reports/TOEIC_LEARNING_OUTCOME_EVIDENCE_v2.95.84.md` — 25/27 TOEIC criteria instrumented across 1,148 stable question-to-criterion links and 648 unique stable question IDs; two remain deliberately uninstrumented.
 - Criterion map audit: `../tools/audit-objective-criterion-map.py` — checks exact question IDs, question indices, Listening reserve exclusion, Part 7 multi-document source quotes and review gates.
 - Criterion mapping remediation: `reports/CRITERION_MAPPING_REMEDIATION_v2.95.80.md` — 21 additional links; explains why below-minimum criteria remain below 10.
 - Candidate change manifest: `reports/CHANGE_MANIFEST_v2.95.80.md`.
@@ -26,7 +27,6 @@ This documentation describes the current TOEIC-first GitHub Pages candidate. Sou
 - Major release quality audit: `reports/MAJOR_RELEASE_QUALITY_AUDIT_v2.95.76.md`.
 - Change manifest: `reports/CHANGE_MANIFEST_v2.95.80.md`.
 - Package verification: `reports/PACKAGE_VERIFICATION_v2.95.77.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.83.md`.
 - Current version ledger: `versions/CURRENT_VERSION.md`.
 - Prior 7-Part assessment and Mock-readiness baseline: `reports/TOEIC_SEVEN_PART_CONTENT_AUDIT_v2.95.75.md`, `reports/TOEIC_MOCK_READINESS_v2.95.75.md`.
 - Master project status: `MASTER_STATUS.md`.

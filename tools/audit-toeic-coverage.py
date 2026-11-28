@@ -15,10 +15,11 @@ def load(rel: str):
 def word_count(text: str) -> int:
     return len(re.findall(r"\b[\w’'-]+\b", text or ""))
 
-def question_counts(items):
+def question_counts(items, mock_only: bool = False):
     result = collections.Counter()
     for item in items:
-        result[item.get("part", "Unassigned")] += len(item.get("questions", []))
+        qs = [q for q in item.get("questions", []) if not mock_only or q.get("mockEligible") is not False]
+        result[item.get("part", "Unassigned")] += len(qs)
     return result
 
 def is_mock_eligible(item):
@@ -28,7 +29,7 @@ def answer_distribution(items, part):
     result = collections.Counter(
         q.get("answerIndex")
         for item in items if item.get("part") == part and is_mock_eligible(item)
-        for q in item.get("questions", [])
+        for q in item.get("questions", []) if q.get("mockEligible") is not False
     )
     return [result.get(i, 0) for i in range(4)]
 
@@ -59,7 +60,11 @@ cefr = collections.Counter(word.get("cefr_level", "Unassigned") for word in voca
 L = collections.Counter(item.get("part", "Unassigned") for item in listening)
 R = collections.Counter(item.get("part", "Unassigned") for item in readings)
 LQ = question_counts(listening)
-ELQ = question_counts([item for item in listening if is_mock_eligible(item)])
+ELQ = question_counts([item for item in listening if is_mock_eligible(item)], mock_only=True)
+PRACTICE_ONLY_LISTEN = sum(
+    1 for item in listening if is_mock_eligible(item)
+    for q in item.get("questions", []) if q.get("mockEligible") is False
+)
 PENDING = [item for item in listening if item.get("editorialStatus") == "reserve-pending-independent-review"]
 PQ = question_counts(PENDING)
 RQ = question_counts(readings)
@@ -113,7 +118,7 @@ lines += [
     f"- Spoken segments: {listening_segments}.",
     f"- Part 1 photo assets: {sum(1 for item in listening if item.get('part') == 'Part 1' and item.get('photoSourceType', 'licensed-stock') == 'licensed-stock')} licensed Pexels + {sum(1 for item in listening if item.get('part') == 'Part 1' and item.get('photoSourceType') == 'ai-generated')} AI-generated; each source type is tracked separately in ATTRIBUTION.csv.",
     "- Audio is browser SpeechSynthesis; it is synthesized audio, not recorded/native-speaker or ETS audio.",
-    f"- Mock-eligible Listening pool: {sum(ELQ.values())} questions; pending independent review: {sum(PQ.values())} questions. Pending content remains available for practice but is excluded from Mock.",
+    f"- Mock-eligible Listening pool: {sum(ELQ.values())} questions; practice-only non-Mock Part 4 additions (`mockEligible: false`): {PRACTICE_ONLY_LISTEN}; pending independent review: {sum(PQ.values())} questions. Pending/practice-only content remains excluded from Mock.",
     f"- Pending batch counts: " + ", ".join(f"Batch {batch}: {sum(len(u.get('questions', [])) for u in PENDING if u.get('editorialBatch', 'legacy') == batch)}" for batch in sorted({u.get('editorialBatch', 'legacy') for u in PENDING})) + ".", "",
     "## Reading coverage", "", "| Part | Resources | Questions |", "|---|---:|---:|"
 ]
@@ -167,7 +172,7 @@ for part in list(LISTEN_TARGET) + list(READ_TARGET):
 
 lines += [
     "", "## Interpretation and gaps", "",
-    f"- Listening learning inventory has {sum(LQ.values())} questions ({len(listening)} source units); currently {sum(ELQ.values())} are Mock-eligible and {sum(PQ.values())} remain pending independent review. The eligible pool supports one full 100-question form; at 102 eligible questions the next Full Listening form reuses 98 questions.",
+    f"- Listening learning inventory has {sum(LQ.values())} questions ({len(listening)} source units); currently {sum(ELQ.values())} are Mock-eligible, {PRACTICE_ONLY_LISTEN} are practice-only (`mockEligible: false`), and {sum(PQ.values())} remain pending independent review. The eligible pool supports one full 100-question form; at {sum(ELQ.values())} eligible questions the next Full Listening form reuses 98 questions.",
     f"- If all pending Listening questions were independently approved, projected per-Part inventory would be P1={ELQ.get('Part 1',0)+PQ.get('Part 1',0)}, P2={ELQ.get('Part 2',0)+PQ.get('Part 2',0)}, P3={ELQ.get('Part 3',0)+PQ.get('Part 3',0)}, P4={ELQ.get('Part 4',0)+PQ.get('Part 4',0)}. It would still be short by {max(0, 12 - (ELQ.get('Part 1',0)+PQ.get('Part 1',0)))} Part 1 items for two entirely non-repeating Full forms.",
     f"- Reading pool has {sum(RQ.values())} total questions ({sum(ERQ.values())} Mock-eligible across {len(readings) - len(RPENDING)} resources + {sum(PRQ.values())} Part 7 reserve-pending across {len(RPENDING)} resources); Part 7 includes {p7_single_questions} single-passage and {p7_multiple_questions} multiple-passage questions total. The Mock regression verifies two consecutive 100-question Reading forms from the {sum(ERQ.values())}-question eligible pool with zero reused question IDs.",
     f"- Structured Part 7 double/triple passage resources: {p7_structured_multi_items}/{len(p7_multiple_items)}.",

@@ -1,3 +1,11 @@
+## v2.95.84 — Mock Pool Count Reconciliation & Listening Purpose Evidence Depth (2026-11-28)
+
+- Fixed Mock Exam UI pool counting in `assets/js/app.js` (`mockPoolCount` and `eligibleByPart`) by exporting shared `isQuestionMockEligible` and `countMockPool` helpers from `assets/js/mock-engine.js`, ensuring the 10 practice-only Part 4 questions (`mockEligible: false`) are excluded from landing totals (**102** Listening / **30** Part 4 / **200** Reading / **295** projected Listening total).
+- Added 9 verbatim audio-backed purpose mappings on existing non-reserve Listening items (`listening-part-3-conversation-purpose` **7 → 11**, clearing the 10-item minimum; `listening-part-4-talk-purpose` **2 → 7**, explicitly kept below the 10-item minimum).
+- Added verbatim `evidenceQuote` / `answerQuote` checks in `tools/audit-objective-criterion-map.py` (`validate_listening_purpose_evidence`), plus Node and Python regression coverage in `mock-exam-engine.mjs`, `mock-ui-integrity.mjs`, and `test_objective_criterion_map.py`.
+- Mapping inventory advances from 1,139 to **1,148 links** across the same **648 unique stable question IDs**; TOEIC outcome instrumentation remains **25/27** (overall **31/33**, Foundation **6/6**).
+- Preserved all canonical questions, choices, answer keys, choice IDs, vocabulary records, IndexedDB v1 schema/learner data, reserve exclusions (193 Listening, 87 Part 7, 80 separate Part 5), Part 1/Part 7 human-review gates, Robot Buddy boundaries, and unchanged `main`.
+
 ## v2.95.83 — Part 4 Inference / Part 6 Discourse Evidence Batch (2026-11-28)
 
 - Added 10 Part 4 next-step/action questions across ten existing non-reserve original-editorial talks; each includes exact transcript evidence, inference type, rationale and new stable choice IDs.

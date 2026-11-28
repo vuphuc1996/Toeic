@@ -18,7 +18,7 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             cwd=ROOT, capture_output=True, text=True
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn("1139 question-to-criterion links", result.stdout)
+        self.assertIn("1148 question-to-criterion links", result.stdout)
         self.assertIn("648 unique stable question IDs", result.stdout)
         self.assertIn("25/27 TOEIC criteria mapped", result.stdout)
         self.assertIn("0 Listening reserve items mapped", result.stdout)
@@ -28,8 +28,8 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
         counts = mapping["mappingCountsByCriterion"]
         self.assertEqual(counts["grammar-core-form-recognition"], 10)
         self.assertEqual(counts["listening-part-3-speaker-linking"], 10)
-        self.assertEqual(counts["listening-part-3-conversation-purpose"], 7)
-        self.assertEqual(counts["listening-part-4-talk-purpose"], 2)
+        self.assertEqual(counts["listening-part-3-conversation-purpose"], 11)
+        self.assertEqual(counts["listening-part-4-talk-purpose"], 7)
         self.assertEqual(counts["reading-part-7-cross-document-link"], 2)
         self.assertEqual(counts["listening-part-1-visual-audio-match"], 8)
         self.assertEqual(counts["listening-part-1-detail-retention"], 8)
@@ -162,6 +162,24 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             distractorQuote=question["choices"][question["answerIndex"]],
         )
         self.assertTrue(any("must not select the answer key" in error for error in AUDIT.validate_part2_distractor_evidence(resource, question, answer_as_distractor)))
+
+    def test_listening_purpose_mappings_verify_non_reserve_audio_evidence(self):
+        mapping = json.loads((ROOT / "data/learning-path/objective-criterion-map.json").read_text(encoding="utf-8"))
+        library = json.loads((ROOT / "data/listening/listening-library.json").read_text(encoding="utf-8"))
+        resources = {item["id"]: item for item in library["listening"]}
+        for cid in ("listening-part-3-conversation-purpose", "listening-part-4-talk-purpose"):
+            rows = [row for row in mapping["mappings"] if row["criterionId"] == cid]
+            self.assertEqual(len({row["questionKey"] for row in rows}), len(rows))
+            for row in rows:
+                resource = resources[row["resourceId"]]
+                question = resource["questions"][row["questionIndex"]]
+                self.assertEqual(AUDIT.validate_listening_purpose_evidence(resource, question, row), [])
+            quote_backed = [row for row in rows if "evidenceQuote" in row]
+            self.assertGreaterEqual(len(quote_backed), 4)
+            bad = dict(quote_backed[0], evidenceQuote="This exact sentence is not in the audio segments.")
+            resource = resources[quote_backed[0]["resourceId"]]
+            question = resource["questions"][quote_backed[0]["questionIndex"]]
+            self.assertTrue(any("does not match canonical audio segments" in err for err in AUDIT.validate_listening_purpose_evidence(resource, question, bad)))
 
 if __name__ == "__main__":
     unittest.main()

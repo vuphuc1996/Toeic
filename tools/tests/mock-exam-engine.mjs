@@ -7,6 +7,8 @@ import {
   scoreMockExam,
   MOCK_MODES,
   isMockEligible,
+  isQuestionMockEligible,
+  countMockPool,
 } from '../../assets/js/mock-engine.js';
 
 const listening = JSON.parse(fs.readFileSync(new URL('../../data/listening/listening-library.json', import.meta.url), 'utf8')).listening;
@@ -51,6 +53,11 @@ const part4PracticeOnly = listening.flatMap(unit =>
 ).filter(item => item.question.mockEligible === false);
 assert.equal(part4PracticeOnly.length, 10, 'all ten new Part 4 inference items must stay practice-only');
 const part4PracticeOnlyIds = new Set(part4PracticeOnly.map(item => `listening:${item.unitId}:${item.index + 1}`));
+assert.equal(isQuestionMockEligible({ question: 'Mock eligible' }), true);
+assert.equal(isQuestionMockEligible({ question: 'Practice only', mockEligible: false }), false);
+assert.equal(countMockPool(listening, ['Part 1', 'Part 2', 'Part 3', 'Part 4']), 102, 'Listening Mock pool count must exclude practice-only Part 4 items');
+assert.equal(countMockPool(listening, 'Part 4'), 30, 'Part 4 Mock pool count must stay 30');
+assert.equal(countMockPool(readings, ['Part 5', 'Part 6', 'Part 7']), 200, 'Reading Mock pool count must stay 200');
 
 // Quick practice: 12 Listening + 13 Reading and exactly 25 unique IDs.
 const quick = make('quick');

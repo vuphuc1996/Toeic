@@ -54,6 +54,7 @@ def main() -> int:
     inventory = collect_editorial_inventory(ROOT)
     listen_count = inventory['listening']['reserve_questions']
     listen_eligible_count = inventory['listening']['eligible_questions']
+    listen_practice_only_count = inventory['listening']['practice_only_questions']
     listen_total_count = inventory['listening']['total_questions']
     p7_count = inventory['part7']['reserve_questions']
     p5_count = inventory['part5']['review_pending_questions']
@@ -81,7 +82,7 @@ def main() -> int:
         f'| Separate Part 5 sentence completion | {p5_count} | 1 bank | `editorialStatus`, `reviewScope`, `certaintyLevel`, `rationale`, `proposedCorrection`, AI triage cross-ref | Grammar, naturalness, distractors, translation and one-answer uniqueness |',
         f'| **Total** | **{listen_count + p7_count + p5_count}** | **{len(listen_rows) + len(p7_rows) + 1}** | **All 360 items protected** | **Independent review required** |', '',
         '## Protected inventory metrics', '',
-        f"- Listening: **{listen_eligible_count} eligible + {listen_count} reserve = {listen_total_count} total**.",
+        f"- Listening: **{listen_eligible_count} eligible + {listen_count} reserve + {listen_practice_only_count} practice-only = {listen_total_count} total**.",
         f"- Part 7 reserve: **{p7_count} questions**; remains separate from Listening and Part 5.",
         f"- Separate Part 5 practice-only bank: **{inventory['part5']['total_questions']} questions**; {p5_count} are review-pending.", '',
         '## Reviewer record', '',
@@ -211,7 +212,7 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text('\n'.join(lines), encoding='utf-8')
     print(f'Wrote {OUT.relative_to(ROOT)}')
-    print(f'Listening eligible={listen_eligible_count}, reserve={listen_count}, total={listen_total_count}; Part7 reserve={p7_count}; separate Part5 practice-only={inventory["part5"]["total_questions"]} (review-pending={p5_count})')
+    print(f'Listening eligible={listen_eligible_count}, reserve={listen_count}, practice_only={listen_practice_only_count}, total={listen_total_count}; Part7 reserve={p7_count}; separate Part5 practice-only={inventory["part5"]["total_questions"]} (review-pending={p5_count})')
     return 0
 
 

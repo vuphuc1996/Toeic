@@ -30,7 +30,7 @@ class EditorialReviewQueueTests(unittest.TestCase):
         pending = [u for u in self.listening if u.get('editorialStatus') == 'reserve-pending-independent-review']
         count = sum(len(u.get('questions', [])) for u in pending)
         self.assertEqual(count, self.metrics['listening']['reserve_questions'])
-        self.assertIn(f"Listening: **{self.metrics['listening']['eligible_questions']} eligible + {count} reserve = {self.metrics['listening']['total_questions']} total**.", self.text)
+        self.assertIn(f"Listening: **{self.metrics['listening']['eligible_questions']} eligible + {count} reserve + {self.metrics['listening']['practice_only_questions']} practice-only = {self.metrics['listening']['total_questions']} total**.", self.text)
         for unit in pending:
             self.assertIn(f"`{unit['id']}`", self.text)
 
@@ -67,7 +67,15 @@ class EditorialReviewQueueTests(unittest.TestCase):
     def test_live_metrics_match_the_reviewed_baseline_snapshot(self):
         self.assertEqual(self.metrics['listening']['eligible_questions'], self.baseline['listening']['eligibleQuestions'])
         self.assertEqual(self.metrics['listening']['reserve_questions'], self.baseline['listening']['reserveQuestions'])
-        self.assertEqual(self.metrics['listening']['total_questions'], self.baseline['listening']['totalQuestions'])
+        self.assertEqual(self.metrics['listening']['practice_only_questions'], 10)
+        self.assertEqual(
+            self.metrics['listening']['eligible_questions'] + self.metrics['listening']['reserve_questions'],
+            self.baseline['listening']['totalQuestions'],
+        )
+        self.assertEqual(
+            self.metrics['listening']['total_questions'],
+            self.baseline['listening']['totalQuestions'] + self.metrics['listening']['practice_only_questions'],
+        )
         self.assertEqual(self.metrics['part7']['reserve_questions'], self.baseline['part7']['reserveQuestions'])
         self.assertEqual(self.metrics['part5']['total_questions'], self.baseline['part5']['totalQuestions'])
         self.assertTrue(self.metrics['part5']['practice_only'])
@@ -76,9 +84,13 @@ class EditorialReviewQueueTests(unittest.TestCase):
     def test_listening_eligible_and_reserve_question_ids_are_disjoint(self):
         eligible = set(self.metrics['listening']['eligible_question_ids'])
         reserve = set(self.metrics['listening']['reserve_question_ids'])
+        practice_only = set(self.metrics['listening']['practice_only_question_ids'])
         self.assertFalse(eligible & reserve)
+        self.assertFalse(eligible & practice_only)
+        self.assertFalse(reserve & practice_only)
         self.assertEqual(len(eligible), self.metrics['listening']['eligible_questions'])
         self.assertEqual(len(reserve), self.metrics['listening']['reserve_questions'])
+        self.assertEqual(len(practice_only), self.metrics['listening']['practice_only_questions'])
 
     def test_part7_and_part5_remain_separate_from_listening(self):
         self.assertEqual(self.metrics['part7']['reserve_questions'], 87)

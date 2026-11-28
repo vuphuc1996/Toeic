@@ -21,17 +21,9 @@ Model: `toeic-dictionary-measurable-build-index-v1` · Status: `provisional-tran
 - Instrumentation becomes **25/27 TOEIC** and **31/33 overall**, with **1,139 links / 648 stable question IDs**.
 - The two criteria still uninstrumented are Part 1 paraphrase recognition and Part 7 paraphrase/inference. Part 1 photos and Part 7 resources remain in the human-review handoff queue.
 - Listening reserve (193), Reading Part 7 reserve (87) and Separate Part 5 review-only (80) remain excluded from Mock.
-## New criterion-level TOEIC evidence
-
-- **25/27 TOEIC sub-skill criteria** now have an explicit stable-question mapping.
-- **1,139** question-to-criterion links span the same **638** unique stable question IDs (+21 links; no new question IDs).
-- The six Foundation outcome criteria retain their separate evidence paths; total instrumentation is **31/33**.
-- Two TOEIC criteria remain deliberately uninstrumented: Listening Part 1 paraphrase recognition and Reading Part 7 paraphrase/inference.
-- The index increases to **76.00%** because Part 2 distractor-resistance gains its first defensible item-level evidence path. The index is a selected measurable build model, not learner attainment. It does **not** mean learners have attained those outcomes.
-
 ## Protected boundaries
 
-- 1,221 vocabulary records and all 831 assessment/support items remain unchanged.
+- 1,221 vocabulary records and all 831 pre-existing assessment/support items remain unchanged, plus 10 practice-only Part 4 questions (841 total assessment/support items).
 - Existing answer keys, stable question/choice IDs, Mock eligibility and reserve-review gates are preserved.
 - Learner IndexedDB v1 schema and local data are unchanged; no data migration is introduced.
 - UI structure, layout, navigation, Robot Buddy access boundary and GitHub Pages-only architecture remain protected.

@@ -1,23 +1,23 @@
-import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.83';
-import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.83';
-import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js?__release=2.95.83';
-import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.83';
-import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.83';
-import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.83';
-import { buildObjectiveResourceIndex, buildObjectiveCriterionIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, summarizeOutcomeCriteria, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.83';
-import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.83';
-import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.83';
-import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.83';
-import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.83';
-import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.83';
-import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.83';
-import { createRobotBuddy } from './robot-buddy.js?__release=2.95.83';
-import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.83';
-import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.83';
-import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.83';
+import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.84';
+import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.84';
+import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam, countMockPool, isQuestionMockEligible } from './mock-engine.js?__release=2.95.84';
+import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.84';
+import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.84';
+import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.84';
+import { buildObjectiveResourceIndex, buildObjectiveCriterionIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, summarizeOutcomeCriteria, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.84';
+import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.84';
+import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.84';
+import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.84';
+import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.84';
+import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.84';
+import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.84';
+import { createRobotBuddy } from './robot-buddy.js?__release=2.95.84';
+import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.84';
+import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.84';
+import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.84';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.83';
+const APP_RELEASE_VERSION = '2.95.84';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);
@@ -1736,7 +1736,7 @@ function loadMockState(){
   const active=readMockStorage(MOCK_ACTIVE_KEY,null);
   if(active&&active.status==='active'&&active.sections?.listening&&active.sections?.reading){state.mockExam=active;}else state.mockExam=null;
 }
-function mockPoolCount(rows,parts){return (rows||[]).filter(row=>parts.includes(row.part)&&(!row.editorialStatus||['approved-for-mock','internal-editorial-reviewed'].includes(row.editorialStatus))).reduce((sum,row)=>sum+(row.questions||[]).length,0);}
+function mockPoolCount(rows,parts){return countMockPool(rows,parts);}
 function mockFormatDuration(seconds){const value=Math.max(0,Math.floor(seconds));const h=Math.floor(value/3600),m=Math.floor(value%3600/60),s=value%60;return h?`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`:`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}
 function mockModeName(id){return MOCK_MODES[id]?.label||'Thi thử TOEIC';}
 function mockResultBand(accuracy){if(accuracy>=85)return 'Tốt';if(accuracy>=75)return 'Khá tốt';if(accuracy>=65)return 'Tiệm cận mục tiêu luyện tập';if(accuracy>=50)return 'Đang hình thành nền tảng';return 'Cần củng cố nền tảng';}
@@ -1758,7 +1758,7 @@ function renderMockHome(){
   $('#mockPoolStats').innerHTML=`<div class="mock-pool-chip"><strong>${listening}</strong><span>Listening khả dụng</span></div><div class="mock-pool-chip"><strong>${reading}</strong><span>Reading khả dụng</span></div><div class="mock-pool-chip"><strong>${state.listening.length+state.readings.length}</strong><span>Cụm bài nguồn</span></div><div class="mock-pool-chip"><strong>${pending}</strong><span>Câu reserve đang chờ duyệt</span></div>`;
   const listeningParts=['Part 1','Part 2','Part 3','Part 4'];
   const twoFormTargets={'Part 1':12,'Part 2':50,'Part 3':78,'Part 4':60};
-  const eligibleByPart=Object.fromEntries(listeningParts.map(part=>[part,state.listening.filter(item=>item.part===part&&(!item.editorialStatus||item.editorialStatus==='approved-for-mock')).reduce((n,item)=>n+(item.questions||[]).length,0)]));
+  const eligibleByPart=Object.fromEntries(listeningParts.map(part=>[part,state.listening.filter(item=>item.part===part&&(!item.editorialStatus||item.editorialStatus==='approved-for-mock')).reduce((n,item)=>n+(item.questions||[]).filter(isQuestionMockEligible).length,0)]));
   const pendingByPart=Object.fromEntries(listeningParts.map(part=>[part,pendingItems.filter(item=>item.part===part).reduce((n,item)=>n+(item.questions||[]).length,0)]));
   const projectedByPart=Object.fromEntries(listeningParts.map(part=>[part,eligibleByPart[part]+pendingByPart[part]]));
   const readinessRows=listeningParts.map(part=>`<div class="mock-readiness-row"><strong>${part}</strong><span>Đang dùng: ${eligibleByPart[part]}</span><span>Chờ duyệt: ${pendingByPart[part]}</span><b>${projectedByPart[part]} / ${twoFormTargets[part]}</b></div>`).join('');
