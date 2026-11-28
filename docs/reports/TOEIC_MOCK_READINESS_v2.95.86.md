@@ -28,7 +28,7 @@ Read-only readiness audit built strictly from `APPROVED_FOR_MOCK` pools (`editor
 ## 3. Listening Bottleneck and Review Gates
 
 - **Current Full-Mock Listening pool:** **102 questions** (Part 1 = 8, Part 2 = 25, Part 3 = 39, Part 4 = 30).
-- **Part 1 reserve change:** 9 → 12 total photo questions; current eligible stays at 8 and pending reserve becomes 4. The three Batch 018 additions have question-level `mockEligible: false`.
+- **Part 1 reserve change:** 9 → 12 total photo questions; current eligible stays at 8 and pending reserve becomes 4. The three Batch 018 additions remain excluded by resource-level `editorialStatus: reserve-pending-independent-review`; question-level `mockEligible: false` remains reserved for practice-only questions.
 - **Current second Full Listening form:** minimum overlap remains **98/100**; Part 1 contributes only two approved surplus questions to a second form.
 - **Post-review arithmetic ceiling:** if all **196** pending Listening questions were independently approved, partwise inventory would be Part 1 = **12/12**, Part 2 = **61/50**, Part 3 = **123/78**, and Part 4 = **102/60**. This reaches the two-form quota by counts only; it does not approve any reserve or replace a future exact block-packing and editorial audit.
 - **Learning outcomes:** Part 1 visual/audio and delayed-retention mappings remain at **8** each. `listening-part-1-paraphrase-recognition` remains uninstrumented. Batch 018 is not added to the criterion map.
