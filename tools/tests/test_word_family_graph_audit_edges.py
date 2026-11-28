@@ -27,10 +27,13 @@ def link(headword, pos="noun", meaning="nghĩa"):
 class WordFamilyGraphEdgeTests(unittest.TestCase):
     def test_nfkc_casefold_and_whitespace_resolve_canonical_target(self):
         data = MODULE.audit_data([
-            ("A.json", {"words": [word("Ａlpha", family=[link(" alpha ")])]}),
+            ("A.json", {"words": [word("alpha", family=[link(" ＢＥＴＡ ")])]}),
+            ("B.json", {"words": [word("beta")]}),
         ])
         self.assertEqual(data["missing_targets"], [])
-        self.assertEqual(data["self_references"], [{"source": "Ａlpha", "target": " alpha ", "pos": "noun", "file": "A.json"}])
+        self.assertEqual(data["self_references"], [])
+        self.assertEqual(data["pos_mismatches"], [])
+        self.assertEqual(data["meaning_mismatches"], [])
 
     def test_missing_target_is_reported_without_pos_or_meaning_guess(self):
         data = MODULE.audit_data([
