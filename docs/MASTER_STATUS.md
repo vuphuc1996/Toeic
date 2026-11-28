@@ -1,18 +1,18 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.76
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.77
 
-**Current source candidate:** v2.95.76 — TOEIC Batch 028 Vocabulary Expansion & Listening Translation Completion. UI/UX layout, IndexedDB v1 schema, canonical vocabulary IDs/headwords, question/choice IDs, answer keys, and reserve gates remain intact and protected.
+**Current source candidate:** v2.95.77 — Migration Compatibility & CI Recovery. UI/UX layout, IndexedDB v1 schema, canonical vocabulary IDs/headwords, question/choice IDs, answer keys, and reserve gates remain intact and protected.
 
-## Current release — v2.95.76
+## Current release — v2.95.77
 
-- **Sole source baseline:** v2.95.75 candidate commit `d5648916cf62b3f07b1ffb9b98425c48ff3e63fe`; this is the only predecessor for this release.
-- **Vocabulary Batch 028:** +40 canonical headwords across the existing A–Z files, focused on Contracts / Legal Administration and Facilities / Property Maintenance. Inventory increases from 1,181 to **1,221**; 0 existing canonical IDs/headwords/senses are removed or rewritten. New records include English definition, Vietnamese meaning, original bilingual example and collocations; IPA is blank pending source verification, Word Family arrays remain empty, and CEFR levels are editorial estimates.
-- **Listening translation completion:** added Vietnamese `transcriptTranslation` to 8 existing units (4 Part 3, 4 Part 4). Listening question inventory remains 295 and all units now have a translation; question/choice IDs, keys, audio transcript segments and editorial statuses remain unchanged.
-- **7-Part and Mock boundary:** existing 831 question/exercise records are unchanged; 302 questions remain Mock-eligible and 360 reserve items remain human-review-required. No reserve content was promoted.
-- **Progress index:** **57.07%** provisional weighted measurable build index; not overall product completion, CEFR/ETS certification, learner mastery or TOEIC readiness.
-- **Protection:** existing question/choice IDs, answer keys, learner IndexedDB v1 schema/records, UI/UX layout, navigation, Robot Buddy access policy and GitHub Pages-only architecture are preserved. No Cloudflare/backend added.
-- **Acceptance boundary:** v2.95.76 is a source candidate. Candidate CI/Validate, GitHub Pages deployment, installed-PWA cache/offline propagation and physical-device QA remain **UNVERIFIED** until exact-commit evidence is recorded.
+- **Sole source baseline:** v2.95.76 candidate commit `035dd6e2001b3b049407f71acd21f9c33f33e776`; this is the only predecessor for this release.
+- **Migration Profile Reconciliation:** Extended all 7 existing historical migration repair profiles (`979`, `992`, `1026`, `1063`, `1100`, `1137`, `1141`) in `manifest.json` with the exact 40 canonical IDs from Batch 028, and added a new exact profile for the 1,181-word v2.95.75 snapshot (`1181`) with those 40 Batch 028 IDs.
+- **CI Recovery & Integrity Fix:** Resolved the vocabulary release integrity test failure (`1221 !== 1181` in `vocabulary-release-integrity.mjs`), ensuring full test compatibility with the 1,221-word inventory (`v2.95.76` / `v2.95.77`).
+- **Version Synchronization:** Synchronized release version markers, application cache keys (`__release=2.95.77`), and Service Worker precache URLs across all 7 synchronized files via `tools/sync-version.py`.
+- **Protection:** Maintained all 1,221 canonical words, all 831 question/support items, Mock eligibility rules, learner IndexedDB schema, and UI/UX layout unchanged. `main` branch remains untouched.
+- **Acceptance boundary:** v2.95.77 is a source candidate. Candidate CI/Validate, GitHub Pages deployment, installed-PWA cache/offline propagation and physical-device QA remain **UNVERIFIED** until exact-commit evidence is recorded.
+
 
 ## Previous release — v2.95.75
 

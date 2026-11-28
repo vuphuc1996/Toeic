@@ -1,6 +1,6 @@
 {
   "name": "toeic-dictionary",
-  "version": "2.95.76",
+  "version": "2.95.77",
   "private": true,
   "type": "module",
   "description": "Offline-first TOEIC vocabulary dictionary, flashcards, grammar, reading, listening, and mock exam workspace.",

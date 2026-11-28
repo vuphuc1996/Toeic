@@ -57,7 +57,7 @@ class VocabularyBatch012Tests(unittest.TestCase):
         self.assertEqual(self.manifest['releaseAdditionIds'], [row['id'] for row in self.current_batch['words']])
         profile = next(x for x in self.manifest['releaseRepairProfiles'] if x['previousTotalWords'] == 1100)
         self.assertEqual(profile['releaseAdditionIds'][:37], [row['id'] for row in self.batch['words']])
-        self.assertEqual(len(profile['releaseAdditionIds']), 81, 'legacy 1100-word snapshots restore Batch 012, 013, and 026 additions')
+        self.assertEqual(len(profile['releaseAdditionIds']), 121, 'legacy 1100-word snapshots restore Batch 012, 013, 026, 027 and 028 additions')
 
 
 if __name__ == '__main__':

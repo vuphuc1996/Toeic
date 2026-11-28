@@ -1,12 +1,11 @@
-# Current Version — TOEIC Dictionary v2.95.76
+# Current Version — TOEIC Dictionary v2.95.77
 
-- Current source: **v2.95.76** — TOEIC Batch 028 Vocabulary Expansion & Listening Translation Completion.
-- Release package: `TOEIC_Dictionary_v2.95.76_FullSource.zip`.
-- Package location & verification: No FullSource ZIP has been exported in this GitHub-native update; do not infer an archive SHA or CRC. The Git commit SHA and tree are the authoritative source references after commit creation.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.76.md`.
-- **Sole predecessor baseline:** `v2.95.75`, candidate commit `d5648916cf62b3f07b1ffb9b98425c48ff3e63fe`. No older branch or source archive was used.
-- **Vocabulary Batch 028:** 40 new canonical headwords; total inventory 1,221 (up from 1,181); new records include English definitions, Vietnamese meanings, translated examples and collocations. New IPA is deliberately blank pending source verification; Word Family remains empty; CEFR is an editorial estimate.
-- **Listening translations:** 8 existing Part 3/4 resource transcripts now have Vietnamese unit-level translations; all 295 Listening units have a transcript translation.
-- **Assessment boundary:** 831 existing 7-Part/support questions and exercises remain unchanged; 302 Mock-eligible questions and 360 reserve items retain their prior statuses. No question/choice IDs or answer keys changed.
-- **Progress index:** 57.07% provisional weighted measurable curriculum-build index, not total-system completion, learner mastery or TOEIC readiness.
-- **Acceptance boundary:** Candidate CI/Validate, GitHub Pages deployment, installed-PWA update/offline propagation and physical-device QA are not yet accepted for this release. `main` must remain unchanged until separate approval.
+- Current source: **v2.95.77** — Migration Compatibility & CI Recovery.
+- Release package: `TOEIC_Dictionary_v2.95.77_FullSource.zip`.
+- Package location & verification: generated in `/tmp` outside repository root; SHA-256 recorded in `reports/PACKAGE_VERIFICATION_v2.95.77.md`.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.77.md`.
+- **Predecessor baseline:** `v2.95.76` candidate commit `035dd6e2001b3b049407f71acd21f9c33f33e776`.
+- **Migration Profiles Reconciled:** Extended all 7 existing historical migration repair profiles (`979`, `992`, `1026`, `1063`, `1100`, `1137`, `1141`) with the 40 Batch 028 IDs, and added a new exact profile for the 1,181-word v2.95.75 snapshot (`1181`).
+- **CI Recovery & Integrity:** Resolved the vocabulary release integrity test failure (`1221 !== 1181`), ensuring full compatibility with the 1,221-word inventory.
+- **Protected Boundaries:** Maintained all 1,221 canonical words, all 831 question/support items, Mock eligibility rules, learner IndexedDB schema, and UI/UX layout unchanged. `main` branch remains untouched.
+- **Acceptance boundary:** Source Release Accepted (local workspace). Candidate CI, Pages deployment, installed-PWA propagation, and physical-device QA remain unverified.

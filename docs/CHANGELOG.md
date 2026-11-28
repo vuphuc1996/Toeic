@@ -1,3 +1,10 @@
+## v2.95.77 — Migration Compatibility & CI Recovery (2026-11-27)
+
+- **Migration Profile Compatibility:** Extended all 7 existing legacy migration repair profiles (`979`, `992`, `1026`, `1063`, `1100`, `1137`, `1141`) in `manifest.json` with the exact 40 canonical IDs from Batch 028, and added a new exact profile for the 1,181-word v2.95.75 snapshot (`1181`) with those 40 Batch 028 IDs.
+- **CI Recovery & Integrity Fix:** Resolved the vocabulary release integrity test failure (`1221 !== 1181` in `vocabulary-release-integrity.mjs`), updating all assertions, snapshot restoration checks, and test feedback for the 1,221-word inventory (`v2.95.76` / `v2.95.77`).
+- **Version Synchronization:** Synchronized release version markers, application cache keys (`__release=2.95.77`), and Service Worker precache URLs across all 7 synchronized files via `tools/sync-version.py`.
+- **Preserved Boundaries:** Maintained all 1,221 canonical words, all 831 question/support items, Mock eligibility rules, learner IndexedDB schema, and UI/UX layout unchanged. `main` branch remains untouched.
+
 ## v2.95.76 — TOEIC Vocabulary Batch 028 & Listening Translation Completion (2026-11-27)
 
 - **Vocabulary expansion:** Added 40 original project-authored canonical headwords for Contracts / Legal Administration and Facilities / Property Maintenance. The dictionary grows from 1,181 to 1,221 records. Existing canonical IDs/headwords/senses are preserved; Batch 028 IPA is left blank pending exact source verification, no Word Family links are inferred, and CEFR remains an editorial estimate.
