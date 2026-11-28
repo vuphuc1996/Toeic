@@ -7,7 +7,7 @@
 - Outcome inventory advances from 22/27 to **23/27** TOEIC criteria and from 28/33 to **29/33** total criteria (Foundation 6/6); four TOEIC criteria remain uninstrumented.
 - Mapping inventory advances from 1,103 to **1,119** links while remaining at **638** unique stable question IDs. Existing multi-criterion questionKey support and learner-local objectiveProgress storage are reused; no IndexedDB schema migration.
 - Added fail-closed audit rules and negative regression tests for prompt mismatch, wrong-choice mismatch, wrong lexical cue and answer-key selection. Progress reports now derive the outstanding criterion count from the registry instead of hardcoding five.
-- UI/layout, vocabulary, learner data, Mock eligibility, reserve/review gates, Robot Buddy and GitHub Pages-only architecture remain unchanged. New exact-commit CI/Pages acceptance is pending; main remains unchanged.
+- UI/layout, vocabulary, learner data, Mock eligibility, reserve/review gates, Robot Buddy and GitHub Pages-only architecture remain unchanged. Exact candidate source/test HEAD `ad6401282fdb6cf86e2321339ee4181d2fc2fb21` passed GitHub Validate [run 46120842790](https://github.com/vuphuc1996/Toeic/actions/runs/46120842790) (151/151 steps; 855 Python tests) and GitHub Pages build/deploy [run 46120842377](https://github.com/vuphuc1996/Toeic/actions/runs/46120842377). The environment URL is https://vuphuc1996.github.io/Toeic/; `main` remains unchanged.
 
 ## v2.95.81 — Part 7 Evidence Guard Hardening (2026-11-28)
 

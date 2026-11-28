@@ -36,4 +36,4 @@
 
 ## Acceptance
 
-Exact candidate CI, mapping audit, full Python discovery, version synchronization, Pages build/deploy and FullSource package verification are pending for the new source commit. Do not treat report generation or candidate commit as acceptance.
+Exact candidate source/test HEAD `ad6401282fdb6cf86e2321339ee4181d2fc2fb21` passed GitHub Validate [run 46120842790](https://github.com/vuphuc1996/Toeic/actions/runs/46120842790) (151/151 steps; 855 Python tests) and GitHub Pages [run 46120842377](https://github.com/vuphuc1996/Toeic/actions/runs/46120842377) (build, status-report and deploy jobs). The FullSource ZIP remains not generated or verified.

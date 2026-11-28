@@ -13,6 +13,10 @@
 - Part 2 audit requires exact prompt-to-segment match, exact incorrect choice at a non-answer index, whole lexical cue in prompt and distractor, and non-empty mismatch rationale.
 - Existing multi-criterion questionKey indexing and the learner-local objectiveProgress ledger are reused; no IndexedDB schema migration.
 - Version/cache inventory: 19 single-instance markers; app **17**, Service Worker **42**, mock-engine **1** release-keyed references, all synchronized to v2.95.82.
-- GitHub Validate, focused evidence tests, canonical mapping audit, version synchronization, full Python suite and Pages build/deploy for this exact candidate commit: **PENDING**.
+- Verified source/test HEAD: `ad6401282fdb6cf86e2321339ee4181d2fc2fb21`.
+- GitHub Validate: **PASS** ([run 46120842790](https://github.com/vuphuc1996/Toeic/actions/runs/46120842790)); 151/151 steps, 0 failed, 0 skipped; full Python discovery **855 tests PASS**.
+- Part 2 lexical-distractor positive/negative tests, project-progress tests, major-release metrics, canonical mapping audit and version synchronization: **PASS**.
+- GitHub Pages build/deploy: **PASS** ([run 46120842377](https://github.com/vuphuc1996/Toeic/actions/runs/46120842377)); build, status-report and deploy jobs all succeeded; environment URL: https://vuphuc1996.github.io/Toeic/.
+- Candidate only; `main` remains unchanged and Production Deployment Accepted is not granted.
 - Candidate only; no merge to `main` or Production Deployment Accepted decision.
 - FullSource ZIP, installed-PWA/offline propagation and physical-device QA: **UNVERIFIED**.
