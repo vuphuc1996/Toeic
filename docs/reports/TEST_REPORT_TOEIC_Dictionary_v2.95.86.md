@@ -6,11 +6,11 @@
 
 ## Evidence status
 
-<badge>AWAITING EXACT-SHA VALIDATION</badge>
+**Status: AWAITING EXACT-SHA VALIDATION**
 
 The user confirmed that v2.95.85 passed **865/865 unit tests**, compilation/build checks and syntax lint. Those results apply only to v2.95.85 and are not attributed to v2.95.86.
 
-The v2.95.86 source changes are committed to `candidate`. The repository workflow `.github/workflows/validate-data.yml` is configured to run on candidate pushes. The complete test suite must finish on the final v2.95.86 SHA before this report can record PASS.
+The v2.95.86 source changes are committed to `candidate`; this report does not yet record an end-to-end test result. The repository workflow `.github/workflows/validate-data.yml` is configured to run on candidate pushes. The complete test suite must finish on the final v2.95.86 SHA before this report can record PASS.
 
 ## Added/updated validation
 
