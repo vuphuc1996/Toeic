@@ -11,6 +11,7 @@ venv/
 .coverage.*
 coverage.xml
 node_modules/
+bun.lock
 
 
 # Runtime/test outputs

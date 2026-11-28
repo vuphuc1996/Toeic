@@ -26,6 +26,11 @@ PRACTICE_ONLY_PART4_TALK_IDS = {
     'part4-travel-service-update',
     'part4-quarterly-inventory-report',
 }
+PRACTICE_ONLY_PART1_UNIT_IDS = {
+    'part1-construction-plans',
+    'part1-supermarket-shelf',
+    'part1-laboratory-bench',
+}
 
 def read_json(rel: str):
     path = ROOT / rel
@@ -120,6 +125,7 @@ def main():
     listen_questions={f'Part {i}':0 for i in range(1,5)}
     listen_mock_questions={f'Part {i}':0 for i in range(1,5)}
     practice_only_p4_count=0
+    practice_only_p1_count=0
     part1_correct=[]
     for item in listening:
         ident=item.get('id','?'); part=item.get('part')
@@ -132,6 +138,16 @@ def main():
         listen_questions[part]+=len(questions)
         listen_mock_questions[part]+=sum(1 for q in questions if q.get('mockEligible') is not False)
         editorial_status=item.get('editorialStatus')
+        if part=='Part 1':
+            if ident in PRACTICE_ONLY_PART1_UNIT_IDS:
+                if editorial_status == 'reserve-pending-independent-review':
+                    ERRORS.append(f"Listening {ident}: practice-only Part 1 unit must not be a reserve item")
+                elif len(questions) != 1 or questions[0].get('mockEligible') is not False:
+                    ERRORS.append(f"Listening {ident}: allowlisted practice-only Part 1 unit must have mockEligible=false on its question")
+                else:
+                    practice_only_p1_count += 1
+            elif any(q.get('mockEligible') is False for q in questions):
+                ERRORS.append(f"Listening {ident}: unexpected mockEligible=false on Part 1")
         if part=='Part 2' and len(questions)!=1:
             ERRORS.append(f"Listening {ident}: Part 2 item must contain exactly one question")
         if part=='Part 3':
@@ -150,7 +166,7 @@ def main():
                     practice_only_p4_count += len(questions) - 3
             elif len(questions)!=3 or any(q.get('mockEligible') is False for q in questions):
                 ERRORS.append(f"Listening {ident}: {part} set must contain exactly three questions")
-        if part not in ('Part 3','Part 4') and any(q.get('mockEligible') is False for q in questions):
+        if part not in ('Part 1','Part 3','Part 4') and any(q.get('mockEligible') is False for q in questions):
             ERRORS.append(f"Listening {ident}: unexpected mockEligible=false on {part}")
         if item.get('contentSource') not in ('original-editorial','licensed','official-permission'):
             WARNINGS.append(f"Listening {ident}: contentSource is not explicitly tagged")
@@ -292,7 +308,7 @@ def main():
         ERRORS.append(f"Part 7 multiple-passage pool has {p7_multiple_questions}, needs at least 25 questions")
 
     print('TOEIC learning content validation')
-    print(f'Listening: {len(listening)} units / {sum(listen_questions.values())} questions ({practice_only_p4_count} Part 4 practice-only)')
+    print(f'Listening: {len(listening)} units / {sum(listen_questions.values())} questions ({practice_only_p4_count} Part 4 + {practice_only_p1_count} Part 1 practice-only)')
     for p in listen_counts: print(f'  {p}: {listen_counts[p]} units / {listen_questions[p]} questions ({listen_mock_questions[p]} non-practice-only)')
     print(f'Reading: {len(reading)} units / {sum(read_questions.values())} questions')
     for p in read_counts: print(f'  {p}: {read_counts[p]} units / {read_questions[p]} questions')
