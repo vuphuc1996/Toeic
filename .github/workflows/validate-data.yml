@@ -301,6 +301,8 @@ jobs:
         run: python -m unittest discover -s tools/tests -p 'test_learning_outcomes.py' -v
       - name: Unit tests — learning outcome progress
         run: python -m unittest discover -s tools/tests -p 'test_learning_outcome_progress.py' -v
+      - name: Node regression — learning outcome criterion progress
+        run: node tools/tests/learning-outcome-criterion-progress.mjs
       - name: Audit objective resource links
         run: python tools/audit-objective-resources.py
       - name: Audit learning outcome criteria
