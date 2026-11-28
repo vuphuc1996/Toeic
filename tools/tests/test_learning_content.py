@@ -131,10 +131,19 @@ class LearningContentTests(unittest.TestCase):
         self.assertGreaterEqual(p7_multiple, 25)
         self.assertGreaterEqual(sum(read.values()), 100)
 
-    def test_part3_and_part4_sets_have_three_questions(self):
+    def test_part3_and_part4_mock_eligible_sets_preserve_three_question_talks(self):
+        practice_only = []
         for item in self.listening:
-            if item.get('part') in ('Part 3', 'Part 4'):
-                self.assertEqual(len(item.get('questions', [])), 3, item.get('id'))
+            if item.get('part') not in ('Part 3', 'Part 4'):
+                continue
+            questions = item.get('questions', [])
+            eligible = [q for q in questions if q.get('mockEligible') is not False]
+            self.assertEqual(len(eligible), 3, item.get('id'))
+            self.assertEqual(len(questions) - len(eligible), sum(q.get('mockEligible') is False for q in questions), item.get('id'))
+            practice_only.extend((item, q) for q in questions if q.get('mockEligible') is False)
+        self.assertEqual(len(practice_only), 10)
+        self.assertTrue(all(item.get('part') == 'Part 4' for item, _ in practice_only))
+        self.assertTrue(all(question.get('mockEligible') is False for _, question in practice_only))
 
     def test_part3_conversations_have_multiple_speakers(self):
         for item in self.listening:
@@ -257,7 +266,13 @@ class LearningContentTests(unittest.TestCase):
             self.assertIn(f'Đáp án {"ABCD"[answer]}', item['questions'][0]['explanation'], ident)
 
     def test_listening_reserve_batch_counts_and_units(self):
-        counts = {f'Part {i}': sum(len(x.get('questions', [])) for x in self.listening if x.get('part') == f'Part {i}') for i in range(1, 5)}
+        counts = {
+            f'Part {i}': sum(
+                sum(1 for q in x.get('questions', []) if q.get('mockEligible') is not False)
+                for x in self.listening if x.get('part') == f'Part {i}'
+            )
+            for i in range(1, 5)
+        }
         self.assertEqual(counts, {'Part 1': 9, 'Part 2': 61, 'Part 3': 123, 'Part 4': 102})
         p3 = next(x for x in self.listening if x.get('id') == 'part3-training-handouts')
         p4 = next(x for x in self.listening if x.get('id') == 'part4-east-elevator-maintenance')
