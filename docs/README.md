@@ -1,14 +1,14 @@
-# TOEIC Dictionary v2.95.78 — Project Documentation
+# TOEIC Dictionary v2.95.79 — Project Documentation
 
 This documentation describes the current TOEIC-first GitHub Pages candidate. Source changes and release evidence are tracked separately from hosted CI, Pages deployment, installed-PWA behavior and physical-device acceptance.
 
-- Current release: `2.95.78`.
-- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.78.md`.
-- Hosted acceptance: GitHub Validate and Pages deployment **PASS** on the code source commit `0187b446123fca1a8708b496e971e18b19a46c57`; final docs-only candidate updates are separately CI-checked.
+- Current release: `2.95.79`.
+- Current release test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.79.md`.
+- Predecessor evidence only: v2.95.78 candidate HEAD `9a174778bcdfea7adca98f0abb1b17d3a050388e` passed Validate [run 46100602552](https://github.com/vuphuc1996/Toeic/actions/runs/46100602552) and Pages build/deploy [run 46100602152](https://github.com/vuphuc1996/Toeic/actions/runs/46100602152). v2.95.79 must be checked on its own exact commit.
 - Learning outcome evidence matrix: `reports/TOEIC_LEARNING_OUTCOME_EVIDENCE_v2.95.78.md` — 22/27 TOEIC criteria mapped to 1,082 stable question links; five criteria intentionally remain uninstrumented.
 - Criterion map audit: `../tools/audit-objective-criterion-map.py` — checks exact question IDs, question indices, reserve exclusion and review gates.
-- Candidate change manifest: `reports/CHANGE_MANIFEST_v2.95.78.md`.
-- Candidate command log: `reports/COMMAND_LOG_INDEX_v2.95.78.md`.
+- Candidate change manifest: `reports/CHANGE_MANIFEST_v2.95.79.md`.
+- Candidate command log: `reports/COMMAND_LOG_INDEX_v2.95.79.md`.
 - Project progress dashboard: `reports/PROJECT_PROGRESS_v2.95.78.md` — provisional weighted measurable build index 73.73%; not overall completion or learner mastery.
 - Migration compatibility audit: `reports/MIGRATION_COMPATIBILITY_v2.95.77.md` — reconciliation of all 8 historical migration repair profiles for the 1,221-word inventory.
 - Vocabulary Batch 028: `reports/VOCABULARY_BATCH_028_v2.95.76.md` — 40 original TOEIC workplace headwords across Contracts / Legal Administration and Facilities / Property Maintenance.
@@ -16,9 +16,9 @@ This documentation describes the current TOEIC-first GitHub Pages candidate. Sou
 - TOEIC content coverage: `reports/TOEIC_CONTENT_COVERAGE_v2.95.76.md` — vocabulary inventory 1,221; Listening transcript translations 295/295.
 - Project progress history v2.95.76: `reports/PROJECT_PROGRESS_v2.95.76.md` — prior weighted build index 57.07%.
 - Major release quality audit: `reports/MAJOR_RELEASE_QUALITY_AUDIT_v2.95.76.md`.
-- Change manifest: `reports/CHANGE_MANIFEST_v2.95.78.md`.
+- Change manifest: `reports/CHANGE_MANIFEST_v2.95.79.md`.
 - Package verification: `reports/PACKAGE_VERIFICATION_v2.95.77.md`.
-- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.78.md`.
+- Current command-log index: `reports/COMMAND_LOG_INDEX_v2.95.79.md`.
 - Current version ledger: `versions/CURRENT_VERSION.md`.
 - Prior 7-Part assessment and Mock-readiness baseline: `reports/TOEIC_SEVEN_PART_CONTENT_AUDIT_v2.95.75.md`, `reports/TOEIC_MOCK_READINESS_v2.95.75.md`.
 - Master project status: `MASTER_STATUS.md`.

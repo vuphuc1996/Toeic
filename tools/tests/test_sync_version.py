@@ -31,10 +31,12 @@ class SyncVersionTests(unittest.TestCase):
         (self.root / "docs").mkdir(parents=True, exist_ok=True)
         self.build("1.2.3")
 
-    def build(self, v, readme=None, master=None, sw=None, index=None, changelog=None):
+    def build(self, v, readme=None, master=None, sw=None, index=None, changelog=None, package_json=None):
         (self.root / "data").mkdir(exist_ok=True)
         (self.root / "docs").mkdir(exist_ok=True)
         (self.root / "data" / "manifest.json").write_text(json.dumps({"version": v, "x": 1}, indent=2) + "\n", encoding="utf-8")
+        package_text = package_json or (json.dumps({"name": "toeic-dictionary", "version": v, "private": True}, indent=2) + "\n")
+        (self.root / "package.json").write_text(package_text, encoding="utf-8")
         (self.root / "assets" / "js").mkdir(parents=True, exist_ok=True)
         (self.root / "assets" / "js" / "app.js").write_text(f"const APP_RELEASE_VERSION = '{v}';\n", encoding="utf-8")
         (self.root / "sw.js").write_text(sw or f"const VERSION = '{v}'; // @version\n", encoding="utf-8")
@@ -71,6 +73,41 @@ class SyncVersionTests(unittest.TestCase):
         code, out = self.tool("--check")
         self.assertEqual(code, 1)
         self.assertIn("LỆCH] docs/README.md title: 1.0.0", out)
+
+    def test_package_version_mismatch_is_reported_and_apply_updates_package_json(self):
+        package = json.dumps({"name": "toeic-dictionary", "version": "9.9.9", "private": True}, indent=2) + "\n"
+        self.build("1.2.3", package_json=package)
+
+        code, out = self.tool("--check")
+        self.assertEqual(code, 1, out)
+        self.assertIn("LỆCH] package.json version: 9.9.9", out)
+
+        before = self.hashes()
+        code, out = self.tool("--dry-run")
+        self.assertEqual(code, 0, out)
+        self.assertIn("9.9.9 -> 1.2.3", out)
+        self.assertEqual(before, self.hashes())
+
+        code, out = self.tool("--apply")
+        self.assertEqual(code, 0, out)
+        self.assertEqual(json.loads((self.root / "package.json").read_text(encoding="utf-8"))["version"], "1.2.3")
+        self.assertEqual(self.tool("--check")[0], 0)
+
+    def test_missing_or_duplicate_package_version_marker_stops_before_writing(self):
+        invalid_packages = {
+            "missing": '{\n  "name": "toeic-dictionary",\n  "private": true\n}\n',
+            "duplicate": ('{\n  "name": "toeic-dictionary",\n  "version": "1.2.3",\n'
+                          '  "version": "1.2.3",\n  "private": true\n}\n'),
+        }
+        for label, package in invalid_packages.items():
+            with self.subTest(marker=label):
+                self.build("1.2.3", readme="# TOEIC Dictionary v1.0.0\n", package_json=package)
+                before = self.hashes()
+                code, out = self.tool("--apply")
+                self.assertEqual(code, 2, out)
+                self.assertIn("package.json version", out)
+                self.assertIn("Dừng: chưa ghi file nào.", out)
+                self.assertEqual(before, self.hashes())
 
     def test_changelog_missing_entry_fails_check(self):
         self.build("1.2.3", changelog="# Changelog\n\n## v0.1.0\n")

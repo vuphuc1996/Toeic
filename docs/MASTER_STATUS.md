@@ -1,10 +1,22 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.78
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.79
 
-**Current source release candidate:** v2.95.78 — Criterion-level TOEIC Learning Outcome Evidence. Sole predecessor: candidate HEAD `c1f9702579633aeb6cd372b29e17b143cb2868a1` (v2.95.77). Latest verified candidate HEAD: `0187b446123fca1a8708b496e971e18b19a46c57`. `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
+**Current source release candidate:** v2.95.79 — Package Metadata Synchronization & Version Guard Hardening. Sole predecessor: candidate HEAD `9a174778bcdfea7adca98f0abb1b17d3a050388e` (v2.95.78). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
-## Current release — v2.95.78
+## Current release — v2.95.79
+
+- **Scope:** source release tooling and metadata only. The canonical version remains in `data/manifest.json`; the top-level `package.json` version is now included in the exact-one synchronization registry.
+- **Fail-closed behavior:** a package version mismatch is reported; a missing or duplicate package version marker stops before `--apply` writes any file.
+- **Regression coverage:** package mismatch, dry-run immutability, successful synchronization, and missing/duplicate marker rejection are added to `test_sync_version.py`.
+- **Cache/version sync:** manifest, package, app runtime, Service Worker, mock-engine module cache and HTML release markers target v2.95.79.
+- **Protected boundaries:** no vocabulary records, learning banks, question/choice IDs, answer keys, Mock/reserve eligibility, IndexedDB schema/data, UI layout, navigation or Robot Buddy behavior are changed.
+- **Predecessor evidence only:** v2.95.78 candidate HEAD `9a174778bcdfea7adca98f0abb1b17d3a050388e` passed Validate [run 46100602552](https://github.com/vuphuc1996/Toeic/actions/runs/46100602552) and Pages [run 46100602152](https://github.com/vuphuc1996/Toeic/actions/runs/46100602152). These results are not v2.95.79 acceptance.
+- **Current acceptance:** v2.95.79 Validate and Pages results are pending their own exact-commit runs. FullSource ZIP, installed-PWA/offline propagation and physical-device QA are not yet verified.
+- **Pages warning boundary:** the prior GitHub-managed Pages workflow emitted Node.js 20 deprecation/dependency warnings while succeeding. This batch does not alter hosting configuration or claim those warnings resolved.
+- **Release boundary:** candidate-only source update. `main` remains `256ca21461e78a7685bed773ddd622a64050e33a`; production deployment is not approved.
+
+## Previous release — v2.95.78
 
 - **Outcome instrumentation:** 22/27 TOEIC sub-skill criteria now have an explicit stable question-to-criterion mapping. With the six existing Foundation criteria, 28/33 total criteria have a local evidence-collection path.
 - **Question map:** 1,082 question-to-criterion links across 638 unique stable question IDs. Exact canonical resource and question identities are preserved; no bank question, choice ID or answer key is rewritten.

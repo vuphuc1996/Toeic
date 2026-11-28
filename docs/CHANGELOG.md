@@ -1,3 +1,12 @@
+## v2.95.79 — Package Metadata Synchronization & Version Guard Hardening (2026-11-28)
+
+- **Canonical version registry:** register the top-level `package.json` version alongside `data/manifest.json` and the existing app, HTML, Service Worker and documentation markers.
+- **Fail-closed marker validation:** the package marker must occur exactly once. A missing or duplicated marker is a structure error and stops `--apply` before any file is written.
+- **Regression coverage:** add mismatch detection, dry-run immutability, successful package synchronization, and missing/duplicate marker safety tests.
+- **Release shell:** bump synchronized source and cache keys to v2.95.79; update the current version ledger and release reports.
+- **Protected boundaries:** no learner-facing UI, vocabulary/content records, question/choice/answer keys, eligibility flags, IndexedDB schema/data, Robot Buddy behavior or hosting configuration are changed. `main` remains untouched.
+- **Acceptance:** this entry records source scope only. Candidate CI and Pages acceptance must be verified on the new exact commit; predecessor evidence is not substituted.
+
 ## v2.95.78 — Criterion-level TOEIC Learning Outcome Evidence (2026-11-28)
 
 - **Question-to-criterion map:** Adds 1,082 stable question-to-outcome links across 638 unique question IDs. 22/27 TOEIC criteria now have explicit criterion-level evidence paths; five remain visible but intentionally uninstrumented.

@@ -37,6 +37,7 @@ class Marker:
 
 
 MARKERS: tuple[Marker, ...] = (
+    Marker("package.json version", "package.json", (rf'^[ \t]{{2}}"version"\s*:\s*"({SEMVER})",?\r?$',)),
     Marker("app.js release version", "assets/js/app.js", (rf"const APP_RELEASE_VERSION = '({SEMVER})';",)),
     Marker("sw.js version", "sw.js", (
         rf"const VERSION = '({SEMVER})';",                              # v2.9.8+ layout

@@ -1,17 +1,13 @@
-# Current Version — TOEIC Dictionary v2.95.78
+# Current Version — TOEIC Dictionary v2.95.79
 
-- Current source: **v2.95.78** — Criterion-level TOEIC Learning Outcome Evidence.
-- Release package: `TOEIC_Dictionary_v2.95.78_FullSource.zip`.
-- Package status: **NOT GENERATED OR VERIFIED in this source-candidate commit**; do not treat the package filename as evidence of a ZIP artifact.
-- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.78.md`.
-- Test report includes hosted evidence for exact candidate HEAD `0187b446123fca1a8708b496e971e18b19a46c57`.
-- Candidate predecessor baseline: `c1f9702579633aeb6cd372b29e17b143cb2868a1` (v2.95.77).
-- Outcome instrumentation: 28/33 criteria total; 22/27 TOEIC criteria; five intentionally uninstrumented.
-- Stable question map: 1,082 links across 638 unique question IDs.
-- Learner data protection: existing IndexedDB v1 and objectiveProgress storage remain in place; no learner-data migration is introduced.
-- Review gates: Listening reserve excluded; Reading Part 7 second-review and Separate Part 5 independent-review remain active.
-- Candidate HEAD: `0187b446123fca1a8708b496e971e18b19a46c57`.
-- Hosted GitHub Validate: **PASS** ([run 46100106836](https://github.com/vuphuc1996/Toeic/actions/runs/46100106836)); 151 steps, 0 failure, 0 skipped; Full Python test discovery **846 tests PASS**.
-- GitHub Pages build and deployment: **PASS** ([run 46100106757](https://github.com/vuphuc1996/Toeic/actions/runs/46100106757)) on the same exact candidate SHA.
+- Current source: **v2.95.79** — Package Metadata Synchronization & Version Guard Hardening.
+- Sole predecessor: candidate HEAD `9a174778bcdfea7adca98f0abb1b17d3a050388e` (v2.95.78).
+- Release package: `TOEIC_Dictionary_v2.95.79_FullSource.zip`.
+- Package status: **NOT GENERATED OR VERIFIED**; this filename is a target, not evidence of an archive.
+- Test report: `reports/TEST_REPORT_TOEIC_Dictionary_v2.95.79.md`.
+- Canonical release source: `data/manifest.json`; top-level `package.json` is now included as an exact-one checked marker.
+- Marker inventory: 19 single-instance release markers plus repeated cache keys in app.js (17), sw.js (42) and optional mock-engine.js (1).
+- Candidate v2.95.79 hosted verification: **PENDING** until actions complete on this exact new commit. Predecessor runs are recorded separately.
+- Candidate only; no merge to `main` or Production Deployment Accepted decision.
 - Installed-PWA/offline and physical-device QA: **UNVERIFIED**.
-- Production deployment on `main`: not approved; `main` remains at `256ca21461e78a7685bed773ddd622a64050e33a`.
+- Main baseline: `256ca21461e78a7685bed773ddd622a64050e33a`; no main update is included.
