@@ -64,22 +64,41 @@ class EditorialReviewQueueTests(unittest.TestCase):
         self.assertIn('AI-assisted audit is not a substitute', self.text)
 
 
-    def test_live_metrics_match_the_reviewed_baseline_snapshot(self):
+    def test_live_metrics_match_the_reviewed_baseline_plus_explicit_batch_018_delta(self):
+        batch_018_ids = {
+            "part1-construction-plans",
+            "part1-laboratory-bench",
+            "part1-supermarket-shelf",
+        }
+        reserve_ids = set(self.metrics['listening']['reserve_question_ids'])
         self.assertEqual(self.metrics['listening']['eligible_questions'], self.baseline['listening']['eligibleQuestions'])
-        self.assertEqual(self.metrics['listening']['reserve_questions'], self.baseline['listening']['reserveQuestions'])
+        self.assertEqual(
+            self.metrics['listening']['reserve_questions'],
+            self.baseline['listening']['reserveQuestions'] + len(batch_018_ids),
+        )
+        self.assertTrue({f"{resource_id}#Q1" for resource_id in batch_018_ids}.issubset(reserve_ids))
         self.assertEqual(self.metrics['listening']['practice_only_questions'], 13)
         self.assertEqual(
             self.metrics['listening']['eligible_questions'] + self.metrics['listening']['reserve_questions'],
-            self.baseline['listening']['totalQuestions'],
+            self.baseline['listening']['totalQuestions'] + len(batch_018_ids),
         )
         self.assertEqual(
             self.metrics['listening']['total_questions'],
-            self.baseline['listening']['totalQuestions'] + self.metrics['listening']['practice_only_questions'],
+            self.baseline['listening']['totalQuestions'] + self.metrics['listening']['practice_only_questions'] + len(batch_018_ids),
         )
         self.assertEqual(self.metrics['part7']['reserve_questions'], self.baseline['part7']['reserveQuestions'])
         self.assertEqual(self.metrics['part5']['total_questions'], self.baseline['part5']['totalQuestions'])
         self.assertTrue(self.metrics['part5']['practice_only'])
         self.assertEqual(self.metrics['part5']['review_pending_questions'], self.baseline['part5']['reviewPendingQuestions'])
+
+    def test_reserve_questions_use_resource_level_status_not_practice_only_flag(self):
+        pending = [
+            unit for unit in self.listening
+            if unit.get("editorialStatus") == "reserve-pending-independent-review"
+        ]
+        for unit in pending:
+            for number, question in enumerate(unit.get("questions", []), 1):
+                self.assertIsNot(question.get("mockEligible"), False, f"{unit['id']}#Q{number}")
 
     def test_listening_eligible_and_reserve_question_ids_are_disjoint(self):
         eligible = set(self.metrics['listening']['eligible_question_ids'])
