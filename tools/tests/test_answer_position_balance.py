@@ -45,6 +45,8 @@ class AnswerPositionBalanceTests(unittest.TestCase):
                 # Keep the historical v2.17 certificate scoped to the original v2.32.0 items.
                 questions = questions[:PART7_BASELINE_QUESTION_COUNTS_V232.get(item.get('id'), 0)]
             for q in questions:
+                if q.get('mockEligible') is False:
+                    continue
                 actual[part][q['answerIndex']] += 1
         for part, distribution in expected.items():
             self.assertEqual([actual[part][index] for index in range(4)], distribution, part)
@@ -104,7 +106,9 @@ class AnswerPositionBalanceTests(unittest.TestCase):
         def part_counts(items):
             counts = Counter()
             for item in items:
-                counts[item['part']] += len(item.get('questions', []))
+                counts[item['part']] += sum(
+                    1 for q in item.get('questions', []) if q.get('mockEligible') is not False
+                )
             return counts
 
         eligible_counts = part_counts(eligible_listening)
@@ -113,7 +117,15 @@ class AnswerPositionBalanceTests(unittest.TestCase):
         self.assertEqual(dict(reserve_counts), EXPECTED_LISTENING_RESERVE_BY_PART)
         self.assertEqual(sum(eligible_counts.values()), 102)
         self.assertEqual(sum(reserve_counts.values()), 193)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 295)
+        practice_only = [
+            (item, question)
+            for item in self.listening
+            for question in item.get('questions', [])
+            if question.get('mockEligible') is False
+        ]
+        self.assertEqual(len(practice_only), 10)
+        self.assertTrue(all(item.get('part') == 'Part 4' for item, _ in practice_only))
+        self.assertEqual(sum(len(x.get('questions', [])) for x in self.listening), 305)
         self.assertEqual(sum(len(x.get('questions', [])) for x in self.reading), 287)
 
         # Batch 027 added 32 questions in 16 reserve resources. All must remain
