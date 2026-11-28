@@ -25,7 +25,7 @@ This documentation describes the current TOEIC-first GitHub Pages candidate. Sou
 ## Content and learner-data boundaries
 
 - Existing canonical vocabulary IDs/headwords/senses and question/choice IDs/answer keys are preserved.
-- All new Batch 018 Part 1 items remain `reserve-pending-independent-review`; each question also has `mockEligible: false`. No new item is treated as an independently reviewed question or approved Mock inventory.
+- All new Batch 018 Part 1 resources remain `reserve-pending-independent-review`, which is the resource-level Mock gate. Do not set question-level `mockEligible: false` on reserve questions; that flag is reserved for practice-only questions. No new item is treated as independently reviewed or approved for Mock.
 - Listening reserve (196), Reading Part 7 reserve (87) and Separate Part 5 review-only (80) remain excluded from Mock.
 - Learner IndexedDB v1 schema and local records are unchanged; no migration is introduced.
 - UI/UX layout, navigation, Robot Buddy access boundary and GitHub Pages-only/offline architecture remain unchanged. No backend or Cloudflare service is introduced.
