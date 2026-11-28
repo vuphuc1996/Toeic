@@ -23,32 +23,82 @@ def stable_question_key(question: dict) -> str | None:
     return re.sub(r":choice:\d+$", "", ids[0])
 
 
+def normalize_source_label(value: object) -> str | None:
+    """Normalize source labels without coercing invalid data into valid labels."""
+    if not isinstance(value, str):
+        return None
+    normalized = " ".join(value.split())
+    return normalized.casefold() or None
+
+
+def evidence_basis_names_sources(evidence_basis: str, source_labels: list[str]) -> bool:
+    """Match each source label as a whole phrase, not a partial substring."""
+    if not isinstance(evidence_basis, str):
+        return False
+    normalized_basis = " ".join(evidence_basis.split())
+    for source_label in source_labels:
+        normalized_label = " ".join(source_label.split())
+        if not normalized_label or re.search(
+            rf"(?<!\w){re.escape(normalized_label)}(?!\w)",
+            normalized_basis,
+            flags=re.IGNORECASE,
+        ) is None:
+            return False
+    return True
+
+
 def validate_cross_document_evidence(resource: dict, question: dict) -> list[str]:
-    """Require multi-source evidence on a Part 7 unit that passed internal review."""
+    """Require unambiguous, reviewed, multi-source evidence for a Part 7 mapping."""
+    if not isinstance(resource, dict) or not isinstance(question, dict):
+        return ["Part 7 cross-document resource and question must be objects"]
     errors: list[str] = []
     if resource.get("editorialStatus") != "internal-editorial-reviewed":
         errors.append("Part 7 cross-document mapping requires an internal-editorial-reviewed resource")
-    documents = resource.get("documents", [])
-    document_by_label = {str(d.get("label", "")).strip(): d for d in documents if isinstance(d, dict) and str(d.get("label", "")).strip()}
+
+    documents = resource.get("documents")
+    if not isinstance(documents, list) or not documents:
+        return errors + ["Part 7 cross-document resource must declare a non-empty documents list"]
+
+    document_by_label: dict[str, dict] = {}
+    for index, document in enumerate(documents):
+        if not isinstance(document, dict):
+            errors.append(f"Part 7 document[{index}] must be an object")
+            continue
+        normalized_label = normalize_source_label(document.get("label"))
+        if normalized_label is None:
+            errors.append(f"Part 7 document[{index}] must have a non-empty string label")
+            continue
+        if normalized_label in document_by_label:
+            errors.append(f"Part 7 resource has duplicate document label {document.get('label')!r}")
+            continue
+        document_by_label[normalized_label] = document
+    if errors:
+        return errors
+
     evidence = question.get("evidence")
     if not isinstance(evidence, dict):
-        errors.append("Part 7 cross-document question is missing its evidence object")
-        return errors
+        return ["Part 7 cross-document question is missing its evidence object"]
     labels, quotes = evidence.get("sourceLabels"), evidence.get("quotes")
-    if not isinstance(labels, list) or len(labels) < 2 or len({str(x).strip() for x in labels}) < 2:
-        errors.append("Part 7 cross-document evidence must cite at least two distinct sourceLabels")
-        return errors
+    if not isinstance(labels, list) or len(labels) < 2:
+        return ["Part 7 cross-document evidence must cite at least two distinct sourceLabels"]
+    normalized_labels = [normalize_source_label(label) for label in labels]
+    if any(label is None for label in normalized_labels):
+        return ["Part 7 sourceLabels must contain only non-empty strings"]
+    if len(set(normalized_labels)) != len(normalized_labels):
+        return ["Part 7 cross-document evidence must not repeat a sourceLabel"]
     if not isinstance(quotes, list) or len(quotes) != len(labels):
-        errors.append("Part 7 cross-document evidence requires one source quote per sourceLabel")
-        return errors
-    for label, quote in zip(labels, quotes):
-        label = str(label).strip()
-        document = document_by_label.get(label)
+        return ["Part 7 cross-document evidence requires one source quote per sourceLabel"]
+    if any(not isinstance(quote, str) or not quote.strip() for quote in quotes):
+        return ["Part 7 source quotes must contain only non-empty strings"]
+
+    for label, normalized_label, quote in zip(labels, normalized_labels, quotes):
+        document = document_by_label.get(normalized_label)
         if document is None:
             errors.append(f"Part 7 evidence sourceLabel {label!r} is not a declared document")
             continue
-        quote_text = " ".join(str(quote or "").split()).casefold()
-        content_text = " ".join(str(document.get("content", "") or "").split()).casefold()
+        quote_text = " ".join(quote.split()).casefold()
+        content = document.get("content")
+        content_text = " ".join(content.split()).casefold() if isinstance(content, str) else ""
         if not quote_text or quote_text not in content_text:
             errors.append(f"Part 7 evidence quote for {label!r} does not match that document")
     return errors
@@ -147,8 +197,8 @@ def main() -> int:
                     errors.extend(f"{label}: {error}" for error in evidence_errors)
                     continue
                 labels = question.get("evidence", {}).get("sourceLabels", [])
-                if not all(str(source_label) in basis for source_label in labels):
-                    errors.append(f"{label}: evidenceBasis must name every declared cross-document sourceLabel")
+                if not evidence_basis_names_sources(basis, labels):
+                    errors.append(f"{label}: evidenceBasis must name every declared cross-document sourceLabel as a whole phrase")
                     continue
                 cross_document_verified += 1
             if objective_id.startswith("listening-") and resource.get("editorialStatus") == "reserve-pending-independent-review":

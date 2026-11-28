@@ -1,10 +1,22 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.80
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.81
 
-**Current source release candidate:** v2.95.80 — Criterion Mapping Coverage & Source Evidence Hardening. Sole predecessor baseline: candidate HEAD `5bbdc5e05e396380d17d5a65f108d73aa8ee172a` (v2.95.79). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
+**Current source release candidate:** v2.95.81 — Part 7 Evidence Guard Hardening. Sole predecessor baseline: candidate HEAD `a16a3e4a51917e687b92e404ab1c785a393dfb0f` (v2.95.80). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
-## Current release — v2.95.80
+## Current release — v2.95.81
+
+- **Scope:** harden the Part 7 cross-document evidence validator and regression tests; no learner-facing feature, content-bank or UI change.
+- **Guard improvements:** reject missing/non-string/duplicate document labels, repeated or non-string source labels, non-string/empty source quotes and evidence-basis substring false positives.
+- **Inventory:** remains **1,103** canonical mapping links across **638** stable question IDs; TOEIC instrumentation **22/27**, Foundation **6/6**, total **28/33**.
+- **Protected gates:** five unsupported TOEIC criteria remain uninstrumented; Listening reserve remains excluded; Part 7 second-review and Separate Part 5 independent-review gates remain active.
+- **Protected data/UI:** no question text, choices, answers, vocabulary IDs, learner IndexedDB schema/records, Mock eligibility, layout, navigation or Robot Buddy behavior changed.
+- **Release shell:** app, Service Worker and mock-engine version/cache markers advance to v2.95.81 for coherent PWA assets.
+- **Acceptance:** exact candidate CI, full Python discovery, mapping audit, version-sync and Pages build/deploy are **PENDING** for this commit. No production approval; `main` remains unchanged.
+- **Offline/device boundary:** installed-PWA/offline propagation and physical-device QA remain **UNVERIFIED**.
+
+## Previous release — v2.95.80
+
 
 - **Scope:** criterion-to-question map and its audit/tests only; no new learning item, content text or UI feature.
 - **Mapping delta:** +21 links; total **1,103** canonical links across the same **638** unique stable question keys.

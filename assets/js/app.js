@@ -1,23 +1,23 @@
-import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.80';
-import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.80';
-import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js?__release=2.95.80';
-import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.80';
-import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.80';
-import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.80';
-import { buildObjectiveResourceIndex, buildObjectiveCriterionIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, summarizeOutcomeCriteria, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.80';
-import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.80';
-import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.80';
-import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.80';
-import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.80';
-import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.80';
-import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.80';
-import { createRobotBuddy } from './robot-buddy.js?__release=2.95.80';
-import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.80';
-import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.80';
-import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.80';
+import { LocalNotificationProvider } from './notification-provider.js?__release=2.95.81';
+import { buildRobotLearningInsights } from './robot-learning-insights.js?__release=2.95.81';
+import { MOCK_MODES, createMockExam, getExamQuestions, getMockSectionForTime, scoreMockExam } from './mock-engine.js?__release=2.95.81';
+import { buildMockScoreReadiness } from './mock-score-readiness.js?__release=2.95.81';
+import { archiveAllPracticeAnswersForRetry, archivePracticeAnswerForRetry, countAttemptedPracticeQuestions, ensurePracticeProgress, getPracticeAttemptCount, getPracticeAttemptHistory, recordPracticeAnswer, summarizePracticeProgress, stagePracticeChoice, getPracticeDraftChoice, getPracticeDraftEntries, isPracticeDraftSetComplete, summarizePracticeDraftSet, commitPracticeDraftSet } from './practice-progress.js?__release=2.95.81';
+import { chooseSentenceCompletionQuestion, validateSentenceCompletionBank } from './sentence-completion.js?__release=2.95.81';
+import { buildObjectiveResourceIndex, buildObjectiveCriterionIndex, ensureObjectiveProgress, recordObjectiveAttempt, recordExplanationRubric, summarizeAllObjectives, summarizeOutcomeCriteria, listDueRecallItems } from './learning-outcome-progress.js?__release=2.95.81';
+import { recordFoundationAttempt, summarizeFoundationLesson, recordFoundationApplicationAttempt, summarizeFoundationApplication, recordFoundationRecallAttempt, listDueFoundationRecallItems, recordFoundationProductionAttempt, recordFoundationProductionRevision, summarizeFoundationOutcomeProgress, summarizeFoundationProductionPortfolio, buildFoundationProductionPortfolioMarkdown } from './foundation-evidence.js?__release=2.95.81';
+import { recordFoundationReadingAttempt, summarizeFoundationReading } from './foundation-reading-evidence.js?__release=2.95.81';
+import { recordFoundationListeningAttempt, summarizeFoundationListening } from './foundation-listening-evidence.js?__release=2.95.81';
+import { recordAlphabetSoundPractice, summarizeAlphabetSoundProgress } from './alphabet-sound-progress.js?__release=2.95.81';
+import { buildMockQuestionSchedule, getMockScheduledQuestion, getMockTransitionLeadIn, getMockQuestionTimeRemaining } from './mock-flow.js?__release=2.95.81';
+import { detectLegacyReleaseAdditionRepair } from './vocabulary-release-integrity.js?__release=2.95.81';
+import { createRobotBuddy } from './robot-buddy.js?__release=2.95.81';
+import { renderAdditionalFlashSenses } from './flashcard-senses.js?__release=2.95.81';
+import { getLearnerFacingRelatedGlossaryDefinition } from './related-glossary-quality.js?__release=2.95.81';
+import { createLearnerBackup, validateLearnerBackup } from './learner-data-backup.js?__release=2.95.81';
 
 // Keep this release marker synchronized with data/manifest.json and sw.js.
-const APP_RELEASE_VERSION = '2.95.80';
+const APP_RELEASE_VERSION = '2.95.81';
 function releaseDataUrl(path, version = APP_RELEASE_VERSION) {
   const url = new URL(path, document.baseURI);
   url.searchParams.set('__release', version);

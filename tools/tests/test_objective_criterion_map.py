@@ -67,5 +67,58 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
         self.assertEqual(sum(outcome["status"].startswith("instrumented_") for outcome in toeic), 22)
         self.assertEqual(sum(outcome["status"] == "criteria_defined_not_yet_instrumented" for outcome in toeic), 5)
 
+
+    def test_part7_evidence_rejects_ambiguous_duplicate_document_and_source_labels(self):
+        resource = {"editorialStatus": "internal-editorial-reviewed", "documents": [
+            {"label": "CUSTOMER EMAIL", "content": "The order is needed on October 20."},
+            {"label": " customer   email ", "content": "A different message with conflicting content."},
+            {"label": "SUPPLIER REPLY", "content": "We can deliver the order on October 20."},
+        ]}
+        question = {"evidence": {
+            "sourceLabels": ["CUSTOMER EMAIL", "SUPPLIER REPLY"],
+            "quotes": ["needed on October 20", "deliver the order on October 20"],
+        }}
+        self.assertTrue(any("duplicate document label" in error
+                            for error in AUDIT.validate_cross_document_evidence(resource, question)))
+
+        clean_resource = {"editorialStatus": "internal-editorial-reviewed", "documents": [
+            {"label": "CUSTOMER EMAIL", "content": "The order is needed on October 20."},
+            {"label": "SUPPLIER REPLY", "content": "We can deliver the order on October 20."},
+        ]}
+        repeated = {"evidence": {
+            "sourceLabels": ["CUSTOMER EMAIL", " customer email "],
+            "quotes": ["needed on October 20", "needed on October 20"],
+        }}
+        self.assertTrue(any("must not repeat" in error
+                            for error in AUDIT.validate_cross_document_evidence(clean_resource, repeated)))
+
+    def test_part7_evidence_rejects_non_string_labels_and_quotes(self):
+        resource = {"editorialStatus": "internal-editorial-reviewed", "documents": [
+            {"label": "CUSTOMER EMAIL", "content": "The order is needed on October 20."},
+            {"label": "SUPPLIER REPLY", "content": "We can deliver the order on October 20."},
+        ]}
+        bad_label = {"evidence": {
+            "sourceLabels": ["CUSTOMER EMAIL", 7],
+            "quotes": ["needed on October 20", "deliver the order on October 20"],
+        }}
+        self.assertTrue(any("only non-empty strings" in error
+                            for error in AUDIT.validate_cross_document_evidence(resource, bad_label)))
+        bad_quote = {"evidence": {
+            "sourceLabels": ["CUSTOMER EMAIL", "SUPPLIER REPLY"],
+            "quotes": ["needed on October 20", 7],
+        }}
+        self.assertTrue(any("only non-empty strings" in error
+                            for error in AUDIT.validate_cross_document_evidence(resource, bad_quote)))
+
+    def test_evidence_basis_matches_complete_source_labels_not_substrings(self):
+        self.assertTrue(AUDIT.evidence_basis_names_sources(
+            "Cross-document evidence cites EVENT SCHEDULE and VENUE OPERATIONS NOTICE.",
+            ["EVENT SCHEDULE", "VENUE OPERATIONS NOTICE"],
+        ))
+        self.assertFalse(AUDIT.evidence_basis_names_sources(
+            "The updated EVENT SCHEDULED version was sent.",
+            ["EVENT SCHEDULE"],
+        ))
+
 if __name__ == "__main__":
     unittest.main()
