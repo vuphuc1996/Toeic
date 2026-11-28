@@ -55,24 +55,32 @@ class ContentBatch027Tests(unittest.TestCase):
    practice_seen.add(unit_id)
    unit['questions']=questions[:3]
   self.assertEqual(practice_seen,practice_only_part4_ids)
-  historical=json.dumps(document,ensure_ascii=False,indent=2).encode('utf-8') + bytes([10])
-  self.assertEqual(self.batch['listening_sha256'],hashlib.sha256(historical).hexdigest())
-  self.assertEqual(len(set(self.batch['listening'])),16)
-
-  # Remove the v2.95.86 Part 1 reserve-only photo expansion when reconstructing
-  # the immutable historical library snapshot used by this batch fingerprint.
+  # Remove the v2.95.86 Part 1 reserve-only photo expansion before
+  # serializing the immutable historical library snapshot for this hash.
   part1_batch_018_ids={
    'part1-construction-plans','part1-laboratory-bench','part1-supermarket-shelf',
   }
   part1_seen=set()
   restored=[]
   for unit in document['listening']:
-   if unit.get('id') in part1_batch_018_ids:
-    part1_seen.add(unit.get('id'))
-   else:
+   if unit.get('id') not in part1_batch_018_ids:
     restored.append(unit)
+    continue
+   questions=unit.get('questions') or []
+   if (
+    unit.get('part') != 'Part 1'
+    or unit.get('editorialBatch') != '018'
+    or unit.get('editorialStatus') != 'reserve-pending-independent-review'
+    or len(questions) != 1
+    or questions[0].get('mockEligible') is not False
+   ):
+    raise AssertionError(f"Unexpected Batch 018 Part 1 reserve record: {unit.get('id')}")
+   part1_seen.add(unit['id'])
   document['listening']=restored
   self.assertEqual(part1_seen,part1_batch_018_ids)
+  historical=json.dumps(document,ensure_ascii=False,indent=2).encode('utf-8') + bytes([10])
+  self.assertEqual(self.batch['listening_sha256'],hashlib.sha256(historical).hexdigest())
+  self.assertEqual(len(set(self.batch['listening'])),16)
 
  def test_v29583_part4_practice_additions_are_exact_and_mock_excluded(self):
   expected_ids={
