@@ -28,9 +28,46 @@ class ContentBatch027Tests(unittest.TestCase):
     present.add(unit['id'])
     del unit['transcriptTranslation']
   self.assertEqual(present,remediation_ids)
+
+  # v2.95.83 adds one question-level practice-only item to each of ten
+  # allowlisted, pre-existing Part 4 talks. Remove only these exact items
+  # when reconstructing the historical listening-library fingerprint.
+  practice_only_part4_ids={
+   'part4-office-announcement','part4-conference-update',
+   'part4-safety-announcement','part4-product-launch',
+   'part4-quarterly-town-hall','part4-customer-voicemail',
+   'part4-warehouse-safety-briefing','part4-training-registration',
+   'part4-travel-service-update','part4-quarterly-inventory-report',
+  }
+  practice_seen=set()
+  for unit in document['listening']:
+   if unit.get('id') not in practice_only_part4_ids:
+    continue
+   questions=unit.get('questions') or []
+   if len(questions)!=4 or questions[3].get('mockEligible') is not False:
+    raise AssertionError(f"Unexpected Part 4 practice-only addition: {unit.get('id')}")
+   practice_seen.add(unit['id'])
+   unit['questions']=questions[:3]
+  self.assertEqual(practice_seen,practice_only_part4_ids)
   historical=json.dumps(document,ensure_ascii=False,indent=2).encode('utf-8') + bytes([10])
   self.assertEqual(self.batch['listening_sha256'],hashlib.sha256(historical).hexdigest())
   self.assertEqual(len(set(self.batch['listening'])),16)
+
+ def test_v29583_part4_practice_additions_are_exact_and_mock_excluded(self):
+  expected_ids={
+   'part4-office-announcement','part4-conference-update',
+   'part4-safety-announcement','part4-product-launch',
+   'part4-quarterly-town-hall','part4-customer-voicemail',
+   'part4-warehouse-safety-briefing','part4-training-registration',
+   'part4-travel-service-update','part4-quarterly-inventory-report',
+  }
+  for unit_id in expected_ids:
+   unit=self.by_id[unit_id]
+   self.assertEqual(len(unit['questions']),4,unit_id)
+   added=unit['questions'][3]
+   self.assertIs(added.get('mockEligible'),False,unit_id)
+   self.assertEqual(added['choiceIds'],[f'listening:{unit_id}:4:choice:{i}' for i in range(1,5)])
+
  def test_all_batch_units_exist_and_are_review_gated(self):
   for unit_id in self.batch['listening']:
    unit=self.by_id[unit_id]
