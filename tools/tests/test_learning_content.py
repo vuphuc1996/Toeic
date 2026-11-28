@@ -273,7 +273,7 @@ class LearningContentTests(unittest.TestCase):
             )
             for i in range(1, 5)
         }
-        self.assertEqual(counts, {'Part 1': 9, 'Part 2': 61, 'Part 3': 123, 'Part 4': 102})
+        self.assertEqual(counts, {'Part 1': 12, 'Part 2': 61, 'Part 3': 123, 'Part 4': 102})
         p3 = next(x for x in self.listening if x.get('id') == 'part3-training-handouts')
         p4 = next(x for x in self.listening if x.get('id') == 'part4-east-elevator-maintenance')
         self.assertEqual(len(p3['segments']), 4)
