@@ -1,3 +1,13 @@
+## v2.95.80 — Criterion Mapping Coverage & Source Evidence Hardening (2026-11-28)
+
+- **21 additional canonical mappings:** Grammar form recognition `1 → 10`; Listening Part 3 speaker/action `1 → 10`; Part 3 conversation purpose `5 → 7`; Part 4 talk purpose `1 → 2`.
+- **Stable identity:** no new bank questions, resources, question keys, choice IDs or answer keys. The map increases from 1,082 to 1,103 links while remaining at 638 unique stable question keys.
+- **Part 7 cross-document guard:** only internally reviewed resources qualify; each mapped question must cite at least two distinct declared source documents and one matching quote per source.
+- **No threshold inflation:** Part 1 criteria remain 8 each, Part 3 purpose 7, Part 4 purpose 2, and Part 7 cross-document 2. Five unsupported TOEIC criteria stay uninstrumented; reserve gates remain unchanged.
+- **Outcome totals:** still 22/27 TOEIC criteria and 28/33 total Foundation + TOEIC criteria instrumented. The provisional weighted build index remains 73.73%.
+- **Protected boundaries:** no UI, learner progress, IndexedDB v1, vocabulary, item bank text, answer keys, Mock eligibility, reserve state or Robot Buddy behavior changed.
+- **Acceptance:** exact-commit Validate and Pages evidence is pending for v2.95.80. `main` remains `256ca21461e78a7685bed773ddd622a64050e33a`.
+
 ## v2.95.79 — Package Metadata Synchronization & Version Guard Hardening (2026-11-28)
 
 - **Canonical version registry:** register the top-level `package.json` version alongside `data/manifest.json` and the existing app, HTML, Service Worker and documentation markers.

@@ -23,6 +23,36 @@ def stable_question_key(question: dict) -> str | None:
     return re.sub(r":choice:\d+$", "", ids[0])
 
 
+def validate_cross_document_evidence(resource: dict, question: dict) -> list[str]:
+    """Require multi-source evidence on a Part 7 unit that passed internal review."""
+    errors: list[str] = []
+    if resource.get("editorialStatus") != "internal-editorial-reviewed":
+        errors.append("Part 7 cross-document mapping requires an internal-editorial-reviewed resource")
+    documents = resource.get("documents", [])
+    document_by_label = {str(d.get("label", "")).strip(): d for d in documents if isinstance(d, dict) and str(d.get("label", "")).strip()}
+    evidence = question.get("evidence")
+    if not isinstance(evidence, dict):
+        errors.append("Part 7 cross-document question is missing its evidence object")
+        return errors
+    labels, quotes = evidence.get("sourceLabels"), evidence.get("quotes")
+    if not isinstance(labels, list) or len(labels) < 2 or len({str(x).strip() for x in labels}) < 2:
+        errors.append("Part 7 cross-document evidence must cite at least two distinct sourceLabels")
+        return errors
+    if not isinstance(quotes, list) or len(quotes) != len(labels):
+        errors.append("Part 7 cross-document evidence requires one source quote per sourceLabel")
+        return errors
+    for label, quote in zip(labels, quotes):
+        label = str(label).strip()
+        document = document_by_label.get(label)
+        if document is None:
+            errors.append(f"Part 7 evidence sourceLabel {label!r} is not a declared document")
+            continue
+        quote_text = " ".join(str(quote or "").split()).casefold()
+        content_text = " ".join(str(document.get("content", "") or "").split()).casefold()
+        if not quote_text or quote_text not in content_text:
+            errors.append(f"Part 7 evidence quote for {label!r} does not match that document")
+    return errors
+
 def main() -> int:
     mapping_doc = load(MAP_PATH)
     registry = load(REGISTRY_PATH)
@@ -40,6 +70,7 @@ def main() -> int:
     unique_rows: set[tuple[str, str, str]] = set()
     verified = 0
     listening_reserve_mappings = 0
+    cross_document_verified = 0
 
     source_cache = {}
     for index, row in enumerate(rows):
@@ -110,6 +141,16 @@ def main() -> int:
             if question.get("id") and row.get("questionId") != question.get("id"):
                 errors.append(f"{label}: optional questionId does not match canonical question ID")
                 continue
+            if criterion_id == "reading-part-7-cross-document-link":
+                evidence_errors = validate_cross_document_evidence(resource, question)
+                if evidence_errors:
+                    errors.extend(f"{label}: {error}" for error in evidence_errors)
+                    continue
+                labels = question.get("evidence", {}).get("sourceLabels", [])
+                if not all(str(source_label) in basis for source_label in labels):
+                    errors.append(f"{label}: evidenceBasis must name every declared cross-document sourceLabel")
+                    continue
+                cross_document_verified += 1
             if objective_id.startswith("listening-") and resource.get("editorialStatus") == "reserve-pending-independent-review":
                 listening_reserve_mappings += 1
                 errors.append(f"{label}: Listening reserve item {resource_id} is mapped")
@@ -172,6 +213,7 @@ def main() -> int:
         f"{len(uninstrumented_toeic)} TOEIC criteria deliberately remain uninstrumented; "
         "0 Listening reserve items mapped."
     )
+    print(f"PASS: {cross_document_verified} Part 7 cross-document mappings have internally reviewed, two-source quote evidence.")
     print("PASS: Part 7 second-review gate and Separate Part 5 independent-review gate remain active.")
     print("NOTE: Mapping inventory is not learner practice evidence, editorial approval, CEFR/ETS mastery or TOEIC score readiness.")
     return 0

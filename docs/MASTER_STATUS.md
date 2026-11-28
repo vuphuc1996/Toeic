@@ -1,10 +1,22 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.79
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.80
 
-**Current source release candidate:** v2.95.79 — Package Metadata Synchronization & Version Guard Hardening. Sole predecessor: candidate HEAD `9a174778bcdfea7adca98f0abb1b17d3a050388e` (v2.95.78). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
+**Current source release candidate:** v2.95.80 — Criterion Mapping Coverage & Source Evidence Hardening. Sole predecessor baseline: candidate HEAD `5bbdc5e05e396380d17d5a65f108d73aa8ee172a` (v2.95.79). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
-## Current release — v2.95.79
+## Current release — v2.95.80
+
+- **Scope:** criterion-to-question map and its audit/tests only; no new learning item, content text or UI feature.
+- **Mapping delta:** +21 links; total **1,103** canonical links across the same **638** unique stable question keys.
+- **Inventory improvements:** Grammar form recognition **1 → 10**; Listening Part 3 speaker/action **1 → 10**; Part 3 purpose **5 → 7**; Part 4 talk purpose **1 → 2**.
+- **Honest remaining limits:** Listening Part 1 visual/audio and detail retention remain **8** each; Reading Part 7 cross-document remains **2** because only two eligible reviewed questions currently have explicit matching quotes from two documents. No reserve item or weakly aligned question is relabeled.
+- **Part 7 source guard:** mappings must be in an internally reviewed unit, have two distinct source labels declared in the resource, and have a quote that matches each source document.
+- **Outcome totals:** still **22/27** TOEIC criteria instrumented; Foundation **6/6**; total **28/33**. Five unsupported criteria remain uninstrumented.
+- **Progress:** provisional weighted measurable curriculum-build index remains **73.73%**. Mapping depth does not increase the instrumented-criterion count.
+- **Protected data:** no question content, choice/answer, stable IDs, vocabulary, Mock eligibility, reserve status, learner IndexedDB records/schema, UI, navigation or Robot Buddy logic is changed.
+- **Acceptance:** v2.95.80 exact-commit mapping audit, tests, full Python suite and Pages build/deploy remain **PENDING**. Candidate-only; no production approval.
+
+## Previous release — v2.95.79
 
 - **Scope:** source release tooling and metadata only. The canonical version remains in `data/manifest.json`; the top-level `package.json` version is now included in the exact-one synchronization registry.
 - **Fail-closed behavior:** a package version mismatch is reported; a missing or duplicate package version marker stops before `--apply` writes any file.

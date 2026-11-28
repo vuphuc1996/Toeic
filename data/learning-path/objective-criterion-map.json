@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Bản đồ câu hỏi–tiêu chí kết quả học tập",
-  "sourcePolicy": "Only exact stable question identities already present in canonical banks are mapped. Keys are derived from choiceIds with only the trailing :choice:N suffix removed. Part 7 cross-document mapping requires explicit multi-source evidence labels. No content, answer key, or choice ID is generated or rewritten.",
+  "sourcePolicy": "Only exact stable question identities already present in canonical banks are mapped. Keys are derived from choiceIds with only the trailing :choice:N suffix removed. Part 7 cross-document mappings require an internally reviewed unit, at least two distinct declared sourceLabels, and a matching source quote for each label. No content, answer key, or choice ID is generated or rewritten.",
   "runtimePolicy": "Evidence is collected only after a completed learner response. Mapping counts are inventory coverage, not learner mastery. Every criterion retains its own minimum unique-item count and threshold. Editorial gates continue to override practice status.",
   "mappings": [
     {
@@ -7329,7 +7329,7 @@
       "criterionId": "reading-part-7-cross-document-link",
       "resourceId": "part7-triple-conference-exhibitor-logistics",
       "questionKey": "reading:part7-triple-conference-exhibitor-logistics:1",
-      "evidenceBasis": "question evidence explicitly cites two or more source documents",
+      "evidenceBasis": "Cross-document evidence cites both EMAIL FROM EXHIBITOR and VENUE OPERATIONS NOTICE.",
       "questionIndex": 0
     },
     {
@@ -7337,7 +7337,7 @@
       "criterionId": "reading-part-7-cross-document-link",
       "resourceId": "part7-triple-conference-exhibitor-logistics",
       "questionKey": "reading:part7-triple-conference-exhibitor-logistics:4",
-      "evidenceBasis": "question evidence explicitly cites two or more source documents",
+      "evidenceBasis": "Cross-document evidence cites both VENUE OPERATIONS NOTICE and EVENT SCHEDULE.",
       "questionIndex": 3
     },
     {
@@ -8959,21 +8959,189 @@
       "questionKey": "reading:triple-passage-meeting:5",
       "evidenceBasis": "Part 7 question requires locating evidence in the passage set",
       "questionIndex": 4
+    },
+    {
+      "objectiveId": "grammar-core",
+      "criterionId": "grammar-core-form-recognition",
+      "resourceId": "sentence-svo",
+      "questionKey": "grammar:sentence-svo:2",
+      "evidenceBasis": "Identifies the object phrase, a grammatical sentence element.",
+      "questionIndex": 1
+    },
+    {
+      "objectiveId": "grammar-core",
+      "criterionId": "grammar-core-form-recognition",
+      "resourceId": "parts-of-speech",
+      "questionKey": "grammar:parts-of-speech:1",
+      "evidenceBasis": "Recognizes the adverb form required to modify a verb phrase.",
+      "questionIndex": 0
+    },
+    {
+      "objectiveId": "grammar-core",
+      "criterionId": "grammar-core-form-recognition",
+      "resourceId": "nouns-countability",
+      "questionKey": "grammar:nouns-countability:1",
+      "evidenceBasis": "Recognizes the uncountable noun form licensed by much.",
+      "questionIndex": 0
+    },
+    {
+      "objectiveId": "grammar-core",
+      "criterionId": "grammar-core-form-recognition",
+      "resourceId": "subject-verb-agreement",
+      "questionKey": "grammar:subject-verb-agreement:1",
+      "evidenceBasis": "Recognizes agreement with the singular head noun in a subject phrase.",
+      "questionIndex": 0
+    },
+    {
+      "objectiveId": "grammar-core",
+      "criterionId": "grammar-core-form-recognition",
+      "resourceId": "present-simple",
+      "questionKey": "grammar:present-simple:1",
+      "evidenceBasis": "Recognizes the third-person singular present-simple verb form.",
+      "questionIndex": 0
+    },
+    {
+      "objectiveId": "grammar-core",
+      "criterionId": "grammar-core-form-recognition",
+      "resourceId": "past-simple",
+      "questionKey": "grammar:past-simple:2",
+      "evidenceBasis": "Recognizes the bare verb form required after did not.",
+      "questionIndex": 1
+    },
+    {
+      "objectiveId": "grammar-core",
+      "criterionId": "grammar-core-form-recognition",
+      "resourceId": "future-forms",
+      "questionKey": "grammar:future-forms:2",
+      "evidenceBasis": "Recognizes be going to with a plural subject and an established plan.",
+      "questionIndex": 1
+    },
+    {
+      "objectiveId": "grammar-core",
+      "criterionId": "grammar-core-form-recognition",
+      "resourceId": "present-perfect",
+      "questionKey": "grammar:present-perfect:1",
+      "evidenceBasis": "Recognizes has plus past participle in a since construction.",
+      "questionIndex": 0
+    },
+    {
+      "objectiveId": "grammar-core",
+      "criterionId": "grammar-core-form-recognition",
+      "resourceId": "articles",
+      "questionKey": "grammar:articles:1",
+      "evidenceBasis": "Selects the article before an adjective-noun phrase beginning with a vowel sound.",
+      "questionIndex": 0
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-speaker-linking",
+      "resourceId": "part3-business-trip",
+      "questionKey": "listening:part3-business-trip:3",
+      "evidenceBasis": "Attributes the next hotel-booking action to the woman speaker.",
+      "questionIndex": 2
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-speaker-linking",
+      "resourceId": "part3-invoice-error",
+      "questionKey": "listening:part3-invoice-error:2",
+      "evidenceBasis": "Links the man's request to the woman's follow-up action.",
+      "questionIndex": 1
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-speaker-linking",
+      "resourceId": "part3-interview-schedule",
+      "questionKey": "listening:part3-interview-schedule:3",
+      "evidenceBasis": "Links the male applicant to the documents he is asked to bring.",
+      "questionIndex": 2
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-speaker-linking",
+      "resourceId": "part3-interview-arrangement",
+      "questionKey": "listening:part3-interview-arrangement:3",
+      "evidenceBasis": "Attributes the request for address/instructions to the applicant speaker.",
+      "questionIndex": 2
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-speaker-linking",
+      "resourceId": "part3-software-upgrade",
+      "questionKey": "listening:part3-software-upgrade:3",
+      "evidenceBasis": "Attributes the paper-log instruction to the man speaker.",
+      "questionIndex": 2
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-speaker-linking",
+      "resourceId": "part3-client-presentation",
+      "questionKey": "listening:part3-client-presentation:3",
+      "evidenceBasis": "Attributes the planned slide edit to the man speaker.",
+      "questionIndex": 2
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-speaker-linking",
+      "resourceId": "part3-procurement-quotation",
+      "questionKey": "listening:part3-procurement-quotation:3",
+      "evidenceBasis": "Attributes the budget-check action to the woman speaker.",
+      "questionIndex": 2
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-speaker-linking",
+      "resourceId": "part3-marketing-campaign",
+      "questionKey": "listening:part3-marketing-campaign:3",
+      "evidenceBasis": "Attributes the quantity-confirmation commitment to the woman speaker.",
+      "questionIndex": 2
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-speaker-linking",
+      "resourceId": "part3-elevator-maintenance",
+      "questionKey": "listening:part3-elevator-maintenance:3",
+      "evidenceBasis": "Attributes preparation of notices to the man speaker.",
+      "questionIndex": 2
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-conversation-purpose",
+      "resourceId": "part3-shipping-delay",
+      "questionKey": "listening:part3-shipping-delay:1",
+      "evidenceBasis": "Asks which shipment problem prompted the woman's call.",
+      "questionIndex": 0
+    },
+    {
+      "objectiveId": "listening-part-3",
+      "criterionId": "listening-part-3-conversation-purpose",
+      "resourceId": "part3-facility-repair",
+      "questionKey": "listening:part3-facility-repair:1",
+      "evidenceBasis": "Asks which maintenance problem the woman is reporting.",
+      "questionIndex": 0
+    },
+    {
+      "objectiveId": "listening-part-4",
+      "criterionId": "listening-part-4-talk-purpose",
+      "resourceId": "part4-quarterly-town-hall",
+      "questionKey": "listening:part4-quarterly-town-hall:2",
+      "evidenceBasis": "Asks for the central subject of the chief operating officer's talk.",
+      "questionIndex": 1
     }
   ],
   "mappingCountsByCriterion": {
     "grammar-core-contextual-choice": 168,
     "grammar-core-error-explanation": 169,
-    "grammar-core-form-recognition": 1,
+    "grammar-core-form-recognition": 10,
     "listening-part-1-detail-retention": 8,
     "listening-part-1-visual-audio-match": 8,
     "listening-part-2-natural-response": 25,
     "listening-part-2-response-intent": 21,
-    "listening-part-3-conversation-purpose": 5,
+    "listening-part-3-conversation-purpose": 7,
     "listening-part-3-detail-inference": 33,
-    "listening-part-3-speaker-linking": 1,
+    "listening-part-3-speaker-linking": 10,
     "listening-part-4-detail-tracking": 29,
-    "listening-part-4-talk-purpose": 1,
+    "listening-part-4-talk-purpose": 2,
     "part5-sentence-completion-accuracy": 80,
     "part5-sentence-completion-error-review": 80,
     "part5-sentence-completion-time-management": 80,
