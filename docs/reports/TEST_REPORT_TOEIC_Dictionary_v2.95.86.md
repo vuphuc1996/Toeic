@@ -1,7 +1,7 @@
 # Test Report — TOEIC Dictionary v2.95.86
 
-**Branch:** `candidate`  
-**Validated application/source SHA:** `d5cefa69610bc381a802127d5f9f000d88e48df8`  
+**Branch:** `candidate`
+**Validated application/source SHA:** `d5cefa69610bc381a802127d5f9f000d88e48df8`
 **Baseline:** v2.95.85 `7b8d80f1eef1523b5c2f31f0361a51c90011da7e`
 
 ## Exact-SHA acceptance evidence
