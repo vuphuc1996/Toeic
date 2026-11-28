@@ -2,7 +2,7 @@
 
 **Phiên bản mã nguồn đang kiểm kê:** v2.95.85
 
-**Current source release candidate:** v2.95.85 — Vocabulary Batch 029, Part 4/Part 7 Criterion Instrumentation & Revision Priority Summary. Predecessor: `v2.95.84` (`19171e45f98ba55b0098b2ed3691e2672a59c5c0` on `candidate`). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
+**Source-level acceptance evidence:** The owner confirmed that candidate source baseline `7b8d80f1eef1523b5c2f31f0361a51c90011da7e` passed **865/865 unit tests**, build/compilation checks and syntax/lint checks. See `reports/RELEASE_ACCEPTANCE_v2.95.85.md`. This is owner-supplied evidence; do not label it as a newly reproduced local run or as GitHub Actions/Pages acceptance.
 
 ## Current release — v2.95.85
 
