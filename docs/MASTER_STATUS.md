@@ -1,3 +1,11 @@
+## Candidate synchronization — 2026-11-28 (documentation-only)
+
+- Latest candidate HEAD: `cf00856a9aea6dce4bcce2ad1b8498fc9b3efb6d` — replaces the stale Google AI Studio starter README with TOEIC Dictionary project, architecture, verification-boundary and local-development guidance.
+- This is a documentation-only commit. The application release remains **v2.95.86** and its validated application/source snapshot remains `d5cefa69610bc381a802127d5f9f000d88e48df8`; no application runtime, vocabulary, question bank, answer key, learner data or UI files changed in this commit.
+- Exact candidate Validate [run 46158867176](https://github.com/vuphuc1996/Toeic/actions/runs/46158867176): **PASS**.
+- Exact candidate Pages build/deployment [run 46158866095](https://github.com/vuphuc1996/Toeic/actions/runs/46158866095): **PASS**.
+- Production `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`. Candidate deployment is not production promotion.
+
 # TOEIC Dictionary — Master Status
 
 **Phiên bản mã nguồn đang kiểm kê:** v2.95.86
