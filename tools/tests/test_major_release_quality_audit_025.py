@@ -35,12 +35,12 @@ class MajorReleaseQualityAudit025(unittest.TestCase):
     def test_content_inventory_is_nonempty_and_known(self):
         c=self.audit['contentInventory']; self.assertEqual(c,{'grammarLessons':58,'listeningResources':145,'readingResources':73,'part5PracticeQuestions':80})
     def test_outcome_instrumentation_is_not_claimed_complete(self):
-        o=self.audit['learningOutcomes']; self.assertEqual(o['criteria'],33); self.assertEqual(o['instrumentedCriteria'],28); self.assertEqual(o['instrumentedPercent'],84.8); self.assertLess(o['instrumentedPercent'],100)
+        o=self.audit['learningOutcomes']; self.assertEqual(o['criteria'],33); self.assertEqual(o['instrumentedCriteria'],29); self.assertEqual(o['instrumentedPercent'],87.9); self.assertLess(o['instrumentedPercent'],100)
     def test_outcome_status_distribution_matches_detail_rows(self):
         o=self.audit['learningOutcomes']
         self.assertEqual(len(o['criteriaDetail']),o['criteria'])
         self.assertEqual(sum(o['statusCounts'].values()),o['criteria'])
-        self.assertEqual(o['statusCounts']['criteria_defined_not_yet_instrumented'],5)
+        self.assertEqual(o['statusCounts']['criteria_defined_not_yet_instrumented'],4)
         self.assertEqual(o['statusCounts']['instrumented_practice_evidence'],20)
         self.assertEqual(o['statusCounts']['instrumented_learner_self_report'],5)
         self.assertEqual(o['statusCounts']['instrumented_delayed_recall'],3)
