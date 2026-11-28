@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import unittest
 from collections import Counter
 from pathlib import Path
@@ -53,7 +54,11 @@ class ContentBatch018Tests(unittest.TestCase):
             asset = ROOT / unit["photo"].removeprefix("./")
             self.assertTrue(asset.is_file(), unit["photo"])
             self.assertLessEqual(asset.stat().st_size, 400_000)
-            self.assertEqual(unit["photoSourceType"], "ai-generated")
+                optional_match = re.search(r"const OPTIONAL = (\[.*?\]);", (ROOT / "sw.js").read_text(encoding="utf-8"), re.S)
+            self.assertIsNotNone(optional_match, "Service Worker OPTIONAL cache list is missing")
+            optional_assets = set(json.loads(optional_match.group(1)))
+            self.assertIn(unit["photo"], optional_assets, "Part 1 photo should be in the best-effort offline cache")
+        self.assertEqual(unit["photoSourceType"], "ai-generated")
             self.assertIn("Google Imagen", unit["sourceNote"])
             row = self.attribution[ident]
             self.assertEqual(row["source_type"], "ai-generated")
