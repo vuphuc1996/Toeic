@@ -98,7 +98,7 @@ class DistractorQualityTests(unittest.TestCase):
         self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 4'), 72)
         self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 2'), 36)
         self.assertEqual(sum(len(x.get('questions', [])) for x in reserve), 196)
-        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 1'), 1)
+        self.assertEqual(sum(len(x.get('questions', [])) for x in reserve if x['part'] == 'Part 1'), 4)
         batch027 = [x for x in reserve if x.get('editorialBatch') == '027']
         self.assertEqual(len(batch027), 16)
         self.assertEqual(sum(len(x.get('questions', [])) for x in batch027), 32)
