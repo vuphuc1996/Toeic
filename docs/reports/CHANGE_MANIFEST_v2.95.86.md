@@ -11,7 +11,7 @@
 - Each resource contains four English SpeechSynthesis statements, one provisional answer, a Vietnamese explanation, exact `evidenceText`, and stable choice IDs.
 - Added the three resource IDs to the Part 1 objective-resource inventory.
 - Listening resources: **145 → 148**. Listening questions: **308 → 311**. Part 1: **9 → 12**.
-- Reserve questions: **193 → 196**. Part 1 reserve: **1 → 4**. Approved Mock Listening remains **102**; the new questions have `mockEligible: false` and resources remain `reserve-pending-independent-review`.
+- Reserve questions: **193 → 196**. Part 1 reserve: **1 → 4**. Approved Mock Listening remains **102**; the resources remain `reserve-pending-independent-review`, which gates Mock eligibility; question-level `mockEligible: false` remains reserved for practice-only items.
 
 ## Validation coverage
 
