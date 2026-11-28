@@ -1,3 +1,13 @@
+## v2.95.86 — Part 1 Photo Reserve Expansion & Candidate Release Reconciliation (2026-11-28)
+
+- Added three Part 1 photo-description practice resources (construction plans, laboratory microscope and supermarket shelf) using existing local JPG assets and Google Imagen provenance.
+- Added exact question/choice IDs, four audio statements, answer evidence, Vietnamese explanations and resource registration for all three units.
+- All three resources remain `reserve-pending-independent-review`; their questions set `mockEligible: false`. Part 1 totals **12** resources/questions (**8** currently eligible, **4** pending); Listening reserve totals **196**; approved Mock Listening stays **102**.
+- Added Batch 018 manifest, photo provenance rows, reserve/Mock regression coverage and historical content fingerprint reconciliation.
+- Synced release/cache markers to v2.95.86 and added current Full-Mock readiness, Part 1 review handoff, quality audit, progress, change manifest and test-status reports.
+- Preserved existing question/choice/answer IDs, criterion mappings, IndexedDB v1 learner data, UI/layout, Robot Buddy and GitHub Pages-only hosting. `main` was not changed.
+- v2.95.85's owner-confirmed 865/865 test/build/lint result is predecessor evidence only. v2.95.86 awaits exact-SHA test and hosted deployment validation.
+
 ## v2.95.85 — Documentation Reconciliation (2026-11-28)
 
 - Corrected the documentation README's stale current-release marker and removed references to non-existent v2.95.85 test-report, change-manifest, project-progress and command-log files.
