@@ -26,7 +26,7 @@ def composite_sha(paths):
 
 
 def composite_sha_reversing_listening_translations(paths):
-    """Hash protected learning banks after removing only the eight v2.95.76 translation additions."""
+    """Reconstruct the protected learning-bank snapshot by reversing only allowlisted later additions."""
     added_ids = {
         "batch026-part3-vendor-call",
         "batch026-part3-training-room",
@@ -85,6 +85,35 @@ def composite_sha_reversing_listening_translations(paths):
                 unit["questions"] = questions[:3]
             if practice_only_seen != practice_only_part4_ids:
                 raise AssertionError(f"Part 4 practice-only IDs differ: {sorted(practice_only_seen ^ practice_only_part4_ids)}")
+
+            # v2.95.86 appends three new Part 1 photo reserve units. They are
+            # explicitly allowlisted here only to reconstruct the earlier
+            # protected-bank snapshot; verify their full fail-closed contract
+            # before removing them from this historical hash calculation.
+            batch_018_part1_ids = {
+                "part1-construction-plans",
+                "part1-laboratory-bench",
+                "part1-supermarket-shelf",
+            }
+            batch_018_seen = set()
+            restored_units = []
+            for unit in document["listening"]:
+                if unit.get("id") not in batch_018_part1_ids:
+                    restored_units.append(unit)
+                    continue
+                questions = unit.get("questions") or []
+                if (
+                    unit.get("part") != "Part 1"
+                    or unit.get("editorialBatch") != "018"
+                    or unit.get("editorialStatus") != "reserve-pending-independent-review"
+                    or len(questions) != 1
+                    or questions[0].get("mockEligible") is not False
+                ):
+                    raise AssertionError(f"Unexpected Batch 018 Part 1 reserve record: {unit.get('id')}")
+                batch_018_seen.add(unit["id"])
+            if batch_018_seen != batch_018_part1_ids:
+                raise AssertionError(f"Batch 018 Part 1 IDs differ: {sorted(batch_018_seen ^ batch_018_part1_ids)}")
+            document["listening"] = restored_units
             data = (json.dumps(document, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
         h.update(path.relative_to(ROOT).as_posix().encode())
         h.update(b"\0")
