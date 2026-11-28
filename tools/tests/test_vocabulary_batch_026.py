@@ -58,7 +58,8 @@ class VocabularyBatch026Tests(unittest.TestCase):
         self.assertEqual(self.patch["count"], 40)
         self.assertEqual([r["id"] for r in self.patch["records"]], batch_ids)
         profile_1141 = next(p for p in self.manifest["releaseRepairProfiles"] if p["previousTotalWords"] == 1141)
-        self.assertEqual(profile_1141["releaseAdditionIds"], batch_ids)
+        expected_profile_ids = batch_ids + [w["id"] for w in self.batch_028["words"]]
+        self.assertEqual(profile_1141["releaseAdditionIds"], expected_profile_ids)
 
     def test_every_batch_record_matches_canonical_inventory_and_schema(self):
         for entry in self.batch["words"]:
