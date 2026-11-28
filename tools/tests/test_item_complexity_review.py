@@ -35,7 +35,7 @@ class ItemComplexityReviewTests(unittest.TestCase):
         reading_reserve=sum(len(x.get('questions',[])) for x in self.reading if x.get('editorialStatus')=='reserve-pending-independent-review')
         self.assertIn(f'Reading reserve-pending: **{reading_reserve}**',self.report)
         self.assertIn('RESERVE — not Mock eligible',self.report)
-        self.assertEqual(expected,193)
+        self.assertEqual(expected,196)
         self.assertEqual(reading_reserve,87)
 
     def test_report_does_not_claim_calibrated_difficulty(self):
