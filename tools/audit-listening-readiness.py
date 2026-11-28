@@ -8,12 +8,22 @@ version=json.loads((ROOT/"data/manifest.json").read_text(encoding="utf-8"))["ver
 parts=("Part 1","Part 2","Part 3","Part 4")
 eligible=[u for u in data if not u.get("editorialStatus") or u.get("editorialStatus")=="approved-for-mock"]
 pending=[u for u in data if u.get("editorialStatus")=="reserve-pending-independent-review"]
-def tally(items):
+def tally(items, include_pending_questions=False):
     c=collections.Counter()
     for u in items:
-        c[u.get("part","Unknown")]+=sum(1 for q in u.get("questions",[]) if q.get("mockEligible") is not False)
+        questions=u.get("questions",[])
+        # Resource-level reserve items are gated by editorialStatus. For the
+        # post-review ceiling, include all their questions even when the
+        # question-level fail-closed flag is false today; those flags must be
+        # explicitly reconsidered only after independent review.
+        count=len(questions) if include_pending_questions else sum(
+            1 for q in questions if q.get("mockEligible") is not False
+        )
+        c[u.get("part","Unknown")]+=count
     return c
-e=tally(eligible); p=tally(pending); total=tally(data)
+e=tally(eligible)
+p=tally(pending, include_pending_questions=True)
+total=e+p
 raw_total=sum(len(u.get("questions",[])) for u in data)
 practice_only=raw_total-sum(total.values())
 batches=collections.defaultdict(lambda: collections.Counter())
