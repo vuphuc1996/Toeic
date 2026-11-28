@@ -352,6 +352,36 @@ def composite_sha_reversing_listening_translations(paths, root: Path) -> str:
                 raise AssertionError(f"Listening remediation IDs differ: {sorted(seen ^ added_ids)}")
             if practice_only_seen != practice_only_part4_ids:
                 raise AssertionError(f"Part 4 practice-only IDs differ: {sorted(practice_only_seen ^ practice_only_part4_ids)}")
+
+            # v2.95.86 adds three Part 1 reserve-only photo resources after the
+            # historical protected-bank snapshot. Validate their resource-level
+            # review gate, then exclude only these exact allowlisted IDs before
+            # computing the historical composite SHA.
+            batch_018_part1_ids = {
+                "part1-construction-plans",
+                "part1-laboratory-bench",
+                "part1-supermarket-shelf",
+            }
+            batch_018_seen: set[str] = set()
+            restored_units = []
+            for unit in document["listening"]:
+                if unit.get("id") not in batch_018_part1_ids:
+                    restored_units.append(unit)
+                    continue
+                questions = unit.get("questions") or []
+                if (
+                    unit.get("part") != "Part 1"
+                    or unit.get("editorialBatch") != "018"
+                    or unit.get("editorialStatus") != "reserve-pending-independent-review"
+                    or unit.get("mockExamEligibility") != "excluded-until-independent-review"
+                    or len(questions) != 1
+                    or "mockEligible" in questions[0]
+                ):
+                    raise AssertionError(f"Unexpected Batch 018 Part 1 reserve record: {unit.get('id')}")
+                batch_018_seen.add(unit["id"])
+            if batch_018_seen != batch_018_part1_ids:
+                raise AssertionError(f"Batch 018 Part 1 IDs differ: {sorted(batch_018_seen ^ batch_018_part1_ids)}")
+            document["listening"] = restored_units
             data = json.dumps(document, ensure_ascii=False, indent=2).encode("utf-8") + b"\n"
         digest.update(path.relative_to(root).as_posix().encode("utf-8"))
         digest.update(b"\0")
