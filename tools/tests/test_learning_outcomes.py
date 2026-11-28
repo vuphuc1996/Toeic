@@ -23,9 +23,9 @@ class LearningOutcomeTests(unittest.TestCase):
    r=subprocess.run([sys.executable,str(ROOT/'tools/audit-learning-outcome-evidence.py'),'--markdown-output',str(out)],capture_output=True,text=True)
    self.assertEqual(r.returncode,0,r.stdout+r.stderr)
    text=out.read_text(encoding='utf-8')
-   self.assertIn('28/33 (84.8%)',text)
-   self.assertIn('22/27',text)
-   self.assertIn('1,103',text)
+   self.assertIn('29/33 (87.9%)',text)
+   self.assertIn('23/27',text)
+   self.assertIn('1,119',text)
    self.assertIn('638 unique question IDs',text)
    self.assertIn('11/11',text)
    for obj in json.loads((ROOT/'data/learning-path/objective-outcomes.json').read_text())['objectives']:
@@ -41,6 +41,6 @@ class LearningOutcomeTests(unittest.TestCase):
   mapped={row['criterionId'] for row in mapping['mappings']}
   toeic=[o for group in registry['objectives'] if not group['objectiveId'].startswith('foundation-') for o in group['outcomes']]
   self.assertEqual(mapped,{o['id'] for o in toeic if o['status'].startswith('instrumented_')})
-  self.assertEqual(sum(o['status'].startswith('instrumented_') for o in toeic),22)
-  self.assertEqual(sum(o['status']=='criteria_defined_not_yet_instrumented' for o in toeic),5)
+  self.assertEqual(sum(o['status'].startswith('instrumented_') for o in toeic),23)
+  self.assertEqual(sum(o['status']=='criteria_defined_not_yet_instrumented' for o in toeic),4)
 if __name__=='__main__': unittest.main()

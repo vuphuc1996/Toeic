@@ -103,6 +103,92 @@ def validate_cross_document_evidence(resource: dict, question: dict) -> list[str
             errors.append(f"Part 7 evidence quote for {label!r} does not match that document")
     return errors
 
+
+def listening_prompt_text(resource: dict) -> str:
+    """Return the canonical spoken prompt represented by Part 2 segments."""
+    segments = resource.get("segments")
+    if not isinstance(segments, list):
+        return ""
+    fragments = []
+    for segment in segments:
+        if isinstance(segment, str):
+            fragments.append(segment)
+        elif isinstance(segment, dict):
+            for key in ("text", "audioText", "en", "transcript", "content"):
+                if isinstance(segment.get(key), str) and segment[key].strip():
+                    fragments.append(segment[key])
+                    break
+    return " ".join(fragments)
+
+
+def contains_whole_lexical_cue(text: str, cue: str) -> bool:
+    """Check for a repeated cue as a whole token or phrase."""
+    if not isinstance(text, str) or not isinstance(cue, str) or not cue.strip():
+        return False
+    return re.search(
+        rf"(?<!\w){re.escape(cue.strip())}(?!\w)",
+        text,
+        flags=re.IGNORECASE,
+    ) is not None
+
+
+def normalize_evidence_text(value: str) -> str:
+    return " ".join(value.split()).casefold()
+
+
+def validate_part2_distractor_evidence(resource: dict, question: dict, row: dict) -> list[str]:
+    """Require exact source-backed prompt, wrong option, repeated cue and mismatch note."""
+    if not all(isinstance(value, dict) for value in (resource, question, row)):
+        return ["Part 2 lexical-trap evidence requires resource, question and mapping objects"]
+
+    errors: list[str] = []
+    prompt = listening_prompt_text(resource)
+    prompt_quote = row.get("promptQuote")
+    if not isinstance(prompt_quote, str) or not prompt_quote.strip():
+        errors.append("Part 2 lexical-trap mapping requires a non-empty promptQuote")
+    elif normalize_evidence_text(prompt_quote) != normalize_evidence_text(prompt):
+        errors.append("Part 2 promptQuote must exactly match the canonical audio segments")
+
+    choices = question.get("choices")
+    answer_index = question.get("answerIndex")
+    distractor_index = row.get("distractorChoiceIndex")
+    if not isinstance(choices, list) or not all(isinstance(choice, str) for choice in choices):
+        errors.append("Part 2 lexical-trap question must have string choices")
+    elif (
+        not isinstance(distractor_index, int) or isinstance(distractor_index, bool)
+        or distractor_index < 0 or distractor_index >= len(choices)
+    ):
+        errors.append("Part 2 distractorChoiceIndex is outside the canonical choices")
+    elif distractor_index == answer_index:
+        errors.append("Part 2 lexical-trap distractorChoiceIndex must not select the answer key")
+    else:
+        canonical_distractor = choices[distractor_index]
+        distractor_quote = row.get("distractorQuote")
+        if distractor_quote != canonical_distractor:
+            errors.append("Part 2 distractorQuote does not match the selected canonical wrong choice")
+        cue = row.get("lexicalCue")
+        if not isinstance(cue, str) or not cue.strip():
+            errors.append("Part 2 lexical-trap mapping requires a non-empty lexicalCue")
+        else:
+            if not contains_whole_lexical_cue(prompt_quote if isinstance(prompt_quote, str) else "", cue):
+                errors.append("Part 2 lexicalCue does not appear in promptQuote")
+            if not contains_whole_lexical_cue(distractor_quote if isinstance(distractor_quote, str) else "", cue):
+                errors.append("Part 2 lexicalCue does not appear in distractorQuote")
+        mismatch = row.get("responseMismatch")
+        if not isinstance(mismatch, str) or not mismatch.strip():
+            errors.append("Part 2 lexical-trap mapping requires a responseMismatch explanation")
+        basis = row.get("evidenceBasis")
+        if not isinstance(basis, str) or not basis.strip():
+            errors.append("Part 2 lexical-trap mapping requires an evidenceBasis")
+        else:
+            if isinstance(distractor_quote, str) and distractor_quote not in basis:
+                errors.append("Part 2 evidenceBasis must reproduce the exact distractorQuote")
+            if isinstance(cue, str) and cue.casefold() not in basis.casefold():
+                errors.append("Part 2 evidenceBasis must identify the repeated lexicalCue")
+            if isinstance(mismatch, str) and mismatch and mismatch not in basis:
+                errors.append("Part 2 evidenceBasis must include the responseMismatch explanation")
+    return errors
+
 def main() -> int:
     mapping_doc = load(MAP_PATH)
     registry = load(REGISTRY_PATH)
@@ -121,6 +207,7 @@ def main() -> int:
     verified = 0
     listening_reserve_mappings = 0
     cross_document_verified = 0
+    part2_lexical_trap_verified = 0
 
     source_cache = {}
     for index, row in enumerate(rows):
@@ -201,6 +288,12 @@ def main() -> int:
                     errors.append(f"{label}: evidenceBasis must name every declared cross-document sourceLabel as a whole phrase")
                     continue
                 cross_document_verified += 1
+            if criterion_id == "listening-part-2-distractor-resistance":
+                lexical_errors = validate_part2_distractor_evidence(resource, question, row)
+                if lexical_errors:
+                    errors.extend(f"{label}: {error}" for error in lexical_errors)
+                    continue
+                part2_lexical_trap_verified += 1
             if objective_id.startswith("listening-") and resource.get("editorialStatus") == "reserve-pending-independent-review":
                 listening_reserve_mappings += 1
                 errors.append(f"{label}: Listening reserve item {resource_id} is mapped")
@@ -233,12 +326,16 @@ def main() -> int:
     }
     if mapped_criteria & uninstrumented_toeic:
         errors.append("an uninstrumented criterion has question mappings")
-    if len(instrumented_toeic) != 22:
-        errors.append(f"expected 22 TOEIC criteria with a mapping; found {len(instrumented_toeic)}")
-    if len(uninstrumented_toeic) != 5:
-        errors.append(f"expected 5 TOEIC criteria to remain uninstrumented; found {len(uninstrumented_toeic)}")
+    if len(instrumented_toeic) != 23:
+        errors.append(f"expected 23 TOEIC criteria with a mapping; found {len(instrumented_toeic)}")
+    if len(uninstrumented_toeic) != 4:
+        errors.append(f"expected 4 TOEIC criteria to remain uninstrumented; found {len(uninstrumented_toeic)}")
     if listening_reserve_mappings:
         errors.append(f"{listening_reserve_mappings} Listening reserve mappings were detected")
+    if counts.get("listening-part-2-distractor-resistance", 0) < 10:
+        errors.append("Part 2 distractor-resistance criterion must retain at least 10 unique mapped questions")
+    if part2_lexical_trap_verified != counts.get("listening-part-2-distractor-resistance", 0):
+        errors.append("every Part 2 distractor-resistance mapping must pass exact audio/distractor evidence validation")
 
     part7 = next((row for row in resource_doc["objectives"] if row["id"] == "reading-part-7"), {})
     part5 = next((row for row in resource_doc["objectives"] if row["id"] == "part5-sentence-completion"), {})
@@ -264,6 +361,7 @@ def main() -> int:
         "0 Listening reserve items mapped."
     )
     print(f"PASS: {cross_document_verified} Part 7 cross-document mappings have internally reviewed, two-source quote evidence.")
+    print(f"PASS: {part2_lexical_trap_verified} Part 2 lexical-trap mappings have exact audio, wrong-choice, repeated-cue and mismatch evidence.")
     print("PASS: Part 7 second-review gate and Separate Part 5 independent-review gate remain active.")
     print("NOTE: Mapping inventory is not learner practice evidence, editorial approval, CEFR/ETS mastery or TOEIC score readiness.")
     return 0

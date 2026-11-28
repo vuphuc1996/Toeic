@@ -18,9 +18,9 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             cwd=ROOT, capture_output=True, text=True
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn("1103 question-to-criterion links", result.stdout)
+        self.assertIn("1119 question-to-criterion links", result.stdout)
         self.assertIn("638 unique stable question IDs", result.stdout)
-        self.assertIn("22/27 TOEIC criteria mapped", result.stdout)
+        self.assertIn("23/27 TOEIC criteria mapped", result.stdout)
         self.assertIn("0 Listening reserve items mapped", result.stdout)
 
     def test_subminimum_criteria_are_not_misreported_as_mastered(self):
@@ -62,10 +62,10 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             self.assertEqual(outcomes[row["criterionId"]][0], row["objectiveId"])
         self.assertEqual(counts, mapping["mappingCountsByCriterion"])
         self.assertEqual(len({row["questionKey"] for row in mapping["mappings"]}), mapping["uniqueQuestionCount"])
-        self.assertEqual(len(counts), 22)
+        self.assertEqual(len(counts), 23)
         toeic = [outcome for group in registry["objectives"] if not group["objectiveId"].startswith("foundation-") for outcome in group["outcomes"]]
-        self.assertEqual(sum(outcome["status"].startswith("instrumented_") for outcome in toeic), 22)
-        self.assertEqual(sum(outcome["status"] == "criteria_defined_not_yet_instrumented" for outcome in toeic), 5)
+        self.assertEqual(sum(outcome["status"].startswith("instrumented_") for outcome in toeic), 23)
+        self.assertEqual(sum(outcome["status"] == "criteria_defined_not_yet_instrumented" for outcome in toeic), 4)
 
 
     def test_part7_evidence_rejects_ambiguous_duplicate_document_and_source_labels(self):
@@ -119,6 +119,47 @@ class ObjectiveCriterionMapTests(unittest.TestCase):
             "The updated EVENT SCHEDULED version was sent.",
             ["EVENT SCHEDULE"],
         ))
+
+
+    def test_part2_lexical_trap_mappings_have_exact_canonical_evidence(self):
+        mapping = json.loads((ROOT / "data/learning-path/objective-criterion-map.json").read_text(encoding="utf-8"))
+        registry = json.loads((ROOT / "data/learning-path/objective-outcomes.json").read_text(encoding="utf-8"))
+        library = json.loads((ROOT / "data/listening/listening-library.json").read_text(encoding="utf-8"))
+        rows = [row for row in mapping["mappings"] if row["criterionId"] == "listening-part-2-distractor-resistance"]
+        self.assertEqual(len(rows), 16)
+        self.assertEqual(len({row["questionKey"] for row in rows}), 16)
+        criterion = next(
+            outcome for group in registry["objectives"] for outcome in group["outcomes"]
+            if outcome["id"] == "listening-part-2-distractor-resistance"
+        )
+        self.assertEqual(criterion["status"], "instrumented_practice_evidence")
+        self.assertEqual(criterion["minimumUniqueItems"], 10)
+        resources = {item["id"]: item for item in library["listening"]}
+        for row in rows:
+            resource = resources[row["resourceId"]]
+            question = resource["questions"][row["questionIndex"]]
+            self.assertNotEqual(resource.get("editorialStatus"), "reserve-pending-independent-review")
+            self.assertEqual(AUDIT.validate_part2_distractor_evidence(resource, question, row), [])
+
+    def test_part2_lexical_trap_guard_rejects_modified_evidence(self):
+        mapping = json.loads((ROOT / "data/learning-path/objective-criterion-map.json").read_text(encoding="utf-8"))
+        library = json.loads((ROOT / "data/listening/listening-library.json").read_text(encoding="utf-8"))
+        row = next(row for row in mapping["mappings"] if row["criterionId"] == "listening-part-2-distractor-resistance")
+        resource = next(item for item in library["listening"] if item["id"] == row["resourceId"])
+        question = resource["questions"][row["questionIndex"]]
+
+        wrong_choice = dict(row, distractorQuote="This is not the original choice.")
+        self.assertTrue(any("canonical wrong choice" in error for error in AUDIT.validate_part2_distractor_evidence(resource, question, wrong_choice)))
+        wrong_prompt = dict(row, promptQuote="A different spoken prompt.")
+        self.assertTrue(any("canonical audio segments" in error for error in AUDIT.validate_part2_distractor_evidence(resource, question, wrong_prompt)))
+        wrong_cue = dict(row, lexicalCue="unrelated-token")
+        self.assertTrue(any("does not appear" in error for error in AUDIT.validate_part2_distractor_evidence(resource, question, wrong_cue)))
+        answer_as_distractor = dict(
+            row,
+            distractorChoiceIndex=question["answerIndex"],
+            distractorQuote=question["choices"][question["answerIndex"]],
+        )
+        self.assertTrue(any("must not select the answer key" in error for error in AUDIT.validate_part2_distractor_evidence(resource, question, answer_as_distractor)))
 
 if __name__ == "__main__":
     unittest.main()

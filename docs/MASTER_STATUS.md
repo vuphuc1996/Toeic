@@ -1,10 +1,23 @@
 # TOEIC Dictionary — Master Status
 
-**Phiên bản mã nguồn đang kiểm kê:** v2.95.81
+**Phiên bản mã nguồn đang kiểm kê:** v2.95.82
 
-**Current source release candidate:** v2.95.81 — Part 7 Evidence Guard Hardening. Sole predecessor baseline: candidate HEAD `a16a3e4a51917e687b92e404ab1c785a393dfb0f` (v2.95.80). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
+**Current source release candidate:** v2.95.82 — Part 2 Lexical Distractor Evidence Instrumentation. Sole predecessor baseline: candidate HEAD `4d1eead800e3378cf91b5b83ddb14bc3c8fb8737` (v2.95.81). `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`.
 
-## Current release — v2.95.81
+## Current release — v2.95.82
+
+- **Scope:** criterion-level evidence instrumentation for Listening Part 2 lexical distractor resistance; audit and regression hardening; version/cache shell synchronization. No learner-facing content, application UI or layout change.
+- **New evidence links:** 16 non-reserve Part 2 question mappings. Each records the canonical audio prompt, incorrect choice index and exact choice text, repeated whole-word cue, and the question-response mismatch rationale.
+- **Criterion inventory:** 1,119 question-to-criterion links across the same 638 stable question IDs; TOEIC criteria instrumented **23/27**; Foundation **6/6**; total **29/33**. Four TOEIC criteria remain deliberately uninstrumented.
+- **Runtime/storage:** existing criterion index supports multiple criterion IDs for one questionKey; writes reuse the existing learner-local objectiveProgress ledger. No IndexedDB v1 schema migration or data reset.
+- **Fail-closed audit:** the Part 2 criterion requires at least 10 links and validates prompt text against canonical segments, distractorChoiceIndex against canonical choices (not the answer key), exact distractor text, repeated cue and response-mismatch evidence.
+- **Protected boundaries:** no bank question, transcript, segment, choice ID, answer key, canonical vocabulary ID, Mock eligibility, Listening reserve, Reading Part 7/Separate Part 5 review gate, learner record/schema, UI, navigation or Robot Buddy behavior is changed.
+- **Progress:** provisional weighted measurable curriculum-build index recalculates from 73.73% to **74.49%** due to one additional criterion evidence path. It is not learner mastery, TOEIC score readiness or total system completion.
+- **Acceptance:** new exact-commit validator, mapping audit, version sync, full Python discovery and Pages build/deploy are **PENDING**. Do not infer acceptance from the predecessor release.
+- **Deployment boundary:** `main` remains unchanged at `256ca21461e78a7685bed773ddd622a64050e33a`; candidate branch only. FullSource ZIP generation, installed-PWA/offline propagation and physical-device QA remain **UNVERIFIED**.
+
+## Previous release — v2.95.81
+
 
 - **Scope:** harden the Part 7 cross-document evidence validator and regression tests; no learner-facing feature, content-bank or UI change.
 - **Guard improvements:** reject missing/non-string/duplicate document labels, repeated or non-string source labels, non-string/empty source quotes and evidence-basis substring false positives.
